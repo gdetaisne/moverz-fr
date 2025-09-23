@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" width="200" height="40">
+  <!-- Maison stylisée compacte -->
+  <g transform="translate(20, 20)">
+    <!-- Toit principal -->
+    <path d="M-15 5 L0 -10 L15 5 L12 5 L0 -7 L-12 5 Z" fill="#1E3A8A"/>
+    <!-- Toit secondaire -->
+    <path d="M-12 2 L0 -8 L12 2 L9 2 L0 -5 L-9 2 Z" fill="none" stroke="#1E3A8A" stroke-width="1"/>
+    <!-- Fenêtre -->
+    <rect x="-3" y="-3" width="6" height="8" fill="none" stroke="#1E3A8A" stroke-width="1"/>
+    <line x1="0" y1="-3" x2="0" y2="5" stroke="#1E3A8A" stroke-width="0.5"/>
+  </g>
+  
+  <!-- Texte compact -->
+  <text x="50" y="15" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold" fill="#1E3A8A">ESTIMATION</text>
+  <text x="50" y="28" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="bold" fill="#1E3A8A">DÉMÉNAGEMENT.FR</text>
+</svg>

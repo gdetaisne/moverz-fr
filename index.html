@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estimation Déménagement en Ligne – Rapide, Précis & Sans Surprise | EstimationDemenagement.fr</title>
     <meta name="description" content="Obtenez des devis de déménagement fiables en quelques minutes grâce à vos photos. Simplicité, sérénité, transparence pour les particuliers. Outil IA simple, précis, efficace pour les pros.">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Estimation Déménagement - Devis gratuit par IA">
+    <meta property="og:description" content="Obtenez des devis de déménagement fiables en quelques minutes grâce à vos photos">
+    <meta property="og:image" content="/logo.svg">
+    <meta property="og:url" content="https://estimationdemenagement.fr">
+    <meta property="og:type" content="website">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +32,8 @@
                         'blue-night': '#1E3A8A',
                         'blue-light': '#3B82F6',
                         'gray-light': '#F3F4F6',
+                        'turquoise': '#7DD3C0',
+                        'turquoise-light': '#A8E6CF',
                     }
                 }
             }
@@ -32,7 +46,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
-                    <a href="/" class="text-2xl font-bold text-blue-night">
+                    <img src="/logo-header.svg" alt="EstimationDemenagement.fr" class="h-10 w-auto mr-3">
+                    <a href="/" class="text-xl font-bold text-blue-night hidden sm:block">
                         EstimationDemenagement.fr
                     </a>
                 </div>
@@ -57,7 +72,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-blue-night to-blue-800 text-white py-20">
+    <section class="bg-gradient-to-br from-turquoise via-blue-light to-blue-night text-white py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <h1 class="text-4xl md:text-6xl font-bold mb-6">
@@ -91,7 +106,7 @@
                     <h3 class="text-2xl font-semibold mb-8 text-center">Pour les particuliers</h3>
                     <div class="space-y-8">
                         <div class="flex items-start">
-                            <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <div class="bg-turquoise-light p-3 rounded-full mr-4">
                                 <span class="text-2xl">🌿</span>
                             </div>
                             <div>
@@ -109,8 +124,8 @@
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <div class="bg-yellow-100 p-3 rounded-full mr-4">
-                                <span class="text-2xl">🤝</span>
+                            <div class="bg-turquoise p-3 rounded-full mr-4">
+                                <span class="text-2xl text-white">🤝</span>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-lg mb-2">Transparence</h4>
@@ -143,8 +158,8 @@
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <div class="bg-green-100 p-3 rounded-full mr-4">
-                                <span class="text-2xl">💶</span>
+                            <div class="bg-turquoise p-3 rounded-full mr-4">
+                                <span class="text-2xl text-white">💶</span>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-lg mb-2">Efficace</h4>
@@ -163,21 +178,21 @@
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Comment ça marche ?</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center">
-                    <div class="bg-blue-light w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <div class="bg-turquoise w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                         <span class="text-white text-3xl">📸</span>
                     </div>
                     <h3 class="text-xl font-semibold mb-4">1. Prenez des photos</h3>
                     <p class="text-gray-600">Photographiez vos pièces et mobilier en quelques minutes</p>
                 </div>
                 <div class="text-center">
-                    <div class="bg-blue-light w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <div class="bg-blue-light w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                         <span class="text-white text-3xl">🤖</span>
                     </div>
                     <h3 class="text-xl font-semibold mb-4">2. IA analyse</h3>
                     <p class="text-gray-600">Notre intelligence artificielle estime le volume et les besoins</p>
                 </div>
                 <div class="text-center">
-                    <div class="bg-blue-light w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <div class="bg-turquoise w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                         <span class="text-white text-3xl">📄</span>
                     </div>
                     <h3 class="text-xl font-semibold mb-4">3. Recevez vos devis</h3>
@@ -247,7 +262,7 @@
     </section>
 
     <!-- CTA Final -->
-    <section class="py-20 bg-blue-night text-white">
+    <section class="py-20 bg-gradient-to-r from-blue-night to-turquoise text-white">
         <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à déménager sereinement ?</h2>
             <p class="text-xl mb-12 text-blue-100">Rejoignez des milliers de clients satisfaits</p>
