@@ -1,0 +1,21 @@
+{
+  "name": "devisdemenagement-fr",
+  "version": "1.0.0",
+  "description": "Site web DevisDemenagement.fr - Devis de déménagement par IA",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["demenagement", "devis", "IA", "moving"],
+  "author": "Lucie & Will",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "compression": "^1.7.4",
+    "helmet": "^7.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

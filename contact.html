@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Parlons de votre projet | DevisDemenagement.fr</title>
+    <meta name="description" content="Contactez l'équipe DevisDemenagement.fr. Questions, partenariats, support technique. Réponse sous 24h garantie.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'blue-night': '#1E3A8A',
+                        'blue-light': '#3B82F6',
+                        'gray-light': '#F3F4F6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter text-gray-900">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-blue-night">
+                        DevisDemenagement.fr
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="/clients.html" class="text-gray-700 hover:text-blue-light transition-colors">Particuliers</a>
+                    <a href="/pro.html" class="text-gray-700 hover:text-blue-light transition-colors">Professionnels</a>
+                    <a href="/blog.html" class="text-gray-700 hover:text-blue-light transition-colors">Blog</a>
+                    <a href="/contact.html" class="text-blue-light font-medium">Contact</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <a href="/clients.html" class="bg-blue-light text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors font-medium">
+                        Devis Gratuit
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-br from-blue-night to-blue-800 text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Parlons de votre projet</h1>
+            <p class="text-xl text-blue-100">
+                Une question ? Un partenariat ? Notre équipe vous répond sous 24h.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact rapide -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="text-center p-6 bg-blue-50 rounded-xl">
+                    <div class="w-16 h-16 bg-blue-light rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white text-2xl">📧</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Email</h3>
+                    <p class="text-gray-600 mb-4">Pour toute question générale</p>
+                    <a href="mailto:contact@devisdemenagement.fr" class="text-blue-light font-medium hover:underline">
+                        contact@devisdemenagement.fr
+                    </a>
+                </div>
+
+                <div class="text-center p-6 bg-green-50 rounded-xl">
+                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white text-2xl">🤝</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Partenariats</h3>
+                    <p class="text-gray-600 mb-4">Déménageurs professionnels</p>
+                    <a href="mailto:partenaires@devisdemenagement.fr" class="text-green-600 font-medium hover:underline">
+                        partenaires@devisdemenagement.fr
+                    </a>
+                </div>
+
+                <div class="text-center p-6 bg-purple-50 rounded-xl">
+                    <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white text-2xl">🛠️</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Support technique</h3>
+                    <p class="text-gray-600 mb-4">Aide et assistance</p>
+                    <a href="mailto:support@devisdemenagement.fr" class="text-purple-600 font-medium hover:underline">
+                        support@devisdemenagement.fr
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulaire de contact -->
+    <section class="py-16 bg-gray-light">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-6">Envoyez-nous un message</h2>
+                <p class="text-xl text-gray-600">Nous vous répondons sous 24h</p>
+            </div>
+            
+            <form class="bg-white p-8 rounded-2xl shadow-lg">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="prenom" class="block text-sm font-medium text-gray-700 mb-2">Prénom *</label>
+                        <input type="text" id="prenom" name="prenom" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-light focus:border-transparent">
+                    </div>
+                    <div>
+                        <label for="nom" class="block text-sm font-medium text-gray-700 mb-2">Nom *</label>
+                        <input type="text" id="nom" name="nom" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-light focus:border-transparent">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-light focus:border-transparent">
+                    </div>
+                    <div>
+                        <label for="telephone" class="block text-sm font-medium text-gray-700 mb-2">Téléphone</label>
+                        <input type="tel" id="telephone" name="telephone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-light focus:border-transparent">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="entreprise" class="block text-sm font-medium text-gray-700 mb-2">Entreprise</label>
+                        <input type="text" id="entreprise" name="entreprise" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-light focus:border-transparent" placeholder="Nom de votre société (optionnel)">
+                    </div>
+                    <div>
+                        <label for="sujet" class="block text-sm font-medium text-gray-700 mb-2">Sujet *</label>
+                        <select id="sujet" name="sujet" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-light focus:border-transparent">
+                            <option value="">Sélectionnez un sujet</option>
+                            <option value="question-generale">Question générale</option>
+                            <option value="support-technique">Support technique</option>
+                            <option value="partenariat-demenageur">Partenariat déménageur</option>
+                            <option value="presse-media">Presse & médias</option>
+                            <option value="investissement">Investissement</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                    <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-light focus:border-transparent" placeholder="Décrivez votre demande ou question..."></textarea>
+                </div>
+
+                <div class="mb-6">
+                    <label class="flex items-start">
+                        <input type="checkbox" required class="mt-1 mr-3">
+                        <span class="text-sm text-gray-600">
+                            J'accepte d'être contacté concernant ma demande et j'ai pris connaissance de la 
+                            <a href="/rgpd.html" class="text-blue-light hover:underline">politique de confidentialité</a>.
+                        </span>
+                    </label>
+                </div>
+
+                <button type="submit" class="w-full bg-blue-light text-white py-4 px-8 rounded-xl text-lg font-semibold hover:bg-blue-600 transition-colors">
+                    Envoyer mon message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Prendre RDV -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-6">Ou planifiez un appel</h2>
+                <p class="text-xl text-gray-600">
+                    Discutons directement de votre projet ou de vos besoins
+                </p>
+            </div>
+
+            <div class="bg-blue-50 p-8 rounded-2xl">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4">Échange avec notre équipe</h3>
+                        <ul class="space-y-3 text-gray-700 mb-6">
+                            <li class="flex items-center">
+                                <span class="text-green-500 mr-3">✓</span>
+                                Conseils personnalisés
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-green-500 mr-3">✓</span>
+                                Démonstration de l'outil pro
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-green-500 mr-3">✓</span>
+                                Conditions de partenariat
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-green-500 mr-3">✓</span>
+                                Questions techniques
+                            </li>
+                        </ul>
+                        <div class="flex space-x-4">
+                            <span class="text-sm text-gray-600">📅 Créneaux disponibles</span>
+                            <span class="text-sm text-gray-600">⏱️ 15-30 minutes</span>
+                        </div>
+                    </div>
+                    <div>
+                        <!-- Placeholder pour Calendly -->
+                        <div class="bg-white p-6 rounded-xl border-2 border-dashed border-gray-300 text-center">
+                            <span class="text-4xl mb-4 block">📅</span>
+                            <h4 class="font-semibold mb-2">Widget Calendly</h4>
+                            <p class="text-sm text-gray-600 mb-4">
+                                Intégration à prévoir avec votre compte Calendly
+                            </p>
+                            <div class="bg-gray-100 p-4 rounded text-xs text-gray-500">
+                                Code d'intégration Calendly à insérer ici :<br>
+                                https://calendly.com/votre-compte
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Contact -->
+    <section class="py-16 bg-gray-light">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Questions fréquentes</h2>
+            
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-xl">
+                    <h3 class="text-lg font-semibold mb-3">Sous quel délai obtiendrai-je une réponse ?</h3>
+                    <p class="text-gray-700">
+                        Nous nous engageons à répondre sous 24h ouvrées maximum. 
+                        Pour les demandes urgentes, utilisez plutôt la planification d'appel.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl">
+                    <h3 class="text-lg font-semibold mb-3">Comment devenir partenaire déménageur ?</h3>
+                    <p class="text-gray-700">
+                        Envoyez-nous votre dossier à partenaires@devisdemenagement.fr avec : 
+                        certification, assurances, zone de couverture et références clients. 
+                        Nous étudions chaque candidature sous 5 jours.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl">
+                    <h3 class="text-lg font-semibold mb-3">Proposez-vous des formations ?</h3>
+                    <p class="text-gray-700">
+                        Oui ! Nous formons gratuitement tous nos partenaires déménageurs 
+                        à l'utilisation de notre plateforme. Formation en ligne de 1h + support continu.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl">
+                    <h3 class="text-lg font-semibold mb-3">Où êtes-vous basés ?</h3>
+                    <p class="text-gray-700">
+                        Notre équipe est basée à Paris mais nous opérons dans toute la France. 
+                        Nos déménageurs partenaires couvrent l'ensemble du territoire.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">DevisDemenagement.fr</h3>
+                    <p class="text-gray-400 mb-4">Votre partenaire déménagement</p>
+                    <div class="space-y-2 text-gray-400">
+                        <div>📧 contact@devisdemenagement.fr</div>
+                        <div>📞 01 XX XX XX XX</div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Solutions</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/clients.html" class="hover:text-white">Particuliers</a></li>
+                        <li><a href="/pro.html" class="hover:text-white">Professionnels</a></li>
+                        <li><a href="/blog.html" class="hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Entreprise</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/a-propos.html" class="hover:text-white">À propos</a></li>
+                        <li><a href="/contact.html" class="hover:text-white text-blue-400">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Légal</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/mentions-legales.html" class="hover:text-white">Mentions légales</a></li>
+                        <li><a href="/rgpd.html" class="hover:text-white">RGPD</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 DevisDemenagement.fr. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
