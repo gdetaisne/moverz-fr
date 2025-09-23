@@ -1,16 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" width="200" height="40">
-  <!-- Maison stylisée compacte -->
-  <g transform="translate(20, 20)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 50" width="280" height="50">
+  <!-- Fond turquoise subtil (optionnel) -->
+  <!-- <rect width="280" height="50" fill="#7DD3C0" rx="8"/> -->
+  
+  <!-- Maison stylisée -->
+  <g transform="translate(25, 25)">
     <!-- Toit principal -->
-    <path d="M-15 5 L0 -10 L15 5 L12 5 L0 -7 L-12 5 Z" fill="#1E3A8A"/>
-    <!-- Toit secondaire -->
-    <path d="M-12 2 L0 -8 L12 2 L9 2 L0 -5 L-9 2 Z" fill="none" stroke="#1E3A8A" stroke-width="1"/>
-    <!-- Fenêtre -->
-    <rect x="-3" y="-3" width="6" height="8" fill="none" stroke="#1E3A8A" stroke-width="1"/>
-    <line x1="0" y1="-3" x2="0" y2="5" stroke="#1E3A8A" stroke-width="0.5"/>
+    <path d="M-12 3 L0 -8 L12 3 L10 3 L0 -6 L-10 3 Z" fill="#1E3A8A" stroke="#1E3A8A" stroke-width="1"/>
+    
+    <!-- Toit secondaire (contour) -->
+    <path d="M-10 1 L0 -6 L10 1 L8 1 L0 -4 L-8 1 Z" fill="none" stroke="#1E3A8A" stroke-width="0.8"/>
+    
+    <!-- Cheminée -->
+    <rect x="-13" y="-2" width="2" height="4" fill="#1E3A8A"/>
+    
+    <!-- Fenêtre avec croix -->
+    <rect x="-2.5" y="-3" width="5" height="6" fill="none" stroke="#1E3A8A" stroke-width="0.8"/>
+    <line x1="0" y1="-3" x2="0" y2="3" stroke="#1E3A8A" stroke-width="0.5"/>
+    <line x1="-2.5" y1="0" x2="2.5" y2="0" stroke="#1E3A8A" stroke-width="0.5"/>
   </g>
   
-  <!-- Texte compact -->
-  <text x="50" y="15" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold" fill="#1E3A8A">ESTIMATION</text>
-  <text x="50" y="28" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="bold" fill="#1E3A8A">DÉMÉNAGEMENT.FR</text>
+  <!-- Texte ESTIMATION -->
+  <text x="60" y="22" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" fill="#1E3A8A">ESTIMATION</text>
+  
+  <!-- Ligne de séparation -->
+  <line x1="60" y1="27" x2="200" y2="27" stroke="#1E3A8A" stroke-width="2"/>
+  
+  <!-- Texte DÉMÉNAGEMENT -->
+  <text x="60" y="40" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#1E3A8A">DÉMÉNAGEMENT</text>
+  
+  <!-- Point -->
+  <circle cx="175" cy="40" r="1.5" fill="#1E3A8A"/>
+  
+  <!-- FR -->
+  <text x="190" y="40" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700" fill="#1E3A8A">FR</text>
+  
+  <!-- Chevron stylisé -->
+  <path d="M205 37 L210 42 L215 37" fill="none" stroke="#1E3A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
