@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: http://movers-main.gslv.cloud/sitemap.xml
+
+# Optimisations SEO
+Crawl-delay: 1
+
+# Autoriser les pages importantes
+Allow: /clients
+Allow: /pro
+Allow: /blog
+Allow: /paris-devis-demenagement
+Allow: /lyon-devis-demenagement
+
+# Pages moins prioritaires mais autorisées
+Allow: /a-propos
+Allow: /contact
+Allow: /mentions-legales
+Allow: /rgpd
