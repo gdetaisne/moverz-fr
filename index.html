@@ -58,15 +58,36 @@
                     <a href="/contact.html" class="text-gray-700 hover:text-blue-light transition-colors">Contact</a>
                 </nav>
                 <div class="flex items-center space-x-4">
-                    <a href="/clients.html" class="bg-blue-light text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors font-medium">
+                    <a href="/clients.html" class="hidden sm:block bg-blue-light text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors font-medium">
                         Devis Gratuit
                     </a>
-                    <button class="md:hidden">
+                    <button data-mobile-menu class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
+            </div>
+        </div>
+        
+        <!-- Menu Mobile -->
+        <div data-mobile-nav class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-4 py-3 space-y-3">
+                <a href="/clients.html" class="block py-3 px-4 text-gray-700 hover:bg-turquoise-light hover:text-blue-night rounded-lg transition-colors font-medium">
+                    👤 Particuliers
+                </a>
+                <a href="/pro.html" class="block py-3 px-4 text-gray-700 hover:bg-turquoise-light hover:text-blue-night rounded-lg transition-colors font-medium">
+                    🏢 Professionnels
+                </a>
+                <a href="/blog.html" class="block py-3 px-4 text-gray-700 hover:bg-turquoise-light hover:text-blue-night rounded-lg transition-colors font-medium">
+                    📝 Blog
+                </a>
+                <a href="/contact.html" class="block py-3 px-4 text-gray-700 hover:bg-turquoise-light hover:text-blue-night rounded-lg transition-colors font-medium">
+                    📞 Contact
+                </a>
+                <a href="/clients.html" class="block mt-4 bg-blue-light text-white py-4 px-6 rounded-lg text-center font-semibold hover:bg-blue-600 transition-colors">
+                    🚀 Devis Gratuit
+                </a>
             </div>
         </div>
     </header>
@@ -75,21 +96,23 @@
     <section class="bg-gradient-to-br from-turquoise via-blue-light to-blue-night text-white py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6">
-                    Devis déménagement<br>en quelques minutes
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                    Devis déménagement<br class="hidden sm:block">
+                    <span class="sm:hidden">rapide</span>
+                    <span class="hidden sm:inline">en quelques minutes</span>
                 </h1>
-                <p class="text-xl md:text-2xl mb-12 text-blue-100 max-w-3xl mx-auto">
-                    Solution innovante pour particuliers et professionnels.<br>
-                    Estimations précises grâce à l'intelligence artificielle.
+                <p class="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 text-blue-100 max-w-3xl mx-auto leading-relaxed">
+                    Solution innovante pour particuliers et professionnels.<br class="hidden sm:block">
+                    Estimations précises grâce à l'IA.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                    <a href="/clients.html" class="bg-blue-light text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-blue-600 transition-colors inline-flex items-center justify-center">
-                        <span class="mr-2">👤</span>
-                        Je suis particulier
+                <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center max-w-md sm:max-w-none mx-auto">
+                    <a href="/clients.html" class="bg-blue-light text-white px-6 sm:px-8 py-5 sm:py-4 rounded-xl text-lg font-semibold hover:bg-blue-600 transition-colors inline-flex items-center justify-center shadow-lg">
+                        <span class="mr-2 text-xl">👤</span>
+                        <span>Je suis particulier</span>
                     </a>
-                    <a href="/pro.html" class="bg-white text-blue-night px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center">
-                        <span class="mr-2">🏢</span>
-                        Je suis professionnel
+                    <a href="/pro.html" class="bg-white text-blue-night px-6 sm:px-8 py-5 sm:py-4 rounded-xl text-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center shadow-lg">
+                        <span class="mr-2 text-xl">🏢</span>
+                        <span>Je suis professionnel</span>
                     </a>
                 </div>
             </div>
@@ -97,10 +120,10 @@
     </section>
 
     <!-- Pourquoi nous choisir -->
-    <section class="py-20 bg-white">
+    <section class="py-12 sm:py-16 lg:py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Pourquoi nous choisir ?</h2>
-            <div class="grid md:grid-cols-2 gap-16">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 lg:mb-16">Pourquoi nous choisir ?</h2>
+            <div class="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
                 <!-- Pour les particuliers -->
                 <div>
                     <h3 class="text-2xl font-semibold mb-8 text-center">Pour les particuliers</h3>
@@ -173,10 +196,10 @@
     </section>
 
     <!-- Démo Section -->
-    <section class="py-20 bg-gray-light">
+    <section class="py-12 sm:py-16 lg:py-20 bg-gray-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Comment ça marche ?</h2>
-            <div class="grid md:grid-cols-3 gap-8">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 lg:mb-16">Comment ça marche ?</h2>
+            <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
                 <div class="text-center">
                     <div class="bg-turquoise w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                         <span class="text-white text-3xl">📸</span>
@@ -266,11 +289,11 @@
         <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à déménager sereinement ?</h2>
             <p class="text-xl mb-12 text-blue-100">Rejoignez des milliers de clients satisfaits</p>
-            <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                <a href="/clients.html" class="bg-blue-light text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-blue-600 transition-colors">
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center max-w-md sm:max-w-none mx-auto">
+                <a href="/clients.html" class="bg-blue-light text-white px-6 sm:px-8 py-5 sm:py-4 rounded-xl text-lg font-semibold hover:bg-blue-600 transition-colors text-center shadow-lg">
                     Obtenir mes devis gratuits
                 </a>
-                <a href="/pro.html" class="bg-white text-blue-night px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-100 transition-colors">
+                <a href="/pro.html" class="bg-white text-blue-night px-6 sm:px-8 py-5 sm:py-4 rounded-xl text-lg font-semibold hover:bg-gray-100 transition-colors text-center shadow-lg">
                     Demander une démo pro
                 </a>
             </div>
@@ -325,5 +348,78 @@
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript Mobile Menu -->
+    <script>
+        // Menu mobile toggle
+        const mobileMenuBtn = document.querySelector('[data-mobile-menu]');
+        const mobileNav = document.querySelector('[data-mobile-nav]');
+        
+        if (mobileMenuBtn && mobileNav) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileNav.classList.toggle('hidden');
+                
+                // Animation de l'icône hamburger
+                const icon = mobileMenuBtn.querySelector('svg');
+                if (!mobileNav.classList.contains('hidden')) {
+                    icon.style.transform = 'rotate(90deg)';
+                } else {
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // Fermer le menu quand on clique sur un lien
+            const mobileLinks = mobileNav.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileNav.classList.add('hidden');
+                    mobileMenuBtn.querySelector('svg').style.transform = 'rotate(0deg)';
+                });
+            });
+            
+            // Fermer le menu quand on clique à l'extérieur
+            document.addEventListener('click', (e) => {
+                if (!mobileMenuBtn.contains(e.target) && !mobileNav.contains(e.target)) {
+                    mobileNav.classList.add('hidden');
+                    mobileMenuBtn.querySelector('svg').style.transform = 'rotate(0deg)';
+                }
+            });
+        }
+        
+        // Smooth scroll pour les ancres
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Optimisation du scroll pour mobile
+        let ticking = false;
+        function updateHeader() {
+            const header = document.querySelector('header');
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 100) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+            ticking = false;
+        }
+        
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateHeader);
+                ticking = true;
+            }
+        });
+    </script>
 </body>
 </html>
