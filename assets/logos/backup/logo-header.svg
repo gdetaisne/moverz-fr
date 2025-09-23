@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 60" width="320" height="60">
+  <!-- Maison exactement comme le logo principal mais en plus petit -->
+  <g transform="translate(30, 30)">
+    <!-- Toit principal avec double ligne -->
+    <path d="M-16 4 L0 -10 L16 4 L13 4 L0 -7 L-13 4 Z" fill="#2C3E50" stroke="#2C3E50" stroke-width="1"/>
+    
+    <!-- Ligne intérieure du toit -->
+    <path d="M-13 2 L0 -7 L13 2 L10 2 L0 -4 L-10 2 Z" fill="none" stroke="#2C3E50" stroke-width="1"/>
+    
+    <!-- Cheminée -->
+    <rect x="-18" y="-2" width="2" height="5" fill="#2C3E50"/>
+    
+    <!-- Fenêtre centrale avec croix parfaite -->
+    <rect x="-3.5" y="-3" width="7" height="7" fill="none" stroke="#2C3E50" stroke-width="1"/>
+    <line x1="0" y1="-3" x2="0" y2="4" stroke="#2C3E50" stroke-width="0.7"/>
+    <line x1="-3.5" y1="0.5" x2="3.5" y2="0.5" stroke="#2C3E50" stroke-width="0.7"/>
+  </g>
+  
+  <!-- Texte ESTIMATION -->
+  <text x="70" y="28" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="900" fill="#2C3E50" letter-spacing="1.5px">ESTIMATION</text>
+  
+  <!-- Ligne de séparation épaisse -->
+  <line x1="70" y1="35" x2="285" y2="35" stroke="#2C3E50" stroke-width="3"/>
+  
+  <!-- Texte DÉMÉNAGEMENT avec point -->
+  <text x="70" y="50" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" fill="#2C3E50" letter-spacing="1px">DÉMÉNAGEMENT.</text>
+  
+  <!-- Point séparateur -->
+  <circle cx="235" cy="50" r="1.5" fill="#2C3E50"/>
+  
+  <!-- FR -->
+  <text x="250" y="50" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#2C3E50">FR</text>
+</svg>
