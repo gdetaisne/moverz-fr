@@ -1,17 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-  <!-- Fond turquoise -->
+  <!-- Fond turquoise comme le logo original -->
   <rect width="32" height="32" fill="#7DD3C0" rx="6"/>
   
-  <!-- Maison simplifiée pour favicon -->
-  <g transform="translate(16, 12)">
+  <!-- Maison simplifiée mais fidèle pour favicon -->
+  <g transform="translate(16, 14)">
     <!-- Toit principal -->
-    <path d="M-10 3 L0 -6 L10 3 L8 3 L0 -4 L-8 3 Z" fill="#1E3A8A"/>
+    <path d="M-10 4 L0 -6 L10 4 L8 4 L0 -4 L-8 4 Z" fill="#1E3A8A"/>
     <!-- Toit intérieur -->
-    <path d="M-8 1 L0 -4 L8 1 L6 1 L0 -2 L-6 1 Z" fill="none" stroke="#1E3A8A" stroke-width="1"/>
-    <!-- Fenêtre -->
-    <rect x="-2" y="-1" width="4" height="5" fill="#1E3A8A"/>
+    <path d="M-8 2 L0 -4 L8 2 L6 2 L0 -2 L-6 2 Z" fill="none" stroke="#1E3A8A" stroke-width="0.8"/>
+    <!-- Fenêtre avec croix -->
+    <rect x="-2.5" y="-1" width="5" height="6" fill="none" stroke="#1E3A8A" stroke-width="1"/>
+    <line x1="0" y1="-1" x2="0" y2="5" stroke="#1E3A8A" stroke-width="0.6"/>
+    <line x1="-2.5" y1="2" x2="2.5" y2="2" stroke="#1E3A8A" stroke-width="0.6"/>
   </g>
   
-  <!-- Texte ED (Estimation Déménagement) -->
-  <text x="16" y="26" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="900" text-anchor="middle" fill="#1E3A8A">ED</text>
+  <!-- E et D stylisées -->
+  <text x="16" y="26" font-family="Inter, Arial, sans-serif" font-size="7" font-weight="900" text-anchor="middle" fill="#1E3A8A">ED</text>
 </svg>
