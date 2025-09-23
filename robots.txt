@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: http://movers-main.gslv.cloud/sitemap.xml
+Sitemap: https://estimationdemenagement.fr/sitemap.xml
 
 # Optimisations SEO
 Crawl-delay: 1

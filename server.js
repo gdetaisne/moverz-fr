@@ -75,11 +75,11 @@ app.get('/health', (req, res) => {
   res.status(200).json({ 
     status: 'OK', 
     timestamp: new Date().toISOString(),
-    service: 'DevisDemenagement.fr'
+    service: 'EstimationDemenagement.fr'
   });
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 DevisDemenagement.fr running on port ${PORT}`);
+  console.log(`🚀 EstimationDemenagement.fr running on port ${PORT}`);
   console.log(`📱 Environment: ${process.env.NODE_ENV || 'development'}`);
 });

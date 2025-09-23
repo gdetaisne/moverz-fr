@@ -1,7 +1,7 @@
 {
-  "name": "devisdemenagement-fr",
+  "name": "estimationdemenagement-fr",
   "version": "1.0.0",
-  "description": "Site web DevisDemenagement.fr - Devis de déménagement par IA",
+  "description": "Site web EstimationDemenagement.fr - Estimation de déménagement par IA",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
