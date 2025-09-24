@@ -2,7 +2,8 @@
 FROM node:18.19.0-alpine AS builder
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci
+# Install all deps (including dev) for build without lockfile
+RUN npm install
 COPY . .
 RUN npm run build
 
@@ -10,10 +11,11 @@ RUN npm run build
 FROM node:18.19.0-alpine
 WORKDIR /usr/src/app
 ENV NODE_ENV=production
+ENV PORT=80
 
 # Install only production deps
 COPY package*.json ./
-RUN npm ci --only=production
+RUN npm install --omit=dev && npm cache clean --force
 
 # Copy server and built assets
 COPY --from=builder /app/dist ./dist
@@ -26,7 +28,7 @@ COPY logo-header.png ./
 
 # Healthcheck
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD node -e "require('http').get('http://localhost:3000/health', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"
+  CMD node -e "require('http').get('http://localhost:$PORT/health', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"
 
-EXPOSE 3000
+EXPOSE 80
 CMD ["node", "server.js"]
