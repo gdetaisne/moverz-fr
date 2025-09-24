@@ -11,6 +11,14 @@ export default function Pro() {
       <Helmet>
         <title>Outil IA pour déménageurs – Estimations précises & ROI</title>
       </Helmet>
+
+      {/* Desktop sticky CTA */}
+      <div className="hidden md:block sticky top-16 z-40 bg-white/70 backdrop-blur border-b border-slate-100">
+        <div className="container py-3 text-right">
+          <a className="btn btn-primary" href="#demo" aria-label="Demander une démo pro">✨ Demander une démo pro</a>
+        </div>
+      </div>
+
       <Hero
         title="Professionnels : gagnez du temps, augmentez votre ROI"
         subtitle="Intégrez l’estimation IA dans votre workflow en 48h."
@@ -66,6 +74,11 @@ export default function Pro() {
           <TestimonialCard name="SpeedMove" role="Commercial" text="Cycle de vente raccourci de 30%." />
         </div>
       </section>
+
+      {/* Mobile bottom bar CTA */}
+      <div className="md:hidden fixed bottom-3 inset-x-3 z-40">
+        <a href="#demo" className="btn btn-primary w-full" aria-label="Demander une démo pro">✨ Demander une démo pro</a>
+      </div>
     </>
   );
 }
