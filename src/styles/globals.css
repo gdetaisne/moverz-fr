@@ -35,7 +35,7 @@ body {
 
 /* Buttons */
 .btn { @apply inline-flex items-center justify-center rounded-xl px-6 py-3 font-semibold transition focus:outline-none focus:ring-2 focus:ring-[var(--mz-teal)] focus:ring-offset-2; }
-.btn-primary { @apply text-white shadow; background-image: linear-gradient(90deg, var(--mz-navy), var(--mz-teal)); }
+.btn-primary { @apply text-white shadow; background-color: var(--mz-teal); }
 .btn-primary:hover { opacity: .9; }
 .btn-outline { @apply border-2 text-[color:var(--mz-teal)]; border-color: var(--mz-teal); }
 .btn-outline:hover { @apply text-white; background-color: var(--mz-teal); }
