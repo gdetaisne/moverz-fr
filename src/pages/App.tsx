@@ -8,6 +8,9 @@ import Pro from '@/pages/Pro';
 import BlogList from '@/pages/BlogList';
 import Contact from '@/pages/Contact';
 import Story from '@/pages/Story';
+import CitiesIndex from '@/pages/villes/Index';
+import Paris from '@/pages/villes/paris';
+import Lyon from '@/pages/villes/lyon';
 
 export default function App() {
   return (
@@ -24,6 +27,9 @@ export default function App() {
           <Route path="/blog" element={<BlogList />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/a-propos" element={<Story />} />
+          <Route path="/villes" element={<CitiesIndex />} />
+          <Route path="/villes/paris" element={<Paris />} />
+          <Route path="/villes/lyon" element={<Lyon />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </SiteLayout>

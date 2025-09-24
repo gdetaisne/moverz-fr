@@ -40,20 +40,35 @@
     <priority>0.8</priority>
   </url>
   
-  <!-- Pages villes SEO -->
+  <!-- Index Villes -->
   <url>
-    <loc>https://moverz.fr/paris-devis-demenagement</loc>
+    <loc>https://moverz.fr/villes</loc>
     <lastmod>2025-01-23</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <url>
-    <loc>https://moverz.fr/lyon-devis-demenagement</loc>
-    <lastmod>2025-01-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
+  <!-- Pages villes SEO (React Router) -->
+  <url><loc>https://moverz.fr/villes/paris</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://moverz.fr/villes/marseille</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://moverz.fr/villes/lyon</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://moverz.fr/villes/toulouse</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://moverz.fr/villes/nice</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://moverz.fr/villes/nantes</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://moverz.fr/villes/montpellier</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://moverz.fr/villes/strasbourg</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://moverz.fr/villes/bordeaux</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://moverz.fr/villes/lille</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://moverz.fr/villes/rennes</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://moverz.fr/villes/reims</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://moverz.fr/villes/toulon</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://moverz.fr/villes/saint-etienne</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://moverz.fr/villes/le-havre</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://moverz.fr/villes/grenoble</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://moverz.fr/villes/dijon</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://moverz.fr/villes/angers</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://moverz.fr/villes/nimes</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://moverz.fr/villes/clermont-ferrand</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   
   <!-- Pages secondaires -->
   <url>
