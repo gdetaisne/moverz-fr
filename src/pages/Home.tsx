@@ -16,7 +16,7 @@ export default function Home() {
         title="La solution innovante pour vos estimations de déménagement"
         subtitle="Particuliers et professionnels. Estimations précises grâce à l’IA."
         primaryCta={{ label: '👤 Je suis particulier', to: '/clients' }}
-        secondaryCta={{ label: '🏢 Je suis professionnel', to: '/pro' }}
+        secondaryCta={{ label: '📦 Je suis professionnel', to: '/pro' }}
       />
 
       <section className="section">
@@ -64,7 +64,7 @@ export default function Home() {
           <p className="text-lg opacity-90">Rejoignez des milliers de clients satisfaits</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a href="/clients" className="btn btn-primary" aria-label="Obtenir mes devis">✨ Obtenir mes devis</a>
-            <a href="/pro" className="btn btn-primary" aria-label="Je suis professionnel">🏢 Je suis professionnel</a>
+            <a href="/pro" className="btn btn-primary" aria-label="Je suis professionnel">📦 Je suis professionnel</a>
           </div>
         </div>
       </section>

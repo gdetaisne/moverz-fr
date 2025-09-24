@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Menu, X, Briefcase, Sparkles } from 'lucide-react';
+import { Menu, X, Sparkles } from 'lucide-react';
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -18,7 +18,7 @@ export function Header() {
       <div className="container flex items-center justify-between py-4">
         <div className="flex items-center gap-3">
           <Link to="/" className="inline-flex items-center hover:opacity-90">
-            <img src="/logo-header.png" alt="Moverz" className="h-10 w-auto" loading="eager" />
+            <img src="/logo.png" alt="Moverz" className="h-14 md:h-16 w-auto" loading="eager" />
           </Link>
         </div>
         <nav className="hidden md:flex items-center gap-8 text-sm">
@@ -29,7 +29,7 @@ export function Header() {
         </nav>
         <div className="hidden md:flex items-center gap-3">
           <Link to="/pro" aria-label="Professionnels" className="btn btn-outline">
-            <Briefcase className="w-4 h-4 mr-2" /> Professionnels
+            <span className="mr-2">📦</span> Professionnels
           </Link>
           <Link to="/pro#demo" aria-label="Demander une démo" className="btn btn-primary">
             <Sparkles className="w-4 h-4 mr-2" /> Demander une démo
@@ -50,7 +50,7 @@ export function Header() {
         <div className="md:hidden border-t border-slate-100 bg-white/95">
           <div className="container py-3 space-y-2">
             <NavLink to="/clients" className="block px-2 py-3 rounded-lg hover:bg-slate-50" onClick={() => setOpen(false)}>👤 Particuliers</NavLink>
-            <NavLink to="/pro" className="block px-2 py-3 rounded-lg hover:bg-slate-50" onClick={() => setOpen(false)}>🏢 Professionnels</NavLink>
+            <NavLink to="/pro" className="block px-2 py-3 rounded-lg hover:bg-slate-50" onClick={() => setOpen(false)}>📦 Professionnels</NavLink>
             <NavLink to="/blog" className="block px-2 py-3 rounded-lg hover:bg-slate-50" onClick={() => setOpen(false)}>📝 Blog</NavLink>
             <NavLink to="/contact" className="block px-2 py-3 rounded-lg hover:bg-slate-50" onClick={() => setOpen(false)}>📞 Contact</NavLink>
             <Link to="/pro#demo" className="btn btn-primary w-full" onClick={() => setOpen(false)}>✨ Demander une démo</Link>
