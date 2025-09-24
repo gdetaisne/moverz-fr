@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Déménagement - Conseils et Astuces | EstimationDemenagement.fr</title>
+    <title>Blog Déménagement - Conseils et Astuces | Moverz.fr</title>
     <meta name="description" content="Découvrez nos conseils d'experts pour un déménagement réussi. Prix, check-lists, erreurs à éviter. Guide complet 2025.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,11 +17,18 @@
                         'inter': ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        'blue-night': '#2C3E50',
-                        'blue-light': '#3B82F6',
-                        'gray-light': '#F3F4F6',
+                        'blue-night': '#1e3a8a',
+                        'blue-deep': '#1e40af',
+                        'blue-medium': '#2563eb',
+                        'blue-light': '#3b82f6',
+                        'blue-soft': '#60a5fa',
+                        'turquoise-dark': '#5f9ea0',
                         'turquoise': '#80b3ad',
+                        'turquoise-medium': '#94c5bf',
                         'turquoise-light': '#a8d0c5',
+                        'turquoise-pale': '#d1e7e4',
+                        'gray-light': '#f8fafc',
+                        'gray-warm': '#f9fafb',
                     }
                 }
             }
@@ -30,13 +37,11 @@
 </head>
 <body class="font-inter text-gray-900">
     <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header class="bg-white shadow-md sticky top-0 z-50 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
-                    <a href="/" class="text-2xl font-bold text-blue-night">
-                        EstimationDemenagement.fr
-                    </a>
+                    <a href="/" class="hover:opacity-80 transition-opacity duration-200"><img src="/logo-header.png" alt="Moverz.fr" class="h-20 w-auto"></a>
                 </div>
                 <nav class="hidden md:flex space-x-8">
                     <a href="/clients.html" class="text-gray-700 hover:text-blue-light transition-colors">Particuliers</a>
@@ -45,8 +50,8 @@
                     <a href="/contact.html" class="text-gray-700 hover:text-blue-light transition-colors">Contact</a>
                 </nav>
                 <div class="flex items-center space-x-4">
-                    <a href="/clients.html" class="bg-blue-light text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors font-medium">
-                        Devis Gratuit
+                    <a href="/clients.html" class="hidden sm:block bg-blue-light text-white px-6 py-2 rounded-lg hover:bg-turquoise-light transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 font-medium">
+                        Estimer mes volumes
                     </a>
                 </div>
             </div>
@@ -54,15 +59,15 @@
     </header>
 
     <!-- Hero Blog -->
-    <section class="bg-gradient-to-br from-turquoise via-blue-light to-blue-night text-white py-16">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section class="bg-gradient-to-br from-blue-night via-blue-deep via-blue-medium via-turquoise-dark to-turquoise text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center group">
             <h1 class="text-4xl md:text-5xl font-bold mb-6">Blog Déménagement</h1>
             <p class="text-xl text-blue-100">Conseils d'experts, astuces et guides pour un déménagement serein</p>
         </div>
     </section>
 
     <!-- Articles en vedette -->
-    <section class="py-20 bg-white">
+    <section class="py-16 bg-gradient-to-b from-gray-warm to-turquoise-pale">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold mb-12">Articles récents</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -79,7 +84,7 @@
                                 Prix moyen d'un déménagement en France en 2025
                             </a>
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-gray-700 leading-relaxed mb-4">
                             Découvrez les tarifs actuels par région, type de logement et distance. 
                             Guide complet pour budgéter votre déménagement.
                         </p>
@@ -104,7 +109,7 @@
                                 Check-list ultime du déménagement en 30 étapes
                             </a>
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-gray-700 leading-relaxed mb-4">
                             La liste complète et chronologique pour ne rien oublier. 
                             De 8 semaines avant à l'installation finale.
                         </p>
@@ -129,7 +134,7 @@
                                 Top 10 erreurs à éviter lors d'un déménagement
                             </a>
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-gray-700 leading-relaxed mb-4">
                             Les pièges les plus fréquents et comment les éviter. 
                             Conseils pratiques de nos experts déménagement.
                         </p>
@@ -152,7 +157,7 @@
                         <h3 class="text-xl font-semibold mt-2 mb-3">
                             Comment emballer efficacement vos objets fragiles
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-gray-700 leading-relaxed mb-4">
                             Techniques professionnelles pour protéger vaisselle, 
                             œuvres d'art et électronique.
                         </p>
@@ -173,7 +178,7 @@
                         <h3 class="text-xl font-semibold mt-2 mb-3">
                             États des lieux : guide complet entrée/sortie
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-gray-700 leading-relaxed mb-4">
                             Tout savoir sur l'état des lieux pour récupérer 
                             votre caution et éviter les litiges.
                         </p>
@@ -194,7 +199,7 @@
                         <h3 class="text-xl font-semibold mt-2 mb-3">
                             Changement d'adresse : toutes les démarches
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-gray-700 leading-relaxed mb-4">
                             Liste complète des organismes à prévenir et 
                             délais à respecter pour votre changement d'adresse.
                         </p>
@@ -210,7 +215,7 @@
 
     <!-- Newsletter -->
     <section class="py-16 bg-blue-night text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center group">
             <h2 class="text-3xl font-bold mb-4">Restez informé</h2>
             <p class="text-xl text-blue-100 mb-8">Recevez nos derniers conseils et astuces déménagement par email</p>
             <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
@@ -221,7 +226,7 @@
                 >
                 <button 
                     type="submit" 
-                    class="bg-blue-light text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors"
+                    class="bg-turquoise text-white px-6 py-3 rounded-lg font-semibold hover:bg-turquoise-light transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
                 >
                     S'abonner
                 </button>
@@ -231,10 +236,10 @@
 
     <!-- CTA -->
     <section class="py-16 bg-gray-light">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center group">
             <h2 class="text-3xl font-bold mb-4">Prêt à déménager ?</h2>
-            <p class="text-xl text-gray-600 mb-8">Obtenez votre devis personnalisé en quelques minutes</p>
-            <a href="/clients.html" class="bg-blue-light text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-blue-600 transition-colors inline-block">
+            <p class="text-xl text-gray-700 leading-relaxed mb-8">Obtenez votre devis personnalisé en quelques minutes</p>
+            <a href="/clients.html" class="bg-turquoise text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-turquoise-light transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 inline-block">
                 Obtenir mes devis gratuits
             </a>
         </div>
@@ -245,7 +250,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">EstimationDemenagement.fr</h3>
+                    <img src="/logo.png" alt="Moverz.fr" class="h-16 w-auto mb-4 brightness-0 invert">
                     <p class="text-gray-400 mb-4">Votre expert déménagement en ligne</p>
                 </div>
                 <div>
@@ -272,8 +277,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 EstimationDemenagement.fr. Tous droits réservés.</p>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center group text-gray-400">
+                <p>&copy; 2025 Moverz.fr. Tous droits réservés.</p>
             </div>
         </div>
     </footer>

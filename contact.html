@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Parlons de votre projet | EstimationDemenagement.fr</title>
-    <meta name="description" content="Contactez l'équipe EstimationDemenagement.fr. Questions, partenariats, support technique. Réponse sous 24h garantie.">
+    <title>Contact - Parlons de votre projet | Moverz.fr</title>
+    <meta name="description" content="Contactez l'équipe Moverz.fr. Questions, partenariats, support technique. Réponse sous 24h garantie.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,11 +17,18 @@
                         'inter': ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        'blue-night': '#2C3E50',
-                        'blue-light': '#3B82F6',
-                        'gray-light': '#F3F4F6',
+                        'blue-night': '#1e3a8a',
+                        'blue-deep': '#1e40af',
+                        'blue-medium': '#2563eb',
+                        'blue-light': '#3b82f6',
+                        'blue-soft': '#60a5fa',
+                        'turquoise-dark': '#5f9ea0',
                         'turquoise': '#80b3ad',
+                        'turquoise-medium': '#94c5bf',
                         'turquoise-light': '#a8d0c5',
+                        'turquoise-pale': '#d1e7e4',
+                        'gray-light': '#f8fafc',
+                        'gray-warm': '#f9fafb',
                     }
                 }
             }
@@ -30,13 +37,11 @@
 </head>
 <body class="font-inter text-gray-900">
     <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header class="bg-white shadow-md sticky top-0 z-50 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
-                    <a href="/" class="text-2xl font-bold text-blue-night">
-                        EstimationDemenagement.fr
-                    </a>
+                    <a href="/" class="hover:opacity-80 transition-opacity duration-200"><img src="/logo-header.png" alt="Moverz.fr" class="h-20 w-auto"></a>
                 </div>
                 <nav class="hidden md:flex space-x-8">
                     <a href="/clients.html" class="text-gray-700 hover:text-blue-light transition-colors">Particuliers</a>
@@ -45,8 +50,8 @@
                     <a href="/contact.html" class="text-blue-light font-medium">Contact</a>
                 </nav>
                 <div class="flex items-center space-x-4">
-                    <a href="/clients.html" class="bg-blue-light text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors font-medium">
-                        Devis Gratuit
+                    <a href="/clients.html" class="hidden sm:block bg-blue-light text-white px-6 py-2 rounded-lg hover:bg-turquoise-light transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 font-medium">
+                        Estimer mes volumes
                     </a>
                 </div>
             </div>
@@ -54,8 +59,8 @@
     </header>
 
     <!-- Hero -->
-    <section class="bg-gradient-to-br from-turquoise via-blue-light to-blue-night text-white py-16">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section class="bg-gradient-to-br from-blue-night via-blue-deep via-blue-medium via-turquoise-dark to-turquoise text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center group">
             <h1 class="text-4xl md:text-5xl font-bold mb-6">Parlons de votre projet</h1>
             <p class="text-xl text-blue-100">
                 Une question ? Un partenariat ? Notre équipe vous répond sous 24h.
@@ -64,37 +69,37 @@
     </section>
 
     <!-- Contact rapide -->
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-gradient-to-b from-gray-warm to-turquoise-pale">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-3 gap-8 mb-16">
-                <div class="text-center p-6 bg-blue-50 rounded-xl">
-                    <div class="w-16 h-16 bg-blue-light rounded-full flex items-center justify-center mx-auto mb-4">
+                <div class="text-center group p-6 bg-blue-50 rounded-xl">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-deep via-turquoise to-blue-light rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-white text-2xl">📧</span>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Email</h3>
-                    <p class="text-gray-600 mb-4">Pour toute question générale</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Pour toute question générale</p>
                     <a href="mailto:contact@devisdemenagement.fr" class="text-blue-light font-medium hover:underline">
                         contact@devisdemenagement.fr
                     </a>
                 </div>
 
-                <div class="text-center p-6 bg-green-50 rounded-xl">
+                <div class="text-center group p-6 bg-green-50 rounded-xl">
                     <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-white text-2xl">🤝</span>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Partenariats</h3>
-                    <p class="text-gray-600 mb-4">Déménageurs professionnels</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Déménageurs professionnels</p>
                     <a href="mailto:partenaires@devisdemenagement.fr" class="text-green-600 font-medium hover:underline">
                         partenaires@devisdemenagement.fr
                     </a>
                 </div>
 
-                <div class="text-center p-6 bg-purple-50 rounded-xl">
+                <div class="text-center group p-6 bg-purple-50 rounded-xl">
                     <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-white text-2xl">🛠️</span>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Support technique</h3>
-                    <p class="text-gray-600 mb-4">Aide et assistance</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Aide et assistance</p>
                     <a href="mailto:support@devisdemenagement.fr" class="text-purple-600 font-medium hover:underline">
                         support@devisdemenagement.fr
                     </a>
@@ -106,12 +111,12 @@
     <!-- Formulaire de contact -->
     <section class="py-16 bg-gray-light">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
+            <div class="text-center group mb-12">
                 <h2 class="text-3xl font-bold mb-6">Envoyez-nous un message</h2>
-                <p class="text-xl text-gray-600">Nous vous répondons sous 24h</p>
+                <p class="text-xl text-gray-700 leading-relaxed">Nous vous répondons sous 24h</p>
             </div>
             
-            <form class="bg-white p-8 rounded-2xl shadow-lg">
+            <form class="bg-gradient-to-b from-gray-warm to-turquoise-pale p-8 rounded-2xl shadow-lg">
                 <div class="grid md:grid-cols-2 gap-6 mb-6">
                     <div>
                         <label for="prenom" class="block text-sm font-medium text-gray-700 mb-2">Prénom *</label>
@@ -161,14 +166,14 @@
                 <div class="mb-6">
                     <label class="flex items-start">
                         <input type="checkbox" required class="mt-1 mr-3">
-                        <span class="text-sm text-gray-600">
+                        <span class="text-sm text-gray-700 leading-relaxed">
                             J'accepte d'être contacté concernant ma demande et j'ai pris connaissance de la 
                             <a href="/rgpd.html" class="text-blue-light hover:underline">politique de confidentialité</a>.
                         </span>
                     </label>
                 </div>
 
-                <button type="submit" class="w-full bg-blue-light text-white py-4 px-8 rounded-xl text-lg font-semibold hover:bg-blue-600 transition-colors">
+                <button type="submit" class="w-full bg-turquoise text-white py-4 px-8 rounded-xl text-lg font-semibold hover:bg-turquoise-light transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
                     Envoyer mon message
                 </button>
             </form>
@@ -176,11 +181,11 @@
     </section>
 
     <!-- Prendre RDV -->
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-gradient-to-b from-gray-warm to-turquoise-pale">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
+            <div class="text-center group mb-12">
                 <h2 class="text-3xl font-bold mb-6">Ou planifiez un appel</h2>
-                <p class="text-xl text-gray-600">
+                <p class="text-xl text-gray-700 leading-relaxed">
                     Discutons directement de votre projet ou de vos besoins
                 </p>
             </div>
@@ -188,7 +193,7 @@
             <div class="bg-blue-50 p-8 rounded-2xl">
                 <div class="grid md:grid-cols-2 gap-8 items-center">
                     <div>
-                        <h3 class="text-2xl font-semibold mb-4">Échange avec notre équipe</h3>
+                        <h3 class="text-xl font-bold mb-4 text-blue-night">Échange avec notre équipe</h3>
                         <ul class="space-y-3 text-gray-700 mb-6">
                             <li class="flex items-center">
                                 <span class="text-green-500 mr-3">✓</span>
@@ -208,16 +213,16 @@
                             </li>
                         </ul>
                         <div class="flex space-x-4">
-                            <span class="text-sm text-gray-600">📅 Créneaux disponibles</span>
-                            <span class="text-sm text-gray-600">⏱️ 15-30 minutes</span>
+                            <span class="text-sm text-gray-700 leading-relaxed">📅 Créneaux disponibles</span>
+                            <span class="text-sm text-gray-700 leading-relaxed">⏱️ 15-30 minutes</span>
                         </div>
                     </div>
                     <div>
                         <!-- Placeholder pour Calendly -->
-                        <div class="bg-white p-6 rounded-xl border-2 border-dashed border-gray-300 text-center">
+                        <div class="bg-gradient-to-b from-gray-warm to-turquoise-pale p-6 rounded-xl border-2 border-dashed border-gray-300 text-center group">
                             <span class="text-4xl mb-4 block">📅</span>
                             <h4 class="font-semibold mb-2">Widget Calendly</h4>
-                            <p class="text-sm text-gray-600 mb-4">
+                            <p class="text-sm text-gray-700 leading-relaxed mb-4">
                                 Intégration à prévoir avec votre compte Calendly
                             </p>
                             <div class="bg-gray-100 p-4 rounded text-xs text-gray-500">
@@ -234,10 +239,10 @@
     <!-- FAQ Contact -->
     <section class="py-16 bg-gray-light">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12">Questions fréquentes</h2>
+            <h2 class="text-3xl font-bold text-center group mb-12">Questions fréquentes</h2>
             
             <div class="space-y-6">
-                <div class="bg-white p-6 rounded-xl">
+                <div class="bg-gradient-to-b from-gray-warm to-turquoise-pale p-6 rounded-xl">
                     <h3 class="text-lg font-semibold mb-3">Sous quel délai obtiendrai-je une réponse ?</h3>
                     <p class="text-gray-700">
                         Nous nous engageons à répondre sous 24h ouvrées maximum. 
@@ -245,7 +250,7 @@
                     </p>
                 </div>
                 
-                <div class="bg-white p-6 rounded-xl">
+                <div class="bg-gradient-to-b from-gray-warm to-turquoise-pale p-6 rounded-xl">
                     <h3 class="text-lg font-semibold mb-3">Comment devenir partenaire déménageur ?</h3>
                     <p class="text-gray-700">
                         Envoyez-nous votre dossier à partenaires@devisdemenagement.fr avec : 
@@ -254,7 +259,7 @@
                     </p>
                 </div>
                 
-                <div class="bg-white p-6 rounded-xl">
+                <div class="bg-gradient-to-b from-gray-warm to-turquoise-pale p-6 rounded-xl">
                     <h3 class="text-lg font-semibold mb-3">Proposez-vous des formations ?</h3>
                     <p class="text-gray-700">
                         Oui ! Nous formons gratuitement tous nos partenaires déménageurs 
@@ -262,7 +267,7 @@
                     </p>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl">
+                <div class="bg-gradient-to-b from-gray-warm to-turquoise-pale p-6 rounded-xl">
                     <h3 class="text-lg font-semibold mb-3">Où êtes-vous basés ?</h3>
                     <p class="text-gray-700">
                         Notre équipe est basée à Paris mais nous opérons dans toute la France. 
@@ -278,7 +283,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">EstimationDemenagement.fr</h3>
+                    <img src="/logo.png" alt="Moverz.fr" class="h-16 w-auto mb-4 brightness-0 invert">
                     <p class="text-gray-400 mb-4">Votre partenaire déménagement</p>
                     <div class="space-y-2 text-gray-400">
                         <div>📧 contact@devisdemenagement.fr</div>
@@ -308,8 +313,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 EstimationDemenagement.fr. Tous droits réservés.</p>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center group text-gray-400">
+                <p>&copy; 2025 Moverz.fr. Tous droits réservés.</p>
             </div>
         </div>
     </footer>

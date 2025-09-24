@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://estimationdemenagement.fr/sitemap.xml
+Sitemap: https://moverz.fr/sitemap.xml
 
 # Optimisations SEO
 Crawl-delay: 1

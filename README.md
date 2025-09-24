@@ -211,3 +211,77 @@ gray-light: #F3F4F6
 ---
 
 *Site développé avec passion pour révolutionner l'industrie du déménagement* 🚚✨
+
+## Guide rapide: Créer une nouvelle section/page avec le Design System
+
+1) Créer une section
+- Utilisez la classe utilitaire `.section` pour les espacements verticaux et `.container` pour la largeur et les marges:
+```html
+<section class="section">
+  <div class="container">
+    <!-- contenu -->
+  </div>
+</section>
+```
+
+2) Cartes unifiées
+- Utilisez `.card` pour tout bloc de contenu (valeurs, témoignages, blog, KPI):
+```html
+<article class="card">
+  <h3 class="h3">Titre</h3>
+  <p class="small">Texte descriptif</p>
+</article>
+```
+
+3) CTAs
+- Deux styles: `.btn.btn-primary` et `.btn.btn-outline`. Ajoutez toujours des `aria-label` clairs:
+```html
+<a href="/clients" class="btn btn-primary" aria-label="Estimer mes volumes">Estimer mes volumes</a>
+```
+
+4) Formulaires (labels flottants)
+- Structure type: `.fld` + `.input` + `.label`:
+```html
+<div class="fld">
+  <input id="email" class="input" placeholder="Email">
+  <label for="email" class="label">Email</label>
+</div>
+```
+
+5) Titres et typographie
+- Respectez une seule `h1` par page. Utilisez les classes `.h1`, `.h2`, `.h3`, `.body`, `.small` pour une typo homogène.
+
+6) Accessibilité
+- Focus visibles: ne retirez pas les styles `:focus-visible`. Donnez des `aria-label` aux boutons d’action et icônes.
+
+7) SEO
+- Définissez `title` et `meta description` avec `react-helmet-async` dans chaque page.
+
+8) Performance
+- Utilisez `loading="lazy"` sur les images et gardez les animations légères.
+
+Exemple de nouvelle page React minimale:
+```tsx
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function NouvellePage() {
+  return (
+    <>
+      <Helmet>
+        <title>Titre page – Moverz</title>
+        <meta name="description" content="Description claire et concise." />
+      </Helmet>
+      <section className="section">
+        <div className="container">
+          <h1 className="h1">Titre de la page</h1>
+          <article className="card mt-6">
+            <h2 className="h2 mb-2">Bloc principal</h2>
+            <p className="body">Contenu de la page…</p>
+          </article>
+        </div>
+      </section>
+    </>
+  );
+}
+```

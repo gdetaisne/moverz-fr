@@ -30,13 +30,11 @@
 </head>
 <body class="font-inter text-gray-900">
     <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header class="bg-white shadow-md sticky top-0 z-50 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
-                    <a href="/" class="text-2xl font-bold text-blue-night">
-                        EstimationDemenagement.fr
-                    </a>
+                    <a href="/" class="hover:opacity-80 transition-opacity duration-200"><img src="/logo-header.png" alt="Moverz.fr" class="h-20 w-auto"></a>
                 </div>
                 <nav class="hidden md:flex space-x-8">
                     <a href="/clients.html" class="text-gray-700 hover:text-blue-light transition-colors">Particuliers</a>
@@ -45,8 +43,8 @@
                     <a href="/contact.html" class="text-gray-700 hover:text-blue-light transition-colors">Contact</a>
                 </nav>
                 <div class="flex items-center space-x-4">
-                    <a href="/clients.html" class="bg-blue-light text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors font-medium">
-                        Devis Gratuit
+                    <a href="/clients.html" class="hidden sm:block bg-blue-light text-white px-6 py-2 rounded-lg hover:bg-turquoise-light transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 font-medium">
+                        Estimer mes volumes
                     </a>
                 </div>
             </div>
@@ -69,13 +67,13 @@
             <div class="flex items-center space-x-6 text-blue-200">
                 <span>📅 Mis à jour : Janvier 2025</span>
                 <span>⏱️ 8 min de lecture</span>
-                <span>👤 Équipe EstimationDemenagement.fr</span>
+                <span>👤 Équipe Moverz.fr</span>
             </div>
         </div>
     </section>
 
     <!-- Article Content -->
-    <article class="py-16 bg-white">
+    <article class="py-16 bg-gradient-to-b from-gray-warm to-turquoise-pale">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- Introduction -->
@@ -97,7 +95,7 @@
                     </ul>
                 </div>
 
-                <a href="/clients.html" class="inline-block bg-blue-light text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-600 transition-colors mb-12">
+                <a href="/clients.html" class="inline-block bg-turquoise text-white px-6 py-3 rounded-lg font-medium hover:bg-turquoise-light transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 mb-12">
                     Obtenir mon devis personnalisé gratuit
                 </a>
             </div>
@@ -107,7 +105,7 @@
                 <h2 class="text-3xl font-bold mb-8 text-blue-night">Prix selon le type de logement</h2>
                 
                 <div class="grid md:grid-cols-2 gap-8 mb-8">
-                    <div class="bg-gray-50 p-6 rounded-xl">
+                    <div class="bg-gradient-to-b from-gray-warm to-turquoise-pale p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-turquoise-pale">
                         <h3 class="text-xl font-semibold mb-4">Appartements</h3>
                         <table class="w-full">
                             <thead>
@@ -127,7 +125,7 @@
                         </table>
                     </div>
                     
-                    <div class="bg-gray-50 p-6 rounded-xl">
+                    <div class="bg-gradient-to-b from-gray-warm to-turquoise-pale p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-turquoise-pale">
                         <h3 class="text-xl font-semibold mb-4">Maisons</h3>
                         <table class="w-full">
                             <thead>
@@ -148,7 +146,7 @@
                     </div>
                 </div>
 
-                <p class="text-gray-600 italic">
+                <p class="text-gray-700 leading-relaxed italic">
                     * Tarifs pour un déménagement local (moins de 50km) avec 2-3 déménageurs et camion adapté.
                 </p>
             </section>
@@ -220,34 +218,34 @@
                     </div>
                 </div>
 
-                <table class="w-full bg-white border border-gray-200 rounded-lg overflow-hidden">
+                <table class="w-full bg-gradient-to-b from-gray-warm to-turquoise-pale border border-gray-200 rounded-lg overflow-hidden">
                     <thead class="bg-gray-100">
                         <tr>
                             <th class="px-6 py-3 text-left">Distance</th>
-                            <th class="px-6 py-3 text-center">Multiplier prix de base</th>
-                            <th class="px-6 py-3 text-center">Exemple T3</th>
+                            <th class="px-6 py-3 text-center group">Multiplier prix de base</th>
+                            <th class="px-6 py-3 text-center group">Exemple T3</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="border-t">
                             <td class="px-6 py-4">0-30km (local)</td>
-                            <td class="px-6 py-4 text-center">x1</td>
-                            <td class="px-6 py-4 text-center font-medium">1000€</td>
+                            <td class="px-6 py-4 text-center group">x1</td>
+                            <td class="px-6 py-4 text-center group font-medium">1000€</td>
                         </tr>
                         <tr class="border-t bg-gray-50">
                             <td class="px-6 py-4">30-100km</td>
-                            <td class="px-6 py-4 text-center">x1.2</td>
-                            <td class="px-6 py-4 text-center font-medium">1200€</td>
+                            <td class="px-6 py-4 text-center group">x1.2</td>
+                            <td class="px-6 py-4 text-center group font-medium">1200€</td>
                         </tr>
                         <tr class="border-t">
                             <td class="px-6 py-4">100-300km</td>
-                            <td class="px-6 py-4 text-center">x1.5</td>
-                            <td class="px-6 py-4 text-center font-medium">1500€</td>
+                            <td class="px-6 py-4 text-center group">x1.5</td>
+                            <td class="px-6 py-4 text-center group font-medium">1500€</td>
                         </tr>
                         <tr class="border-t bg-gray-50">
                             <td class="px-6 py-4">300km+</td>
-                            <td class="px-6 py-4 text-center">x2</td>
-                            <td class="px-6 py-4 text-center font-medium">2000€</td>
+                            <td class="px-6 py-4 text-center group">x2</td>
+                            <td class="px-6 py-4 text-center group font-medium">2000€</td>
                         </tr>
                     </tbody>
                 </table>
@@ -352,13 +350,13 @@
             </section>
 
             <!-- CTA milieu d'article -->
-            <div class="bg-blue-night text-white p-8 rounded-xl text-center mb-16">
+            <div class="bg-blue-night text-white p-8 rounded-xl text-center group mb-16">
                 <h3 class="text-2xl font-bold mb-4">Obtenez votre estimation personnalisée</h3>
                 <p class="text-blue-100 mb-6">
                     Notre IA calcule le prix exact de votre déménagement en fonction de votre logement, 
                     votre région et vos besoins spécifiques.
                 </p>
-                <a href="/clients.html" class="bg-blue-light text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-blue-600 transition-colors inline-block">
+                <a href="/clients.html" class="bg-turquoise text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-turquoise-light transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 inline-block">
                     Calculer mon prix gratuitement
                 </a>
             </div>
@@ -368,7 +366,7 @@
                 <h2 class="text-3xl font-bold mb-8 text-blue-night">Questions fréquentes</h2>
                 
                 <div class="space-y-6">
-                    <div class="bg-white border border-gray-200 rounded-xl p-6">
+                    <div class="bg-gradient-to-b from-gray-warm to-turquoise-pale border border-gray-200 rounded-xl p-6">
                         <h3 class="text-lg font-semibold mb-3">Quand les prix sont-ils les plus élevés ?</h3>
                         <p class="text-gray-700">
                             Les périodes les plus chères sont juin-septembre (déménagements étudiants et familiaux), 
@@ -376,7 +374,7 @@
                         </p>
                     </div>
                     
-                    <div class="bg-white border border-gray-200 rounded-xl p-6">
+                    <div class="bg-gradient-to-b from-gray-warm to-turquoise-pale border border-gray-200 rounded-xl p-6">
                         <h3 class="text-lg font-semibold mb-3">Faut-il prévoir un budget supplémentaire ?</h3>
                         <p class="text-gray-700">
                             Oui, ajoutez 15-20% au devis initial pour les imprévus : étage supplémentaire non mentionné, 
@@ -384,7 +382,7 @@
                         </p>
                     </div>
                     
-                    <div class="bg-white border border-gray-200 rounded-xl p-6">
+                    <div class="bg-gradient-to-b from-gray-warm to-turquoise-pale border border-gray-200 rounded-xl p-6">
                         <h3 class="text-lg font-semibold mb-3">Les devis en ligne sont-ils fiables ?</h3>
                         <p class="text-gray-700">
                             Avec notre technologie IA basée sur l'analyse photo, la précision atteint 95%. 
@@ -392,7 +390,7 @@
                         </p>
                     </div>
                     
-                    <div class="bg-white border border-gray-200 rounded-xl p-6">
+                    <div class="bg-gradient-to-b from-gray-warm to-turquoise-pale border border-gray-200 rounded-xl p-6">
                         <h3 class="text-lg font-semibold mb-3">Comment éviter les frais cachés ?</h3>
                         <p class="text-gray-700">
                             Exigez un devis détaillé mentionnant tous les services. Méfiez-vous des tarifs 
@@ -403,12 +401,12 @@
             </section>
 
             <!-- CTA final -->
-            <div class="bg-gray-50 p-8 rounded-xl text-center">
+            <div class="bg-gray-50 p-8 rounded-xl text-center group">
                 <h3 class="text-2xl font-bold mb-4">Prêt à obtenir vos devis ?</h3>
-                <p class="text-gray-600 mb-6">
+                <p class="text-gray-700 leading-relaxed mb-6">
                     Comparez gratuitement jusqu'à 3 devis de déménageurs vérifiés dans votre région.
                 </p>
-                <a href="/clients.html" class="bg-blue-light text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-blue-600 transition-colors inline-block">
+                <a href="/clients.html" class="bg-turquoise text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-turquoise-light transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 inline-block">
                     Obtenir mes devis gratuits
                 </a>
             </div>
@@ -419,9 +417,9 @@
     <!-- Articles relatifs -->
     <section class="py-16 bg-gray-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-12 text-center">Articles qui pourraient vous intéresser</h2>
+            <h2 class="text-3xl font-bold mb-12 text-center group">Articles qui pourraient vous intéresser</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                <article class="bg-gradient-to-b from-gray-warm to-turquoise-pale rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
                     <div class="h-48 bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
                         <span class="text-6xl text-white">✅</span>
                     </div>
@@ -431,11 +429,11 @@
                                 Check-list ultime du déménagement en 30 étapes
                             </a>
                         </h3>
-                        <p class="text-gray-600">Guide complet pour organiser votre déménagement sans rien oublier.</p>
+                        <p class="text-gray-700 leading-relaxed">Guide complet pour organiser votre déménagement sans rien oublier.</p>
                     </div>
                 </article>
                 
-                <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                <article class="bg-gradient-to-b from-gray-warm to-turquoise-pale rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
                     <div class="h-48 bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center">
                         <span class="text-6xl text-white">⚠️</span>
                     </div>
@@ -445,11 +443,11 @@
                                 Top 10 erreurs à éviter lors d'un déménagement
                             </a>
                         </h3>
-                        <p class="text-gray-600">Les pièges les plus fréquents et comment les éviter.</p>
+                        <p class="text-gray-700 leading-relaxed">Les pièges les plus fréquents et comment les éviter.</p>
                     </div>
                 </article>
                 
-                <article class="bg-white rounded-xl overflow-hidden shadow-sm">
+                <article class="bg-gradient-to-b from-gray-warm to-turquoise-pale rounded-xl overflow-hidden shadow-sm">
                     <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
                         <span class="text-6xl text-white">📦</span>
                     </div>
@@ -470,7 +468,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">EstimationDemenagement.fr</h3>
+                    <img src="/logo.png" alt="Moverz.fr" class="h-16 w-auto mb-4 brightness-0 invert">
                     <p class="text-gray-400 mb-4">Votre expert déménagement en ligne</p>
                 </div>
                 <div>
@@ -496,8 +494,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 EstimationDemenagement.fr. Tous droits réservés.</p>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center group text-gray-400">
+                <p>&copy; 2025 Moverz.fr. Tous droits réservés.</p>
             </div>
         </div>
     </footer>

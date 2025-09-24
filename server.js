@@ -11,9 +11,9 @@ app.use(helmet({
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],
-      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com", "https://cdn.tailwindcss.com"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
       fontSrc: ["'self'", "https://fonts.gstatic.com"],
-      scriptSrc: ["'self'", "'unsafe-inline'", "https://cdn.tailwindcss.com"],
+      scriptSrc: ["'self'"],
       imgSrc: ["'self'", "data:", "https:"],
       connectSrc: ["'self'"]
     }
@@ -22,41 +22,24 @@ app.use(helmet({
 
 app.use(compression());
 
-// Serve static files
-app.use(express.static(__dirname, {
-  maxAge: '1d', // Cache static files for 1 day
-  etag: true
-}));
+// Serve Vite build output
+const distDir = path.join(__dirname, 'dist');
+app.use(express.static(distDir, { maxAge: '1w', etag: true }));
 
-// Routes for clean URLs (without .html)
-const routes = [
-  { path: '/', file: 'index.html' },
-  { path: '/clients', file: 'clients.html' },
-  { path: '/pro', file: 'pro.html' },
-  { path: '/blog', file: 'blog.html' },
-  { path: '/contact', file: 'contact.html' },
-  { path: '/a-propos', file: 'a-propos.html' },
-  { path: '/mentions-legales', file: 'mentions-legales.html' },
-  { path: '/rgpd', file: 'rgpd.html' },
-  { path: '/paris-devis-demenagement', file: 'paris-devis-demenagement.html' },
-  { path: '/lyon-devis-demenagement', file: 'lyon-devis-demenagement.html' }
-];
+// Serve legacy static assets (logos, images)
+app.use(express.static(__dirname, { maxAge: '1d', etag: true }));
 
-// Set up routes
+// Legacy HTML routes removed in favor of SPA
+const routes = [];
 routes.forEach(route => {
   app.get(route.path, (req, res) => {
     res.sendFile(path.join(__dirname, route.file));
   });
 });
 
-// Blog article route
+// Blog article static route (kept as standalone HTML for now)
 app.get('/blog/prix-moyen-demenagement-france-2025', (req, res) => {
   res.sendFile(path.join(__dirname, 'blog', 'prix-moyen-demenagement-france-2025.html'));
-});
-
-// 404 handler
-app.use((req, res) => {
-  res.status(404).sendFile(path.join(__dirname, 'index.html'));
 });
 
 // SEO files
@@ -75,11 +58,16 @@ app.get('/health', (req, res) => {
   res.status(200).json({ 
     status: 'OK', 
     timestamp: new Date().toISOString(),
-    service: 'EstimationDemenagement.fr'
+    service: 'Moverz.fr'
   });
 });
 
+// SPA fallback (excluding known static endpoints)
+app.get(/^(?!\/(sitemap\.xml|robots\.txt|blog\/prix-moyen-demenagement-france-2025)).*$/, (req, res) => {
+  res.sendFile(path.join(distDir, 'index.html'));
+});
+
 app.listen(PORT, () => {
-  console.log(`🚀 EstimationDemenagement.fr running on port ${PORT}`);
+  console.log(`🚀 Moverz.fr running on port ${PORT}`);
   console.log(`📱 Environment: ${process.env.NODE_ENV || 'development'}`);
 });

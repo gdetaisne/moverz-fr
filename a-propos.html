@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À propos de nous - Lucie & Will | EstimationDemenagement.fr</title>
-    <meta name="description" content="Découvrez l'histoire de EstimationDemenagement.fr, fondé par Lucie et Will pour révolutionner l'estimation de déménagement grâce à l'intelligence artificielle.">
+    <title>À propos de nous - Lucie & Will | Moverz.fr</title>
+    <meta name="description" content="Découvrez l'histoire de Moverz.fr, fondé par Lucie et Will pour révolutionner l'estimation de déménagement grâce à l'intelligence artificielle.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,11 +17,18 @@
                         'inter': ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        'blue-night': '#2C3E50',
-                        'blue-light': '#3B82F6',
-                        'gray-light': '#F3F4F6',
+                        'blue-night': '#1e3a8a',
+                        'blue-deep': '#1e40af',
+                        'blue-medium': '#2563eb',
+                        'blue-light': '#3b82f6',
+                        'blue-soft': '#60a5fa',
+                        'turquoise-dark': '#5f9ea0',
                         'turquoise': '#80b3ad',
+                        'turquoise-medium': '#94c5bf',
                         'turquoise-light': '#a8d0c5',
+                        'turquoise-pale': '#d1e7e4',
+                        'gray-light': '#f8fafc',
+                        'gray-warm': '#f9fafb',
                     }
                 }
             }
@@ -30,13 +37,11 @@
 </head>
 <body class="font-inter text-gray-900">
     <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header class="bg-white shadow-md sticky top-0 z-50 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
-                    <a href="/" class="text-2xl font-bold text-blue-night">
-                        EstimationDemenagement.fr
-                    </a>
+                    <a href="/" class="hover:opacity-80 transition-opacity duration-200"><img src="/logo-header.png" alt="Moverz.fr" class="h-20 w-auto"></a>
                 </div>
                 <nav class="hidden md:flex space-x-8">
                     <a href="/clients.html" class="text-gray-700 hover:text-blue-light transition-colors">Particuliers</a>
@@ -45,8 +50,8 @@
                     <a href="/contact.html" class="text-gray-700 hover:text-blue-light transition-colors">Contact</a>
                 </nav>
                 <div class="flex items-center space-x-4">
-                    <a href="/clients.html" class="bg-blue-light text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors font-medium">
-                        Devis Gratuit
+                    <a href="/clients.html" class="hidden sm:block bg-blue-light text-white px-6 py-2 rounded-lg hover:bg-turquoise-light transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 font-medium">
+                        Estimer mes volumes
                     </a>
                 </div>
             </div>
@@ -54,8 +59,8 @@
     </header>
 
     <!-- Hero -->
-    <section class="bg-gradient-to-br from-turquoise via-blue-light to-blue-night text-white py-20">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section class="bg-gradient-to-br from-blue-night via-blue-deep via-blue-medium via-turquoise-dark to-turquoise text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center group">
             <h1 class="text-4xl md:text-5xl font-bold mb-6">Notre histoire</h1>
             <p class="text-xl text-blue-100">
                 Comment Lucie et Will ont révolutionné l'estimation de déménagement 
@@ -65,32 +70,33 @@
     </section>
 
     <!-- Notre histoire -->
-    <section class="py-20 bg-white">
+    <section class="py-16 bg-gradient-to-b from-gray-warm to-turquoise-pale">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center group mb-16">
                 <h2 class="text-3xl font-bold mb-6">L'idée qui a tout changé</h2>
-                <p class="text-xl text-gray-600 leading-relaxed">
-                    Tout a commencé par une frustration personnelle. En 2023, lors de notre propre déménagement, 
-                    nous avons vécu l'expérience que des millions de Français subissent chaque année : 
-                    une estimation de 6h qui s'est transformée en journée complète, 
+                <p class="text-xl text-gray-700 leading-relaxed">
+                    Tout a commencé par une frustration personnelle. En tant que serial expats, nous connaissons 
+                    les déménagements - et avec des enfants en bas âge, nous avons souffert ! En 2023, lors de 
+                    notre énième déménagement, nous avons encore une fois vécu l'expérience que des millions de 
+                    Français subissent chaque année : une estimation de 6h qui s'est transformée en journée complète, 
                     un prix qui a doublé et des surprises désagréables.
                 </p>
             </div>
 
             <div class="bg-blue-50 p-8 rounded-xl mb-16">
-                <h3 class="text-2xl font-semibold mb-6 text-center text-blue-night">Le problème était évident</h3>
+                <h3 class="text-2xl font-semibold mb-6 text-center group text-blue-night">Le problème était évident</h3>
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="text-center">
+                    <div class="text-center group">
                         <span class="text-4xl mb-4 block">😤</span>
                         <h4 class="font-semibold mb-2">Pour les particuliers</h4>
                         <p class="text-gray-700">Visites techniques contraignantes, estimations approximatives, surprises le jour J</p>
                     </div>
-                    <div class="text-center">
+                    <div class="text-center group">
                         <span class="text-4xl mb-4 block">😮‍💨</span>
                         <h4 class="font-semibold mb-2">Pour les déménageurs</h4>
                         <p class="text-gray-700">Temps perdu en déplacements, estimations chronophages, gestion administrative lourde</p>
                     </div>
-                    <div class="text-center">
+                    <div class="text-center group">
                         <span class="text-4xl mb-4 block">💡</span>
                         <h4 class="font-semibold mb-2">Notre solution</h4>
                         <p class="text-gray-700">Intelligence artificielle pour des estimations précises sans contraintes</p>
@@ -101,58 +107,76 @@
     </section>
 
     <!-- Équipe fondatrice -->
-    <section class="py-20 bg-gray-light">
+    <section class="py-16 bg-gray-light">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-16">L'équipe fondatrice</h2>
+            <h2 class="text-3xl font-bold text-center group mb-16">L'équipe fondatrice</h2>
             
             <div class="grid md:grid-cols-2 gap-12">
                 <!-- Lucie -->
-                <div class="bg-white p-8 rounded-xl shadow-sm">
+                <div class="bg-gradient-to-b from-gray-warm to-turquoise-pale p-8 rounded-xl shadow-sm">
                     <div class="flex items-center mb-6">
-                        <div class="w-20 h-20 bg-blue-light rounded-full flex items-center justify-center text-white text-2xl font-bold mr-6">
-                            L
+                        <div class="w-20 h-20 rounded-full mr-6 overflow-hidden bg-gradient-to-r from-blue-deep via-turquoise to-blue-light flex items-center justify-center">
+                            <img 
+                                src="/assets/team/lucie.jpeg" 
+                                alt="Photo de Lucie" 
+                                class="w-full h-full object-cover"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+                            >
+                            <div class="w-full h-full flex items-center justify-center text-white text-2xl font-bold" style="display: none;">
+                                L
+                            </div>
                         </div>
                         <div>
                             <h3 class="text-2xl font-bold">Lucie</h3>
-                            <p class="text-blue-light font-medium">Co-fondatrice & CEO</p>
+                            <p class="text-blue-light font-medium">Co-fondatrice</p>
                         </div>
                     </div>
                     <p class="text-gray-700 mb-6 leading-relaxed">
-                        Diplômée d'HEC Paris, Lucie a 8 ans d'expérience dans le conseil en transformation digitale. 
-                        Spécialisée dans l'optimisation des processus métier, elle a accompagné plus de 50 entreprises 
-                        dans leur digitalisation. Passionnée par l'IA et l'expérience utilisateur, 
-                        elle pilote la vision produit et la stratégie commerciale.
+                        🌍 Après 10 ans à développer des boîtes de la tech entre Paris, la Cote d'Ivoire et la Thailande, je mets mon énergie (et mon café) au service d'un objectif simple : rendre les devis de déménagement précis, rapides et transparents.<br>
+                        💡 Je jongle entre stratégie, marketing et brainstorms improbables avec Guillaume (mon partenaire in crime & in business).<br>
+                        ✨ Passionnée par l'innovation, mais aussi par le surf des vagues… et des bonnes idées.
                     </p>
-                    <div class="bg-blue-50 p-4 rounded-lg">
-                        <p class="text-sm text-blue-800 italic">
-                            "Mon objectif : rendre le déménagement aussi simple qu'une commande en ligne. 
-                            L'IA nous permet enfin d'y arriver !"
-                        </p>
+                    <div class="mt-4">
+                        <a href="https://www.linkedin.com/in/lucieveltz/" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path>
+                            </svg>
+                            Voir le profil LinkedIn
+                        </a>
                     </div>
                 </div>
 
                 <!-- Will -->
-                <div class="bg-white p-8 rounded-xl shadow-sm">
+                <div class="bg-gradient-to-b from-gray-warm to-turquoise-pale p-8 rounded-xl shadow-sm">
                     <div class="flex items-center mb-6">
-                        <div class="w-20 h-20 bg-blue-light rounded-full flex items-center justify-center text-white text-2xl font-bold mr-6">
-                            W
+                        <div class="w-20 h-20 rounded-full mr-6 overflow-hidden bg-gradient-to-r from-blue-deep via-turquoise to-blue-light flex items-center justify-center">
+                            <img 
+                                src="/assets/team/guillaume.jpeg" 
+                                alt="Photo de Guillaume" 
+                                class="w-full h-full object-cover"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+                            >
+                            <div class="w-full h-full flex items-center justify-center text-white text-2xl font-bold" style="display: none;">
+                                W
+                            </div>
                         </div>
                         <div>
                             <h3 class="text-2xl font-bold">Will</h3>
-                            <p class="text-blue-light font-medium">Co-fondateur & CTO</p>
+                            <p class="text-blue-light font-medium">Co-fondateur</p>
                         </div>
                     </div>
                     <p class="text-gray-700 mb-6 leading-relaxed">
-                        Ingénieur diplômé de l'École Polytechnique, Will a dirigé le développement IA 
-                        chez deux scale-ups parisiennes. Expert en computer vision et machine learning, 
-                        il a développé des algorithmes de reconnaissance d'images utilisés par plus de 100 000 utilisateurs. 
-                        Il supervise le développement technique et l'innovation.
+                        🌍 Après plus de 10 ans d'entrepreneuriat et de projets entre l'Europe, l'Afrique et l'Asie, j'ai décidé de mettre mon expérience au service d'un marché encore trop traditionnel : le déménagement.<br>
+                        💡 Stratège, entrepreneur et "problem solver" dans l'âme, je construis des ponts entre innovation, efficacité opérationnelle et business concret.<br>
+                        ✨ Passionné par les défis entrepreneuriaux, mais aussi par l'IA, les voyages… et les discussions (parfois interminables) avec Lucie.
                     </p>
-                    <div class="bg-blue-50 p-4 rounded-lg">
-                        <p class="text-sm text-blue-800 italic">
-                            "Analyser un logement en quelques photos avec 95% de précision, 
-                            c'est le défi technique le plus passionnant de ma carrière !"
-                        </p>
+                    <div class="mt-4">
+                        <a href="https://www.linkedin.com/in/guillaume-stehelin-de-taisne/" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path>
+                            </svg>
+                            Voir le profil LinkedIn
+                        </a>
                     </div>
                 </div>
             </div>
@@ -160,11 +184,11 @@
     </section>
 
     <!-- Notre mission -->
-    <section class="py-20 bg-white">
+    <section class="py-16 bg-gradient-to-b from-gray-warm to-turquoise-pale">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center group mb-16">
                 <h2 class="text-3xl font-bold mb-6">Notre mission</h2>
-                <p class="text-xl text-gray-600">
+                <p class="text-xl text-gray-700 leading-relaxed">
                     Révolutionner l'industrie du déménagement en rendant l'estimation 
                     instantanée, précise et accessible à tous.
                 </p>
@@ -218,12 +242,12 @@
     </section>
 
     <!-- Nos valeurs -->
-    <section class="py-20 bg-gray-light">
+    <section class="py-16 bg-gray-light">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-16">Nos valeurs</h2>
+            <h2 class="text-3xl font-bold text-center group mb-16">Nos valeurs</h2>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl text-center">
+                <div class="bg-gradient-to-b from-gray-warm to-turquoise-pale p-8 rounded-xl text-center group">
                     <span class="text-5xl mb-6 block">🚀</span>
                     <h3 class="text-xl font-semibold mb-4">Innovation</h3>
                     <p class="text-gray-700">
@@ -232,7 +256,7 @@
                     </p>
                 </div>
                 
-                <div class="bg-white p-8 rounded-xl text-center">
+                <div class="bg-gradient-to-b from-gray-warm to-turquoise-pale p-8 rounded-xl text-center group">
                     <span class="text-5xl mb-6 block">🤝</span>
                     <h3 class="text-xl font-semibold mb-4">Confiance</h3>
                     <p class="text-gray-700">
@@ -241,7 +265,7 @@
                     </p>
                 </div>
                 
-                <div class="bg-white p-8 rounded-xl text-center">
+                <div class="bg-gradient-to-b from-gray-warm to-turquoise-pale p-8 rounded-xl text-center group">
                     <span class="text-5xl mb-6 block">💫</span>
                     <h3 class="text-xl font-semibold mb-4">Excellence</h3>
                     <p class="text-gray-700">
@@ -254,20 +278,20 @@
     </section>
 
     <!-- Technologie -->
-    <section class="py-20 bg-white">
+    <section class="py-16 bg-gradient-to-b from-gray-warm to-turquoise-pale">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center group mb-16">
                 <h2 class="text-3xl font-bold mb-6">Notre technologie</h2>
-                <p class="text-xl text-gray-600">
+                <p class="text-xl text-gray-700 leading-relaxed">
                     Une IA de pointe entraînée sur des milliers de déménagements réels
                 </p>
             </div>
 
             <div class="bg-blue-50 p-8 rounded-xl">
-                <h3 class="text-2xl font-semibold mb-6 text-center text-blue-night">Comment ça fonctionne</h3>
+                <h3 class="text-2xl font-semibold mb-6 text-center group text-blue-night">Comment ça fonctionne</h3>
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="text-center">
-                        <div class="bg-blue-light w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="text-center group">
+                        <div class="bg-gradient-to-r from-blue-deep via-turquoise to-blue-light w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                             <span class="text-white text-2xl">🧠</span>
                         </div>
                         <h4 class="font-semibold mb-2">Analyse visuelle</h4>
@@ -275,8 +299,8 @@
                             Reconnaissance automatique des meubles, volumes et contraintes
                         </p>
                     </div>
-                    <div class="text-center">
-                        <div class="bg-blue-light w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="text-center group">
+                        <div class="bg-gradient-to-r from-blue-deep via-turquoise to-blue-light w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                             <span class="text-white text-2xl">📊</span>
                         </div>
                         <h4 class="font-semibold mb-2">Calcul intelligent</h4>
@@ -284,8 +308,8 @@
                             Algorithmes de prédiction basés sur des données réelles
                         </p>
                     </div>
-                    <div class="text-center">
-                        <div class="bg-blue-light w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="text-center group">
+                        <div class="bg-gradient-to-r from-blue-deep via-turquoise to-blue-light w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                             <span class="text-white text-2xl">⚡</span>
                         </div>
                         <h4 class="font-semibold mb-2">Résultat instantané</h4>
@@ -299,18 +323,18 @@
     </section>
 
     <!-- CTA -->
-    <section class="py-20 bg-blue-night text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section class="py-16 bg-blue-night text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center group">
             <h2 class="text-3xl font-bold mb-6">Rejoignez l'aventure</h2>
             <p class="text-xl text-blue-100 mb-8">
                 Que vous soyez particulier ou professionnel, découvrez comment 
                 nous pouvons simplifier votre prochain déménagement.
             </p>
             <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                <a href="/clients.html" class="bg-blue-light text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-blue-600 transition-colors">
+                <a href="/clients.html" class="bg-turquoise text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-turquoise-light transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
                     Particuliers : Mon devis gratuit
                 </a>
-                <a href="/pro.html" class="bg-white text-blue-night px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-100 transition-colors">
+                <a href="/pro.html" class="bg-gradient-to-b from-gray-warm to-turquoise-pale text-blue-night px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-100 transition-colors">
                     Pros : Demander une démo
                 </a>
             </div>
@@ -322,7 +346,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">EstimationDemenagement.fr</h3>
+                    <img src="/logo.png" alt="Moverz.fr" class="h-16 w-auto mb-4 brightness-0 invert">
                     <p class="text-gray-400 mb-4">Fondé par Lucie & Will en 2023</p>
                 </div>
                 <div>
@@ -348,8 +372,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 EstimationDemenagement.fr. Tous droits réservés.</p>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center group text-gray-400">
+                <p>&copy; 2025 Moverz.fr. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
