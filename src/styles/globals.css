@@ -60,4 +60,3 @@ a:hover { @apply underline; }
 
 /* Motion-safe animation utility */
 @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
-.motion-safe\:animate-\[fadeIn_0\.7s_ease_0\.1s_both] { animation: fadeIn 0.7s ease 0.1s both; }
