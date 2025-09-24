@@ -26,8 +26,8 @@ app.use(compression());
 const distDir = path.join(__dirname, 'dist');
 app.use(express.static(distDir, { maxAge: '1w', etag: true }));
 
-// Serve legacy static assets (logos, images)
-app.use(express.static(__dirname, { maxAge: '1d', etag: true }));
+// Serve static assets from repo, but do not serve index.html to avoid overriding SPA
+app.use(express.static(__dirname, { maxAge: '1d', etag: true, index: false }));
 
 // Legacy HTML routes removed in favor of SPA
 const routes = [];
