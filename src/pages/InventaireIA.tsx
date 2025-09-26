@@ -5,6 +5,14 @@ const InventaireIA: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Modifier la CSP pour autoriser l'iframe
+    const meta = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
+    if (meta) {
+      meta.setAttribute('content', "default-src 'self'; frame-src 'self' https://moverz-v3.vercel.app https://*.vercel.app; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https:;");
+    }
+  }, []);
+
+  useEffect(() => {
     // Timeout pour détecter si l'iframe ne se charge pas
     const timer = setTimeout(() => {
       if (isLoading) {
