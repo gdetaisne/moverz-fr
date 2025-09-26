@@ -92,15 +92,16 @@ const InventaireIA: React.FC = () => {
           {/* Iframe */}
           {!iframeError && (
             <iframe
-              src="https://moverz-v3.vercel.app/"
-              allow="camera; microphone; fullscreen; geolocation"
-              sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-downloads allow-top-navigation"
+              src="https://moverz-v3.vercel.app/?embed=true"
+              allow="camera; microphone; fullscreen; geolocation; clipboard-write"
+              sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-downloads allow-top-navigation allow-modals"
               title="Inventaire IA - Analyse automatique des objets"
               className="w-full h-screen min-h-[600px] border-0"
-              loading="lazy"
+              loading="eager"
               onLoad={handleIframeLoad}
               onError={handleIframeError}
               style={{ display: isLoading ? 'none' : 'block' }}
+              referrerPolicy="no-referrer-when-downgrade"
             />
           )}
 
