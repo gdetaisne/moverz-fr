@@ -15,7 +15,9 @@ app.use(helmet({
       fontSrc: ["'self'", "https://fonts.gstatic.com"],
       scriptSrc: ["'self'"],
       imgSrc: ["'self'", "data:", "https:"],
-      connectSrc: ["'self'"]
+      connectSrc: ["'self'"],
+      frameSrc: ["'self'", "https://moverz-v3.vercel.app", "https://*.vercel.app"],
+      frameAncestors: ["'self'", "https://moverz-v3.vercel.app", "https://*.vercel.app"]
     }
   }
 }));
