@@ -53,7 +53,7 @@ const InventaireIA: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
           <iframe
-            src="https://moverz-v3.vercel.app/"
+            src="https://movers-test.gslv.cloud/"
             allow="camera; microphone; fullscreen; geolocation"
             sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-downloads allow-top-navigation"
             title="Inventaire IA - Analyse automatique des objets"
