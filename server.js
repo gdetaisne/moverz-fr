@@ -16,8 +16,8 @@ app.use(helmet({
       scriptSrc: ["'self'"],
       imgSrc: ["'self'", "data:", "https:"],
       connectSrc: ["'self'"],
-      frameSrc: ["'self'", "https://moverz-v3.vercel.app", "https://*.vercel.app"],
-      frameAncestors: ["'self'", "https://moverz-v3.vercel.app", "https://*.vercel.app"]
+      frameSrc: ["'self'", "https://movers-test.gslv.cloud", "https://*.gslv.cloud"],
+      frameAncestors: ["'self'", "https://movers-test.gslv.cloud", "https://*.gslv.cloud"]
     }
   }
 }));
