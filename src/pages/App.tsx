@@ -11,6 +11,7 @@ import Story from '@/pages/Story';
 import CitiesIndex from '@/pages/villes/Index';
 import Paris from '@/pages/villes/paris';
 import Lyon from '@/pages/villes/lyon';
+import InventaireIA from '@/pages/InventaireIA';
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="/villes" element={<CitiesIndex />} />
           <Route path="/villes/paris" element={<Paris />} />
           <Route path="/villes/lyon" element={<Lyon />} />
+          <Route path="/inventaire-ia" element={<InventaireIA />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </SiteLayout>

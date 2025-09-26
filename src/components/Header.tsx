@@ -24,6 +24,7 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-8 text-sm">
           <NavLink to="/clients" className={({isActive}) => isActive ? 'text-[var(--mz-teal)]' : 'text-slate-700 hover:text-[var(--mz-teal)]'}>Particuliers</NavLink>
           <NavLink to="/pro" className={({isActive}) => isActive ? 'text-[var(--mz-teal)]' : 'text-slate-700 hover:text-[var(--mz-teal)]'}>Professionnels</NavLink>
+          <NavLink to="/inventaire-ia" className={({isActive}) => isActive ? 'text-[var(--mz-teal)]' : 'text-slate-700 hover:text-[var(--mz-teal)]'}>Inventaire IA</NavLink>
           <NavLink to="/blog" className={({isActive}) => isActive ? 'text-[var(--mz-teal)]' : 'text-slate-700 hover:text-[var(--mz-teal)]'}>Blog</NavLink>
           <NavLink to="/contact" className={({isActive}) => isActive ? 'text-[var(--mz-teal)]' : 'text-slate-700 hover:text-[var(--mz-teal)]'}>Contact</NavLink>
         </nav>
@@ -51,6 +52,7 @@ export function Header() {
           <div className="container py-3 space-y-2">
             <NavLink to="/clients" className="block px-2 py-3 rounded-lg hover:bg-slate-50" onClick={() => setOpen(false)}>👤 Particuliers</NavLink>
             <NavLink to="/pro" className="block px-2 py-3 rounded-lg hover:bg-slate-50" onClick={() => setOpen(false)}>📦 Professionnels</NavLink>
+            <NavLink to="/inventaire-ia" className="block px-2 py-3 rounded-lg hover:bg-slate-50" onClick={() => setOpen(false)}>🤖 Inventaire IA</NavLink>
             <NavLink to="/blog" className="block px-2 py-3 rounded-lg hover:bg-slate-50" onClick={() => setOpen(false)}>📝 Blog</NavLink>
             <NavLink to="/contact" className="block px-2 py-3 rounded-lg hover:bg-slate-50" onClick={() => setOpen(false)}>📞 Contact</NavLink>
             <Link to="/pro#demo" className="btn btn-primary w-full" onClick={() => setOpen(false)}>✨ Demander une démo</Link>
