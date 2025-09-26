@@ -52,14 +52,30 @@ const InventaireIA: React.FC = () => {
       {/* Main content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-          <iframe
-            src="https://moverz-v3.vercel.app/"
-            allow="camera; microphone; fullscreen; geolocation"
-            sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-downloads allow-top-navigation"
-            title="Inventaire IA - Analyse automatique des objets"
-            className="w-full h-screen min-h-[600px] border-0"
-            loading="lazy"
-          />
+          <div className="flex flex-col items-center justify-center h-screen min-h-[600px] p-8 text-center">
+            <div className="text-6xl mb-4">🤖</div>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+              Inventaire IA - Analyse automatique
+            </h3>
+            <p className="text-gray-600 mb-8 max-w-2xl">
+              Notre application d'analyse IA est disponible. 
+              Cliquez sur le bouton ci-dessous pour accéder à l'application complète :
+            </p>
+            <div className="space-y-4">
+              <a 
+                href="https://moverz-v3.vercel.app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors text-lg font-semibold"
+              >
+                <span className="mr-2">🚀</span>
+                Ouvrir l'Inventaire IA
+              </a>
+              <div className="text-sm text-gray-500">
+                S'ouvre dans un nouvel onglet
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
