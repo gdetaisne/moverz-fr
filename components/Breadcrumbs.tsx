@@ -1,0 +1,38 @@
+interface BreadcrumbItem {
+  label: string;
+  href: string;
+}
+
+interface BreadcrumbsProps {
+  items: BreadcrumbItem[];
+}
+
+export default function Breadcrumbs({ items }: BreadcrumbsProps) {
+  return (
+    <nav aria-label="Breadcrumb" className="text-sm">
+      <ol className="flex items-center gap-2 flex-wrap">
+        {items.map((item, index) => {
+          const isLast = index === items.length - 1;
+          return (
+            <li key={item.href} className="flex items-center gap-2">
+              {!isLast ? (
+                <>
+                  <a
+                    href={item.href}
+                    className="text-white/70 hover:text-white transition-colors duration-300"
+                  >
+                    {item.label}
+                  </a>
+                  <span className="text-white/50">/</span>
+                </>
+              ) : (
+                <span className="text-white font-medium">{item.label}</span>
+              )}
+            </li>
+          );
+        })}
+      </ol>
+    </nav>
+  );
+}
+

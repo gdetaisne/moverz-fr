@@ -1,0 +1,269 @@
+import type { Metadata } from "next";
+import FAQAccordion from "@/components/FAQAccordion";
+import { getFullMetadata } from "@/lib/canonical-helper";
+import Breadcrumbs from "@/components/Breadcrumbs";
+
+export const metadata: Metadata = getFullMetadata(
+  'faq',
+  "FAQ — Questions fréquentes | Moverz",
+  "Toutes les réponses à vos questions sur le comparateur Moverz : fonctionnement, tarifs, sécurité, déménageurs vérifiés."
+);
+
+const faqCategories = [
+  {
+    title: "Démarrage",
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+    ),
+    color: "from-blue-500/10 to-cyan-500/20",
+    borderColor: "border-blue-500/30",
+    items: [
+      {
+        q: "Qu'est-ce que Moverz ?",
+        a: "Moverz est un comparateur de devis de déménageurs qui vous aide à obtenir des offres vraiment comparables. Vous créez un seul inventaire détaillé de votre déménagement, que tous les déménageurs partenaires reçoivent pour vous envoyer un devis clair. Notre service est 100% gratuit et sans harcèlement téléphonique.",
+      },
+      {
+        q: "Combien de devis vais-je recevoir ?",
+        a: "Vous recevrez un minimum de 5 devis de déménageurs contrôlés. Ce nombre peut varier en fonction de votre localisation et de la disponibilité des partenaires, mais nous nous engageons à vous fournir plusieurs options comparables.",
+      },
+      {
+        q: "Que se passe-t-il si ma ville n'est pas couverte ?",
+        a: "Si votre ville ne fait pas encore partie de nos 11 villes couvertes, nous vous invitons à nous contacter via notre page de contact. Nous sommes en constante expansion et votre intérêt nous aide à prioriser nos prochaines ouvertures.",
+      }
+    ]
+  },
+  {
+    title: "Tarifs & Transparence",
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    color: "from-emerald-500/10 to-teal-500/20",
+    borderColor: "border-emerald-500/30",
+    items: [
+      {
+        q: "Combien coûte le service Moverz ?",
+        a: "Notre service est entièrement gratuit pour vous, sans aucun engagement. Nous sommes rémunérés par les déménageurs partenaires lorsque vous choisissez l'un d'entre eux via notre plateforme. Il n'y a aucun frais caché.",
+      },
+      {
+        q: "Comment Moverz garantit-il des devis comparables ?",
+        a: "Vous créez un seul inventaire détaillé de votre déménagement. Cet inventaire standardisé est envoyé à tous les déménageurs partenaires. Ainsi, ils chiffrent tous le même volume et les mêmes prestations, ce qui rend les devis directement comparables. Plus de décalage entre les offres !",
+      }
+    ]
+  },
+  {
+    title: "Sécurité & Confidentialité",
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    ),
+    color: "from-purple-500/10 to-pink-500/20",
+    borderColor: "border-purple-500/30",
+    items: [
+      {
+        q: "Est-ce que je vais être harcelé par téléphone ?",
+        a: "Absolument pas. Votre dossier reste anonyme. Les déménageurs reçoivent votre demande et vous envoient leurs devis par email via notre plateforme. Vous décidez vous-même qui vous souhaitez contacter et quand, sans aucune pression ni appel intempestif.",
+      },
+      {
+        q: "Les déménageurs sont-ils fiables ?",
+        a: "Oui, nous sélectionnons rigoureusement nos déménageurs partenaires. Nous vérifions leur solvabilité, leurs assurances, et analysons leur historique de litiges et leurs avis clients. Seuls les professionnels fiables et de confiance sont intégrés à notre réseau.",
+      }
+    ]
+  },
+  {
+    title: "Couverture géographique",
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    color: "from-orange-500/10 to-red-500/20",
+    borderColor: "border-orange-500/30",
+    items: [
+      {
+        q: "Puis-je utiliser Moverz pour un déménagement international ?",
+        a: "Actuellement, Moverz se concentre sur les déménagements nationaux en France. Nous couvrons 11 grandes villes et leurs régions. Nous prévoyons d'étendre nos services à l'international à l'avenir.",
+      }
+    ]
+  }
+];
+
+export default function FAQPage() {
+  return (
+    <main className="bg-hero min-h-screen">
+      <div className="halo" />
+      
+      {/* Hero Section - Fun & Engaging */}
+      <section className="relative overflow-hidden text-white">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1516542076529-1ea3854896e1?q=80&w=2000&auto=format&fit=crop"
+            alt="FAQ"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#04163a]/95 via-[#2b7a78]/88 to-[#04163a]/92"></div>
+        </div>
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+          <Breadcrumbs
+            items={[
+              { label: "Accueil", href: "/" },
+              { label: "FAQ", href: "/faq/" }
+            ]}
+          />
+          <div className="mt-8 space-y-6">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-white/80 backdrop-blur-sm">
+              <svg className="h-4 w-4 text-[#6BCFCF]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+              <span>Toutes vos réponses ici</span>
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+              Questions fréquentes
+            </h1>
+            <p className="text-lg md:text-xl text-white/85 max-w-3xl leading-relaxed">
+              Vous avez des questions ? On a les réponses ! Tout ce que vous devez savoir sur Moverz en mode simple et clair.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats rapides - Fun facts */}
+      <section className="section section-light pt-8 pb-4">
+        <div className="container max-w-5xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            {[
+              { 
+                icon: <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>,
+                stat: "< 3 min", 
+                label: "Pour créer son dossier" 
+              },
+              { 
+                icon: <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" /></svg>,
+                stat: "100%", 
+                label: "Gratuit & sans engagement" 
+              },
+              { 
+                icon: <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>,
+                stat: "0 spam", 
+                label: "Aucun harcèlement" 
+              },
+              { 
+                icon: <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>,
+                stat: "5+", 
+                label: "Devis comparables" 
+              }
+            ].map((item, i) => (
+              <div 
+                key={i}
+                className="relative overflow-hidden rounded-2xl border border-[#E3E5E8] bg-white p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#6BCFCF]/60 to-transparent" />
+                <div className="text-center space-y-2">
+                  <div className="flex items-center justify-center text-[#2B7A78]">{item.icon}</div>
+                  <div className="text-2xl font-bold text-[#04163a]">{item.stat}</div>
+                  <div className="text-xs text-[#6B7280]">{item.label}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ par catégories - Plus fun et organisé */}
+      <section className="section section-light pt-4">
+        <div className="container max-w-4xl">
+          <div className="text-center mb-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#2B7A78] mb-3">
+              Questions & Réponses
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#04163a]">
+              Tout ce que vous voulez savoir
+            </h2>
+          </div>
+
+          <div className="space-y-8">
+            {faqCategories.map((category, idx) => (
+              <div key={idx} className="relative">
+                {/* Header catégorie avec icône et design fun */}
+                <div className="mb-5 flex items-center gap-3">
+                  <div className={`flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${category.color} border ${category.borderColor} text-[#2B7A78]`}>
+                    {category.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-[#04163a]">{category.title}</h3>
+                    <p className="text-xs text-[#6B7280]">{category.items.length} question{category.items.length > 1 ? 's' : ''}</p>
+                  </div>
+                </div>
+                
+                {/* Questions de la catégorie */}
+                <div className="ml-0 md:ml-15">
+                  <FAQAccordion items={category.items} />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Encore une question ? - Section fun */}
+          <div className="mt-16 relative overflow-hidden rounded-3xl border-2 border-dashed border-[#6BCFCF]/30 bg-gradient-to-br from-white to-[#F0FDFA] p-8 md:p-12 text-center">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(107,207,207,0.08),transparent_50%)]" />
+            <div className="relative space-y-4">
+              <div className="inline-flex items-center justify-center h-16 w-16 rounded-2xl bg-gradient-to-br from-[#6BCFCF]/20 to-[#4FB8B8]/30 border border-[#6BCFCF]/30 mx-auto text-[#2B7A78]">
+                <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-[#04163a]">
+                Encore une question ?
+              </h3>
+              <p className="text-base text-[#4b5c6b] max-w-xl mx-auto">
+                Pas de soucis ! Notre équipe adore discuter déménagement (oui, vraiment). On vous répond en mode humain, pas en mode robot.
+              </p>
+              <a
+                href="/contact/"
+                className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-base font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+              >
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
+                <span className="relative">Posez votre question</span>
+                <svg className="relative h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Final - Plus engageant */}
+      <section className="section section-contrast">
+        <div className="container max-w-3xl text-center space-y-6">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-white/80 backdrop-blur-sm">
+            <svg className="h-4 w-4 text-[#6BCFCF]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
+            <span>Prêt à démarrer ?</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+            Comparez 5+ devis en 3 minutes
+          </h2>
+          <p className="text-lg text-white/75 max-w-2xl mx-auto">
+            Gratuit, rapide, et sans prise de tête. Promis, on ne va pas vous harceler !
+          </p>
+          <a
+            href="/choisir-ville/"
+            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-lg font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+          >
+            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
+            <span className="relative">C'est parti !</span>
+            <svg className="relative h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+        </div>
+      </section>
+    </main>
+  );
+}
