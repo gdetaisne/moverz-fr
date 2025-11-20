@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL('https://moverz.fr'),
   title: "Comparateur Déménagement — Devis Comparables | Moverz",
-  description: "Comparez 5+ devis de déménageurs contrôlés (solvabilité + 0 litige). Un seul inventaire IA → des devis vraiment comparables. 100% gratuit, sans harcèlement.",
+  description: "Comparez 5+ devis de déménageurs contrôlés (solvabilité + 0 litige). Un seul dossier → des devis vraiment comparables. 100% gratuit, sans harcèlement.",
   keywords: ["comparateur déménagement", "devis déménageurs", "déménagement France", "comparateur devis", "déménageurs contrôlés"],
   authors: [{ name: "Moverz" }],
   openGraph: {

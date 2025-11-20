@@ -53,7 +53,7 @@ export default function AProposPage() {
             <h2 className="text-2xl font-semibold text-[#04163a] mb-4">Notre Vision</h2>
             <div className="text-[#4b5c6b] space-y-4">
               <p>
-                Nous imaginons un futur où la comparaison de devis de déménagement est aussi simple et fiable que la réservation d'un vol ou d'un hôtel. Un futur où l'intelligence artificielle travaille pour le consommateur, en standardisant les offres et en éliminant les zones d'ombre.
+                Nous imaginons un futur où la comparaison de devis de déménagement est aussi simple et fiable que la réservation d'un vol ou d'un hôtel. Un futur où la technologie travaille pour le consommateur, en standardisant les offres et en éliminant les zones d'ombre.
               </p>
               <p>
                 Moverz aspire à devenir la référence en matière de déménagement transparent, en bâtissant une communauté de déménageurs partenaires d'excellence et en offrant une expérience utilisateur inégalée, basée sur la confiance et l'efficacité.
@@ -65,7 +65,7 @@ export default function AProposPage() {
             <h2 className="text-2xl font-semibold text-[#04163a] mb-4">Notre Équipe</h2>
             <div className="text-[#4b5c6b] space-y-4">
               <p>
-                Moverz est une initiative de GSLV, une société française dédiée à l'innovation dans les services aux particuliers. Notre équipe est composée d'experts en logistique, en développement web et en intelligence artificielle, tous passionnés par l'idée de simplifier votre vie.
+                Moverz est une initiative de GSLV, une société française dédiée à l'innovation dans les services aux particuliers. Notre équipe est composée d'experts en logistique, en développement web et en technologie, tous passionnés par l'idée de simplifier votre vie.
               </p>
               <p>
                 Nous travaillons chaque jour pour améliorer notre plateforme, étendre notre réseau de partenaires et vous offrir le meilleur service possible.

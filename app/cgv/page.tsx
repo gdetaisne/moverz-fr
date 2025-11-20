@@ -53,8 +53,8 @@ export default function CGVPage() {
               <h2 className="text-2xl font-semibold text-white mb-3">2. Services proposés</h2>
               <p>Moverz propose aux déménageurs partenaires :</p>
               <ul className="list-disc pl-6 mt-3 space-y-1 text-white/80">
-                <li>L'accès à des dossiers de déménagement qualifiés, préparés par l'IA.</li>
-                <li>La possibilité de soumettre des devis basés sur un inventaire standardisé.</li>
+                <li>L'accès à des dossiers de déménagement qualifiés et standardisés.</li>
+                <li>La possibilité de soumettre des devis basés sur un inventaire unique.</li>
                 <li>Une plateforme de gestion des leads et des échanges avec les clients.</li>
               </ul>
             </div>

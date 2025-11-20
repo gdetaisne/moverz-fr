@@ -46,7 +46,7 @@ export default function Hero() {
             {/* Badge avec shimmer subtil */}
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80 backdrop-blur-sm shadow-lg shadow-black/20 hover:border-white/20 hover:bg-white/8 transition-all duration-300">
               <span className="h-2 w-2 rounded-full bg-emerald-300 animate-pulse shadow-[0_0_8px_rgba(110,231,183,0.6)]" />
-              Processus IA anti-arnaque
+              Processus anti-arnaque
             </div>
 
             {/* Titre massif avec gradient text (Stripe-style) */}
