@@ -66,9 +66,9 @@ const nextConfig = {
           },
         ],
       },
-      // Cache agressif pour assets statiques
+      // Cache agressif pour assets statiques (images)
       {
-        source: '/logo.png',
+        source: '/:path*.png',
         headers: [
           {
             key: 'Cache-Control',
@@ -77,7 +77,34 @@ const nextConfig = {
         ],
       },
       {
-        source: '/(.*\\.(jpg|jpeg|png|gif|webp|avif|svg|ico))',
+        source: '/:path*.jpg',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/:path*.jpeg',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/:path*.webp',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/:path*.svg',
         headers: [
           {
             key: 'Cache-Control',
