@@ -5,8 +5,8 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = getFullMetadata(
   'comment-ca-marche',
-  "Comment ça marche ? — Moverz",
-  "Découvrez le processus simple et transparent de Moverz en 3 étapes : dossier unique, déménageurs contrôlés, devis comparables sans spam."
+  "Comment ça marche ? 3 Étapes pour Comparer vos Devis | Moverz",
+  "Processus simple en 3 étapes : ✓ 1. Créez votre dossier (3 min) ✓ 2. Recevez 5+ devis comparables ✓ 3. Choisissez le meilleur pro · 100% gratuit, sans spam"
 );
 
 export default function CommentCaMarchePage() {

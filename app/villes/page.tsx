@@ -5,8 +5,8 @@ import { CITIES, getCitiesByRegion } from "@/lib/cities";
 
 export const metadata: Metadata = getFullMetadata(
   'villes',
-  "Villes couvertes — Comparateur Déménagement | Moverz",
-  "Découvrez les 11 villes françaises où Moverz est disponible : Nice, Lyon, Marseille, Toulouse, Bordeaux et plus encore."
+  "11 Villes en France : Déménagement Lyon, Nice, Marseille... | Moverz",
+  "Déménagez à Lyon, Nice, Marseille, Toulouse, Bordeaux, Nantes... → Comparez 5+ devis de pros contrôlés en 3 min · Service 100% gratuit, sans spam · Choisissez votre ville"
 );
 
 export default function VillesPage() {

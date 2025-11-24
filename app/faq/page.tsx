@@ -5,8 +5,8 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = getFullMetadata(
   'faq',
-  "FAQ — Questions fréquentes | Moverz",
-  "Toutes les réponses à vos questions sur le comparateur Moverz : fonctionnement, tarifs, sécurité, déménageurs vérifiés."
+  "FAQ Déménagement : Tarifs, Arnaques, Assurances [Réponses 2025] | Moverz",
+  "Toutes vos questions sur le déménagement : Combien ça coûte ? Comment éviter les arnaques ? Les pros sont-ils assurés ? C'est vraiment gratuit ? → Réponses claires"
 );
 
 const faqCategories = [
@@ -93,8 +93,28 @@ const faqCategories = [
 ];
 
 export default function FAQPage() {
+  // Générer le schema FAQPage pour Google Rich Snippets
+  const allFaqItems = faqCategories.flatMap(cat => cat.items);
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": allFaqItems.map(item => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.a
+      }
+    }))
+  };
+
   return (
     <main className="bg-hero min-h-screen">
+      {/* Schema FAQPage pour Rich Snippets Google */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="halo" />
       
       {/* Hero Section - Fun & Engaging */}

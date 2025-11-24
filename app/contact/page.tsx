@@ -5,8 +5,8 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = getFullMetadata(
   'contact',
-  "Contactez Moverz - Support et informations",
-  "Besoin d'aide ou d'informations ? Contactez l'équipe Moverz pour toute question sur nos services de comparaison de devis de déménagement."
+  "Contactez Moverz : Support Déménagement [Réponse 24h] | Moverz",
+  "Besoin d'aide pour votre déménagement ? Notre équipe répond en 24h · Questions sur les devis, les pros, le service · Email : contact@moverz.fr"
 );
 
 export default function ContactPage() {

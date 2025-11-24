@@ -8,9 +8,27 @@ interface BreadcrumbsProps {
 }
 
 export default function Breadcrumbs({ items }: BreadcrumbsProps) {
+  // Générer le schema BreadcrumbList pour Google Rich Snippets
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": items.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.label,
+      "item": `https://moverz.fr${item.href}`
+    }))
+  };
+
   return (
-    <nav aria-label="Breadcrumb" className="text-sm">
-      <ol className="flex items-center gap-2 flex-wrap">
+    <>
+      {/* Schema BreadcrumbList pour Google */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <nav aria-label="Breadcrumb" className="text-sm">
+        <ol className="flex items-center gap-2 flex-wrap">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
           return (
@@ -33,6 +51,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
         })}
       </ol>
     </nav>
+    </>
   );
 }
 

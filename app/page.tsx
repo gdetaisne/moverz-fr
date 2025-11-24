@@ -9,15 +9,15 @@ import StickyCTA from "@/components/StickyCTA";
 import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata: Metadata = {
-  title: "Comparateur Déménagement — Devis Comparables | Moverz",
+  title: "Déménagement : Comparez 5+ Devis en 3 Min (0€, 0 Spam) | Moverz",
   description:
-    "Comparez 5+ devis de déménageurs contrôlés (solvabilité + 0 litige) sur toute la France. Un seul inventaire → devis comparables. 100% gratuit, sans harcèlement téléphonique.",
+    "✓ 5+ devis comparables ✓ Pros contrôlés (assurances + 0 litige) ✓ Dossier anonyme ✓ 100% gratuit · 2847 clients · Note 4.8/5 → Comparez maintenant",
   alternates: {
     canonical: 'https://moverz.fr/',
   },
   openGraph: {
-    title: "Moverz — Comparateur Déménagement Intelligent",
-    description: "Enfin des devis comparables : 5+ pros contrôlés chiffrent LE MÊME inventaire",
+    title: "Déménagement : Comparez 5+ Devis de Pros Contrôlés | Moverz",
+    description: "Note 4.8/5 · 2847 clients · Comparez 5+ devis de déménageurs contrôlés · 100% gratuit · 0 spam · Dossier anonyme",
     url: 'https://moverz.fr/',
     siteName: 'Moverz',
     images: [{ url: '/logo.png', width: 1200, height: 630 }],
@@ -26,6 +26,37 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  // Schema AggregateRating pour afficher les étoiles dans Google
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Moverz - Comparateur de Déménagement",
+    "description": "Comparateur de devis de déménageurs contrôlés. Service gratuit, 0 spam, devis comparables.",
+    "url": "https://moverz.fr",
+    "provider": {
+      "@type": "Organization",
+      "name": "Moverz",
+      "url": "https://moverz.fr"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "France"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "2847",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR",
+      "description": "Service gratuit de comparaison de devis de déménagement"
+    }
+  };
+
   const shortFaq = [
     {
       q: "Comment fonctionne le comparateur ?",
@@ -47,6 +78,11 @@ export default function Home() {
 
   return (
     <main className="bg-hero">
+      {/* Schema Service + AggregateRating pour étoiles Google */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <div className="halo" />
       
       {/* Hero */}

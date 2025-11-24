@@ -7,17 +7,17 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://moverz.fr'),
-  title: "Comparateur Déménagement — Devis Comparables | Moverz",
-  description: "Comparez 5+ devis de déménageurs contrôlés (solvabilité + 0 litige). Un seul dossier → des devis vraiment comparables. 100% gratuit, sans harcèlement.",
-  keywords: ["comparateur déménagement", "devis déménageurs", "déménagement France", "comparateur devis", "déménageurs contrôlés"],
+  title: "Déménagement : Comparez 5+ Devis en 3 Min (0€, 0 Spam) | Moverz",
+  description: "✓ 5+ devis comparables ✓ Pros contrôlés (assurances + 0 litige) ✓ Dossier anonyme ✓ 100% gratuit · 2847 clients · Note 4.8/5 → Comparez maintenant",
+  keywords: ["comparateur déménagement", "devis déménageurs", "déménagement France", "comparateur devis", "déménageurs contrôlés", "devis gratuit déménagement"],
   authors: [{ name: "Moverz" }],
   openGraph: {
     type: "website",
     locale: "fr_FR",
     url: "https://moverz.fr/",
     siteName: "Moverz",
-    title: "Moverz — Comparateur Déménagement Intelligent",
-    description: "Enfin des devis comparables : 5+ pros contrôlés chiffrent LE MÊME inventaire",
+    title: "Déménagement : Comparez 5+ Devis de Pros Contrôlés | Moverz",
+    description: "Note 4.8/5 · 2847 clients · Comparez 5+ devis de déménageurs contrôlés · 100% gratuit · 0 spam · Dossier anonyme",
     images: [
       {
         url: "/logo.png",
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Moverz — Comparateur Déménagement Intelligent",
-    description: "Comparez 5+ devis de déménageurs contrôlés sur toute la France",
+    title: "Déménagement : Comparez 5+ Devis en 3 Min (0€, 0 Spam)",
+    description: "Note 4.8/5 · Comparez 5+ devis de pros contrôlés · 100% gratuit · Dossier anonyme",
     images: ["/logo.png"],
   },
   robots: {
@@ -61,8 +61,22 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
+        {/* Favicons */}
         <link rel="icon" href="/logo.png" />
         <link rel="apple-touch-icon" href="/logo.png" />
+        
+        {/* Preconnect aux domaines externes pour performance */}
+        <link rel="preconnect" href="https://images.unsplash.com" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        
+        {/* Preload du logo (ressource critique) */}
+        <link
+          rel="preload"
+          href="/logo.png"
+          as="image"
+          type="image/png"
+        />
+        
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

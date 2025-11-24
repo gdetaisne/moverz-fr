@@ -5,8 +5,8 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = getFullMetadata(
   'choisir-ville',
-  "Choisissez votre ville — Comparateur Déménagement | Moverz",
-  "Sélectionnez votre ville parmi Nice, Lyon, Marseille, Toulouse, Bordeaux et 6 autres pour comparer vos devis de déménagement."
+  "Votre Ville : Lyon, Nice, Marseille... → 5+ Devis Gratuits | Moverz",
+  "Sélectionnez votre ville parmi 11 villes en France → Recevez 5+ devis comparables de pros contrôlés · En 3 min · 100% gratuit · 0 spam · Commencez maintenant"
 );
 
 export default function ChoisirVillePage() {

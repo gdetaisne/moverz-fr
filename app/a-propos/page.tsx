@@ -4,8 +4,8 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = getFullMetadata(
   'a-propos',
-  "À propos de Moverz - Notre mission et notre vision",
-  "Découvrez l'équipe Moverz, notre mission de simplifier le déménagement et notre vision d'un comparateur transparent et anti-arnaque."
+  "À propos de Moverz : Comparateur Anti-Arnaque [Notre Mission]",
+  "Qui sommes-nous ? Notre mission : simplifier le déménagement avec un comparateur transparent · 5+ pros contrôlés · Devis comparables · 0 spam · Découvrez notre équipe"
 );
 
 export default function AProposPage() {
