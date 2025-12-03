@@ -46,7 +46,7 @@ export default function MentionsLegalesPage() {
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
               <h2 className="text-2xl font-semibold text-white mb-3">Éditeur du site</h2>
               <p>
-                GSLV, société par actions simplifiée (SAS). Siège social: 5 rue Jean
+                GSLV EURL SIREN 914499876, RCS de LA ROCHELLE. Siège social: 5 rue Jean
                 Coyttar, 17290 Thairé, France. Marque exploitée: Moverz.
               </p>
               <p className="mt-2">Contact: contact@moverz.fr</p>
