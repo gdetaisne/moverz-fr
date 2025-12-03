@@ -197,13 +197,22 @@ export default function RootLayout({
                   <li><a href="/cgu/" className="text-white/70 hover:text-white transition-colors">CGU</a></li>
                   <li><a href="/cgv/" className="text-white/70 hover:text-white transition-colors">CGV</a></li>
                 </ul>
+                <div className="mt-4 text-xs text-white/60 leading-relaxed space-y-0.5">
+                  <p>Propriétaire du site :</p>
+                  <p>Entreprise : GSLV EURL</p>
+                  <p>SIREN : 914499876</p>
+                  <p>RCS : La Rochelle</p>
+                  <p>Adresse du siège : 5 Rue Jean Coyttar, 17290 Thairé, France</p>
+                  <p>Site web : https://moverz.fr</p>
+                  <p>Email : contact@moverz.fr</p>
+                </div>
               </div>
             </div>
 
             {/* Bas du footer */}
             <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
               <p className="text-sm text-white/60">
-                © {new Date().getFullYear()} Moverz. Tous droits réservés.
+                © {new Date().getFullYear()} Moverz – GSLV EURL (SIREN 914499876). Tous droits réservés.
               </p>
               <p className="text-sm text-white/60">
                 Fait en France

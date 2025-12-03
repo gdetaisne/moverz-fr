@@ -5,7 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Mentions légales | Moverz",
   description:
-    "Mentions légales de Moverz (GSLV) : éditeur, hébergeur, responsabilité, propriété intellectuelle et données personnelles.",
+    "Mentions légales de Moverz, marque exploitée par GSLV EURL : éditeur, hébergeur, responsabilité, propriété intellectuelle et données personnelles.",
   alternates: {
     canonical: getCanonicalUrl('mentions-legales'),
   },
@@ -45,20 +45,34 @@ export default function MentionsLegalesPage() {
           <div className="space-y-10 text-white/90">
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
               <h2 className="text-2xl font-semibold text-white mb-3">Éditeur du site</h2>
-              <p>
-                GSLV EURL SIREN 914499876, RCS de LA ROCHELLE. Siège social: 5 rue Jean
-                Coyttar, 17290 Thairé, France. Marque exploitée: Moverz.
+              <p className="font-semibold">Propriétaire du site :</p>
+              <p className="mt-2">
+                <span className="font-semibold">Entreprise :</span> GSLV EURL
               </p>
-              <p className="mt-2">Contact: contact@moverz.fr</p>
-              <p className="mt-2">Directeur de la publication: Guillaume Stehelin</p>
-              <p className="mt-2">Responsable de la rédaction: Équipe Moverz</p>
-              <p className="mt-2">SIREN 914 499 876 — SIRET 914 499 876 00011 — RCS La Rochelle</p>
-              <p className="mt-2">TVA intracommunautaire: FR43914499876 — Capital social: 1 000,00 €</p>
-              <ul className="list-disc pl-6 mt-3 space-y-1 text-white/80">
-                <li>Demandes presse/partenariats/juridiques: adresse ci-dessus.</li>
-                <li>Demandes RGPD: <span className="underline">contact@moverz.fr</span>.</li>
-                <li>Délai moyen de réponse: 14 jours ouvrés.</li>
-              </ul>
+              <p>
+                <span className="font-semibold">SIREN :</span> 914499876
+              </p>
+              <p>
+                <span className="font-semibold">RCS :</span> La Rochelle
+              </p>
+              <p className="mt-2">
+                <span className="font-semibold">Adresse du siège :</span> 5 Rue Jean Coyttar, 17290 Thairé, France
+              </p>
+              <p className="mt-2">
+                <span className="font-semibold">Site web :</span>{" "}
+                <a href="https://moverz.fr" className="underline text-[#6bcfcf]">
+                  https://moverz.fr
+                </a>
+              </p>
+              <p className="mt-2">
+                <span className="font-semibold">Email :</span>{" "}
+                <a href="mailto:contact@moverz.fr" className="underline text-[#6bcfcf]">
+                  contact@moverz.fr
+                </a>
+              </p>
+              <p className="mt-4">
+                Moverz est une marque exploitée par GSLV EURL.
+              </p>
             </div>
 
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
@@ -80,7 +94,7 @@ export default function MentionsLegalesPage() {
                 Moverz propose un service de préparation de dossier et de mise en
                 relation avec des entreprises de déménagement partenaires. La
                 comparaison des devis et le choix final appartiennent au client.
-                GSLV agit exclusivement en tant qu'intermédiaire B2B et facture ses
+                GSLV EURL agit exclusivement en tant qu'intermédiaire B2B et facture ses
                 prestations aux professionnels partenaires.
               </p>
             </div>

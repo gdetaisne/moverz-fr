@@ -65,7 +65,7 @@ export default function AProposPage() {
             <h2 className="text-2xl font-semibold text-[#04163a] mb-4">Notre Équipe</h2>
             <div className="text-[#4b5c6b] space-y-4">
               <p>
-                Moverz est une initiative de GSLV, une société française dédiée à l'innovation dans les services aux particuliers. Notre équipe est composée d'experts en logistique, en développement web et en technologie, tous passionnés par l'idée de simplifier votre vie.
+                Moverz est une initiative de GSLV EURL, une société française dédiée à l'innovation dans les services aux particuliers. Notre équipe est composée d'experts en logistique, en développement web et en technologie, tous passionnés par l'idée de simplifier votre vie.
               </p>
               <p>
                 Nous travaillons chaque jour pour améliorer notre plateforme, étendre notre réseau de partenaires et vous offrir le meilleur service possible.

@@ -45,7 +45,7 @@ export default function CGVPage() {
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
               <h2 className="text-2xl font-semibold text-white mb-3">1. Objet</h2>
               <p>
-                Les présentes Conditions Générales de Vente (CGV) régissent les relations contractuelles entre GSLV (Moverz) et ses clients professionnels (déménageurs partenaires) concernant la fourniture de services de mise en relation et de génération de leads qualifiés.
+                Les présentes Conditions Générales de Vente (CGV) régissent les relations contractuelles entre GSLV EURL (Moverz) et ses clients professionnels (déménageurs partenaires) concernant la fourniture de services de mise en relation et de génération de leads qualifiés.
               </p>
             </div>
 

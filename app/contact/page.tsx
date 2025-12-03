@@ -94,8 +94,8 @@ export default function ContactPage() {
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wider text-[#6B7280] mb-1">Adresse</p>
                   <p className="text-[#4b5c6b] leading-relaxed">
-                    GSLV - Moverz<br />
-                    5 rue Jean Coyttar<br />
+                    GSLV EURL - Moverz<br />
+                    5 Rue Jean Coyttar<br />
                     17290 Thairé, France
                   </p>
                 </div>
