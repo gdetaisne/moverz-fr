@@ -11,19 +11,20 @@ export default function CitiesGrid() {
               Couverture nationale
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#04163a] leading-tight">
-              11 grandes villes françaises
+              Nos principales villes couvertes… et toute la France
             </h2>
             <p className="text-base md:text-lg text-[#4b5c6b] leading-relaxed max-w-2xl mx-auto">
-              Chaque ville dispose de son comparateur dédié avec des déménageurs locaux vérifiés.
+              Ces villes disposent d’un comparateur dédié avec des déménageurs locaux vérifiés.
+              Moverz peut aussi vous accompagner pour un déménagement partout ailleurs en France.
             </p>
           </div>
 
-          {/* Grid compact des villes */}
+          {/* Grid compact des villes → maintenant vers les pages villes sur moverz.fr */}
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto">
             {CITIES.map((city, index) => (
               <a
                 key={city.slug}
-                href={`${city.url}/devis-gratuits/`}
+                href={`/demenagement/${city.slug}/`}
                 className="group relative overflow-hidden flex items-center gap-3 rounded-xl border border-[#E3E5E8] bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-[#6BCFCF]/50"
                 style={{ animationDelay: `${index * 40}ms` }}
               >

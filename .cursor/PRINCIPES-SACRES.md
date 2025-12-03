@@ -1,4 +1,4 @@
-# ⚠️ PRINCIPES SACRÉS - SITE HUB MOVERZ.FR
+# ⚠️ PRINCIPES SACRÉS - SITE MOVERZ.FR (HUB + PAGES VILLES)
 
 **LECTURE OBLIGATOIRE avant toute modification**
 
@@ -6,16 +6,29 @@
 
 ---
 
-## 🎯 OBJECTIF ULTIME : HUB NATIONAL
+## 🎯 OBJECTIF ULTIME : SITE PRINCIPAL (HUB NATIONAL + PAGES VILLES)
 
-**Ce site sert de hub central pour diriger vers les 11 sites locaux.**
+**Moverz.fr devient le site principal qui concentre :**
+
+- Un **hub national** (home, pages génériques, /choisir-ville/, etc.)
+- Des **pages villes SEO** (ex : page dédiée à “Déménagement Marseille”)
+- Un **blog centralisé** (articles nationaux + articles avec angle local)
+
+Les anciens sites locaux (devis-demenageur-{ville}.fr, etc.) sont en **migration progressive** :
+
+- Phase transitoire : ils existent encore et envoient du trafic
+- Phase finale : ils sont redirigés (301) vers les pages villes sur moverz.fr
 
 ### Business Model
 ```
-SEO National → Moverz.fr → Sélection ville → Site local → Leads → €€€
+Avant (ancien modèle) :
+SEO National → Moverz.fr (hub) → Sélection ville → Site local → Leads → €€€
+
+Nouveau modèle (après migration) :
+SEO National + Local → Moverz.fr (hub + pages villes + blog) → Leads → €€€
 ```
 
-**Si le hub est cassé → Mauvaise expérience → Perte de conversions**
+**Si le site principal (hub + pages villes) est cassé → Mauvaise expérience → Perte de conversions**
 
 **Donc toute décision technique DOIT prioriser le SEO et l'UX.**
 
@@ -101,69 +114,94 @@ https://devis-demenageur-{ville}.fr/
 
 ---
 
-## 🌍 PRINCIPE #2 : SITE HUB NATIONAL (PAS DE CITYDATA)
+## 🌍 PRINCIPE #2 : STRUCTURE DU SITE MOVERZ.FR (HUB + PAGES VILLES)
 
-### ⚠️ Différences avec sites locaux
+### ⚠️ Deux types de pages à ne pas confondre
 
-**MOVERZ.FR = HUB NATIONAL** :
+**1) PAGES HUB NATIONALES (home, /comment-ca-marche/, /choisir-ville/, etc.)**
 
-```
-/Users/lucie/moverz-fr/    ← Site unique Next.js
-```
+Ces pages restent **100% nationales** :
 
-**Ce site N'EST PAS** :
-- ❌ Un site local (pas de cityData)
-- ❌ Un site multi-villes (un seul site)
-- ❌ Focalisé sur une ville spécifique
+- Focus : “France”, “11 villes”, “déménagement en France”
+- Aucun focus sur une ville spécifique
+- Rôle : présenter l’offre globale et orienter vers la sélection de ville ou les pages villes
 
-**Ce site EST** :
-- ✅ Un hub national
-- ✅ Un portail vers les 11 sites locaux
-- ✅ Focalisé sur la comparaison de déménageurs en France
+**2) PAGES VILLES SUR MOVERZ.FR (nouveau modèle)**
 
-### 🚨 RÈGLES SPÉCIFIQUES AU HUB
+Ces pages sont **locales** par design :
+
+- Focus : requêtes type “déménagement + [Ville]”
+- Contenu spécifique à la ville (quartiers, exemples, contexte local, etc.)
+- Rôle : devenir la **cible principale des 301** depuis les anciens domaines locaux
+
+### 🚨 RÈGLES SPÉCIFIQUES AUX PAGES HUB
 
 #### CTAs → `/choisir-ville/`
 
-**JAMAIS** pointer vers `/devis-gratuits/` (ça c'est pour les sites locaux)
+Sur les pages hub (home, pages nationales) :
 
-**TOUJOURS** pointer vers `/choisir-ville/` pour permettre la sélection de ville
+- **JAMAIS** pointer vers `/devis-gratuits/` (c’est réservé à la logique locale / formulaires)
+- **TOUJOURS** pointer vers `/choisir-ville/` ou vers une logique de sélection de ville
 
 ```typescript
-// ❌ MAUVAIS (CTA site local)
+// ❌ MAUVAIS (CTA site local sur une page hub)
 <a href="/devis-gratuits/">Obtenir des devis</a>
 
 // ✅ CORRECT (CTA hub)
 <a href="/choisir-ville/">Choisir ma ville</a>
 ```
 
-#### Pas de cityData
+### 🚨 RÈGLES SPÉCIFIQUES AUX PAGES VILLES
 
-**JAMAIS** importer ou utiliser `cityData` :
+- Autorisé : contenu local (ex : “Déménagement à Marseille”, quartiers, exemples locaux)
+- Autorisé : CTAs qui mènent vers un **formulaire de devis intégré à la page ville**
+- Interdit : casser la structure URL / les canonicals sans plan de 301
+
+Les pages villes doivent :
+
+1. Respecter une **structure standardisée** (template unique ou très limité)
+2. Avoir des **URLs stables** (pensées pour durer plusieurs années)
+3. Être clairement séparées des pages hub (routing, composants, wording)
+
+### ❌ CITYDATA INTERDIT / ✅ SOURCES DE DONNÉES AUTORISÉES
+
+Sur moverz.fr :
+
+- ❌ **Interdit** : importer ou utiliser `cityData` du projet multi-sites (`moverz_main`)
+- ✅ **Autorisé** : utiliser des **données villes propres à moverz.fr** (ex : `lib/cities.ts` ou nouveau module dédié aux pages villes)
 
 ```typescript
-// ❌ INTERDIT sur moverz.fr
+// ❌ INTERDIT sur moverz.fr (copier-coller depuis un site local)
 import { getCityDataFromUrl } from '@/lib/cityData';
 const city = getCityDataFromUrl(env.SITE_URL);
 
-// ✅ CORRECT : Focalisé national
+// ✅ CORRECT : Hub national
 title: "Comparateur Déménagement — France | Moverz"
+
+// ✅ CORRECT : Page ville avec data spécifique au hub
+import { getCityBySlug } from '@/lib/cities';
+const city = getCityBySlug('marseille');
+title: `Déménagement ${city.nameCapitalized} | Moverz`;
 ```
 
-#### Utiliser lib/cities.ts
+### Utiliser `lib/cities.ts` comme source de vérité
 
-**Pour lister les villes** :
+**Pour lister les villes et leurs URLs (anciens sites locaux + nouvelles pages villes)** :
 
 ```typescript
 // ✅ CORRECT
 import { CITIES } from '@/lib/cities';
 
 CITIES.map(city => (
-  <a href={`${city.url}/devis-gratuits/`}>
+  <a href={city.hubCityUrl}>
     {city.nameCapitalized}
   </a>
 ))
 ```
+
+> ⚠️ Pendant la phase de migration, `CITIES` doit refléter l’état réel :
+> - domaines encore actifs
+> - domaines déjà 301 vers moverz.fr
 
 ---
 

@@ -36,11 +36,12 @@ export default function VillesPage() {
           <div className="mt-8 space-y-4">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-white/80 backdrop-blur-sm">
               <span className="h-2 w-2 rounded-full bg-[#6BCFCF] animate-pulse" />
-              11 grandes villes françaises
+              Disponible partout en France
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">Villes couvertes par Moverz</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">Villes principales couvertes par Moverz</h1>
             <p className="text-lg md:text-xl text-white/85 max-w-3xl leading-relaxed">
-              Sélectionnez votre ville pour accéder au comparateur local et recevoir vos devis de déménageurs contrôlés.
+              Ces 11 grandes villes disposent d’un comparateur local dédié. Pour les autres villes de France,
+              vous pouvez aussi utiliser Moverz en sélectionnant vos adresses précises lors de la demande de devis.
             </p>
           </div>
         </div>
@@ -57,7 +58,7 @@ export default function VillesPage() {
               Comparez dans toute la France
             </h2>
             <p className="text-base md:text-lg text-[#4b5c6b] max-w-2xl mx-auto">
-              Moverz est disponible dans 11 grandes villes. Chaque ville dispose de son comparateur local avec des déménageurs contrôlés.
+              Moverz est disponible partout en France. Ces villes ont un comparateur local dédié avec des déménageurs contrôlés.
             </p>
           </div>
 
@@ -75,7 +76,7 @@ export default function VillesPage() {
                   {cities.map((city, index) => (
                     <a
                       key={city.slug}
-                      href={`${city.url}/devis-gratuits/`}
+                      href={`/demenagement/${city.slug}/`}
                       className="group relative overflow-hidden rounded-2xl border border-[#E3E5E8] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-[#6BCFCF]/40"
                       style={{ animationDelay: `${index * 60}ms` }}
                     >

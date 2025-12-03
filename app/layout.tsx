@@ -120,6 +120,9 @@ export default function RootLayout({
               <span className="text-2xl md:text-3xl font-bold text-white">Moverz</span>
             </a>
             <div className="flex items-center gap-6">
+              <a href="/blog/" className="text-sm font-medium text-white/80 hover:text-white transition-colors hidden md:block">
+                Blog
+              </a>
               <a href="/villes/" className="text-sm font-medium text-white/80 hover:text-white transition-colors hidden md:block">
                 Villes
               </a>
@@ -165,6 +168,7 @@ export default function RootLayout({
                 <h3 className="font-semibold mb-4 text-white">Liens utiles</h3>
                 <ul className="space-y-2 text-sm">
                   <li><a href="/comment-ca-marche/" className="text-white/70 hover:text-white transition-colors">Comment ça marche</a></li>
+                  <li><a href="/blog/" className="text-white/70 hover:text-white transition-colors">Blog déménagement</a></li>
                   <li><a href="/villes/" className="text-white/70 hover:text-white transition-colors">Nos villes</a></li>
                   <li><a href="/faq/" className="text-white/70 hover:text-white transition-colors">FAQ</a></li>
                   <li><a href="/contact/" className="text-white/70 hover:text-white transition-colors">Contact</a></li>
