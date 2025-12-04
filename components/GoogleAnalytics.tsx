@@ -1,7 +1,7 @@
 import Script from "next/script";
 
-// TODO: si tu changes de propriété GA4, mets ici le nouvel ID.
-const GA_ID = "G-3ERB6CZ8E5";
+// ID de mesure GA4 pour moverz.fr
+const GA_ID = "G-YZJRJPKHWV";
 
 export default function GoogleAnalytics() {
   if (!GA_ID) return null;
