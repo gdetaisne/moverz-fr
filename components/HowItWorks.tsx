@@ -132,8 +132,8 @@ export default function HowItWorks() {
         ))}
       </div>
       
-      {/* CTAs avec espacement généreux */}
-      <div className="relative mt-12 flex flex-col items-center justify-center gap-4 text-center sm:flex-row sm:justify-center">
+      {/* CTA principal */}
+      <div className="relative mt-12 flex items-center justify-center text-center">
         <a
           href="/choisir-ville/"
           className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-base md:text-lg font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
@@ -141,13 +141,6 @@ export default function HowItWorks() {
         >
           <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
           <span className="relative">Recevez 5+ devis fiables gratuitement</span>
-        </a>
-        <a 
-          href="/comment-ca-marche/" 
-          className="group inline-flex items-center gap-2 rounded-2xl border-2 border-[#E3E5E8] bg-white px-6 py-3 text-sm md:text-base font-medium text-[#04163a] hover:bg-[#F8F9FA] hover:border-[#6BCFCF]/40 transition-all duration-300"
-        >
-          <span>Voir le détail du fonctionnement</span>
-          <span className="text-lg group-hover:translate-x-1 transition-transform duration-300">→</span>
         </a>
       </div>
     </div>
