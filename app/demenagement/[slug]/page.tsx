@@ -57,6 +57,7 @@ export default function CityMovingPage({ params }: PageProps) {
   const isTours = city.slug === "tours";
   const isReims = city.slug === "reims";
   const isLeHavre = city.slug === "le-havre";
+  const quoteUrl = `https://devis.moverz.fr/?city_slug=${city.slug}&source=moverz.fr&from=/demenagement/${city.slug}/`;
   const marseilleNeighborhoods = [
     "Vieux-Port, Le Panier",
     "La Joliette, Euroméditerranée",
@@ -398,9 +399,8 @@ export default function CityMovingPage({ params }: PageProps) {
               Déménagement à {city.nameCapitalized} : comparez 5+ devis de pros contrôlés
             </h1>
             <p className="text-sm md:text-base text-white/80 max-w-xl">
-              Créez un seul dossier complet (inventaire, accès, contraintes) et laissez 5+ déménageurs
-              contrôlés vous répondre sur la même base. Résultat : des devis enfin comparables pour
-              votre déménagement à {city.nameCapitalized}.
+              1 seul dossier ultra complet (inventaire, accès, contraintes) pour recevoir plusieurs devis
+              structurés sur la même base. Vous gagnez du temps et évitez les mauvaises surprises le jour J.
             </p>
             <ul className="space-y-2 text-sm md:text-base text-white/85">
               <li>✓ Pros vérifiés (assurances, solvabilité, avis)</li>
@@ -408,7 +408,7 @@ export default function CityMovingPage({ params }: PageProps) {
               <li>✓ Service 100% gratuit pour vous</li>
             </ul>
             <div className="flex flex-wrap gap-3 pt-2">
-              <a href="/choisir-ville/" className="btn-primary">
+              <a href={quoteUrl} className="btn-primary">
                 Obtenir des devis pour {city.nameCapitalized}
               </a>
               <p className="text-xs md:text-sm text-white/60">
@@ -433,6 +433,69 @@ export default function CityMovingPage({ params }: PageProps) {
                 fourchette indiquée ci-dessous pour un T3. Les devis personnalisés restent la référence.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Comment ça marche */}
+      <section className="section section-light">
+        <div className="container space-y-8">
+          <div className="text-center space-y-3">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#2B7A78]">
+              Comment ça marche ?
+            </p>
+            <h2 className="text-2xl md:text-3xl font-semibold text-[#04163a]">
+              3 étapes pour organiser votre déménagement à {city.nameCapitalized}
+            </h2>
+            <p className="text-sm md:text-base text-[#4b5c6b] max-w-2xl mx-auto">
+              Moverz vous accompagne de la description de votre projet jusqu&apos;au choix final du déménageur,
+              sans démarchage agressif ni devis incompréhensibles.
+            </p>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-3">
+            <div className="rounded-2xl border border-[#E3E5E8] bg-white p-5 space-y-3">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#6B7280]">
+                Étape 1
+              </p>
+              <h3 className="text-sm font-semibold text-[#04163a]">
+                Décrivez votre déménagement
+              </h3>
+              <p className="text-sm text-[#4b5c6b]">
+                Adresses de départ et d&apos;arrivée, volume estimé, accès, contraintes particulières…
+                Vous remplissez un seul dossier ultra précis pour votre déménagement à {city.nameCapitalized}.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-[#E3E5E8] bg-white p-5 space-y-3">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#6B7280]">
+                Étape 2
+              </p>
+              <h3 className="text-sm font-semibold text-[#04163a]">
+                Recevez 5+ devis comparables
+              </h3>
+              <p className="text-sm text-[#4b5c6b]">
+                Les déménageurs partenaires chiffrent exactement la même opération. Vous recevez des
+                devis structurés et faciles à comparer, sans appels en série.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-[#E3E5E8] bg-white p-5 space-y-3">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#6B7280]">
+                Étape 3
+              </p>
+              <h3 className="text-sm font-semibold text-[#04163a]">
+                Choisissez sereinement votre déménageur
+              </h3>
+              <p className="text-sm text-[#4b5c6b]">
+                Vous comparez prix, options et avis, puis validez le déménageur qui correspond le mieux
+                à votre projet. Moverz reste disponible en cas de question.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <a href={quoteUrl} className="btn-primary">
+              Lancer mon comparateur pour {city.nameCapitalized}
+            </a>
           </div>
         </div>
       </section>
@@ -1506,7 +1569,7 @@ export default function CityMovingPage({ params }: PageProps) {
             3 minutes pour créer votre dossier, 5+ devis alignés sur la même base. Vous gardez le
             contrôle sur le choix du déménageur et le moment où vous le contactez.
           </p>
-          <a href="/choisir-ville/" className="btn-primary">
+          <a href={quoteUrl} className="btn-primary">
             Obtenir des devis pour {city.nameCapitalized}
           </a>
         </div>

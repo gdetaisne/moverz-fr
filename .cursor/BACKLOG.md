@@ -102,14 +102,14 @@
 
 ## 🟠 ROADMAP OPTIMISATION 4 SEMAINES (150 contenus)
 
-### [P1]-TASK-SEO-301-FINALISATION — Import + vérification 301
+### [P1]-TASK-201-SEO-301-FINALISATION — Import + vérification 301
 
 - **Statut** : 📋 À faire  
 - **Objectif** :  
   Importer le fichier complet des 301 (articles + domaines), vérifier un échantillon (30 URLs),
   corriger les erreurs de correspondance de slug et stabiliser la couche redirections.
 
-### [P1]-TASK-SEO-CANON-DUPLICATES — Canonisation des doublons (125 groupes)
+### [P1]-TASK-202-SEO-CANON-DUPLICATES — Canonisation des doublons (125 groupes)
 
 - **Statut** : 📋 À faire  
 - **Objectif** :  
@@ -117,7 +117,7 @@
   faibles, relier toutes les anciennes URLs via 301, tagger l’état dans l’outil de suivi
   (fusionné / à réécrire / OK).
 
-### [P1]-TASK-SEO-PRIX-TOP20 — Optimisation immédiate 20 articles Prix
+### [P1]-TASK-203-SEO-PRIX-TOP20 — Optimisation immédiate 20 articles Prix
 
 - **Statut** : 📋 À faire  
 - **Objectif** :  
@@ -125,28 +125,28 @@
   Marseille, Lyon, Nice, longue distance, lecture de devis) selon le template Moverz
   (meta, Hn, tableaux, maillage interne).
 
-### [P1]-TASK-SEO-LONGFORM-40 — Optimisation 40 articles >1000 mots
+### [P1]-TASK-204-SEO-LONGFORM-40 — Optimisation 40 articles >1000 mots
 
 - **Statut** : 📋 À faire  
 - **Objectif** :  
   Optimiser 40 articles longs à fort potentiel (guides complets, comparatifs, tutoriels),
   en ajoutant 3–6 liens internes, CTA vers Moverz, harmonisation des slugs et métas.
 
-### [P1]-TASK-SEO-THIN-ANALYSE — Audit contenus <350 mots
+### [P1]-TASK-205-SEO-THIN-ANALYSE — Audit contenus <350 mots
 
 - **Statut** : 📋 À faire  
 - **Objectif** :  
   Classer les ~288 contenus <350 mots en trois catégories (supprimer+301, fusionner,
   réécrire) et définir la liste courte des ~30 articles à réécrire entièrement.
 
-### [P1]-TASK-SEO-MIDRANGE-OPTIM — Optimisation 25–30 articles 350–700 mots
+### [P1]-TASK-206-SEO-MIDRANGE-OPTIM — Optimisation 25–30 articles 350–700 mots
 
 - **Statut** : 📋 À faire  
 - **Objectif** :  
   Sélectionner puis optimiser 25–30 contenus 350–700 mots avec bon potentiel (prix, villes,
   evergreen) en appliquant le template Moverz (structure, maillage, métas).
 
-### [P1]-TASK-SEO-PAGES-VILLES-20 — Réécriture / optimisation 20 pages villes
+### [P1]-TASK-207-SEO-PAGES-VILLES-20 — Réécriture / optimisation 20 pages villes
 
 - **Statut** : 📋 À faire  
 - **Objectif** :  
@@ -154,28 +154,28 @@
   Toulouse, etc.) avec structure complète : quartiers, prix, volumes types, conseils locaux,
   CTA + maillage vers le blog et les villes voisines.
 
-### [P1]-TASK-SEO-MAILLAGE-VILLES — Maillage final blog ↔ pages villes
+### [P1]-TASK-208-SEO-MAILLAGE-VILLES — Maillage final blog ↔ pages villes
 
 - **Statut** : 📋 À faire  
 - **Objectif** :  
   Pour chaque page ville, ajouter un bloc “articles recommandés” et relier systématiquement
   blog ↔ ville : prix [VILLE], guide déménager à [VILLE], articles conseils pertinents.
 
-### [P1]-TASK-SEO-SITEMAP-REINDEX — Sitemaps + reindexation Search Console
+### [P1]-TASK-209-SEO-SITEMAP-REINDEX — Sitemaps + reindexation Search Console
 
 - **Statut** : 📋 À faire  
 - **Objectif** :  
   Regénérer/pousser les sitemaps XML, vérifier leur prise en compte dans GSC, utiliser
   l’inspection d’URL pour re-soumettre les pages critiques (pages villes + top articles).
 
-### [P2]-TASK-SEO-GUIDE-NATIONAL — Guide National du Déménagement 2025
+### [P2]-TASK-210-SEO-GUIDE-NATIONAL — Guide National du Déménagement 2025
 
 - **Statut** : 📋 À faire  
 - **Objectif** :  
   Créer un “Guide national du déménagement 2025” comme page pilier, reliée à l’ensemble des
   fiches prix, checklists et guides thématiques.
 
-### [P2]-TASK-SEO-PROBLEMES-CLIENTS — 10 pages problématiques clients
+### [P2]-TASK-211-SEO-PROBLEMES-CLIENTS — 10 pages problématiques clients
 
 - **Statut** : 📋 À faire  
 - **Objectif** :  
