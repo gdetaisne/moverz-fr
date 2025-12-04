@@ -589,21 +589,31 @@ export default function CityMovingPage({ params }: PageProps) {
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#6B7280] mb-1">
                     Quartiers de Marseille (exemples)
                   </p>
-                  <ul className="grid grid-cols-1 gap-1">
+                  <div className="flex flex-wrap gap-2">
                     {marseilleNeighborhoods.map((q) => (
-                      <li key={q}>• {q}</li>
+                      <span
+                        key={q}
+                        className="rounded-full border border-[#E3E5E8] bg-[#F8F9FA] px-3 py-1 text-xs text-[#4b5c6b]"
+                      >
+                        {q}
+                      </span>
                     ))}
-                  </ul>
+                  </div>
                 </div>
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#6B7280] mb-1">
                     Communes souvent desservies autour de Marseille
                   </p>
-                  <ul className="grid grid-cols-1 gap-1">
+                  <div className="flex flex-wrap gap-2">
                     {marseilleSuburbs.map((c) => (
-                      <li key={c}>• {c}</li>
+                      <span
+                        key={c}
+                        className="rounded-full border border-[#E3E5E8] bg-[#F8F9FA] px-3 py-1 text-xs text-[#4b5c6b]"
+                      >
+                        {c}
+                      </span>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               </div>
             ) : isParis ? (

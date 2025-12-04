@@ -35,6 +35,15 @@ export default function BlogPostPage({ params }: PageProps) {
     return null;
   }
 
+  const publishedDate =
+    post.publishedAt && !Number.isNaN(new Date(post.publishedAt).getTime())
+      ? new Date(post.publishedAt).toLocaleDateString("fr-FR", {
+          day: "2-digit",
+          month: "long",
+          year: "numeric",
+        })
+      : "";
+
   const related = BLOG_POSTS.filter(
     (p) =>
       p.slug !== post.slug &&
@@ -60,14 +69,9 @@ export default function BlogPostPage({ params }: PageProps) {
                 {post.category}
               </span>
             )}
-            <span>
-              Publié le{" "}
-              {new Date(post.publishedAt).toLocaleDateString("fr-FR", {
-                day: "2-digit",
-                month: "long",
-                year: "numeric",
-              })}
-            </span>
+            {publishedDate && (
+              <span>Publié le {publishedDate}</span>
+            )}
             {post.readingTimeMinutes && (
               <span>· {post.readingTimeMinutes} min de lecture</span>
             )}
