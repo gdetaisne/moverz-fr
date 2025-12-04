@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { CITIES } from "@/lib/cities";
+import { BLOG_POSTS } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://moverz.fr";
@@ -34,5 +35,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  return [...staticPages, ...cityPages];
+  // Articles de blog (dont P1 Prix & guides majeurs)
+  const blogPages: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}/`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...cityPages, ...blogPages];
 }

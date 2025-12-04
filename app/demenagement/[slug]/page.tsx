@@ -7,6 +7,7 @@ import { CityHero } from "@/components/city/CityHero";
 import { CityHowItWorks } from "@/components/city/CityHowItWorks";
 import { CityPricing } from "@/components/city/CityPricing";
 import { CityFinalCTA } from "@/components/city/CityFinalCTA";
+import { getPricePostForCity } from "@/lib/blog";
 
 type PageProps = {
   params: {
@@ -62,6 +63,7 @@ export default function CityMovingPage({ params }: PageProps) {
   const isReims = city.slug === "reims";
   const isLeHavre = city.slug === "le-havre";
   const quoteUrl = `https://devis.moverz.fr/?city_slug=${city.slug}&source=moverz.fr&from=/demenagement/${city.slug}/`;
+  const pricePost = getPricePostForCity(city.slug);
   const marseilleNeighborhoods = [
     "Vieux-Port, Le Panier",
     "La Joliette, Euroméditerranée",
@@ -451,6 +453,25 @@ export default function CityMovingPage({ params }: PageProps) {
 
       {/* Prix indicatifs */}
       <CityPricing cityName={city.nameCapitalized} />
+
+      {/* Lien vers le guide Prix de la ville si disponible */}
+      {pricePost && (
+        <section className="section section-light pt-0">
+          <div className="container max-w-3xl text-sm md:text-base text-[#4b5c6b] space-y-3">
+            <p>
+              Pour aller plus loin sur les tarifs, vous pouvez consulter notre guide complet&nbsp;
+              <a
+                href={`/blog/${pricePost.slug}/`}
+                className="text-[#2B7A78] underline underline-offset-2 hover:text-[#205a5a]"
+              >
+                prix déménagement {city.nameCapitalized.toLowerCase()}
+              </a>
+              , avec des fourchettes détaillées, des exemples concrets et les facteurs qui font
+              varier le budget.
+            </p>
+          </div>
+        </section>
+      )}
 
       {/* Quartiers & communes couvertes */}
       <section className="section section-light">

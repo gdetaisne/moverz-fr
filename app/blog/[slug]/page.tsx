@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { BlogPostMeta } from "@/lib/blog";
 import { BLOG_POSTS, getPostBySlug } from "@/lib/blog";
 import { getFullMetadata } from "@/lib/canonical-helper";
+import { getCityBySlug } from "@/lib/cities";
 
 type PageProps = {
   params: {
@@ -50,6 +51,8 @@ export default function BlogPostPage({ params }: PageProps) {
       p.slug !== post.slug &&
       (p.category === post.category || (!!post.citySlug && p.citySlug === post.citySlug))
   ).slice(0, 4);
+
+  const city = post.citySlug ? getCityBySlug(post.citySlug) : undefined;
 
   const renderContent = (post: BlogPostMeta) => {
     switch (post.slug) {
@@ -260,6 +263,14 @@ export default function BlogPostPage({ params }: PageProps) {
               <span className="rounded-full bg-white/10 px-2 py-0.5 font-semibold text-[11px] text-[#6BCFCF]">
                 {post.category}
               </span>
+            )}
+            {city && (
+              <a
+                href={`/demenagement/${city.slug}/`}
+                className="rounded-full bg-white/10 px-3 py-0.5 text-[11px] text-[#6BCFCF] hover:bg-white/20 hover:text-white transition-colors"
+              >
+                Déménagement {city.nameCapitalized}
+              </a>
             )}
             {publishedDate && (
               <span>Publié le {publishedDate}</span>

@@ -68,4 +68,14 @@ export function getPostBySlug(slug: string): BlogPostMeta | undefined {
   return BLOG_POSTS.find((post) => post.slug === slug);
 }
 
+// Trouver l'article Prix associé à une ville donnée
+export function getPricePostForCity(citySlug: string): BlogPostMeta | undefined {
+  return BLOG_POSTS.find(
+    (post) =>
+      post.category === "prix-et-devis" &&
+      post.citySlug === citySlug &&
+      post.slug.startsWith("prix-demenagement")
+  );
+}
+
 
