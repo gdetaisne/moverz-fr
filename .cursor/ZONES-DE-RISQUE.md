@@ -1,31 +1,37 @@
-# 🚨 ZONES DE RISQUE - Site Hub Moverz.fr
+# 🚨 ZONES DE RISQUE - Moverz.fr (Hub + Pages Villes)
 
-**Pour éviter les bugs récurrents sur le hub national**
+**Objectif : éviter les bugs récurrents sur le hub national ET sur les pages villes SEO.**
 
 **Avant de modifier du code, vérifie si tu touches à une de ces zones.**
 
 ---
 
-## 🔴 ZONE À RISQUE #1 : Villes Hardcodées dans le Contenu
+## 🔴 ZONE À RISQUE #1 : Ville spécifique au mauvais endroit
 
 ### 📊 Impact : CRITIQUE (UX + SEO)
 
-**Bug** : Mention d'une ville spécifique au lieu de rester national
+**Principe** :
+
+- **Hub national** (home, `/comment-ca-marche/`, `/villes/`, `/faq/`, `/blog/`…) → ton **national**.  
+- **Pages villes** (`/demenagement/[slug]/`) + articles “déménagement par ville” → ton **local** autorisé.
+
+**Bug** : mentionner une ville spécifique ou des quartiers **dans une page hub** au lieu de le faire sur la page ville dédiée.
 
 ### 🐛 Exemples de bugs
 
 ```typescript
-// ❌ BUG : Mention ville spécifique sur le hub
+// ❌ BUG : Mention ville spécifique sur une page hub
+// (ex: home, /comment-ca-marche/, /blog/, /faq/)
 title: "Déménagement à Nice | Moverz"
 
-// ❌ BUG : Description ville-spécifique
+// ❌ BUG : Description ville-spécifique sur le hub
 description: "Trouvez les meilleurs déménageurs à Lyon..."
 
-// ❌ BUG : Contenu focalisé sur une ville
+// ❌ BUG : Contenu focalisé sur une ville sur une page hub
 <h1>Comparez des déménageurs à Marseille</h1>
 
-// ❌ BUG : Link hardcodé au lieu de lib/cities
-<a href="https://devis-demenageur-nice.fr">Nice</a>
+// ✅ CORRECT : sur la page ville /demenagement/marseille/
+<h1>Déménagement à Marseille : comparez 5+ devis de pros contrôlés</h1>
 ```
 
 **Conséquence** :
@@ -35,25 +41,25 @@ description: "Trouvez les meilleurs déménageurs à Lyon..."
 
 ---
 
-### ✅ Solution : Rester NATIONAL
+### ✅ Solution : Séparer clairement HUB vs PAGES VILLES
 
 ```typescript
-// ✅ CORRECT : Focus national
+// ✅ CORRECT : Focus national (home / hub)
 title: "Comparateur Déménagement — France | Moverz"
 description: "Comparez 5+ devis de déménageurs dans toute la France..."
 
-// ✅ CORRECT : Utiliser lib/cities.ts
+// ✅ CORRECT : Utiliser lib/cities.ts pour lister les villes
 import { CITIES } from '@/lib/cities';
 
 {CITIES.map(city => (
-  <a key={city.slug} href={`${city.url}/devis-gratuits/`}>
+  <a key={city.slug} href={`/demenagement/${city.slug}/`}>
     {city.nameCapitalized}
   </a>
 ))}
 
 // ✅ CORRECT : Wording national
 <h1>Comparez des déménageurs en France</h1>
-<p>11 villes couvertes : {CITIES.map(c => c.nameCapitalized).join(', ')}</p>
+<p>Villes principales couvertes : {CITIES.map(c => c.nameCapitalized).join(', ')}</p>
 ```
 
 ---
@@ -63,49 +69,59 @@ import { CITIES } from '@/lib/cities';
 **Avant de commit, scanner le code pour** :
 
 ```bash
-# Détecter mentions ville-spécifiques
-grep -r "à Nice\|à Lyon\|à Marseille\|à Lille" /Users/lucie/moverz-fr/app/
-grep -r "déménagement Nice\|déménagement Lyon" /Users/lucie/moverz-fr/components/
-
-# Détecter liens hardcodés
-grep -r "devis-demenageur-nice.fr\|devis-demenageur-lyon.fr" /Users/lucie/moverz-fr/ --include="*.tsx"
+# Détecter mentions ville-spécifiques sur les pages HUB
+grep -r "à Nice\|à Lyon\|à Marseille\|à Lille" /Users/lucie/moverz-fr/app/ /Users/lucie/moverz-fr/components/ \
+  | grep -v "/demenagement/" \
+  | grep -v "/blog/demenagement-par-ville"
 ```
 
 **Si 1+ résultat** → BUG potentiel (sauf dans les exemples ou commentaires)
 
 ---
 
-## 🟠 ZONE À RISQUE #2 : CTAs vers `/devis-gratuits/`
+## 🟠 ZONE À RISQUE #2 : CTAs vers le mauvais tunnel
 
-### 📊 Impact : CRITIQUE (UX cassée)
+### 📊 Impact : CRITIQUE (UX cassée / tracking KO)
 
-**Bug** : CTA pointe vers `/devis-gratuits/` au lieu de `/choisir-ville/`
+**Nouveau workflow** :
+
+```text
+Hub & pages villes Moverz.fr → https://devis.moverz.fr/?... → Tunnel de devis
+```
+
+**Bug** : CTA pointe encore vers `/devis-gratuits/` ou `/choisir-ville/` au lieu de `https://devis.moverz.fr`.
 
 ### 🐛 Scénario réel
 
 ```tsx
-// ❌ BUG : CTA site local sur hub
+// ❌ BUG : Ancien CTA
 <a href="/devis-gratuits/">Obtenir mes devis</a>
 
-// Résultat : 404 sur moverz.fr (cette page n'existe pas sur le hub)
+// ❌ BUG : Ancien funnel interne
+<a href="/choisir-ville/">Obtenir mes devis</a>
+
+// ✅ NOUVEAU CTA : tunnel central
+<a href="https://devis.moverz.fr/?source=moverz.fr&from=/">
+  Obtenir mes devis
+</a>
 ```
 
-**Root cause** : Copier-coller depuis un site local sans adapter
+**Root cause** : Ancien modèle “hub → /choisir-ville/ → site local”
 
 ---
 
-### ✅ Solution : CTAs vers `/choisir-ville/`
+### ✅ Solution : CTAs vers `https://devis.moverz.fr` avec tracking
 
 ```tsx
-// ✅ CORRECT : CTA hub
-<a href="/choisir-ville/">Choisir ma ville</a>
-<a href="/choisir-ville/">Obtenir mes devis</a>
-<a href="/choisir-ville/">Comparer 5+ devis</a>
-```
+// ✅ CORRECT : CTA hub (exemple home)
+<a href="https://devis.moverz.fr/?source=moverz.fr&from=/">
+  Comparez 5+ devis gratuitement
+</a>
 
-**Workflow** :
-```
-Hub Moverz.fr → /choisir-ville/ → Sélection ville → Site local /devis-gratuits/
+// ✅ CORRECT : CTA page ville
+<a href={`https://devis.moverz.fr/?city_slug=${city.slug}&source=moverz.fr&from=/demenagement/${city.slug}/`}>
+  Obtenir des devis pour {city.nameCapitalized}
+</a>
 ```
 
 ---
@@ -115,11 +131,12 @@ Hub Moverz.fr → /choisir-ville/ → Sélection ville → Site local /devis-gra
 **Cursor DOIT vérifier** :
 
 ```bash
-# Chercher tous les liens /devis-gratuits/ sur le hub
+# Chercher tous les anciens liens /devis-gratuits/ ou /choisir-ville/
 grep -r 'href="/devis-gratuits' /Users/lucie/moverz-fr/ --include="*.tsx"
+grep -r 'href="/choisir-ville/' /Users/lucie/moverz-fr/ --include="*.tsx"
 ```
 
-**Si 1+ résultat** → BUG (sauf dans CitiesGrid qui link vers sites locaux)
+**Si 1+ résultat** → à vérifier (ne doit plus être utilisé pour le tunnel principal)
 
 ---
 

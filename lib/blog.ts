@@ -11,27 +11,31 @@ export interface BlogPostMeta {
 
 import { BLOG_DATA } from "./blog-data";
 
+// P1-SEO-PRIX-TOP20 : 20 articles Prix à mettre en avant en priorité
 const PRIORITY_SLUGS: string[] = [
-  // Guides prix & devis (nationaux + grandes villes)
-  "prix-demenagement-guide-complet-2025",
-  "prix-demenagement-longue-distance-france",
-  "prix-demenagement-paris",
+  // Guides prix par grande ville
   "prix-demenagement-marseille",
-  "prix-demenagement-lyon",
-  "prix-demenagement-nice",
+  "prix-demenagement-lyon-guide-complet",
+  "prix-demenagement-nice-guide",
   "prix-demenagement-bordeaux-guide",
-  "prix-demenagement-toulouse",
+  "prix-demenagement-montpellier",
   "prix-demenagement-nantes-guide",
-  "prix-demenagement-lille",
-  // Checklists & guides majeurs
-  "checklist-demenagement-complete-2025",
-  "checklist-demarches-administratives-apres-demenagement-2025",
-  "preparer-son-demenagement-20-etapes-indispensables",
-  // Comparateur & pages business
-  "comparateur-demenageurs-choisir-meilleur-devis",
-  // Famille
-  "demenager-avec-des-enfants-guide-pratique",
-  "demenager-avec-bebe-organisation-astuces-0-18-mois",
+  "prix-demenagement-lille-guide",
+  "prix-demenagement-rouen-guide-complet",
+  "prix-demenagement-strasbourg",
+  "prix-demenagement-toulouse",
+  // Longue distance
+  "prix-demenagement-longue-distance-bordeaux",
+  "prix-demenagement-longue-distance-marseille",
+  "prix-demenagement-longue-distance-lille-paris",
+  "prix-demenagement-longue-distance-montpellier-paris",
+  // Typologies de logements / cas fréquents
+  "prix-demenagement-studio-lille-2025",
+  "prix-demenagement-studio-lyon",
+  "prix-demenagement-t2-marseille-fourchettes-facteurs",
+  "prix-demenagement-t2-nice",
+  "prix-demenagement-t3-lyon",
+  "prix-demenagement-t3-nice",
 ];
 
 function sortByPriority(data: BlogPostMeta[]): BlogPostMeta[] {

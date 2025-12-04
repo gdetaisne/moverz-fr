@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import type { BlogPostMeta } from "@/lib/blog";
 import { BLOG_POSTS } from "@/lib/blog";
 import { getFullMetadata } from "@/lib/canonical-helper";
 
@@ -8,6 +9,36 @@ export const metadata: Metadata = getFullMetadata(
   "Blog déménagement : guides, prix et checklists | Moverz",
   "Guides pratiques pour préparer votre déménagement : prix, organisation, cartons, administratif, checklists et erreurs à éviter."
 );
+
+const CATEGORY_IMAGES: Record<string, string[]> = {
+  "prix-et-devis": [
+    "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1600&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop",
+  ],
+  "checklists-et-guides": [
+    "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1600&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1515871204537-49a5fe66a31f?q=80&w=1600&auto=format&fit=crop",
+  ],
+  "demenagement-par-ville": [
+    "https://images.unsplash.com/photo-1506377295352-e3154d43ea9e?q=80&w=1600&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?q=80&w=1600&auto=format&fit=crop",
+  ],
+  "conseils-demenagement": [
+    "https://images.unsplash.com/photo-1597092450864-4c4d4a5d5d4a?q=80&w=1600&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1598550874175-4d4a0deb3e5c?q=80&w=1600&auto=format&fit=crop",
+  ],
+};
+
+const DEFAULT_IMAGES: string[] = [
+  "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1600&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1597092450864-4c4d4a5d5d4a?q=80&w=1600&auto=format&fit=crop",
+];
+
+function getImageForPost(post: BlogPostMeta, index: number): string {
+  const key = post.category ?? "default";
+  const pool = CATEGORY_IMAGES[key] ?? DEFAULT_IMAGES;
+  return pool[index % pool.length];
+}
 
 export default function BlogIndexPage() {
   const posts = BLOG_POSTS;
@@ -80,7 +111,7 @@ export default function BlogIndexPage() {
             </div>
 
             <div className="grid gap-8 max-w-5xl mx-auto">
-              {featured.map((post) => (
+            {featured.map((post, index) => (
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}/`}
@@ -89,8 +120,13 @@ export default function BlogIndexPage() {
                   <article className="relative overflow-hidden rounded-3xl bg-white border border-[#E3E5E8] shadow-lg hover:border-[#6BCFCF]/40 transition-all duration-500 hover:scale-[1.01] hover:shadow-[0_20px_60px_rgba(0,0,0,0.12)]">
                     <div className="grid md:grid-cols-[320px_1fr]">
                       <div className="relative h-56 md:h-auto overflow-hidden">
+                        <img
+                          src={getImageForPost(post, index)}
+                          alt={post.title}
+                          className="w-full h-full object-cover"
+                          loading={index === 0 ? "eager" : "lazy"}
+                        />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#04163a] via-[#04163a]/40 to-transparent" />
-                        <div className="w-full h-full bg-[radial-gradient(circle_at_top,_#6BCFCF33,_transparent_60%),_radial-gradient(circle_at_bottom,_#2B7A7833,_transparent_60%)]" />
                         <div className="absolute top-6 left-6 z-10">
                           {post.category && (
                             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#6BCFCF] text-[#04163a] text-xs font-bold shadow-lg">
