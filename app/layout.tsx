@@ -180,10 +180,10 @@ export default function RootLayout({
               <div>
                 <h3 className="font-semibold mb-4 text-white">Nos villes</h3>
                 <ul className="space-y-2 text-sm">
-                  <li><a href="https://devis-demenageur-nice.fr" className="text-white/70 hover:text-white transition-colors">Nice</a></li>
-                  <li><a href="https://devis-demenageur-lyon.fr" className="text-white/70 hover:text-white transition-colors">Lyon</a></li>
-                  <li><a href="https://devis-demenageur-marseille.fr" className="text-white/70 hover:text-white transition-colors">Marseille</a></li>
-                  <li><a href="https://devis-demenageur-toulousain.fr" className="text-white/70 hover:text-white transition-colors">Toulouse</a></li>
+                  <li><a href="/demenagement/nice/" className="text-white/70 hover:text-white transition-colors">Nice</a></li>
+                  <li><a href="/demenagement/lyon/" className="text-white/70 hover:text-white transition-colors">Lyon</a></li>
+                  <li><a href="/demenagement/marseille/" className="text-white/70 hover:text-white transition-colors">Marseille</a></li>
+                  <li><a href="/demenagement/toulouse/" className="text-white/70 hover:text-white transition-colors">Toulouse</a></li>
                   <li><a href="/villes/" className="text-[#6BCFCF] hover:text-white transition-colors">Voir toutes les villes →</a></li>
                 </ul>
               </div>

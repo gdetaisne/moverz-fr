@@ -35,6 +35,12 @@ export default function BlogPostPage({ params }: PageProps) {
     return null;
   }
 
+  const related = BLOG_POSTS.filter(
+    (p) =>
+      p.slug !== post.slug &&
+      (p.category === post.category || (!!post.citySlug && p.citySlug === post.citySlug))
+  ).slice(0, 4);
+
   return (
     <main className="bg-hero min-h-screen">
       <div className="halo" />
@@ -116,6 +122,40 @@ export default function BlogPostPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      {/* Articles liés */}
+      {related.length > 0 && (
+        <section className="section section-light">
+          <div className="container max-w-3xl space-y-4 text-[#04163a]">
+            <h2 className="text-xl md:text-2xl font-semibold">
+              Articles qui peuvent aussi vous intéresser
+            </h2>
+            <div className="space-y-3">
+              {related.map((item) => (
+                <a
+                  key={item.slug}
+                  href={`/blog/${item.slug}/`}
+                  className="group flex flex-col gap-1 rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 hover:border-[#6BCFCF]/50 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200"
+                >
+                  <div className="flex flex-wrap items-center gap-2 text-xs text-[#6B7280]">
+                    {item.category && (
+                      <span className="rounded-full bg-[#F0F4F8] px-2 py-0.5 font-semibold text-[11px] text-[#2B7A78]">
+                        {item.category}
+                      </span>
+                    )}
+                    {item.citySlug && (
+                      <span className="text-[#6B7280]">{item.citySlug}</span>
+                    )}
+                  </div>
+                  <p className="text-sm font-semibold text-[#04163a] group-hover:text-[#2B7A78]">
+                    {item.title}
+                  </p>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA vers le comparateur */}
       <section className="section section-contrast">

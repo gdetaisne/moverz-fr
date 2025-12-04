@@ -136,9 +136,25 @@ function detectCategory(row) {
   return "conseils-demenagement";
 }
 
+function isBatchRow(row) {
+  const title = (row.title || "").toLowerCase();
+  const slug = (row.new_slug || "").toLowerCase();
+
+  // On exclut tous les anciens articles "batch" purement techniques (production interne),
+  // qui ne doivent pas apparaître dans le blog public moverz.fr.
+  if (title.startsWith("batch production") || title.startsWith("production batch")) {
+    return true;
+  }
+  if (slug.startsWith("batch-") || slug.includes("batch-production")) {
+    return true;
+  }
+  return false;
+}
+
 console.log(`📄 Lecture de ${CSV_PATH}...`);
-const rows = readCleanCsv();
-console.log(`➡️  ${rows.length} articles.`);
+const allRows = readCleanCsv();
+const rows = allRows.filter((row) => !isBatchRow(row));
+console.log(`➡️  ${allRows.length} articles en entrée, ${rows.length} conservés (batchs exclus).`);
 
 const objects = rows.map((row) => {
   const wordCount = toNumber(row.word_count);
