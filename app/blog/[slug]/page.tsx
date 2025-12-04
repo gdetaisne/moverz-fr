@@ -170,7 +170,10 @@ export default function BlogPostPage({ params }: PageProps) {
             3 minutes pour créer votre dossier, 5+ déménageurs contrôlés qui chiffrent le même
             volume. Vous gardez la main sur le choix final.
           </p>
-          <a href="/choisir-ville/" className="btn-primary">
+          <a
+            href="https://devis.moverz.fr/?source=moverz.fr&from=/blog-article"
+            className="btn-primary"
+          >
             Lancer mon comparateur de devis
           </a>
         </div>

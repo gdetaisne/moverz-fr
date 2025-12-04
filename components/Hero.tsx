@@ -65,7 +65,7 @@ export default function Hero() {
             {/* CTA avec gradient + glow (Stripe-style) */}
             <div className="mt-10 flex flex-col items-center justify-center sm:flex-row lg:justify-start">
               <a
-                href="/choisir-ville/"
+                href="https://devis.moverz.fr/?source=moverz.fr&from=/"
                 className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-lg md:text-xl font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
                 aria-label="Comparez 5+ devis gratuitement"
               >

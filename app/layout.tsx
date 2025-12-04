@@ -155,7 +155,7 @@ export default function RootLayout({
                 FAQ
               </a>
               <a
-                href="/choisir-ville/"
+                href="https://devis.moverz.fr/?source=moverz.fr&from=header"
                 className="inline-flex items-center gap-1 rounded-xl bg-gradient-to-r from-[#6BCFCF] to-[#4FB8B8] px-4 py-2 text-sm font-semibold text-[#04141f] hover:scale-105 transition-transform duration-300"
               >
                 <span>Obtenir des devis</span>

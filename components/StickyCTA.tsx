@@ -23,7 +23,7 @@ export default function StickyCTA() {
       <div className="md:hidden">
         <div className="bg-white/95 backdrop-blur-xl border-t border-[#E3E5E8] px-4 py-3 shadow-[0_-4px_24px_rgba(0,0,0,0.08)]">
           <a
-            href="/choisir-ville/"
+            href="https://devis.moverz.fr/?source=moverz.fr&from=/sticky-cta-mobile"
             className="group relative inline-flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-6 py-3 text-sm font-semibold text-[#04141f] shadow-[0_4px_16px_rgba(107,207,207,0.3)] active:scale-95 transition-all duration-200"
             aria-label="Recevoir mes devis gratuits"
           >
@@ -65,7 +65,7 @@ export default function StickyCTA() {
 
               {/* CTA Button */}
               <a
-                href="/choisir-ville/"
+                href="https://devis.moverz.fr/?source=moverz.fr&from=/sticky-cta-desktop"
                 className="group/btn relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-6 py-3 text-sm font-semibold text-[#04141f] shadow-[0_4px_20px_rgba(107,207,207,0.35)] hover:shadow-[0_8px_32px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 flex-shrink-0"
                 aria-label="Lancer le comparateur"
               >

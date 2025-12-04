@@ -19,7 +19,7 @@ export function CityPricing({ cityName }: CityPricingProps) {
           </p>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { label: "Studio / T1", range: "300 € – 600 €" },
             { label: "T2 / 40–50 m²", range: "500 € – 900 €" },

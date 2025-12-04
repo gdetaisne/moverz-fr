@@ -165,7 +165,10 @@ export default function Home() {
                 <p className="text-sm md:text-base text-white/80 max-w-xl mx-auto">
                   Pour votre déménagement en France, obtenez des devis alignés sur la même base, sans appels commerciaux non souhaités.
                 </p>
-                <a href="/choisir-ville/" className="btn-primary">
+                <a
+                  href="https://devis.moverz.fr/?source=moverz.fr&from=/"
+                  className="btn-primary"
+                >
                   Lancer mon comparateur de devis
                 </a>
               </div>
