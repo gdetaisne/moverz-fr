@@ -1262,12 +1262,21 @@ export default function CityMovingPage({ params }: PageProps) {
                 </div>
               </div>
             ) : (
-              <ul className="grid grid-cols-1 gap-2 text-sm text-[#4b5c6b]">
-                <li>• Centre-ville et quartiers limitrophes</li>
-                <li>• Communes voisines reliées en transport / voiture</li>
-                <li>• Zones pavillonnaires et lotissements récents</li>
-                <li>• Déménagements intra-muros et longue distance depuis {city.nameCapitalized}</li>
-              </ul>
+              <div className="flex flex-wrap gap-2 text-sm text-[#4b5c6b]">
+                {[
+                  "Centre-ville et quartiers limitrophes",
+                  "Communes voisines reliées en transport / voiture",
+                  "Zones pavillonnaires et lotissements récents",
+                  `Déménagements intra-muros et longue distance depuis ${city.nameCapitalized}`,
+                ].map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-full border border-[#E3E5E8] bg-[#F8F9FA] px-3 py-1 text-xs text-[#4b5c6b]"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
             )}
             <p className="text-xs text-[#6B7280] mt-3">
               La liste exacte dépend des déménageurs sélectionnés. Elle est précisée au moment des devis.

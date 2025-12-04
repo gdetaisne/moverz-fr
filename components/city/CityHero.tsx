@@ -41,11 +41,16 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
             <h2 className="text-lg font-semibold text-white">
               Exemple de déménagement à {city.nameCapitalized}
             </h2>
-            <ul className="space-y-2 text-sm text-white/80">
-              <li>• T3 meublé, 65 m²</li>
-              <li>• 4ᵉ étage avec ascenseur</li>
-              <li>• Distance 10–15 km</li>
-            </ul>
+            <div className="flex flex-wrap gap-2 text-xs text-white/80">
+              {["T3 meublé, 65 m²", "4ᵉ étage avec ascenseur", "Distance 10–15 km"].map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-white/20 bg-white/5 px-3 py-1"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
             <p className="text-xs text-white/70">
               Selon le volume, l&apos;accès et la période, les prix constatés se situent généralement dans la
               fourchette indiquée ci-dessous pour un T3. Les devis personnalisés restent la référence.
