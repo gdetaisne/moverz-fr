@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Image from "next/image";
 import "./globals.css";
 import { MOVERZ_REVIEWS, getAverageRating, getTotalReviews } from "@/lib/reviews";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -128,6 +129,7 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
+        <GoogleAnalytics />
         {/* Header */}
         <header className="sticky top-0 z-40 w-full backdrop-blur-lg bg-[#04163a]/90 border-b border-white/10">
           <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8">
