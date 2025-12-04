@@ -3,6 +3,10 @@ import { notFound } from "next/navigation";
 import { CITIES, getCityBySlug } from "@/lib/cities";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import { getCityReviewsBySlug } from "@/lib/city-reviews";
+import { CityHero } from "@/components/city/CityHero";
+import { CityHowItWorks } from "@/components/city/CityHowItWorks";
+import { CityPricing } from "@/components/city/CityPricing";
+import { CityFinalCTA } from "@/components/city/CityFinalCTA";
 
 type PageProps = {
   params: {
@@ -389,116 +393,10 @@ export default function CityMovingPage({ params }: PageProps) {
       <div className="halo" />
 
       {/* Hero */}
-      <section className="section section-contrast">
-        <div className="container grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] items-center">
-          <div className="space-y-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
-              Déménagement · {city.nameCapitalized}
-            </p>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-              Déménagement à {city.nameCapitalized} : comparez 5+ devis de pros contrôlés
-            </h1>
-            <p className="text-sm md:text-base text-white/80 max-w-xl">
-              1 seul dossier ultra complet (inventaire, accès, contraintes) pour recevoir plusieurs devis
-              structurés sur la même base. Vous gagnez du temps et évitez les mauvaises surprises le jour J.
-            </p>
-            <ul className="space-y-2 text-sm md:text-base text-white/85">
-              <li>✓ Pros vérifiés (assurances, solvabilité, avis)</li>
-              <li>✓ Dossier anonyme, 0 démarchage sauvage</li>
-              <li>✓ Service 100% gratuit pour vous</li>
-            </ul>
-            <div className="flex flex-wrap gap-3 pt-2">
-              <a href={quoteUrl} className="btn-primary">
-                Obtenir des devis pour {city.nameCapitalized}
-              </a>
-              <p className="text-xs md:text-sm text-white/60">
-                3 minutes pour remplir votre dossier · Réponse rapide des déménageurs
-              </p>
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="absolute -inset-6 rounded-3xl bg-gradient-to-br from-[#6BCFCF]/20 via-transparent to-[#4FB8B8]/15 blur-2xl" />
-            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#04163a]/60 backdrop-blur-sm p-6 space-y-4">
-              <h2 className="text-lg font-semibold text-white">
-                Exemple de déménagement à {city.nameCapitalized}
-              </h2>
-              <ul className="space-y-2 text-sm text-white/80">
-                <li>• T3 meublé, 65 m²</li>
-                <li>• 4ᵉ étage avec ascenseur</li>
-                <li>• Distance 10–15 km</li>
-              </ul>
-              <p className="text-xs text-white/70">
-                Selon le volume, l&apos;accès et la période, les prix constatés se situent généralement dans la
-                fourchette indiquée ci-dessous pour un T3. Les devis personnalisés restent la référence.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CityHero city={city} quoteUrl={quoteUrl} />
 
       {/* Comment ça marche */}
-      <section className="section section-light">
-        <div className="container space-y-8">
-          <div className="text-center space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#2B7A78]">
-              Comment ça marche ?
-            </p>
-            <h2 className="text-2xl md:text-3xl font-semibold text-[#04163a]">
-              3 étapes pour organiser votre déménagement à {city.nameCapitalized}
-            </h2>
-            <p className="text-sm md:text-base text-[#4b5c6b] max-w-2xl mx-auto">
-              Moverz vous accompagne de la description de votre projet jusqu&apos;au choix final du déménageur,
-              sans démarchage agressif ni devis incompréhensibles.
-            </p>
-          </div>
-
-          <div className="grid gap-4 md:grid-cols-3">
-            <div className="rounded-2xl border border-[#E3E5E8] bg-white p-5 space-y-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#6B7280]">
-                Étape 1
-              </p>
-              <h3 className="text-sm font-semibold text-[#04163a]">
-                Décrivez votre déménagement
-              </h3>
-              <p className="text-sm text-[#4b5c6b]">
-                Adresses de départ et d&apos;arrivée, volume estimé, accès, contraintes particulières…
-                Vous remplissez un seul dossier ultra précis pour votre déménagement à {city.nameCapitalized}.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-[#E3E5E8] bg-white p-5 space-y-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#6B7280]">
-                Étape 2
-              </p>
-              <h3 className="text-sm font-semibold text-[#04163a]">
-                Recevez 5+ devis comparables
-              </h3>
-              <p className="text-sm text-[#4b5c6b]">
-                Les déménageurs partenaires chiffrent exactement la même opération. Vous recevez des
-                devis structurés et faciles à comparer, sans appels en série.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-[#E3E5E8] bg-white p-5 space-y-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#6B7280]">
-                Étape 3
-              </p>
-              <h3 className="text-sm font-semibold text-[#04163a]">
-                Choisissez sereinement votre déménageur
-              </h3>
-              <p className="text-sm text-[#4b5c6b]">
-                Vous comparez prix, options et avis, puis validez le déménageur qui correspond le mieux
-                à votre projet. Moverz reste disponible en cas de question.
-              </p>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <a href={quoteUrl} className="btn-primary">
-              Lancer mon comparateur pour {city.nameCapitalized}
-            </a>
-          </div>
-        </div>
-      </section>
+      <CityHowItWorks cityName={city.nameCapitalized} quoteUrl={quoteUrl} />
 
       {/* Pourquoi Moverz à {Ville} */}
       <section className="section section-light">
@@ -552,45 +450,7 @@ export default function CityMovingPage({ params }: PageProps) {
       </section>
 
       {/* Prix indicatifs */}
-      <section className="section section-contrast">
-        <div className="container space-y-6">
-          <div className="text-center space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
-              Prix indicatifs
-            </p>
-            <h2 className="text-2xl md:text-3xl font-semibold text-white">
-              Combien coûte un déménagement à {city.nameCapitalized} ?
-            </h2>
-            <p className="text-sm md:text-base text-white/80 max-w-2xl mx-auto">
-              Les prix varient selon la période, l&apos;accès, le volume, la distance et le niveau de service
-              (éco, standard, confort). Voici des ordres de grandeur à titre indicatif.
-            </p>
-          </div>
-
-          <div className="grid gap-4 md:grid-cols-3">
-            {[
-              { label: "Studio / T1", range: "300 € – 600 €" },
-              { label: "T2 / 40–50 m²", range: "500 € – 900 €" },
-              { label: "T3 / 60–70 m²", range: "700 € – 1 300 €" },
-              { label: "Maison / >90 m²", range: "1 200 € – 2 400 €+" },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className="rounded-2xl border border-white/10 bg-white/5 p-5 text-sm text-white space-y-2"
-              >
-                <p className="text-xs uppercase tracking-[0.18em] text-[#6BCFCF]">
-                  {item.label}
-                </p>
-                <p className="text-lg font-semibold">{item.range}</p>
-                <p className="text-xs text-white/70">
-                  Estimations basées sur des déménagements réalisés à {city.nameCapitalized} et dans des
-                  villes de taille comparable. Un devis personnalisé reste indispensable.
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <CityPricing cityName={city.nameCapitalized} />
 
       {/* Quartiers & communes couvertes */}
       <section className="section section-light">
@@ -1557,23 +1417,7 @@ export default function CityMovingPage({ params }: PageProps) {
       </section>
 
       {/* CTA final */}
-      <section className="section section-contrast">
-        <div className="container max-w-3xl text-center space-y-5">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
-            Prêt à comparer ?
-          </p>
-          <h2 className="text-2xl md:text-3xl font-semibold text-white">
-            Lancez votre comparateur pour déménager à {city.nameCapitalized}
-          </h2>
-          <p className="text-sm md:text-base text-white/80 max-w-2xl mx-auto">
-            3 minutes pour créer votre dossier, 5+ devis alignés sur la même base. Vous gardez le
-            contrôle sur le choix du déménageur et le moment où vous le contactez.
-          </p>
-          <a href={quoteUrl} className="btn-primary">
-            Obtenir des devis pour {city.nameCapitalized}
-          </a>
-        </div>
-      </section>
+      <CityFinalCTA cityName={city.nameCapitalized} quoteUrl={quoteUrl} />
     </main>
   );
 }
