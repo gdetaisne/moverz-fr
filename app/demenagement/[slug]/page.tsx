@@ -63,6 +63,22 @@ export default function CityMovingPage({ params }: PageProps) {
   const isReims = city.slug === "reims";
   const isLeHavre = city.slug === "le-havre";
   const quoteUrl = `https://devis.moverz.fr/?city_slug=${city.slug}&source=moverz.fr&from=/demenagement/${city.slug}/`;
+  const priceSlugByCity: Record<string, string | undefined> = {
+    marseille: "prix-demenagement-marseille",
+    lyon: "prix-demenagement-lyon-guide-complet",
+    nice: "prix-demenagement-nice-guide",
+    bordeaux: "prix-demenagement-bordeaux-guide",
+    toulouse: "prix-demenagement-toulouse",
+    nantes: "prix-demenagement-nantes-guide",
+    lille: "prix-demenagement-lille-guide",
+    rouen: "prix-demenagement-rouen-guide-complet",
+    strasbourg: "prix-demenagement-strasbourg",
+  };
+
+  const priceSlug = priceSlugByCity[city.slug];
+  const pricePost = priceSlug
+    ? BLOG_POSTS.find((post) => post.slug === priceSlug)
+    : undefined;
   const pricePost = getPricePostForCity(city.slug);
   const marseilleNeighborhoods = [
     "Vieux-Port, Le Panier",
