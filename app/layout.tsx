@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import "./globals.css";
+import { MOVERZ_REVIEWS, getAverageRating, getTotalReviews } from "@/lib/reviews";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -83,10 +84,32 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
+              "@id": "https://moverz.fr/#organization",
               "name": "Moverz",
               "url": "https://moverz.fr",
               "logo": "https://moverz.fr/logo.png",
               "description": "Comparateur de déménagement anti-arnaque. Comparez 5+ devis de déménageurs contrôlés sur toute la France.",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": getAverageRating(MOVERZ_REVIEWS),
+                "reviewCount": getTotalReviews(),
+                "bestRating": 5,
+                "worstRating": 1
+              },
+              "review": MOVERZ_REVIEWS.map((review) => ({
+                "@type": "Review",
+                "author": {
+                  "@type": "Person",
+                  "name": review.author.split(" — ")[0] || review.author
+                },
+                "reviewBody": review.body,
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": review.rating,
+                  "bestRating": 5,
+                  "worstRating": 1
+                }
+              })),
               "contactPoint": {
                 "@type": "ContactPoint",
                 "contactType": "Customer Service",
