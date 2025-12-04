@@ -10,9 +10,12 @@ export interface BlogPostMeta {
 }
 
 import { BLOG_DATA } from "./blog-data";
+import { BLOG_EXTRA } from "./blog-extra";
 
 // P1-SEO-PRIX-TOP20 : 20 articles Prix à mettre en avant en priorité
 const PRIORITY_SLUGS: string[] = [
+  // Guide national longue distance
+  "prix-demenagement-longue-distance-france",
   // Guides prix par grande ville
   "prix-demenagement-marseille",
   "prix-demenagement-lyon-guide-complet",
@@ -59,7 +62,7 @@ function sortByPriority(data: BlogPostMeta[]): BlogPostMeta[] {
   });
 }
 
-export const BLOG_POSTS: BlogPostMeta[] = sortByPriority(BLOG_DATA);
+export const BLOG_POSTS: BlogPostMeta[] = sortByPriority([...BLOG_DATA, ...BLOG_EXTRA]);
 
 export function getPostBySlug(slug: string): BlogPostMeta | undefined {
   return BLOG_POSTS.find((post) => post.slug === slug);

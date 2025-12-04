@@ -30,7 +30,7 @@ const faqCategories = [
       },
       {
         q: "Que se passe-t-il si ma ville n'est pas couverte ?",
-        a: "Si votre ville ne fait pas encore partie de nos 11 villes couvertes, nous vous invitons à nous contacter via notre page de contact. Nous sommes en constante expansion et votre intérêt nous aide à prioriser nos prochaines ouvertures.",
+        a: "Moverz peut être utilisé partout en France : vous pouvez créer un dossier complet quel que soit votre point de départ ou d'arrivée. Certaines grandes villes ont des pages dédiées, mais si vous ne trouvez pas explicitement votre ville dans nos exemples, vous pouvez quand même utiliser le comparateur et nous indiquer vos adresses précises.",
       }
     ]
   },
@@ -86,7 +86,7 @@ const faqCategories = [
     items: [
       {
         q: "Puis-je utiliser Moverz pour un déménagement international ?",
-        a: "Actuellement, Moverz se concentre sur les déménagements nationaux en France. Nous couvrons 11 grandes villes et leurs régions. Nous prévoyons d'étendre nos services à l'international à l'avenir.",
+        a: "Notre cœur de métier est le déménagement France → France, mais nous pouvons étudier certains projets internationaux au cas par cas (Europe proche, retour en France, etc.). Indiquez simplement votre situation dans le formulaire ou contactez-nous : nous vous dirons clairement si nous pouvons vous accompagner directement ou vous orienter vers la bonne solution.",
       }
     ]
   }
