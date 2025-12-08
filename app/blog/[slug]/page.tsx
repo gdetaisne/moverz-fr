@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import type { Components } from "react-markdown";
 import type { BlogPostMeta } from "@/lib/blog";
 import { BLOG_POSTS, getCanonicalBodyBySlug, getPostBySlug } from "@/lib/blog";
 import { getFullMetadata } from "@/lib/canonical-helper";
@@ -57,6 +58,63 @@ export default function BlogPostPage({ params }: PageProps) {
   const city = post.citySlug ? getCityBySlug(post.citySlug) : undefined;
   const canonicalBody = getCanonicalBodyBySlug(post.slug);
 
+  // Custom components pour ReactMarkdown
+  const markdownComponents: Components = {
+    blockquote: ({ children, ...props }) => {
+      // Extraire le texte brut de children (qui peut être un array de paragraphes)
+      const extractText = (node: any): string => {
+        if (typeof node === 'string') return node;
+        if (Array.isArray(node)) return node.map(extractText).join(' ');
+        if (node?.props?.children) return extractText(node.props.children);
+        return '';
+      };
+      
+      const childrenText = extractText(children).trim();
+      
+      // Détecter les blockquotes CTA (commencent par [CTA])
+      if (childrenText.includes('[CTA]')) {
+        // Supprimer le [CTA] et extraire le contenu
+        const fullText = childrenText.replace('[CTA]', '').trim();
+        
+        // Séparer en lignes et prendre la première comme titre
+        const lines = fullText.split('\n').map(l => l.trim()).filter(Boolean);
+        const title = lines[0] || 'Comparer les devis';
+        const description = lines.slice(1).join(' ') || 'Obtenez plusieurs devis comparables en quelques minutes.';
+
+        return (
+          <div className="my-8 rounded-2xl border-2 border-[#6BCFCF] bg-gradient-to-br from-[#F0F9FF] to-[#E0F2FE] p-6 md:p-8 text-center shadow-md">
+            <div className="space-y-4">
+              <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/20 px-4 py-1.5 text-xs font-semibold text-[#0F172A]">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+                Action recommandée
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-[#0F172A] leading-tight">
+                {title}
+              </h3>
+              <p className="text-sm md:text-base text-[#4b5c6b] max-w-2xl mx-auto leading-relaxed">
+                {description}
+              </p>
+              <a
+                href="https://devis.moverz.fr/?source=moverz.fr&from=/blog-article-cta"
+                className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF] px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#5AB9B9] transition-colors"
+              >
+                <span>Comparer les devis gratuitement</span>
+                <span className="text-lg leading-none">→</span>
+              </a>
+            </div>
+          </div>
+        );
+      }
+
+      // Blockquotes normales
+      return (
+        <blockquote className="border-l-4 border-[#6BCFCF] bg-[#F0F9FF] py-3 px-4 my-6 not-italic text-[#04163a]" {...props}>
+          {children}
+        </blockquote>
+      );
+    },
+  };
+
   return (
     <main className="bg-hero min-h-screen">
       <div className="halo" />
@@ -102,12 +160,11 @@ export default function BlogPostPage({ params }: PageProps) {
         <section className="section section-light">
           <div className="container max-w-3xl text-[#04163a]">
             <div className="rounded-3xl bg-white px-4 py-6 md:px-10 md:py-10 shadow-sm border border-[#E3E5E8]">
-              <ReactMarkdown
-                remarkPlugins={[remarkGfm]}
-                className="prose prose-sm md:prose-base max-w-none prose-headings:text-[#04163a] prose-headings:font-semibold prose-p:text-[#4b5c6b] prose-p:leading-relaxed prose-li:text-[#4b5c6b] prose-li:leading-relaxed prose-strong:text-[#04163a] prose-a:text-[#2B7A78] prose-a:underline prose-a:underline-offset-2 prose-table:text-xs md:prose-table:text-sm prose-th:text-[#04163a] prose-th:font-semibold"
-              >
-                {canonicalBody}
-              </ReactMarkdown>
+              <article className="prose prose-base lg:prose-lg max-w-none prose-headings:font-bold prose-headings:text-[#04163a] prose-h1:text-3xl prose-h1:mb-6 prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:text-[#4b5c6b] prose-p:leading-relaxed prose-p:mb-4 prose-li:text-[#4b5c6b] prose-li:leading-relaxed prose-strong:text-[#04163a] prose-strong:font-semibold prose-a:text-[#2B7A78] prose-a:font-medium prose-a:no-underline hover:prose-a:underline prose-ul:my-4 prose-ul:list-disc prose-ul:pl-5 prose-ol:my-4 prose-ol:list-decimal prose-ol:pl-5 prose-table:text-sm prose-th:bg-[#F9FAFB] prose-th:text-[#04163a] prose-th:font-semibold prose-th:p-3 prose-td:p-3 prose-td:border-[#E5E7EB] prose-hr:my-8 prose-hr:border-[#E5E7EB]">
+                <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+                  {canonicalBody}
+                </ReactMarkdown>
+              </article>
             </div>
           </div>
         </section>
