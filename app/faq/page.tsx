@@ -22,7 +22,7 @@ const faqCategories = [
     items: [
       {
         q: "Qu'est-ce que Moverz ?",
-        a: "Moverz est un comparateur de devis de déménageurs qui vous aide à obtenir des offres vraiment comparables. Vous créez un seul inventaire détaillé de votre déménagement, que tous les déménageurs partenaires reçoivent pour vous envoyer un devis clair. Notre service est 100% gratuit et sans harcèlement téléphonique.",
+        a: "Moverz est un comparateur de devis de déménageurs qui s’appuie sur l’IA pour préparer un dossier ultra précis à partir de quelques questions et de vos photos. L’IA Moverz estime la volumétrie de votre déménagement et structure un inventaire unique, envoyé à des déménageurs contrôlés. Résultat : des devis enfin comparables, 100% gratuits et sans harcèlement téléphonique.",
       },
       {
         q: "Combien de devis vais-je recevoir ?",
@@ -50,7 +50,7 @@ const faqCategories = [
       },
       {
         q: "Comment Moverz garantit-il des devis comparables ?",
-        a: "Vous créez un seul inventaire détaillé de votre déménagement. Cet inventaire standardisé est envoyé à tous les déménageurs partenaires. Ainsi, ils chiffrent tous le même volume et les mêmes prestations, ce qui rend les devis directement comparables. Plus de décalage entre les offres !",
+        a: "Vous décrivez votre déménagement, envoyez des photos et laissez l’IA Moverz faire le travail. Elle estime le volume global et crée un dossier standardisé (même volumétrie, mêmes informations) envoyé à tous les déménageurs partenaires. Ils chiffrent ainsi la même base, ce qui rend les devis directement comparables et limite les mauvaises surprises.",
       }
     ]
   },
@@ -145,7 +145,7 @@ export default function FAQPage() {
               Questions fréquentes
             </h1>
             <p className="text-lg md:text-xl text-white/85 max-w-3xl leading-relaxed">
-              Vous avez des questions ? On a les réponses ! Tout ce que vous devez savoir sur Moverz en mode simple et clair.
+              Vous avez des questions ? On a les réponses ! Découvrez comment l’IA Moverz estime votre volume, standardise votre dossier et vous aide à comparer des devis vraiment comparables, sans spam.
             </p>
           </div>
         </div>
@@ -159,7 +159,7 @@ export default function FAQPage() {
               { 
                 icon: <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>,
                 stat: "< 3 min", 
-                label: "Pour créer son dossier" 
+                label: "Pour créer son dossier complet" 
               },
               { 
                 icon: <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" /></svg>,
@@ -169,7 +169,7 @@ export default function FAQPage() {
               { 
                 icon: <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>,
                 stat: "0 spam", 
-                label: "Aucun harcèlement" 
+                label: "Aucun appel intempestif" 
               },
               { 
                 icon: <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>,
@@ -267,17 +267,17 @@ export default function FAQPage() {
             <span>Prêt à démarrer ?</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
-            Comparez 5+ devis en 3 minutes
+            Comparez 5+ devis gratuitement
           </h2>
           <p className="text-lg text-white/75 max-w-2xl mx-auto">
-            Gratuit, rapide, et sans prise de tête. Promis, on ne va pas vous harceler !
+            En quelques photos, l’IA Moverz estime votre volume et prépare des devis comparables de déménageurs contrôlés, sans spam.
           </p>
           <a
             href="https://devis.moverz.fr/?source=moverz.fr&from=/faq"
             className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-lg font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
           >
             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
-            <span className="relative">C'est parti !</span>
+            <span className="relative">Comparez 5+ devis gratuitement</span>
             <svg className="relative h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>

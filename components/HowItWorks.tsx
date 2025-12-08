@@ -36,8 +36,8 @@ export default function HowItWorks() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
         </svg>
       ),
-      title: "Créez votre dossier unique",
-      description: "Quelques infos clés, un seul dossier pour tous les déménageurs.",
+      title: "Vous décrivez votre déménagement",
+      description: "Adresses, date, type de logement : on va droit au but.",
     },
     {
       number: "2", 
@@ -46,8 +46,8 @@ export default function HowItWorks() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
         </svg>
       ),
-      title: "Nous filtrons les déménageurs",
-      description: "Seuls les pros fiables, bien notés et assurés reçoivent votre demande.",
+      title: "Vous envoyez quelques photos",
+      description: "L’IA Moverz estime le volume de votre déménagement à partir de vos photos.",
     },
     {
       number: "3",
@@ -56,8 +56,8 @@ export default function HowItWorks() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
         </svg>
       ),
-      title: "Vous comparez 5+ devis fiables",
-      description: "Même volume, mêmes options : des devis comparables, sans spam.",
+      title: "Vous comparez 5+ devis",
+      description: "Même info pour tous les déménageurs : des devis enfin comparables, sans appels forcés.",
     }
   ];
 
@@ -82,10 +82,10 @@ export default function HowItWorks() {
           Processus en 3 étapes
         </p>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#04163a] leading-tight">
-          Comment fonctionne le comparateur ?
-      </h2>
+          Comment ça marche ?
+        </h2>
         <p className="text-base md:text-lg lg:text-xl text-[#4b5c6b] leading-relaxed max-w-2xl mx-auto font-light">
-          Un dossier unique, des pros filtrés, des devis enfin comparables.
+          En 3 étapes simples, vous préparez votre déménagement sans prise de tête.
         </p>
       </div>
 
@@ -140,7 +140,7 @@ export default function HowItWorks() {
           aria-label="Recevez 5+ devis fiables gratuitement"
         >
           <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
-          <span className="relative">Recevez 5+ devis fiables gratuitement</span>
+          <span className="relative">Comparez 5+ devis gratuitement</span>
         </a>
       </div>
     </div>

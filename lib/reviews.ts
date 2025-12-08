@@ -56,12 +56,10 @@ export const MOVERZ_REVIEWS: Review[] = [
   },
 ];
 
-/**
- * Sélectionne aléatoirement N avis
- */
 export function getRandomReviews(count: number = 3): Review[] {
-  const shuffled = [...MOVERZ_REVIEWS].sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, count);
+  // Important : pas d'aléatoire côté rendu pour éviter les erreurs d'hydratation.
+  // On retourne simplement les premiers avis comme "avis mis en avant".
+  return MOVERZ_REVIEWS.slice(0, count);
 }
 
 /**

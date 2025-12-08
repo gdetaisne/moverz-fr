@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Hero from "@/components/Hero";
-import HowItWorks from "@/components/HowItWorks";
-import WhyMoverz from "@/components/WhyMoverz";
-import ProofStrip from "@/components/ProofStrip";
-import Testimonials from "@/components/Testimonials";
-import CitiesGrid from "@/components/CitiesGrid";
+import ProblemSolution from "@/components/ProblemSolution";
+import FlowAndIA from "@/components/FlowAndIA";
+import VisualProof from "@/components/VisualProof";
+import RealStories from "@/components/RealStories";
+import TrustSignals from "@/components/TrustSignals";
+import QuickFAQ from "@/components/QuickFAQ";
 import StickyCTA from "@/components/StickyCTA";
-import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata: Metadata = {
   title: "Déménagement : Comparez 5+ Devis en 3 Min (0€, 0 Spam) | Moverz",
@@ -57,127 +57,69 @@ export default function Home() {
     }
   };
 
-  const shortFaq = [
-    {
-      q: "Comment fonctionne le comparateur ?",
-      a: "Vous créez un seul dossier avec votre inventaire, celui-ci est standardisé et envoyé à 5+ déménageurs contrôlés qui vous envoient leurs devis basés sur le même inventaire. Résultat : des devis enfin comparables.",
-    },
-    {
-      q: "Les déménageurs sont-ils fiables ?",
-      a: "Oui, nous vérifions leur solvabilité, leurs assurances, et analysons leur historique de litiges et avis clients. Seuls les pros fiables et bien notés reçoivent votre dossier.",
-    },
-    {
-      q: "Est-ce que je vais être harcelé par téléphone ?",
-      a: "Non, votre dossier reste anonyme. Les déménageurs reçoivent votre demande et vous envoient leurs devis par email via notre plateforme. Vous décidez vous-même qui contacter et quand.",
-    },
-    {
-      q: "C'est vraiment gratuit ?",
-      a: "Oui, notre service est entièrement gratuit pour vous, sans engagement. Nous sommes rémunérés par les déménageurs partenaires lorsque vous choisissez l'un d'entre eux.",
-    },
-  ];
+  // short FAQ retirée de la home pour alléger la page (FAQ complète sur /faq)
 
   return (
-    <main className="bg-hero">
+    <main className="bg-white">
       {/* Schema Service + AggregateRating pour étoiles Google */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
-      <div className="halo" />
       
-      {/* Hero */}
+      {/* 1. Hero - Redesigned for clarity and emotion */}
       <Hero />
 
-      {/* How it works */}
+      {/* 2. How It Works + AI - Interactive timeline */}
+      <FlowAndIA />
+
+      {/* 3. Visual Proof - Show the magic moment */}
+      <VisualProof />
+
+      {/* 4. Trust Signals - Security and guarantees */}
+      <TrustSignals />
+
+      {/* 5. Problem/Solution - Show the pain and the relief */}
+      <ProblemSolution />
+
+      {/* 6. Real Stories - Customer testimonials with outcomes */}
+      <RealStories />
+
+      {/* 7. Quick FAQ - Remove last objections */}
+      <QuickFAQ />
+
+      {/* 8. Final CTA - Stronger emotional hook */}
       <section className="section section-light">
-        <div className="container">
-          <HowItWorks />
-        </div>
-      </section>
-
-      {/* Why Moverz */}
-      <section className="section section-contrast">
-        <div className="container">
-          <WhyMoverz />
-        </div>
-      </section>
-
-      {/* Proof Strip */}
-      <section className="section section-light">
-        <div className="container">
-          <ProofStrip />
-        </div>
-      </section>
-
-      {/* Cities Grid */}
-      <CitiesGrid />
-
-      {/* Testimonials */}
-      <section className="section section-contrast">
-        <div className="container">
-          <Testimonials />
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="section section-light">
-        <div className="container space-y-8">
-          <div className="text-center space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#2B7A78]">
-              Questions fréquentes
-            </p>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#04163a]">
-              Vous avez des questions ?
-            </h2>
-            <p className="text-[#4b5c6b] max-w-2xl mx-auto text-sm md:text-base">
-              Voici les réponses aux questions les plus fréquentes sur Moverz.
-            </p>
-          </div>
-          <div className="max-w-3xl mx-auto">
-            <FAQAccordion items={shortFaq} />
-          </div>
-          <div className="text-center pt-6">
-            <a
-              href="/faq/"
-              className="group inline-flex items-center gap-2 rounded-2xl border-2 border-[#E3E5E8] bg-white px-6 py-3 text-sm md:text-base font-medium text-[#04163a] hover:bg-[#F8F9FA] hover:border-[#6BCFCF]/40 transition-all duration-300"
-            >
-              <span>Voir toutes les questions</span>
-              <span className="text-lg group-hover:translate-x-1 transition-transform duration-300">→</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="section section-contrast">
         <div className="container">
           <div className="max-w-3xl mx-auto">
-            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#04163A] via-[#05243f] to-[#0b3b46] p-6 md:p-8 text-center shadow-[0_24px_70px_rgba(0,0,0,0.55)]">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_55%)]" />
-              <div className="relative space-y-4">
-                <div className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-medium text-white/80">
+            <div className="relative overflow-hidden rounded-3xl bg-white border border-[#E5E7EB] p-8 md:p-12 text-center shadow-xl">
+              <div className="relative space-y-6">
+                <div className="inline-flex items-center justify-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
                   <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
-                  Sans engagement · 0 spam · 5+ devis fiables
+                  Gratuit · Sans spam · Sans engagement
                 </div>
-                <h2 className="text-2xl md:text-3xl font-semibold text-white">
-                  Lancer mon comparateur de devis
+                <h2 className="text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl text-[#0F172A]">
+                  Prêt à déménager<br />sans stress ?
                 </h2>
-                <p className="text-sm md:text-base text-white/80 max-w-xl mx-auto">
-                  Pour votre déménagement en France, obtenez des devis alignés sur la même base, sans appels commerciaux non souhaités.
+                <p className="text-base md:text-lg lg:text-xl text-[#6B7280] leading-relaxed max-w-xl mx-auto">
+                  Rejoignez les 1 200+ personnes qui ont simplifié leur déménagement avec Moverz.
                 </p>
-                <a
-                  href="https://devis.moverz.fr/?source=moverz.fr&from=/"
-                  className="btn-primary"
-                >
-                  Lancer mon comparateur de devis
-                </a>
+                <div className="pt-2">
+                  <a
+                    href="https://devis.moverz.fr/?source=moverz.fr&from=/"
+                    className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-6 py-3 text-sm md:text-base font-semibold text-white shadow-lg hover:bg-[#1E293B] transition-colors"
+                  >
+                    <span>Commencer mon déménagement</span>
+                    <span className="text-lg leading-none">→</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Sticky CTA */}
+      {/* Sticky CTA global */}
       <StickyCTA />
     </main>
   );

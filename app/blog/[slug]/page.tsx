@@ -355,12 +355,14 @@ export default function BlogPostPage({ params }: PageProps) {
       {canonicalBody ? (
         <section className="section section-light">
           <div className="container max-w-3xl text-[#04163a]">
-            <ReactMarkdown
-              remarkPlugins={[remarkGfm]}
-              className="prose prose-sm md:prose-base max-w-none prose-headings:text-[#04163a] prose-p:text-[#4b5c6b] prose-li:text-[#4b5c6b]"
-            >
-              {canonicalBody}
-            </ReactMarkdown>
+            <div className="rounded-3xl bg-white px-4 py-6 md:px-10 md:py-10 shadow-sm border border-[#E3E5E8]">
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                className="prose prose-sm md:prose-base max-w-none prose-headings:text-[#04163a] prose-headings:font-semibold prose-p:text-[#4b5c6b] prose-p:leading-relaxed prose-li:text-[#4b5c6b] prose-li:leading-relaxed prose-strong:text-[#04163a] prose-a:text-[#2B7A78] prose-a:underline prose-a:underline-offset-2 prose-table:text-xs md:prose-table:text-sm prose-th:text-[#04163a] prose-th:font-semibold"
+              >
+                {canonicalBody}
+              </ReactMarkdown>
+            </div>
           </div>
         </section>
       ) : (

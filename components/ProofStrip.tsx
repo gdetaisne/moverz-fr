@@ -61,7 +61,7 @@ export default function ProofStrip() {
       value: 1200,
       suffix: "+",
       label: "Clients ont comparé",
-      caption: "Dossiers pilotés depuis 2022",
+      caption: "Déménagements accompagnés depuis 2022",
       icon: (
         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -83,8 +83,8 @@ export default function ProofStrip() {
     {
       value: 5,
       suffix: "+",
-      label: "Devis fiables",
-      caption: "Tous alignés sur le même dossier",
+      label: "Devis comparables",
+      caption: "Tous basés sur le même volume",
       icon: (
         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -93,10 +93,10 @@ export default function ProofStrip() {
       highlight: true,
     },
     {
-      value: -18,
+      value: 100,
       suffix: "%",
-      label: "Économies moyennes",
-      caption: "Écart moyen vs devis le plus cher",
+      label: "Service gratuit",
+      caption: "Sans engagement, sans frais cachés, sans spam",
       icon: (
         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
@@ -122,16 +122,16 @@ export default function ProofStrip() {
       
       {/* Header simplifié et centré */}
       <div className="relative text-center space-y-4">
-        <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#2B7A78]">
-          Chiffres clés
-          </p>
+        <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#6BCFCF]">
+          Pourquoi Moverz
+        </p>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#04163a] leading-tight">
-          Le comparateur en quelques chiffres
-          </h2>
+          Pourquoi des milliers de déménagements passent par Moverz
+        </h2>
         <p className="text-base md:text-lg text-[#4b5c6b] leading-relaxed max-w-2xl mx-auto font-light">
-          Des données issues de dossiers réellement comparés en France.
-          </p>
-        </div>
+          Quelques chiffres issus de dossiers réellement comparés en France.
+        </p>
+      </div>
 
       {/* Stats cards avec counter animations + pictogrammes */}
       <div className="relative grid gap-6 md:grid-cols-4 md:gap-6">
@@ -153,19 +153,19 @@ export default function ProofStrip() {
               key={stat.label}
               className={`group relative rounded-3xl border p-6 md:p-8 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.12)] motion-safe:animate-fade-up-soft ${
                 stat.highlight 
-                  ? 'border-[#6BCFCF]/40 bg-gradient-to-br from-[#6BCFCF]/5 to-[#4FB8B8]/10 hover:border-[#6BCFCF]/60 hover:shadow-[0_20px_60px_rgba(107,207,207,0.25)]' 
+                  ? 'border-[#6BCFCF]/40 bg-[#6BCFCF]/5 hover:border-[#6BCFCF]/60 hover:shadow-[0_20px_60px_rgba(107,207,207,0.25)]' 
                   : 'border-[#E3E5E8] bg-white hover:border-[#6BCFCF]/30'
               }`}
               style={{ animationDelay: `${index * 80}ms` }}
             >
               {/* Glow effect au hover */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#6BCFCF]/0 to-[#4FB8B8]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-5" />
+              <div className="absolute inset-0 rounded-3xl bg-[#6BCFCF]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-5" />
               
               <div className="relative space-y-4">
                 {/* Pictogramme SVG */}
                 <div className={`flex h-12 w-12 items-center justify-center rounded-2xl border-2 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 ${
                   stat.highlight
-                    ? 'bg-gradient-to-br from-[#6BCFCF]/20 to-[#4FB8B8]/30 border-[#6BCFCF]/40 text-[#2B7A78] group-hover:shadow-[0_0_20px_rgba(107,207,207,0.4)]'
+                    ? 'bg-[#6BCFCF]/20 border-[#6BCFCF]/40 text-[#6BCFCF] group-hover:shadow-[0_0_20px_rgba(107,207,207,0.4)]'
                     : 'bg-[#F8F9FA] border-[#E3E5E8] text-[#4b5c6b] group-hover:border-[#6BCFCF]/40'
                 }`}>
                   {stat.icon}
@@ -178,8 +178,8 @@ export default function ProofStrip() {
                   <div className="flex items-baseline gap-1">
                     <span className={`text-4xl md:text-5xl font-bold leading-none transition-all duration-300 ${
                       stat.highlight 
-                        ? 'text-[#2B7A78] group-hover:text-[#1F5F5D]' 
-                        : 'text-[#04163a] group-hover:text-[#2B7A78]'
+                        ? 'text-[#6BCFCF]'
+                        : 'text-[#04163a] group-hover:text-[#6BCFCF]'
                     }`}>
                       {displayValue}
                     </span>

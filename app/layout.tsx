@@ -131,7 +131,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <GoogleAnalytics />
         {/* Header */}
-        <header className="sticky top-0 z-40 w-full backdrop-blur-lg bg-[#04163a]/90 border-b border-white/10">
+        <header className="sticky top-0 z-40 w-full backdrop-blur-lg bg-[#0F172A]/95 border-b border-white/10">
           <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8">
             <a href="/" className="flex items-center gap-3" title="Moverz - Comparateur de déménagement">
               <Image 
@@ -156,7 +156,7 @@ export default function RootLayout({
               </a>
               <a
                 href="https://devis.moverz.fr/?source=moverz.fr&from=header"
-                className="inline-flex items-center gap-1 rounded-xl bg-gradient-to-r from-[#6BCFCF] to-[#4FB8B8] px-4 py-2 text-sm font-semibold text-[#04141f] hover:scale-105 transition-transform duration-300"
+                className="inline-flex items-center gap-1 rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#0F172A] hover:bg-[#F3F4F6] transition-colors"
               >
                 <span>Obtenir des devis</span>
                 <span className="text-base">→</span>
@@ -168,7 +168,7 @@ export default function RootLayout({
         <main>{children}</main>
 
         {/* Footer */}
-        <footer className="bg-[#04163a] border-t border-white/10 text-white">
+        <footer className="bg-[#0F172A] border-t border-white/10 text-white">
           <div className="mx-auto max-w-7xl px-4 md:px-8 py-12 md:py-16">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
               {/* Colonne 1 : Marque */}

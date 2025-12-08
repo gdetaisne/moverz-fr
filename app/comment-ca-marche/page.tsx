@@ -5,8 +5,8 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = getFullMetadata(
   'comment-ca-marche',
-  "Comment ça marche ? 3 Étapes pour Comparer vos Devis | Moverz",
-  "Processus simple en 3 étapes : ✓ 1. Créez votre dossier (3 min) ✓ 2. Recevez 5+ devis comparables ✓ 3. Choisissez le meilleur pro · 100% gratuit, sans spam"
+  "Comment ça marche ? Photos, IA & Devis Comparables | Moverz",
+  "Découvrez comment l’IA Moverz analyse vos photos pour estimer la volumétrie de votre déménagement et préparer 5+ devis vraiment comparables, en quelques minutes et sans spam."
 );
 
 export default function CommentCaMarchePage() {
@@ -31,7 +31,7 @@ export default function CommentCaMarchePage() {
           />
           <h1 className="text-3xl md:text-5xl font-bold mt-6">Comment ça marche ?</h1>
           <p className="text-white/85 mt-3 max-w-3xl">
-            Découvrez en détail le processus simple et transparent de Moverz pour comparer vos devis de déménagement.
+            Découvrez comment, à partir de quelques questions et de vos photos, l’IA Moverz estime votre volume et prépare des devis de déménageurs enfin comparables.
           </p>
         </div>
       </section>

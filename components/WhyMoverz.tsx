@@ -9,7 +9,7 @@ export default function WhyMoverz() {
         </svg>
       ),
       title: "Devis comparables",
-      description: "Un seul inventaire → tous chiffrent le même volume. Fini les devis incomparables.",
+      description: "L’IA Moverz standardise votre dossier : même volumétrie, mêmes infos pour tous. Fini les devis incomparables.",
     },
     {
       icon: (
@@ -18,7 +18,7 @@ export default function WhyMoverz() {
         </svg>
       ),
       title: "Gain de temps",
-      description: "Un seul dossier, 5+ devis reçus sans relances ni visites techniques.",
+      description: "En quelques questions et des photos, un seul dossier envoyé à 5+ déménageurs contrôlés, sans relances ni visites techniques inutiles.",
     },
     {
       icon: (
@@ -53,8 +53,8 @@ export default function WhyMoverz() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
         </svg>
       ),
-      title: "Support dédié",
-      description: "Une question ? Un souci ? Notre équipe vous accompagne à chaque étape.",
+      title: "IA Moverz + support dédié",
+      description: "Une technologie IA qui estime votre volume et un humain disponible quand vous en avez besoin. Le meilleur des deux mondes.",
     },
   ];
 
@@ -66,10 +66,10 @@ export default function WhyMoverz() {
           Pourquoi nous choisir
         </p>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-          Pourquoi Moverz plutôt que les autres ?
+          Pourquoi Moverz plutôt qu’un comparateur classique ?
         </h2>
         <p className="text-base md:text-lg text-white/75 max-w-2xl mx-auto leading-relaxed">
-          La plupart des comparateurs vous mettent en relation avec n'importe qui et vous laissent comparer des devis incomparables. Nous, on fait l'inverse.
+          La plupart des comparateurs se contentent de transmettre vos coordonnées à plusieurs déménageurs. Nous, on utilise l’IA Moverz pour estimer votre volume, filtrer les pros et préparer des devis vraiment comparables.
         </p>
       </div>
 
@@ -120,7 +120,7 @@ export default function WhyMoverz() {
           className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-lg font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
         >
           <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
-          <span className="relative">Recevoir 5+ devis fiables gratuitement</span>
+          <span className="relative">Comparez 5+ devis gratuitement</span>
           <span className="relative text-xl leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
         </a>
       </div>
