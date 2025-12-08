@@ -24,49 +24,56 @@ export default function QuickFAQ() {
   ];
 
   return (
-    <section className="section section-contrast">
+    <section className="relative py-20 md:py-32 bg-gradient-to-br from-[#0F172A] to-[#1E293B] text-white">
       <div className="container max-w-3xl">
-        <div className="text-center mb-12 space-y-6">
+        {/* Header minimal */}
+        <div className="text-center mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90 backdrop-blur-sm">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
-            Questions rapides
+            <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
+            Questions fréquentes
           </div>
-          <h2 className="text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl text-white">
-            Dernières questions<br />avant de commencer ?
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
+            Une dernière question ?
           </h2>
         </div>
 
+        {/* FAQ items - Clean accordion */}
         <div className="space-y-3">
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden hover:bg-white/10 transition-colors"
+              className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:bg-white/10"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full flex items-center justify-between p-5 text-left"
+                className="w-full flex items-center justify-between p-6 text-left group"
               >
-                <span className="font-semibold text-white text-sm md:text-base pr-4">
+                <span className="font-semibold text-base md:text-lg pr-4">
                   {faq.q}
                 </span>
                 <span
-                  className={`flex-shrink-0 text-xl text-white transition-transform ${
+                  className={`flex-shrink-0 text-xl transition-transform duration-300 ${
                     openIndex === i ? "rotate-180" : ""
                   }`}
                 >
                   ↓
                 </span>
               </button>
-              {openIndex === i && (
-                <div className="px-5 pb-5 text-sm md:text-base text-white/70 leading-relaxed">
+              <div
+                className={`overflow-hidden transition-all duration-300 ${
+                  openIndex === i ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                }`}
+              >
+                <div className="px-6 pb-6 text-sm md:text-base text-white/70 leading-relaxed">
                   {faq.a}
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-8">
+        {/* Link to full FAQ */}
+        <div className="text-center mt-10">
           <a
             href="/faq/"
             className="inline-flex items-center gap-2 text-sm font-medium text-[#6BCFCF] hover:text-white transition-colors"
@@ -79,4 +86,3 @@ export default function QuickFAQ() {
     </section>
   );
 }
-

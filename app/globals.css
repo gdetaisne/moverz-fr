@@ -39,30 +39,12 @@
     }
   }
 
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0px) scale(1);
-    }
-    50% {
-      transform: translateY(-20px) scale(1.05);
-    }
-  }
-
-  @keyframes spin-slow {
+  @keyframes progressLine {
     from {
-      transform: rotate(0deg);
+      transform: translateX(-100%);
     }
     to {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes bounce-subtle {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.05);
+      transform: translateX(100%);
     }
   }
 
@@ -70,16 +52,43 @@
     animation: fade-in 0.5s ease-out;
   }
 
-  .animate-float {
-    animation: float ease-in-out infinite;
+  @keyframes glow {
+    0%, 100% {
+      text-shadow: 0 0 20px rgba(107, 207, 207, 0.5), 0 0 30px rgba(107, 207, 207, 0.3);
+    }
+    50% {
+      text-shadow: 0 0 30px rgba(107, 207, 207, 0.8), 0 0 50px rgba(107, 207, 207, 0.5);
+    }
   }
 
-  .animate-spin-slow {
-    animation: spin-slow 3s linear infinite;
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 
-  .animate-bounce-subtle {
-    animation: bounce-subtle 2s ease-in-out infinite;
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out both;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out both;
   }
 }
 

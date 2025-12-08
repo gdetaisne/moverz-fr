@@ -96,34 +96,27 @@ export default function Home() {
       {/* 7. Quick FAQ - Remove last objections */}
       <QuickFAQ />
 
-      {/* 8. Final CTA - Stronger emotional hook */}
-      <section className="section section-light">
-        <div className="container">
-          <div className="max-w-3xl mx-auto">
-            <div className="relative overflow-hidden rounded-3xl bg-white border border-[#E5E7EB] p-8 md:p-12 text-center shadow-xl">
-              <div className="relative space-y-6">
-                <div className="inline-flex items-center justify-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
-                  Gratuit · Sans spam · Sans engagement
-                </div>
-                <h2 className="text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl text-[#0F172A]">
-                  Prêt à déménager<br />sans stress ?
-                </h2>
-                <p className="text-base md:text-lg lg:text-xl text-[#6B7280] leading-relaxed max-w-xl mx-auto">
-                  Rejoignez les 1 200+ personnes qui ont simplifié leur déménagement avec Moverz.
-                </p>
-                <div className="pt-2">
-                  <a
-                    href="https://devis.moverz.fr/?source=moverz.fr&from=/"
-                    className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-6 py-3 text-sm md:text-base font-semibold text-white shadow-lg hover:bg-[#1E293B] transition-colors"
-                  >
-                    <span>Commencer mon déménagement</span>
-                    <span className="text-lg leading-none">→</span>
-                  </a>
-                </div>
-              </div>
-            </div>
+      {/* 8. Final CTA - Minimal and strong */}
+      <section className="relative py-20 md:py-32 bg-white">
+        <div className="container max-w-3xl text-center space-y-6">
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl text-[#0F172A]">
+            Prêt à déménager<br />sans stress ?
+          </h2>
+          <p className="text-lg text-[#6B7280]">
+            1 200+ personnes ont déjà simplifié leur déménagement.
+          </p>
+          <div className="pt-4">
+            <a
+              href="https://devis.moverz.fr/?source=moverz.fr&from=/"
+              className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white hover:bg-[#1E293B] hover:scale-105 transition-all duration-300"
+            >
+              <span>Comparer les devis gratuitement</span>
+              <span className="text-lg leading-none">→</span>
+            </a>
           </div>
+          <p className="text-xs text-[#6B7280]">
+            Gratuit · Sans spam · Sans engagement
+          </p>
         </div>
       </section>
 
