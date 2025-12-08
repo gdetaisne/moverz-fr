@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Hero from "@/components/Hero";
 import ProblemSolution from "@/components/ProblemSolution";
 import FlowAndIA from "@/components/FlowAndIA";
@@ -60,15 +61,22 @@ export default function Home() {
   // short FAQ retirée de la home pour alléger la page (FAQ complète sur /faq)
 
   return (
-    <main className="bg-white">
-      {/* Schema Service + AggregateRating pour étoiles Google */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+    <>
+      {/* Widget script externe - chargé une seule fois sur la home */}
+      <Script
+        src="https://devis.moverz.fr/moverz-widget.js"
+        strategy="afterInteractive"
       />
       
-      {/* 1. Hero - Redesigned for clarity and emotion */}
-      <Hero />
+      <main className="bg-white">
+        {/* Schema Service + AggregateRating pour étoiles Google */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        />
+        
+        {/* 1. Hero - Redesigned for clarity and emotion */}
+        <Hero />
 
       {/* 2. How It Works + AI - Interactive timeline */}
       <FlowAndIA />
@@ -119,9 +127,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sticky CTA global */}
-      <StickyCTA />
-    </main>
+        {/* Sticky CTA global */}
+        <StickyCTA />
+      </main>
+    </>
   );
 }
 

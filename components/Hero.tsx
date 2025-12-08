@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import PhotoDropWidget from "./PhotoDropWidget";
 
 export default function Hero() {
   const [scrollY, setScrollY] = useState(0);
@@ -61,18 +60,8 @@ export default function Hero() {
           <div className="relative mx-auto w-full max-w-[480px] lg:mx-0">
             {/* Carte épurée */}
             <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/95 backdrop-blur-xl p-6 md:p-8 shadow-2xl">
-              {/* Header simple */}
-              <div className="mb-6 text-center">
-                <span className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-4 py-1.5 text-xs font-semibold text-white">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
-                  IA Moverz · Volumétrie exacte
-                </span>
-              </div>
-
-              {/* Widget drop de photos */}
-              <div className="relative">
-                <PhotoDropWidget />
-              </div>
+              {/* Widget externe intégré */}
+              <div id="moverz-widget-root" className="min-h-[350px] md:min-h-[400px]"></div>
             </div>
           </div>
         </div>
