@@ -56,6 +56,104 @@ export default function BlogPostPage({ params }: PageProps) {
 
   const renderContent = (post: BlogPostMeta) => {
     switch (post.slug) {
+      case "prix-demenagement-marseille":
+        return (
+          <section className="section section-light">
+            <div className="container max-w-3xl space-y-8 text-[#04163a]">
+              <div className="space-y-4">
+                <h2 className="text-xl md:text-2xl font-semibold">
+                  Combien coûte un déménagement à Marseille en 2025 ?
+                </h2>
+                <p className="text-sm md:text-base text-[#4b5c6b]">
+                  À Marseille, le prix d&apos;un déménagement dépend à la fois du volume, des accès et du
+                  type de trajet (intra-Marseille, métropole, longue distance). Entre le Vieux-Port, les
+                  collines et les communes voisines, les conditions de stationnement et les escaliers
+                  peuvent faire varier la facture du simple au double.
+                </p>
+                <p className="text-sm md:text-base text-[#4b5c6b]">
+                  Pour un déménagement réalisé par des pros en formule standard, on observe généralement
+                  les ordres de grandeur suivants :
+                </p>
+                <ul className="list-disc pl-5 space-y-1 text-sm md:text-base text-[#4b5c6b]">
+                  <li>Studio / T1 : 300–600 € pour un trajet court intra-Marseille</li>
+                  <li>T2 : 500–900 € selon les accès et la période</li>
+                  <li>T3 : 700–1 300 € pour des volumes de 60–70 m²</li>
+                  <li>Maison / grand T4+ : 1 200–2 400 € et plus</li>
+                </ul>
+                <p className="text-xs text-[#6B7280]">
+                  Ces fourchettes restent indicatives : seul un devis basé sur un inventaire précis permet
+                  de fixer un prix fiable.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h2 className="text-xl md:text-2xl font-semibold">
+                  Exemples concrets de déménagements à Marseille
+                </h2>
+                <p className="text-sm md:text-base text-[#4b5c6b]">
+                  Un T2 Castellane → Cours Julien avec ascenseurs des deux côtés ne coûtera pas le même
+                  prix qu&apos;un T3 en 4ᵉ sans ascenseur dans une rue compliquée du centre. Le volume,
+                  les étages, la distance de portage et la période (été / fins de mois) expliquent les
+                  différences entre devis.
+                </p>
+                <p className="text-sm md:text-base text-[#4b5c6b]">
+                  Ce que vous pouvez attendre en pratique :
+                </p>
+                <ul className="list-disc pl-5 space-y-1 text-sm md:text-base text-[#4b5c6b]">
+                  <li>Petit volume intra-Marseille avec accès faciles : plutôt bas de fourchette.</li>
+                  <li>
+                    T3 avec escaliers et stationnement compliqué : on se rapproche ou dépasse le haut de
+                    fourchette.
+                  </li>
+                  <li>
+                    Longue distance depuis Marseille (vers Lyon, Nantes, Paris…) : plusieurs milliers
+                    d&apos;euros selon le volume et le niveau de service.
+                  </li>
+                </ul>
+              </div>
+
+              <div className="space-y-4">
+                <h2 className="text-xl md:text-2xl font-semibold">
+                  Les facteurs qui font bouger la facture à Marseille
+                </h2>
+                <ul className="list-disc pl-5 space-y-2 text-sm md:text-base text-[#4b5c6b]">
+                  <li>
+                    <strong>Le volume</strong> (m³) : il conditionne la taille du camion et le nombre de
+                    déménageurs.
+                  </li>
+                  <li>
+                    <strong>Les accès</strong> : étages, ascenseur, pente, distance de portage depuis le
+                    camion, possibilité ou non de se garer en bas de l&apos;immeuble.
+                  </li>
+                  <li>
+                    <strong>Le type de trajet</strong> : intra-Marseille, métropole marseillaise, longue
+                    distance France → France.
+                  </li>
+                  <li>
+                    <strong>La période</strong> : été, fins de mois et week-ends sont plus chers que les
+                    créneaux calmes en semaine.
+                  </li>
+                  <li>
+                    <strong>Le niveau de service</strong> : éco (vous faites beaucoup), standard ou
+                    confort (emballage complet).
+                  </li>
+                </ul>
+              </div>
+
+              <div className="space-y-4">
+                <h2 className="text-xl md:text-2xl font-semibold">
+                  Comment utiliser Moverz pour trouver le juste prix ?
+                </h2>
+                <p className="text-sm md:text-base text-[#4b5c6b]">
+                  En décrivant précisément votre projet (volume, adresses, étages, contraintes de
+                  stationnement), vous permettez aux déménageurs partenaires de chiffrer exactement la
+                  même opération. Vous recevez alors 5+ devis comparables sur la même base et pouvez
+                  choisir sereinement le meilleur compromis entre prix, options et niveau de service.
+                </p>
+              </div>
+            </div>
+          </section>
+        );
       case "prix-demenagement-longue-distance-france":
         return (
           <section className="section section-light">
