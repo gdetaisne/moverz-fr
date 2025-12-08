@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import type { BlogPostMeta } from "@/lib/blog";
-import { BLOG_POSTS, getPostBySlug } from "@/lib/blog";
+import { BLOG_POSTS, getCanonicalBodyBySlug, getPostBySlug } from "@/lib/blog";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import { getCityBySlug } from "@/lib/cities";
 
@@ -56,6 +58,30 @@ export default function BlogPostPage({ params }: PageProps) {
 
   const renderContent = (post: BlogPostMeta) => {
     switch (post.slug) {
+      case "prix-demenagement-t2-marseille-fourchettes-facteurs": {
+        const canonicalBody = getCanonicalBodyBySlug(post.slug);
+
+        return (
+          <section className="section section-light">
+            <div className="container max-w-3xl text-[#04163a]">
+              {canonicalBody ? (
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  className="prose prose-sm md:prose-base max-w-none prose-headings:text-[#04163a] prose-p:text-[#4b5c6b] prose-li:text-[#4b5c6b]"
+                >
+                  {canonicalBody}
+                </ReactMarkdown>
+              ) : (
+                <p className="text-sm md:text-base text-[#4b5c6b]">
+                  Le contenu détaillé de cet article est en cours de synchronisation depuis nos anciens
+                  sites. Il sera bientôt disponible avec un guide complet et des exemples concrets pour
+                  votre déménagement de T2 à Marseille.
+                </p>
+              )}
+            </div>
+          </section>
+        );
+      }
       case "prix-demenagement-marseille":
         return (
           <section className="section section-light">
