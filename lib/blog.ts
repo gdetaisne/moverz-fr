@@ -86,9 +86,8 @@ function mergeBlogData(
     const canonicalMeta: BlogPostMeta = {
       slug: canonical.slug,
       title: canonical.title,
-      // Pas de description ni de dates dans la source canonique :
-      // on réutilise l'existant, puis sanitizePost fera le fallback si besoin.
-      description: existing?.description ?? "",
+      // Description : on privilégie la description canonique, puis la data existante, puis fallback dans sanitizePost.
+      description: (canonical as any).description || existing?.description || "",
       publishedAt: existing?.publishedAt ?? "",
       updatedAt: existing?.updatedAt,
       category: canonical.type ?? existing?.category,
