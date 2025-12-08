@@ -32,11 +32,11 @@ export default function Hero() {
               Service gratuit • Déménageurs vérifiés
             </div>
 
-            {/* Titre émotionnel */}
-            <h1 className="mt-6 text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl lg:text-7xl">
-              Déménager ?<br />
-              <span className="text-[#6BCFCF]">On gère la partie chiante.</span>
-            </h1>
+                  {/* Titre émotionnel */}
+                  <h1 className="mt-6 text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl lg:text-7xl">
+                    Vous déménagez.<br />
+                    <span className="text-[#6BCFCF]">On compare.</span>
+                  </h1>
 
             {/* Sous-titre clair */}
             <p className="mt-6 text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-xl mx-auto lg:mx-0">
