@@ -11,6 +11,7 @@ export interface BlogPostMeta {
 
 import { BLOG_DATA } from "./blog-data";
 import { BLOG_EXTRA } from "./blog-extra";
+import { CANONICAL_BLOG_POSTS, type CanonicalBlogPost } from "./blog-canonique";
 
 // P1-SEO-PRIX-TOP20 : 20 articles Prix à mettre en avant en priorité
 const PRIORITY_SLUGS: string[] = [
@@ -62,15 +63,41 @@ function sortByPriority(data: BlogPostMeta[]): BlogPostMeta[] {
   });
 }
 
-function mergeBlogData(base: BlogPostMeta[], extra: BlogPostMeta[]): BlogPostMeta[] {
+function mergeBlogData(
+  base: BlogPostMeta[],
+  extra: BlogPostMeta[],
+  canonicals: CanonicalBlogPost[]
+): BlogPostMeta[] {
   const map = new Map<string, BlogPostMeta>();
+
+  // 1) Base : données issues du CSV auto-généré
   base.forEach((post) => {
     map.set(post.slug, post);
   });
+
+  // 2) Overrides manuels : BLOG_EXTRA écrase BLOG_DATA
   extra.forEach((post) => {
-    // les entrées de BLOG_EXTRA écrasent celles de BLOG_DATA pour le même slug
     map.set(post.slug, post);
   });
+
+  // 3) Canoniques : contenus validés dans moverz_main écrasent tout le reste
+  canonicals.forEach((canonical) => {
+    const existing = map.get(canonical.slug);
+    const canonicalMeta: BlogPostMeta = {
+      slug: canonical.slug,
+      title: canonical.title,
+      // Pas de description ni de dates dans la source canonique :
+      // on réutilise l'existant, puis sanitizePost fera le fallback si besoin.
+      description: existing?.description ?? "",
+      publishedAt: existing?.publishedAt ?? "",
+      updatedAt: existing?.updatedAt,
+      category: canonical.type ?? existing?.category,
+      citySlug: canonical.citySlug ?? existing?.citySlug,
+      readingTimeMinutes: existing?.readingTimeMinutes,
+    };
+    map.set(canonical.slug, canonicalMeta);
+  });
+
   return Array.from(map.values());
 }
 
@@ -90,12 +117,22 @@ function sanitizePost(post: BlogPostMeta): BlogPostMeta {
   return { ...post, title, description };
 }
 
-const RAW_BLOG_POSTS: BlogPostMeta[] = mergeBlogData(BLOG_DATA, BLOG_EXTRA).map(sanitizePost);
+const RAW_BLOG_POSTS: BlogPostMeta[] = mergeBlogData(
+  BLOG_DATA,
+  BLOG_EXTRA,
+  CANONICAL_BLOG_POSTS
+).map(sanitizePost);
 
 export const BLOG_POSTS: BlogPostMeta[] = sortByPriority(RAW_BLOG_POSTS);
 
 export function getPostBySlug(slug: string): BlogPostMeta | undefined {
   return BLOG_POSTS.find((post) => post.slug === slug);
+}
+
+// Récupérer le body markdown canonique pour un slug donné (si disponible)
+export function getCanonicalBodyBySlug(slug: string): string | undefined {
+  const canonical = CANONICAL_BLOG_POSTS.find((post) => post.slug === slug);
+  return canonical?.body;
 }
 
 // Trouver l'article Prix associé à une ville donnée
