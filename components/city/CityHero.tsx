@@ -7,54 +7,38 @@ type CityHeroProps = {
 
 export function CityHero({ city, quoteUrl }: CityHeroProps) {
   return (
-    <section className="section section-contrast">
-      <div className="container grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] items-center">
-        <div className="space-y-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
-            Déménagement · {city.nameCapitalized}
-          </p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-            Déménagement à {city.nameCapitalized} : comparez 5+ devis de pros contrôlés
-          </h1>
-          <p className="text-sm md:text-base text-white/80 max-w-xl">
-            1 seul dossier ultra complet (inventaire, accès, contraintes) pour recevoir plusieurs devis
-            structurés sur la même base. Vous gagnez du temps et évitez les mauvaises surprises le jour J.
-          </p>
-          <ul className="space-y-2 text-sm md:text-base text-white/85">
-            <li>✓ Pros vérifiés (assurances, solvabilité, avis)</li>
-            <li>✓ Dossier anonyme, 0 démarchage sauvage</li>
-            <li>✓ Service 100% gratuit pour vous</li>
-          </ul>
-          <div className="flex flex-wrap gap-3 pt-2">
-            <a href={quoteUrl} className="btn-primary">
-              Obtenir des devis pour {city.nameCapitalized}
-            </a>
-            <p className="text-xs md:text-sm text-white/60">
-              3 minutes pour remplir votre dossier · Réponse rapide des déménageurs
-            </p>
-          </div>
-        </div>
+    <section className="relative overflow-hidden text-white">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A]" />
 
-        <div className="relative">
-          <div className="absolute -inset-6 rounded-3xl bg-gradient-to-br from-[#6BCFCF]/20 via-transparent to-[#4FB8B8]/15 blur-2xl" />
-          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#04163a]/60 backdrop-blur-sm p-6 space-y-4">
-            <h2 className="text-lg font-semibold text-white">
-              Exemple de déménagement à {city.nameCapitalized}
-            </h2>
-            <div className="flex flex-wrap gap-2 text-xs text-white/80">
-              {["T3 meublé, 65 m²", "4ᵉ étage avec ascenseur", "Distance 10–15 km"].map((item) => (
-                <span
-                  key={item}
-                  className="rounded-full border border-white/20 bg-white/5 px-3 py-1"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
-            <p className="text-xs text-white/70">
-              Selon le volume, l&apos;accès et la période, les prix constatés se situent généralement dans la
-              fourchette indiquée ci-dessous pour un T3. Les devis personnalisés restent la référence.
-            </p>
+      <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-8 md:py-28">
+        <div className="max-w-4xl mx-auto text-center space-y-6">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+            {city.nameCapitalized}
+          </div>
+
+          {/* Titre */}
+          <h1 className="text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl lg:text-7xl">
+            Déménager à {city.nameCapitalized} ?<br />
+            <span className="text-[#6BCFCF]">3 min, 5+ devis.</span>
+          </h1>
+
+          {/* Sous-titre */}
+          <p className="text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
+            Des déménageurs locaux contrôlés. Des devis comparables. 0 spam.
+          </p>
+
+          {/* CTA */}
+          <div className="pt-4">
+            <a
+              href={quoteUrl}
+              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#F3F4F6] transition-colors"
+            >
+              <span>Comparer les déménageurs</span>
+              <span className="text-lg leading-none">→</span>
+            </a>
           </div>
         </div>
       </div>

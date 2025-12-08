@@ -34,7 +34,7 @@ export default function RealStories() {
             Témoignages
           </div>
           <h2 className="text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl text-[#0F172A]">
-            Des gens qui ont rendu<br />leur déménagement facile
+            Ça marche vraiment
           </h2>
           <p className="text-base md:text-lg lg:text-xl text-[#6B7280] leading-relaxed max-w-2xl mx-auto">
             Pas de blabla marketing. Juste des résultats concrets.

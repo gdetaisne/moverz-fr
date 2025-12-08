@@ -1,69 +1,33 @@
 export default function ProblemSolution() {
   const comparison = [
-    { 
-      old: "2h d'appels à des déménageurs", 
-      new: "3 min top chrono"
-    },
-    { 
-      old: "Devis incomparables (25m³ vs 30m³ vs 🤷)", 
-      new: "Même volume pour tous = enfin comparable"
-    },
-    { 
-      old: "Tarifs mystère + frais cachés", 
-      new: "Tout transparent, zéro surprise"
-    },
-    { 
-      old: "Spam calls pendant 3 semaines", 
-      new: "Vous décidez qui vous contacte"
-    },
+    { old: "2h d'appels", new: "3 min" },
+    { old: "Devis incomparables", new: "Même volume" },
+    { old: "Frais cachés", new: "Tout transparent" },
+    { old: "Spam calls", new: "0 spam" },
   ];
 
   return (
     <section className="section section-contrast">
-      <div className="container max-w-4xl">
-        {/* Accroche fun */}
-        <div className="text-center mb-16">
-          <p className="text-base md:text-lg text-white/60 mb-4">
-            On sait ce que vous pensez...
-          </p>
-          <h2 className="text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl text-white mb-6">
-            "Encore un comparateur<br />
-            qui va me spammer"
+      <div className="container max-w-5xl">
+        {/* Titre simple */}
+        <div className="text-center mb-12 space-y-6">
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90 backdrop-blur-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+            Avant / Après
+          </div>
+          <h2 className="text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl text-white">
+            On a repensé le comparateur
           </h2>
-          <p className="text-base md:text-lg lg:text-xl text-white/70 leading-relaxed max-w-2xl mx-auto">
-            On comprend. C'est pour ça qu'on a tout repensé.
-          </p>
         </div>
 
-        {/* Comparaison moderne */}
-        <div className="space-y-4 mb-16">
+        {/* Comparaison ultra-simple */}
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {comparison.map((item, i) => (
-            <div 
-              key={i}
-              className="group relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300"
-            >
-              <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-white/10">
-                {/* Avant */}
-                <div className="p-4 md:p-6 relative">
-                  <div className="absolute top-3 right-3 text-xs text-white/40 font-medium">Avant</div>
-                  <div className="flex items-center gap-3">
-                    <span className="text-base text-white/40 font-mono">:(</span>
-                    <p className="text-sm md:text-base text-white/50 line-through">
-                      {item.old}
-                    </p>
-                  </div>
-                </div>
-                
-                {/* Après */}
-                <div className="p-4 md:p-6 relative bg-white/5">
-                  <div className="absolute top-3 right-3 text-xs text-[#6BCFCF] font-medium">Maintenant</div>
-                  <div className="flex items-center gap-3">
-                    <span className="text-base text-[#6BCFCF] font-mono">:)</span>
-                    <p className="text-sm md:text-base text-white font-medium">
-                      {item.new}
-                    </p>
-                  </div>
-                </div>
+            <div key={i} className="text-center">
+              <div className="rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-6 mb-3">
+                <p className="text-sm text-white/40 line-through mb-2">{item.old}</p>
+                <div className="text-3xl my-3">↓</div>
+                <p className="text-base font-bold text-[#6BCFCF]">{item.new}</p>
               </div>
             </div>
           ))}
