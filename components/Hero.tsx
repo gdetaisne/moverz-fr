@@ -57,12 +57,9 @@ export default function Hero() {
           </div>
 
           {/* ========== COLONNE DROITE – WIDGET PHOTOS ========== */}
-          <div className="relative mx-auto w-full max-w-[480px] lg:mx-0">
-            {/* Carte épurée */}
-            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/95 backdrop-blur-xl p-6 md:p-8 shadow-2xl">
-              {/* Widget externe intégré */}
-              <div id="moverz-widget-root" className="min-h-[350px] md:min-h-[400px]"></div>
-            </div>
+          <div className="relative mx-auto w-full max-w-[560px] lg:mx-0">
+            {/* Widget externe - prend toute la place */}
+            <div id="moverz-widget-root" className="min-h-[450px] md:min-h-[500px] w-full"></div>
           </div>
         </div>
       </div>
