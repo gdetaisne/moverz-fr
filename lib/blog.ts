@@ -74,7 +74,23 @@ function mergeBlogData(base: BlogPostMeta[], extra: BlogPostMeta[]): BlogPostMet
   return Array.from(map.values());
 }
 
-const RAW_BLOG_POSTS: BlogPostMeta[] = mergeBlogData(BLOG_DATA, BLOG_EXTRA);
+function humanizeSlug(slug: string): string {
+  return slug
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (c) => c.toUpperCase())
+    .trim();
+}
+
+function sanitizePost(post: BlogPostMeta): BlogPostMeta {
+  const bad = (v: string | undefined) => !v || v.trim() === "" || v.trim() === ">-";
+  const title = bad(post.title) ? humanizeSlug(post.slug) : post.title;
+  const description = bad(post.description)
+    ? `${title} – guide complet déménagement Moverz.`
+    : post.description;
+  return { ...post, title, description };
+}
+
+const RAW_BLOG_POSTS: BlogPostMeta[] = mergeBlogData(BLOG_DATA, BLOG_EXTRA).map(sanitizePost);
 
 export const BLOG_POSTS: BlogPostMeta[] = sortByPriority(RAW_BLOG_POSTS);
 
