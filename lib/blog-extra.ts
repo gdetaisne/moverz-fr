@@ -20,6 +20,16 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     category: "conseils-demenagement",
     readingTimeMinutes: 9,
   },
+  {
+    slug: "prix-demenagement-lyon-guide-complet",
+    title: "Prix déménagement Lyon 2025 : fourchettes, exemples & conseils pour payer le juste prix",
+    description:
+      "Découvrez combien coûte un déménagement à Lyon en 2025 : prix par type de logement, exemples concrets selon les quartiers et conseils pour obtenir des devis comparables sans mauvaises surprises.",
+    publishedAt: "2025-01-03T00:00:00.000Z",
+    category: "prix-et-devis",
+    citySlug: "lyon",
+    readingTimeMinutes: 19,
+  },
 ];
 
 

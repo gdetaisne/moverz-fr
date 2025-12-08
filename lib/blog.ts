@@ -62,7 +62,21 @@ function sortByPriority(data: BlogPostMeta[]): BlogPostMeta[] {
   });
 }
 
-export const BLOG_POSTS: BlogPostMeta[] = sortByPriority([...BLOG_DATA, ...BLOG_EXTRA]);
+function mergeBlogData(base: BlogPostMeta[], extra: BlogPostMeta[]): BlogPostMeta[] {
+  const map = new Map<string, BlogPostMeta>();
+  base.forEach((post) => {
+    map.set(post.slug, post);
+  });
+  extra.forEach((post) => {
+    // les entrées de BLOG_EXTRA écrasent celles de BLOG_DATA pour le même slug
+    map.set(post.slug, post);
+  });
+  return Array.from(map.values());
+}
+
+const RAW_BLOG_POSTS: BlogPostMeta[] = mergeBlogData(BLOG_DATA, BLOG_EXTRA);
+
+export const BLOG_POSTS: BlogPostMeta[] = sortByPriority(RAW_BLOG_POSTS);
 
 export function getPostBySlug(slug: string): BlogPostMeta | undefined {
   return BLOG_POSTS.find((post) => post.slug === slug);
