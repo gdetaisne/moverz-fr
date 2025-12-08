@@ -120,7 +120,19 @@ const RAW_BLOG_POSTS: BlogPostMeta[] = mergeBlogData(
   BLOG_DATA,
   BLOG_EXTRA,
   CANONICAL_BLOG_POSTS
-).map(sanitizePost);
+)
+  .map(sanitizePost)
+  .filter((post) => {
+    // Filtrer les articles avec des titres de dev/interne
+    const badTitlePatterns = [
+      /articles?\s+pilier\s+\d+/i,
+      /statut\s+production/i,
+      /brouillon/i,
+      /draft/i,
+      /test\s+article/i,
+    ];
+    return !badTitlePatterns.some((pattern) => pattern.test(post.title));
+  });
 
 export const BLOG_POSTS: BlogPostMeta[] = sortByPriority(RAW_BLOG_POSTS);
 

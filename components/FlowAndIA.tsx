@@ -1,8 +1,9 @@
  "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function FlowAndIA() {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const steps = [
     {
       id: 0,
@@ -49,19 +50,35 @@ export default function FlowAndIA() {
   const [activeId, setActiveId] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [progress, setProgress] = useState(0);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   const activeStep = steps.find((s) => s.id === activeId) ?? steps[0];
 
-  // Auto-play avec cycle de 4 secondes par étape
+  // Mouse move effect
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!sectionRef.current) return;
+      const rect = sectionRef.current.getBoundingClientRect();
+      setMousePosition({
+        x: (e.clientX - rect.left - rect.width / 2) / rect.width,
+        y: (e.clientY - rect.top - rect.height / 2) / rect.height,
+      });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
+  // Auto-play avec cycle de 5 secondes par étape (plus lent = plus smooth)
   useEffect(() => {
     if (isPaused) return;
 
     const progressInterval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) return 0;
-        return prev + 2; // Incrémente de 2% toutes les 80ms = 4s pour 100%
+        return prev + 1; // 1% toutes les 50ms = 5s pour 100%
       });
-    }, 80);
+    }, 50);
 
     return () => clearInterval(progressInterval);
   }, [isPaused]);
@@ -75,7 +92,31 @@ export default function FlowAndIA() {
   }, [progress, isPaused, steps.length]);
 
   return (
-    <section className="relative overflow-hidden py-20 md:py-28 bg-white">
+    <section 
+      ref={sectionRef}
+      className="relative overflow-hidden py-20 md:py-28 bg-white"
+      style={{
+        background: `radial-gradient(circle at ${50 + mousePosition.x * 10}% ${50 + mousePosition.y * 10}%, rgba(107, 207, 207, 0.05), transparent 60%)`,
+      }}
+    >
+      {/* Animated background particles */}
+      <div className="absolute inset-0 opacity-30">
+        {[...Array(3)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full bg-gradient-to-br from-[#6BCFCF]/20 to-transparent blur-3xl animate-float"
+            style={{
+              width: `${200 + i * 100}px`,
+              height: `${200 + i * 100}px`,
+              left: `${20 + i * 30}%`,
+              top: `${10 + i * 20}%`,
+              animationDelay: `${i * 2}s`,
+              animationDuration: `${10 + i * 2}s`,
+            }}
+          />
+        ))}
+      </div>
+
       <div className="container max-w-6xl relative">
         <div className="text-center mb-16 space-y-6">
           <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
@@ -97,16 +138,21 @@ export default function FlowAndIA() {
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
-          {/* Ligne de fond */}
-          <div className="hidden md:block absolute top-6 left-0 right-0 h-1 bg-[#E5E7EB] rounded-full" />
+          {/* Ligne de fond avec glow */}
+          <div className="hidden md:block absolute top-6 left-0 right-0 h-1 bg-gradient-to-r from-[#E5E7EB] via-[#E5E7EB] to-[#E5E7EB] rounded-full" />
           
-          {/* Ligne de progression */}
+          {/* Ligne de progression avec glow animé */}
           <div 
-            className="hidden md:block absolute top-6 left-0 h-1 bg-[#6BCFCF] rounded-full transition-all duration-300"
+            className="hidden md:block absolute top-6 left-0 h-1 rounded-full transition-all duration-500 ease-out"
             style={{ 
-              width: `${(activeId / (steps.length - 1)) * 100 + (progress / (steps.length - 1))}%` 
+              width: `${(activeId / (steps.length - 1)) * 100 + (progress / (steps.length - 1))}%`,
+              background: 'linear-gradient(90deg, #6BCFCF, #5AB9B9)',
+              boxShadow: '0 0 20px rgba(107, 207, 207, 0.5), 0 0 40px rgba(107, 207, 207, 0.3)',
             }}
-          />
+          >
+            {/* Animated dot at the end */}
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-[#6BCFCF] shadow-lg animate-pulse" />
+          </div>
           
           <div className="grid md:grid-cols-3 gap-8 md:gap-12 relative">
             {steps.map((step) => {
@@ -121,33 +167,60 @@ export default function FlowAndIA() {
                     setActiveId(step.id);
                     setProgress(0);
                   }}
-                  className="group text-center focus:outline-none"
+                  className="group text-center focus:outline-none relative"
                 >
+                  {/* Glow effect pour étape active */}
+                  {isActive && (
+                    <div className="absolute inset-0 blur-2xl opacity-50 animate-pulse">
+                      <div className="h-14 w-14 mx-auto rounded-full bg-[#6BCFCF]" />
+                    </div>
+                  )}
+
                   {/* Icône avec animation */}
-                  <div className={`inline-flex items-center justify-center h-14 w-14 rounded-full mb-4 transition-all duration-500 ${
-                    isActive
-                      ? "bg-[#6BCFCF] text-white scale-110 shadow-lg shadow-[#6BCFCF]/30"
-                      : isPassed
-                      ? "bg-[#6BCFCF]/20 text-[#6BCFCF] border-2 border-[#6BCFCF]"
-                      : "bg-white border-2 border-[#E5E7EB] text-[#6B7280] group-hover:border-[#6BCFCF] group-hover:text-[#6BCFCF]"
-                  }`}>
-                    {step.icon}
+                  <div 
+                    className={`relative inline-flex items-center justify-center h-16 w-16 rounded-full mb-4 transition-all duration-700 ease-out ${
+                      isActive
+                        ? "bg-gradient-to-br from-[#6BCFCF] to-[#5AB9B9] text-white scale-125 shadow-2xl"
+                        : isPassed
+                        ? "bg-gradient-to-br from-[#6BCFCF]/30 to-[#5AB9B9]/30 text-[#6BCFCF] border-2 border-[#6BCFCF] scale-105"
+                        : "bg-white border-2 border-[#E5E7EB] text-[#6B7280] group-hover:border-[#6BCFCF] group-hover:text-[#6BCFCF] group-hover:scale-110"
+                    }`}
+                    style={{
+                      transform: isActive ? `scale(1.25) translateY(${Math.sin(progress / 10) * 2}px)` : undefined,
+                    }}
+                  >
+                    <div className={`transition-transform duration-500 ${isActive ? 'animate-bounce-subtle' : ''}`}>
+                      {step.icon}
+                    </div>
                     
-                    {/* Progress ring pour l'étape active */}
+                    {/* Progress ring pour l'étape active avec gradient */}
                     {isActive && (
-                      <svg className="absolute inset-0 h-14 w-14 -rotate-90">
+                      <svg className="absolute inset-0 h-16 w-16 -rotate-90 overflow-visible">
+                        <defs>
+                          <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stopColor="white" stopOpacity="0.6" />
+                            <stop offset="100%" stopColor="white" stopOpacity="0.2" />
+                          </linearGradient>
+                        </defs>
                         <circle
-                          cx="28"
-                          cy="28"
-                          r="26"
+                          cx="32"
+                          cy="32"
+                          r="29"
                           fill="none"
-                          stroke="white"
-                          strokeWidth="2"
-                          strokeDasharray={`${2 * Math.PI * 26}`}
-                          strokeDashoffset={`${2 * Math.PI * 26 * (1 - progress / 100)}`}
-                          className="transition-all duration-100"
-                          opacity="0.3"
+                          stroke="url(#progressGradient)"
+                          strokeWidth="3"
+                          strokeDasharray={`${2 * Math.PI * 29}`}
+                          strokeDashoffset={`${2 * Math.PI * 29 * (1 - progress / 100)}`}
+                          className="transition-all duration-300 ease-out drop-shadow-lg"
+                          strokeLinecap="round"
                         />
+                      </svg>
+                    )}
+
+                    {/* Checkmark pour étapes passées */}
+                    {isPassed && !isActive && (
+                      <svg className="absolute top-0 right-0 h-5 w-5 text-[#6BCFCF] bg-white rounded-full" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     )}
                   </div>
