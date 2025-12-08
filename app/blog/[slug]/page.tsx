@@ -55,33 +55,10 @@ export default function BlogPostPage({ params }: PageProps) {
   ).slice(0, 4);
 
   const city = post.citySlug ? getCityBySlug(post.citySlug) : undefined;
+  const canonicalBody = getCanonicalBodyBySlug(post.slug);
 
   const renderContent = (post: BlogPostMeta) => {
     switch (post.slug) {
-      case "prix-demenagement-t2-marseille-fourchettes-facteurs": {
-        const canonicalBody = getCanonicalBodyBySlug(post.slug);
-
-        return (
-          <section className="section section-light">
-            <div className="container max-w-3xl text-[#04163a]">
-              {canonicalBody ? (
-                <ReactMarkdown
-                  remarkPlugins={[remarkGfm]}
-                  className="prose prose-sm md:prose-base max-w-none prose-headings:text-[#04163a] prose-p:text-[#4b5c6b] prose-li:text-[#4b5c6b]"
-                >
-                  {canonicalBody}
-                </ReactMarkdown>
-              ) : (
-                <p className="text-sm md:text-base text-[#4b5c6b]">
-                  Le contenu détaillé de cet article est en cours de synchronisation depuis nos anciens
-                  sites. Il sera bientôt disponible avec un guide complet et des exemples concrets pour
-                  votre déménagement de T2 à Marseille.
-                </p>
-              )}
-            </div>
-          </section>
-        );
-      }
       case "prix-demenagement-marseille":
         return (
           <section className="section section-light">
@@ -325,44 +302,9 @@ export default function BlogPostPage({ params }: PageProps) {
           <section className="section section-light">
             <div className="container max-w-3xl space-y-8 text-[#04163a]">
               <p className="text-sm text-[#4b5c6b]">
-                Le contenu détaillé de cet article sera importé depuis les anciens sites Moverz.
-                Pour l&apos;instant, cette page sert de template : structure de lecture claire,
-                sections hiérarchisées et CTA vers les formulaires Moverz.
+                Le contenu détaillé de cet article est en cours de migration depuis nos anciens sites
+                Moverz. Il sera prochainement remplacé par un guide complet avec des exemples concrets.
               </p>
-
-              <div className="space-y-4">
-                <h2 className="text-xl md:text-2xl font-semibold">
-                  1. Ce que vous allez trouver dans ce guide
-                </h2>
-                <p className="text-sm md:text-base text-[#4b5c6b]">
-                  Chaque article du blog Moverz est pensé pour répondre à une question précise : prix,
-                  organisation, démarches, cartons, enfants, changements d&apos;école, etc. L&apos;objectif
-                  est de vous aider à prendre des décisions concrètes, pas de vous noyer sous le jargon.
-                </p>
-              </div>
-
-              <div className="space-y-4">
-                <h2 className="text-xl md:text-2xl font-semibold">
-                  2. Des conseils actionnables, pas du blabla
-                </h2>
-                <p className="text-sm md:text-base text-[#4b5c6b]">
-                  Les contenus publiés ici sont basés sur des déménagements réels, des retours clients
-                  et l&apos;expérience de déménageurs pros. Chaque section vise à vous donner une action
-                  concrète à réaliser, avec des exemples de cas fréquents.
-                </p>
-              </div>
-
-              <div className="space-y-4">
-                <h2 className="text-xl md:text-2xl font-semibold">
-                  3. Comment utiliser le comparateur Moverz en complément
-                </h2>
-                <p className="text-sm md:text-base text-[#4b5c6b]">
-                  La lecture d&apos;un guide permet de mieux comprendre les enjeux d&apos;un déménagement,
-                  mais les prix réels dépendent toujours de votre volume, de vos accès et de vos dates.
-                  C&apos;est pour ça que Moverz vous permet de créer un dossier unique et de recevoir 5+
-                  devis alignés sur la même base.
-                </p>
-              </div>
             </div>
           </section>
         );
@@ -410,7 +352,20 @@ export default function BlogPostPage({ params }: PageProps) {
       </section>
 
       {/* Contenu article */}
-      {renderContent(post)}
+      {canonicalBody ? (
+        <section className="section section-light">
+          <div className="container max-w-3xl text-[#04163a]">
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              className="prose prose-sm md:prose-base max-w-none prose-headings:text-[#04163a] prose-p:text-[#4b5c6b] prose-li:text-[#4b5c6b]"
+            >
+              {canonicalBody}
+            </ReactMarkdown>
+          </div>
+        </section>
+      ) : (
+        renderContent(post)
+      )}
 
       {/* Articles liés */}
       {related.length > 0 && (
