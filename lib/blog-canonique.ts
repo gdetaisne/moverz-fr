@@ -582,12 +582,12 @@ export const CANONICAL_BLOG_POSTS: CanonicalBlogPost[] =
     "body": "# Autorisation Stationnement Demenagement Rouen Mairie\n\nLes démarches administratives et les **autorisations de stationnement à Rouen** (autorisation-stationnement-demenagement-rouen-mairie) sont souvent les grandes oubliées d’un déménagement… jusqu’au moment où le camion ne peut pas se garer ou où une contravention tombe.\n\nCe guide vous aide à :\n\n- identifier les démarches à faire (mairie, préfecture, bailleur),  \n- anticiper les délais,  \n- intégrer ces contraintes dans votre **dossier Moverz**.\n\n> [CTA] Préparer mon déménagement avec les bonnes démarches  \n> L’IA Moverz estime votre volume en ~1 minute, puis vous créez un dossier complet (accès, stationnement, dates) pour obtenir 3 à 5 devis comparables sur `devis.moverz.fr`."
   },
   {
-    "slug": "autorisation-stationnement-strasbourg",
-    "title": "Autorisation Stationnement Strasbourg",
+    "slug": "autorisation-stationnement-demenagement-strasbourg",
+    "title": "Autorisation Stationnement Déménagement Strasbourg",
     "citySlug": "strasbourg",
     "type": "checklists-et-guides",
-    "description": "Autorisation Stationnement Strasbourg",
-    "body": "# Autorisation Stationnement Strasbourg\n\nLes démarches administratives et les **autorisations de stationnement à Strasbourg** (autorisation-stationnement-strasbourg) sont souvent les grandes oubliées d’un déménagement… jusqu’au moment où le camion ne peut pas se garer ou où une contravention tombe.\n\nCe guide vous aide à :\n\n- identifier les démarches à faire (mairie, préfecture, bailleur),  \n- anticiper les délais,  \n- intégrer ces contraintes dans votre **dossier Moverz**.\n\n> [CTA] Préparer mon déménagement avec les bonnes démarches  \n> L’IA Moverz estime votre volume en ~1 minute, puis vous créez un dossier complet (accès, stationnement, dates) pour obtenir 3 à 5 devis comparables sur `devis.moverz.fr`."
+    "description": "Autorisation Stationnement Déménagement Strasbourg",
+    "body": "# Autorisation Stationnement Déménagement Strasbourg\n\nLes démarches administratives et les **autorisations de stationnement à Strasbourg** (autorisation-stationnement-demenagement-strasbourg) sont souvent les grandes oubliées d'un déménagement… jusqu'au moment où le camion ne peut pas se garer ou où une contravention tombe.\n\nCe guide vous aide à :\n\n- identifier les démarches à faire (mairie, préfecture, bailleur),  \n- anticiper les délais,  \n- intégrer ces contraintes dans votre **dossier Moverz**.\n\n> [CTA] Préparer mon déménagement avec les bonnes démarches  \n> L’IA Moverz estime votre volume en ~1 minute, puis vous créez un dossier complet (accès, stationnement, dates) pour obtenir 3 à 5 devis comparables sur `devis.moverz.fr`."
   },
   {
     "slug": "bien-ranger-box-stockage-marseille",
@@ -2925,6 +2925,6 @@ export const CANONICAL_BLOG_POSTS: CanonicalBlogPost[] =
     "description": "Transport Piano Droit Toulouse",
     "body": "# Transport Piano Droit Toulouse\n\nUn **piano** est l’un des objets les plus délicats à déménager à Toulouse (transport-piano-droit-toulouse) : poids, encombrement, fragilité mécanique et émotionnelle.  \nUn simple faux mouvement peut entraîner des dégâts coûteux ou nuire à la justesse de l’instrument.\n\nCe guide vous donne des repères pour :\n\n- choisir entre déménager un piano avec des pros spécialisés ou non,  \n- préparer l’instrument avant le transport,  \n- et comprendre le rôle de l’**IA Moverz** pour dimensionner le projet (volume, accès, étage, monte‑charge, etc.).\n\n> [CTA] Dimensionner mon déménagement de piano  \n> L’IA Moverz estime votre volume global en ~1 minute (piano inclus) et vous permet de recevoir 3 à 5 devis de déménageurs spécialisés ou habitués aux pianos sur `devis.moverz.fr`."
   }
-] ;
+] as const;
 
 export type CanonicalBlogPostSlug = (typeof CANONICAL_BLOG_POSTS)[number]['slug'];
