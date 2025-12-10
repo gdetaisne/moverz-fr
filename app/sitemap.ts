@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { CITIES } from "@/lib/cities";
 import { BLOG_POSTS } from "@/lib/blog";
+import { cityData } from "@/lib/cityData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://moverz.fr";
@@ -36,6 +37,53 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
+  // Hub quartiers : /quartiers-{ville}/
+  const hubQuartiersPages: MetadataRoute.Sitemap = [];
+  for (const citySlug of Object.keys(cityData)) {
+    // Seulement les 7 nouvelles villes (pas celles qui existaient déjà)
+    if (['nice', 'toulouse', 'strasbourg', 'nantes', 'rennes', 'rouen', 'montpellier'].includes(citySlug)) {
+      hubQuartiersPages.push({
+        url: `${baseUrl}/quartiers-${citySlug}/`,
+        lastModified: now,
+        changeFrequency: "monthly",
+        priority: 0.7,
+      });
+    }
+  }
+
+  // Pages quartiers : /{ville}/{quartier}/
+  const quartierPages: MetadataRoute.Sitemap = [];
+  for (const [citySlug, city] of Object.entries(cityData)) {
+    // Seulement les 7 nouvelles villes
+    if (['nice', 'toulouse', 'strasbourg', 'nantes', 'rennes', 'rouen', 'montpellier'].includes(citySlug)) {
+      for (const neighborhood of city.neighborhoods) {
+        quartierPages.push({
+          url: `${baseUrl}/${citySlug}/${neighborhood.slug}/`,
+          lastModified: now,
+          changeFrequency: "monthly",
+          priority: 0.6,
+        });
+      }
+    }
+  }
+
+  // Pages corridors : /{ville}-vers-{destination}/
+  const corridorPages: MetadataRoute.Sitemap = [];
+  for (const [citySlug, city] of Object.entries(cityData)) {
+    // Seulement les 7 nouvelles villes
+    if (['nice', 'toulouse', 'strasbourg', 'nantes', 'rennes', 'rouen', 'montpellier'].includes(citySlug)) {
+      for (const corridor of city.corridors) {
+        const destSlug = corridor.destination.toLowerCase().replace(/['\s]/g, '-');
+        corridorPages.push({
+          url: `${baseUrl}/${citySlug}-vers-${destSlug}/`,
+          lastModified: now,
+          changeFrequency: "monthly",
+          priority: 0.6,
+        });
+      }
+    }
+  }
+
   // Articles de blog (dont P1 Prix & guides majeurs)
   const blogPages: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}/`,
@@ -44,5 +92,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...cityPages, ...blogPages];
+  return [
+    ...staticPages,
+    ...cityPages,
+    ...hubQuartiersPages,
+    ...quartierPages,
+    ...corridorPages,
+    ...blogPages,
+  ];
 }

@@ -1,0 +1,161 @@
+source_url,target_url,status_code,description
+https://devis-demenageur-nice.fr/,https://moverz.fr/demenagement/nice/,301,Nice home → ville
+https://devis-demenageur-nice.fr/quartiers-nice,https://moverz.fr/quartiers-nice/,301,Nice hub quartiers
+https://devis-demenageur-nice.fr/quartiers-nice/,https://moverz.fr/quartiers-nice/,301,Nice hub quartiers
+https://devis-demenageur-nice.fr/vieux-nice,https://moverz.fr/nice/vieux-nice/,301,Nice quartier
+https://devis-demenageur-nice.fr/vieux-nice/,https://moverz.fr/nice/vieux-nice/,301,Nice quartier
+https://devis-demenageur-nice.fr/port,https://moverz.fr/nice/port/,301,Nice quartier
+https://devis-demenageur-nice.fr/port/,https://moverz.fr/nice/port/,301,Nice quartier
+https://devis-demenageur-nice.fr/liberation,https://moverz.fr/nice/liberation/,301,Nice quartier
+https://devis-demenageur-nice.fr/liberation/,https://moverz.fr/nice/liberation/,301,Nice quartier
+https://devis-demenageur-nice.fr/cimiez,https://moverz.fr/nice/cimiez/,301,Nice quartier
+https://devis-demenageur-nice.fr/cimiez/,https://moverz.fr/nice/cimiez/,301,Nice quartier
+https://devis-demenageur-nice.fr/riquier,https://moverz.fr/nice/riquier/,301,Nice quartier
+https://devis-demenageur-nice.fr/riquier/,https://moverz.fr/nice/riquier/,301,Nice quartier
+https://devis-demenageur-nice.fr/nice-vers-paris,https://moverz.fr/nice-vers-paris/,301,Nice corridor
+https://devis-demenageur-nice.fr/nice-vers-paris/,https://moverz.fr/nice-vers-paris/,301,Nice corridor
+https://devis-demenageur-nice.fr/nice-vers-marseille,https://moverz.fr/nice-vers-marseille/,301,Nice corridor
+https://devis-demenageur-nice.fr/nice-vers-marseille/,https://moverz.fr/nice-vers-marseille/,301,Nice corridor
+https://devis-demenageur-nice.fr/nice-vers-lyon,https://moverz.fr/nice-vers-lyon/,301,Nice corridor
+https://devis-demenageur-nice.fr/nice-vers-lyon/,https://moverz.fr/nice-vers-lyon/,301,Nice corridor
+https://devis-demenageur-nice.fr/nice-vers-italie,https://moverz.fr/nice-vers-italie/,301,Nice corridor
+https://devis-demenageur-nice.fr/nice-vers-italie/,https://moverz.fr/nice-vers-italie/,301,Nice corridor
+https://devis-demenageur-nice.fr/nice-vers-monaco,https://moverz.fr/nice-vers-monaco/,301,Nice corridor
+https://devis-demenageur-nice.fr/nice-vers-monaco/,https://moverz.fr/nice-vers-monaco/,301,Nice corridor
+https://devis-demenageur-toulousain.fr/,https://moverz.fr/demenagement/toulouse/,301,Toulouse home → ville
+https://devis-demenageur-toulousain.fr/quartiers-toulouse,https://moverz.fr/quartiers-toulouse/,301,Toulouse hub quartiers
+https://devis-demenageur-toulousain.fr/quartiers-toulouse/,https://moverz.fr/quartiers-toulouse/,301,Toulouse hub quartiers
+https://devis-demenageur-toulousain.fr/capitole,https://moverz.fr/toulouse/capitole/,301,Toulouse quartier
+https://devis-demenageur-toulousain.fr/capitole/,https://moverz.fr/toulouse/capitole/,301,Toulouse quartier
+https://devis-demenageur-toulousain.fr/saint-cyprien,https://moverz.fr/toulouse/saint-cyprien/,301,Toulouse quartier
+https://devis-demenageur-toulousain.fr/saint-cyprien/,https://moverz.fr/toulouse/saint-cyprien/,301,Toulouse quartier
+https://devis-demenageur-toulousain.fr/carmes,https://moverz.fr/toulouse/carmes/,301,Toulouse quartier
+https://devis-demenageur-toulousain.fr/carmes/,https://moverz.fr/toulouse/carmes/,301,Toulouse quartier
+https://devis-demenageur-toulousain.fr/compans,https://moverz.fr/toulouse/compans/,301,Toulouse quartier
+https://devis-demenageur-toulousain.fr/compans/,https://moverz.fr/toulouse/compans/,301,Toulouse quartier
+https://devis-demenageur-toulousain.fr/jean-jaures,https://moverz.fr/toulouse/jean-jaures/,301,Toulouse quartier
+https://devis-demenageur-toulousain.fr/jean-jaures/,https://moverz.fr/toulouse/jean-jaures/,301,Toulouse quartier
+https://devis-demenageur-toulousain.fr/toulouse-vers-paris,https://moverz.fr/toulouse-vers-paris/,301,Toulouse corridor
+https://devis-demenageur-toulousain.fr/toulouse-vers-paris/,https://moverz.fr/toulouse-vers-paris/,301,Toulouse corridor
+https://devis-demenageur-toulousain.fr/toulouse-vers-lyon,https://moverz.fr/toulouse-vers-lyon/,301,Toulouse corridor
+https://devis-demenageur-toulousain.fr/toulouse-vers-lyon/,https://moverz.fr/toulouse-vers-lyon/,301,Toulouse corridor
+https://devis-demenageur-toulousain.fr/toulouse-vers-marseille,https://moverz.fr/toulouse-vers-marseille/,301,Toulouse corridor
+https://devis-demenageur-toulousain.fr/toulouse-vers-marseille/,https://moverz.fr/toulouse-vers-marseille/,301,Toulouse corridor
+https://devis-demenageur-toulousain.fr/toulouse-vers-nantes,https://moverz.fr/toulouse-vers-nantes/,301,Toulouse corridor
+https://devis-demenageur-toulousain.fr/toulouse-vers-nantes/,https://moverz.fr/toulouse-vers-nantes/,301,Toulouse corridor
+https://devis-demenageur-toulousain.fr/toulouse-vers-espagne,https://moverz.fr/toulouse-vers-espagne/,301,Toulouse corridor
+https://devis-demenageur-toulousain.fr/toulouse-vers-espagne/,https://moverz.fr/toulouse-vers-espagne/,301,Toulouse corridor
+https://devis-demenageur-strasbourg.fr/,https://moverz.fr/demenagement/strasbourg/,301,Strasbourg home → ville
+https://devis-demenageur-strasbourg.fr/quartiers-strasbourg,https://moverz.fr/quartiers-strasbourg/,301,Strasbourg hub quartiers
+https://devis-demenageur-strasbourg.fr/quartiers-strasbourg/,https://moverz.fr/quartiers-strasbourg/,301,Strasbourg hub quartiers
+https://devis-demenageur-strasbourg.fr/grande-ile,https://moverz.fr/strasbourg/grande-ile/,301,Strasbourg quartier
+https://devis-demenageur-strasbourg.fr/grande-ile/,https://moverz.fr/strasbourg/grande-ile/,301,Strasbourg quartier
+https://devis-demenageur-strasbourg.fr/neudorf,https://moverz.fr/strasbourg/neudorf/,301,Strasbourg quartier
+https://devis-demenageur-strasbourg.fr/neudorf/,https://moverz.fr/strasbourg/neudorf/,301,Strasbourg quartier
+https://devis-demenageur-strasbourg.fr/cronenbourg,https://moverz.fr/strasbourg/cronenbourg/,301,Strasbourg quartier
+https://devis-demenageur-strasbourg.fr/cronenbourg/,https://moverz.fr/strasbourg/cronenbourg/,301,Strasbourg quartier
+https://devis-demenageur-strasbourg.fr/koenigshoffen,https://moverz.fr/strasbourg/koenigshoffen/,301,Strasbourg quartier
+https://devis-demenageur-strasbourg.fr/koenigshoffen/,https://moverz.fr/strasbourg/koenigshoffen/,301,Strasbourg quartier
+https://devis-demenageur-strasbourg.fr/robertsau,https://moverz.fr/strasbourg/robertsau/,301,Strasbourg quartier
+https://devis-demenageur-strasbourg.fr/robertsau/,https://moverz.fr/strasbourg/robertsau/,301,Strasbourg quartier
+https://devis-demenageur-strasbourg.fr/strasbourg-vers-paris,https://moverz.fr/strasbourg-vers-paris/,301,Strasbourg corridor
+https://devis-demenageur-strasbourg.fr/strasbourg-vers-paris/,https://moverz.fr/strasbourg-vers-paris/,301,Strasbourg corridor
+https://devis-demenageur-strasbourg.fr/strasbourg-vers-lyon,https://moverz.fr/strasbourg-vers-lyon/,301,Strasbourg corridor
+https://devis-demenageur-strasbourg.fr/strasbourg-vers-lyon/,https://moverz.fr/strasbourg-vers-lyon/,301,Strasbourg corridor
+https://devis-demenageur-strasbourg.fr/strasbourg-vers-mulhouse,https://moverz.fr/strasbourg-vers-mulhouse/,301,Strasbourg corridor
+https://devis-demenageur-strasbourg.fr/strasbourg-vers-mulhouse/,https://moverz.fr/strasbourg-vers-mulhouse/,301,Strasbourg corridor
+https://devis-demenageur-strasbourg.fr/strasbourg-vers-allemagne,https://moverz.fr/strasbourg-vers-allemagne/,301,Strasbourg corridor
+https://devis-demenageur-strasbourg.fr/strasbourg-vers-allemagne/,https://moverz.fr/strasbourg-vers-allemagne/,301,Strasbourg corridor
+https://devis-demenageur-strasbourg.fr/strasbourg-vers-suisse,https://moverz.fr/strasbourg-vers-suisse/,301,Strasbourg corridor
+https://devis-demenageur-strasbourg.fr/strasbourg-vers-suisse/,https://moverz.fr/strasbourg-vers-suisse/,301,Strasbourg corridor
+https://devis-demenageur-nantes.fr/,https://moverz.fr/demenagement/nantes/,301,Nantes home → ville
+https://devis-demenageur-nantes.fr/quartiers-nantes,https://moverz.fr/quartiers-nantes/,301,Nantes hub quartiers
+https://devis-demenageur-nantes.fr/quartiers-nantes/,https://moverz.fr/quartiers-nantes/,301,Nantes hub quartiers
+https://devis-demenageur-nantes.fr/bouffay,https://moverz.fr/nantes/bouffay/,301,Nantes quartier
+https://devis-demenageur-nantes.fr/bouffay/,https://moverz.fr/nantes/bouffay/,301,Nantes quartier
+https://devis-demenageur-nantes.fr/ile-de-nantes,https://moverz.fr/nantes/ile-de-nantes/,301,Nantes quartier
+https://devis-demenageur-nantes.fr/ile-de-nantes/,https://moverz.fr/nantes/ile-de-nantes/,301,Nantes quartier
+https://devis-demenageur-nantes.fr/doulon,https://moverz.fr/nantes/doulon/,301,Nantes quartier
+https://devis-demenageur-nantes.fr/doulon/,https://moverz.fr/nantes/doulon/,301,Nantes quartier
+https://devis-demenageur-nantes.fr/beaujoire,https://moverz.fr/nantes/beaujoire/,301,Nantes quartier
+https://devis-demenageur-nantes.fr/beaujoire/,https://moverz.fr/nantes/beaujoire/,301,Nantes quartier
+https://devis-demenageur-nantes.fr/hauts-paves,https://moverz.fr/nantes/hauts-paves/,301,Nantes quartier
+https://devis-demenageur-nantes.fr/hauts-paves/,https://moverz.fr/nantes/hauts-paves/,301,Nantes quartier
+https://devis-demenageur-nantes.fr/nantes-vers-paris,https://moverz.fr/nantes-vers-paris/,301,Nantes corridor
+https://devis-demenageur-nantes.fr/nantes-vers-paris/,https://moverz.fr/nantes-vers-paris/,301,Nantes corridor
+https://devis-demenageur-nantes.fr/nantes-vers-bordeaux,https://moverz.fr/nantes-vers-bordeaux/,301,Nantes corridor
+https://devis-demenageur-nantes.fr/nantes-vers-bordeaux/,https://moverz.fr/nantes-vers-bordeaux/,301,Nantes corridor
+https://devis-demenageur-nantes.fr/nantes-vers-rennes,https://moverz.fr/nantes-vers-rennes/,301,Nantes corridor
+https://devis-demenageur-nantes.fr/nantes-vers-rennes/,https://moverz.fr/nantes-vers-rennes/,301,Nantes corridor
+https://devis-demenageur-nantes.fr/nantes-vers-lyon,https://moverz.fr/nantes-vers-lyon/,301,Nantes corridor
+https://devis-demenageur-nantes.fr/nantes-vers-lyon/,https://moverz.fr/nantes-vers-lyon/,301,Nantes corridor
+https://devis-demenageur-nantes.fr/nantes-vers-la-baule,https://moverz.fr/nantes-vers-la-baule/,301,Nantes corridor
+https://devis-demenageur-nantes.fr/nantes-vers-la-baule/,https://moverz.fr/nantes-vers-la-baule/,301,Nantes corridor
+https://devis-demenageur-rennes.fr/,https://moverz.fr/demenagement/rennes/,301,Rennes home → ville
+https://devis-demenageur-rennes.fr/quartiers-rennes,https://moverz.fr/quartiers-rennes/,301,Rennes hub quartiers
+https://devis-demenageur-rennes.fr/quartiers-rennes/,https://moverz.fr/quartiers-rennes/,301,Rennes hub quartiers
+https://devis-demenageur-rennes.fr/centre,https://moverz.fr/rennes/centre/,301,Rennes quartier
+https://devis-demenageur-rennes.fr/centre/,https://moverz.fr/rennes/centre/,301,Rennes quartier
+https://devis-demenageur-rennes.fr/thabor,https://moverz.fr/rennes/thabor/,301,Rennes quartier
+https://devis-demenageur-rennes.fr/thabor/,https://moverz.fr/rennes/thabor/,301,Rennes quartier
+https://devis-demenageur-rennes.fr/maurepas,https://moverz.fr/rennes/maurepas/,301,Rennes quartier
+https://devis-demenageur-rennes.fr/maurepas/,https://moverz.fr/rennes/maurepas/,301,Rennes quartier
+https://devis-demenageur-rennes.fr/villejean,https://moverz.fr/rennes/villejean/,301,Rennes quartier
+https://devis-demenageur-rennes.fr/villejean/,https://moverz.fr/rennes/villejean/,301,Rennes quartier
+https://devis-demenageur-rennes.fr/cleunay,https://moverz.fr/rennes/cleunay/,301,Rennes quartier
+https://devis-demenageur-rennes.fr/cleunay/,https://moverz.fr/rennes/cleunay/,301,Rennes quartier
+https://devis-demenageur-rennes.fr/rennes-vers-paris,https://moverz.fr/rennes-vers-paris/,301,Rennes corridor
+https://devis-demenageur-rennes.fr/rennes-vers-paris/,https://moverz.fr/rennes-vers-paris/,301,Rennes corridor
+https://devis-demenageur-rennes.fr/rennes-vers-nantes,https://moverz.fr/rennes-vers-nantes/,301,Rennes corridor
+https://devis-demenageur-rennes.fr/rennes-vers-nantes/,https://moverz.fr/rennes-vers-nantes/,301,Rennes corridor
+https://devis-demenageur-rennes.fr/rennes-vers-brest,https://moverz.fr/rennes-vers-brest/,301,Rennes corridor
+https://devis-demenageur-rennes.fr/rennes-vers-brest/,https://moverz.fr/rennes-vers-brest/,301,Rennes corridor
+https://devis-demenageur-rennes.fr/rennes-vers-saint-malo,https://moverz.fr/rennes-vers-saint-malo/,301,Rennes corridor
+https://devis-demenageur-rennes.fr/rennes-vers-saint-malo/,https://moverz.fr/rennes-vers-saint-malo/,301,Rennes corridor
+https://devis-demenageur-rennes.fr/rennes-vers-angers,https://moverz.fr/rennes-vers-angers/,301,Rennes corridor
+https://devis-demenageur-rennes.fr/rennes-vers-angers/,https://moverz.fr/rennes-vers-angers/,301,Rennes corridor
+https://devis-demenageur-rouen.fr/,https://moverz.fr/demenagement/rouen/,301,Rouen home → ville
+https://devis-demenageur-rouen.fr/quartiers-rouen,https://moverz.fr/quartiers-rouen/,301,Rouen hub quartiers
+https://devis-demenageur-rouen.fr/quartiers-rouen/,https://moverz.fr/quartiers-rouen/,301,Rouen hub quartiers
+https://devis-demenageur-rouen.fr/centre-historique,https://moverz.fr/rouen/centre-historique/,301,Rouen quartier
+https://devis-demenageur-rouen.fr/centre-historique/,https://moverz.fr/rouen/centre-historique/,301,Rouen quartier
+https://devis-demenageur-rouen.fr/saint-sever,https://moverz.fr/rouen/saint-sever/,301,Rouen quartier
+https://devis-demenageur-rouen.fr/saint-sever/,https://moverz.fr/rouen/saint-sever/,301,Rouen quartier
+https://devis-demenageur-rouen.fr/grammont,https://moverz.fr/rouen/grammont/,301,Rouen quartier
+https://devis-demenageur-rouen.fr/grammont/,https://moverz.fr/rouen/grammont/,301,Rouen quartier
+https://devis-demenageur-rouen.fr/sapins,https://moverz.fr/rouen/sapins/,301,Rouen quartier
+https://devis-demenageur-rouen.fr/sapins/,https://moverz.fr/rouen/sapins/,301,Rouen quartier
+https://devis-demenageur-rouen.fr/madrillet,https://moverz.fr/rouen/madrillet/,301,Rouen quartier
+https://devis-demenageur-rouen.fr/madrillet/,https://moverz.fr/rouen/madrillet/,301,Rouen quartier
+https://devis-demenageur-rouen.fr/rouen-vers-paris,https://moverz.fr/rouen-vers-paris/,301,Rouen corridor
+https://devis-demenageur-rouen.fr/rouen-vers-paris/,https://moverz.fr/rouen-vers-paris/,301,Rouen corridor
+https://devis-demenageur-rouen.fr/rouen-vers-le-havre,https://moverz.fr/rouen-vers-le-havre/,301,Rouen corridor
+https://devis-demenageur-rouen.fr/rouen-vers-le-havre/,https://moverz.fr/rouen-vers-le-havre/,301,Rouen corridor
+https://devis-demenageur-rouen.fr/rouen-vers-caen,https://moverz.fr/rouen-vers-caen/,301,Rouen corridor
+https://devis-demenageur-rouen.fr/rouen-vers-caen/,https://moverz.fr/rouen-vers-caen/,301,Rouen corridor
+https://devis-demenageur-rouen.fr/rouen-vers-amiens,https://moverz.fr/rouen-vers-amiens/,301,Rouen corridor
+https://devis-demenageur-rouen.fr/rouen-vers-amiens/,https://moverz.fr/rouen-vers-amiens/,301,Rouen corridor
+https://devis-demenageur-rouen.fr/rouen-vers-lille,https://moverz.fr/rouen-vers-lille/,301,Rouen corridor
+https://devis-demenageur-rouen.fr/rouen-vers-lille/,https://moverz.fr/rouen-vers-lille/,301,Rouen corridor
+https://devis-demenageur-montpellier.fr/,https://moverz.fr/demenagement/montpellier/,301,Montpellier home → ville
+https://devis-demenageur-montpellier.fr/quartiers-montpellier,https://moverz.fr/quartiers-montpellier/,301,Montpellier hub quartiers
+https://devis-demenageur-montpellier.fr/quartiers-montpellier/,https://moverz.fr/quartiers-montpellier/,301,Montpellier hub quartiers
+https://devis-demenageur-montpellier.fr/ecusson,https://moverz.fr/montpellier/ecusson/,301,Montpellier quartier
+https://devis-demenageur-montpellier.fr/ecusson/,https://moverz.fr/montpellier/ecusson/,301,Montpellier quartier
+https://devis-demenageur-montpellier.fr/antigone,https://moverz.fr/montpellier/antigone/,301,Montpellier quartier
+https://devis-demenageur-montpellier.fr/antigone/,https://moverz.fr/montpellier/antigone/,301,Montpellier quartier
+https://devis-demenageur-montpellier.fr/pres-arenes,https://moverz.fr/montpellier/pres-arenes/,301,Montpellier quartier
+https://devis-demenageur-montpellier.fr/pres-arenes/,https://moverz.fr/montpellier/pres-arenes/,301,Montpellier quartier
+https://devis-demenageur-montpellier.fr/beaux-arts,https://moverz.fr/montpellier/beaux-arts/,301,Montpellier quartier
+https://devis-demenageur-montpellier.fr/beaux-arts/,https://moverz.fr/montpellier/beaux-arts/,301,Montpellier quartier
+https://devis-demenageur-montpellier.fr/port-marianne,https://moverz.fr/montpellier/port-marianne/,301,Montpellier quartier
+https://devis-demenageur-montpellier.fr/port-marianne/,https://moverz.fr/montpellier/port-marianne/,301,Montpellier quartier
+https://devis-demenageur-montpellier.fr/montpellier-vers-paris,https://moverz.fr/montpellier-vers-paris/,301,Montpellier corridor
+https://devis-demenageur-montpellier.fr/montpellier-vers-paris/,https://moverz.fr/montpellier-vers-paris/,301,Montpellier corridor
+https://devis-demenageur-montpellier.fr/montpellier-vers-lyon,https://moverz.fr/montpellier-vers-lyon/,301,Montpellier corridor
+https://devis-demenageur-montpellier.fr/montpellier-vers-lyon/,https://moverz.fr/montpellier-vers-lyon/,301,Montpellier corridor
+https://devis-demenageur-montpellier.fr/montpellier-vers-marseille,https://moverz.fr/montpellier-vers-marseille/,301,Montpellier corridor
+https://devis-demenageur-montpellier.fr/montpellier-vers-marseille/,https://moverz.fr/montpellier-vers-marseille/,301,Montpellier corridor
+https://devis-demenageur-montpellier.fr/montpellier-vers-toulouse,https://moverz.fr/montpellier-vers-toulouse/,301,Montpellier corridor
+https://devis-demenageur-montpellier.fr/montpellier-vers-toulouse/,https://moverz.fr/montpellier-vers-toulouse/,301,Montpellier corridor
+
