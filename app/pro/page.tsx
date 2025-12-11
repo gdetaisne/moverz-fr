@@ -4,8 +4,8 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = getFullMetadata(
   "pro",
-  "Moverz Pro : Logiciel Déménageur | CRM Devis + Gestion Dossiers | SaaS",
-  "Logiciel SaaS pour déménageurs : standardisez vos demandes, estimez les volumes en 1 min (IA), générez des devis comparables. Gagnez 50% de temps commercial. CRM déménagement + pipeline + suivi."
+  "Moverz Pro : Widget IA Volumétrie en Marque Blanche pour Déménageurs",
+  "Intégrez l'IA Moverz sur votre site de déménagement. Vos clients calculent leur volume en 1 min, vous recevez des dossiers précis avec photos. Widget en marque blanche, API simple, 0 dev."
 );
 
 export default function ProPage() {
@@ -36,10 +36,10 @@ export default function ProPage() {
               SaaS pour déménageurs · Moverz Pro
             </div>
             <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-              Logiciel déménageur : CRM + Devis + Gestion dossiers
+              Widget IA volumétrie en marque blanche pour votre site
             </h1>
             <p className="text-base md:text-lg text-white/85 max-w-2xl">
-              Moverz Pro est le SaaS conçu pour les déménageurs qui veulent structurer leur pipeline commercial. Estimation IA du volume en 1 min, devis standardisés, suivi des dossiers, réduction des litiges. Gagnez 50% de temps commercial.
+              Intégrez l&apos;IA Moverz directement sur votre site de déménagement. Vos clients calculent leur volume en 1 minute avec leurs photos, vous recevez des dossiers complets et précis. Widget en marque blanche, intégration en 5 min, 0 dev.
             </p>
           </div>
         </div>
@@ -51,28 +51,25 @@ export default function ProPage() {
           <div className="grid md:grid-cols-2 gap-8 items-start">
             <div className="space-y-4">
               <h2 className="text-2xl md:text-3xl font-semibold text-[#04163a]">
-                Pensé pour les déménageurs qui veulent structurer leur pipeline
+                L&apos;IA Moverz directement sur votre site
               </h2>
               <p className="text-sm md:text-base text-[#4b5c6b]">
-                Moverz Pro centralise les demandes, l&apos;inventaire client, les contraintes d&apos;accès
-                et les options choisies. Plus besoin de courir après les informations manquantes ou de
-                recopier des emails à la main : vous partez directement d&apos;un dossier structuré.
+                Vos clients prennent des photos de leur logement, l&apos;IA calcule automatiquement le volume en m³ (précision 90-95%). Vous recevez un dossier complet avec inventaire détaillé, photos des accès, et estimation précise. Plus besoin de visite technique chronophage.
               </p>
               <p className="text-sm md:text-base text-[#4b5c6b]">
-                Notre objectif n&apos;est pas de remplacer votre expertise, mais de la rendre plus
-                lisible et scalable : moins de temps perdu, plus de clarté pour vos clients, moins de
-                contestations sur le prix final.
+                Le widget est en marque blanche : vos couleurs, votre logo, votre domaine. Le client ne voit que votre marque. Intégration en 5 minutes avec un simple script, aucun développement nécessaire.
               </p>
             </div>
             <div className="space-y-4 rounded-2xl border border-[#E3E5E8] bg-white p-6 shadow-sm">
               <h3 className="text-sm font-semibold text-[#04163a]">
-                Ce que Moverz Pro permet concrètement
+                Ce que le widget Moverz Pro vous apporte
               </h3>
               <ul className="space-y-2 text-sm text-[#4b5c6b]">
-                <li>• Centraliser les demandes provenant de Moverz et de vos propres canaux</li>
-                <li>• Avoir un inventaire homogène pour chaque client (volume, accès, options)</li>
-                <li>• Générer plus vite des devis lisibles et comparables</li>
-                <li>• Garder une trace des échanges et des versions de devis</li>
+                <li>• Estimation IA du volume en 1 minute (90-95% de précision)</li>
+                <li>• Dossier complet : inventaire + photos + accès + contraintes</li>
+                <li>• Intégration marque blanche sur votre site (vos couleurs, votre logo)</li>
+                <li>• Réduction des litiges (volume documenté avec photos)</li>
+                <li>• Gain de 2-3h par dossier (plus de visite technique)</li>
               </ul>
             </div>
           </div>
@@ -80,16 +77,16 @@ export default function ProPage() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                title: "Standardisation des dossiers",
-                text: "Même structure pour toutes les demandes : moins d’oublis, moins de zones grises, plus de productivité pour les équipes commerciales.",
+                title: "Intégration en 5 minutes",
+                text: "Un simple script à copier-coller sur votre site. Aucune compétence technique requise. Compatible avec tous les CMS (WordPress, Wix, site custom).",
               },
               {
-                title: "Lecture des prix facilitée",
-                text: "Vos clients voient clairement ce qui est inclus ou non. Résultat : moins de malentendus et moins de négociations interminables.",
+                title: "Marque blanche 100%",
+                text: "Vos couleurs, votre logo, votre domaine. Le client ne voit que votre marque. L'IA Moverz est invisible, vous gardez toute la relation client.",
               },
               {
-                title: "Suivi et pilotage",
-                text: "Visualisez vos demandes, vos conversions et vos marges par type de déménagement. Identifiez les offres qui fonctionnent vraiment.",
+                title: "Réduction des litiges",
+                text: "Volume documenté avec photos, inventaire détaillé pièce par pièce. Plus de contestation possible le jour J. Clients satisfaits, moins de stress.",
               },
             ].map((item) => (
               <div
@@ -118,29 +115,29 @@ export default function ProPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                title: "Logiciel déménageur : comparatif 2025",
-                description: "Quel outil choisir pour gérer vos devis et votre pipeline ? CRM, Excel, ou logiciel métier ?",
-                href: "/blog/logiciel-demenageur-comparatif-2025/",
+                title: "Widget IA volumétrie : comparatif 2025",
+                description: "Les 5 solutions pour calculer le volume automatiquement sur votre site. API, widget, ou développement sur-mesure ?",
+                href: "/blog/widget-ia-volumetrie-demenagement-comparatif/",
               },
               {
-                title: "Déménagement entreprise : guide complet",
-                description: "Tout savoir sur le déménagement de bureaux et locaux professionnels : prix, étapes, erreurs à éviter.",
-                href: "/blog/demenagement-entreprise-bureaux-guide-complet/",
+                title: "Marque blanche déménagement : guide complet",
+                description: "Comment intégrer un outil tiers sur votre site sans perdre votre identité de marque ? Avantages, pièges à éviter.",
+                href: "/blog/marque-blanche-demenagement-guide/",
               },
               {
-                title: "Estimer le volume : IA vs manuel",
-                description: "Comparatif des 4 méthodes d'estimation du volume. L'IA est-elle vraiment plus précise ?",
-                href: "/blog/estimer-volume-demenagement-ia-vs-manuel/",
+                title: "Estimer le volume : IA vs visite technique",
+                description: "Comparatif précision, temps, coût. L'IA peut-elle vraiment remplacer la visite technique ?",
+                href: "/blog/estimer-volume-demenagement-ia-vs-visite/",
               },
               {
-                title: "Réduire les litiges clients de 80%",
-                description: "Les 5 causes de litiges en déménagement et comment les éviter avec la bonne méthode.",
-                href: "/blog/demenageur-reduire-litiges-clients/",
+                title: "Réduire les litiges volume de 90%",
+                description: "Pourquoi 40% des litiges viennent du volume sous-estimé, et comment l'IA + photos règlent le problème.",
+                href: "/blog/demenageur-reduire-litiges-volume/",
               },
               {
-                title: "Tarif déménageur : grille de prix 2025",
-                description: "Comment calculer vos tarifs ? Fourchettes par type de déménagement, marges réalistes.",
-                href: "/blog/tarif-demenageur-professionnel-grille-prix-marges/",
+                title: "ROI widget volumétrie : calcul 2025",
+                description: "Combien économiser en temps commercial avec un widget IA ? Calcul du ROI sur 12 mois.",
+                href: "/blog/roi-widget-volumetrie-demenageur/",
               },
             ].map((resource) => (
               <a
