@@ -135,13 +135,47 @@ const CITY_REVIEWS: CityReviewsMap = {
     },
     {
       name: "Leïla",
-      detail: "Lille → Villeneuve-d’Ascq",
-      text: "Les devis reçus détaillaient bien le temps de trajet, les options d’emballage et le nombre de déménageurs. Rien à redire sur l’exécution.",
+      detail: "Lille → Villeneuve-d'Ascq",
+      text: "Les devis reçus détaillaient bien le temps de trajet, les options d'emballage et le nombre de déménageurs. Rien à redire sur l'exécution.",
     },
     {
       name: "Antoine",
       detail: "Colocation étudiante",
       text: "On a pu regrouper plusieurs petits volumes dans un seul déménagement. Les devis étaient clairs et adaptés à notre situation.",
+    },
+  ],
+  grenoble: [
+    {
+      name: "Marc",
+      detail: "Centre-ville → Meylan",
+      text: "Entre les accès montagnards et les contraintes de stationnement, on avait peur des surcoûts. Les devis Moverz étaient clairs et adaptés à la réalité grenobloise.",
+    },
+    {
+      name: "Isabelle",
+      detail: "Appartement avec vue sur les Alpes",
+      text: "Les déménageurs connaissaient bien l'agglomération grenobloise. Ils ont géré les contraintes d'accès et de circulation sans problème.",
+    },
+    {
+      name: "Julien",
+      detail: "Déménagement étudiant",
+      text: "Même pour un petit volume, on a reçu des devis sérieux et adaptés au budget étudiant. Aucun stress.",
+    },
+  ],
+  "ile-de-france": [
+    {
+      name: "Caroline",
+      detail: "Paris → Versailles",
+      text: "On quittait la capitale pour une maison en grande couronne. Les déménageurs ont géré les deux contextes (ville dense puis résidentiel) parfaitement.",
+    },
+    {
+      name: "David",
+      detail: "Banlieue → banlieue",
+      text: "On avait peur que personne ne prenne notre déménagement entre deux communes de banlieue au sérieux. On a reçu 5 devis détaillés et professionnels.",
+    },
+    {
+      name: "Nadia",
+      detail: "Famille nombreuse en Essonne",
+      text: "Gros volume, enfants à gérer, stress du timing. L'équipe sélectionnée a été à la hauteur du début à la fin.",
     },
   ],
 };

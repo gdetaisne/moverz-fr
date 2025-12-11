@@ -53,20 +53,24 @@ export default function CityMovingPage({ params }: PageProps) {
   // Quartiers principaux (pour SEO)
   const neighborhoods: Record<string, string[]> = {
     marseille: ["Vieux-Port", "Le Panier", "Joliette", "Cours Julien", "Prado", "Endoume"],
-    paris: ["1er arr.", "2e arr.", "3e arr.", "4e arr.", "5e arr.", "6e arr.", "7e arr.", "8e arr.", "9e arr.", "10e arr.", "11e arr.", "12e arr."],
+    paris: ["1er arr.", "2e arr.", "3e arr.", "4e arr.", "5e arr.", "6e arr.", "7e arr.", "8e arr.", "9e arr.", "10e arr.", "11e arr.", "12e arr.", "13e arr.", "14e arr.", "15e arr.", "16e arr.", "17e arr.", "18e arr.", "19e arr.", "20e arr."],
     lyon: ["Presqu'île", "Vieux Lyon", "Croix-Rousse", "Part-Dieu", "Confluence", "Gerland"],
     nice: ["Vieux-Nice", "Carré d'Or", "Promenade", "Cimiez", "Riquier", "Fabron"],
     toulouse: ["Capitole", "Saint-Cyprien", "Carmes", "Minimes", "Borderouge"],
     bordeaux: ["Chartrons", "Saint-Pierre", "Saint-Michel", "Caudéran", "Bacalan"],
+    grenoble: ["Centre-ville", "Europole", "Île Verte", "Championnet", "Grand Place", "Mistral"],
+    "ile-de-france": ["Paris", "Hauts-de-Seine", "Seine-Saint-Denis", "Val-de-Marne", "Seine-et-Marne", "Yvelines", "Essonne", "Val-d'Oise"],
   };
 
   const suburbs: Record<string, string[]> = {
     marseille: ["Aix-en-Provence", "Aubagne", "Allauch", "La Ciotat", "Cassis"],
-    paris: ["Boulogne-Billancourt", "Levallois-Perret", "Neuilly", "Saint-Denis", "Montreuil"],
+    paris: ["Boulogne-Billancourt", "Levallois-Perret", "Neuilly-sur-Seine", "Saint-Denis", "Montreuil", "Vincennes", "Issy-les-Moulineaux", "Versailles"],
     lyon: ["Villeurbanne", "Caluire-et-Cuire", "Oullins", "Écully"],
     nice: ["Saint-Laurent-du-Var", "Cagnes-sur-Mer", "Villefranche", "Beaulieu"],
     toulouse: ["Blagnac", "Colomiers", "Tournefeuille", "Balma"],
     bordeaux: ["Mérignac", "Pessac", "Talence", "Bègles"],
+    grenoble: ["Échirolles", "Saint-Martin-d'Hères", "Fontaine", "Meylan", "Seyssinet-Pariset"],
+    "ile-de-france": ["Versailles", "Créteil", "Nanterre", "Cergy", "Évry", "Melun", "Saint-Denis", "Boulogne-Billancourt"],
   };
 
   const cityNeighborhoods = neighborhoods[city.slug] || [];
