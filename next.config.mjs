@@ -133,6 +133,18 @@ const nextConfig = {
         permanent: true,
       },
 
+      // Redirection ancienne page clients → homepage
+      {
+        source: '/clients',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/clients/',
+        destination: '/',
+        permanent: true,
+      },
+
       // Redirections anciennes URLs villes → nouvelles pages /demenagement/[slug]/
       // Nice
       {
