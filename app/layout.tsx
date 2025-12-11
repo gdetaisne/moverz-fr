@@ -145,9 +145,6 @@ export default function RootLayout({
               <span className="text-2xl md:text-3xl font-bold text-white">Moverz</span>
             </a>
             <div className="flex items-center gap-6">
-              <a href="/blog/" className="text-sm font-medium text-white/80 hover:text-white transition-colors hidden md:block">
-                Blog
-              </a>
               <a href="/comment-ca-marche/" className="text-sm font-medium text-white/80 hover:text-white transition-colors hidden md:block">
                 Comment ça marche
               </a>
@@ -156,6 +153,9 @@ export default function RootLayout({
               </a>
               <a href="/faq/" className="text-sm font-medium text-white/80 hover:text-white transition-colors hidden md:block">
                 FAQ
+              </a>
+              <a href="/blog/" className="text-sm font-medium text-white/80 hover:text-white transition-colors hidden md:block">
+                Blog
               </a>
               <a
                 href="https://devis.moverz.fr/?source=moverz.fr&from=header"
