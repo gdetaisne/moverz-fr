@@ -148,8 +148,8 @@ export default function RootLayout({
               <a href="/blog/" className="text-sm font-medium text-white/80 hover:text-white transition-colors hidden md:block">
                 Blog
               </a>
-              <a href="/villes/" className="text-sm font-medium text-white/80 hover:text-white transition-colors hidden md:block">
-                Villes
+              <a href="/comment-ca-marche/" className="text-sm font-medium text-white/80 hover:text-white transition-colors hidden md:block">
+                Comment ça marche
               </a>
               <a href="/pro/" className="text-sm font-medium text-white/80 hover:text-white transition-colors hidden md:block">
                 Pro
