@@ -151,6 +151,9 @@ export default function RootLayout({
               <a href="/villes/" className="text-sm font-medium text-white/80 hover:text-white transition-colors hidden md:block">
                 Villes
               </a>
+              <a href="/pro/" className="text-sm font-medium text-white/80 hover:text-white transition-colors hidden md:block">
+                Pro
+              </a>
               <a href="/faq/" className="text-sm font-medium text-white/80 hover:text-white transition-colors hidden md:block">
                 FAQ
               </a>
@@ -195,6 +198,7 @@ export default function RootLayout({
                   <li><a href="/comment-ca-marche/" className="text-white/70 hover:text-white transition-colors">Comment ça marche</a></li>
                   <li><a href="/blog/" className="text-white/70 hover:text-white transition-colors">Blog déménagement</a></li>
                   <li><a href="/villes/" className="text-white/70 hover:text-white transition-colors">Nos villes</a></li>
+                  <li><a href="/pro/" className="text-white/70 hover:text-white transition-colors">Offre Pro</a></li>
                   <li><a href="/faq/" className="text-white/70 hover:text-white transition-colors">FAQ</a></li>
                   <li><a href="/contact/" className="text-white/70 hover:text-white transition-colors">Contact</a></li>
                   <li><a href="/a-propos/" className="text-white/70 hover:text-white transition-colors">À propos</a></li>

@@ -4,8 +4,8 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = getFullMetadata(
   "pro",
-  "Moverz Pro : Outil IA pour Déménageurs | SaaS d'Estimation Automatisée",
-  "Moverz Pro est un outil SaaS pour déménageurs qui permet de standardiser les demandes, estimer les volumes et les prix plus rapidement, et proposer des devis comparables sans Excel ni formulaires bricolés."
+  "Moverz Pro : Logiciel Déménageur | CRM Devis + Gestion Dossiers | SaaS",
+  "Logiciel SaaS pour déménageurs : standardisez vos demandes, estimez les volumes en 1 min (IA), générez des devis comparables. Gagnez 50% de temps commercial. CRM déménagement + pipeline + suivi."
 );
 
 export default function ProPage() {
@@ -36,12 +36,10 @@ export default function ProPage() {
               SaaS pour déménageurs · Moverz Pro
             </div>
             <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-              Moverz Pro : l&apos;outil IA pour des devis de déménagement enfin comparables
+              Logiciel déménageur : CRM + Devis + Gestion dossiers
             </h1>
             <p className="text-base md:text-lg text-white/85 max-w-2xl">
-              Standardisez vos demandes, estimez plus vite vos volumes et vos prix, et envoyez des devis
-              lisibles sans passer vos journées dans Excel. Moverz Pro vous aide à gagner du temps, à
-              réduire les litiges et à améliorer l&apos;expérience de vos clients.
+              Moverz Pro est le SaaS conçu pour les déménageurs qui veulent structurer leur pipeline commercial. Estimation IA du volume en 1 min, devis standardisés, suivi des dossiers, réduction des litiges. Gagnez 50% de temps commercial.
             </p>
           </div>
         </div>
@@ -101,6 +99,66 @@ export default function ProPage() {
                 <h3 className="text-sm font-semibold text-[#04163a]">{item.title}</h3>
                 <p className="text-sm text-[#4b5c6b]">{item.text}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Ressources pour déménageurs */}
+      <section className="section section-light">
+        <div className="container max-w-5xl space-y-8">
+          <div className="text-center space-y-3">
+            <h2 className="text-2xl md:text-3xl font-semibold text-[#04163a]">
+              Ressources pour déménageurs professionnels
+            </h2>
+            <p className="text-sm md:text-base text-[#4b5c6b] max-w-2xl mx-auto">
+              Guides pratiques, comparatifs et conseils pour optimiser votre activité de déménagement.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                title: "Logiciel déménageur : comparatif 2025",
+                description: "Quel outil choisir pour gérer vos devis et votre pipeline ? CRM, Excel, ou logiciel métier ?",
+                href: "/blog/logiciel-demenageur-comparatif-2025/",
+              },
+              {
+                title: "Déménagement entreprise : guide complet",
+                description: "Tout savoir sur le déménagement de bureaux et locaux professionnels : prix, étapes, erreurs à éviter.",
+                href: "/blog/demenagement-entreprise-bureaux-guide-complet/",
+              },
+              {
+                title: "Estimer le volume : IA vs manuel",
+                description: "Comparatif des 4 méthodes d'estimation du volume. L'IA est-elle vraiment plus précise ?",
+                href: "/blog/estimer-volume-demenagement-ia-vs-manuel/",
+              },
+              {
+                title: "Réduire les litiges clients de 80%",
+                description: "Les 5 causes de litiges en déménagement et comment les éviter avec la bonne méthode.",
+                href: "/blog/demenageur-reduire-litiges-clients/",
+              },
+              {
+                title: "Tarif déménageur : grille de prix 2025",
+                description: "Comment calculer vos tarifs ? Fourchettes par type de déménagement, marges réalistes.",
+                href: "/blog/tarif-demenageur-professionnel-grille-prix-marges/",
+              },
+            ].map((resource) => (
+              <a
+                key={resource.href}
+                href={resource.href}
+                className="group rounded-2xl border border-[#E3E5E8] bg-white p-5 space-y-3 hover:border-[#2B7A78] hover:shadow-md transition-all"
+              >
+                <h3 className="text-base font-semibold text-[#04163a] group-hover:text-[#2B7A78] transition-colors">
+                  {resource.title}
+                </h3>
+                <p className="text-sm text-[#4b5c6b] leading-relaxed">
+                  {resource.description}
+                </p>
+                <span className="inline-flex items-center gap-1 text-sm font-medium text-[#2B7A78]">
+                  Lire l&apos;article
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </span>
+              </a>
             ))}
           </div>
         </div>
