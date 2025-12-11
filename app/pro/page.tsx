@@ -31,7 +31,7 @@ export default function ProPage() {
               className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2 text-sm font-medium text-white/90 backdrop-blur-sm"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
-              <span>Widget IA pour déménageurs</span>
+              <span>Calculateur IA pour déménageurs</span>
             </motion.div>
 
             {/* Title */}
@@ -52,7 +52,7 @@ export default function ProPage() {
               transition={{ duration: 0.4, delay: 0.2 }}
               className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto"
             >
-              Un widget IA qui s'intègre sur votre site en 5 minutes. Vos clients prennent des photos, l'IA calcule le volume, vous recevez des dossiers complets. Simple, précis, en marque blanche.
+              Un calculateur IA qui s'intègre sur votre site en 5 minutes. Vos clients prennent des photos, l'IA calcule le volume, vous recevez des dossiers complets. Simple, précis, en marque blanche.
             </motion.p>
 
             {/* CTAs */}
