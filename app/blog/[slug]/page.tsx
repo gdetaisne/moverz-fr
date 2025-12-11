@@ -7,6 +7,7 @@ import type { BlogPostMeta } from "@/lib/blog";
 import { BLOG_POSTS, getCanonicalBodyBySlug, getPostBySlug } from "@/lib/blog";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import { getCityBySlug } from "@/lib/cities";
+import { ArticleSchema } from "@/components/schema/ArticleSchema";
 
 type PageProps = {
   params: {
@@ -117,6 +118,15 @@ export default function BlogPostPage({ params }: PageProps) {
 
   return (
     <main className="bg-hero min-h-screen">
+      <ArticleSchema
+        title={post.title}
+        description={post.description}
+        slug={post.slug}
+        publishedAt={post.publishedAt}
+        updatedAt={post.updatedAt}
+        category={post.category}
+        readingTimeMinutes={post.readingTimeMinutes}
+      />
       <div className="halo" />
 
       {/* Hero article */}

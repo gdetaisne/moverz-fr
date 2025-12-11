@@ -7,6 +7,7 @@ import { CityHero } from "@/components/city/CityHero";
 import { CityStats } from "@/components/city/CityStats";
 import { CityPricing } from "@/components/city/CityPricing";
 import { CityFinalCTA } from "@/components/city/CityFinalCTA";
+import { FAQSchema } from "@/components/schema/FAQSchema";
 
 type PageProps = {
   params: {
@@ -71,8 +72,25 @@ export default function CityMovingPage({ params }: PageProps) {
   const cityNeighborhoods = neighborhoods[city.slug] || [];
   const citySuburbs = suburbs[city.slug] || [];
 
+  // FAQ Schema pour Rich Snippets Google
+  const cityFAQs = [
+    {
+      question: `Combien de temps à l'avance pour déménager à ${city.nameCapitalized} ?`,
+      answer: `Idéalement 4–8 semaines avant, surtout en haute saison. Plus tôt = plus de choix de prix.`,
+    },
+    {
+      question: 'Les déménageurs font une visite technique ?',
+      answer: 'Vos photos suffisent. Vous avez donc la paix, pas de visites techniques qui prennent une demi-journée.',
+    },
+    {
+      question: 'Moverz est vraiment gratuit ?',
+      answer: 'Oui. On est rémunérés par les déménageurs, pas par vous.',
+    },
+  ];
+
   return (
     <main className="bg-white">
+      <FAQSchema faqs={cityFAQs} />
       {/* Hero */}
       <CityHero city={city} quoteUrl={quoteUrl} />
 
@@ -131,6 +149,17 @@ export default function CityMovingPage({ params }: PageProps) {
                   </div>
                 </div>
               )}
+              
+              {/* Lien vers hub quartiers */}
+              <div className="mt-6 text-center">
+                <a
+                  href={`/quartiers-${city.slug}/`}
+                  className="inline-flex items-center gap-2 text-sm font-medium text-[#2B7A78] hover:text-[#205a5a] transition-colors"
+                >
+                  <span>Découvrir tous les quartiers de {city.nameCapitalized}</span>
+                  <span>→</span>
+                </a>
+              </div>
             </div>
           </div>
         </section>

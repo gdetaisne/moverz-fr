@@ -59,6 +59,17 @@ export function QuartierPage({
         <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A]" />
 
         <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-8 md:py-28">
+          {/* Breadcrumb / lien retour ville */}
+          <div className="mb-6">
+            <a
+              href={`/demenagement/${citySlug}/`}
+              className="inline-flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors"
+            >
+              <span>←</span>
+              <span>Retour à Déménagement {cityName}</span>
+            </a>
+          </div>
+          
           <div className="max-w-4xl mx-auto text-center space-y-6">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90">
