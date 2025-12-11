@@ -148,14 +148,18 @@ export default function RootLayout({
               <a href="/comment-ca-marche/" className="text-sm font-medium text-white/80 hover:text-white transition-colors hidden md:block">
                 Comment ça marche
               </a>
-              <a href="/pro/" className="text-sm font-medium text-white/80 hover:text-white transition-colors hidden md:block">
-                Pro
-              </a>
               <a href="/faq/" className="text-sm font-medium text-white/80 hover:text-white transition-colors hidden md:block">
                 FAQ
               </a>
               <a href="/blog/" className="text-sm font-medium text-white/80 hover:text-white transition-colors hidden md:block">
                 Blog
+              </a>
+              <a
+                href="/pro/"
+                className="inline-flex items-center gap-1 rounded-full border border-white/30 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10 transition-colors hidden md:inline-flex"
+              >
+                <span>Pro</span>
+                <span className="text-base">→</span>
               </a>
               <a
                 href="https://devis.moverz.fr/?source=moverz.fr&from=header"
