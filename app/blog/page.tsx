@@ -5,6 +5,8 @@ import Link from "next/link";
 import type { BlogPostMeta } from "@/lib/blog";
 import { BLOG_POSTS } from "@/lib/blog";
 
+export const dynamic = 'force-dynamic';
+
 const ITEMS_PER_PAGE = 20;
 
 const CATEGORIES = [

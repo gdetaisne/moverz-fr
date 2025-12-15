@@ -16,8 +16,12 @@ type PageProps = {
 };
 
 export function generateStaticParams() {
-  return BLOG_POSTS.map((post) => ({ slug: post.slug }));
+  return BLOG_POSTS
+    .filter((post) => post.slug && post.slug.trim() !== '' && post.slug !== 'blog')
+    .map((post) => ({ slug: post.slug }));
 }
+
+export const dynamicParams = false;
 
 export function generateMetadata({ params }: PageProps): Metadata {
   const post = getPostBySlug(params.slug);
