@@ -5,8 +5,8 @@ import { CITIES, getCitiesByRegion } from "@/lib/cities";
 
 export const metadata: Metadata = getFullMetadata(
   'villes',
-  "11 Villes en France : Déménagement Lyon, Nice, Marseille... | Moverz",
-  "Déménagez à Lyon, Nice, Marseille, Toulouse, Bordeaux, Nantes... → Comparez 5+ devis de pros contrôlés en 3 min · Service 100% gratuit, sans spam · Choisissez votre ville"
+  "Déménagement partout en France | Moverz - Comparez 5+ Devis",
+  "Déménagez partout en France : Paris, Lyon, Marseille, Toulouse, Bordeaux... → Comparez 5+ devis de pros locaux en 3 min · IA calcule le volume · 100% gratuit · 0 spam"
 );
 
 export default function VillesPage() {
@@ -38,10 +38,10 @@ export default function VillesPage() {
               <span className="h-2 w-2 rounded-full bg-[#6BCFCF] animate-pulse" />
               Disponible partout en France
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">Villes principales couvertes par Moverz</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">Déménagement partout en France</h1>
             <p className="text-lg md:text-xl text-white/85 max-w-3xl leading-relaxed">
-              Ces 11 grandes villes disposent d’un comparateur local dédié. Pour les autres villes de France,
-              vous pouvez aussi utiliser Moverz en sélectionnant vos adresses précises lors de la demande de devis.
+              Moverz fonctionne dans toute la France. Voici nos villes principales avec guides dédiés, 
+              mais vous pouvez comparer des devis pour n'importe quelle ville en indiquant vos adresses précises.
             </p>
           </div>
         </div>
