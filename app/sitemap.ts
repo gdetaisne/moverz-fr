@@ -37,19 +37,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  // Hub quartiers : /quartiers-{ville}/
-  const hubQuartiersPages: MetadataRoute.Sitemap = [];
-  for (const citySlug of Object.keys(cityData)) {
-    // Seulement les 7 nouvelles villes (pas celles qui existaient déjà)
-    if (['nice', 'toulouse', 'strasbourg', 'nantes', 'rennes', 'rouen', 'montpellier'].includes(citySlug)) {
-      hubQuartiersPages.push({
-        url: `${baseUrl}/quartiers-${citySlug}/`,
-        lastModified: now,
-        changeFrequency: "monthly",
-        priority: 0.7,
-      });
-    }
-  }
+  // Hub quartiers : /quartiers-{ville}/ (toutes les villes)
+  const hubQuartiersPages: MetadataRoute.Sitemap = CITIES.map((city) => ({
+    url: `${baseUrl}/quartiers-${city.slug}/`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
 
   // Pages quartiers : /{ville}/{quartier}/
   const quartierPages: MetadataRoute.Sitemap = [];
