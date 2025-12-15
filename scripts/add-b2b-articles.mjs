@@ -5,14 +5,16 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Lire les 5 articles B2B
+// Lire les articles stratégiques
 const articlesDir = path.join(__dirname, '../content/blog');
 const articles = [
   'widget-ia-volumetrie-demenagement-comparatif.md',
   'marque-blanche-demenagement-guide.md',
   'estimer-volume-demenagement-ia-vs-visite.md',
   'demenageur-reduire-litiges-volume.md',
-  'roi-widget-volumetrie-demenageur.md'
+  'roi-widget-volumetrie-demenageur.md',
+  'prix-demenagement-2025.md',
+  'top-erreurs-a-eviter.md'
 ];
 
 const newArticles = [];
@@ -31,14 +33,14 @@ articles.forEach(filename => {
   const frontmatter = frontmatterMatch[1];
   const body = frontmatterMatch[2];
   
-  // Extraire les champs du frontmatter
-  const titleMatch = frontmatter.match(/title:\s*"(.*)"/);
-  const slugMatch = frontmatter.match(/slug:\s*"(.*)"/);
-  const descriptionMatch = frontmatter.match(/description:\s*"(.*)"/);
+  // Extraire les champs du frontmatter (avec ou sans guillemets)
+  const titleMatch = frontmatter.match(/title:\s*"?([^"\n]*)"?/);
+  const slugMatch = frontmatter.match(/slug:\s*"?([^"\n]*)"?/);
+  const descriptionMatch = frontmatter.match(/description:\s*"?([^"\n]*)"?/);
   
-  const title = titleMatch ? titleMatch[1] : '';
-  const slug = slugMatch ? slugMatch[1] : '';
-  const description = descriptionMatch ? descriptionMatch[1] : '';
+  const title = titleMatch ? titleMatch[1].trim() : '';
+  const slug = slugMatch ? slugMatch[1].trim() : '';
+  const description = descriptionMatch ? descriptionMatch[1].trim() : '';
   
   newArticles.push({
     slug,
@@ -92,7 +94,7 @@ const updatedContent = beforeClosing + (needsComma ? ',\n' : '\n') + newArticles
 // Écrire le fichier mis à jour
 fs.writeFileSync(blogCanoniquePath, updatedContent, 'utf8');
 
-console.log('✅ 5 articles B2B ajoutés à lib/blog-canonique.ts');
+console.log(`✅ ${newArticles.length} articles ajoutés à lib/blog-canonique.ts`);
 console.log('Articles ajoutés:');
 newArticles.forEach(a => console.log(`  - ${a.slug}`));
 
