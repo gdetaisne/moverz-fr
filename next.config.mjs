@@ -587,6 +587,27 @@ const nextConfig = {
         destination: '/demenagement/le-havre/',
         permanent: true,
       },
+      // Saint-Étienne
+      {
+        source: '/saint-etienne',
+        destination: '/demenagement/saint-etienne/',
+        permanent: true,
+      },
+      {
+        source: '/saint-etienne/',
+        destination: '/demenagement/saint-etienne/',
+        permanent: true,
+      },
+      {
+        source: '/villes/saint-etienne',
+        destination: '/demenagement/saint-etienne/',
+        permanent: true,
+      },
+      {
+        source: '/villes/saint-etienne/',
+        destination: '/demenagement/saint-etienne/',
+        permanent: true,
+      },
     ]
   },
 };

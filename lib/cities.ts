@@ -182,6 +182,14 @@ export const CITIES: CityInfo[] = [
     description: 'Comparez 5+ devis de déménageurs au Havre',
     region: 'Normandie',
   },
+  {
+    slug: 'saint-etienne',
+    name: 'saint-etienne',
+    nameCapitalized: 'Saint-Étienne',
+    url: 'https://moverz.fr', // Pas de site dédié
+    description: 'Comparez 5+ devis de déménageurs à Saint-Étienne',
+    region: 'Auvergne-Rhône-Alpes',
+  },
 ];
 
 export function getCityBySlug(slug: string): CityInfo | undefined {
