@@ -5,6 +5,7 @@ export type CorridorPageProps = {
   originCitySlug: string;
   originCityName: string;
   destination: string;
+  destinationSlug?: string;
   distance: string;
   tempsMoyen: string;
   periodeConseillee: string;
@@ -21,12 +22,23 @@ export type CorridorPageProps = {
   }>;
 };
 
+function slugify(input: string): string {
+  return input
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
 export function generateCorridorMetadata(
   originCitySlug: string,
   originCityName: string,
-  destination: string
+  destination: string,
+  destinationSlug?: string
 ): Metadata {
-  const path = `${originCitySlug}-vers-${destination.toLowerCase()}`;
+  const destSlug = destinationSlug ?? slugify(destination);
+  const path = `${originCitySlug}-vers-${destSlug}`;
   const title = `Déménagement ${originCityName} → ${destination} : Devis & Prix 2025 | Moverz`;
   const description = `Déménagement ${originCityName} vers ${destination} : devis gratuits, prix indicatifs, conseils d'experts. 5+ déménageurs contrôlés · 0€ · 0 spam`;
 
@@ -37,6 +49,7 @@ export function CorridorPage({
   originCitySlug,
   originCityName,
   destination,
+  destinationSlug,
   distance,
   tempsMoyen,
   periodeConseillee,
@@ -45,7 +58,8 @@ export function CorridorPage({
   conseils,
   faq,
 }: CorridorPageProps) {
-  const quoteUrl = `https://devis.moverz.fr/?city_slug=${originCitySlug}&source=moverz.fr&from=/${originCitySlug}-vers-${destination.toLowerCase()}/`;
+  const destSlug = destinationSlug ?? slugify(destination);
+  const quoteUrl = `https://devis.moverz.fr/?city_slug=${originCitySlug}&source=moverz.fr&from=/${originCitySlug}-vers-${destSlug}/`;
 
   return (
     <main className="bg-white">

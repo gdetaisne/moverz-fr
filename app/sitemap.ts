@@ -78,6 +78,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
+  // Corridors city → city (toutes les villes "réelles" de CITIES, hors région Île-de-France)
+  const excludedForCorridors = new Set(["ile-de-france"]);
+  const corridorCityToCity: MetadataRoute.Sitemap = [];
+  const corridorCities = CITIES.filter((c) => !excludedForCorridors.has(c.slug));
+  for (const from of corridorCities) {
+    for (const to of corridorCities) {
+      if (from.slug === to.slug) continue;
+      corridorCityToCity.push({
+        url: `${baseUrl}/${from.slug}-vers-${to.slug}/`,
+        lastModified: now,
+        changeFrequency: "monthly",
+        priority: 0.55,
+      });
+    }
+  }
+
   // Articles de blog (dont P1 Prix & guides majeurs)
   const blogPages: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}/`,
@@ -86,12 +102,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [
+  // Dédoublonnage final (sitemap propre même si certaines URLs existent déjà en dur)
+  const all = [
     ...staticPages,
     ...cityPages,
     ...hubQuartiersPages,
     ...quartierPages,
     ...corridorPages,
+    ...corridorCityToCity,
     ...blogPages,
   ];
+
+  const seen = new Set<string>();
+  return all.filter((entry) => {
+    if (seen.has(entry.url)) return false;
+    seen.add(entry.url);
+    return true;
+  });
 }
