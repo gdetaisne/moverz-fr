@@ -53,6 +53,37 @@ export default function CityMovingPage({ params }: PageProps) {
 
   const quoteUrl = `https://devis.moverz.fr/?city_slug=${city.slug}&source=moverz.fr&from=/demenagement/${city.slug}/`;
 
+  // Corridors (liens internes) — on limite à quelques destinations pour éviter des pages "listing" gigantesques.
+  // Exclure ile-de-france (région) car pas un corridor ville→ville.
+  const corridorCandidates = CITIES
+    .map((c) => c.slug)
+    .filter((s) => s !== city.slug && s !== "ile-de-france");
+
+  // Destinations prioritaires "business" (ordre)
+  const preferred = [
+    "paris",
+    "lyon",
+    "marseille",
+    "toulouse",
+    "bordeaux",
+    "lille",
+    "nantes",
+    "strasbourg",
+    "nice",
+    "montpellier",
+    "rennes",
+    "rouen",
+  ].filter((s) => s !== city.slug);
+
+  const corridorDestinations = [
+    ...preferred.filter((s) => corridorCandidates.includes(s)),
+    ...corridorCandidates,
+  ]
+    // unique
+    .filter((v, i, arr) => arr.indexOf(v) === i)
+    // limiter (SEO/UX)
+    .slice(0, 6);
+
   // Quartiers principaux (pour SEO)
   const neighborhoods: Record<string, string[]> = {
     marseille: ["Vieux-Port", "Le Panier", "Joliette", "Cours Julien", "Prado", "Endoume"],
@@ -220,6 +251,29 @@ export default function CityMovingPage({ params }: PageProps) {
                     <span>→</span>
                   </a>
                 </div>
+
+                {/* Corridors (villes → villes) */}
+                {corridorDestinations.length > 0 && (
+                  <div className="rounded-2xl border border-[#E5E7EB] bg-white p-8">
+                    <h3 className="text-lg font-semibold text-[#0F172A] mb-2">
+                      Déménager depuis {city.nameCapitalized} vers…
+                    </h3>
+                    <p className="text-sm text-[#6B7280] mb-5">
+                      Longue distance ? Voici les trajets les plus demandés, avec devis gratuits et déménageurs contrôlés.
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-2">
+                      {corridorDestinations.map((dest) => (
+                        <a
+                          key={dest}
+                          href={`/${city.slug}-vers-${dest}/`}
+                          className="rounded-full border border-[#E5E7EB] bg-[#FAFAFA] px-3 py-1.5 text-xs text-[#0F172A] hover:border-[#6BCFCF]/50 hover:bg-white transition-colors"
+                        >
+                          {city.nameCapitalized} → {getCityBySlug(dest)?.nameCapitalized ?? dest}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>

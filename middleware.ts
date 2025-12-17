@@ -45,7 +45,7 @@ export function middleware(req: NextRequest) {
   }
 
   const url = req.nextUrl.clone();
-  url.pathname = `/_corridor/${from}/${to}`;
+  url.pathname = `/corridor/${from}/${to}`;
   return NextResponse.rewrite(url);
 }
 

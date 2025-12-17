@@ -23,7 +23,7 @@ export const CITY_COORDS: Record<string, CityCoord> = {
   tours: { lat: 47.3941, lon: 0.6848 },
   reims: { lat: 49.2583, lon: 4.0317 },
   "le-havre": { lat: 49.4944, lon: 0.1079 },
-  saint-etienne: { lat: 45.4397, lon: 4.3872 },
+  "saint-etienne": { lat: 45.4397, lon: 4.3872 },
 };
 
 function toRad(v: number): number {

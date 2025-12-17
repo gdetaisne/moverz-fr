@@ -77,6 +77,14 @@ export function CorridorPage({
               <span>←</span>
               <span>Retour à Déménagement {originCityName}</span>
             </a>
+            <span className="mx-2 text-white/40">·</span>
+            <a
+              href={`/demenagement/${destSlug}/`}
+              className="inline-flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors"
+            >
+              <span>Voir Déménagement {destination}</span>
+              <span>→</span>
+            </a>
           </div>
           
           <div className="max-w-4xl mx-auto text-center space-y-6">

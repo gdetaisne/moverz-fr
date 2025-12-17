@@ -54,7 +54,6 @@ export default function CorridorAutoPage({ params }: PageProps) {
     return null;
   }
 
-  // Estimations crédibles (route + temps + prix) — pas parfait, mais suffisant pour landing SEO.
   const km = estimateRoadDistanceKm(from.slug, to.slug) ?? 300;
   const distance = formatDistance(km);
   const tempsMoyen = formatDurationFromKm(km);
