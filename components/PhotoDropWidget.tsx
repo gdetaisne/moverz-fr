@@ -102,7 +102,7 @@ export default function PhotoDropWidget({
                  Glissez vos photos ici
                </p>
                <p className="mt-1 text-xs md:text-sm text-[#4b5c6b]">
-                 L'IA calcule tout. Vous, vous attendez 60 secondes.
+                 Les photos = la clé : volume fiable, devis comparables, moins de surprises.
                </p>
         {hasFiles && (
           <p className="mt-3 text-xs md:text-sm font-medium text-[#6BCFCF]">
@@ -143,7 +143,7 @@ export default function PhotoDropWidget({
       </button>
 
       <p className="text-[11px] md:text-xs text-[#4b5c6b] text-center">
-        Gratuit • Sans spam • En 3 minutes chrono
+        Gratuit • Sans spam • Les photos augmentent la précision
       </p>
     </div>
   );

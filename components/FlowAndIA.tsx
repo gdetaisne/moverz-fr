@@ -85,7 +85,7 @@ export default function FlowAndIA() {
             3 étapes, 3 minutes
           </h2>
           <p className="text-lg text-[#6B7280]">
-            L'IA fait le travail. Vous gardez le contrôle.
+            L'IA fait le travail. Les photos sont la clé. Vous gardez le contrôle.
           </p>
         </motion.div>
 
@@ -216,6 +216,11 @@ export default function FlowAndIA() {
                   <p className="text-base md:text-lg text-[#0F172A] leading-relaxed font-medium">
                     {activeStep.ia}
                   </p>
+                  {activeId === 1 && (
+                    <p className="mt-3 text-sm text-[#6B7280] leading-relaxed">
+                      Plus vos photos sont claires (pièces + accès), plus les devis sont justes et comparables.
+                    </p>
+                  )}
                 </motion.div>
               </AnimatePresence>
               

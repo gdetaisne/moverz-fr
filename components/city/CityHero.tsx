@@ -50,6 +50,9 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
             className="text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto"
           >
             Des déménageurs locaux contrôlés. Des devis comparables. 0 spam.
+            <span className="block mt-2 text-white/70 text-sm md:text-base">
+              Conseil : ajoutez des photos (pièces + accès) pour des devis plus justes.
+            </span>
           </motion.p>
 
           {/* CTA principal */}
