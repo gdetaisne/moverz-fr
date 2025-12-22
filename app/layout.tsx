@@ -156,14 +156,14 @@ export default function RootLayout({
               </a>
               <a
                 href="/pro/"
-                className="inline-flex items-center gap-1 rounded-full border border-white/30 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10 transition-colors hidden md:inline-flex"
+                className="inline-flex items-center gap-1 rounded-full border border-white/25 px-4 py-2 text-sm font-semibold text-white/90 hover:text-white hover:bg-white/10 transition-colors hidden md:inline-flex"
               >
                 <span>Pro</span>
                 <span className="text-base">→</span>
               </a>
               <a
                 href="https://devis.moverz.fr/?source=moverz.fr&from=header"
-                className="inline-flex items-center gap-1 rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#0F172A] hover:bg-[#F3F4F6] transition-colors"
+                className="inline-flex items-center gap-1 rounded-full bg-[var(--brand-deep)] px-4 py-2 text-sm font-semibold text-white hover:bg-[var(--brand-teal-3)] transition-colors shadow-[0_10px_30px_rgba(43,122,120,0.35)]"
               >
                 <span>Obtenir des devis</span>
                 <span className="text-base">→</span>

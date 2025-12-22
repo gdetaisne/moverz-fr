@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Brand core */
+  --brand-navy: #0f172a;
+  --brand-navy-2: #04163a;
+  --brand-slate: #1e293b;
+
+  /* Brand accents */
+  --brand-deep: #2b7a78; /* DBA: main brand accent */
+  --brand-teal: #6bcfcf; /* spark / highlight */
+  --brand-teal-2: #4fb8b8;
+  --brand-teal-3: #3da5a5;
+  --brand-warm: #f59e0b; /* subtle warm counter-accent */
+
+  /* Surfaces (lighter feel) */
+  --surface-0: #ffffff;
+  --surface-1: #fbfeff;
+  --surface-2: #f3fbfb;
+  --surface-3: #eef8f8;
+
+  /* Text */
+  --text-strong: #04163a;
+  --text-muted: #4b5c6b;
+}
+
 @layer base {
   * {
     @apply m-0 p-0 box-border;
@@ -12,7 +36,8 @@
   }
   
   body {
-    @apply min-h-screen text-[#04163a] antialiased;
+    @apply min-h-screen antialiased;
+    color: var(--text-strong);
   }
 }
 
@@ -99,11 +124,11 @@
   }
 
   .section-light {
-    @apply bg-gradient-to-br from-[#fdfeff] via-[#f9fdff] to-[#f5fbfc];
+    @apply bg-gradient-to-br from-[var(--surface-1)] via-[var(--surface-2)] to-[var(--surface-3)];
   }
 
   .section-contrast {
-    @apply bg-gradient-to-br from-[#04163a] via-[#05243f] to-[#0b3b46] text-white;
+    @apply bg-gradient-to-br from-[var(--brand-navy-2)] via-[var(--brand-navy)] to-[var(--brand-deep)] text-white;
   }
 
   .container {
@@ -112,26 +137,31 @@
 
   /* Hero background */
   .bg-hero {
-    @apply relative bg-gradient-to-br from-[#04163a] via-[#2b7a78] to-[#04163a];
+    @apply relative bg-gradient-to-br from-[var(--brand-navy-2)] via-[var(--brand-deep)] to-[var(--brand-navy-2)];
   }
 
   .halo {
     @apply absolute inset-0 opacity-40;
     background: radial-gradient(
       circle at 20% 50%,
-      rgba(107, 207, 207, 0.25) 0%,
+      rgba(107, 207, 207, 0.20) 0%,
       transparent 50%
     ),
     radial-gradient(
       circle at 80% 80%,
-      rgba(43, 122, 120, 0.2) 0%,
+      rgba(43, 122, 120, 0.18) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 70% 20%,
+      rgba(245, 158, 11, 0.12) 0%,
       transparent 50%
     );
   }
 
   /* Boutons */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-base md:text-lg font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-[var(--brand-deep)] via-[var(--brand-teal-2)] to-[var(--brand-teal)] px-8 py-4 text-base md:text-lg font-semibold text-white shadow-[0_10px_34px_rgba(43,122,120,0.35)] hover:shadow-[0_14px_60px_rgba(107,207,207,0.45)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300;
   }
 
   .btn-secondary {

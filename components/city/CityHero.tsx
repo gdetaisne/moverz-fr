@@ -39,7 +39,7 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
             className="text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl lg:text-7xl"
           >
             Déménager à {city.nameCapitalized} ?<br />
-            <span className="text-[#6BCFCF]">3 min, 5+ devis.</span>
+            <span className="text-[var(--brand-teal)]">3 min, 5+ devis.</span>
           </motion.h1>
 
           {/* Sous-titre */}
@@ -64,7 +64,7 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
           >
             <a
               href={quoteUrl}
-              className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-[#0F172A] shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+              className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--brand-deep)] via-[var(--brand-teal-2)] to-[var(--brand-teal)] px-8 py-4 text-base font-semibold text-white shadow-[0_10px_34px_rgba(43,122,120,0.35)] hover:shadow-[0_14px_60px_rgba(107,207,207,0.45)] hover:scale-105 transition-all duration-300"
             >
               <span>Comparer les déménageurs</span>
               <span className="text-lg leading-none group-hover:translate-x-1 transition-transform">→</span>

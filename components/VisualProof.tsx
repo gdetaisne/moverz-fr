@@ -42,9 +42,9 @@ export default function VisualProof() {
             </p>
             
             {[
-              { name: "Déménageurs Pro Plus", price: "1 890€", badge: "Meilleur prix" },
-              { name: "Express Moving", price: "2 100€", badge: "Mieux noté" },
-              { name: "Déménagement Facile", price: "2 250€", badge: null },
+              { name: "Déménageurs Pro Plus", price: "990€", badge: "Meilleur prix" },
+              { name: "Express Moving", price: "1 190€", badge: "Mieux noté" },
+              { name: "Déménagement Facile", price: "1 290€", badge: null },
             ].map((quote, i) => (
               <div
                 key={i}

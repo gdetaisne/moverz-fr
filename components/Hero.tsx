@@ -74,12 +74,15 @@ export default function Hero() {
             >
               <a
                 href="https://devis.moverz.fr/?source=moverz.fr&from=/"
-                className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--brand-deep)] via-[var(--brand-teal-2)] to-[var(--brand-teal)] px-6 py-3 text-sm md:text-base font-semibold text-white shadow-[0_10px_34px_rgba(43,122,120,0.35)] hover:shadow-[0_14px_60px_rgba(107,207,207,0.45)] hover:scale-105 transition-all duration-300"
                 aria-label="Obtenir mes devis gratuits"
               >
                 <span>Obtenir mes devis gratuits</span>
                 <span className="text-lg leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
               </a>
+              <p className="mt-3 text-xs md:text-sm text-white/70">
+                Téléphone masqué · 0 spam · Les photos rendent les devis plus justes
+              </p>
             </div>
           </div>
 
