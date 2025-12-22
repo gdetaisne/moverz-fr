@@ -30,10 +30,10 @@ export function CityPricing({ cityName }: CityPricingProps) {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 bg-gradient-to-br from-[#0F172A] to-[#1E293B] overflow-hidden">
+    <section className="relative py-20 md:py-32 bg-gradient-to-br from-[var(--brand-navy)] to-[var(--brand-slate)] overflow-hidden">
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#6BCFCF] rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#6BCFCF] rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }} />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--brand-teal)] rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[var(--brand-teal)] rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }} />
       </div>
 
       <div className="container max-w-5xl relative">
@@ -45,7 +45,7 @@ export function CityPricing({ cityName }: CityPricingProps) {
           className="text-center mb-12 space-y-6 text-white"
         >
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur-sm">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
+            <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-teal)] animate-pulse" />
             <span>Prix indicatifs</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold">
@@ -67,15 +67,15 @@ export function CityPricing({ cityName }: CityPricingProps) {
               whileHover={{ y: -4, scale: 1.02 }}
               className="group"
             >
-              <div className={`rounded-2xl ${item.highlight ? 'border-2 border-[#6BCFCF]/50 bg-white/10' : 'border border-white/10 bg-white/5'} backdrop-blur-sm p-8 text-center hover:border-[#6BCFCF]/70 hover:bg-white/15 transition-all duration-300`}>
-                <div className={`flex items-center justify-center h-12 w-12 rounded-xl ${item.highlight ? 'bg-[#6BCFCF] text-white' : 'bg-white/10 text-[#6BCFCF]'} group-hover:scale-110 transition-transform duration-300 mx-auto mb-4`}>
+              <div className={`rounded-2xl ${item.highlight ? 'border-2 border-[var(--brand-teal)]/50 bg-white/10' : 'border border-white/10 bg-white/5'} backdrop-blur-sm p-8 text-center hover:border-[var(--brand-teal)]/70 hover:bg-white/15 transition-all duration-300`}>
+                <div className={`flex items-center justify-center h-12 w-12 rounded-xl ${item.highlight ? 'bg-[var(--brand-deep)] text-white' : 'bg-white/10 text-[var(--brand-teal)]'} group-hover:scale-110 transition-transform duration-300 mx-auto mb-4`}>
                   <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />
                   </svg>
                 </div>
                 <p className="text-sm text-white/60 mb-2">{item.volume}</p>
                 <p className="text-lg font-bold text-white mb-3">{item.label}</p>
-                <p className="text-3xl font-bold text-[#6BCFCF]">{item.price}</p>
+                <p className="text-3xl font-bold text-[var(--brand-teal)]">{item.price}</p>
               </div>
             </motion.div>
           ))}

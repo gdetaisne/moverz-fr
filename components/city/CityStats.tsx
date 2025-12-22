@@ -29,7 +29,7 @@ export function CityStats({ cityName }: CityStatsProps) {
   return (
     <section className="relative py-20 md:py-32 bg-white overflow-hidden">
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-0 w-96 h-96 bg-[#6BCFCF]/30 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
+        <div className="absolute top-20 left-0 w-96 h-96 bg-[var(--brand-teal)]/25 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
       </div>
 
       <div className="container max-w-5xl relative">
@@ -40,11 +40,11 @@ export function CityStats({ cityName }: CityStatsProps) {
           transition={{ duration: 0.4 }}
           className="text-center mb-12 space-y-6"
         >
-          <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-2 text-sm font-medium text-[#6BCFCF] border border-[#6BCFCF]/20">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
+          <div className="inline-flex items-center gap-2 rounded-full bg-[var(--brand-teal)]/10 px-4 py-2 text-sm font-medium text-[var(--brand-deep)] border border-[var(--brand-teal)]/20">
+            <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-teal)] animate-pulse" />
             <span>Moverz à {cityName}</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-navy)]">
             Ça marche à {cityName} aussi
           </h2>
         </motion.div>
@@ -60,13 +60,13 @@ export function CityStats({ cityName }: CityStatsProps) {
               whileHover={{ y: -4, scale: 1.02 }}
               className="group"
             >
-              <div className={`rounded-2xl border ${stat.highlight ? 'border-[#6BCFCF]/30 bg-[#6BCFCF]/5' : 'border-[#E5E7EB] bg-white'} p-8 hover:border-[#6BCFCF]/50 hover:shadow-xl transition-all duration-300`}>
-                <div className={`flex items-center justify-center h-14 w-14 rounded-xl ${stat.highlight ? 'bg-[#6BCFCF] text-white' : 'bg-[#F0F9FF] text-[#6BCFCF]'} group-hover:scale-110 transition-transform duration-300 mx-auto mb-6`}>
+              <div className={`rounded-2xl border ${stat.highlight ? 'border-[var(--brand-teal)]/30 bg-[var(--brand-teal)]/5' : 'border-[#E5E7EB] bg-white'} p-8 hover:border-[var(--brand-teal)]/50 hover:shadow-xl transition-all duration-300`}>
+                <div className={`flex items-center justify-center h-14 w-14 rounded-xl ${stat.highlight ? 'bg-[var(--brand-deep)] text-white' : 'bg-[var(--brand-teal)]/15 text-[var(--brand-deep)]'} group-hover:scale-110 transition-transform duration-300 mx-auto mb-6`}>
                   <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={stat.icon} />
                   </svg>
                 </div>
-                <p className={`text-4xl md:text-5xl font-bold mb-3 text-center ${stat.highlight ? 'text-[#6BCFCF]' : 'text-[#0F172A]'}`}>
+                <p className={`text-4xl md:text-5xl font-bold mb-3 text-center ${stat.highlight ? 'text-[var(--brand-deep)]' : 'text-[var(--brand-navy)]'}`}>
                   {stat.value}
                 </p>
                 <p className="text-sm text-[#6B7280] text-center leading-relaxed">
