@@ -24,10 +24,14 @@ const blogDataSlugs = [...blogDataContent.matchAll(/slug:\s*['"](.*?)['"]/g)].ma
 
 // Extraire les slugs de blog-canonique.ts
 const blogCanoniqueContent = fs.readFileSync(blogCanoniquePath, 'utf-8');
-const canonicalSlugs = [...blogCanoniqueContent.matchAll(/"slug":\s*"(.*?)"/g)].map(m => m[1]);
+// blog-canonique.ts contient de gros template literals (body) : on cible uniquement les slugs des objets canoniques
+const canonicalSlugs = [
+  ...blogCanoniqueContent.matchAll(/\{\s*\n\s*slug:\s*"([^"]+)"/g)
+].map((m) => m[1]);
 
 // Identifier les manquants
-const missingSlugs = blogDataSlugs.filter(slug => !canonicalSlugs.includes(slug));
+const canonicalSet = new Set(canonicalSlugs);
+const missingSlugs = blogDataSlugs.filter((slug) => !canonicalSet.has(slug));
 
 console.log(`📊 Statistiques :`);
 console.log(`  - Total articles blog-data : ${blogDataSlugs.length}`);

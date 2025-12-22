@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import type { BlogPostMeta } from "@/lib/blog";
-import { BLOG_POSTS } from "@/lib/blog";
+import { PUBLISHED_BLOG_POSTS } from "@/lib/blog";
 
 export const dynamic = 'force-dynamic';
 
@@ -32,11 +32,11 @@ export default function BlogIndexPage() {
   const [activeCategory, setActiveCategory] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
 
-  const featured = BLOG_POSTS.slice(0, 3);
+  const featured = PUBLISHED_BLOG_POSTS.slice(0, 3);
 
   // Filtrer les articles (hors featured)
   const filteredPosts = useMemo(() => {
-    const allPosts = BLOG_POSTS.slice(3); // Exclure les 3 featured
+    const allPosts = PUBLISHED_BLOG_POSTS.slice(3); // Exclure les 3 featured
     if (activeCategory === "all") return allPosts;
     return allPosts.filter((post) => post.category === activeCategory);
   }, [activeCategory]);

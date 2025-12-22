@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { getFullMetadata } from "@/lib/canonical-helper";
+import { getPricePostForCity } from "@/lib/blog";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export type Neighborhood = {
   slug: string;
@@ -30,9 +32,22 @@ export function HubQuartiersPage({
   neighborhoods,
 }: HubQuartiersPageProps) {
   const quoteUrl = `https://devis.moverz.fr/?city_slug=${citySlug}&source=moverz.fr&from=/quartiers-${citySlug}/`;
+  const pricePost = getPricePostForCity(citySlug);
 
   return (
     <main className="bg-white">
+      <div className="bg-[#0F172A]">
+        <div className="container max-w-6xl pt-6">
+          <Breadcrumbs
+            items={[
+              { label: "Accueil", href: "/" },
+              { label: "Villes", href: "/villes/" },
+              { label: `Déménagement ${cityName}`, href: `/demenagement/${citySlug}/` },
+              { label: `Quartiers ${cityName}`, href: `/quartiers-${citySlug}/` },
+            ]}
+          />
+        </div>
+      </div>
       {/* Hero */}
       <section className="relative overflow-hidden text-white">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A]" />
@@ -110,6 +125,58 @@ export function HubQuartiersPage({
                 </div>
               </a>
             ))}
+          </div>
+
+          {/* Maillage interne : ressources utiles */}
+          <div className="pt-6">
+            <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 text-center space-y-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+                Ressources utiles
+              </p>
+              <p className="text-sm text-[#6B7280] max-w-2xl mx-auto">
+                Avant de comparer vos devis, voici les pages les plus utiles pour préparer votre déménagement à {cityName}.
+              </p>
+              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3">
+                <a
+                  href={`/demenagement/${citySlug}/`}
+                  className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+                >
+                  <span>Guide déménagement {cityName}</span>
+                  <span>→</span>
+                </a>
+                {pricePost ? (
+                  <a
+                    href={`/blog/${pricePost.slug}/`}
+                    className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                  >
+                    <span>Prix à {cityName}</span>
+                    <span>→</span>
+                  </a>
+                ) : (
+                  <a
+                    href="/blog/prix-et-devis/"
+                    className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                  >
+                    <span>Guides prix & devis</span>
+                    <span>→</span>
+                  </a>
+                )}
+                <a
+                  href="/blog/checklists-et-guides/"
+                  className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                >
+                  <span>Checklists & guides</span>
+                  <span>→</span>
+                </a>
+                <a
+                  href="/blog/conseils-demenagement/"
+                  className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                >
+                  <span>Conseils déménagement</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

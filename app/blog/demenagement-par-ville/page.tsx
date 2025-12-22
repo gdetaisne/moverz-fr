@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { BLOG_POSTS } from "@/lib/blog";
+import { PUBLISHED_BLOG_POSTS } from "@/lib/blog";
 import { getFullMetadata } from "@/lib/canonical-helper";
 
 const CATEGORY = "demenagement-par-ville";
@@ -11,7 +11,7 @@ export const metadata: Metadata = getFullMetadata(
 );
 
 export default function BlogVillesPage() {
-  const posts = BLOG_POSTS.filter((post) => post.category === CATEGORY);
+  const posts = PUBLISHED_BLOG_POSTS.filter((post) => post.category === CATEGORY);
 
   const postsByCity = posts.reduce<Record<string, typeof posts>>((acc, post) => {
     const key = post.citySlug || "autres";

@@ -1,0 +1,108 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { CITIES, getCityBySlug } from "@/lib/cities";
+import { getFullMetadata } from "@/lib/canonical-helper";
+
+type PageProps = {
+  params: {
+    from: string;
+  };
+};
+
+const EXCLUDED_SLUGS = new Set(["ile-de-france"]);
+
+export function generateStaticParams() {
+  return CITIES.filter((c) => !EXCLUDED_SLUGS.has(c.slug)).map((c) => ({ from: c.slug }));
+}
+
+export const dynamicParams = false;
+
+export function generateMetadata({ params }: PageProps): Metadata {
+  const from = getCityBySlug(params.from);
+  if (!from || EXCLUDED_SLUGS.has(from.slug)) return {};
+
+  const path = `corridor/${from.slug}`;
+  const title = `Déménagement depuis ${from.nameCapitalized} : trajets & devis | Moverz`;
+  const description = `Tous les trajets de déménagement au départ de ${from.nameCapitalized} (France). Comparez des devis, prix indicatifs et conseils par destination.`;
+
+  return getFullMetadata(path, title, description);
+}
+
+export default function CorridorHubFromPage({ params }: PageProps) {
+  const from = getCityBySlug(params.from);
+  if (!from || EXCLUDED_SLUGS.has(from.slug)) {
+    notFound();
+    return null;
+  }
+
+  const destinations = CITIES.filter((c) => !EXCLUDED_SLUGS.has(c.slug) && c.slug !== from.slug);
+
+  return (
+    <main className="bg-white">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white">
+        <div className="container mx-auto max-w-6xl px-4 py-16 md:py-24 space-y-6 text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+            Trajets de déménagement
+          </p>
+          <h1 className="text-3xl md:text-5xl font-bold">
+            Déménager depuis {from.nameCapitalized}
+          </h1>
+          <p className="text-sm md:text-base text-white/80 max-w-3xl mx-auto leading-relaxed">
+            Retrouvez tous les trajets (ville → ville) au départ de {from.nameCapitalized}. Chaque page
+            inclut des prix indicatifs, des conseils et un accès au comparateur.
+          </p>
+
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+            <a
+              href={`/demenagement/${from.slug}/`}
+              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:bg-[#F3F4F6] transition-colors"
+            >
+              <span>Guide déménagement {from.nameCapitalized}</span>
+              <span>→</span>
+            </a>
+            <a
+              href="/blog/prix-et-devis/"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white hover:bg-white/15 transition-colors"
+            >
+              <span>Guides prix & devis</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-20 bg-gradient-to-br from-[#fdfeff] via-[#f9fdff] to-[#f5fbfc]">
+        <div className="container mx-auto max-w-6xl px-4 space-y-8">
+          <div className="text-center space-y-2">
+            <h2 className="text-2xl md:text-3xl font-semibold text-[#0F172A]">
+              Destinations depuis {from.nameCapitalized}
+            </h2>
+            <p className="text-sm text-[#6B7280]">
+              {destinations.length} destinations — cliquez pour voir la page dédiée.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {destinations.map((to) => (
+              <a
+                key={to.slug}
+                href={`/${from.slug}-vers-${to.slug}/`}
+                className="group rounded-2xl border border-[#E5E7EB] bg-white p-5 hover:border-[#6BCFCF]/60 hover:shadow-md transition-all"
+              >
+                <p className="text-sm text-[#6B7280]">Déménagement</p>
+                <h3 className="text-base md:text-lg font-semibold text-[#0F172A] group-hover:text-[#2B7A78] transition-colors">
+                  {from.nameCapitalized} → {to.nameCapitalized}
+                </h3>
+                <p className="mt-1 text-sm text-[#4b5c6b]">
+                  Devis & prix indicatifs · Conseils · Déménageurs contrôlés
+                </p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
+
+

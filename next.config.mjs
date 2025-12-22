@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+import { BLOG_MISSING_301_REDIRECTS } from './redirects/blog-missing-301.mjs';
+
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
@@ -608,6 +610,9 @@ const nextConfig = {
         destination: '/demenagement/saint-etienne/',
         permanent: true,
       },
+
+      // Blog : slugs sans contenu canonique → redirections 301 vers hubs / guides pertinents
+      ...BLOG_MISSING_301_REDIRECTS,
     ]
   },
 };

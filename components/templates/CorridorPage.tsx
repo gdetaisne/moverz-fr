@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { getFullMetadata } from "@/lib/canonical-helper";
+import { getPricePostForCity, getPublishedPostBySlug } from "@/lib/blog";
+import { getCityBySlug } from "@/lib/cities";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export type CorridorPageProps = {
   originCitySlug: string;
@@ -60,9 +63,25 @@ export function CorridorPage({
 }: CorridorPageProps) {
   const destSlug = destinationSlug ?? slugify(destination);
   const quoteUrl = `https://devis.moverz.fr/?city_slug=${originCitySlug}&source=moverz.fr&from=/${originCitySlug}-vers-${destSlug}/`;
+  const destinationCity = getCityBySlug(destSlug);
+  const originPricePost = getPricePostForCity(originCitySlug);
+  const destPricePost = destinationCity ? getPricePostForCity(destinationCity.slug) : undefined;
+  const longDistancePricePost = getPublishedPostBySlug("prix-demenagement-longue-distance-france");
 
   return (
     <main className="bg-white">
+      <div className="bg-[#0F172A]">
+        <div className="container max-w-7xl pt-6">
+          <Breadcrumbs
+            items={[
+              { label: "Accueil", href: "/" },
+              { label: "Villes", href: "/villes/" },
+              { label: `Déménagement ${originCityName}`, href: `/demenagement/${originCitySlug}/` },
+              { label: `${originCityName} → ${destination}`, href: `/${originCitySlug}-vers-${destSlug}/` },
+            ]}
+          />
+        </div>
+      </div>
       {/* Hero */}
       <section className="relative overflow-hidden text-white">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A]" />
@@ -78,13 +97,19 @@ export function CorridorPage({
               <span>Retour à Déménagement {originCityName}</span>
             </a>
             <span className="mx-2 text-white/40">·</span>
-            <a
-              href={`/demenagement/${destSlug}/`}
-              className="inline-flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors"
-            >
-              <span>Voir Déménagement {destination}</span>
-              <span>→</span>
-            </a>
+            {destinationCity ? (
+              <a
+                href={`/demenagement/${destinationCity.slug}/`}
+                className="inline-flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors"
+              >
+                <span>Voir Déménagement {destinationCity.nameCapitalized}</span>
+                <span>→</span>
+              </a>
+            ) : (
+              <span className="inline-flex items-center gap-2 text-sm text-white/60">
+                <span>Destination : {destination}</span>
+              </span>
+            )}
           </div>
           
           <div className="max-w-4xl mx-auto text-center space-y-6">
@@ -162,6 +187,38 @@ export function CorridorPage({
               Prix indicatifs pour {distance} de trajet. Le prix final dépend du volume exact, des accès et de la période.
             </p>
           </div>
+
+          {/* Maillage interne : guides prix liés */}
+          {(originPricePost || destPricePost) && (
+            <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 text-center space-y-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+                Guides liés
+              </p>
+              <p className="text-sm text-[#6B7280]">
+                Pour aller plus loin sur les tarifs et la lecture des devis.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                {originPricePost && (
+                  <a
+                    href={`/blog/${originPricePost.slug}/`}
+                    className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+                  >
+                    <span>Prix à {originCityName}</span>
+                    <span>→</span>
+                  </a>
+                )}
+                {destPricePost && (
+                  <a
+                    href={`/blog/${destPricePost.slug}/`}
+                    className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                  >
+                    <span>Prix à {destinationCity?.nameCapitalized}</span>
+                    <span>→</span>
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
@@ -238,6 +295,42 @@ export function CorridorPage({
                 </p>
               </div>
             ))}
+          </div>
+
+          {/* Maillage SEO : "à lire ensuite" (2 liens max) */}
+          <div className="pt-2">
+            <div className="rounded-2xl border border-[#E5E7EB] bg-gradient-to-br from-white to-[#FAFAFA] p-6 md:p-8 text-center space-y-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+                À lire ensuite
+              </p>
+              <p className="text-sm text-[#6B7280] max-w-2xl mx-auto">
+                Deux ressources clés pour comprendre les prix et préparer votre déménagement longue distance.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a
+                  href={
+                    longDistancePricePost
+                      ? `/blog/${longDistancePricePost.slug}/`
+                      : "/blog/prix-et-devis/"
+                  }
+                  className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+                >
+                  <span>
+                    {longDistancePricePost
+                      ? "Prix déménagement longue distance"
+                      : "Guides prix & devis"}
+                  </span>
+                  <span>→</span>
+                </a>
+                <a
+                  href="/blog/checklists-et-guides/"
+                  className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-white transition-colors"
+                >
+                  <span>Checklists & guides</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

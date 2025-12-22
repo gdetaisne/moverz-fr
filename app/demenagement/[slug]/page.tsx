@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CITIES, getCityBySlug } from "@/lib/cities";
 import { getFullMetadata } from "@/lib/canonical-helper";
+import { getPricePostForCity, PUBLISHED_BLOG_POSTS } from "@/lib/blog";
+import { cityData } from "@/lib/cityData";
 import { getCityReviewsBySlug } from "@/lib/city-reviews";
 import { CityHero } from "@/components/city/CityHero";
 import { CityStats } from "@/components/city/CityStats";
 import { CityPricing } from "@/components/city/CityPricing";
 import { CityFinalCTA } from "@/components/city/CityFinalCTA";
 import { FAQSchema } from "@/components/schema/FAQSchema";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import FlowAndIA from "@/components/FlowAndIA";
 import TrustSignals from "@/components/TrustSignals";
 import ProblemSolution from "@/components/ProblemSolution";
@@ -52,6 +55,25 @@ export default function CityMovingPage({ params }: PageProps) {
   const isBordeaux = city.slug === "bordeaux";
 
   const quoteUrl = `https://devis.moverz.fr/?city_slug=${city.slug}&source=moverz.fr&from=/demenagement/${city.slug}/`;
+  const pricePost = getPricePostForCity(city.slug);
+  const cityGuides = PUBLISHED_BLOG_POSTS
+    .filter((post) => post.citySlug === city.slug && post.slug !== pricePost?.slug)
+    .slice(0, 3);
+
+  // Pages quartiers : uniquement disponibles pour certaines villes (routes /{ville}/{quartier}/)
+  const NEIGHBORHOOD_PAGE_CITIES = new Set([
+    "nice",
+    "toulouse",
+    "strasbourg",
+    "nantes",
+    "rennes",
+    "rouen",
+    "montpellier",
+  ]);
+  const popularNeighborhoods =
+    NEIGHBORHOOD_PAGE_CITIES.has(city.slug) && cityData[city.slug]?.neighborhoods?.length
+      ? cityData[city.slug].neighborhoods.slice(0, 5)
+      : [];
 
   // Corridors (liens internes) — on limite à quelques destinations pour éviter des pages "listing" gigantesques.
   // Exclure ile-de-france (région) car pas un corridor ville→ville.
@@ -157,6 +179,17 @@ export default function CityMovingPage({ params }: PageProps) {
   return (
     <main className="bg-white">
       <FAQSchema faqs={cityFAQs} />
+      <div className="bg-[#0F172A]">
+        <div className="container max-w-4xl pt-6">
+          <Breadcrumbs
+            items={[
+              { label: "Accueil", href: "/" },
+              { label: "Villes", href: "/villes/" },
+              { label: `Déménagement ${city.nameCapitalized}`, href: `/demenagement/${city.slug}/` },
+            ]}
+          />
+        </div>
+      </div>
       {/* Hero */}
       <CityHero city={city} quoteUrl={quoteUrl} />
 
@@ -168,6 +201,106 @@ export default function CityMovingPage({ params }: PageProps) {
 
       {/* Prix indicatifs */}
       <CityPricing cityName={city.nameCapitalized} />
+
+      {/* Maillage interne : guide prix lié à la ville */}
+      {pricePost && (
+        <section className="section section-light">
+          <div className="container max-w-4xl">
+            <div className="rounded-2xl border border-[#E5E7EB] bg-white p-8 md:p-10 text-center space-y-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+                Guide prix
+              </p>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A]">
+                Prix d&apos;un déménagement à {city.nameCapitalized}
+              </h2>
+              <p className="text-sm md:text-base text-[#6B7280] max-w-2xl mx-auto">
+                Fourchettes, facteurs qui font varier le tarif, et conseils pour obtenir un devis fiable.
+              </p>
+              <a
+                href={`/blog/${pricePost.slug}/`}
+                className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-[#1E293B] transition-colors"
+              >
+                <span>Lire le guide : {pricePost.title}</span>
+                <span className="text-lg leading-none">→</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Maillage SEO : hubs + guides liés */}
+      <section className="section section-light">
+        <div className="container max-w-4xl">
+          <div className="rounded-2xl border border-[#E5E7EB] bg-white p-8 md:p-10 space-y-6">
+            <div className="text-center space-y-3">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+                Guides & ressources
+              </p>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A]">
+                Mieux préparer votre déménagement à {city.nameCapitalized}
+              </h2>
+              <p className="text-sm md:text-base text-[#6B7280] max-w-2xl mx-auto">
+                Prix, checklists et conseils: les pages à lire ensuite pour faire les bons choix et comparer des devis sur une base solide.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3">
+              <a
+                href="/blog/prix-et-devis/"
+                className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+              >
+                <span>Guides prix & devis</span>
+                <span>→</span>
+              </a>
+              <a
+                href="/blog/checklists-et-guides/"
+                className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+              >
+                <span>Checklists & guides</span>
+                <span>→</span>
+              </a>
+              <a
+                href="/blog/conseils-demenagement/"
+                className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+              >
+                <span>Conseils déménagement</span>
+                <span>→</span>
+              </a>
+              <a
+                href="/blog/demenagement-par-ville/"
+                className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+              >
+                <span>Articles par ville</span>
+                <span>→</span>
+              </a>
+            </div>
+
+            {cityGuides.length > 0 && (
+              <div className="space-y-3">
+                <h3 className="text-base md:text-lg font-semibold text-[#0F172A] text-center">
+                  Guides liés à {city.nameCapitalized}
+                </h3>
+                <div className="grid md:grid-cols-3 gap-3">
+                  {cityGuides.map((post) => (
+                    <a
+                      key={post.slug}
+                      href={`/blog/${post.slug}/`}
+                      className="group rounded-2xl border border-[#E5E7EB] bg-white p-4 hover:border-[#6BCFCF]/50 hover:shadow-sm transition-all"
+                    >
+                      <p className="text-sm font-semibold text-[#0F172A] group-hover:text-[#2B7A78] line-clamp-2">
+                        {post.title}
+                      </p>
+                      <p className="mt-1 text-xs text-[#6B7280] line-clamp-2">
+                        {post.description}
+                      </p>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
 
       {/* Trust Signals - Réassurance */}
       <TrustSignals />
@@ -272,6 +405,47 @@ export default function CityMovingPage({ params }: PageProps) {
                         </a>
                       ))}
                     </div>
+                    <div className="mt-5 text-center">
+                      <a
+                        href={`/corridor/${city.slug}/`}
+                        className="inline-flex items-center gap-2 text-sm font-medium text-[#2B7A78] hover:text-[#205a5a] transition-colors"
+                      >
+                        <span>Voir tous les trajets depuis {city.nameCapitalized}</span>
+                        <span>→</span>
+                      </a>
+                    </div>
+                  </div>
+                )}
+
+                {/* Quartiers populaires (liens entrants vers pages quartier) */}
+                {popularNeighborhoods.length > 0 && (
+                  <div className="rounded-2xl border border-[#E5E7EB] bg-white p-8">
+                    <h3 className="text-lg font-semibold text-[#0F172A] mb-2">
+                      Quartiers populaires à {city.nameCapitalized}
+                    </h3>
+                    <p className="text-sm text-[#6B7280] mb-5">
+                      Quelques pages quartier à lire en priorité (accès, stationnement, conseils locaux).
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-2">
+                      {popularNeighborhoods.map((q) => (
+                        <a
+                          key={q.slug}
+                          href={`/${city.slug}/${q.slug}/`}
+                          className="rounded-full border border-[#E5E7EB] bg-[#FAFAFA] px-3 py-1.5 text-xs text-[#0F172A] hover:border-[#6BCFCF]/50 hover:bg-white transition-colors"
+                        >
+                          Déménagement {q.name} ({city.nameCapitalized})
+                        </a>
+                      ))}
+                    </div>
+                    <div className="mt-5 text-center">
+                      <a
+                        href={`/quartiers-${city.slug}/`}
+                        className="inline-flex items-center gap-2 text-sm font-medium text-[#2B7A78] hover:text-[#205a5a] transition-colors"
+                      >
+                        <span>Voir tous les quartiers de {city.nameCapitalized}</span>
+                        <span>→</span>
+                      </a>
+                    </div>
                   </div>
                 )}
               </div>
@@ -337,6 +511,31 @@ export default function CityMovingPage({ params }: PageProps) {
                 </p>
               </div>
             ))}
+          </div>
+
+          {/* Maillage SEO : mini-bloc "à lire ensuite" (2 liens max) */}
+          <div className="mt-10">
+            <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 text-center space-y-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+                À lire ensuite
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a
+                  href={pricePost ? `/blog/${pricePost.slug}/` : "/blog/prix-et-devis/"}
+                  className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+                >
+                  <span>{pricePost ? `Prix à ${city.nameCapitalized}` : "Guides prix & devis"}</span>
+                  <span>→</span>
+                </a>
+                <a
+                  href="/blog/checklists-et-guides/"
+                  className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                >
+                  <span>Checklists & guides</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

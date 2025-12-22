@@ -43,6 +43,15 @@ export default function VillesPage() {
               Moverz fonctionne dans toute la France. Voici nos villes principales avec guides dédiés, 
               mais vous pouvez comparer des devis pour n'importe quelle ville en indiquant vos adresses précises.
             </p>
+            <div className="pt-2">
+              <a
+                href="/corridor/"
+                className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white/15 transition-colors"
+              >
+                <span>Voir tous les trajets (corridors)</span>
+                <span>→</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>

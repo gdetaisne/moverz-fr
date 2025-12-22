@@ -4,7 +4,12 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import type { Components } from "react-markdown";
 import type { BlogPostMeta } from "@/lib/blog";
-import { BLOG_POSTS, getCanonicalBodyBySlug, getPostBySlug } from "@/lib/blog";
+import {
+  PUBLISHED_BLOG_POSTS,
+  getCanonicalBodyBySlug,
+  getPricePostForCity,
+  getPublishedPostBySlug,
+} from "@/lib/blog";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import { getCityBySlug } from "@/lib/cities";
 import { ArticleSchema } from "@/components/schema/ArticleSchema";
@@ -16,15 +21,15 @@ type PageProps = {
 };
 
 export function generateStaticParams() {
-  return BLOG_POSTS
-    .filter((post) => post.slug && post.slug.trim() !== '' && post.slug !== 'blog')
+  return PUBLISHED_BLOG_POSTS
+    .filter((post) => post.slug && post.slug.trim() !== "" && post.slug !== "blog")
     .map((post) => ({ slug: post.slug }));
 }
 
 export const dynamicParams = false;
 
 export function generateMetadata({ params }: PageProps): Metadata {
-  const post = getPostBySlug(params.slug);
+  const post = getPublishedPostBySlug(params.slug);
 
   if (!post) {
     return {};
@@ -38,7 +43,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
 }
 
 export default function BlogPostPage({ params }: PageProps) {
-  const post = getPostBySlug(params.slug);
+  const post = getPublishedPostBySlug(params.slug);
 
   if (!post) {
     notFound();
@@ -54,13 +59,14 @@ export default function BlogPostPage({ params }: PageProps) {
         })
       : "";
 
-  const related = BLOG_POSTS.filter(
+  const related = PUBLISHED_BLOG_POSTS.filter(
     (p) =>
       p.slug !== post.slug &&
       (p.category === post.category || (!!post.citySlug && p.citySlug === post.citySlug))
   ).slice(0, 4);
 
   const city = post.citySlug ? getCityBySlug(post.citySlug) : undefined;
+  const cityPricePost = post.citySlug ? getPricePostForCity(post.citySlug) : undefined;
   const canonicalBody = getCanonicalBodyBySlug(post.slug);
 
   // Custom components pour ReactMarkdown
@@ -242,6 +248,75 @@ export default function BlogPostPage({ params }: PageProps) {
           </div>
         </section>
       )}
+
+      {/* Maillage SEO : ressources utiles */}
+      <section className="section section-light">
+        <div className="container max-w-3xl text-[#04163a]">
+          <div className="rounded-2xl border border-[#E3E5E8] bg-white p-6 md:p-8 text-center space-y-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+              Ressources utiles
+            </p>
+            <p className="text-sm text-[#6B7280] max-w-2xl mx-auto">
+              Les pages les plus utiles à lire ensuite (prix, checklists, et guides par ville).
+            </p>
+            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3">
+              {city ? (
+                <a
+                  href={`/demenagement/${city.slug}/`}
+                  className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+                >
+                  <span>Guide déménagement {city.nameCapitalized}</span>
+                  <span>→</span>
+                </a>
+              ) : (
+                <a
+                  href="/villes/"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+                >
+                  <span>Guides par ville</span>
+                  <span>→</span>
+                </a>
+              )}
+
+              {city ? (
+                <a
+                  href={`/quartiers-${city.slug}/`}
+                  className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                >
+                  <span>Quartiers de {city.nameCapitalized}</span>
+                  <span>→</span>
+                </a>
+              ) : null}
+
+              {cityPricePost ? (
+                <a
+                  href={`/blog/${cityPricePost.slug}/`}
+                  className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                >
+                  <span>Prix à {city?.nameCapitalized}</span>
+                  <span>→</span>
+                </a>
+              ) : (
+                <a
+                  href="/blog/prix-et-devis/"
+                  className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                >
+                  <span>Guides prix & devis</span>
+                  <span>→</span>
+                </a>
+              )}
+
+              <a
+                href="/blog/checklists-et-guides/"
+                className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+              >
+                <span>Checklists & guides</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* CTA vers le comparateur */}
       <section className="section section-contrast">

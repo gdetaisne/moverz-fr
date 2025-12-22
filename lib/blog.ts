@@ -90,7 +90,9 @@ function mergeBlogData(
       description: (canonical as any).description || existing?.description || "",
       publishedAt: existing?.publishedAt ?? "",
       updatedAt: existing?.updatedAt,
-      category: canonical.type ?? existing?.category,
+      // IMPORTANT: canonical.type = "pilier|satellite" (ce n'est pas la catégorie SEO du blog)
+      // On conserve donc la catégorie issue de BLOG_DATA/BLOG_EXTRA.
+      category: existing?.category,
       citySlug: canonical.citySlug ?? existing?.citySlug,
       readingTimeMinutes: existing?.readingTimeMinutes,
     };
@@ -136,8 +138,20 @@ const RAW_BLOG_POSTS: BlogPostMeta[] = mergeBlogData(
 
 export const BLOG_POSTS: BlogPostMeta[] = sortByPriority(RAW_BLOG_POSTS);
 
+// Ensemble des slugs ayant un contenu canonique (contenu réellement publié)
+const CANONICAL_SLUG_SET = new Set(CANONICAL_BLOG_POSTS.map((p) => p.slug));
+
+// Liste des articles réellement publiés (évite d'exposer des placeholders "en cours de réécriture")
+export const PUBLISHED_BLOG_POSTS: BlogPostMeta[] = BLOG_POSTS.filter((post) =>
+  CANONICAL_SLUG_SET.has(post.slug)
+);
+
 export function getPostBySlug(slug: string): BlogPostMeta | undefined {
   return BLOG_POSTS.find((post) => post.slug === slug);
+}
+
+export function getPublishedPostBySlug(slug: string): BlogPostMeta | undefined {
+  return PUBLISHED_BLOG_POSTS.find((post) => post.slug === slug);
 }
 
 // Récupérer le body markdown canonique pour un slug donné (si disponible)
@@ -148,7 +162,7 @@ export function getCanonicalBodyBySlug(slug: string): string | undefined {
 
 // Trouver l'article Prix associé à une ville donnée
 export function getPricePostForCity(citySlug: string): BlogPostMeta | undefined {
-  return BLOG_POSTS.find(
+  return PUBLISHED_BLOG_POSTS.find(
     (post) =>
       post.category === "prix-et-devis" &&
       post.citySlug === citySlug &&

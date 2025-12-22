@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 import { CITIES } from "@/lib/cities";
-import { BLOG_POSTS } from "@/lib/blog";
+import { PUBLISHED_BLOG_POSTS } from "@/lib/blog";
 import { cityData } from "@/lib/cityData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/comment-ca-marche",
     "/villes",
+    "/corridor",
     "/choisir-ville",
     "/faq",
     "/contact",
@@ -94,8 +95,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
+  // Hub corridors par ville : /corridor/{from}/
+  const corridorHubs: MetadataRoute.Sitemap = corridorCities.map((c) => ({
+    url: `${baseUrl}/corridor/${c.slug}/`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.4,
+  }));
+
   // Articles de blog (dont P1 Prix & guides majeurs)
-  const blogPages: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
+  const blogPages: MetadataRoute.Sitemap = PUBLISHED_BLOG_POSTS.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}/`,
     lastModified: now,
     changeFrequency: "weekly",
@@ -110,6 +119,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...quartierPages,
     ...corridorPages,
     ...corridorCityToCity,
+    ...corridorHubs,
     ...blogPages,
   ];
 

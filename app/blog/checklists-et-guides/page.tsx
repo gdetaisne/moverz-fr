@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { BLOG_POSTS } from "@/lib/blog";
+import { PUBLISHED_BLOG_POSTS } from "@/lib/blog";
 import { getFullMetadata } from "@/lib/canonical-helper";
 
 const CATEGORY = "checklists-et-guides";
@@ -11,7 +11,7 @@ export const metadata: Metadata = getFullMetadata(
 );
 
 export default function BlogChecklistsPage() {
-  const posts = BLOG_POSTS.filter((post) => post.category === CATEGORY);
+  const posts = PUBLISHED_BLOG_POSTS.filter((post) => post.category === CATEGORY);
 
   return (
     <main className="bg-hero min-h-screen">
@@ -45,6 +45,46 @@ export default function BlogChecklistsPage() {
               Des contenus longs, structurés, pensés pour vous accompagner de J-60 au jour J et
               après le déménagement.
             </p>
+          </div>
+
+          {/* Maillage SEO : hubs utiles */}
+          <div className="rounded-2xl border border-[#E3E5E8] bg-white p-6 md:p-8 text-center space-y-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+              Ressources liées
+            </p>
+            <p className="text-sm text-[#6B7280] max-w-2xl mx-auto">
+              Complétez avec nos guides prix, nos conseils et les contenus par ville.
+            </p>
+            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3">
+              <a
+                href="/blog/prix-et-devis/"
+                className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+              >
+                <span>Guides prix & devis</span>
+                <span>→</span>
+              </a>
+              <a
+                href="/blog/conseils-demenagement/"
+                className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+              >
+                <span>Conseils déménagement</span>
+                <span>→</span>
+              </a>
+              <a
+                href="/blog/demenagement-par-ville/"
+                className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+              >
+                <span>Articles par ville</span>
+                <span>→</span>
+              </a>
+              <a
+                href="/villes/"
+                className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+              >
+                <span>Guides par ville</span>
+                <span>→</span>
+              </a>
+            </div>
           </div>
 
           <div className="space-y-4">
