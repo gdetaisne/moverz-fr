@@ -64,17 +64,8 @@ export default function HowItWorks() {
   return (
     <div 
       ref={sectionRef}
-      className="relative overflow-hidden space-y-10 rounded-3xl bg-gradient-to-br from-white via-[#F8F9FA] to-[#F0F4F8] p-8 md:p-12 lg:p-16 text-[#04163a] shadow-[0_32px_90px_rgba(0,0,0,0.08)] border border-[#E3E5E8]"
+      className="relative overflow-hidden space-y-10 rounded-3xl bg-white p-8 md:p-12 lg:p-16 text-[#04163a] shadow-sm border border-[#E3E5E8]"
     >
-      {/* Halos lumineux subtils (version claire) */}
-      <div 
-        className="pointer-events-none absolute -top-32 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_center,_rgba(107,207,207,0.12),_transparent_70%)] blur-3xl transition-transform duration-1000"
-        style={{ transform: isInView ? 'translate(-50%, 0)' : 'translate(-50%, -30px)' }}
-      />
-      <div 
-        className="pointer-events-none absolute bottom-0 right-0 h-64 w-64 rounded-full bg-[radial-gradient(circle_at_center,_rgba(79,70,229,0.08),_transparent_70%)] blur-3xl transition-transform duration-1000"
-        style={{ transform: isInView ? 'translate(0, 0)' : 'translate(30px, 30px)' }}
-      />
       
       {/* Header avec espacement généreux */}
       <div className="relative space-y-4 text-center">
@@ -94,17 +85,15 @@ export default function HowItWorks() {
         {steps.map((step, index) => (
           <div
             key={step.number}
-            className="group relative flex flex-col gap-4 rounded-3xl border border-[#E3E5E8] bg-white p-6 md:p-8 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.12)] hover:border-[#6BCFCF]/40 motion-safe:animate-fade-up-soft"
+            className="group relative flex flex-col gap-4 rounded-2xl border border-[#E3E5E8] bg-white p-6 md:p-8 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md hover:border-[#6BCFCF]/40"
             style={{ animationDelay: `${index * 100 + 400}ms` }}
           >
-            {/* Glow effect au hover */}
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#6BCFCF]/0 to-[#4FB8B8]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-5" />
             
             <div className="relative flex flex-col items-center gap-4">
               {/* Numéro + Pictogramme combinés */}
               <div className="relative">
                 <div 
-                  className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[#6BCFCF]/20 to-[#4FB8B8]/30 border-2 border-[#6BCFCF]/30 text-[#2B7A78] transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-[0_0_20px_rgba(107,207,207,0.4)]"
+                  className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#6BCFCF]/15 border-2 border-[#6BCFCF]/30 text-[#2B7A78] transition-all duration-200 group-hover:scale-105"
                   style={{
                     opacity: isInView ? 1 : 0,
                     transform: isInView ? 'scale(1)' : 'scale(0.8)',
@@ -114,7 +103,7 @@ export default function HowItWorks() {
                   {step.icon}
                 </div>
                 {/* Badge numéro */}
-                <div className="absolute -top-2 -right-2 flex h-7 w-7 items-center justify-center rounded-full bg-[#2B7A78] text-xs font-bold text-white shadow-lg">
+                <div className="absolute -top-2 -right-2 flex h-7 w-7 items-center justify-center rounded-full bg-[#0F172A] text-xs font-bold text-white shadow-sm">
                 {step.number}
                 </div>
               </div>
@@ -136,11 +125,11 @@ export default function HowItWorks() {
       <div className="relative mt-12 flex items-center justify-center text-center">
         <a
           href="https://devis.moverz.fr/?source=moverz.fr&from=/comment-ca-marche"
-          className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-base md:text-lg font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+          className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
           aria-label="Recevez 5+ devis fiables gratuitement"
         >
-          <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
-          <span className="relative">Comparez 5+ devis gratuitement</span>
+          <span>Comparez 5+ devis gratuitement</span>
+          <span className="text-xl leading-none">→</span>
         </a>
       </div>
     </div>

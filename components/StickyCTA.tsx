@@ -72,7 +72,6 @@ export default function StickyCTA() {
       <div className="hidden md:block">
         <div className="mx-auto max-w-5xl px-6 pb-6">
           <div className="relative overflow-hidden rounded-2xl bg-white/98 border border-[#E3E5E8] shadow-[0_18px_60px_rgba(15,23,42,0.14)]">
-            <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#6BCFCF]/70 to-transparent" />
             <div className="relative flex items-center justify-between gap-6 px-6 py-4">
               {/* Icône + Texte structuré */}
               <div className="flex items-center gap-4">

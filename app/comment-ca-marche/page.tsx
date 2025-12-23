@@ -12,8 +12,7 @@ export const metadata: Metadata = getFullMetadata(
 
 export default function CommentCaMarchePage() {
   return (
-    <main className="bg-hero min-h-screen">
-      <div className="halo" />
+    <main className="bg-white min-h-screen">
       <PageHero
         breadcrumbs={[
           { label: "Accueil", href: "/" },
@@ -53,11 +52,10 @@ export default function CommentCaMarchePage() {
           </p>
           <a
             href="https://devis.moverz.fr/?source=moverz.fr&from=/comment-ca-marche/"
-            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-lg font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+            className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-[#0F172A] shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
           >
-            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
-            <span className="relative">Comparez 5+ devis gratuitement</span>
-            <span className="relative text-xl leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
+            <span>Comparez 5+ devis gratuitement</span>
+            <span className="text-xl leading-none">→</span>
           </a>
         </div>
       </section>

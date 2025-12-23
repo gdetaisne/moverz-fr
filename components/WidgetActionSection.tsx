@@ -28,22 +28,13 @@ export default function WidgetActionSection({
   citySlug,
 }: WidgetActionSectionProps) {
   return (
-    <section className="section section-light">
+    <section className="section section-contrast">
       <div className="container max-w-5xl">
-        {/* Gradient border wrapper */}
-        <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-[#04163a] via-[#2B7A78] to-[#04163a] p-[1px] shadow-[0_24px_70px_rgba(4,22,58,0.18)]">
-          {/* Glass panel */}
-          <div className="rounded-[31px] bg-[#0B1220]">
-            <div className="relative overflow-hidden rounded-[31px] px-6 py-7 md:px-10 md:py-8 text-white">
-              <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#6BCFCF]/70 to-transparent" />
-              <div className="pointer-events-none absolute inset-0 opacity-70">
-                <div className="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full bg-[#6BCFCF]/25 blur-3xl" />
-                <div className="absolute -bottom-52 -right-40 h-[620px] w-[620px] rounded-full bg-white/10 blur-3xl" />
-              </div>
+        <div className="relative overflow-hidden rounded-2xl border border-white/10 px-6 py-7 md:px-10 md:py-8 text-white">
 
-              <div className="relative grid gap-7 lg:grid-cols-12 lg:items-start">
-                {/* Copy */}
-                <div className="lg:col-span-5 space-y-4">
+          <div className="relative grid gap-7 lg:grid-cols-12 lg:items-start">
+            {/* Copy */}
+            <div className="lg:col-span-5 space-y-4">
                   <div className="space-y-2">
                     <div className="flex items-center gap-3">
                       <div className="relative flex h-11 w-11 items-center justify-center rounded-xl bg-[#0F172A]">
@@ -88,11 +79,11 @@ export default function WidgetActionSection({
                       <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
                       5+ devis
                     </TrustChip>
-                  </div>
-                </div>
+              </div>
+            </div>
 
-                {/* Widget */}
-                <div className="lg:col-span-7">
+            {/* Widget */}
+            <div className="lg:col-span-7">
                   {/* Slim card */}
                   <Card className="mx-auto w-full max-w-[520px] border-white/10 bg-white/95 p-1 shadow-[0_18px_60px_rgba(0,0,0,0.22)]">
                     <div className="rounded-xl border border-[#E3E5E8] bg-white">
@@ -105,11 +96,9 @@ export default function WidgetActionSection({
                       />
                     </div>
                   </Card>
-                  <p className="mt-2 text-xs text-white/55">
-                    Astuce: préparez 2–3 photos des pièces principales pour accélérer l’estimation.
-                  </p>
-                </div>
-              </div>
+              <p className="mt-2 text-xs text-white/55">
+                Astuce: préparez 2–3 photos des pièces principales pour accélérer l'estimation.
+              </p>
             </div>
           </div>
         </div>
