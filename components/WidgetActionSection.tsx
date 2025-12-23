@@ -1,4 +1,7 @@
+"use client";
+
 import MoverzWidgetEmbed from "@/components/MoverzWidgetEmbed";
+import type { ReactNode } from "react";
 
 type WidgetActionSectionProps = {
   eyebrow?: string;
@@ -28,7 +31,7 @@ function CheckIcon() {
   );
 }
 
-function TrustChip({ children }: { children: React.ReactNode }) {
+function TrustChip({ children }: { children: ReactNode }) {
   return (
     <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold text-white">
       {children}

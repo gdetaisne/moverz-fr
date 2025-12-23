@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import FAQAccordion from "@/components/FAQAccordion";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import PageHero from "@/components/PageHero";
+import WidgetActionSection from "@/components/WidgetActionSection";
 
 export const metadata: Metadata = getFullMetadata(
   'faq',
@@ -237,6 +238,13 @@ export default function FAQPage() {
           </div>
         </div>
       </section>
+
+      <WidgetActionSection
+        title="Comparez 5+ devis maintenant"
+        subtitle="Décrivez votre déménagement en quelques minutes. L’IA fiabilise le volume pour des devis vraiment comparables, sans spam."
+        source="moverz.fr"
+        from="/faq/"
+      />
 
       {/* CTA Final - Plus engageant */}
       <section className="section section-contrast">

@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import type { BlogPostMeta } from "@/lib/blog";
 import { PUBLISHED_BLOG_POSTS } from "@/lib/blog";
+import WidgetActionSection from "@/components/WidgetActionSection";
 
 export const dynamic = 'force-dynamic';
 
@@ -235,6 +236,13 @@ export default function BlogIndexPage() {
           )}
         </div>
       </section>
+
+      <WidgetActionSection
+        title="Comparez 5+ devis gratuitement"
+        subtitle="Vous avez les infos (prix, checklists, conseils). Lancez le comparateur: l’IA fiabilise le volume pour des devis comparables, sans spam."
+        source="moverz.fr"
+        from="/blog/"
+      />
     </main>
   );
 }
