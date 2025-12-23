@@ -20,17 +20,10 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden font-sans">
-      {/* Background teal clair lumineux */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#D4F5F5] via-[#A8E8E8] to-[#6BCFCF]" />
-      
-      {/* Animated blobs colorés */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/40 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#4FB8B8]/30 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }} />
-      <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-[#3DA5A5]/20 rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '6s', animationDelay: '1s' }} />
+    <section className="relative overflow-hidden font-sans bg-[#A8E8E8]">
 
-      {/* Espacement généreux */}
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+      {/* Spacing uniforme */}
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
           
           {/* ========== COLONNE GAUCHE – TEXTE ========== */}

@@ -50,9 +50,9 @@ export default function Button({
 
   const variants: Record<ButtonVariant, string> = {
     primary:
-      "bg-gradient-to-r from-[var(--brand-deep)] via-[var(--brand-teal-2)] to-[var(--brand-teal)] text-[#04141f] shadow-[0_12px_40px_rgba(107,207,207,0.28)] hover:shadow-[0_16px_60px_rgba(107,207,207,0.38)] hover:scale-[1.01] active:scale-[0.99]",
+      "bg-[var(--brand-navy)] text-white shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98]",
     secondary:
-      "bg-white/10 text-white hover:bg-white/15 border border-white/14",
+      "bg-white text-[var(--brand-navy)] border-2 border-[var(--brand-navy)] hover:bg-gray-50",
     ghost:
       "bg-transparent text-white/85 hover:text-white hover:bg-white/10 border border-white/12",
     whatsapp:

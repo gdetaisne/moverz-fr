@@ -118,56 +118,38 @@
 }
 
 @layer components {
-  /* Conteneurs sections */
+  /* Conteneurs sections - UNIFORME */
   .section {
-    @apply relative w-full py-12 md:py-20 lg:py-24 overflow-hidden;
+    @apply relative w-full py-16 md:py-24 overflow-hidden;
   }
 
   .section-light {
-    @apply bg-gradient-to-br from-[var(--surface-1)] via-[var(--surface-2)] to-[var(--surface-3)];
+    /* Fond blanc pur - premium clean */
+    @apply bg-white;
   }
 
   .section-contrast {
-    /* Premium dark contrast section (navy base, teal accents elsewhere) */
-    @apply bg-gradient-to-br from-[var(--brand-navy-2)] via-[var(--brand-navy)] to-[var(--brand-deep)] text-white;
+    /* Fond navy solide - premium contrast */
+    @apply bg-[var(--brand-navy)] text-white;
   }
 
   .container {
     @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
   }
 
-  /* Hero background */
+  /* Hero background - SOLIDE */
   .bg-hero {
-    /* Brand hero background (navy base) */
-    @apply relative bg-gradient-to-br from-[var(--brand-navy-2)] via-[var(--brand-deep)] to-[var(--brand-navy-2)];
+    /* Teal clair solide - signature Moverz */
+    @apply relative bg-[#A8E8E8];
   }
 
-  .halo {
-    @apply absolute inset-0 opacity-40;
-    background: radial-gradient(
-      circle at 20% 50%,
-      rgba(107, 207, 207, 0.20) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 80% 80%,
-      rgba(43, 122, 120, 0.18) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 70% 20%,
-      rgba(245, 158, 11, 0.12) 0%,
-      transparent 50%
-    );
-  }
-
-  /* Boutons */
+  /* Boutons - SOLIDES UNIFORMES */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-[var(--brand-deep)] via-[var(--brand-teal-2)] to-[var(--brand-teal)] px-8 py-4 text-base md:text-lg font-semibold text-white shadow-[0_10px_34px_rgba(43,122,120,0.35)] hover:shadow-[0_14px_60px_rgba(107,207,207,0.45)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-[var(--brand-navy)] px-8 py-4 text-base font-semibold text-white shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-200;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-2xl border border-white/20 bg-white/5 px-8 py-4 text-base md:text-lg font-semibold text-white backdrop-blur-sm hover:bg-white/10 hover:border-white/30 transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-[var(--brand-navy)] bg-white px-8 py-4 text-base font-semibold text-[var(--brand-navy)] hover:bg-gray-50 transition-all duration-200;
   }
 }
 
