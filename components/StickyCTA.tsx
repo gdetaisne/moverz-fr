@@ -44,13 +44,13 @@ export default function StickyCTA() {
     >
       {/* VERSION MOBILE : Compacte et discrète */}
       <div className="md:hidden">
-        <div className="bg-white/98 border-t border-[#E3E5E8] px-4 py-2.5 shadow-[0_-10px_34px_rgba(15,23,42,0.14)]">
+        <div className="bg-white border-t border-[#E3E5E8] px-4 py-2.5 shadow-sm">
           <div className="flex items-center gap-2">
             <Button
               href={whatsappUrl}
               variant="secondary"
               size="sm"
-              className="flex-1 px-4 py-2.5 border-[#E3E5E8] bg-white text-[#0F172A] hover:bg-[#F9FAFB]"
+              className="flex-1 px-4 py-2.5"
               ariaLabel="Démarrer sur WhatsApp"
             >
               <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#25D366]/15 text-[#128C7E]">
@@ -71,12 +71,11 @@ export default function StickyCTA() {
       {/* VERSION DESKTOP : Premium élégante */}
       <div className="hidden md:block">
         <div className="mx-auto max-w-5xl px-6 pb-6">
-          <div className="relative overflow-hidden rounded-2xl bg-white/98 border border-[#E3E5E8] shadow-[0_18px_60px_rgba(15,23,42,0.14)]">
+          <div className="relative overflow-hidden rounded-2xl bg-white border border-[#E3E5E8] shadow-lg">
             <div className="relative flex items-center justify-between gap-6 px-6 py-4">
               {/* Icône + Texte structuré */}
               <div className="flex items-center gap-4">
                 <div className="relative flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-[#0F172A]">
-                  <div className="absolute inset-0 rounded-xl ring-1 ring-[#6BCFCF]/25" />
                   <Image
                     src="/logo.png"
                     alt="Moverz"
@@ -86,16 +85,16 @@ export default function StickyCTA() {
                   />
                 </div>
                 <div className="space-y-1">
-                  <p className="text-base font-semibold text-[#04163a] leading-tight">
+                  <p className="text-base font-semibold text-[#0F172A] leading-tight">
                     Déménagez sans stress
                   </p>
                   <div className="flex items-center gap-2">
-                    <Chip tone="brand">
+                    <Chip tone="teal" size="sm">
                       <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
                       3 min
                     </Chip>
-                    <Chip tone="brand">IA</Chip>
-                    <Chip tone="brand">0 spam</Chip>
+                    <Chip tone="teal" size="sm">IA</Chip>
+                    <Chip tone="teal" size="sm">0 spam</Chip>
                   </div>
                 </div>
               </div>
@@ -106,7 +105,7 @@ export default function StickyCTA() {
                   href={whatsappUrl}
                   variant="secondary"
                   size="sm"
-                  className="px-5 py-2.5 border-[#E3E5E8] bg-white text-[#0F172A] hover:bg-[#F9FAFB]"
+                  className="px-5 py-2.5"
                   ariaLabel="Démarrer sur WhatsApp"
                 >
                   <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#25D366]/15 text-[#128C7E]">
