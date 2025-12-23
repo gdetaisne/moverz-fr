@@ -2,6 +2,7 @@
 
 import MoverzWidgetEmbed from "@/components/MoverzWidgetEmbed";
 import type { ReactNode } from "react";
+import Image from "next/image";
 
 type WidgetActionSectionProps = {
   eyebrow?: string;
@@ -12,28 +13,9 @@ type WidgetActionSectionProps = {
   citySlug?: string;
 };
 
-function CheckIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-[#2B7A78]"
-      fill="none"
-    >
-      <path
-        d="M20 6L9 17l-5-5"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
 function TrustChip({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold text-white">
+    <span className="inline-flex items-center gap-1.5 rounded-full border border-[#6BCFCF]/30 bg-[#6BCFCF]/10 px-3 py-1 text-xs font-semibold text-[#E6FFFA]">
       {children}
     </span>
   );
@@ -55,6 +37,7 @@ export default function WidgetActionSection({
           {/* Glass panel */}
           <div className="rounded-[31px] bg-[#0B1220]">
             <div className="relative overflow-hidden rounded-[31px] px-6 py-7 md:px-10 md:py-8 text-white">
+              <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#6BCFCF]/70 to-transparent" />
               <div className="pointer-events-none absolute inset-0 opacity-70">
                 <div className="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full bg-[#6BCFCF]/25 blur-3xl" />
                 <div className="absolute -bottom-52 -right-40 h-[620px] w-[620px] rounded-full bg-white/10 blur-3xl" />
@@ -63,38 +46,51 @@ export default function WidgetActionSection({
               <div className="relative grid gap-7 lg:grid-cols-12 lg:items-start">
                 {/* Copy */}
                 <div className="lg:col-span-5 space-y-6">
-                  <div className="space-y-2">
-                    <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
-                      {eyebrow}
-                    </p>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <div className="relative flex h-11 w-11 items-center justify-center rounded-xl bg-[#0F172A]">
+                        <div className="absolute inset-0 rounded-xl ring-1 ring-[#6BCFCF]/35" />
+                        <Image
+                          src="/logo.png"
+                          alt="Moverz"
+                          width={26}
+                          height={26}
+                          className="relative h-6.5 w-6.5"
+                        />
+                      </div>
+                      <div>
+                        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+                          {eyebrow}
+                        </p>
+                        <p className="text-sm font-semibold text-white/80">IA Moverz</p>
+                      </div>
+                    </div>
+
                     <h2 className="text-3xl md:text-4xl font-bold leading-tight">
                       {title}
                     </h2>
-                    <p className="text-base md:text-lg text-white/75 leading-relaxed">
+                    <p className="text-sm md:text-base text-white/75 leading-relaxed">
                       {subtitle}
                     </p>
                   </div>
 
-                  <ul className="space-y-3 text-sm md:text-base text-white/85">
-                    <li className="flex gap-3">
-                      <CheckIcon />
-                      <span>Devis comparables (volume fiabilisé par l’IA)</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <CheckIcon />
-                      <span>Pros contrôlés (assurances + historique)</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <CheckIcon />
-                      <span>0 spam, dossier anonyme, 100% gratuit</span>
-                    </li>
-                  </ul>
-
                   <div className="flex flex-wrap gap-2">
-                    <TrustChip>5+ devis</TrustChip>
-                    <TrustChip>0 spam</TrustChip>
-                    <TrustChip>100% gratuit</TrustChip>
-                    <TrustChip>Support Moverz</TrustChip>
+                    <TrustChip>
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+                      3 min
+                    </TrustChip>
+                    <TrustChip>
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+                      IA
+                    </TrustChip>
+                    <TrustChip>
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+                      0 spam
+                    </TrustChip>
+                    <TrustChip>
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+                      5+ devis
+                    </TrustChip>
                   </div>
                 </div>
 
