@@ -43,11 +43,11 @@ export default function StickyCTA() {
     >
       {/* VERSION MOBILE : Compacte et discrète */}
       <div className="md:hidden">
-        <div className="bg-[#0B1220]/92 backdrop-blur-xl border-t border-white/10 px-4 py-3 shadow-[0_-8px_30px_rgba(0,0,0,0.35)]">
+        <div className="bg-[#0B1220]/97 backdrop-blur-xl border-t border-white/15 px-4 py-2.5 shadow-[0_-10px_34px_rgba(0,0,0,0.42)]">
           <div className="flex items-center gap-2">
             <a
               href={whatsappUrl}
-              className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-white/10 px-5 py-3 text-sm font-semibold text-white hover:bg-white/15 transition-colors"
+              className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-white/10 px-4 py-2.5 text-sm font-semibold text-white hover:bg-white/15 transition-colors"
               aria-label="Démarrer sur WhatsApp"
             >
               <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#25D366]/15 text-[#25D366]">
@@ -59,7 +59,7 @@ export default function StickyCTA() {
             </a>
             <a
               href={quoteUrl}
-              className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#2B7A78] via-[#4FB8B8] to-[#6BCFCF] px-5 py-3 text-sm font-semibold text-[#04141f] shadow-[0_12px_40px_rgba(107,207,207,0.28)]"
+              className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#2B7A78] via-[#4FB8B8] to-[#6BCFCF] px-4 py-2.5 text-sm font-semibold text-[#04141f] shadow-[0_12px_40px_rgba(107,207,207,0.28)]"
               aria-label="Comparer mes devis"
             >
               <span>Comparer</span>
@@ -72,34 +72,34 @@ export default function StickyCTA() {
       {/* VERSION DESKTOP : Premium élégante */}
       <div className="hidden md:block">
         <div className="mx-auto max-w-5xl px-6 pb-6">
-          <div className="relative overflow-hidden rounded-2xl bg-[#0B1220]/88 backdrop-blur-xl border border-white/10 shadow-[0_14px_50px_rgba(0,0,0,0.35)]">
+          <div className="relative overflow-hidden rounded-2xl bg-[#0B1220]/96 backdrop-blur-xl border border-white/14 shadow-[0_18px_60px_rgba(0,0,0,0.42)]">
             <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#6BCFCF]/80 to-transparent" />
-            <div className="relative flex items-center justify-between gap-6 px-6 py-4 text-white">
+            <div className="relative flex items-center justify-between gap-5 px-5 py-3.5 text-white">
               {/* Icône + Texte structuré */}
-              <div className="flex items-center gap-4">
-                <div className="relative flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-[#0F172A]">
+              <div className="flex items-center gap-3.5">
+                <div className="relative flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-[#0F172A]">
                   <div className="absolute inset-0 rounded-xl ring-1 ring-[#6BCFCF]/35" />
                   <Image
                     src="/logo.png"
                     alt="Moverz"
-                    width={28}
-                    height={28}
-                    className="relative h-7 w-7"
+                    width={24}
+                    height={24}
+                    className="relative h-6 w-6"
                   />
                 </div>
                 <div className="space-y-1">
-                  <p className="text-base md:text-lg font-semibold leading-tight">
+                  <p className="text-sm md:text-base font-semibold leading-tight">
                     Déménagez sans stress
                   </p>
-                  <div className="flex items-center gap-2 text-xs text-white/70">
-                    <span className="inline-flex items-center gap-1 rounded-full bg-[#6BCFCF]/12 px-2 py-1 font-semibold text-[#E6FFFA]">
+                  <div className="flex items-center gap-2 text-[11px] text-white/70">
+                    <span className="inline-flex items-center gap-1 rounded-full bg-[#6BCFCF]/12 px-2 py-0.5 font-semibold text-[#E6FFFA]">
                       <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
                       3 min
                     </span>
-                    <span className="inline-flex items-center rounded-full bg-[#6BCFCF]/12 px-2 py-1 font-semibold text-[#E6FFFA]">
+                    <span className="inline-flex items-center rounded-full bg-[#6BCFCF]/12 px-2 py-0.5 font-semibold text-[#E6FFFA]">
                       IA
                     </span>
-                    <span className="inline-flex items-center rounded-full bg-[#6BCFCF]/12 px-2 py-1 font-semibold text-[#E6FFFA]">
+                    <span className="inline-flex items-center rounded-full bg-[#6BCFCF]/12 px-2 py-0.5 font-semibold text-[#E6FFFA]">
                       0 spam
                     </span>
                   </div>
@@ -110,7 +110,7 @@ export default function StickyCTA() {
               <div className="flex items-center gap-3 flex-shrink-0">
                 <a
                   href={whatsappUrl}
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 px-5 py-3 text-sm font-semibold text-white hover:bg-white/15 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 px-4 py-2.5 text-sm font-semibold text-white hover:bg-white/15 transition-colors"
                   aria-label="Démarrer sur WhatsApp"
                 >
                   <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#25D366]/15 text-[#25D366]">
@@ -122,7 +122,7 @@ export default function StickyCTA() {
                 </a>
                 <a
                   href={quoteUrl}
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#2B7A78] via-[#4FB8B8] to-[#6BCFCF] px-6 py-3 text-sm font-semibold text-[#04141f] shadow-[0_12px_40px_rgba(107,207,207,0.28)] hover:shadow-[0_16px_60px_rgba(107,207,207,0.38)] hover:scale-[1.01] active:scale-[0.99] transition-all"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#2B7A78] via-[#4FB8B8] to-[#6BCFCF] px-5 py-2.5 text-sm font-semibold text-[#04141f] shadow-[0_12px_40px_rgba(107,207,207,0.28)] hover:shadow-[0_16px_60px_rgba(107,207,207,0.38)] hover:scale-[1.01] active:scale-[0.99] transition-all"
                   aria-label="Lancer le comparateur"
                 >
                   <span>Comparer maintenant</span>
