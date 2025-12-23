@@ -21,19 +21,22 @@ export default function Hero() {
 
   return (
     <section className="relative overflow-hidden text-white font-sans">
-      {/* Clean background with animated gradient */}
+      {/* Background gradient (style /pro) */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A]" />
       
+      {/* Animated blobs (style /pro) */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#6BCFCF]/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#6BCFCF]/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }} />
 
       {/* Espacement généreux */}
-      <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-8 md:py-28 lg:py-36">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
           
           {/* ========== COLONNE GAUCHE – TEXTE ========== */}
           <div className="mx-auto max-w-2xl text-center lg:mx-0 lg:text-left">
-            {/* Badge simple */}
+            {/* Badge (style /pro) */}
             <div 
-              className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90 backdrop-blur-sm"
+              className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2 text-sm font-medium text-white/90 backdrop-blur-sm"
               style={{
                 animation: mounted ? 'fadeInUp 0.6s ease-out' : 'none',
               }}
@@ -65,7 +68,7 @@ export default function Hero() {
               L'IA analyse vos photos, compare les devis, vous déménagez sans stress.
             </p>
 
-            {/* CTA principal */}
+            {/* CTA principal (style /pro) */}
             <div 
               className="mt-8"
               style={{
@@ -74,13 +77,13 @@ export default function Hero() {
             >
               <a
                 href="https://devis.moverz.fr/?source=moverz.fr&from=/"
-                className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--brand-deep)] via-[var(--brand-teal-2)] to-[var(--brand-teal)] px-6 py-3 text-sm md:text-base font-semibold text-white shadow-[0_10px_34px_rgba(43,122,120,0.35)] hover:shadow-[0_14px_60px_rgba(107,207,207,0.45)] hover:scale-105 transition-all duration-300"
+                className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-[#0F172A] shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
                 aria-label="Obtenir mes devis gratuits"
               >
                 <span>Obtenir mes devis gratuits</span>
-                <span className="text-lg leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
+                <span className="text-xl leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
               </a>
-              <p className="mt-3 text-xs md:text-sm text-white/70">
+              <p className="mt-3 text-sm text-white/70">
                 Téléphone masqué · 0 spam · Les photos rendent les devis plus justes
               </p>
             </div>
