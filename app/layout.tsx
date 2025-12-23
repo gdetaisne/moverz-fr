@@ -131,7 +131,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <GoogleAnalytics />
         {/* Header */}
-        <header className="sticky top-0 z-40 w-full backdrop-blur-lg bg-[#0F172A]/95 border-b border-white/10">
+        <header className="sticky top-0 z-40 w-full bg-white border-b border-[#E3E5E8] shadow-sm">
           <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8">
             <a href="/" className="flex items-center gap-3" title="Moverz - Comparateur de déménagement">
               <Image 
@@ -142,28 +142,28 @@ export default function RootLayout({
                 priority
                 className="h-10 w-10 md:h-12 md:w-12"
               />
-              <span className="text-2xl md:text-3xl font-bold text-white">Moverz</span>
+              <span className="text-2xl md:text-3xl font-bold text-[#0F172A]">Moverz</span>
             </a>
             <div className="flex items-center gap-6">
-              <a href="/comment-ca-marche/" className="text-sm font-medium text-white/80 hover:text-white transition-colors hidden md:block">
+              <a href="/comment-ca-marche/" className="text-sm font-medium text-[#1E293B]/70 hover:text-[#0F172A] transition-colors hidden md:block">
                 Comment ça marche
               </a>
-              <a href="/faq/" className="text-sm font-medium text-white/80 hover:text-white transition-colors hidden md:block">
+              <a href="/faq/" className="text-sm font-medium text-[#1E293B]/70 hover:text-[#0F172A] transition-colors hidden md:block">
                 FAQ
               </a>
-              <a href="/blog/" className="text-sm font-medium text-white/80 hover:text-white transition-colors hidden md:block">
+              <a href="/blog/" className="text-sm font-medium text-[#1E293B]/70 hover:text-[#0F172A] transition-colors hidden md:block">
                 Blog
               </a>
               <a
                 href="/pro/"
-                className="inline-flex items-center gap-1 rounded-full border border-white/25 px-4 py-2 text-sm font-semibold text-white/90 hover:text-white hover:bg-white/10 transition-colors hidden md:inline-flex"
+                className="inline-flex items-center gap-1 rounded-full border-2 border-[#0F172A] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:bg-gray-50 transition-colors hidden md:inline-flex"
               >
                 <span>Pro</span>
                 <span className="text-base">→</span>
               </a>
               <a
                 href="https://devis.moverz.fr/?source=moverz.fr&from=header"
-                className="inline-flex items-center gap-1 rounded-full bg-[var(--brand-deep)] px-4 py-2 text-sm font-semibold text-white hover:bg-[var(--brand-teal-3)] transition-colors shadow-[0_10px_30px_rgba(43,122,120,0.35)]"
+                className="inline-flex items-center gap-1 rounded-full bg-[#0F172A] px-4 py-2 text-sm font-semibold text-white hover:scale-105 transition-all duration-200 shadow-sm"
               >
                 <span>Obtenir des devis</span>
                 <span className="text-base">→</span>
