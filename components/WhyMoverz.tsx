@@ -110,13 +110,60 @@ export default function WhyMoverz() {
           </motion.div>
         </div>
 
-        {/* Bottom trust line */}
+        {/* Why photos are essential */}
         <motion.div
-          className="text-center"
+          className="mt-12 max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.2 }}
+        >
+          <Card className="p-8 bg-white border-2 border-[#E3E5E8]">
+            <h3 className="text-xl md:text-2xl font-bold text-[#0F172A] mb-6 text-center">
+              Pourquoi les photos sont essentielles ?
+            </h3>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 mt-0.5">
+                  <svg className="h-5 w-5 text-[#6BCFCF]" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <p className="text-sm md:text-base text-[#1E293B]/70 leading-relaxed">
+                  <span className="font-semibold text-[#0F172A]">Devis 30% plus précis</span> (évite les marges "au cas où")
+                </p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 mt-0.5">
+                  <svg className="h-5 w-5 text-[#6BCFCF]" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <p className="text-sm md:text-base text-[#1E293B]/70 leading-relaxed">
+                  <span className="font-semibold text-[#0F172A]">Moins de surprises et suppléments</span> le jour J
+                </p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 mt-0.5">
+                  <svg className="h-5 w-5 text-[#6BCFCF]" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <p className="text-sm md:text-base text-[#1E293B]/70 leading-relaxed">
+                  <span className="font-semibold text-[#0F172A]">Inventaire + déclaration de valeur</span> générés par IA
+                </p>
+              </div>
+            </div>
+          </Card>
+        </motion.div>
+
+        {/* Bottom trust line */}
+        <motion.div
+          className="text-center mt-8"
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.3 }}
         >
           <p className="text-sm text-[#1E293B]/70">
             <span className="font-semibold text-[#0F172A]">Bonus :</span> Vos photos restent privées, les déménageurs sont contrôlés (assurance + 0 litige), et votre numéro reste anonyme.
