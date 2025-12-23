@@ -51,13 +51,13 @@ export default function WidgetActionSection({
         <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-[#04163a] via-[#2B7A78] to-[#04163a] p-[1px] shadow-[0_24px_70px_rgba(4,22,58,0.18)]">
           {/* Glass panel */}
           <div className="rounded-[31px] bg-[#0B1220]">
-            <div className="relative overflow-hidden rounded-[31px] px-6 py-10 md:px-10 md:py-14 text-white">
+            <div className="relative overflow-hidden rounded-[31px] px-6 py-8 md:px-10 md:py-10 text-white">
               <div className="pointer-events-none absolute inset-0 opacity-70">
                 <div className="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full bg-[#6BCFCF]/25 blur-3xl" />
                 <div className="absolute -bottom-52 -right-40 h-[620px] w-[620px] rounded-full bg-white/10 blur-3xl" />
               </div>
 
-              <div className="relative grid gap-8 lg:grid-cols-12 lg:items-start">
+              <div className="relative grid gap-8 lg:grid-cols-12 lg:items-center">
                 {/* Copy */}
                 <div className="lg:col-span-5 space-y-6">
                   <div className="space-y-2">
@@ -97,13 +97,13 @@ export default function WidgetActionSection({
 
                 {/* Widget */}
                 <div className="lg:col-span-7">
-                  <div className="rounded-3xl border border-white/10 bg-white/95 p-3 md:p-4 shadow-[0_18px_60px_rgba(0,0,0,0.25)]">
+                  <div className="mx-auto w-full max-w-[560px] rounded-3xl border border-white/10 bg-white/95 p-3 md:p-4 shadow-[0_18px_60px_rgba(0,0,0,0.25)]">
                     <div className="rounded-2xl bg-[#F8FAFC] border border-[#E3E5E8]">
                       <MoverzWidgetEmbed
                         source={source}
                         from={from}
                         citySlug={citySlug}
-                        className="min-h-[520px] md:min-h-[560px] w-full"
+                        className="min-h-[450px] md:min-h-[500px] w-full"
                       />
                     </div>
                   </div>
