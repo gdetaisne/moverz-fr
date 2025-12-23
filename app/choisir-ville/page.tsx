@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { CITIES, getCitiesByRegion } from '@/lib/cities';
 import { getFullMetadata } from "@/lib/canonical-helper";
-import Breadcrumbs from "@/components/Breadcrumbs";
+import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = getFullMetadata(
   'choisir-ville',
@@ -17,36 +17,21 @@ export default function ChoisirVillePage() {
   return (
     <main className="bg-hero min-h-screen">
       <div className="halo" />
-      
-      {/* Hero Section */}
-      <section className="relative overflow-hidden text-white">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1516542076529-1ea3854896e1?q=80&w=2000&auto=format&fit=crop"
-            alt="Choisissez votre ville"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#04163a]/95 via-[#2b7a78]/88 to-[#04163a]/92"></div>
-        </div>
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <Breadcrumbs
-            items={[
-              { label: "Accueil", href: "/" },
-              { label: "Choisir ville", href: "/choisir-ville/" }
-            ]}
-          />
-          <div className="mt-8 space-y-4">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-white/80 backdrop-blur-sm">
-              <span className="h-2 w-2 rounded-full bg-[#6BCFCF] animate-pulse" />
-              Accès direct au comparateur local
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">Choisissez votre ville</h1>
-            <p className="text-lg md:text-xl text-white/85 max-w-3xl leading-relaxed">
-              Sélectionnez votre ville pour accéder au comparateur local et recevoir 5+ devis de déménageurs contrôlés.
-            </p>
-          </div>
-        </div>
-      </section>
+
+      <PageHero
+        breadcrumbs={[
+          { label: "Accueil", href: "/" },
+          { label: "Choisir ville", href: "/choisir-ville/" },
+        ]}
+        eyebrow="Accès direct au comparateur"
+        title="Choisissez votre ville"
+        subtitle="Sélectionnez votre ville pour démarrer le comparateur et recevoir 5+ devis de déménageurs contrôlés, sur une base standardisée."
+        primaryCta={{
+          label: "Démarrer le comparateur",
+          href: "https://devis.moverz.fr/?source=moverz.fr&from=/choisir-ville/",
+        }}
+        secondaryCta={{ label: "Voir les guides par ville", href: "/villes/" }}
+      />
 
       {/* Cities Selection - Style Stripe */}
       <section className="section section-light">

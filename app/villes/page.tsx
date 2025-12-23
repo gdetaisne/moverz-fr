@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getFullMetadata } from "@/lib/canonical-helper";
-import Breadcrumbs from "@/components/Breadcrumbs";
+import PageHero from "@/components/PageHero";
 import { CITIES, getCitiesByRegion } from "@/lib/cities";
 
 export const metadata: Metadata = getFullMetadata(
@@ -15,46 +15,21 @@ export default function VillesPage() {
   return (
     <main className="bg-hero min-h-screen">
       <div className="halo" />
-      
-      {/* Hero Section */}
-      <section className="relative overflow-hidden text-white">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1516542076529-1ea3854896e1?q=80&w=2000&auto=format&fit=crop"
-            alt="Villes couvertes"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#04163a]/95 via-[#2b7a78]/88 to-[#04163a]/92"></div>
-        </div>
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <Breadcrumbs
-            items={[
-              { label: "Accueil", href: "/" },
-              { label: "Villes", href: "/villes/" }
-            ]}
-          />
-          <div className="mt-8 space-y-4">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-white/80 backdrop-blur-sm">
-              <span className="h-2 w-2 rounded-full bg-[#6BCFCF] animate-pulse" />
-              Disponible partout en France
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">Déménagement partout en France</h1>
-            <p className="text-lg md:text-xl text-white/85 max-w-3xl leading-relaxed">
-              Moverz fonctionne dans toute la France. Voici nos villes principales avec guides dédiés, 
-              mais vous pouvez comparer des devis pour n'importe quelle ville en indiquant vos adresses précises.
-            </p>
-            <div className="pt-2">
-              <a
-                href="/corridor/"
-                className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white/15 transition-colors"
-              >
-                <span>Voir tous les trajets (corridors)</span>
-                <span>→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+
+      <PageHero
+        breadcrumbs={[
+          { label: "Accueil", href: "/" },
+          { label: "Villes", href: "/villes/" },
+        ]}
+        eyebrow="Couverture nationale"
+        title="Déménagement partout en France"
+        subtitle="Moverz fonctionne dans toute la France. Explorez nos villes principales (guides dédiés) et lancez le comparateur, même si votre ville n’est pas listée."
+        primaryCta={{
+          label: "Comparer 5+ devis gratuitement",
+          href: "https://devis.moverz.fr/?source=moverz.fr&from=/villes",
+        }}
+        secondaryCta={{ label: "Voir tous les trajets (corridors)", href: "/corridor/" }}
+      />
 
       {/* Cities Grid - Style Stripe moderne */}
       <section className="section section-light">

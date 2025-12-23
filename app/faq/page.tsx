@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import FAQAccordion from "@/components/FAQAccordion";
 import { getFullMetadata } from "@/lib/canonical-helper";
-import Breadcrumbs from "@/components/Breadcrumbs";
+import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = getFullMetadata(
   'faq',
@@ -117,39 +117,20 @@ export default function FAQPage() {
       />
       <div className="halo" />
       
-      {/* Hero Section - Fun & Engaging */}
-      <section className="relative overflow-hidden text-white">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1516542076529-1ea3854896e1?q=80&w=2000&auto=format&fit=crop"
-            alt="FAQ"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#04163a]/95 via-[#2b7a78]/88 to-[#04163a]/92"></div>
-        </div>
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <Breadcrumbs
-            items={[
-              { label: "Accueil", href: "/" },
-              { label: "FAQ", href: "/faq/" }
-            ]}
-          />
-          <div className="mt-8 space-y-6">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-white/80 backdrop-blur-sm">
-              <svg className="h-4 w-4 text-[#6BCFCF]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-              </svg>
-              <span>Toutes vos réponses ici</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-              Questions fréquentes
-            </h1>
-            <p className="text-lg md:text-xl text-white/85 max-w-3xl leading-relaxed">
-              Vous avez des questions ? On a les réponses ! Découvrez comment l’IA Moverz estime votre volume, standardise votre dossier et vous aide à comparer des devis vraiment comparables, sans spam.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        breadcrumbs={[
+          { label: "Accueil", href: "/" },
+          { label: "FAQ", href: "/faq/" },
+        ]}
+        eyebrow="Toutes vos réponses ici"
+        title="Questions fréquentes"
+        subtitle="Découvrez comment l’IA Moverz estime votre volume, standardise votre dossier et vous aide à comparer des devis vraiment comparables, sans spam."
+        primaryCta={{
+          label: "Comparer 5+ devis gratuitement",
+          href: "https://devis.moverz.fr/?source=moverz.fr&from=/faq/",
+        }}
+        secondaryCta={{ label: "Comment ça marche", href: "/comment-ca-marche/" }}
+      />
 
       {/* Stats rapides - Fun facts */}
       <section className="section section-light pt-8 pb-4">

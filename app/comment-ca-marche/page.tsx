@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import HowItWorks from "@/components/HowItWorks";
 import { getFullMetadata } from "@/lib/canonical-helper";
-import Breadcrumbs from "@/components/Breadcrumbs";
 import MoverzWidgetEmbed from "@/components/MoverzWidgetEmbed";
+import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = getFullMetadata(
   'comment-ca-marche',
@@ -14,28 +14,20 @@ export default function CommentCaMarchePage() {
   return (
     <main className="bg-hero min-h-screen">
       <div className="halo" />
-      <section className="relative overflow-hidden text-white">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1516542076529-1ea3854896e1?q=80&w=2000&auto=format&fit=crop"
-            alt="Comment ça marche"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#04163a]/95 via-[#2b7a78]/88 to-[#04163a]/92"></div>
-        </div>
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <Breadcrumbs
-            items={[
-              { label: "Accueil", href: "/" },
-              { label: "Comment ça marche", href: "/comment-ca-marche/" }
-            ]}
-          />
-          <h1 className="text-3xl md:text-5xl font-bold mt-6">Comment ça marche ?</h1>
-          <p className="text-white/85 mt-3 max-w-3xl">
-            Découvrez comment, à partir de quelques questions et de vos photos, l’IA Moverz estime votre volume et prépare des devis de déménageurs enfin comparables.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        breadcrumbs={[
+          { label: "Accueil", href: "/" },
+          { label: "Comment ça marche", href: "/comment-ca-marche/" },
+        ]}
+        eyebrow="Processus en 3 étapes"
+        title="Comment ça marche ?"
+        subtitle="À partir de quelques questions et de vos photos, l’IA Moverz estime votre volume et prépare des devis de déménageurs enfin comparables."
+        primaryCta={{
+          label: "Comparer 5+ devis maintenant",
+          href: "https://devis.moverz.fr/?source=moverz.fr&from=/comment-ca-marche/",
+        }}
+        secondaryCta={{ label: "Voir la FAQ", href: "/faq/" }}
+      />
 
       <section className="section section-light">
         <div className="container">
@@ -44,6 +36,7 @@ export default function CommentCaMarchePage() {
           {/* Widget devis (même widget que la home) */}
           <div className="mt-10 md:mt-14">
             <div className="max-w-5xl mx-auto rounded-3xl border border-[#E3E5E8] bg-white p-4 md:p-8 shadow-sm">
+              <div id="widget" />
               <div className="text-center space-y-2 mb-6">
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#2B7A78]">
                   Passer à l’action
