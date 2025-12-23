@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import Chip from "@/components/ui/Chip";
+import Button from "@/components/ui/Button";
 
 export default function QuickFAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -24,13 +26,16 @@ export default function QuickFAQ() {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 bg-gradient-to-br from-[#0F172A] to-[#1E293B] text-white">
+    <section className="section section-contrast">
+      <div className="halo" />
       <div className="container max-w-3xl">
         {/* Header minimal */}
         <div className="text-center mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90 backdrop-blur-sm">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
-            Questions fréquentes
+          <div className="flex justify-center">
+            <Chip tone="dark" className="px-4 py-1.5">
+              <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-teal)]" />
+              Questions fréquentes
+            </Chip>
           </div>
           <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
             Une dernière question ?
@@ -74,13 +79,10 @@ export default function QuickFAQ() {
 
         {/* Link to full FAQ */}
         <div className="text-center mt-10">
-          <a
-            href="/faq/"
-            className="inline-flex items-center gap-2 text-sm font-medium text-[#6BCFCF] hover:text-white transition-colors"
-          >
+          <Button href="/faq/" variant="ghost" size="sm" className="px-4 py-2.5">
             <span>Voir toutes les questions</span>
             <span>→</span>
-          </a>
+          </Button>
         </div>
       </div>
     </section>

@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Chip from "@/components/ui/Chip";
+import Card from "@/components/ui/Card";
 
 export default function TrustSignals() {
   const signals = [
@@ -43,18 +45,8 @@ export default function TrustSignals() {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 bg-white overflow-hidden">
-      {/* Animated background gradient */}
-      <div className="absolute inset-0 opacity-20">
-        <div 
-          className="absolute top-20 left-0 w-96 h-96 bg-[#6BCFCF] rounded-full blur-[120px] animate-pulse"
-          style={{ animationDuration: '5s' }}
-        />
-        <div 
-          className="absolute bottom-20 right-0 w-96 h-96 bg-[#6BCFCF] rounded-full blur-[120px] animate-pulse"
-          style={{ animationDuration: '7s', animationDelay: '2s' }}
-        />
-      </div>
+    <section className="section section-light">
+      <div className="halo" />
 
       <div className="container max-w-5xl relative">
         {/* Header with animation */}
@@ -65,9 +57,11 @@ export default function TrustSignals() {
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
         >
-          <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#6BCFCF]/20 to-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF] border border-[#6BCFCF]/20">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
-            Confiance & sécurité
+          <div className="flex justify-center">
+            <Chip tone="brand" className="px-4 py-1.5">
+              <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-teal)]" />
+              Confiance & sécurité
+            </Chip>
           </div>
           <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl text-[#0F172A]">
             Vos données sont protégées
@@ -86,9 +80,9 @@ export default function TrustSignals() {
               whileHover={{ y: -4, scale: 1.02 }}
               className="group"
             >
-              <div className="rounded-2xl border border-[#E5E7EB] bg-white p-8 hover:border-[#6BCFCF]/50 hover:shadow-xl transition-all duration-300">
+              <Card className="p-8 hover:border-[#6BCFCF]/50 hover:shadow-xl transition-all duration-300">
                 {/* Icon */}
-                <div className="flex items-center justify-center h-14 w-14 rounded-xl bg-[#F0F9FF] text-[#6BCFCF] group-hover:bg-[#6BCFCF] group-hover:text-white transition-all duration-300 mb-4">
+                <div className="flex items-center justify-center h-14 w-14 rounded-xl bg-[#F0FDFA] text-[#2B7A78] group-hover:bg-[#6BCFCF] group-hover:text-[#04141f] transition-all duration-300 mb-4">
                   {signal.icon}
                 </div>
                 
@@ -99,7 +93,7 @@ export default function TrustSignals() {
                 <p className="text-sm text-[#6B7280] leading-relaxed">
                   {signal.text}
                 </p>
-              </div>
+              </Card>
             </motion.div>
           ))}
         </div>
