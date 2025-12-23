@@ -98,7 +98,6 @@ export default function Hero() {
               <MoverzWidgetEmbed
                 source="moverz.fr"
                 from="/"
-                rootId="moverz-widget-hero"
                 className="min-h-[450px] md:min-h-[500px] w-full"
               />
             </div>
