@@ -46,8 +46,6 @@ export default function TrustSignals() {
 
   return (
     <section className="section section-light">
-      <div className="halo" />
-
       <div className="container max-w-5xl relative">
         {/* Header with animation */}
         <motion.div 

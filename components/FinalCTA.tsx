@@ -7,8 +7,6 @@ import Button from "@/components/ui/Button";
 export default function FinalCTA() {
   return (
     <section className="section section-contrast">
-      <div className="halo" />
-
       <div className="container max-w-4xl relative">
         <motion.div 
           className="text-center space-y-8"

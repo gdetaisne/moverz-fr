@@ -48,15 +48,7 @@ export default function ProblemSolution() {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 bg-gradient-to-br from-[#0F172A] to-[#1E293B] text-white overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div 
-          className="absolute top-0 right-0 w-96 h-96 bg-[#6BCFCF] rounded-full blur-[120px] animate-pulse"
-          style={{ animationDuration: '6s' }}
-        />
-      </div>
-
+    <section className="relative py-20 md:py-32 bg-[#0F172A] text-white overflow-hidden">
       <div className="container max-w-5xl relative">
         {/* Title with animation */}
         <motion.div 
@@ -66,7 +58,7 @@ export default function ProblemSolution() {
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
         >
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90 backdrop-blur-sm border border-white/10">
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/10 px-4 py-1.5 text-xs font-medium text-white/90">
             <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
             Notre promesse
           </div>

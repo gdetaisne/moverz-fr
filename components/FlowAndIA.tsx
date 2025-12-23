@@ -56,18 +56,6 @@ export default function FlowAndIA() {
 
   return (
     <section className="relative py-20 md:py-32 bg-white overflow-hidden">
-      {/* Animated background gradient */}
-      <div className="absolute inset-0 opacity-30">
-        <div 
-          className="absolute top-0 right-0 w-96 h-96 bg-[#6BCFCF] rounded-full blur-[150px] animate-pulse"
-          style={{ animationDuration: '4s' }}
-        />
-        <div 
-          className="absolute bottom-0 left-0 w-96 h-96 bg-[#6BCFCF] rounded-full blur-[150px] animate-pulse"
-          style={{ animationDuration: '6s', animationDelay: '2s' }}
-        />
-      </div>
-
       <div className="container max-w-6xl relative">
         {/* Header with animation */}
         <motion.div 
@@ -77,14 +65,14 @@ export default function FlowAndIA() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#6BCFCF]/20 to-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF] border border-[#6BCFCF]/20">
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 border border-[#6BCFCF]/25 px-4 py-1.5 text-xs font-medium text-[#0F172A]">
             <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
             Comment ça marche
           </div>
           <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl text-[#0F172A]">
             3 étapes, 3 minutes
           </h2>
-          <p className="text-lg text-[#6B7280]">
+          <p className="text-lg text-[#1E293B]/70">
             L'IA fait le travail. Les photos sont la clé. Vous gardez le contrôle.
           </p>
         </motion.div>
@@ -108,8 +96,8 @@ export default function FlowAndIA() {
               >
                 <div className={`relative rounded-2xl p-8 transition-all duration-300 ${
                   isActive
-                    ? "bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] shadow-xl scale-105"
-                    : "bg-white border border-[#E5E7EB] hover:border-[#6BCFCF]/50 hover:shadow-lg"
+                    ? "bg-[#0F172A] shadow-lg scale-105"
+                    : "bg-white border border-[#E3E5E8] hover:border-[#6BCFCF]/50 hover:shadow-md"
                 }`}>
 
                   <div className="relative space-y-4">
@@ -142,7 +130,7 @@ export default function FlowAndIA() {
                         {step.title}
                       </h3>
                       <p className={`text-sm leading-relaxed transition-colors duration-200 ${
-                        isActive ? "text-white/80" : "text-[#6B7280]"
+                        isActive ? "text-white/80" : "text-[#1E293B]/70"
                       }`}>
                         {step.description}
                       </p>
@@ -151,7 +139,7 @@ export default function FlowAndIA() {
                     {/* Progress indicator for active step */}
                     {isActive && (
                       <motion.div 
-                        className="h-1 bg-white/20 rounded-full overflow-hidden"
+                        className="h-1 bg-white/10 rounded-full overflow-hidden"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                       >
@@ -171,8 +159,8 @@ export default function FlowAndIA() {
                   <div className="hidden md:block absolute top-16 left-full w-8 h-px">
                     <div className={`h-full transition-colors duration-300 ${
                       isActive || steps[index + 1].id === activeId
-                        ? "bg-gradient-to-r from-[#6BCFCF] to-transparent"
-                        : "bg-[#E5E7EB]"
+                        ? "bg-[#6BCFCF]"
+                        : "bg-[#E3E5E8]"
                     }`} />
                   </div>
                 )}
@@ -189,10 +177,10 @@ export default function FlowAndIA() {
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.2 }}
         >
-          <div className="relative rounded-3xl border border-[#E5E7EB] bg-gradient-to-br from-white via-[#FAFAFA] to-white p-8 md:p-10 text-center shadow-md">
+          <div className="relative rounded-3xl border border-[#E3E5E8] bg-white p-8 md:p-10 text-center shadow-sm">
             {/* Decorative elements */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <div className="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-[#6BCFCF] to-[#0F172A] shadow-md">
+              <div className="flex items-center justify-center h-12 w-12 rounded-full bg-[#6BCFCF] shadow-sm">
                 <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
@@ -200,7 +188,7 @@ export default function FlowAndIA() {
             </div>
 
             <div className="space-y-6 pt-4">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-semibold text-[#6BCFCF]">
+              <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 border border-[#6BCFCF]/25 px-4 py-1.5 text-xs font-semibold text-[#0F172A]">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
                 Sous le capot · IA Moverz
               </div>
@@ -217,14 +205,14 @@ export default function FlowAndIA() {
                     {activeStep.ia}
                   </p>
                   {activeId === 1 && (
-                    <p className="mt-3 text-sm text-[#6B7280] leading-relaxed">
+                    <p className="mt-3 text-sm text-[#1E293B]/70 leading-relaxed">
                       Plus vos photos sont claires (pièces + accès), plus les devis sont justes et comparables.
                     </p>
                   )}
                 </motion.div>
               </AnimatePresence>
               
-              {/* Step indicators - Enhanced */}
+              {/* Step indicators */}
               <div className="flex items-center justify-center gap-2 pt-2">
                 {steps.map((step) => (
                   <button
@@ -232,8 +220,8 @@ export default function FlowAndIA() {
                     onClick={() => setActiveId(step.id)}
                     className={`rounded-full transition-all duration-300 ${
                       step.id === activeId
-                        ? "h-2 w-8 bg-gradient-to-r from-[#0F172A] to-[#6BCFCF]"
-                        : "h-2 w-2 bg-[#E5E7EB] hover:bg-[#6BCFCF]/50"
+                        ? "h-2 w-8 bg-[#0F172A]"
+                        : "h-2 w-2 bg-[#E3E5E8] hover:bg-[#6BCFCF]/50"
                     }`}
                     aria-label={`Aller à l'étape ${step.id + 1}`}
                   />

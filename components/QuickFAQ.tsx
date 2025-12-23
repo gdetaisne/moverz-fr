@@ -27,7 +27,6 @@ export default function QuickFAQ() {
 
   return (
     <section className="section section-contrast">
-      <div className="halo" />
       <div className="container max-w-3xl">
         {/* Header minimal */}
         <div className="text-center mb-16 space-y-4">
@@ -47,7 +46,7 @@ export default function QuickFAQ() {
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:bg-white/10"
+              className="rounded-2xl border border-white/10 bg-white/5 overflow-hidden transition-all duration-300 hover:bg-white/10"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}

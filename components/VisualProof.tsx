@@ -1,10 +1,10 @@
 export default function VisualProof() {
   return (
-    <section className="relative py-20 md:py-32 bg-gradient-to-br from-[#0F172A] to-[#1E293B] text-white">
+    <section className="relative py-20 md:py-32 bg-[#0F172A] text-white">
       <div className="container max-w-4xl">
         {/* Header minimal */}
         <div className="text-center mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/10 px-4 py-1.5 text-xs font-medium text-white/90">
             <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
             Ce qui se passe après
           </div>
@@ -17,7 +17,7 @@ export default function VisualProof() {
         </div>
 
         {/* Clean preview card */}
-        <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 md:p-12 space-y-8">
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 space-y-8">
           {/* AI Result */}
           <div className="flex items-center gap-4 pb-8 border-b border-white/10">
             <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full bg-[#6BCFCF] animate-pulse">
@@ -50,8 +50,8 @@ export default function VisualProof() {
                 key={i}
                 className={`flex items-center justify-between p-5 rounded-xl border transition-all duration-300 ${
                   i === 0
-                    ? "border-[#6BCFCF] bg-white/10 backdrop-blur-sm"
-                    : "border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10"
+                    ? "border-[#6BCFCF] bg-white/10"
+                    : "border-white/10 bg-white/5 hover:bg-white/10"
                 }`}
               >
                 <div className="flex items-center gap-4">
