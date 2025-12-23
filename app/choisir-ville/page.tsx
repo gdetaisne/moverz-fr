@@ -11,6 +11,8 @@ export const metadata: Metadata = getFullMetadata(
 
 export default function ChoisirVillePage() {
   const citiesByRegion = getCitiesByRegion();
+  const quoteUrlForCity = (citySlug: string) =>
+    `https://devis.moverz.fr/?city_slug=${citySlug}&source=moverz.fr&from=/choisir-ville/`;
 
   return (
     <main className="bg-hero min-h-screen">
@@ -81,7 +83,7 @@ export default function ChoisirVillePage() {
                   {cities.map((city) => (
                     <a
                       key={city.slug}
-                      href={`${city.url}/devis-gratuits/`}
+                      href={quoteUrlForCity(city.slug)}
                       className="group relative overflow-hidden flex items-center justify-between gap-4 rounded-xl border border-[#E3E5E8] bg-white p-4 shadow-sm transition-all duration-300 hover:shadow-md hover:border-[#6BCFCF]/50 hover:-translate-y-0.5"
                     >
                       {/* Filament subtil */}
@@ -126,7 +128,7 @@ export default function ChoisirVillePage() {
               {CITIES.sort((a, b) => a.nameCapitalized.localeCompare(b.nameCapitalized)).map((city) => (
                 <a
                   key={city.slug}
-                  href={`${city.url}/devis-gratuits/`}
+                  href={quoteUrlForCity(city.slug)}
                   className="group flex items-center gap-2 text-sm text-[#4b5c6b] hover:text-[#2B7A78] font-medium transition-colors py-1.5"
                 >
                   <svg className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
