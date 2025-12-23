@@ -8,6 +8,7 @@ import TrustSignals from "@/components/TrustSignals";
 import QuickFAQ from "@/components/QuickFAQ";
 import StickyCTA from "@/components/StickyCTA";
 import FinalCTA from "@/components/FinalCTA";
+import WhyMoverz from "@/components/WhyMoverz";
 import MoverzWidgetEmbed from "@/components/MoverzWidgetEmbed";
 
 export const metadata: Metadata = {
@@ -90,6 +91,9 @@ export default function Home() {
 
       {/* 4. Trust Signals - Security and guarantees */}
       <TrustSignals />
+
+      {/* Why Moverz - Storytelling (photos = devis comparables) */}
+      <WhyMoverz />
 
       {/* 5. Problem/Solution - Show the pain and the relief */}
       <ProblemSolution />
