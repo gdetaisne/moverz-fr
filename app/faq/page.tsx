@@ -110,13 +110,12 @@ export default function FAQPage() {
   };
 
   return (
-    <main className="bg-hero min-h-screen">
+    <main className="bg-white min-h-screen">
       {/* Schema FAQPage pour Rich Snippets Google */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <div className="halo" />
       
       <PageHero
         breadcrumbs={[
@@ -161,9 +160,8 @@ export default function FAQPage() {
             ].map((item, i) => (
               <div 
                 key={i}
-                className="relative overflow-hidden rounded-2xl border border-[#E3E5E8] bg-white p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+                className="relative overflow-hidden rounded-2xl border border-[#E3E5E8] bg-white p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200"
               >
-                <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#6BCFCF]/60 to-transparent" />
                 <div className="text-center space-y-2">
                   <div className="flex items-center justify-center text-[#2B7A78]">{item.icon}</div>
                   <div className="text-2xl font-bold text-[#04163a]">{item.stat}</div>
@@ -190,9 +188,9 @@ export default function FAQPage() {
           <div className="space-y-8">
             {faqCategories.map((category, idx) => (
               <div key={idx} className="relative">
-                {/* Header catégorie avec icône et design fun */}
+                {/* Header catégorie avec icône */}
                 <div className="mb-5 flex items-center gap-3">
-                  <div className={`flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${category.color} border ${category.borderColor} text-[#2B7A78]`}>
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#6BCFCF]/15 border-2 border-[#6BCFCF]/30 text-[#2B7A78]">
                     {category.icon}
                   </div>
                   <div>
@@ -209,11 +207,10 @@ export default function FAQPage() {
             ))}
           </div>
 
-          {/* Encore une question ? - Section fun */}
-          <div className="mt-16 relative overflow-hidden rounded-3xl border-2 border-dashed border-[#6BCFCF]/30 bg-gradient-to-br from-white to-[#F0FDFA] p-8 md:p-12 text-center">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(107,207,207,0.08),transparent_50%)]" />
+          {/* Encore une question ? */}
+          <div className="mt-16 relative overflow-hidden rounded-2xl border-2 border-dashed border-[#6BCFCF]/30 bg-white p-8 md:p-12 text-center shadow-sm">
             <div className="relative space-y-4">
-              <div className="inline-flex items-center justify-center h-16 w-16 rounded-2xl bg-gradient-to-br from-[#6BCFCF]/20 to-[#4FB8B8]/30 border border-[#6BCFCF]/30 mx-auto text-[#2B7A78]">
+              <div className="inline-flex items-center justify-center h-16 w-16 rounded-2xl bg-[#6BCFCF]/15 border-2 border-[#6BCFCF]/30 mx-auto text-[#2B7A78]">
                 <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -226,11 +223,10 @@ export default function FAQPage() {
               </p>
               <a
                 href="/contact/"
-                className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-base font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
               >
-                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
-                <span className="relative">Posez votre question</span>
-                <svg className="relative h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <span>Posez votre question</span>
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </a>
@@ -263,13 +259,10 @@ export default function FAQPage() {
           </p>
           <a
             href="https://devis.moverz.fr/?source=moverz.fr&from=/faq"
-            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-lg font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+            className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-[#0F172A] shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
           >
-            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
-            <span className="relative">Comparez 5+ devis gratuitement</span>
-            <svg className="relative h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
+            <span>Comparez 5+ devis gratuitement</span>
+            <span className="text-xl leading-none">→</span>
           </a>
         </div>
       </section>

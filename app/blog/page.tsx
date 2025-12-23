@@ -57,21 +57,19 @@ export default function BlogIndexPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(107,207,207,0.15),transparent_50%)]" />
-        
-        <div className="relative container mx-auto max-w-6xl px-4 py-20 md:py-28">
+      <section className="relative overflow-hidden bg-[#A8E8E8]">
+        <div className="relative container mx-auto max-w-6xl px-4 py-16 md:py-24">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90 backdrop-blur-sm">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/90 px-5 py-2 text-sm font-semibold text-[#0F172A] shadow-md backdrop-blur-sm border border-[#6BCFCF]/30">
+              <span className="h-2 w-2 rounded-full bg-[#6BCFCF] animate-pulse shadow-[0_0_8px_rgba(107,207,207,0.6)]" />
               Blog déménagement
             </div>
 
-            <h1 className="text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl text-[#0F172A]">
               Guides, prix & checklists
             </h1>
             
-            <p className="text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-base md:text-lg lg:text-xl text-[#1E293B] leading-relaxed max-w-2xl mx-auto">
               {filteredPosts.length + 3} articles pour préparer votre déménagement sereinement.
             </p>
           </div>
@@ -79,7 +77,7 @@ export default function BlogIndexPage() {
       </section>
 
       {/* Featured articles */}
-      <section className="py-12 md:py-20 bg-gradient-to-br from-[#fdfeff] via-[#f9fdff] to-[#f5fbfc]">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto max-w-6xl px-4">
           <div className="mb-12 text-center space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
@@ -123,7 +121,7 @@ export default function BlogIndexPage() {
       </section>
 
       {/* Filters + Articles list */}
-      <section className="py-12 md:py-20 bg-white">
+      <section className="py-16 md:py-24 bg-white border-t border-[#E3E5E8]">
         <div className="container mx-auto max-w-6xl px-4 space-y-8">
           {/* Filters */}
           <div className="flex flex-wrap justify-center gap-3">
