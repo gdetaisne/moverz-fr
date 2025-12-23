@@ -31,10 +31,10 @@ export default function PageHero({
   return (
     <section className="relative overflow-hidden text-white">
       {/* Brand gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[var(--brand-deep)] via-[var(--brand-teal-3)] to-[var(--brand-deep)]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A]" />
       {/* Subtle brand glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_45%,rgba(107,207,207,0.22),transparent_55%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_35%,rgba(79,184,184,0.20),transparent_55%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_45%,rgba(107,207,207,0.18),transparent_55%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_35%,rgba(79,184,184,0.14),transparent_55%)]" />
 
       <div className="relative mx-auto max-w-5xl px-4 py-16 md:px-8 md:py-24">
         <Breadcrumbs items={breadcrumbs} />

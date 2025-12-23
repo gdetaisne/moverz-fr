@@ -22,7 +22,7 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden text-white font-sans">
       {/* Clean background with animated gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[var(--brand-deep)] via-[var(--brand-teal-3)] to-[var(--brand-deep)]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A]" />
       
 
       {/* Espacement généreux */}
