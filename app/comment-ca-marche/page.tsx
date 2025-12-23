@@ -38,7 +38,7 @@ export default function CommentCaMarchePage() {
       {/* Widget devis (même widget que la home) */}
       <WidgetActionSection
         title="Comparez 5+ devis maintenant"
-        subtitle="Même logique que sur la home: vous démarrez ici, et l’IA aide à fiabiliser le volume."
+        subtitle="Démarrez votre dossier en 3 minutes. Ajoutez des photos pour des devis plus précis."
         source="moverz.fr"
         from="/comment-ca-marche/"
       />

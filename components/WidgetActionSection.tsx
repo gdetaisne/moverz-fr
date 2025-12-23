@@ -45,8 +45,8 @@ export default function WidgetActionSection({
 
               <div className="relative grid gap-7 lg:grid-cols-12 lg:items-start">
                 {/* Copy */}
-                <div className="lg:col-span-5 space-y-6">
-                  <div className="space-y-3">
+                <div className="lg:col-span-5 space-y-4">
+                  <div className="space-y-2">
                     <div className="flex items-center gap-3">
                       <div className="relative flex h-11 w-11 items-center justify-center rounded-xl bg-[#0F172A]">
                         <div className="absolute inset-0 rounded-xl ring-1 ring-[#6BCFCF]/35" />
@@ -62,14 +62,13 @@ export default function WidgetActionSection({
                         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
                           {eyebrow}
                         </p>
-                        <p className="text-sm font-semibold text-white/80">IA Moverz</p>
                       </div>
                     </div>
 
-                    <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+                    <h2 className="text-2xl md:text-3xl font-bold leading-tight">
                       {title}
                     </h2>
-                    <p className="text-sm md:text-base text-white/75 leading-relaxed">
+                    <p className="text-sm text-white/70 leading-relaxed">
                       {subtitle}
                     </p>
                   </div>
@@ -104,11 +103,11 @@ export default function WidgetActionSection({
                         from={from}
                         citySlug={citySlug}
                         // Low min-height just to avoid layout shift before script mounts
-                        className="min-h-[340px] sm:min-h-[380px] md:min-h-[420px] w-full"
+                        className="min-h-[320px] sm:min-h-[360px] md:min-h-[400px] w-full"
                       />
                     </div>
                   </div>
-                  <p className="mt-3 text-xs text-white/55">
+                  <p className="mt-2 text-xs text-white/55">
                     Astuce: préparez 2–3 photos des pièces principales pour accélérer l’estimation.
                   </p>
                 </div>
