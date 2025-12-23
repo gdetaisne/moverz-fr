@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import HowItWorks from "@/components/HowItWorks";
 import { getFullMetadata } from "@/lib/canonical-helper";
-import MoverzWidgetEmbed from "@/components/MoverzWidgetEmbed";
 import PageHero from "@/components/PageHero";
+import WidgetActionSection from "@/components/WidgetActionSection";
 
 export const metadata: Metadata = getFullMetadata(
   'comment-ca-marche',
@@ -32,31 +32,16 @@ export default function CommentCaMarchePage() {
       <section className="section section-light">
         <div className="container">
           <HowItWorks />
-
-          {/* Widget devis (même widget que la home) */}
-          <div className="mt-10 md:mt-14">
-            <div className="max-w-5xl mx-auto rounded-3xl border border-[#E3E5E8] bg-white p-4 md:p-8 shadow-sm">
-              <div id="widget" />
-              <div className="text-center space-y-2 mb-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#2B7A78]">
-                  Passer à l’action
-                </p>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#04163a]">
-                  Comparez 5+ devis maintenant
-                </h2>
-                <p className="text-sm md:text-base text-[#4b5c6b] max-w-2xl mx-auto">
-                  Même logique que sur la home: vous démarrez ici, et l’IA aide à fiabiliser le volume.
-                </p>
-              </div>
-              <MoverzWidgetEmbed
-                source="moverz.fr"
-                from="/comment-ca-marche/"
-                className="min-h-[520px] md:min-h-[560px] w-full"
-              />
-            </div>
-          </div>
         </div>
       </section>
+
+      {/* Widget devis (même widget que la home) */}
+      <WidgetActionSection
+        title="Comparez 5+ devis maintenant"
+        subtitle="Même logique que sur la home: vous démarrez ici, et l’IA aide à fiabiliser le volume."
+        source="moverz.fr"
+        from="/comment-ca-marche/"
+      />
 
       <section className="section section-contrast">
         <div className="container max-w-3xl text-center space-y-6">
