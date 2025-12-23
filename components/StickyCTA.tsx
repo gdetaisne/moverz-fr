@@ -24,14 +24,13 @@ export default function StickyCTA() {
   }, []);
 
   const quoteUrl = `https://devis.moverz.fr/?source=moverz.fr&from=${encodeURIComponent(fromPath)}`;
-  // WhatsApp direct link (set this in env to enable true direct WA)
-  // Example: NEXT_PUBLIC_WHATSAPP_PHONE_E164=33612345678 (no +, no spaces)
-  // Default fallback for now (can be overridden via CapRover env)
+  // WhatsApp direct link - Numéro WhatsApp Business Moverz
+  // +33 7 52 98 65 81 = 33752986581
   const whatsappPhone = (
     process.env.NEXT_PUBLIC_WHATSAPP_PHONE_E164 ||
-    "33633046059" // +33 6 33 04 60 59
+    "33752986581" // +33 7 52 98 65 81 (WhatsApp Business Moverz)
   ).replace(/\D/g, "");
-  const whatsappText = `Bonjour Moverz, je veux comparer des devis de déménagement. Je viens de ${fromPath}`;
+  const whatsappText = `Bonjour ! Je souhaite obtenir des devis pour mon déménagement 🚚`;
   const whatsappUrl = whatsappPhone
     ? `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(whatsappText)}`
     : `${quoteUrl}&channel=whatsapp`;
