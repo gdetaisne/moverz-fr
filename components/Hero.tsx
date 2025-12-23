@@ -91,12 +91,18 @@ export default function Hero() {
             animation: mounted ? 'fadeInUp 1s ease-out 0.4s both' : 'none',
           }}
         >
-          {/* Widget externe - prend toute la place */}
-          <MoverzWidgetEmbed
-            source="moverz.fr"
-            from="/"
-            className="min-h-[450px] md:min-h-[500px] w-full"
-          />
+          {/* Card blanche pour le widget */}
+          <div className="rounded-2xl bg-white p-1 shadow-lg border border-[#E3E5E8]">
+            <div className="rounded-xl border border-[#E3E5E8] bg-white overflow-hidden">
+              {/* Widget externe */}
+              <MoverzWidgetEmbed
+                source="moverz.fr"
+                from="/"
+                rootId="moverz-widget-hero"
+                className="min-h-[450px] md:min-h-[500px] w-full"
+              />
+            </div>
+          </div>
         </div>
         </div>
       </div>
