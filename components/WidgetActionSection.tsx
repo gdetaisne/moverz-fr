@@ -100,13 +100,13 @@ export default function WidgetActionSection({
 
                 {/* Widget */}
                 <div className="lg:col-span-7">
-                  <div className="mx-auto w-full max-w-[560px] rounded-3xl border border-white/10 bg-white/95 p-3 md:p-4 shadow-[0_18px_60px_rgba(0,0,0,0.25)]">
-                    <div className="rounded-2xl bg-[#F8FAFC] border border-[#E3E5E8]">
+                  <div className="mx-auto w-full max-w-[560px] rounded-3xl border border-white/10 bg-white/95 p-2 md:p-3 shadow-[0_18px_60px_rgba(0,0,0,0.25)]">
+                    <div className="rounded-2xl border border-[#E3E5E8] bg-white">
                       <MoverzWidgetEmbed
                         source={source}
                         from={from}
                         citySlug={citySlug}
-                        className="min-h-[450px] md:min-h-[500px] w-full"
+                        className="min-h-[380px] sm:min-h-[420px] md:min-h-[460px] w-full"
                       />
                     </div>
                   </div>
