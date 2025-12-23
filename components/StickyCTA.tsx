@@ -89,12 +89,12 @@ export default function StickyCTA() {
                     Déménagez sans stress
                   </p>
                   <div className="flex items-center gap-2">
-                    <Chip tone="teal" size="sm">
+                    <Chip tone="light" size="sm">
                       <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
                       3 min
                     </Chip>
-                    <Chip tone="teal" size="sm">IA</Chip>
-                    <Chip tone="teal" size="sm">0 spam</Chip>
+                    <Chip tone="light" size="sm">IA</Chip>
+                    <Chip tone="light" size="sm">0 spam</Chip>
                   </div>
                 </div>
               </div>
