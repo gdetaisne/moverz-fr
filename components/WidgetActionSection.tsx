@@ -2,6 +2,7 @@
 
 import MoverzWidgetEmbed from "@/components/MoverzWidgetEmbed";
 import type { ReactNode } from "react";
+import { useMemo, useState } from "react";
 
 type WidgetActionSectionProps = {
   eyebrow?: string;
@@ -10,6 +11,7 @@ type WidgetActionSectionProps = {
   source: string;
   from: string;
   citySlug?: string;
+  defaultExpanded?: boolean;
 };
 
 function CheckIcon() {
@@ -46,7 +48,14 @@ export default function WidgetActionSection({
   source,
   from,
   citySlug,
+  defaultExpanded = true,
 }: WidgetActionSectionProps) {
+  const [expanded, setExpanded] = useState<boolean>(defaultExpanded);
+  const buttonLabel = useMemo(
+    () => (expanded ? "Réduire" : "Démarrer maintenant"),
+    [expanded]
+  );
+
   return (
     <section className="section section-light">
       <div className="container max-w-6xl">
@@ -96,23 +105,52 @@ export default function WidgetActionSection({
                     <TrustChip>100% gratuit</TrustChip>
                     <TrustChip>Support Moverz</TrustChip>
                   </div>
+
+                  <div className="pt-2">
+                    <button
+                      type="button"
+                      onClick={() => setExpanded((v) => !v)}
+                      className="inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-6 py-3 text-sm md:text-base font-semibold text-[#04141f] shadow-[0_12px_40px_rgba(107,207,207,0.30)] hover:shadow-[0_16px_60px_rgba(107,207,207,0.40)] hover:scale-[1.01] active:scale-[0.99] transition-all"
+                      aria-expanded={expanded}
+                    >
+                      <span>{buttonLabel}</span>
+                      <span className="text-lg leading-none">{expanded ? "—" : "→"}</span>
+                    </button>
+                    {!expanded && (
+                      <p className="mt-2 text-xs text-white/55">
+                        Le widget s’ouvre ici (sans quitter la page).
+                      </p>
+                    )}
+                  </div>
                 </div>
 
                 {/* Widget */}
                 <div className="lg:col-span-7">
-                  <div className="mx-auto w-full max-w-[560px] rounded-3xl border border-white/10 bg-white/95 p-2 md:p-3 shadow-[0_18px_60px_rgba(0,0,0,0.25)]">
-                    <div className="rounded-2xl border border-[#E3E5E8] bg-white">
-                      <MoverzWidgetEmbed
-                        source={source}
-                        from={from}
-                        citySlug={citySlug}
-                        className="min-h-[380px] sm:min-h-[420px] md:min-h-[460px] w-full"
-                      />
-                    </div>
+                  <div
+                    className={`mx-auto w-full max-w-[560px] transition-all duration-300 ${
+                      expanded ? "opacity-100" : "opacity-0 pointer-events-none"
+                    }`}
+                    style={{ maxHeight: expanded ? 2000 : 0 }}
+                  >
+                    {expanded && (
+                      <>
+                        <div className="rounded-3xl border border-white/10 bg-white/95 p-2 md:p-3 shadow-[0_18px_60px_rgba(0,0,0,0.25)]">
+                          <div className="rounded-2xl border border-[#E3E5E8] bg-white">
+                            <MoverzWidgetEmbed
+                              source={source}
+                              from={from}
+                              citySlug={citySlug}
+                              className="min-h-[380px] sm:min-h-[420px] md:min-h-[460px] w-full"
+                            />
+                          </div>
+                        </div>
+                        <p className="mt-3 text-xs text-white/55">
+                          Astuce: préparez 2–3 photos des pièces principales pour accélérer
+                          l’estimation.
+                        </p>
+                      </>
+                    )}
                   </div>
-                  <p className="mt-3 text-xs text-white/55">
-                    Astuce: préparez 2–3 photos des pièces principales pour accélérer l’estimation.
-                  </p>
                 </div>
               </div>
             </div>

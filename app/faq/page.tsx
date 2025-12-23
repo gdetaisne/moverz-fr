@@ -244,6 +244,7 @@ export default function FAQPage() {
         subtitle="Décrivez votre déménagement en quelques minutes. L’IA fiabilise le volume pour des devis vraiment comparables, sans spam."
         source="moverz.fr"
         from="/faq/"
+        defaultExpanded={false}
       />
 
       {/* CTA Final - Plus engageant */}
