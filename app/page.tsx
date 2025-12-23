@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Hero from "@/components/Hero";
 import ProblemSolution from "@/components/ProblemSolution";
 import FlowAndIA from "@/components/FlowAndIA";
@@ -9,6 +8,7 @@ import TrustSignals from "@/components/TrustSignals";
 import QuickFAQ from "@/components/QuickFAQ";
 import StickyCTA from "@/components/StickyCTA";
 import FinalCTA from "@/components/FinalCTA";
+import MoverzWidgetEmbed from "@/components/MoverzWidgetEmbed";
 
 export const metadata: Metadata = {
   title: "Déménagement : Comparez 5+ Devis en 3 Min (0€, 0 Spam) | Moverz",
@@ -63,10 +63,13 @@ export default function Home() {
 
   return (
     <>
-      {/* Widget script externe - chargé une seule fois sur la home */}
-      <Script
-        src="https://devis.moverz.fr/moverz-widget.js"
-        strategy="afterInteractive"
+      {/* Widget script externe (dedup via Script id) */}
+      <MoverzWidgetEmbed
+        source="moverz.fr"
+        from="/"
+        // Container exists in Hero; keep this instance script-only by hiding the div (avoid duplicate IDs)
+        rootId="moverz-widget-script-only"
+        className="hidden"
       />
       
       <main className="bg-white">

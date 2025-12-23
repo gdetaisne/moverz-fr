@@ -11,6 +11,7 @@ import { CityPricing } from "@/components/city/CityPricing";
 import { CityFinalCTA } from "@/components/city/CityFinalCTA";
 import { FAQSchema } from "@/components/schema/FAQSchema";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import MoverzWidgetEmbed from "@/components/MoverzWidgetEmbed";
 import FlowAndIA from "@/components/FlowAndIA";
 import TrustSignals from "@/components/TrustSignals";
 import ProblemSolution from "@/components/ProblemSolution";
@@ -192,6 +193,31 @@ export default function CityMovingPage({ params }: PageProps) {
       </div>
       {/* Hero */}
       <CityHero city={city} quoteUrl={quoteUrl} />
+
+      {/* Widget devis (conversion + SEO) */}
+      <section className="section section-light">
+        <div className="container max-w-4xl">
+          <div className="rounded-3xl border border-[#E3E5E8] bg-white p-4 md:p-8 shadow-sm">
+            <div className="text-center space-y-2 mb-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+                Comparez maintenant
+              </p>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A]">
+                5+ devis à {city.nameCapitalized}, sans spam
+              </h2>
+              <p className="text-sm md:text-base text-[#6B7280] max-w-2xl mx-auto">
+                Démarrez votre dossier en quelques minutes. L’IA aide à fiabiliser le volume pour des devis comparables.
+              </p>
+            </div>
+            <MoverzWidgetEmbed
+              source="moverz.fr"
+              from={`/demenagement/${city.slug}/`}
+              citySlug={city.slug}
+              className="min-h-[520px] md:min-h-[560px] w-full"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Stats locales */}
       <CityStats cityName={city.nameCapitalized} />
