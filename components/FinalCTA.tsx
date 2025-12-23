@@ -6,7 +6,7 @@ import Button from "@/components/ui/Button";
 
 export default function FinalCTA() {
   return (
-    <section className="section section-contrast">
+    <section className="section bg-[#A8E8E8]">
       <div className="container max-w-4xl relative">
         <motion.div 
           className="text-center space-y-8"
@@ -23,8 +23,8 @@ export default function FinalCTA() {
             transition={{ duration: 0.4, delay: 0.1 }}
           >
             <div className="flex justify-center">
-              <Chip tone="dark" className="px-4 py-1.5">
-                <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-teal)]" />
+              <Chip tone="light" className="px-4 py-1.5">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
                 Gratuit · Sans spam · Sans engagement
               </Chip>
             </div>
@@ -32,7 +32,7 @@ export default function FinalCTA() {
 
           {/* Title */}
           <motion.h2 
-            className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl text-white"
+            className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl text-[#0F172A]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -43,7 +43,7 @@ export default function FinalCTA() {
 
           {/* Subtitle */}
           <motion.p 
-            className="text-lg text-white/75"
+            className="text-lg text-[#1E293B]/70"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -76,26 +76,26 @@ export default function FinalCTA() {
 
           {/* Trust indicators */}
           <motion.div 
-            className="flex items-center justify-center gap-6 pt-4 text-sm text-white/70"
+            className="flex items-center justify-center gap-6 pt-4 text-sm text-[#1E293B]/70"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.5 }}
           >
             <div className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-[var(--brand-teal)]" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-4 h-4 text-[#6BCFCF]" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
               <span>3 minutes</span>
             </div>
             <div className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-[var(--brand-teal)]" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-4 h-4 text-[#6BCFCF]" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
               <span>0€ pour vous</span>
             </div>
             <div className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-[var(--brand-teal)]" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-4 h-4 text-[#6BCFCF]" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
               <span>5+ devis comparables</span>
