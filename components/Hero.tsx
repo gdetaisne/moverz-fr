@@ -84,20 +84,62 @@ export default function Hero() {
             </div>
           </div>
 
-        {/* ========== COLONNE DROITE – WIDGET PHOTOS ========== */}
+        {/* ========== COLONNE DROITE – CTA DIRECT ========== */}
         <div 
           className="relative mx-auto w-full max-w-[560px] lg:mx-0"
           style={{
             animation: mounted ? 'fadeInUp 1s ease-out 0.4s both' : 'none',
           }}
         >
-          {/* Widget externe - structure simple */}
-          <div className="rounded-2xl bg-white p-4 shadow-lg border border-[#E3E5E8]">
-            <MoverzWidgetEmbed
-              source="moverz.fr"
-              from="/"
-              className="min-h-[450px] md:min-h-[500px] w-full"
-            />
+          {/* CTA Card temporaire */}
+          <div className="rounded-2xl bg-white p-8 md:p-10 shadow-lg border border-[#E3E5E8] text-center space-y-6">
+            <div className="space-y-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#6BCFCF]/10 mx-auto">
+                <svg className="w-8 h-8 text-[#6BCFCF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold text-[#0F172A] mb-2">
+                  Prêt à commencer ?
+                </h3>
+                <p className="text-base text-[#1E293B]/70">
+                  Ajoutez quelques photos de vos pièces,<br />
+                  l'IA calcule votre volume en 3 minutes.
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-3">
+              <a
+                href="https://devis.moverz.fr/?source=moverz.fr&from=/"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200 w-full"
+              >
+                <span>Démarrer mon devis gratuit</span>
+                <span className="text-xl leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
+              </a>
+              <p className="text-xs text-[#1E293B]/60">
+                Gratuit · 3 min · Sans engagement
+              </p>
+            </div>
+
+            <div className="pt-4 border-t border-[#E3E5E8]">
+              <div className="flex items-center justify-center gap-4 text-xs text-[#1E293B]/60">
+                <div className="flex items-center gap-1">
+                  <svg className="w-4 h-4 text-[#6BCFCF]" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>0 spam</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <svg className="w-4 h-4 text-[#6BCFCF]" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>5+ devis comparables</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         </div>
