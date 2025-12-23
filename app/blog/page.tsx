@@ -242,7 +242,6 @@ export default function BlogIndexPage() {
         subtitle="Vous avez les infos (prix, checklists, conseils). Lancez le comparateur: l’IA fiabilise le volume pour des devis comparables, sans spam."
         source="moverz.fr"
         from="/blog/"
-        defaultExpanded={false}
       />
     </main>
   );
