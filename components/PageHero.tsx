@@ -37,13 +37,14 @@ export default function PageHero({
   const isCenter = align === "center";
 
   return (
-    <section className="relative overflow-hidden text-white">
-      {/* Background gradient (style /pro) */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A]" />
+    <section className="relative overflow-hidden">
+      {/* Background teal clair lumineux */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#D4F5F5] via-[#A8E8E8] to-[#6BCFCF]" />
       
-      {/* Animated blobs (style /pro) */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#6BCFCF]/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#6BCFCF]/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }} />
+      {/* Animated blobs colorés */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/40 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#4FB8B8]/30 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }} />
+      <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-[#3DA5A5]/20 rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '6s', animationDelay: '1s' }} />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <Breadcrumbs items={breadcrumbs} />
@@ -55,9 +56,9 @@ export default function PageHero({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2 text-sm font-medium text-white/90 backdrop-blur-sm"
+              className="inline-flex items-center gap-2 rounded-full bg-white/90 px-5 py-2 text-sm font-semibold text-[#0F172A] shadow-md backdrop-blur-sm border border-[#6BCFCF]/30"
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
+              <span className="h-2 w-2 rounded-full bg-[#6BCFCF] animate-pulse shadow-[0_0_8px_rgba(107,207,207,0.6)]" />
               <span>{eyebrow}</span>
             </motion.div>
           )}
@@ -67,7 +68,7 @@ export default function PageHero({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 }}
-            className="text-4xl md:text-6xl font-bold leading-tight"
+            className="text-4xl md:text-6xl font-bold leading-tight text-[#0F172A]"
           >
             {title}
           </motion.h1>
@@ -78,7 +79,7 @@ export default function PageHero({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
-              className={`text-lg md:text-xl text-white/80 leading-relaxed ${isCenter ? "max-w-2xl mx-auto" : "max-w-2xl"}`}
+              className={`text-lg md:text-xl text-[#1E293B] leading-relaxed ${isCenter ? "max-w-2xl mx-auto" : "max-w-2xl"}`}
             >
               {subtitle}
             </motion.p>
@@ -95,7 +96,7 @@ export default function PageHero({
               {primaryCta && (
                 <a
                   href={primaryCta.href}
-                  className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-[#0F172A] shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                  className="group inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-[0_8px_30px_rgba(15,23,42,0.3)] hover:shadow-[0_12px_50px_rgba(15,23,42,0.4)] hover:scale-105 transition-all duration-300"
                 >
                   <span>{primaryCta.label}</span>
                   <span className="text-xl leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
@@ -104,7 +105,7 @@ export default function PageHero({
               {secondaryCta && (
                 <a
                   href={secondaryCta.href}
-                  className="inline-flex items-center gap-2 rounded-full border-2 border-white/30 bg-white/10 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
+                  className="inline-flex items-center gap-2 rounded-full border-2 border-[#0F172A]/30 bg-white/60 px-8 py-4 text-base font-semibold text-[#0F172A] backdrop-blur-sm hover:bg-white/80 transition-all duration-300"
                 >
                   <span>{secondaryCta.label}</span>
                 </a>
@@ -118,7 +119,7 @@ export default function PageHero({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.4 }}
-              className={`pt-8 flex flex-wrap items-center gap-6 text-sm text-white/70 ${isCenter ? "justify-center" : ""}`}
+              className={`pt-8 flex flex-wrap items-center gap-6 text-sm text-[#1E293B]/80 font-medium ${isCenter ? "justify-center" : ""}`}
             >
               {socialProof.map((item, i) => (
                 <div key={i} className="flex items-center gap-2">
