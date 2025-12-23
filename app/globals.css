@@ -128,7 +128,8 @@
   }
 
   .section-contrast {
-    @apply bg-gradient-to-br from-[var(--brand-navy-2)] via-[var(--brand-navy)] to-[var(--brand-deep)] text-white;
+    /* More turquoise, less navy (keep readability) */
+    @apply bg-gradient-to-br from-[var(--brand-deep)] via-[var(--brand-teal-3)] to-[var(--brand-deep)] text-white;
   }
 
   .container {
@@ -137,7 +138,8 @@
 
   /* Hero background */
   .bg-hero {
-    @apply relative bg-gradient-to-br from-[var(--brand-navy-2)] via-[var(--brand-deep)] to-[var(--brand-navy-2)];
+    /* Teal-dominant hero background */
+    @apply relative bg-gradient-to-br from-[var(--brand-deep)] via-[var(--brand-teal-3)] to-[var(--brand-deep)];
   }
 
   .halo {

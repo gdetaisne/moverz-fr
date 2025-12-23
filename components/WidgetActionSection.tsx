@@ -3,6 +3,8 @@
 import MoverzWidgetEmbed from "@/components/MoverzWidgetEmbed";
 import type { ReactNode } from "react";
 import Image from "next/image";
+import Chip from "@/components/ui/Chip";
+import Card from "@/components/ui/Card";
 
 type WidgetActionSectionProps = {
   eyebrow?: string;
@@ -14,11 +16,7 @@ type WidgetActionSectionProps = {
 };
 
 function TrustChip({ children }: { children: ReactNode }) {
-  return (
-    <span className="inline-flex items-center gap-1.5 rounded-full border border-[#6BCFCF]/30 bg-[#6BCFCF]/10 px-3 py-1 text-xs font-semibold text-[#E6FFFA]">
-      {children}
-    </span>
-  );
+  return <Chip tone="teal">{children}</Chip>;
 }
 
 export default function WidgetActionSection({
@@ -95,8 +93,8 @@ export default function WidgetActionSection({
 
                 {/* Widget */}
                 <div className="lg:col-span-7">
-                  {/* Cadre fin (évite l'effet "device") */}
-                  <div className="mx-auto w-full max-w-[520px] rounded-2xl border border-white/10 bg-white/95 p-1 shadow-[0_18px_60px_rgba(0,0,0,0.22)]">
+                  {/* Slim card */}
+                  <Card className="mx-auto w-full max-w-[520px] border-white/10 bg-white/95 p-1 shadow-[0_18px_60px_rgba(0,0,0,0.22)]">
                     <div className="rounded-xl border border-[#E3E5E8] bg-white">
                       <MoverzWidgetEmbed
                         source={source}
@@ -106,7 +104,7 @@ export default function WidgetActionSection({
                         className="min-h-[320px] sm:min-h-[360px] md:min-h-[400px] w-full"
                       />
                     </div>
-                  </div>
+                  </Card>
                   <p className="mt-2 text-xs text-white/55">
                     Astuce: préparez 2–3 photos des pièces principales pour accélérer l’estimation.
                   </p>

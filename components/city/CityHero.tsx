@@ -12,11 +12,11 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
   return (
     <section className="relative overflow-hidden text-white">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[var(--brand-deep)] via-[var(--brand-teal-3)] to-[var(--brand-deep)]" />
       
       {/* Animated blobs */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#6BCFCF]/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#6BCFCF]/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }} />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#6BCFCF]/16 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#6BCFCF]/16 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }} />
 
       <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-8 md:py-28 lg:py-36">
         <div className="max-w-4xl mx-auto text-center space-y-8">
