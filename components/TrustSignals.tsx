@@ -1,100 +1,75 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Chip from "@/components/ui/Chip";
-import Card from "@/components/ui/Card";
 
 export default function TrustSignals() {
   const signals = [
     {
-      title: "Données sécurisées",
-      text: "Vos photos et informations sont cryptées et supprimées après votre déménagement.",
       icon: (
-        <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
         </svg>
       ),
+      text: "Données cryptées",
     },
     {
-      title: "Déménageurs vérifiés",
-      text: "Assurances contrôlées, avis clients analysés, 0 litige toléré.",
       icon: (
-        <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
         </svg>
       ),
+      text: "1 200+ déménagements",
     },
     {
-      title: "100% gratuit",
-      text: "Aucun frais caché, aucun engagement. Vous ne payez que le déménageur choisi.",
       icon: (
-        <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
         </svg>
       ),
+      text: "Note 4.9/5",
     },
     {
-      title: "Support dédié",
-      text: "Un problème ? Notre équipe intervient pour trouver une solution.",
       icon: (
-        <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
+      text: "Réponse 24h",
+    },
+    {
+      icon: (
+        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+      text: "100% gratuit",
     },
   ];
 
   return (
-    <section className="section section-light">
-      <div className="container max-w-5xl relative">
-        {/* Header with animation */}
-        <motion.div 
-          className="text-center mb-16 space-y-4"
-          initial={{ opacity: 0, y: 20 }}
+    <section className="section section-light border-y border-[#E3E5E8]">
+      <div className="container max-w-6xl">
+        <motion.div
+          className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4"
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
         >
-          <div className="flex justify-center">
-            <Chip tone="brand" className="px-4 py-1.5">
-              <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-teal)]" />
-              Confiance & sécurité
-            </Chip>
-          </div>
-          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl text-[#0F172A]">
-            Vos données sont protégées
-          </h2>
-        </motion.div>
-
-        {/* Grid with stagger animation */}
-        <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
           {signals.map((signal, i) => (
             <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              key={signal.text}
+              className="flex items-center gap-2 text-[#1E293B]/70"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: i * 0.08 }}
-              whileHover={{ y: -4, scale: 1.02 }}
-              className="group"
+              transition={{ duration: 0.3, delay: i * 0.05 }}
             >
-              <Card className="p-8 hover:border-[#6BCFCF]/50 hover:shadow-xl transition-all duration-300">
-                {/* Icon */}
-                <div className="flex items-center justify-center h-14 w-14 rounded-xl bg-[#F0FDFA] text-[#2B7A78] group-hover:bg-[#6BCFCF] group-hover:text-[#04141f] transition-all duration-300 mb-4">
-                  {signal.icon}
-                </div>
-                
-                {/* Content */}
-                <h3 className="text-lg font-semibold mb-3 text-[#0F172A]">
-                  {signal.title}
-                </h3>
-                <p className="text-sm text-[#6B7280] leading-relaxed">
-                  {signal.text}
-                </p>
-              </Card>
+              <div className="text-[#6BCFCF]">{signal.icon}</div>
+              <span className="text-sm font-medium">{signal.text}</span>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
