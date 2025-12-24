@@ -355,79 +355,146 @@ export default function PourquoiMoverzContent() {
 
       {/* Section 4: Vérification entreprises (différenciation majeure) */}
       <section className="section section-light border-t border-[#E3E5E8]">
-        <div className="container max-w-5xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
-              className="space-y-6"
-            >
-              <Chip tone="light">Exclusivité Moverz</Chip>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] leading-tight">
-                Ce qu&apos;aucun comparateur ne vous montre
-              </h2>
-              <p className="text-lg text-[#1E293B]/70">
-                Nous enrichissons chaque déménageur avec des données financières et juridiques. 
-                Vous savez exactement à qui vous avez affaire.
-              </p>
-              <ul className="space-y-4">
-                {[
-                  "Score Creditsafe (santé financière)",
-                  "Historique des litiges en cours",
-                  "Vérification SIREN / identité légale",
-                  "Évolution de la note dans le temps",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <div className="flex-shrink-0 mt-1">
-                      <svg className="h-5 w-5 text-[#6BCFCF]" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="text-[#1E293B]">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+        <div className="container max-w-6xl">
+          <motion.div
+            className="text-center space-y-4 mb-12"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.35 }}
+          >
+            <Chip tone="light" className="mx-auto">Exclusivité Moverz</Chip>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] leading-tight">
+              Ce qu&apos;aucun comparateur ne vous montre
+            </h2>
+            <p className="text-lg text-[#1E293B]/70 max-w-2xl mx-auto">
+              Nous analysons chaque déménageur avec des outils spécialisés.
+              Voici un exemple de comparaison réelle.
+            </p>
+          </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
-            >
-              <Card className="p-8 bg-[#0F172A] border-none">
-                <div className="space-y-6">
-                  <div className="flex items-center justify-between">
-                    <span className="text-white/60 text-sm">Déménageur A</span>
-                    <span className="text-[#6BCFCF] font-bold">Score: 82/100</span>
+          {/* Tableau comparatif 3 déménageurs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+            className="overflow-x-auto"
+          >
+            <div className="bg-[#0F172A] rounded-2xl p-6 md:p-8">
+              <table className="w-full text-left border-collapse min-w-[600px]">
+                <thead>
+                  <tr className="border-b border-white/20">
+                    <th className="py-4 px-4 text-white/60 font-medium text-sm">Critère</th>
+                    <th className="py-4 px-4 text-center">
+                      <div className="text-white font-semibold">Déménageur A</div>
+                      <div className="text-xs text-white/50">SIREN vérifié ✓</div>
+                    </th>
+                    <th className="py-4 px-4 text-center">
+                      <div className="text-white font-semibold">Déménageur B</div>
+                      <div className="text-xs text-white/50">SIREN vérifié ✓</div>
+                    </th>
+                    <th className="py-4 px-4 text-center">
+                      <div className="text-white font-semibold">Déménageur C</div>
+                      <div className="text-xs text-white/50">SIREN vérifié ✓</div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="text-sm">
+                  <tr className="border-b border-white/10">
+                    <td className="py-4 px-4 text-white/80 font-medium">Score Creditsafe</td>
+                    <td className="py-4 px-4 text-center">
+                      <span className="text-[#6BCFCF] font-bold text-lg">78/100</span>
+                    </td>
+                    <td className="py-4 px-4 text-center">
+                      <span className="text-orange-400 font-bold text-lg">52/100</span>
+                    </td>
+                    <td className="py-4 px-4 text-center">
+                      <span className="text-[#6BCFCF] font-bold text-lg">71/100</span>
+                    </td>
+                  </tr>
+                  <tr className="border-b border-white/10">
+                    <td className="py-4 px-4 text-white/80 font-medium">Score précédent</td>
+                    <td className="py-4 px-4 text-center">
+                      <span className="text-[#6BCFCF]">75 → 78</span>
+                      <span className="text-green-400 text-xs ml-1">↑</span>
+                    </td>
+                    <td className="py-4 px-4 text-center">
+                      <span className="text-orange-400">68 → 52</span>
+                      <span className="text-red-400 text-xs ml-1">↓</span>
+                    </td>
+                    <td className="py-4 px-4 text-center">
+                      <span className="text-white/70">71 → 71</span>
+                      <span className="text-white/50 text-xs ml-1">=</span>
+                    </td>
+                  </tr>
+                  <tr className="border-b border-white/10">
+                    <td className="py-4 px-4 text-white/80 font-medium">Litiges</td>
+                    <td className="py-4 px-4 text-center">
+                      <span className="text-[#6BCFCF]">0 litige</span>
+                    </td>
+                    <td className="py-4 px-4 text-center">
+                      <span className="text-white/70">0 litige</span>
+                    </td>
+                    <td className="py-4 px-4 text-center">
+                      <div className="text-red-400">1 litige clôturé</div>
+                      <div className="text-xs text-red-400/70">Condamné (2023)</div>
+                    </td>
+                  </tr>
+                  <tr className="border-b border-white/10">
+                    <td className="py-4 px-4 text-white/80 font-medium">Situation financière</td>
+                    <td className="py-4 px-4 text-center">
+                      <div className="text-[#6BCFCF]">Bénéficiaire</div>
+                      <div className="text-xs text-[#6BCFCF]/70">Depuis 3 exercices</div>
+                    </td>
+                    <td className="py-4 px-4 text-center">
+                      <div className="text-red-400">Pertes récentes</div>
+                      <div className="text-xs text-red-400/70">Dernier exercice</div>
+                    </td>
+                    <td className="py-4 px-4 text-center">
+                      <div className="text-[#6BCFCF]">Bénéficiaire</div>
+                      <div className="text-xs text-white/50">Depuis 2 exercices</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              {/* Recommandations */}
+              <div className="grid md:grid-cols-3 gap-4 mt-8 pt-6 border-t border-white/10">
+                <div className="bg-[#6BCFCF]/10 rounded-xl p-4 border border-[#6BCFCF]/30">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-[#6BCFCF] text-lg">✓</span>
+                    <span className="text-[#6BCFCF] font-semibold text-sm">Recommandé</span>
                   </div>
-                  <div className="space-y-3">
-                    <div className="flex justify-between text-sm">
-                      <span className="text-white/70">Santé financière</span>
-                      <span className="text-[#6BCFCF]">✓ Solide</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-white/70">Litiges en cours</span>
-                      <span className="text-[#6BCFCF]">0</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-white/70">SIREN vérifié</span>
-                      <span className="text-[#6BCFCF]">✓</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-white/70">Assurance RC Pro</span>
-                      <span className="text-[#6BCFCF]">✓ Valide</span>
-                    </div>
-                  </div>
-                  <div className="pt-4 border-t border-white/10">
-                    <div className="text-xs text-white/50">Données Creditsafe • Mise à jour mensuelle</div>
-                  </div>
+                  <p className="text-white/80 text-sm">
+                    <strong>Déménageur A</strong> : Score solide et en hausse, aucun litige, bénéficiaire depuis 3 ans. Le plus fiable.
+                  </p>
                 </div>
-              </Card>
-            </motion.div>
-          </div>
+                <div className="bg-orange-500/10 rounded-xl p-4 border border-orange-500/30">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-orange-400 text-lg">⚠</span>
+                    <span className="text-orange-400 font-semibold text-sm">Attention</span>
+                  </div>
+                  <p className="text-white/80 text-sm">
+                    <strong>Déménageur B</strong> : Score en chute, pertes récentes. Fragile. Négociez bien les conditions de paiement.
+                  </p>
+                </div>
+                <div className="bg-red-500/10 rounded-xl p-4 border border-red-500/30">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-red-400 text-lg">⚠</span>
+                    <span className="text-red-400 font-semibold text-sm">Vigilance</span>
+                  </div>
+                  <p className="text-white/80 text-sm">
+                    <strong>Déménageur C</strong> : Score correct mais litige avec condamnation récente. Vérifiez les avis clients.
+                  </p>
+                </div>
+              </div>
+
+              <div className="text-center mt-6">
+                <div className="text-xs text-white/50">Données Creditsafe • Mise à jour mensuelle • Exemple illustratif</div>
+              </div>
+            </div>
+          </motion.div>
 
           {/* Pourquoi personne d'autre ne le fait */}
           <motion.div
