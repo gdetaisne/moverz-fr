@@ -104,14 +104,14 @@ export default function PourquoiMoverzContent() {
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
           >
-            <Card className="p-8 bg-[#0F172A] border-none text-center">
+            <div className="p-8 bg-[#0F172A] rounded-2xl text-center">
               <p className="text-xl md:text-2xl text-white font-medium leading-relaxed">
                 &ldquo;Le devis le moins cher n&apos;est pas nécessairement le moins risqué.&rdquo;
               </p>
               <p className="text-white/60 mt-4 text-sm">
                 Sans vérification, impossible de distinguer une entreprise fiable d&apos;une autre.
               </p>
-            </Card>
+            </div>
           </motion.div>
         </div>
       </section>
