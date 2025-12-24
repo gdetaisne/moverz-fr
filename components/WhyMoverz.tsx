@@ -159,7 +159,7 @@ export default function WhyMoverz() {
 
         {/* Bottom trust line */}
         <motion.div
-          className="text-center mt-8"
+          className="text-center mt-8 space-y-3"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -168,6 +168,13 @@ export default function WhyMoverz() {
           <p className="text-sm text-[#1E293B]/70">
             <span className="font-semibold text-[#0F172A]">Bonus :</span> Vos photos restent privées, les déménageurs sont contrôlés (assurance + 0 litige), et votre numéro reste anonyme.
           </p>
+          <a
+            href="/pourquoi-moverz/"
+            className="inline-flex items-center gap-1 text-sm text-[#6BCFCF] font-medium hover:underline"
+          >
+            Découvrir comment Moverz vous protège
+            <span>→</span>
+          </a>
         </motion.div>
       </div>
     </section>

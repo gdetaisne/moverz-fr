@@ -27,7 +27,7 @@ const faqCategories = [
       },
       {
         q: "Quelle est la différence entre Moverz et les autres comparateurs ?",
-        a: "La plupart des comparateurs (45-50% du marché) se contentent de revendre vos coordonnées aux déménageurs. Moverz va beaucoup plus loin : nous créons un dossier standardisé via photos/vidéos WhatsApp, nous vérifions la santé financière de chaque entreprise (score Creditsafe), leur historique de litiges, et leur identité légale. Le prix ne fait pas tout : nous vous aidons à choisir un déménageur fiable, pas juste le moins cher.",
+        a: "La plupart des comparateurs (45-50% du marché) se contentent de revendre vos coordonnées aux déménageurs. Moverz va beaucoup plus loin : nous créons un dossier standardisé via photos/vidéos WhatsApp, nous vérifions la santé financière de chaque entreprise (score Creditsafe), leur historique de litiges, et leur identité légale. Le prix ne fait pas tout : nous vous aidons à choisir un déménageur fiable, pas juste le moins cher. En savoir plus sur <a href='/pourquoi-moverz/' class='underline text-[#6BCFCF]'>notre approche unique</a>.",
       },
       {
         q: "Combien de devis vais-je recevoir ?",
@@ -75,7 +75,7 @@ const faqCategories = [
       },
       {
         q: "Le marché du déménagement est-il risqué ?",
-        a: "Oui, malheureusement. Selon une enquête DGCCRF de 2023, 64% des entreprises de déménagement contrôlées présentaient au moins une anomalie. En 2024, 257 entreprises du secteur ont fait faillite sur environ 1 300 établissements. Et 90% des sociétés ont moins de 20 salariés, ce qui rend l'évaluation de leur fiabilité très difficile sans outils spécialisés.",
+        a: "Oui, malheureusement. Selon une enquête DGCCRF de 2023, 64% des entreprises de déménagement contrôlées présentaient au moins une anomalie. En 2024, 257 entreprises du secteur ont fait faillite sur environ 1 300 établissements. Et 90% des sociétés ont moins de 20 salariés, ce qui rend l'évaluation de leur fiabilité très difficile sans outils spécialisés. Consultez notre guide complet : <a href='/blog/eviter-arnaques-demenagement/' class='underline text-[#6BCFCF]'>Comment éviter les arnaques au déménagement</a>.",
       },
       {
         q: "Comment Moverz vérifie-t-il les déménageurs ?",

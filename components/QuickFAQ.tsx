@@ -76,12 +76,20 @@ export default function QuickFAQ() {
           ))}
         </div>
 
-        {/* Link to full FAQ */}
-        <div className="text-center mt-10">
+        {/* Links */}
+        <div className="text-center mt-10 space-y-3">
           <Button href="/faq/" variant="ghost" size="sm" className="px-4 py-2.5">
             <span>Voir toutes les questions</span>
             <span>→</span>
           </Button>
+          <div>
+            <a
+              href="/blog/eviter-arnaques-demenagement/"
+              className="text-sm text-white/60 hover:text-white transition-colors"
+            >
+              Guide : Comment éviter les arnaques au déménagement
+            </a>
+          </div>
         </div>
       </div>
     </section>

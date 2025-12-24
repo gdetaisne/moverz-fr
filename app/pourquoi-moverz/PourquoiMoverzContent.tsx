@@ -131,6 +131,12 @@ export default function PourquoiMoverzContent() {
               <p className="text-white/60 mt-6 text-sm font-medium">
                 Transparence maximale. Vous savez exactement à qui vous avez affaire.
               </p>
+              <a
+                href="/blog/eviter-arnaques-demenagement/"
+                className="inline-block mt-4 text-[#6BCFCF] text-sm underline hover:text-white transition-colors"
+              >
+                → Lire notre guide complet sur les arnaques au déménagement
+              </a>
             </div>
           </motion.div>
         </div>

@@ -204,6 +204,7 @@ export default function RootLayout({
                 <ul className="space-y-2 text-sm">
                   <li><a href="/pourquoi-moverz/" className="text-white/70 hover:text-white transition-colors">Pourquoi Moverz</a></li>
                   <li><a href="/comment-ca-marche/" className="text-white/70 hover:text-white transition-colors">Comment ça marche</a></li>
+                  <li><a href="/blog/eviter-arnaques-demenagement/" className="text-white/70 hover:text-white transition-colors">Éviter les arnaques</a></li>
                   <li><a href="/blog/" className="text-white/70 hover:text-white transition-colors">Blog déménagement</a></li>
                   <li><a href="/villes/" className="text-white/70 hover:text-white transition-colors">Nos villes</a></li>
                   <li><a href="/pro/" className="text-white/70 hover:text-white transition-colors">Offre Pro</a></li>

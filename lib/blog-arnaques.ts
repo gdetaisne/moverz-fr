@@ -203,7 +203,7 @@ Les professionnels (banques, assureurs, grands comptes) utilisent des outils sp�
 
 ## Pourquoi les comparateurs classiques ne vous protègent pas
 
-**Mauvaise nouvelle** : la plupart des comparateurs ne comparent rien.
+**Mauvaise nouvelle** : la plupart des comparateurs ne comparent rien. Pour comprendre en détail notre approche différente, consultez notre page [Pourquoi Moverz](/pourquoi-moverz/).
 
 ### Le modèle "Lead-gen" (45-50% du marché)
 
@@ -286,6 +286,8 @@ Pour chaque déménageur, vous voyez :
 ---
 
 ## FAQ : vos questions sur les arnaques au déménagement
+
+Pour plus de questions sur le déménagement, consultez notre [FAQ complète](/faq/).
 
 ### Comment savoir si un déménageur est fiable ?
 
