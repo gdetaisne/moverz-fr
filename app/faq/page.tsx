@@ -23,7 +23,11 @@ const faqCategories = [
     items: [
       {
         q: "Qu'est-ce que Moverz ?",
-        a: "Moverz est un comparateur de devis de déménageurs qui s’appuie sur l’IA pour préparer un dossier ultra précis à partir de quelques questions et de vos photos. L’IA Moverz estime la volumétrie de votre déménagement et structure un inventaire unique, envoyé à des déménageurs contrôlés. Résultat : des devis enfin comparables, 100% gratuits et sans harcèlement téléphonique.",
+        a: "Moverz est un comparateur de devis de déménageurs qui s'appuie sur l'IA pour préparer un dossier ultra précis à partir de quelques questions et de vos photos. L'IA Moverz estime la volumétrie de votre déménagement et structure un inventaire unique, envoyé à des déménageurs contrôlés. Résultat : des devis enfin comparables, 100% gratuits et sans harcèlement téléphonique.",
+      },
+      {
+        q: "Quelle est la différence entre Moverz et les autres comparateurs ?",
+        a: "La plupart des comparateurs (45-50% du marché) se contentent de revendre vos coordonnées aux déménageurs. Moverz va beaucoup plus loin : nous créons un dossier standardisé via photos/vidéos WhatsApp, nous vérifions la santé financière de chaque entreprise (score Creditsafe), leur historique de litiges, et leur identité légale. Le prix ne fait pas tout : nous vous aidons à choisir un déménageur fiable, pas juste le moins cher.",
       },
       {
         q: "Combien de devis vais-je recevoir ?",
@@ -70,8 +74,16 @@ const faqCategories = [
         a: "Absolument pas. Votre dossier reste anonyme. Les déménageurs reçoivent votre demande et vous envoient leurs devis par email via notre plateforme. Vous décidez vous-même qui vous souhaitez contacter et quand, sans aucune pression ni appel intempestif.",
       },
       {
+        q: "Le marché du déménagement est-il risqué ?",
+        a: "Oui, malheureusement. Selon une enquête DGCCRF de 2023, 64% des entreprises de déménagement contrôlées présentaient au moins une anomalie. En 2024, 257 entreprises du secteur ont fait faillite sur environ 1 300 établissements. Et 90% des sociétés ont moins de 20 salariés, ce qui rend l'évaluation de leur fiabilité très difficile sans outils spécialisés.",
+      },
+      {
+        q: "Comment Moverz vérifie-t-il les déménageurs ?",
+        a: "Nous utilisons des outils professionnels (Creditsafe) pour analyser chaque entreprise : score de solvabilité sur 100, évolution de ce score dans le temps, historique des litiges et condamnations, situation financière (bénéficiaire ou en pertes), et vérification de l'identité légale (SIREN, assurances). Cette analyse, normalement réservée aux professionnels B2B, est mise à votre disposition pour vous aider à choisir en toute transparence.",
+      },
+      {
         q: "Les déménageurs sont-ils fiables ?",
-        a: "Oui, nous sélectionnons rigoureusement nos déménageurs partenaires. Nous vérifions leur solvabilité, leurs assurances, et analysons leur historique de litiges et leurs avis clients. Seuls les professionnels fiables et de confiance sont intégrés à notre réseau.",
+        a: "Les déménageurs partenaires Moverz sont rigoureusement sélectionnés. Nous vérifions leur score Creditsafe (santé financière), leur historique de litiges, leurs assurances RC Pro, et leur identité légale. Seuls les professionnels avec un profil financier solide et sans litiges problématiques sont intégrés à notre réseau. Vous recevez ces informations pour chaque devis.",
       }
     ]
   },
