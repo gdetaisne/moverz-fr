@@ -24,6 +24,98 @@ export default function PourquoiMoverzContent() {
         secondaryCta={{ label: "Voir comment ça marche", href: "/comment-ca-marche/" }}
       />
 
+      {/* Section 0: Les chiffres qui font réfléchir */}
+      <section className="section section-light border-b border-[#E3E5E8]">
+        <div className="container max-w-5xl">
+          <motion.div
+            className="text-center space-y-4 mb-12"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.35 }}
+          >
+            <Chip tone="light" className="mx-auto">
+              Les chiffres du secteur
+            </Chip>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] leading-tight">
+              Un marché à risque
+            </h2>
+            <p className="text-lg text-[#1E293B]/70 max-w-2xl mx-auto">
+              Le déménagement est l&apos;un des secteurs les plus problématiques pour les consommateurs.
+              Voici pourquoi.
+            </p>
+          </motion.div>
+
+          {/* Stats grid */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {[
+              {
+                stat: "64%",
+                label: "d'anomalies détectées",
+                desc: "Enquête DGCCRF 2023 : 64% des entreprises contrôlées présentaient au moins une anomalie.",
+                source: "DGCCRF, 2023",
+                color: "text-red-500",
+              },
+              {
+                stat: "257",
+                label: "faillites en 2024",
+                desc: "Sur ~1 300 établissements. Comment savoir si votre déménageur sera encore là le jour J ?",
+                source: "CSD, 2024",
+                color: "text-orange-500",
+              },
+              {
+                stat: "90%",
+                label: "de petites structures",
+                desc: "Moins de 20 salariés, souvent sans garantie réseau. Difficile d'évaluer leur fiabilité.",
+                source: "Étude marché",
+                color: "text-[#0F172A]",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+              >
+                <Card className="h-full p-8 text-center">
+                  <div className={`text-5xl md:text-6xl font-bold ${item.color} mb-2`}>
+                    {item.stat}
+                  </div>
+                  <div className="text-lg font-semibold text-[#0F172A] mb-3">
+                    {item.label}
+                  </div>
+                  <p className="text-sm text-[#1E293B]/70 mb-4">
+                    {item.desc}
+                  </p>
+                  <div className="text-xs text-[#1E293B]/50 border-t border-[#E3E5E8] pt-3">
+                    Source : {item.source}
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Citation clé */}
+          <motion.div
+            className="max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+          >
+            <Card className="p-8 bg-[#0F172A] border-none text-center">
+              <p className="text-xl md:text-2xl text-white font-medium leading-relaxed">
+                &ldquo;Le devis le moins cher n&apos;est pas nécessairement le moins risqué.&rdquo;
+              </p>
+              <p className="text-white/60 mt-4 text-sm">
+                Sans vérification, impossible de distinguer une entreprise fiable d&apos;une autre.
+              </p>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Section 1: Le problème */}
       <section className="section section-light">
         <div className="container max-w-5xl">
