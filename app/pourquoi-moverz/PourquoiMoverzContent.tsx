@@ -367,6 +367,9 @@ export default function PourquoiMoverzContent() {
             <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] leading-tight">
               Ce qu&apos;aucun comparateur ne vous montre
             </h2>
+            <p className="text-xl text-[#0F172A] font-medium mb-2">
+              Le prix ne fait pas tout.
+            </p>
             <p className="text-lg text-[#1E293B]/70 max-w-2xl mx-auto">
               Nous analysons chaque déménageur avec des outils spécialisés.
               Voici un exemple de comparaison réelle.
