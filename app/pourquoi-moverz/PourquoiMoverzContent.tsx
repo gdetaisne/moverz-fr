@@ -96,7 +96,7 @@ export default function PourquoiMoverzContent() {
             ))}
           </div>
 
-          {/* Citation clé */}
+          {/* Citation clé + protection Moverz */}
           <motion.div
             className="max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 12 }}
@@ -105,11 +105,31 @@ export default function PourquoiMoverzContent() {
             transition={{ duration: 0.4 }}
           >
             <div className="p-8 bg-[#0F172A] rounded-2xl text-center">
+              <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/20 px-4 py-1.5 text-sm font-semibold text-[#6BCFCF] mb-6">
+                <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                Moverz vous protège
+              </div>
               <p className="text-xl md:text-2xl text-white font-medium leading-relaxed">
-                &ldquo;Le devis le moins cher n&apos;est pas nécessairement le moins risqué.&rdquo;
+                Nous analysons chaque entreprise avec des outils spécialisés.
               </p>
-              <p className="text-white/60 mt-4 text-sm">
-                Sans vérification, impossible de distinguer une entreprise fiable d&apos;une autre.
+              <div className="flex flex-wrap justify-center gap-4 mt-6">
+                <div className="flex items-center gap-2 text-white/80 text-sm">
+                  <span className="text-[#6BCFCF]">✓</span>
+                  <span>Historique des litiges</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80 text-sm">
+                  <span className="text-[#6BCFCF]">✓</span>
+                  <span>Situation financière</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80 text-sm">
+                  <span className="text-[#6BCFCF]">✓</span>
+                  <span>Évolution dans le temps</span>
+                </div>
+              </div>
+              <p className="text-white/60 mt-6 text-sm font-medium">
+                Transparence maximale. Vous savez exactement à qui vous avez affaire.
               </p>
             </div>
           </motion.div>
