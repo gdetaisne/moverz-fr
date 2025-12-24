@@ -12,6 +12,7 @@ export interface BlogPostMeta {
 import { BLOG_DATA } from "./blog-data";
 import { BLOG_EXTRA } from "./blog-extra";
 import { CANONICAL_BLOG_POSTS, type CanonicalBlogPost } from "./blog-canonique";
+import { ARNAQUES_ARTICLE } from "./blog-arnaques";
 
 // P1-SEO-PRIX-TOP20 : 20 articles Prix à mettre en avant en priorité
 const PRIORITY_SLUGS: string[] = [
@@ -121,7 +122,7 @@ function sanitizePost(post: BlogPostMeta): BlogPostMeta {
 const RAW_BLOG_POSTS: BlogPostMeta[] = mergeBlogData(
   BLOG_DATA,
   BLOG_EXTRA,
-  CANONICAL_BLOG_POSTS
+  [ARNAQUES_ARTICLE, ...CANONICAL_BLOG_POSTS]
 )
   .map(sanitizePost)
   .filter((post) => {
@@ -139,7 +140,8 @@ const RAW_BLOG_POSTS: BlogPostMeta[] = mergeBlogData(
 export const BLOG_POSTS: BlogPostMeta[] = sortByPriority(RAW_BLOG_POSTS);
 
 // Ensemble des slugs ayant un contenu canonique (contenu réellement publié)
-const CANONICAL_SLUG_SET = new Set(CANONICAL_BLOG_POSTS.map((p) => p.slug));
+const ALL_CANONICAL_POSTS = [ARNAQUES_ARTICLE, ...CANONICAL_BLOG_POSTS];
+const CANONICAL_SLUG_SET = new Set(ALL_CANONICAL_POSTS.map((p) => p.slug));
 
 // Liste des articles réellement publiés (évite d'exposer des placeholders "en cours de réécriture")
 export const PUBLISHED_BLOG_POSTS: BlogPostMeta[] = BLOG_POSTS.filter((post) =>
@@ -156,7 +158,7 @@ export function getPublishedPostBySlug(slug: string): BlogPostMeta | undefined {
 
 // Récupérer le body markdown canonique pour un slug donné (si disponible)
 export function getCanonicalBodyBySlug(slug: string): string | undefined {
-  const canonical = CANONICAL_BLOG_POSTS.find((post) => post.slug === slug);
+  const canonical = ALL_CANONICAL_POSTS.find((post) => post.slug === slug);
   return canonical?.body;
 }
 
