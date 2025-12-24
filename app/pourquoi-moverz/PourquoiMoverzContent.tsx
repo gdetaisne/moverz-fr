@@ -24,7 +24,7 @@ export default function PourquoiMoverzContent() {
         secondaryCta={{ label: "Voir comment ça marche", href: "/comment-ca-marche/" }}
       />
 
-      {/* Section 0: Les chiffres qui font réfléchir */}
+      {/* Section 1: Un marché à risque */}
       <section className="section section-light border-b border-[#E3E5E8]">
         <div className="container max-w-5xl">
           <motion.div
@@ -96,7 +96,7 @@ export default function PourquoiMoverzContent() {
             ))}
           </div>
 
-          {/* Citation clé + protection Moverz */}
+          {/* Protection Moverz */}
           <motion.div
             className="max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 12 }}
@@ -136,225 +136,8 @@ export default function PourquoiMoverzContent() {
         </div>
       </section>
 
-      {/* Section 1: Le problème */}
-      <section className="section section-light">
-        <div className="container max-w-5xl">
-          <motion.div
-            className="text-center space-y-4 mb-16"
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.35 }}
-          >
-            <Chip tone="light" className="mx-auto">
-              Le constat
-            </Chip>
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] leading-tight">
-              Le vrai problème des comparateurs
-            </h2>
-            <p className="text-lg text-[#1E293B]/70 max-w-2xl mx-auto">
-              Sur les 20–30 premiers résultats Google, la plupart des comparateurs ne comparent rien.<br />
-              Ils revendent vos coordonnées.
-            </p>
-          </motion.div>
-
-          {/* Grid des problèmes */}
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
-            {[
-              {
-                icon: "📝",
-                title: "Lead-gen (45-50%)",
-                desc: "Formulaire → vos données vendues aux déménageurs. Aucune comparaison réelle.",
-              },
-              {
-                icon: "📹",
-                title: "Courtiers visio (25-30%)",
-                desc: "Rendez-vous obligatoire, délais longs, friction élevée. Difficile à scaler.",
-              },
-              {
-                icon: "🏢",
-                title: "Réseaux fermés (15-20%)",
-                desc: "Comparaison limitée à leurs membres. Pas neutre par définition.",
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.1 }}
-              >
-                <Card className="h-full p-6">
-                  <div className="text-3xl mb-4">{item.icon}</div>
-                  <h3 className="text-lg font-bold text-[#0F172A] mb-2">{item.title}</h3>
-                  <p className="text-sm text-[#1E293B]/70">{item.desc}</p>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Point clé */}
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4 }}
-          >
-            <p className="text-lg text-[#0F172A] font-medium">
-              👉 Conséquence : le devis le moins cher n&apos;est pas nécessairement le moins risqué.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 2: Tableau comparatif */}
-      <section className="section section-contrast">
-        <div className="container max-w-5xl">
-          <motion.div
-            className="text-center space-y-4 mb-12"
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.35 }}
-          >
-            <Chip tone="dark" className="mx-auto">
-              Comparaison
-            </Chip>
-            <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
-              Moverz vs les autres
-            </h2>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4 }}
-            className="overflow-x-auto"
-          >
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr className="border-b border-white/20">
-                  <th className="py-4 px-4 text-white/60 font-medium text-sm"></th>
-                  <th className="py-4 px-4 text-white/60 font-medium text-sm">Comparateurs classiques</th>
-                  <th className="py-4 px-4 text-[#6BCFCF] font-semibold text-sm">Moverz</th>
-                </tr>
-              </thead>
-              <tbody className="text-sm">
-                {[
-                  { label: "Base de comparaison", classic: "Formulaire déclaratif", moverz: "Photos + vidéo + voice" },
-                  { label: "Canal", classic: "Email / formulaire web", moverz: "WhatsApp (asynchrone)" },
-                  { label: "Standardisation", classic: "Faible", moverz: "Dossier unique pour tous" },
-                  { label: "Vérification entreprises", classic: false, moverz: true },
-                  { label: "Données financières", classic: false, moverz: true },
-                  { label: "Litiges visibles", classic: false, moverz: true },
-                  { label: "Aide au choix", classic: "Limitée (prix)", moverz: "Fiabilité + prix" },
-                ].map((row, i) => (
-                  <tr key={i} className="border-b border-white/10">
-                    <td className="py-4 px-4 text-white/80 font-medium">{row.label}</td>
-                    <td className="py-4 px-4 text-white/60">
-                      {typeof row.classic === "boolean" ? (
-                        row.classic ? (
-                          <span className="text-[#6BCFCF]">✓</span>
-                        ) : (
-                          <span className="text-red-400">✕</span>
-                        )
-                      ) : (
-                        row.classic
-                      )}
-                    </td>
-                    <td className="py-4 px-4 text-white font-medium">
-                      {typeof row.moverz === "boolean" ? (
-                        row.moverz ? (
-                          <span className="text-[#6BCFCF]">✓</span>
-                        ) : (
-                          <span className="text-red-400">✕</span>
-                        )
-                      ) : (
-                        row.moverz
-                      )}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 3: Ce qui change avec Moverz */}
-      <section className="section section-light">
-        <div className="container max-w-5xl">
-          <motion.div
-            className="text-center space-y-4 mb-16"
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.35 }}
-          >
-            <Chip tone="light" className="mx-auto">
-              Notre approche
-            </Chip>
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] leading-tight">
-              Ce qui change avec Moverz
-            </h2>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: (
-                  <svg className="h-8 w-8 text-[#6BCFCF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                  </svg>
-                ),
-                title: "WhatsApp, pas de formulaire",
-                desc: "Envoyez photos, vidéos et voice notes en 3 minutes. Pas de rendez-vous, pas de friction.",
-              },
-              {
-                icon: (
-                  <svg className="h-8 w-8 text-[#6BCFCF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                ),
-                title: "Dossier standardisé",
-                desc: "Un inventaire structuré, une estimation cohérente. Tous les déménageurs répondent sur la même base.",
-              },
-              {
-                icon: (
-                  <svg className="h-8 w-8 text-[#6BCFCF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                ),
-                title: "Entreprises vérifiées",
-                desc: "Score financier, litiges, identité légale. Vous voyez ce qu'aucun comparateur ne montre.",
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.1 }}
-              >
-                <Card className="h-full p-8 text-center">
-                  <div className="flex justify-center mb-6">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#6BCFCF]/10">
-                      {item.icon}
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold text-[#0F172A] mb-3">{item.title}</h3>
-                  <p className="text-[#1E293B]/70">{item.desc}</p>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Section 4: Vérification entreprises (différenciation majeure) */}
-      <section className="section section-light border-t border-[#E3E5E8]">
+      {/* Section 2: Ce qu'aucun comparateur ne vous montre */}
+      <section className="section section-light border-b border-[#E3E5E8]">
         <div className="container max-w-6xl">
           <motion.div
             className="text-center space-y-4 mb-12"
@@ -516,6 +299,153 @@ export default function PourquoiMoverzContent() {
         </div>
       </section>
 
+      {/* Section 3: Le vrai problème des comparateurs */}
+      <section className="section section-light">
+        <div className="container max-w-5xl">
+          <motion.div
+            className="text-center space-y-4 mb-16"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.35 }}
+          >
+            <Chip tone="light" className="mx-auto">
+              Le constat
+            </Chip>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] leading-tight">
+              Le vrai problème des comparateurs
+            </h2>
+            <p className="text-lg text-[#1E293B]/70 max-w-2xl mx-auto">
+              Sur les 20–30 premiers résultats Google, la plupart des comparateurs ne comparent rien.<br />
+              Ils revendent vos coordonnées.
+            </p>
+          </motion.div>
+
+          {/* Grid des problèmes */}
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
+            {[
+              {
+                icon: "📝",
+                title: "Lead-gen (45-50%)",
+                desc: "Formulaire → vos données vendues aux déménageurs. Aucune comparaison réelle.",
+              },
+              {
+                icon: "📹",
+                title: "Courtiers visio (25-30%)",
+                desc: "Rendez-vous obligatoire, délais longs, friction élevée. Difficile à scaler.",
+              },
+              {
+                icon: "🏢",
+                title: "Réseaux fermés (15-20%)",
+                desc: "Comparaison limitée à leurs membres. Pas neutre par définition.",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+              >
+                <Card className="h-full p-6">
+                  <div className="text-3xl mb-4">{item.icon}</div>
+                  <h3 className="text-lg font-bold text-[#0F172A] mb-2">{item.title}</h3>
+                  <p className="text-sm text-[#1E293B]/70">{item.desc}</p>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Point clé */}
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+          >
+            <p className="text-lg text-[#0F172A] font-medium">
+              👉 Conséquence : le devis le moins cher n&apos;est pas nécessairement le moins risqué.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section 4: Moverz vs les autres */}
+      <section className="section section-contrast">
+        <div className="container max-w-5xl">
+          <motion.div
+            className="text-center space-y-4 mb-12"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.35 }}
+          >
+            <Chip tone="dark" className="mx-auto">
+              Comparaison
+            </Chip>
+            <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
+              Moverz vs les autres
+            </h2>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+            className="overflow-x-auto"
+          >
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="border-b border-white/20">
+                  <th className="py-4 px-4 text-white/60 font-medium text-sm"></th>
+                  <th className="py-4 px-4 text-white/60 font-medium text-sm">Comparateurs classiques</th>
+                  <th className="py-4 px-4 text-[#6BCFCF] font-semibold text-sm">Moverz</th>
+                </tr>
+              </thead>
+              <tbody className="text-sm">
+                {[
+                  { label: "Base de comparaison", classic: "Formulaire déclaratif", moverz: "Photos + vidéo + voice" },
+                  { label: "Canal", classic: "Email / formulaire web", moverz: "WhatsApp (asynchrone)" },
+                  { label: "Standardisation", classic: "Faible", moverz: "Dossier unique pour tous" },
+                  { label: "Vérification entreprises", classic: false, moverz: true },
+                  { label: "Données financières", classic: false, moverz: true },
+                  { label: "Litiges visibles", classic: false, moverz: true },
+                  { label: "Aide au choix", classic: "Limitée (prix)", moverz: "Fiabilité + prix" },
+                ].map((row, i) => (
+                  <tr key={i} className="border-b border-white/10">
+                    <td className="py-4 px-4 text-white/80 font-medium">{row.label}</td>
+                    <td className="py-4 px-4 text-white/60">
+                      {typeof row.classic === "boolean" ? (
+                        row.classic ? (
+                          <span className="text-[#6BCFCF]">✓</span>
+                        ) : (
+                          <span className="text-red-400">✕</span>
+                        )
+                      ) : (
+                        row.classic
+                      )}
+                    </td>
+                    <td className="py-4 px-4 text-white font-medium">
+                      {typeof row.moverz === "boolean" ? (
+                        row.moverz ? (
+                          <span className="text-[#6BCFCF]">✓</span>
+                        ) : (
+                          <span className="text-red-400">✕</span>
+                        )
+                      ) : (
+                        row.moverz
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Section 5: Lien Moverz / GSLV EURL */}
       <section className="section section-light border-t border-[#E3E5E8]">
         <div className="container max-w-3xl text-center">
@@ -566,4 +496,3 @@ export default function PourquoiMoverzContent() {
     </main>
   );
 }
-
