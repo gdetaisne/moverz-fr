@@ -27,7 +27,7 @@ Je vais envoyer 6 photos (recommandé) :
  * Generate WhatsApp web link (desktop + mobile web)
  */
 export function generateWhatsAppLink(
-  phoneNumber: string = "33699999999", // TODO: Replace with real WhatsApp Business number
+  phoneNumber: string = "33752986581",
   source: string = "home"
 ): string {
   const message = generateWhatsAppMessage(source);
@@ -39,7 +39,7 @@ export function generateWhatsAppLink(
  * Generate WhatsApp deep link (mobile app)
  */
 export function generateWhatsAppDeepLink(
-  phoneNumber: string = "33699999999",
+  phoneNumber: string = "33752986581",
   source: string = "home"
 ): string {
   const message = generateWhatsAppMessage(source);
@@ -51,7 +51,6 @@ export function generateWhatsAppDeepLink(
  * Get WhatsApp Business phone number from env (with fallback)
  */
 export function getWhatsAppNumber(): string {
-  // TODO: Add to .env: NEXT_PUBLIC_WHATSAPP_NUMBER
-  return process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "33699999999";
+  return process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "33752986581";
 }
 
