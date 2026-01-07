@@ -106,7 +106,7 @@ export function CityServicePage({
                 href={`https://devis.moverz.fr/?city_slug=${citySlug}&source=moverz.fr&from=${encodeURIComponent(fromPath)}`}
                 className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#F3F4F6] transition-colors"
               >
-                <span>Obtenir 5+ devis</span>
+                <span>Obtenir 3 à 5 devis</span>
                 <span className="text-lg leading-none">→</span>
               </a>
             </div>
@@ -172,7 +172,7 @@ export function CityServicePage({
                 href={`https://devis.moverz.fr/?city_slug=${citySlug}&source=moverz.fr&from=${encodeURIComponent(fromPath)}`}
                 className="inline-flex items-center justify-center rounded-full border border-[#6BCFCF] bg-[#6BCFCF] px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[#2B7A78] hover:border-[#2B7A78]"
               >
-                Comparer 5+ devis (gratuit)
+                Comparer 3 à 5 devis (gratuit)
               </a>
               <p className="mt-2 text-xs text-[#6B7280]">Sans spam · Sans engagement</p>
             </div>
@@ -206,7 +206,7 @@ export function CityServicePage({
       {/* CTA widget */}
       <WidgetActionSection
         eyebrow={eyebrow}
-        title={`Comparez 5+ devis à ${cityName}`}
+        title={`Comparez 3 à 5 devis à ${cityName}`}
         subtitle="Un seul dossier, des devis standardisés. L’IA fiabilise le volume pour des tarifs comparables, sans spam."
         source="moverz.fr"
         from={fromPath}

@@ -5,7 +5,7 @@ export const metadata = generateCityServiceMetadata({
   serviceSlug: "garde-meuble",
   title: "Garde-meuble à Lyon : box, stockage, tarifs & devis | Moverz",
   description:
-    "Garde-meuble à Lyon : comparer box/self-stockage et solutions avec déménageur. Tailles, sécurité, assurance, conseils + 5+ devis via Moverz.",
+    "Garde-meuble à Lyon : comparer box/self-stockage et solutions avec déménageur. Tailles, sécurité, assurance, conseils + 3 à 5 devis via Moverz.",
 });
 
 export default function Page() {

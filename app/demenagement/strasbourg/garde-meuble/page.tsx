@@ -5,7 +5,7 @@ export const metadata = generateCityServiceMetadata({
   serviceSlug: "garde-meuble",
   title: "Garde-meuble à Strasbourg : box, stockage, tarifs & devis | Moverz",
   description:
-    "Garde-meuble à Strasbourg : comparer box/self-stockage et solutions avec déménageur. Tailles, sécurité, assurance, conseils + 5+ devis via Moverz.",
+    "Garde-meuble à Strasbourg : comparer box/self-stockage et solutions avec déménageur. Tailles, sécurité, assurance, conseils + 3 à 5 devis via Moverz.",
 });
 
 export default function Page() {

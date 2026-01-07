@@ -129,7 +129,7 @@ export default function PhotoDropWidget({
             <span className="relative">
               {isRedirecting
                 ? "Redirection en cours..."
-                : "Continuer et comparer 5+ devis"}
+                : "Continuer et comparer 3 à 5 devis"}
             </span>
             <span className="relative text-lg leading-none group-hover:translate-x-1 transition-transform duration-300">
               →

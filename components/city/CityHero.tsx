@@ -33,7 +33,7 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
             className="text-4xl md:text-6xl font-bold leading-tight text-[#0F172A]"
           >
             Déménager à {city.nameCapitalized} ?<br />
-            <span className="text-[#0F172A]">3 min, 5+ devis.</span>
+            <span className="text-[#0F172A]">3 min, 3 à 5 devis.</span>
           </motion.h1>
 
           {/* Subtitle */}

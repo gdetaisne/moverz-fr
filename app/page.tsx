@@ -11,15 +11,15 @@ import FinalCTA from "@/components/FinalCTA";
 import WhyMoverz from "@/components/WhyMoverz";
 
 export const metadata: Metadata = {
-  title: "Déménagement : Comparez 5+ Devis en 3 Min (0€, 0 Spam) | Moverz",
+  title: "Déménagement : Comparez 3 à 5 devis en 3 min (0€, 0 spam) | Moverz",
   description:
-    "✓ 5+ devis comparables ✓ Pros contrôlés (assurances + 0 litige) ✓ Dossier anonyme ✓ 100% gratuit · 2847 clients · Note 4.8/5 → Comparez maintenant",
+    "✓ 3 à 5 devis comparables ✓ Pros contrôlés (assurances + 0 litige) ✓ Dossier anonyme ✓ 100% gratuit · 2847 clients · Note 4.8/5 → Comparez maintenant",
   alternates: {
     canonical: 'https://moverz.fr/',
   },
   openGraph: {
-    title: "Déménagement : Comparez 5+ Devis de Pros Contrôlés | Moverz",
-    description: "Note 4.8/5 · 2847 clients · Comparez 5+ devis de déménageurs contrôlés · 100% gratuit · 0 spam · Dossier anonyme",
+    title: "Déménagement : Comparez 3 à 5 devis de pros contrôlés | Moverz",
+    description: "Note 4.8/5 · 2847 clients · Comparez 3 à 5 devis de déménageurs contrôlés · 100% gratuit · 0 spam · Dossier anonyme",
     url: 'https://moverz.fr/',
     siteName: 'Moverz',
     images: [{ url: '/logo.png', width: 1200, height: 630 }],

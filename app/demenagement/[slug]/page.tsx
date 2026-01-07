@@ -200,7 +200,7 @@ export default function CityMovingPage({ params }: PageProps) {
       {/* Widget devis (conversion + SEO) */}
       <WidgetActionSection
         eyebrow="Comparez maintenant"
-        title={`5+ devis à ${city.nameCapitalized}, sans spam`}
+        title={`3 à 5 devis à ${city.nameCapitalized}, sans spam`}
         subtitle="Démarrez votre dossier en quelques minutes. L’IA aide à fiabiliser le volume pour des devis comparables."
         source="moverz.fr"
         from={`/demenagement/${city.slug}/`}

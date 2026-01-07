@@ -348,7 +348,7 @@ export function CorridorPage({
           </h2>
 
           <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
-            Créez votre dossier en 3 minutes et recevez 5+ devis de déménageurs contrôlés.
+            Créez votre dossier en 3 minutes et recevez 3 à 5 devis de déménageurs contrôlés.
           </p>
 
           <div className="pt-4">

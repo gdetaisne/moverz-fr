@@ -55,7 +55,7 @@ export function CityLocalInsights({ citySlug, cityName, quoteUrl }: CityLocalIns
               href={quoteUrl}
               className="inline-flex items-center justify-center rounded-full border border-[#6BCFCF] bg-[#6BCFCF] px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[#2B7A78] hover:border-[#2B7A78]"
             >
-              Obtenir 5+ devis (gratuit)
+              Obtenir 3 à 5 devis (gratuit)
             </a>
             <p className="mt-2 text-xs text-[#6B7280]">Sans spam · Sans engagement · Dossier en 3 minutes</p>
           </div>

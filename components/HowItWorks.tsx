@@ -56,7 +56,7 @@ export default function HowItWorks() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
         </svg>
       ),
-      title: "Vous comparez 5+ devis",
+      title: "Vous comparez 3 à 5 devis",
       description: "Même info pour tous les déménageurs : des devis enfin comparables, sans appels forcés.",
     }
   ];
@@ -126,9 +126,9 @@ export default function HowItWorks() {
         <a
           href="https://devis.moverz.fr/?source=moverz.fr&from=/comment-ca-marche"
           className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
-          aria-label="Recevez 5+ devis fiables gratuitement"
+          aria-label="Recevez 3 à 5 devis fiables gratuitement"
         >
-          <span>Comparez 5+ devis gratuitement</span>
+          <span>Comparez 3 à 5 devis gratuitement</span>
           <span className="text-xl leading-none">→</span>
         </a>
       </div>

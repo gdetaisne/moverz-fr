@@ -138,7 +138,7 @@ export default function FAQPage() {
         title="Questions fréquentes"
         subtitle="Découvrez comment l’IA Moverz estime votre volume, standardise votre dossier et vous aide à comparer des devis vraiment comparables, sans spam."
         primaryCta={{
-          label: "Comparer 5+ devis gratuitement",
+          label: "Comparer 3 à 5 devis gratuitement",
           href: "https://devis.moverz.fr/?source=moverz.fr&from=/faq/",
         }}
         secondaryCta={{ label: "Comment ça marche", href: "/comment-ca-marche/" }}
@@ -248,7 +248,7 @@ export default function FAQPage() {
       </section>
 
       <WidgetActionSection
-        title="Comparez 5+ devis maintenant"
+        title="Comparez 3 à 5 devis maintenant"
         subtitle="Décrivez votre déménagement en quelques minutes. L’IA fiabilise le volume pour des devis vraiment comparables, sans spam."
         source="moverz.fr"
         from="/faq/"
@@ -264,7 +264,7 @@ export default function FAQPage() {
             <span>Prêt à démarrer ?</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
-            Comparez 5+ devis gratuitement
+            Comparez 3 à 5 devis gratuitement
           </h2>
           <p className="text-lg text-white/75 max-w-2xl mx-auto">
             En quelques photos, l’IA Moverz estime votre volume et prépare des devis comparables de déménageurs contrôlés, sans spam.
@@ -273,7 +273,7 @@ export default function FAQPage() {
             href="https://devis.moverz.fr/?source=moverz.fr&from=/faq"
             className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-[#0F172A] shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
           >
-            <span>Comparez 5+ devis gratuitement</span>
+            <span>Comparez 3 à 5 devis gratuitement</span>
             <span className="text-xl leading-none">→</span>
           </a>
         </div>

@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { LiveStatsWidget } from "./LiveStatsWidget";
-import MoverzWidgetEmbed from "./MoverzWidgetEmbed";
+import QuoteWidgetShell from "./QuoteWidgetShell";
 
 export default function Hero() {
   const [scrollY, setScrollY] = useState(0);
@@ -60,7 +60,7 @@ export default function Hero() {
                 animation: mounted ? 'fadeInUp 1s ease-out 0.2s both' : 'none',
               }}
             >
-              L'IA analyse vos photos, compare les devis, vous déménagez sans stress.
+              L’IA fiabilise le volume grâce aux photos, pour des devis comparables. Vous choisissez le bon prix, sans stress.
             </p>
 
             {/* CTA principal navy */}
@@ -75,7 +75,7 @@ export default function Hero() {
                 className="group inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-[0_8px_30px_rgba(15,23,42,0.3)] hover:shadow-[0_12px_50px_rgba(15,23,42,0.4)] hover:scale-105 transition-all duration-300"
                 aria-label="Obtenir mes devis gratuits"
               >
-                <span>Obtenir mes devis gratuits</span>
+                <span>Recevoir 3 à 5 devis gratuits</span>
                 <span className="text-xl leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
               </a>
               <p className="mt-3 text-sm text-[#1E293B]/80 font-medium">
@@ -91,14 +91,7 @@ export default function Hero() {
             animation: mounted ? 'fadeInUp 1s ease-out 0.4s both' : 'none',
           }}
         >
-          {/* Widget externe */}
-          <div className="rounded-2xl bg-white p-4 shadow-lg border border-[#E3E5E8]">
-            <MoverzWidgetEmbed
-              source="moverz.fr"
-              from="/"
-              className="min-h-[450px] md:min-h-[500px] w-full"
-            />
-          </div>
+          <QuoteWidgetShell source="moverz.fr" from="/" />
         </div>
         </div>
       </div>

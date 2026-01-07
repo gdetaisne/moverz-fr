@@ -5,7 +5,7 @@ export const metadata = generateCityServiceMetadata({
   serviceSlug: "pas-cher",
   title: "Déménagement pas cher à Nantes : astuces + devis comparables | Moverz",
   description:
-    "Déménagement pas cher à Nantes : leviers concrets (dates, volume, formule) + 5+ devis comparables et sans spam. Payez moins sans sacrifier la fiabilité.",
+    "Déménagement pas cher à Nantes : leviers concrets (dates, volume, formule) + 3 à 5 devis comparables et sans spam. Payez moins sans sacrifier la fiabilité.",
 });
 
 export default function Page() {
@@ -91,7 +91,7 @@ export default function Page() {
         {
           question: "Puis-je obtenir plusieurs devis gratuitement ?",
           answer:
-            "Oui. Vous pouvez demander 5+ devis via Moverz avec un seul dossier, sans engagement.",
+            "Oui. Vous pouvez demander 3 à 5 devis via Moverz avec un seul dossier, sans engagement.",
         },
         {
           question: "Et si je n’ai qu’un petit volume ?",

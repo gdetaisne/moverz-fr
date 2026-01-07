@@ -5,7 +5,7 @@ export const metadata = generateCityServiceMetadata({
   serviceSlug: "petit-demenagement",
   title: "Petit déménagement à Toulouse : transport petit volume & devis | Moverz",
   description:
-    "Petit déménagement à Toulouse (petit volume) : options, fourchettes de prix, accès, timing. Comparez 5+ devis pros pour transporter quelques meubles/cartons.",
+    "Petit déménagement à Toulouse (petit volume) : options, fourchettes de prix, accès, timing. Comparez 3 à 5 devis pros pour transporter quelques meubles/cartons.",
 });
 
 export default function Page() {
@@ -92,7 +92,7 @@ export default function Page() {
         {
           question: "Puis-je comparer plusieurs devis gratuitement ?",
           answer:
-            "Oui. Avec Moverz, vous remplissez un seul dossier et recevez 5+ devis standardisés, sans engagement.",
+            "Oui. Avec Moverz, vous remplissez un seul dossier et recevez 3 à 5 devis standardisés, sans engagement.",
         },
         {
           question: "Et si j’ai surtout besoin d’un coup de main (portage) ?",

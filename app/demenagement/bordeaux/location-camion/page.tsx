@@ -5,7 +5,7 @@ export const metadata = generateCityServiceMetadata({
   serviceSlug: "location-camion",
   title: "Location camion déménagement Bordeaux : volumes, prix & conseils | Moverz",
   description:
-    "Location camion déménagement à Bordeaux : quel volume choisir, prix, conditions (permis, caution), conseils centre-ville/quais + alternative : comparer 5+ devis pros.",
+    "Location camion déménagement à Bordeaux : quel volume choisir, prix, conditions (permis, caution), conseils centre-ville/quais + alternative : comparer 3 à 5 devis pros.",
 });
 
 export default function Page() {
@@ -96,7 +96,7 @@ export default function Page() {
         {
           question: "Puis-je comparer plusieurs devis gratuitement ?",
           answer:
-            "Oui. Vous pouvez demander 5+ devis via Moverz avec un seul dossier, sans engagement.",
+            "Oui. Vous pouvez demander 3 à 5 devis via Moverz avec un seul dossier, sans engagement.",
         },
       ]}
     />

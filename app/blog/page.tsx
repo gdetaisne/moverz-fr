@@ -229,7 +229,7 @@ export default function BlogIndexPage() {
       </section>
 
       <WidgetActionSection
-        title="Comparez 5+ devis gratuitement"
+        title="Comparez 3 à 5 devis gratuitement"
         subtitle="Vous avez les infos (prix, checklists, conseils). Lancez le comparateur: l’IA fiabilise le volume pour des devis comparables, sans spam."
         source="moverz.fr"
         from="/blog/"

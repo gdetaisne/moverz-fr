@@ -34,7 +34,7 @@ export function generateQuartierMetadata(
   quartierName: string
 ): Metadata {
   const path = `${citySlug}/${quartierSlug}`;
-  const title = `Déménagement ${quartierName} (${cityName}) : 5+ Devis en 3 Min | Moverz`;
+  const title = `Déménagement ${quartierName} (${cityName}) : 3 à 5 devis en 3 min | Moverz`;
   const description = `Déménageurs locaux contrôlés pour ${quartierName} à ${cityName}. Devis comparables en 3 min · IA volume · 0€ · 0 spam`;
 
   return getFullMetadata(path, title, description);
@@ -96,7 +96,7 @@ export function QuartierPage({
             {/* Titre */}
             <h1 className="text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl">
               Déménager à {quartierName} ?<br />
-              <span className="text-[#6BCFCF]">3 min, 5+ devis.</span>
+              <span className="text-[#6BCFCF]">3 min, 3 à 5 devis.</span>
             </h1>
 
             {/* Sous-titre */}

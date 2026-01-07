@@ -1,6 +1,6 @@
 "use client";
 
-import MoverzWidgetEmbed from "@/components/MoverzWidgetEmbed";
+import QuoteWidgetShell from "@/components/QuoteWidgetShell";
 import Image from "next/image";
 
 type WidgetActionSectionProps = {
@@ -55,7 +55,7 @@ export default function WidgetActionSection({
                   { icon: "●", label: "3 min" },
                   { icon: "●", label: "IA" },
                   { icon: "●", label: "0 spam" },
-                  { icon: "●", label: "5+ devis" },
+                  { icon: "●", label: "3 à 5 devis" },
                 ].map((item, i) => (
                   <span
                     key={i}
@@ -70,19 +70,9 @@ export default function WidgetActionSection({
 
             {/* Widget */}
             <div className="lg:col-span-7">
-              <div className="mx-auto w-full max-w-[520px] rounded-xl bg-white p-1 shadow-sm">
-                <div className="rounded-lg border border-[#E3E5E8] bg-white">
-                  <MoverzWidgetEmbed
-                    source={source}
-                    from={from}
-                    citySlug={citySlug}
-                    className="min-h-[320px] sm:min-h-[360px] md:min-h-[400px] w-full"
-                  />
-                </div>
+              <div className="mx-auto w-full max-w-[560px]">
+                <QuoteWidgetShell source={source} from={from} citySlug={citySlug} />
               </div>
-              <p className="mt-2 text-xs text-center text-white/60">
-                Astuce: préparez 2–3 photos des pièces principales pour accélérer l'estimation.
-              </p>
             </div>
           </div>
         </div>

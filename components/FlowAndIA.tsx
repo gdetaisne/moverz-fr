@@ -30,7 +30,7 @@ export default function FlowAndIA() {
     },
     {
       id: 2,
-      title: "Comparez 5+ devis",
+      title: "Comparez 3 à 5 devis",
       description: "Devis comparables, même volume.",
       ia: "L'IA prépare un dossier clair pour tous les déménageurs. Même base, même prix.",
       icon: (
