@@ -17,18 +17,7 @@ type PageProps = {
   };
 };
 
-const EXCLUDED_SLUGS = new Set(["ile-de-france"]);
-
-export function generateStaticParams() {
-  const cities = CITIES.filter((c) => !EXCLUDED_SLUGS.has(c.slug));
-  return cities.flatMap((from) =>
-    cities
-      .filter((to) => to.slug !== from.slug)
-      .map((to) => ({ from: from.slug, to: to.slug }))
-  );
-}
-
-export const dynamicParams = false;
+export const dynamicParams = true;
 
 export function generateMetadata({ params }: PageProps): Metadata {
   const from = getCityBySlug(params.from);

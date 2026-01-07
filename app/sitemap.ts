@@ -2,10 +2,21 @@ import { MetadataRoute } from "next";
 import { CITIES } from "@/lib/cities";
 import { PUBLISHED_BLOG_POSTS } from "@/lib/blog";
 import { cityData } from "@/lib/cityData";
+import { QUARTIER_HUB_SLUGS } from "@/lib/quartiers";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://moverz.fr";
   const now = new Date();
+  const SERVICE_SLUGS = [
+    "garde-meuble",
+    "location-camion",
+    "pas-cher",
+    "petit-demenagement",
+    "aide-demenagement",
+    "entreprise",
+    "piano",
+    "international",
+  ] as const;
 
   // Pages statiques principales
   const staticPages: MetadataRoute.Sitemap = [
@@ -38,13 +49,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  // Hub quartiers : /quartiers-{ville}/ (toutes les villes)
-  const hubQuartiersPages: MetadataRoute.Sitemap = CITIES.map((city) => ({
-    url: `${baseUrl}/quartiers-${city.slug}/`,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }));
+  // Hub quartiers : /quartiers-{ville}/ (seulement villes supportées pour éviter du thin content)
+  const hubQuartiersPages: MetadataRoute.Sitemap = CITIES.filter((c) => QUARTIER_HUB_SLUGS.includes(c.slug as any)).map(
+    (city) => ({
+      url: `${baseUrl}/quartiers-${city.slug}/`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    })
+  );
 
   // Pages quartiers : /{ville}/{quartier}/
   const quartierPages: MetadataRoute.Sitemap = [];
@@ -79,21 +92,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  // Corridors city → city (toutes les villes "réelles" de CITIES, hors région Île-de-France)
+  // Corridors city → city (LIMITÉ) — éviter l'explosion N² si on scale à 300 villes
   const excludedForCorridors = new Set(["ile-de-france"]);
-  const corridorCityToCity: MetadataRoute.Sitemap = [];
   const corridorCities = CITIES.filter((c) => !excludedForCorridors.has(c.slug));
-  for (const from of corridorCities) {
-    for (const to of corridorCities) {
-      if (from.slug === to.slug) continue;
-      corridorCityToCity.push({
-        url: `${baseUrl}/${from.slug}-vers-${to.slug}/`,
-        lastModified: now,
-        changeFrequency: "monthly",
-        priority: 0.55,
-      });
-    }
-  }
+  const preferred = [
+    "paris",
+    "lyon",
+    "marseille",
+    "toulouse",
+    "bordeaux",
+    "lille",
+    "nantes",
+    "strasbourg",
+    "nice",
+    "montpellier",
+    "rennes",
+    "rouen",
+  ];
+
+  const corridorCityToCity: MetadataRoute.Sitemap = corridorCities.flatMap((from) => {
+    const candidates = corridorCities.map((c) => c.slug).filter((s) => s !== from.slug);
+    const ordered = [...preferred.filter((s) => candidates.includes(s)), ...candidates]
+      .filter((v, i, arr) => arr.indexOf(v) === i)
+      .slice(0, 6);
+
+    return ordered.map((toSlug) => ({
+      url: `${baseUrl}/${from.slug}-vers-${toSlug}/`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.55,
+    }));
+  });
 
   // Hub corridors par ville : /corridor/{from}/
   const corridorHubs: MetadataRoute.Sitemap = corridorCities.map((c) => ({
@@ -111,6 +140,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  // Pages "service" (cluster SEO) — scalable sans ajouter du code ville par ville
+  const cityServicePages: MetadataRoute.Sitemap = CITIES.flatMap((city) =>
+    SERVICE_SLUGS.map((service) => ({
+      url: `${baseUrl}/demenagement/${city.slug}/${service}/`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.65,
+    }))
+  );
+
   // Dédoublonnage final (sitemap propre même si certaines URLs existent déjà en dur)
   const all = [
     ...staticPages,
@@ -121,6 +160,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...corridorCityToCity,
     ...corridorHubs,
     ...blogPages,
+    ...cityServicePages,
   ];
 
   const seen = new Set<string>();

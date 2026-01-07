@@ -88,8 +88,29 @@ export function CityPricing({ cityName }: CityPricingProps) {
           transition={{ duration: 0.4, delay: 0.3 }}
           className="text-sm text-center text-white/50"
         >
-          Tarifs indicatifs. Vos devis personnalisés = prix réel.
+          Tarifs indicatifs. Le prix réel dépend du volume, des accès et de la période. Vos devis personnalisés = prix réel.
         </motion.p>
+
+        <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-6 md:p-8">
+          <p className="text-sm font-semibold text-white mb-3">Ce qui fait varier le prix (mini-guide)</p>
+          <ul className="grid gap-2 text-sm text-white/70">
+            {[
+              "Volume (m³) : principal levier — trier avant = payer moins.",
+              "Accès : étages, ascenseur, distance camion→entrée, couloirs.",
+              "Période : été, week-ends et fins de mois = souvent plus cher.",
+              "Formule : éco vs standard vs clé en main (emballage/démontage).",
+              "Spécifiques : objets lourds/fragiles (piano), stockage temporaire, longue distance.",
+            ].map((item) => (
+              <li key={item} className="flex gap-2">
+                <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[var(--brand-teal)] shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-4 text-xs text-white/50">
+            Disclaimer : ces fourchettes ne remplacent pas un devis. Elles n’intègrent pas toutes les contraintes possibles (accès difficile, portage long, options d’assurance, etc.).
+          </p>
+        </div>
       </div>
     </section>
   );

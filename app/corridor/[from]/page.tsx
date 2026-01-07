@@ -10,12 +10,7 @@ type PageProps = {
 };
 
 const EXCLUDED_SLUGS = new Set(["ile-de-france"]);
-
-export function generateStaticParams() {
-  return CITIES.filter((c) => !EXCLUDED_SLUGS.has(c.slug)).map((c) => ({ from: c.slug }));
-}
-
-export const dynamicParams = false;
+export const dynamicParams = true;
 
 export function generateMetadata({ params }: PageProps): Metadata {
   const from = getCityBySlug(params.from);
@@ -35,7 +30,32 @@ export default function CorridorHubFromPage({ params }: PageProps) {
     return null;
   }
 
-  const destinations = CITIES.filter((c) => !EXCLUDED_SLUGS.has(c.slug) && c.slug !== from.slug);
+  const preferred = [
+    "paris",
+    "lyon",
+    "marseille",
+    "toulouse",
+    "bordeaux",
+    "lille",
+    "nantes",
+    "strasbourg",
+    "nice",
+    "montpellier",
+    "rennes",
+    "rouen",
+  ].filter((s) => s !== from.slug);
+
+  const candidates = CITIES.filter((c) => !EXCLUDED_SLUGS.has(c.slug) && c.slug !== from.slug);
+  const sameRegion = candidates.filter((c) => c.region === from.region).map((c) => c.slug);
+  const orderedSlugs = [
+    ...preferred.filter((s) => candidates.some((c) => c.slug === s)),
+    ...sameRegion,
+    ...candidates.map((c) => c.slug),
+  ]
+    .filter((v, i, arr) => arr.indexOf(v) === i)
+    .slice(0, 60);
+
+  const destinations = orderedSlugs.map((slug) => getCityBySlug(slug)).filter(Boolean) as typeof candidates;
 
   return (
     <main className="bg-white">
@@ -78,7 +98,7 @@ export default function CorridorHubFromPage({ params }: PageProps) {
               Destinations depuis {from.nameCapitalized}
             </h2>
             <p className="text-sm text-[#6B7280]">
-              {destinations.length} destinations — cliquez pour voir la page dédiée.
+              {destinations.length} destinations (sélection) — cliquez pour voir la page dédiée.
             </p>
           </div>
 

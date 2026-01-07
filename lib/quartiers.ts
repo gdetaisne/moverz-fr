@@ -1,0 +1,26 @@
+export const QUARTIER_HUB_SLUGS = [
+  "marseille",
+  "paris",
+  "lyon",
+  "nice",
+  "toulouse",
+  "bordeaux",
+  "grenoble",
+  "ile-de-france",
+  "lille",
+  "strasbourg",
+  "nantes",
+  "rennes",
+  "rouen",
+  "montpellier",
+  "toulon",
+  "dijon",
+  "angers",
+  "clermont-ferrand",
+  "tours",
+  "reims",
+  "le-havre",
+  "saint-etienne",
+] as const;
+
+

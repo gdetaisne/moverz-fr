@@ -1,31 +1,9 @@
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
+import { CITIES } from "@/lib/cities";
 
-// Keep this list small & static for edge runtime safety.
 // NOTE: exclude "ile-de-france" from corridors because it's a region, not a city-to-city route.
-const CITY_SLUGS = new Set([
-  "nice",
-  "lyon",
-  "marseille",
-  "toulouse",
-  "bordeaux",
-  "lille",
-  "strasbourg",
-  "nantes",
-  "rennes",
-  "rouen",
-  "montpellier",
-  "paris",
-  "grenoble",
-  "toulon",
-  "dijon",
-  "angers",
-  "clermont-ferrand",
-  "tours",
-  "reims",
-  "le-havre",
-  "saint-etienne",
-]);
+const CITY_SLUGS = new Set(CITIES.map((c) => c.slug).filter((s) => s !== "ile-de-france"));
 
 export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;

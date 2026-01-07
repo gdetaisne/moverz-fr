@@ -3,6 +3,9 @@
  * Chaque ville a son propre site local
  */
 
+import { EXTRA_CITIES } from "@/lib/cities-extra";
+import { slugifyCityName } from "@/lib/slugify";
+
 export interface CityInfo {
   slug: string;
   name: string;
@@ -12,7 +15,7 @@ export interface CityInfo {
   region: string;
 }
 
-export const CITIES: CityInfo[] = [
+const CORE_CITIES: CityInfo[] = [
   {
     slug: 'nice',
     name: 'nice',
@@ -191,6 +194,42 @@ export const CITIES: CityInfo[] = [
     region: 'Auvergne-Rhône-Alpes',
   },
 ];
+
+function buildExtraCities(): CityInfo[] {
+  return EXTRA_CITIES.map(({ nameCapitalized, region }) => {
+    const slug = slugifyCityName(nameCapitalized);
+    return {
+      slug,
+      name: slug,
+      nameCapitalized,
+      url: "https://moverz.fr",
+      description: `Comparez 5+ devis de déménageurs à ${nameCapitalized}`,
+      region,
+    };
+  });
+}
+
+export const CITIES: CityInfo[] = (() => {
+  const extras = buildExtraCities();
+  const bySlug = new Map<string, CityInfo>();
+
+  // CORE wins on duplicates (url exceptions etc.)
+  for (const c of [...extras, ...CORE_CITIES]) {
+    if (!bySlug.has(c.slug)) bySlug.set(c.slug, c);
+  }
+
+  // Keep insertion order stable: CORE first, then extras not already in CORE.
+  const coreSlugs = new Set(CORE_CITIES.map((c) => c.slug));
+  const merged = [...CORE_CITIES, ...extras.filter((c) => !coreSlugs.has(c.slug))];
+
+  // Ensure uniqueness
+  const seen = new Set<string>();
+  return merged.filter((c) => {
+    if (seen.has(c.slug)) return false;
+    seen.add(c.slug);
+    return true;
+  });
+})();
 
 export function getCityBySlug(slug: string): CityInfo | undefined {
   return CITIES.find(city => city.slug === slug);

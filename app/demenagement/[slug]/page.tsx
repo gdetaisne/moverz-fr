@@ -5,7 +5,9 @@ import { getFullMetadata } from "@/lib/canonical-helper";
 import { getPricePostForCity, PUBLISHED_BLOG_POSTS } from "@/lib/blog";
 import { cityData } from "@/lib/cityData";
 import { getCityReviewsBySlug } from "@/lib/city-reviews";
+import { buildCityFaqs } from "@/lib/seo-faq";
 import { CityHero } from "@/components/city/CityHero";
+import { CityLocalInsights } from "@/components/city/CityLocalInsights";
 import { CityStats } from "@/components/city/CityStats";
 import { CityPricing } from "@/components/city/CityPricing";
 import { CityFinalCTA } from "@/components/city/CityFinalCTA";
@@ -48,12 +50,7 @@ export default function CityMovingPage({ params }: PageProps) {
     return null;
   }
 
-  const isMarseille = city.slug === "marseille";
   const isParis = city.slug === "paris";
-  const isLyon = city.slug === "lyon";
-  const isNice = city.slug === "nice";
-  const isToulouse = city.slug === "toulouse";
-  const isBordeaux = city.slug === "bordeaux";
 
   const quoteUrl = `https://devis.moverz.fr/?city_slug=${city.slug}&source=moverz.fr&from=/demenagement/${city.slug}/`;
   const pricePost = getPricePostForCity(city.slug);
@@ -133,47 +130,52 @@ export default function CityMovingPage({ params }: PageProps) {
   const cityNeighborhoods = neighborhoods[city.slug] || [];
   const citySuburbs = suburbs[city.slug] || [];
 
-  // FAQ Schema pour Rich Snippets Google - ENRICHIE (8-10 questions)
-  const cityFAQs = [
+  const cityFAQs = buildCityFaqs({
+    citySlug: city.slug,
+    cityName: city.nameCapitalized,
+    extra: cityData[city.slug]?.faqs || [],
+  });
+
+  const SERVICE_CARDS = [
     {
-      question: `Combien de temps à l'avance pour déménager à ${city.nameCapitalized} ?`,
-      answer: `Idéalement 4–8 semaines avant, surtout en haute saison (juin-septembre). Plus tôt = plus de choix de prix et de créneaux horaires. Pour un déménagement en période creuse, 2-3 semaines peuvent suffire.`,
+      href: `/demenagement/${city.slug}/garde-meuble/`,
+      title: `Garde-meuble à ${city.nameCapitalized}`,
+      desc: "Box, self-stockage, sécurité, tarifs.",
     },
     {
-      question: 'Les déménageurs font une visite technique ?',
-      answer: 'Non, vos photos suffisent. Notre IA analyse les volumes à partir de vos photos. Vous avez donc la paix, pas de visites techniques qui prennent une demi-journée et créent de la pression commerciale.',
+      href: `/demenagement/${city.slug}/location-camion/`,
+      title: "Location camion déménagement",
+      desc: "Volumes, prix, stationnement, alternatives.",
     },
     {
-      question: 'Moverz est vraiment gratuit ?',
-      answer: 'Oui, 100% gratuit pour vous. On est rémunérés par les déménageurs partenaires (modèle commission). Vous ne payez que le déménageur que vous choisissez, au tarif normal.',
+      href: `/demenagement/${city.slug}/pas-cher/`,
+      title: "Déménagement pas cher",
+      desc: "Leviers concrets pour payer moins.",
     },
     {
-      question: `Quel est le prix moyen d'un déménagement à ${city.nameCapitalized} ?`,
-      answer: `Cela dépend du volume et des accès. En moyenne : 500-800€ pour un studio (15m³), 900-1400€ pour un T2/T3 (30m³), 1500-2500€ pour un T4+ (50m³). Les prix peuvent varier selon les étages, ascenseur, distance et services demandés.`,
+      href: `/demenagement/${city.slug}/petit-demenagement/`,
+      title: "Petit déménagement (petit volume)",
+      desc: "Options rapides et économiques.",
     },
     {
-      question: 'Comment fonctionne la comparaison de devis ?',
-      answer: 'Vous remplissez UN seul dossier (3 min). Notre IA calcule le volume précis. Vous recevez 5+ devis standardisés dans les 48h. Tous les déménageurs reçoivent exactement les mêmes infos = devis vraiment comparables.',
+      href: `/demenagement/${city.slug}/aide-demenagement/`,
+      title: "Aide au déménagement",
+      desc: "Main d’œuvre, matériel, monte-meuble.",
     },
     {
-      question: 'Les déménageurs sont-ils assurés et fiables ?',
-      answer: 'Oui. Tous nos partenaires ont une assurance responsabilité civile professionnelle valide et des garanties marchandises transportées. Nous vérifions leurs documents et analysons leurs avis clients. Tolérance zéro sur les litiges.',
+      href: `/demenagement/${city.slug}/entreprise/`,
+      title: "Déménagement d’entreprise",
+      desc: "Transfert de bureaux, méthode, assurance.",
     },
     {
-      question: 'Puis-je choisir la date et l\'heure de déménagement ?',
-      answer: 'Oui, vous indiquez vos dates souhaitées dans le formulaire. Les déménageurs vous proposent des créneaux disponibles. En général, les jours de semaine sont moins chers que le week-end.',
+      href: `/demenagement/${city.slug}/piano/`,
+      title: "Déménagement de piano",
+      desc: "Transport sécurisé et précautions.",
     },
     {
-      question: 'Que se passe-t-il si j\'ai un problème le jour J ?',
-      answer: 'Notre équipe support intervient rapidement en cas de litige ou imprévu. Vous avez un contact direct. Nous faisons le lien avec le déménageur pour trouver une solution immédiate.',
-    },
-    {
-      question: `Les déménageurs connaissent-ils bien ${city.nameCapitalized} ?`,
-      answer: `Oui, nous ne sélectionnons que des déménageurs locaux ou régionaux qui connaissent les contraintes de ${city.nameCapitalized} : accès difficiles, stationnement, réglementation locale, etc.`,
-    },
-    {
-      question: 'Puis-je annuler ou modifier mon déménagement ?',
-      answer: 'Oui. Vous gérez directement avec le déménageur choisi selon ses conditions générales. En général, une annulation gratuite est possible jusqu\'à 7-14 jours avant. Contactez-nous si besoin d\'aide.',
+      href: `/demenagement/${city.slug}/international/`,
+      title: "Déménagement international",
+      desc: "Europe/monde, formalités, assurance.",
     },
   ];
 
@@ -212,6 +214,43 @@ export default function CityMovingPage({ params }: PageProps) {
 
       {/* Prix indicatifs */}
       <CityPricing cityName={city.nameCapitalized} />
+
+      {/* Bloc local unique + CTA */}
+      <CityLocalInsights citySlug={city.slug} cityName={city.nameCapitalized} quoteUrl={quoteUrl} />
+
+      {/* Services à la carte (scalable) */}
+      <section className="section section-light">
+        <div className="container max-w-4xl">
+          <div className="rounded-2xl border border-[#E5E7EB] bg-white p-8 md:p-10 space-y-6">
+            <div className="text-center space-y-3">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+                Services à {city.nameCapitalized}
+              </p>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A]">
+                Besoin d&apos;un service spécifique ?
+              </h2>
+              <p className="text-sm md:text-base text-[#6B7280] max-w-2xl mx-auto">
+                Pages dédiées par intention (garde-meuble, petit volume, piano…). Lisez, puis comparez des devis sur une base claire.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-3">
+              {SERVICE_CARDS.map((card) => (
+                <a
+                  key={card.href}
+                  href={card.href}
+                  className="group rounded-2xl border border-[#E5E7EB] bg-white p-5 hover:border-[#6BCFCF]/50 hover:shadow-sm transition-all"
+                >
+                  <p className="text-sm font-semibold text-[#0F172A] group-hover:text-[#2B7A78]">
+                    {card.title}
+                  </p>
+                  <p className="mt-1 text-xs text-[#6B7280]">{card.desc}</p>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Maillage interne : guide prix lié à la ville */}
       {pricePost && (

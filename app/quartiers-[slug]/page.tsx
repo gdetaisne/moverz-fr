@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CITIES, getCityBySlug } from "@/lib/cities";
 import { getFullMetadata } from "@/lib/canonical-helper";
+import { QUARTIER_HUB_SLUGS } from "@/lib/quartiers";
 
 type PageProps = {
   params: {
@@ -10,7 +11,8 @@ type PageProps = {
 };
 
 export function generateStaticParams() {
-  return CITIES.map((city) => ({ slug: city.slug }));
+  const supported = new Set(QUARTIER_HUB_SLUGS);
+  return CITIES.filter((c) => supported.has(c.slug)).map((city) => ({ slug: city.slug }));
 }
 
 export const dynamicParams = false;
@@ -32,7 +34,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
 export default function QuartiersPage({ params }: PageProps) {
   const city = getCityBySlug(params.slug);
 
-  if (!city) {
+  if (!city || !QUARTIER_HUB_SLUGS.includes(city.slug as any)) {
     notFound();
     return null;
   }
