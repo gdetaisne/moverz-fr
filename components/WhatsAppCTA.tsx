@@ -84,7 +84,7 @@ export default function WhatsAppCTA({
 
         {/* Sous-texte réassurance */}
         <p className="text-sm text-[#1E293B]/70 font-medium text-center sm:text-left">
-          Le plus simple • 6 photos • Devis plus justes • 0 spam
+          Le plus simple • Photos de toutes les pièces • Devis plus justes • 0 spam
         </p>
 
         {/* CTA secondaire (lien discret) */}

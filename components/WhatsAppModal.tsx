@@ -89,11 +89,11 @@ export default function WhatsAppModal({
           </div>
         )}
 
-        {/* 6 photos checklist */}
+        {/* Photos checklist */}
         <div className="bg-[#A8E8E8]/20 rounded-xl p-4 mb-6 text-sm space-y-1.5">
-          <p className="font-semibold text-[#0F172A] mb-2">6 photos recommandées :</p>
-          <p className="text-[#1E293B]/80">✓ Salon • Cuisine • Chambres</p>
-          <p className="text-[#1E293B]/80">✓ Entrée immeuble • Escaliers • Parking</p>
+          <p className="font-semibold text-[#0F172A] mb-2">📸 Toutes les pièces :</p>
+          <p className="text-[#1E293B]/80">✓ Salon • Chambres • Cuisine • Cave/Garage</p>
+          <p className="text-[#1E293B]/80">✓ Entrée • Escaliers • Parking</p>
         </div>
 
         {/* Copy link button */}

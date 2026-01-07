@@ -58,12 +58,12 @@ export default function PhotoChecklist() {
             Photos = devis plus justes
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] mb-6">
-            Les 6 photos indispensables
+            Photographiez <span className="text-[#6BCFCF]">toutes</span> vos pièces
           </h2>
           <p className="text-lg text-[#1E293B]/70 leading-relaxed">
-            Plus vos photos sont précises, plus les déménageurs peuvent estimer le volume et le temps nécessaire.
+            <strong className="text-[#0F172A]">Plus vous envoyez de photos, plus les devis sont précis.</strong>
             <br />
-            <strong className="text-[#0F172A]">Résultat : des devis comparables et sans surprise.</strong>
+            Chaque pièce, chaque meuble volumineux, chaque accès compte pour estimer le volume exact et éviter les mauvaises surprises le jour J.
           </p>
         </div>
 
@@ -110,11 +110,14 @@ export default function PhotoChecklist() {
         {/* Bottom CTA */}
         <div className="mt-16 text-center max-w-2xl mx-auto">
           <div className="bg-[#A8E8E8]/20 rounded-2xl p-8 border border-[#6BCFCF]/30">
-            <p className="text-lg font-semibold text-[#0F172A] mb-2">
-              💡 Astuce : prenez ces photos maintenant
+            <p className="text-lg font-semibold text-[#0F172A] mb-3">
+              📸 Important : envoyez des photos de <strong>toutes les pièces</strong>
             </p>
-            <p className="text-[#1E293B]/70">
-              Vous gagnerez du temps lors de votre demande de devis, et les déménageurs pourront vous donner un tarif précis dès le premier échange.
+            <p className="text-[#1E293B]/70 mb-3">
+              Salon, chambres, cuisine, cave, garage, grenier… <strong>chaque espace</strong> doit être photographié pour un devis juste.
+            </p>
+            <p className="text-sm text-[#0F172A] font-medium bg-white/50 rounded-lg px-4 py-3 inline-block">
+              ⚡ Plus de photos = devis plus précis = 0 surprise le jour J
             </p>
           </div>
         </div>
