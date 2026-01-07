@@ -74,12 +74,12 @@ export default function HeroMockup() {
       {/* Subtle glow effect */}
       <div className="absolute inset-0 rounded-[48px] bg-gradient-to-b from-[#6BCFCF]/10 to-transparent blur-2xl -z-10" />
 
-      <style jsx>{`
+      <style dangerouslySetInnerHTML={{__html: `
         @keyframes float {
           0%, 100% { transform: translateY(0px); }
           50% { transform: translateY(-12px); }
         }
-      `}</style>
+      `}} />
     </div>
   );
 }
