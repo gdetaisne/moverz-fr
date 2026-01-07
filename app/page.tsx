@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Hero from "@/components/Hero";
+import PhotoChecklist from "@/components/PhotoChecklist";
+import WhatYouReceive from "@/components/WhatYouReceive";
 import ProblemSolution from "@/components/ProblemSolution";
 import FlowAndIA from "@/components/FlowAndIA";
 import VisualProof from "@/components/VisualProof";
@@ -73,28 +75,34 @@ export default function Home() {
         {/* 1. Hero - Redesigned for clarity and emotion */}
         <Hero />
 
-      {/* 2. How It Works + AI - Interactive timeline */}
+      {/* 2. Photo Checklist - Les 6 photos indispensables */}
+      <PhotoChecklist />
+
+      {/* 3. What You Receive - Mockup des devis comparables */}
+      <WhatYouReceive />
+
+      {/* 4. How It Works + AI - Interactive timeline */}
       <FlowAndIA />
 
-      {/* 3. Visual Proof - Show the magic moment */}
+      {/* 5. Visual Proof - Show the magic moment */}
       <VisualProof />
 
-      {/* 4. Trust Signals - Security and guarantees */}
+      {/* 6. Trust Signals - Security and guarantees */}
       <TrustSignals />
 
-      {/* Why Moverz - Storytelling (photos = devis comparables) */}
+      {/* 7. Why Moverz - Storytelling (photos = devis comparables) */}
       <WhyMoverz />
 
-      {/* 5. Problem/Solution - Show the pain and the relief */}
+      {/* 8. Problem/Solution - Show the pain and the relief */}
       <ProblemSolution />
 
-      {/* 6. Real Stories - Customer testimonials with outcomes */}
+      {/* 9. Real Stories - Customer testimonials with outcomes */}
       <RealStories />
 
-      {/* 7. Quick FAQ - Remove last objections */}
+      {/* 10. Quick FAQ - Remove last objections */}
       <QuickFAQ />
 
-      {/* 8. Final CTA - Enhanced with animation */}
+      {/* 11. Final CTA - Enhanced with animation */}
       <FinalCTA />
 
         {/* Sticky CTA global */}
