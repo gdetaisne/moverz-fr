@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function HeroMockup() {
   const [mounted, setMounted] = useState(false);
@@ -24,8 +25,14 @@ export default function HeroMockup() {
         <div className="relative bg-[#E5DDD5] rounded-[36px] overflow-hidden" style={{ aspectRatio: '9/19.5' }}>
           {/* WhatsApp header */}
           <div className="bg-[#075E54] px-4 py-3 flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white font-semibold text-sm">
-              M
+            <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center overflow-hidden">
+              <Image
+                src="/logo.png"
+                alt="Moverz"
+                width={32}
+                height={32}
+                className="object-contain"
+              />
             </div>
             <div>
               <p className="text-white font-semibold text-sm">Moverz</p>
