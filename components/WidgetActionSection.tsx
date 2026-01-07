@@ -1,6 +1,7 @@
 "use client";
 
-import QuoteWidgetShell from "@/components/QuoteWidgetShell";
+import HeroMockup from "@/components/HeroMockup";
+import WhatsAppCTA from "@/components/WhatsAppCTA";
 import Image from "next/image";
 
 type WidgetActionSectionProps = {
@@ -68,10 +69,16 @@ export default function WidgetActionSection({
               </div>
             </div>
 
-            {/* Widget */}
-            <div className="lg:col-span-7">
-              <div className="mx-auto w-full max-w-[560px]">
-                <QuoteWidgetShell source={source} from={from} citySlug={citySlug} />
+            {/* Mockup + CTA */}
+            <div className="lg:col-span-7 space-y-6">
+              {/* WhatsApp mockup */}
+              <div className="mx-auto w-full max-w-[340px]">
+                <HeroMockup />
+              </div>
+              
+              {/* WhatsApp CTA */}
+              <div className="max-w-sm mx-auto">
+                <WhatsAppCTA source={source} />
               </div>
             </div>
           </div>
