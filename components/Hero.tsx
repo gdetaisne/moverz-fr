@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { LiveStatsWidget } from "./LiveStatsWidget";
 import HeroMockup from "./HeroMockup";
+import WhatsAppCTA from "./WhatsAppCTA";
 
 export default function Hero() {
   const [scrollY, setScrollY] = useState(0);
@@ -63,24 +63,14 @@ export default function Hero() {
               3 à 5 devis fiables · 2–3 min · 100% gratuit
             </p>
 
-            {/* CTA principal navy */}
+            {/* CTAs WhatsApp-first (device-based) */}
             <div 
               className="mt-8"
               style={{
                 animation: mounted ? 'fadeInUp 1.2s ease-out 0.3s both' : 'none',
               }}
             >
-              <a
-                href="https://devis.moverz.fr/?source=moverz.fr&from=/&devis_range=3-5"
-                className="group inline-flex items-center gap-2 rounded-xl bg-[#0F172A] px-7 py-3.5 text-base font-semibold text-white shadow-[0_10px_40px_rgba(15,23,42,0.20)] hover:shadow-[0_14px_60px_rgba(15,23,42,0.26)] hover:-translate-y-0.5 transition-all duration-300"
-                aria-label="Obtenir mes devis gratuits"
-              >
-                <span>Recevoir mes devis gratuitement</span>
-                <span className="text-xl leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
-              </a>
-              <p className="mt-3 text-sm text-[#1E293B]/80 font-medium">
-                Téléphone masqué · 0 spam · Les photos rendent les devis plus justes
-              </p>
+              <WhatsAppCTA source="home" />
             </div>
           </div>
 
