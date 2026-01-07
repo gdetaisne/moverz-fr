@@ -5,7 +5,7 @@ import { getLocalInsights } from "@/lib/local-insights";
 import { buildCityServiceFaqs } from "@/lib/seo-faq";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import WidgetActionSection from "@/components/WidgetActionSection";
-import { FAQSchema } from "@/components/schema/FAQSchema";
+import { FAQ } from "@/components/FAQ";
 
 export type CityServiceFAQ = { question: string; answer: string };
 
@@ -60,8 +60,6 @@ export function CityServicePage({
 
   return (
     <main className="bg-white">
-      <FAQSchema faqs={autoFaqs} />
-
       <div className="bg-[#0F172A]">
         <div className="container max-w-7xl pt-6">
           <Breadcrumbs
@@ -215,27 +213,7 @@ export function CityServicePage({
         citySlug={citySlug}
       />
 
-      {/* FAQ */}
-      <section className="py-12 md:py-20 bg-white">
-        <div className="container mx-auto max-w-4xl px-4">
-          <div className="text-center mb-10 space-y-4">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
-              Questions fréquentes
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">FAQ — {cityName}</h2>
-          </div>
-
-          <div className="space-y-4">
-            {autoFaqs.map((faq, idx) => (
-              <div key={idx} className="rounded-2xl border border-[#E5E7EB] bg-white p-6">
-                <h3 className="text-base font-bold text-[#0F172A]">{faq.question}</h3>
-                <p className="mt-2 text-sm md:text-base text-[#6B7280] leading-relaxed">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FAQ title={`FAQ — ${cityName}`} faqs={autoFaqs} />
     </main>
   );
 }

@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CITIES, getCityBySlug } from "@/lib/cities";
-import { getFullMetadata } from "@/lib/canonical-helper";
 import { getPricePostForCity, PUBLISHED_BLOG_POSTS } from "@/lib/blog";
 import { cityData } from "@/lib/cityData";
 import { getCityReviewsBySlug } from "@/lib/city-reviews";
 import { buildCityFaqs } from "@/lib/seo-faq";
+import { getCityPageMetadata } from "@/lib/seo/metadata";
 import { CityHero } from "@/components/city/CityHero";
 import { CityLocalInsights } from "@/components/city/CityLocalInsights";
 import { CityStats } from "@/components/city/CityStats";
 import { CityPricing } from "@/components/city/CityPricing";
 import { CityFinalCTA } from "@/components/city/CityFinalCTA";
-import { FAQSchema } from "@/components/schema/FAQSchema";
+import { FAQ } from "@/components/FAQ";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FlowAndIA from "@/components/FlowAndIA";
 import TrustSignals from "@/components/TrustSignals";
@@ -34,12 +34,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
   if (!city) {
     return {};
   }
-
-  const path = `demenagement/${city.slug}`;
-  const title = `Déménagement ${city.nameCapitalized} : 5+ Devis en 3 Min | IA Moverz`;
-  const description = `3 min · IA calcule le volume · 5+ devis comparables · Déménageurs locaux contrôlés à ${city.nameCapitalized} · 0€ · 0 spam`;
-
-  return getFullMetadata(path, title, description);
+  return getCityPageMetadata(city);
 }
 
 export default function CityMovingPage({ params }: PageProps) {
@@ -136,6 +131,13 @@ export default function CityMovingPage({ params }: PageProps) {
     extra: cityData[city.slug]?.faqs || [],
   });
 
+  // Maillage interne "villes proches / même région" (6–10 liens)
+  const sameRegion = CITIES.filter((c) => c.region === city.region && c.slug !== city.slug).slice(0, 10);
+  const fallback = CITIES.filter((c) => c.slug !== city.slug && c.slug !== "ile-de-france")
+    .filter((c) => !sameRegion.some((s) => s.slug === c.slug))
+    .slice(0, Math.max(0, 10 - sameRegion.length));
+  const nearbyCities = [...sameRegion, ...fallback].slice(0, 10);
+
   const SERVICE_CARDS = [
     {
       href: `/demenagement/${city.slug}/garde-meuble/`,
@@ -181,7 +183,6 @@ export default function CityMovingPage({ params }: PageProps) {
 
   return (
     <main className="bg-white">
-      <FAQSchema faqs={cityFAQs} />
       <div className="bg-[#0F172A]">
         <div className="container max-w-4xl pt-6">
           <Breadcrumbs
@@ -217,6 +218,39 @@ export default function CityMovingPage({ params }: PageProps) {
 
       {/* Bloc local unique + CTA */}
       <CityLocalInsights citySlug={city.slug} cityName={city.nameCapitalized} quoteUrl={quoteUrl} />
+
+      {/* Villes proches / même région */}
+      {nearbyCities.length > 0 && (
+        <section className="section section-light">
+          <div className="container max-w-4xl">
+            <div className="rounded-2xl border border-[#E5E7EB] bg-white p-8 md:p-10 space-y-6">
+              <div className="text-center space-y-3">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+                  Maillage local
+                </p>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A]">
+                  Villes proches de {city.nameCapitalized}
+                </h2>
+                <p className="text-sm md:text-base text-[#6B7280] max-w-2xl mx-auto">
+                  Guides utiles à consulter si vous déménagez dans la région (prix, accès, conseils) — et pour comparer des devis sur une base claire.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap justify-center gap-2">
+                {nearbyCities.map((c) => (
+                  <a
+                    key={c.slug}
+                    href={`/demenagement/${c.slug}/`}
+                    className="rounded-full border border-[#E5E7EB] bg-[#FAFAFA] px-3 py-1.5 text-xs text-[#0F172A] hover:border-[#6BCFCF]/50 hover:bg-white transition-colors"
+                  >
+                    Déménagement {c.nameCapitalized}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Services à la carte (scalable) */}
       <section className="section section-light">
@@ -537,54 +571,30 @@ export default function CityMovingPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* FAQ enrichie */}
+      <FAQ title={`FAQ ${city.nameCapitalized}`} faqs={cityFAQs} />
+
+      {/* Maillage SEO : mini-bloc "à lire ensuite" */}
       <section className="section section-light">
         <div className="container max-w-3xl">
-          <div className="text-center mb-10 space-y-6">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
-              Questions fréquentes
-            </div>
-            <h2 className="text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl text-[#0F172A]">
-              FAQ {city.nameCapitalized}
-            </h2>
-          </div>
-
-          <div className="space-y-6">
-            {cityFAQs.map((faq, index) => (
-              <div key={index} className="rounded-xl border border-[#E5E7EB] bg-white p-6 hover:border-[#6BCFCF]/50 hover:shadow-md transition-all duration-200">
-                <h3 className="text-base font-bold text-[#0F172A] mb-2">
-                  {faq.question}
-                </h3>
-                <p className="text-sm text-[#6B7280] leading-relaxed">
-                  {faq.answer}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          {/* Maillage SEO : mini-bloc "à lire ensuite" (2 liens max) */}
-          <div className="mt-10">
-            <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 text-center space-y-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
-                À lire ensuite
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-                <a
-                  href={pricePost ? `/blog/${pricePost.slug}/` : "/blog/prix-et-devis/"}
-                  className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
-                >
-                  <span>{pricePost ? `Prix à ${city.nameCapitalized}` : "Guides prix & devis"}</span>
-                  <span>→</span>
-                </a>
-                <a
-                  href="/blog/checklists-et-guides/"
-                  className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
-                >
-                  <span>Checklists & guides</span>
-                  <span>→</span>
-                </a>
-              </div>
+          <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 text-center space-y-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+              À lire ensuite
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a
+                href={pricePost ? `/blog/${pricePost.slug}/` : "/blog/prix-et-devis/"}
+                className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+              >
+                <span>{pricePost ? `Prix à ${city.nameCapitalized}` : "Guides prix & devis"}</span>
+                <span>→</span>
+              </a>
+              <a
+                href="/blog/checklists-et-guides/"
+                className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+              >
+                <span>Checklists & guides</span>
+                <span>→</span>
+              </a>
             </div>
           </div>
         </div>

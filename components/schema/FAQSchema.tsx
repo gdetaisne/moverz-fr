@@ -9,11 +9,11 @@ interface FAQSchemaProps {
   faqs: FAQItem[]
 }
 
-export function FAQSchema({ faqs }: FAQSchemaProps) {
-  const schema = {
+export function buildFAQSchema(faqs: FAQItem[]) {
+  return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: faqs.map(faq => ({
+    mainEntity: faqs.map((faq) => ({
       '@type': 'Question',
       name: faq.question,
       acceptedAnswer: {
@@ -22,6 +22,10 @@ export function FAQSchema({ faqs }: FAQSchemaProps) {
       },
     })),
   }
+}
+
+export function FAQSchema({ faqs }: FAQSchemaProps) {
+  const schema = buildFAQSchema(faqs)
 
   return (
     <Script

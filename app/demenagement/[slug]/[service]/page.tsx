@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getCityBySlug } from "@/lib/cities";
-import { CityServicePage, generateCityServiceMetadata } from "@/components/templates/CityServicePage";
+import { CityServicePage } from "@/components/templates/CityServicePage";
 import { SERVICE_DEFINITIONS, SERVICE_SLUGS, type ServiceSlug } from "@/lib/service-pages";
+import { getCityServiceMetadata } from "@/lib/seo/metadata";
 
 type PageProps = {
   params: {
@@ -17,13 +18,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
   if (!city) return {};
   if (!SERVICE_SLUGS.includes(service)) return {};
 
-  const def = SERVICE_DEFINITIONS[service];
-  return generateCityServiceMetadata({
-    citySlug: city.slug,
-    serviceSlug: service,
-    title: def.title(city.nameCapitalized),
-    description: def.description(city.nameCapitalized),
-  });
+  return getCityServiceMetadata({ city, service });
 }
 
 export default function CityServiceDynamicPage({ params }: PageProps) {

@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
-import { getFullMetadata } from "@/lib/canonical-helper";
+import { getHubMetadata } from "@/lib/seo/metadata";
 import PageHero from "@/components/PageHero";
 import { CITIES, getCitiesByRegion } from "@/lib/cities";
 
-export const metadata: Metadata = getFullMetadata(
-  'villes',
-  "Déménagement partout en France | Moverz - Comparez 5+ Devis",
-  "Déménagez partout en France : Paris, Lyon, Marseille, Toulouse, Bordeaux... → Comparez 5+ devis de pros locaux en 3 min · IA calcule le volume · 100% gratuit · 0 spam"
-);
+export const metadata: Metadata = getHubMetadata({
+  path: "villes",
+  title: "Déménagement partout en France | Moverz — 5+ devis comparables",
+  description:
+    "Annuaire des villes couvertes par Moverz. Trouvez votre guide local et comparez 5+ devis en 3 min (IA fiabilise le volume, 0 spam).",
+});
 
 export default function VillesPage() {
   const citiesByRegion = getCitiesByRegion();
+  const totalPages = Math.max(1, Math.ceil(CITIES.length / 60));
 
   return (
     <main className="bg-hero min-h-screen">
@@ -28,7 +30,7 @@ export default function VillesPage() {
           label: "Comparer 5+ devis gratuitement",
           href: "https://devis.moverz.fr/?source=moverz.fr&from=/villes",
         }}
-        secondaryCta={{ label: "Voir tous les trajets (corridors)", href: "/corridor/" }}
+        secondaryCta={{ label: "Annuaire complet (paginé)", href: "/villes/page/1/" }}
       />
 
       {/* Cities Grid - Style Stripe moderne */}
@@ -130,6 +132,33 @@ export default function VillesPage() {
                 </svg>
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pagination annuaire */}
+      <section className="section section-light">
+        <div className="container max-w-4xl text-center space-y-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+            Annuaire
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-[#04163a]">
+            Toutes les villes (paginé)
+          </h2>
+          <p className="text-sm text-[#4b5c6b] max-w-2xl mx-auto">
+            Pour une navigation plus rapide, l’annuaire complet est disponible en pages (60 villes par page).
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            <a
+              href="/villes/page/1/"
+              className="inline-flex items-center gap-2 rounded-xl bg-[#0F172A] px-5 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+            >
+              <span>Ouvrir l’annuaire</span>
+              <span>→</span>
+            </a>
+            <span className="text-xs text-[#6B7280]">
+              {CITIES.length} villes · {totalPages} pages
+            </span>
           </div>
         </div>
       </section>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { BlogPostMeta } from "@/lib/blog";
 import { PUBLISHED_BLOG_POSTS } from "@/lib/blog";
 import WidgetActionSection from "@/components/WidgetActionSection";
+import { formatDateFR } from "@/lib/date/fr";
 
 export const dynamic = 'force-dynamic';
 
@@ -18,16 +19,8 @@ const CATEGORIES = [
   { slug: "conseils-demenagement", label: "Conseils" },
 ];
 
-const formatDate = (value: string) => {
-  if (!value) return "";
-  const d = new Date(value);
-  if (Number.isNaN(d.getTime())) return "";
-  return d.toLocaleDateString("fr-FR", {
-    day: "2-digit",
-    month: "short",
-    year: "numeric",
-  });
-};
+const formatDate = (value: string) =>
+  formatDateFR(value, { day: "2-digit", month: "short", year: "numeric" });
 
 export default function BlogIndexPage() {
   const [activeCategory, setActiveCategory] = useState("all");

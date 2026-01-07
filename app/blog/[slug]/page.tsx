@@ -13,6 +13,7 @@ import {
 import { getFullMetadata } from "@/lib/canonical-helper";
 import { getCityBySlug } from "@/lib/cities";
 import { ArticleSchema } from "@/components/schema/ArticleSchema";
+import { formatDateFR } from "@/lib/date/fr";
 
 type PageProps = {
   params: {
@@ -52,11 +53,7 @@ export default function BlogPostPage({ params }: PageProps) {
 
   const publishedDate =
     post.publishedAt && !Number.isNaN(new Date(post.publishedAt).getTime())
-      ? new Date(post.publishedAt).toLocaleDateString("fr-FR", {
-          day: "2-digit",
-          month: "long",
-          year: "numeric",
-        })
+      ? formatDateFR(post.publishedAt, { day: "2-digit", month: "long", year: "numeric" })
       : "";
 
   const related = PUBLISHED_BLOG_POSTS.filter(
