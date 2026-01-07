@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { ArrowRight, Check, Copy, Mail, MessageCircle } from "lucide-react";
 
 type QuoteBridgeCardProps = {
   quoteUrl: string;
@@ -52,38 +53,57 @@ export default function QuoteBridgeCard({
   };
 
   return (
-    <div className="rounded-2xl bg-white p-6 shadow-lg border border-[#E3E5E8] space-y-5">
+    <div className="rounded-3xl bg-white p-6 md:p-7 shadow-[0_10px_40px_rgba(15,23,42,0.08)] border border-[#E6EEF2] space-y-5">
       <div className="space-y-2">
-        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#2B7A78]">Photos = devis plus justes</p>
+        <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 border border-[#6BCFCF]/25 px-3 py-1 text-xs font-semibold text-[#0F172A] w-fit">
+          <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+          Photos = devis plus justes
+        </div>
         <h3 className="text-xl md:text-2xl font-bold text-[#0F172A]">{title}</h3>
         <p className="text-sm text-[#64748B] leading-relaxed">{subtitle}</p>
       </div>
 
-      <div className="rounded-xl border border-[#E5E7EB] bg-[#F8FAFC] p-4">
+      <div className="rounded-2xl border border-[#E6EEF2] bg-[rgba(107,207,207,0.06)] p-4">
         <p className="text-xs font-semibold text-[#0F172A] mb-2">Les 4 photos qui font gagner du temps</p>
         <div className="grid grid-cols-2 gap-2 text-xs text-[#334155]">
-          <div className="rounded-lg bg-white border border-[#E5E7EB] px-3 py-2">Entrée / escaliers</div>
-          <div className="rounded-lg bg-white border border-[#E5E7EB] px-3 py-2">Salon (vue large)</div>
-          <div className="rounded-lg bg-white border border-[#E5E7EB] px-3 py-2">Meuble volumineux</div>
-          <div className="rounded-lg bg-white border border-[#E5E7EB] px-3 py-2">Accès camion / rue</div>
+          {[
+            "Entrée / escaliers",
+            "Salon (vue large)",
+            "Meuble volumineux",
+            "Accès camion / rue",
+          ].map((label) => (
+            <div key={label} className="rounded-xl bg-white border border-[#E6EEF2] px-3 py-2 flex items-center gap-2">
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#6BCFCF]/15 text-[#2B7A78]">
+                <Check className="h-3.5 w-3.5" />
+              </span>
+              <span>{label}</span>
+            </div>
+          ))}
         </div>
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2">
         <a
           href={whatsappUrl}
-          className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#0F172A] px-5 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+          className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#0F172A] px-5 py-3.5 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
         >
-          <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#25D366]/15 text-[#25D366]">●</span>
-          WhatsApp
-          <span className="text-base leading-none">→</span>
+          <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-white/10">
+            <MessageCircle className="h-4.5 w-4.5" />
+          </span>
+          <span className="flex items-center gap-2">
+            WhatsApp <span className="text-[11px] font-bold rounded-full bg-white/10 px-2 py-0.5">Recommandé</span>
+          </span>
+          <ArrowRight className="h-4 w-4" />
         </a>
         <a
           href={mailtoUrl}
-          className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#E5E7EB] bg-white px-5 py-3 text-sm font-semibold text-[#0F172A] hover:bg-[#FAFAFA] transition-colors"
+          className="inline-flex items-center justify-center gap-2 rounded-2xl border border-[#E6EEF2] bg-white px-5 py-3.5 text-sm font-semibold text-[#0F172A] hover:bg-[#FAFAFA] transition-colors"
         >
+          <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-[#0F172A]/5">
+            <Mail className="h-4.5 w-4.5 text-[#0F172A]" />
+          </span>
           Envoyer par email
-          <span className="text-base leading-none">→</span>
+          <ArrowRight className="h-4 w-4" />
         </a>
       </div>
 
@@ -91,12 +111,13 @@ export default function QuoteBridgeCard({
         <button
           type="button"
           onClick={onCopy}
-          className="inline-flex items-center gap-2 rounded-lg border border-[#E5E7EB] bg-white px-4 py-2 text-xs font-semibold text-[#0F172A] hover:bg-[#FAFAFA] transition-colors"
+          className="inline-flex items-center gap-2 rounded-xl border border-[#E6EEF2] bg-white px-4 py-2.5 text-xs font-semibold text-[#0F172A] hover:bg-[#FAFAFA] transition-colors"
         >
+          <Copy className="h-4 w-4" />
           {copied ? "Lien copié" : "Copier le lien"}
         </button>
-        <a href={quoteUrl} className="text-xs font-semibold text-[#2B7A78] hover:underline">
-          Continuer sur cet appareil →
+        <a href={quoteUrl} className="text-xs font-semibold text-[#2B7A78] hover:underline inline-flex items-center gap-1">
+          Continuer sur cet appareil <ArrowRight className="h-4 w-4" />
         </a>
       </div>
     </div>

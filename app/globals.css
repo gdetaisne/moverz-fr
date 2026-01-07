@@ -139,8 +139,10 @@
 
   /* Hero background - SOLIDE */
   .bg-hero {
-    /* Teal clair solide - signature Moverz */
-    @apply relative bg-[#A8E8E8];
+    /* Premium: mint → white gradient (less "block of color") */
+    background: radial-gradient(900px 420px at 20% 12%, rgba(107, 207, 207, 0.26), transparent 60%),
+      radial-gradient(700px 380px at 80% 18%, rgba(168, 232, 232, 0.60), transparent 62%),
+      linear-gradient(180deg, #a8e8e8 0%, #eafafa 42%, #ffffff 100%);
   }
 
   /* Boutons - SOLIDES UNIFORMES */

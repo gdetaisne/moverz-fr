@@ -21,17 +21,17 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden font-sans bg-[#A8E8E8]">
+    <section className="relative overflow-hidden font-sans bg-hero">
 
       {/* Spacing uniforme */}
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
+        <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
           
           {/* ========== COLONNE GAUCHE – TEXTE ========== */}
           <div className="mx-auto max-w-2xl text-center lg:mx-0 lg:text-left">
             {/* Badge lumineux */}
             <div 
-              className="inline-flex items-center gap-2 rounded-full bg-white/90 px-5 py-2 text-sm font-semibold text-[#0F172A] shadow-md backdrop-blur-sm border border-[#6BCFCF]/30"
+              className="inline-flex items-center gap-2 rounded-full bg-white/80 px-5 py-2 text-sm font-semibold text-[#0F172A] shadow-sm backdrop-blur-sm border border-white/60"
               style={{
                 animation: mounted ? 'fadeInUp 0.6s ease-out' : 'none',
               }}
@@ -71,7 +71,7 @@ export default function Hero() {
               }}
             >
               <a
-                href="https://devis.moverz.fr/?source=moverz.fr&from=/"
+                href="https://devis.moverz.fr/?source=moverz.fr&from=/&devis_range=3-5"
                 className="group inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-[0_8px_30px_rgba(15,23,42,0.3)] hover:shadow-[0_12px_50px_rgba(15,23,42,0.4)] hover:scale-105 transition-all duration-300"
                 aria-label="Obtenir mes devis gratuits"
               >
@@ -81,6 +81,22 @@ export default function Hero() {
               <p className="mt-3 text-sm text-[#1E293B]/80 font-medium">
                 Téléphone masqué · 0 spam · Les photos rendent les devis plus justes
               </p>
+
+              <div className="mt-6 flex flex-wrap items-center justify-center gap-2 lg:justify-start">
+                {[
+                  "2–3 min",
+                  "3 à 5 devis",
+                  "Dossier anonyme",
+                  "Sans engagement",
+                ].map((label) => (
+                  <span
+                    key={label}
+                    className="inline-flex items-center rounded-full bg-white/70 backdrop-blur-sm border border-white/70 px-3 py-1 text-xs font-semibold text-[#0F172A]"
+                  >
+                    {label}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
 
