@@ -60,7 +60,7 @@ export default function Hero() {
                 animation: mounted ? 'fadeInUp 1s ease-out 0.2s both' : 'none',
               }}
             >
-              3 à 5 devis fiables · 2–3 min · 100% gratuit
+              3 à 5 devis fiables · 3 min · 100% gratuit
             </p>
 
             {/* CTAs WhatsApp-first (device-based) */}
