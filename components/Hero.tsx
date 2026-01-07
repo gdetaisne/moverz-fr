@@ -47,10 +47,9 @@ export default function Hero() {
                 animation: mounted ? 'fadeInUp 0.8s ease-out 0.1s both' : 'none',
               }}
             >
-              Vous déménagez.<br />
-              <span className="text-[#0F172A]">
-                On compare.
-              </span>
+              Obtenez 3 à 5 devis fiables<br />
+              pour votre déménagement,<br className="hidden sm:block" />
+              en 2–3 minutes
             </h1>
 
             {/* Sous-titre clair */}
@@ -60,7 +59,7 @@ export default function Hero() {
                 animation: mounted ? 'fadeInUp 1s ease-out 0.2s both' : 'none',
               }}
             >
-              L’IA fiabilise le volume grâce aux photos, pour des devis comparables. Vous choisissez le bon prix, sans stress.
+              Comparez les prix, gagnez du temps, et déménagez l’esprit tranquille.
             </p>
 
             {/* CTA principal navy */}
@@ -72,31 +71,15 @@ export default function Hero() {
             >
               <a
                 href="https://devis.moverz.fr/?source=moverz.fr&from=/&devis_range=3-5"
-                className="group inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-[0_8px_30px_rgba(15,23,42,0.3)] hover:shadow-[0_12px_50px_rgba(15,23,42,0.4)] hover:scale-105 transition-all duration-300"
+                className="group inline-flex items-center gap-2 rounded-xl bg-[#0F172A] px-7 py-3.5 text-base font-semibold text-white shadow-[0_10px_40px_rgba(15,23,42,0.20)] hover:shadow-[0_14px_60px_rgba(15,23,42,0.26)] hover:-translate-y-0.5 transition-all duration-300"
                 aria-label="Obtenir mes devis gratuits"
               >
-                <span>Recevoir 3 à 5 devis gratuits</span>
+                <span>Recevoir mes devis gratuitement</span>
                 <span className="text-xl leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
               </a>
               <p className="mt-3 text-sm text-[#1E293B]/80 font-medium">
                 Téléphone masqué · 0 spam · Les photos rendent les devis plus justes
               </p>
-
-              <div className="mt-6 flex flex-wrap items-center justify-center gap-2 lg:justify-start">
-                {[
-                  "2–3 min",
-                  "3 à 5 devis",
-                  "Dossier anonyme",
-                  "Sans engagement",
-                ].map((label) => (
-                  <span
-                    key={label}
-                    className="inline-flex items-center rounded-full bg-white/70 backdrop-blur-sm border border-white/70 px-3 py-1 text-xs font-semibold text-[#0F172A]"
-                  >
-                    {label}
-                  </span>
-                ))}
-              </div>
             </div>
           </div>
 
