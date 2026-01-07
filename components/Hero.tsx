@@ -47,9 +47,10 @@ export default function Hero() {
                 animation: mounted ? 'fadeInUp 0.8s ease-out 0.1s both' : 'none',
               }}
             >
-              Obtenez 3 à 5 devis fiables<br />
-              pour votre déménagement,<br className="hidden sm:block" />
-              en 2–3 minutes
+              Vous déménagez.<br />
+              <span className="text-[#0F172A]">
+                On compare.
+              </span>
             </h1>
 
             {/* Sous-titre clair */}
@@ -59,7 +60,7 @@ export default function Hero() {
                 animation: mounted ? 'fadeInUp 1s ease-out 0.2s both' : 'none',
               }}
             >
-              Comparez les prix, gagnez du temps, et déménagez l’esprit tranquille.
+              3 à 5 devis fiables · 2–3 min · 100% gratuit
             </p>
 
             {/* CTA principal navy */}

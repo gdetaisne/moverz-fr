@@ -1,102 +1,85 @@
 "use client";
+import { useEffect, useState } from "react";
 
-import { motion } from "framer-motion";
+export default function HeroMockup() {
+  const [mounted, setMounted] = useState(false);
 
-type HeroMockupProps = {
-  scrollY?: number;
-};
-
-export default function HeroMockup({ scrollY = 0 }: HeroMockupProps) {
-  const parallax = Math.max(-18, Math.min(18, scrollY * 0.03));
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
-    <div className="relative">
-      {/* soft background blob */}
-      <div className="absolute -inset-6 rounded-[40px] bg-white/40 backdrop-blur-sm border border-white/60 shadow-[0_20px_70px_rgba(15,23,42,0.06)]" />
+    <div 
+      className="relative w-full max-w-[340px] mx-auto"
+      style={{
+        animation: mounted ? 'float 4s ease-in-out infinite' : 'none',
+      }}
+    >
+      {/* iPhone frame minimal */}
+      <div className="relative bg-white rounded-[48px] shadow-[0_20px_60px_rgba(0,0,0,0.12)] p-3 border-[12px] border-[#1F2937]">
+        {/* Notch */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-[#1F2937] rounded-b-3xl z-10" />
 
-      <div className="relative rounded-[34px] border border-[#E6EEF2] bg-white/85 backdrop-blur-sm p-6 md:p-7 shadow-[0_18px_60px_rgba(15,23,42,0.08)] overflow-hidden">
-        {/* subtle decorative circles */}
-        <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-[#6BCFCF]/18 blur-2xl" />
-        <div className="absolute -bottom-28 -left-28 h-72 w-72 rounded-full bg-[#A8E8E8]/60 blur-2xl" />
-
-        <div className="relative grid gap-6 lg:grid-cols-[1fr_240px] items-center">
-          {/* Left: "screen" preview */}
-          <div className="space-y-4">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 border border-[#6BCFCF]/25 px-3 py-1 text-xs font-semibold text-[#0F172A]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
-              Aperçu
+        {/* Screen content */}
+        <div className="relative bg-[#E5DDD5] rounded-[36px] overflow-hidden" style={{ aspectRatio: '9/19.5' }}>
+          {/* WhatsApp header */}
+          <div className="bg-[#075E54] px-4 py-3 flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white font-semibold text-sm">
+              M
             </div>
-
-            <div className="rounded-2xl border border-[#E6EEF2] bg-white p-4">
-              <div className="flex items-center justify-between">
-                <p className="text-sm font-semibold text-[#0F172A]">Conversation WhatsApp</p>
-                <span className="text-xs font-semibold text-[#2B7A78]">Photos → devis</span>
-              </div>
-
-              {/* photo stack */}
-              <div className="mt-4 grid grid-cols-3 gap-2">
-                {[0, 1, 2].map((i) => (
-                  <div
-                    key={i}
-                    className="aspect-[4/3] rounded-xl border border-[#E6EEF2] bg-gradient-to-br from-[#F1F5F9] to-[#E2E8F0] relative overflow-hidden"
-                  >
-                    <div className="absolute inset-0 opacity-70 bg-[radial-gradient(circle_at_30%_30%,rgba(107,207,207,0.35),transparent_55%)]" />
-                    <div className="absolute bottom-2 left-2 right-2 h-2 rounded-full bg-white/70 border border-white/70" />
-                  </div>
-                ))}
-              </div>
-
-              {/* messages */}
-              <div className="mt-4 space-y-2">
-                <div className="ml-auto w-[82%] rounded-2xl rounded-tr-sm bg-[#0F172A] px-3 py-2 text-xs text-white">
-                  Voici 4 photos (salon, escaliers, meuble volumineux, accès camion).
-                </div>
-                <div className="w-[86%] rounded-2xl rounded-tl-sm bg-[#6BCFCF]/15 border border-[#6BCFCF]/25 px-3 py-2 text-xs text-[#0F172A]">
-                  Merci ! Je reviens avec <span className="font-semibold">3 à 5 devis</span> comparables.
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap gap-2">
-              {["Téléphone masqué", "0 spam", "3 à 5 devis"].map((t) => (
-                <span
-                  key={t}
-                  className="inline-flex items-center rounded-full bg-white border border-[#E6EEF2] px-3 py-1 text-xs font-semibold text-[#0F172A]"
-                >
-                  {t}
-                </span>
-              ))}
+            <div>
+              <p className="text-white font-semibold text-sm">Moverz</p>
+              <p className="text-white/70 text-xs">en ligne</p>
             </div>
           </div>
 
-          {/* Right: phone frame (light) */}
-          <motion.div
-            className="hidden lg:block justify-self-end"
-            animate={{ y: [0, -6, 0] }}
-            transition={{ duration: 5.2, repeat: Infinity, ease: "easeInOut" }}
-            style={{ transform: `translateY(${parallax}px)` }}
-          >
-            <div className="relative w-[240px]">
-              <div className="rounded-[34px] border border-[#0F172A]/20 bg-[#0F172A] p-2 shadow-[0_18px_60px_rgba(15,23,42,0.25)]">
-                <div className="rounded-[28px] bg-white overflow-hidden">
-                  <div className="h-10 bg-[#0F172A] flex items-center justify-center text-white text-xs font-semibold">
-                    Moverz
-                  </div>
-                  <div className="p-3 space-y-2">
-                    <div className="h-16 rounded-2xl bg-[#F1F5F9] border border-[#E6EEF2]" />
-                    <div className="h-10 rounded-2xl bg-[#6BCFCF]/10 border border-[#6BCFCF]/25" />
-                    <div className="h-10 rounded-2xl bg-[#0F172A] text-white flex items-center justify-center text-xs font-semibold">
-                      3 à 5 devis
-                    </div>
-                  </div>
-                </div>
+          {/* Conversation */}
+          <div className="p-4 space-y-3 pt-6">
+            {/* Message from Moverz */}
+            <div className="flex justify-start">
+              <div className="bg-white rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[85%] shadow-sm">
+                <p className="text-[#1F2937] text-sm leading-relaxed">
+                  Bonjour ! Envoyez-moi <strong>3 à 4 photos</strong> (pièces + accès) pour recevoir des devis précis 📸
+                </p>
+                <p className="text-[#667085] text-xs mt-1">10:24</p>
               </div>
             </div>
-          </motion.div>
+
+            {/* User's photos (4 thumbnails in 2x2 grid) */}
+            <div className="flex justify-end">
+              <div className="bg-[#DCF8C6] rounded-2xl rounded-tr-sm px-3 py-3 max-w-[85%] shadow-sm">
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg" />
+                  <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg" />
+                  <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg" />
+                  <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg" />
+                </div>
+                <p className="text-[#667085] text-xs mt-2 text-right">10:26</p>
+              </div>
+            </div>
+
+            {/* Confirmation from Moverz */}
+            <div className="flex justify-start">
+              <div className="bg-white rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[85%] shadow-sm">
+                <p className="text-[#1F2937] text-sm leading-relaxed">
+                  Parfait ! Vous allez recevoir <strong>3 à 5 devis</strong> dans les prochaines heures ✨
+                </p>
+                <p className="text-[#667085] text-xs mt-1">10:27</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* Subtle glow effect */}
+      <div className="absolute inset-0 rounded-[48px] bg-gradient-to-b from-[#6BCFCF]/10 to-transparent blur-2xl -z-10" />
+
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-12px); }
+        }
+      `}</style>
     </div>
   );
 }
-
-
