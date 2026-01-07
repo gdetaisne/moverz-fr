@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { LiveStatsWidget } from "./LiveStatsWidget";
-import QuoteWidgetShell from "./QuoteWidgetShell";
+import HeroMockup from "./HeroMockup";
 
 export default function Hero() {
   const [scrollY, setScrollY] = useState(0);
@@ -90,7 +90,7 @@ export default function Hero() {
             animation: mounted ? 'fadeInUp 1s ease-out 0.4s both' : 'none',
           }}
         >
-          <QuoteWidgetShell source="moverz.fr" from="/" />
+          <HeroMockup scrollY={scrollY} />
         </div>
         </div>
       </div>
