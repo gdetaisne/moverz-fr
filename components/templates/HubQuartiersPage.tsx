@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import { getPricePostForCity } from "@/lib/blog";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { CheckCircle, BarChart } from "lucide-react";
 
 export type Neighborhood = {
   slug: string;
@@ -196,8 +197,8 @@ export function HubQuartiersPage({
 
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center space-y-3">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#6BCFCF]/10 text-[#6BCFCF] text-xl font-bold">
-                ✓
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#6BCFCF]/10 text-[#6BCFCF]">
+                <CheckCircle className="w-6 h-6" />
               </div>
               <h3 className="text-base font-bold text-[#0F172A]">
                 Déménageurs contrôlés
@@ -220,8 +221,8 @@ export function HubQuartiersPage({
             </div>
 
             <div className="text-center space-y-3">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#6BCFCF]/10 text-[#6BCFCF] text-xl font-bold">
-                📊
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#6BCFCF]/10 text-[#6BCFCF]">
+                <BarChart className="w-6 h-6" />
               </div>
               <h3 className="text-base font-bold text-[#0F172A]">
                 Devis comparables

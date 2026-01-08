@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import { ClipboardList, BarChart3, Bell } from "lucide-react";
 
 export default function ProDashboardPreview() {
   const [activeTab, setActiveTab] = useState<"dossiers" | "stats" | "notifications">("dossiers");
@@ -25,9 +26,9 @@ export default function ProDashboardPreview() {
         {/* Tabs */}
         <div className="flex justify-center gap-2 mb-8">
           {[
-            { id: "dossiers", label: "📋 Dossiers", desc: "Gérez vos leads" },
-            { id: "stats", label: "📊 Statistiques", desc: "Suivez vos perfs" },
-            { id: "notifications", label: "🔔 Notifications", desc: "Temps réel" },
+            { id: "dossiers", label: "Dossiers", Icon: ClipboardList, desc: "Gérez vos leads" },
+            { id: "stats", label: "Statistiques", Icon: BarChart3, desc: "Suivez vos perfs" },
+            { id: "notifications", label: "Notifications", Icon: Bell, desc: "Temps réel" },
           ].map((tab) => (
             <button
               key={tab.id}
@@ -39,7 +40,10 @@ export default function ProDashboardPreview() {
               }`}
             >
               <div className="flex flex-col items-center gap-1">
-                <span>{tab.label}</span>
+                <span className="flex items-center gap-2">
+                  <tab.Icon className="w-4 h-4" />
+                  {tab.label}
+                </span>
                 <span className="text-xs opacity-70">{tab.desc}</span>
               </div>
             </button>

@@ -17,6 +17,8 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import FlowAndIA from "@/components/FlowAndIA";
 import TrustSignals from "@/components/TrustSignals";
 import ProblemSolution from "@/components/ProblemSolution";
+import WidgetActionSection from "@/components/WidgetActionSection";
+import { CityGuideTeaser } from "@/components/city/CityGuideTeaser";
 
 type PageProps = {
   params: {
@@ -197,6 +199,16 @@ export default function CityMovingPage({ params }: PageProps) {
       {/* Hero */}
       <CityHero city={city} quoteUrl={quoteUrl} />
 
+      {/* Widget devis (conversion + SEO) */}
+      <WidgetActionSection
+        eyebrow="Comparez maintenant"
+        title={`3 à 5 devis à ${city.nameCapitalized}, sans spam`}
+        subtitle="Démarrez votre dossier en quelques minutes. L’IA aide à fiabiliser le volume pour des devis comparables."
+        source="moverz.fr"
+        from={`/demenagement/${city.slug}/`}
+        citySlug={city.slug}
+      />
+
       {/* Stats locales */}
       <CityStats cityName={city.nameCapitalized} />
 
@@ -209,9 +221,8 @@ export default function CityMovingPage({ params }: PageProps) {
       {/* Bloc local unique + CTA */}
       <CityLocalInsights citySlug={city.slug} cityName={city.nameCapitalized} quoteUrl={quoteUrl} />
 
-      {/* Guide long-form (SEO) — 2000+ mots, replié par défaut pour préserver la conversion */}
-      {/* Temporarily disabled - causes build timeout on CapRover */}
-      {/* <CityLongFormGuide citySlug={city.slug} cityName={city.nameCapitalized} quoteUrl={quoteUrl} /> */}
+      {/* Guide long-form (SEO) : page dédiée (évite les timeouts de build) */}
+      <CityGuideTeaser citySlug={city.slug} cityName={city.nameCapitalized} />
 
       {/* Villes proches / même région */}
       {nearbyCities.length > 0 && (
