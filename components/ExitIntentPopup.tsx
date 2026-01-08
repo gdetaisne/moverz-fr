@@ -71,7 +71,7 @@ export default function ExitIntentPopup() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[9999] w-full max-w-4xl mx-4"
+            className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[9999] w-full max-w-3xl mx-4 md:mx-8"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative bg-gradient-to-br from-white via-gray-50 to-white rounded-3xl shadow-[0_25px_80px_rgba(0,0,0,0.3)] overflow-hidden border border-gray-100">
@@ -94,7 +94,7 @@ export default function ExitIntentPopup() {
               </button>
 
               {/* Content - Split layout */}
-              <div className="relative grid md:grid-cols-2 gap-8 p-8 md:p-12">
+              <div className="relative grid md:grid-cols-2 gap-6 md:gap-8 p-6 md:p-10">
                 {/* Left: Mockup */}
                 <div className="hidden md:flex items-center justify-center">
                   <div className="relative w-full max-w-[280px]">
