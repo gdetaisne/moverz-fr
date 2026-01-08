@@ -34,13 +34,13 @@ export default function ProCTA() {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Recevez des leads qualifiés,
+              On révolutionne le déménagement,
               <br />
-              <span className="text-[#6BCFCF]">gérez-les en un clic</span>
+              <span className="text-[#6BCFCF]">ensemble</span>
             </h2>
 
             <p className="text-lg text-white/70 mb-8 leading-relaxed">
-              Rejoignez le réseau Moverz Pro : accédez à des dossiers complets (photos, IA, volumes) et transformez plus de leads en clients.
+              Rejoignez Moverz Pro et accédez à des dossiers ultra-préparés (photos, IA, volumes). Plus de temps pour déménager, moins pour courir après les infos.
             </p>
 
             {/* Features */}
@@ -50,8 +50,8 @@ export default function ProCTA() {
                   <Users className="w-4 h-4 text-[#6BCFCF]" />
                 </div>
                 <div>
-                  <p className="font-semibold text-white">Leads qualifiés avec photos</p>
-                  <p className="text-sm text-white/60">Dossiers complets analysés par l'IA</p>
+                  <p className="font-semibold text-white">Dossiers ultra-préparés</p>
+                  <p className="text-sm text-white/60">Photos, IA, volumes → tout est prêt pour votre devis</p>
                 </div>
               </div>
 
@@ -60,8 +60,8 @@ export default function ProCTA() {
                   <TrendingUp className="w-4 h-4 text-[#6BCFCF]" />
                 </div>
                 <div>
-                  <p className="font-semibold text-white">Dashboard SaaS tout-en-un</p>
-                  <p className="text-sm text-white/60">Gérez vos devis, suivez vos conversions</p>
+                  <p className="font-semibold text-white">Dashboard qui simplifie votre vie</p>
+                  <p className="text-sm text-white/60">Gérez vos dossiers, suivez vos clients, gagnez du temps</p>
                 </div>
               </div>
 
@@ -70,8 +70,8 @@ export default function ProCTA() {
                   <Zap className="w-4 h-4 text-[#6BCFCF]" />
                 </div>
                 <div>
-                  <p className="font-semibold text-white">Payez uniquement si vous répondez</p>
-                  <p className="text-sm text-white/60">Modèle transparent, 0 surprise</p>
+                  <p className="font-semibold text-white">Clients déjà convaincus</p>
+                  <p className="text-sm text-white/60">Ils viennent via Moverz, ils sont prêts à déménager</p>
                 </div>
               </div>
             </div>
@@ -91,31 +91,31 @@ export default function ProCTA() {
             {/* Card 1 */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <div className="flex items-center justify-between mb-2">
-                <p className="text-white/60 text-sm font-medium">Leads générés/mois</p>
+                <p className="text-white/60 text-sm font-medium">Déménagements facilités/mois</p>
                 <TrendingUp className="w-5 h-5 text-[#6BCFCF]" />
               </div>
               <p className="text-4xl font-bold text-white mb-1">1 200+</p>
-              <p className="text-xs text-white/50">+45% vs. mois dernier</p>
+              <p className="text-xs text-white/50">Et ça monte chaque mois 🚀</p>
             </div>
 
             {/* Card 2 */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <div className="flex items-center justify-between mb-2">
-                <p className="text-white/60 text-sm font-medium">Taux de conversion moyen</p>
+                <p className="text-white/60 text-sm font-medium">Clients satisfaits</p>
                 <Zap className="w-5 h-5 text-[#6BCFCF]" />
               </div>
-              <p className="text-4xl font-bold text-white mb-1">32%</p>
-              <p className="text-xs text-white/50">Lead → Client confirmé</p>
+              <p className="text-4xl font-bold text-white mb-1">4.9/5</p>
+              <p className="text-xs text-white/50">Déménagement réussi = client heureux</p>
             </div>
 
             {/* Card 3 */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <div className="flex items-center justify-between mb-2">
-                <p className="text-white/60 text-sm font-medium">Déménageurs partenaires</p>
+                <p className="text-white/60 text-sm font-medium">Partenaires Moverz Pro</p>
                 <Users className="w-5 h-5 text-[#6BCFCF]" />
               </div>
               <p className="text-4xl font-bold text-white mb-1">150+</p>
-              <p className="text-xs text-white/50">Partout en France</p>
+              <p className="text-xs text-white/50">Partout en France 🇫🇷</p>
             </div>
           </div>
         </div>
