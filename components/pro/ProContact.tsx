@@ -177,7 +177,7 @@ export default function ProContact() {
         >
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-[#6BCFCF]" />
-            <span>Réponse < 2h par email</span>
+            <span>Réponse {'<'} 2h par email</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-[#6BCFCF]" />
