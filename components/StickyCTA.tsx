@@ -99,22 +99,8 @@ export default function StickyCTA() {
                 </div>
               </div>
 
-              {/* CTAs */}
+              {/* CTA - Desktop: pas de WhatsApp */}
               <div className="flex items-center gap-3 flex-shrink-0">
-                <Button
-                  href={whatsappUrl}
-                  variant="secondary"
-                  size="sm"
-                  className="px-5 py-2.5"
-                  ariaLabel="Démarrer sur WhatsApp"
-                >
-                  <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#25D366]/15 text-[#128C7E]">
-                    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true">
-                      <path d="M20.52 3.48A11.91 11.91 0 0 0 12.06 0C5.5 0 .16 5.33.16 11.89c0 2.09.55 4.12 1.6 5.92L0 24l6.35-1.68a11.86 11.86 0 0 0 5.71 1.46h.01c6.56 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.17-3.44-8.41Zm-8.45 18.2h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.77 1 1-3.67-.24-.38a9.88 9.88 0 0 1-1.52-5.25C2.13 6.42 6.49 2.06 11.86 2.06c2.64 0 5.12 1.03 6.98 2.9a9.82 9.82 0 0 1 2.9 6.98c0 5.37-4.36 9.74-9.67 9.74Z" />
-                    </svg>
-                  </span>
-                  <span>WhatsApp</span>
-                </Button>
                 <Button href={quoteUrl} variant="primary" size="sm" className="px-6 py-2.5" ariaLabel="Lancer le comparateur">
                   <span>Comparer maintenant</span>
                   <span className="text-base leading-none">→</span>

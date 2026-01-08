@@ -9,6 +9,7 @@ import TrustSignals from "@/components/TrustSignals";
 import QuickFAQ from "@/components/QuickFAQ";
 import StickyCTA from "@/components/StickyCTA";
 import FinalCTA from "@/components/FinalCTA";
+import ProCTA from "@/components/ProCTA";
 import WhyMoverz from "@/components/WhyMoverz";
 
 export const metadata: Metadata = {
@@ -100,6 +101,9 @@ export default function Home() {
 
       {/* 10. Final CTA - Enhanced with animation */}
       <FinalCTA />
+
+      {/* 11. Pro CTA - For movers (SaaS positioning) */}
+      <ProCTA />
 
         {/* Sticky CTA global */}
         <StickyCTA />
