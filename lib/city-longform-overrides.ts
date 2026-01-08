@@ -1720,6 +1720,208 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
       },
     ],
   },
+
+  // Pack A (sections complètes) — Hauts-de-France (10)
+  amiens: {
+    extraSections: [
+      {
+        id: "specificites-logement-acces",
+        title: "Spécificités logement & accès à Amiens (et checklist locale)",
+        paragraphs: [
+          "À Amiens, un devis fiable dépend surtout du temps réel : portage, étages, passages. C’est souvent plus déterminant que “10 cartons de plus”.",
+          "Le meilleur standard : distance camion→porte + photo escalier/palier (ou ascenseur) + photo du passage le plus étroit. Avec ça, les devis deviennent comparables.",
+          "Annoncez aussi les meubles volumineux : c’est ce qui évite les blocages le jour J.",
+        ],
+        checklist: [
+          "Photo rue : stationnement/arrêt possible",
+          "Distance camion→porte (court/moyen/long)",
+          "Photo entrée + passage le plus étroit",
+          "Photo escalier/ascenseur + palier",
+          "Photo meubles volumineux + objets fragiles",
+        ],
+      },
+    ],
+  },
+  dunkerque: {
+    extraSections: [
+      {
+        id: "specificites-logement-acces",
+        title: "Spécificités logement & accès à Dunkerque (et checklist locale)",
+        paragraphs: [
+          "À Dunkerque, la comparaison de devis devient simple quand l’accès est clair : où s’arrêter, distance de portage, et passages à l’intérieur.",
+          "Même sans mesurer, une estimation en pas + 2–3 photos suffit à rendre le chiffrage réaliste.",
+          "Gardez le même dossier pour tous les déménageurs pour éviter les écarts artificiels.",
+        ],
+        checklist: [
+          "Photo stationnement/arrêt possible",
+          "Distance camion→porte (en pas)",
+          "Photo entrée + passage le plus étroit",
+          "Photo escalier/ascenseur",
+          "Photo des 2–3 meubles volumineux",
+        ],
+      },
+    ],
+  },
+  calais: {
+    extraSections: [
+      {
+        id: "specificites-logement-acces",
+        title: "Spécificités logement & accès à Calais (et checklist locale)",
+        paragraphs: [
+          "À Calais, un devis fiable est un devis qui connaît votre logistique réelle : stationnement, portage, et passage intérieur.",
+          "Si vous avez un portage long ou un escalier tournant, montrez-le : c’est du temps de manutention.",
+          "La checklist ci-dessous suffit à standardiser votre demande et comparer des devis comparables.",
+        ],
+        checklist: [
+          "Photo rue : endroit où s’arrêter",
+          "Distance camion→porte (court/moyen/long)",
+          "Photo entrée + couloir/porte la plus étroite",
+          "Photo escalier/ascenseur + palier",
+          "Photo objets lourds/fragiles (groupée)",
+        ],
+      },
+    ],
+  },
+  "boulogne-sur-mer": {
+    extraSections: [
+      {
+        id: "specificites-logement-acces",
+        title: "Spécificités logement & accès à Boulogne‑sur‑Mer (et checklist locale)",
+        paragraphs: [
+          "À Boulogne‑sur‑Mer, le devis devient fiable quand l’accès est visible : rue, entrée, escalier/ascenseur. C’est simple et très efficace.",
+          "Le portage est souvent le paramètre sous-estimé : notez-le (en pas) et vous évitez les écarts de chiffrage.",
+          "Ajoutez les meubles volumineux, et tout le monde chiffre la même méthode.",
+        ],
+        checklist: [
+          "Photo stationnement/arrêt possible",
+          "Distance camion→porte (en pas)",
+          "Photo entrée + passage le plus étroit",
+          "Photo escalier/ascenseur",
+          "Photo meubles volumineux (canapé, frigo, armoire)",
+        ],
+      },
+    ],
+  },
+  arras: {
+    extraSections: [
+      {
+        id: "specificites-logement-acces",
+        title: "Spécificités logement & accès à Arras (et checklist locale)",
+        paragraphs: [
+          "À Arras, un devis fiable se construit sur l’accès : stationnement, portage, et passages. Sans ça, les devis ne décrivent pas la même prestation.",
+          "Même sans mesures, une photo du passage le plus étroit + une photo escalier/ascenseur suffisent souvent à cadrer correctement.",
+          "Gardez la checklist identique pour tous pour comparer sereinement.",
+        ],
+        checklist: [
+          "Photo rue : arrêt possible + distance",
+          "Distance camion→porte (court/moyen/long)",
+          "Photo passage le plus étroit",
+          "Photo escalier/ascenseur + palier",
+          "Photo meubles volumineux + objets fragiles",
+        ],
+      },
+    ],
+  },
+  lens: {
+    extraSections: [
+      {
+        id: "specificites-logement-acces",
+        title: "Spécificités logement & accès à Lens (et checklist locale)",
+        paragraphs: [
+          "À Lens, la fiabilité dépend surtout du temps réel de manutention : portage, étages, passages. C’est le vrai facteur de coût.",
+          "Notez la distance camion→porte (même en pas) et photographiez l’escalier/palier. Ça suffit souvent à éviter les devis trop optimistes.",
+          "Ajoutez une photo des meubles volumineux et vous sécurisez le devis.",
+        ],
+        checklist: [
+          "Distance camion→porte (en pas)",
+          "Photo rue : stationnement possible",
+          "Photo escalier (bas + palier) / ascenseur (cabine)",
+          "Photo passage le plus étroit",
+          "Photo meubles volumineux",
+        ],
+      },
+    ],
+  },
+  lievin: {
+    extraSections: [
+      {
+        id: "specificites-logement-acces",
+        title: "Spécificités logement & accès à Liévin (et checklist locale)",
+        paragraphs: [
+          "À Liévin, un devis fiable vient d’un dossier standard : accès, volume, date. L’accès se fiabilise avec 3 photos (rue, entrée, escalier/ascenseur).",
+          "Si vous avez un meuble “limite”, annoncez-le : c’est souvent ce détail qui évite un blocage le jour J.",
+          "La checklist ci-dessous est un standard simple à réutiliser.",
+        ],
+        checklist: [
+          "Photo rue : arrêt possible",
+          "Distance camion→porte (court/moyen/long)",
+          "Photo entrée + passage le plus étroit",
+          "Photo escalier/ascenseur",
+          "Photo objets fragiles/lourds (groupée)",
+        ],
+      },
+    ],
+  },
+  bethune: {
+    extraSections: [
+      {
+        id: "specificites-logement-acces",
+        title: "Spécificités logement & accès à Béthune (et checklist locale)",
+        paragraphs: [
+          "À Béthune, les devis deviennent comparables quand l’accès est clair : où le camion s’arrête, combien de portage, et comment on monte.",
+          "Une photo du passage le plus étroit + une photo escalier/ascenseur suffisent souvent à rendre le devis réaliste.",
+          "Ajoutez les meubles volumineux et vous évitez les devis “au feeling”.",
+        ],
+        checklist: [
+          "Photo rue : stationnement possible + distance",
+          "Distance camion→porte (en pas)",
+          "Photo entrée + passage le plus étroit",
+          "Photo escalier/ascenseur + palier",
+          "Photo meubles volumineux",
+        ],
+      },
+    ],
+  },
+  valenciennes: {
+    extraSections: [
+      {
+        id: "specificites-logement-acces",
+        title: "Spécificités logement & accès à Valenciennes (et checklist locale)",
+        paragraphs: [
+          "À Valenciennes, le devis fiable est celui qui connaît le temps réel de manutention : portage, étages, passages. C’est ce qui fait varier la facture.",
+          "Le bon standard : distance camion→porte + photo escalier/palier + photo du passage le plus étroit. Ensuite, on compare enfin des devis comparables.",
+          "Annoncez les objets fragiles/lourds pour aligner la méthode et l’assurance.",
+        ],
+        checklist: [
+          "Distance camion→porte (court/moyen/long)",
+          "Photo rue : arrêt possible",
+          "Photo passage le plus étroit",
+          "Photo escalier/ascenseur",
+          "Liste + photo objets fragiles/lourds",
+        ],
+      },
+    ],
+  },
+  douai: {
+    extraSections: [
+      {
+        id: "specificites-logement-acces",
+        title: "Spécificités logement & accès à Douai (et checklist locale)",
+        paragraphs: [
+          "À Douai, la fiabilité d’un devis dépend de l’accès : stationnement, portage, et passages. Sans ces infos, vous comparez des devis qui n’incluent pas la même quantité de travail.",
+          "Une photo de l’escalier + un palier et une photo du passage le plus étroit suffisent souvent à fiabiliser le chiffrage.",
+          "Gardez la checklist identique pour tous pour comparer sereinement.",
+        ],
+        checklist: [
+          "Photo stationnement/arrêt possible",
+          "Distance camion→porte (en pas)",
+          "Photo entrée + passage le plus étroit",
+          "Photo escalier/ascenseur + palier",
+          "Photo meubles volumineux + objets fragiles",
+        ],
+      },
+    ],
+  },
 };
 
 
