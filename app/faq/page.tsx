@@ -144,7 +144,7 @@ export default function FAQPage() {
         secondaryCta={{ label: "Comment ça marche", href: "/comment-ca-marche/" }}
       />
 
-      {/* Stats rapides - Fun facts */}
+      {/* Stats rapides - Premium Tech */}
       <section className="section section-light pt-8 pb-4">
         <div className="container max-w-5xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
@@ -152,32 +152,43 @@ export default function FAQPage() {
               { 
                 icon: <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>,
                 stat: "< 3 min", 
-                label: "Pour créer son dossier complet" 
+                label: "Pour créer son dossier complet",
+                gradient: "from-blue-500 to-cyan-500"
               },
               { 
                 icon: <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" /></svg>,
                 stat: "100%", 
-                label: "Gratuit & sans engagement" 
+                label: "Gratuit & sans engagement",
+                gradient: "from-emerald-500 to-teal-500"
               },
               { 
                 icon: <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>,
                 stat: "0 spam", 
-                label: "Aucun appel intempestif" 
+                label: "Aucun appel intempestif",
+                gradient: "from-purple-500 to-pink-500"
               },
               { 
                 icon: <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>,
                 stat: "5+", 
-                label: "Devis comparables" 
+                label: "Devis comparables",
+                gradient: "from-orange-500 to-red-500"
               }
             ].map((item, i) => (
               <div 
                 key={i}
-                className="relative overflow-hidden rounded-2xl border border-[#E3E5E8] bg-white p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200"
+                className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white/80 backdrop-blur-sm p-5 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-[#6BCFCF]/30 transition-all duration-300"
               >
-                <div className="text-center space-y-2">
-                  <div className="flex items-center justify-center text-[#2B7A78]">{item.icon}</div>
-                  <div className="text-2xl font-bold text-[#04163a]">{item.stat}</div>
-                  <div className="text-xs text-[#6B7280]">{item.label}</div>
+                {/* Gradient overlay on hover */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
+                
+                <div className="relative text-center space-y-2.5">
+                  <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${item.gradient} bg-opacity-10 text-[#2B7A78] group-hover:scale-110 transition-transform duration-300`}>
+                    {item.icon}
+                  </div>
+                  <div className="text-2xl md:text-3xl font-bold bg-gradient-to-br from-[#0F172A] to-[#2B7A78] bg-clip-text text-transparent">
+                    {item.stat}
+                  </div>
+                  <div className="text-xs text-gray-600 font-medium leading-tight">{item.label}</div>
                 </div>
               </div>
             ))}
@@ -185,61 +196,74 @@ export default function FAQPage() {
         </div>
       </section>
 
-      {/* FAQ par catégories - Plus fun et organisé */}
+      {/* FAQ par catégories - Premium Tech */}
       <section className="section section-light pt-4">
         <div className="container max-w-4xl">
-          <div className="text-center mb-10">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#2B7A78] mb-3">
+          <div className="text-center mb-12 space-y-3">
+            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#6BCFCF]/10 to-[#2B7A78]/10 border border-[#6BCFCF]/20 px-4 py-2 text-sm font-semibold text-[#2B7A78]">
+              <span className="h-2 w-2 rounded-full bg-[#6BCFCF] animate-pulse" />
               Questions & Réponses
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#04163a]">
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
               Tout ce que vous voulez savoir
             </h2>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-10">
             {faqCategories.map((category, idx) => (
               <div key={idx} className="relative">
-                {/* Header catégorie avec icône */}
-                <div className="mb-5 flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#6BCFCF]/15 border-2 border-[#6BCFCF]/30 text-[#2B7A78]">
-                    {category.icon}
+                {/* Premium category header */}
+                <div className="mb-6 flex items-center gap-4 group">
+                  <div className="relative">
+                    <div className={`flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${category.color} border ${category.borderColor} text-[#2B7A78] shadow-sm group-hover:shadow-md group-hover:scale-105 transition-all duration-300`}>
+                      {category.icon}
+                    </div>
+                    {/* Glow effect */}
+                    <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-50 blur-xl transition-opacity duration-300 -z-10`} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-[#04163a]">{category.title}</h3>
-                    <p className="text-xs text-[#6B7280]">{category.items.length} question{category.items.length > 1 ? 's' : ''}</p>
+                    <h3 className="text-xl md:text-2xl font-bold text-[#0F172A] group-hover:text-[#2B7A78] transition-colors">
+                      {category.title}
+                    </h3>
+                    <p className="text-sm text-gray-500 font-medium">
+                      {category.items.length} question{category.items.length > 1 ? 's' : ''}
+                    </p>
                   </div>
                 </div>
                 
                 {/* Questions de la catégorie */}
-                <div className="ml-0 md:ml-15">
+                <div className="ml-0 md:ml-18">
                   <FAQAccordion items={category.items} />
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Encore une question ? */}
-          <div className="mt-16 relative overflow-hidden rounded-2xl border-2 border-dashed border-[#6BCFCF]/30 bg-white p-8 md:p-12 text-center shadow-sm">
-            <div className="relative space-y-4">
-              <div className="inline-flex items-center justify-center h-16 w-16 rounded-2xl bg-[#6BCFCF]/15 border-2 border-[#6BCFCF]/30 mx-auto text-[#2B7A78]">
-                <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          {/* Encore une question ? - Premium Tech */}
+          <div className="mt-16 relative overflow-hidden rounded-3xl border border-gray-200 bg-gradient-to-br from-white via-gray-50 to-white p-8 md:p-12 text-center shadow-xl">
+            {/* Gradient overlays */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#6BCFCF]/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#2B7A78]/10 rounded-full blur-3xl" />
+            
+            <div className="relative space-y-6">
+              <div className="inline-flex items-center justify-center h-20 w-20 rounded-2xl bg-gradient-to-br from-[#6BCFCF]/20 to-[#2B7A78]/20 border border-[#6BCFCF]/30 mx-auto text-[#2B7A78] shadow-lg hover:scale-110 transition-transform duration-300">
+                <svg className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-[#04163a]">
+              <h3 className="text-2xl md:text-3xl font-bold text-[#0F172A]">
                 Encore une question ?
               </h3>
-              <p className="text-base text-[#4b5c6b] max-w-xl mx-auto">
+              <p className="text-base text-gray-600 max-w-xl mx-auto leading-relaxed">
                 Pas de soucis ! Notre équipe adore discuter déménagement (oui, vraiment). On vous répond en mode humain, pas en mode robot.
               </p>
               <a
                 href="/contact/"
-                className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+                className="inline-flex items-center gap-2 rounded-xl bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
               >
                 <span>Posez votre question</span>
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </a>
             </div>
