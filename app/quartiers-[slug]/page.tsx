@@ -102,7 +102,7 @@ export default function QuartiersPage({ params }: PageProps) {
   const cityNeighborhoods = neighborhoods[city.slug] || [];
   const citySuburbs = suburbs[city.slug] || [];
 
-  const quoteUrl = `https://devis.moverz.fr/?city_slug=${city.slug}&source=moverz.fr&from=/quartiers-${city.slug}/`;
+  const quoteUrl = `https://devis.moverz.fr/devis-gratuits-v3?city_slug=${city.slug}&source=moverz.fr&from=/quartiers-${city.slug}/`;
 
   return (
     <>

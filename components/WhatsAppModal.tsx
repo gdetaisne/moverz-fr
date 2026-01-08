@@ -123,7 +123,7 @@ export default function WhatsAppModal({
 
         {/* Alternative: Continue on this device */}
         <a
-          href={`https://devis.moverz.fr/?source=moverz.fr&from=${source}&devis_range=3-5`}
+          href={`https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=${source}&devis_range=3-5`}
           className="w-full inline-flex items-center justify-center gap-2 rounded-xl border-2 border-[#E3E5E8] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/50 hover:bg-[#F8F9FA] transition-colors"
           onClick={onClose}
         >

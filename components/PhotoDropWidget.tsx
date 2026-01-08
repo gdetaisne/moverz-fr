@@ -7,7 +7,7 @@ interface PhotoDropWidgetProps {
 }
 
 export default function PhotoDropWidget({
-  redirectUrl = "https://devis.moverz.fr/?source=moverz.fr&from=/home-photo-widget",
+  redirectUrl = "https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/home-photo-widget",
 }: PhotoDropWidgetProps) {
   const [files, setFiles] = useState<File[]>([]);
   const [isDragging, setIsDragging] = useState(false);

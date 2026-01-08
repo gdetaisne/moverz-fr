@@ -791,7 +791,7 @@
       }
       window.MoverzWidget.goToQuotes = function () {
         window.location.href =
-          "https://devis.moverz.fr/?source=moverz.fr&from=header";
+          "https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=header";
       };
     }
 

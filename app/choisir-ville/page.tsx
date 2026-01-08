@@ -12,7 +12,7 @@ export const metadata: Metadata = getFullMetadata(
 export default function ChoisirVillePage() {
   const citiesByRegion = getCitiesByRegion();
   const quoteUrlForCity = (citySlug: string) =>
-    `https://devis.moverz.fr/?city_slug=${citySlug}&source=moverz.fr&from=/choisir-ville/`;
+    `https://devis.moverz.fr/devis-gratuits-v3?city_slug=${citySlug}&source=moverz.fr&from=/choisir-ville/`;
 
   return (
     <main className="bg-hero min-h-screen">
@@ -28,7 +28,7 @@ export default function ChoisirVillePage() {
         subtitle="Sélectionnez votre ville pour démarrer le comparateur et recevoir 3 à 5 devis de déménageurs contrôlés, sur une base standardisée."
         primaryCta={{
           label: "Démarrer le comparateur",
-          href: "https://devis.moverz.fr/?source=moverz.fr&from=/choisir-ville/",
+          href: "https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/choisir-ville/",
         }}
         secondaryCta={{ label: "Voir les guides par ville", href: "/villes/" }}
       />

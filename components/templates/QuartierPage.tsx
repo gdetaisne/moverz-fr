@@ -52,7 +52,7 @@ export function QuartierPage({
   destinationsFrequentes,
   faq,
 }: QuartierPageProps) {
-  const quoteUrl = `https://devis.moverz.fr/?city_slug=${citySlug}&source=moverz.fr&from=/${citySlug}/${quartierSlug}/`;
+  const quoteUrl = `https://devis.moverz.fr/devis-gratuits-v3?city_slug=${citySlug}&source=moverz.fr&from=/${citySlug}/${quartierSlug}/`;
   const pricePost = getPricePostForCity(citySlug);
 
   return (

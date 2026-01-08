@@ -169,7 +169,7 @@ export default function RootLayout({
                 <span className="text-base">→</span>
               </a>
               <a
-                href="https://devis.moverz.fr/?source=moverz.fr&from=header"
+                href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=header"
                 className="inline-flex items-center gap-1 rounded-full bg-[#0F172A] px-4 py-2 text-sm font-semibold text-white hover:scale-105 transition-all duration-200 shadow-sm"
               >
                 <span>Obtenir des devis</span>

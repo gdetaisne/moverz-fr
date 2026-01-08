@@ -47,7 +47,7 @@ export default function CityMovingPage({ params }: PageProps) {
 
   const isParis = city.slug === "paris";
 
-  const quoteUrl = `https://devis.moverz.fr/?city_slug=${city.slug}&source=moverz.fr&from=/demenagement/${city.slug}/`;
+  const quoteUrl = `https://devis.moverz.fr/devis-gratuits-v3?city_slug=${city.slug}&source=moverz.fr&from=/demenagement/${city.slug}/`;
   const pricePost = getPricePostForCity(city.slug);
   const cityGuides = PUBLISHED_BLOG_POSTS
     .filter((post) => post.citySlug === city.slug && post.slug !== pricePost?.slug)

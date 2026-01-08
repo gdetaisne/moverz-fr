@@ -247,7 +247,7 @@ export default function VolumeCalculator() {
 
               {/* CTA */}
               <a
-                href={`https://devis.moverz.fr/?source=moverz.fr&from=/calculateur-volume-demenagement/&estimated_volume=${totalVolume}`}
+                href={`https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/calculateur-volume-demenagement/&estimated_volume=${totalVolume}`}
                 className="block w-full text-center py-4 rounded-xl bg-[#6BCFCF] text-[#0F172A] font-semibold hover:bg-[#A8E8E8] transition-colors"
               >
                 Obtenir des devis →

@@ -62,7 +62,7 @@ export function CorridorPage({
   faq,
 }: CorridorPageProps) {
   const destSlug = destinationSlug ?? slugify(destination);
-  const quoteUrl = `https://devis.moverz.fr/?city_slug=${originCitySlug}&source=moverz.fr&from=/${originCitySlug}-vers-${destSlug}/`;
+  const quoteUrl = `https://devis.moverz.fr/devis-gratuits-v3?city_slug=${originCitySlug}&source=moverz.fr&from=/${originCitySlug}-vers-${destSlug}/`;
   const destinationCity = getCityBySlug(destSlug);
   const originPricePost = getPricePostForCity(originCitySlug);
   const destPricePost = destinationCity ? getPricePostForCity(destinationCity.slug) : undefined;

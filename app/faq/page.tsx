@@ -139,7 +139,7 @@ export default function FAQPage() {
         subtitle="Découvrez comment l’IA Moverz estime votre volume, standardise votre dossier et vous aide à comparer des devis vraiment comparables, sans spam."
         primaryCta={{
           label: "Comparer 3 à 5 devis gratuitement",
-          href: "https://devis.moverz.fr/?source=moverz.fr&from=/faq/",
+          href: "https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/faq/",
         }}
         secondaryCta={{ label: "Comment ça marche", href: "/comment-ca-marche/" }}
       />
@@ -270,7 +270,7 @@ export default function FAQPage() {
             En quelques photos, l’IA Moverz estime votre volume et prépare des devis comparables de déménageurs contrôlés, sans spam.
           </p>
           <a
-            href="https://devis.moverz.fr/?source=moverz.fr&from=/faq"
+            href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/faq"
             className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-[#0F172A] shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
           >
             <span>Comparez 3 à 5 devis gratuitement</span>

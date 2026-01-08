@@ -61,7 +61,7 @@ export default function VillesPaginatedPage({ params }: PageProps) {
         subtitle={`Page ${pageNum}/${totalPages} — trouvez votre guide local et comparez 3 à 5 devis.`}
         primaryCta={{
           label: "Comparer 3 à 5 devis gratuitement",
-          href: "https://devis.moverz.fr/?source=moverz.fr&from=/villes-page",
+          href: "https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/villes-page",
         }}
         secondaryCta={{ label: "Retour à la page régions", href: "/villes/" }}
       />

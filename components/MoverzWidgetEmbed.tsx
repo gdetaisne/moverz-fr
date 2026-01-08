@@ -68,7 +68,7 @@ export default function MoverzWidgetEmbed({
             <div className="text-center space-y-3 p-6">
               <p className="text-sm text-red-600">Le widget ne peut pas se charger pour le moment.</p>
               <a
-                href="https://devis.moverz.fr/?source=moverz.fr&from=/"
+                href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/"
                 className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:scale-105 transition-all"
               >
                 Obtenir mes devis

@@ -22,7 +22,7 @@ export default function StickyCTA() {
     setFromPath(window.location.pathname || "/");
   }, []);
 
-  const quoteUrl = `https://devis.moverz.fr/?source=moverz.fr&from=${encodeURIComponent(fromPath)}`;
+  const quoteUrl = `https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=${encodeURIComponent(fromPath)}`;
   // WhatsApp direct link - Numéro WhatsApp Business Moverz
   // +33 7 52 98 65 81 = 33752986581
   const whatsappPhone = (

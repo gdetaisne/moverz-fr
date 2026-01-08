@@ -31,7 +31,7 @@ export function HubQuartiersPage({
   cityName,
   neighborhoods,
 }: HubQuartiersPageProps) {
-  const quoteUrl = `https://devis.moverz.fr/?city_slug=${citySlug}&source=moverz.fr&from=/quartiers-${citySlug}/`;
+  const quoteUrl = `https://devis.moverz.fr/devis-gratuits-v3?city_slug=${citySlug}&source=moverz.fr&from=/quartiers-${citySlug}/`;
   const pricePost = getPricePostForCity(citySlug);
 
   return (

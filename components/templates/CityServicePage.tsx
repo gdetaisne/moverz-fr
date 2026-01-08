@@ -103,7 +103,7 @@ export function CityServicePage({
 
             <div className="pt-3">
               <a
-                href={`https://devis.moverz.fr/?city_slug=${citySlug}&source=moverz.fr&from=${encodeURIComponent(fromPath)}`}
+                href={`https://devis.moverz.fr/devis-gratuits-v3?city_slug=${citySlug}&source=moverz.fr&from=${encodeURIComponent(fromPath)}`}
                 className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#F3F4F6] transition-colors"
               >
                 <span>Obtenir 3 à 5 devis</span>
@@ -169,7 +169,7 @@ export function CityServicePage({
 
             <div className="text-center">
               <a
-                href={`https://devis.moverz.fr/?city_slug=${citySlug}&source=moverz.fr&from=${encodeURIComponent(fromPath)}`}
+                href={`https://devis.moverz.fr/devis-gratuits-v3?city_slug=${citySlug}&source=moverz.fr&from=${encodeURIComponent(fromPath)}`}
                 className="inline-flex items-center justify-center rounded-full border border-[#6BCFCF] bg-[#6BCFCF] px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[#2B7A78] hover:border-[#2B7A78]"
               >
                 Comparer 3 à 5 devis (gratuit)

@@ -55,7 +55,7 @@ export default function WhatsAppCTA({
       source,
       device: isMobile ? "mobile" : "desktop",
     });
-    window.location.href = `https://devis.moverz.fr/?source=moverz.fr&from=${source}&devis_range=3-5`;
+    window.location.href = `https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=${source}&devis_range=3-5`;
   };
 
   if (!mounted) return null; // Avoid hydration mismatch
@@ -102,7 +102,7 @@ export default function WhatsAppCTA({
               : "text-[#0F172A]/60 hover:text-[#0F172A]"
           }`}
         >
-          Envoyer vos photos sur WhatsApp (recommandé)
+          Ou remplir le formulaire depuis cet ordinateur
         </button>
       </div>
 

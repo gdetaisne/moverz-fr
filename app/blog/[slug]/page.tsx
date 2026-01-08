@@ -103,7 +103,7 @@ export default function BlogPostPage({ params }: PageProps) {
                 {description}
               </p>
               <a
-                href="https://devis.moverz.fr/?source=moverz.fr&from=/blog-article-cta"
+                href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/blog-article-cta"
                 className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF] px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#5AB9B9] transition-colors"
               >
                 <span>Comparer les devis gratuitement</span>
@@ -201,7 +201,7 @@ export default function BlogPostPage({ params }: PageProps) {
                 En attendant, vous pouvez déjà comparer des devis pour votre déménagement.
               </p>
               <a
-                href="https://devis.moverz.fr/?source=moverz.fr&from=/blog-placeholder"
+                href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/blog-placeholder"
                 className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-[#1E293B] transition-colors"
               >
                 <span>Comparer les devis maintenant</span>
@@ -329,7 +329,7 @@ export default function BlogPostPage({ params }: PageProps) {
             volume. Vous gardez la main sur le choix final.
           </p>
           <a
-            href="https://devis.moverz.fr/?source=moverz.fr&from=/blog-article"
+            href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/blog-article"
             className="btn-primary"
           >
             Lancer mon comparateur de devis

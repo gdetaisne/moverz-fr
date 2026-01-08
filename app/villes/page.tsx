@@ -28,7 +28,7 @@ export default function VillesPage() {
         subtitle="Moverz fonctionne dans toute la France. Explorez nos villes principales (guides dédiés) et lancez le comparateur, même si votre ville n’est pas listée."
         primaryCta={{
           label: "Comparer 3 à 5 devis gratuitement",
-          href: "https://devis.moverz.fr/?source=moverz.fr&from=/villes",
+          href: "https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/villes",
         }}
         secondaryCta={{ label: "Annuaire complet (paginé)", href: "/villes/page/1/" }}
       />
@@ -177,7 +177,7 @@ export default function VillesPage() {
             Choisissez votre ville et lancez votre comparateur en quelques clics.
           </p>
           <a
-            href="https://devis.moverz.fr/?source=moverz.fr&from=/villes"
+            href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/villes"
             className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-lg font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
           >
             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
