@@ -3,7 +3,6 @@ import { getFullMetadata } from "@/lib/canonical-helper";
 import { getPricePostForCity, getPublishedPostBySlug } from "@/lib/blog";
 import { getCityBySlug } from "@/lib/cities";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { MapPin, CheckCircle } from "lucide-react";
 
 export type CorridorPageProps = {
   originCitySlug: string;
@@ -129,8 +128,7 @@ export function CorridorPage({
             {/* Infos rapides */}
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm md:text-base text-white/80">
               <span className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-[#6BCFCF]" />
-                {distance}
+                <span className="text-[#6BCFCF]">📍</span> {distance}
               </span>
               <span>·</span>
               <span className="flex items-center gap-2">
@@ -262,8 +260,8 @@ export function CorridorPage({
                   key={index}
                   className="flex gap-3 rounded-xl border border-[#E5E7EB] bg-white p-4"
                 >
-                  <span className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-[#6BCFCF]/10 text-[#6BCFCF]">
-                    <CheckCircle className="w-4 h-4" />
+                  <span className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-[#6BCFCF]/10 text-[#6BCFCF] text-sm font-bold">
+                    ✓
                   </span>
                   <p className="text-sm text-[#4b5c6b]">{conseil}</p>
                 </div>

@@ -5,18 +5,18 @@ import Link from "next/link";
 import type { BlogPostMeta } from "@/lib/blog";
 import { PUBLISHED_BLOG_POSTS } from "@/lib/blog";
 import { formatDateFR } from "@/lib/date/fr";
-import { BookOpen, Clock, TrendingUp, Filter, ArrowRight, Library, DollarSign, CheckCircle, Building, Lightbulb } from "lucide-react";
+import { BookOpen, Clock, TrendingUp, Filter, ArrowRight } from "lucide-react";
 
 export const dynamic = 'force-dynamic';
 
 const ITEMS_PER_PAGE = 12;
 
 const CATEGORIES = [
-  { slug: "all", label: "Tous les articles", Icon: Library },
-  { slug: "prix-et-devis", label: "Prix & devis", Icon: DollarSign },
-  { slug: "checklists-et-guides", label: "Checklists & guides", Icon: CheckCircle },
-  { slug: "demenagement-par-ville", label: "Par ville", Icon: Building },
-  { slug: "conseils-demenagement", label: "Conseils", Icon: Lightbulb },
+  { slug: "all", label: "Tous les articles", icon: "📚" },
+  { slug: "prix-et-devis", label: "Prix & devis", icon: "💰" },
+  { slug: "checklists-et-guides", label: "Checklists & guides", icon: "✅" },
+  { slug: "demenagement-par-ville", label: "Par ville", icon: "🏙️" },
+  { slug: "conseils-demenagement", label: "Conseils", icon: "💡" },
 ];
 
 const formatDate = (value: string) =>
@@ -217,7 +217,7 @@ export default function BlogIndexPage() {
                       : "bg-gray-100 text-[#6B7280] hover:bg-gray-200 hover:scale-102"
                   }`}
                 >
-                  <cat.Icon className="w-4 h-4" />
+                  <span>{cat.icon}</span>
                   <span>{cat.label}</span>
                   <span className={`text-xs ${
                     activeCategory === cat.slug ? "text-white/70" : "text-[#6B7280]"

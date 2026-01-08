@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL('https://moverz.fr'),
   title: "Déménagement : Comparez 3 à 5 devis en 3 min (0€, 0 spam) | Moverz",
-  description: "3 à 5 devis comparables • Pros contrôlés (assurances + 0 litige) • Dossier anonyme • 100% gratuit · 2847 clients · Note 4.8/5 → Comparez maintenant",
+  description: "✓ 3 à 5 devis comparables ✓ Pros contrôlés (assurances + 0 litige) ✓ Dossier anonyme ✓ 100% gratuit · 2847 clients · Note 4.8/5 → Comparez maintenant",
   keywords: ["comparateur déménagement", "devis déménageurs", "déménagement France", "comparateur devis", "déménageurs contrôlés", "devis gratuit déménagement"],
   authors: [{ name: "Moverz" }],
   openGraph: {

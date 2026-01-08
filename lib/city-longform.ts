@@ -1,5 +1,4 @@
 import { CITIES, getCityBySlug } from "@/lib/cities";
-import { CITY_LONGFORM_OVERRIDES } from "@/lib/city-longform-overrides";
 
 export type CityGuideSection = {
   id: string;
@@ -266,63 +265,17 @@ export function getCityLongFormGuide(citySlug: string, cityName: string): CityLo
     },
   ];
 
-  // Apply handwritten per-city enhancements (without changing the overall structure)
-  const override = CITY_LONGFORM_OVERRIDES[citySlug];
-  const sectionsWithOverrides: CityGuideSection[] = sections.map((s) => {
-    const prepend = override?.prependBySectionId?.[s.id] ?? [];
-    const append = override?.appendBySectionId?.[s.id] ?? [];
-    if (!prepend.length && !append.length) return s;
-    return {
-      ...s,
-      paragraphs: [...prepend, ...s.paragraphs, ...append],
-    };
-  });
-
   const base = {
     title: `Guide complet : déménager à ${cityName} (${angle})`,
     subtitle: `2000+ mots, conçu pour vous aider à obtenir des devis fiables et éviter les surprises — sans vous noyer dans le blabla.`,
-    sections: [...sectionsWithOverrides, ...(override?.extraSections ?? [])],
+    sections,
   };
 
-  const MIN_WORDS = 2000;
-  const fillerPool = [
-    `Petit rappel utile : plus votre dossier est clair (accès, portage, étage, ascenseur, gros meubles), moins vous payez l’incertitude. C’est le principe des devis comparables.`,
-    `Si vous hésitez sur un passage (porte, couloir, escalier), une photo vaut mieux qu’une estimation. Les déménageurs n’ont pas besoin de perfection : ils ont besoin de visibilité.`,
-    `Conseil “anti‑stress” : regroupez vos essentiels (documents, chargeurs, clés) dans un sac qui ne part pas dans le camion. Le jour J, ça change tout.`,
-    `Pour éviter les oublis, faites une checklist en 3 colonnes : à faire avant, le jour J, après. Cochez — et vous avancez sans surcharge mentale.`,
-    `Si vous comparez deux devis, comparez aussi la prestation : emballage, démontage/remontage, assurance, et ce qui est inclus sur l’accès. Un prix seul ne suffit pas.`,
-    `Astuce simple : notez “distance camion→porte” en mètres approximatifs (ou en pas). Même approximatif, c’est un excellent repère pour éviter les surprises.`,
-    `Le volume est un levier puissant : trier avant de demander un devis est souvent la façon la plus simple de payer moins, sans rogner sur la qualité.`,
-    `En cas de doute, demandez une confirmation écrite des contraintes d’accès prises en compte. Ce n’est pas bureaucratique : c’est de la clarté.`,
-  ];
-
-  let mutable = { ...base, sections: [...base.sections] };
-  let wordCount = countWordsInGuide(mutable);
-
-  if (wordCount < MIN_WORDS) {
-    const filler = pickManyUnique(fillerPool, seed + 999, Math.min(fillerPool.length, 6));
-    const extra: CityGuideSection = {
-      id: "annexe",
-      title: "Annexe : rappels rapides (pour éviter les erreurs classiques)",
-      paragraphs: [],
-    };
-
-    // Add filler paragraphs deterministically until we hit the threshold.
-    let cursor = seed + 123;
-    while (wordCount < MIN_WORDS) {
-      extra.paragraphs.push(filler[cursor % filler.length]);
-      cursor = (cursor * 1103515245 + 12345) >>> 0;
-      mutable.sections = [...base.sections, extra];
-      wordCount = countWordsInGuide(mutable);
-      // Safety: break even if something weird happens
-      if (extra.paragraphs.length > 200) break;
-    }
-  }
-
+  const wordCount = countWordsInGuide(base);
   const estimatedReadingMinutes = estimateMinutes(wordCount);
 
   return {
-    ...mutable,
+    ...base,
     wordCount,
     estimatedReadingMinutes,
   };
