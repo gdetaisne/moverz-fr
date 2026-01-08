@@ -55,7 +55,7 @@ export default function WhatsAppModal({
       onClick={onClose}
     >
       <div
-        className="relative bg-white rounded-3xl shadow-2xl max-w-md w-full p-8 animate-in fade-in zoom-in duration-300"
+        className="relative bg-white rounded-3xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto p-8 animate-in fade-in zoom-in duration-300"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close button */}
