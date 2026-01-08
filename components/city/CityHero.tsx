@@ -1,7 +1,9 @@
 "use client";
 
 import type { CityInfo } from "@/lib/cities";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import WhatsAppCTA from "@/components/WhatsAppCTA";
+import Image from "next/image";
 
 type CityHeroProps = {
   city: CityInfo;
@@ -9,90 +11,143 @@ type CityHeroProps = {
 };
 
 export function CityHero({ city, quoteUrl }: CityHeroProps) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
-    <section className="relative overflow-hidden bg-[#A8E8E8]">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white py-16 md:py-24">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+          backgroundSize: '32px 32px'
+        }} />
+      </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <div className="mt-12 text-center space-y-8 max-w-4xl mx-auto">
-          {/* Badge */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="inline-flex items-center gap-2 rounded-full bg-white/90 px-5 py-2 text-sm font-semibold text-[#0F172A] shadow-md backdrop-blur-sm border border-[#6BCFCF]/30"
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left: Content */}
+          <div
+            style={{
+              animation: mounted ? 'fadeInUp 1s ease-out' : 'none',
+            }}
           >
-            <span className="h-2 w-2 rounded-full bg-[#6BCFCF] animate-pulse shadow-[0_0_8px_rgba(107,207,207,0.6)]" />
-            <span>{city.nameCapitalized}</span>
-          </motion.div>
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold mb-8 backdrop-blur-sm">
+              <span className="h-2 w-2 rounded-full bg-[#6BCFCF] animate-pulse" />
+              <span>{city.nameCapitalized}</span>
+            </div>
 
-          {/* Title */}
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.1 }}
-            className="text-4xl md:text-6xl font-bold leading-tight text-[#0F172A]"
-          >
-            Déménager à {city.nameCapitalized} ?<br />
-            <span className="text-[#0F172A]">3 min, 3 à 5 devis.</span>
-          </motion.h1>
+            {/* Title */}
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-[1.1]">
+              Déménager à{" "}
+              <span className="text-[#6BCFCF]">{city.nameCapitalized}</span> ?
+              <br />
+              <span className="text-white">3 min, 3 à 5 devis.</span>
+            </h1>
 
-          {/* Subtitle */}
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.2 }}
-            className="text-lg md:text-xl text-[#1E293B] leading-relaxed max-w-2xl mx-auto"
-          >
-            Des déménageurs locaux contrôlés. Des devis comparables. 0 spam.
-            <span className="block mt-2 text-[#1E293B]/80 text-sm md:text-base font-medium">
+            {/* Subtitle */}
+            <p className="text-xl text-white/70 mb-10 leading-relaxed">
+              Des déménageurs locaux contrôlés. Des devis comparables. 0 spam.
+            </p>
+
+            {/* WhatsApp CTA */}
+            <WhatsAppCTA source={`city-${city.slug}`} />
+
+            <p className="text-sm text-white/50 mt-6">
               Conseil : ajoutez des photos (pièces + accès) pour des devis plus justes.
-            </span>
-          </motion.p>
+            </p>
+          </div>
 
-          {/* CTA */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4"
+          {/* Right: Mockup WhatsApp simple */}
+          <div
+            className="relative order-first lg:order-last"
+            style={{
+              animation: mounted ? 'fadeInUp 1s ease-out 0.2s both' : 'none',
+            }}
           >
-            <a
-              href={quoteUrl}
-              className="group inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-[0_8px_30px_rgba(15,23,42,0.3)] hover:shadow-[0_12px_50px_rgba(15,23,42,0.4)] hover:scale-105 transition-all duration-300"
-            >
-              <span>Comparer les déménageurs</span>
-              <span className="text-xl leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
-            </a>
-          </motion.div>
+            <div className="relative w-full max-w-[360px] mx-auto">
+              {/* iPhone mockup simple */}
+              <div className="relative bg-white rounded-[3rem] shadow-[0_30px_80px_rgba(0,0,0,0.4)] p-3 border-[12px] border-[#0F172A]">
+                {/* Notch */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-6 bg-[#0F172A] rounded-b-2xl z-10" />
+                
+                {/* Screen */}
+                <div className="relative bg-[#ECE5DD] rounded-[2.3rem] overflow-hidden" style={{ height: '600px' }}>
+                  {/* WhatsApp header */}
+                  <div className="bg-[#075E54] px-4 py-3 flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+                      <Image src="/logo.png" alt="Moverz" width={24} height={24} className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <p className="text-white font-semibold text-sm">Moverz</p>
+                      <p className="text-white/70 text-xs">en ligne</p>
+                    </div>
+                  </div>
 
-          {/* Social proof */}
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 0.4 }}
-            className="pt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-[#1E293B]/80 font-medium"
-          >
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5 text-[#0F172A]" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>Déménageurs locaux</span>
+                  {/* Conversation */}
+                  <div className="p-4 space-y-3">
+                    {/* Message from Moverz */}
+                    <div className="flex justify-start">
+                      <div className="bg-white rounded-2xl rounded-tl-sm p-3 max-w-[85%] shadow-sm">
+                        <p className="text-[#1F2937] text-sm leading-relaxed">
+                          Bonjour ! Pour votre déménagement à <strong>{city.nameCapitalized}</strong>, envoyez-moi des photos de toutes les pièces 📸
+                        </p>
+                        <p className="text-[#1F2937]/50 text-xs mt-1">10:24</p>
+                      </div>
+                    </div>
+
+                    {/* User response (green bubble) */}
+                    <div className="flex justify-end">
+                      <div className="bg-[#DCF8C6] rounded-2xl rounded-tr-sm p-3 max-w-[75%] shadow-sm">
+                        <p className="text-[#1F2937] text-sm">📸📸📸</p>
+                        <p className="text-[#1F2937]/50 text-xs mt-1 text-right">10:26</p>
+                      </div>
+                    </div>
+
+                    {/* Response from Moverz */}
+                    <div className="flex justify-start">
+                      <div className="bg-white rounded-2xl rounded-tl-sm p-3 max-w-[85%] shadow-sm">
+                        <p className="text-[#1F2937] text-sm leading-relaxed">
+                          Parfait ! Vous recevrez <strong>3 à 5 devis</strong> de déménageurs locaux à {city.nameCapitalized} dans les prochains jours ✨
+                        </p>
+                        <p className="text-[#1F2937]/50 text-xs mt-1">10:27</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating badges */}
+              <div className="absolute -right-4 top-20 bg-white rounded-xl shadow-xl px-3 py-2 rotate-6 border border-[#6BCFCF]/30">
+                <p className="text-xs font-bold text-[#0F172A]">Locaux</p>
+                <p className="text-xs text-[#1E293B]/60">Contrôlés</p>
+              </div>
+
+              <div className="absolute -left-4 bottom-32 bg-white rounded-xl shadow-xl px-3 py-2 -rotate-6 border border-[#6BCFCF]/30">
+                <p className="text-xs font-bold text-[#0F172A]">0 spam</p>
+                <p className="text-xs text-[#1E293B]/60">Gratuit</p>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5 text-[#0F172A]" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>100% gratuit</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5 text-[#0F172A]" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>IA volumétrie</span>
-            </div>
-          </motion.div>
+          </div>
         </div>
       </div>
+
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}} />
     </section>
   );
 }

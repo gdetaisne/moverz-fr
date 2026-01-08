@@ -1,28 +1,35 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { Home, Building2, Building, TrendingUp, Calculator } from "lucide-react";
 
 type CityPricingProps = {
   cityName: string;
 };
 
 export function CityPricing({ cityName }: CityPricingProps) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const priceRanges = [
     { 
-      icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6",
+      icon: <Home className="w-5 h-5" />,
       label: "Studio", 
       volume: "15 m³", 
       price: "500–800€" 
     },
     { 
-      icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4",
+      icon: <Building2 className="w-5 h-5" />,
       label: "T2/T3", 
       volume: "30 m³", 
       price: "900–1400€",
       highlight: true,
     },
     { 
-      icon: "M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z",
+      icon: <Building className="w-5 h-5" />,
       label: "T4+", 
       volume: "50 m³", 
       price: "1500–2500€" 
@@ -30,88 +37,157 @@ export function CityPricing({ cityName }: CityPricingProps) {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 bg-gradient-to-br from-[var(--brand-navy)] to-[var(--brand-slate)] overflow-hidden">
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--brand-teal)] rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[var(--brand-teal)] rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }} />
-      </div>
-
-      <div className="container max-w-5xl relative">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
-          className="text-center mb-12 space-y-6 text-white"
-        >
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur-sm">
-            <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-teal)] animate-pulse" />
-            <span>Prix indicatifs</span>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Combien ça coûte ?
-          </h2>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            Fourchettes moyennes à {cityName}
-          </p>
-        </motion.div>
-
-        <div className="grid sm:grid-cols-3 gap-6 mb-8">
-          {priceRanges.map((item, i) => (
-            <motion.div
-              key={item.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: i * 0.1 }}
-              whileHover={{ y: -4, scale: 1.02 }}
-              className="group"
-            >
-              <div className={`rounded-2xl ${item.highlight ? 'border-2 border-[var(--brand-teal)]/50 bg-white/10' : 'border border-white/10 bg-white/5'} backdrop-blur-sm p-8 text-center hover:border-[var(--brand-teal)]/70 hover:bg-white/15 transition-all duration-300`}>
-                <div className={`flex items-center justify-center h-12 w-12 rounded-xl ${item.highlight ? 'bg-[var(--brand-deep)] text-white' : 'bg-white/10 text-[var(--brand-teal)]'} group-hover:scale-110 transition-transform duration-300 mx-auto mb-4`}>
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />
-                  </svg>
+    <section className="py-20 md:py-28 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white">
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left: Mockup calcul IA */}
+          <div 
+            className="relative order-2 lg:order-1"
+            style={{
+              animation: mounted ? 'fadeInUp 1s ease-out' : 'none',
+            }}
+          >
+            <div className="relative w-full max-w-[420px] mx-auto">
+              <div className="bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.25)] p-6 text-[#0F172A]">
+                {/* Header */}
+                <div className="flex items-center justify-between mb-6 pb-4 border-b border-gray-200">
+                  <div>
+                    <p className="text-xs text-gray-600 font-medium">Estimation prix</p>
+                    <p className="text-lg font-bold">T3 • 60m² → {cityName}</p>
+                  </div>
+                  <Calculator className="w-6 h-6 text-[#6BCFCF]" />
                 </div>
-                <p className="text-sm text-white/60 mb-2">{item.volume}</p>
-                <p className="text-lg font-bold text-white mb-3">{item.label}</p>
-                <p className="text-3xl font-bold text-[var(--brand-teal)]">{item.price}</p>
+
+                {/* Volume detected */}
+                <div className="p-4 rounded-2xl bg-[#6BCFCF]/10 border border-[#6BCFCF]/30 mb-4">
+                  <p className="text-xs text-gray-600 mb-1">Volume détecté (IA)</p>
+                  <p className="text-3xl font-bold text-[#0F172A]">42 m³</p>
+                  <p className="text-xs text-gray-500 mt-1">7 photos analysées</p>
+                </div>
+
+                {/* Price calculation */}
+                <div className="space-y-3 mb-4">
+                  <div className="flex items-center justify-between p-3 rounded-xl bg-gray-50">
+                    <span className="text-sm text-gray-600">Base volumétrie</span>
+                    <span className="text-sm font-semibold">1 200€</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 rounded-xl bg-gray-50">
+                    <span className="text-sm text-gray-600">Distance</span>
+                    <span className="text-sm font-semibold">+ 450€</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 rounded-xl bg-gray-50">
+                    <span className="text-sm text-gray-600">Accès (3ᵉ étage)</span>
+                    <span className="text-sm font-semibold">+ 200€</span>
+                  </div>
+                </div>
+
+                {/* Total */}
+                <div className="p-5 rounded-2xl bg-gradient-to-br from-[#6BCFCF]/20 to-[#A8E8E8]/20 border-2 border-[#6BCFCF]">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-xs text-gray-600 mb-1">Fourchette estimée</p>
+                      <p className="text-3xl font-bold text-[#0F172A]">1 850€</p>
+                    </div>
+                    <TrendingUp className="w-8 h-8 text-green-600" />
+                  </div>
+                  <p className="text-xs text-gray-600 mt-3">± 10% selon déménageur</p>
+                </div>
+
+                <p className="text-xs text-gray-500 text-center mt-4">
+                  Estimation IA • Prix réel dans vos devis
+                </p>
               </div>
-            </motion.div>
-          ))}
-        </div>
+            </div>
+          </div>
 
-        <motion.p 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.3 }}
-          className="text-sm text-center text-white/50"
-        >
-          Tarifs indicatifs. Le prix réel dépend du volume, des accès et de la période. Vos devis personnalisés = prix réel.
-        </motion.p>
+          {/* Right: Prix indicatifs */}
+          <div 
+            className="order-1 lg:order-2"
+            style={{
+              animation: mounted ? 'fadeInUp 1s ease-out 0.2s both' : 'none',
+            }}
+          >
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-semibold mb-6 backdrop-blur-sm">
+              <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
+              Prix indicatifs
+            </div>
 
-        <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-6 md:p-8">
-          <p className="text-sm font-semibold text-white mb-3">Ce qui fait varier le prix (mini-guide)</p>
-          <ul className="grid gap-2 text-sm text-white/70">
-            {[
-              "Volume (m³) : principal levier — trier avant = payer moins.",
-              "Accès : étages, ascenseur, distance camion→entrée, couloirs.",
-              "Période : été, week-ends et fins de mois = souvent plus cher.",
-              "Formule : éco vs standard vs clé en main (emballage/démontage).",
-              "Spécifiques : objets lourds/fragiles (piano), stockage temporaire, longue distance.",
-            ].map((item) => (
-              <li key={item} className="flex gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[var(--brand-teal)] shrink-0" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-4 text-xs text-white/50">
-            Disclaimer : ces fourchettes ne remplacent pas un devis. Elles n’intègrent pas toutes les contraintes possibles (accès difficile, portage long, options d’assurance, etc.).
-          </p>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+              Combien ça coûte ?
+            </h2>
+
+            <p className="text-lg text-white/70 mb-8 leading-relaxed">
+              Fourchettes moyennes à {cityName}
+            </p>
+
+            <div className="space-y-4 mb-8">
+              {priceRanges.map((item) => (
+                <div 
+                  key={item.label}
+                  className={`p-5 rounded-2xl border ${
+                    item.highlight 
+                      ? 'border-[#6BCFCF] bg-[#6BCFCF]/10' 
+                      : 'border-white/20 bg-white/5'
+                  } backdrop-blur-sm hover:border-[#6BCFCF]/70 transition-all`}
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-4">
+                      <div className={`flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl ${
+                        item.highlight ? 'bg-[#6BCFCF] text-[#0F172A]' : 'bg-white/10 text-white'
+                      }`}>
+                        {item.icon}
+                      </div>
+                      <div>
+                        <p className="text-lg font-bold text-white">{item.label}</p>
+                        <p className="text-sm text-white/60">{item.volume}</p>
+                      </div>
+                    </div>
+                    <p className="text-2xl font-bold text-[#6BCFCF]">{item.price}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="p-5 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
+              <p className="text-sm font-semibold text-white mb-3">Ce qui fait varier le prix</p>
+              <ul className="space-y-2 text-sm text-white/70">
+                <li className="flex gap-2">
+                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#6BCFCF] shrink-0" />
+                  <span><strong className="text-white">Volume (m³)</strong> : principal levier — trier avant = payer moins</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#6BCFCF] shrink-0" />
+                  <span><strong className="text-white">Accès</strong> : étages, ascenseur, distance camion→entrée</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#6BCFCF] shrink-0" />
+                  <span><strong className="text-white">Période</strong> : été, week-ends, fins de mois = plus cher</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#6BCFCF] shrink-0" />
+                  <span><strong className="text-white">Formule</strong> : éco vs standard vs clé en main</span>
+                </li>
+              </ul>
+              <p className="text-xs text-white/50 mt-4">
+                Tarifs indicatifs. Le prix réel dépend de votre dossier complet (volume IA + accès + période).
+              </p>
+            </div>
+          </div>
         </div>
       </div>
+
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}} />
     </section>
   );
 }

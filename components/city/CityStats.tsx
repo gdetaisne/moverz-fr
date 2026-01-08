@@ -1,82 +1,160 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { Clock, Check, DollarSign, Sparkles } from "lucide-react";
 
 type CityStatsProps = {
   cityName: string;
 };
 
 export function CityStats({ cityName }: CityStatsProps) {
-  const stats = [
-    {
-      icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
-      value: "48h",
-      label: "Temps moyen de réponse",
-    },
-    {
-      icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z",
-      value: "5+",
-      label: "Devis comparables",
-      highlight: true,
-    },
-    {
-      icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
-      value: "0€",
-      label: "Gratuit pour vous",
-    },
-  ];
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
-    <section className="relative py-20 md:py-32 bg-white overflow-hidden">
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-0 w-96 h-96 bg-[var(--brand-teal)]/25 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
-      </div>
-
-      <div className="container max-w-5xl relative">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
-          className="text-center mb-12 space-y-6"
-        >
-          <div className="inline-flex items-center gap-2 rounded-full bg-[var(--brand-teal)]/10 px-4 py-2 text-sm font-medium text-[var(--brand-deep)] border border-[var(--brand-teal)]/20">
-            <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-teal)] animate-pulse" />
-            <span>Moverz à {cityName}</span>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-navy)]">
-            Ça marche à {cityName} aussi
-          </h2>
-        </motion.div>
-
-        <div className="grid sm:grid-cols-3 gap-6">
-          {stats.map((stat, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: i * 0.1 }}
-              whileHover={{ y: -4, scale: 1.02 }}
-              className="group"
-            >
-              <div className={`rounded-2xl border ${stat.highlight ? 'border-[var(--brand-teal)]/30 bg-[var(--brand-teal)]/5' : 'border-[#E5E7EB] bg-white'} p-8 hover:border-[var(--brand-teal)]/50 hover:shadow-xl transition-all duration-300`}>
-                <div className={`flex items-center justify-center h-14 w-14 rounded-xl ${stat.highlight ? 'bg-[var(--brand-deep)] text-white' : 'bg-[var(--brand-teal)]/15 text-[var(--brand-deep)]'} group-hover:scale-110 transition-transform duration-300 mx-auto mb-6`}>
-                  <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={stat.icon} />
-                  </svg>
+    <section className="py-20 md:py-28 bg-white">
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left: Mockup dashboard */}
+          <div 
+            className="relative order-2 lg:order-1"
+            style={{
+              animation: mounted ? 'fadeInUp 1s ease-out' : 'none',
+            }}
+          >
+            <div className="relative w-full max-w-[420px] mx-auto">
+              <div className="bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.15)] p-6 border border-[#E3E5E8]">
+                {/* Header */}
+                <div className="flex items-center justify-between mb-6 pb-4 border-b border-[#E3E5E8]">
+                  <div>
+                    <p className="text-xs text-[#1E293B]/60 font-medium">Votre déménagement</p>
+                    <p className="text-lg font-bold text-[#0F172A]">Paris → {cityName}</p>
+                  </div>
+                  <Sparkles className="w-6 h-6 text-[#6BCFCF]" />
                 </div>
-                <p className={`text-4xl md:text-5xl font-bold mb-3 text-center ${stat.highlight ? 'text-[var(--brand-deep)]' : 'text-[var(--brand-navy)]'}`}>
-                  {stat.value}
-                </p>
-                <p className="text-sm text-[#6B7280] text-center leading-relaxed">
-                  {stat.label}
-                </p>
+
+                {/* Progress bar */}
+                <div className="mb-6">
+                  <div className="flex items-center justify-between text-xs mb-2">
+                    <span className="text-[#1E293B]/70 font-medium">Progression</span>
+                    <span className="text-[#0F172A] font-bold">66%</span>
+                  </div>
+                  <div className="w-full h-2 bg-[#F8F9FA] rounded-full overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-[#6BCFCF] to-[#A8E8E8] rounded-full" style={{ width: '66%' }} />
+                  </div>
+                  <p className="text-xs text-[#1E293B]/60 mt-1">3 étapes</p>
+                </div>
+
+                {/* Info grid */}
+                <div className="space-y-3 mb-6">
+                  <div className="p-3 rounded-xl bg-[#F8F9FA]">
+                    <p className="text-xs text-[#1E293B]/60 mb-1">Infos envoyées</p>
+                    <p className="text-sm font-semibold text-[#0F172A]">T3 • 60m² • 3ᵉ étage</p>
+                  </div>
+
+                  <div className="p-3 rounded-xl bg-[#F8F9FA]">
+                    <p className="text-xs text-[#1E293B]/60 mb-1">7 photos envoyées</p>
+                    <p className="text-sm font-semibold text-[#0F172A]">IA : ~45m³ estimés</p>
+                  </div>
+
+                  <div className="p-3 rounded-xl bg-[#F8F9FA]">
+                    <p className="text-xs text-[#1E293B]/60 mb-1">5 déménageurs contactés</p>
+                    <p className="text-sm font-semibold text-[#0F172A]">Réponse sous 48-72h</p>
+                  </div>
+                </div>
+
+                {/* CTA button */}
+                <div className="p-4 rounded-2xl bg-gradient-to-br from-[#6BCFCF]/10 to-[#A8E8E8]/10 border border-[#6BCFCF]/30 text-center">
+                  <div className="flex items-center justify-center gap-2 mb-1">
+                    <Check className="w-4 h-4 text-green-600" strokeWidth={3} />
+                    <p className="text-sm font-bold text-green-900">Dossier envoyé</p>
+                  </div>
+                  <p className="text-xs text-[#1E293B]/70">Vous serez notifié par WhatsApp</p>
+                </div>
               </div>
-            </motion.div>
-          ))}
+            </div>
+          </div>
+
+          {/* Right: Explications */}
+          <div 
+            className="order-1 lg:order-2"
+            style={{
+              animation: mounted ? 'fadeInUp 1s ease-out 0.2s both' : 'none',
+            }}
+          >
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-sm font-semibold text-[#0F172A] mb-6">
+              <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
+              Moverz à {cityName}
+            </div>
+
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] mb-6 leading-tight">
+              Ça marche à{" "}
+              <span className="text-[#6BCFCF]">{cityName}</span> aussi
+            </h2>
+
+            <p className="text-lg text-[#1E293B]/70 leading-relaxed mb-8">
+              Même processus, mêmes garanties, déménageurs locaux vérifiés.
+            </p>
+
+            <div className="space-y-5">
+              {/* Stat 1 */}
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[#6BCFCF]/10">
+                  <Clock className="w-6 h-6 text-[#0F172A]" strokeWidth={2.5} />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0F172A] mb-1">48h</h3>
+                  <p className="text-[#1E293B]/70 text-sm">
+                    Temps moyen de réponse pour recevoir vos devis
+                  </p>
+                </div>
+              </div>
+
+              {/* Stat 2 */}
+              <div className="flex items-start gap-4 p-4 rounded-xl bg-[#6BCFCF]/10 border border-[#6BCFCF]/30">
+                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[#0F172A]">
+                  <Check className="w-6 h-6 text-white" strokeWidth={2.5} />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0F172A] mb-1">5+ devis comparables</h3>
+                  <p className="text-[#1E293B]/70 text-sm">
+                    Tous basés sur le même dossier (photos IA + détails)
+                  </p>
+                </div>
+              </div>
+
+              {/* Stat 3 */}
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[#6BCFCF]/10">
+                  <DollarSign className="w-6 h-6 text-[#0F172A]" strokeWidth={2.5} />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0F172A] mb-1">0€</h3>
+                  <p className="text-[#1E293B]/70 text-sm">
+                    Gratuit pour vous, payé par les déménageurs
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}} />
     </section>
   );
 }
