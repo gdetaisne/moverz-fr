@@ -1,182 +1,195 @@
 "use client";
-
-import { motion } from "framer-motion";
-import Chip from "@/components/ui/Chip";
-import Card from "@/components/ui/Card";
+import { useEffect, useState } from "react";
+import { Image as ImageIcon, X, Check, TrendingDown, TrendingUp } from "lucide-react";
 
 export default function WhyMoverz() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
-    <section className="section section-light">
-      <div className="container max-w-5xl">
-        {/* Header */}
-        <motion.div
-          className="text-center space-y-4 mb-16"
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.35 }}
-        >
-          <Chip tone="light" className="mx-auto">
-            Pourquoi les photos changent tout
-          </Chip>
-          <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] leading-tight">
-            Le vrai problème des comparateurs
-          </h2>
-          <p className="text-lg text-[#1E293B]/70 max-w-2xl mx-auto">
-            Sans photos, chaque déménageur devine un volume différent.<br />
-            Résultat ? Des devis impossibles à comparer.
-          </p>
-        </motion.div>
-
-        {/* Problem vs Solution */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {/* Problem card */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4 }}
+    <section className="py-20 md:py-28 bg-white">
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left: Comparison mockup */}
+          <div 
+            className="relative order-2 lg:order-1"
+            style={{
+              animation: mounted ? 'fadeInUp 1s ease-out' : 'none',
+            }}
           >
-            <Card className="h-full p-8 bg-white border-2 border-[#E3E5E8]">
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-red-50">
-                    <svg className="h-6 w-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-[#0F172A]">Sans photos</h3>
+            {/* Comparison cards */}
+            <div className="relative w-full max-w-[440px] mx-auto">
+              {/* SANS photos - Card 1 */}
+              <div className="relative bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.08)] p-8 mb-6 border-2 border-red-200">
+                {/* Badge SANS */}
+                <div className="absolute -top-3 left-8 bg-red-500 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg flex items-center gap-1">
+                  <X className="w-3 h-3" />
+                  SANS photos
                 </div>
-                <ul className="space-y-3 text-sm text-[#1E293B]/70">
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-500 mt-0.5">✕</span>
-                    <span>Déménageur A estime 20m³</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-500 mt-0.5">✕</span>
-                    <span>Déménageur B estime 30m³</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-500 mt-0.5">✕</span>
-                    <span>Impossible de comparer les prix</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-500 mt-0.5">✕</span>
-                    <span>Surprises le jour J</span>
-                  </li>
-                </ul>
-              </div>
-            </Card>
-          </motion.div>
 
-          {/* Solution card */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4 }}
-          >
-            <Card className="h-full p-8 bg-[#6BCFCF]/5 border-2 border-[#6BCFCF]/25">
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#6BCFCF]">
-                    <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
+                <div className="pt-4 space-y-4">
+                  {/* Header */}
+                  <div className="flex items-center justify-between pb-4 border-b border-gray-200">
+                    <div>
+                      <p className="text-sm font-semibold text-[#0F172A]">Paris → Lyon</p>
+                      <p className="text-xs text-[#1E293B]/60">T3 • 60m²</p>
+                    </div>
+                    <ImageIcon className="w-5 h-5 text-red-400" />
                   </div>
-                  <h3 className="text-xl font-bold text-[#0F172A]">Avec photos + IA</h3>
-                </div>
-                <ul className="space-y-3 text-sm text-[#1E293B]/70">
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#6BCFCF] mt-0.5">✓</span>
-                    <span>L'IA calcule 23m³ précis</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#6BCFCF] mt-0.5">✓</span>
-                    <span>Tous les déménageurs reçoivent le même volume</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#6BCFCF] mt-0.5">✓</span>
-                    <span>Devis réellement comparables</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#6BCFCF] mt-0.5">✓</span>
-                    <span>Vous choisissez en connaissance de cause</span>
-                  </li>
-                </ul>
-              </div>
-            </Card>
-          </motion.div>
-        </div>
 
-        {/* Why photos are essential */}
-        <motion.div
-          className="mt-12 max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.2 }}
-        >
-          <Card className="p-8 bg-white border-2 border-[#E3E5E8]">
-            <h3 className="text-xl md:text-2xl font-bold text-[#0F172A] mb-6 text-center">
-              Pourquoi les photos sont essentielles ?
-            </h3>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 mt-0.5">
-                  <svg className="h-5 w-5 text-[#6BCFCF]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
+                  {/* Devis list */}
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between p-3 rounded-lg bg-red-50">
+                      <p className="text-sm font-medium text-[#0F172A]">Déménageur A</p>
+                      <p className="text-lg font-bold text-red-600">1 200€</p>
+                    </div>
+                    <div className="flex items-center justify-between p-3 rounded-lg bg-red-50">
+                      <p className="text-sm font-medium text-[#0F172A]">Déménageur B</p>
+                      <p className="text-lg font-bold text-red-600">2 800€</p>
+                    </div>
+                    <div className="flex items-center justify-between p-3 rounded-lg bg-red-50">
+                      <p className="text-sm font-medium text-[#0F172A]">Déménageur C</p>
+                      <p className="text-lg font-bold text-red-600">1 950€</p>
+                    </div>
+                  </div>
+
+                  {/* Warning */}
+                  <div className="flex items-start gap-2 p-3 rounded-lg bg-red-100/50 border border-red-200">
+                    <TrendingDown className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
+                    <p className="text-xs text-red-900 font-medium">Écart de prix énorme</p>
+                  </div>
                 </div>
-                <p className="text-sm md:text-base text-[#1E293B]/70 leading-relaxed">
-                  <span className="font-semibold text-[#0F172A]">Devis 30% plus précis</span> (évite les marges "au cas où")
-                </p>
               </div>
-              <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 mt-0.5">
-                  <svg className="h-5 w-5 text-[#6BCFCF]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
+
+              {/* AVEC photos - Card 2 */}
+              <div className="relative bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.12)] p-8 border-2 border-green-200">
+                {/* Badge AVEC */}
+                <div className="absolute -top-3 left-8 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg flex items-center gap-1">
+                  <Check className="w-3 h-3" strokeWidth={3} />
+                  AVEC 7 photos
                 </div>
-                <p className="text-sm md:text-base text-[#1E293B]/70 leading-relaxed">
-                  <span className="font-semibold text-[#0F172A]">Moins de surprises et suppléments</span> le jour J
-                </p>
+
+                <div className="pt-4 space-y-4">
+                  {/* Header */}
+                  <div className="flex items-center justify-between pb-4 border-b border-gray-200">
+                    <div>
+                      <p className="text-sm font-semibold text-[#0F172A]">Paris → Lyon</p>
+                      <p className="text-xs text-[#1E293B]/60">T3 • 60m² • IA: ~42m³</p>
+                    </div>
+                    <ImageIcon className="w-5 h-5 text-green-500" />
+                  </div>
+
+                  {/* Devis list */}
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between p-3 rounded-lg bg-green-50">
+                      <p className="text-sm font-medium text-[#0F172A]">Déménageur A</p>
+                      <p className="text-lg font-bold text-green-600">1 850€</p>
+                    </div>
+                    <div className="flex items-center justify-between p-3 rounded-lg bg-green-50">
+                      <p className="text-sm font-medium text-[#0F172A]">Déménageur B</p>
+                      <p className="text-lg font-bold text-green-600">1 920€</p>
+                    </div>
+                    <div className="flex items-center justify-between p-3 rounded-lg bg-green-50">
+                      <p className="text-sm font-medium text-[#0F172A]">Déménageur C</p>
+                      <p className="text-lg font-bold text-green-600">1 980€</p>
+                    </div>
+                  </div>
+
+                  {/* Success */}
+                  <div className="flex items-start gap-2 p-3 rounded-lg bg-green-100/50 border border-green-200">
+                    <TrendingUp className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
+                    <p className="text-xs text-green-900 font-medium">Devis comparables ✨</p>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 mt-0.5">
-                  <svg className="h-5 w-5 text-[#6BCFCF]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <p className="text-sm md:text-base text-[#1E293B]/70 leading-relaxed">
-                  <span className="font-semibold text-[#0F172A]">Inventaire + déclaration de valeur</span> générés par IA
-                </p>
+
+              {/* Floating comparison badge */}
+              <div className="absolute -right-6 top-1/2 -translate-y-1/2 bg-white rounded-2xl shadow-xl px-4 py-3 border border-[#6BCFCF]/30 rotate-3">
+                <p className="text-xs text-[#1E293B]/70 font-medium">Écart</p>
+                <p className="text-2xl font-bold text-[#0F172A]">÷3</p>
               </div>
             </div>
-          </Card>
-        </motion.div>
+          </div>
 
-        {/* Bottom trust line */}
-        <motion.div
-          className="text-center mt-8 space-y-3"
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.3 }}
-        >
-          <p className="text-sm text-[#1E293B]/70">
-            <span className="font-semibold text-[#0F172A]">Bonus :</span> Vos photos restent privées, les déménageurs sont contrôlés (assurance + 0 litige), et votre numéro reste anonyme.
-          </p>
-          <a
-            href="/pourquoi-moverz/"
-            className="inline-flex items-center gap-1 text-sm text-[#6BCFCF] font-medium hover:underline"
+          {/* Right: Explications */}
+          <div 
+            className="order-1 lg:order-2"
+            style={{
+              animation: mounted ? 'fadeInUp 1s ease-out 0.2s both' : 'none',
+            }}
           >
-            Découvrir comment Moverz vous protège
-            <span>→</span>
-          </a>
-        </motion.div>
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-sm font-semibold text-[#0F172A] mb-6">
+              <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
+              Pourquoi ça change tout
+            </div>
+
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] mb-6 leading-tight">
+              Les photos rendent les devis{" "}
+              <span className="text-[#6BCFCF]">comparables</span>
+            </h2>
+
+            <p className="text-lg text-[#1E293B]/70 leading-relaxed mb-8">
+              Sans photos, chaque déménageur devine le volume → écarts énormes.
+              <br />
+              <strong className="text-[#0F172A]">Avec photos, l'IA estime précisément</strong> → tous partent de la même base.
+            </p>
+
+            <div className="space-y-5">
+              {/* Sans photos */}
+              <div className="flex items-start gap-4 p-4 rounded-xl bg-red-50 border border-red-200">
+                <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-red-100">
+                  <X className="w-5 h-5 text-red-600" strokeWidth={2.5} />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-[#0F172A] mb-1">Sans photos</h3>
+                  <p className="text-[#1E293B]/70 text-sm">
+                    Estimation au doigt mouillé → écarts de 50% à 100% entre devis.
+                  </p>
+                </div>
+              </div>
+
+              {/* Avec photos */}
+              <div className="flex items-start gap-4 p-4 rounded-xl bg-green-50 border border-green-200">
+                <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-green-100">
+                  <Check className="w-5 h-5 text-green-600" strokeWidth={2.5} />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-[#0F172A] mb-1">Avec photos</h3>
+                  <p className="text-[#1E293B]/70 text-sm">
+                    L'IA calcule le volume réel (~42m³) → tous les devis tournent autour du même prix.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom CTA-like */}
+            <div className="mt-8 p-5 rounded-xl bg-gradient-to-br from-[#6BCFCF]/10 to-[#A8E8E8]/10 border border-[#6BCFCF]/30">
+              <p className="text-sm font-semibold text-[#0F172A] mb-2">
+                📸 Résultat : vous comparez des prix justes
+              </p>
+              <p className="text-xs text-[#1E293B]/70">
+                Fini les devis fantaisistes. Vous choisissez le meilleur rapport qualité-prix, en toute transparence.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}} />
     </section>
   );
 }
