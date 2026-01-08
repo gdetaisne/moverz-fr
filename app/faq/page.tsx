@@ -273,35 +273,10 @@ export default function FAQPage() {
 
       <WidgetActionSection
         title="Comparez 3 à 5 devis maintenant"
-        subtitle="Décrivez votre déménagement en quelques minutes. L’IA fiabilise le volume pour des devis vraiment comparables, sans spam."
+        subtitle="Décrivez votre déménagement en quelques minutes. L'IA fiabilise le volume pour des devis vraiment comparables, sans spam."
         source="moverz.fr"
         from="/faq/"
       />
-
-      {/* CTA Final - Plus engageant */}
-      <section className="section section-contrast">
-        <div className="container max-w-3xl text-center space-y-6">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-white/80 backdrop-blur-sm">
-            <svg className="h-4 w-4 text-[#6BCFCF]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-            </svg>
-            <span>Prêt à démarrer ?</span>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
-            Comparez 3 à 5 devis gratuitement
-          </h2>
-          <p className="text-lg text-white/75 max-w-2xl mx-auto">
-            En quelques photos, l’IA Moverz estime votre volume et prépare des devis comparables de déménageurs contrôlés, sans spam.
-          </p>
-          <a
-            href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/faq"
-            className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-[#0F172A] shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
-          >
-            <span>Comparez 3 à 5 devis gratuitement</span>
-            <span className="text-xl leading-none">→</span>
-          </a>
-        </div>
-      </section>
     </main>
   );
 }
