@@ -1,123 +1,103 @@
 "use client";
-import { Check, X } from "lucide-react";
-import Image from "next/image";
+import { Home, Utensils, Bed, DoorOpen, MoveVertical, Car } from "lucide-react";
 
 const photos = [
   {
     id: 1,
-    title: "Salon (vue large)",
-    description: "Montrez l'ensemble des meubles et le volume global",
-    good: "Vue d'ensemble avec tous les meubles visibles",
-    bad: "Photo trop rapprochée d'un seul meuble",
+    icon: Home,
+    title: "Salon",
+    description: "Vue d'ensemble avec tous les meubles",
   },
   {
     id: 2,
-    title: "Cuisine (électroménager)",
-    description: "Incluez frigo, four, lave-vaisselle si ils partent",
-    good: "Vue complète des équipements à déménager",
-    bad: "Photo floue ou sans les appareils",
+    icon: Utensils,
+    title: "Cuisine",
+    description: "Électroménager et équipements",
   },
   {
     id: 3,
-    title: "Chambres (lits + armoires)",
-    description: "Montrez les meubles volumineux de chaque chambre",
-    good: "Angle large montrant lit et armoires",
-    bad: "Photo partielle ou sombre",
+    icon: Bed,
+    title: "Chambres",
+    description: "Lits, armoires, bureaux",
   },
   {
     id: 4,
-    title: "Entrée de l'immeuble",
-    description: "L'accès pour le camion (porte, hall, ascenseur)",
-    good: "Vue claire de l'entrée et de l'accès",
-    bad: "Photo depuis trop loin ou sans contexte",
+    icon: DoorOpen,
+    title: "Entrée & Accès",
+    description: "Hall, couloirs, portes",
   },
   {
     id: 5,
-    title: "Escaliers / Ascenseur",
-    description: "Montrez la largeur et le type d'accès (étage ?)",
-    good: "Vue de face montrant largeur et hauteur",
-    bad: "Photo floue ou angle incompréhensible",
+    icon: MoveVertical,
+    title: "Escaliers",
+    description: "Type d'accès et largeur",
   },
   {
     id: 6,
-    title: "Stationnement / Rue",
-    description: "Où le camion pourra-t-il se garer ? Rue étroite ?",
-    good: "Vue d'ensemble de la rue et accès parking",
-    bad: "Photo trop proche ou sans vue d'ensemble",
+    icon: Car,
+    title: "Stationnement",
+    description: "Accès parking ou rue",
   },
 ];
 
 export default function PhotoChecklist() {
   return (
-    <section className="py-20 md:py-28 bg-white">
-      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 md:py-32 bg-gradient-to-b from-white to-[#F8F9FA]">
+      <div className="container max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-sm font-semibold text-[#0F172A] mb-6">
+        <div className="max-w-2xl mx-auto text-center mb-20">
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-2 text-sm font-semibold text-[#0F172A] mb-8">
             <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
-            Photos = devis plus justes
+            Photos = devis précis
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] mb-6">
-            Photographiez <span className="text-[#6BCFCF]">toutes</span> vos pièces
+          <h2 className="text-4xl md:text-6xl font-bold text-[#0F172A] mb-8 leading-[1.1]">
+            Photographiez{" "}
+            <span className="text-[#6BCFCF]">toutes</span>{" "}
+            vos pièces
           </h2>
-          <p className="text-lg text-[#1E293B]/70 leading-relaxed">
-            <strong className="text-[#0F172A]">Plus vous envoyez de photos, plus les devis sont précis.</strong>
-            <br />
-            Chaque pièce, chaque meuble volumineux, chaque accès compte pour estimer le volume exact et éviter les mauvaises surprises le jour J.
+          <p className="text-xl text-[#1E293B]/60 leading-relaxed font-light">
+            Plus vous envoyez de photos, plus les devis sont justes.
           </p>
         </div>
 
-        {/* Grid de photos */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
-          {photos.map((photo) => (
-            <div
-              key={photo.id}
-              className="bg-white rounded-2xl border border-[#E3E5E8] p-6 hover:shadow-lg transition-shadow duration-300"
-            >
-              {/* Number badge */}
-              <div className="flex items-start gap-4 mb-4">
-                <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-[#6BCFCF]/10 text-[#0F172A] font-bold text-lg">
-                  {photo.id}
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-[#0F172A] mb-1">
-                    {photo.title}
-                  </h3>
-                  <p className="text-sm text-[#1E293B]/70">
-                    {photo.description}
-                  </p>
-                </div>
-              </div>
-
-              {/* Good vs Bad examples */}
-              <div className="space-y-3 mt-4">
-                {/* Good example */}
-                <div className="flex items-start gap-2 p-3 rounded-lg bg-green-50 border border-green-200">
-                  <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-sm text-green-900">{photo.good}</p>
-                </div>
-
-                {/* Bad example */}
-                <div className="flex items-start gap-2 p-3 rounded-lg bg-red-50 border border-red-200">
-                  <X className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-sm text-red-900">{photo.bad}</p>
+        {/* Grid premium */}
+        <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto mb-16">
+          {photos.map((photo) => {
+            const Icon = photo.icon;
+            return (
+              <div
+                key={photo.id}
+                className="group bg-white rounded-3xl p-8 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)] transition-all duration-500 border border-[#E3E5E8]/50 hover:border-[#6BCFCF]/30"
+              >
+                <div className="flex items-start gap-5">
+                  {/* Icon */}
+                  <div className="flex-shrink-0 flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-[#6BCFCF]/10 to-[#A8E8E8]/10 group-hover:scale-110 transition-transform duration-300">
+                    <Icon className="w-7 h-7 text-[#0F172A]" strokeWidth={1.5} />
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="flex-1 pt-1">
+                    <h3 className="text-xl font-bold text-[#0F172A] mb-2">
+                      {photo.title}
+                    </h3>
+                    <p className="text-[#1E293B]/60 text-sm leading-relaxed font-light">
+                      {photo.description}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-16 text-center max-w-2xl mx-auto">
-          <div className="bg-[#A8E8E8]/20 rounded-2xl p-8 border border-[#6BCFCF]/30">
+        {/* Bottom message premium */}
+        <div className="max-w-2xl mx-auto text-center">
+          <div className="bg-white rounded-3xl p-10 shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-[#E3E5E8]/50">
             <p className="text-lg font-semibold text-[#0F172A] mb-3">
-              📸 Important : envoyez des photos de <strong>toutes les pièces</strong>
+              Salon, chambres, cuisine, cave, garage, grenier…
             </p>
-            <p className="text-[#1E293B]/70 mb-3">
-              Salon, chambres, cuisine, cave, garage, grenier… <strong>chaque espace</strong> doit être photographié pour un devis juste.
-            </p>
-            <p className="text-sm text-[#0F172A] font-medium bg-white/50 rounded-lg px-4 py-3 inline-block">
-              ⚡ Plus de photos = devis plus précis = 0 surprise le jour J
+            <p className="text-[#1E293B]/60 leading-relaxed font-light">
+              Chaque espace photographié = un devis plus juste.
             </p>
           </div>
         </div>
@@ -125,4 +105,3 @@ export default function PhotoChecklist() {
     </section>
   );
 }
-
