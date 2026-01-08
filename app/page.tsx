@@ -4,7 +4,6 @@ import PhotoChecklist from "@/components/PhotoChecklist";
 import WhatYouReceive from "@/components/WhatYouReceive";
 import ProblemSolution from "@/components/ProblemSolution";
 import FlowAndIA from "@/components/FlowAndIA";
-import VisualProof from "@/components/VisualProof";
 import RealStories from "@/components/RealStories";
 import TrustSignals from "@/components/TrustSignals";
 import QuickFAQ from "@/components/QuickFAQ";
@@ -84,25 +83,22 @@ export default function Home() {
       {/* 4. How It Works + AI - Interactive timeline */}
       <FlowAndIA />
 
-      {/* 5. Visual Proof - Show the magic moment */}
-      <VisualProof />
-
-      {/* 6. Trust Signals - Security and guarantees */}
+      {/* 5. Trust Signals - Security and guarantees */}
       <TrustSignals />
 
-      {/* 7. Why Moverz - Storytelling (photos = devis comparables) */}
+      {/* 6. Why Moverz - Storytelling (photos = devis comparables) */}
       <WhyMoverz />
 
-      {/* 8. Problem/Solution - Show the pain and the relief */}
+      {/* 7. Problem/Solution - Show the pain and the relief */}
       <ProblemSolution />
 
-      {/* 9. Real Stories - Customer testimonials with outcomes */}
+      {/* 8. Real Stories - Customer testimonials with outcomes */}
       <RealStories />
 
-      {/* 10. Quick FAQ - Remove last objections */}
+      {/* 9. Quick FAQ - Remove last objections */}
       <QuickFAQ />
 
-      {/* 11. Final CTA - Enhanced with animation */}
+      {/* 10. Final CTA - Enhanced with animation */}
       <FinalCTA />
 
         {/* Sticky CTA global */}
