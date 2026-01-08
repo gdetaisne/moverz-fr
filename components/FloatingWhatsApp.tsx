@@ -6,11 +6,25 @@ import { generateWhatsAppDeepLink, getWhatsAppNumber } from "@/lib/whatsapp";
 export default function FloatingWhatsApp() {
   const [visible, setVisible] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [hideForSticky, setHideForSticky] = useState(false);
 
   useEffect(() => {
     // Show after 2 seconds
     const timer = setTimeout(() => setVisible(true), 2000);
-    return () => clearTimeout(timer);
+    
+    // Hide when sticky CTA appears (40% scroll)
+    const handleScroll = () => {
+      const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+      setHideForSticky(scrolled > 0.4);
+    };
+    
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const handleClick = () => {
@@ -27,7 +41,7 @@ export default function FloatingWhatsApp() {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className={`fixed bottom-6 right-6 z-40 transition-all duration-500 ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8 pointer-events-none"
+        visible && !hideForSticky ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8 pointer-events-none"
       }`}
       style={{
         willChange: "transform, opacity",
