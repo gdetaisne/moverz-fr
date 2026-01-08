@@ -7,11 +7,13 @@ import WhatsAppModal from "./WhatsAppModal";
 type WhatsAppCTAProps = {
   source?: string;
   className?: string;
+  variant?: "light" | "dark";
 };
 
 export default function WhatsAppCTA({
   source = "home",
   className = "",
+  variant = "light",
 }: WhatsAppCTAProps) {
   const [isMobile, setIsMobile] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -83,14 +85,22 @@ export default function WhatsAppCTA({
         </button>
 
         {/* Sous-texte réassurance */}
-        <p className="text-sm text-[#1E293B]/70 font-medium text-center sm:text-left">
+        <p className={`text-sm font-medium text-center sm:text-left ${
+          variant === "dark" 
+            ? "text-white/80" 
+            : "text-[#1E293B]/70"
+        }`}>
           Le plus simple • Devis plus justes • 0 spam
         </p>
 
         {/* CTA secondaire (lien discret) */}
         <button
           onClick={handleWebClick}
-          className="block text-[#0F172A]/60 hover:text-[#0F172A] text-sm font-medium underline underline-offset-4 transition-colors mx-auto sm:mx-0"
+          className={`block text-sm font-medium underline underline-offset-4 transition-colors mx-auto sm:mx-0 ${
+            variant === "dark"
+              ? "text-white/70 hover:text-white"
+              : "text-[#0F172A]/60 hover:text-[#0F172A]"
+          }`}
         >
           Envoyer vos photos sur WhatsApp (recommandé)
         </button>

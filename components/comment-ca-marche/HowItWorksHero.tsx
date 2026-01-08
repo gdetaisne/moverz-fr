@@ -52,7 +52,7 @@ export default function HowItWorksHero() {
             </p>
 
             {/* WhatsApp CTA */}
-            <WhatsAppCTA source="comment-ca-marche" />
+            <WhatsAppCTA source="comment-ca-marche" variant="dark" />
           </div>
 
           {/* Right: Quick steps icons */}

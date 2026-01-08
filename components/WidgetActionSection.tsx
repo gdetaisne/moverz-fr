@@ -22,9 +22,15 @@ export default function WidgetActionSection({
   citySlug,
 }: WidgetActionSectionProps) {
   return (
-    <section className="section section-contrast">
-      <div className="container max-w-5xl">
-        <div className="relative rounded-2xl border border-white/10 px-6 py-7 md:px-10 md:py-8 text-white">
+    <section className="section relative overflow-hidden bg-gradient-to-br from-[#1E293B] via-[#0F172A] to-[#1E3A5F] text-white">
+      {/* Subtle gradient overlays for depth */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#6BCFCF]/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#2B7A78]/20 rounded-full blur-3xl" />
+      </div>
+      
+      <div className="container max-w-5xl relative z-10">
+        <div className="relative rounded-2xl border border-white/20 bg-white/5 backdrop-blur-sm px-6 py-7 md:px-10 md:py-8 text-white shadow-xl">
           <div className="grid gap-7 lg:grid-cols-12 lg:items-start">
             {/* Copy */}
             <div className="lg:col-span-5 space-y-4">
@@ -46,7 +52,7 @@ export default function WidgetActionSection({
                 <h2 className="text-2xl md:text-3xl font-bold leading-tight">
                   {title}
                 </h2>
-                <p className="text-sm text-white/75 leading-relaxed">
+                <p className="text-base text-white/95 leading-relaxed">
                   {subtitle}
                 </p>
               </div>
@@ -78,7 +84,7 @@ export default function WidgetActionSection({
               
               {/* WhatsApp CTA */}
               <div className="max-w-sm mx-auto">
-                <WhatsAppCTA source={source} />
+                <WhatsAppCTA source={source} variant="dark" />
               </div>
             </div>
           </div>
