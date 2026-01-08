@@ -95,7 +95,7 @@ export default function ProCTA() {
                 <TrendingUp className="w-5 h-5 text-[#6BCFCF]" />
               </div>
               <p className="text-4xl font-bold text-white mb-1">1 200+</p>
-              <p className="text-xs text-white/50">Et ça monte chaque mois 🚀</p>
+              <p className="text-xs text-white/50">Et ça monte chaque mois</p>
             </div>
 
             {/* Card 2 */}
@@ -115,7 +115,7 @@ export default function ProCTA() {
                 <Users className="w-5 h-5 text-[#6BCFCF]" />
               </div>
               <p className="text-4xl font-bold text-white mb-1">150+</p>
-              <p className="text-xs text-white/50">Partout en France 🇫🇷</p>
+              <p className="text-xs text-white/50">Partout en France</p>
             </div>
           </div>
         </div>
