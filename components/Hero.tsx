@@ -37,7 +37,7 @@ export default function Hero() {
               }}
             >
               <span className="h-2 w-2 rounded-full bg-[#6BCFCF] animate-pulse shadow-[0_0_8px_rgba(107,207,207,0.6)]" />
-              Service gratuit • Déménageurs vérifiés
+              Déménageurs vérifiés
             </div>
 
             {/* Titre émotionnel */}

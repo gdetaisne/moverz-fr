@@ -84,7 +84,7 @@ export default function WhatsAppCTA({
 
         {/* Sous-texte réassurance */}
         <p className="text-sm text-[#1E293B]/70 font-medium text-center sm:text-left">
-          Le plus simple • Photos de toutes les pièces • Devis plus justes • 0 spam
+          Le plus simple • Devis plus justes • 0 spam
         </p>
 
         {/* CTA secondaire (lien discret) */}
@@ -92,7 +92,7 @@ export default function WhatsAppCTA({
           onClick={handleWebClick}
           className="block text-[#0F172A]/60 hover:text-[#0F172A] text-sm font-medium underline underline-offset-4 transition-colors mx-auto sm:mx-0"
         >
-          Je préfère {isMobile ? "le faire sur le site" : "continuer sur le site"}
+          Envoyer vos photos sur WhatsApp (recommandé)
         </button>
       </div>
 
