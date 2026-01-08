@@ -8,7 +8,7 @@ import { buildCityFaqs } from "@/lib/seo-faq";
 import { getCityPageMetadata } from "@/lib/seo/metadata";
 import { CityHero } from "@/components/city/CityHero";
 import { CityLocalInsights } from "@/components/city/CityLocalInsights";
-import { CityLongFormGuide } from "@/components/city/CityLongFormGuide";
+// import { CityLongFormGuide } from "@/components/city/CityLongFormGuide"; // Temporarily disabled - causes build timeout
 import { CityStats } from "@/components/city/CityStats";
 import { CityPricing } from "@/components/city/CityPricing";
 import { CityFinalCTA } from "@/components/city/CityFinalCTA";
@@ -210,7 +210,8 @@ export default function CityMovingPage({ params }: PageProps) {
       <CityLocalInsights citySlug={city.slug} cityName={city.nameCapitalized} quoteUrl={quoteUrl} />
 
       {/* Guide long-form (SEO) — 2000+ mots, replié par défaut pour préserver la conversion */}
-      <CityLongFormGuide citySlug={city.slug} cityName={city.nameCapitalized} quoteUrl={quoteUrl} />
+      {/* Temporarily disabled - causes build timeout on CapRover */}
+      {/* <CityLongFormGuide citySlug={city.slug} cityName={city.nameCapitalized} quoteUrl={quoteUrl} /> */}
 
       {/* Villes proches / même région */}
       {nearbyCities.length > 0 && (

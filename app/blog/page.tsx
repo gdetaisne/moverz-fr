@@ -5,7 +5,6 @@ import Link from "next/link";
 import type { BlogPostMeta } from "@/lib/blog";
 import { PUBLISHED_BLOG_POSTS } from "@/lib/blog";
 import { formatDateFR } from "@/lib/date/fr";
-import { motion } from "framer-motion";
 import { BookOpen, Clock, TrendingUp, Filter, ArrowRight } from "lucide-react";
 
 export const dynamic = 'force-dynamic';
@@ -65,12 +64,7 @@ export default function BlogIndexPage() {
         <div className="relative container mx-auto max-w-6xl px-4 py-20 md:py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Content */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="space-y-8"
-            >
+            <div className="space-y-8 animate-fade-in">
               <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2 text-sm font-medium backdrop-blur-sm">
                 <BookOpen className="w-4 h-4 text-[#6BCFCF]" />
                 <span>Blog déménagement</span>
@@ -101,25 +95,17 @@ export default function BlogIndexPage() {
                   <span>Meilleurs guides</span>
                 </a>
               </div>
-            </motion.div>
+            </div>
 
             {/* Right: Stats Cards */}
-            <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-4"
-            >
+            <div className="space-y-4 animate-slide-in-right">
               {[
                 { icon: BookOpen, label: "Articles publiés", value: PUBLISHED_BLOG_POSTS.length.toString(), color: "text-[#6BCFCF]" },
                 { icon: TrendingUp, label: "Lectures/mois", value: "12 000+", color: "text-[#6BCFCF]" },
                 { icon: Clock, label: "Temps de lecture moyen", value: "5 min", color: "text-[#6BCFCF]" },
               ].map((stat, i) => (
-                <motion.div
+                <div
                   key={i}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
                   className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-[#6BCFCF]/50 transition-all duration-300"
                 >
                   <div className="flex items-center gap-4">
@@ -131,9 +117,9 @@ export default function BlogIndexPage() {
                       <p className="text-sm text-white/70">{stat.label}</p>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -141,12 +127,7 @@ export default function BlogIndexPage() {
       {/* Featured Articles */}
       <section id="featured" className="py-20 md:py-32 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto max-w-6xl px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-16 text-center space-y-4"
-          >
+          <div className="mb-16 text-center space-y-4">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-2 text-sm font-semibold text-[#6BCFCF]">
               <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
               À lire en priorité
@@ -157,17 +138,11 @@ export default function BlogIndexPage() {
             <p className="text-lg text-[#6B7280] max-w-2xl mx-auto">
               Les articles les plus complets pour réussir votre déménagement
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {featured.map((post, i) => (
-              <motion.div
-                key={post.slug}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-              >
+              <div key={post.slug}>
                 <Link
                   href={`/blog/${post.slug}/`}
                   className="group block h-full"
@@ -206,7 +181,7 @@ export default function BlogIndexPage() {
                     </div>
                   </article>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -216,19 +191,14 @@ export default function BlogIndexPage() {
       <section id="articles" className="py-20 md:py-32 bg-white border-t border-gray-200">
         <div className="container mx-auto max-w-6xl px-4">
           {/* Section header */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center space-y-4"
-          >
+          <div className="mb-12 text-center space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
               Tous les articles
             </h2>
             <p className="text-lg text-[#6B7280]">
               Explorez notre bibliothèque de guides et conseils
             </p>
-          </motion.div>
+          </div>
 
           {/* Filters */}
           <div className="mb-12">
@@ -270,13 +240,7 @@ export default function BlogIndexPage() {
           {currentPosts.length > 0 ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               {currentPosts.map((post, i) => (
-                <motion.div
-                  key={post.slug}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.05 }}
-                >
+                <div key={post.slug}>
                   <Link
                     href={`/blog/${post.slug}/`}
                     className="group block h-full"
@@ -322,7 +286,7 @@ export default function BlogIndexPage() {
                       </div>
                     </article>
                   </Link>
-                </motion.div>
+                </div>
               ))}
             </div>
           ) : (
