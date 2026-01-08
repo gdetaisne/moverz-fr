@@ -14,6 +14,85 @@ type Focus =
   | "objets-lourds"
   | "distance";
 
+/**
+ * Editorial overrides for priority cities.
+ * Goal: genuinely unique, useful local guidance (not just templated variations).
+ */
+const CITY_OVERRIDES: Record<string, LocalInsightBlock> = {
+  nice: {
+    title: "Conseils locaux à Nice (pour un devis vraiment fiable)",
+    paragraphs: [
+      "Nice a un vrai point fort (la météo) et un vrai point faible (l’accès). Dans beaucoup de secteurs, la différence entre un devis “OK” et un devis “surprise” se joue sur 20 mètres : où le camion peut-il se mettre, et combien de portage faut-il faire.",
+      "Le réflexe #1 : pensez “centre historique vs avenues”. Dans le Vieux-Nice, certaines rues sont étroites et très fréquentées : même un petit déménagement peut devenir long si l’équipe doit faire des allers-retours avec un diable sur plusieurs dizaines de mètres.",
+      "Le réflexe #2 : anticipez les étages. Dans les immeubles anciens (sans ascenseur ou avec des cabines petites), un canapé ou un frigo peut nécessiter un passage par escalier… ou un monte-meubles si la configuration le permet.",
+      "Le réflexe #3 : décrivez le créneau et le contexte (jour de marché, zone piétonne, travaux). À Nice, ces détails changent la logistique — donc le prix — bien plus que les gens ne l’imaginent.",
+      "Notre conseil simple : donnez les mêmes infos à tous les déménageurs. Moverz aide justement à standardiser le dossier (accès + volume fiabilisé) pour comparer des devis sur une base claire.",
+    ],
+    bullets: [
+      "Objectif : des devis comparables (même volume + mêmes accès).",
+      "Décrivez précisément le stationnement : possibilité d’arrêt minute, distance camion→entrée, contraintes de circulation.",
+      "Si ascenseur : indiquez s’il est aux normes (porte, profondeur) — c’est souvent le point de blocage sur les gros meubles.",
+      "Périodes souvent moins favorables : été (juin–septembre) · fins de mois · week-ends.",
+    ],
+    photoChecklist: [
+      "Rue devant l’entrée : largeur, possibilité de stationner/stopper, présence de potelets / zone piétonne",
+      "Entrée de l’immeuble + hall + largeur des portes (prise de vue “de face”)",
+      "Escalier : photo depuis le bas + un palier (pour estimer les rotations)",
+      "Ascenseur (si présent) : porte ouverte + cabine (un objet de repère suffit)",
+      "Balcon/fenêtre côté rue (utile si un monte-meubles est envisageable)",
+    ],
+    avoidPeriods: ["Été (juin–septembre)", "Fin de mois", "Week-ends"],
+  },
+  lyon: {
+    title: "Conseils locaux à Lyon (pour éviter les suppléments le jour J)",
+    paragraphs: [
+      "À Lyon, l’écart de prix entre deux devis vient rarement “du hasard”. Il vient presque toujours de l’accès : Presqu’île avec stationnement difficile, pentes et escaliers à la Croix-Rousse, immeubles anciens et cours intérieures dans certains secteurs.",
+      "Le meilleur moyen d’obtenir un devis fiable : décrire le trajet réel du camion jusqu’à la porte. Une adresse peut être simple sur Google Maps et pourtant compliquée en pratique (sens uniques, zones de livraison, distance de portage).",
+      "Côté immeuble, le point qui fait exploser le temps (donc le coût) : la largeur des escaliers et des paliers. À Lyon, beaucoup de logements ont des rotations serrées, ce qui peut imposer du démontage ou un transport spécifique des meubles volumineux.",
+      "Si vous déménagez entre arrondissements ou en proche périphérie, la circulation et le créneau comptent : une équipe peut charger plus vite le matin qu’en plein pic. Une fenêtre de 2–3 dates aide souvent à obtenir un meilleur rapport qualité/prix.",
+      "En résumé : accès + volume + date = devis comparables. Moverz structure ces infos pour éviter les devis sous-dimensionnés (puis les ajustements).",
+    ],
+    bullets: [
+      "Objectif : des devis comparables (même volume + mêmes accès).",
+      "Précisez : étage, présence/tailles d’ascenseur, distance camion→porte, et s’il y a une cour/porte cochère.",
+      "Pour les gros meubles : indiquez s’ils passent par l’escalier (largeur) ou s’il faut prévoir démontage.",
+      "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
+    ],
+    photoChecklist: [
+      "Point de stationnement possible (photo depuis la rue, avec la façade)",
+      "Porte cochère / entrée d’immeuble / cour intérieure (si applicable)",
+      "Escalier : photo en plongée + un palier (pour voir l’angle)",
+      "Ascenseur : porte ouverte + profondeur de cabine (si présent)",
+      "Meubles volumineux (canapé, armoire) + accès (couloir/porte) sur une seule photo",
+    ],
+    avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
+  },
+  marseille: {
+    title: "Conseils locaux à Marseille (accès, stationnement, quartiers)",
+    paragraphs: [
+      "Marseille est une ville où la logistique compte autant que le volume. Dans certains quartiers, deux logements “identiques” peuvent donner deux devis très différents simplement à cause du stationnement, du relief, et de la largeur des rues.",
+      "Le premier point à clarifier : où le camion peut-il réellement se placer ? En centre-ville et dans les zones anciennes, le portage (distance à pied) peut vite devenir le poste de coût principal — plus que le nombre de cartons.",
+      "Le deuxième point : les étages et les escaliers. Entre les immeubles sans ascenseur et les paliers étroits, certains meubles demandent du démontage ou une méthode spécifique. Mieux vaut l’anticiper au devis que le découvrir au chargement.",
+      "Le troisième point : le timing. Marseille peut être très variable selon les créneaux (trafic, disponibilité). Une petite flexibilité sur la date (2–3 options) améliore souvent le prix et la qualité de l’équipe.",
+      "Conclusion : pour comparer des devis, il faut un dossier unique et précis (accès + volume + date). C’est exactement ce que Moverz standardise pour éviter les mauvaises surprises.",
+    ],
+    bullets: [
+      "Objectif : des devis comparables (même volume + mêmes accès).",
+      "Décrivez le stationnement : possibilité d’arrêt, distance de portage, obstacles (marches, pente, ruelle).",
+      "Listez les objets “à risque” (frigo, piano, vitrine) + précisez si démontage souhaité.",
+      "Périodes souvent moins favorables : été (juin–septembre) · fins de mois · week-ends.",
+    ],
+    photoChecklist: [
+      "Rue devant l’entrée : largeur + possibilité de s’arrêter (photo prise à hauteur de camion)",
+      "Chemin d’accès à pied (si portage) : trottoir, marches, pente",
+      "Escalier : photo depuis le bas + un palier (pour estimer les rotations)",
+      "Ascenseur : porte ouverte + cabine (si présent)",
+      "Objets lourds/fragiles (une photo groupée suffit) + sortie (couloir/porte)",
+    ],
+    avoidPeriods: ["Été (juin–septembre)", "Fin de mois", "Week-ends"],
+  },
+};
+
 function hashSlug(input: string): number {
   let h = 2166136261;
   for (let i = 0; i < input.length; i++) {
@@ -43,6 +122,9 @@ function pickManyUnique<T>(arr: T[], seed: number, count: number): T[] {
 }
 
 export function getLocalInsights(citySlug: string, cityName: string): LocalInsightBlock {
+  const override = CITY_OVERRIDES[citySlug];
+  if (override) return override;
+
   const seed = hashSlug(citySlug);
   const focus: Focus = pick(
     ["stationnement", "acces-immeuble", "volume", "planning", "objets-lourds", "distance"],
