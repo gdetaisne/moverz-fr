@@ -1,6 +1,7 @@
 import ProHero from "@/components/pro/ProHero";
 import ProBeforeAfter from "@/components/pro/ProBeforeAfter";
 import ProHowItWorks from "@/components/pro/ProHowItWorks";
+import ProDashboardPreview from "@/components/pro/ProDashboardPreview";
 import ProFeatures from "@/components/pro/ProFeatures";
 import ProPricing from "@/components/pro/ProPricing";
 import ProTestimonial from "@/components/pro/ProTestimonial";
@@ -14,6 +15,7 @@ export default function ProPage() {
       <ProHero />
       <ProBeforeAfter />
       <ProHowItWorks />
+      <ProDashboardPreview />
       <ProFeatures />
       <ProPricing />
       <ProTestimonial />
