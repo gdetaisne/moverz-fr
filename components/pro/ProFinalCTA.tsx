@@ -1,0 +1,64 @@
+"use client";
+import { motion } from "framer-motion";
+import { CheckCircle2, MessageSquare } from "lucide-react";
+
+export default function ProFinalCTA() {
+  return (
+    <section className="relative py-20 md:py-32 bg-gradient-to-br from-[#0F172A] to-[#1E293B] overflow-hidden">
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#6BCFCF] rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#6BCFCF] rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }} />
+      </div>
+      
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
+          className="text-center space-y-8 text-white"
+        >
+          <h2 className="text-3xl md:text-5xl font-bold">
+            Prêt à automatiser vos estimations ?
+          </h2>
+          <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
+            Rejoignez les 150+ déménageurs qui économisent 3h par dossier avec Moverz Pro.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+            <a
+              href="#contact"
+              className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-[#0F172A] shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            >
+              <span>Démarrer l'essai gratuit 30 jours</span>
+              <span className="text-lg leading-none group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-white/30 bg-white/10 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
+            >
+              <MessageSquare className="w-5 h-5" />
+              <span>Parler à l'équipe</span>
+            </a>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-white/70 pt-4">
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-[#6BCFCF]" />
+              30 jours gratuit
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-[#6BCFCF]" />
+              Sans engagement
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-[#6BCFCF]" />
+              Support FR
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
