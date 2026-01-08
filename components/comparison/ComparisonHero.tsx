@@ -1,0 +1,85 @@
+"use client";
+import { useEffect, useState } from "react";
+
+export default function ComparisonHero() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  return (
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white py-20 md:py-32">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+          backgroundSize: '32px 32px'
+        }} />
+      </div>
+
+      <div 
+        className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative"
+        style={{
+          animation: mounted ? 'fadeInUp 1s ease-out' : 'none',
+        }}
+      >
+        {/* Breadcrumb */}
+        <nav className="mb-8">
+          <ol className="flex items-center gap-2 text-sm text-white/60">
+            <li><a href="/" className="hover:text-white transition-colors">Accueil</a></li>
+            <li>/</li>
+            <li className="text-white">Comparateur</li>
+          </ol>
+        </nav>
+
+        <div className="text-center space-y-6">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold">
+            <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
+            Guide comparatif
+          </div>
+
+          {/* Title */}
+          <h1 className="text-4xl md:text-6xl font-bold leading-[1.1]">
+            Moverz vs Autres Solutions
+          </h1>
+
+          {/* Subtitle */}
+          <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
+            Tableau comparatif détaillé pour choisir la meilleure solution pour votre déménagement : 
+            <strong className="text-white"> prix, spam, fiabilité, temps</strong>.
+          </p>
+
+          {/* Stats row */}
+          <div className="flex flex-wrap items-center justify-center gap-6 pt-4">
+            {[
+              { icon: "🎯", label: "Comparaison objective" },
+              { icon: "📊", label: "10+ critères" },
+              { icon: "✅", label: "Données vérifiées" },
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-2 text-sm text-white/80">
+                <span className="text-lg">{item.icon}</span>
+                <span>{item.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}} />
+    </section>
+  );
+}
+

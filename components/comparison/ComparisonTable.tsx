@@ -1,0 +1,259 @@
+"use client";
+import { useState } from "react";
+
+type ComparisonData = {
+  category: string;
+  criteria: string;
+  moverz: { value: string; score: "good" | "ok" | "bad" };
+  comparateurs: { value: string; score: "good" | "ok" | "bad" };
+  direct: { value: string; score: "good" | "ok" | "bad" };
+};
+
+const comparisonData: ComparisonData[] = [
+  // Prix & Transparence
+  {
+    category: "Prix & Transparence",
+    criteria: "Coût du service",
+    moverz: { value: "100% gratuit", score: "good" },
+    comparateurs: { value: "Gratuit (mais lead-gen)", score: "ok" },
+    direct: { value: "Gratuit", score: "good" },
+  },
+  {
+    category: "Prix & Transparence",
+    criteria: "Devis comparables",
+    moverz: { value: "✅ Même volume IA", score: "good" },
+    comparateurs: { value: "❌ Volumes différents", score: "bad" },
+    direct: { value: "⚠️ Estimation manuelle", score: "ok" },
+  },
+  {
+    category: "Prix & Transparence",
+    criteria: "Frais cachés",
+    moverz: { value: "0 frais", score: "good" },
+    comparateurs: { value: "Commission déménageur", score: "bad" },
+    direct: { value: "0 frais", score: "good" },
+  },
+  
+  // Spam & Harcèlement
+  {
+    category: "Spam & Harcèlement",
+    criteria: "Appels intempestifs",
+    moverz: { value: "0 spam", score: "good" },
+    comparateurs: { value: "5-10 appels/jour", score: "bad" },
+    direct: { value: "1-2 appels", score: "ok" },
+  },
+  {
+    category: "Spam & Harcèlement",
+    criteria: "Revente de données",
+    moverz: { value: "❌ Jamais", score: "good" },
+    comparateurs: { value: "✅ Business model", score: "bad" },
+    direct: { value: "❌ Non", score: "good" },
+  },
+  
+  // Fiabilité & Contrôle
+  {
+    category: "Fiabilité & Contrôle",
+    criteria: "Vérification déménageurs",
+    moverz: { value: "Score financier + litiges", score: "good" },
+    comparateurs: { value: "Aucune vérification", score: "bad" },
+    direct: { value: "À votre charge", score: "bad" },
+  },
+  {
+    category: "Fiabilité & Contrôle",
+    criteria: "Historique litiges",
+    moverz: { value: "Visible avant contact", score: "good" },
+    comparateurs: { value: "Non vérifié", score: "bad" },
+    direct: { value: "Non disponible", score: "bad" },
+  },
+  {
+    category: "Fiabilité & Contrôle",
+    criteria: "Santé financière",
+    moverz: { value: "Score Creditsafe vérifié", score: "good" },
+    comparateurs: { value: "Non contrôlée", score: "bad" },
+    direct: { value: "À vérifier soi-même", score: "bad" },
+  },
+  
+  // Temps & Efficacité
+  {
+    category: "Temps & Efficacité",
+    criteria: "Temps de création",
+    moverz: { value: "3 minutes", score: "good" },
+    comparateurs: { value: "5-10 min + appels", score: "bad" },
+    direct: { value: "15-30 min/devis", score: "bad" },
+  },
+  {
+    category: "Temps & Efficacité",
+    criteria: "Nombre de devis",
+    moverz: { value: "3 à 5 devis", score: "good" },
+    comparateurs: { value: "Variable (spam)", score: "ok" },
+    direct: { value: "1 devis/demande", score: "bad" },
+  },
+  {
+    category: "Temps & Efficacité",
+    criteria: "Délai de réponse",
+    moverz: { value: "48-72h", score: "good" },
+    comparateurs: { value: "Immédiat (appels)", score: "ok" },
+    direct: { value: "Variable (1-7j)", score: "ok" },
+  },
+];
+
+const categories = Array.from(new Set(comparisonData.map(d => d.category)));
+
+export default function ComparisonTable() {
+  const [activeFilter, setActiveFilter] = useState<string>("all");
+
+  const filteredData = activeFilter === "all"
+    ? comparisonData
+    : comparisonData.filter(d => d.category === activeFilter);
+
+  const getScoreIcon = (score: "good" | "ok" | "bad") => {
+    switch (score) {
+      case "good":
+        return <span className="text-green-600">✓</span>;
+      case "ok":
+        return <span className="text-orange-500">○</span>;
+      case "bad":
+        return <span className="text-red-600">✗</span>;
+    }
+  };
+
+  const getScoreColor = (score: "good" | "ok" | "bad") => {
+    switch (score) {
+      case "good":
+        return "bg-green-50 border-green-200";
+      case "ok":
+        return "bg-orange-50 border-orange-200";
+      case "bad":
+        return "bg-red-50 border-red-200";
+    }
+  };
+
+  return (
+    <section className="py-20 md:py-32 bg-gradient-to-b from-white to-[#F8F9FA]">
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center space-y-4 mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A]">
+            Tableau Comparatif Détaillé
+          </h2>
+          <p className="text-lg text-[#1E293B]/70 max-w-3xl mx-auto">
+            Comparez objectivement les 3 options pour obtenir vos devis de déménagement
+          </p>
+        </div>
+
+        {/* Filters */}
+        <div className="flex flex-wrap gap-3 justify-center mb-8">
+          <button
+            onClick={() => setActiveFilter("all")}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+              activeFilter === "all"
+                ? "bg-[#0F172A] text-white"
+                : "bg-white text-[#1E293B] border border-[#E3E5E8] hover:border-[#0F172A]"
+            }`}
+          >
+            Tous les critères
+          </button>
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveFilter(cat)}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                activeFilter === cat
+                  ? "bg-[#0F172A] text-white"
+                  : "bg-white text-[#1E293B] border border-[#E3E5E8] hover:border-[#0F172A]"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        {/* Table */}
+        <div className="overflow-x-auto">
+          <table className="w-full bg-white rounded-2xl shadow-lg overflow-hidden">
+            {/* Header */}
+            <thead>
+              <tr className="bg-[#0F172A] text-white">
+                <th className="px-6 py-4 text-left text-sm font-semibold">Critère</th>
+                <th className="px-6 py-4 text-center text-sm font-semibold">
+                  <div className="flex flex-col items-center gap-1">
+                    <span className="text-[#6BCFCF] text-lg">⭐</span>
+                    <span>Moverz</span>
+                  </div>
+                </th>
+                <th className="px-6 py-4 text-center text-sm font-semibold">Comparateurs</th>
+                <th className="px-6 py-4 text-center text-sm font-semibold">Direct</th>
+              </tr>
+            </thead>
+
+            {/* Body */}
+            <tbody>
+              {filteredData.map((row, index) => (
+                <tr
+                  key={index}
+                  className={`border-b border-[#E3E5E8] hover:bg-[#F8F9FA] transition-colors ${
+                    index === 0 || filteredData[index - 1].category !== row.category
+                      ? "border-t-2 border-t-[#0F172A]"
+                      : ""
+                  }`}
+                >
+                  {/* Criteria */}
+                  <td className="px-6 py-4">
+                    <div className="space-y-1">
+                      {(index === 0 || filteredData[index - 1].category !== row.category) && (
+                        <p className="text-xs font-bold uppercase tracking-wider text-[#6BCFCF]">
+                          {row.category}
+                        </p>
+                      )}
+                      <p className="text-sm font-medium text-[#0F172A]">{row.criteria}</p>
+                    </div>
+                  </td>
+
+                  {/* Moverz */}
+                  <td className="px-6 py-4">
+                    <div className={`inline-flex items-center gap-2 px-3 py-2 rounded-lg border ${getScoreColor(row.moverz.score)}`}>
+                      {getScoreIcon(row.moverz.score)}
+                      <span className="text-sm font-medium text-[#0F172A]">{row.moverz.value}</span>
+                    </div>
+                  </td>
+
+                  {/* Comparateurs */}
+                  <td className="px-6 py-4">
+                    <div className={`inline-flex items-center gap-2 px-3 py-2 rounded-lg border ${getScoreColor(row.comparateurs.score)}`}>
+                      {getScoreIcon(row.comparateurs.score)}
+                      <span className="text-sm font-medium text-[#0F172A]">{row.comparateurs.value}</span>
+                    </div>
+                  </td>
+
+                  {/* Direct */}
+                  <td className="px-6 py-4">
+                    <div className={`inline-flex items-center gap-2 px-3 py-2 rounded-lg border ${getScoreColor(row.direct.score)}`}>
+                      {getScoreIcon(row.direct.score)}
+                      <span className="text-sm font-medium text-[#0F172A]">{row.direct.value}</span>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Legend */}
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm">
+          <div className="flex items-center gap-2">
+            <span className="text-green-600">✓</span>
+            <span className="text-[#1E293B]/70">Excellent</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-orange-500">○</span>
+            <span className="text-[#1E293B]/70">Correct</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-red-600">✗</span>
+            <span className="text-[#1E293B]/70">Problématique</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
