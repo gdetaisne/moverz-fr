@@ -4,9 +4,19 @@ import Image from "next/image";
 
 export default function HeroMockup() {
   const [mounted, setMounted] = useState(false);
+  const [showTyping, setShowTyping] = useState(false);
 
   useEffect(() => {
     setMounted(true);
+    // Show typing indicator after photos appear
+    const typingTimer = setTimeout(() => setShowTyping(true), 3000);
+    // Hide typing after 2 seconds
+    const hideTypingTimer = setTimeout(() => setShowTyping(false), 5000);
+    
+    return () => {
+      clearTimeout(typingTimer);
+      clearTimeout(hideTypingTimer);
+    };
   }, []);
 
   return (
@@ -57,24 +67,75 @@ export default function HeroMockup() {
             <div className="flex justify-end animate-[slideInRight_0.5s_ease-out_0.2s_both]">
               <div className="bg-[#DCF8C6] rounded-2xl rounded-tr-sm px-3 py-3 max-w-[85%] shadow-sm hover:shadow-md transition-shadow duration-200">
                 <div className="grid grid-cols-2 gap-2">
-                  <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg hover:scale-105 transition-transform duration-200" />
-                  <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg hover:scale-105 transition-transform duration-200" />
-                  <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg hover:scale-105 transition-transform duration-200" />
-                  <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg hover:scale-105 transition-transform duration-200" />
+                  {/* Photo 1: Living room */}
+                  <div className="relative aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-200 cursor-pointer">
+                    <Image
+                      src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=200&h=200&fit=crop&q=80"
+                      alt="Salon"
+                      fill
+                      className="object-cover"
+                      sizes="100px"
+                    />
+                  </div>
+                  {/* Photo 2: Bedroom */}
+                  <div className="relative aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-200 cursor-pointer">
+                    <Image
+                      src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=200&h=200&fit=crop&q=80"
+                      alt="Chambre"
+                      fill
+                      className="object-cover"
+                      sizes="100px"
+                    />
+                  </div>
+                  {/* Photo 3: Kitchen */}
+                  <div className="relative aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-200 cursor-pointer">
+                    <Image
+                      src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=200&h=200&fit=crop&q=80"
+                      alt="Cuisine"
+                      fill
+                      className="object-cover"
+                      sizes="100px"
+                    />
+                  </div>
+                  {/* Photo 4: Boxes/moving */}
+                  <div className="relative aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-200 cursor-pointer">
+                    <Image
+                      src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=200&h=200&fit=crop&q=80"
+                      alt="Cartons"
+                      fill
+                      className="object-cover"
+                      sizes="100px"
+                    />
+                  </div>
                 </div>
                 <p className="text-[#667085] text-xs mt-2 text-right">10:26</p>
               </div>
             </div>
 
-            {/* Confirmation from Moverz */}
-            <div className="flex justify-start animate-[slideInLeft_0.5s_ease-out_0.4s_both]">
-              <div className="bg-white rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[85%] shadow-sm hover:shadow-md transition-shadow duration-200">
-                <p className="text-[#1F2937] text-sm leading-relaxed">
-                  Parfait ! Vous recevrez <strong>3 à 5 devis</strong> dans les prochains jours.
-                </p>
-                <p className="text-[#667085] text-xs mt-1">10:27</p>
+            {/* Typing indicator */}
+            {showTyping && (
+              <div className="flex justify-start animate-[fadeIn_0.3s_ease-out]">
+                <div className="bg-white rounded-2xl rounded-tl-sm px-4 py-3 shadow-sm">
+                  <div className="flex gap-1">
+                    <span className="w-2 h-2 rounded-full bg-[#667085] animate-bounce" style={{ animationDelay: '0ms' }} />
+                    <span className="w-2 h-2 rounded-full bg-[#667085] animate-bounce" style={{ animationDelay: '150ms' }} />
+                    <span className="w-2 h-2 rounded-full bg-[#667085] animate-bounce" style={{ animationDelay: '300ms' }} />
+                  </div>
+                </div>
               </div>
-            </div>
+            )}
+
+            {/* Confirmation from Moverz */}
+            {!showTyping && (
+              <div className="flex justify-start animate-[slideInLeft_0.5s_ease-out_0.4s_both]">
+                <div className="bg-white rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[85%] shadow-sm hover:shadow-md transition-shadow duration-200">
+                  <p className="text-[#1F2937] text-sm leading-relaxed">
+                    Parfait ! Vous recevrez <strong>3 à 5 devis</strong> dans les prochains jours.
+                  </p>
+                  <p className="text-[#667085] text-xs mt-1">10:27</p>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -86,6 +147,10 @@ export default function HeroMockup() {
         @keyframes float {
           0%, 100% { transform: translateY(0px); }
           50% { transform: translateY(-12px); }
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
         }
       `}} />
     </div>

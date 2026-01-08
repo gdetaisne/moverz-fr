@@ -4,6 +4,8 @@ import Image from "next/image";
 import "./globals.css";
 import { MOVERZ_REVIEWS, getAverageRating, getTotalReviews } from "@/lib/reviews";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import ExitIntentPopup from "@/components/ExitIntentPopup";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -130,6 +132,8 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <GoogleAnalytics />
+        <FloatingWhatsApp />
+        <ExitIntentPopup />
         {/* Header */}
         <header className="sticky top-0 z-40 w-full bg-white border-b border-[#E3E5E8] shadow-sm">
           <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8">
