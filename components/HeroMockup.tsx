@@ -11,13 +11,14 @@ export default function HeroMockup() {
 
   return (
     <div 
-      className="relative w-full max-w-[340px] mx-auto"
+      className="relative w-full max-w-[340px] mx-auto group"
       style={{
         animation: mounted ? 'float 4s ease-in-out infinite' : 'none',
+        willChange: 'transform',
       }}
     >
       {/* iPhone frame minimal */}
-      <div className="relative bg-white rounded-[48px] shadow-[0_20px_60px_rgba(0,0,0,0.12)] p-3 border-[12px] border-[#1F2937]">
+      <div className="relative bg-white rounded-[48px] shadow-[0_20px_60px_rgba(0,0,0,0.12)] group-hover:shadow-[0_25px_80px_rgba(0,0,0,0.18)] p-3 border-[12px] border-[#1F2937] transition-shadow duration-500">
         {/* Notch */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-[#1F2937] rounded-b-3xl z-10" />
 
@@ -43,8 +44,8 @@ export default function HeroMockup() {
           {/* Conversation */}
           <div className="p-4 space-y-3 pt-6">
             {/* Message from Moverz */}
-            <div className="flex justify-start">
-              <div className="bg-white rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[85%] shadow-sm">
+            <div className="flex justify-start animate-[slideInLeft_0.5s_ease-out]">
+              <div className="bg-white rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[85%] shadow-sm hover:shadow-md transition-shadow duration-200">
                 <p className="text-[#1F2937] text-sm leading-relaxed">
                   Bonjour ! Envoyez-moi <strong>3 à 4 photos</strong> (pièces + accès) pour recevoir des devis précis 📸
                 </p>
@@ -53,21 +54,21 @@ export default function HeroMockup() {
             </div>
 
             {/* User's photos (4 thumbnails in 2x2 grid) */}
-            <div className="flex justify-end">
-              <div className="bg-[#DCF8C6] rounded-2xl rounded-tr-sm px-3 py-3 max-w-[85%] shadow-sm">
+            <div className="flex justify-end animate-[slideInRight_0.5s_ease-out_0.2s_both]">
+              <div className="bg-[#DCF8C6] rounded-2xl rounded-tr-sm px-3 py-3 max-w-[85%] shadow-sm hover:shadow-md transition-shadow duration-200">
                 <div className="grid grid-cols-2 gap-2">
-                  <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg" />
-                  <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg" />
-                  <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg" />
-                  <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg" />
+                  <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg hover:scale-105 transition-transform duration-200" />
+                  <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg hover:scale-105 transition-transform duration-200" />
+                  <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg hover:scale-105 transition-transform duration-200" />
+                  <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg hover:scale-105 transition-transform duration-200" />
                 </div>
                 <p className="text-[#667085] text-xs mt-2 text-right">10:26</p>
               </div>
             </div>
 
             {/* Confirmation from Moverz */}
-            <div className="flex justify-start">
-              <div className="bg-white rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[85%] shadow-sm">
+            <div className="flex justify-start animate-[slideInLeft_0.5s_ease-out_0.4s_both]">
+              <div className="bg-white rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[85%] shadow-sm hover:shadow-md transition-shadow duration-200">
                 <p className="text-[#1F2937] text-sm leading-relaxed">
                   Parfait ! Vous recevrez <strong>3 à 5 devis</strong> dans les prochains jours.
                 </p>
@@ -79,7 +80,7 @@ export default function HeroMockup() {
       </div>
 
       {/* Subtle glow effect */}
-      <div className="absolute inset-0 rounded-[48px] bg-gradient-to-b from-[#6BCFCF]/10 to-transparent blur-2xl -z-10" />
+      <div className="absolute inset-0 rounded-[48px] bg-gradient-to-b from-[#6BCFCF]/10 to-transparent group-hover:from-[#6BCFCF]/20 blur-2xl -z-10 transition-all duration-500" />
 
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes float {
