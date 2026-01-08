@@ -62,7 +62,7 @@ export default function ProContact() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* WhatsApp Pro */}
           <motion.a
-            href="https://wa.me/33752986581?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Moverz%20Pro"
+            href="https://wa.me/66952824035?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Moverz%20Pro"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
@@ -90,7 +90,7 @@ export default function ProContact() {
             <div className="mt-4 pt-4 border-t border-gray-200">
               <p className="text-xs text-[#6B7280]">
                 <Phone className="inline w-3 h-3 mr-1" />
-                +33 7 52 98 65 81
+                +66 9 52 82 40 35
               </p>
             </div>
           </motion.a>
