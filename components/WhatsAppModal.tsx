@@ -114,6 +114,22 @@ export default function WhatsAppModal({
           )}
         </button>
 
+        {/* Divider */}
+        <div className="flex items-center gap-3 my-4">
+          <div className="flex-1 h-px bg-[#E3E5E8]" />
+          <p className="text-xs text-[#1E293B]/60 font-medium">ou</p>
+          <div className="flex-1 h-px bg-[#E3E5E8]" />
+        </div>
+
+        {/* Alternative: Continue on this device */}
+        <a
+          href={`https://devis.moverz.fr/?source=moverz.fr&from=${source}&devis_range=3-5`}
+          className="w-full inline-flex items-center justify-center gap-2 rounded-xl border-2 border-[#E3E5E8] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/50 hover:bg-[#F8F9FA] transition-colors"
+          onClick={onClose}
+        >
+          <span>Continuer sur cet appareil</span>
+        </a>
+
         {/* Reassurance */}
         <p className="text-xs text-[#1E293B]/60 text-center mt-4">
           1 message/jour max • Stop quand vous voulez • 0 spam
