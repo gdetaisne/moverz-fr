@@ -1,107 +1,175 @@
 "use client";
-import { Home, Utensils, Bed, DoorOpen, MoveVertical, Car } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Check, Camera } from "lucide-react";
 
-const photos = [
-  {
-    id: 1,
-    icon: Home,
-    title: "Salon",
-    description: "Vue d'ensemble avec tous les meubles",
-  },
-  {
-    id: 2,
-    icon: Utensils,
-    title: "Cuisine",
-    description: "Électroménager et équipements",
-  },
-  {
-    id: 3,
-    icon: Bed,
-    title: "Chambres",
-    description: "Lits, armoires, bureaux",
-  },
-  {
-    id: 4,
-    icon: DoorOpen,
-    title: "Entrée & Accès",
-    description: "Hall, couloirs, portes",
-  },
-  {
-    id: 5,
-    icon: MoveVertical,
-    title: "Escaliers",
-    description: "Type d'accès et largeur",
-  },
-  {
-    id: 6,
-    icon: Car,
-    title: "Stationnement",
-    description: "Accès parking ou rue",
-  },
+const photosList = [
+  "Salon (vue large)",
+  "Cuisine + électroménager",
+  "Chambres (lits + armoires)",
+  "Cave / Garage / Grenier",
+  "Entrée immeuble",
+  "Escaliers / Ascenseur",
+  "Stationnement / Rue",
 ];
 
 export default function PhotoChecklist() {
-  return (
-    <section className="py-24 md:py-32 bg-gradient-to-b from-white to-[#F8F9FA]">
-      <div className="container max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="max-w-2xl mx-auto text-center mb-20">
-          <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-2 text-sm font-semibold text-[#0F172A] mb-8">
-            <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
-            Photos = devis précis
-          </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-[#0F172A] mb-8 leading-[1.1]">
-            Photographiez{" "}
-            <span className="text-[#6BCFCF]">toutes</span>{" "}
-            vos pièces
-          </h2>
-          <p className="text-xl text-[#1E293B]/60 leading-relaxed font-light">
-            Plus vous envoyez de photos, plus les devis sont justes.
-          </p>
-        </div>
+  const [mounted, setMounted] = useState(false);
 
-        {/* Grid premium */}
-        <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto mb-16">
-          {photos.map((photo) => {
-            const Icon = photo.icon;
-            return (
-              <div
-                key={photo.id}
-                className="group bg-white rounded-3xl p-8 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)] transition-all duration-500 border border-[#E3E5E8]/50 hover:border-[#6BCFCF]/30"
-              >
-                <div className="flex items-start gap-5">
-                  {/* Icon */}
-                  <div className="flex-shrink-0 flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-[#6BCFCF]/10 to-[#A8E8E8]/10 group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="w-7 h-7 text-[#0F172A]" strokeWidth={1.5} />
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  return (
+    <section className="py-20 md:py-28 bg-white">
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left: Mockup checklist */}
+          <div 
+            className="relative order-2 lg:order-1"
+            style={{
+              animation: mounted ? 'fadeInUp 1s ease-out' : 'none',
+            }}
+          >
+            {/* Phone mockup with checklist */}
+            <div className="relative w-full max-w-[360px] mx-auto">
+              {/* iPhone frame */}
+              <div className="relative bg-white rounded-[48px] shadow-[0_20px_60px_rgba(0,0,0,0.15)] p-3 border-[12px] border-[#1F2937]">
+                {/* Notch */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-[#1F2937] rounded-b-3xl z-10" />
+
+                {/* Screen content */}
+                <div className="relative bg-gradient-to-b from-[#F8F9FA] to-white rounded-[36px] overflow-hidden" style={{ aspectRatio: '9/19.5' }}>
+                  {/* Header */}
+                  <div className="bg-gradient-to-br from-[#0F172A] to-[#1E293B] px-5 py-6 text-white">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white/10">
+                        <Camera className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold">Photos à envoyer</p>
+                        <p className="text-xs opacity-70">Déménagement Paris → Lyon</p>
+                      </div>
+                    </div>
                   </div>
-                  
-                  {/* Content */}
-                  <div className="flex-1 pt-1">
-                    <h3 className="text-xl font-bold text-[#0F172A] mb-2">
-                      {photo.title}
-                    </h3>
-                    <p className="text-[#1E293B]/60 text-sm leading-relaxed font-light">
-                      {photo.description}
-                    </p>
+
+                  {/* Checklist */}
+                  <div className="p-5 space-y-3">
+                    {photosList.map((item, index) => (
+                      <div
+                        key={index}
+                        className="flex items-center gap-3 p-3 rounded-xl bg-white border border-[#E3E5E8] shadow-sm"
+                      >
+                        <div className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-green-100">
+                          <Check className="w-4 h-4 text-green-600" strokeWidth={3} />
+                        </div>
+                        <p className="text-sm font-medium text-[#0F172A]">{item}</p>
+                      </div>
+                    ))}
+
+                    {/* Bottom tip */}
+                    <div className="mt-6 p-4 rounded-xl bg-[#6BCFCF]/10 border border-[#6BCFCF]/30">
+                      <p className="text-xs text-[#0F172A] font-medium text-center">
+                        ✨ Plus de photos = devis plus précis
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            );
-          })}
-        </div>
 
-        {/* Bottom message premium */}
-        <div className="max-w-2xl mx-auto text-center">
-          <div className="bg-white rounded-3xl p-10 shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-[#E3E5E8]/50">
-            <p className="text-lg font-semibold text-[#0F172A] mb-3">
-              Salon, chambres, cuisine, cave, garage, grenier…
+              {/* Floating badge */}
+              <div className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-lg px-4 py-3 border border-[#6BCFCF]/30">
+                <p className="text-2xl font-bold text-[#0F172A]">7+</p>
+                <p className="text-xs text-[#1E293B]/70">photos</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right: Explications */}
+          <div 
+            className="order-1 lg:order-2"
+            style={{
+              animation: mounted ? 'fadeInUp 1s ease-out 0.2s both' : 'none',
+            }}
+          >
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-sm font-semibold text-[#0F172A] mb-6">
+              <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
+              Photos = devis précis
+            </div>
+
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] mb-6 leading-tight">
+              Photographiez{" "}
+              <span className="text-[#6BCFCF]">toutes</span>{" "}
+              vos pièces
+            </h2>
+
+            <p className="text-lg text-[#1E293B]/70 leading-relaxed mb-8">
+              Plus vous envoyez de photos détaillées, plus les déménageurs peuvent estimer précisément{" "}
+              <strong className="text-[#0F172A]">le volume et le temps nécessaire</strong>.
             </p>
-            <p className="text-[#1E293B]/60 leading-relaxed font-light">
-              Chaque espace photographié = un devis plus juste.
-            </p>
+
+            <div className="space-y-5">
+              {/* Benefit 1 */}
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-[#6BCFCF]/10">
+                  <Check className="w-5 h-5 text-[#0F172A]" strokeWidth={2.5} />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-[#0F172A] mb-1">Toutes les pièces</h3>
+                  <p className="text-[#1E293B]/70 text-sm">
+                    Salon, chambres, cuisine, cave, garage, grenier… chaque espace compte.
+                  </p>
+                </div>
+              </div>
+
+              {/* Benefit 2 */}
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-[#6BCFCF]/10">
+                  <Check className="w-5 h-5 text-[#0F172A]" strokeWidth={2.5} />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-[#0F172A] mb-1">Les accès</h3>
+                  <p className="text-[#1E293B]/70 text-sm">
+                    Entrée, escaliers, ascenseur, stationnement… pour anticiper la logistique.
+                  </p>
+                </div>
+              </div>
+
+              {/* Benefit 3 */}
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-[#6BCFCF]/10">
+                  <Check className="w-5 h-5 text-[#0F172A]" strokeWidth={2.5} />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-[#0F172A] mb-1">0 surprise</h3>
+                  <p className="text-[#1E293B]/70 text-sm">
+                    Des photos complètes = un devis juste = pas de supplément le jour J.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom reassurance */}
+            <div className="mt-8 p-4 rounded-xl bg-[#A8E8E8]/20 border border-[#6BCFCF]/30">
+              <p className="text-sm font-medium text-[#0F172A]">
+                📸 Prenez vos photos dès maintenant pour gagner du temps.
+              </p>
+            </div>
           </div>
         </div>
       </div>
+
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}} />
     </section>
   );
 }
