@@ -28,7 +28,9 @@ This is the main Moverz website, serving as a hub for our 11 local moving compar
     Create a `.env.local` file with:
     ```
     SITE_URL=https://moverz.fr
+    NEXT_PUBLIC_BACKOFFICE_URL=https://moverz-backoffice.gslv.cloud
     ```
+    See `ENV.md` for details.
 3.  **Run in development mode**:
     ```bash
     npm run dev
