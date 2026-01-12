@@ -1,38 +1,156 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Sparkles, Clock, Shield, Zap } from "lucide-react";
-import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { trackEvent, TRACKING_EVENTS } from "@/lib/tracking";
 import { generateWhatsAppDeepLink, getWhatsAppNumber } from "@/lib/whatsapp";
 
 export default function ExitIntentPopup() {
   const [show, setShow] = useState(false);
-  const [hasShown, setHasShown] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [armed, setArmed] = useState(false);
+  const pathname = usePathname();
+
+  const isExcludedPath = useMemo(() => {
+    const p = (pathname || "/").toLowerCase();
+    // Pages où un interstitiel est particulièrement pénible / contre-productif
+    const excludedPrefixes = [
+      "/blog",
+      "/cgv",
+      "/faq",
+      "/a-propos",
+      "/contact",
+      // pages déjà très “conversion”
+      "/comparateur-demenageurs",
+      "/calculateur-volume-demenagement",
+      "/choisir-ville",
+    ];
+    return excludedPrefixes.some((prefix) => p.startsWith(prefix));
+  }, [pathname]);
+
+  const canRun = useMemo(() => {
+    if (typeof window === "undefined") return false;
+    // Ignore if reduced motion
+    const prefersReducedMotion =
+      typeof window.matchMedia === "function" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) return false;
+    if (isExcludedPath) return false;
+    return true;
+  }, [isExcludedPath]);
+
+  const shouldSuppressByFrequency = () => {
+    try {
+      const KEY = "exitIntentLastShownAt";
+      const last = localStorage.getItem(KEY);
+      if (!last) return false;
+      const lastTs = Number(last);
+      if (!Number.isFinite(lastTs)) return false;
+      // 7 jours
+      const SEVEN_DAYS = 7 * 24 * 60 * 60 * 1000;
+      return Date.now() - lastTs < SEVEN_DAYS;
+    } catch {
+      return false;
+    }
+  };
+
+  const markShown = () => {
+    try {
+      sessionStorage.setItem("exitIntentShown", "true");
+      localStorage.setItem("exitIntentLastShownAt", String(Date.now()));
+    } catch {
+      // ignore
+    }
+  };
+
+  const alreadyShownThisSession = () => {
+    try {
+      return !!sessionStorage.getItem("exitIntentShown");
+    } catch {
+      return false;
+    }
+  };
+
+  const hasConversionIntentThisSession = () => {
+    try {
+      return !!sessionStorage.getItem("moverzConversionIntent");
+    } catch {
+      return false;
+    }
+  };
 
   useEffect(() => {
     setMounted(true);
-    
-    // Check if already shown in this session
-    if (sessionStorage.getItem("exitIntentShown")) {
-      setHasShown(true);
-      return;
-    }
 
-    const handleMouseLeave = (e: MouseEvent) => {
-      // Only trigger if mouse leaves from top and hasn't been shown yet
-      if (e.clientY <= 0 && !hasShown) {
-        setShow(true);
-        setHasShown(true);
-        sessionStorage.setItem("exitIntentShown", "true");
-        trackEvent(TRACKING_EVENTS.EXIT_INTENT_SHOWN, {});
-      }
+    if (!canRun) return;
+
+    const open = (reason: "mouse-leave-top" | "scroll-up") => {
+      if (show) return;
+      if (!canRun) return;
+      if (!armed) return;
+      if (alreadyShownThisSession()) return;
+      if (hasConversionIntentThisSession()) return;
+      if (shouldSuppressByFrequency()) return;
+
+      setShow(true);
+      markShown();
+      trackEvent(TRACKING_EVENTS.EXIT_INTENT_SHOWN, { reason, pathname });
     };
 
-    document.addEventListener("mouseleave", handleMouseLeave);
-    return () => document.removeEventListener("mouseleave", handleMouseLeave);
-  }, [hasShown]);
+    // Arm after a short delay or once the user has scrolled a bit (means they actually read).
+    const armTimeout = window.setTimeout(() => setArmed(true), 8000);
+    const onArmScroll = () => {
+      if (window.scrollY > 220) setArmed(true);
+    };
+
+    // Exit intent by mouse leaving from top.
+    const onMouseLeave = (e: MouseEvent) => {
+      if (e.clientY <= 0) open("mouse-leave-top");
+    };
+
+    // Secondary trigger: user scrolls up quickly towards the top.
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      const delta = y - lastY;
+      // delta < 0 => scrolling up
+      if (delta < -220 && y < 140) open("scroll-up");
+      lastY = y;
+      onArmScroll();
+    };
+
+    document.addEventListener("mouseleave", onMouseLeave);
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => {
+      window.clearTimeout(armTimeout);
+      document.removeEventListener("mouseleave", onMouseLeave);
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, [armed, canRun, pathname, show]);
+
+  // Auto-dismiss: if user scrolls down (meaning they're engaged) or after a short timeout.
+  useEffect(() => {
+    if (!show) return;
+
+    const shownAtScrollY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (y - shownAtScrollY > 260) {
+        handleClose();
+      }
+    };
+    const timeout = window.setTimeout(() => {
+      handleClose();
+    }, 22000);
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.clearTimeout(timeout);
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, [show]);
 
   const handleClose = () => {
     setShow(false);

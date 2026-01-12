@@ -32,5 +32,9 @@ export const TRACKING_EVENTS = {
   WHATSAPP_QR_OPEN: "whatsapp_qr_open",
   WHATSAPP_LINK_COPY: "whatsapp_link_copy",
   WHATSAPP_MODAL_CLOSE: "whatsapp_modal_close",
+  EXIT_INTENT_SHOWN: "exit_intent_shown",
+  EXIT_INTENT_CLOSED: "exit_intent_closed",
+  EXIT_INTENT_WHATSAPP_CLICK: "exit_intent_whatsapp_click",
+  EXIT_INTENT_WEB_CLICK: "exit_intent_web_click",
 } as const;
 
