@@ -15,10 +15,6 @@ type PageProps = {
   };
 };
 
-export function generateStaticParams() {
-  return CITIES.map((city) => ({ slug: city.slug }));
-}
-
 export function generateMetadata({ params }: PageProps): Metadata {
   const city = getCityBySlug(params.slug);
   if (!city) return {};

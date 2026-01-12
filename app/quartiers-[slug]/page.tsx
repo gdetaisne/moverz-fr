@@ -10,12 +10,10 @@ type PageProps = {
   };
 };
 
-export function generateStaticParams() {
-  const supported = new Set(QUARTIER_HUB_SLUGS);
-  return CITIES.filter((c) => supported.has(c.slug)).map((city) => ({ slug: city.slug }));
-}
-
-export const dynamicParams = false;
+// IMPORTANT (stability): do not pre-render all quartiers hubs at build time.
+// Generate on-demand and cache (ISR) to avoid Next.js worker 60s timeouts.
+export const revalidate = 60 * 60 * 24; // 24h
+export const dynamicParams = true;
 
 export function generateMetadata({ params }: PageProps): Metadata {
   const city = getCityBySlug(params.slug);

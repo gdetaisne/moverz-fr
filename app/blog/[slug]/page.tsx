@@ -24,13 +24,10 @@ type PageProps = {
   };
 };
 
-export function generateStaticParams() {
-  return PUBLISHED_BLOG_POSTS
-    .filter((post) => post.slug && post.slug.trim() !== "" && post.slug !== "blog")
-    .map((post) => ({ slug: post.slug }));
-}
-
-export const dynamicParams = false;
+// IMPORTANT (stability): avoid pre-rendering all blog posts during build on small VPS.
+// Generate on-demand and cache (ISR) to avoid Next.js worker 60s timeouts.
+export const revalidate = 60 * 60 * 24; // 24h
+export const dynamicParams = true;
 
 export function generateMetadata({ params }: PageProps): Metadata {
   const post = getPublishedPostBySlug(params.slug);

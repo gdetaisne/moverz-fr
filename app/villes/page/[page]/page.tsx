@@ -11,10 +11,10 @@ type PageProps = {
   params: { page: string };
 };
 
-export function generateStaticParams() {
-  const totalPages = Math.max(1, Math.ceil(CITIES.length / PER_PAGE));
-  return Array.from({ length: totalPages }, (_, i) => ({ page: String(i + 1) }));
-}
+// IMPORTANT (stability): do not pre-render all paginated city directory pages at build time.
+// On small VPS, SSG can exceed Next.js worker timeouts (>60s) and block deployments.
+// Instead, generate on-demand and cache (ISR).
+export const revalidate = 60 * 60 * 24; // 24h
 
 export function generateMetadata({ params }: PageProps): Metadata {
   const pageNum = Number(params.page);
