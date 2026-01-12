@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { FAQSchema } from "@/components/schema/FAQSchema";
 
@@ -49,30 +49,27 @@ function FAQItem({ faq, isOpen, onToggle }: { faq: FAQItem; isOpen: boolean; onT
         </motion.div>
       </button>
 
-      <AnimatePresence initial={false}>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="overflow-hidden"
+      {/* Keep answers in the HTML (SEO + testability), but visually collapse when closed */}
+      <motion.div
+        initial={false}
+        animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        className="overflow-hidden"
+        aria-hidden={!isOpen}
+      >
+        <div className="relative px-5 md:px-6 pb-5 md:pb-6">
+          {/* Separator line */}
+          <div className="h-px bg-gradient-to-r from-[#6BCFCF]/20 via-[#6BCFCF]/40 to-transparent mb-4" />
+          <motion.p
+            initial={false}
+            animate={{ y: isOpen ? 0 : -6 }}
+            transition={{ duration: 0.2 }}
+            className="text-sm md:text-base text-gray-600 leading-relaxed"
           >
-            <div className="relative px-5 md:px-6 pb-5 md:pb-6">
-              {/* Separator line */}
-              <div className="h-px bg-gradient-to-r from-[#6BCFCF]/20 via-[#6BCFCF]/40 to-transparent mb-4" />
-              <motion.p
-                initial={{ y: -10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.1, duration: 0.3 }}
-                className="text-sm md:text-base text-gray-600 leading-relaxed"
-              >
-                {faq.answer}
-              </motion.p>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            {faq.answer}
+          </motion.p>
+        </div>
+      </motion.div>
     </motion.div>
   );
 }

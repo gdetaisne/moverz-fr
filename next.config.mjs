@@ -123,6 +123,13 @@ const nextConfig = {
 
   async redirects() {
     return [
+      // Legacy HTML URLs
+      {
+        source: '/paris-devis-demenagement.html',
+        destination: '/demenagement/paris/',
+        permanent: true,
+      },
+
       // Redirection inventaire-ia → choisir-ville
       {
         source: '/inventaire-ia',

@@ -1,0 +1,135 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║              🔗 ANALYSE FIX 404 CORRIDORS (Commit a278843)                  ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+✅ CE QUE TU AS RÉSOLU (PARTIE VISIBLE)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Problème: URLs comme /paris-vers-marseille/ → 404
+
+Cause: Route /_corridor/[from]/[to]/ (préfixe _ = privée, inaccessible)
+
+Solution: 
+  • Renommage: app/_corridor/ → app/corridor/ (sans _)
+  • Middleware: rewrite vers /corridor/ au lieu de /_corridor/
+  • Fix typo: saint-etienne (clé correcte dans CITY_COORDS)
+  • Maillage interne: ajout de 6 liens corridor sur pages ville
+  • Navigation: lien vers ville destination dans breadcrumb
+
+Résultat: ✅ Les URLs /paris-vers-marseille/ fonctionnent maintenant
+
+
+⚠️  EFFETS DE BORD POTENTIELS (TES DOUTES)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. 🟡 Distances sous-estimées (PRIORITÉ 1)
+   Problème: estimateRoadDistanceKm utilise Haversine (vol d'oiseau)
+   Impact: 
+     • Paris-Marseille: ~660 km calculé, ~775 km réel (-15%)
+     • Prix et temps sous-estimés → perte de crédibilité
+   
+   Solution: Ajouter facteur de correction ×1.2
+   
+   lib/corridors.ts:
+     const rawDistance = haversineDistance(...);
+     const factor = rawDistance < 100 ? 1.1 : rawDistance < 300 ? 1.15 : 1.2;
+     return Math.round(rawDistance * factor);
+
+2. 🟡 Saint-Étienne avec accent (PRIORITÉ 2)
+   Problème: /saint-étienne-vers-lyon/ → 404 (accent non géré)
+   Impact: Utilisateurs tapant accent → 404
+   
+   Solution: Redirect 301 dans next.config.mjs
+   
+   {
+     source: '/saint-étienne-vers-:to',
+     destination: '/saint-etienne-vers-:to',
+     permanent: true,
+   }
+
+3. 🟢 Duplication de contenu (DÉJÀ GÉRÉ)
+   Risque: Page accessible via 2 URLs
+     • /paris-vers-marseille/ (publique, via middleware)
+     • /corridor/paris/marseille/ (directe, route Next.js)
+   
+   Status: ✅ Canonical URLs OK (via getFullMetadata)
+   → Google indexera seulement /{from}-vers-{to}/
+
+4. 🟢 Performance SSG (DÉJÀ GÉRÉ)
+   Risque: 380 pages corridor (20 villes × 19 destinations)
+   Status: ✅ ISR en place (dynamicParams = true)
+   → Pages générées à la demande, pas de build lent
+
+5. 🟢 Maillage interne (OK)
+   Changement: Ajout de 6 liens corridor sur chaque page ville
+   Status: ✅ Raisonnable, bon pour SEO
+
+
+📊 MATRICE DES RISQUES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+┌─────────────────────────┬─────────────┬────────┬──────────────────────────┐
+│ Effet de bord           │ Probabilité │ Impact │ Action requise           │
+├─────────────────────────┼─────────────┼────────┼──────────────────────────┤
+│ Distances sous-estimées │ 🟡 Moyenne  │ 🟡 Moy │ Facteur ×1.2             │
+│ Saint-Étienne accent    │ 🟡 Moyenne  │ 🟢 Fai │ Redirect 301             │
+│ Duplication contenu     │ 🟢 Faible   │ 🟢 Fai │ Canonical OK ✅          │
+│ Performance SSG         │ 🟢 Faible   │ 🟢 Fai │ ISR OK ✅                │
+│ Maillage agressif       │ 🟢 Faible   │ 🟢 Fai │ 6 liens OK ✅            │
+└─────────────────────────┴─────────────┴────────┴──────────────────────────┘
+
+Gravité globale: 🟢 FAIBLE
+
+
+🎯 ACTIONS IMMÉDIATES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Priorité 1: Corriger les distances (5 min)
+  → lib/corridors.ts: ajouter facteur ×1.2
+  → Impact: Distances plus réalistes, meilleure crédibilité
+
+Priorité 2: Redirect Saint-Étienne (2 min)
+  → next.config.mjs: ajouter redirect /saint-étienne-vers-:to
+  → Impact: Moins de 404, meilleure UX
+
+Priorité 3: Surveiller GSC (J+7)
+  → Google Search Console → Pages → Chercher /corridor/
+  → Vérifier qu'aucune URL n'est indexée
+
+
+✅ CHECKLIST RAPIDE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Tests:
+  □ /paris-vers-marseille/ → 200 ✅
+  □ /saint-etienne-vers-lyon/ → 200 ✅
+  □ /saint-étienne-vers-lyon/ → 404 ? (ajouter redirect)
+  □ Distances cohérentes avec Google Maps ? (ajouter facteur)
+
+Actions:
+  □ Ajouter facteur ×1.2 pour distances
+  □ Ajouter redirect 301 Saint-Étienne
+  □ Surveiller GSC pendant 30 jours
+
+
+🚀 VERDICT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TON COMMIT EST SAFE ✅
+
+Aucun risque d'outage:
+  ✓ Résout le problème des 404 corridor
+  ✓ Canonical URLs bien gérées (pas de duplication)
+  ✓ ISR en place (pas de problème de performance)
+  ✓ Maillage interne raisonnable (6 liens)
+
+Seuls ajustements recommandés:
+  1. Corriger les distances (crédibilité)
+  2. Redirect Saint-Étienne avec accent (UX)
+
+Sinon, déploie en confiance! 💪
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Pour plus de détails, ouvre: ANALYSE-FIX-404-CORRIDORS.md ou TL-DR-FIX-404-CORRIDORS.md
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

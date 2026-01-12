@@ -17,6 +17,8 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import FlowAndIA from "@/components/FlowAndIA";
 import TrustSignals from "@/components/TrustSignals";
 import ProblemSolution from "@/components/ProblemSolution";
+import { CityGuideTeaser } from "@/components/city/CityGuideTeaser";
+import { LongTailInternalLinks } from "@/components/seo/LongTailInternalLinks";
 
 type PageProps = {
   params: {
@@ -209,9 +211,11 @@ export default function CityMovingPage({ params }: PageProps) {
       {/* Bloc local unique + CTA */}
       <CityLocalInsights citySlug={city.slug} cityName={city.nameCapitalized} quoteUrl={quoteUrl} />
 
-      {/* Guide long-form (SEO) — 2000+ mots, replié par défaut pour préserver la conversion */}
-      {/* Temporarily disabled - causes build timeout on CapRover */}
-      {/* <CityLongFormGuide citySlug={city.slug} cityName={city.nameCapitalized} quoteUrl={quoteUrl} /> */}
+      {/* Guide long-form (SEO) — page dédiée (évite les timeouts build) */}
+      <CityGuideTeaser citySlug={city.slug} cityName={city.nameCapitalized} />
+
+      {/* Cas fréquents (long tail) */}
+      <LongTailInternalLinks cityName={city.nameCapitalized} />
 
       {/* Villes proches / même région */}
       {nearbyCities.length > 0 && (

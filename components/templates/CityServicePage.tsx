@@ -6,6 +6,7 @@ import { buildCityServiceFaqs } from "@/lib/seo-faq";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import WidgetActionSection from "@/components/WidgetActionSection";
 import { FAQ } from "@/components/FAQ";
+import { LongTailInternalLinks } from "@/components/seo/LongTailInternalLinks";
 
 export type CityServiceFAQ = { question: string; answer: string };
 
@@ -177,6 +178,9 @@ export function CityServicePage({
               <p className="mt-2 text-xs text-[#6B7280]">Sans spam · Sans engagement</p>
             </div>
           </div>
+
+          {/* Cas fréquents (long tail) — liens internes vers guides ultra niche */}
+          <LongTailInternalLinks cityName={cityName} serviceSlug={serviceSlug} limit={8} />
 
           {sections.map((s) => (
             <div key={s.title} className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 space-y-4">
