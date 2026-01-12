@@ -15,7 +15,17 @@ export default function ExitIntentPopup() {
   const isExcludedPath = useMemo(() => {
     const p = (pathname || "/").toLowerCase();
     // Pages où un interstitiel est particulièrement pénible / contre-productif
-    const excludedPrefixes = ["/blog", "/cgv", "/faq", "/a-propos", "/contact"];
+    const excludedPrefixes = [
+      "/blog",
+      "/cgv",
+      "/faq",
+      "/a-propos",
+      "/contact",
+      // pages déjà très “conversion”
+      "/comparateur-demenageurs",
+      "/calculateur-volume-demenagement",
+      "/choisir-ville",
+    ];
     return excludedPrefixes.some((prefix) => p.startsWith(prefix));
   }, [pathname]);
 
@@ -62,11 +72,20 @@ export default function ExitIntentPopup() {
     }
   };
 
+  const hasConversionIntentThisSession = () => {
+    try {
+      return !!sessionStorage.getItem("moverzConversionIntent");
+    } catch {
+      return false;
+    }
+  };
+
   const open = (reason: "mouse-leave-top" | "scroll-up") => {
     if (show) return;
     if (!canRun) return;
     if (!armed) return;
     if (alreadyShownThisSession()) return;
+    if (hasConversionIntentThisSession()) return;
     if (shouldSuppressByFrequency()) return;
 
     setShow(true);
@@ -119,6 +138,28 @@ export default function ExitIntentPopup() {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [armed, canRun, pathname]);
+
+  // Auto-dismiss: if user scrolls down (meaning they're engaged) or after a short timeout.
+  useEffect(() => {
+    if (!show) return;
+
+    const shownAtScrollY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (y - shownAtScrollY > 260) {
+        handleClose();
+      }
+    };
+    const timeout = window.setTimeout(() => {
+      handleClose();
+    }, 22000);
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.clearTimeout(timeout);
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, [show]);
 
   const handleClose = () => {
     setShow(false);

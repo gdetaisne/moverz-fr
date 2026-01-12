@@ -6,6 +6,7 @@ import { MOVERZ_REVIEWS, getAverageRating, getTotalReviews } from "@/lib/reviews
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ExitIntentPopup from "@/components/ExitIntentPopup";
+import { ConversionIntentTracker } from "@/components/ConversionIntentTracker";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -132,6 +133,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <GoogleAnalytics />
+        <ConversionIntentTracker />
         <FloatingWhatsApp />
         <ExitIntentPopup />
         {/* Header */}
