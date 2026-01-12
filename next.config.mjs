@@ -44,6 +44,26 @@ const nextConfig = {
 
   async headers() {
     return [
+      // Do not index email-confirmation screens (transactional UX, not SEO content)
+      {
+        source: '/confirm-email/:path*',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow'
+          },
+        ],
+      },
+      // Backward-compatible alias that redirects to /confirm-email
+      {
+        source: '/public/leads/confirm/:path*',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow'
+          },
+        ],
+      },
       {
         source: '/:path*',
         headers: [
