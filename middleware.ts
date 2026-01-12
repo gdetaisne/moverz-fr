@@ -8,6 +8,14 @@ const CITY_SLUGS = new Set(CITIES.map((c) => c.slug).filter((s) => s !== "ile-de
 export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
+  // Incident hardening (2026-01-12):
+  // The Next.js image optimizer endpoint (`/_next/image`) can become CPU-heavy under crawl/bot traffic
+  // and was observed to correlate with 504s + CPU saturation in production.
+  // We disable it at the edge to prevent direct hits even if a client tries to call it explicitly.
+  if (pathname.startsWith("/_next/image")) {
+    return new NextResponse(null, { status: 404 });
+  }
+
   // Fast path: only care about "-vers-"
   if (!pathname.includes("-vers-")) return NextResponse.next();
 
