@@ -5,7 +5,9 @@ import { getCityPageMetadata } from "@/lib/seo/metadata";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { CityLongFormGuide } from "@/components/city/CityLongFormGuide";
 
-export const dynamic = "force-dynamic";
+// This page is expensive (long-form SSR) and can be crawled heavily.
+// Use ISR to avoid recalculating for every bot hit and reduce risk of timeouts.
+export const revalidate = 60 * 60 * 24; // 24h
 
 type PageProps = {
   params: {

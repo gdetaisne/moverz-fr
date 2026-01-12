@@ -8,8 +8,6 @@ import { LONGTAIL_LINKS } from "@/lib/blog-longtail-links";
 import { formatDateFR } from "@/lib/date/fr";
 import { BookOpen, Clock, TrendingUp, Filter, ArrowRight } from "lucide-react";
 
-export const dynamic = 'force-dynamic';
-
 const ITEMS_PER_PAGE = 12;
 
 const CATEGORIES = [
