@@ -1,5 +1,4 @@
 import { CITIES, getCityBySlug } from "@/lib/cities";
-import { CITY_LONGFORM_OVERRIDES } from "@/lib/city-longform-overrides";
 
 export type CityGuideSection = {
   id: string;
@@ -112,7 +111,7 @@ export function getCityLongFormGuide(citySlug: string, cityName: string): CityLo
     4
   );
 
-  let sections: CityGuideSection[] = [
+  const sections: CityGuideSection[] = [
     {
       id: "dossier",
       title: "1) Le dossier parfait (pour des devis vraiment comparables)",
@@ -266,56 +265,9 @@ export function getCityLongFormGuide(citySlug: string, cityName: string): CityLo
     },
   ];
 
-  // Apply editorial overrides (handcrafted + scalable extras)
-  const override = CITY_LONGFORM_OVERRIDES[citySlug];
-  if (override) {
-    sections = sections.map((section) => {
-      const paragraphs = [...section.paragraphs];
-      const prepend = override.prependBySectionId?.[section.id];
-      const append = override.appendBySectionId?.[section.id];
-      if (prepend?.length) paragraphs.unshift(...prepend);
-      if (append?.length) paragraphs.push(...append);
-      return { ...section, paragraphs };
-    });
-    if (override.extraSections?.length) {
-      sections = [...sections, ...override.extraSections];
-    }
-  }
-
-  // Safe, bounded padding to guarantee >= 2000 words (no heavy while loop).
-  const MIN_WORDS = 2000;
-  const PAD_BLOCKS = [
-    "Si vous voulez un devis fiable, ne cherchez pas la perfection : cherchez la cohérence. La même info envoyée à plusieurs déménageurs (accès, portage, passages, objets lourds) donne des devis comparables.",
-    "Le meilleur “anti‑surprise” reste la photo du passage le plus étroit + la photo escalier/palier (ou ascenseur cabine). C’est souvent là que se joue la méthode sur les gros meubles.",
-    "Dernier levier simple : la flexibilité. Proposer 2–3 dates possibles augmente la disponibilité et réduit les devis faits “au hasard” faute de créneau réaliste.",
-    "Une journée fluide est une journée sans frottements : accès dégagé, zone tampon près de la porte, étiquetage clair. Ce sont des minutes gagnées qui deviennent des heures.",
-  ];
-
-  const baseDraft = {
+  const base = {
     title: `Guide complet : déménager à ${cityName} (${angle})`,
     subtitle: `2000+ mots, conçu pour vous aider à obtenir des devis fiables et éviter les surprises — sans vous noyer dans le blabla.`,
-    sections,
-  };
-
-  let wordCountDraft = countWordsInGuide(baseDraft);
-  if (wordCountDraft < MIN_WORDS) {
-    const deficit = MIN_WORDS - wordCountDraft;
-    const approxWordsPerBlock = 70;
-    const blocks = Math.min(14, Math.max(1, Math.ceil(deficit / approxWordsPerBlock)));
-    const paragraphs = Array.from({ length: blocks }, (_, i) => PAD_BLOCKS[i % PAD_BLOCKS.length]);
-    sections = [
-      ...sections,
-      {
-        id: "annexe-pratique",
-        title: "Annexe pratique : derniers rappels (pour éviter les surprises)",
-        paragraphs,
-      },
-    ];
-  }
-
-  const base = {
-    title: baseDraft.title,
-    subtitle: baseDraft.subtitle,
     sections,
   };
 

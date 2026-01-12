@@ -35,8 +35,6 @@ export default function PageHero({
   align = "center",
 }: PageHeroProps) {
   const isCenter = align === "center";
-  const relFor = (href: string | undefined) =>
-    href && href.startsWith("https://devis.moverz.fr") ? "nofollow" : undefined;
 
   return (
     <section className="relative overflow-hidden bg-[#A8E8E8]">
@@ -91,7 +89,6 @@ export default function PageHero({
               {primaryCta && (
                 <a
                   href={primaryCta.href}
-                  rel={relFor(primaryCta.href)}
                   className="group inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-[0_8px_30px_rgba(15,23,42,0.3)] hover:shadow-[0_12px_50px_rgba(15,23,42,0.4)] hover:scale-105 transition-all duration-300"
                 >
                   <span>{primaryCta.label}</span>
@@ -101,7 +98,6 @@ export default function PageHero({
               {secondaryCta && (
                 <a
                   href={secondaryCta.href}
-                  rel={relFor(secondaryCta.href)}
                   className="inline-flex items-center gap-2 rounded-full border-2 border-[#0F172A]/30 bg-white/60 px-8 py-4 text-base font-semibold text-[#0F172A] backdrop-blur-sm hover:bg-white/80 transition-all duration-300"
                 >
                   <span>{secondaryCta.label}</span>

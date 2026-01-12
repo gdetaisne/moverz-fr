@@ -4,7 +4,6 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import type { BlogPostMeta } from "@/lib/blog";
 import { PUBLISHED_BLOG_POSTS } from "@/lib/blog";
-import { LONGTAIL_LINKS } from "@/lib/blog-longtail-links";
 import { formatDateFR } from "@/lib/date/fr";
 import { BookOpen, Clock, TrendingUp, Filter, ArrowRight } from "lucide-react";
 
@@ -15,7 +14,6 @@ const CATEGORIES = [
   { slug: "prix-et-devis", label: "Prix & devis", icon: "💰" },
   { slug: "checklists-et-guides", label: "Checklists & guides", icon: "✅" },
   { slug: "demenagement-par-ville", label: "Par ville", icon: "🏙️" },
-  { slug: "cas-frequents", label: "Cas fréquents", icon: "🧩" },
   { slug: "conseils-demenagement", label: "Conseils", icon: "💡" },
 ];
 
@@ -50,7 +48,6 @@ export default function BlogIndexPage() {
   // Count articles per category
   const getCategoryCount = (slug: string) => {
     if (slug === "all") return PUBLISHED_BLOG_POSTS.length;
-    if (slug === "cas-frequents") return LONGTAIL_LINKS.length;
     return PUBLISHED_BLOG_POSTS.filter(p => p.category === slug).length;
   };
 
@@ -209,38 +206,23 @@ export default function BlogIndexPage() {
             </div>
             <div className="flex flex-wrap justify-center gap-3">
               {CATEGORIES.map((cat) => (
-                cat.slug === "cas-frequents" ? (
-                  <Link
-                    key={cat.slug}
-                    href="/blog/cas-frequents/"
-                    className="group inline-flex items-center gap-2 rounded-full bg-gray-100 px-5 py-2.5 text-sm font-semibold text-[#6B7280] hover:bg-gray-200 hover:scale-102 transition-all"
-                  >
-                    <span>{cat.icon}</span>
-                    <span>{cat.label}</span>
-                    <span className="text-xs text-[#6B7280]">({getCategoryCount(cat.slug)})</span>
-                    <span className="text-xs text-[#6BCFCF] group-hover:text-[#0F172A] transition-colors">→</span>
-                  </Link>
-                ) : (
-                  <button
-                    key={cat.slug}
-                    onClick={() => handleCategoryChange(cat.slug)}
-                    className={`group inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all ${
-                      activeCategory === cat.slug
-                        ? "bg-[#0F172A] text-white shadow-lg scale-105"
-                        : "bg-gray-100 text-[#6B7280] hover:bg-gray-200 hover:scale-102"
-                    }`}
-                  >
-                    <span>{cat.icon}</span>
-                    <span>{cat.label}</span>
-                    <span
-                      className={`text-xs ${
-                        activeCategory === cat.slug ? "text-white/70" : "text-[#6B7280]"
-                      }`}
-                    >
-                      ({getCategoryCount(cat.slug)})
-                    </span>
-                  </button>
-                )
+                <button
+                  key={cat.slug}
+                  onClick={() => handleCategoryChange(cat.slug)}
+                  className={`group inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all ${
+                    activeCategory === cat.slug
+                      ? "bg-[#0F172A] text-white shadow-lg scale-105"
+                      : "bg-gray-100 text-[#6B7280] hover:bg-gray-200 hover:scale-102"
+                  }`}
+                >
+                  <span>{cat.icon}</span>
+                  <span>{cat.label}</span>
+                  <span className={`text-xs ${
+                    activeCategory === cat.slug ? "text-white/70" : "text-[#6B7280]"
+                  }`}>
+                    ({getCategoryCount(cat.slug)})
+                  </span>
+                </button>
               ))}
             </div>
           </div>
