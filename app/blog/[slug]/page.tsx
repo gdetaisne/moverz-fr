@@ -10,9 +10,12 @@ import {
   getPricePostForCity,
   getPublishedPostBySlug,
 } from "@/lib/blog";
+import { LONGTAIL_FAQS } from "@/lib/blog-longtail";
+import { LONGTAIL_PACK2_FAQS } from "@/lib/blog-longtail-pack2";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import { getCityBySlug } from "@/lib/cities";
 import { ArticleSchema } from "@/components/schema/ArticleSchema";
+import { FAQSchema } from "@/components/schema/FAQSchema";
 import { formatDateFR } from "@/lib/date/fr";
 
 type PageProps = {
@@ -47,6 +50,8 @@ export default function BlogPostPage({ params }: PageProps) {
     notFound();
     return null;
   }
+
+  const faqItems = LONGTAIL_FAQS[post.slug] ?? LONGTAIL_PACK2_FAQS[post.slug];
 
   const publishedDate =
     post.publishedAt && !Number.isNaN(new Date(post.publishedAt).getTime())
@@ -101,6 +106,7 @@ export default function BlogPostPage({ params }: PageProps) {
               </p>
               <a
                 href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/blog-article-cta"
+                rel="nofollow"
                 className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF] px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#5AB9B9] transition-colors"
               >
                 <span>Comparer les devis gratuitement</span>
@@ -122,6 +128,7 @@ export default function BlogPostPage({ params }: PageProps) {
 
   return (
     <main className="bg-hero min-h-screen">
+      {faqItems?.length ? <FAQSchema faqs={faqItems} /> : null}
       <ArticleSchema
         title={post.title}
         description={post.description}
@@ -199,6 +206,7 @@ export default function BlogPostPage({ params }: PageProps) {
               </p>
               <a
                 href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/blog-placeholder"
+                rel="nofollow"
                 className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-[#1E293B] transition-colors"
               >
                 <span>Comparer les devis maintenant</span>
@@ -327,6 +335,7 @@ export default function BlogPostPage({ params }: PageProps) {
           </p>
           <a
             href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/blog-article"
+            rel="nofollow"
             className="btn-primary"
           >
             Lancer mon comparateur de devis

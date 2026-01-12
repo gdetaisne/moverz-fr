@@ -6,6 +6,7 @@ import { buildCityServiceFaqs } from "@/lib/seo-faq";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import WidgetActionSection from "@/components/WidgetActionSection";
 import { FAQ } from "@/components/FAQ";
+import { LongTailInternalLinks } from "@/components/seo/LongTailInternalLinks";
 
 export type CityServiceFAQ = { question: string; answer: string };
 
@@ -200,6 +201,9 @@ export function CityServicePage({
               )}
             </div>
           ))}
+
+          {/* Cas fréquents (long tail) — liens internes vers guides ultra niche */}
+          <LongTailInternalLinks cityName={cityName} serviceSlug={serviceSlug} limit={8} />
         </div>
       </section>
 

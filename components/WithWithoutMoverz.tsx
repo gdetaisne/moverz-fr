@@ -73,6 +73,7 @@ export default function WithWithoutMoverz() {
           </p>
           <a
             href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/with-without"
+            rel="nofollow"
             className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-sm md:text-base font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
           >
             Comparez 3 à 5 devis gratuitement
