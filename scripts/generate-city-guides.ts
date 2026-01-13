@@ -151,6 +151,22 @@ function padToMinimumWords(sections: CityGuideSection[], baseTitle: string): Cit
     "Le meilleur “anti‑surprise” reste la photo du passage le plus étroit + la photo escalier/palier (ou ascenseur cabine). C’est souvent là que se joue la méthode sur les gros meubles.",
     "Dernier levier simple : la flexibilité. Proposer 2–3 dates possibles augmente la disponibilité et réduit les devis faits “au hasard” faute de créneau réaliste.",
     "Une journée fluide est une journée sans frottements : accès dégagé, zone tampon près de la porte, étiquetage clair. Ce sont des minutes gagnées qui deviennent des heures.",
+    "Avant le jour J, faites une mini‑liste “risques” : meuble trop large, couloir étroit, ascenseur petit, portage long. Un risque identifié tôt devient une méthode prévue (et évite les suppléments).",
+    "Cartons : mieux vaut 20 cartons moyens bien fermés que 10 énormes surchargés. Les cartons trop lourds sont une source #1 de casse et de temps perdu.",
+    "Étiquetage simple et efficace : pièce + priorité (ouvrir d’abord / peut attendre). Ça transforme le déchargement en routine, pas en chasse au trésor.",
+    "Gros électroménager : sécurisez portes/tiroirs (scotch), videz et dégivrez le frigo/congélo à l’avance. C’est peu de travail, beaucoup de tranquillité.",
+    "Meubles démontés : mettez vis/clé Allen dans un sachet scotché au meuble. Au remontage, c’est le détail qui vous fait gagner 30 minutes.",
+    "Si vous hésitez sur un passage, dites‑le. Un devis fiable préfère un “doute” assumé qu’un silence qui finit en improvisation.",
+    "Le temps se perd dans les micro‑allers‑retours. Préparez une “zone tampon” près de la porte avec ce qui part en premier.",
+    "Jour J : une personne “référent accès” (badges, clés, portes) + une personne “référent cartons”. Moins de quiproquos = journée plus courte.",
+    "Protégez le fragile en priorité (verres, écrans, tableaux). L’objectif n’est pas d’emballer tout, mais d’éviter les chocs qui coûtent cher.",
+    "Planifiez l’eau et une petite collation. Une équipe qui tourne bien, c’est aussi une équipe qui ne se met pas en difficulté.",
+    "Si vous pouvez, évitez les fins de mois et week‑ends. À défaut, compensez par une fenêtre de dates (2–3 options) pour garder de la marge.",
+    "Photos utiles : rue + entrée + escalier/ascenseur + passage le plus étroit. C’est la base universelle d’un devis comparable.",
+    "Gardez votre dossier “copier‑coller” prêt : mêmes infos, mêmes photos, même prestation. Vous comparez alors des prix, pas des hypothèses.",
+    "À l’arrivée, identifiez les pièces (affichette sur la porte ou post‑it). Les cartons arrivent au bon endroit du premier coup.",
+    "Pensez “sécurité” : couloir dégagé, animaux/enfants à l’écart des zones de passage. Ça évite les accidents et les arrêts.",
+    "Après déchargement, faites un tour rapide (placards, cave, balcon). Les oublis coûtent plus cher qu’un check de 5 minutes.",
   ];
 
   const draft = { title: baseTitle, subtitle: "", sections };
