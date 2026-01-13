@@ -150,6 +150,28 @@ export default function WhatYouReceive() {
               <strong className="text-[#0F172A]">exactement les mêmes informations</strong>.
             </p>
 
+            {/* Verified movers card */}
+            <div className="rounded-2xl border border-[#E3E5E8] bg-white p-5 md:p-6 shadow-sm mb-8">
+              <h3 className="text-sm font-bold text-[#0F172A] mb-3">Déménageurs vérifiés</h3>
+              <ul className="space-y-2 text-sm text-[#1E293B]/75">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+                  Licence de transport (capacité)
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+                  Assurance responsabilité civile professionnelle valide
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+                  Éléments financiers vérifiés (ex : Kbis récent)
+                </li>
+              </ul>
+              <div className="mt-4 rounded-xl bg-[#A8E8E8]/20 border border-[#6BCFCF]/25 px-4 py-3 text-xs font-semibold text-[#0F172A]">
+                Objectif : <span className="font-bold">au moins 3 devis</span> rapidement (souvent sous 48h, selon disponibilité).
+              </div>
+            </div>
+
             <div className="space-y-6">
               {/* Feature 1 */}
               <div className="flex items-start gap-4">
@@ -172,7 +194,7 @@ export default function WhatYouReceive() {
                 <div>
                   <h3 className="font-bold text-[#0F172A] mb-1">Pros vérifiés</h3>
                   <p className="text-[#1E293B]/70 text-sm">
-                    Assurances, avis clients, 0 litige : chaque déménageur est contrôlé.
+                    Licence, assurance et éléments administratifs : chaque déménageur partenaire est contrôlé.
                   </p>
                 </div>
               </div>
@@ -183,9 +205,9 @@ export default function WhatYouReceive() {
                   <Clock className="w-6 h-6 text-[#0F172A]" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#0F172A] mb-1">Réponse sous 48-72h</h3>
+                  <h3 className="font-bold text-[#0F172A] mb-1">3 à 5 devis comparables</h3>
                   <p className="text-[#1E293B]/70 text-sm">
-                    Vous recevez 3 à 5 devis détaillés dans les prochains jours.
+                    Vous comparez prix, options et conditions sur un format standardisé.
                   </p>
                 </div>
               </div>

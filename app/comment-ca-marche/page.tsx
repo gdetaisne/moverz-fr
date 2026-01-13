@@ -4,6 +4,10 @@ import HowItWorksHero from "@/components/comment-ca-marche/HowItWorksHero";
 import HowItWorksSteps from "@/components/comment-ca-marche/HowItWorksSteps";
 import HowItWorksIA from "@/components/comment-ca-marche/HowItWorksIA";
 import HowItWorksDevis from "@/components/comment-ca-marche/HowItWorksDevis";
+import HowItWorksNoSurprises from "@/components/comment-ca-marche/HowItWorksNoSurprises";
+import HowItWorksTransparency from "@/components/comment-ca-marche/HowItWorksTransparency";
+import HowItWorksWhyDifferent from "@/components/comment-ca-marche/HowItWorksWhyDifferent";
+import HowItWorksFAQ from "@/components/comment-ca-marche/HowItWorksFAQ";
 import WidgetActionSection from "@/components/WidgetActionSection";
 
 export const metadata: Metadata = getFullMetadata(
@@ -18,6 +22,9 @@ export default function CommentCaMarchePage() {
       {/* Hero premium */}
       <HowItWorksHero />
 
+      {/* No surprises intro */}
+      <HowItWorksNoSurprises />
+
       {/* Steps with mockups */}
       <HowItWorksSteps />
 
@@ -27,10 +34,19 @@ export default function CommentCaMarchePage() {
       {/* Devis comparison section */}
       <HowItWorksDevis />
 
+      {/* Transparency / choose */}
+      <HowItWorksTransparency />
+
+      {/* Why different */}
+      <HowItWorksWhyDifferent />
+
+      {/* FAQ */}
+      <HowItWorksFAQ />
+
       {/* Widget CTA final */}
       <WidgetActionSection
-        title="Prêt à comparer vos devis ?"
-        subtitle="Démarrez en 3 minutes. L'IA analyse vos photos et prépare des devis comparables."
+        title="Prêt à envoyer vos photos ?"
+        subtitle="Démarrez en 3 minutes. L'IA analyse vos photos et prépare des devis comparables, sans spam."
         source="moverz.fr"
         from="/comment-ca-marche/"
       />

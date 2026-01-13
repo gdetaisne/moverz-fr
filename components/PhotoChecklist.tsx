@@ -107,6 +107,28 @@ export default function PhotoChecklist() {
               <strong className="text-[#0F172A]">le volume et le temps nécessaire</strong>.
             </p>
 
+            {/* Why photos */}
+            <div className="rounded-2xl border border-[#E3E5E8] bg-white p-5 md:p-6 shadow-sm mb-8">
+              <h3 className="text-sm font-bold text-[#0F172A] mb-3">Pourquoi des photos ?</h3>
+              <ul className="space-y-2 text-sm text-[#1E293B]/75">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+                  Aucun compte requis
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+                  Les déménageurs voient exactement ce qu&apos;il y a à transporter
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+                  Volume plus précis → devis plus engageant (moins d&apos;estimation téléphonique floue)
+                </li>
+              </ul>
+              <div className="mt-4 rounded-xl bg-[#6BCFCF]/10 border border-[#6BCFCF]/25 px-4 py-3 text-xs font-semibold text-[#0F172A]">
+                Temps nécessaire : <span className="font-bold">5–10 minutes</span> pour prendre toutes les photos.
+              </div>
+            </div>
+
             <div className="space-y-5">
               {/* Benefit 1 */}
               <div className="flex items-start gap-4">

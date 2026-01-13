@@ -152,6 +152,58 @@ const nextConfig = {
         permanent: true,
       },
 
+      // Aliases courts (citations LLM + UX)
+      {
+        source: '/prix',
+        destination: '/blog/prix-et-devis/',
+        permanent: true,
+      },
+      {
+        source: '/prix/',
+        destination: '/blog/prix-et-devis/',
+        permanent: true,
+      },
+      {
+        source: '/checklist',
+        destination: '/blog/checklists-et-guides/',
+        permanent: true,
+      },
+      {
+        source: '/checklist/',
+        destination: '/blog/checklists-et-guides/',
+        permanent: true,
+      },
+      {
+        source: '/volume',
+        destination: '/calculateur-volume-demenagement/',
+        permanent: true,
+      },
+      {
+        source: '/volume/',
+        destination: '/calculateur-volume-demenagement/',
+        permanent: true,
+      },
+      {
+        source: '/choisir',
+        destination: '/comparateur-demenageurs/',
+        permanent: true,
+      },
+      {
+        source: '/choisir/',
+        destination: '/comparateur-demenageurs/',
+        permanent: true,
+      },
+      {
+        source: '/confidentialite',
+        destination: '/politique-confidentialite/',
+        permanent: true,
+      },
+      {
+        source: '/confidentialite/',
+        destination: '/politique-confidentialite/',
+        permanent: true,
+      },
+
       // Redirection inventaire-ia → choisir-ville
       {
         source: '/inventaire-ia',
