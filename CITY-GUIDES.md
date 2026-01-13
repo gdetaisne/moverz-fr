@@ -49,6 +49,11 @@ done
 - Page ville: `/demenagement/:slug/`
   - Teaser + lien interne vers la page guide
 
+## Sitemap
+
+- Les URLs `/demenagement/:slug/guide/` sont incluses dans `app/sitemaps/sitemap-cities.xml/route.ts`
+- Exception actuelle: `ile-de-france` (pas de JSON guide généré)
+
 ## Notes
 
 - Les JSON sont générés au build (Option A) et **ne doivent pas être commités**.

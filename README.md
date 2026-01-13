@@ -10,6 +10,7 @@ This is the main Moverz website, serving as a hub for our 11 local moving compar
 - **`components/`**: Reusable React components, adapted from local sites.
 - **`lib/`**: Utility functions and data (e.g., `cities.ts` for local site links, `env.ts`, `canonical-helper.ts`, `reviews.ts`).
 - **`public/`**: Static assets (images, favicons).
+- **`public/fonts/`**: Fonts self-hosted (e.g. Inter) to avoid network dependencies during build.
 - **`next.config.mjs`**: Next.js configuration, including redirects.
 - **`tailwind.config.ts`**: Tailwind CSS configuration.
 - **`postcss.config.cjs`**: PostCSS configuration.
@@ -41,6 +42,8 @@ This is the main Moverz website, serving as a hub for our 11 local moving compar
     ```bash
     npm run build
     ```
+
+Note: the site self-hosts Inter via `next/font/local` (see `app/layout.tsx`) to avoid flaky builds caused by fetching Google Fonts.
 5.  **Start production server**:
     ```bash
     npm start
