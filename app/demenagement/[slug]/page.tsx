@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CITIES, getCityBySlug } from "@/lib/cities";
 import { getPricePostForCity, PUBLISHED_BLOG_POSTS } from "@/lib/blog";
@@ -212,6 +213,29 @@ export default function CityMovingPage({ params }: PageProps) {
       {/* Guide long-form (SEO) — 2000+ mots, replié par défaut pour préserver la conversion */}
       {/* Temporarily disabled - causes build timeout on CapRover */}
       {/* <CityLongFormGuide citySlug={city.slug} cityName={city.nameCapitalized} quoteUrl={quoteUrl} /> */}
+
+      {/* Guide long-form (SEO) — servi depuis JSON pré-généré (Option A) */}
+      <section className="section section-light">
+        <div className="container max-w-4xl">
+          <div className="rounded-2xl border border-[#E5E7EB] bg-white p-8 md:p-10 space-y-5 text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">Guide local</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A]">
+              Guide complet : déménager à {city.nameCapitalized}
+            </h2>
+            <p className="text-sm md:text-base text-[#6B7280] max-w-2xl mx-auto">
+              2000+ mots ultra pratiques : devis comparables, accès & stationnement, checklists, méthode jour J.
+            </p>
+            <div className="pt-1">
+              <Link
+                href={"/demenagement/" + city.slug + "/guide/"}
+                className="inline-flex items-center justify-center rounded-full border border-[#0F172A] bg-white px-7 py-3 text-sm font-semibold text-[#0F172A] shadow-sm transition-colors hover:bg-[#F8FAFC]"
+              >
+                Lire le guide (2000+ mots) →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Villes proches / même région */}
       {nearbyCities.length > 0 && (

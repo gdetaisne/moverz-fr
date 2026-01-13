@@ -30,16 +30,15 @@ function pick<T>(arr: T[], seed: number): T {
 }
 
 function pickManyUnique<T>(arr: T[], seed: number, count: number): T[] {
+  const n = Math.min(count, arr.length);
+  if (n <= 0) return [];
+
+  // Deterministic, fast unique selection.
+  // For small arrays (our use-case), a seeded rotation is enough and avoids any potential infinite loop.
+  const start = (seed >>> 0) % arr.length;
   const out: T[] = [];
-  const used = new Set<number>();
-  let cursor = seed;
-  while (out.length < Math.min(count, arr.length)) {
-    const idx = cursor % arr.length;
-    if (!used.has(idx)) {
-      used.add(idx);
-      out.push(arr[idx]);
-    }
-    cursor = (cursor * 1103515245 + 12345) >>> 0;
+  for (let i = 0; i < n; i++) {
+    out.push(arr[(start + i) % arr.length]);
   }
   return out;
 }
@@ -83,6 +82,7 @@ function nearbyCityNames(citySlug: string): string[] {
  * Target: >= 2000 words for every city.
  */
 export function getCityLongFormGuide(citySlug: string, cityName: string): CityLongFormGuide {
+
   const seed = hashSlug(citySlug);
   const city = getCityBySlug(citySlug);
   const region = city?.region;
