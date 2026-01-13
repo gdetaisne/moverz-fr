@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import Image from "next/image";
 import "./globals.css";
 import { MOVERZ_REVIEWS, getAverageRating, getTotalReviews } from "@/lib/reviews";
@@ -8,7 +8,12 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ExitIntentPopup from "@/components/ExitIntentPopup";
 import { ConversionIntentTracker } from "@/components/ConversionIntentTracker";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = localFont({
+  src: "../public/fonts/inter-latin.woff2",
+  display: "swap",
+  variable: "--font-inter",
+  weight: "100 900",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://moverz.fr'),
