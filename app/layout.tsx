@@ -7,6 +7,7 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ExitIntentPopup from "@/components/ExitIntentPopup";
 import { ConversionIntentTracker } from "@/components/ConversionIntentTracker";
+import { JsonLd } from "@/components/schema/JsonLd";
 
 const inter = localFont({
   src: "../public/fonts/inter-latin.woff2",
@@ -87,52 +88,51 @@ export default function RootLayout({
           type="image/png"
         />
         
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "@id": "https://moverz.fr/#organization",
-              "name": "Moverz",
-              "url": "https://moverz.fr",
-              "logo": "https://moverz.fr/logo.png",
-              "description": "Comparateur de déménagement anti-arnaque. Comparez 3 à 5 devis de déménageurs contrôlés sur toute la France.",
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": getAverageRating(MOVERZ_REVIEWS),
-                "reviewCount": getTotalReviews(),
-                "bestRating": 5,
-                "worstRating": 1
+        <JsonLd
+          id="organization-schema"
+          data={{
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "@id": "https://moverz.fr/#organization",
+            name: "Moverz",
+            url: "https://moverz.fr",
+            logo: "https://moverz.fr/logo.png",
+            description:
+              "Comparateur de déménagement anti-arnaque. Comparez 3 à 5 devis de déménageurs contrôlés sur toute la France.",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: getAverageRating(MOVERZ_REVIEWS),
+              reviewCount: getTotalReviews(),
+              bestRating: 5,
+              worstRating: 1,
+            },
+            review: MOVERZ_REVIEWS.map((review) => ({
+              "@type": "Review",
+              author: {
+                "@type": "Person",
+                name: review.author.split(" — ")[0] || review.author,
               },
-              "review": MOVERZ_REVIEWS.map((review) => ({
-                "@type": "Review",
-                "author": {
-                  "@type": "Person",
-                  "name": review.author.split(" — ")[0] || review.author
-                },
-                "reviewBody": review.body,
-                "reviewRating": {
-                  "@type": "Rating",
-                  "ratingValue": review.rating,
-                  "bestRating": 5,
-                  "worstRating": 1
-                }
-              })),
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "contactType": "Customer Service",
-                "email": "contact@moverz.fr",
-                "availableLanguage": "French"
+              reviewBody: review.body,
+              reviewRating: {
+                "@type": "Rating",
+                ratingValue: review.rating,
+                bestRating: 5,
+                worstRating: 1,
               },
-              "sameAs": [],
-              "areaServed": {
-                "@type": "Country",
-                "name": "France"
-              },
-              "serviceType": ["Comparateur de déménagement", "Devis déménageurs"],
-              "knowsAbout": ["Déménagement", "Comparaison de devis", "Déménageurs professionnels"]
-            })
+            })),
+            contactPoint: {
+              "@type": "ContactPoint",
+              contactType: "Customer Service",
+              email: "contact@moverz.fr",
+              availableLanguage: "French",
+            },
+            sameAs: [],
+            areaServed: {
+              "@type": "Country",
+              name: "France",
+            },
+            serviceType: ["Comparateur de déménagement", "Devis déménageurs"],
+            knowsAbout: ["Déménagement", "Comparaison de devis", "Déménageurs professionnels"],
           }}
         />
       </head>

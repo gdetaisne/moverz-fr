@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { FAQSchema } from "@/components/schema/FAQSchema";
 
@@ -10,6 +10,8 @@ type FAQProps = {
   title: string;
   faqs: FAQItem[];
   id?: string;
+  /** Max items rendered + included in JSON-LD */
+  limit?: number;
 };
 
 function FAQItem({ faq, isOpen, onToggle }: { faq: FAQItem; isOpen: boolean; onToggle: () => void }) {
@@ -49,36 +51,36 @@ function FAQItem({ faq, isOpen, onToggle }: { faq: FAQItem; isOpen: boolean; onT
         </motion.div>
       </button>
 
-      <AnimatePresence initial={false}>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="overflow-hidden"
+      {/* Keep answer in DOM for SEO + test parity; animate visibility instead of conditional rendering */}
+      <motion.div
+        initial={false}
+        animate={{
+          height: isOpen ? "auto" : 0,
+          opacity: isOpen ? 1 : 0,
+        }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        className="overflow-hidden"
+        aria-hidden={!isOpen}
+      >
+        <div className="relative px-5 md:px-6 pb-5 md:pb-6">
+          {/* Separator line */}
+          <div className="h-px bg-gradient-to-r from-[#6BCFCF]/20 via-[#6BCFCF]/40 to-transparent mb-4" />
+          <motion.p
+            initial={false}
+            animate={{ y: isOpen ? 0 : -10, opacity: isOpen ? 1 : 0 }}
+            transition={{ duration: 0.25 }}
+            className="text-sm md:text-base text-gray-600 leading-relaxed"
           >
-            <div className="relative px-5 md:px-6 pb-5 md:pb-6">
-              {/* Separator line */}
-              <div className="h-px bg-gradient-to-r from-[#6BCFCF]/20 via-[#6BCFCF]/40 to-transparent mb-4" />
-              <motion.p
-                initial={{ y: -10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.1, duration: 0.3 }}
-                className="text-sm md:text-base text-gray-600 leading-relaxed"
-              >
-                {faq.answer}
-              </motion.p>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            {faq.answer}
+          </motion.p>
+        </div>
+      </motion.div>
     </motion.div>
   );
 }
 
-export function FAQ({ title, faqs, id = "faq" }: FAQProps) {
-  const limited = faqs.slice(0, 8);
+export function FAQ({ title, faqs, id = "faq", limit = 8 }: FAQProps) {
+  const limited = faqs.slice(0, limit);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const handleToggle = (index: number) => {

@@ -1,4 +1,4 @@
-import Script from 'next/script'
+import { JsonLd } from "@/components/schema/JsonLd";
 
 interface ArticleSchemaProps {
   title: string
@@ -59,11 +59,7 @@ export function ArticleSchema({
   }
 
   return (
-    <Script
-      id="article-schema"
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
+    <JsonLd id="article-schema" data={schema} />
   )
 }
 

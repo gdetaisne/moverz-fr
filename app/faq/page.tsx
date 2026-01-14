@@ -3,6 +3,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import PageHero from "@/components/PageHero";
 import WidgetActionSection from "@/components/WidgetActionSection";
+import { JsonLd } from "@/components/schema/JsonLd";
 
 export const metadata: Metadata = getFullMetadata(
   'faq',
@@ -108,6 +109,11 @@ const faqCategories = [
 export default function FAQPage() {
   // Générer le schema FAQPage pour Google Rich Snippets
   const allFaqItems = faqCategories.flatMap(cat => cat.items);
+  const stripHtml = (html: string) =>
+    html
+      .replace(/<[^>]*>/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -116,7 +122,8 @@ export default function FAQPage() {
       "name": item.q,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": item.a
+        // JSON-LD must be plain text (no HTML)
+        "text": stripHtml(item.a)
       }
     }))
   };
@@ -124,10 +131,7 @@ export default function FAQPage() {
   return (
     <main className="bg-white min-h-screen">
       {/* Schema FAQPage pour Rich Snippets Google */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <JsonLd id="faq-page-schema" data={faqSchema} />
       
       <PageHero
         breadcrumbs={[

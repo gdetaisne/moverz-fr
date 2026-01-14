@@ -1,4 +1,4 @@
-import Script from 'next/script'
+import { JsonLd } from "@/components/schema/JsonLd";
 
 interface FAQItem {
   question: string
@@ -28,11 +28,7 @@ export function FAQSchema({ faqs }: FAQSchemaProps) {
   const schema = buildFAQSchema(faqs)
 
   return (
-    <Script
-      id="faq-schema"
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
+    <JsonLd id="faq-schema" data={schema} />
   )
 }
 
