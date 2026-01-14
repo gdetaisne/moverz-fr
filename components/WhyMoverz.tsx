@@ -205,7 +205,7 @@ export default function WhyMoverz() {
 
                 <p className="text-white/70 leading-relaxed mb-4">
                   L'IA analyse vos photos pour créer un dossier standardisé. 
-                  Résultat : <span className="text-[#6BCFCF] font-semibold">devis comparables</span> (écart de 7% au lieu de ÷2.3).
+                  Résultat : <span className="text-[#6BCFCF] font-semibold">devis comparables</span>.
                 </p>
 
                 <div className="inline-flex items-center gap-2 text-sm text-white/80">
