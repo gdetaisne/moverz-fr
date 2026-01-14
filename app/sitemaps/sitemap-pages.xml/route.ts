@@ -12,6 +12,9 @@ export function GET() {
   const staticPaths = [
     "/",
     "/comment-ca-marche",
+    "/criteres-choisir-demenageur",
+    "/faq-arnaque-demenagement",
+    "/verifications-partenaires",
     "/villes",
     "/corridor",
     "/choisir-ville",
