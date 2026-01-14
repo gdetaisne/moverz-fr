@@ -59,7 +59,7 @@ export default function ProFeatures() {
     {
       icon: HeadphonesIcon,
       title: "Support français <2h",
-      description: "Une vraie personne répond par email, WhatsApp ou téléphone. Pas de chatbot. Support inclus dans tous les plans.",
+      description: "Une vraie personne répond par email. WhatsApp / téléphone inclus sur Pro & Entreprises. Pas de chatbot.",
       highlight: "Équipe basée en France",
     },
     {

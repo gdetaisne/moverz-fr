@@ -7,9 +7,9 @@ export default function ProPricing() {
     {
       name: "Starter",
       icon: Zap,
-      price: "99",
-      period: "/mois",
-      description: "Parfait pour débuter",
+      price: "149",
+      period: "",
+      description: "Sans WhatsApp",
       features: [
         "Jusqu'à 50 dossiers/mois",
         "Widget marque blanche",
@@ -24,14 +24,15 @@ export default function ProPricing() {
     {
       name: "Pro",
       icon: Crown,
-      price: "199",
-      period: "/mois",
-      description: "Le plus populaire",
+      price: "299",
+      period: "setup fees",
+      description: "Avec WhatsApp",
       features: [
         "Dossiers illimités",
         "Widget marque blanche",
         "IA volumétrie (±5%)",
         "Dashboard web + mobile",
+        "Support WhatsApp + email",
         "Support prioritaire (<2h)",
         "Intégration personnalisée",
         "API accès complet",
@@ -43,11 +44,11 @@ export default function ProPricing() {
       badge: "⭐ Plus populaire",
     },
     {
-      name: "Enterprise",
+      name: "Entreprises",
       icon: Crown,
       price: "Sur mesure",
       period: "",
-      description: "Pour les grandes structures",
+      description: "Marque blanche sur mesure",
       features: [
         "Tout de Pro +",
         "Compte manager dédié",
@@ -189,7 +190,7 @@ export default function ProPricing() {
               <p className="text-sm text-[#6B7280]">Dossiers traités vs avant</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-[#0F172A] mb-2">199€</p>
+              <p className="text-3xl font-bold text-[#0F172A] mb-2">299€</p>
               <p className="text-sm text-[#6B7280]">Rentable dès 2 dossiers/mois</p>
             </div>
           </div>

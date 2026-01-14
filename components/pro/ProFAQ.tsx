@@ -33,7 +33,7 @@ export default function ProFAQ() {
     },
     {
       question: "Puis-je connecter Moverz à mon CRM ?",
-      answer: "Oui (plan Pro et Enterprise). On fournit une API REST + webhooks temps réel. Compatible Salesforce, Pipedrive, HubSpot, ou CRM custom. On peut aussi développer une intégration sur-mesure (Enterprise).",
+      answer: "Oui (plan Pro et Entreprises). On fournit une API REST + webhooks temps réel. Compatible Salesforce, Pipedrive, HubSpot, ou CRM custom. On peut aussi développer une intégration sur-mesure (Entreprises).",
     },
     {
       question: "Que se passe-t-il si j'annule mon abonnement ?",
@@ -41,7 +41,7 @@ export default function ProFAQ() {
     },
     {
       question: "Le support est-il vraiment français ?",
-      answer: "Oui. Notre équipe est basée en France. On répond par email, WhatsApp ou téléphone en moins de 2h (en semaine). Pas de chatbot, pas de ticket. Une vraie personne qui connaît le métier du déménagement.",
+      answer: "Oui. Notre équipe est basée en France. On répond par email (tous les plans) et via WhatsApp / téléphone sur Pro & Entreprises. Pas de chatbot, pas de ticket. Une vraie personne qui connaît le métier du déménagement.",
     },
   ];
 
