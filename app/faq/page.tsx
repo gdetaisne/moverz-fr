@@ -148,6 +148,50 @@ export default function FAQPage() {
         secondaryCta={{ label: "Comment ça marche", href: "/comment-ca-marche/" }}
       />
 
+      {/* Maillage interne (SEO) */}
+      <section className="section section-light pt-8 pb-0">
+        <div className="container max-w-5xl">
+          <div className="rounded-2xl border border-[#E3E5E8] bg-white p-6 md:p-8">
+            <div className="text-center space-y-3 mb-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">À lire aussi</p>
+              <h2 className="text-xl md:text-2xl font-bold text-[#0F172A]">Guides utiles (sans blabla)</h2>
+              <p className="text-sm text-[#6B7280] max-w-2xl mx-auto">
+                Des pages courtes et actionnables pour vérifier un déménageur et éviter les zones floues.
+              </p>
+            </div>
+
+            <div className="grid gap-3 md:grid-cols-3">
+              {[
+                {
+                  href: "/faq-arnaque-demenagement/",
+                  title: "FAQ arnaques déménagement",
+                  desc: "10 questions factuelles : acomptes, devis, assurance, suppléments, sous-traitance…",
+                },
+                {
+                  href: "/criteres-choisir-demenageur/",
+                  title: "Critères pour choisir un déménageur",
+                  desc: "Les 7 critères indispensables + checklist imprimable.",
+                },
+                {
+                  href: "/verifications-partenaires/",
+                  title: "Vérifications partenaires (transparence)",
+                  desc: "Ce qui est vérifié, pourquoi, et ce que ça change concrètement.",
+                },
+              ].map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="group rounded-2xl border border-[#E5E7EB] bg-white p-5 hover:border-[#6BCFCF]/50 hover:shadow-sm transition-all"
+                >
+                  <p className="text-sm font-semibold text-[#0F172A] group-hover:text-[#2B7A78]">{item.title}</p>
+                  <p className="mt-1 text-xs text-[#6B7280] leading-relaxed">{item.desc}</p>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Stats rapides - Premium Tech */}
       <section className="section section-light pt-8 pb-4">
         <div className="container max-w-5xl">

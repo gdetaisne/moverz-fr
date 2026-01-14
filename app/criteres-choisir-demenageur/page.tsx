@@ -269,6 +269,48 @@ export default function CriteresChoisirDemenageurPage() {
               ].join("\n")}
             </div>
           </div>
+
+          {/* Maillage interne (SEO) */}
+          <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF] text-center">
+              À lire aussi
+            </p>
+            <h2 className="mt-3 text-xl md:text-2xl font-bold text-[#0F172A] text-center">
+              Pour compléter (court, factuel)
+            </h2>
+            <p className="mt-2 text-sm text-[#6B7280] text-center max-w-2xl mx-auto">
+              Trois pages complémentaires pour cadrer le devis, repérer les signaux d’alerte, et comprendre les vérifications.
+            </p>
+
+            <div className="mt-6 grid gap-3 md:grid-cols-3">
+              {[
+                {
+                  href: "/faq-arnaque-demenagement/",
+                  title: "FAQ arnaques déménagement",
+                  desc: "10 Q/R factuelles (suppléments, acompte, assurance, sous-traitance…).",
+                },
+                {
+                  href: "/verifications-partenaires/",
+                  title: "Vérifications partenaires (transparence)",
+                  desc: "Ce qui est vérifié, pourquoi, et ce que ça change concrètement.",
+                },
+                {
+                  href: "/blog/eviter-arnaques-demenagement/",
+                  title: "Guide long : éviter les arnaques",
+                  desc: "Version longue avec exemples et points d’attention.",
+                },
+              ].map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="group rounded-2xl border border-[#E5E7EB] bg-white p-5 hover:border-[#6BCFCF]/50 hover:shadow-sm transition-all"
+                >
+                  <p className="text-sm font-semibold text-[#0F172A] group-hover:text-[#2B7A78]">{item.title}</p>
+                  <p className="mt-1 text-xs text-[#6B7280] leading-relaxed">{item.desc}</p>
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
