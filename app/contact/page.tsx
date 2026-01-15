@@ -2,7 +2,16 @@ import type { Metadata } from "next";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ContactForm from "@/components/ContactForm";
-import { MessageCircle, Mail, Clock, ShieldCheck, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import {
+  ArrowRight,
+  Clock,
+  Mail,
+  MessageCircle,
+  ShieldCheck,
+  Users,
+  Linkedin,
+} from "lucide-react";
 
 export const metadata: Metadata = getFullMetadata(
   'contact',
@@ -12,22 +21,12 @@ export const metadata: Metadata = getFullMetadata(
 
 export default function ContactPage() {
   return (
-    <main className="bg-white min-h-screen">
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A]" />
-        <div className="absolute -top-20 left-1/4 h-72 w-72 rounded-full bg-[#6BCFCF]/15 blur-[90px]" />
-        <div className="absolute -bottom-20 right-1/4 h-72 w-72 rounded-full bg-[#6BCFCF]/15 blur-[90px]" />
-        <div
-          className="absolute inset-0 opacity-[0.06]"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 2px 2px, white 1px, transparent 0)",
-            backgroundSize: "32px 32px",
-          }}
-        />
+    <main className="bg-hero min-h-screen">
+      <div className="halo" />
 
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20 text-white">
+      {/* Hero (light, homogène avec le reste du site) */}
+      <section className="relative overflow-hidden">
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
           <Breadcrumbs
             items={[
               { label: "Accueil", href: "/" },
@@ -35,22 +34,22 @@ export default function ContactPage() {
             ]}
           />
 
-          <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:items-center">
+          <div className="mt-8 grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white/90 backdrop-blur-sm">
-                <Clock className="h-4 w-4 text-[#6BCFCF]" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#6BCFCF]/30 bg-white/70 px-4 py-2 text-sm font-semibold text-[#0F172A] backdrop-blur-sm">
+                <Clock className="h-4 w-4 text-[#2B7A78]" />
                 Réponse sous 24h ouvrées
               </div>
 
-              <h1 className="mt-6 text-4xl md:text-6xl font-bold leading-[1.05]">
-                Un message, un devis, un doute ?
+              <h1 className="mt-6 text-4xl md:text-6xl font-bold leading-[1.05] text-[#0F172A]">
+                On répond vite.
                 <br />
-                <span className="text-[#6BCFCF]">On vous répond vite.</span>
+                <span className="text-[#0F172A]/80">Et on répond clair.</span>
               </h1>
 
-              <p className="mt-5 text-lg text-white/80 max-w-xl">
-                Le plus simple: WhatsApp (photos + contexte). Sinon, laissez-nous un message par email via
-                le formulaire.
+              <p className="mt-5 text-base md:text-lg text-[#1E293B]/70 max-w-xl">
+                Besoin d’aide sur un devis, une arnaque, ou votre dossier ? Le plus rapide: WhatsApp
+                (photos + contexte). Sinon, envoyez un message via le formulaire.
               </p>
 
               <div className="mt-7 flex flex-col sm:flex-row gap-3">
@@ -66,7 +65,7 @@ export default function ContactPage() {
                 </a>
                 <a
                   href="#form"
-                  className="group inline-flex items-center justify-center gap-2 rounded-2xl border border-white/25 bg-white/10 px-6 py-4 text-sm font-semibold text-white backdrop-blur-sm hover:bg-white/15 transition-all"
+                  className="group inline-flex items-center justify-center gap-2 rounded-2xl border border-[#0F172A]/15 bg-white px-6 py-4 text-sm font-semibold text-[#0F172A] hover:bg-gray-50 transition-colors"
                 >
                   <Mail className="h-4 w-4" />
                   Envoyer un message
@@ -74,36 +73,104 @@ export default function ContactPage() {
                 </a>
               </div>
 
-              <div className="mt-6 flex flex-wrap items-center gap-2 text-xs text-white/70">
-                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1">
-                  <ShieldCheck className="h-3.5 w-3.5 text-[#6BCFCF]" />
+              <div className="mt-6 flex flex-wrap items-center gap-2 text-xs text-[#0F172A]/60">
+                <span className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 backdrop-blur-sm border border-white/60">
+                  <ShieldCheck className="h-3.5 w-3.5 text-[#2B7A78]" />
                   Sans démarchage
                 </span>
-                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1">
-                  <ShieldCheck className="h-3.5 w-3.5 text-[#6BCFCF]" />
+                <span className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 backdrop-blur-sm border border-white/60">
+                  <ShieldCheck className="h-3.5 w-3.5 text-[#2B7A78]" />
                   Dossier anonyme
                 </span>
-                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1">
-                  <ShieldCheck className="h-3.5 w-3.5 text-[#6BCFCF]" />
+                <span className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 backdrop-blur-sm border border-white/60">
+                  <ShieldCheck className="h-3.5 w-3.5 text-[#2B7A78]" />
                   Devis comparables
                 </span>
               </div>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-                <p className="text-sm font-semibold">Rapide</p>
-                <p className="mt-2 text-sm text-white/70">
-                  WhatsApp si vous pouvez envoyer 2–3 photos (accès, pièces, cave…).
+            <div className="space-y-4">
+              <div className="rounded-3xl border border-[#E3E5E8] bg-white p-7 shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
+                <div className="flex items-center gap-3">
+                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#6BCFCF]/10 text-[#2B7A78]">
+                    <Users className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-[#0F172A]">On vous répond</p>
+                    <p className="text-sm text-[#1E293B]/70">Une vraie équipe, pas un bot.</p>
+                  </div>
+                </div>
+
+                <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                  <div className="rounded-2xl border border-[#E3E5E8] bg-[#FAFBFC] p-4">
+                    <div className="flex items-center gap-3">
+                      <div className="relative h-10 w-10 overflow-hidden rounded-xl border border-[#E3E5E8] bg-white">
+                        <Image
+                          src="/lucie-profile.jpg"
+                          alt="Lucie, responsable partenaire Moverz"
+                          width={40}
+                          height={40}
+                          className="h-10 w-10 object-cover"
+                        />
+                      </div>
+                      <div className="min-w-0">
+                        <p className="text-sm font-semibold text-[#0F172A] leading-tight">
+                          Lucie
+                        </p>
+                        <p className="text-xs text-[#6B7280]">Responsable partenaire</p>
+                      </div>
+                    </div>
+                    <a
+                      href="https://www.linkedin.com/in/lucieveltz/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-[#0F172A]/80 hover:text-[#0F172A] transition-colors"
+                    >
+                      <Linkedin className="h-3.5 w-3.5" />
+                      LinkedIn
+                    </a>
+                  </div>
+
+                  <div className="rounded-2xl border border-[#E3E5E8] bg-[#FAFBFC] p-4">
+                    <div className="flex items-center gap-3">
+                      <div className="relative h-10 w-10 overflow-hidden rounded-xl border border-[#E3E5E8] bg-white">
+                        <Image
+                          src="/guillaume-profile.jpg"
+                          alt="Guillaume, cofondateur Moverz"
+                          width={40}
+                          height={40}
+                          className="h-10 w-10 object-cover"
+                        />
+                      </div>
+                      <div className="min-w-0">
+                        <p className="text-sm font-semibold text-[#0F172A] leading-tight">
+                          Guillaume
+                        </p>
+                        <p className="text-xs text-[#6B7280]">Cofondateur</p>
+                      </div>
+                    </div>
+                    <a
+                      href="https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-[#0F172A]/80 hover:text-[#0F172A] transition-colors"
+                    >
+                      <Linkedin className="h-3.5 w-3.5" />
+                      LinkedIn
+                    </a>
+                  </div>
+                </div>
+
+                <p className="mt-5 text-xs text-[#6B7280]">
+                  Note: ajoute la photo dans <code>public/guillaume-profile.jpg</code>.
                 </p>
-                <p className="mt-4 text-xs text-white/60">Lun–Ven · 9h–18h</p>
               </div>
-              <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-                <p className="text-sm font-semibold">Détaillé</p>
-                <p className="mt-2 text-sm text-white/70">
-                  Formulaire/email pour une demande structurée (devis, litige, admin).
+
+              <div className="rounded-3xl border border-[#E3E5E8] bg-white p-7 shadow-sm">
+                <p className="text-sm font-semibold text-[#0F172A]">Astuce</p>
+                <p className="mt-2 text-sm text-[#1E293B]/70">
+                  Si vous avez un devis “bizarre”, envoyez une capture + 2 photos (accès / étage / cave). On vous dit tout de suite ce qui cloche.
                 </p>
-                <p className="mt-4 text-xs text-white/60">Réponse sous 24h ouvrées</p>
               </div>
             </div>
           </div>
