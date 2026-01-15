@@ -72,6 +72,25 @@ export default function Hero() {
             >
               <WhatsAppCTA source="home" />
             </div>
+
+            {/* Pro CTA (visible dès la fold, sans parasiter le CTA principal) */}
+            <div
+              className="mt-5 flex flex-col items-center gap-2 text-center lg:items-start lg:text-left"
+              style={{
+                animation: mounted ? "fadeInUp 1.2s ease-out 0.38s both" : "none",
+              }}
+            >
+              <span className="text-sm font-medium text-[#0F172A]/70">
+                Vous êtes déménageur ?
+              </span>
+              <a
+                href="/pro/"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-[#0F172A]/15 bg-white/70 px-4 py-2 text-sm font-semibold text-[#0F172A] shadow-sm backdrop-blur-sm transition-all hover:border-[#6BCFCF]/50 hover:bg-white hover:shadow-[0_10px_30px_rgba(107,207,207,0.18)] active:scale-[0.98]"
+                aria-label="Découvrir l'offre Moverz Pro"
+              >
+                Découvrir Moverz Pro <span aria-hidden="true">→</span>
+              </a>
+            </div>
           </div>
 
         {/* ========== COLONNE DROITE – WIDGET PHOTOS ========== */}
