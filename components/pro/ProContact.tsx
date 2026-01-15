@@ -248,7 +248,7 @@ export default function ProContact() {
                     <p className="text-xs text-[#6B7280] mt-1">Réponse rapide</p>
                   </a>
                   <a
-                    href="mailto:lucie@moverz.fr?subject=Demande%20d%C3%A9mo%20Moverz%20Pro"
+                    href={mailtoHref}
                     className="rounded-2xl border border-gray-200 bg-white px-4 py-4 hover:border-[#6BCFCF]/50 hover:shadow-sm transition-all"
                   >
                     <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[#6BCFCF]/10 text-[#6BCFCF] mb-3">
@@ -280,136 +280,6 @@ export default function ProContact() {
                 </p>
               </div>
             </div>
-          </div>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* WhatsApp Pro */}
-          <motion.a
-            href="https://wa.me/66952824035?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Moverz%20Pro"
-            target="_blank"
-            rel="noopener noreferrer"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            whileHover={{ y: -4, scale: 1.02 }}
-            className="group relative rounded-2xl border-2 border-gray-200 bg-white p-8 hover:border-[#25D366]/50 hover:shadow-xl transition-all duration-300"
-          >
-            <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-[#25D366]/10 text-[#25D366] group-hover:bg-[#25D366] group-hover:text-white transition-all duration-300 mb-4">
-              <MessageCircle className="w-7 h-7" />
-            </div>
-            
-            <h3 className="text-xl font-bold text-[#0F172A] mb-2">
-              WhatsApp Pro
-            </h3>
-            <p className="text-sm text-[#6B7280] mb-4">
-              Réponse rapide. Parfait pour un premier échange ou une question précise.
-            </p>
-            
-            <div className="inline-flex items-center gap-2 text-[#25D366] font-semibold text-sm">
-              <span>Ouvrir WhatsApp</span>
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </div>
-
-            <div className="mt-4 pt-4 border-t border-gray-200">
-              <p className="text-xs text-[#6B7280]">
-                <Phone className="inline w-3 h-3 mr-1" />
-                +66 9 52 82 40 35
-              </p>
-            </div>
-          </motion.a>
-
-          {/* Email Pro */}
-          <motion.a
-            href="mailto:lucie@moverz.fr?subject=Demande%20d%27information%20Moverz%20Pro"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            whileHover={{ y: -4, scale: 1.02 }}
-            className="group relative rounded-2xl border-2 border-gray-200 bg-white p-8 hover:border-[#6BCFCF]/50 hover:shadow-xl transition-all duration-300"
-          >
-            <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-[#6BCFCF]/10 text-[#6BCFCF] group-hover:bg-[#6BCFCF] group-hover:text-white transition-all duration-300 mb-4">
-              <Mail className="w-7 h-7" />
-            </div>
-            
-            <h3 className="text-xl font-bold text-[#0F172A] mb-2">
-              Email Pro
-            </h3>
-            <p className="text-sm text-[#6B7280] mb-4">
-              Pour un échange détaillé (process, volume, intégrations, etc.).
-            </p>
-            
-            <div className="inline-flex items-center gap-2 text-[#6BCFCF] font-semibold text-sm">
-              <span>Envoyer un email</span>
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </div>
-
-            <div className="mt-4 pt-4 border-t border-gray-200">
-              <p className="text-xs text-[#6B7280] font-mono">
-                lucie@moverz.fr
-              </p>
-            </div>
-          </motion.a>
-
-          {/* Calendly */}
-          <motion.a
-            href="https://calendly.com/lucie-moverz/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            whileHover={{ y: -4, scale: 1.02 }}
-            className="group relative rounded-2xl border-2 border-[#6BCFCF] bg-gradient-to-br from-[#0F172A] to-[#1E293B] p-8 hover:shadow-2xl transition-all duration-300 text-white md:col-span-2 lg:col-span-1"
-          >
-            <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-[#6BCFCF]/20 text-[#6BCFCF] group-hover:bg-[#6BCFCF] group-hover:text-[#0F172A] transition-all duration-300 mb-4">
-              <Calendar className="w-7 h-7" />
-            </div>
-            
-            <h3 className="text-xl font-bold mb-2">
-              Être rappelé(e)
-            </h3>
-            <p className="text-sm text-white/80 mb-4">
-              Choisissez un créneau. Je vous rappelle pour faire le point et vous montrer Moverz.
-            </p>
-            
-            <div className="inline-flex items-center gap-2 text-[#6BCFCF] font-semibold text-sm">
-              <span>Choisir un créneau</span>
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </div>
-
-            <div className="mt-4 pt-4 border-t border-white/20">
-              <p className="text-xs text-white/70">
-                📞 Rappel sous 24h · Lun-Ven 9h-19h
-              </p>
-            </div>
-
-            {/* Highlight glow */}
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-[#6BCFCF] to-[#2B7A78] rounded-2xl blur opacity-30 -z-10" />
-          </motion.a>
-        </div>
-
-
-        {/* Trust badges */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="mt-16 flex flex-wrap items-center justify-center gap-8 text-sm text-[#6B7280]"
-        >
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-[#6BCFCF]" />
-            <span>Réponse rapide</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-[#6BCFCF]" />
-            <span>WhatsApp instantané</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-[#6BCFCF]" />
-            <span>Rappel sous 24h</span>
           </div>
         </motion.div>
       </div>

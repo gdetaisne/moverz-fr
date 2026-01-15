@@ -42,9 +42,9 @@ export default function ProHero() {
               transition={{ duration: 0.4, delay: 0.1 }}
               className="text-4xl md:text-6xl font-bold leading-tight"
             >
-              Chiffrez sans visite technique,
+              On révolutionne le déménagement,
               <br />
-              avec un <span className="text-[#6BCFCF]">dossier opposable</span>
+              <span className="text-[#6BCFCF]">ensemble</span>.
             </motion.h1>
 
             {/* Subtitle */}
@@ -54,9 +54,9 @@ export default function ProHero() {
               transition={{ duration: 0.4, delay: 0.2 }}
               className="text-lg md:text-xl text-white/80 leading-relaxed"
             >
-              Le client remplit son dossier (infos + adresses/dates + photos). Moverz génère
-              automatiquement l’inventaire, la déclaration de valeur et les exports — pour des devis plus
-              fiables, moins de litiges et plus de productivité.
+              Moverz Pro vous aide à <strong className="text-white">chiffrer sans visite technique</strong> grâce à
+              un <strong className="text-white">dossier digital opposable</strong> (photos + inventaire IA + déclaration de valeur).
+              Des devis plus fiables, moins de litiges, plus de productivité.
             </motion.p>
 
             {/* Proof points */}
