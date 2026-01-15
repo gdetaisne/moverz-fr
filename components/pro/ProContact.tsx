@@ -96,7 +96,7 @@ export default function ProContact() {
                     <div className="h-14 w-14 rounded-2xl overflow-hidden border border-[#E3E5E8]">
                       <Image
                         src="/lucie-profile.jpg"
-                        alt="Lucie, cofondatrice Moverz"
+                        alt="Lucie, responsable partenaire Moverz"
                         width={56}
                         height={56}
                         className="h-14 w-14 object-cover"
@@ -108,7 +108,10 @@ export default function ProContact() {
                   </div>
                   <div className="min-w-0">
                     <p className="text-sm font-semibold text-[#0F172A] leading-tight">
-                      Lucie <span className="text-[#6B7280] font-medium">· Cofondatrice</span>
+                      Lucie{" "}
+                      <span className="text-[#6B7280] font-medium">
+                        · Responsable partenaire
+                      </span>
                     </p>
                     <p className="text-sm text-[#6B7280]">
                       Réponse rapide. Démo orientée ROI (temps, litiges, fiabilité devis).
