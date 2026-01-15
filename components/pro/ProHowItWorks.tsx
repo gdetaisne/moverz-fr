@@ -1,32 +1,27 @@
 "use client";
 import { motion } from "framer-motion";
-import { Code, Smartphone, Zap, BarChart3 } from "lucide-react";
+import { Send, Camera, FileText } from "lucide-react";
 
 export default function ProHowItWorks() {
   const steps = [
     {
       step: "1",
-      icon: Code,
-      title: "Intégration 5 min",
-      description: "Copiez-collez 3 lignes de code sur votre site. Compatible WordPress, Wix, tout.",
+      icon: Send,
+      title: "Vous créez un lead",
+      description: "Depuis le backoffice, vous envoyez un lien au client (SMS/email/WhatsApp).",
     },
     {
       step: "2",
-      icon: Smartphone,
-      title: "Client prend photos",
-      description: "Le widget guide votre client pièce par pièce. 10 photos en 2 minutes.",
+      icon: Camera,
+      title: "Le client complète",
+      description: "Formulaire + adresses/dates + photos guidées (pièces, accès, zones à risque).",
     },
     {
       step: "3",
-      icon: Zap,
-      title: "IA calcule volume",
-      description: "30 secondes pour analyser les photos et générer un volume précis (±5%).",
-    },
-    {
-      step: "4",
-      icon: BarChart3,
-      title: "Dashboard + devis",
-      description: "Recevez le dossier complet dans votre interface. Chiffrez en 2 clics.",
+      icon: FileText,
+      title: "Vous chiffrez vite",
+      description:
+        "Dossier opposable + inventaire IA + déclaration de valeur + exports. Relances auto si incomplet.",
     },
   ];
 
@@ -47,14 +42,14 @@ export default function ProHowItWorks() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Comment fonctionne le widget ?
+            Comment ça marche (en 3 étapes)
           </h2>
           <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            Une solution SaaS complète, de l'intégration à la facturation
+            Un process simple pour qualifier sans déplacement — et envoyer des devis plus fiables.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {steps.map((item, i) => (
             <motion.div
               key={i}
@@ -81,7 +76,7 @@ export default function ProHowItWorks() {
               </div>
 
               {/* Connector line (except last) */}
-              {i < 3 && (
+              {i < 2 && (
                 <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-[#6BCFCF]/50 to-transparent" />
               )}
             </motion.div>

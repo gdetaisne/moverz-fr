@@ -13,10 +13,10 @@ export default function ProBeforeAfter() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] mb-4">
-            Avant / Après Moverz Pro
+            Avant / Après : chiffrage sans visite
           </h2>
           <p className="text-lg text-[#6B7280] max-w-2xl mx-auto">
-            Fini les visites techniques chronophages. Place à l'automatisation.
+            Remplacez la visite technique par un dossier photo opposable (et exploitable).
           </p>
         </motion.div>
 
@@ -35,9 +35,9 @@ export default function ProBeforeAfter() {
             
             <div className="space-y-5">
               {[
-                { icon: Clock, label: "3h par dossier", desc: "Appel + déplacement + visite + saisie" },
-                { icon: TrendingUp, label: "40% de litiges", desc: '"Vous aviez dit 25m³, pas 32!"' },
-                { icon: Users, label: "Clients perdus", desc: "Ils partent pendant les 5 jours d'attente" },
+                { icon: Clock, label: "2–3h par dossier", desc: "RDV + déplacement + visite + saisie + aller-retours" },
+                { icon: TrendingUp, label: "Devis fragiles", desc: "Hypothèses, volume contesté, options oubliées" },
+                { icon: Users, label: "Cycle trop long", desc: "Le client “refroidit” pendant l’attente" },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center">
@@ -66,9 +66,9 @@ export default function ProBeforeAfter() {
             
             <div className="space-y-5">
               {[
-                { icon: Clock, label: "5 min par dossier", desc: "Client prend photos → IA calcule → Vous chiffrez" },
-                { icon: Shield, label: "90% litiges en moins", desc: "Photos = preuve irréfutable du volume" },
-                { icon: TrendingUp, label: "Réponse immédiate", desc: "Dossier complet en 2 minutes chrono" },
+                { icon: Clock, label: "Dossier exploitable", desc: "Photos + inventaire IA + déclaration de valeur" },
+                { icon: Shield, label: "Moins de litiges", desc: "Périmètre documenté (preuves + documents)" },
+                { icon: TrendingUp, label: "Devis plus rapide", desc: "Relances auto → complétion → chiffrage" },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#6BCFCF]/10 flex items-center justify-center">

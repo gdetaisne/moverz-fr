@@ -3,8 +3,8 @@ import { getFullMetadata } from "@/lib/canonical-helper";
 
 export const metadata: Metadata = getFullMetadata(
   "pro",
-  "Moverz Pro : Widget IA Volumétrie en Marque Blanche | Économisez 3h/dossier",
-  "Solution SaaS pour déménageurs : Widget IA en marque blanche · Intégration 5 min · 0 dev · Précision 95% · Dashboard complet · Support FR < 2h · Essai 30j gratuit"
+  "Moverz Pro : dossier digital opposable pour chiffrer sans visite technique",
+  "SaaS pour déménageurs : dossier client (photos + inventaire IA + déclaration de valeur) · relances automatiques · exports PDF/Excel · WhatsApp (Pro) · module devis."
 );
 
 export default function ProLayout({

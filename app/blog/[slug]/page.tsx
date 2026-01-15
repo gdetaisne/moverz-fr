@@ -37,7 +37,10 @@ export function generateMetadata({ params }: PageProps): Metadata {
   }
 
   const path = `blog/${post.slug}`;
-  const title = `${post.title} | Blog déménagement Moverz`;
+  const title =
+    post.category === "pro"
+      ? `${post.title} | Blog déménageurs (Moverz Pro)`
+      : `${post.title} | Blog déménagement Moverz`;
   const description = post.description;
 
   return getFullMetadata(path, title, description);
@@ -67,6 +70,45 @@ export default function BlogPostPage({ params }: PageProps) {
   const city = post.citySlug ? getCityBySlug(post.citySlug) : undefined;
   const cityPricePost = post.citySlug ? getPricePostForCity(post.citySlug) : undefined;
   const canonicalBody = getCanonicalBodyBySlug(post.slug);
+
+  const slugifyHeading = (value: string) =>
+    value
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/['’]/g, "")
+      .replace(/&/g, " et ")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/-+/g, "-")
+      .replace(/^-|-$/g, "");
+
+  const extractToc = (md: string) => {
+    const items: { id: string; text: string; level: 2 | 3 }[] = [];
+    const seen = new Map<string, number>();
+    let inCode = false;
+    for (const rawLine of md.split("\n")) {
+      const line = rawLine.trim();
+      if (line.startsWith("```")) {
+        inCode = !inCode;
+        continue;
+      }
+      if (inCode) continue;
+      const m = /^(#{2,3})\s+(.+)$/.exec(line);
+      if (!m) continue;
+      const level = m[1].length;
+      if (level !== 2 && level !== 3) continue;
+      const text = m[2].replace(/\s+#+\s*$/, "").trim();
+      if (!text) continue;
+      let id = slugifyHeading(text);
+      const n = (seen.get(id) ?? 0) + 1;
+      seen.set(id, n);
+      if (n > 1) id = `${id}-${n}`;
+      items.push({ id, text, level: level as 2 | 3 });
+    }
+    return items;
+  };
+
+  const toc = canonicalBody ? extractToc(canonicalBody) : [];
 
   // Custom components pour ReactMarkdown
   const markdownComponents: Components = {
@@ -117,11 +159,63 @@ export default function BlogPostPage({ params }: PageProps) {
         );
       }
 
+      // Détecter les blockquotes “démo” (Blog Pro)
+      if (childrenText.includes("[DEMO]")) {
+        const fullText = childrenText.replace("[DEMO]", "").trim();
+        const lines = fullText.split("\n").map((l) => l.trim()).filter(Boolean);
+        const title = lines[0] || "Voir Moverz en action";
+        const description =
+          lines.slice(1).join(" ") ||
+          "Démo rapide : dossier digital opposable, inventaire IA, déclaration de valeur, relances et exports.";
+
+        return (
+          <div className="my-8 rounded-2xl border-2 border-[#6BCFCF] bg-gradient-to-br from-[#0F172A] to-[#1E293B] p-6 md:p-8 text-center shadow-md">
+            <div className="space-y-4">
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold text-white/90 backdrop-blur-sm">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+                Démo (déménageurs)
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-white leading-tight">
+                {title}
+              </h3>
+              <p className="text-sm md:text-base text-white/80 max-w-2xl mx-auto leading-relaxed">
+                {description}
+              </p>
+              <a
+                href="/pro/#contact"
+                className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF] px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#5AB9B9] transition-colors"
+              >
+                <span>Demander une démo</span>
+                <span className="text-lg leading-none">→</span>
+              </a>
+            </div>
+          </div>
+        );
+      }
+
       // Blockquotes normales
       return (
         <blockquote className="border-l-4 border-[#6BCFCF] bg-[#F0F9FF] py-3 px-4 my-6 not-italic text-[#04163a]" {...props}>
           {children}
         </blockquote>
+      );
+    },
+    h2: ({ children }) => {
+      const text = Array.isArray(children) ? children.join("") : String(children ?? "");
+      const id = slugifyHeading(text);
+      return (
+        <h2 id={id} className="scroll-mt-28">
+          {children}
+        </h2>
+      );
+    },
+    h3: ({ children }) => {
+      const text = Array.isArray(children) ? children.join("") : String(children ?? "");
+      const id = slugifyHeading(text);
+      return (
+        <h3 id={id} className="scroll-mt-28">
+          {children}
+        </h3>
       );
     },
   };
@@ -155,6 +249,11 @@ export default function BlogPostPage({ params }: PageProps) {
                 {post.category}
               </span>
             )}
+            {post.tags?.length ? (
+              <span className="rounded-full bg-white/10 px-2 py-0.5 font-semibold text-[11px] text-white/80">
+                {post.tags.slice(0, 3).join(" · ")}
+              </span>
+            ) : null}
             {city && (
               <a
                 href={`/demenagement/${city.slug}/`}
@@ -181,6 +280,25 @@ export default function BlogPostPage({ params }: PageProps) {
         <section className="section section-light">
           <div className="container max-w-3xl text-[#04163a]">
             <div className="rounded-3xl bg-white px-4 py-6 md:px-10 md:py-10 shadow-sm border border-[#E3E5E8]">
+              {toc.length >= 3 ? (
+                <div className="mb-8 rounded-2xl border border-[#E3E5E8] bg-[#F9FAFB] px-5 py-4">
+                  <p className="text-sm font-semibold text-[#04163a] mb-3">
+                    Sommaire
+                  </p>
+                  <ul className="space-y-2 text-sm text-[#4b5c6b]">
+                    {toc.map((item) => (
+                      <li key={item.id} className={item.level === 3 ? "pl-4" : ""}>
+                        <a
+                          href={`#${item.id}`}
+                          className="hover:text-[#2B7A78] hover:underline underline-offset-4"
+                        >
+                          {item.text}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
               <article className="prose prose-base lg:prose-lg max-w-none prose-headings:font-bold prose-headings:text-[#04163a] prose-h1:text-3xl prose-h1:mb-6 prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:text-[#4b5c6b] prose-p:leading-relaxed prose-p:mb-4 prose-li:text-[#4b5c6b] prose-li:leading-relaxed prose-strong:text-[#04163a] prose-strong:font-semibold prose-a:text-[#2B7A78] prose-a:font-medium prose-a:no-underline hover:prose-a:underline prose-ul:my-4 prose-ul:list-disc prose-ul:pl-5 prose-ol:my-4 prose-ol:list-decimal prose-ol:pl-5 prose-table:text-sm prose-th:bg-[#F9FAFB] prose-th:text-[#04163a] prose-th:font-semibold prose-th:p-3 prose-td:p-3 prose-td:border-[#E5E7EB] prose-hr:my-8 prose-hr:border-[#E5E7EB]">
                 <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
                   {canonicalBody}

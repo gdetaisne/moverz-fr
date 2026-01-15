@@ -19,10 +19,11 @@ export default function ProFinalCTA() {
           className="text-center space-y-8 text-white"
         >
           <h2 className="text-3xl md:text-5xl font-bold">
-            Prêt à automatiser vos estimations ?
+            Prêt à fiabiliser vos devis (sans visites) ?
           </h2>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
-            Rejoignez les 150+ déménageurs qui économisent 3h par dossier avec Moverz Pro.
+            Un dossier standardisé, opposable, et exploitable par votre équipe — pour chiffrer plus vite,
+            réduire les surprises et éviter les litiges évitables.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
@@ -30,7 +31,7 @@ export default function ProFinalCTA() {
               href="#contact"
               className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-[#0F172A] shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
-              <span>Démarrer l'essai gratuit 30 jours</span>
+              <span>Demander une démo</span>
               <span className="text-lg leading-none group-hover:translate-x-1 transition-transform">→</span>
             </a>
             <a
@@ -45,15 +46,15 @@ export default function ProFinalCTA() {
           <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-white/70 pt-4">
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-[#6BCFCF]" />
-              30 jours gratuit
+              Dossier opposable
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-[#6BCFCF]" />
-              Sans engagement
+              Relances automatiques
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-[#6BCFCF]" />
-              Support FR
+              Exports & devis
             </div>
           </div>
         </motion.div>

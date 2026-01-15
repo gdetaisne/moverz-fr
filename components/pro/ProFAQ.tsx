@@ -2,48 +2,11 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { PRO_FAQS } from "./proFaqData";
 
 export default function ProFAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  const faqs = [
-    {
-      question: "Comment fonctionne l'essai gratuit de 30 jours ?",
-      answer: "Vous créez votre compte, intégrez le widget sur votre site en 5 minutes, et vous avez accès à toutes les fonctionnalités Pro pendant 30 jours. Aucune carte bancaire requise. À la fin de l'essai, vous choisissez votre plan ou vous arrêtez (sans frais).",
-    },
-    {
-      question: "L'intégration nécessite-t-elle un développeur ?",
-      answer: "Non. 99% de nos clients intègrent le widget sans développeur. C'est un simple copier-coller de 3 lignes de code dans votre site. Compatible WordPress, Wix, Webflow, HTML custom. On a des tutoriels vidéo pour chaque plateforme.",
-    },
-    {
-      question: "Quelle est la précision de l'IA volumétrie ?",
-      answer: "90-95% de précision (marge d'erreur ±5%). Notre modèle a été entraîné sur 50 000+ déménagements réels. Il reconnaît 200+ types d'objets et prend en compte les espaces de rangement. Aussi précis qu'une visite technique, mais en 30 secondes.",
-    },
-    {
-      question: "Que se passe-t-il si le client conteste le volume ?",
-      answer: "C'est justement l'avantage principal : les photos sont une preuve irréfutable. Si le client conteste, vous lui montrez les photos qu'il a prises lui-même. Résultat : -90% de litiges en moyenne chez nos clients.",
-    },
-    {
-      question: "Puis-je personnaliser les couleurs et le logo ?",
-      answer: "Oui, marque blanche 100%. Vous configurez vos couleurs (code hex), votre logo, et même votre nom de domaine (widget.votre-entreprise.fr). Le client ne voit QUE votre marque. Aucune mention de Moverz visible.",
-    },
-    {
-      question: "Comment sont stockées les photos des clients ?",
-      answer: "Hébergement sécurisé en Europe (conformité RGPD). Chiffrement AES-256. Les photos sont automatiquement supprimées après 90 jours (ou plus tôt si vous le demandez). Vous êtes propriétaire des données.",
-    },
-    {
-      question: "Puis-je connecter Moverz à mon CRM ?",
-      answer: "Oui (plan Pro et Entreprises). On fournit une API REST + webhooks temps réel. Compatible Salesforce, Pipedrive, HubSpot, ou CRM custom. On peut aussi développer une intégration sur-mesure (Entreprises).",
-    },
-    {
-      question: "Que se passe-t-il si j'annule mon abonnement ?",
-      answer: "Vous pouvez annuler en 1 clic depuis le dashboard. Pas de période d'engagement. Vous gardez accès jusqu'à la fin du mois payé. Vous pouvez exporter toutes vos données (dossiers, photos, stats) avant de partir.",
-    },
-    {
-      question: "Le support est-il vraiment français ?",
-      answer: "Oui. Notre équipe est basée en France. On répond par email (tous les plans) et via WhatsApp / téléphone sur Pro & Entreprises. Pas de chatbot, pas de ticket. Une vraie personne qui connaît le métier du déménagement.",
-    },
-  ];
+  const faqs = PRO_FAQS;
 
   return (
     <section className="relative py-20 md:py-32 bg-white overflow-hidden">
@@ -74,6 +37,7 @@ export default function ProFAQ() {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                aria-expanded={openIndex === i}
                 className="w-full flex items-center justify-between p-6 text-left"
               >
                 <span className="font-bold text-[#0F172A] text-lg pr-4">

@@ -1,72 +1,73 @@
 "use client";
 import { motion } from "framer-motion";
 import { 
-  Smartphone, 
-  Code, 
-  Palette, 
-  Shield, 
-  Zap, 
-  BarChart3,
-  Clock,
-  HeadphonesIcon,
-  Puzzle
+  FileText,
+  Images,
+  Sparkles,
+  Bell,
+  MessageCircle,
+  Calculator,
+  Download,
+  Shield,
 } from "lucide-react";
 
 export default function ProFeatures() {
   const features = [
     {
-      icon: Code,
-      title: "Intégration 5 minutes",
-      description: "Copiez-collez 3 lignes de code. Compatible WordPress, Wix, Webflow, HTML custom. Aucune compétence technique requise.",
-      highlight: "99% des installations sans développeur",
+      icon: FileText,
+      title: "Backoffice déménageur",
+      description:
+        "Créez un lead (au téléphone ou à froid), envoyez le lien au client, suivez statuts + historique, et gardez une vue claire des dossiers.",
+      highlight: "Leads → dossiers, sans perte d’info",
     },
     {
-      icon: Palette,
-      title: "Marque blanche 100%",
-      description: "Vos couleurs, votre logo, votre domaine. Le client ne voit QUE votre marque. Moverz est invisible.",
-      highlight: "0 mention de Moverz visible",
+      icon: Images,
+      title: "Tunnel client (formulaire + photos)",
+      description:
+        "Le client complète ses infos + adresses/dates + formule, puis ajoute des photos. Objectif : un dossier standardisé, exploitable, opposable.",
+      highlight: "Photos guidées + complétude",
     },
     {
-      icon: Smartphone,
-      title: "Mobile-first",
-      description: "78% des clients prennent les photos sur smartphone. Notre widget est optimisé pour mobile (interface tactile, compression auto).",
-      highlight: "Temps moyen : 2min12s",
+      icon: Sparkles,
+      title: "IA & documents générés",
+      description:
+        "Analyse des photos, inventaire et statut de complétude. Génération automatique : dossier PDF (photos) + déclaration de valeur (PDF) + inventaire (Excel).",
+      highlight: "Moins d’aller-retours, plus de preuves",
     },
     {
-      icon: Zap,
-      title: "IA volumétrie ±5%",
-      description: "Modèle entraîné sur 50 000+ déménagements. Reconnaît 200+ types d'objets. Précision équivalente à une visite technique.",
-      highlight: "90-95% de précision",
+      icon: Bell,
+      title: "Relances automatiques",
+      description:
+        "Séquences configurables selon statut (partiel / sans photos). Templates éditables. Le message explique clairement ce qu’il manque.",
+      highlight: "Plus de dossiers complets, plus vite",
+    },
+    {
+      icon: MessageCircle,
+      title: "WhatsApp (Pro)",
+      description:
+        "Notifications WhatsApp au déménageur : nouveau lead, besoin d’intervention, lead converti en dossier. Numéro dédié provisionné par Moverz (Pro).",
+      highlight: "Réponse rapide, cycle raccourci",
+    },
+    {
+      icon: Calculator,
+      title: "Module devis (Pro)",
+      description:
+        "Chiffrez à partir d’un dossier propre. Édition avant envoi, historique et garde-fous (options, contraintes, règles).",
+      highlight: "Devis plus fiables, moins de surprises",
+    },
+    {
+      icon: Download,
+      title: "Exports (PDF/Excel/CSV)",
+      description:
+        "Exports par dossier : dossier photos PDF, déclaration de valeur PDF, inventaire Excel. Exports tables : leads + dossiers en CSV.",
+      highlight: "Branchable sur votre process actuel",
     },
     {
       icon: Shield,
-      title: "Photos = preuve anti-litige",
-      description: 'Volume contesté ? Montrez les photos. Le client ne peut plus dire "vous aviez dit 25m³". -90% de litiges en moyenne.',
-      highlight: "Protection juridique",
-    },
-    {
-      icon: BarChart3,
-      title: "Dashboard analytique",
-      description: "Taux de conversion, temps moyen, volumes moyens, progression mensuelle. Toutes vos métriques en temps réel.",
-      highlight: "Suivi complet de votre activité",
-    },
-    {
-      icon: Clock,
-      title: "Réponse instantanée",
-      description: "Le client reçoit son volume en 30 secondes. Vous recevez le dossier complet immédiatement. Plus d'attente de 5 jours.",
-      highlight: "0 perte de leads",
-    },
-    {
-      icon: HeadphonesIcon,
-      title: "Support français <2h",
-      description: "Une vraie personne répond par email. WhatsApp / téléphone inclus sur Pro & Entreprises. Pas de chatbot.",
-      highlight: "Équipe basée en France",
-    },
-    {
-      icon: Puzzle,
-      title: "API & Webhooks",
-      description: "Connectez Moverz à votre CRM (Salesforce, Pipedrive, custom). Webhook temps réel à chaque nouveau dossier.",
-      highlight: "Documentation complète",
+      title: "RGPD & hébergement Europe",
+      description:
+        "Hébergement en Europe. Politique de rétention claire (photos supprimées après la période définie, dossiers anonymisés).",
+      highlight: "Conformité & sérénité",
     },
   ];
 
@@ -124,7 +125,7 @@ export default function ProFeatures() {
           ))}
         </div>
 
-        {/* Mockup visuel - Comment ça s'intègre */}
+        {/* Exports (visuel simple) */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -132,33 +133,33 @@ export default function ProFeatures() {
           className="mt-20 max-w-4xl mx-auto"
         >
           <h3 className="text-2xl md:text-3xl font-bold text-[#0F172A] mb-8 text-center">
-            Intégration en 3 lignes de code
+            Ce que vous récupérez concrètement
           </h3>
           
-          <div className="rounded-2xl bg-[#0F172A] p-6 overflow-hidden shadow-2xl border border-[#6BCFCF]/20">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-3 h-3 rounded-full bg-red-500" />
-              <div className="w-3 h-3 rounded-full bg-yellow-500" />
-              <div className="w-3 h-3 rounded-full bg-green-500" />
-              <span className="ml-4 text-white/60 text-sm">index.html</span>
-            </div>
-            
-            <pre className="text-sm text-white/90 font-mono overflow-x-auto">
-              <code>{`<!-- Ajoutez ce code avant </body> -->
-<script src="https://widget.moverz.fr/embed.js"></script>
-<script>
-  MoverzWidget.init({
-    apiKey: 'votre_cle_api',
-    primaryColor: '#6BCFCF',
-    companyName: 'Votre Entreprise'
-  });
-</script>`}</code>
-            </pre>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                title: "Dossier photos (PDF)",
+                desc: "Preuves opposables (pièces + accès).",
+              },
+              {
+                title: "Inventaire (Excel)",
+                desc: "Exploitable par l’équipe pour chiffrer.",
+              },
+              {
+                title: "Déclaration de valeur (PDF)",
+                desc: "Cadrage assurance / responsabilité.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl border border-gray-200 bg-gradient-to-br from-white to-[#F8F9FA] p-6"
+              >
+                <p className="text-sm font-semibold text-[#0F172A]">{item.title}</p>
+                <p className="mt-2 text-sm text-[#6B7280]">{item.desc}</p>
+              </div>
+            ))}
           </div>
-
-          <p className="text-center text-sm text-[#6B7280] mt-6">
-            C'est tout. Le widget apparaît automatiquement sur votre site. ✨
-          </p>
         </motion.div>
       </div>
     </section>

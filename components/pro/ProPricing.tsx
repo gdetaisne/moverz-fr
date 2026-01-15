@@ -9,55 +9,48 @@ export default function ProPricing() {
       icon: Zap,
       price: "149",
       period: "",
-      description: "Sans WhatsApp",
+      description: "Pour qualifier sans WhatsApp",
       features: [
-        "Jusqu'à 50 dossiers/mois",
-        "Widget marque blanche",
-        "IA volumétrie (±5%)",
-        "Dashboard web + mobile",
-        "Support email (48h)",
-        "Intégration guidée",
+        "Backoffice déménageur (leads/dossiers)",
+        "Tunnel client (formulaire + photos)",
+        "IA + statut de complétude",
+        "Dossier PDF + déclaration de valeur (PDF)",
+        "Inventaire (Excel) + exports CSV (leads/dossiers)",
+        "Relances automatiques (email)",
       ],
-      cta: "Commencer",
+      cta: "Demander une démo",
       highlight: false,
     },
     {
       name: "Pro",
       icon: Crown,
       price: "299",
-      period: "setup fees",
-      description: "Avec WhatsApp",
+      period: "",
+      description: "WhatsApp + module devis",
       features: [
-        "Dossiers illimités",
-        "Widget marque blanche",
-        "IA volumétrie (±5%)",
-        "Dashboard web + mobile",
-        "Support WhatsApp + email",
-        "Support prioritaire (<2h)",
-        "Intégration personnalisée",
-        "API accès complet",
-        "Statistiques avancées",
-        "Formations mensuelles",
+        "Tout Starter +",
+        "WhatsApp (numéro dédié provisionné)",
+        "Notifications WhatsApp (nouveau lead, etc.)",
+        "Module devis (édition + historique)",
+        "Relances automatiques configurables",
       ],
-      cta: "Démarrer l'essai",
+      cta: "Demander une démo",
       highlight: true,
-      badge: "⭐ Plus populaire",
+      badge: "⭐ Recommandé",
     },
     {
       name: "Entreprises",
       icon: Crown,
       price: "Sur mesure",
       period: "",
-      description: "Marque blanche sur mesure",
+      description: "Intégrations & options avancées",
       features: [
         "Tout de Pro +",
-        "Compte manager dédié",
-        "SLA garanti 99.9%",
-        "Développements sur-mesure",
-        "Multi-sites / franchises",
-        "Formation équipe complète",
-        "Intégration CRM",
-        "Facturation flexible",
+        "Intégrations CRM (connecteurs, mapping)",
+        "API + webhooks",
+        "Multi-sites / multi-agences",
+        "White-label (domaine, templates, PDFs)",
+        "SLA + support prioritaire",
       ],
       cta: "Nous contacter",
       highlight: false,
@@ -77,7 +70,7 @@ export default function ProPricing() {
             Tarifs transparents
           </h2>
           <p className="text-lg text-[#6B7280] max-w-2xl mx-auto">
-            30 jours d'essai gratuit · Sans engagement · Annulation en 1 clic
+            Starter / Pro incluent 100 leads/mois · Dépassement par tranches · Lead = dossier complété
           </p>
         </motion.div>
 
@@ -170,33 +163,46 @@ export default function ProPricing() {
           ))}
         </div>
 
-        {/* ROI Calculator */}
+        {/* Quotas + dépassements */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mt-16 max-w-3xl mx-auto bg-gradient-to-br from-[#F0F9FF] to-white rounded-2xl border-2 border-[#6BCFCF]/20 p-8"
         >
-          <h3 className="text-2xl font-bold text-[#0F172A] mb-6 text-center">
-            💡 Calcul du ROI
+          <h3 className="text-xl md:text-2xl font-bold text-[#0F172A] mb-4 text-center">
+            Quotas & dépassements
           </h3>
-          <div className="grid md:grid-cols-3 gap-6 text-center">
-            <div>
-              <p className="text-3xl font-bold text-[#0F172A] mb-2">2h50</p>
-              <p className="text-sm text-[#6B7280]">Économisées par dossier</p>
+          <div className="space-y-4 text-sm text-[#4b5c6b]">
+            <p className="text-center">
+              <strong className="text-[#0F172A]">Starter</strong> et{" "}
+              <strong className="text-[#0F172A]">Pro</strong> incluent{" "}
+              <strong className="text-[#0F172A]">100 leads / mois</strong>.
+            </p>
+            <div className="grid sm:grid-cols-3 gap-3">
+              {[
+                { k: "+20 leads", v: "50€" },
+                { k: "+50 leads", v: "110€" },
+                { k: "+100 leads", v: "200€" },
+              ].map((x) => (
+                <div
+                  key={x.k}
+                  className="rounded-xl border border-[#E3E5E8] bg-white p-4 text-center"
+                >
+                  <p className="font-semibold text-[#0F172A]">{x.k}</p>
+                  <p className="text-[#2B7A78] font-bold mt-1">{x.v}</p>
+                </div>
+              ))}
             </div>
-            <div>
-              <p className="text-3xl font-bold text-[#6BCFCF] mb-2">×4</p>
-              <p className="text-sm text-[#6B7280]">Dossiers traités vs avant</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold text-[#0F172A] mb-2">299€</p>
-              <p className="text-sm text-[#6B7280]">Rentable dès 2 dossiers/mois</p>
+            <div className="rounded-xl border border-[#E3E5E8] bg-white p-4">
+              <p className="font-semibold text-[#0F172A] mb-1">Définition d’un “lead”</p>
+              <p>
+                Un lead est compté dès que le client a{" "}
+                <strong className="text-[#0F172A]">complété son dossier</strong>{" "}
+                (formulaire rempli). Les photos sont optionnelles.
+              </p>
             </div>
           </div>
-          <p className="text-center text-sm text-[#6B7280] mt-6">
-            Exemple : 20 dossiers/mois = <strong className="text-[#0F172A]">57h économisées</strong> = <strong className="text-[#6BCFCF]">~2850€</strong> en temps commercial
-          </p>
         </motion.div>
       </div>
     </section>

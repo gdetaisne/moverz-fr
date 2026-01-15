@@ -1,11 +1,10 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import type { BlogPostMeta } from "@/lib/blog";
+import { useSearchParams } from "next/navigation";
 import { PUBLISHED_BLOG_POSTS } from "@/lib/blog";
 import { LONGTAIL_LINKS } from "@/lib/blog-longtail-links";
-import { formatDateFR } from "@/lib/date/fr";
 import { BookOpen, Clock, TrendingUp, Filter, ArrowRight } from "lucide-react";
 
 const ITEMS_PER_PAGE = 12;
@@ -17,23 +16,52 @@ const CATEGORIES = [
   { slug: "demenagement-par-ville", label: "Par ville", icon: "🏙️" },
   { slug: "cas-frequents", label: "Cas fréquents", icon: "🧩" },
   { slug: "conseils-demenagement", label: "Conseils", icon: "💡" },
+  { slug: "pro", label: "Déménageurs (Pro)", icon: "🏢" },
 ];
 
-const formatDate = (value: string) =>
-  formatDateFR(value, { day: "2-digit", month: "short", year: "numeric" });
-
-export default function BlogIndexPage() {
+export default function BlogIndexClient() {
+  const searchParams = useSearchParams();
   const [activeCategory, setActiveCategory] = useState("all");
+  const [activeTag, setActiveTag] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
 
-  const featured = PUBLISHED_BLOG_POSTS.slice(0, 3);
+  const isPro = activeCategory === "pro";
+
+  const proPosts = useMemo(
+    () => PUBLISHED_BLOG_POSTS.filter((p) => p.category === "pro"),
+    []
+  );
+
+  const heroTitle = isPro ? "Guides pour déménageurs" : "Guides, prix & checklists";
+  const heroSubtitle = isPro
+    ? "Devis plus fiables, moins de litiges, relances efficaces : des articles concrets, orientés ROI."
+    : `${PUBLISHED_BLOG_POSTS.length} articles pour préparer votre déménagement sereinement. Conseils d'experts, prix réels, et guides pratiques.`;
+
+  const featured = useMemo(() => {
+    if (isPro) return proPosts.slice(0, 3);
+    // Évite de pousser du B2B en “featured” sur le blog grand public.
+    return PUBLISHED_BLOG_POSTS.filter((p) => p.category !== "pro").slice(0, 3);
+  }, [isPro, proPosts]);
+
+  const featuredSlugs = useMemo(() => new Set(featured.map((p) => p.slug)), [featured]);
+
+  const basePosts = useMemo(() => {
+    // Tous les posts hors featured.
+    // En mode Pro, on liste aussi les Pro hors featured.
+    return (isPro ? proPosts : PUBLISHED_BLOG_POSTS).filter((p) => !featuredSlugs.has(p.slug));
+  }, [featuredSlugs, isPro, proPosts]);
 
   // Filtrer les articles (hors featured)
   const filteredPosts = useMemo(() => {
-    const allPosts = PUBLISHED_BLOG_POSTS.slice(3);
-    if (activeCategory === "all") return allPosts;
-    return allPosts.filter((post) => post.category === activeCategory);
-  }, [activeCategory]);
+    const allPosts = basePosts;
+    const byCategory =
+      activeCategory === "all"
+        ? allPosts
+        : allPosts.filter((post) => post.category === activeCategory);
+
+    if (!activeTag) return byCategory;
+    return byCategory.filter((post) => (post.tags ?? []).includes(activeTag));
+  }, [activeCategory, activeTag, basePosts]);
 
   // Pagination
   const totalPages = Math.ceil(filteredPosts.length / ITEMS_PER_PAGE);
@@ -44,6 +72,12 @@ export default function BlogIndexPage() {
   // Reset page when category changes
   const handleCategoryChange = (slug: string) => {
     setActiveCategory(slug);
+    setActiveTag(null);
+    setCurrentPage(1);
+  };
+
+  const handleTagChange = (tag: string | null) => {
+    setActiveTag(tag);
     setCurrentPage(1);
   };
 
@@ -51,8 +85,29 @@ export default function BlogIndexPage() {
   const getCategoryCount = (slug: string) => {
     if (slug === "all") return PUBLISHED_BLOG_POSTS.length;
     if (slug === "cas-frequents") return LONGTAIL_LINKS.length;
-    return PUBLISHED_BLOG_POSTS.filter(p => p.category === slug).length;
+    return PUBLISHED_BLOG_POSTS.filter((p) => p.category === slug).length;
   };
+
+  const availableTags = useMemo(() => {
+    const tags = new Set<string>();
+    PUBLISHED_BLOG_POSTS.filter((p) => p.category === "pro").forEach((p) => {
+      (p.tags ?? []).forEach((t) => tags.add(t));
+    });
+    return Array.from(tags).sort((a, b) => a.localeCompare(b, "fr"));
+  }, []);
+
+  useEffect(() => {
+    const cat = searchParams.get("cat");
+    const tag = searchParams.get("tag");
+
+    if (cat && CATEGORIES.some((c) => c.slug === cat)) {
+      setActiveCategory(cat);
+    }
+    if (tag) {
+      setActiveTag(tag);
+    }
+    setCurrentPage(1);
+  }, [searchParams]);
 
   return (
     <main className="min-h-screen bg-white">
@@ -68,40 +123,74 @@ export default function BlogIndexPage() {
             <div className="space-y-8 animate-fade-in">
               <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2 text-sm font-medium backdrop-blur-sm">
                 <BookOpen className="w-4 h-4 text-[#6BCFCF]" />
-                <span>Blog déménagement</span>
+                <span>{isPro ? "Ressources déménageurs" : "Blog déménagement"}</span>
               </div>
 
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Guides, prix &<br />
-                <span className="text-[#6BCFCF]">checklists</span>
+                {isPro ? (
+                  <>
+                    {heroTitle}
+                    <br />
+                    <span className="text-[#6BCFCF]">devis · litiges · relances</span>
+                  </>
+                ) : (
+                  <>
+                    Guides, prix &<br />
+                    <span className="text-[#6BCFCF]">checklists</span>
+                  </>
+                )}
               </h1>
               
               <p className="text-lg md:text-xl text-white/80 leading-relaxed">
-                {PUBLISHED_BLOG_POSTS.length} articles pour préparer votre déménagement sereinement. 
-                Conseils d'experts, prix réels, et guides pratiques.
+                {heroSubtitle}
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <a
-                  href="#articles"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF] px-6 py-3 text-base font-semibold text-[#0F172A] hover:scale-105 transition-transform duration-300"
-                >
-                  <span>Explorer les articles</span>
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-                <a
-                  href="#featured"
-                  className="inline-flex items-center gap-2 rounded-full border-2 border-white/30 bg-white/10 px-6 py-3 text-base font-semibold backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
-                >
-                  <span>Meilleurs guides</span>
-                </a>
+                {isPro ? (
+                  <>
+                    <a
+                      href="/pro/#contact"
+                      className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF] px-6 py-3 text-base font-semibold text-[#0F172A] hover:scale-105 transition-transform duration-300"
+                    >
+                      <span>Demander une démo</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </a>
+                    <a
+                      href="#featured"
+                      className="inline-flex items-center gap-2 rounded-full border-2 border-white/30 bg-white/10 px-6 py-3 text-base font-semibold backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
+                    >
+                      <span>À lire en priorité</span>
+                    </a>
+                  </>
+                ) : (
+                  <>
+                    <a
+                      href="#articles"
+                      className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF] px-6 py-3 text-base font-semibold text-[#0F172A] hover:scale-105 transition-transform duration-300"
+                    >
+                      <span>Explorer les articles</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </a>
+                    <a
+                      href="#featured"
+                      className="inline-flex items-center gap-2 rounded-full border-2 border-white/30 bg-white/10 px-6 py-3 text-base font-semibold backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
+                    >
+                      <span>Meilleurs guides</span>
+                    </a>
+                  </>
+                )}
               </div>
             </div>
 
             {/* Right: Stats Cards */}
             <div className="space-y-4 animate-slide-in-right">
               {[
-                { icon: BookOpen, label: "Articles publiés", value: PUBLISHED_BLOG_POSTS.length.toString(), color: "text-[#6BCFCF]" },
+                {
+                  icon: BookOpen,
+                  label: isPro ? "Articles déménageurs" : "Articles publiés",
+                  value: (isPro ? proPosts.length : PUBLISHED_BLOG_POSTS.length).toString(),
+                  color: "text-[#6BCFCF]",
+                },
                 { icon: TrendingUp, label: "Lectures/mois", value: "12 000+", color: "text-[#6BCFCF]" },
                 { icon: Clock, label: "Temps de lecture moyen", value: "5 min", color: "text-[#6BCFCF]" },
               ].map((stat, i) => (
@@ -142,7 +231,7 @@ export default function BlogIndexPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {featured.map((post, i) => (
+            {featured.map((post) => (
               <div key={post.slug}>
                 <Link
                   href={`/blog/${post.slug}/`}
@@ -152,8 +241,8 @@ export default function BlogIndexPage() {
                     {/* Category badge */}
                     {post.category && (
                       <span className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-3 py-1.5 text-xs font-bold text-[#6BCFCF] mb-4">
-                        {CATEGORIES.find(c => c.slug === post.category)?.icon}
-                        {post.category}
+                        {CATEGORIES.find((c) => c.slug === post.category)?.icon}
+                        {CATEGORIES.find((c) => c.slug === post.category)?.label ?? post.category}
                       </span>
                     )}
 
@@ -244,6 +333,39 @@ export default function BlogIndexPage() {
               ))}
             </div>
           </div>
+
+          {/* Tags (Pro) */}
+          {(activeCategory === "pro" || activeTag) && availableTags.length > 0 && (
+            <div className="mb-10">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <Filter className="w-4 h-4 text-[#6B7280]" />
+                <p className="text-sm font-medium text-[#6B7280]">Filtrer par tag</p>
+              </div>
+              <div className="flex flex-wrap justify-center gap-2">
+                <button
+                  onClick={() => handleTagChange(null)}
+                  className={`rounded-full px-4 py-2 text-xs font-semibold transition-all ${
+                    !activeTag ? "bg-[#0F172A] text-white" : "bg-gray-100 text-[#6B7280] hover:bg-gray-200"
+                  }`}
+                >
+                  Tous
+                </button>
+                {availableTags.map((tag) => (
+                  <button
+                    key={tag}
+                    onClick={() => handleTagChange(tag)}
+                    className={`rounded-full px-4 py-2 text-xs font-semibold transition-all ${
+                      activeTag === tag
+                        ? "bg-[#0F172A] text-white"
+                        : "bg-gray-100 text-[#6B7280] hover:bg-gray-200"
+                    }`}
+                  >
+                    {tag}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Results count */}
           <div className="mb-8 text-center">

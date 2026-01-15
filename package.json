@@ -10,6 +10,7 @@
     "start": "next start -p 3040",
     "lint": "next lint",
     "test": "vitest run",
+    "blog:pro:gen": "tsx scripts/generate-blog-pro.ts",
     "seo:inventory": "tsx scripts/seo-inventory.ts > seo-inventory.csv",
     "seo:healthcheck": "tsx scripts/seo-healthcheck.ts",
     "seo:city-guides-wordcount": "tsx scripts/seo-city-guides-wordcount.ts > seo-city-guides-wordcount.csv"
