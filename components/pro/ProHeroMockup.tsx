@@ -109,15 +109,15 @@ export default function ProHeroMockup() {
             <div className="space-y-2.5 mb-5">
               <div className="flex items-center justify-between text-sm">
                 <span className="text-gray-700 font-medium">Volume IA</span>
-                <span className="font-bold text-[#0F172A]">22m³ ±5%</span>
+                <span className="font-bold text-[#0F172A]">22m3</span>
               </div>
               <div className="flex items-center justify-between text-sm">
                 <span className="text-gray-700 font-medium">Inventaire</span>
-                <span className="font-bold text-[#0F172A]">13 items + 30 cartons</span>
+                <span className="font-bold text-[#0F172A]">13 items et 30 cartons</span>
               </div>
               <div className="flex items-center justify-between text-sm">
                 <span className="text-gray-700 font-medium">Date souhaitée</span>
-                <span className="font-bold text-[#0F172A]">15 mars (±1 semaine)</span>
+                <span className="font-bold text-[#0F172A]">15 mars (+/- 1 semaine)</span>
               </div>
             </div>
 
