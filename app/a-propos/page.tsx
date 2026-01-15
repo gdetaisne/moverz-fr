@@ -10,6 +10,8 @@ import {
   BadgeCheck,
   Camera,
   ArrowRight,
+  Linkedin,
+  Cat,
 } from "lucide-react";
 
 export const metadata: Metadata = getFullMetadata(
@@ -213,33 +215,93 @@ export default function AProposPage() {
               <h3 className="text-xl md:text-2xl font-bold text-[#0F172A]">
                 Qui est derrière Moverz ?
               </h3>
-              <div className="mt-6 flex items-start gap-4">
-                <div className="relative h-16 w-16 overflow-hidden rounded-2xl border border-[#E3E5E8] bg-white">
-                  <Image
-                    src="/lucie-profile.jpg"
-                    alt="Lucie, cofondatrice Moverz"
-                    width={64}
-                    height={64}
-                    className="h-16 w-16 object-cover"
-                  />
+
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                {/* Lucie */}
+                <div className="rounded-2xl border border-[#E3E5E8] bg-[#FAFBFC] p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="relative h-14 w-14 overflow-hidden rounded-2xl border border-[#E3E5E8] bg-white">
+                      <Image
+                        src="/lucie-profile.jpg"
+                        alt="Lucie, cofondatrice Moverz"
+                        width={56}
+                        height={56}
+                        className="h-14 w-14 object-cover"
+                      />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="flex items-center justify-between gap-3">
+                        <p className="text-sm font-semibold text-[#0F172A]">
+                          Lucie <span className="text-[#6B7280] font-medium">· Cofondatrice</span>
+                        </p>
+                        <a
+                          href="https://www.linkedin.com/in/lucieveltz/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 rounded-full border border-[#0F172A]/10 bg-white px-3 py-1.5 text-xs font-semibold text-[#0F172A] hover:bg-gray-50 transition-colors"
+                          aria-label="LinkedIn de Lucie"
+                        >
+                          <Linkedin className="h-3.5 w-3.5" />
+                          LinkedIn
+                        </a>
+                      </div>
+                      <p className="mt-2 text-sm text-[#1E293B]/70">
+                        Obsédée par le “dossier clair” (pour que le prix du devis soit le prix final).
+                      </p>
+                    </div>
+                  </div>
+                  <div className="mt-4 rounded-xl border border-[#6BCFCF]/25 bg-white p-4 text-sm text-[#0F172A]">
+                    <p className="font-semibold">Fun fact</p>
+                    <p className="mt-1 text-[#0F172A]/75">
+                      Lucie et ses déménagements “intempestifs” : elle a un talent rare pour trouver un
+                      appart… puis décider de partir 3 mois après. Résultat: la check-list cartons est devenue
+                      une seconde langue.
+                    </p>
+                  </div>
                 </div>
-                <div className="min-w-0">
-                  <p className="text-sm font-semibold text-[#0F172A]">
-                    Lucie <span className="text-[#6B7280] font-medium">· Cofondatrice</span>
-                  </p>
-                  <p className="mt-1 text-sm text-[#1E293B]/70">
-                    L’objectif: aider les particuliers à choisir sans stress, et aider les déménageurs à chiffrer
-                    plus vite (Moverz Pro).
-                  </p>
+
+                {/* Guillaume */}
+                <div className="rounded-2xl border border-[#E3E5E8] bg-[#FAFBFC] p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="relative h-14 w-14 overflow-hidden rounded-2xl border border-[#E3E5E8] bg-white">
+                      <div className="h-14 w-14 bg-gradient-to-br from-[#0F172A] to-[#1E293B] flex items-center justify-center">
+                        <span className="text-white font-bold">G</span>
+                      </div>
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="flex items-center justify-between gap-3">
+                        <p className="text-sm font-semibold text-[#0F172A]">
+                          Guillaume{" "}
+                          <span className="text-[#6B7280] font-medium">· Cofondateur</span>
+                        </p>
+                        <a
+                          href="https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 rounded-full border border-[#0F172A]/10 bg-white px-3 py-1.5 text-xs font-semibold text-[#0F172A] hover:bg-gray-50 transition-colors"
+                          aria-label="LinkedIn de Guillaume"
+                        >
+                          <Linkedin className="h-3.5 w-3.5" />
+                          LinkedIn
+                        </a>
+                      </div>
+                      <p className="mt-2 text-sm text-[#1E293B]/70">
+                        Fan de process simples et de décisions nettes: “on compare proprement, point”.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="mt-4 rounded-xl border border-[#6BCFCF]/25 bg-white p-4 text-sm text-[#0F172A]">
+                    <p className="font-semibold inline-flex items-center gap-2">
+                      Fun fact <Cat className="h-4 w-4 text-[#2B7A78]" />
+                    </p>
+                    <p className="mt-1 text-[#0F172A]/75">
+                      Guillaume ne déménage <strong>jamais</strong> sans ses chats. Le camion peut être en retard,
+                      les cartons pas finis… mais les chats, eux, ont toujours leur “kit premium” (coussin + croquettes + plan d’évacuation).
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div className="mt-6 rounded-2xl border border-[#6BCFCF]/25 bg-[#6BCFCF]/10 p-5 text-sm text-[#0F172A]">
-                <p className="font-semibold">Fun fact</p>
-                <p className="mt-1 text-[#0F172A]/75">
-                  Le détail qui coûte le plus cher… c’est presque toujours un “petit oubli” dans le dossier.
-                  On préfère les capturer avant le devis.
-                </p>
-              </div>
+
               <div className="mt-7 flex flex-col sm:flex-row gap-3">
                 <a
                   href="/contact/"
