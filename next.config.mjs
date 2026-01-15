@@ -42,6 +42,22 @@ const nextConfig = {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
 
+  async rewrites() {
+    // Fallback for "/quartiers-<slug>/" hubs: serve them via the dynamic route "/quartiers/<slug>/".
+    // We exclude cities that already have a dedicated hub page (to preserve internal linking).
+    const excluded = "nice|toulouse|strasbourg|nantes|rennes|rouen|montpellier";
+    return [
+      {
+        source: `/quartiers-:slug((?!${excluded})[a-z0-9-]+)`,
+        destination: "/quartiers/:slug/",
+      },
+      {
+        source: `/quartiers-:slug((?!${excluded})[a-z0-9-]+)/`,
+        destination: "/quartiers/:slug/",
+      },
+    ];
+  },
+
   async headers() {
     return [
       // Do not index email-confirmation screens (transactional UX, not SEO content)
