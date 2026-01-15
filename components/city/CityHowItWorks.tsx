@@ -38,7 +38,7 @@ export function CityHowItWorks({ cityName, quoteUrl }: CityHowItWorksProps) {
               Étape 2
             </p>
             <h3 className="text-sm font-semibold text-[#04163a]">
-              Recevez 3 à 5 devis comparables
+              Recevez 3 devis minimum comparables
             </h3>
             <p className="text-sm text-[#4b5c6b]">
               Les déménageurs partenaires chiffrent exactement la même opération. Vous recevez des

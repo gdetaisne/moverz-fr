@@ -22,7 +22,7 @@ export default function ComparateurDemenageursPage() {
       {/* CTA Final */}
       <WidgetActionSection
         title="Prêt à essayer Moverz ?"
-        subtitle="Créez votre dossier en 3 minutes. L'IA analyse vos photos et vous obtenez 3 à 5 devis comparables de pros contrôlés."
+        subtitle="Créez votre dossier en 3 minutes. L'IA analyse vos photos et vous obtenez 3 devis minimum comparables de pros contrôlés."
         source="moverz.fr"
         from="/comparateur-demenageurs/"
       />

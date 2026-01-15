@@ -31,7 +31,7 @@
 - Background : blanc 10% opacity, bordure arrondie
 
 **Titre :**
-- "Comparez 5+ devis"
+- "Comparez 3 devis minimum"
 - "de déménageurs contrôlés" (en gradient #6BCFCF → #4FB8B8)
 - Police : 72px, extra-bold
 
@@ -50,7 +50,7 @@
 https://www.opengraph.xyz/
 
 1. Upload ton logo
-2. Titre : "Comparez 5+ devis de déménageurs contrôlés"
+2. Titre : "Comparez 3 devis minimum de déménageurs contrôlés"
 3. Sous-titre : "Note 4.8/5 · 2847 clients · 0€ · Sans démarchage · 100% fiables"
 4. Background : Gradient bleu (#04163a)
 5. Download PNG → `og-image.png`

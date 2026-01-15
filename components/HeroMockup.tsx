@@ -130,7 +130,7 @@ export default function HeroMockup() {
               <div className="flex justify-start animate-[slideInLeft_0.5s_ease-out_0.4s_both]">
                 <div className="bg-white rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[85%] shadow-sm hover:shadow-md transition-shadow duration-200">
                   <p className="text-[#1F2937] text-sm leading-relaxed">
-                    Parfait ! Vous recevrez <strong>3 à 5 devis</strong> dans les prochains jours.
+                    Parfait ! Vous recevrez <strong>3 devis minimum</strong> dans les prochains jours.
                   </p>
                   <p className="text-[#667085] text-xs mt-1">10:27</p>
                 </div>

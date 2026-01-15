@@ -48,7 +48,7 @@ export default function HowItWorksHero() {
             </h1>
 
             <p className="text-xl text-white/70 mb-10 leading-relaxed">
-              En 3 minutes, l'IA analyse vos photos et prépare 3 à 5 devis comparables. Simple, rapide, sans démarchage.
+              En 3 minutes, l'IA analyse vos photos et prépare 3 devis minimum comparables. Simple, rapide, sans démarchage.
             </p>
 
             {/* WhatsApp CTA */}
@@ -83,7 +83,7 @@ export default function HowItWorksHero() {
               </div>
               <div>
                 <p className="font-semibold text-white">3. Comparez</p>
-                <p className="text-sm text-white/60">3 à 5 devis comparables</p>
+                <p className="text-sm text-white/60">3 devis minimum comparables</p>
               </div>
             </div>
           </div>

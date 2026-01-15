@@ -5,7 +5,7 @@ export const metadata = generateCityServiceMetadata({
   serviceSlug: "aide-demenagement",
   title: "Aide au déménagement à Marseille : main d’œuvre, matériel, devis | Moverz",
   description:
-    "Aide au déménagement à Marseille : porteurs, manutention, monte-meuble, matériel. Conseils + 3 à 5 devis comparables pour une aide à la carte, sans spam.",
+    "Aide au déménagement à Marseille : porteurs, manutention, monte-meuble, matériel. Conseils + 3 devis minimum comparables pour une aide à la carte, sans spam.",
 });
 
 export default function Page() {
@@ -96,7 +96,7 @@ export default function Page() {
         {
           question: "Puis-je comparer plusieurs devis gratuitement ?",
           answer:
-            "Oui. Avec Moverz, vous pouvez recevoir 3 à 5 devis standardisés et décider ensuite, sans engagement.",
+            "Oui. Avec Moverz, vous pouvez recevoir 3 devis minimum standardisés et décider ensuite, sans engagement.",
         },
       ]}
     />

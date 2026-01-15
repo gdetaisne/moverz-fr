@@ -5,7 +5,7 @@ export const metadata = generateCityServiceMetadata({
   serviceSlug: "entreprise",
   title: "Déménagement d’entreprise à Rennes : transfert bureaux, devis | Moverz",
   description:
-    "Déménagement d’entreprise à Rennes : transfert de bureaux, informatique, archives. Méthode, minimisation d’arrêt, assurance + 3 à 5 devis comparables via Moverz.",
+    "Déménagement d’entreprise à Rennes : transfert de bureaux, informatique, archives. Méthode, minimisation d’arrêt, assurance + 3 devis minimum comparables via Moverz.",
 });
 
 export default function Page() {
@@ -55,7 +55,7 @@ export default function Page() {
           ],
         },
         {
-          title: "Comparer 3 à 5 devis sur une base identique",
+          title: "Comparer 3 devis minimum sur une base identique",
           paragraphs: [
             "La comparaison n’a de valeur que si les offres sont sur le même cahier des charges.",
             "Moverz standardise la demande et vous permet de recevoir des devis comparables, sans spam.",
@@ -96,7 +96,7 @@ export default function Page() {
         {
           question: "Puis-je comparer plusieurs devis gratuitement ?",
           answer:
-            "Oui. Vous pouvez demander 3 à 5 devis via Moverz avec un seul dossier, sans engagement.",
+            "Oui. Vous pouvez demander 3 devis minimum via Moverz avec un seul dossier, sans engagement.",
         },
       ]}
     />

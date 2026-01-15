@@ -5,7 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata: Metadata = getFullMetadata(
   'a-propos',
   "À propos de Moverz : Comparateur Anti-Arnaque [Notre Mission]",
-  "Qui sommes-nous ? Notre mission : simplifier le déménagement avec un comparateur transparent · 5+ pros contrôlés · Devis comparables · Sans démarchage · Découvrez notre équipe"
+  "Qui sommes-nous ? Notre mission : simplifier le déménagement avec un comparateur transparent · pros contrôlés contrôlés · Devis comparables · Sans démarchage · Découvrez notre équipe"
 );
 
 export default function AProposPage() {

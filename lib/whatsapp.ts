@@ -4,7 +4,7 @@
  * Generate pre-filled WhatsApp message (premium concierge tone)
  */
 export function generateWhatsAppMessage(source: string = "home"): string {
-  const message = `Bonjour, je voudrais obtenir 3 à 5 devis comparables pour mon déménagement.
+  const message = `Bonjour, je voudrais obtenir 3 devis minimum comparables pour mon déménagement.
 
 📍 Ville de départ :
 📍 Ville d'arrivée :

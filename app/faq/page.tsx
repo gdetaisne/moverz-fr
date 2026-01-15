@@ -142,7 +142,7 @@ export default function FAQPage() {
         title="Questions fréquentes"
         subtitle="Découvrez comment l’IA Moverz estime votre volume, standardise votre dossier et vous aide à comparer des devis vraiment comparables, sans spam."
         primaryCta={{
-          label: "Comparer 3 à 5 devis gratuitement",
+          label: "Comparer 3 devis minimum gratuitement",
           href: "https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/faq/",
         }}
         secondaryCta={{ label: "Comment ça marche", href: "/comment-ca-marche/" }}
@@ -320,7 +320,7 @@ export default function FAQPage() {
       </section>
 
       <WidgetActionSection
-        title="Comparez 3 à 5 devis maintenant"
+        title="Comparez 3 devis minimum maintenant"
         subtitle="Décrivez votre déménagement en quelques minutes. L'IA fiabilise le volume pour des devis vraiment comparables, sans spam."
         source="moverz.fr"
         from="/faq/"

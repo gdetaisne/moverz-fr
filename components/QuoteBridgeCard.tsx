@@ -21,7 +21,7 @@ function getWhatsappUrl(quoteUrl: string) {
 }
 
 function getMailtoUrl(quoteUrl: string) {
-  const subject = "Moverz — lien pour obtenir 3 à 5 devis (et ajouter mes photos)";
+  const subject = "Moverz — lien pour obtenir 3 devis minimum (et ajouter mes photos)";
   const body =
     `Bonjour,\\n\\n` +
     `Voici mon lien Moverz : ${quoteUrl}\\n\\n` +
@@ -56,7 +56,7 @@ export default function QuoteBridgeCard({ quoteUrl }: QuoteBridgeCardProps) {
         </div>
 
         <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-[#0F172A]">
-          Comparez 3 à 5 devis maintenant
+          Comparez 3 devis minimum maintenant
         </h3>
         <p className="text-sm md:text-[15px] text-[#334155] leading-relaxed">
           Photos = devis plus précis. Téléphone masqué, sans démarchage.

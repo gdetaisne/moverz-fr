@@ -238,7 +238,7 @@ Dans votre dossier Moverz, indiquez :
 
 ### Étape 4 : Comparer les devis
 
-Avec Moverz, vous recevez **3 à 5 devis comparables** :
+Avec Moverz, vous recevez **3 devis minimum comparables** :
 - Même volume (ex: 30 m³)
 - Même description accès
 - Même formule
@@ -378,7 +378,7 @@ Avec Moverz, vous recevez **3 à 5 devis comparables** :
 - Vous identifiez les outliers (trop cher ou trop cheap = suspect)
 - **→ Vous négociez mieux** ✅
 
-**Moverz** : 3 à 5 devis automatiquement, déménageurs contrôlés.
+**Moverz** : 3 devis minimum automatiquement, déménageurs contrôlés.
 
 ---
 

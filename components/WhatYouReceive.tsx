@@ -205,7 +205,7 @@ export default function WhatYouReceive() {
                   <Clock className="w-6 h-6 text-[#0F172A]" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#0F172A] mb-1">3 à 5 devis comparables</h3>
+                  <h3 className="font-bold text-[#0F172A] mb-1">3 devis minimum comparables</h3>
                   <p className="text-[#1E293B]/70 text-sm">
                     Vous comparez prix, options et conditions sur un format standardisé.
                   </p>

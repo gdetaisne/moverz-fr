@@ -18,8 +18,8 @@ const inter = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://moverz.fr'),
-  title: "Déménagement : Comparez 3 à 5 devis en 3 min (0€, sans démarchage) | Moverz",
-  description: "✓ 3 à 5 devis comparables ✓ Pros contrôlés (assurances + 0 litige) ✓ Dossier anonyme ✓ 100% gratuit · 2847 clients · Note 4.8/5 → Comparez maintenant",
+  title: "Déménagement : Comparez 3 devis minimum en 3 min (0€, sans démarchage) | Moverz",
+  description: "✓ 3 devis minimum comparables ✓ Pros contrôlés (assurances + 0 litige) ✓ Dossier anonyme ✓ 100% gratuit · 2847 clients · Note 4.8/5 → Comparez maintenant",
   keywords: ["comparateur déménagement", "devis déménageurs", "déménagement France", "comparateur devis", "déménageurs contrôlés", "devis gratuit déménagement"],
   authors: [{ name: "Moverz" }],
   openGraph: {
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "https://moverz.fr/",
     siteName: "Moverz",
-    title: "Déménagement : Comparez 3 à 5 devis de pros contrôlés | Moverz",
-    description: "Note 4.8/5 · 2847 clients · Comparez 3 à 5 devis de déménageurs contrôlés · 100% gratuit · Sans démarchage · Dossier anonyme",
+    title: "Déménagement : Comparez 3 devis minimum de pros contrôlés | Moverz",
+    description: "Note 4.8/5 · 2847 clients · Comparez 3 devis minimum de déménageurs contrôlés · 100% gratuit · Sans démarchage · Dossier anonyme",
     images: [
       {
         url: "/logo.png",
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Déménagement : Comparez 3 à 5 devis en 3 min (0€, sans démarchage)",
-    description: "Note 4.8/5 · Comparez 3 à 5 devis de pros contrôlés · 100% gratuit · Dossier anonyme",
+    title: "Déménagement : Comparez 3 devis minimum en 3 min (0€, sans démarchage)",
+    description: "Note 4.8/5 · Comparez 3 devis minimum de pros contrôlés · 100% gratuit · Dossier anonyme",
     images: ["/logo.png"],
   },
   robots: {
@@ -98,7 +98,7 @@ export default function RootLayout({
             url: "https://moverz.fr",
             logo: "https://moverz.fr/logo.png",
             description:
-              "Comparateur de déménagement anti-arnaque. Comparez 3 à 5 devis de déménageurs contrôlés sur toute la France.",
+               "Comparateur de déménagement anti-arnaque. Comparez 3 devis minimum de déménageurs contrôlés sur toute la France.",
             aggregateRating: {
               "@type": "AggregateRating",
               ratingValue: getAverageRating(MOVERZ_REVIEWS),

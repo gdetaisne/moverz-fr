@@ -38,7 +38,7 @@ export default function VisualProof() {
           {/* Quotes preview - Minimalist */}
           <div className="space-y-3">
             <p className="text-sm font-medium text-white/70 uppercase tracking-wide mb-4">
-              3 à 5 devis comparables reçus
+              3 devis minimum comparables reçus
             </p>
             
             {[

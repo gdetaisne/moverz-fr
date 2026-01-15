@@ -5,7 +5,7 @@ export const metadata = generateCityServiceMetadata({
   serviceSlug: "international",
   title: "Déménagement international depuis Montpellier : Europe/monde, devis | Moverz",
   description:
-    "Déménagement international depuis/vers Montpellier : modes de transport, formalités, assurance, stockage. Conseils + 3 à 5 devis comparables via Moverz.",
+    "Déménagement international depuis/vers Montpellier : modes de transport, formalités, assurance, stockage. Conseils + 3 devis minimum comparables via Moverz.",
 });
 
 export default function Page() {
@@ -91,7 +91,7 @@ export default function Page() {
         {
           question: "Puis-je comparer plusieurs devis gratuitement ?",
           answer:
-            "Oui. Avec Moverz, vous pouvez demander 3 à 5 devis comparables via un seul dossier, sans engagement.",
+            "Oui. Avec Moverz, vous pouvez demander 3 devis minimum comparables via un seul dossier, sans engagement.",
         },
         {
           question: "Quel mode de transport choisir ?",

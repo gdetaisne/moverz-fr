@@ -5,7 +5,7 @@ export const metadata = generateCityServiceMetadata({
   serviceSlug: "piano",
   title: "Déménagement piano Toulouse : transport sécurisé, devis | Moverz",
   description:
-    "Déménagement piano à Toulouse : piano droit ou à queue, accès, protections, assurance. Conseils + 3 à 5 devis de pros pour un transport sécurisé.",
+    "Déménagement piano à Toulouse : piano droit ou à queue, accès, protections, assurance. Conseils + 3 devis minimum de pros pour un transport sécurisé.",
 });
 
 export default function Page() {
@@ -95,7 +95,7 @@ export default function Page() {
         {
           question: "Puis-je comparer plusieurs devis gratuitement ?",
           answer:
-            "Oui. Avec Moverz, vous pouvez recevoir 3 à 5 devis standardisés et décider ensuite, sans engagement.",
+            "Oui. Avec Moverz, vous pouvez recevoir 3 devis minimum standardisés et décider ensuite, sans engagement.",
         },
       ]}
     />

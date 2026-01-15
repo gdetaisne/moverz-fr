@@ -132,7 +132,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <p className="font-semibold text-[#04163a] text-sm">5+ déménageurs certifiés</p>
+                    <p className="font-semibold text-[#04163a] text-sm">déménageurs contrôlés certifiés</p>
                     <p className="text-xs text-[#6B7280] mt-0.5">Solvabilité vérifiée, 0 litige majeur</p>
                   </div>
                 </li>

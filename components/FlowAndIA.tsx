@@ -18,7 +18,7 @@ import { MessageSquare, Camera, CheckCircle } from "lucide-react";
   {
     number: "3",
     icon: CheckCircle,
-    title: "Recevez 3 à 5 devis",
+    title: "Recevez 3 devis minimum",
     description: "Devis comparables rapidement (souvent sous 48h). Vous choisissez le meilleur.",
   },
 ];

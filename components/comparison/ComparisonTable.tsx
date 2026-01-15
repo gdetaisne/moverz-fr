@@ -83,7 +83,7 @@ const comparisonData: ComparisonData[] = [
   {
     category: "Temps & Efficacité",
     criteria: "Nombre de devis",
-    moverz: { value: "3 à 5 devis", score: "good" },
+    moverz: { value: "3 devis minimum", score: "good" },
     comparateurs: { value: "Variable (spam)", score: "ok" },
     direct: { value: "1 devis/demande", score: "bad" },
   },

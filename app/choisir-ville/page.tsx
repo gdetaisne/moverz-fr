@@ -5,8 +5,8 @@ import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = getFullMetadata(
   'choisir-ville',
-  "Votre Ville : Lyon, Nice, Marseille... → 3 à 5 devis Gratuits | Moverz",
-  "Sélectionnez votre ville parmi 11 villes en France → Recevez 3 à 5 devis comparables de pros contrôlés · En 3 min · 100% gratuit · Sans démarchage · Commencez maintenant"
+  "Votre Ville : Lyon, Nice, Marseille... → 3 devis minimum gratuits | Moverz",
+  "Sélectionnez votre ville parmi 11 villes en France → Recevez 3 devis minimum comparables de pros contrôlés · En 3 min · 100% gratuit · Sans démarchage · Commencez maintenant"
 );
 
 export default function ChoisirVillePage() {
@@ -25,7 +25,7 @@ export default function ChoisirVillePage() {
         ]}
         eyebrow="Accès direct au comparateur"
         title="Choisissez votre ville"
-        subtitle="Sélectionnez votre ville pour démarrer le comparateur et recevoir 3 à 5 devis de déménageurs contrôlés, sur une base standardisée."
+        subtitle="Sélectionnez votre ville pour démarrer le comparateur et recevoir 3 devis minimum de déménageurs contrôlés, sur une base standardisée."
         primaryCta={{
           label: "Démarrer le comparateur",
           href: "https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/choisir-ville/",

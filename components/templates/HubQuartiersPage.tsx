@@ -247,7 +247,7 @@ export function HubQuartiersPage({
           </h2>
 
           <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
-            3 minutes pour créer votre dossier, 5+ déménageurs qui chiffrent le même volume.
+            3 minutes pour créer votre dossier, des déménageurs contrôlés qui chiffrent le même volume.
           </p>
 
           <div className="pt-4">

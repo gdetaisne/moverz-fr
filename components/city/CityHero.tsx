@@ -46,7 +46,7 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
               Déménager à{" "}
               <span className="text-[#6BCFCF]">{city.nameCapitalized}</span> ?
               <br />
-              <span className="text-white">3 min, 3 à 5 devis.</span>
+              <span className="text-white">3 min, 3 devis minimum.</span>
             </h1>
 
             {/* Subtitle */}
@@ -112,7 +112,7 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
                     <div className="flex justify-start">
                       <div className="bg-white rounded-2xl rounded-tl-sm p-3 max-w-[85%] shadow-sm">
                         <p className="text-[#1F2937] text-sm leading-relaxed">
-                          Parfait ! Vous recevrez <strong>3 à 5 devis</strong> de déménageurs locaux à {city.nameCapitalized} dans les prochains jours ✨
+                          Parfait ! Vous recevrez <strong>3 devis minimum</strong> de déménageurs locaux à {city.nameCapitalized} dans les prochains jours ✨
                         </p>
                         <p className="text-[#1F2937]/50 text-xs mt-1">10:27</p>
                       </div>

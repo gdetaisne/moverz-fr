@@ -34,7 +34,7 @@ export function generateQuartierMetadata(
   quartierName: string
 ): Metadata {
   const path = `${citySlug}/${quartierSlug}`;
-  const title = `Déménagement ${quartierName} (${cityName}) : 3 à 5 devis en 3 min | Moverz`;
+  const title = `Déménagement ${quartierName} (${cityName}) : 3 devis minimum en 3 min | Moverz`;
   const description = `Déménageurs locaux contrôlés pour ${quartierName} à ${cityName}. Devis comparables en 3 min · IA volume · 0€ · Sans démarchage`;
 
   return getFullMetadata(path, title, description);
@@ -96,7 +96,7 @@ export function QuartierPage({
             {/* Titre */}
             <h1 className="text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl">
               Déménager à {quartierName} ?<br />
-              <span className="text-[#6BCFCF]">3 min, 3 à 5 devis.</span>
+              <span className="text-[#6BCFCF]">3 min, 3 devis minimum.</span>
             </h1>
 
             {/* Sous-titre */}
@@ -298,7 +298,7 @@ export function QuartierPage({
           </h2>
 
           <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
-            3 minutes pour créer votre dossier, 5+ déménageurs qui chiffrent le même volume.
+            3 minutes pour créer votre dossier, des déménageurs contrôlés qui chiffrent le même volume.
           </p>
 
           <div className="pt-4">

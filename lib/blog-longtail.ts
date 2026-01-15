@@ -230,7 +230,7 @@ Un déménagement au **5e étage sans ascenseur** n’est pas “impossible” �
 
 Dans ce guide, on va faire simple : **ce qui fait monter le prix**, **comment obtenir des devis comparables**, et une **checklist** copiable/collable pour éviter les mauvaises surprises.
 
-> [CTA] Comparer 3 à 5 devis sans surprises
+> [CTA] Comparer 3 devis minimum sans surprises
 > Si vous êtes au 5e sans ascenseur, la fiabilité dépend de l’accès. Envoyez le même dossier à plusieurs pros et comparez des devis comparables.
 
 ## 1) Pourquoi le 5e sans ascenseur change (vraiment) la journée

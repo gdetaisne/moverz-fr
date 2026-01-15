@@ -5,7 +5,7 @@ export const metadata = generateCityServiceMetadata({
   serviceSlug: "garde-meuble",
   title: "Garde-meuble à Toulouse : box, stockage, tarifs & devis | Moverz",
   description:
-    "Garde-meuble à Toulouse : comparer box/self-stockage et solutions avec déménageur. Tarifs, tailles, sécurité, conseils + 3 à 5 devis gratuits via Moverz.",
+    "Garde-meuble à Toulouse : comparer box/self-stockage et solutions avec déménageur. Tarifs, tailles, sécurité, conseils + 3 devis minimum gratuits via Moverz.",
 });
 
 export default function Page() {

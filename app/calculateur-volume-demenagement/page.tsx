@@ -18,7 +18,7 @@ export default function CalculateurVolumePage() {
       {/* CTA Final */}
       <WidgetActionSection
         title="Obtenez des devis basés sur ce volume"
-        subtitle="L'IA Moverz analysera vos photos pour affiner l'estimation et vous obtiendrez 3 à 5 devis comparables de pros contrôlés."
+        subtitle="L'IA Moverz analysera vos photos pour affiner l'estimation et vous obtiendrez 3 devis minimum comparables de pros contrôlés."
         source="moverz.fr"
         from="/calculateur-volume-demenagement/"
       />

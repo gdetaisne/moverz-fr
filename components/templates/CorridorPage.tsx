@@ -43,7 +43,7 @@ export function generateCorridorMetadata(
   const destSlug = destinationSlug ?? slugify(destination);
   const path = `${originCitySlug}-vers-${destSlug}`;
   const title = `Déménagement ${originCityName} → ${destination} : Devis & Prix 2025 | Moverz`;
-  const description = `Déménagement ${originCityName} vers ${destination} : devis gratuits, prix indicatifs, conseils d'experts. 5+ déménageurs contrôlés · 0€ · Sans démarchage`;
+  const description = `Déménagement ${originCityName} vers ${destination} : devis gratuits, prix indicatifs, conseils d'experts. déménageurs contrôlés contrôlés · 0€ · Sans démarchage`;
 
   return getFullMetadata(path, title, description);
 }
@@ -348,7 +348,7 @@ export function CorridorPage({
           </h2>
 
           <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
-            Créez votre dossier en 3 minutes et recevez 3 à 5 devis de déménageurs contrôlés.
+            Créez votre dossier en 3 minutes et recevez 3 devis minimum de déménageurs contrôlés.
           </p>
 
           <div className="pt-4">
