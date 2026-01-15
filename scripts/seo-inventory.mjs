@@ -75,7 +75,7 @@ function cityTitle(cityCap) {
   return `Déménagement ${cityCap} : 3 à 5 devis en 3 min | Moverz`;
 }
 function cityMeta(cityCap) {
-  return `3 min · IA fiabilise le volume · 3 à 5 devis comparables · Déménageurs contrôlés à ${cityCap} · 0€ · 0 spam.`;
+  return `3 min · IA fiabilise le volume · 3 à 5 devis comparables · Déménageurs contrôlés à ${cityCap} · 0€ · Sans démarchage.`;
 }
 function serviceTitle(service, cityCap) {
   return `${service} ${cityCap}`; // placeholder for audit (we only need duplicate detection)

@@ -50,7 +50,7 @@ export default function Page() {
           ],
           bullets: [
             "Même volume, mêmes accès, même date = comparaison objective.",
-            "0 spam : dossier anonyme, vous gardez le contrôle.",
+            "Sans démarchage : dossier anonyme, vous gardez le contrôle.",
             "Vous pouvez négocier sur une base claire (options, assurances, timing).",
           ],
         },

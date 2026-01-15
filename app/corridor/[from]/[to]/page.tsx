@@ -29,7 +29,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
 
   const path = `${from.slug}-vers-${to.slug}`;
   const title = `Déménagement ${from.nameCapitalized} → ${to.nameCapitalized} : Devis & Prix 2025 | Moverz`;
-  const description = `Déménagement ${from.nameCapitalized} vers ${to.nameCapitalized} : devis gratuits, prix indicatifs, conseils d'experts. 5+ déménageurs contrôlés · 0€ · 0 spam`;
+  const description = `Déménagement ${from.nameCapitalized} vers ${to.nameCapitalized} : devis gratuits, prix indicatifs, conseils d'experts. 5+ déménageurs contrôlés · 0€ · Sans démarchage`;
 
   return getFullMetadata(path, title, description);
 }

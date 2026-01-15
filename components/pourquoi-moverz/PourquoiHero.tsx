@@ -84,7 +84,7 @@ export default function PourquoiHero() {
                 <Users className="w-6 h-6 text-[#6BCFCF]" />
               </div>
               <div>
-                <p className="font-semibold text-white">0 spam</p>
+                <p className="font-semibold text-white">Sans démarchage</p>
                 <p className="text-sm text-white/60">Téléphone masqué jusqu'à votre choix</p>
               </div>
             </div>

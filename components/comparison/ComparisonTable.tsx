@@ -37,7 +37,7 @@ const comparisonData: ComparisonData[] = [
   {
     category: "Spam & Harcèlement",
     criteria: "Appels intempestifs",
-    moverz: { value: "0 spam", score: "good" },
+    moverz: { value: "Sans démarchage", score: "good" },
     comparateurs: { value: "5-10 appels/jour", score: "bad" },
     direct: { value: "1-2 appels", score: "ok" },
   },

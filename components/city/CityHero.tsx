@@ -51,7 +51,7 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
 
             {/* Subtitle */}
             <p className="text-xl text-white/70 mb-10 leading-relaxed">
-              Des déménageurs locaux contrôlés. Des devis comparables. 0 spam.
+              Des déménageurs locaux contrôlés. Des devis comparables. Sans démarchage.
             </p>
 
             {/* WhatsApp CTA */}
@@ -128,7 +128,7 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
               </div>
 
               <div className="absolute -left-4 bottom-32 bg-white rounded-xl shadow-xl px-3 py-2 -rotate-6 border border-[#6BCFCF]/30">
-                <p className="text-xs font-bold text-[#0F172A]">0 spam</p>
+                <p className="text-xs font-bold text-[#0F172A]">Sans démarchage</p>
                 <p className="text-xs text-[#1E293B]/60">Gratuit</p>
               </div>
             </div>

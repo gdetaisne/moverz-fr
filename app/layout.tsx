@@ -18,7 +18,7 @@ const inter = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://moverz.fr'),
-  title: "Déménagement : Comparez 3 à 5 devis en 3 min (0€, 0 spam) | Moverz",
+  title: "Déménagement : Comparez 3 à 5 devis en 3 min (0€, sans démarchage) | Moverz",
   description: "✓ 3 à 5 devis comparables ✓ Pros contrôlés (assurances + 0 litige) ✓ Dossier anonyme ✓ 100% gratuit · 2847 clients · Note 4.8/5 → Comparez maintenant",
   keywords: ["comparateur déménagement", "devis déménageurs", "déménagement France", "comparateur devis", "déménageurs contrôlés", "devis gratuit déménagement"],
   authors: [{ name: "Moverz" }],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: "https://moverz.fr/",
     siteName: "Moverz",
     title: "Déménagement : Comparez 3 à 5 devis de pros contrôlés | Moverz",
-    description: "Note 4.8/5 · 2847 clients · Comparez 3 à 5 devis de déménageurs contrôlés · 100% gratuit · 0 spam · Dossier anonyme",
+    description: "Note 4.8/5 · 2847 clients · Comparez 3 à 5 devis de déménageurs contrôlés · 100% gratuit · Sans démarchage · Dossier anonyme",
     images: [
       {
         url: "/logo.png",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Déménagement : Comparez 3 à 5 devis en 3 min (0€, 0 spam)",
+    title: "Déménagement : Comparez 3 à 5 devis en 3 min (0€, sans démarchage)",
     description: "Note 4.8/5 · Comparez 3 à 5 devis de pros contrôlés · 100% gratuit · Dossier anonyme",
     images: ["/logo.png"],
   },
@@ -206,7 +206,7 @@ export default function RootLayout({
                   <span className="text-2xl md:text-3xl font-bold text-white">Moverz</span>
                 </a>
                 <p className="text-sm text-white/70 leading-relaxed">
-                  Le comparateur anti-arnaque. Devis comparables, pros contrôlés, 0 spam.
+                  Le comparateur anti-arnaque. Devis comparables, pros contrôlés, sans démarchage.
                 </p>
               </div>
 

@@ -17,7 +17,7 @@ export function generateWhatsAppMessage(source: string = "home"): string {
 ✓ Parking / Stationnement
 ✓ Chaque meuble volumineux
 
-⚡ 1 message/jour max • Stop quand vous voulez • 0 spam`;
+⚡ 1 message/jour max • Stop quand vous voulez • Sans démarchage`;
 
   return message;
 }

@@ -18,7 +18,7 @@ function cityHint(citySlug: string, cityName: string): string {
 export function getCityPageMetadata(city: CityInfo): Metadata {
   const path = `demenagement/${city.slug}`;
   const title = `Déménagement ${city.nameCapitalized} : 3 à 5 devis en 3 min | Moverz`;
-  const description = `3 min · IA fiabilise le volume · 3 à 5 devis comparables · Déménageurs contrôlés à ${city.nameCapitalized} · 0€ · 0 spam. ${cityHint(
+  const description = `3 min · IA fiabilise le volume · 3 à 5 devis comparables · Déménageurs contrôlés à ${city.nameCapitalized} · 0€ · Sans démarchage. ${cityHint(
     city.slug,
     city.nameCapitalized
   )}`;

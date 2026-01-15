@@ -48,7 +48,7 @@ export default function HowItWorksHero() {
             </h1>
 
             <p className="text-xl text-white/70 mb-10 leading-relaxed">
-              En 3 minutes, l'IA analyse vos photos et prépare 3 à 5 devis comparables. Simple, rapide, 0 spam.
+              En 3 minutes, l'IA analyse vos photos et prépare 3 à 5 devis comparables. Simple, rapide, sans démarchage.
             </p>
 
             {/* WhatsApp CTA */}

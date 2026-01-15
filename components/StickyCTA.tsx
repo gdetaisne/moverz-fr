@@ -108,7 +108,7 @@ export default function StickyCTA() {
                       IA
                     </span>
                     <span className="inline-flex items-center gap-1.5 rounded-full bg-[#6BCFCF]/10 px-2.5 py-1 text-xs font-medium text-[#0F172A] hover:bg-[#6BCFCF]/20 hover:scale-105 transition-all duration-200 cursor-default">
-                      0 spam
+                      Sans démarchage
                     </span>
                   </div>
                 </div>

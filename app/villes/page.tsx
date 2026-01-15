@@ -7,7 +7,7 @@ export const metadata: Metadata = getHubMetadata({
   path: "villes",
   title: "Déménagement partout en France | Moverz — 3 à 5 devis comparables",
   description:
-    "Annuaire des villes couvertes par Moverz. Trouvez votre guide local et comparez 3 à 5 devis en 3 min (IA fiabilise le volume, 0 spam).",
+    "Annuaire des villes couvertes par Moverz. Trouvez votre guide local et comparez 3 à 5 devis en 3 min (IA fiabilise le volume, sans démarchage).",
 });
 
 export default function VillesPage() {
@@ -168,7 +168,7 @@ export default function VillesPage() {
         <div className="container max-w-3xl text-center space-y-6">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs text-white/80 backdrop-blur-sm">
             <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
-            3 à 5 devis · 0 spam · 100% gratuit
+            3 à 5 devis · Sans démarchage · 100% gratuit
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
             Prêt à comparer vos devis ?

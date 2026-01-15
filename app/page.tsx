@@ -13,7 +13,7 @@ import ProCTA from "@/components/ProCTA";
 import WhyMoverz from "@/components/WhyMoverz";
 
 export const metadata: Metadata = {
-  title: "Déménagement : Comparez 3 à 5 devis en 3 min (0€, 0 spam) | Moverz",
+  title: "Déménagement : Comparez 3 à 5 devis en 3 min (0€, sans démarchage) | Moverz",
   description:
     "✓ 3 à 5 devis comparables ✓ Pros contrôlés (assurances + 0 litige) ✓ Dossier anonyme ✓ 100% gratuit · 2847 clients · Note 4.8/5 → Comparez maintenant",
   alternates: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Déménagement : Comparez 3 à 5 devis de pros contrôlés | Moverz",
-    description: "Note 4.8/5 · 2847 clients · Comparez 3 à 5 devis de déménageurs contrôlés · 100% gratuit · 0 spam · Dossier anonyme",
+    description: "Note 4.8/5 · 2847 clients · Comparez 3 à 5 devis de déménageurs contrôlés · 100% gratuit · Sans démarchage · Dossier anonyme",
     url: 'https://moverz.fr/',
     siteName: 'Moverz',
     images: [{ url: '/logo.png', width: 1200, height: 630 }],
@@ -35,7 +35,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Moverz - Comparateur de Déménagement",
-    "description": "Comparateur de devis de déménageurs contrôlés. Service gratuit, 0 spam, devis comparables.",
+    "description": "Comparateur de devis de déménageurs contrôlés. Service gratuit, sans démarchage, devis comparables.",
     "url": "https://moverz.fr",
     "provider": {
       "@type": "Organization",

@@ -105,7 +105,7 @@ export default function Testimonials() {
           </span>
           </div>
           <p className="text-sm md:text-base text-white/70 font-light max-w-xl mx-auto">
-            Clarté des devis · 0 spam · Accompagnement · Pros fiables
+            Clarté des devis · Sans démarchage · Accompagnement · Pros fiables
           </p>
         </div>
       </div>

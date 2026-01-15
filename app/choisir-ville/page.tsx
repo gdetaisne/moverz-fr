@@ -6,7 +6,7 @@ import PageHero from "@/components/PageHero";
 export const metadata: Metadata = getFullMetadata(
   'choisir-ville',
   "Votre Ville : Lyon, Nice, Marseille... → 3 à 5 devis Gratuits | Moverz",
-  "Sélectionnez votre ville parmi 11 villes en France → Recevez 3 à 5 devis comparables de pros contrôlés · En 3 min · 100% gratuit · 0 spam · Commencez maintenant"
+  "Sélectionnez votre ville parmi 11 villes en France → Recevez 3 à 5 devis comparables de pros contrôlés · En 3 min · 100% gratuit · Sans démarchage · Commencez maintenant"
 );
 
 export default function ChoisirVillePage() {

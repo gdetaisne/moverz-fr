@@ -29,7 +29,7 @@ export function CityFinalCTA({ cityName, quoteUrl }: CityFinalCTAProps) {
           <div className="space-y-8 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-2 text-sm font-semibold text-[#6BCFCF] border border-[#6BCFCF]/20">
               <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
-              <span>100% gratuit · 0 spam</span>
+              <span>100% gratuit · Sans démarchage</span>
             </div>
             
             <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] leading-tight">

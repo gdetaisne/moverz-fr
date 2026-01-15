@@ -36,7 +36,7 @@
 - Police : 72px, extra-bold
 
 **Bénéfices (en bas) :**
-- 3 badges : "✓ 0€", "✓ 0 spam", "✓ 100% fiables"
+- 3 badges : "✓ 0€", "✓ Sans démarchage", "✓ 100% fiables"
 - Background : blanc 8% opacity, bordure #6BCFCF
 
 4. Télécharge en PNG (1200x630)
@@ -51,7 +51,7 @@ https://www.opengraph.xyz/
 
 1. Upload ton logo
 2. Titre : "Comparez 5+ devis de déménageurs contrôlés"
-3. Sous-titre : "Note 4.8/5 · 2847 clients · 0€ · 0 spam · 100% fiables"
+3. Sous-titre : "Note 4.8/5 · 2847 clients · 0€ · Sans démarchage · 100% fiables"
 4. Background : Gradient bleu (#04163a)
 5. Download PNG → `og-image.png`
 

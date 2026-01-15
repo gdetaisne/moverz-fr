@@ -126,7 +126,7 @@ export default function WhatsAppModal({
 
         {/* Reassurance */}
         <p className="text-xs text-[#1E293B]/60 text-center mt-4">
-          1 message/jour max • Stop quand vous voulez • 0 spam
+          1 message/jour max • Stop quand vous voulez • Sans démarchage
         </p>
       </div>
     </div>

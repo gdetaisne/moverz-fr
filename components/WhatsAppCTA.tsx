@@ -90,7 +90,7 @@ export default function WhatsAppCTA({
             ? "text-white/80" 
             : "text-[#1E293B]/70"
         }`}>
-          Le plus simple • Devis plus justes • 0 spam
+          Le plus simple • Devis plus justes • Sans démarchage
         </p>
 
         {/* CTA secondaire (lien discret) */}

@@ -154,7 +154,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <p className="font-semibold text-[#04163a] text-sm">0 spam</p>
+                    <p className="font-semibold text-[#04163a] text-sm">Sans démarchage</p>
                     <p className="text-xs text-[#6B7280] mt-0.5">Vous décidez quand et avec qui échanger</p>
                   </div>
                 </li>

@@ -59,7 +59,7 @@ export default function QuoteBridgeCard({ quoteUrl }: QuoteBridgeCardProps) {
           Comparez 3 à 5 devis maintenant
         </h3>
         <p className="text-sm md:text-[15px] text-[#334155] leading-relaxed">
-          Photos = devis plus précis. Téléphone masqué, 0 spam.
+          Photos = devis plus précis. Téléphone masqué, sans démarchage.
         </p>
       </div>
 

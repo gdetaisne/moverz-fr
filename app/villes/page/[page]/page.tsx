@@ -22,7 +22,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
 
   const title = pageNum === 1 ? "Villes (annuaire) | Moverz" : `Villes (annuaire) — page ${pageNum} | Moverz`;
   const description =
-    "Annuaire des villes couvertes par Moverz. Accédez aux guides locaux et comparez 3 à 5 devis en 3 min (IA fiabilise le volume, 0 spam).";
+    "Annuaire des villes couvertes par Moverz. Accédez aux guides locaux et comparez 3 à 5 devis en 3 min (IA fiabilise le volume, sans démarchage).";
 
   return getHubMetadata({
     path: `villes/page/${pageNum}`,

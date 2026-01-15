@@ -36,7 +36,7 @@ export default function ComparisonSection() {
         </svg>
       ),
       title: "Dossier anonyme",
-      description: "Vous décidez qui vous contacte, quand et comment. 0 spam.",
+      description: "Vous décidez qui vous contacte, quand et comment. Sans démarchage.",
     },
   ];
 

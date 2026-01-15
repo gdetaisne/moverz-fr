@@ -20,7 +20,7 @@ export default function FinalCTA() {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-2 text-sm font-semibold text-[#0F172A] mb-8">
           <span className="h-2 w-2 rounded-full bg-[#6BCFCF] animate-pulse" />
-          Gratuit · 0 spam · 0 engagement
+          Gratuit · Sans démarchage · 0 engagement
         </div>
 
         {/* Title */}
