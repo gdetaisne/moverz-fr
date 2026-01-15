@@ -22,7 +22,7 @@ export default function ProBlogSection() {
             Ressources pour déménageurs
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A]">
-            Guides “sales-ready” pour mieux chiffrer
+            Guides pour chiffrer plus vite (et éviter les surprises)
           </h2>
           <p className="text-lg text-[#6B7280] max-w-3xl mx-auto">
             Visites techniques, litiges, relances WhatsApp, déclaration de valeur… des articles concrets
