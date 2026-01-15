@@ -170,10 +170,24 @@ export default function RootLayout({
               </a>
               <a
                 href="/pro/"
-                className="inline-flex items-center gap-1 rounded-full border-2 border-[#0F172A] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:bg-gray-50 transition-colors hidden md:inline-flex"
+                className="group inline-flex items-center gap-2 rounded-full border border-[#6BCFCF]/40 bg-[#6BCFCF]/10 px-3 py-2 text-sm font-semibold text-[#0F172A] shadow-sm transition-all hover:bg-[#6BCFCF]/15 hover:shadow-[0_10px_30px_rgba(107,207,207,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6BCFCF] focus-visible:ring-offset-2 md:px-4"
+                aria-label="Vous êtes déménageur ? Découvrir Moverz Pro"
               >
-                <span>Pro</span>
-                <span className="text-base">→</span>
+                <span
+                  className="h-2 w-2 rounded-full bg-[#6BCFCF] shadow-[0_0_10px_rgba(107,207,207,0.55)] animate-pulse"
+                  aria-hidden="true"
+                />
+                <span className="hidden md:inline text-[#0F172A]/70 font-medium">
+                  Déménageur ?
+                </span>
+                <span className="md:hidden">Pro</span>
+                <span className="hidden md:inline">Moverz Pro</span>
+                <span
+                  className="text-base transition-transform group-hover:translate-x-0.5"
+                  aria-hidden="true"
+                >
+                  →
+                </span>
               </a>
               <a
                 href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=header"

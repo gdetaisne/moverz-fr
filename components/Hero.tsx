@@ -75,21 +75,36 @@ export default function Hero() {
 
             {/* Pro CTA (visible dès la fold, sans parasiter le CTA principal) */}
             <div
-              className="mt-5 flex flex-col items-center gap-2 text-center lg:items-start lg:text-left"
+              className="mt-6 flex justify-center lg:justify-start"
               style={{
                 animation: mounted ? "fadeInUp 1.2s ease-out 0.38s both" : "none",
               }}
             >
-              <span className="text-sm font-medium text-[#0F172A]/70">
-                Vous êtes déménageur ?
-              </span>
-              <a
-                href="/pro/"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-[#0F172A]/15 bg-white/70 px-4 py-2 text-sm font-semibold text-[#0F172A] shadow-sm backdrop-blur-sm transition-all hover:border-[#6BCFCF]/50 hover:bg-white hover:shadow-[0_10px_30px_rgba(107,207,207,0.18)] active:scale-[0.98]"
-                aria-label="Découvrir l'offre Moverz Pro"
-              >
-                Découvrir Moverz Pro <span aria-hidden="true">→</span>
-              </a>
+              <div className="w-full max-w-xl rounded-2xl border border-[#6BCFCF]/20 bg-white/70 p-4 shadow-[0_10px_40px_rgba(15,23,42,0.06)] backdrop-blur-sm">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="text-center sm:text-left">
+                    <p className="text-sm font-semibold text-[#0F172A]">
+                      Vous êtes déménageur ?
+                    </p>
+                    <p className="mt-1 text-sm text-[#0F172A]/70">
+                      Dossiers complets (photos + IA + volume) pour chiffrer plus vite.
+                    </p>
+                  </div>
+                  <a
+                    href="/pro/"
+                    className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#6BCFCF] px-5 py-2.5 text-sm font-semibold text-[#0F172A] shadow-[0_12px_35px_rgba(107,207,207,0.35)] transition-all hover:shadow-[0_16px_45px_rgba(107,207,207,0.45)] hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6BCFCF] focus-visible:ring-offset-2"
+                    aria-label="Découvrir l'offre Moverz Pro"
+                  >
+                    Découvrir Moverz Pro
+                    <span
+                      className="text-base transition-transform group-hover:translate-x-0.5"
+                      aria-hidden="true"
+                    >
+                      →
+                    </span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 

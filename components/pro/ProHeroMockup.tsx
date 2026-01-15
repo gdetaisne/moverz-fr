@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { BarChart3, Image, Zap, CheckCircle2 } from "lucide-react";
+import { BarChart3, Image as ImageIcon, Zap, CheckCircle2 } from "lucide-react";
 
 export default function ProHeroMockup() {
   const [mounted, setMounted] = useState(false);
@@ -11,7 +11,7 @@ export default function ProHeroMockup() {
 
   return (
     <div 
-      className="relative w-full max-w-[600px] mx-auto"
+      className="relative w-full max-w-[720px] mx-auto"
       style={{
         animation: mounted ? 'float 4s ease-in-out infinite' : 'none',
       }}
@@ -21,8 +21,13 @@ export default function ProHeroMockup() {
         {/* Header bar */}
         <div className="bg-gradient-to-r from-[#0F172A] to-[#1E293B] px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-[#6BCFCF] flex items-center justify-center">
-              <span className="text-white font-bold text-sm">M</span>
+            <div className="w-8 h-8 rounded-lg bg-white/10 border border-white/10 flex items-center justify-center overflow-hidden">
+              <img
+                src="/logo.png"
+                alt="Moverz"
+                className="h-6 w-6 object-contain"
+                loading="eager"
+              />
             </div>
             <div>
               <p className="text-white font-semibold text-sm">Moverz Pro</p>
@@ -44,61 +49,84 @@ export default function ProHeroMockup() {
               { label: "Taux conv.", value: "34%", icon: CheckCircle2 },
               { label: "Ce mois", value: "+12", icon: Zap },
             ].map((stat, i) => (
-              <div key={i} className="bg-white rounded-xl p-3 border border-gray-200 shadow-sm">
+              <div
+                key={i}
+                className="bg-white rounded-xl p-3.5 border border-gray-200 shadow-sm"
+              >
                 <div className="flex items-center justify-between mb-2">
                   <stat.icon className="w-4 h-4 text-[#6BCFCF]" />
                 </div>
-                <p className="text-2xl font-bold text-[#0F172A]">{stat.value}</p>
-                <p className="text-xs text-gray-500">{stat.label}</p>
+                <p className="text-2xl font-bold text-[#0F172A] leading-none">
+                  {stat.value}
+                </p>
+                <p className="text-sm text-gray-600">{stat.label}</p>
               </div>
             ))}
           </div>
 
           {/* New lead card */}
-          <div className="bg-white rounded-xl border-2 border-[#6BCFCF]/20 p-4 shadow-lg">
+          <div className="bg-white rounded-2xl border-2 border-[#6BCFCF]/25 p-5 shadow-lg">
             <div className="flex items-start justify-between mb-3">
               <div>
-                <p className="font-bold text-[#0F172A] text-sm mb-1">Nouveau dossier</p>
-                <p className="text-xs text-gray-500">Paris → Lyon · 42m³</p>
+                <p className="font-bold text-[#0F172A] text-base leading-tight mb-1">
+                  Nouveau dossier
+                </p>
+                <p className="text-sm text-gray-600 font-medium">
+                  Paris → Lyon · 22m³
+                </p>
               </div>
-              <div className="px-2 py-1 rounded-full bg-[#6BCFCF]/10 text-[#6BCFCF] text-xs font-semibold">
+              <div className="px-3 py-1.5 rounded-full bg-[#6BCFCF]/10 text-[#2B7A78] text-sm font-semibold">
                 Nouveau
               </div>
             </div>
 
             {/* Photos grid */}
             <div className="grid grid-cols-4 gap-2 mb-3">
-              {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="relative aspect-square rounded-lg bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Image className="w-4 h-4 text-gray-400" />
-                  </div>
+              {[
+                // miniatures “intérieur” (fake) – juste pour crédibiliser le mockup
+                "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=220&q=60",
+                "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=220&q=60",
+                "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=220&q=60",
+                "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=220&q=60",
+              ].map((src, i) => (
+                <div
+                  key={src}
+                  className="relative aspect-square rounded-lg bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden border border-gray-200"
+                >
+                  <img
+                    src={src}
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
                 </div>
               ))}
             </div>
 
             {/* Details */}
-            <div className="space-y-2 mb-4">
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-gray-600">Volume IA</span>
-                <span className="font-semibold text-[#0F172A]">42m³ ±5%</span>
+            <div className="space-y-2.5 mb-5">
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-gray-700 font-medium">Volume IA</span>
+                <span className="font-bold text-[#0F172A]">22m³ ±5%</span>
               </div>
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-gray-600">Inventaire</span>
-                <span className="font-semibold text-[#0F172A]">127 items</span>
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-gray-700 font-medium">Inventaire</span>
+                <span className="font-bold text-[#0F172A]">13 items + 30 cartons</span>
               </div>
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-gray-600">Date souhaitée</span>
-                <span className="font-semibold text-[#0F172A]">15 mars</span>
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-gray-700 font-medium">Date souhaitée</span>
+                <span className="font-bold text-[#0F172A]">15 mars (±1 semaine)</span>
               </div>
             </div>
 
             {/* Action buttons */}
             <div className="flex gap-2">
-              <button className="flex-1 bg-[#6BCFCF] text-white text-xs font-semibold py-2 rounded-lg hover:bg-[#5AB0B0] transition-colors">
-                Chiffrer
+              <button className="flex-1 bg-[#6BCFCF] text-white text-sm font-semibold py-2.5 rounded-lg hover:bg-[#5AB0B0] transition-colors">
+                Envoyer le devis
               </button>
-              <button className="px-4 bg-gray-100 text-gray-700 text-xs font-semibold py-2 rounded-lg hover:bg-gray-200 transition-colors">
+              <button className="px-4 bg-gray-100 text-gray-800 text-sm font-semibold py-2.5 rounded-lg hover:bg-gray-200 transition-colors">
                 Voir détails
               </button>
             </div>
