@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ContactForm from "@/components/ContactForm";
+import { MessageCircle, Mail, Clock, ShieldCheck, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = getFullMetadata(
   'contact',
@@ -11,154 +12,197 @@ export const metadata: Metadata = getFullMetadata(
 
 export default function ContactPage() {
   return (
-    <main className="bg-hero min-h-screen">
-      <div className="halo" />
-      <section className="relative overflow-hidden text-white">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1516542076529-1ea3854896e1?q=80&w=2000&auto=format&fit=crop"
-            alt="Contactez-nous"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#04163a]/95 via-[#2b7a78]/88 to-[#04163a]/92"></div>
-        </div>
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+    <main className="bg-white min-h-screen">
+      {/* Hero */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A]" />
+        <div className="absolute -top-20 left-1/4 h-72 w-72 rounded-full bg-[#6BCFCF]/15 blur-[90px]" />
+        <div className="absolute -bottom-20 right-1/4 h-72 w-72 rounded-full bg-[#6BCFCF]/15 blur-[90px]" />
+        <div
+          className="absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 2px 2px, white 1px, transparent 0)",
+            backgroundSize: "32px 32px",
+          }}
+        />
+
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20 text-white">
           <Breadcrumbs
             items={[
               { label: "Accueil", href: "/" },
-              { label: "Contact", href: "/contact/" }
+              { label: "Contact", href: "/contact/" },
             ]}
           />
-          <h1 className="text-3xl md:text-5xl font-bold mt-6">Contactez-nous</h1>
-          <p className="text-white/85 mt-3 max-w-3xl">
-            Notre équipe est à votre écoute pour répondre à toutes vos questions et vous accompagner.
-          </p>
+
+          <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white/90 backdrop-blur-sm">
+                <Clock className="h-4 w-4 text-[#6BCFCF]" />
+                Réponse sous 24h ouvrées
+              </div>
+
+              <h1 className="mt-6 text-4xl md:text-6xl font-bold leading-[1.05]">
+                Un message, un devis, un doute ?
+                <br />
+                <span className="text-[#6BCFCF]">On vous répond vite.</span>
+              </h1>
+
+              <p className="mt-5 text-lg text-white/80 max-w-xl">
+                Le plus simple: WhatsApp (photos + contexte). Sinon, laissez-nous un message par email via
+                le formulaire.
+              </p>
+
+              <div className="mt-7 flex flex-col sm:flex-row gap-3">
+                <a
+                  href="https://wa.me/33752986581?text=Bonjour%20!%20J%E2%80%99ai%20une%20question%20sur%20mon%20d%C3%A9m%C3%A9nagement."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-[#25D366] px-6 py-4 text-sm font-semibold text-white shadow-sm hover:shadow-[0_10px_25px_rgba(37,211,102,0.25)] hover:scale-[1.02] active:scale-[0.99] transition-all"
+                >
+                  <MessageCircle className="h-4 w-4" />
+                  Démarrer sur WhatsApp
+                  <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
+                </a>
+                <a
+                  href="#form"
+                  className="group inline-flex items-center justify-center gap-2 rounded-2xl border border-white/25 bg-white/10 px-6 py-4 text-sm font-semibold text-white backdrop-blur-sm hover:bg-white/15 transition-all"
+                >
+                  <Mail className="h-4 w-4" />
+                  Envoyer un message
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+
+              <div className="mt-6 flex flex-wrap items-center gap-2 text-xs text-white/70">
+                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1">
+                  <ShieldCheck className="h-3.5 w-3.5 text-[#6BCFCF]" />
+                  Sans démarchage
+                </span>
+                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1">
+                  <ShieldCheck className="h-3.5 w-3.5 text-[#6BCFCF]" />
+                  Dossier anonyme
+                </span>
+                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1">
+                  <ShieldCheck className="h-3.5 w-3.5 text-[#6BCFCF]" />
+                  Devis comparables
+                </span>
+              </div>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+                <p className="text-sm font-semibold">Rapide</p>
+                <p className="mt-2 text-sm text-white/70">
+                  WhatsApp si vous pouvez envoyer 2–3 photos (accès, pièces, cave…).
+                </p>
+                <p className="mt-4 text-xs text-white/60">Lun–Ven · 9h–18h</p>
+              </div>
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+                <p className="text-sm font-semibold">Détaillé</p>
+                <p className="mt-2 text-sm text-white/70">
+                  Formulaire/email pour une demande structurée (devis, litige, admin).
+                </p>
+                <p className="mt-4 text-xs text-white/60">Réponse sous 24h ouvrées</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
+      {/* Form + info */}
       <section className="section section-light">
-        <div className="container max-w-5xl">
-          {/* Formulaire de contact en haut - Style Stripe */}
-          <div className="relative overflow-hidden rounded-3xl border border-[#E3E5E8] bg-gradient-to-b from-white to-[#FAFBFC] p-8 md:p-12 shadow-[0_8px_30px_rgba(0,0,0,0.08)] mb-8">
-            {/* Filament lumineux en haut */}
-            <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-[#6BCFCF]/60 via-[#4f46e5]/40 to-[#22c55e]/50" />
-            
-            <div className="max-w-3xl mx-auto">
-              <div className="text-center mb-8">
-                <div className="inline-flex items-center gap-2 rounded-full border border-[#6BCFCF]/20 bg-[#6BCFCF]/5 px-4 py-1.5 text-xs font-semibold text-[#2B7A78] mb-4">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
-                  Réponse sous 24h
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#04163a] mb-3">Envoyez-nous un message</h2>
-                <p className="text-[#4b5c6b] text-base md:text-lg">
-                  Une question ? Notre équipe vous répond rapidement par email.
+        <div className="container max-w-6xl">
+          <div className="grid gap-6 lg:grid-cols-2 lg:items-start">
+            <div
+              id="form"
+              className="relative overflow-hidden rounded-3xl border border-[#E3E5E8] bg-gradient-to-b from-white to-[#FAFBFC] p-8 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
+            >
+              <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-[#6BCFCF]/70 via-[#0F172A]/20 to-[#6BCFCF]/70" />
+              <div className="mb-6">
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A]">
+                  Envoyer un message
+                </h2>
+                <p className="mt-2 text-sm md:text-base text-[#1E293B]/70">
+                  Donnez un peu de contexte (dates, villes, volume, contraintes). On vous répond sous 24h
+                  ouvrées.
                 </p>
               </div>
               <ContactForm />
             </div>
-          </div>
 
-          {/* Coordonnées et garanties en dessous */}
-          <div className="grid gap-6 md:grid-cols-2">
-            {/* Colonne gauche - Coordonnées */}
-            <div className="relative overflow-hidden rounded-2xl border border-[#E3E5E8] bg-white p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-[#6BCFCF]/20 to-[#4FB8B8]/30 text-[#2B7A78]">
-                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
+            <div className="space-y-6">
+              <div className="rounded-3xl border border-[#E3E5E8] bg-white p-7 md:p-8 shadow-sm">
+                <p className="text-sm font-semibold text-[#0F172A]">Coordonnées</p>
+                <div className="mt-4 space-y-4 text-sm text-[#1E293B]/70">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-[#6B7280] mb-1">
+                      Email
+                    </p>
+                    <a
+                      href="mailto:contact@moverz.fr"
+                      className="text-[#2B7A78] hover:text-[#1F5F5D] font-semibold transition-colors"
+                    >
+                      contact@moverz.fr
+                    </a>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-[#6B7280] mb-1">
+                      Horaires
+                    </p>
+                    <p>Lundi - Vendredi : 9h - 18h</p>
+                    <p className="text-xs text-[#6B7280] mt-0.5">Réponse sous 24h ouvrées</p>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-[#6B7280] mb-1">
+                      Adresse
+                    </p>
+                    <p className="leading-relaxed">
+                      GSLV EURL - Moverz<br />
+                      5 Rue Jean Coyttar<br />
+                      17290 Thairé, France
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-[#04163a]">Nous contacter</h3>
               </div>
 
-              <div className="space-y-4 text-sm">
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-[#6B7280] mb-1">Email</p>
-                  <a 
-                    href="mailto:contact@moverz.fr" 
-                    className="text-[#2B7A78] hover:text-[#1F5F5D] font-medium transition-colors inline-flex items-center gap-1 group"
-                  >
-                    contact@moverz.fr
-                    <svg className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </a>
-                </div>
-
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-[#6B7280] mb-1">Horaires</p>
-                  <p className="text-[#4b5c6b]">Lundi - Vendredi : 9h - 18h</p>
-                  <p className="text-xs text-[#6B7280] mt-0.5">Réponse sous 24h ouvrées</p>
-                </div>
-
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-[#6B7280] mb-1">Adresse</p>
-                  <p className="text-[#4b5c6b] leading-relaxed">
-                    GSLV EURL - Moverz<br />
-                    5 Rue Jean Coyttar<br />
-                    17290 Thairé, France
-                  </p>
-                </div>
+              <div className="rounded-3xl border border-[#E3E5E8] bg-white p-7 md:p-8 shadow-sm">
+                <p className="text-sm font-semibold text-[#0F172A]">Nos garanties</p>
+                <ul className="mt-4 space-y-3 text-sm text-[#1E293B]/70">
+                  <li className="flex items-start gap-3">
+                    <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#6BCFCF]/15 text-[#2B7A78]">
+                      <ShieldCheck className="h-4 w-4" />
+                    </span>
+                    <span>
+                      <strong className="text-[#0F172A]">Dossier anonyme</strong> — coordonnées partagées après votre choix.
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#6BCFCF]/15 text-[#2B7A78]">
+                      <ShieldCheck className="h-4 w-4" />
+                    </span>
+                    <span>
+                      <strong className="text-[#0F172A]">Déménageurs contrôlés</strong> — solvabilité + signaux faibles.
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#6BCFCF]/15 text-[#2B7A78]">
+                      <ShieldCheck className="h-4 w-4" />
+                    </span>
+                    <span>
+                      <strong className="text-[#0F172A]">Devis comparables</strong> — même cahier des charges pour tous.
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#6BCFCF]/15 text-[#2B7A78]">
+                      <ShieldCheck className="h-4 w-4" />
+                    </span>
+                    <span>
+                      <strong className="text-[#0F172A]">Sans démarchage</strong> — vous choisissez quand échanger.
+                    </span>
+                  </li>
+                </ul>
               </div>
-            </div>
-
-            {/* Colonne droite - Garanties */}
-            <div className="relative overflow-hidden rounded-2xl border border-[#E3E5E8] bg-white p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-[#6BCFCF]/20 to-[#4FB8B8]/30 text-[#2B7A78]">
-                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-bold text-[#04163a]">Nos garanties</h3>
-              </div>
-
-              <ul className="space-y-3.5">
-                <li className="flex items-start gap-3 group">
-                  <div className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#6BCFCF]/10 mt-0.5 group-hover:bg-[#6BCFCF]/20 transition-colors">
-                    <svg className="h-3 w-3 text-[#2B7A78]" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-[#04163a] text-sm">Dossier anonyme</p>
-                    <p className="text-xs text-[#6B7280] mt-0.5">Coordonnées partagées après votre choix</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3 group">
-                  <div className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#6BCFCF]/10 mt-0.5 group-hover:bg-[#6BCFCF]/20 transition-colors">
-                    <svg className="h-3 w-3 text-[#2B7A78]" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-[#04163a] text-sm">déménageurs contrôlés certifiés</p>
-                    <p className="text-xs text-[#6B7280] mt-0.5">Solvabilité vérifiée, 0 litige majeur</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3 group">
-                  <div className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#6BCFCF]/10 mt-0.5 group-hover:bg-[#6BCFCF]/20 transition-colors">
-                    <svg className="h-3 w-3 text-[#2B7A78]" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-[#04163a] text-sm">Devis comparables</p>
-                    <p className="text-xs text-[#6B7280] mt-0.5">Même cahier des charges pour tous</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3 group">
-                  <div className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#6BCFCF]/10 mt-0.5 group-hover:bg-[#6BCFCF]/20 transition-colors">
-                    <svg className="h-3 w-3 text-[#2B7A78]" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-[#04163a] text-sm">Sans démarchage</p>
-                    <p className="text-xs text-[#6B7280] mt-0.5">Vous décidez quand et avec qui échanger</p>
-                  </div>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
