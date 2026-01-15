@@ -330,7 +330,7 @@ export default function BlogPostPage({ params }: PageProps) {
             Comparez des devis pour votre déménagement
           </h2>
           <p className="text-sm md:text-base text-white/80 max-w-2xl mx-auto">
-            3 minutes pour créer votre dossier, déménageurs contrôlés contrôlés qui chiffrent le même
+            3 minutes pour créer votre dossier, déménageurs contrôlés qui chiffrent le même
             volume. Vous gardez la main sur le choix final.
           </p>
           <a
