@@ -223,7 +223,7 @@ export default function AProposPage() {
                     <div className="relative h-14 w-14 overflow-hidden rounded-2xl border border-[#E3E5E8] bg-white">
                       <Image
                         src="/lucie-profile.jpg"
-                        alt="Lucie, cofondatrice Moverz"
+                        alt="Lucie, cofondateur Moverz"
                         width={56}
                         height={56}
                         className="h-14 w-14 object-cover"
@@ -232,7 +232,7 @@ export default function AProposPage() {
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center justify-between gap-3">
                         <p className="text-sm font-semibold text-[#0F172A]">
-                          Lucie <span className="text-[#6B7280] font-medium">· Cofondatrice</span>
+                          Lucie <span className="text-[#6B7280] font-medium">· Cofondateur</span>
                         </p>
                         <a
                           href="https://www.linkedin.com/in/lucieveltz/"
@@ -245,9 +245,6 @@ export default function AProposPage() {
                           LinkedIn
                         </a>
                       </div>
-                      <p className="mt-2 text-sm text-[#1E293B]/70">
-                        Obsédée par le “dossier clair” (pour que le prix du devis soit le prix final).
-                      </p>
                     </div>
                   </div>
                   <div className="mt-4 rounded-xl border border-[#6BCFCF]/25 bg-white p-4 text-sm text-[#0F172A]">

@@ -161,9 +161,6 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <p className="mt-5 text-xs text-[#6B7280]">
-                  Note: ajoute la photo dans <code>public/guillaume-profile.jpg</code>.
-                </p>
               </div>
 
               <div className="rounded-3xl border border-[#E3E5E8] bg-white p-7 shadow-sm">
