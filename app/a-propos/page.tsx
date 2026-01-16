@@ -264,9 +264,13 @@ export default function AProposPage() {
                 <div className="rounded-2xl border border-[#E3E5E8] bg-[#FAFBFC] p-6">
                   <div className="flex items-start gap-4">
                     <div className="relative h-14 w-14 overflow-hidden rounded-2xl border border-[#E3E5E8] bg-white">
-                      <div className="h-14 w-14 bg-gradient-to-br from-[#0F172A] to-[#1E293B] flex items-center justify-center">
-                        <span className="text-white font-bold">G</span>
-                      </div>
+                      <Image
+                        src="/guillaume-profile.jpg"
+                        alt="Guillaume, cofondateur Moverz"
+                        width={56}
+                        height={56}
+                        className="h-14 w-14 object-cover"
+                      />
                     </div>
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center justify-between gap-3">
