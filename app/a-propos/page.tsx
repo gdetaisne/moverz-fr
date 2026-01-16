@@ -168,7 +168,7 @@ export default function AProposPage() {
             </div>
           </div>
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+          <div className="mt-10 grid gap-6 lg:grid-cols-2 items-start">
             <div className="relative overflow-hidden rounded-3xl border border-[#E3E5E8] bg-gradient-to-b from-white to-[#FAFBFC] p-7 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
               <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-[#6BCFCF]/70 via-[#0F172A]/20 to-[#6BCFCF]/70" />
               <h3 className="text-xl md:text-2xl font-bold text-[#0F172A]">
@@ -216,7 +216,7 @@ export default function AProposPage() {
                 Qui est derrière Moverz ?
               </h3>
 
-              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              <div className="mt-6 grid gap-4 sm:grid-cols-2 items-start">
                 {/* Lucie */}
                 <div className="rounded-2xl border border-[#E3E5E8] bg-[#FAFBFC] p-6">
                   <div className="flex items-start gap-4">
@@ -245,6 +245,9 @@ export default function AProposPage() {
                           LinkedIn
                         </a>
                       </div>
+                      <p className="mt-2 text-sm text-[#1E293B]/70">
+                        Obsédée par le “dossier clair” (pour que le prix du devis soit le prix final).
+                      </p>
                     </div>
                   </div>
                   <div className="mt-4 rounded-xl border border-[#6BCFCF]/25 bg-white p-4 text-sm text-[#0F172A]">

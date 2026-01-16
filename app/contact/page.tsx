@@ -107,7 +107,7 @@ export default function ContactPage() {
                       <div className="relative h-10 w-10 overflow-hidden rounded-xl border border-[#E3E5E8] bg-white">
                         <Image
                           src="/lucie-profile.jpg"
-                          alt="Lucie, responsable partenaire Moverz"
+                          alt="Lucie, cofondateur Moverz"
                           width={40}
                           height={40}
                           className="h-10 w-10 object-cover"
@@ -117,7 +117,7 @@ export default function ContactPage() {
                         <p className="text-sm font-semibold text-[#0F172A] leading-tight">
                           Lucie
                         </p>
-                        <p className="text-xs text-[#6B7280]">Responsable partenaire</p>
+                        <p className="text-xs text-[#6B7280]">Cofondateur</p>
                       </div>
                     </div>
                     <a
