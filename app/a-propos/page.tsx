@@ -168,39 +168,42 @@ export default function AProposPage() {
             </div>
           </div>
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-2 items-start">
+          <div className="mt-10 space-y-6">
+            {/* Full-width anti-scam block (évite le “trou” de grid) */}
             <div className="relative overflow-hidden rounded-3xl border border-[#E3E5E8] bg-gradient-to-b from-white to-[#FAFBFC] p-7 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
               <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-[#6BCFCF]/70 via-[#0F172A]/20 to-[#6BCFCF]/70" />
               <h3 className="text-xl md:text-2xl font-bold text-[#0F172A]">
                 Comment on évite les arnaques (vraiment)
               </h3>
-              <ul className="mt-6 space-y-4 text-[#1E293B]/75">
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#6BCFCF]/15 text-[#2B7A78]">
+              <div className="mt-6 grid gap-6 lg:grid-cols-3">
+                <div className="flex items-start gap-3">
+                  <span className="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#6BCFCF]/15 text-[#2B7A78]">
                     <BadgeCheck className="h-4 w-4" />
                   </span>
-                  <span>
-                    <strong className="text-[#0F172A]">Contrôles</strong> (pro, solvabilité, signaux faibles) avant de
-                    vous faire choisir.
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#6BCFCF]/15 text-[#2B7A78]">
+                  <div className="text-[#1E293B]/75">
+                    <p className="font-semibold text-[#0F172A]">Contrôles</p>
+                    <p className="text-sm">Pro, solvabilité, signaux faibles — avant de vous faire choisir.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#6BCFCF]/15 text-[#2B7A78]">
                     <Camera className="h-4 w-4" />
                   </span>
-                  <span>
-                    <strong className="text-[#0F172A]">Dossier photo</strong> pour limiter les “ajustements” de dernière minute.
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#6BCFCF]/15 text-[#2B7A78]">
+                  <div className="text-[#1E293B]/75">
+                    <p className="font-semibold text-[#0F172A]">Dossier photo</p>
+                    <p className="text-sm">Pour limiter les “ajustements” de dernière minute.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#6BCFCF]/15 text-[#2B7A78]">
                     <Scale className="h-4 w-4" />
                   </span>
-                  <span>
-                    <strong className="text-[#0F172A]">Comparaison propre</strong>: même cahier des charges, mêmes options.
-                  </span>
-                </li>
-              </ul>
+                  <div className="text-[#1E293B]/75">
+                    <p className="font-semibold text-[#0F172A]">Comparaison propre</p>
+                    <p className="text-sm">Même cahier des charges, mêmes options.</p>
+                  </div>
+                </div>
+              </div>
               <div className="mt-7">
                 <a
                   href="/verifications-partenaires/"
@@ -211,12 +214,20 @@ export default function AProposPage() {
               </div>
             </div>
 
+            {/* Team block */}
             <div className="rounded-3xl border border-[#E3E5E8] bg-white p-7 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
-              <h3 className="text-xl md:text-2xl font-bold text-[#0F172A]">
-                Qui est derrière Moverz ?
-              </h3>
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                  <h3 className="text-xl md:text-2xl font-bold text-[#0F172A]">
+                    Qui est derrière Moverz ?
+                  </h3>
+                  <p className="mt-1 text-sm text-[#1E293B]/70">
+                    Deux humains, zéro blabla, beaucoup de check-lists.
+                  </p>
+                </div>
+              </div>
 
-              <div className="mt-6 grid gap-4 sm:grid-cols-2 items-start">
+              <div className="mt-6 grid gap-4 lg:grid-cols-2">
                 {/* Lucie */}
                 <div className="rounded-2xl border border-[#E3E5E8] bg-[#FAFBFC] p-6">
                   <div className="flex items-start gap-4">
