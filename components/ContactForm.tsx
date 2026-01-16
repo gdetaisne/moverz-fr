@@ -3,7 +3,6 @@ import { useMemo, useState, type FormEvent } from "react";
 
 type ContactSubject =
   | "Devis & déménagement"
-  | "Arnaques / litige"
   | "Facturation / administratif"
   | "Presse / partenariat"
   | "Autre";
@@ -12,6 +11,7 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSent, setIsSent] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [sentViaMailClient, setSentViaMailClient] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -43,6 +43,7 @@ export default function ContactForm() {
     setError(null);
     setIsSubmitting(true);
     setIsSent(false);
+    setSentViaMailClient(false);
 
     try {
       const res = await fetch("/api/contact/", {
@@ -50,6 +51,14 @@ export default function ContactForm() {
         headers: { "content-type": "application/json" },
         body: JSON.stringify(form),
       });
+
+      // If SMTP isn't configured on the server, fallback to user's mail client.
+      if (res.status === 501) {
+        setSentViaMailClient(true);
+        setIsSent(true);
+        window.location.href = mailtoHref;
+        return;
+      }
 
       if (!res.ok) {
         const data = (await res.json().catch(() => null)) as any;
@@ -86,8 +95,21 @@ export default function ContactForm() {
         </div>
         <h3 className="text-xl font-bold text-[#0F172A] mb-2">Message envoyé</h3>
         <p className="text-[#1E293B]/70">
-          On revient vers vous sous 24h ouvrées. Si c’est urgent, privilégiez WhatsApp.
+          {sentViaMailClient
+            ? "Votre client mail vient de s’ouvrir. Envoyez le message pour nous écrire directement."
+            : "On revient vers vous sous 24h ouvrées. Si c’est urgent, privilégiez WhatsApp."}
         </p>
+        {sentViaMailClient ? (
+          <div className="mt-5">
+            <a
+              className="underline underline-offset-2 text-sm font-semibold text-[#0F172A]"
+              href={mailtoHref}
+            >
+              Si rien ne s’est ouvert, cliquez ici pour envoyer par email
+            </a>
+            .
+          </div>
+        ) : null}
       </div>
     );
   }
@@ -168,7 +190,6 @@ export default function ContactForm() {
             className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-[#04163a] focus:border-[#6BCFCF]/60 focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]/20 transition-all"
           >
             <option>Devis & déménagement</option>
-            <option>Arnaques / litige</option>
             <option>Facturation / administratif</option>
             <option>Presse / partenariat</option>
             <option>Autre</option>
@@ -211,6 +232,12 @@ export default function ContactForm() {
         <span className="relative">{isSubmitting ? "Envoi…" : "Envoyer le message"}</span>
         <span className="relative text-xl leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
       </button>
+      <a
+        href={mailtoHref}
+        className="w-full inline-flex items-center justify-center gap-2 rounded-2xl border border-[#0F172A]/15 bg-white px-8 py-4 text-base font-semibold text-[#0F172A] hover:bg-gray-50 transition-colors"
+      >
+        Envoyer par email <span aria-hidden="true">→</span>
+      </a>
       <p className="text-xs text-[#6B7280] text-center">
         Pas de démarchage. Si c’est urgent, WhatsApp est plus rapide.
       </p>
