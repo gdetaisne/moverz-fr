@@ -18,30 +18,60 @@ const inter = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://moverz.fr'),
-  title: "Déménagement : Comparez 3 devis minimum en 3 min (0€, sans démarchage) | Moverz",
-  description: "✓ 3 devis minimum comparables ✓ Pros contrôlés (assurances + 0 litige) ✓ Dossier anonyme ✓ 100% gratuit · 2847 clients · Note 4.8/5 → Comparez maintenant",
-  keywords: ["comparateur déménagement", "devis déménageurs", "déménagement France", "comparateur devis", "déménageurs contrôlés", "devis gratuit déménagement"],
-  authors: [{ name: "Moverz" }],
+  title: {
+    default: "3 Devis Déménagement Gratuits · 0 Appel · Pros Vérifiés | Moverz",
+    template: "%s | Moverz"
+  },
+  description: "Note 4.9/5 ⭐ · 3 devis comparables garantis (IA calcule volume précis) · Pros vérifiés (assurances + 0 litige) · Dossier anonyme · 0 appel commercial · Réponse sous 7 jours · 100% gratuit → Comparez en 3 min",
+  keywords: [
+    "devis déménagement gratuit",
+    "comparateur déménageurs fiable",
+    "devis déménagement sans appel",
+    "3 devis déménagement",
+    "anti-arnaque déménagement",
+    "déménageurs vérifiés assurés",
+    "devis comparables déménagement",
+    "devis déménagement anonyme",
+    "comparateur déménagement pas d'appel",
+    "trouver déménageur vérifié",
+    "devis déménagement rapide",
+    "comparateur déménagement fiable",
+    "logiciel déménageur",
+    "SaaS déménagement"
+  ],
+  authors: [{ name: "Moverz", url: "https://moverz.fr" }],
+  creator: "Moverz",
+  publisher: "Moverz",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  applicationName: "Moverz",
+  referrer: "origin-when-cross-origin",
   openGraph: {
     type: "website",
     locale: "fr_FR",
     url: "https://moverz.fr/",
     siteName: "Moverz",
-    title: "Déménagement : Comparez 3 devis minimum de pros contrôlés | Moverz",
-    description: "Note 4.8/5 · 2847 clients · Comparez 3 devis minimum de déménageurs contrôlés · 100% gratuit · Sans démarchage · Dossier anonyme",
+    title: "3 Devis Déménagement Gratuits · 0 Appel · Pros Vérifiés",
+    description: "Note 4.9/5 ⭐ · 3 devis comparables garantis (IA calcule volume précis) · Pros vérifiés (assurances + 0 litige) · Dossier anonyme · 0 appel commercial · Réponse sous 7 jours · 100% gratuit → Comparez en 3 min",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Moverz - Comparateur de déménagement anti-arnaque",
+        alt: "Moverz - Comparateur de déménagement anti-arnaque · Note 4.9/5",
+        type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Déménagement : Comparez 3 devis minimum en 3 min (0€, sans démarchage)",
-    description: "Note 4.8/5 · Comparez 3 devis minimum de pros contrôlés · 100% gratuit · Dossier anonyme",
+    site: "@moverz",
+    creator: "@moverz",
+    title: "3 Devis Déménagement Gratuits · 0 Appel · Pros Vérifiés",
+    description: "Note 4.9/5 ⭐ · 3 devis comparables garantis · Pros vérifiés · 0 appel commercial · Gratuit → Comparez en 3 min",
     images: ["/logo.png"],
   },
   robots: {
@@ -52,16 +82,27 @@ export const metadata: Metadata = {
       follow: true,
       'max-image-preview': 'large',
       'max-snippet': -1,
+      'max-video-preview': -1,
     },
   },
   alternates: {
     canonical: 'https://moverz.fr/',
+    languages: {
+      'fr-FR': 'https://moverz.fr/',
+    },
   },
+  category: 'déménagement',
 };
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#0F172A' },
+    { media: '(prefers-color-scheme: dark)', color: '#0F172A' },
+  ],
 };
 
 export default function RootLayout({

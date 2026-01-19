@@ -13,18 +13,18 @@ import ProCTA from "@/components/ProCTA";
 import WhyMoverz from "@/components/WhyMoverz";
 
 export const metadata: Metadata = {
-  title: "Déménagement : Comparez 3 devis minimum en 3 min (0€, sans démarchage) | Moverz",
+  title: "3 Devis Déménagement Gratuits · 0 Appel · Pros Vérifiés | Moverz",
   description:
-    "✓ 3 devis minimum comparables ✓ Pros contrôlés (assurances + 0 litige) ✓ Dossier anonyme ✓ 100% gratuit · 2847 clients · Note 4.8/5 → Comparez maintenant",
+    "Note 4.9/5 ⭐ · 3 devis comparables garantis (IA calcule volume précis) · Pros vérifiés (assurances + 0 litige) · Dossier anonyme · 0 appel commercial · Réponse sous 7 jours · 100% gratuit → Comparez en 3 min",
   alternates: {
     canonical: 'https://moverz.fr/',
   },
   openGraph: {
-    title: "Déménagement : Comparez 3 devis minimum de pros contrôlés | Moverz",
-    description: "Note 4.8/5 · 2847 clients · Comparez 3 devis minimum de déménageurs contrôlés · 100% gratuit · Sans démarchage · Dossier anonyme",
+    title: "3 Devis Déménagement Gratuits · 0 Appel · Pros Vérifiés",
+    description: "Note 4.9/5 ⭐ · 3 devis comparables garantis (IA calcule volume précis) · Pros vérifiés (assurances + 0 litige) · Dossier anonyme · 0 appel commercial · Réponse sous 7 jours · 100% gratuit → Comparez en 3 min",
     url: 'https://moverz.fr/',
     siteName: 'Moverz',
-    images: [{ url: '/logo.png', width: 1200, height: 630 }],
+    images: [{ url: '/logo.png', width: 1200, height: 630, alt: 'Moverz - Comparateur de déménagement anti-arnaque · Note 4.9/5' }],
     type: 'website',
   },
 };
