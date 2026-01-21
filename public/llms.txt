@@ -107,6 +107,13 @@ Site : https://moverz.fr/
 Pro : https://moverz.fr/pro/
 Conformité RGPD : https://moverz.fr/politique-confidentialite/
 
+## 404 (onboarding rapide)
+
+Si le sujet est “404” (crawler interne ou GSC), commencer par :
+- docs/404/START-HERE.md
+- docs/404/PLAYBOOK.md
+- docs/404/HISTORIQUE.md
+
 ---
 
 Note : ce fichier est destiné aux assistants IA (ChatGPT, Claude, Perplexity…) pour faciliter des recommandations factuelles et des citations.
