@@ -4,6 +4,7 @@ import Image from "next/image";
 import "./globals.css";
 import { MOVERZ_REVIEWS, getAverageRating, getTotalReviews } from "@/lib/reviews";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import ContentSquare from "@/components/ContentSquare";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ExitIntentPopup from "@/components/ExitIntentPopup";
 import { ConversionIntentTracker } from "@/components/ConversionIntentTracker";
@@ -176,6 +177,9 @@ export default function RootLayout({
             knowsAbout: ["Déménagement", "Comparaison de devis", "Déménageurs professionnels"],
           }}
         />
+
+        {/* Analytics / session replay (prod only) */}
+        <ContentSquare />
       </head>
       <body className={inter.className}>
         <GoogleAnalytics />
