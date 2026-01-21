@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { computeFromAddress, getSmtpTransporter } from "@/lib/email/smtp";
 
 export const runtime = "nodejs";
 
@@ -46,34 +47,22 @@ export async function POST(req: Request) {
   }
 
   const to = process.env.CONTACT_TO?.trim() || "contact@moverz.fr";
-  const from = process.env.CONTACT_FROM?.trim() || to;
-
-  const smtpUrl = process.env.SMTP_URL?.trim();
-  const host = process.env.SMTP_HOST?.trim();
-  const port = process.env.SMTP_PORT ? Number(process.env.SMTP_PORT) : undefined;
-  const user = process.env.SMTP_USER?.trim();
-  const pass = process.env.SMTP_PASS?.trim();
-
-  const hasSmtp =
-    !!smtpUrl || (!!host && typeof port === "number" && !!user && !!pass);
+  const from = computeFromAddress({
+    explicitFrom: process.env.CONTACT_FROM,
+    smtpFrom: process.env.SMTP_FROM,
+    smtpUser: process.env.SMTP_USER,
+    fallbackTo: to,
+  });
 
   // If SMTP isn't configured, let the UI fallback to mailto.
-  if (!hasSmtp) {
+  const smtp = await getSmtpTransporter(process.env);
+  if (!smtp.ok) {
     return NextResponse.json(
-      { error: "Envoi email non configuré. Utilisez WhatsApp ou email." },
+      { error: "Envoi email non configuré. Utilisez WhatsApp ou email.", missing: smtp.missing },
       { status: 501 }
     );
   }
-
-  const nodemailer = await import("nodemailer");
-  const transporter = smtpUrl
-    ? nodemailer.createTransport(smtpUrl)
-    : nodemailer.createTransport({
-        host,
-        port,
-        secure: port === 465,
-        auth: { user, pass },
-      });
+  const transporter = smtp.transporter;
 
   const mailSubject = `[Contact] ${subject}`;
   const text = [
@@ -87,13 +76,21 @@ export async function POST(req: Request) {
     .filter(Boolean)
     .join("\n");
 
-  await transporter.sendMail({
-    to,
-    from,
-    replyTo: email,
-    subject: mailSubject,
-    text,
-  });
+  try {
+    await transporter.sendMail({
+      to,
+      from,
+      replyTo: email,
+      subject: mailSubject,
+      text,
+    });
+  } catch (err) {
+    console.error("[contact] sendMail failed", err);
+    return NextResponse.json(
+      { error: "Impossible d’envoyer pour le moment. Réessayez plus tard." },
+      { status: 502 }
+    );
+  }
 
   return NextResponse.json({ ok: true }, { status: 200 });
 }

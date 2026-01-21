@@ -8,6 +8,7 @@ export default function ProContact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSent, setIsSent] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [sentViaMailClient, setSentViaMailClient] = useState(false);
   const [form, setForm] = useState({
     name: "",
     company: "",
@@ -36,6 +37,7 @@ export default function ProContact() {
     setError(null);
     setIsSubmitting(true);
     setIsSent(false);
+    setSentViaMailClient(false);
 
     try {
       const res = await fetch("/api/pro-contact/", {
@@ -43,6 +45,14 @@ export default function ProContact() {
         headers: { "content-type": "application/json" },
         body: JSON.stringify(form),
       });
+
+      // If SMTP isn't configured on the server, fallback to user's mail client.
+      if (res.status === 501) {
+        setSentViaMailClient(true);
+        setIsSent(true);
+        window.location.href = mailtoHref;
+        return;
+      }
 
       if (!res.ok) {
         const data = (await res.json().catch(() => null)) as any;
@@ -61,6 +71,33 @@ export default function ProContact() {
       setIsSubmitting(false);
     }
   };
+
+  if (isSent && sentViaMailClient) {
+    return (
+      <section id="contact" className="relative py-20 md:py-32 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto rounded-3xl border border-[#6BCFCF]/30 bg-gradient-to-br from-[#E6FFFA] to-white p-8 text-center">
+            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#6BCFCF]/15 text-[#0F172A]">
+              <span className="text-2xl" aria-hidden="true">
+                ✓
+              </span>
+            </div>
+            <h3 className="text-xl font-bold text-[#0F172A] mb-2">Presque terminé</h3>
+            <p className="text-[#1E293B]/70">
+              Votre client mail vient de s’ouvrir. Envoyez le message pour écrire directement à{" "}
+              <strong>lucie@moverz.fr</strong>.
+            </p>
+            <div className="mt-5">
+              <a className="underline underline-offset-2 text-sm font-semibold text-[#0F172A]" href={mailtoHref}>
+                Si rien ne s’est ouvert, cliquez ici pour envoyer par email
+              </a>
+              .
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="contact" className="relative py-20 md:py-32 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
