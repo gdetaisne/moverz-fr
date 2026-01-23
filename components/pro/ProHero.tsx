@@ -42,9 +42,9 @@ export default function ProHero() {
               transition={{ duration: 0.4, delay: 0.1 }}
               className="text-4xl md:text-6xl font-bold leading-tight"
             >
-              On révolutionne le déménagement,
+              Nous augmentons votre CA.
               <br />
-              <span className="text-[#6BCFCF]">ensemble</span>.
+              <span className="text-[#6BCFCF]">Zéro visite technique.</span>
             </motion.h1>
 
             {/* Subtitle */}
@@ -52,11 +52,10 @@ export default function ProHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
-              className="text-lg md:text-xl text-white/80 leading-relaxed"
+              className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl"
             >
-              Moverz Pro vous aide à <strong className="text-white">chiffrer sans visite technique</strong> grâce à
-              un <strong className="text-white">dossier digital opposable</strong> (photos + inventaire IA + déclaration de valeur).
-              Des devis plus fiables, moins de litiges, plus de productivité.
+              Moverz Pro transforme chaque demande en <strong className="text-white">dossier digital opposable</strong>. 
+              Chiffrez plus vite, réduisez les litiges, signez plus de contrats.
             </motion.p>
 
             {/* Proof points */}
@@ -85,21 +84,32 @@ export default function ProHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.4 }}
-              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4"
+              className="space-y-4 pt-4"
             >
-              <a
-                href="#contact"
-                className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-[#0F172A] shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
-              >
-                <span>Demander une démo</span>
-                <span className="text-lg leading-none group-hover:translate-x-1 transition-transform">→</span>
-              </a>
-              <a
-                href="#pricing"
-                className="inline-flex items-center gap-2 rounded-full border-2 border-white/30 bg-white/10 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
-              >
-                <span>Voir les tarifs</span>
-              </a>
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                <a
+                  href="#contact"
+                  className="group inline-flex items-center gap-2 rounded-xl bg-white px-8 py-4 text-base font-semibold text-[#0F172A] shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+                >
+                  <span>Demander une démo</span>
+                  <span className="text-lg leading-none group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+                <a
+                  href="#pricing"
+                  className="inline-flex items-center gap-2 text-base font-medium text-white/90 hover:text-white underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors"
+                >
+                  <span>Voir les tarifs</span>
+                </a>
+              </div>
+              
+              {/* Mini-preuve sous CTA */}
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-medium text-white/60">
+                <span>✓ Dossiers opposables</span>
+                <span className="text-white/30">·</span>
+                <span>✓ Exports PDF/CSV</span>
+                <span className="text-white/30">·</span>
+                <span>✓ Relances auto</span>
+              </div>
             </motion.div>
           </div>
 

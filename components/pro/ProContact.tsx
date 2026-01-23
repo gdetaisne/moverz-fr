@@ -267,56 +267,59 @@ export default function ProContact() {
               </div>
             </div>
 
-            <div className="space-y-4">
-              <div className="rounded-3xl border border-[#E3E5E8] bg-white p-7 md:p-8 shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
-                <p className="text-sm font-semibold text-[#0F172A]">Vous préférez un canal direct ?</p>
-                <p className="mt-2 text-sm text-[#6B7280]">
-                  WhatsApp pour une question rapide, email pour un échange détaillé, ou Calendly pour un
-                  rappel.
-                </p>
-                <div className="mt-5 grid sm:grid-cols-3 gap-3">
+            <div className="space-y-6">
+              {/* Canaux alternatifs - simplifié */}
+              <div className="rounded-2xl border border-[#E3E5E8] bg-white p-6">
+                <p className="text-sm font-medium text-[#0F172A] mb-4">Canaux alternatifs</p>
+                <div className="space-y-2">
                   <a
                     href="https://wa.me/66952824035?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Moverz%20Pro"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-2xl border border-gray-200 bg-white px-4 py-4 hover:border-[#25D366]/50 hover:shadow-sm transition-all"
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-colors group"
                   >
-                    <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[#25D366]/10 text-[#25D366] mb-3">
-                      <MessageCircle className="w-5 h-5" />
+                    <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#25D366]/10 text-[#25D366] group-hover:bg-[#25D366]/20">
+                      <MessageCircle className="w-4 h-4" />
                     </div>
-                    <p className="text-sm font-semibold text-[#0F172A]">WhatsApp</p>
-                    <p className="text-xs text-[#6B7280] mt-1">Réponse rapide</p>
+                    <div className="flex-1">
+                      <p className="text-sm font-medium text-[#0F172A]">WhatsApp</p>
+                      <p className="text-xs text-[#6B7280]">Réponse rapide</p>
+                    </div>
                   </a>
                   <a
                     href={mailtoHref}
-                    className="rounded-2xl border border-gray-200 bg-white px-4 py-4 hover:border-[#6BCFCF]/50 hover:shadow-sm transition-all"
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-colors group"
                   >
-                    <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[#6BCFCF]/10 text-[#6BCFCF] mb-3">
-                      <Mail className="w-5 h-5" />
+                    <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#6BCFCF]/10 text-[#6BCFCF] group-hover:bg-[#6BCFCF]/20">
+                      <Mail className="w-4 h-4" />
                     </div>
-                    <p className="text-sm font-semibold text-[#0F172A]">Email</p>
-                    <p className="text-xs text-[#6B7280] mt-1">Détaillé</p>
+                    <div className="flex-1">
+                      <p className="text-sm font-medium text-[#0F172A]">Email</p>
+                      <p className="text-xs text-[#6B7280]">Échange détaillé</p>
+                    </div>
                   </a>
                   <a
                     href="https://calendly.com/lucie-moverz/30min"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-2xl border border-gray-200 bg-white px-4 py-4 hover:border-[#6BCFCF]/50 hover:shadow-sm transition-all"
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-colors group"
                   >
-                    <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[#0F172A]/10 text-[#0F172A] mb-3">
-                      <Calendar className="w-5 h-5" />
+                    <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#0F172A]/10 text-[#0F172A] group-hover:bg-[#0F172A]/20">
+                      <Calendar className="w-4 h-4" />
                     </div>
-                    <p className="text-sm font-semibold text-[#0F172A]">Calendly</p>
-                    <p className="text-xs text-[#6B7280] mt-1">Être rappelé(e)</p>
+                    <div className="flex-1">
+                      <p className="text-sm font-medium text-[#0F172A]">Calendly</p>
+                      <p className="text-xs text-[#6B7280]">Être rappelé(e)</p>
+                    </div>
                   </a>
                 </div>
               </div>
 
-              <div className="rounded-3xl border border-[#E3E5E8] bg-gradient-to-br from-white to-[#F9FAFB] p-7 md:p-8">
-                <p className="text-sm font-semibold text-[#0F172A]">Astuce</p>
-                <p className="mt-2 text-sm text-[#6B7280]">
-                  Envoyez 1 exemple de dossier “difficile” : accès, cave, objets lourds. On vous montre
-                  comment Moverz le standardise.
+              {/* Astuce - simplifié */}
+              <div className="rounded-2xl border border-[#E3E5E8] bg-[#F9FAFB] p-5">
+                <p className="text-xs font-medium text-[#6B7280] uppercase tracking-wide mb-2">Astuce</p>
+                <p className="text-sm text-[#0F172A]">
+                  Envoyez un dossier "difficile" (accès, cave, objets lourds). On vous montre comment Moverz le standardise.
                 </p>
               </div>
             </div>

@@ -26,10 +26,9 @@ export default function ProBeforeAfter() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative rounded-2xl border-2 border-red-200 bg-red-50/50 p-8"
+            className="relative rounded-2xl border border-[#E3E5E8] bg-[#F9FAFB] p-8"
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-red-100 px-4 py-2 text-sm font-semibold text-red-600 mb-6">
-              <span className="h-1.5 w-1.5 rounded-full bg-red-600 animate-pulse" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-white border border-[#E3E5E8] px-4 py-2 text-sm font-medium text-[#6B7280] mb-6">
               Sans Moverz Pro
             </div>
             
@@ -37,14 +36,14 @@ export default function ProBeforeAfter() {
               {[
                 { icon: Clock, label: "2–3h par dossier", desc: "RDV + déplacement + visite + saisie + aller-retours" },
                 { icon: TrendingUp, label: "Devis fragiles", desc: "Hypothèses, volume contesté, options oubliées" },
-                { icon: Users, label: "Cycle trop long", desc: "Le client “refroidit” pendant l’attente" },
+                { icon: Users, label: "Cycle trop long", desc: "Le client "refroidit" pendant l'attente" },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center">
-                    <item.icon className="w-5 h-5 text-red-600" />
+                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white border border-[#E3E5E8] flex items-center justify-center">
+                    <item.icon className="w-5 h-5 text-[#6B7280]" />
                   </div>
                   <div>
-                    <p className="font-bold text-[#0F172A]">{item.label}</p>
+                    <p className="font-semibold text-[#0F172A]">{item.label}</p>
                     <p className="text-sm text-[#6B7280]">{item.desc}</p>
                   </div>
                 </div>
@@ -57,10 +56,10 @@ export default function ProBeforeAfter() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative rounded-2xl border-2 border-[#6BCFCF] bg-gradient-to-br from-[#F0F9FF] to-white p-8 shadow-xl"
+            className="relative rounded-2xl border-2 border-[#6BCFCF]/40 bg-gradient-to-br from-[#F0F9FF] to-white p-8 shadow-sm"
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-2 text-sm font-semibold text-[#6BCFCF] border border-[#6BCFCF]/20 mb-6">
-              <Zap className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-2 text-sm font-medium text-[#0F172A] border border-[#6BCFCF]/30 mb-6">
+              <Zap className="w-3.5 h-3.5 text-[#6BCFCF]" />
               Avec Moverz Pro
             </div>
             
@@ -75,15 +74,12 @@ export default function ProBeforeAfter() {
                     <item.icon className="w-5 h-5 text-[#6BCFCF]" />
                   </div>
                   <div>
-                    <p className="font-bold text-[#0F172A]">{item.label}</p>
+                    <p className="font-semibold text-[#0F172A]">{item.label}</p>
                     <p className="text-sm text-[#6B7280]">{item.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
-
-            {/* Glow effect */}
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-[#6BCFCF] to-[#2B7A78] rounded-2xl blur opacity-20 -z-10" />
           </motion.div>
         </div>
       </div>

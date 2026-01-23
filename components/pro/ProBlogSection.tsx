@@ -63,9 +63,9 @@ export default function ProBlogSection() {
         <div className="mt-10 text-center">
           <Link
             href="/blog/?cat=pro"
-            className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-7 py-3.5 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-medium text-[#0F172A] hover:text-[#2B7A78] underline underline-offset-4 decoration-[#0F172A]/30 hover:decoration-[#2B7A78] transition-colors"
           >
-            Voir tous les articles “déménageurs”
+            Voir tous les articles "déménageurs"
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

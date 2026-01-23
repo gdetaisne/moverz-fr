@@ -26,14 +26,7 @@ export default function ProHowItWorks() {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 bg-gradient-to-br from-[#0F172A] to-[#1E293B] text-white overflow-hidden">
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-          backgroundSize: '32px 32px'
-        }} />
-      </div>
-
+    <section className="relative py-20 md:py-32 bg-gradient-to-b from-white to-[#F9FAFB] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -41,10 +34,14 @@ export default function ProHowItWorks() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-2 text-sm font-medium text-[#0F172A] mb-6">
+            <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
+            Process simple
+          </div>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[#0F172A]">
             Comment ça marche (en 3 étapes)
           </h2>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto">
+          <p className="text-lg text-[#6B7280] max-w-2xl mx-auto">
             Un process simple pour qualifier sans déplacement — et envoyer des devis plus fiables.
           </p>
         </motion.div>
@@ -59,9 +56,9 @@ export default function ProHowItWorks() {
               transition={{ delay: i * 0.1 }}
               className="relative group"
             >
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-[#6BCFCF]/50 transition-all duration-300 h-full">
+              <div className="bg-white rounded-2xl p-6 border border-[#E3E5E8] hover:border-[#6BCFCF]/50 hover:shadow-md transition-all duration-300 h-full">
                 {/* Step badge */}
-                <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#6BCFCF]/20 text-[#6BCFCF] font-bold text-sm mb-4">
+                <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#6BCFCF]/20 border border-[#6BCFCF]/30 text-[#0F172A] font-bold text-sm mb-4">
                   {item.step}
                 </div>
                 
@@ -71,13 +68,13 @@ export default function ProHowItWorks() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                <p className="text-sm text-white/70 leading-relaxed">{item.description}</p>
+                <h3 className="text-lg font-bold mb-2 text-[#0F172A]">{item.title}</h3>
+                <p className="text-sm text-[#6B7280] leading-relaxed">{item.description}</p>
               </div>
 
               {/* Connector line (except last) */}
               {i < 2 && (
-                <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-[#6BCFCF]/50 to-transparent" />
+                <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-[#6BCFCF]/30 to-transparent" />
               )}
             </motion.div>
           ))}
