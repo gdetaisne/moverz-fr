@@ -46,38 +46,38 @@ export default function ProHowItWorks() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {steps.map((item, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="relative group"
-            >
-              <div className="bg-white rounded-2xl p-6 border border-[#E3E5E8] hover:border-[#6BCFCF]/50 hover:shadow-md transition-all duration-300 h-full">
-                {/* Step badge */}
-                <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#6BCFCF]/20 border border-[#6BCFCF]/30 text-[#0F172A] font-bold text-sm mb-4">
-                  {item.step}
-                </div>
-                
-                {/* Icon */}
-                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#6BCFCF]/10 text-[#6BCFCF] mb-4">
-                  <item.icon className="w-6 h-6" />
-                </div>
-
-                {/* Content */}
-                <h3 className="text-lg font-bold mb-2 text-[#0F172A]">{item.title}</h3>
-                <p className="text-sm text-[#6B7280] leading-relaxed">{item.description}</p>
-              </div>
-
-              {/* Connector line (except last) */}
-              {i < 2 && (
-                <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-[#6BCFCF]/30 to-transparent" />
-              )}
-            </motion.div>
-          ))}
+        {/* Stepper horizontal compact */}
+        <div className="max-w-5xl mx-auto">
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute top-12 left-0 right-0 h-0.5 bg-[#E3E5E8] hidden md:block" />
+            <div className="absolute top-12 left-0 w-2/3 h-0.5 bg-gradient-to-r from-[#6BCFCF] to-[#6BCFCF]/30 hidden md:block" />
+            
+            <div className="grid md:grid-cols-3 gap-8 md:gap-4 relative">
+              {steps.map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="relative"
+                >
+                  {/* Step number + icon */}
+                  <div className="flex flex-col items-center mb-4">
+                    <div className="relative flex items-center justify-center w-24 h-24 rounded-2xl bg-white border-2 border-[#E3E5E8] shadow-sm mb-3 z-10">
+                      <div className="absolute -top-2 -right-2 flex items-center justify-center w-6 h-6 rounded-full bg-[#6BCFCF] text-white text-xs font-bold">
+                        {item.step}
+                      </div>
+                      <item.icon className="w-10 h-10 text-[#6BCFCF]" />
+                    </div>
+                    <h3 className="text-base font-bold text-[#0F172A] text-center mb-2">{item.title}</h3>
+                    <p className="text-xs text-[#6B7280] text-center leading-relaxed">{item.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

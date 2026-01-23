@@ -58,25 +58,25 @@ export default function ProHero() {
               Chiffrez plus vite, réduisez les litiges, signez plus de contrats.
             </motion.p>
 
-            {/* Proof points */}
+            {/* Proof points - Badges compacts */}
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.3 }}
-              className="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-white/70"
+              className="flex flex-wrap items-center justify-center lg:justify-start gap-2"
             >
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-[#6BCFCF]" />
-                <span>Dossier client + photos</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-[#6BCFCF]" />
-                <span>Inventaire IA + déclaration de valeur</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-[#6BCFCF]" />
-                <span>Relances + exports + devis</span>
-              </div>
+              {[
+                "Dossier opposable",
+                "Inventaire IA",
+                "Relances auto",
+                "Exports PDF/CSV",
+                "Déclaration valeur"
+              ].map((item, i) => (
+                <span key={i} className="inline-flex items-center gap-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1.5 text-xs font-medium text-white">
+                  <CheckCircle2 className="w-3 h-3 text-[#6BCFCF]" />
+                  {item}
+                </span>
+              ))}
             </motion.div>
 
             {/* CTAs */}

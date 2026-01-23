@@ -32,20 +32,23 @@ export default function ProBeforeAfter() {
               Sans Moverz Pro
             </div>
             
-            <div className="space-y-5">
+            <div className="space-y-6">
               {[
-                { icon: Clock, label: "2–3h par dossier", desc: "RDV + déplacement + visite + saisie + aller-retours" },
-                { icon: TrendingUp, label: "Devis fragiles", desc: "Hypothèses, volume contesté, options oubliées" },
-                { icon: Users, label: "Cycle trop long", desc: "Le client 'refroidit' pendant l'attente" },
+                { icon: Clock, metric: "2–3h", label: "par dossier", desc: "RDV + déplacement + visite + saisie + aller-retours" },
+                { icon: TrendingUp, metric: "~30%", label: "litiges volume", desc: "Hypothèses, volume contesté, options oubliées" },
+                { icon: Users, metric: "48h+", label: "cycle moyen", desc: "Le client 'refroidit' pendant l'attente" },
               ].map((item, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white border border-[#E3E5E8] flex items-center justify-center">
-                    <item.icon className="w-5 h-5 text-[#6B7280]" />
+                <div key={i} className="space-y-2">
+                  <div className="flex items-center gap-3">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white border border-[#E3E5E8] flex items-center justify-center">
+                      <item.icon className="w-5 h-5 text-[#6B7280]" />
+                    </div>
+                    <div>
+                      <p className="text-3xl font-bold text-[#0F172A] leading-none">{item.metric}</p>
+                      <p className="text-xs text-[#6B7280] mt-1">{item.label}</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="font-semibold text-[#0F172A]">{item.label}</p>
-                    <p className="text-sm text-[#6B7280]">{item.desc}</p>
-                  </div>
+                  <p className="text-xs text-[#6B7280] leading-relaxed ml-13">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -63,20 +66,23 @@ export default function ProBeforeAfter() {
               Avec Moverz Pro
             </div>
             
-            <div className="space-y-5">
+            <div className="space-y-6">
               {[
-                { icon: Clock, label: "Dossier exploitable", desc: "Photos + inventaire IA + déclaration de valeur" },
-                { icon: Shield, label: "Moins de litiges", desc: "Périmètre documenté (preuves + documents)" },
-                { icon: TrendingUp, label: "Devis plus rapide", desc: "Relances auto → complétion → chiffrage" },
+                { icon: Clock, metric: "15min", label: "dossier prêt", desc: "Photos + inventaire IA + déclaration de valeur" },
+                { icon: Shield, metric: "-70%", label: "litiges évitables", desc: "Périmètre documenté (preuves + documents)" },
+                { icon: TrendingUp, metric: "3x", label: "plus rapide", desc: "Relances auto → complétion → chiffrage" },
               ].map((item, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#6BCFCF]/10 flex items-center justify-center">
-                    <item.icon className="w-5 h-5 text-[#6BCFCF]" />
+                <div key={i} className="space-y-2">
+                  <div className="flex items-center gap-3">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#6BCFCF]/10 flex items-center justify-center">
+                      <item.icon className="w-5 h-5 text-[#6BCFCF]" />
+                    </div>
+                    <div>
+                      <p className="text-3xl font-bold text-[#0F172A] leading-none">{item.metric}</p>
+                      <p className="text-xs text-[#6B7280] mt-1">{item.label}</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="font-semibold text-[#0F172A]">{item.label}</p>
-                    <p className="text-sm text-[#6B7280]">{item.desc}</p>
-                  </div>
+                  <p className="text-xs text-[#6B7280] leading-relaxed ml-13">{item.desc}</p>
                 </div>
               ))}
             </div>

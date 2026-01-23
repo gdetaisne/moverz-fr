@@ -267,60 +267,49 @@ export default function ProContact() {
               </div>
             </div>
 
-            <div className="space-y-6">
-              {/* Canaux alternatifs - simplifié */}
+            <div className="flex flex-col justify-start">
+              {/* Canaux alternatifs - ultra secondaires */}
               <div className="rounded-2xl border border-[#E3E5E8] bg-white p-6">
-                <p className="text-sm font-medium text-[#0F172A] mb-4">Canaux alternatifs</p>
+                <p className="text-xs font-medium text-[#6B7280] mb-4">Autres canaux</p>
                 <div className="space-y-2">
                   <a
                     href="https://wa.me/66952824035?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Moverz%20Pro"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-colors group"
+                    className="flex items-center gap-3 p-2 rounded-lg hover:bg-[#F9FAFB] transition-colors group"
                   >
-                    <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#25D366]/10 text-[#25D366] group-hover:bg-[#25D366]/20">
+                    <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-[#25D366]/10 text-[#25D366]">
                       <MessageCircle className="w-4 h-4" />
                     </div>
                     <div className="flex-1">
-                      <p className="text-sm font-medium text-[#0F172A]">WhatsApp</p>
-                      <p className="text-xs text-[#6B7280]">Réponse rapide</p>
+                      <p className="text-xs font-medium text-[#0F172A]">WhatsApp</p>
                     </div>
                   </a>
                   <a
                     href={mailtoHref}
-                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-colors group"
+                    className="flex items-center gap-3 p-2 rounded-lg hover:bg-[#F9FAFB] transition-colors group"
                   >
-                    <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#6BCFCF]/10 text-[#6BCFCF] group-hover:bg-[#6BCFCF]/20">
+                    <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-[#6BCFCF]/10 text-[#6BCFCF]">
                       <Mail className="w-4 h-4" />
                     </div>
                     <div className="flex-1">
-                      <p className="text-sm font-medium text-[#0F172A]">Email</p>
-                      <p className="text-xs text-[#6B7280]">Échange détaillé</p>
+                      <p className="text-xs font-medium text-[#0F172A]">Email</p>
                     </div>
                   </a>
                   <a
                     href="https://calendly.com/lucie-moverz/30min"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-colors group"
+                    className="flex items-center gap-3 p-2 rounded-lg hover:bg-[#F9FAFB] transition-colors group"
                   >
-                    <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#0F172A]/10 text-[#0F172A] group-hover:bg-[#0F172A]/20">
+                    <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-[#0F172A]/10 text-[#0F172A]">
                       <Calendar className="w-4 h-4" />
                     </div>
                     <div className="flex-1">
-                      <p className="text-sm font-medium text-[#0F172A]">Calendly</p>
-                      <p className="text-xs text-[#6B7280]">Être rappelé(e)</p>
+                      <p className="text-xs font-medium text-[#0F172A]">Calendly</p>
                     </div>
                   </a>
                 </div>
-              </div>
-
-              {/* Astuce - simplifié */}
-              <div className="rounded-2xl border border-[#E3E5E8] bg-[#F9FAFB] p-5">
-                <p className="text-xs font-medium text-[#6B7280] uppercase tracking-wide mb-2">Astuce</p>
-                <p className="text-sm text-[#0F172A]">
-                  Envoyez un dossier "difficile" (accès, cave, objets lourds). On vous montre comment Moverz le standardise.
-                </p>
               </div>
             </div>
           </div>

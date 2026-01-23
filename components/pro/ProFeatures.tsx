@@ -14,63 +14,33 @@ import {
 } from "lucide-react";
 
 export default function ProFeatures() {
-  const features = [
+  const pillars = [
     {
+      title: "Acquisition & dossier",
       icon: FileText,
-      title: "Backoffice déménageur",
-      description:
-        "Créez un lead (au téléphone ou à froid), envoyez le lien au client, suivez statuts + historique, et gardez une vue claire des dossiers.",
-      highlight: "Leads → dossiers, sans perte d’info",
+      features: [
+        { icon: FileText, name: "Backoffice déménageur", desc: "Créez leads, envoyez lien, suivez statuts" },
+        { icon: Images, name: "Tunnel client guidé", desc: "Formulaire + photos standardisées" },
+      ]
     },
     {
-      icon: Images,
-      title: "Tunnel client (formulaire + photos)",
-      description:
-        "Le client complète ses infos + adresses/dates + formule, puis ajoute des photos. Objectif : un dossier standardisé, exploitable, opposable.",
-      highlight: "Photos guidées + complétude",
-    },
-    {
-      icon: Sparkles,
-      title: "IA & documents générés",
-      description:
-        "Analyse des photos, inventaire et statut de complétude. Génération automatique : dossier PDF (photos) + déclaration de valeur (PDF) + inventaire (Excel).",
-      highlight: "Moins d’aller-retours, plus de preuves",
-    },
-    {
-      icon: Bell,
-      title: "Relances automatiques",
-      description:
-        "Séquences configurables selon statut (partiel / sans photos). Templates éditables. Le message explique clairement ce qu’il manque.",
-      highlight: "Plus de dossiers complets, plus vite",
-    },
-    {
-      icon: MessageCircle,
-      title: "WhatsApp (Pro)",
-      description:
-        "Notifications WhatsApp au déménageur : nouveau lead, besoin d’intervention, lead converti en dossier. Numéro dédié provisionné par Moverz (Pro).",
-      highlight: "Réponse rapide, cycle raccourci",
-    },
-    {
-      icon: Calculator,
-      title: "Module devis (Pro)",
-      description:
-        "Chiffrez à partir d’un dossier propre. Édition avant envoi, historique et garde-fous (options, contraintes, règles).",
-      highlight: "Devis plus fiables, moins de surprises",
-    },
-    {
-      icon: Download,
-      title: "Exports (PDF/Excel/CSV)",
-      description:
-        "Exports par dossier : dossier photos PDF, déclaration de valeur PDF, inventaire Excel. Exports tables : leads + dossiers en CSV.",
-      highlight: "Branchable sur votre process actuel",
-    },
-    {
+      title: "Preuves & documents",
       icon: Shield,
-      title: "RGPD & hébergement Europe",
-      description:
-        "Hébergement en Europe. Politique de rétention claire (photos supprimées après la période définie, dossiers anonymisés).",
-      highlight: "Conformité & sérénité",
+      features: [
+        { icon: Sparkles, name: "IA & inventaire", desc: "Analyse photos, génère inventaire Excel" },
+        { icon: Download, name: "Exports PDF/CSV", desc: "Dossier photos, déclaration valeur, CSV" },
+        { icon: Shield, name: "RGPD Europe", desc: "Hébergement EU, rétention claire" },
+      ]
     },
+    {
+      title: "Vitesse & conversion",
+      icon: Calculator,
+      features: [
+        { icon: Bell, name: "Relances auto", desc: "Séquences configurables si incomplet" },
+        { icon: MessageCircle, name: "WhatsApp Pro", desc: "Notifs + numéro dédié provisionné" },
+        { icon: Calculator, name: "Module devis", desc: "Chiffrage rapide depuis dossier propre" },
+      ]
+    }
   ];
 
   return (
@@ -90,37 +60,45 @@ export default function ProFeatures() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, i) => (
+        {/* 3 piliers visuels */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {pillars.map((pillar, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              whileHover={{ y: -4, scale: 1.02 }}
-              className="group relative"
+              transition={{ delay: i * 0.1 }}
+              className="relative"
             >
-              <div className="h-full rounded-2xl border-2 border-gray-200 bg-white p-6 hover:border-[#6BCFCF]/50 hover:shadow-xl transition-all duration-300">
-                {/* Icon */}
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#F0F9FF] text-[#6BCFCF] group-hover:bg-[#6BCFCF] group-hover:text-white transition-all duration-300 mb-4">
-                  <feature.icon className="w-6 h-6" />
+              <div className="h-full rounded-2xl border border-[#E3E5E8] bg-white p-6 hover:border-[#6BCFCF]/50 hover:shadow-lg transition-all duration-300">
+                {/* Pillar header */}
+                <div className="flex items-center gap-3 mb-6 pb-4 border-b border-[#E3E5E8]">
+                  <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#6BCFCF]/10 text-[#6BCFCF]">
+                    <pillar.icon className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-lg font-bold text-[#0F172A]">
+                    {pillar.title}
+                  </h3>
                 </div>
 
-                {/* Title */}
-                <h3 className="text-xl font-bold text-[#0F172A] mb-3">
-                  {feature.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-sm text-[#6B7280] leading-relaxed mb-4">
-                  {feature.description}
-                </p>
-
-                {/* Highlight badge */}
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#6BCFCF]/10 text-[#6BCFCF] text-xs font-semibold">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#6BCFCF]" />
-                  {feature.highlight}
+                {/* Features list */}
+                <div className="space-y-4">
+                  {pillar.features.map((feature, j) => (
+                    <div key={j} className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-[#F0F9FF] flex items-center justify-center">
+                        <feature.icon className="w-4 h-4 text-[#6BCFCF]" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-semibold text-[#0F172A] leading-tight mb-1">
+                          {feature.name}
+                        </p>
+                        <p className="text-xs text-[#6B7280] leading-relaxed">
+                          {feature.desc}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </motion.div>
@@ -147,41 +125,41 @@ export default function ProFeatures() {
                   icon: Images,
                   chip: "PDF",
                   title: "Dossier photos",
-                  desc: "Pièces + accès. Le périmètre est documenté (opposable).",
+                  desc: "Pièces + accès. Périmètre documenté (opposable).",
                 },
                 {
                   icon: FileSpreadsheet,
                   chip: "XLSX",
                   title: "Inventaire",
-                  desc: "Lisible par l’équipe pour chiffrer (items + cartons).",
+                  desc: "Lisible par l'équipe pour chiffrer (items + cartons).",
                 },
                 {
                   icon: Receipt,
                   chip: "PDF",
-                  title: "Déclaration de valeur",
-                  desc: "Cadrage assurance / responsabilité, sans zones grises.",
+                  title: "Déclaration valeur",
+                  desc: "Cadrage assurance / responsabilité, 0 zone grise.",
                 },
               ].map((item) => (
-                <div key={item.title} className="group relative">
-                  <div className="absolute -inset-[1px] rounded-3xl bg-gradient-to-br from-[#6BCFCF]/35 via-[#2B7A78]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="relative rounded-3xl border border-[#E3E5E8] bg-white p-6 shadow-sm hover:shadow-md transition-all">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#6BCFCF]/10 text-[#2B7A78]">
+                <div key={item.title} className="group relative h-full">
+                  <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-br from-[#6BCFCF]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="relative h-full rounded-2xl border border-[#E3E5E8] bg-white p-6 shadow-sm hover:shadow-md transition-all flex flex-col">
+                    <div className="flex items-start justify-between gap-4 mb-4">
+                      <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#6BCFCF]/10 text-[#6BCFCF]">
                         <item.icon className="w-6 h-6" />
                       </div>
-                      <span className="inline-flex items-center rounded-full border border-[#E3E5E8] bg-[#F9FAFB] px-3 py-1 text-xs font-semibold text-[#0F172A]">
+                      <span className="inline-flex items-center h-6 rounded-full border border-[#E3E5E8] bg-[#F9FAFB] px-2.5 py-1 text-xs font-semibold text-[#0F172A]">
                         {item.chip}
                       </span>
                     </div>
 
-                    <p className="mt-4 text-base font-bold text-[#0F172A]">
+                    <p className="text-base font-bold text-[#0F172A] mb-2">
                       {item.title}
                     </p>
-                    <p className="mt-2 text-sm text-[#6B7280] leading-relaxed">
+                    <p className="text-sm text-[#6B7280] leading-relaxed flex-1 mb-4">
                       {item.desc}
                     </p>
 
-                    <div className="mt-5 flex items-center gap-2 text-xs text-[#2B7A78] font-semibold">
+                    <div className="flex items-center gap-2 text-xs text-[#6BCFCF] font-semibold pt-3 border-t border-[#E3E5E8]">
                       <Download className="w-4 h-4" />
                       Export en 1 clic
                     </div>
