@@ -73,31 +73,25 @@ export default function Hero() {
               <WhatsAppCTA source="home" />
             </div>
 
-            {/* Preuves de réassurance sous CTA */}
+            {/* Mini-badges de réassurance (hyper scannables) */}
             <div
-              className="mt-6 space-y-2"
+              className="mt-6 flex flex-wrap gap-2 justify-center lg:justify-start"
               style={{
                 animation: mounted ? "fadeInUp 1.2s ease-out 0.4s both" : "none",
               }}
             >
-              <div className="flex items-center justify-center lg:justify-start gap-2 text-sm text-[#1E293B]/80">
-                <svg className="w-5 h-5 text-[#6BCFCF] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="font-medium">Numéro masqué jusqu'au choix</span>
-              </div>
-              <div className="flex items-center justify-center lg:justify-start gap-2 text-sm text-[#1E293B]/80">
-                <svg className="w-5 h-5 text-[#6BCFCF] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="font-medium">Aucun démarchage · Aucun appel</span>
-              </div>
-              <div className="flex items-center justify-center lg:justify-start gap-2 text-sm text-[#1E293B]/80">
-                <svg className="w-5 h-5 text-[#6BCFCF] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="font-medium">Entreprises vérifiées (assurance + licence + solvabilité)</span>
-              </div>
+              {[
+                "✓ Numéro masqué jusqu'au choix",
+                "✓ Aucun démarchage / aucun appel",
+                "✓ Entreprises vérifiées (assurance + licence + solvabilité)"
+              ].map((badge, i) => (
+                <span 
+                  key={i}
+                  className="inline-flex items-center gap-1.5 rounded-full bg-white/90 backdrop-blur-sm border border-[#E3E5E8] px-3 py-2 text-xs font-semibold text-[#0F172A] shadow-sm"
+                >
+                  {badge}
+                </span>
+              ))}
             </div>
           </div>
 
