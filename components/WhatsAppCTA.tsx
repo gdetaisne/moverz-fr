@@ -79,8 +79,8 @@ export default function WhatsAppCTA({
           </svg>
           <span>
             {isMobile
-              ? "Démarrer sur WhatsApp"
-              : "Continuer sur WhatsApp (recommandé)"}
+              ? "Recevoir mes devis sur WhatsApp"
+              : "Recevoir mes devis sur WhatsApp"}
           </span>
         </button>
 
@@ -90,7 +90,7 @@ export default function WhatsAppCTA({
             ? "text-white/80" 
             : "text-[#1E293B]/70"
         }`}>
-          Le plus simple • Devis plus justes • Sans démarchage
+          3 minutes • Numéro masqué • 0 démarchage
         </p>
 
         {/* CTA secondaire (lien discret) */}

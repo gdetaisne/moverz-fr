@@ -123,7 +123,7 @@ export default function WhatYouReceive() {
 
               {/* Floating badge */}
               <div className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-lg px-4 py-3 border border-[#6BCFCF]/30">
-                <p className="text-2xl font-bold text-[#0F172A]">5 devis</p>
+                <p className="text-2xl font-bold text-[#0F172A]">3+ devis</p>
                 <p className="text-xs text-[#1E293B]/70">comparables</p>
               </div>
             </div>

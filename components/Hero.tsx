@@ -73,37 +73,30 @@ export default function Hero() {
               <WhatsAppCTA source="home" />
             </div>
 
-            {/* Pro CTA (visible dès la fold, sans parasiter le CTA principal) */}
+            {/* Preuves de réassurance sous CTA */}
             <div
-              className="mt-6 flex justify-center lg:justify-start"
+              className="mt-6 space-y-2"
               style={{
-                animation: mounted ? "fadeInUp 1.2s ease-out 0.38s both" : "none",
+                animation: mounted ? "fadeInUp 1.2s ease-out 0.4s both" : "none",
               }}
             >
-              <div className="w-full max-w-xl rounded-2xl border border-[#6BCFCF]/20 bg-white/70 p-4 shadow-[0_10px_40px_rgba(15,23,42,0.06)] backdrop-blur-sm">
-                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                  <div className="text-center sm:text-left">
-                    <p className="text-sm font-semibold text-[#0F172A]">
-                      Vous êtes déménageur ?
-                    </p>
-                    <p className="mt-1 text-sm text-[#0F172A]/70">
-                      Dossiers complets (photos + IA + volume) pour chiffrer plus vite.
-                    </p>
-                  </div>
-                  <a
-                    href="/pro/"
-                    className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#6BCFCF] px-5 py-2.5 text-sm font-semibold text-[#0F172A] shadow-[0_12px_35px_rgba(107,207,207,0.35)] transition-all hover:shadow-[0_16px_45px_rgba(107,207,207,0.45)] hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6BCFCF] focus-visible:ring-offset-2"
-                    aria-label="Découvrir l'offre Moverz Pro"
-                  >
-                    Découvrir Moverz Pro
-                    <span
-                      className="text-base transition-transform group-hover:translate-x-0.5"
-                      aria-hidden="true"
-                    >
-                      →
-                    </span>
-                  </a>
-                </div>
+              <div className="flex items-center justify-center lg:justify-start gap-2 text-sm text-[#1E293B]/80">
+                <svg className="w-5 h-5 text-[#6BCFCF] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="font-medium">Numéro masqué jusqu'au choix</span>
+              </div>
+              <div className="flex items-center justify-center lg:justify-start gap-2 text-sm text-[#1E293B]/80">
+                <svg className="w-5 h-5 text-[#6BCFCF] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="font-medium">Aucun démarchage · Aucun appel</span>
+              </div>
+              <div className="flex items-center justify-center lg:justify-start gap-2 text-sm text-[#1E293B]/80">
+                <svg className="w-5 h-5 text-[#6BCFCF] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="font-medium">Entreprises vérifiées (assurance + licence + solvabilité)</span>
               </div>
             </div>
           </div>

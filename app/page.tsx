@@ -9,7 +9,6 @@ import TrustSignals from "@/components/TrustSignals";
 import QuickFAQ from "@/components/QuickFAQ";
 import StickyCTA from "@/components/StickyCTA";
 import FinalCTA from "@/components/FinalCTA";
-import ProCTA from "@/components/ProCTA";
 import WhyMoverz from "@/components/WhyMoverz";
 
 export const metadata: Metadata = {
@@ -72,38 +71,24 @@ export default function Home() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
         />
         
-        {/* 1. Hero - Redesigned for clarity and emotion */}
+        {/* 1. Hero - Promesse + CTA + Preuves */}
         <Hero />
 
-      {/* 2. Photo Checklist - Les 6 photos indispensables */}
-      <PhotoChecklist />
-
-      {/* 3. What You Receive - Mockup des devis comparables */}
-      <WhatYouReceive />
-
-      {/* 4. How It Works + AI - Interactive timeline */}
+      {/* 2. Comment ça marche - 3 étapes compactes (FlowAndIA) */}
       <FlowAndIA />
 
-      {/* 5. Trust Signals - Security and guarantees */}
-      <TrustSignals />
-
-      {/* 6. Why Moverz - Storytelling (photos = devis comparables) */}
+      {/* 3. Pourquoi c'est sûr - Creditsafe + déménageurs vérifiés + WhatsApp */}
       <WhyMoverz />
 
-      {/* 7. Problem/Solution - Show the pain and the relief */}
-      <ProblemSolution />
+      {/* 4. Ce que vous recevez - Devis comparables + exemple */}
+      <WhatYouReceive />
 
-      {/* 8. Real Stories - Customer testimonials with outcomes */}
+      {/* 5. Social proof - Notes + Témoignages + Chiffres */}
       <RealStories />
 
-      {/* 9. Quick FAQ - Remove last objections */}
+      {/* 6. FAQ + CTA final */}
       <QuickFAQ />
-
-      {/* 10. Final CTA - Enhanced with animation */}
       <FinalCTA />
-
-      {/* 11. Pro CTA - For movers (SaaS positioning) */}
-      <ProCTA />
 
         {/* Sticky CTA global */}
         <StickyCTA />
