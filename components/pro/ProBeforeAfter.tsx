@@ -36,7 +36,7 @@ export default function ProBeforeAfter() {
               {[
                 { icon: Clock, label: "2–3h par dossier", desc: "RDV + déplacement + visite + saisie + aller-retours" },
                 { icon: TrendingUp, label: "Devis fragiles", desc: "Hypothèses, volume contesté, options oubliées" },
-                { icon: Users, label: "Cycle trop long", desc: "Le client "refroidit" pendant l'attente" },
+                { icon: Users, label: "Cycle trop long", desc: "Le client 'refroidit' pendant l'attente" },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white border border-[#E3E5E8] flex items-center justify-center">
