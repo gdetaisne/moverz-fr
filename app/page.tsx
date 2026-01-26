@@ -30,18 +30,14 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  // Schema AggregateRating pour afficher les étoiles dans Google
-  const serviceSchema = {
+  // Schema Organization + AggregateRating pour afficher les étoiles dans Google
+  const organizationSchema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Moverz - Comparateur de Déménagement",
-    "description": "Comparateur de devis de déménageurs contrôlés. Service gratuit, sans démarchage, 3 devis minimum comparables.",
+    "@type": "Organization",
+    "name": "Moverz",
     "url": "https://moverz.fr",
-    "provider": {
-      "@type": "Organization",
-      "name": "Moverz",
-      "url": "https://moverz.fr"
-    },
+    "logo": "https://moverz.fr/logo.png",
+    "description": "Comparateur de devis de déménageurs contrôlés. Service gratuit, sans démarchage, 3 devis minimum comparables.",
     "areaServed": {
       "@type": "Country",
       "name": "France"
@@ -52,12 +48,6 @@ export default function Home() {
       "reviewCount": "2847",
       "bestRating": "5",
       "worstRating": "1"
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "EUR",
-      "description": "Service gratuit de comparaison de devis de déménagement"
     }
   };
 
@@ -114,10 +104,10 @@ export default function Home() {
   return (
     <>
       <main className="bg-white">
-        {/* Schema Service + AggregateRating pour étoiles Google */}
+        {/* Schema Organization + AggregateRating pour étoiles Google */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
         
         {/* Schema FAQ pour rich snippets */}
