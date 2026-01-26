@@ -10,6 +10,7 @@ import QuickFAQ from "@/components/QuickFAQ";
 import StickyCTA from "@/components/StickyCTA";
 import FinalCTA from "@/components/FinalCTA";
 import WhyMoverz from "@/components/WhyMoverz";
+import { HowToChoose } from "@/components/home/HowToChoose";
 
 export const metadata: Metadata = {
   title: "Déménagement France dès 450€ | 3+ Devis 48h | Contrôlés",
@@ -140,7 +141,10 @@ export default function Home() {
       {/* 5. Social proof - Notes + Témoignages + Chiffres */}
       <RealStories />
 
-      {/* 6. FAQ + CTA final */}
+      {/* 6. Comment choisir un bon déménageur (featured snippet) */}
+      <HowToChoose />
+
+      {/* 7. FAQ + CTA final */}
       <QuickFAQ />
       <FinalCTA />
 

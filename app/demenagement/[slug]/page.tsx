@@ -12,6 +12,7 @@ import { CityLocalInsights } from "@/components/city/CityLocalInsights";
 // import { CityLongFormGuide } from "@/components/city/CityLongFormGuide"; // Temporarily disabled - causes build timeout
 import { CityStats } from "@/components/city/CityStats";
 import { CityPricing } from "@/components/city/CityPricing";
+import { CityPricingTable } from "@/components/city/CityPricingTable";
 import { CityFinalCTA } from "@/components/city/CityFinalCTA";
 import { FAQ } from "@/components/FAQ";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -229,6 +230,9 @@ export default function CityMovingPage({ params }: PageProps) {
       </div>
       {/* Hero */}
       <CityHero city={city} quoteUrl={quoteUrl} />
+
+      {/* Tableau prix optimisé featured snippet */}
+      <CityPricingTable cityName={city.nameCapitalized} />
 
       {/* Stats locales */}
       <CityStats cityName={city.nameCapitalized} />
