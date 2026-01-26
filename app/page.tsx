@@ -12,18 +12,18 @@ import FinalCTA from "@/components/FinalCTA";
 import WhyMoverz from "@/components/WhyMoverz";
 
 export const metadata: Metadata = {
-  title: "3 Devis Déménagement Gratuits · 0 Appel · Pros Vérifiés | Moverz",
+  title: "Déménagement France dès 450€ | 3+ Devis 48h | Contrôlés",
   description:
-    "Note 4.9/5 ⭐ · 3 devis comparables garantis (IA calcule volume précis) · Pros vérifiés (assurances + 0 litige) · Dossier anonyme · 0 appel commercial · Réponse sous 7 jours · 100% gratuit → Comparez en 3 min",
+    "450€ minimum. Recevez 3+ devis comparables en 48h. IA calcule volume = 0 écart prix jour J. Dossier anonyme, 0 harcèlement. 1200+ déménagements ⭐4.9/5. Gratuit.",
   alternates: {
     canonical: 'https://moverz.fr/',
   },
   openGraph: {
-    title: "3 Devis Déménagement Gratuits · 0 Appel · Pros Vérifiés",
-    description: "Note 4.9/5 ⭐ · 3 devis comparables garantis (IA calcule volume précis) · Pros vérifiés (assurances + 0 litige) · Dossier anonyme · 0 appel commercial · Réponse sous 7 jours · 100% gratuit → Comparez en 3 min",
+    title: "Déménagement France dès 450€ | 3+ Devis 48h | Contrôlés",
+    description: "450€ minimum. Recevez 3+ devis comparables en 48h. IA calcule volume = 0 écart prix jour J. Dossier anonyme, 0 harcèlement. 1200+ déménagements ⭐4.9/5. Gratuit.",
     url: 'https://moverz.fr/',
     siteName: 'Moverz',
-    images: [{ url: '/logo.png', width: 1200, height: 630, alt: 'Moverz - Comparateur de déménagement anti-arnaque · Note 4.9/5' }],
+    images: [{ url: '/logo.png', width: 1200, height: 630, alt: 'Moverz - Déménagement dès 450€ · 3+ devis comparables 48h · Note 4.9/5' }],
     type: 'website',
   },
 };

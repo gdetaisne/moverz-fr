@@ -20,10 +20,10 @@ const inter = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://moverz.fr'),
   title: {
-    default: "3 Devis Déménagement Gratuits · 0 Appel · Pros Vérifiés | Moverz",
+    default: "Déménagement France dès 450€ | 3+ Devis 48h | Contrôlés",
     template: "%s | Moverz"
   },
-  description: "Note 4.9/5 ⭐ · 3 devis comparables garantis (IA calcule volume précis) · Pros vérifiés (assurances + 0 litige) · Dossier anonyme · 0 appel commercial · Réponse sous 7 jours · 100% gratuit → Comparez en 3 min",
+  description: "450€ minimum. Recevez 3+ devis comparables en 48h. IA calcule volume = 0 écart prix jour J. Dossier anonyme, 0 harcèlement. 1200+ déménagements ⭐4.9/5. Gratuit.",
   keywords: [
     "devis déménagement gratuit",
     "comparateur déménageurs fiable",
@@ -55,14 +55,14 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "https://moverz.fr/",
     siteName: "Moverz",
-    title: "3 Devis Déménagement Gratuits · 0 Appel · Pros Vérifiés",
-    description: "Note 4.9/5 ⭐ · 3 devis comparables garantis (IA calcule volume précis) · Pros vérifiés (assurances + 0 litige) · Dossier anonyme · 0 appel commercial · Réponse sous 7 jours · 100% gratuit → Comparez en 3 min",
+    title: "Déménagement France dès 450€ | 3+ Devis 48h | Contrôlés",
+    description: "450€ minimum. Recevez 3+ devis comparables en 48h. IA calcule volume = 0 écart prix jour J. Dossier anonyme, 0 harcèlement. 1200+ déménagements ⭐4.9/5. Gratuit.",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Moverz - Comparateur de déménagement anti-arnaque · Note 4.9/5",
+        alt: "Moverz - Déménagement dès 450€ · 3+ devis comparables 48h · Note 4.9/5",
         type: "image/png",
       },
     ],
@@ -71,8 +71,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@moverz",
     creator: "@moverz",
-    title: "3 Devis Déménagement Gratuits · 0 Appel · Pros Vérifiés",
-    description: "Note 4.9/5 ⭐ · 3 devis comparables garantis · Pros vérifiés · 0 appel commercial · Gratuit → Comparez en 3 min",
+    title: "Déménagement France dès 450€ | 3+ Devis 48h | Contrôlés",
+    description: "450€ minimum. 3+ devis comparables en 48h. IA = 0 écart prix. Anonyme, 0 harcèlement. 1200+ déménagements ⭐4.9/5. Gratuit.",
     images: ["/logo.png"],
   },
   robots: {
