@@ -60,6 +60,54 @@ export default function Home() {
     }
   };
 
+  // FAQ Schema pour rich snippets Google
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Combien coûte un déménagement avec Moverz ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dès 450€ minimum. Recevez 3+ devis comparables en 48h pour comparer les prix. L'IA calcule votre volume précis pour éviter tout écart prix le jour J."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Combien de devis vais-je recevoir ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "3+ devis minimum de déménageurs contrôlés et assurés. Tous les devis sont comparables car basés sur le même volume calculé par IA."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "En combien de temps je reçois les devis ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "48 heures maximum. Dossier anonyme, aucun harcèlement téléphonique."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "C'est vraiment gratuit ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, 100% gratuit. Aucun frais caché. Les déménageurs nous rémunèrent uniquement s'ils décrochent votre déménagement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment l'IA calcule-t-elle le volume ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Vous prenez des photos de vos pièces. L'IA analyse et calcule le volume en m³ avec 90-95% de précision. Cela garantit des devis comparables et évite les écarts de prix le jour J."
+        }
+      }
+    ]
+  };
+
   // short FAQ retirée de la home pour alléger la page (FAQ complète sur /faq)
 
   return (
@@ -69,6 +117,12 @@ export default function Home() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        />
+        
+        {/* Schema FAQ pour rich snippets */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
         
         {/* 1. Hero - Promesse + CTA + Preuves */}
