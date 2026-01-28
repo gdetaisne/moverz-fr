@@ -13,18 +13,18 @@ import WhyMoverz from "@/components/WhyMoverz";
 import { HowToChoose } from "@/components/home/HowToChoose";
 
 export const metadata: Metadata = {
-  title: "Déménagement France dès 450€ | 3+ Devis 48h | Contrôlés",
+  title: "Déménagement 450€ | Devis 5j | Contrôlés · 0 Spam",
   description:
-    "450€ minimum. Recevez 3+ devis comparables en 48h. IA calcule volume = 0 écart prix jour J. Dossier anonyme, 0 harcèlement. 1200+ déménagements ⭐4.9/5. Gratuit.",
+    "450€ minimum. 3+ devis comparables sous 5 jours. Déménageurs contrôlés & assurés. 0 harcèlement, dossier anonyme. IA = 0 écart prix. 1200+ déménagements ⭐4.9/5. Gratuit.",
   alternates: {
     canonical: 'https://moverz.fr/',
   },
   openGraph: {
-    title: "Déménagement France dès 450€ | 3+ Devis 48h | Contrôlés",
-    description: "450€ minimum. Recevez 3+ devis comparables en 48h. IA calcule volume = 0 écart prix jour J. Dossier anonyme, 0 harcèlement. 1200+ déménagements ⭐4.9/5. Gratuit.",
+    title: "Déménagement 450€ | Devis 5j | Contrôlés · 0 Spam",
+    description: "450€ minimum. 3+ devis comparables sous 5 jours. Déménageurs contrôlés & assurés. 0 harcèlement, dossier anonyme. IA = 0 écart prix. 1200+ déménagements ⭐4.9/5. Gratuit.",
     url: 'https://moverz.fr/',
     siteName: 'Moverz',
-    images: [{ url: '/logo.png', width: 1200, height: 630, alt: 'Moverz - Déménagement dès 450€ · 3+ devis comparables 48h · Note 4.9/5' }],
+    images: [{ url: '/logo.png', width: 1200, height: 630, alt: 'Moverz - Déménagement 450€ · Devis 5j · Contrôlés · 0 Spam · Note 4.9/5' }],
     type: 'website',
   },
 };
@@ -61,7 +61,7 @@ export default function Home() {
         "name": "Combien coûte un déménagement avec Moverz ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Dès 450€ minimum. Recevez 3+ devis comparables en 48h pour comparer les prix. L'IA calcule votre volume précis pour éviter tout écart prix le jour J."
+          "text": "Dès 450€ minimum. Recevez 3+ devis comparables sous 5 jours pour comparer les prix. L'IA calcule votre volume précis pour éviter tout écart prix le jour J."
         }
       },
       {

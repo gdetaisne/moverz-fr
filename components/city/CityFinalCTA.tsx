@@ -44,7 +44,7 @@ export function CityFinalCTA({ cityName, quoteUrl }: CityFinalCTAProps) {
             {/* Trust points */}
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                { icon: Clock, label: "Devis en 48h max", color: "text-[#6BCFCF]" },
+                { icon: Clock, label: "Devis sous 5 jours", color: "text-[#6BCFCF]" },
                 { icon: Shield, label: "Déménageurs vérifiés", color: "text-[#6BCFCF]" },
                 { icon: TrendingUp, label: "Note 4.8/5", color: "text-[#6BCFCF]" },
                 { icon: CheckCircle2, label: "2847 clients satisfaits", color: "text-[#6BCFCF]" },

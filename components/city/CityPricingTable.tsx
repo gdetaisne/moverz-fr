@@ -134,7 +134,7 @@ export function CityPricingTable({ cityName }: CityPricingTableProps) {
               </li>
             </ul>
             <p className="pt-2">
-              💡 <strong>Astuce</strong> : Recevez 3+ devis comparables en 48h. Même volume IA = vous comparez 
+              💡 <strong>Astuce</strong> : Recevez 3+ devis comparables sous 5 jours. Même volume IA = vous comparez 
               vraiment pommes avec pommes, pas de bluff.
             </p>
           </div>

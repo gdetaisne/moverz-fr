@@ -20,10 +20,10 @@ const inter = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://moverz.fr'),
   title: {
-    default: "Déménagement France dès 450€ | 3+ Devis 48h | Contrôlés",
-    template: "%s | Moverz"
+    default: "Déménagement 450€ | Devis 5j | Contrôlés · 0 Spam",
+    template: "%s"
   },
-  description: "450€ minimum. Recevez 3+ devis comparables en 48h. IA calcule volume = 0 écart prix jour J. Dossier anonyme, 0 harcèlement. 1200+ déménagements ⭐4.9/5. Gratuit.",
+  description: "450€ minimum. 3+ devis comparables sous 5 jours. Déménageurs contrôlés & assurés. 0 harcèlement, dossier anonyme. IA = 0 écart prix. 1200+ déménagements ⭐4.9/5. Gratuit.",
   keywords: [
     "devis déménagement gratuit",
     "comparateur déménageurs fiable",
@@ -55,14 +55,14 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "https://moverz.fr/",
     siteName: "Moverz",
-    title: "Déménagement France dès 450€ | 3+ Devis 48h | Contrôlés",
-    description: "450€ minimum. Recevez 3+ devis comparables en 48h. IA calcule volume = 0 écart prix jour J. Dossier anonyme, 0 harcèlement. 1200+ déménagements ⭐4.9/5. Gratuit.",
+    title: "Déménagement 450€ | Devis 5j | Contrôlés · 0 Spam",
+    description: "450€ minimum. 3+ devis comparables sous 5 jours. Déménageurs contrôlés & assurés. 0 harcèlement, dossier anonyme. IA = 0 écart prix. 1200+ déménagements ⭐4.9/5. Gratuit.",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Moverz - Déménagement dès 450€ · 3+ devis comparables 48h · Note 4.9/5",
+        alt: "Moverz - Déménagement 450€ · Devis 5j · Contrôlés · 0 Spam · Note 4.9/5",
         type: "image/png",
       },
     ],
@@ -71,8 +71,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@moverz",
     creator: "@moverz",
-    title: "Déménagement France dès 450€ | 3+ Devis 48h | Contrôlés",
-    description: "450€ minimum. 3+ devis comparables en 48h. IA = 0 écart prix. Anonyme, 0 harcèlement. 1200+ déménagements ⭐4.9/5. Gratuit.",
+    title: "Déménagement 450€ | Devis 5j | Contrôlés · 0 Spam",
+    description: "450€ minimum. 3+ devis comparables sous 5 jours. Déménageurs contrôlés & assurés. 0 harcèlement, dossier anonyme. IA = 0 écart prix. 1200+ déménagements ⭐4.9/5. Gratuit.",
     images: ["/logo.png"],
   },
   robots: {

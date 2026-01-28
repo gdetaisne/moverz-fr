@@ -6,7 +6,7 @@ export default function RealStories() {
       name: "Sophie L.",
       city: "Lyon",
       outcome: "800€ économisés",
-      quote: "J'ai reçu 4 devis en 48h. Le moins cher était 800€ moins cher que ce que j'allais payer.",
+      quote: "J'ai reçu 4 devis en quelques jours. Le moins cher était 800€ moins cher que ce que j'allais payer.",
       initials: "SL",
       rating: 5,
     },

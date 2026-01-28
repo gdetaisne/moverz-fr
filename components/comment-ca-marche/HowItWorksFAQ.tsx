@@ -22,7 +22,7 @@ export default function HowItWorksFAQ() {
     {
       question: "Et si je ne reçois pas 3 devis ?",
       answer:
-        "Notre objectif est de vous obtenir au moins 3 devis rapidement (souvent sous 48h, selon disponibilité locale). Si les retours sont insuffisants, nous vous recontactons pour proposer des alternatives (élargir le réseau, ajuster dates/contraintes, etc.).",
+        "Notre objectif est de vous obtenir au moins 3 devis rapidement (sous 5 jours, selon disponibilité locale). Si les retours sont insuffisants, nous vous recontactons pour proposer des alternatives (élargir le réseau, ajuster dates/contraintes, etc.).",
     },
     {
       question: "Puis-je annuler ?",

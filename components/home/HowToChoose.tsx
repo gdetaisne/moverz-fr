@@ -97,7 +97,7 @@ export function HowToChoose() {
               <p className="text-xs text-[#6B7280] max-w-2xl mx-auto">
                 Tous les déménageurs du réseau Moverz sont contrôlés : assurance vérifiée, 
                 Creditsafe validé, avis authentiques, volume calculé par IA (même base pour tous). 
-                Vous recevez 3+ devis vraiment comparables en 48h.
+                Vous recevez 3+ devis vraiment comparables sous 5 jours.
               </p>
             </div>
           </div>

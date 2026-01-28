@@ -168,7 +168,7 @@ export default function WhatYouReceive() {
                 </li>
               </ul>
               <div className="mt-4 rounded-xl bg-[#A8E8E8]/20 border border-[#6BCFCF]/25 px-4 py-3 text-xs font-semibold text-[#0F172A]">
-                Objectif : <span className="font-bold">au moins 3 devis</span> rapidement (souvent sous 48h, selon disponibilité).
+                Objectif : <span className="font-bold">au moins 3 devis</span> rapidement (sous 5 jours, selon disponibilité).
               </div>
             </div>
 

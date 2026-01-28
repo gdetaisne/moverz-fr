@@ -106,7 +106,7 @@ export function CityStats({ cityName }: CityStatsProps) {
                   <Clock className="w-6 h-6 text-[#0F172A]" strokeWidth={2.5} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#0F172A] mb-1">48h</h3>
+                  <h3 className="font-bold text-[#0F172A] mb-1">5 jours</h3>
                   <p className="text-[#1E293B]/70 text-sm">
                     Temps moyen de réponse pour recevoir vos devis
                   </p>
