@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import PartenairesHero from "@/components/partenaires/PartenairesHero";
+import PartenairesDemo from "@/components/partenaires/PartenairesDemo";
 import PartenairesHowItWorks from "@/components/partenaires/PartenairesHowItWorks";
 import PartenairesWhyYou from "@/components/partenaires/PartenairesWhyYou";
 import PartenairesExpectations from "@/components/partenaires/PartenairesExpectations";
@@ -53,6 +54,7 @@ export default function PartenairesPage() {
     <main className="min-h-screen bg-white">
       <FAQSchema faqs={FAQ_DATA} />
       <PartenairesHero />
+      <PartenairesDemo />
       <PartenairesHowItWorks />
       <PartenairesWhyYou />
       <PartenairesExpectations />
