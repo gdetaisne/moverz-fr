@@ -86,7 +86,7 @@ export default function PartenairesHero() {
                 href="#demo"
                 className="group inline-flex items-center gap-2 rounded-xl bg-[#6BCFCF] px-8 py-4 text-base font-semibold text-[#0F172A] shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
               >
-                <span>Voir la démo</span>
+                <span>Voir la démo (1 min)</span>
                 <span className="text-lg leading-none group-hover:translate-x-1 transition-transform">→</span>
               </a>
               
