@@ -1,0 +1,75 @@
+"use client";
+import { motion } from "framer-motion";
+import { Star, TrendingUp, MessageCircle, Shield } from "lucide-react";
+
+export default function PartenairesWhyYou() {
+  const criteria = [
+    {
+      icon: Star,
+      title: "Réputation en ligne et retours clients",
+      description: "Vos avis et notes comptent"
+    },
+    {
+      icon: TrendingUp,
+      title: "Fiabilité opérationnelle",
+      description: "Ponctualité, respect des engagements"
+    },
+    {
+      icon: MessageCircle,
+      title: "Sérieux perçu",
+      description: "Qualité de devis, clarté, communication"
+    },
+    {
+      icon: Shield,
+      title: "Capacité à gérer un dossier proprement",
+      description: "Assurance, équipe, matériel"
+    }
+  ];
+
+  return (
+    <section className="relative py-20 md:py-32 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[#0F172A]">
+            Pourquoi vous recevez ce dossier
+          </h2>
+          <p className="text-lg text-[#6B7280] max-w-3xl mx-auto">
+            Chez Moverz, ce n'est pas un <span className="font-semibold text-[#0F172A]">« lead au hasard »</span>.
+            <br />
+            Vous avez été retenu parce que vous cochez des critères concrets :
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          {criteria.map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-br from-[#F9FAFB] to-white border border-[#E3E5E8] hover:border-[#6BCFCF]/30 transition-colors"
+            >
+              <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[#6BCFCF]/10">
+                <item.icon className="w-6 h-6 text-[#6BCFCF]" />
+              </div>
+              <div>
+                <h3 className="font-bold text-[#0F172A] mb-1">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-[#6B7280]">
+                  {item.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

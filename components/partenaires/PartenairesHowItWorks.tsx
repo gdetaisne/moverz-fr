@@ -1,0 +1,89 @@
+"use client";
+import { motion } from "framer-motion";
+import { Award, FileText, Send, BarChart3 } from "lucide-react";
+
+export default function PartenairesHowItWorks() {
+  const steps = [
+    {
+      step: "1",
+      icon: Award,
+      title: "Sélection des entreprises",
+      description: "Vous recevez des dossiers Moverz parce que vous avez été sélectionné pour votre sérieux (réputation, fiabilité, retours clients, solidité perçue)."
+    },
+    {
+      step: "2",
+      icon: FileText,
+      title: "Envoi d'un dossier client cadré",
+      description: "Un client confie à Moverz la mission de collecter 3 à 5 devis comparables. Le client ne démarche pas plusieurs entreprises : c'est Moverz qui centralise."
+    },
+    {
+      step: "3",
+      icon: Send,
+      title: "Votre devis",
+      description: "Vous étudiez le dossier, puis vous envoyez un devis conforme à la demande. Si besoin, vous ajoutez des réserves (accès, stationnement, portage, étages, fragiles, etc.) et/ou vous demandez des précisions."
+    },
+    {
+      step: "4",
+      icon: BarChart3,
+      title: "Comparaison côté client",
+      description: "Le client reçoit une synthèse claire des devis (comparables et lisibles), enrichie par des éléments de confiance (réputation en ligne, signaux de sérieux, etc.)."
+    }
+  ];
+
+  return (
+    <section className="relative py-20 md:py-32 bg-gradient-to-b from-white to-[#F9FAFB] overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-2 text-sm font-medium text-[#0F172A] mb-6">
+            <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
+            Process simple
+          </div>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[#0F172A]">
+            Comment ça marche (en 4 étapes)
+          </h2>
+        </motion.div>
+
+        {/* Timeline */}
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+            {/* Ligne de connexion (desktop) */}
+            <div className="absolute top-12 left-0 right-0 h-0.5 bg-[#E3E5E8] hidden lg:block" />
+            <div className="absolute top-12 left-0 w-3/4 h-0.5 bg-gradient-to-r from-[#6BCFCF] to-[#6BCFCF]/30 hidden lg:block" />
+            
+            {steps.map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="relative"
+              >
+                <div className="flex flex-col items-center text-center">
+                  <div className="relative flex items-center justify-center w-24 h-24 rounded-2xl bg-white border-2 border-[#E3E5E8] shadow-sm mb-4 z-10">
+                    <div className="absolute -top-2 -right-2 flex items-center justify-center w-6 h-6 rounded-full bg-[#6BCFCF] text-white text-xs font-bold">
+                      {item.step}
+                    </div>
+                    <item.icon className="w-10 h-10 text-[#6BCFCF]" />
+                  </div>
+                  
+                  <h3 className="text-base font-bold text-[#0F172A] mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-[#6B7280] leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
