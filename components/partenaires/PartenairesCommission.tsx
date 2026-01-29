@@ -53,7 +53,7 @@ export default function PartenairesCommission() {
           <div className="p-6 rounded-xl bg-white border border-[#6BCFCF]/30">
             <h3 className="font-bold text-[#0F172A] mb-2">Modèle (à personnaliser)</h3>
             <p className="text-[#6B7280]">
-              Commission : <span className="font-semibold text-[#0F172A]">[X% HT]</span> ou <span className="font-semibold text-[#0F172A]">[forfait]</span> sur les dossiers payants
+              Commission : <span className="font-semibold text-[#0F172A]">10% HT</span> ou <span className="font-semibold text-[#0F172A]">[forfait]</span> sur les dossiers payants
             </p>
           </div>
         </motion.div>
