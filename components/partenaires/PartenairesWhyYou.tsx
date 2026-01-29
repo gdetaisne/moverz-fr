@@ -69,6 +69,23 @@ export default function PartenairesWhyYou() {
             </motion.div>
           ))}
         </div>
+
+        {/* Lien vers vérifications partenaires */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+          className="mt-12 text-center"
+        >
+          <a
+            href="/verifications-partenaires"
+            className="inline-flex items-center gap-2 text-[#0F172A] hover:text-[#6BCFCF] transition-colors font-medium"
+          >
+            <span>En savoir plus sur nos critères de vérification des partenaires</span>
+            <span className="text-lg">→</span>
+          </a>
+        </motion.div>
       </div>
     </section>
   );

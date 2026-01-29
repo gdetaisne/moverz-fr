@@ -160,19 +160,35 @@ export default function VerificationsPartenairesPage() {
 
       {/* CTA discret */}
       <section className="section section-light pt-0">
-        <div className="container max-w-4xl">
+        <div className="container max-w-4xl space-y-6">
           <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div className="space-y-1">
-              <p className="text-sm font-semibold text-[#0F172A]">Envie d’une base d’estimation plus claire ?</p>
+              <p className="text-sm font-semibold text-[#0F172A]">Envie d'une base d'estimation plus claire ?</p>
               <p className="text-sm text-[#6B7280]">
                 Une visite, une visio ou des photos détaillées réduisent les ambiguïtés sur le volume et les accès.
               </p>
             </div>
             <a
               href="/comment-ca-marche/"
-              className="inline-flex items-center justify-center rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#1E293B] transition-colors"
+              className="inline-flex items-center justify-center rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#1E293B] transition-colors whitespace-nowrap"
             >
               Comprendre la méthode →
+            </a>
+          </div>
+
+          {/* CTA Devenir partenaire */}
+          <div className="rounded-2xl border border-[#6BCFCF]/30 bg-gradient-to-br from-[#6BCFCF]/5 to-white p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div className="space-y-1">
+              <p className="text-sm font-semibold text-[#0F172A]">Vous êtes déménageur ?</p>
+              <p className="text-sm text-[#6B7280]">
+                Rejoignez notre réseau et recevez des dossiers qualifiés avec photos, inventaire IA et infos client vérifiées.
+              </p>
+            </div>
+            <a
+              href="/partenaires/"
+              className="inline-flex items-center justify-center rounded-full bg-[#6BCFCF] px-6 py-3 text-sm font-semibold text-[#0F172A] shadow-sm hover:bg-[#2B7A78] hover:text-white transition-all whitespace-nowrap"
+            >
+              Devenir partenaire →
             </a>
           </div>
         </div>

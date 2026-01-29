@@ -251,7 +251,7 @@ export default function RootLayout({
         {/* Footer */}
         <footer className="bg-[#0F172A] border-t border-white/10 text-white">
           <div className="mx-auto max-w-7xl px-4 md:px-8 py-12 md:py-16">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
               {/* Colonne 1 : Marque */}
               <div className="space-y-4">
                 <a href="/" className="flex items-center gap-3" title="Moverz - Comparateur de déménagement">
@@ -278,14 +278,23 @@ export default function RootLayout({
                   <li><a href="/blog/eviter-arnaques-demenagement/" className="text-white/70 hover:text-white transition-colors">Éviter les arnaques</a></li>
                   <li><a href="/blog/" className="text-white/70 hover:text-white transition-colors">Blog déménagement</a></li>
                   <li><a href="/villes/" className="text-white/70 hover:text-white transition-colors">Nos villes</a></li>
-                  <li><a href="/pro/" className="text-white/70 hover:text-white transition-colors">Offre Pro</a></li>
                   <li><a href="/faq/" className="text-white/70 hover:text-white transition-colors">FAQ</a></li>
                   <li><a href="/contact/" className="text-white/70 hover:text-white transition-colors">Contact</a></li>
                   <li><a href="/a-propos/" className="text-white/70 hover:text-white transition-colors">À propos</a></li>
                 </ul>
               </div>
 
-              {/* Colonne 3 : Nos villes */}
+              {/* Colonne 3 : Professionnels */}
+              <div>
+                <h3 className="font-semibold mb-4 text-white">Professionnels</h3>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="/partenaires/" className="text-[#6BCFCF] hover:text-white transition-colors font-medium">Devenir partenaire</a></li>
+                  <li><a href="/pro/" className="text-white/70 hover:text-white transition-colors">Moverz Pro (SaaS)</a></li>
+                  <li><a href="/verifications-partenaires/" className="text-white/70 hover:text-white transition-colors">Nos critères de vérification</a></li>
+                </ul>
+              </div>
+
+              {/* Colonne 4 : Nos villes */}
               <div>
                 <h3 className="font-semibold mb-4 text-white">Nos villes</h3>
                 <ul className="space-y-2 text-sm">
@@ -297,7 +306,7 @@ export default function RootLayout({
                 </ul>
               </div>
 
-              {/* Colonne 4 : Légal */}
+              {/* Colonne 5 : Légal */}
               <div>
                 <h3 className="font-semibold mb-4 text-white">Informations légales</h3>
                 <ul className="space-y-2 text-sm">
