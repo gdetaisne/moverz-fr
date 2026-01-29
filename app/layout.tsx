@@ -20,10 +20,10 @@ const inter = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://moverz.fr'),
   title: {
-    default: "Déménagement 450€ | Devis 5j | Contrôlés · 0 Spam",
+    default: "Comparateur Déménagement | Devis 5j | Contrôlés · Gratuit",
     template: "%s"
   },
-  description: "450€ minimum. 3+ devis comparables sous 5 jours. Déménageurs contrôlés & assurés. 0 harcèlement, dossier anonyme. IA = 0 écart prix. 1200+ déménagements ⭐4.9/5. Gratuit.",
+  description: "3+ devis comparables sous 5 jours. Déménageurs contrôlés & assurés. 0 harcèlement, dossier anonyme. IA calcule volume = 0 écart prix. 1200+ déménagements ⭐4.9/5. Service gratuit.",
   keywords: [
     "devis déménagement gratuit",
     "comparateur déménageurs fiable",
@@ -55,14 +55,14 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "https://moverz.fr/",
     siteName: "Moverz",
-    title: "Déménagement 450€ | Devis 5j | Contrôlés · 0 Spam",
-    description: "450€ minimum. 3+ devis comparables sous 5 jours. Déménageurs contrôlés & assurés. 0 harcèlement, dossier anonyme. IA = 0 écart prix. 1200+ déménagements ⭐4.9/5. Gratuit.",
+    title: "Comparateur Déménagement | Devis 5j | Contrôlés · Gratuit",
+    description: "3+ devis comparables sous 5 jours. Déménageurs contrôlés & assurés. 0 harcèlement, dossier anonyme. IA calcule volume = 0 écart prix. 1200+ déménagements ⭐4.9/5. Service gratuit.",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Moverz - Déménagement 450€ · Devis 5j · Contrôlés · 0 Spam · Note 4.9/5",
+        alt: "Moverz - Comparateur Déménagement · Devis 5j · Contrôlés · Gratuit · Note 4.9/5",
         type: "image/png",
       },
     ],
@@ -71,8 +71,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@moverz",
     creator: "@moverz",
-    title: "Déménagement 450€ | Devis 5j | Contrôlés · 0 Spam",
-    description: "450€ minimum. 3+ devis comparables sous 5 jours. Déménageurs contrôlés & assurés. 0 harcèlement, dossier anonyme. IA = 0 écart prix. 1200+ déménagements ⭐4.9/5. Gratuit.",
+    title: "Comparateur Déménagement | Devis 5j | Contrôlés · Gratuit",
+    description: "3+ devis comparables sous 5 jours. Déménageurs contrôlés & assurés. 0 harcèlement, dossier anonyme. IA calcule volume = 0 écart prix. 1200+ déménagements ⭐4.9/5. Service gratuit.",
     images: ["/logo.png"],
   },
   robots: {

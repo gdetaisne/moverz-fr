@@ -11,20 +11,21 @@ import StickyCTA from "@/components/StickyCTA";
 import FinalCTA from "@/components/FinalCTA";
 import WhyMoverz from "@/components/WhyMoverz";
 import { HowToChoose } from "@/components/home/HowToChoose";
+import ProBanner from "@/components/home/ProBanner";
 
 export const metadata: Metadata = {
-  title: "Déménagement 450€ | Devis 5j | Contrôlés · 0 Spam",
+  title: "Comparateur Déménagement | Devis 5j | Contrôlés · Gratuit",
   description:
-    "450€ minimum. 3+ devis comparables sous 5 jours. Déménageurs contrôlés & assurés. 0 harcèlement, dossier anonyme. IA = 0 écart prix. 1200+ déménagements ⭐4.9/5. Gratuit.",
+    "3+ devis comparables sous 5 jours. Déménageurs contrôlés & assurés. 0 harcèlement, dossier anonyme. IA calcule volume = 0 écart prix. 1200+ déménagements ⭐4.9/5. Service gratuit.",
   alternates: {
     canonical: 'https://moverz.fr/',
   },
   openGraph: {
-    title: "Déménagement 450€ | Devis 5j | Contrôlés · 0 Spam",
-    description: "450€ minimum. 3+ devis comparables sous 5 jours. Déménageurs contrôlés & assurés. 0 harcèlement, dossier anonyme. IA = 0 écart prix. 1200+ déménagements ⭐4.9/5. Gratuit.",
+    title: "Comparateur Déménagement | Devis 5j | Contrôlés · Gratuit",
+    description: "3+ devis comparables sous 5 jours. Déménageurs contrôlés & assurés. 0 harcèlement, dossier anonyme. IA calcule volume = 0 écart prix. 1200+ déménagements ⭐4.9/5. Service gratuit.",
     url: 'https://moverz.fr/',
     siteName: 'Moverz',
-    images: [{ url: '/logo.png', width: 1200, height: 630, alt: 'Moverz - Déménagement 450€ · Devis 5j · Contrôlés · 0 Spam · Note 4.9/5' }],
+    images: [{ url: '/logo.png', width: 1200, height: 630, alt: 'Moverz - Comparateur Déménagement · Devis 5j · Contrôlés · Gratuit · Note 4.9/5' }],
     type: 'website',
   },
 };
@@ -134,8 +135,13 @@ export default function Home() {
       {/* 6. Comment choisir un bon déménageur (featured snippet) */}
       <HowToChoose />
 
-      {/* 7. FAQ + CTA final */}
+      {/* 7. FAQ */}
       <QuickFAQ />
+
+      {/* 8. Banner Pro (déménageurs) */}
+      <ProBanner />
+
+      {/* 9. CTA final */}
       <FinalCTA />
 
         {/* Sticky CTA global */}

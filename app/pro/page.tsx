@@ -1,4 +1,5 @@
 import ProHero from "@/components/pro/ProHero";
+import ProPartenairesBanner from "@/components/pro/ProPartenairesBanner";
 import ProBeforeAfter from "@/components/pro/ProBeforeAfter";
 import ProHowItWorks from "@/components/pro/ProHowItWorks";
 import ProDashboardPreview from "@/components/pro/ProDashboardPreview";
@@ -16,6 +17,7 @@ export default function ProPage() {
     <main className="min-h-screen bg-white">
       <FAQSchema faqs={[...PRO_FAQS]} />
       <ProHero />
+      <ProPartenairesBanner />
       <ProBeforeAfter />
       <ProHowItWorks />
       <ProDashboardPreview />
