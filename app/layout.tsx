@@ -290,7 +290,8 @@ export default function RootLayout({
                 <ul className="space-y-2 text-sm">
                   <li><a href="/partenaires/" className="text-[#6BCFCF] hover:text-white transition-colors font-medium">Devenir partenaire</a></li>
                   <li><a href="/pro/" className="text-white/70 hover:text-white transition-colors">Moverz Pro (SaaS)</a></li>
-                  <li><a href="/verifications-partenaires/" className="text-white/70 hover:text-white transition-colors">Nos critères de vérification</a></li>
+                  <li><a href="/verifications-partenaires/" className="text-white/70 hover:text-white transition-colors">Critères de sélection</a></li>
+                  <li><a href="/cgv-partenaires/" className="text-white/70 hover:text-white transition-colors">CGV Partenaires</a></li>
                 </ul>
               </div>
 
@@ -313,7 +314,7 @@ export default function RootLayout({
                   <li><a href="/mentions-legales/" className="text-white/70 hover:text-white transition-colors">Mentions légales</a></li>
                   <li><a href="/politique-confidentialite/" className="text-white/70 hover:text-white transition-colors">Confidentialité</a></li>
                   <li><a href="/cgu/" className="text-white/70 hover:text-white transition-colors">CGU</a></li>
-                  <li><a href="/cgv/" className="text-white/70 hover:text-white transition-colors">CGV</a></li>
+                  <li><a href="/cgv/" className="text-white/70 hover:text-white transition-colors">CGV Clients</a></li>
                 </ul>
                 <div className="mt-4 text-xs text-white/60 leading-relaxed space-y-0.5">
                   <p>Propriétaire du site :</p>

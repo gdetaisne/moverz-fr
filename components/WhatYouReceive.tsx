@@ -152,23 +152,27 @@ export default function WhatYouReceive() {
 
             {/* Verified movers card */}
             <div className="rounded-2xl border border-[#E3E5E8] bg-white p-5 md:p-6 shadow-sm mb-8">
-              <h3 className="text-sm font-bold text-[#0F172A] mb-3">Déménageurs vérifiés</h3>
+              <h3 className="text-sm font-bold text-[#0F172A] mb-3">Déménageurs sélectionnés</h3>
               <ul className="space-y-2 text-sm text-[#1E293B]/75">
                 <li className="flex items-start gap-2">
                   <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
-                  Licence de transport (capacité)
+                  Engagés contractuellement sur la légalité (SIRET, licences)
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
-                  Assurance responsabilité civile professionnelle valide
+                  Assurance RC Pro et marchandises maintenues à jour
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
-                  Éléments financiers vérifiés (ex : Kbis récent)
+                  Qualité de service et transparence (devis clairs, délais respectés)
                 </li>
               </ul>
-              <div className="mt-4 rounded-xl bg-[#A8E8E8]/20 border border-[#6BCFCF]/25 px-4 py-3 text-xs font-semibold text-[#0F172A]">
-                Objectif : <span className="font-bold">au moins 3 devis</span> rapidement (sous 5 jours, selon disponibilité).
+              <div className="mt-4 rounded-xl bg-[#A8E8E8]/20 border border-[#6BCFCF]/25 px-4 py-3 text-xs">
+                <span className="font-semibold text-[#0F172A]">Objectif : <span className="font-bold">au moins 3 devis</span> rapidement (sous 5 jours, selon disponibilité).</span>
+                <br />
+                <a href="/verifications-partenaires/" className="text-[#0F172A] hover:text-[#6BCFCF] font-medium underline underline-offset-2">
+                  Voir nos critères de sélection →
+                </a>
               </div>
             </div>
 
@@ -192,9 +196,9 @@ export default function WhatYouReceive() {
                   <Shield className="w-6 h-6 text-[#0F172A]" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#0F172A] mb-1">Pros vérifiés</h3>
+                  <h3 className="font-bold text-[#0F172A] mb-1">Pros sélectionnés</h3>
                   <p className="text-[#1E293B]/70 text-sm">
-                    Licence, assurance et éléments administratifs : chaque déménageur partenaire est contrôlé.
+                    Chaque déménageur s'engage contractuellement sur la légalité, l'assurance et la qualité de service.
                   </p>
                 </div>
               </div>

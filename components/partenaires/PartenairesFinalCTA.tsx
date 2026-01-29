@@ -17,7 +17,7 @@ export default function PartenairesFinalCTA() {
             Prêt à recevoir des dossiers qualifiés ?
           </h2>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a
               href="#demo"
               className="group inline-flex items-center gap-2 rounded-xl bg-[#6BCFCF] px-8 py-4 text-base font-semibold text-[#0F172A] shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
@@ -33,6 +33,13 @@ export default function PartenairesFinalCTA() {
               <span>Nous contacter</span>
             </a>
           </div>
+
+          <p className="text-sm text-white/60 mt-6">
+            En rejoignant notre réseau, vous acceptez nos{" "}
+            <a href="/cgv-partenaires/" className="text-[#6BCFCF] hover:underline font-medium">
+              Conditions Générales de Vente Partenaires
+            </a>
+          </p>
         </motion.div>
       </div>
     </section>

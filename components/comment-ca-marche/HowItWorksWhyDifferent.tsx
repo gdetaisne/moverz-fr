@@ -8,7 +8,7 @@ export default function HowItWorksWhyDifferent() {
     "Votre numéro est transmis à plusieurs sociétés",
     "Vous recevez des appels pendant des jours",
     "Devis basés sur déclaratif (risque de supplément le jour J)",
-    "Vérifications partenaires variables",
+    "Critères de sélection partenaires variables",
   ];
 
   const moverz = [
@@ -16,7 +16,7 @@ export default function HowItWorksWhyDifferent() {
     "Dossier qualifié transmis à un nombre limité de pros",
     "Vous recevez des devis écrits, comparables (pas de spam)",
     "Base commune (photos + infos) → chiffrage plus précis",
-    "Partenaires contrôlés (licence / assurance / éléments financiers)",
+    "Partenaires engagés contractuellement (légalité, assurance, qualité)",
   ];
 
   return (

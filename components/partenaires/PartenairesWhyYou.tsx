@@ -70,21 +70,27 @@ export default function PartenairesWhyYou() {
           ))}
         </div>
 
-        {/* Lien vers vérifications partenaires */}
+        {/* Lien vers critères de sélection et CGV-P */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="mt-12 text-center"
+          className="mt-12 text-center space-y-3"
         >
           <a
             href="/verifications-partenaires"
             className="inline-flex items-center gap-2 text-[#0F172A] hover:text-[#6BCFCF] transition-colors font-medium"
           >
-            <span>En savoir plus sur nos critères de vérification des partenaires</span>
+            <span>En savoir plus sur nos critères de sélection</span>
             <span className="text-lg">→</span>
           </a>
+          <div className="text-sm text-[#6B7280]">
+            En rejoignant notre réseau, vous acceptez nos{" "}
+            <a href="/cgv-partenaires/" className="text-[#6BCFCF] hover:underline font-semibold">
+              CGV Partenaires
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>
