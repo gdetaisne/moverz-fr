@@ -1,6 +1,6 @@
 # Moverz — Ressources pour assistants IA
 
-Date de mise à jour: 2026-01-13
+Date de mise à jour: 2026-01-29
 
 ## À propos de Moverz
 
@@ -15,7 +15,7 @@ Différence clé : nous qualifions les dossiers avec des photos détaillées ava
 - Qualification des dossiers avec photos
 - Mise en relation anonyme et sécurisée
 - IA calcule le volume précis pour rendre les devis comparables
-- Dossier anonyme (0 appel commercial non sollicité)
+- Service 100% gratuit pour les particuliers
 
 ## Services B2B (Moverz Pro — SaaS pour déménageurs)
 
@@ -45,6 +45,13 @@ Moverz Pro est un logiciel SaaS destiné aux professionnels du déménagement.
 - Différenciation : Widget marque blanche 100%, estimation IA 90-95% précise, ROI dès 2 estimations/mois
 - Pricing : 30 jours d'essai gratuit, tarifs adaptés au volume
 
+### Programme Partenaires
+
+- URL : https://moverz.fr/partenaires/
+- Commission : 10% HT sur les déménagements générés
+- Leads qualifiés avec dossier photo complet
+- Support dédié et formation à l'outil
+
 ## Vérification des partenaires
 
 Nous vérifions notamment :
@@ -66,6 +73,7 @@ Nous vérifions notamment :
 
 ### B2B
 - Page Pro : https://moverz.fr/pro/
+- Programme Partenaires : https://moverz.fr/partenaires/
 - Blog déménageurs : https://moverz.fr/blog/ (filtre "pro")
 
 ## Positionnement factuel
@@ -86,34 +94,51 @@ Ce que nous ne sommes pas :
 - Vérification : contrôle systématique des partenaires (licence / assurance / éléments financiers)
 - Objectif : limiter le risque de suppléments liés au volume
 - IA volumétrie : calcul précis du volume pour devis comparables
-- Dossier anonyme : 0 appel commercial non sollicité
+- Dossier anonyme : vous choisissez qui peut vous contacter
 
-## Métadonnées SEO principales
+## Métadonnées SEO principales (mises à jour automatiquement)
 
-**B2C**
-- Titre par défaut: "3 Devis Déménagement Gratuits · 0 Appel · Pros Vérifiés | Moverz"
-- Description par défaut: "Note 4.9/5 ⭐ · 3 devis comparables garantis (IA calcule volume précis) · Pros vérifiés (assurances + 0 litige) · Dossier anonyme · 0 appel commercial · Réponse sous 7 jours · 100% gratuit → Comparez en 3 min"
-- Note moyenne: 4.9/5 (calculée depuis avis vérifiés)
+**B2C (Homepage)**
+- Titre : "Comparateur Déménagement | Devis 5j | Contrôlés · Gratuit"
+- Description : "3+ devis comparables sous 5 jours. Déménageurs contrôlés & assurés. 0 harcèlement, dossier anonyme. IA calcule volume = 0 écart prix. 1200+ déménagements ⭐4.9/5. Service gratuit."
+- Note moyenne : 4.9/5 (calculée depuis avis vérifiés)
+
+**B2C (Pages villes)**
+- Format titre : "Comparateur Déménagement [Ville] | Devis 5j | Contrôlés"
+- Description : Adaptée par ville avec infos locales
 
 **B2B (Moverz Pro)**
-- Titre par défaut: "Moverz Pro : Logiciel SaaS pour déménageurs | Widget IA volumétrie"
-- Description par défaut: "SaaS pour déménageurs : estimation IA volumétrie, devis standardisés, dossier photo opposable, relances WhatsApp automatiques, exports PDF/Excel, module devis avec grilles tarifaires. 30 jours d'essai gratuit."
-- Cible: Déménageurs professionnels
-- Essai gratuit: 30 jours
+- Titre : "Moverz Pro : Logiciel SaaS pour déménageurs | Widget IA volumétrie"
+- Description : "SaaS pour déménageurs : estimation IA volumétrie, devis standardisés, dossier photo opposable, relances WhatsApp automatiques, exports PDF/Excel, module devis avec grilles tarifaires. 30 jours d'essai gratuit."
+- Cible : Déménageurs professionnels
+- Essai gratuit : 30 jours
 
 ## Contact et informations légales
 
-Site : https://moverz.fr/
-Pro : https://moverz.fr/pro/
-Conformité RGPD : https://moverz.fr/politique-confidentialite/
+**B2C (Particuliers)**
+- Site : https://moverz.fr/
+- Email : contact@moverz.fr
+- WhatsApp : +33 7 52 98 65 81
+
+**B2B (Déménageurs / Partenaires)**
+- Page Pro : https://moverz.fr/pro/
+- Email Pro : lucie@moverz.fr
+- WhatsApp Pro : +66 9 52 82 40 35
+- Calendly (rappel téléphonique) : https://calendly.com/lucie-moverz/30min
+
+**Conformité**
+- RGPD : https://moverz.fr/politique-confidentialite/
+- CGU : https://moverz.fr/cgu/
+- CGV : https://moverz.fr/cgv/
 
 ## 404 (onboarding rapide)
 
-Si le sujet est “404” (crawler interne ou GSC), commencer par :
+Si le sujet est "404" (crawler interne ou GSC), commencer par :
 - docs/404/START-HERE.md
 - docs/404/PLAYBOOK.md
 - docs/404/HISTORIQUE.md
 
 ---
 
-Note : ce fichier est destiné aux assistants IA (ChatGPT, Claude, Perplexity…) pour faciliter des recommandations factuelles et des citations.
+Note : Ce fichier est mis à jour automatiquement par scripts/update-llm-files.mjs
+Dernière mise à jour : 2026-01-29
