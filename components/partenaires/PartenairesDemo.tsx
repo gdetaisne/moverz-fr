@@ -2,9 +2,8 @@
 import { motion } from "framer-motion";
 
 export default function PartenairesDemo() {
-  // TODO: Remplacer par l'ID de votre vidéo Vimeo
-  // Format: https://vimeo.com/123456789 → VIDEO_ID = 123456789
-  const VIMEO_VIDEO_ID = "VOTRE_VIDEO_ID";
+  // ID de la vidéo démo Moverz Partenaires
+  const VIMEO_VIDEO_ID = "1159132225";
 
   return (
     <section id="demo" className="relative py-20 md:py-32 bg-white">
