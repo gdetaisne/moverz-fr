@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 
 export default function PartenairesDemo() {
   // ID de la vidéo démo Moverz Partenaires
-  const VIMEO_VIDEO_ID = "1159132225";
+  const VIMEO_VIDEO_ID = "1159478255";
+  const VIMEO_HASH = "e9d01e99d4";
 
   return (
     <section id="demo" className="relative py-20 md:py-32 bg-white">
@@ -36,10 +37,11 @@ export default function PartenairesDemo() {
           {/* 16:9 Aspect Ratio Container */}
           <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
             <iframe
-              src={`https://player.vimeo.com/video/${VIMEO_VIDEO_ID}?h=0&title=0&byline=0&portrait=0`}
+              src={`https://player.vimeo.com/video/${VIMEO_VIDEO_ID}?h=${VIMEO_HASH}&title=0&byline=0&portrait=0`}
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
               frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
               title="Démo Moverz Partenaires"
             />
