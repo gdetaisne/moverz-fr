@@ -33,16 +33,18 @@ export default function BlogFloatingCTA() {
 
   useEffect(() => {
     const compute = () => {
-      const denom = document.body.scrollHeight - window.innerHeight;
-      const scrolled = denom > 0 ? window.scrollY / denom : 0;
+      const maxScrollPx = Math.max(1, document.body.scrollHeight - window.innerHeight);
+      const y = Math.max(0, window.scrollY);
 
-      // Align with FloatingWhatsApp hiding threshold (0.4) to avoid overlap.
-      const isVisible = scrolled > 0.4;
+      // Show once the user has passed the initial "line de flottaison" (≈ first viewport).
+      // This is much more stable than using a % of total page height.
+      const startPx = Math.round(window.innerHeight * 0.95);
+      const isVisible = y > startPx;
       setVisible(isVisible);
 
       // Progress bar: show only the "reading" portion after the CTA appears.
-      const start = 0.4;
-      const p = scrolled <= start ? 0 : Math.min(1, (scrolled - start) / (1 - start));
+      const denom = Math.max(1, maxScrollPx - startPx);
+      const p = !isVisible ? 0 : Math.min(1, (y - startPx) / denom);
       setScrollProgress(p);
 
       // Micro parallax / lift (1–2px max) for a premium feel without being distracting.
