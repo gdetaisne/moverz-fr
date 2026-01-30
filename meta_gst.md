@@ -266,11 +266,15 @@ Construire un **Knowledge Graph cohérent** (Organization/WebSite/WebPage + type
 On définit des templates stables (Title + Description) par grandes familles d’URL.
 
 - **Guideline copy (anti-fausse promesse, CTR + lead_click)** *(décidé)*
+  - **SLA (vérités à respecter)**:
+    - **Support Moverz**: réponse email sous 24h.
+    - **Partenaires**: recommandation d’envoyer les devis sous 48h (non garanti côté client).
+    - **Client**: **engagement** d’envoi de devis comparables sous **5 à 7 jours**.
   - **Home + pages money** (description):
-    - `Recevez 5+ devis comparés. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.`
+    - `Recevez 5+ devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.`
   - **Pages villes** (description):
-    - `Recevez 5+ devis comparés pour votre projet depuis [VILLE]. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.`
-  - **Règle**: on évite les promesses invérifiables/variables (`48h`, `5 jours`, etc.) dans les metas.
+    - `Recevez 5+ devis comparés sous 5 à 7 jours pour votre projet depuis [VILLE]. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.`
+  - **Règle**: on évite les promesses “temps réel” non garanties (ex: `48h` pour les devis) dans les metas. `5–7 jours` est OK car c’est un engagement Moverz.
 
 - **Home (`/`)** (transactionnel marque)
   - **Title**: promesse principale + preuve + marque

@@ -17,8 +17,8 @@ function cityHint(citySlug: string, cityName: string): string {
 
 export function getCityPageMetadata(city: CityInfo): Metadata {
   const path = `demenagement/${city.slug}`;
-  const title = `Comparateur Déménagement ${city.nameCapitalized} | Devis 5j | Contrôlés`;
-  const description = `Recevez 5+ devis comparés pour votre projet depuis ${city.nameCapitalized}. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.`;
+  const title = `Comparateur Déménagement ${city.nameCapitalized} | Devis 5–7j | Contrôlés`;
+  const description = `Recevez 5+ devis comparés sous 5 à 7 jours pour votre projet depuis ${city.nameCapitalized}. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.`;
   return getFullMetadata(path, title, description);
 }
 
@@ -27,7 +27,7 @@ export function getCityServiceMetadata(args: { city: CityInfo; service: ServiceS
   const def = SERVICE_DEFINITIONS[service];
   const path = `demenagement/${city.slug}/${service}`;
   const title = def.title(city.nameCapitalized);
-  const description = `Recevez 5+ devis comparés pour votre projet depuis ${city.nameCapitalized}. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.`;
+  const description = `Recevez 5+ devis comparés sous 5 à 7 jours pour votre projet depuis ${city.nameCapitalized}. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.`;
   return getFullMetadata(path, title, description);
 }
 

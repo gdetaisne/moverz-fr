@@ -57,7 +57,7 @@ function extractMetadataFromLayout() {
   
   // Extraire le title par défaut
   const titleMatch = content.match(/default:\s*"([^"]+)"/);
-  const title = titleMatch ? titleMatch[1] : 'Comparateur Déménagement | Devis 5j | Contrôlés · Gratuit';
+  const title = titleMatch ? titleMatch[1] : 'Comparateur Déménagement | Devis 5–7j | Contrôlés · Gratuit';
   
   // Extraire la description
   const descMatch = content.match(/description:\s*"([^"]+)"/);
@@ -75,7 +75,7 @@ function extractCityMetadata() {
   
   // Extraire le template de title pour les villes
   const titleMatch = content.match(/const title = `([^`]+)`/);
-  const titleTemplate = titleMatch ? titleMatch[1] : 'Comparateur Déménagement ${city.nameCapitalized} | Devis 5j | Contrôlés';
+  const titleTemplate = titleMatch ? titleMatch[1] : 'Comparateur Déménagement ${city.nameCapitalized} | Devis 5–7j | Contrôlés';
   
   return { 
     titleTemplate: titleTemplate.replace(/\$\{city\.nameCapitalized\}/g, '[Ville]'),

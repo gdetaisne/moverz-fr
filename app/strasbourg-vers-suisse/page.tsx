@@ -38,7 +38,7 @@ export default function Page() {
       faq={[
         {
           question: "Quels sont les délais pour un déménagement Strasbourg → Suisse ?",
-          answer: "Nos partenaires déménageurs peuvent généralement intervenir sous 7 jours. Pour les déménagements urgents, certains peuvent se libérer en 48h selon la période."
+          answer: "Nos partenaires déménageurs peuvent généralement intervenir sous 7 jours. Pour les demandes urgentes, certaines disponibilités peuvent être plus proches selon la période (le plus fiable est de comparer les disponibilités sur dossier complet)."
         },
         {
           question: "Quels sont les tarifs pour Strasbourg → Suisse ?",

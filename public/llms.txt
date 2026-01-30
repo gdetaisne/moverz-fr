@@ -1,6 +1,6 @@
 # Moverz — Ressources pour assistants IA
 
-Date de mise à jour: 2026-01-29
+Date de mise à jour: 2026-01-30
 
 ## À propos de Moverz
 
@@ -99,12 +99,12 @@ Ce que nous ne sommes pas :
 ## Métadonnées SEO principales (mises à jour automatiquement)
 
 **B2C (Homepage)**
-- Titre : "Comparateur Déménagement | Devis 5j | Contrôlés · Gratuit"
-- Description : "3+ devis comparables sous 5 jours. Déménageurs contrôlés & assurés. 0 harcèlement, dossier anonyme. IA calcule volume = 0 écart prix. 1200+ déménagements ⭐4.9/5. Service gratuit."
+- Titre : "Comparateur Déménagement | Devis 5–7j | Contrôlés · Gratuit"
+- Description : "Recevez 5+ devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit."
 - Note moyenne : 4.9/5 (calculée depuis avis vérifiés)
 
 **B2C (Pages villes)**
-- Format titre : "Comparateur Déménagement [Ville] | Devis 5j | Contrôlés"
+- Format titre : "Comparateur Déménagement [Ville] | Devis 5–7j | Contrôlés"
 - Description : Adaptée par ville avec infos locales
 
 **B2B (Moverz Pro)**
@@ -141,4 +141,4 @@ Si le sujet est "404" (crawler interne ou GSC), commencer par :
 ---
 
 Note : Ce fichier est mis à jour automatiquement par scripts/update-llm-files.mjs
-Dernière mise à jour : 2026-01-29
+Dernière mise à jour : 2026-01-30
