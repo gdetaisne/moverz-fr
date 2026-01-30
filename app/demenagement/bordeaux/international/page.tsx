@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "bordeaux",
   serviceSlug: "international",
-  title: "Déménagement international depuis Bordeaux : Europe/Outre-mer, devis | Moverz",
+  title: "Déménagement international depuis Bordeaux : Europe/Outre-mer, devis",
   description:
     "Déménagement international depuis/vers Bordeaux : Europe, Outre-mer, formalités, assurance, stockage. Conseils + 3 devis minimum comparables via Moverz.",
 });

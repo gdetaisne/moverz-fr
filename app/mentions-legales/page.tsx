@@ -3,7 +3,7 @@ import { getCanonicalUrl } from "@/lib/canonical-helper";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Mentions légales | Moverz",
+  title: "Mentions légales",
   description:
     "Mentions légales de Moverz, marque exploitée par GSLV EURL : éditeur, hébergeur, responsabilité, propriété intellectuelle et données personnelles.",
   alternates: {

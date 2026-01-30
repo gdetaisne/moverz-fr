@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "toulouse",
   serviceSlug: "entreprise",
-  title: "Déménagement d’entreprise à Toulouse : transfert bureaux, devis | Moverz",
+  title: "Déménagement d’entreprise à Toulouse : transfert bureaux, devis",
   description:
     "Déménagement d’entreprise à Toulouse : transfert de bureaux, informatique, archives. Méthode, minimisation d’arrêt, assurance + 3 devis minimum comparables via Moverz.",
 });

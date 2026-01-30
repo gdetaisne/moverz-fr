@@ -5,7 +5,7 @@ import { CITIES, getCitiesByRegion } from "@/lib/cities";
 
 export const metadata: Metadata = getHubMetadata({
   path: "villes",
-  title: "Déménagement partout en France | Moverz — 3 devis minimum comparables",
+  title: "Déménagement partout en France — 3 devis minimum comparables",
   description:
     "Annuaire des villes couvertes par Moverz. Trouvez votre guide local et comparez 3 devis minimum en 3 min (IA fiabilise le volume, sans démarchage).",
 });

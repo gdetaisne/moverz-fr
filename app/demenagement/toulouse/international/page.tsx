@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "toulouse",
   serviceSlug: "international",
-  title: "Déménagement international depuis Toulouse : démarches, devis | Moverz",
+  title: "Déménagement international depuis Toulouse : démarches, devis",
   description:
     "Déménagement international depuis/vers Toulouse : transport (route, maritime, aérien), douane, assurance, stockage. Conseils + 3 devis minimum via Moverz.",
 });

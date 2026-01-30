@@ -20,7 +20,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
   const pageNum = Number(params.page);
   if (!Number.isFinite(pageNum) || pageNum < 1) return {};
 
-  const title = pageNum === 1 ? "Villes (annuaire) | Moverz" : `Villes (annuaire) — page ${pageNum} | Moverz`;
+  const title = pageNum === 1 ? "Villes (annuaire)" : `Villes (annuaire) — page ${pageNum}`;
   const description =
     "Annuaire des villes couvertes par Moverz. Accédez aux guides locaux et comparez 3 devis minimum en 3 min (IA fiabilise le volume, sans démarchage).";
 

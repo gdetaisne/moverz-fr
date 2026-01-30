@@ -20,7 +20,7 @@ export function generateHubQuartiersMetadata(
   cityName: string
 ): Metadata {
   const path = `quartiers-${citySlug}`;
-  const title = `Quartiers & communes — Déménagement à ${cityName} | Moverz`;
+  const title = `Quartiers & communes — Déménagement à ${cityName}`;
   const description = `Trouvez votre page quartier/commune pour estimer votre déménagement à ${cityName}. Déménageurs locaux contrôlés · 0€ · Sans démarchage`;
 
   return getFullMetadata(path, title, description);

@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "strasbourg",
   serviceSlug: "piano",
-  title: "Déménagement piano Strasbourg : transport sécurisé, devis | Moverz",
+  title: "Déménagement piano Strasbourg : transport sécurisé, devis",
   description:
     "Déménagement piano à Strasbourg : piano droit ou à queue, accès, protections, assurance. Conseils + 3 devis minimum de pros pour un transport sécurisé.",
 });

@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "montpellier",
   serviceSlug: "petit-demenagement",
-  title: "Petit déménagement à Montpellier : transport petit volume & devis | Moverz",
+  title: "Petit déménagement à Montpellier : transport petit volume & devis",
   description:
     "Petit déménagement à Montpellier (petit volume) : options, fourchettes de prix, accès, timing. Comparez 3 devis minimum pros pour transporter quelques meubles/cartons.",
 });

@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "strasbourg",
   serviceSlug: "international",
-  title: "Déménagement international depuis Strasbourg : Europe/Allemagne, devis | Moverz",
+  title: "Déménagement international depuis Strasbourg : Europe/Allemagne, devis",
   description:
     "Déménagement international depuis/vers Strasbourg : Europe, Allemagne, formalités, assurance, stockage. Conseils + 3 devis minimum comparables via Moverz.",
 });

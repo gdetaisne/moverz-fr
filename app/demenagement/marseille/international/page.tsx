@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "marseille",
   serviceSlug: "international",
-  title: "Déménagement international depuis Marseille : démarches, devis | Moverz",
+  title: "Déménagement international depuis Marseille : démarches, devis",
   description:
     "Déménagement international depuis/vers Marseille : transport (route, maritime, aérien), douane, assurance, stockage. Conseils + 3 devis minimum via Moverz.",
 });

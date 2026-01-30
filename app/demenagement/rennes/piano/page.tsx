@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "rennes",
   serviceSlug: "piano",
-  title: "Déménagement piano Rennes : transport sécurisé, devis | Moverz",
+  title: "Déménagement piano Rennes : transport sécurisé, devis",
   description:
     "Déménagement piano à Rennes : piano droit ou à queue, accès, protections, assurance. Conseils + 3 devis minimum de pros pour un transport sécurisé.",
 });

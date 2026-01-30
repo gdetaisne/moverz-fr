@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "rouen",
   serviceSlug: "pas-cher",
-  title: "Déménagement pas cher à Rouen : astuces + devis comparables | Moverz",
+  title: "Déménagement pas cher à Rouen : astuces + devis comparables",
   description:
     "Déménagement pas cher à Rouen : leviers concrets (dates, volume, formule) + 3 devis minimum comparables et sans spam. Payez moins sans sacrifier la fiabilité.",
 });

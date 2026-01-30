@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "marseille",
   serviceSlug: "entreprise",
-  title: "Déménagement d’entreprise à Marseille : transfert bureaux, devis | Moverz",
+  title: "Déménagement d’entreprise à Marseille : transfert bureaux, devis",
   description:
     "Déménagement d’entreprise à Marseille : transfert de bureaux, informatique, archives. Méthode, minimisation d’arrêt, assurance + 3 devis minimum comparables via Moverz.",
 });

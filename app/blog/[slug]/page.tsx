@@ -39,8 +39,8 @@ export function generateMetadata({ params }: PageProps): Metadata {
   const path = `blog/${post.slug}`;
   const title =
     post.category === "pro"
-      ? `${post.title} | Blog déménageurs (Moverz Pro)`
-      : `${post.title} | Blog déménagement Moverz`;
+      ? `${post.title} | Blog déménageurs`
+      : `${post.title} | Blog déménagement`;
   const description = post.description;
 
   return getFullMetadata(path, title, description);

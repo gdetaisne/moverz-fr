@@ -27,8 +27,9 @@ export function generateMetadata({ params }: PageProps): Metadata {
     return {};
   }
 
+  const year = new Date().getFullYear();
   const path = `${from.slug}-vers-${to.slug}`;
-  const title = `Déménagement ${from.nameCapitalized} → ${to.nameCapitalized} : Devis & Prix 2025 | Moverz`;
+  const title = `Déménagement ${from.nameCapitalized} → ${to.nameCapitalized} : Devis & Prix ${year}`;
   const description = `Déménagement ${from.nameCapitalized} vers ${to.nameCapitalized} : devis gratuits, prix indicatifs, conseils d'experts. Déménageurs contrôlés · 0€ · Sans démarchage`;
 
   return getFullMetadata(path, title, description);

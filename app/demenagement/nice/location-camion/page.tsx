@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "nice",
   serviceSlug: "location-camion",
-  title: "Location camion déménagement Nice : volumes, prix & conseils | Moverz",
+  title: "Location camion déménagement Nice : volumes, prix & conseils",
   description:
     "Location camion déménagement à Nice : quel volume choisir, prix, conditions (permis, caution), conseils stationnement + alternative : comparer 3 devis minimum pros.",
 });

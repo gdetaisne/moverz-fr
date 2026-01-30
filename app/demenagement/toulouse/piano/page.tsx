@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "toulouse",
   serviceSlug: "piano",
-  title: "Déménagement piano Toulouse : transport sécurisé, devis | Moverz",
+  title: "Déménagement piano Toulouse : transport sécurisé, devis",
   description:
     "Déménagement piano à Toulouse : piano droit ou à queue, accès, protections, assurance. Conseils + 3 devis minimum de pros pour un transport sécurisé.",
 });

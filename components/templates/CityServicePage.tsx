@@ -35,7 +35,10 @@ export function generateCityServiceMetadata(args: {
   description: string;
 }): Metadata {
   const path = `demenagement/${args.citySlug}/${args.serviceSlug}`;
-  return getFullMetadata(path, args.title, args.description);
+  // Global title.template already appends "| Moverz" (see `app/layout.tsx`).
+  // To avoid "… | Moverz | Moverz", we normalize any legacy titles that still include the suffix.
+  const normalizedTitle = args.title.replace(/\s*\|\s*Moverz\s*$/i, "").trim();
+  return getFullMetadata(path, normalizedTitle, args.description);
 }
 
 export function CityServicePage({

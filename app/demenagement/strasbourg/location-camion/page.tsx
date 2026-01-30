@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "strasbourg",
   serviceSlug: "location-camion",
-  title: "Location camion déménagement Strasbourg : volumes, prix & conseils | Moverz",
+  title: "Location camion déménagement Strasbourg : volumes, prix & conseils",
   description:
     "Location camion déménagement à Strasbourg : quel volume choisir, prix, conditions (permis, caution), conseils centre-ville/tram + alternative : comparer 3 devis minimum pros.",
 });

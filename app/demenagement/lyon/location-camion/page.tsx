@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "lyon",
   serviceSlug: "location-camion",
-  title: "Location camion déménagement Lyon : volumes, prix & conseils | Moverz",
+  title: "Location camion déménagement Lyon : volumes, prix & conseils",
   description:
     "Location camion déménagement à Lyon : quel volume choisir, prix, conditions (permis, caution), conseils stationnement + alternative : comparer 3 devis minimum pros.",
 });

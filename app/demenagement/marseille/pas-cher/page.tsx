@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "marseille",
   serviceSlug: "pas-cher",
-  title: "Déménagement pas cher à Marseille : astuces + devis comparables | Moverz",
+  title: "Déménagement pas cher à Marseille : astuces + devis comparables",
   description:
     "Déménagement pas cher à Marseille : leviers concrets (dates, volume, formule) + 3 devis minimum comparables et sans spam. Payez moins sans sacrifier la fiabilité.",
 });

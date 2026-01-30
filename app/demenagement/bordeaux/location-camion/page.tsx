@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "bordeaux",
   serviceSlug: "location-camion",
-  title: "Location camion déménagement Bordeaux : volumes, prix & conseils | Moverz",
+  title: "Location camion déménagement Bordeaux : volumes, prix & conseils",
   description:
     "Location camion déménagement à Bordeaux : quel volume choisir, prix, conditions (permis, caution), conseils centre-ville/quais + alternative : comparer 3 devis minimum pros.",
 });

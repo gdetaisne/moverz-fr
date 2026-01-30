@@ -3,7 +3,7 @@ import { getCanonicalUrl } from "@/lib/canonical-helper";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Politique de confidentialité | Moverz",
+  title: "Politique de confidentialité",
   description:
     "Politique de confidentialité de Moverz : collecte, utilisation, protection de vos données personnelles et vos droits RGPD.",
   alternates: {

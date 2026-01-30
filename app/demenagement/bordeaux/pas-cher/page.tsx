@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "bordeaux",
   serviceSlug: "pas-cher",
-  title: "Déménagement pas cher à Bordeaux : astuces + devis comparables | Moverz",
+  title: "Déménagement pas cher à Bordeaux : astuces + devis comparables",
   description:
     "Déménagement pas cher à Bordeaux : leviers concrets (dates, volume, formule) + 3 devis minimum comparables et sans spam. Payez moins sans sacrifier la fiabilité.",
 });

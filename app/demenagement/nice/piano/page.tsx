@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "nice",
   serviceSlug: "piano",
-  title: "Déménagement piano Nice : transport sécurisé, devis | Moverz",
+  title: "Déménagement piano Nice : transport sécurisé, devis",
   description:
     "Déménagement piano à Nice : piano droit ou à queue, accès, protections, assurance. Conseils + 3 devis minimum de pros pour un transport sécurisé.",
 });

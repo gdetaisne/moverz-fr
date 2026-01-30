@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "lyon",
   serviceSlug: "international",
-  title: "Déménagement international depuis Lyon : Suisse/Italie, devis | Moverz",
+  title: "Déménagement international depuis Lyon : Suisse/Italie, devis",
   description:
     "Déménagement international depuis/vers Lyon : Europe (Suisse, Italie…), formalités, assurance, stockage. Conseils + 3 devis minimum comparables via Moverz.",
 });

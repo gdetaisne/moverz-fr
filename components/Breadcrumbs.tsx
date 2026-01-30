@@ -1,3 +1,5 @@
+import { env } from "@/lib/env";
+
 interface BreadcrumbItem {
   label: string;
   href: string;
@@ -8,6 +10,7 @@ interface BreadcrumbsProps {
 }
 
 export default function Breadcrumbs({ items }: BreadcrumbsProps) {
+  const baseUrl = env.SITE_URL.replace(/\/$/, "");
   // Générer le schema BreadcrumbList pour Google Rich Snippets
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -16,7 +19,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
       "@type": "ListItem",
       "position": index + 1,
       "name": item.label,
-      "item": `https://moverz.fr${item.href}`
+      "item": `${baseUrl}${item.href.startsWith("/") ? item.href : `/${item.href}`}`
     }))
   };
 

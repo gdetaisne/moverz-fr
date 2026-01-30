@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://moverz.fr'),
   title: {
     default: "Comparateur Déménagement | Devis 5j | Contrôlés · Gratuit",
-    template: "%s"
+    template: "%s | Moverz"
   },
-  description: "3+ devis comparables sous 5 jours. Déménageurs contrôlés & assurés. 0 harcèlement, dossier anonyme. IA calcule volume = 0 écart prix. 1200+ déménagements ⭐4.9/5. Service gratuit.",
+  description: "Recevez 5+ devis comparés. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.",
   keywords: [
     "devis déménagement gratuit",
     "comparateur déménageurs fiable",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     url: "https://moverz.fr/",
     siteName: "Moverz",
     title: "Comparateur Déménagement | Devis 5j | Contrôlés · Gratuit",
-    description: "3+ devis comparables sous 5 jours. Déménageurs contrôlés & assurés. 0 harcèlement, dossier anonyme. IA calcule volume = 0 écart prix. 1200+ déménagements ⭐4.9/5. Service gratuit.",
+    description: "Recevez 5+ devis comparés. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.",
     images: [
       {
         url: "/logo.png",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     site: "@moverz",
     creator: "@moverz",
     title: "Comparateur Déménagement | Devis 5j | Contrôlés · Gratuit",
-    description: "3+ devis comparables sous 5 jours. Déménageurs contrôlés & assurés. 0 harcèlement, dossier anonyme. IA calcule volume = 0 écart prix. 1200+ déménagements ⭐4.9/5. Service gratuit.",
+    description: "Recevez 5+ devis comparés. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.",
     images: ["/logo.png"],
   },
   robots: {

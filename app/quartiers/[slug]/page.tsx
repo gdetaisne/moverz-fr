@@ -23,7 +23,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
   }
 
   const path = `quartiers-${city.slug}`;
-  const title = `Quartiers de ${city.nameCapitalized} : Guide Complet Déménagement | Moverz`;
+  const title = `Quartiers de ${city.nameCapitalized} : Guide Complet Déménagement`;
   const description = `Guide complet des quartiers et arrondissements de ${city.nameCapitalized} pour votre déménagement. Spécificités, accès, parkings, déménageurs locaux adaptés à chaque zone.`;
 
   return getFullMetadata(path, title, description);

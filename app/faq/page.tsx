@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/schema/JsonLd";
 
 export const metadata: Metadata = getFullMetadata(
   'faq',
-  "FAQ Déménagement : Tarifs, Arnaques, Assurances [Réponses 2025] | Moverz",
+  "FAQ Déménagement : Tarifs, Arnaques, Assurances [Réponses 2025]",
   "Toutes vos questions sur le déménagement : Combien ça coûte ? Comment éviter les arnaques ? Les pros sont-ils assurés ? C'est vraiment gratuit ? → Réponses claires"
 );
 

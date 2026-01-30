@@ -40,9 +40,10 @@ export function generateCorridorMetadata(
   destination: string,
   destinationSlug?: string
 ): Metadata {
+  const year = new Date().getFullYear();
   const destSlug = destinationSlug ?? slugify(destination);
   const path = `${originCitySlug}-vers-${destSlug}`;
-  const title = `Déménagement ${originCityName} → ${destination} : Devis & Prix 2025 | Moverz`;
+  const title = `Déménagement ${originCityName} → ${destination} : Devis & Prix ${year}`;
   const description = `Déménagement ${originCityName} vers ${destination} : devis gratuits, prix indicatifs, conseils d'experts. Déménageurs contrôlés · 0€ · Sans démarchage`;
 
   return getFullMetadata(path, title, description);

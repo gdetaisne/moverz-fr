@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "nantes",
   serviceSlug: "piano",
-  title: "Déménagement piano Nantes : transport sécurisé, devis | Moverz",
+  title: "Déménagement piano Nantes : transport sécurisé, devis",
   description:
     "Déménagement piano à Nantes : piano droit ou à queue, accès, protections, assurance. Conseils + 3 devis minimum de pros pour un transport sécurisé.",
 });

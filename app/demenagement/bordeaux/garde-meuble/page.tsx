@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "bordeaux",
   serviceSlug: "garde-meuble",
-  title: "Garde-meuble à Bordeaux : box, stockage, tarifs & devis | Moverz",
+  title: "Garde-meuble à Bordeaux : box, stockage, tarifs & devis",
   description:
     "Garde-meuble à Bordeaux : comparer box/self-stockage et solutions avec déménageur. Tailles, sécurité, assurance, conseils + 3 devis minimum via Moverz.",
 });

@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "rouen",
   serviceSlug: "aide-demenagement",
-  title: "Aide au déménagement à Rouen : main d’œuvre, matériel, devis | Moverz",
+  title: "Aide au déménagement à Rouen : main d’œuvre, matériel, devis",
   description:
     "Aide au déménagement à Rouen : porteurs, manutention, monte-meuble, matériel. Conseils + 3 devis minimum comparables pour une aide à la carte, sans spam.",
 });

@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "nantes",
   serviceSlug: "petit-demenagement",
-  title: "Petit déménagement à Nantes : transport petit volume & devis | Moverz",
+  title: "Petit déménagement à Nantes : transport petit volume & devis",
   description:
     "Petit déménagement à Nantes (petit volume) : options, fourchettes de prix, accès, timing. Comparez 3 devis minimum pros pour transporter quelques meubles/cartons.",
 });

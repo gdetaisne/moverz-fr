@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "bordeaux",
   serviceSlug: "piano",
-  title: "Déménagement piano Bordeaux : transport sécurisé, devis | Moverz",
+  title: "Déménagement piano Bordeaux : transport sécurisé, devis",
   description:
     "Déménagement piano à Bordeaux : piano droit ou à queue, accès, protections, assurance. Conseils + 3 devis minimum de pros pour un transport sécurisé.",
 });

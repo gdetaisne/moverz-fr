@@ -183,40 +183,8 @@ export default function CityMovingPage({ params }: PageProps) {
     },
   ];
 
-  // Schema Breadcrumb pour rich snippets
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Accueil",
-        "item": "https://moverz.fr/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Villes",
-        "item": "https://moverz.fr/villes/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": `Déménagement ${city.nameCapitalized}`,
-        "item": `https://moverz.fr/demenagement/${city.slug}/`
-      }
-    ]
-  };
-
   return (
     <main className="bg-white">
-      {/* Schema Breadcrumb */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      
       <div className="bg-[#0F172A]">
         <div className="container max-w-4xl pt-6">
           <Breadcrumbs

@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "nantes",
   serviceSlug: "international",
-  title: "Déménagement international depuis Nantes : Europe/monde, devis | Moverz",
+  title: "Déménagement international depuis Nantes : Europe/monde, devis",
   description:
     "Déménagement international depuis/vers Nantes : modes de transport, formalités, assurance, stockage. Conseils + 3 devis minimum comparables via Moverz.",
 });

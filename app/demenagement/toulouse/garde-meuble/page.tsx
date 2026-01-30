@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "toulouse",
   serviceSlug: "garde-meuble",
-  title: "Garde-meuble à Toulouse : box, stockage, tarifs & devis | Moverz",
+  title: "Garde-meuble à Toulouse : box, stockage, tarifs & devis",
   description:
     "Garde-meuble à Toulouse : comparer box/self-stockage et solutions avec déménageur. Tarifs, tailles, sécurité, conseils + 3 devis minimum gratuits via Moverz.",
 });

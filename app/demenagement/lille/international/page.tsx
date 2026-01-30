@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "lille",
   serviceSlug: "international",
-  title: "Déménagement international depuis Lille : Belgique/UK/Europe, devis | Moverz",
+  title: "Déménagement international depuis Lille : Belgique/UK/Europe, devis",
   description:
     "Déménagement international depuis/vers Lille : Europe (Belgique, UK…), formalités, assurance, stockage. Conseils + 3 devis minimum comparables via Moverz.",
 });

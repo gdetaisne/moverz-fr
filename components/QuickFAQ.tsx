@@ -2,28 +2,12 @@
 import { useState } from "react";
 import Chip from "@/components/ui/Chip";
 import Button from "@/components/ui/Button";
+import { HOME_FAQS } from "@/components/home/homeFaqs";
 
 export default function QuickFAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const faqs = [
-    {
-      q: "C'est vraiment gratuit ?",
-      a: "Oui, 100% gratuit pour vous. Nous sommes rémunérés par les déménageurs seulement si vous en choisissez un. Aucun frais caché, aucun engagement.",
-    },
-    {
-      q: "Je vais recevoir des appels de spam ?",
-      a: "Non. Votre dossier reste anonyme. Les déménageurs vous envoient leurs devis par email via notre plateforme. Vous choisissez qui contacter.",
-    },
-    {
-      q: "L'IA est vraiment précise ?",
-      a: "Oui. L'IA analyse vos photos et estime le volume avec une grande précision. Si besoin, les déménageurs peuvent affiner lors de la visite technique.",
-    },
-    {
-      q: "Et si je n'aime aucun devis ?",
-      a: "Aucun problème, vous n'êtes pas obligé d'en choisir un. Le service est sans engagement. Vous pouvez aussi nous contacter pour voir d'autres options.",
-    },
-  ];
+  const faqs = HOME_FAQS;
 
   return (
     <section className="section section-contrast">
@@ -53,7 +37,7 @@ export default function QuickFAQ() {
                 className="w-full flex items-center justify-between p-6 text-left group"
               >
                 <span className="font-semibold text-base md:text-lg pr-4">
-                  {faq.q}
+                  {faq.question}
                 </span>
                 <span
                   className={`flex-shrink-0 text-xl transition-transform duration-300 ${
@@ -69,7 +53,7 @@ export default function QuickFAQ() {
                 }`}
               >
                 <div className="px-6 pb-6 text-sm md:text-base text-white/70 leading-relaxed">
-                  {faq.a}
+                  {faq.answer}
                 </div>
               </div>
             </div>

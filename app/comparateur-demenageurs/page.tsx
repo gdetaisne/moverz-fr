@@ -7,7 +7,7 @@ import WidgetActionSection from "@/components/WidgetActionSection";
 export const metadata: Metadata = baseGenerateMetadata(
   "comparateur-demenageurs",
   "Comparateur de Déménageurs : Moverz vs Autres Solutions | Guide 2025",
-  "Tableau comparatif détaillé : Moverz vs comparateurs classiques vs déménageurs directs. Prix, spam, fiabilité, temps... Choisissez la meilleure solution pour votre déménagement."
+  "Recevez 5+ devis comparés. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit."
 );
 
 export default function ComparateurDemenageursPage() {

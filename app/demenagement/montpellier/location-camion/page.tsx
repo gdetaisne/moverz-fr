@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "montpellier",
   serviceSlug: "location-camion",
-  title: "Location camion déménagement Montpellier : volumes, prix & conseils | Moverz",
+  title: "Location camion déménagement Montpellier : volumes, prix & conseils",
   description:
     "Location camion déménagement à Montpellier : quel volume choisir, prix, conditions (permis, caution), conseils stationnement + alternative : comparer 3 devis minimum pros.",
 });

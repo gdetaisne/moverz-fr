@@ -3,7 +3,7 @@ import { getCanonicalUrl } from "@/lib/canonical-helper";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Conditions Générales d'Utilisation (CGU) | Moverz",
+  title: "Conditions Générales d'Utilisation (CGU)",
   description:
     "Conditions Générales d'Utilisation de Moverz : règles d'accès et d'utilisation de notre plateforme de comparaison de devis de déménagement.",
   alternates: {

@@ -4,7 +4,7 @@ import Image from "next/image";
 import ConfirmEmailClient from "./ConfirmEmailClient";
 
 export const metadata: Metadata = {
-  title: "Confirmation d’email | Moverz",
+  title: "Confirmation d’email",
   robots: {
     index: false,
     follow: false,

@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "rennes",
   serviceSlug: "location-camion",
-  title: "Location camion déménagement Rennes : volumes, prix & conseils | Moverz",
+  title: "Location camion déménagement Rennes : volumes, prix & conseils",
   description:
     "Location camion déménagement à Rennes : quel volume choisir, prix, conditions (permis, caution), conseils stationnement + alternative : comparer 3 devis minimum pros.",
 });

@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "rennes",
   serviceSlug: "international",
-  title: "Déménagement international depuis Rennes : Europe/monde, devis | Moverz",
+  title: "Déménagement international depuis Rennes : Europe/monde, devis",
   description:
     "Déménagement international depuis/vers Rennes : modes de transport, formalités, assurance, stockage. Conseils + 3 devis minimum comparables via Moverz.",
 });

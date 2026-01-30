@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "marseille",
   serviceSlug: "garde-meuble",
-  title: "Garde-meuble à Marseille : box, stockage, tarifs & devis | Moverz",
+  title: "Garde-meuble à Marseille : box, stockage, tarifs & devis",
   description:
     "Garde-meuble à Marseille : comparer box/self-stockage et solutions avec déménageur. Tarifs, tailles, sécurité, conseils + 3 devis minimum gratuits via Moverz.",
 });

@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "nice",
   serviceSlug: "garde-meuble",
-  title: "Garde-meuble à Nice : box, stockage, tarifs & devis | Moverz",
+  title: "Garde-meuble à Nice : box, stockage, tarifs & devis",
   description:
     "Garde-meuble à Nice : comparer box/self-stockage et solutions avec déménageur. Tailles, sécurité, assurance, conseils + 3 devis minimum via Moverz.",
 });

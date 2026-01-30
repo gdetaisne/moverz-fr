@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "nice",
   serviceSlug: "pas-cher",
-  title: "Déménagement pas cher à Nice : astuces + devis comparables | Moverz",
+  title: "Déménagement pas cher à Nice : astuces + devis comparables",
   description:
     "Déménagement pas cher à Nice : leviers concrets (dates, volume, accès/monte-meuble) + 3 devis minimum comparables et sans spam. Payez moins sans sacrifier la fiabilité.",
 });

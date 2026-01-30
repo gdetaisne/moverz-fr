@@ -12,17 +12,19 @@ import FinalCTA from "@/components/FinalCTA";
 import WhyMoverz from "@/components/WhyMoverz";
 import { HowToChoose } from "@/components/home/HowToChoose";
 import ProBanner from "@/components/home/ProBanner";
+import { FAQSchema } from "@/components/schema/FAQSchema";
+import { HOME_FAQS } from "@/components/home/homeFaqs";
 
 export const metadata: Metadata = {
   title: "Comparateur Déménagement | Devis 5j | Contrôlés · Gratuit",
   description:
-    "3+ devis comparables sous 5 jours. Déménageurs contrôlés & assurés. 0 harcèlement, dossier anonyme. IA calcule volume = 0 écart prix. 1200+ déménagements ⭐4.9/5. Service gratuit.",
+    "Recevez 5+ devis comparés. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.",
   alternates: {
     canonical: 'https://moverz.fr/',
   },
   openGraph: {
     title: "Comparateur Déménagement | Devis 5j | Contrôlés · Gratuit",
-    description: "3+ devis comparables sous 5 jours. Déménageurs contrôlés & assurés. 0 harcèlement, dossier anonyme. IA calcule volume = 0 écart prix. 1200+ déménagements ⭐4.9/5. Service gratuit.",
+    description: "Recevez 5+ devis comparés. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.",
     url: 'https://moverz.fr/',
     siteName: 'Moverz',
     images: [{ url: '/logo.png', width: 1200, height: 630, alt: 'Moverz - Comparateur Déménagement · Devis 5j · Contrôlés · Gratuit · Note 4.9/5' }],
@@ -31,91 +33,13 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  // Schema Organization + AggregateRating pour afficher les étoiles dans Google
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Moverz",
-    "url": "https://moverz.fr",
-    "logo": "https://moverz.fr/logo.png",
-    "description": "Comparateur de devis de déménageurs contrôlés. Service gratuit, sans démarchage, 3 devis minimum comparables.",
-    "areaServed": {
-      "@type": "Country",
-      "name": "France"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "2847",
-      "bestRating": "5",
-      "worstRating": "1"
-    }
-  };
-
-  // FAQ Schema pour rich snippets Google
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Combien coûte un déménagement avec Moverz ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Dès 450€ minimum. Recevez 3+ devis comparables sous 5 jours pour comparer les prix. L'IA calcule votre volume précis pour éviter tout écart prix le jour J."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Combien de devis vais-je recevoir ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "3+ devis minimum de déménageurs contrôlés et assurés. Tous les devis sont comparables car basés sur le même volume calculé par IA."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "En combien de temps je reçois les devis ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "48 heures maximum. Dossier anonyme, aucun harcèlement téléphonique."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "C'est vraiment gratuit ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Oui, 100% gratuit. Aucun frais caché. Les déménageurs nous rémunèrent uniquement s'ils décrochent votre déménagement."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Comment l'IA calcule-t-elle le volume ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Vous prenez des photos de vos pièces. L'IA analyse et calcule le volume en m³ avec 90-95% de précision. Cela garantit des devis comparables et évite les écarts de prix le jour J."
-        }
-      }
-    ]
-  };
-
   // short FAQ retirée de la home pour alléger la page (FAQ complète sur /faq)
 
   return (
     <>
       <main className="bg-white">
-        {/* Schema Organization + AggregateRating pour étoiles Google */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
-        
-        {/* Schema FAQ pour rich snippets */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
+        {/* FAQ JSON-LD: single source of truth with the visible home FAQ */}
+        <FAQSchema faqs={HOME_FAQS} />
         
         {/* 1. Hero - Promesse + CTA + Preuves */}
         <Hero />

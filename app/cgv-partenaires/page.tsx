@@ -3,7 +3,7 @@ import { getCanonicalUrl } from "@/lib/canonical-helper";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "CGV Partenaires : Engagements des déménageurs | Moverz",
+  title: "CGV Partenaires : Engagements des déménageurs",
   description:
     "Conditions Générales de Vente Partenaires : engagements contractuels des déménageurs du réseau Moverz (légalité, assurance, qualité, transparence).",
   alternates: {

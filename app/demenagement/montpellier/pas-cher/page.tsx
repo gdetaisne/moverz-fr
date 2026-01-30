@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "montpellier",
   serviceSlug: "pas-cher",
-  title: "Déménagement pas cher à Montpellier : astuces + devis comparables | Moverz",
+  title: "Déménagement pas cher à Montpellier : astuces + devis comparables",
   description:
     "Déménagement pas cher à Montpellier : leviers concrets (dates, volume, accès/monte-meuble) + 3 devis minimum comparables et sans spam. Payez moins sans sacrifier la fiabilité.",
 });

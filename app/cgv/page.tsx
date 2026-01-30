@@ -3,7 +3,7 @@ import { getCanonicalUrl } from "@/lib/canonical-helper";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Conditions Générales de Vente (CGV) | Moverz",
+  title: "Conditions Générales de Vente (CGV)",
   description:
     "Conditions Générales de Vente de Moverz : informations sur les services payants pour les professionnels et les modalités de facturation.",
   alternates: {

@@ -33,6 +33,7 @@ export function getOpenGraphMetadata(
   title: string,
   description: string
 ) {
+  const baseUrl = env.SITE_URL.replace(/\/$/, "");
   return {
     title,
     description,
@@ -40,7 +41,7 @@ export function getOpenGraphMetadata(
     siteName: 'Moverz',
     images: [
       {
-        url: `${env.SITE_URL}/og-image.jpg`,
+        url: `${baseUrl}/logo.png`,
         width: 1200,
         height: 630,
         alt: 'Moverz - Comparateur de déménagement',

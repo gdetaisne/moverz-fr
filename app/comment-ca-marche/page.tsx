@@ -12,8 +12,8 @@ import WidgetActionSection from "@/components/WidgetActionSection";
 
 export const metadata: Metadata = getFullMetadata(
   'comment-ca-marche',
-  "Comment ça marche ? Photos, IA & Devis Comparables | Moverz",
-  "Découvrez comment l'IA Moverz analyse vos photos pour estimer la volumétrie de votre déménagement et préparer 3 devis minimum vraiment comparables, en quelques minutes et sans spam."
+  "Comment ça marche ? Photos, IA & Devis Comparables",
+  "Recevez 5+ devis comparés. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit."
 );
 
 export default function CommentCaMarchePage() {

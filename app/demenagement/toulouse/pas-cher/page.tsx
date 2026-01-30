@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "toulouse",
   serviceSlug: "pas-cher",
-  title: "Déménagement pas cher à Toulouse : astuces + devis comparables | Moverz",
+  title: "Déménagement pas cher à Toulouse : astuces + devis comparables",
   description:
     "Déménagement pas cher à Toulouse : leviers concrets (dates, volume, formule) + 3 devis minimum comparables et sans spam. Conseils pour payer moins sans sacrifier la fiabilité.",
 });

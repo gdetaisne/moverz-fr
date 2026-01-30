@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "marseille",
   serviceSlug: "piano",
-  title: "Déménagement piano Marseille : transport sécurisé, devis | Moverz",
+  title: "Déménagement piano Marseille : transport sécurisé, devis",
   description:
     "Déménagement piano à Marseille : piano droit ou à queue, accès, protections, assurance. Conseils + 3 devis minimum de pros pour un transport sécurisé.",
 });

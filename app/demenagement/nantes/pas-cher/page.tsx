@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "nantes",
   serviceSlug: "pas-cher",
-  title: "Déménagement pas cher à Nantes : astuces + devis comparables | Moverz",
+  title: "Déménagement pas cher à Nantes : astuces + devis comparables",
   description:
     "Déménagement pas cher à Nantes : leviers concrets (dates, volume, formule) + 3 devis minimum comparables et sans spam. Payez moins sans sacrifier la fiabilité.",
 });

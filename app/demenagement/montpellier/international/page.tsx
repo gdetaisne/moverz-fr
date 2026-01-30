@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "montpellier",
   serviceSlug: "international",
-  title: "Déménagement international depuis Montpellier : Europe/monde, devis | Moverz",
+  title: "Déménagement international depuis Montpellier : Europe/monde, devis",
   description:
     "Déménagement international depuis/vers Montpellier : modes de transport, formalités, assurance, stockage. Conseils + 3 devis minimum comparables via Moverz.",
 });

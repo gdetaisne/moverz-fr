@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "marseille",
   serviceSlug: "location-camion",
-  title: "Location camion déménagement Marseille : volumes, prix & conseils | Moverz",
+  title: "Location camion déménagement Marseille : volumes, prix & conseils",
   description:
     "Location camion déménagement à Marseille : quel volume choisir, prix, conditions (permis, caution), conseils chargement + alternative : comparer 3 devis minimum pros.",
 });

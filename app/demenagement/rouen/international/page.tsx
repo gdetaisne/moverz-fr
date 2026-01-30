@@ -3,7 +3,7 @@ import { CityServicePage, generateCityServiceMetadata } from "@/components/templ
 export const metadata = generateCityServiceMetadata({
   citySlug: "rouen",
   serviceSlug: "international",
-  title: "Déménagement international depuis Rouen : Europe/monde, devis | Moverz",
+  title: "Déménagement international depuis Rouen : Europe/monde, devis",
   description:
     "Déménagement international depuis/vers Rouen : modes de transport, formalités, assurance, stockage. Conseils + 3 devis minimum comparables via Moverz.",
 });

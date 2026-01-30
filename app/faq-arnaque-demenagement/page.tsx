@@ -5,7 +5,7 @@ import { FAQ, type FAQItem } from "@/components/FAQ";
 
 export const metadata: Metadata = getFullMetadata(
   "faq-arnaque-demenagement",
-  "FAQ arnaques déménagement : questions-réponses factuelles | Moverz",
+  "FAQ arnaques déménagement : questions-réponses factuelles",
   "10 questions-réponses factuelles pour éviter les arnaques au déménagement : devis, acomptes, assurance, suppléments, sous-traitance, documents, recours."
 );
 
