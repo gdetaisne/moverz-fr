@@ -21,6 +21,7 @@ import TrustSignals from "@/components/TrustSignals";
 import ProblemSolution from "@/components/ProblemSolution";
 import { WebPageSchema } from "@/components/schema/WebPageSchema";
 import { ServiceSchema } from "@/components/schema/ServiceSchema";
+import { FAQSchema } from "@/components/schema/FAQSchema";
 import { getLocalPricesForMeta } from "@/lib/pricing-corridors";
 
 type PageProps = {
@@ -205,6 +206,9 @@ export default function CityMovingPage({ params }: PageProps) {
           return `${prices.t1}-${prices.house}`;
         })()}
       />
+      
+      {/* FAQ schema: featured answers ChatGPT/AI Overviews */}
+      <FAQSchema faqs={cityFAQs} />
       
       <div className="bg-[#0F172A]">
         <div className="container max-w-4xl pt-6">
