@@ -9015,5 +9015,49 @@ export const BLOG_DATA: BlogPostMeta[] = [
   category: "demenagement-par-ville",
   citySlug: "lyon",
   readingTimeMinutes: 7
+  },
+  {
+  slug: "prix-demenageur-toulouse-2026",
+  title: "Prix Déménageur Toulouse 2026 : Tarifs Réels & Comparatif Complet",
+  description: "Prix déménageur Toulouse 2026 : 520€ studio, 950€ T2, 1600€ T3, 2550€ maison. Données réelles comparateurs + acteurs locaux. Surcoûts centre +15-20%. Guide complet.",
+  publishedAt: "2026-01-30",
+  category: "demenagement-par-ville",
+  citySlug: "toulouse",
+  readingTimeMinutes: 10
+  },
+  {
+  slug: "prix-demenageur-bordeaux-2026",
+  title: "Prix Déménageur Bordeaux 2026 : Tarifs Réels & Comparatif Complet",
+  description: "Prix déménageur Bordeaux 2026 : 530€ studio, 970€ T2, 1650€ T3, 2600€ maison. Données réelles comparateurs. Surcoûts centre historique +15-20%. Guide complet.",
+  publishedAt: "2026-01-30",
+  category: "demenagement-par-ville",
+  citySlug: "bordeaux",
+  readingTimeMinutes: 10
+  },
+  {
+  slug: "prix-demenageur-marseille-2026",
+  title: "Prix Déménageur Marseille 2026 : Tarifs Réels & Comparatif Complet",
+  description: "Prix déménageur Marseille 2026 : 540€ studio, 980€ T2, 1670€ T3, 2650€ maison. Données réelles comparateurs. Surcoûts centre +15-20%, relief +10-15%. Guide complet.",
+  publishedAt: "2026-01-30",
+  category: "demenagement-par-ville",
+  citySlug: "marseille",
+  readingTimeMinutes: 10
+  },
+  {
+  slug: "prix-demenageur-lyon-2026",
+  title: "Prix Déménageur Lyon 2026 : Tarifs Réels & Comparatif Complet",
+  description: "Prix déménageur Lyon 2026 : 535€ studio, 975€ T2, 1660€ T3, 2620€ maison. Données réelles comparateurs. Surcoûts Presqu'île +15-20%. Guide complet.",
+  publishedAt: "2026-01-30",
+  category: "demenagement-par-ville",
+  citySlug: "lyon",
+  readingTimeMinutes: 10
+  },
+  {
+  slug: "comparer-plateformes-devis-demenagement-2026",
+  title: "Comment Comparer les Plateformes de Devis Déménagement ? Guide 2026",
+  description: "Nextories, Emoovz, Déménagement24, Moverz : comment choisir ? 5 critères clés (inventaire, rapidité, réseau, prix). Comparatif complet des plateformes de devis déménagement 2026.",
+  publishedAt: "2026-01-30",
+  category: "guides-pratiques",
+  readingTimeMinutes: 12
   }
 ];
