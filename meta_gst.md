@@ -286,10 +286,17 @@ Construire un **Knowledge Graph cohérent** (Organization/WebSite/WebPage + type
     - robots meta: `noindex,follow` sur `/search`
 - **P1.4 Unifier l’injection JSON-LD via `JsonLd`**
   - **constat**: certains composants injectent encore du JSON-LD via `<script dangerouslySetInnerHTML>` (ex: breadcrumbs).
-  - **action**: migrer vers `JsonLd` partout (réduit les divergences et facilite les tests).
+  - **action (appliquée)**:
+    - `components/Breadcrumbs.tsx` : remplacement du `<script type="application/ld+json">` par `JsonLd`
+    - `components/StructuredDataCTA.tsx` : remplacement du `<script type="application/ld+json">` par `JsonLd`
+  - **validation**:
+    - plus aucun `<script type="application/ld+json">` “manuel” dans le repo (hors wrapper `JsonLd`)
 - **P1.5 BlogPosting: sortir les hardcodes domaine**
   - **constat**: `components/schema/ArticleSchema.tsx` hardcode `https://moverz.fr` (url, publisher, logo).
-  - **action**: baser ces champs sur `env.SITE_URL` + canonical helper (sans inventer d’image article tant que la source n’existe pas).
+  - **action (appliquée)**:
+    - utiliser `getCanonicalUrl("blog/[slug]")` pour `url` + `mainEntityOfPage.@id`
+    - `author` / `publisher` référencent `Organization` via `@id` (base `env.SITE_URL`)
+  - **note**: on n’invente pas d’image article tant qu’on n’a pas une source fiable.
 
 #### P2 — Maintenabilité & QA
 - **P2.1 Tests JSON-LD additionnels**

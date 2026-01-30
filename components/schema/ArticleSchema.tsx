@@ -1,4 +1,6 @@
 import { JsonLd } from "@/components/schema/JsonLd";
+import { env } from "@/lib/env";
+import { getCanonicalUrl } from "@/lib/canonical-helper";
 
 interface ArticleSchemaProps {
   title: string
@@ -19,31 +21,23 @@ export function ArticleSchema({
   category,
   readingTimeMinutes,
 }: ArticleSchemaProps) {
+  const baseUrl = env.SITE_URL.replace(/\/$/, "");
+  const canonicalUrl = getCanonicalUrl(`blog/${slug}`);
+  const organizationId = `${baseUrl}/#organization`;
+
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: title,
     description,
-    url: `https://moverz.fr/blog/${slug}/`,
+    url: canonicalUrl,
     datePublished: publishedAt,
     dateModified: updatedAt || publishedAt,
-    author: {
-      '@type': 'Organization',
-      name: 'Moverz',
-      url: 'https://moverz.fr',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Moverz',
-      url: 'https://moverz.fr',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://moverz.fr/logo.png',
-      },
-    },
+    author: { "@id": organizationId },
+    publisher: { "@id": organizationId },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://moverz.fr/blog/${slug}/`,
+      '@id': canonicalUrl,
     },
     ...(category && {
       articleSection: category,
