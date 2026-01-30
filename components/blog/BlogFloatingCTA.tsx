@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { MOVERZ_REVIEWS, getAverageRating, getTotalReviews } from "@/lib/reviews";
+import { trackEvent } from "@/lib/tracking";
 
 function Stars({ value }: { value: number }) {
   // Display 5 stars (visual), and show numeric rating next to it (no fake precision).
@@ -61,10 +62,45 @@ export default function BlogFloatingCTA() {
 
   const quoteUrl = `https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=${encodeURIComponent(
     fromPath
-  )}&channel=blog-floating`;
+  )}&channel=blog-floating&event=lead_click&placement=blog_floating`;
 
   const title = "Comparer sans se faire harceler";
   const promise = "Recevez 5+ devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement.";
+
+  const onCtaClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const href = (e.currentTarget?.href || quoteUrl).toString();
+    const device = typeof window !== "undefined" && window.innerWidth >= 1024 ? "desktop" : "mobile";
+
+    // 1) Push an explicit event for segmentation (GTM dataLayer via trackEvent)
+    trackEvent("blog_floating_cta_click", {
+      fromPath,
+      channel: "blog-floating",
+      device,
+      link_url: href,
+    });
+
+    // 2) GA4: emit lead_click + uplift_click (transport beacon) to keep measurement simple (no AB testing)
+    try {
+      const gtag = (window as any)?.gtag;
+      if (typeof gtag === "function") {
+        const params = {
+          transport_type: "beacon",
+          page_location: window.location.href,
+          page_path: window.location.pathname,
+          link_url: href,
+          link_text: (e.currentTarget?.textContent || "").trim().slice(0, 120),
+          placement: fromPath,
+          source: "moverz.fr",
+          channel: "blog-floating",
+          device,
+        };
+        gtag("event", "lead_click", params);
+        gtag("event", "uplift_click", params);
+      }
+    } catch {
+      // no-op
+    }
+  };
 
   return (
     <>
@@ -110,6 +146,8 @@ export default function BlogFloatingCTA() {
             <a
               href={quoteUrl}
               rel="nofollow"
+              data-ga-tracked="1"
+              onClick={onCtaClick}
               className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#0F172A] px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#1E293B] transition-colors"
             >
               Obtenir des devis <span aria-hidden="true">→</span>
@@ -141,6 +179,8 @@ export default function BlogFloatingCTA() {
               <a
                 href={quoteUrl}
                 rel="nofollow"
+                data-ga-tracked="1"
+                onClick={onCtaClick}
                 className="shrink-0 inline-flex items-center justify-center rounded-xl bg-[#0F172A] px-4 py-2.5 text-xs font-semibold text-white hover:bg-[#1E293B] transition-colors"
               >
                 Obtenir →
