@@ -35,4 +35,10 @@ export function getHubMetadata(args: { path: string; title: string; description:
   return getFullMetadata(args.path, args.title, args.description);
 }
 
+// Back-compat: some pages still import `generateMetadata` from `@/lib/metadata`.
+// Keep a single implementation source of truth here.
+export function generateMetadata(path: string, title: string, description: string): Metadata {
+  return getFullMetadata(path, title, description);
+}
+
 
