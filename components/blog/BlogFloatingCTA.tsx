@@ -97,6 +97,9 @@ export default function BlogFloatingCTA() {
   const title = "Comparer sans se faire harceler";
   const promise = "Recevez 5+ devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement.";
 
+  const mobilityUrl =
+    "https://yx1t4lgsza4.typeform.com/to/RluFyQFU?typeform-source=groupemobility.fr";
+
   const onCtaClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     const href = (e.currentTarget?.href || quoteUrl).toString();
     const device = typeof window !== "undefined" && window.innerWidth >= 1024 ? "desktop" : "mobile";
@@ -126,6 +129,36 @@ export default function BlogFloatingCTA() {
         };
         gtag("event", "lead_click", params);
         gtag("event", "uplift_click", params);
+      }
+    } catch {
+      // no-op
+    }
+  };
+
+  const onMobilityClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const href = (e.currentTarget?.href || mobilityUrl).toString();
+    const device = typeof window !== "undefined" && window.innerWidth >= 1024 ? "desktop" : "mobile";
+
+    trackEvent("mobility_click", {
+      fromPath,
+      channel: "blog-floating",
+      device,
+      link_url: href,
+    });
+
+    try {
+      const gtag = (window as any)?.gtag;
+      if (typeof gtag === "function") {
+        gtag("event", "mobility_click", {
+          transport_type: "beacon",
+          page_location: window.location.href,
+          page_path: window.location.pathname,
+          link_url: href,
+          link_text: (e.currentTarget?.textContent || "").trim().slice(0, 120),
+          placement: fromPath,
+          channel: "blog-floating",
+          device,
+        });
       }
     } catch {
       // no-op
@@ -203,6 +236,26 @@ export default function BlogFloatingCTA() {
               Promesse client : devis comparables sous 5 à 7 jours (selon dossier).
             </p>
           </div>
+
+          {/* Secondary offer (Mobility / relocation) */}
+          <div className="px-5 pb-5">
+            <div className="rounded-2xl border border-[#E3E5E8] bg-gradient-to-br from-[#F8FAFC] to-white p-4">
+              <p className="text-sm font-bold text-[#0F172A]">À la recherche d&apos;un logement ?</p>
+              <p className="mt-1 text-sm text-[#334155] leading-snug">
+                Nous vous accompagnons dans votre relocation et gérons l&apos;ensemble de vos démarches.
+              </p>
+              <a
+                href={mobilityUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-ga-tracked="1"
+                onClick={onMobilityClick}
+                className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-4 py-3 text-sm font-semibold text-[#0F172A] border border-[#0F172A]/10 shadow-sm hover:bg-[#FAFAFA] hover:border-[#6BCFCF]/50 transition-colors"
+              >
+                Être accompagné(e) <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
         </div>
       </aside>
 
@@ -239,6 +292,17 @@ export default function BlogFloatingCTA() {
                 Obtenir →
               </a>
             </div>
+
+            <a
+              href={mobilityUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-ga-tracked="1"
+              onClick={onMobilityClick}
+              className="mt-2 block rounded-xl border border-[#E3E5E8] bg-white px-3 py-2 text-xs font-semibold text-[#0F172A] hover:border-[#6BCFCF]/50 hover:bg-[#FAFAFA] transition-colors"
+            >
+              À la recherche d&apos;un logement ? Relocation → 
+            </a>
           </div>
         </div>
       </div>
