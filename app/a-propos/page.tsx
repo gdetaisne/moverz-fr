@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Image from "next/image";
+import { JsonLd } from "@/components/schema/JsonLd";
 import {
   ShieldCheck,
   Sparkles,
@@ -23,6 +24,30 @@ export const metadata: Metadata = getFullMetadata(
 export default function AProposPage() {
   return (
     <main className="bg-hero min-h-screen">
+      <JsonLd
+        id="person-lucie-veltz"
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "@id": "https://moverz.fr/#person-lucie-veltz",
+          name: "Lucie Veltz",
+          url: "https://moverz.fr/a-propos/",
+          worksFor: { "@id": "https://moverz.fr/#organization" },
+          sameAs: ["https://www.linkedin.com/in/lucieveltz/"],
+        }}
+      />
+      <JsonLd
+        id="person-guillaume-stehelin"
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "@id": "https://moverz.fr/#person-guillaume-stehelin",
+          name: "Guillaume Stehelin de Taisne",
+          url: "https://moverz.fr/a-propos/",
+          worksFor: { "@id": "https://moverz.fr/#organization" },
+          sameAs: ["https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/"],
+        }}
+      />
       <div className="halo" />
       <section className="relative overflow-hidden">
         {/* Background */}

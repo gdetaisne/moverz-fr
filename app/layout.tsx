@@ -168,13 +168,30 @@ export default function RootLayout({
               email: "contact@moverz.fr",
               availableLanguage: "French",
             },
-            sameAs: [],
+            sameAs: ["https://www.linkedin.com/company/109778731/"],
             areaServed: {
               "@type": "Country",
               name: "France",
             },
             serviceType: ["Comparateur de déménagement", "Devis déménageurs"],
             knowsAbout: ["Déménagement", "Comparaison de devis", "Déménageurs professionnels"],
+          }}
+        />
+
+        <JsonLd
+          id="website-schema"
+          data={{
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "https://moverz.fr/#website",
+            url: "https://moverz.fr/",
+            name: "Moverz",
+            publisher: { "@id": "https://moverz.fr/#organization" },
+            potentialAction: {
+              "@type": "SearchAction",
+              target: "https://moverz.fr/search?q={search_term_string}",
+              "query-input": "required name=search_term_string",
+            },
           }}
         />
 

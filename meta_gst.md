@@ -252,6 +252,7 @@ Construire un **Knowledge Graph cohérent** (Organization/WebSite/WebPage + type
 ### Décisions actées (session)
 - **Organization schema**: **Global only** (source unique dans `app/layout.tsx`) → supprimer les duplications page-level (ex: home).
 - **Module metadata**: standardiser sur **`lib/seo/metadata.ts`** comme point d’entrée (migration imports + suppression/alias contrôlé du doublon).
+- **Recherche interne (SearchAction)**: **B — Footer + Blog (pas FAQ)**, avec une route `/search` en **`noindex,follow`** + JSON‑LD `WebSite.SearchAction`.
 
 ### Re-assess priorités (reste à faire) — CTR / Leads / Maintenabilité
 
@@ -272,10 +273,21 @@ Construire un **Knowledge Graph cohérent** (Organization/WebSite/WebPage + type
   - **action**: aligner titles/desc des pages money (`/comparateur-demenageurs/`, `/choisir-ville/`, `/comment-ca-marche/`, etc.) sur le même modèle de promesse.
 
 #### P1 — Données structurées “best-in-class” (qualité)
-- **P1.3 Unifier l’injection JSON-LD via `JsonLd`**
-  - **constat**: `components/Breadcrumbs.tsx` et certains composants injectent encore du JSON-LD via `<script dangerouslySetInnerHTML>`.
+- **P1.3 SearchAction + recherche interne simple (Footer + Blog)**
+  - **constat (avant)**: pas de route de recherche interne dédiée (donc impossible d’ajouter `SearchAction` sans “inventer”).
+  - **action (appliquée)**:
+    - créer `app/search/page.tsx` (GET `/search?q=...`) avec résultats **Blog + Villes**
+    - mettre `/search` en **`noindex,follow`** (évite l’indexation des pages de résultats internes)
+    - ajouter un **input de recherche** dans le **footer (site-wide)** et sur le **blog** (hub + article)
+    - ajouter JSON‑LD `WebSite` avec `potentialAction: SearchAction` dans `app/layout.tsx`
+  - **validation**:
+    - `GET /search?q=nice` retourne des liens utiles (blog + villes)
+    - présence de `WebSite` + `SearchAction` dans le HTML (script JSON‑LD)
+    - robots meta: `noindex,follow` sur `/search`
+- **P1.4 Unifier l’injection JSON-LD via `JsonLd`**
+  - **constat**: certains composants injectent encore du JSON-LD via `<script dangerouslySetInnerHTML>` (ex: breadcrumbs).
   - **action**: migrer vers `JsonLd` partout (réduit les divergences et facilite les tests).
-- **P1.4 BlogPosting: sortir les hardcodes domaine**
+- **P1.5 BlogPosting: sortir les hardcodes domaine**
   - **constat**: `components/schema/ArticleSchema.tsx` hardcode `https://moverz.fr` (url, publisher, logo).
   - **action**: baser ces champs sur `env.SITE_URL` + canonical helper (sans inventer d’image article tant que la source n’existe pas).
 
@@ -362,6 +374,8 @@ On définit des templates stables (Title + Description) par grandes familles d�
     - `components/schema/JsonLd.tsx` (propre)
     - `components/schema/FAQSchema.tsx`, `components/schema/ArticleSchema.tsx`
     - `components/Breadcrumbs.tsx` (script inline)
+    - `app/layout.tsx` (Organization + WebSite/SearchAction)
+    - `app/a-propos/page.tsx` (Person: Guillaume + Lucie)
     - pages avec `<script type="application/ld+json">` direct (`app/page.tsx`, `app/demenagement/[slug]/page.tsx`, etc.)
   - **validation**: liste des pages qui injectent: Organization / FAQPage / BlogPosting / BreadcrumbList / WebPage (CTA).
 
