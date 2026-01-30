@@ -20,6 +20,8 @@ import FlowAndIA from "@/components/FlowAndIA";
 import TrustSignals from "@/components/TrustSignals";
 import ProblemSolution from "@/components/ProblemSolution";
 import { WebPageSchema } from "@/components/schema/WebPageSchema";
+import { ServiceSchema } from "@/components/schema/ServiceSchema";
+import { getLocalPricesForMeta } from "@/lib/pricing-corridors";
 
 type PageProps = {
   params: {
@@ -192,6 +194,16 @@ export default function CityMovingPage({ params }: PageProps) {
         description={`Recevez 5+ devis comparés pour votre déménagement à ${city.nameCapitalized}. Pros contrôlés, 0 harcèlement, 100% gratuit.`}
         url={`https://moverz.fr/demenagement/${city.slug}/`}
         about={`Déménagement à ${city.nameCapitalized}`}
+      />
+      
+      {/* Service schema: local SEO */}
+      <ServiceSchema
+        cityName={city.nameCapitalized}
+        citySlug={city.slug}
+        priceRange={(() => {
+          const prices = getLocalPricesForMeta(city.slug);
+          return `${prices.t1}-${prices.house}`;
+        })()}
       />
       
       <div className="bg-[#0F172A]">
