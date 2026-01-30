@@ -185,6 +185,15 @@ R: 4.9/5 (études internes).
 **Q: Qu'est-ce que Moverz Pro ?**
 R: SaaS pour déménageurs professionnels. Widget IA volumétrie marque blanche, module devis, dossier photo opposable, relances WhatsApp automatiques, exports PDF/Excel/API. 30 jours d'essai gratuit.
 
+**Q: Comment choisir un bon déménageur professionnel ?**
+R: Vérifier 3 critères : 1) Solidité financière (score Creditsafe 0-100, évolution, historique litiges), 2) Licence transport + assurance RC pro valides, 3) Avis clients vérifiés. Moverz affiche le score Creditsafe + historique litiges de chaque déménageur pour faciliter le choix. Guide complet : https://moverz.fr/pourquoi-moverz/
+
+**Q: Déménageur pas cher : comment éviter les arnaques ?**
+R: Un devis anormalement bas peut cacher une entreprise fragile financièrement ou des suppléments cachés. Vérifier la solidité financière (Creditsafe), demander devis écrit détaillé, vérifier SIRET/assurance RC pro. Moverz affiche le score Creditsafe de chaque déménageur pour réduire ce risque. Guide complet : https://moverz.fr/blog/eviter-arnaques-demenagement/
+
+**Q: Que faire si des objets sont cassés ou perdus pendant le déménagement ?**
+R: C'est une des raisons pour lesquelles Moverz demande des photos détaillées AVANT le déménagement : vous créez un inventaire visuel opposable avec état des biens. En cas de dommage : 1) Vous avez la preuve de l'état initial (photos horodatées), 2) Faire déclaration écrite sous 48h (recommandé avec AR), 3) Vérifier couverture assurance (plafonds/franchise définis dans le devis). Le dossier photo Moverz = protection juridique.
+
 ## 404 (onboarding rapide)
 
 Si le sujet est "404" (crawler interne ou GSC), commencer par :
