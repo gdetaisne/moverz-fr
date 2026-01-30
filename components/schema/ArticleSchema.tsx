@@ -10,6 +10,9 @@ interface ArticleSchemaProps {
   updatedAt?: string
   category?: string
   readingTimeMinutes?: number
+  imageUrl?: string
+  imageWidth?: number
+  imageHeight?: number
 }
 
 export function buildArticleSchema({
@@ -20,6 +23,9 @@ export function buildArticleSchema({
   updatedAt,
   category,
   readingTimeMinutes,
+  imageUrl,
+  imageWidth,
+  imageHeight,
 }: ArticleSchemaProps) {
   const baseUrl = env.SITE_URL.replace(/\/$/, "");
   const canonicalUrl = getCanonicalUrl(`blog/${slug}`);
@@ -45,6 +51,14 @@ export function buildArticleSchema({
     ...(readingTimeMinutes && {
       timeRequired: `PT${readingTimeMinutes}M`,
     }),
+    ...(imageUrl && {
+      image: {
+        "@type": "ImageObject",
+        url: imageUrl,
+        width: imageWidth || 1200,
+        height: imageHeight || 630,
+      },
+    }),
     inLanguage: "fr-FR",
     about: {
       "@type": "Thing",
@@ -61,6 +75,9 @@ export function ArticleSchema({
   updatedAt,
   category,
   readingTimeMinutes,
+  imageUrl,
+  imageWidth,
+  imageHeight,
 }: ArticleSchemaProps) {
   const schema = buildArticleSchema({
     title,
@@ -70,6 +87,9 @@ export function ArticleSchema({
     updatedAt,
     category,
     readingTimeMinutes,
+    imageUrl,
+    imageWidth,
+    imageHeight,
   });
 
   return (

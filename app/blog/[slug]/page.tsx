@@ -16,6 +16,7 @@ import { getFullMetadata } from "@/lib/canonical-helper";
 import { getCityBySlug } from "@/lib/cities";
 import { ArticleSchema } from "@/components/schema/ArticleSchema";
 import { FAQSchema } from "@/components/schema/FAQSchema";
+import { HowToSchema } from "@/components/schema/HowToSchema";
 import { formatDateFR } from "@/lib/date/fr";
 import BlogFloatingCTA from "@/components/blog/BlogFloatingCTA";
 
@@ -110,6 +111,67 @@ export default function BlogPostPage({ params }: PageProps) {
   };
 
   const toc = canonicalBody ? extractToc(canonicalBody) : [];
+
+  // HowTo schema pour guides prioritaires
+  const howToSchemas: Record<string, any> = {
+    "top-erreurs-a-eviter": {
+      title: "Comment éviter les 12 erreurs coûteuses en déménagement",
+      description: "Guide étape par étape pour éviter stress, surcoûts et litiges lors de votre déménagement.",
+      totalTime: "PT8W", // 8 semaines préparation
+      estimatedCost: { value: "400-3000", currency: "EUR" },
+      supply: ["Cartons déménagement", "Papier bulle", "Ruban adhésif", "Marqueurs", "Photos des pièces"],
+      tool: ["IA volumétrie Moverz", "Comparateur devis", "WhatsApp suivi"],
+      steps: [
+        { name: "Calculer votre volume précis (Erreur #1)", text: "Utilisez l'IA Moverz pour estimer votre volume réel en 1 minute. Inclut cave, garage, extérieurs. Évite les surcoûts jour J." },
+        { name: "Choisir la bonne période (Erreur #2)", text: "Évitez juillet-août et week-ends (surcoût +30-50%). Privilégiez octobre-mars et jours de semaine." },
+        { name: "Comparer 3-5 devis comparables (Erreur #3)", text: "Même volume, mêmes options. Évitez les devis 'low-cost' sans assurance. Utilisez Moverz pour standardiser." },
+        { name: "Vérifier le déménageur (Erreur #4)", text: "Checklist : SIREN valide, assurance RC Pro, pas de signaux faibles (faillite, litiges). Moverz automatise ces vérifications." },
+        { name: "Prendre photos avant départ (Erreur #5)", text: "Photographiez TOUS les meubles et l'état du logement. Protège en cas de litige sur l'état initial." },
+        { name: "Déclarer vos objets de valeur (Erreur #6)", text: "Déclarez pianos, œuvres d'art, objets >1500€. L'assurance standard ne couvre que 60€/m³." },
+        { name: "Emballer correctement (Erreur #7)", text: "Cartons renforcés pour livres (15kg max), papier bulle pour fragiles, marquage clair par pièce." },
+        { name: "Préparer les accès (Erreur #8)", text: "Vérifiez parking, autorisations, dimensions ascenseur/escaliers. Prévenez le déménageur AVANT devis." },
+        { name: "Lire les conditions générales (Erreur #9)", text: "Délai annulation, modalités paiement, assurance incluse. Ne signez pas sans comprendre." },
+        { name: "Confirmer 48h avant (Erreur #10)", text: "Reconfirmez horaires, accès, volume. Évite les mauvaises surprises jour J." },
+        { name: "Superviser le chargement (Erreur #11)", text: "Soyez présent au chargement. Vérifiez protection meubles, respect inventaire." },
+        { name: "Contrôler l'état à l'arrivée (Erreur #12)", text: "Avant signature BL, inspectez meubles/cartons. Notez anomalies IMMÉDIATEMENT sur bordereau." },
+      ],
+    },
+    "eviter-arnaques-demenagement": {
+      title: "Comment vérifier un déménageur et éviter les arnaques",
+      description: "Guide complet pour identifier les signaux d'alerte et choisir un déménageur fiable (64% d'anomalies DGCCRF 2023).",
+      totalTime: "PT30M", // 30 min de vérification
+      supply: ["SIREN du déménageur", "Devis à comparer"],
+      tool: ["Creditsafe (via Moverz)", "Annuaire Entreprises (INSEE)", "Google Maps avis"],
+      steps: [
+        { name: "Vérifier le SIREN et l'inscription", text: "Utilisez annuaire-entreprises.data.gouv.fr. Le SIREN doit être actif et l'entreprise inscrite au registre des transporteurs." },
+        { name: "Consulter la santé financière", text: "Moverz utilise Creditsafe pour vérifier solvabilité, risque de faillite, incidents de paiement. 257 faillites en 2024." },
+        { name: "Lire les avis Google Maps", text: "Vérifiez les avis récents (6 derniers mois). Attention aux patterns : surcôts, objets cassés, litiges." },
+        { name: "Vérifier l'assurance RC Pro", text: "Demandez une attestation d'assurance valide. Requis légalement mais souvent absent (DGCCRF)." },
+        { name: "Comparer le devis aux standards", text: "Un devis conforme détaille : volume, accès, options, tarif au m³/horaire, conditions annulation, assurance." },
+        { name: "Repérer les signaux d'alerte", text: "Prix 50% sous marché, paiement cash uniquement, pas de contrat écrit, urgence artificielle → FUYEZ." },
+        { name: "Utiliser Moverz pour automatiser", text: "Moverz vérifie automatiquement SIREN, santé financière, litiges avant de partager votre dossier. Vous ne recevez que des pros contrôlés." },
+      ],
+    },
+    "prix-demenagement-2025": {
+      title: "Comment calculer le prix réel de votre déménagement",
+      description: "Méthodologie complète pour estimer votre budget déménagement 2025 et comparer des devis fiables.",
+      totalTime: "PT15M", // 15 min calcul
+      estimatedCost: { value: "400-6000", currency: "EUR" },
+      supply: ["Inventaire pièce par pièce", "Photos du logement"],
+      tool: ["IA volumétrie Moverz", "Calculateur distance", "Comparateur devis"],
+      steps: [
+        { name: "Calculer votre volume en m³", text: "Utilisez l'IA Moverz (1 minute) ou inventaire manuel pièce par pièce. Incluez cave, garage, extérieurs. Volume précis = devis fiables." },
+        { name: "Mesurer la distance exacte", text: "Distance routière (Google Maps), pas vol d'oiseau. Impacte fortement le prix : 10km vs 500km = x3-x5 le tarif." },
+        { name: "Identifier vos contraintes d'accès", text: "Étage sans ascenseur (+15-30€/étage), rue étroite, parking éloigné → surcoûts potentiels. Photographiez les accès." },
+        { name: "Choisir votre formule", text: "Éco (vous emballez) vs Standard (déménageur emballe). Différence 30-40% sur le tarif total." },
+        { name: "Repérer la période", text: "Haute saison (juin-août) = +30-50% vs basse saison (oct-mars). Préférez jours de semaine (-20% vs week-end)." },
+        { name: "Utiliser les fourchettes de référence", text: "Studio 10-15m³ local : 400-800€. T3 30-40m³ longue distance : 1700-3200€. Maison 60-80m³ : 2000-6000€." },
+        { name: "Comparer 3-5 devis standardisés", text: "Même volume, mêmes options, même cahier des charges. Moverz automatise cette standardisation pour éviter devis incomparables." },
+      ],
+    },
+  };
+
+  const howToData = howToSchemas[post.slug];
 
   // Custom components pour ReactMarkdown
   const markdownComponents: Components = {
@@ -225,6 +287,17 @@ export default function BlogPostPage({ params }: PageProps) {
     <main className="bg-hero min-h-screen">
       <BlogFloatingCTA />
       {faqItems?.length ? <FAQSchema faqs={faqItems} /> : null}
+      {howToData ? (
+        <HowToSchema
+          title={howToData.title}
+          description={howToData.description}
+          totalTime={howToData.totalTime}
+          estimatedCost={howToData.estimatedCost}
+          supply={howToData.supply}
+          tool={howToData.tool}
+          steps={howToData.steps}
+        />
+      ) : null}
       <ArticleSchema
         title={post.title}
         description={post.description}

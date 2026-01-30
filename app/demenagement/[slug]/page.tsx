@@ -19,6 +19,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import FlowAndIA from "@/components/FlowAndIA";
 import TrustSignals from "@/components/TrustSignals";
 import ProblemSolution from "@/components/ProblemSolution";
+import { WebPageSchema } from "@/components/schema/WebPageSchema";
 
 type PageProps = {
   params: {
@@ -185,6 +186,14 @@ export default function CityMovingPage({ params }: PageProps) {
 
   return (
     <main className="bg-white">
+      {/* WebPage schema: contexte page ville */}
+      <WebPageSchema
+        name={`Déménagement ${city.nameCapitalized}`}
+        description={`Recevez 5+ devis comparés pour votre déménagement à ${city.nameCapitalized}. Pros contrôlés, 0 harcèlement, 100% gratuit.`}
+        url={`https://moverz.fr/demenagement/${city.slug}/`}
+        about={`Déménagement à ${city.nameCapitalized}`}
+      />
+      
       <div className="bg-[#0F172A]">
         <div className="container max-w-4xl pt-6">
           <Breadcrumbs

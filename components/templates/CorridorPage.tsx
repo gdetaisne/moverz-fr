@@ -5,6 +5,7 @@ import { getCityBySlug } from "@/lib/cities";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { getCorridorPricesForMeta, getPrixIndicatifsForContent } from "@/lib/pricing-corridors";
 import { estimateRoadDistanceKm, formatDistance, formatDurationFromKm } from "@/lib/corridors";
+import { WebPageSchema } from "@/components/schema/WebPageSchema";
 
 export type CorridorPageProps = {
   originCitySlug: string;
@@ -141,6 +142,14 @@ export function CorridorPage({
 
   return (
     <main className="bg-white">
+      {/* WebPage schema: contexte page corridor */}
+      <WebPageSchema
+        name={`Déménagement ${originCityName} → ${destination}`}
+        description={`Recevez 5+ devis comparés pour votre déménagement de ${originCityName} vers ${destination}. Distance, prix, conseils.`}
+        url={`https://moverz.fr/${originCitySlug}-vers-${destSlug}/`}
+        about={`Déménagement ${originCityName} vers ${destination}`}
+      />
+      
       <div className="bg-[#0F172A]">
         <div className="container max-w-7xl pt-6">
           <Breadcrumbs

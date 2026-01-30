@@ -13,6 +13,7 @@ import WhyMoverz from "@/components/WhyMoverz";
 import { HowToChoose } from "@/components/home/HowToChoose";
 import ProBanner from "@/components/home/ProBanner";
 import { FAQSchema } from "@/components/schema/FAQSchema";
+import { WebPageSchema } from "@/components/schema/WebPageSchema";
 import { HOME_FAQS } from "@/components/home/homeFaqs";
 
 export const metadata: Metadata = {
@@ -38,6 +39,14 @@ export default function Home() {
   return (
     <>
       <main className="bg-white">
+        {/* WebPage schema: contexte homepage */}
+        <WebPageSchema
+          name="Comparateur Déménagement | Devis 5–7j | Contrôlés · Gratuit"
+          description="Recevez 5+ devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit."
+          url="https://moverz.fr/"
+          about="Comparateur de déménagement"
+        />
+        
         {/* FAQ JSON-LD: single source of truth with the visible home FAQ */}
         <FAQSchema faqs={HOME_FAQS} />
         
