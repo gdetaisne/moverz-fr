@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import { LONGTAIL_LINKS } from "@/lib/blog-longtail-links";
+import BlogFloatingCTA from "@/components/blog/BlogFloatingCTA";
 
 export const metadata: Metadata = getFullMetadata(
   "blog/cas-frequents",
@@ -13,6 +14,7 @@ export default function BlogCasFrequentsPage() {
 
   return (
     <main className="bg-hero min-h-screen">
+      <BlogFloatingCTA />
       <div className="halo" />
 
       <section className="relative overflow-hidden text-white">

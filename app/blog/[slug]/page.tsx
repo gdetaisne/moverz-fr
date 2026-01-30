@@ -17,6 +17,7 @@ import { getCityBySlug } from "@/lib/cities";
 import { ArticleSchema } from "@/components/schema/ArticleSchema";
 import { FAQSchema } from "@/components/schema/FAQSchema";
 import { formatDateFR } from "@/lib/date/fr";
+import BlogFloatingCTA from "@/components/blog/BlogFloatingCTA";
 
 type PageProps = {
   params: {
@@ -222,6 +223,7 @@ export default function BlogPostPage({ params }: PageProps) {
 
   return (
     <main className="bg-hero min-h-screen">
+      <BlogFloatingCTA />
       {faqItems?.length ? <FAQSchema faqs={faqItems} /> : null}
       <ArticleSchema
         title={post.title}

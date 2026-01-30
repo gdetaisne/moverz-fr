@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PUBLISHED_BLOG_POSTS } from "@/lib/blog";
 import { getFullMetadata } from "@/lib/canonical-helper";
+import BlogFloatingCTA from "@/components/blog/BlogFloatingCTA";
 
 const CATEGORY = "conseils-demenagement";
 
@@ -15,6 +16,7 @@ export default function BlogConseilsPage() {
 
   return (
     <main className="bg-hero min-h-screen">
+      <BlogFloatingCTA />
       <div className="halo" />
 
       <section className="relative overflow-hidden text-white">
