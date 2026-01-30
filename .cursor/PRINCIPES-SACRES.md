@@ -34,6 +34,60 @@ SEO National + Local → Moverz.fr (hub + pages villes + blog) → Leads → €
 
 ---
 
+## 📘 PRINCIPE #0 : STRATÉGIE META - SOURCE DE VÉRITÉ UNIQUE
+
+### ⚠️ DOC OBLIGATOIRE EN CONTEXTE
+
+**Fichier** : `.cursor/STRATEGIE-META-UNIFIEE.md`
+
+**RÈGLE ABSOLUE** :
+- ✅ **Ce document DOIT être maintenu à jour** à chaque modification meta
+- ✅ **RIEN ne peut se faire sur les META si ce doc n'est pas dans le contexte**
+- ✅ **Toute modification meta DOIT être documentée** dans ce doc unifié
+
+### 🚫 INTERDICTIONS
+
+❌ **Modifier des metadata** (title, description) sans avoir lu `.cursor/STRATEGIE-META-UNIFIEE.md`  
+❌ **Créer de nouveaux formats meta** sans les documenter dans le doc unifié  
+❌ **Changer la logique de pricing** sans mettre à jour la section "Pricing dynamique"  
+❌ **Déployer des changements meta** sans validation dans le doc unifié  
+
+### ✅ WORKFLOW OBLIGATOIRE META
+
+```
+1. LIRE .cursor/STRATEGIE-META-UNIFIEE.md (comprendre l'existant)
+2. ANALYSER l'impact de la modification proposée
+3. MODIFIER le code (lib/seo/metadata.ts, etc.)
+4. METTRE À JOUR .cursor/STRATEGIE-META-UNIFIEE.md (nouveau format, KPIs, etc.)
+5. VALIDER que le doc est cohérent avec le code
+6. COMMIT avec message clair référençant le doc
+```
+
+### 📋 Sections critiques du doc unifié
+
+- **Architecture technique** : Fichiers sources, principes
+- **Format par type page** : Homepage, Villes, Corridors, Quartiers, Services
+- **Pricing dynamique** : Formules, logique de calcul
+- **Historique & évolutions** : Timeline avec reasoning
+- **KPIs & monitoring** : Métriques à suivre
+
+### 🛑 RED FLAG - STOP ET DEMANDER
+
+**Si une demande touche aux META sans mentionner le doc unifié** :
+
+```
+⚠️ STOP - Meta Modification
+
+Toute modification meta requiert :
+1. Avoir lu .cursor/STRATEGIE-META-UNIFIEE.md
+2. Comprendre l'impact vs. stratégie actuelle
+3. Documenter la modification dans le doc unifié
+
+Es-tu sûr d'avoir consulté le doc unifié ? (Oui/Non)
+```
+
+---
+
 ## 🏆 PRINCIPE #1 : SEO FIRST (NON NÉGOCIABLE)
 
 ### ⚠️ Comprendre l'impact business
