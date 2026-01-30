@@ -3,23 +3,26 @@ import { getFullMetadata } from "@/lib/canonical-helper";
 import { getPricePostForCity, getPublishedPostBySlug } from "@/lib/blog";
 import { getCityBySlug } from "@/lib/cities";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { getCorridorPricesForMeta, getPrixIndicatifsForContent } from "@/lib/pricing-corridors";
+import { estimateRoadDistanceKm, formatDistance, formatDurationFromKm } from "@/lib/corridors";
 
 export type CorridorPageProps = {
   originCitySlug: string;
   originCityName: string;
   destination: string;
   destinationSlug?: string;
-  distance: string;
-  tempsMoyen: string;
-  periodeConseillee: string;
-  prixIndicatifs: Array<{
+  // Props optionnels (calculés automatiquement si non fournis)
+  distance?: string;
+  tempsMoyen?: string;
+  periodeConseillee?: string;
+  prixIndicatifs?: Array<{
     type: string;
     prix: string;
     description: string;
   }>;
-  accesArrivee: string;
-  conseils: string[];
-  faq: Array<{
+  accesArrivee?: string;
+  conseils?: string[];
+  faq?: Array<{
     question: string;
     answer: string;
   }>;
@@ -34,6 +37,17 @@ function slugify(input: string): string {
     .replace(/(^-|-$)/g, "");
 }
 
+/**
+ * Génère metadata optimisée pour pages corridors
+ * 
+ * Optimisations SEO (2026-01-30):
+ * - Distance dans title → pertinence immédiate SERP
+ * - Fourchettes prix T1/T2/Maison dans description → forte différenciation
+ * - Calcul prix basé sur formules officielles tunnel (pricing-corridors.ts)
+ * 
+ * Format title: "Déménagement {Ville A} → {Ville B} ({Distance}km) | Devis 5–7j · {Année}"
+ * Format desc: "{A}→{B} ({Xkm}) : 5+ devis sous 5–7j. Tarifs : T1 X€ · T2 Y€ · Maison Z€. Pros contrôlés, 0€."
+ */
 export function generateCorridorMetadata(
   originCitySlug: string,
   originCityName: string,
@@ -43,6 +57,20 @@ export function generateCorridorMetadata(
   const year = new Date().getFullYear();
   const destSlug = destinationSlug ?? slugify(destination);
   const path = `${originCitySlug}-vers-${destSlug}`;
+  
+  // Calcul distance + prix réels (formules officielles)
+  const priceData = getCorridorPricesForMeta(originCitySlug, destSlug);
+  
+  if (priceData) {
+    // ✅ Version optimisée (distance + prix)
+    const title = `Déménagement ${originCityName} → ${destination} (${priceData.distanceKm}km) | Devis 5–7j · ${year}`;
+    
+    const description = `${originCityName}→${destination} (${priceData.distanceKm}km) : 5+ devis sous 5–7j. Tarifs : T1 ${priceData.t1} · T2 ${priceData.t2} · Maison ${priceData.house}. Pros contrôlés, 0€.`;
+    
+    return getFullMetadata(path, title, description);
+  }
+  
+  // Fallback (si calcul prix impossible)
   const title = `Déménagement ${originCityName} → ${destination} : Devis & Prix ${year}`;
   const description = `Déménagement ${originCityName} vers ${destination} : devis gratuits, prix indicatifs, conseils d'experts. Déménageurs contrôlés · 0€ · Sans démarchage`;
 
@@ -54,15 +82,57 @@ export function CorridorPage({
   originCityName,
   destination,
   destinationSlug,
-  distance,
-  tempsMoyen,
-  periodeConseillee,
-  prixIndicatifs,
-  accesArrivee,
-  conseils,
-  faq,
+  distance: distanceProp,
+  tempsMoyen: tempsMoyenProp,
+  periodeConseillee: periodeConseilleeProp,
+  prixIndicatifs: prixIndicatifsProp,
+  accesArrivee: accesArriveeProp,
+  conseils: conseilsProp,
+  faq: faqProp,
 }: CorridorPageProps) {
   const destSlug = destinationSlug ?? slugify(destination);
+  
+  // ============================================
+  // Calcul automatique des données (si non fournies)
+  // ============================================
+  const km = estimateRoadDistanceKm(originCitySlug, destSlug) ?? 300;
+  
+  const distance = distanceProp ?? formatDistance(km);
+  const tempsMoyen = tempsMoyenProp ?? formatDurationFromKm(km);
+  const periodeConseillee = periodeConseilleeProp ?? "Avr-Sept";
+  const prixIndicatifs = prixIndicatifsProp ?? getPrixIndicatifsForContent(km);
+  
+  const accesArrivee = accesArriveeProp ?? 
+    `${destination} a des contraintes d'accès variables selon le quartier (stationnement, rues étroites, zones piétonnes, immeubles sans ascenseur). Nos partenaires anticipent l'autorisation de stationnement, le portage et le matériel adapté (protection, diable, monte-meubles si besoin).`;
+  
+  const conseils = conseilsProp ?? [
+    "Anticipez votre date (fin de mois et été = plus de demande).",
+    "Faites estimer votre volume précisément pour éviter les suppléments le jour J.",
+    "Préparez des photos des accès (escaliers, ascenseur, rue) pour un devis juste.",
+    "Demandez l'autorisation de stationnement si nécessaire (mairie / syndic).",
+  ];
+  
+  const faq = faqProp ?? [
+    {
+      question: `Quels sont les délais pour un déménagement ${originCityName} → ${destination} ?`,
+      answer:
+        "En moyenne 7 à 14 jours selon la période. En semaine et hors haute saison, certains déménageurs peuvent intervenir plus rapidement. Le plus fiable est de comparer plusieurs disponibilités.",
+    },
+    {
+      question: `Quels sont les tarifs pour ${originCityName} → ${destination} ?`,
+      answer:
+        "Les tarifs dépendent du volume (m³), des accès (étage, ascenseur, portage), de la période et de la formule (éco/standard/confort). Les fourchettes ci-dessus donnent un ordre d'idée, puis le devis final est personnalisé.",
+    },
+    {
+      question: "Comment éviter les mauvaises surprises le jour J ?",
+      answer:
+        "La clé : un volume précis + des accès bien décrits. Avec Moverz, l'IA aide à estimer le volume et votre dossier est partagé à plusieurs déménageurs sur la même base, pour des devis comparables.",
+    },
+  ];
+  
+  // ============================================
+  // Reste du composant (inchangé)
+  // ============================================
   const quoteUrl = `https://devis.moverz.fr/devis-gratuits-v3?city_slug=${originCitySlug}&source=moverz.fr&from=/${originCitySlug}-vers-${destSlug}/`;
   const destinationCity = getCityBySlug(destSlug);
   const originPricePost = getPricePostForCity(originCitySlug);

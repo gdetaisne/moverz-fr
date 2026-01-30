@@ -27,6 +27,17 @@ export type QuartierPageProps = {
   }>;
 };
 
+/**
+ * Génère metadata optimisée pour pages quartiers
+ * 
+ * Optimisations SEO (2026-01-30):
+ * - Harmonisation messagerie : "5+ devis sous 5–7j" (cohérent avec home/villes)
+ * - Suppression "3 min" (promesse peu différenciante vs. compétition)
+ * - Ajout "Dossier anonyme" (différenciant Moverz)
+ * 
+ * Format title: "Déménagement {Quartier} ({Ville}) | 5+ devis en 5–7j · Pros locaux"
+ * Format desc: "{Quartier}, {Ville} : 5+ devis comparés sous 5–7j. Dossier anonyme, pros locaux contrôlés, 0€."
+ */
 export function generateQuartierMetadata(
   citySlug: string,
   cityName: string,
@@ -34,8 +45,8 @@ export function generateQuartierMetadata(
   quartierName: string
 ): Metadata {
   const path = `${citySlug}/${quartierSlug}`;
-  const title = `Déménagement ${quartierName} (${cityName}) : 3 devis minimum en 3 min`;
-  const description = `Déménageurs locaux contrôlés pour ${quartierName} à ${cityName}. Devis comparables en 3 min · IA volume · 0€ · Sans démarchage`;
+  const title = `Déménagement ${quartierName} (${cityName}) | 5+ devis en 5–7j · Pros locaux`;
+  const description = `${quartierName}, ${cityName} : 5+ devis comparés sous 5–7j. Dossier anonyme, pros locaux contrôlés, 0€.`;
 
   return getFullMetadata(path, title, description);
 }
