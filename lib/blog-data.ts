@@ -9059,5 +9059,41 @@ export const BLOG_DATA: BlogPostMeta[] = [
   publishedAt: "2026-01-30",
   category: "guides-pratiques",
   readingTimeMinutes: 12
+  },
+  {
+  slug: "prix-demenageur-nice-2026",
+  title: "Prix Déménageur Nice 2026 : Tarifs Réels & Comparatif Complet",
+  description: "Prix déménageur Nice 2026 : 545€ studio, 990€ T2, 1680€ T3, 2670€ maison. Données réelles comparateurs. Surcoûts Vieux-Nice +15-20%, collines +10-15%. Guide complet.",
+  publishedAt: "2026-01-30",
+  category: "demenagement-par-ville",
+  citySlug: "nice",
+  readingTimeMinutes: 10
+  },
+  {
+  slug: "prix-demenageur-strasbourg-2026",
+  title: "Prix Déménageur Strasbourg 2026 : Tarifs Réels & Comparatif Complet",
+  description: "Prix déménageur Strasbourg 2026 : 525€ studio, 960€ T2, 1630€ T3, 2580€ maison. Données réelles comparateurs. Surcoûts Grande-Île +15-20%. Guide complet.",
+  publishedAt: "2026-01-30",
+  category: "demenagement-par-ville",
+  citySlug: "strasbourg",
+  readingTimeMinutes: 10
+  },
+  {
+  slug: "prix-demenageur-lille-2026",
+  title: "Prix Déménageur Lille 2026 : Tarifs Réels & Comparatif Complet",
+  description: "Prix déménageur Lille 2026 : 520€ studio, 955€ T2, 1620€ T3, 2570€ maison. Données réelles comparateurs. Surcoûts Vieux-Lille +15-20%. Guide complet.",
+  publishedAt: "2026-01-30",
+  category: "demenagement-par-ville",
+  citySlug: "lille",
+  readingTimeMinutes: 10
+  },
+  {
+  slug: "prix-demenageur-nantes-2026",
+  title: "Prix Déménageur Nantes 2026 : Tarifs Réels & Comparatif Complet",
+  description: "Prix déménageur Nantes 2026 : 530€ studio, 970€ T2, 1650€ T3, 2610€ maison. Données réelles comparateurs. Surcoûts centre +15-20%, Île Nantes +10-15%. Guide complet.",
+  publishedAt: "2026-01-30",
+  category: "demenagement-par-ville",
+  citySlug: "nantes",
+  readingTimeMinutes: 10
   }
 ];
