@@ -5,7 +5,7 @@ export const metadata = generateCityServiceMetadata({
   serviceSlug: "entreprise",
   title: "Déménagement d’entreprise à Toulouse : transfert bureaux, devis",
   description:
-    "Déménagement d’entreprise à Toulouse : transfert de bureaux, informatique, archives. Méthode, minimisation d’arrêt, assurance + 3 devis minimum comparables via Moverz.",
+    "Déménagement d’entreprise à Toulouse : transfert de bureaux, informatique, archives. Méthode, minimisation d’arrêt, assurance + 5+ devis comparés comparables via Moverz.",
 });
 
 export default function Page() {
@@ -55,7 +55,7 @@ export default function Page() {
           ],
         },
         {
-          title: "Comparer 3 devis minimum sur une base identique",
+          title: "Comparer 5+ devis comparés sur une base identique",
           paragraphs: [
             "Le vrai risque est de comparer des devis incomplets. Pour décider, il faut des offres sur un même cahier des charges.",
             "Moverz vous aide à standardiser la demande et à recevoir des devis comparables, sans spam.",
@@ -96,7 +96,7 @@ export default function Page() {
         {
           question: "Puis-je comparer plusieurs devis gratuitement ?",
           answer:
-            "Oui. Vous pouvez demander 3 devis minimum via Moverz avec un seul dossier, sans engagement.",
+            "Oui. Vous pouvez demander 5+ devis comparés via Moverz avec un seul dossier, sans engagement.",
         },
       ]}
     />

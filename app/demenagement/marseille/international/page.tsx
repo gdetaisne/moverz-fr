@@ -5,7 +5,7 @@ export const metadata = generateCityServiceMetadata({
   serviceSlug: "international",
   title: "Déménagement international depuis Marseille : démarches, devis",
   description:
-    "Déménagement international depuis/vers Marseille : transport (route, maritime, aérien), douane, assurance, stockage. Conseils + 3 devis minimum via Moverz.",
+    "Déménagement international depuis/vers Marseille : transport (route, maritime, aérien), douane, assurance, stockage. Conseils + 5+ devis comparés via Moverz.",
 });
 
 export default function Page() {

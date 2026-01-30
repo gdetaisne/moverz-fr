@@ -139,8 +139,8 @@ export default function RootLayout({
             name: "Moverz",
             url: "https://moverz.fr",
             logo: "https://moverz.fr/logo.png",
-            description:
-               "Comparateur de déménagement anti-arnaque. Comparez 3 devis minimum de déménageurs contrôlés sur toute la France.",
+              description:
+               "Comparateur de déménagement anti-arnaque. Recevez 5+ devis comparés sous 5 à 7 jours, sans harcèlement.",
             aggregateRating: {
               "@type": "AggregateRating",
               ratingValue: getAverageRating(MOVERZ_REVIEWS),

@@ -110,7 +110,7 @@ export function CityServicePage({
                 href={`https://devis.moverz.fr/devis-gratuits-v3?city_slug=${citySlug}&source=moverz.fr&from=${encodeURIComponent(fromPath)}`}
                 className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#F3F4F6] transition-colors"
               >
-                <span>Obtenir 3 devis minimum</span>
+                <span>Recevoir 5+ devis comparés</span>
                 <span className="text-lg leading-none">→</span>
               </a>
             </div>

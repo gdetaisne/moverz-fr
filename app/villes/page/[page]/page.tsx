@@ -22,7 +22,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
 
   const title = pageNum === 1 ? "Villes (annuaire)" : `Villes (annuaire) — page ${pageNum}`;
   const description =
-    "Annuaire des villes couvertes par Moverz. Accédez aux guides locaux et comparez 3 devis minimum en 3 min (IA fiabilise le volume, sans démarchage).";
+    "Annuaire des villes couvertes par Moverz. Accédez aux guides locaux et recevez 5+ devis comparés (dossier anonyme, sans harcèlement).";
 
   return getHubMetadata({
     path: `villes/page/${pageNum}`,
@@ -58,9 +58,9 @@ export default function VillesPaginatedPage({ params }: PageProps) {
         ]}
         eyebrow="Annuaire (paginé)"
         title="Toutes les villes"
-        subtitle={`Page ${pageNum}/${totalPages} — trouvez votre guide local et comparez 3 devis minimum.`}
+        subtitle={`Page ${pageNum}/${totalPages} — trouvez votre guide local et comparez 5+ devis comparés.`}
         primaryCta={{
-          label: "Comparer 3 devis minimum gratuitement",
+          label: "Comparer 5+ devis comparés gratuitement",
           href: "https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/villes-page",
         }}
         secondaryCta={{ label: "Retour à la page régions", href: "/villes/" }}

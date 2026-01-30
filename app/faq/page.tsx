@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/schema/JsonLd";
 
 export const metadata: Metadata = getFullMetadata(
   'faq',
-  "FAQ Déménagement : Tarifs, Arnaques, Assurances [Réponses 2025]",
+  `FAQ Déménagement : Tarifs, Arnaques, Assurances [Réponses ${new Date().getFullYear()}]`,
   "Toutes vos questions sur le déménagement : Combien ça coûte ? Comment éviter les arnaques ? Les pros sont-ils assurés ? C'est vraiment gratuit ? → Réponses claires"
 );
 
@@ -142,7 +142,7 @@ export default function FAQPage() {
         title="Questions fréquentes"
         subtitle="Découvrez comment l’IA Moverz estime votre volume, standardise votre dossier et vous aide à comparer des devis vraiment comparables, sans spam."
         primaryCta={{
-          label: "Comparer 3 devis minimum gratuitement",
+          label: "Comparer 5+ devis comparés gratuitement",
           href: "https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/faq/",
         }}
         secondaryCta={{ label: "Comment ça marche", href: "/comment-ca-marche/" }}
@@ -320,7 +320,7 @@ export default function FAQPage() {
       </section>
 
       <WidgetActionSection
-        title="Comparez 3 devis minimum maintenant"
+        title="Comparez 5+ devis comparés maintenant"
         subtitle="Décrivez votre déménagement en quelques minutes. L'IA fiabilise le volume pour des devis vraiment comparables, sans spam."
         source="moverz.fr"
         from="/faq/"

@@ -29,7 +29,7 @@ Construire un système **cohérent, scalable et mesurable** pour les metas (Titl
 **Convention**: Title = *[Intent + Mot-clé]* + *[Ville/Destination si applicable]* + “| Moverz”
 
 #### Homepage (marque + proposition de valeur)
-- **Title**: `Comparateur de déménagement anti-arnaque | 3 devis contrôlés | Moverz`
+- **Title**: `Comparateur de déménagement anti-arnaque | 5+ devis comparés | Moverz`
 - **Meta description** (140–160 chars idéal SERP): bénéfice + preuve + différenciation.
 - **OG image**: image dédiée (1200×630) type “brand + proof”.
 
@@ -40,8 +40,8 @@ Construire un système **cohérent, scalable et mesurable** pour les metas (Titl
 - **Pagination**: Title/Desc doivent inclure `Page N` + canonical vers la page paginée (pas vers page 1).
 
 #### Pages Ville (ex: /demenagement/[ville]/)
-- **Title**: `Déménagement à {Ville} | 3 devis contrôlés en 5 jours | Moverz`
-- **Desc**: `{Ville}: 3+ devis comparables sous 5 jours… + hook local (parking, accès, maison/centre-ville) + preuve avis`
+- **Title**: `Déménagement à {Ville} | 5+ devis comparés (5–7j) | Moverz`
+- **Desc**: `{Ville}: 5+ devis comparés sous 5 à 7 jours… + hook local (parking, accès, maison/centre-ville) + preuve avis`
 - **Schema**: BreadcrumbList + Service (si possible) + FAQPage si FAQ.
 
 #### Corridors (ex: /{ville}-vers-{destination}/)
@@ -67,7 +67,7 @@ Construire un système **cohérent, scalable et mesurable** pour les metas (Titl
   - Toujours inclure la **marque** en suffixe (sauf home où possible aussi).
 - **Description**:
   - 140–160 chars cible; unique; phrase lisible.
-  - Ajouter 1–2 “proof points” (ex: `⭐4.9/5`, `3+ devis`, `5 jours`, `sans harcèlement`) sans spam.
+  - Ajouter 1–2 “proof points” (ex: `⭐4.9/5`, `5+ devis`, `5–7 jours`, `sans harcèlement`) sans spam.
 - **Images OG**:
   - Toujours absolute URL.
   - Idéal: OG images par type (home, city, blog, corridor).
@@ -253,6 +253,40 @@ Construire un **Knowledge Graph cohérent** (Organization/WebSite/WebPage + type
 - **Organization schema**: **Global only** (source unique dans `app/layout.tsx`) → supprimer les duplications page-level (ex: home).
 - **Module metadata**: standardiser sur **`lib/seo/metadata.ts`** comme point d’entrée (migration imports + suppression/alias contrôlé du doublon).
 
+### Re-assess priorités (reste à faire) — CTR / Leads / Maintenabilité
+
+> Lecture: **P0 = impact direct + risque** (CTR/lead_click), **P1 = gains importants mais moins urgents**, **P2 = durabilité/observabilité**.  
+> Contraintes respectées: **zéro fausse promesse** (SLA: support <24h, partenaires <=48h recommandé, client 5–7 jours).
+
+#### P0 — Leads + confiance (zéro ambiguïté)
+- **P0.1 Clarifier “5+ devis comparés” (cohérence globale)** *(implémenté)*
+  - **constat (avant)**: mélange “3 devis minimum”, “5 devis minimum”, “5+ devis” selon pages.
+  - **action**: alignement des CTA + contenus principaux vers **“5+ devis comparés”** (sans réintroduire de promesse 48h).
+
+#### P1 — CTR (qualité des snippets) sans dette
+- **P1.1 Templates Title “hyper maintenant” (sans date figée)** *(implémenté pour les pages concernées)*
+  - **constat (avant)**: titles avec année figée (ex: “Guide 2025”, “Réponses 2025”).
+  - **action**: l’année est désormais **dynamique** sur les metas concernées (année courante).
+- **P1.2 Harmoniser le message des pages money**
+  - **objectif**: 1 promesse claire + 1 différenciant + 1 preuve (sans métriques fragiles).
+  - **action**: aligner titles/desc des pages money (`/comparateur-demenageurs/`, `/choisir-ville/`, `/comment-ca-marche/`, etc.) sur le même modèle de promesse.
+
+#### P1 — Données structurées “best-in-class” (qualité)
+- **P1.3 Unifier l’injection JSON-LD via `JsonLd`**
+  - **constat**: `components/Breadcrumbs.tsx` et certains composants injectent encore du JSON-LD via `<script dangerouslySetInnerHTML>`.
+  - **action**: migrer vers `JsonLd` partout (réduit les divergences et facilite les tests).
+- **P1.4 BlogPosting: sortir les hardcodes domaine**
+  - **constat**: `components/schema/ArticleSchema.tsx` hardcode `https://moverz.fr` (url, publisher, logo).
+  - **action**: baser ces champs sur `env.SITE_URL` + canonical helper (sans inventer d’image article tant que la source n’existe pas).
+
+#### P2 — Maintenabilité & QA
+- **P2.1 Tests JSON-LD additionnels**
+  - **constat**: test FAQ JSON-LD existe; pas de tests Breadcrumb/Article.
+  - **action**: ajouter tests unitaires (breadcrumb/article) sur le modèle de `tests/jsonld-faq.test.ts`.
+- **P2.2 Audit automatique “metadata inventory”**
+  - **objectif**: détecter en CI les régressions (double schema, title doublé, OG incohérent, etc.).
+  - **action**: script build-time qui exporte un CSV (URL → title/desc/canonical/schema types).
+
 ### Granularité des metas (SERP) — comment on définit le message par type de page
 
 #### Niveau 0 — Fallback global (sécurité)
@@ -353,9 +387,8 @@ On définit des templates stables (Title + Description) par grandes familles d�
 - **constat**:
   - `app/layout.tsx` injecte Organization + AggregateRating (via `JsonLd`).
   - `app/page.tsx` injecte aussi Organization + AggregateRating (valeurs différentes).
-- **action (décision requise)**:
-  - **Option A (global only)**: garder Organization uniquement dans `app/layout.tsx`, supprimer celui de `app/page.tsx`.
-  - **Option B (home only)**: déplacer Organization vers home uniquement (et retirer du layout) — implique que toutes les pages n’auront plus l’entité.
+- **action (implémentée)**:
+  - **Global only**: Organization est conservé uniquement dans `app/layout.tsx` (suppression de la duplication home).
 - **dépendances**: aucune.
 - **validation**: une seule définition `Organization` rendue à l’échelle du site + rating cohérent.
 
@@ -426,9 +459,8 @@ On définit des templates stables (Title + Description) par grandes familles d�
 
 #### 4.1 Supprimer la duplication de modules metadata (risque de divergence future)
 - **constat**: `lib/metadata.ts` et `lib/seo/metadata.ts` font (en partie) le même rôle (wrappers vers `getFullMetadata`).
-- **action (décision requise)**:
-  - **Option A**: garder uniquement `lib/seo/metadata.ts` et migrer les imports.
-  - **Option B**: garder `lib/metadata.ts` mais le transformer en alias/documentation, sans logique propre.
+- **action (implémentée)**:
+  - `lib/metadata.ts` est un alias “deprecated” qui réexporte depuis `lib/seo/metadata.ts` (source unique).
 - **dépendances**: 2.x.
 - **validation**: un seul point d’entrée “metadata” documenté; aucun import résiduel du module supprimé.
 

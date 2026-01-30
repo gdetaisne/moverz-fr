@@ -25,7 +25,7 @@ export default function ChoisirVillePage() {
         ]}
         eyebrow="Accès direct au comparateur"
         title="Choisissez votre ville"
-        subtitle="Sélectionnez votre ville pour démarrer le comparateur et recevoir 3 devis minimum de déménageurs contrôlés, sur une base standardisée."
+        subtitle="Sélectionnez votre ville pour démarrer le comparateur et recevoir 5+ devis comparés de déménageurs contrôlés, sur une base standardisée."
         primaryCta={{
           label: "Démarrer le comparateur",
           href: "https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/choisir-ville/",

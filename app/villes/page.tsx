@@ -5,9 +5,9 @@ import { CITIES, getCitiesByRegion } from "@/lib/cities";
 
 export const metadata: Metadata = getHubMetadata({
   path: "villes",
-  title: "Déménagement partout en France — 3 devis minimum comparables",
+  title: "Déménagement partout en France — 5+ devis comparés",
   description:
-    "Annuaire des villes couvertes par Moverz. Trouvez votre guide local et comparez 3 devis minimum en 3 min (IA fiabilise le volume, sans démarchage).",
+    "Annuaire des villes couvertes par Moverz. Trouvez votre guide local et recevez 5+ devis comparés (dossier anonyme, sans harcèlement).",
 });
 
 export default function VillesPage() {
@@ -27,7 +27,7 @@ export default function VillesPage() {
         title="Déménagement partout en France"
         subtitle="Moverz fonctionne dans toute la France. Explorez nos villes principales (guides dédiés) et lancez le comparateur, même si votre ville n’est pas listée."
         primaryCta={{
-          label: "Comparer 3 devis minimum gratuitement",
+          label: "Comparer 5+ devis comparés gratuitement",
           href: "https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/villes",
         }}
         secondaryCta={{ label: "Annuaire complet (paginé)", href: "/villes/page/1/" }}
@@ -168,7 +168,7 @@ export default function VillesPage() {
         <div className="container max-w-3xl text-center space-y-6">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs text-white/80 backdrop-blur-sm">
             <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
-            3 devis minimum · Sans démarchage · 100% gratuit
+            5+ devis comparés · Sans démarchage · 100% gratuit
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
             Prêt à comparer vos devis ?
@@ -182,7 +182,7 @@ export default function VillesPage() {
             className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-lg font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
           >
             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
-            <span className="relative">Comparez 3 devis minimum gratuitement</span>
+            <span className="relative">Comparez 5+ devis comparés gratuitement</span>
             <span className="relative text-xl leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
           </a>
         </div>

@@ -5,7 +5,7 @@ export const metadata = generateCityServiceMetadata({
   serviceSlug: "location-camion",
   title: "Location camion déménagement Strasbourg : volumes, prix & conseils",
   description:
-    "Location camion déménagement à Strasbourg : quel volume choisir, prix, conditions (permis, caution), conseils centre-ville/tram + alternative : comparer 3 devis minimum pros.",
+    "Location camion déménagement à Strasbourg : quel volume choisir, prix, conditions (permis, caution), conseils centre-ville/tram + alternative : comparer 5+ devis comparés pros.",
 });
 
 export default function Page() {
@@ -96,7 +96,7 @@ export default function Page() {
         {
           question: "Puis-je comparer plusieurs devis gratuitement ?",
           answer:
-            "Oui. Vous pouvez demander 3 devis minimum via Moverz avec un seul dossier, sans engagement.",
+            "Oui. Vous pouvez demander 5+ devis comparés via Moverz avec un seul dossier, sans engagement.",
         },
       ]}
     />
