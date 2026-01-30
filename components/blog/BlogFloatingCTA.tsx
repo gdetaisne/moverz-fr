@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { MOVERZ_REVIEWS, getAverageRating, getTotalReviews } from "@/lib/reviews";
 import { trackEvent } from "@/lib/tracking";
 
@@ -24,20 +24,50 @@ export default function BlogFloatingCTA() {
   const [visible, setVisible] = useState(false);
   const [fromPath, setFromPath] = useState<string>("/blog");
   const [reviewIndex, setReviewIndex] = useState<number>(0);
+  const [scrollProgress, setScrollProgress] = useState<number>(0);
+  const [liftPx, setLiftPx] = useState<number>(0);
+  const rafRef = useRef<number | null>(null);
 
   const rating = useMemo(() => getAverageRating(MOVERZ_REVIEWS), []);
   const review = MOVERZ_REVIEWS[Math.min(reviewIndex, MOVERZ_REVIEWS.length - 1)];
 
   useEffect(() => {
-    const onScroll = () => {
+    const compute = () => {
       const denom = document.body.scrollHeight - window.innerHeight;
       const scrolled = denom > 0 ? window.scrollY / denom : 0;
+
       // Align with FloatingWhatsApp hiding threshold (0.4) to avoid overlap.
-      setVisible(scrolled > 0.4);
+      const isVisible = scrolled > 0.4;
+      setVisible(isVisible);
+
+      // Progress bar: show only the "reading" portion after the CTA appears.
+      const start = 0.4;
+      const p = scrolled <= start ? 0 : Math.min(1, (scrolled - start) / (1 - start));
+      setScrollProgress(p);
+
+      // Micro parallax / lift (1–2px max) for a premium feel without being distracting.
+      // Only when visible to avoid layout jitters near the top.
+      const lift = isVisible ? Math.min(2, Math.max(0, p * 2)) : 0;
+      setLiftPx(lift);
     };
-    onScroll();
+
+    const onScroll = () => {
+      if (rafRef.current) return;
+      rafRef.current = window.requestAnimationFrame(() => {
+        rafRef.current = null;
+        compute();
+      });
+    };
+
+    compute();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("resize", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (rafRef.current) window.cancelAnimationFrame(rafRef.current);
+      rafRef.current = null;
+    };
   }, []);
 
   useEffect(() => {
@@ -110,8 +140,24 @@ export default function BlogFloatingCTA() {
           visible ? "opacity-100 translate-y-0" : "pointer-events-none opacity-0 translate-y-4"
         }`}
         aria-label="Rappel promesse Moverz"
+        style={{
+          transform: visible ? `translateY(-${liftPx}px)` : undefined,
+        }}
       >
-        <div className="rounded-2xl border border-[#E3E5E8] bg-white shadow-[0_18px_60px_rgba(15,23,42,0.12)] overflow-hidden">
+        <div
+          className={`rounded-2xl border bg-white overflow-hidden transition-shadow duration-500 ${
+            visible
+              ? "border-[#6BCFCF]/35 shadow-[0_18px_60px_rgba(15,23,42,0.14),0_0_0_1px_rgba(107,207,207,0.18)]"
+              : "border-[#E3E5E8] shadow-[0_18px_60px_rgba(15,23,42,0.12)]"
+          }`}
+        >
+          {/* Scroll progress (premium, unobtrusive) */}
+          <div className="h-1 w-full bg-[#E3E5E8]" aria-hidden="true">
+            <div
+              className="h-full bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#0F172A] transition-[width] duration-150 ease-out"
+              style={{ width: `${Math.round(scrollProgress * 100)}%` }}
+            />
+          </div>
           <div className="px-5 py-4 border-b border-[#E3E5E8] bg-gradient-to-br from-[#F8FAFC] to-white">
             <p className="text-sm font-bold text-[#0F172A]">{title}</p>
             <p className="mt-1 text-sm text-[#334155] leading-snug">{promise}</p>
@@ -169,6 +215,13 @@ export default function BlogFloatingCTA() {
       >
         <div className="mx-auto max-w-md px-3 pb-5">
           <div className="rounded-2xl border border-[#E3E5E8] bg-white/95 backdrop-blur shadow-[0_-10px_40px_rgba(15,23,42,0.10)] px-3 py-3">
+            {/* Scroll progress (mobile) */}
+            <div className="mb-2 h-1 w-full overflow-hidden rounded-full bg-[#E3E5E8]" aria-hidden="true">
+              <div
+                className="h-full bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#0F172A] transition-[width] duration-150 ease-out"
+                style={{ width: `${Math.round(scrollProgress * 100)}%` }}
+              />
+            </div>
             <div className="flex items-center justify-between gap-3">
               <div className="min-w-0">
                 <p className="text-xs font-semibold text-[#0F172A] truncate">{title}</p>
