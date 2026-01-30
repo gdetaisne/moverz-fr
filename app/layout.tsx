@@ -146,6 +146,13 @@ export default function RootLayout({
             },
             description:
               "Comparateur de déménagement anti-arnaque. Recevez 5+ devis comparés sous 5 à 7 jours, sans harcèlement.",
+            foundingDate: "2023",
+            address: {
+              "@type": "PostalAddress",
+              addressCountry: "FR",
+              addressLocality: "Paris",
+              addressRegion: "Île-de-France",
+            },
             aggregateRating: {
               "@type": "AggregateRating",
               ratingValue: getAverageRating(MOVERZ_REVIEWS),
