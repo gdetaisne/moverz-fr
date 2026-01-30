@@ -309,7 +309,12 @@ Construire un **Knowledge Graph cohérent** (Organization/WebSite/WebPage + type
     - `npm test` (Vitest) passe en CI/local (11 tests OK)
 - **P2.2 Audit automatique “metadata inventory”**
   - **objectif**: détecter en CI les régressions (double schema, title doublé, OG incohérent, etc.).
-  - **action**: script build-time qui exporte un CSV (URL → title/desc/canonical/schema types).
+  - **action (appliquée)**:
+    - `scripts/seo-inventory.ts` génère un CSV **URL → title/desc/h1/canonical/status/lastmod** (villes + services + blog).
+    - le champ `status` expose des flags “anti‑régression” (ex: `double_brand`, `meta_mentions_48h`, `canonical_mismatch`, etc.).
+  - **validation**:
+    - commande: `npm run seo:inventory > seo-inventory.csv`
+    - le CSV contient ~4k lignes (selon le nombre d’articles publiés).
 
 ### Granularité des metas (SERP) — comment on définit le message par type de page
 
