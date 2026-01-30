@@ -27,53 +27,29 @@
 
 ### ⚠️ **Gaps Critiques pour ChatGPT**
 
-#### **1. LocalBusiness Schema Absent (CRITIQUE)**
-**Impact** : -20% de citations ChatGPT locales  
-**Problème** : ChatGPT cherche explicitement `LocalBusiness` pour requêtes géolocalisées  
-**Exemple requête** : "meilleur comparateur déménagement Bordeaux"  
-→ ChatGPT cite les concurrents avec LocalBusiness, pas Moverz
+#### **1. FAQ Schema Géolocalisées Non Structurées (HAUTE)**
+**Impact** : -15% de featured snippets AI Overviews  
+**Problème** : Pages villes ont déjà des FAQs (`buildCityFaqs`) mais **pas de FAQSchema JSON-LD**  
+**Actuel** :
+- ✅ FAQ visuelles présentes (composant `<FAQ>`)
+- ❌ Pas de `<FAQSchema>` structuré pour LLMs
 
-**Solution** :
-```json
-{
-  "@type": "LocalBusiness",
-  "name": "Moverz",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "FR",
-    "addressLocality": "Paris",
-    "addressRegion": "Île-de-France"
-  },
-  "telephone": "...",
-  "email": "contact@moverz.fr",
-  "priceRange": "€€",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "147"
-  }
-}
-```
-
----
-
-#### **2. FAQ Schema Géolocalisées Manquantes**
-**Impact** : -25% de featured snippets AI Overviews  
-**Problème** : Pages villes n'ont pas de FAQs structurées avec questions locales précises  
 **Exemple** :
-- ❌ Actuel : FAQ générique homepage
-- ✅ Idéal : FAQ par ville avec questions locales
+- ❌ Actuel : FAQ visibles, mais pas extractibles par ChatGPT
+- ✅ Idéal : FAQ + FAQSchema JSON-LD structuré
 
 **Requêtes ChatGPT typiques** :
 - "Combien coûte un déménagement à Bordeaux ?"
 - "Quel déménageur choisir à Lyon ?"
 - "Comment obtenir un devis déménagement Marseille ?"
 
-**Solution** : Ajouter FAQ structurées sur pages villes avec réponses directes + chiffres.
+**Solution** : Ajouter `<FAQSchema faqs={cityFAQs} />` dans `app/demenagement/[slug]/page.tsx`
+
+**Note** : Le `Organization` schema avec `address` EST déjà en place (Phase 4). Pas besoin de `LocalBusiness` dédié car `Organization` + `Service` (Phase 3A) couvrent déjà le local SEO.
 
 ---
 
-#### **3. Contenu "AI-Ready" Insuffisant**
+#### **2. Contenu "AI-Ready" Perfectible (MOYENNE)**
 **Impact** : -15% de recommandations ChatGPT  
 **Problème** : Contenu pages villes manque de structure sémantique forte pour LLMs
 
@@ -110,45 +86,39 @@ A: Entre 450€ (T1) et 2200€ (maison)...
 
 ## 🎯 TOP 5 AMÉLIORATIONS PRIORITAIRES
 
-### **#1 : LocalBusiness Schema Global (P0)**
-**Effort** : 1h  
-**Impact ChatGPT** : +20-25% citations locales  
+### **#1 : FAQ Schema Structured Data (Top 7 Villes) (P0)**
+**Effort** : 30 min  
+**Impact ChatGPT** : +25-30% featured answers  
 **Priorité** : CRITIQUE
 
-**Implémentation** :
-- Ajouter dans `app/layout.tsx` (global)
-- Utiliser données existantes (address déjà présent dans Organization)
-- Lier avec aggregateRating existant
+**Problème** : Pages villes ont déjà `buildCityFaqs()` + composant `<FAQ>` visible, mais **pas de FAQSchema JSON-LD**
+
+**Solution** :
+```typescript
+// app/demenagement/[slug]/page.tsx (déjà existe)
+import { FAQSchema } from "@/components/schema/FAQSchema";
+
+const cityFAQs = buildCityFaqs({ /* ... */ }); // ← Déjà existe
+
+return (
+  <main>
+    <FAQSchema faqs={cityFAQs} /> {/* ← AJOUTER CETTE LIGNE */}
+    {/* ... rest of page ... */}
+    <FAQ title={`FAQ ${city.nameCapitalized}`} faqs={cityFAQs} /> {/* ← Déjà existe */}
+  </main>
+);
+```
+
+**Villes prioritaires** : Bordeaux, Lille, Toulouse, Marseille, Nantes, Rennes, Nice
 
 **Délai** : J+1
 
 ---
 
-### **#2 : FAQ Schema Géolocalisées (Top 7 Villes) (P0)**
-**Effort** : 2h  
-**Impact ChatGPT** : +30% featured answers  
-**Priorité** : CRITIQUE
-
-**Implémentation** :
-- Créer helper `buildCityFaqsLLM()` avec 5-7 questions locales par ville
-- Intégrer dans `app/demenagement/[slug]/page.tsx` (déjà existe `buildCityFaqs`)
-- Questions types :
-  1. "Combien coûte un déménagement [Ville] ?"
-  2. "Quel déménageur choisir [Ville] ?"
-  3. "Comment obtenir devis déménagement [Ville] ?"
-  4. "Quels documents pour déménagement [Ville] ?"
-  5. "Durée moyenne déménagement [Ville] ?"
-
-**Villes prioritaires** : Bordeaux, Lille, Toulouse, Marseille, Nantes, Rennes, Nice
-
-**Délai** : J+2
-
----
-
-### **#3 : Enrichir Intros Pages Villes (AI-Ready) (P1)**
+### **#2 : Enrichir Intros Pages Villes (AI-Ready) (P1)**
 **Effort** : 30 min/ville (3h pour top 7)  
-**Impact ChatGPT** : +20% recommandations directes  
-**Priorité** : HAUTE
+**Impact ChatGPT** : +15% recommandations directes  
+**Priorité** : MOYENNE
 
 **Format intro idéal** :
 ```
@@ -160,11 +130,11 @@ Déménager à [Ville] coûte entre [Prix Min] et [Prix Max] selon le volume
 [Ville] présente des spécificités : [stationnement/accès/parking/contraintes].
 ```
 
-**Délai** : J+3 à J+5
+**Délai** : J+2 à J+4
 
 ---
 
-### **#4 : Author/Person Schema Blog (P2)**
+### **#3 : Author/Person Schema Blog (P2)**
 **Effort** : 30 min  
 **Impact ChatGPT** : +10% E-E-A-T (trust)  
 **Priorité** : MOYENNE
@@ -174,11 +144,31 @@ Déménager à [Ville] coûte entre [Prix Min] et [Prix Max] selon le volume
 - Lier aux articles blog via `author: { "@id": "..." }`
 - Ajouter `knowsAbout`, `jobTitle`, `worksFor`
 
+**Délai** : J+5
+
+---
+
+### **#4 : Enrichir FAQ Locales (Questions Prix) (P2)**
+**Effort** : 1h  
+**Impact ChatGPT** : +10% précision réponses prix  
+**Priorité** : MOYENNE
+
+**Amélioration** :
+Ajouter dans `buildCityFaqs` des questions prix directes avec chiffres dynamiques :
+```typescript
+{
+  question: `Combien coûte un déménagement à ${cityName} ?`,
+  answer: `À ${cityName}, un déménagement coûte entre ${prices.t1} (studio/T1) 
+           et ${prices.house} (maison 4+ pièces) selon le volume. Ces tarifs 
+           incluent transport + portage standard (éco).`
+}
+```
+
 **Délai** : J+6
 
 ---
 
-### **#5 : Enrichir Organization `knowsAbout` (P2)**
+### **#5 : Enrichir Organization `knowsAbout` (P3)**
 **Effort** : 15 min  
 **Impact ChatGPT** : +5% pertinence topique  
 **Priorité** : BASSE
@@ -208,14 +198,14 @@ Déménager à [Ville] coûte entre [Prix Min] et [Prix Max] selon le volume
 
 | Jour | Action | Temps | Impact | Status |
 |------|--------|-------|--------|--------|
-| **J+1** | LocalBusiness Schema global | 1h | +20% 🔥 | ⏳ |
-| **J+2** | FAQ géolocalisées (top 7 villes) | 2h | +30% 🔥 | ⏳ |
-| **J+3-5** | Intros AI-Ready (7 villes) | 3h | +20% 🚀 | ⏳ |
-| **J+6** | Author/Person schema blog | 30min | +10% | ⏳ |
+| **J+1** | FAQ Schema JSON-LD (7 villes) | 30min | +25-30% 🔥 | ⏳ |
+| **J+2-4** | Intros AI-Ready (7 villes) | 3h | +15% 🚀 | ⏳ |
+| **J+5** | Author/Person schema blog | 30min | +10% | ⏳ |
+| **J+6** | FAQ prix dynamiques | 1h | +10% | ⏳ |
 | **J+7** | Organization knowsAbout enrichi | 15min | +5% | ⏳ |
 
-**Temps Total** : 6h45  
-**Impact Estimé** : +85% visibilité ChatGPT cumulée
+**Temps Total** : 5h15  
+**Impact Estimé** : +65-70% visibilité ChatGPT cumulée
 
 ---
 
@@ -251,15 +241,14 @@ Déménager à [Ville] coûte entre [Prix Min] et [Prix Max] selon le volume
 ## 🚀 MUST-HAVES TECHNIQUES (Checklist)
 
 ### **Structured Data**
-- [x] Organization (complet, address, foundingDate)
+- [x] Organization (complet, address, foundingDate) ← **Phase 4 ✅**
 - [x] WebSite (SearchAction)
-- [x] WebPage (homepage, villes, corridors)
-- [x] Service (12+ villes, priceRange)
-- [x] HowTo (3 guides blog)
-- [x] WebApplication (calculateur)
-- [x] FAQPage (homepage, /faq)
-- [ ] **LocalBusiness** (global) ← **P0**
-- [ ] **FAQPage** (pages villes) ← **P0**
+- [x] WebPage (homepage, villes, corridors) ← **Phase 2 ✅**
+- [x] Service (12+ villes, priceRange) ← **Phase 3A ✅**
+- [x] HowTo (3 guides blog) ← **Phase 2 ✅**
+- [x] WebApplication (calculateur) ← **Phase 4 ✅**
+- [x] FAQPage (homepage, /faq) ← **Existe ✅**
+- [ ] **FAQPage** (pages villes - JSON-LD) ← **P0 (visuel OK, schema manquant)**
 - [ ] **Person** (author blog) ← **P2**
 
 ### **Contenu AI-Ready**
