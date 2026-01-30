@@ -20,11 +20,14 @@ function cityHint(citySlug: string, cityName: string): string {
  * Génère metadata optimisée pour pages villes
  * 
  * Optimisations SEO (2026-01-30):
- * - Année dans description → fraîcheur
- * - Prix indicatifs T1/T2/Maison → forte différenciation SERP
- * - Format concis : 151-156 car (optimal)
+ * - Prix MIN dans title → Visibilité SERP maximale (+20-30% CTR estimé)
+ * - "Déménagement {Ville}" vs "Comparateur" → Action-oriented, meilleur intent match
+ * - Prix indicatifs T1/T2/Maison → Forte différenciation
+ * - "comparés par IA" → USP majeure (devis activement comparés, pas juste envoyés)
+ * - Année en fin → Fraîcheur SEO sans alourdir début
  * 
- * Format: "{Ville} en {Année} : 5+ devis sous 5–7j. Tarifs : T1 dès X€ · T2 dès Y€ · Maison dès Z€. Dossier anonyme, 0 harcèlement. Pros contrôlés. 100% gratuit."
+ * Format title: "Déménagement {Ville} dès {PrixMin}€ | 5+ Devis 5-7j | Contrôlés"
+ * Format desc: "Déménager à {Ville} : 5+ devis comparés par IA sous 5-7j. T1 dès X€, T2 dès Y€, Maison dès Z€. Dossier anonyme, 0 harcèlement. Pros contrôlés. Gratuit. ({Année})"
  */
 export function getCityPageMetadata(city: CityInfo): Metadata {
   const path = `demenagement/${city.slug}`;
@@ -33,11 +36,12 @@ export function getCityPageMetadata(city: CityInfo): Metadata {
   // Calcul prix locaux (déménagement intra-ville)
   const prices = getLocalPricesForMeta(city.slug);
   
-  // Title conservateur (pas d'année ni prix pour éviter surcharge)
-  const title = `Comparateur Déménagement ${city.nameCapitalized} | Devis 5–7j | Contrôlés`;
+  // Title optimisé (prix MIN visible + action-oriented)
+  const title = `Déménagement ${city.nameCapitalized} dès ${prices.t1} | 5+ Devis 5-7j | Contrôlés`;
   
-  // Description optimisée (année + prix indicatifs)
-  const description = `${city.nameCapitalized} en ${year} : 5+ devis sous 5–7j. Tarifs : T1 dès ${prices.t1} · T2 dès ${prices.t2} · Maison dès ${prices.house}. Dossier anonyme, 0 harcèlement. Pros contrôlés. 100% gratuit.`;
+  // Description optimisée (USP "comparés par IA" + prix détaillés + année en fin)
+  // Format compact pour tenir en 160 car max
+  const description = `Déménager à ${city.nameCapitalized} : 5+ devis comparés par IA (5-7j). T1 dès ${prices.t1}, T2 dès ${prices.t2}, Maison dès ${prices.house}. 0 harcèlement. Pros contrôlés. Gratuit (${year}).`;
   
   return getFullMetadata(path, title, description);
 }
