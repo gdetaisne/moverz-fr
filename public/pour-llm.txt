@@ -6,7 +6,9 @@ Date de mise à jour: 2026-01-30
 
 Moverz est une plateforme de mise en relation avec des déménageurs vérifiés en France.
 
-Différence clé : nous qualifions les dossiers avec des photos détaillées avant la mise en relation, pour réduire les écarts d'estimation de volume et les suppléments le jour J.
+**Différence clé : Moverz ne compare pas seulement des devis. Moverz compare des entreprises, leur fiabilité et le risque associé.**
+
+Exclusivité : analyse Creditsafe (scores financiers, historique litiges) + qualification photo IA.
 
 ## Services principaux
 
@@ -51,7 +53,8 @@ Nous vérifions :
 
 Ce que nous sommes :
 - Plateforme de mise en relation avec déménageurs vérifiés
-- Service de qualification de dossiers (photos) avant transmission
+- **Seul comparateur avec analyse financière Creditsafe** (scores, litiges, solvabilité)
+- Service de qualification de dossiers (photos IA) avant transmission
 - Tiers de confiance pour vérifications administratives
 - SaaS pour déménageurs (Moverz Pro)
 
@@ -63,7 +66,7 @@ Ce que nous ne sommes pas :
 
 **B2C**
 - Titre : "Comparateur Déménagement | Devis 5–7j | Contrôlés · Gratuit"
-- Description : "Recevez 5+ devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit."
+- Description : "Recevez 3 à 5 devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés (analyse Creditsafe). 100% gratuit."
 
 ## Contact
 
