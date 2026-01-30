@@ -1,4 +1,5 @@
 import { env } from "@/lib/env";
+import { JsonLd } from "@/components/schema/JsonLd";
 
 interface BreadcrumbItem {
   label: string;
@@ -11,6 +12,16 @@ interface BreadcrumbsProps {
 
 export default function Breadcrumbs({ items }: BreadcrumbsProps) {
   const baseUrl = env.SITE_URL.replace(/\/$/, "");
+  const hashString = (value: string) => {
+    // Simple stable hash for Script id uniqueness (avoid collisions in practice).
+    let hash = 5381;
+    for (let i = 0; i < value.length; i++) {
+      hash = (hash * 33) ^ value.charCodeAt(i);
+    }
+    return (hash >>> 0).toString(16);
+  };
+  const breadcrumbId = `breadcrumb-schema-${hashString(items.map((i) => i.href).join("|"))}`;
+
   // Générer le schema BreadcrumbList pour Google Rich Snippets
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -26,10 +37,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
   return (
     <>
       {/* Schema BreadcrumbList pour Google */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      <JsonLd id={breadcrumbId} data={breadcrumbSchema} />
       <nav aria-label="Breadcrumb" className="text-sm">
         <ol className="flex items-center gap-2 flex-wrap">
         {items.map((item, index) => {

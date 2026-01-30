@@ -1,5 +1,7 @@
 "use client";
 
+import { JsonLd } from "@/components/schema/JsonLd";
+
 type StructuredDataCTAProps = {
   title: string;
   description: string;
@@ -13,6 +15,15 @@ export default function StructuredDataCTA({
   url,
   actionType = "OrderAction",
 }: StructuredDataCTAProps) {
+  const hashString = (value: string) => {
+    let hash = 5381;
+    for (let i = 0; i < value.length; i++) {
+      hash = (hash * 33) ^ value.charCodeAt(i);
+    }
+    return (hash >>> 0).toString(16);
+  };
+  const id = `cta-schema-${hashString(url)}`;
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -32,11 +43,6 @@ export default function StructuredDataCTA({
     }
   };
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-    />
-  );
+  return <JsonLd id={id} data={structuredData} />;
 }
 
