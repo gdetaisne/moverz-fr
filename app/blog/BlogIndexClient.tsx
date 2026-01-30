@@ -145,6 +145,29 @@ export default function BlogIndexClient() {
                 {heroSubtitle}
               </p>
 
+              <form action="/search" method="get" className="max-w-xl">
+                <label className="sr-only" htmlFor="blog-search-q">
+                  Rechercher sur Moverz
+                </label>
+                <div className="flex gap-2">
+                  <input
+                    id="blog-search-q"
+                    name="q"
+                    placeholder="Rechercher (blog, villes)…"
+                    className="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]"
+                  />
+                  <button
+                    type="submit"
+                    className="shrink-0 rounded-xl bg-[#6BCFCF] px-5 py-3 text-sm font-semibold text-[#0F172A] hover:bg-[#5AB9B9] transition-colors"
+                  >
+                    OK
+                  </button>
+                </div>
+                <p className="mt-2 text-xs text-white/60">
+                  Astuce: essayez “prix”, “volume”, “Nice”, “checklist”.
+                </p>
+              </form>
+
               <div className="flex flex-wrap gap-4">
                 {isPro ? (
                   <>

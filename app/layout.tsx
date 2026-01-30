@@ -267,6 +267,23 @@ export default function RootLayout({
                 <p className="text-sm text-white/70 leading-relaxed">
                   Le comparateur anti-arnaque. Devis comparables, pros contrôlés, sans démarchage.
                 </p>
+                <form action="/search" method="get" className="mt-4 flex gap-2">
+                  <label className="sr-only" htmlFor="footer-search-q">
+                    Rechercher sur Moverz
+                  </label>
+                  <input
+                    id="footer-search-q"
+                    name="q"
+                    placeholder="Rechercher (blog, villes)…"
+                    className="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-2 text-sm text-white placeholder:text-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]"
+                  />
+                  <button
+                    type="submit"
+                    className="shrink-0 rounded-xl bg-[#6BCFCF] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:bg-[#5AB9B9] transition-colors"
+                  >
+                    OK
+                  </button>
+                </form>
               </div>
 
               {/* Colonne 2 : Liens utiles */}

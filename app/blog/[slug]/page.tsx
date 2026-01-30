@@ -272,6 +272,26 @@ export default function BlogPostPage({ params }: PageProps) {
           <p className="text-sm md:text-base text-white/80 max-w-2xl">
             {post.description}
           </p>
+
+          <form action="/search" method="get" className="pt-2">
+            <label className="sr-only" htmlFor="blog-article-search-q">
+              Rechercher sur Moverz
+            </label>
+            <div className="flex gap-2 max-w-xl">
+              <input
+                id="blog-article-search-q"
+                name="q"
+                placeholder="Rechercher (blog, villes)…"
+                className="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]"
+              />
+              <button
+                type="submit"
+                className="shrink-0 rounded-xl bg-[#6BCFCF] px-5 py-3 text-sm font-semibold text-[#0F172A] hover:bg-[#5AB9B9] transition-colors"
+              >
+                OK
+              </button>
+            </div>
+          </form>
         </div>
       </section>
 
