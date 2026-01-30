@@ -255,6 +255,54 @@ export function getCorridorPricesForMeta(
 }
 
 /**
+ * Calcule prix indicatifs pour déménagement LOCAL (intra-ville)
+ * 
+ * Usage: meta descriptions pages villes
+ * Hypothèse: distance moyenne intra-ville = 15 km
+ * 
+ * @param citySlug Slug ville (non utilisé pour l'instant, distance fixe)
+ * @returns Prix min (format "dès X€") pour T1/T2/Maison
+ * 
+ * @example
+ * ```ts
+ * const prices = getLocalPricesForMeta('nice');
+ * // { t1: "450€", t2: "750€", house: "1300€" }
+ * ```
+ */
+export function getLocalPricesForMeta(citySlug: string) {
+  const DISTANCE_LOCALE_KM = 15; // Distance intra-ville moyenne
+  
+  const t1 = calculateCorridorPrice(
+    DISTANCE_LOCALE_KM,
+    DEFAULT_SURFACES.t1,
+    TYPE_COEFFICIENTS.t1
+  );
+  
+  const t2 = calculateCorridorPrice(
+    DISTANCE_LOCALE_KM,
+    DEFAULT_SURFACES.t2,
+    TYPE_COEFFICIENTS.t2
+  );
+  
+  const house = calculateCorridorPrice(
+    DISTANCE_LOCALE_KM,
+    DEFAULT_SURFACES.house,
+    TYPE_COEFFICIENTS.house
+  );
+  
+  // Format "dès X€" (prix min uniquement, arrondi dizaines)
+  const formatMin = (price: { min: number; max: number }) => {
+    return `${Math.round(price.min / 10) * 10}€`;
+  };
+  
+  return {
+    t1: formatMin(t1),
+    t2: formatMin(t2),
+    house: formatMin(house),
+  };
+}
+
+/**
  * Génère les prix indicatifs pour affichage dans la page corridor
  * 
  * Format identique à ce qui est attendu par le composant CorridorPage
