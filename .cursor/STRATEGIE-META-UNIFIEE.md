@@ -24,9 +24,11 @@
 4. [Pages Corridors](#pages-corridors)
 5. [Pages Quartiers](#pages-quartiers)
 6. [Pages Services](#pages-services)
-7. [Pricing dynamique](#pricing-dynamique)
-8. [Historique & évolutions](#historique-évolutions)
-9. [KPIs & Monitoring](#kpis-monitoring)
+7. [Blog](#blog)
+8. [Structured Data (JSON-LD)](#structured-data-json-ld)
+9. [Pricing dynamique](#pricing-dynamique)
+10. [Historique & évolutions](#historique-évolutions)
+11. [KPIs & Monitoring](#kpis-monitoring)
 
 ---
 
@@ -41,7 +43,12 @@
 | `components/templates/QuartierPage.tsx` | Génération meta quartiers | ✅ Actif |
 | `lib/pricing-corridors.ts` | Calcul prix dynamiques (formules tunnel ÉCO) | ✅ Actif |
 | `lib/canonical-helper.ts` | Helpers canonical + OG | ✅ Actif |
-| `app/layout.tsx` | Meta globales (Organization, WebSite schema) | ✅ Actif |
+| `lib/blog-canonique.ts` | Metadata blog | ✅ Actif |
+| `app/layout.tsx` | Meta globales (Organization, WebSite schema) + Title template | ✅ Actif |
+| `components/Breadcrumbs.tsx` | BreadcrumbList JSON-LD | ✅ Actif |
+| `components/schema/ArticleSchema.tsx` | Article JSON-LD (blog) | ✅ Actif |
+| `components/blog/BlogFloatingCTA.tsx` | CTA blog (conversion) | ✅ Actif |
+| `components/home/homeFaqs.ts` | FAQ homepage (source unique) | ✅ Actif |
 
 ### Principes architecturaux
 
@@ -50,6 +57,20 @@
 ✅ **Prix réels** : Formules tunnel ÉCO (pas inventés)  
 ✅ **Cohérence meta/contenu** : Même data pour SERP et page  
 ✅ **Testable** : Scripts de validation automatiques  
+✅ **Title template** : `%s | Moverz` (défini dans `app/layout.tsx`)  
+✅ **Messaging unifié** : "5+ devis comparés sous 5-7j" partout  
+✅ **Truthful copy** : Zéro fausse promesse
+
+### Évolutions techniques 30 janvier
+
+| Aspect | Avant | Après | Impact |
+|--------|-------|-------|--------|
+| **Title branding** | Hardcodé `\| Moverz` dans chaque page | Template `%s \| Moverz` dans layout | Maintenance ⬆️ |
+| **Duplicate schema** | Organization homepage + layout | Seulement layout | SEO quality ⬆️ |
+| **FAQ source** | Hardcodé homepage | `homeFaqs.ts` réutilisable | DRY ⬆️ |
+| **Pricing corridors** | Hardcodé 34 pages | Calculé dynamiquement | Accuracy ⬆️ |
+| **JSON-LD** | Scripts inline | Wrapper `JsonLd` typé | Type-safety ⬆️ |
+| **Tests** | Manuel | Automatisés (vitest) | Quality ⬆️ |  
 
 ---
 
@@ -272,6 +293,128 @@ Définis dans `lib/service-pages.ts` :
 
 ---
 
+## 📝 Blog
+
+### Format actuel (30 janvier 2026)
+
+**Title** :
+```
+{Titre Article} | Moverz
+```
+
+**Description** :
+```
+Variable par article (défini dans lib/blog-canonique.ts)
+```
+
+### Évolutions 30 janvier
+
+| Heure | Commit | Change | Impact |
+|-------|--------|--------|--------|
+| **10:12** | `04ddb19` | Suppression promesses "48h" des metas blog | Alignement avec délai réel 5-7j |
+| **10:29** | `e3d7378` | Ajout floating CTA blog (promise + reviews) | Conversion ⬆️ |
+| **10:41** | `86cd5da` | Tracking `lead_click` + `uplift_click` sur CTA | Analytics ⬆️ |
+| **10:59** | `3e0e097` | Scroll progress + parallax subtil CTA | UX ⬆️ |
+| **11:05** | `66c5be2` | Relocation box + tracking `mobility_click` | Engagement ⬆️ |
+| **11:13** | `386f716` | CTA visible après fold (viewport-based) | Conversion ⬆️ |
+
+### Fichiers sources
+
+- **Metadata blog** : `lib/blog-canonique.ts`
+- **Floating CTA** : `components/blog/BlogFloatingCTA.tsx`
+- **Pages blog** : `app/blog/[slug]/page.tsx`, `app/blog/*/page.tsx`
+
+### Composant clé : BlogFloatingCTA
+
+**USP affichées** :
+- ✅ "Recevez 5+ devis comparés sous 5–7j"
+- ✅ "Dossier anonyme, 0 harcèlement"
+- ✅ Reviews (4.9/5, 1200+ déménagements)
+
+**Tracking** :
+- `lead_click` : Clic CTA principal
+- `uplift_click` : Clic review
+- `mobility_click` : Engagement relocation box
+
+**Affichage** : Après scroll viewport (non intrusif)
+
+---
+
+## 🏗️ Structured Data (JSON-LD)
+
+### Schémas implémentés (30 janvier 2026)
+
+| Schema | Où | Fichier | Status |
+|--------|----|---------| -------|
+| **Organization** | Global (site-wide) | `app/layout.tsx` | ✅ Actif |
+| **WebSite** | Global (site-wide) | `app/layout.tsx` | ✅ Actif |
+| **SearchAction** | Global (site-wide) | `app/layout.tsx` | ✅ Ajouté 30/01 |
+| **Person** | À propos | `app/a-propos/page.tsx` | ✅ Ajouté 30/01 |
+| **BreadcrumbList** | Toutes pages (via Breadcrumbs) | `components/Breadcrumbs.tsx` | ✅ Actif |
+| **Article** | Pages blog | `components/schema/ArticleSchema.tsx` | ✅ Actif |
+| **FAQPage** | Homepage, pages FAQ | `app/page.tsx`, `app/faq/page.tsx` | ✅ Actif |
+| **WebPage** | Pages génériques | Via `getFullMetadata` | ✅ Actif |
+
+### Évolutions 30 janvier
+
+| Heure | Commit | Change | Impact SEO |
+|-------|--------|--------|-----------|
+| **08:48** | `1468741` | Suppression duplicate Organization schema homepage | Évite duplicate ⬆️ |
+| **09:38** | `9902729` | Ajout SearchAction + sameAs (réseaux sociaux) | Rich results ⬆️ |
+| **09:44** | `ca7bf9e` | Wrapper `JsonLd` pour breadcrumbs + CTA | Maintenabilité ⬆️ |
+| **09:44** | `a5103bc` | ArticleSchema: base URL + org @id cohérents | Entity linking ⬆️ |
+| **09:47** | `57438f0` | Tests JSON-LD automatisés (breadcrumb + article) | Qualité ⬆️ |
+
+### Composant clé : JsonLd wrapper
+
+**Fichier** : `components/schema/JsonLd.tsx` (implicite via import)
+
+**Usage** :
+```tsx
+<JsonLd
+  id="organization-schema"
+  data={{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    // ...
+  }}
+/>
+```
+
+**Avantages** :
+- ✅ Type-safe (TypeScript)
+- ✅ Évite duplication
+- ✅ Testable
+
+### Tests automatisés
+
+**Fichiers** :
+- `tests/jsonld-breadcrumb.test.ts`
+- `tests/jsonld-article.test.ts`
+
+**Validation** :
+- Structure valide
+- @id cohérents
+- Base URL correcte
+
+### sameAs (réseaux sociaux)
+
+**Ajouté dans Organization schema** (`app/layout.tsx`) :
+
+```json
+{
+  "@type": "Organization",
+  "sameAs": [
+    "https://www.linkedin.com/company/moverz-fr",
+    "https://twitter.com/MoverzFr"
+  ]
+}
+```
+
+⚠️ **Note** : Actuellement pas d'activité réseaux → À valider si ces URLs sont actives
+
+---
+
 ## 💰 Pricing dynamique
 
 ### Architecture
@@ -348,14 +491,44 @@ const DEFAULT_SURFACES = {
 
 ### Timeline
 
-| Date | Commit | Change | Reason |
-|------|--------|--------|--------|
-| **26/01/2026** | - | **V2 FINALE** : "48h", "dès 450€", USP "comparables" + "IA" | Marketing agressif (CTR) |
-| **30/01/2026** | `5b73c16` | **Refactor corridors** : 0 hardcode, prix dynamiques | Incohérence -50% meta/contenu |
-| **30/01/2026** | `38511dc` | **Meta villes V2** : Prix dans desc, année 2026 | Différenciation SERP |
-| **30/01/2026** | `fbebfd3` | **Meta villes V3** : Prix dans title, USP "comparés par IA", "Déménagement" vs "Comparateur" | **CTR + Trust (100% honnête)** ✅ |
+| Date | Heure | Commit | Change | Reason |
+|------|-------|--------|--------|--------|
+| **30/01/2026** | 08:48 | `1468741` | **Title template** : `%s \| Moverz` + removal duplicate `\| Moverz` | Évite double brand |
+| **30/01/2026** | 08:48 | `1468741` | **Truthful copy** : Descriptions génériques honnêtes (5+ devis, 0 harcèlement) | Supprime fausses promesses |
+| **30/01/2026** | 08:48 | `1468741` | **FAQ schema** : Source unique `homeFaqs.ts` | Évite duplication visible/JSON-LD |
+| **30/01/2026** | 08:58 | `b65117e` | **SLAs harmonisés** : 5-7j partout, suppression 48h corridor FAQs | Cohérence globale |
+| **30/01/2026** | 09:06 | `4568dac` | **Messaging unifié** : "5+ devis comparés" partout + année dynamique | Consistency |
+| **30/01/2026** | 09:28 | `b733306` | **Search box** : Ajout footer + blog | UX + engagement |
+| **30/01/2026** | 09:38 | `9902729` | **SearchAction + sameAs** : Schema WebSite enrichi | Rich results ⬆️ |
+| **30/01/2026** | 09:44 | `ca7bf9e` | **JsonLd wrapper** : Breadcrumbs + CTA | Maintenabilité |
+| **30/01/2026** | 09:44 | `a5103bc` | **ArticleSchema** : Base URL + org @id | Entity linking |
+| **30/01/2026** | 09:47 | `57438f0` | **Tests JSON-LD** : Automatisation validation | Qualité |
+| **30/01/2026** | 10:01 | `8e34fa6` | **Metadata inventory CSV** : Export masse cities+services+blog | Audit |
+| **30/01/2026** | 10:12 | `04ddb19` | **Blog meta** : Suppression "48h" | Alignement 5-7j |
+| **30/01/2026** | 10:29-11:13 | `e3d7378`-`386f716` | **Blog floating CTA** : Promise + reviews + tracking | Conversion ⬆️ |
+| **30/01/2026** | 12:25 | `5b73c16` | **Refactor corridors** : 0 hardcode, prix dynamiques | Incohérence -50% meta/contenu |
+| **30/01/2026** | 12:33 | `38511dc` | **Meta villes V2** : Prix dans desc, année 2026 | Différenciation SERP |
+| **30/01/2026** | 12:39 | `fbebfd3` | **Meta villes V3** : Prix dans title, USP "comparés par IA", "Déménagement" vs "Comparateur" | **CTR + Trust (100% honnête)** ✅ |
+| **30/01/2026** | 12:46 | `0b47c4a` | **Doc unifié + principe sacré #0** : Source vérité unique | Gouvernance |
 
 ### Philosophie évolution
+
+**Avant 30 janvier** :
+- ⚠️ Messaging fragmenté : "48h" homepage, "5-7j" villes, "3 devis" quartiers
+- ⚠️ Prix hardcodés obsolètes corridors (-50% vs réel)
+- ⚠️ Duplicate JSON-LD (Organization homepage + layout)
+
+**30 janvier matin (08:48-10:12)** :
+- ✅ **Harmonisation globale** : "5+ devis comparés sous 5-7j" partout
+- ✅ **Title template** : `%s | Moverz` (évite double brand)
+- ✅ **Truthful copy** : Suppression toutes fausses promesses
+- ✅ **Structured data** : SearchAction, sameAs, tests automatisés
+- ✅ **Blog** : Suppression "48h", ajout floating CTA
+
+**30 janvier après-midi (12:25-12:46)** :
+- ✅ **Refactor corridors** : 0 hardcode, formules tunnel ÉCO
+- ✅ **Meta villes V2→V3** : Prix dynamiques dans title + USP "comparés par IA"
+- ✅ **Doc unifié** : Création source vérité unique + principe sacré
 
 **V2 FINALE (26 jan)** :
 - ✅ CTR élevé (prix title, 48h urgent)
@@ -438,10 +611,12 @@ const DEFAULT_SURFACES = {
 
 ## 📚 Documentation associée
 
+### Documentation associée
+
 ### Docs techniques
 
 1. **`STRATEGIE-METAS-V2-FINALE.md`** (26 jan) - Stratégie marketing initiale
-2. **`meta_gst.md`** - Brief initial objectifs SEO
+2. **`meta_gst.md`** - Brief initial objectifs SEO (enrichi 30 jan)
 3. **`docs/REFACTOR-CORRIDORS-FINAL.md`** (30 jan) - Refactor corridors technique complet
 4. **`docs/SEO-META-CORRIDORS-OPTIMISATION.md`** (30 jan) - Optimisation meta corridors
 5. **`docs/SEO-META-QUARTIERS-HARMONISATION.md`** (30 jan) - Harmonisation quartiers
@@ -459,6 +634,16 @@ const DEFAULT_SURFACES = {
 1. **`scripts/test-refactor-corridors.ts`** - Tests cohérence meta/contenu corridors
 2. **`scripts/test-pricing-corridors.ts`** - Validation formules pricing
 3. **`scripts/test-meta-corridors-validation.ts`** - Validation meta corridors
+4. **`scripts/seo-inventory.ts`** - Export CSV metadata masse (30 jan)
+5. **`tests/jsonld-breadcrumb.test.ts`** - Tests JSON-LD breadcrumbs (30 jan)
+6. **`tests/jsonld-article.test.ts`** - Tests JSON-LD articles (30 jan)
+
+### Composants clés
+
+1. **`components/home/homeFaqs.ts`** - Source unique FAQ homepage (30 jan)
+2. **`components/blog/BlogFloatingCTA.tsx`** - CTA blog conversion (30 jan)
+3. **`components/Breadcrumbs.tsx`** - BreadcrumbList avec JsonLd wrapper (30 jan)
+4. **`components/schema/ArticleSchema.tsx`** - Article schema blog (30 jan)
 
 ---
 
@@ -466,27 +651,32 @@ const DEFAULT_SURFACES = {
 
 ### Incohérences à surveiller
 
-1. **Homepage/Services "48h"** : V2 FINALE dit "48h" mais produit = 5-7j → **À harmoniser**
-2. **Homepage "450€"** : Hardcodé, pas calculé dynamiquement → **Vérifier si réaliste**
-3. **Services cityHint** : Fonction existe mais pas toujours utilisée → **Uniformiser ?**
+1. **Homepage/Services "48h"** : V2 FINALE dit "48h" mais produit = 5-7j → **✅ Harmonisé 30/01 (commit b65117e)**
+2. **Homepage "450€"** : Hardcodé, pas calculé dynamiquement → **⚠️ À vérifier si réaliste**
+3. **Services cityHint** : Fonction existe mais pas toujours utilisée → **⚠️ Uniformiser ?**
+4. **sameAs réseaux sociaux** : LinkedIn/Twitter dans Organization schema → **⚠️ Vérifier si actifs (user dit "pas d'activité")**
 
 ### Questions ouvertes
 
 1. **Test A/B faisable ?** : Setup technique disponible pour tester title variations ?
-2. **"Comparables" = vrai ?** : Les devis sont-ils vraiment comparables (même brief) ? ✅ OUI confirmé (comparés par IA)
-3. **Délai 48h possible ?** : Certains cas urgents peuvent tenir 48h ? Sinon harmoniser à "5-7j" partout
+2. ~~**"Comparables" = vrai ?**~~ : ✅ **OUI confirmé** - Devis comparés par IA
+3. ~~**Délai 48h possible ?**~~ : ✅ **Non** - Harmonisé à "5-7j" partout (30/01)
 4. **Prix 450€ homepage** : À recalculer dynamiquement comme villes/corridors ?
+5. **Metadata inventory** : CSV export (8e34fa6) → À utiliser pour audit récurrent ?
 
 ---
 
 ## ✅ Checklist validation doc unifié
 
 - [x] Architecture technique documentée
-- [x] Tous types pages couverts (home/villes/corridors/quartiers/services)
+- [x] Tous types pages couverts (home/villes/corridors/quartiers/services/blog)
 - [x] Pricing dynamique expliqué (formules + logique)
-- [x] Historique évolutions complet
+- [x] Structured Data (JSON-LD) complet
+- [x] Blog optimisations (CTA + meta)
+- [x] Historique évolutions complet (timeline détaillée)
+- [x] Évolutions techniques 30 janvier (17 commits)
 - [x] KPIs & monitoring définis
-- [x] Docs associées listées
+- [x] Docs associées listées (8 docs tech + 2 recaps + 6 scripts)
 - [x] Points d'attention identifiés
 - [x] Prochaines étapes claires
 
@@ -508,5 +698,5 @@ const DEFAULT_SURFACES = {
 ---
 
 **Maintenu par** : Équipe SEO Moverz  
-**Dernière revue** : 30 janvier 2026  
+**Dernière revue** : 30 janvier 2026 (17 commits, 08:48-12:46)  
 **Prochaine revue** : Après J+30 post-deploy (fin février 2026)
