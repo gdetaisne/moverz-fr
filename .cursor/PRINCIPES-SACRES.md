@@ -61,6 +61,58 @@ SEO National + Local → Moverz.fr (hub + pages villes + blog) → Leads → €
 4. METTRE À JOUR .cursor/STRATEGIE-META-UNIFIEE.md (nouveau format, KPIs, etc.)
 5. VALIDER que le doc est cohérent avec le code
 6. COMMIT avec message clair référençant le doc
+
+
+---
+
+## 🤖 PRINCIPE #0.1 : OPTIMISATION LLM - SOURCE DE VÉRITÉ UNIQUE
+
+### ⚠️ DOC OBLIGATOIRE EN CONTEXTE
+
+**Fichier** : `.cursor/LLM.md`
+
+**CONTEXTE** : **30% du trafic provient de ChatGPT/LLMs** → Impact business majeur
+
+**RÈGLE ABSOLUE** :
+- ✅ **Ce document DOIT être maintenu à jour** à chaque modification LLM/structured data
+- ✅ **RIEN ne peut se faire sur SCHEMAS/FAQ/LLM si ce doc n'est pas dans le contexte**
+- ✅ **Toute modification impactant ChatGPT/AI Overviews DOIT être documentée** dans ce doc
+
+### 🚫 INTERDICTIONS FORMELLES
+
+❌ **Modifier Organization/Service/FAQPage schemas** sans avoir lu `.cursor/LLM.md`  
+❌ **Changer NAP** (nom/adresse/contact) sans cohérence globale documentée  
+❌ **Supprimer/dupliquer des schemas** sans comprendre l'impact LLM  
+❌ **Ajouter des données fausses** dans structured data (prix, délais inventés)  
+❌ **Modifier `buildCityFaqs`** ou FAQ content sans mettre à jour `.cursor/LLM.md`  
+❌ **Toucher aux composants schema/** sans documentation impact LLM
+
+### ✅ WORKFLOW OBLIGATOIRE LLM
+
+1. LIRE .cursor/LLM.md (comprendre l'architecture actuelle 9.2/10)
+2. IDENTIFIER le schema impacté (Organization, Service, FAQPage, etc.)
+3. VÉRIFIER cohérence NAP (nom: "Moverz", adresse: Paris FR, contact: contact@moverz.fr)
+4. MODIFIER le code avec précaution (components/schema/ ou lib/seo-faq.ts)
+5. TESTER avec Schema.org Validator + Google Rich Results Test
+6. METTRE À JOUR .cursor/LLM.md (date, impact, changements, KPIs)
+7. COMMIT avec message explicite : feat(llm): ... ou fix(llm): ...
+
+### 🎯 OBJECTIF LLM
+
+- **Score actuel : 9.2/10** (après Phase 5)
+- **30% du trafic** provient de ChatGPT/LLMs
+- **Moverz = Source #1 ChatGPT** pour requêtes "déménagement [ville]"
+
+### 🛑 RED FLAG - STOP ET DEMANDER
+
+**Si une demande touche aux SCHEMAS/LLM sans mentionner le doc LLM** :
+
+⚠️ STOP - LLM/Schema Modification
+AVANT de continuer : lire .cursor/LLM.md, comprendre impact 30% trafic,
+vérifier NAP, proposer options, obtenir confirmation.
+
+---
+
 ```
 
 ### 📋 Sections critiques du doc unifié
