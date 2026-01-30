@@ -299,9 +299,14 @@ Construire un **Knowledge Graph cohérent** (Organization/WebSite/WebPage + type
   - **note**: on n’invente pas d’image article tant qu’on n’a pas une source fiable.
 
 #### P2 — Maintenabilité & QA
-- **P2.1 Tests JSON-LD additionnels**
-  - **constat**: test FAQ JSON-LD existe; pas de tests Breadcrumb/Article.
-  - **action**: ajouter tests unitaires (breadcrumb/article) sur le modèle de `tests/jsonld-faq.test.ts`.
+- **P2.1 Tests JSON-LD additionnels** *(implémenté)*
+  - **constat (avant)**: test FAQ JSON-LD existe; pas de tests Breadcrumb/Article.
+  - **action (appliquée)**:
+    - ajout de `tests/jsonld-breadcrumb.test.ts`
+    - ajout de `tests/jsonld-article.test.ts`
+    - extraction de builders testables: `buildBreadcrumbSchema()` et `buildArticleSchema()`
+  - **validation**:
+    - `npm test` (Vitest) passe en CI/local (11 tests OK)
 - **P2.2 Audit automatique “metadata inventory”**
   - **objectif**: détecter en CI les régressions (double schema, title doublé, OG incohérent, etc.).
   - **action**: script build-time qui exporte un CSV (URL → title/desc/canonical/schema types).

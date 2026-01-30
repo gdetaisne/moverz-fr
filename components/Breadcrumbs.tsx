@@ -1,13 +1,29 @@
 import { env } from "@/lib/env";
 import { JsonLd } from "@/components/schema/JsonLd";
 
-interface BreadcrumbItem {
+export interface BreadcrumbItem {
   label: string;
   href: string;
 }
 
-interface BreadcrumbsProps {
+export interface BreadcrumbsProps {
   items: BreadcrumbItem[];
+}
+
+export function buildBreadcrumbSchema(args: {
+  items: BreadcrumbItem[];
+  baseUrl: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: args.items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.label,
+      item: `${args.baseUrl}${item.href.startsWith("/") ? item.href : `/${item.href}`}`,
+    })),
+  };
 }
 
 export default function Breadcrumbs({ items }: BreadcrumbsProps) {
@@ -23,16 +39,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
   const breadcrumbId = `breadcrumb-schema-${hashString(items.map((i) => i.href).join("|"))}`;
 
   // Générer le schema BreadcrumbList pour Google Rich Snippets
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": items.map((item, index) => ({
-      "@type": "ListItem",
-      "position": index + 1,
-      "name": item.label,
-      "item": `${baseUrl}${item.href.startsWith("/") ? item.href : `/${item.href}`}`
-    }))
-  };
+  const breadcrumbSchema = buildBreadcrumbSchema({ items, baseUrl });
 
   return (
     <>

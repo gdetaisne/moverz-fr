@@ -12,7 +12,7 @@ interface ArticleSchemaProps {
   readingTimeMinutes?: number
 }
 
-export function ArticleSchema({
+export function buildArticleSchema({
   title,
   description,
   slug,
@@ -25,9 +25,9 @@ export function ArticleSchema({
   const canonicalUrl = getCanonicalUrl(`blog/${slug}`);
   const organizationId = `${baseUrl}/#organization`;
 
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
     headline: title,
     description,
     url: canonicalUrl,
@@ -36,8 +36,8 @@ export function ArticleSchema({
     author: { "@id": organizationId },
     publisher: { "@id": organizationId },
     mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': canonicalUrl,
+      "@type": "WebPage",
+      "@id": canonicalUrl,
     },
     ...(category && {
       articleSection: category,
@@ -45,12 +45,32 @@ export function ArticleSchema({
     ...(readingTimeMinutes && {
       timeRequired: `PT${readingTimeMinutes}M`,
     }),
-    inLanguage: 'fr-FR',
+    inLanguage: "fr-FR",
     about: {
-      '@type': 'Thing',
-      name: 'Déménagement',
+      "@type": "Thing",
+      name: "Déménagement",
     },
-  }
+  };
+}
+
+export function ArticleSchema({
+  title,
+  description,
+  slug,
+  publishedAt,
+  updatedAt,
+  category,
+  readingTimeMinutes,
+}: ArticleSchemaProps) {
+  const schema = buildArticleSchema({
+    title,
+    description,
+    slug,
+    publishedAt,
+    updatedAt,
+    category,
+    readingTimeMinutes,
+  });
 
   return (
     <JsonLd id="article-schema" data={schema} />
