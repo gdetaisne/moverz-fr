@@ -598,7 +598,7 @@ Moverz Pro propose **1 configuration par clé API**. Si vous avez 3 enseignes, v
 
 **30 jours d'essai gratuit** · Intégration 5 min · Marque blanche incluse
 
-<a href="/pro/" style="display:inline-block;background:#2B7A78;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;">
+<a href="/partenaires/" style="display:inline-block;background:#2B7A78;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;">
 Démarrer l'essai gratuit →
 </a>
 

@@ -245,7 +245,7 @@ export default function BlogPostPage({ params }: PageProps) {
                 {description}
               </p>
               <a
-                href="/pro/#contact"
+                href="/partenaires/#contact"
                 className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF] px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#5AB9B9] transition-colors"
               >
                 <span>Demander une démo</span>

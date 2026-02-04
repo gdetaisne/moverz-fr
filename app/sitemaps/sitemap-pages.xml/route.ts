@@ -21,7 +21,7 @@ export function GET() {
     "/faq",
     "/contact",
     "/a-propos",
-    "/pro",
+    "/partenaires",
     "/mentions-legales",
     "/politique-confidentialite",
     "/cgu",

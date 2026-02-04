@@ -32,7 +32,7 @@ export default function GoogleAnalytics() {
 
             // Tracking clics (sans toucher tous les boutons)
             // - lead_click: clic vers devis.moverz.fr
-            // - pro_click: clic vers /pro
+            // - partenaires_click: clic vers /partenaires
             // - contact_click: clic tel: / mailto:
             // Utilise transport beacon pour survivre à la navigation.
             if (!window.__moverz_click_tracking_installed) {
@@ -78,10 +78,10 @@ export default function GoogleAnalytics() {
 
                   const isMail = href.startsWith('mailto:');
                   const isTel = href.startsWith('tel:');
-                  const isPro = href.startsWith('/pro') || href.startsWith('https://moverz.fr/pro');
+                  const isPartenaires = href.startsWith('/partenaires') || href.startsWith('https://moverz.fr/partenaires');
                   const isDevis = href.includes('devis.moverz.fr');
 
-                  if (!isMail && !isTel && !isPro && !isDevis) return;
+                  if (!isMail && !isTel && !isPartenaires && !isDevis) return;
 
                   const fromParam = getQueryParam(href, 'from') || '';
                   const sourceParam = getQueryParam(href, 'source') || '';
@@ -96,8 +96,8 @@ export default function GoogleAnalytics() {
                     return;
                   }
 
-                  if (isPro) {
-                    track('pro_click', {
+                  if (isPartenaires) {
+                    track('partenaires_click', {
                       link_url: href,
                       link_text: safeText(a),
                     });

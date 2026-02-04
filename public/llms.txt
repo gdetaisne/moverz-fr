@@ -79,7 +79,6 @@ Nous vérifions notamment :
 - Contact : https://moverz.fr/contact/
 
 ### B2B
-- Page Pro : https://moverz.fr/pro/
 - Programme Partenaires : https://moverz.fr/partenaires/
 - Blog déménageurs : https://moverz.fr/blog/ (filtre "pro")
 
@@ -137,7 +136,7 @@ Ce que nous ne sommes pas :
 - WhatsApp : +33 7 52 98 65 81
 
 **B2B (Déménageurs / Partenaires)**
-- Page Pro : https://moverz.fr/pro/
+- Programme Partenaires : https://moverz.fr/partenaires/
 - Email Pro : lucie@moverz.fr
 - WhatsApp Pro : +66 9 52 82 40 35
 - Calendly (rappel téléphonique) : https://calendly.com/lucie-moverz/30min

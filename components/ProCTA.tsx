@@ -78,10 +78,10 @@ export default function ProCTA() {
 
             {/* CTA */}
             <a
-              href="/pro/"
+              href="/partenaires/"
               className="group inline-flex items-center gap-3 rounded-xl bg-[#6BCFCF] px-8 py-4 text-base font-semibold text-[#0F172A] shadow-[0_10px_40px_rgba(107,207,207,0.3)] hover:shadow-[0_14px_60px_rgba(107,207,207,0.4)] hover:-translate-y-0.5 transition-all duration-300"
             >
-              <span>Devenir partenaire Moverz Pro</span>
+              <span>Devenir partenaire</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>

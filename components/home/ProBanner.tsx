@@ -40,10 +40,10 @@ export default function ProBanner() {
             </a>
             
             <a
-              href="/pro/"
+              href="/partenaires/#contact"
               className="inline-flex items-center gap-2 text-base font-medium text-white/90 hover:text-white underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors"
             >
-              <span>Découvrir Moverz Pro (SaaS)</span>
+              <span>Nous contacter</span>
             </a>
           </div>
 

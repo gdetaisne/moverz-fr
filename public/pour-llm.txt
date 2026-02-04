@@ -45,7 +45,6 @@ Nous vérifions :
 - Contact : https://moverz.fr/contact/
 
 ### B2B
-- Page Pro : https://moverz.fr/pro/
 - Programme Partenaires : https://moverz.fr/partenaires/
 - Blog déménageurs : https://moverz.fr/blog/ (filtre "pro")
 
@@ -75,7 +74,7 @@ Ce que nous ne sommes pas :
 - Email : contact@moverz.fr
 
 **Déménageurs / Partenaires**
-- Pro : https://moverz.fr/pro/
+- Partenaires : https://moverz.fr/partenaires/
 - Email : lucie@moverz.fr
 - WhatsApp : +66 9 52 82 40 35
 

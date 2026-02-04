@@ -350,10 +350,10 @@ export default function AProposPage() {
                   Nous écrire <span aria-hidden="true">→</span>
                 </a>
                 <a
-                  href="/pro/"
+                  href="/partenaires/"
                   className="inline-flex items-center justify-center gap-2 rounded-2xl border border-[#0F172A]/15 bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:bg-gray-50 transition-colors"
                 >
-                  Découvrir Moverz Pro <span aria-hidden="true">→</span>
+                  Devenir partenaire <span aria-hidden="true">→</span>
                 </a>
               </div>
             </div>

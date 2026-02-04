@@ -605,7 +605,7 @@ Abonnement 100€/mois ÷ Économie 98€/dossier (100€ - 2€) = **1,02 dossi
 
 **30 jours d'essai gratuit** · Intégration 5 min · Précision 90-95%
 
-<a href="/pro/" style="display:inline-block;background:#2B7A78;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;">
+<a href="/partenaires/" style="display:inline-block;background:#2B7A78;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;">
 Démarrer l'essai gratuit →
 </a>
 

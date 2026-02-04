@@ -40,7 +40,7 @@ const IMPORTANT_PAGES = {
     { title: 'Contact', url: '/contact/' },
   ],
   b2b: [
-    { title: 'Page Pro', url: '/pro/' },
+    { title: 'Page Partenaires', url: '/partenaires/' },
     { title: 'Programme Partenaires', url: '/partenaires/' },
     { title: 'Blog déménageurs', url: '/blog/', note: '(filtre "pro")' },
   ],
@@ -214,7 +214,7 @@ Ce que nous ne sommes pas :
 - WhatsApp : ${CONTACT_INFO.whatsapp}
 
 **B2B (Déménageurs / Partenaires)**
-- Page Pro : https://moverz.fr/pro/
+- Page Partenaires : https://moverz.fr/partenaires/
 - Email Pro : ${CONTACT_INFO.emailPro}
 - WhatsApp Pro : ${CONTACT_INFO.whatsappPro}
 - Calendly (rappel téléphonique) : ${CONTACT_INFO.calendly}
@@ -311,7 +311,7 @@ Ce que nous ne sommes pas :
 - Email : ${CONTACT_INFO.email}
 
 **Déménageurs / Partenaires**
-- Pro : https://moverz.fr/pro/
+- Partenaires : https://moverz.fr/partenaires/
 - Email : ${CONTACT_INFO.emailPro}
 - WhatsApp : ${CONTACT_INFO.whatsappPro}
 

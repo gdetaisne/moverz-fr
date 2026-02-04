@@ -174,7 +174,7 @@ export default function BlogIndexClient() {
                 {isPro ? (
                   <>
                     <a
-                      href="/pro/#contact"
+                      href="/partenaires/#contact"
                       className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF] px-6 py-3 text-base font-semibold text-[#0F172A] hover:scale-105 transition-transform duration-300"
                     >
                       <span>Demander une démo</span>

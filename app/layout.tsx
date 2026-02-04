@@ -243,27 +243,6 @@ export default function RootLayout({
                 Blog
               </a>
               <a
-                href="/pro/"
-                className="group inline-flex items-center gap-2 rounded-full border border-[#6BCFCF]/40 bg-[#6BCFCF]/10 px-3 py-2 text-sm font-semibold text-[#0F172A] shadow-sm transition-all hover:bg-[#6BCFCF]/15 hover:shadow-[0_10px_30px_rgba(107,207,207,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6BCFCF] focus-visible:ring-offset-2 md:px-4"
-                aria-label="Vous êtes déménageur ? Découvrir Moverz Pro"
-              >
-                <span
-                  className="h-2 w-2 rounded-full bg-[#6BCFCF] shadow-[0_0_10px_rgba(107,207,207,0.55)] animate-pulse"
-                  aria-hidden="true"
-                />
-                <span className="hidden md:inline text-[#0F172A]/70 font-medium">
-                  Déménageur ?
-                </span>
-                <span className="md:hidden">Pro</span>
-                <span className="hidden md:inline">Moverz Pro</span>
-                <span
-                  className="text-base transition-transform group-hover:translate-x-0.5"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
-              </a>
-              <a
                 href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=header"
                 rel="nofollow"
                 className="inline-flex items-center gap-1 rounded-full bg-[#0F172A] px-4 py-2 text-sm font-semibold text-white hover:scale-105 transition-all duration-200 shadow-sm"
@@ -335,7 +314,7 @@ export default function RootLayout({
                 <h3 className="font-semibold mb-4 text-white">Professionnels</h3>
                 <ul className="space-y-2 text-sm">
                   <li><a href="/partenaires/" className="text-[#6BCFCF] hover:text-white transition-colors font-medium">Devenir partenaire</a></li>
-                  <li><a href="/pro/" className="text-white/70 hover:text-white transition-colors">Moverz Pro (SaaS)</a></li>
+                  <li><a href="/partenaires/" className="text-white/70 hover:text-white transition-colors">Devenir partenaire</a></li>
                   <li><a href="/verifications-partenaires/" className="text-white/70 hover:text-white transition-colors">Critères de sélection</a></li>
                   <li><a href="/cgv-partenaires/" className="text-white/70 hover:text-white transition-colors">CGV Partenaires</a></li>
                 </ul>

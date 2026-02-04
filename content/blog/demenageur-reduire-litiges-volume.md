@@ -533,7 +533,7 @@ Avant Moverz Pro, vérifiez que votre outil répond à ces critères :
 
 **30 jours d'essai gratuit** · Réduisez vos litiges de 90% · Preuve visuelle incluse
 
-<a href="/pro/" style="display:inline-block;background:#2B7A78;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;">
+<a href="/partenaires/" style="display:inline-block;background:#2B7A78;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;">
 Démarrer l'essai gratuit →
 </a>
 

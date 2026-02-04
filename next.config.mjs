@@ -220,6 +220,18 @@ const nextConfig = {
         permanent: true,
       },
 
+      // Redirection /pro → /partenaires
+      {
+        source: '/pro',
+        destination: '/partenaires/',
+        permanent: true,
+      },
+      {
+        source: '/pro/',
+        destination: '/partenaires/',
+        permanent: true,
+      },
+
       // Redirection inventaire-ia → choisir-ville
       {
         source: '/inventaire-ia',

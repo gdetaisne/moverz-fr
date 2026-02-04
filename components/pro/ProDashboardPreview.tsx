@@ -237,7 +237,7 @@ export default function ProDashboardPreview() {
             Découvrez toutes les fonctionnalités en action
           </p>
           <a
-            href="/pro/#contact"
+            href="/partenaires/#contact"
             className="inline-flex items-center gap-2 rounded-xl bg-[#0F172A] px-8 py-4 text-base font-semibold text-white hover:bg-[#1E293B] transition-colors"
           >
             <span>Demander une démo</span>

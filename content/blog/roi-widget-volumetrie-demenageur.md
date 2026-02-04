@@ -497,7 +497,7 @@ Dans ce guide ultra-détaillé, vous allez découvrir :
 3. Combien de temps par estimation ? **[___] heures**
 4. Taux de litige volume actuel ? **[___] %**
 
-<a href="/pro/" style="display:inline-block;background:#2B7A78;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;">
+<a href="/partenaires/" style="display:inline-block;background:#2B7A78;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;">
 Calculer mon ROI personnalisé →
 </a>
 
@@ -507,7 +507,7 @@ Calculer mon ROI personnalisé →
 
 **30 jours d'essai gratuit** · 0€ setup · ROI immédiat · 0 engagement
 
-<a href="/pro/" style="display:inline-block;background:#2B7A78;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;">
+<a href="/partenaires/" style="display:inline-block;background:#2B7A78;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;">
 Démarrer l'essai gratuit →
 </a>
 
