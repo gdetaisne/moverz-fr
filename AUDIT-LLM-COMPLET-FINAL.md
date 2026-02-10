@@ -2,6 +2,11 @@
 
 **Date:** 30 janvier 2026
 
+> **📌 Snapshot (document historique)**
+> - **État à date** : 2026-01-30
+> - **Score final (/10)** : **évaluation qualitative interne** (checklist), utile pour prioriser/suivre des actions, **pas** une mesure scientifique ni un KPI business.
+> - **Pour la “source de vérité” actuelle** (message central, contacts, où modifier quoi) : voir `LLM.md`.
+
 ---
 
 ## 🎯 Résumé des modifications

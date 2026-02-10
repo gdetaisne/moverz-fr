@@ -97,6 +97,9 @@ export async function middleware(req: NextRequest, event: NextFetchEvent) {
   const mwDebug = req.nextUrl.searchParams.get("mwdebug");
   const bot = detectLlmBot(req.headers.get("user-agent"));
   const aiRefHost = detectAiReferrerHost(req.headers.get("referer"));
+  const accept = req.headers.get("accept") || "";
+  const isHtml = accept.includes("text/html");
+  const abCookie = req.cookies.get("ab_promise")?.value;
 
   // If mwdebug is enabled, do a blocking GA4 call once so we can expose the result in headers.
   // This avoids "did it send?" ambiguity in GA4 real-time.
@@ -116,6 +119,20 @@ export async function middleware(req: NextRequest, event: NextFetchEvent) {
     : null;
 
   const track = (res: NextResponse) => {
+    // A/B test cookie for promise wording (A vs B). Keep it stable per visitor.
+    // - Only set for HTML navigations
+    // - Pin bots to variant A to avoid crawl noise
+    if (isHtml && !abCookie) {
+      const variant = bot ? "A" : Math.random() < 0.5 ? "A" : "B";
+      res.cookies.set({
+        name: "ab_promise",
+        value: variant,
+        path: "/",
+        maxAge: 60 * 60 * 24 * 30, // 30 days
+        sameSite: "lax",
+      });
+    }
+
     if (mwDebug) {
       res.headers.set("x-mw-debug", "1");
       res.headers.set("x-mw-version", "ga4hdr-v2");
@@ -133,7 +150,9 @@ export async function middleware(req: NextRequest, event: NextFetchEvent) {
       }
     }
 
-    if (aiRefHost) {
+    // "AI referral" is meant to approximate human clicks coming from AI surfaces.
+    // Avoid counting known LLM crawlers as "referrals" (they can send arbitrary Referer headers).
+    if (aiRefHost && !bot) {
       // Track AI-driven human referrals independently from GA4 "traffic source" classification
       event.waitUntil(
         sendGa4Event({

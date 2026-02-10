@@ -73,7 +73,7 @@ export default function StickyCTA() {
                 </div>
                 <div className="space-y-1">
                   <p className="text-sm font-semibold text-[#0F172A] leading-tight">
-                    3 min · 3 devis · 0 démarchage
+                    3 min · devis comparables · 0 démarchage
                   </p>
                   <p className="text-xs text-[#1E293B]/60">
                     Numéro masqué · Entreprises vérifiées

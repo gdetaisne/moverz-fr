@@ -3,6 +3,11 @@
 **Date:** 30 janvier 2026  
 **Objectif:** Remonter au maximum dans les citations et réponses des LLMs (ChatGPT, Perplexity, Claude, etc.)
 
+> **📌 Snapshot (document historique)**
+> - **État à date** : 2026-01-30
+> - **Scores (/10)** : **évaluation qualitative interne** (checklist), utile pour prioriser des actions, **pas** une mesure scientifique ni un KPI business.
+> - **Pour la “source de vérité” actuelle** (message central, contacts, où modifier quoi) : voir `LLM.md`.
+
 ---
 
 ## 📊 DIAGNOSTIC GLOBAL (Score actuel)

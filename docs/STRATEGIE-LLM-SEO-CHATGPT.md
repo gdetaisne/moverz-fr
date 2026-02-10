@@ -1,6 +1,13 @@
 # 🤖 STRATÉGIE LLM SEO — Dominer ChatGPT & AI Overviews
 
-**Contexte** : 30% du trafic Moverz.fr provient déjà de ChatGPT/LLMs (jan 2026)  
+> **📌 Snapshot (document historique)**
+> - **Date** : jan 2026 (rédaction initiale)
+> - **Métriques “trafic LLM”** : valeur **indicative** à **revalider** avant toute décision.
+>   - **Source attendue** : GA4 (référents `chat.openai.com`, `perplexity.ai`) + idéalement logs (user-agents type `OAI-SearchBot`, `PerplexityBot`)
+>   - **Méthode** : sessions / utilisateurs issus de référents LLM + crawl bots (si logs)
+> - **Scores “LLM compliance /10”** : **évaluation qualitative interne (checklist)**, pas un KPI business mesuré.
+
+**Contexte (snapshot)** : “30% du trafic Moverz.fr provient déjà de ChatGPT/LLMs” (déclaratif, jan 2026 — à sourcer via GA4/logs)  
 **Objectif** : BEST IN CLASS pour maximiser citations, recommandations, et trafic indirect  
 **Horizon** : J+30 (validation impact ChatGPT)
 

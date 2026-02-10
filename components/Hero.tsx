@@ -2,9 +2,31 @@
 import { useEffect, useState } from "react";
 import HeroMockup from "./HeroMockup";
 
-export default function Hero() {
+type AbPromiseVariant = "A" | "B";
+
+type HeroProps = {
+  /**
+   * Optional server-provided variant. If omitted, we fall back to the ab_promise cookie.
+   */
+  abVariant?: AbPromiseVariant;
+};
+
+function readCookie(name: string): string {
+  try {
+    if (typeof document === "undefined") return "";
+    const parts = document.cookie.split("; ");
+    const hit = parts.find((p) => p.startsWith(`${name}=`));
+    if (!hit) return "";
+    return decodeURIComponent(hit.slice(name.length + 1));
+  } catch {
+    return "";
+  }
+}
+
+export default function Hero({ abVariant }: HeroProps) {
   const [scrollY, setScrollY] = useState(0);
   const [mounted, setMounted] = useState(false);
+  const [ab, setAb] = useState<AbPromiseVariant>(abVariant ?? "A");
 
   useEffect(() => {
     setMounted(true);
@@ -18,6 +40,20 @@ export default function Hero() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (abVariant) return;
+    const v = readCookie("ab_promise");
+    if (v === "A" || v === "B") setAb(v);
+  }, [abVariant]);
+
+  const heroPromise =
+    ab === "B"
+      ? "Jusqu’à 5 devis comparables · Déménageurs vérifiés · 3 min · 100% gratuit"
+      : "des devis comparables · 3 min · 100% gratuit";
+
+  const heroCtaHref =
+    `https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=home&devis_range=3-5&ab_promise=${ab}`;
 
   return (
     <section className="relative overflow-hidden font-sans bg-hero">
@@ -59,7 +95,7 @@ export default function Hero() {
                 animation: mounted ? 'fadeInUp 1s ease-out 0.2s both' : 'none',
               }}
             >
-              des devis comparables · 3 min · 100% gratuit
+              {heroPromise}
             </p>
 
             {/* CTA principal */}
@@ -70,7 +106,7 @@ export default function Hero() {
               }}
             >
               <a
-                href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=home&devis_range=3-5"
+                href={heroCtaHref}
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-[0_10px_40px_rgba(15,23,42,0.25)] hover:shadow-[0_14px_60px_rgba(15,23,42,0.35)] hover:-translate-y-0.5 transition-all duration-300"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

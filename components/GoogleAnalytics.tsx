@@ -52,6 +52,15 @@ export default function GoogleAnalytics() {
                 }
               }
 
+              function getCookie(name) {
+                try {
+                  const m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/([.$?*|{}()\\[\\]\\\\\\/\\+^])/g, '\\\\$1') + '=([^;]*)'));
+                  return m ? decodeURIComponent(m[1]) : '';
+                } catch (e) {
+                  return '';
+                }
+              }
+
               function track(eventName, params) {
                 try {
                   if (typeof window.gtag !== 'function') return;
@@ -85,6 +94,7 @@ export default function GoogleAnalytics() {
 
                   const fromParam = getQueryParam(href, 'from') || '';
                   const sourceParam = getQueryParam(href, 'source') || '';
+                  const abPromise = getQueryParam(href, 'ab_promise') || getCookie('ab_promise') || '';
 
                   if (isDevis) {
                     track('lead_click', {
@@ -92,6 +102,7 @@ export default function GoogleAnalytics() {
                       link_text: safeText(a),
                       placement: fromParam || '',
                       source: sourceParam || '',
+                      ab_promise: abPromise,
                     });
                     return;
                   }

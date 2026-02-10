@@ -1,8 +1,11 @@
 # 🤖 OPTIMISATION LLM — ChatGPT & AI Overviews
 
-**Contexte** : 30% du trafic Moverz.fr provient de ChatGPT/LLMs (jan 2026)  
+## ✅ Rôle de ce document
+
+Ce fichier est un **playbook technique** (schemas, validation, checklist, architecture).
+Pour la vue exécutive / “source de vérité” (message central, contacts, où modifier quoi), voir `LLM.md`.
+
 **Objectif** : Maximiser citations, recommandations, et featured answers  
-**Score actuel** : **9.2/10** (après Phase 5)  
 **Dernière mise à jour** : 2026-01-30
 
 ---

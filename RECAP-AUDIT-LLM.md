@@ -2,6 +2,11 @@
 
 ---
 
+> **📌 Snapshot (document historique)**
+> - **État à date** : 2026-01-30
+> - **Score final (/10)** : **évaluation qualitative interne** (checklist), utile pour suivre un plan d’actions, **pas** une mesure “trafic / citations” mesurée automatiquement.
+> - **Pour la “source de vérité” actuelle** (message central, contacts, où modifier quoi) : voir `LLM.md`.
+
 ## ✅ MISSION ACCOMPLIE
 
 **Objectif :** Optimiser moverz.fr pour remonter dans ChatGPT/Perplexity/Claude  
