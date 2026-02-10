@@ -7,13 +7,13 @@ export const runtime = "nodejs";
 export function GET() {
   const baseUrl = env.SITE_URL;
 
-  // Collecter toutes les URLs de corridors depuis cityData
+  // Collecter toutes les URLs de quartiers depuis cityData
   const urls = Object.values(cityData).flatMap((city) =>
-    city.corridors.map((corridor) => ({
-      loc: absoluteUrl(baseUrl, `/${corridor.slug}`),
+    city.neighborhoods.map((neighborhood) => ({
+      loc: absoluteUrl(baseUrl, `/${city.slug}/${neighborhood.slug}`),
       changefreq: "monthly" as const,
-      priority: 0.6,
-    }))
+      priority: 0.5,
+    })),
   );
 
   const xml = buildUrlset(urls);
@@ -24,3 +24,4 @@ export function GET() {
     },
   });
 }
+

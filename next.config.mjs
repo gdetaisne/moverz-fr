@@ -47,6 +47,15 @@ const nextConfig = {
     // We exclude cities that already have a dedicated hub page (to preserve internal linking).
     const excluded = "nice|toulouse|strasbourg|nantes|rennes|rouen|montpellier";
     return [
+      // XML sitemap endpoints: keep the .xml URLs, but serve via dot-less routes for maximum compatibility.
+      {
+        source: "/sitemaps/sitemap-corridors.xml",
+        destination: "/sitemaps/sitemap-corridors",
+      },
+      {
+        source: "/sitemaps/sitemap-quartiers.xml",
+        destination: "/sitemaps/sitemap-quartiers",
+      },
       {
         source: `/quartiers-:slug((?!${excluded})[a-z0-9-]+)`,
         destination: "/quartiers/:slug/",
