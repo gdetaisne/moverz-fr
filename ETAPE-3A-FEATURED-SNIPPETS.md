@@ -76,7 +76,7 @@
 <p>
   Un déménagement à Nice coûte entre 450€ (studio) et 3500€ (maison).
   Le prix dépend du volume (15-80 m³), de la distance et des services.
-  Pour un tarif précis, comparez 3+ devis basés sur le même volume calculé par IA.
+  Pour un tarif précis, comparez des devis basés sur le même volume calculé par IA.
 </p>
 
 <table>
@@ -123,7 +123,7 @@
 
 <p>
   Choisir un bon déménageur en 5 étapes : vérifier l'assurance obligatoire,
-  comparer 3+ devis sur une base identique (même volume), lire les avis récents vérifiés,
+  comparer des devis sur une base identique (même volume), lire les avis récents vérifiés,
   contrôler la santé financière (Creditsafe), et exiger une estimation précise du volume.
 </p>
 
@@ -135,7 +135,7 @@
     avant signature.
   </li>
   <li>
-    <strong>Comparer 3+ devis comparables</strong> : 
+    <strong>Comparer des devis comparables</strong> : 
     Base identique = même volume en m³. Si chaque déménageur estime un volume différent, 
     les prix ne sont pas comparables. L'IA Moverz calcule 1 volume unique = devis 
     vraiment comparables.

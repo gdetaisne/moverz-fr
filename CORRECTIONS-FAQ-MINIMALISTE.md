@@ -7,7 +7,7 @@
 ## 🎯 Modifications appliquées
 
 ### 1. **Promesse nombre de devis** ✅
-- ❌ Avant : "3 devis minimum" ou "5+ devis"
+- ❌ Avant : "des devis" ou "des devis"
 - ✅ Maintenant : **"3 à 5 devis minimum (souvent plus)"**
 - Plus honnête et flexible
 

@@ -16,7 +16,7 @@ Comparateur Déménagement {Ville} | Devis 5–7j | Contrôlés
 
 **Description** (153-158 car) :
 ```
-Recevez 5+ devis comparés sous 5 à 7 jours pour votre projet depuis {Ville}. 
+Recevez des devis comparés sous 5 à 7 jours pour votre projet depuis {Ville}. 
 Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.
 ```
 
@@ -24,9 +24,9 @@ Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gra
 
 | Ville | Title | Desc | Title car | Desc car |
 |-------|-------|------|-----------|----------|
-| Nice | Comparateur Déménagement Nice \| Devis 5–7j \| Contrôlés | Recevez 5+ devis... Nice... | 54 | 153 |
-| Lyon | Comparateur Déménagement Lyon \| Devis 5–7j \| Contrôlés | Recevez 5+ devis... Lyon... | 54 | 153 |
-| Marseille | Comparateur Déménagement Marseille \| Devis 5–7j \| Contrôlés | Recevez 5+ devis... Marseille... | 59 | 158 |
+| Nice | Comparateur Déménagement Nice \| Devis 5–7j \| Contrôlés | Recevez des devis... Nice... | 54 | 153 |
+| Lyon | Comparateur Déménagement Lyon \| Devis 5–7j \| Contrôlés | Recevez des devis... Lyon... | 54 | 153 |
+| Marseille | Comparateur Déménagement Marseille \| Devis 5–7j \| Contrôlés | Recevez des devis... Marseille... | 59 | 158 |
 
 ---
 
@@ -36,7 +36,7 @@ Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gra
 |--------|------------|-------------|
 | **Longueur title** | ✅ Excellent | 54-59 car (optimal : 50-60) |
 | **Longueur desc** | ✅ Bon | 153-158 car (optimal : 150-160) |
-| **Messaging "5+ devis 5-7j"** | ✅ Cohérent | Aligné stratégie globale |
+| **Messaging "des devis 5-7j"** | ✅ Cohérent | Aligné stratégie globale |
 | **USP "0 harcèlement"** | ✅ Différenciant | Anti-arnaque clair |
 | **Terme "Contrôlés"** | ✅ Trust | Rassure utilisateur |
 | **Format structuré** | ✅ Pro | Lisible en SERP |
@@ -107,7 +107,7 @@ Option A (avec année):
 Déménagement Nice 2026 | Devis 5–7j | Dès 450€ | Contrôlés
 
 Option B (focus prix):
-Déménagement Nice | Dès 450€ | 5+ devis 5–7j | Contrôlés
+Déménagement Nice | Dès 450€ | des devis 5–7j | Contrôlés
 
 Option C (conservateur, juste année):
 Déménagement Nice 2026 | Devis 5–7j | Contrôlés · Gratuit
@@ -123,13 +123,13 @@ Déménagement Nice 2026 | Devis 5–7j | Contrôlés · Gratuit
 
 **Format proposé** :
 ```
-{Ville} : 5+ devis sous 5–7j. Tarifs : T1 dès {X}€ · T2 dès {Y}€ · Maison dès {Z}€. 
+{Ville} : des devis sous 5–7j. Tarifs : T1 dès {X}€ · T2 dès {Y}€ · Maison dès {Z}€. 
 Dossier anonyme, 0 harcèlement. Pros contrôlés. Gratuit.
 ```
 
 **Exemple Nice** :
 ```
-Nice : 5+ devis sous 5–7j. Tarifs : T1 dès 450€ · T2 dès 750€ · Maison dès 1300€. 
+Nice : des devis sous 5–7j. Tarifs : T1 dès 450€ · T2 dès 750€ · Maison dès 1300€. 
 Dossier anonyme, 0 harcèlement. Pros contrôlés. Gratuit.
 ```
 
@@ -154,18 +154,18 @@ Dossier anonyme, 0 harcèlement. Pros contrôlés. Gratuit.
 **Implémentation** :
 ```typescript
 const hint = cityHint(city.slug, city.nameCapitalized);
-const description = `${city.nameCapitalized} : 5+ devis sous 5–7j. Tarifs : T1 dès ${pricesLocal.t1} · T2 dès ${pricesLocal.t2} · Maison dès ${pricesLocal.house}. ${hint} Gratuit.`;
+const description = `${city.nameCapitalized} : des devis sous 5–7j. Tarifs : T1 dès ${pricesLocal.t1} · T2 dès ${pricesLocal.t2} · Maison dès ${pricesLocal.house}. ${hint} Gratuit.`;
 ```
 
 **Exemple Nice (friction accès élevée)** :
 ```
-Nice : 5+ devis sous 5–7j. Tarifs : T1 dès 450€ · T2 dès 750€ · Maison dès 1300€. 
+Nice : des devis sous 5–7j. Tarifs : T1 dès 450€ · T2 dès 750€ · Maison dès 1300€. 
 Accès & parking Nice inclus. Gratuit.
 ```
 
 **Exemple Toulouse (pavillonnaire)** :
 ```
-Toulouse : 5+ devis sous 5–7j. Tarifs : T1 dès 420€ · T2 dès 700€ · Maison dès 1200€. 
+Toulouse : des devis sous 5–7j. Tarifs : T1 dès 420€ · T2 dès 700€ · Maison dès 1200€. 
 Maisons & garages Toulouse. Gratuit.
 ```
 
@@ -256,7 +256,7 @@ export function getCityPageMetadata(city: CityInfo): Metadata {
   
   // Description (P0 - prix indicatifs + P1 - cityHint)
   const hint = cityHint(city.slug, city.nameCapitalized);
-  const description = `${city.nameCapitalized} : 5+ devis sous 5–7j. Tarifs : T1 dès ${prices.t1} · T2 dès ${prices.t2} · Maison dès ${prices.house}. ${hint} Gratuit.`;
+  const description = `${city.nameCapitalized} : des devis sous 5–7j. Tarifs : T1 dès ${prices.t1} · T2 dès ${prices.t2} · Maison dès ${prices.house}. ${hint} Gratuit.`;
   
   return getFullMetadata(path, title, description);
 }

@@ -17,7 +17,7 @@ export function HowToChoose() {
     {
       number: 2,
       icon: <Scale className="w-6 h-6" />,
-      title: "Comparer 3+ devis comparables",
+      title: "Comparer des devis comparables",
       description: "Base identique = même volume en m³. Si chaque déménageur estime un volume différent, les prix ne sont pas comparables. L'IA Moverz calcule 1 volume unique = devis vraiment comparables."
     },
     {
@@ -57,7 +57,7 @@ export function HowToChoose() {
           {/* Réponse courte (40-60 mots) pour featured snippet paragraphe */}
           <p className="text-base text-[#6B7280] max-w-3xl mx-auto text-center leading-relaxed">
             Choisir un bon déménageur en 5 étapes : vérifier l'assurance obligatoire, 
-            comparer 3+ devis sur une base identique (même volume), lire les avis récents vérifiés, 
+            comparer des devis sur une base identique (même volume), lire les avis récents vérifiés, 
             contrôler la santé financière (Creditsafe), et exiger une estimation précise du volume.
           </p>
 
@@ -97,7 +97,7 @@ export function HowToChoose() {
               <p className="text-xs text-[#6B7280] max-w-2xl mx-auto">
                 Tous les déménageurs du réseau Moverz sont contrôlés : assurance vérifiée, 
                 Creditsafe validé, avis authentiques, volume calculé par IA (même base pour tous). 
-                Vous recevez 3+ devis vraiment comparables sous 5 jours.
+                Vous recevez des devis vraiment comparables sous 5 jours.
               </p>
             </div>
           </div>

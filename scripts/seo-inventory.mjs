@@ -72,16 +72,16 @@ const SERVICE_SLUGS = [
 ];
 
 function cityTitle(cityCap) {
-  return `Déménagement ${cityCap} : 3 devis minimum en 3 min | Moverz`;
+  return `Déménagement ${cityCap} : devis comparables en 3 min | Moverz`;
 }
 function cityMeta(cityCap) {
-  return `3 min · IA fiabilise le volume · 3 devis minimum comparables · Déménageurs contrôlés à ${cityCap} · 0€ · Sans démarchage.`;
+  return `3 min · IA fiabilise le volume · Devis comparables · Déménageurs contrôlés à ${cityCap} · 0€ · Sans démarchage.`;
 }
 function serviceTitle(service, cityCap) {
   return `${service} ${cityCap}`; // placeholder for audit (we only need duplicate detection)
 }
 function serviceMeta(service, cityCap) {
-  return `${service} à ${cityCap} : 3 devis minimum comparables.`;
+  return `${service} à ${cityCap} : devis comparables de déménageurs contrôlés.`;
 }
 
 function csvEscape(v) {

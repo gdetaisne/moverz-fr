@@ -364,7 +364,7 @@ Le stationnement est l’un des meilleurs “leviers invisibles” d’un démé
 
 Le problème : beaucoup de gens ne pensent à l’autorisation de stationnement qu’au dernier moment. Résultat : stress, retard, ou devis qui devient fragile (“on verra sur place”). Ce guide vous donne une méthode simple : **quand demander**, **quoi demander**, et **comment rédiger**.
 
-> [CTA] Comparer 3 devis minimum (accès clair)
+> [CTA] Comparer des devis (accès clair)
 > Un accès clair = un devis plus fiable. Standardisez votre dossier et comparez des devis comparables.
 
 ## 1) Est-ce que j’ai besoin d’une autorisation ?
@@ -737,7 +737,7 @@ Déménager avec des enfants n’est pas “plus compliqué” à cause des cart
 
 Le plan qui marche tient en 3 idées : garder une routine minimale, créer des zones, et préparer un kit 48h. On déroule.
 
-> [CTA] Comparer 3 devis minimum (sans stress)
+> [CTA] Comparer des devis (sans stress)
 > Un déménagement plus fluide passe aussi par un accès clair et un inventaire cohérent.
 
 ## 1) La règle d’or : préserver une routine minimale
@@ -833,7 +833,7 @@ ${COMMON_APPENDIX}
 
 Un déménagement vu par un animal : bruits, odeurs, cartons, portes ouvertes. Les risques principaux : stress et fuite. La solution : une zone “safe” + un référent + une arrivée organisée.
 
-> [CTA] Comparer 3 devis minimum (journée fluide)
+> [CTA] Comparer des devis (journée fluide)
 > Une journée fluide limite aussi le stress pour les animaux : accès clair, timing clair.
 
 ## 1) Avant : créer une “bulle” stable
@@ -1027,7 +1027,7 @@ ${COMMON_APPENDIX}
 
 Un inventaire sert à rendre les devis comparables. S’il est trop long, vous abandonnez. S’il est trop vague, il ne sert à rien. On fait un modèle minimal, efficace.
 
-> [CTA] Comparer 3 devis minimum (dossier standardisé)
+> [CTA] Comparer des devis (dossier standardisé)
 > Standardisez vos infos, comparez proprement.
 
 ## 1) 3 listes

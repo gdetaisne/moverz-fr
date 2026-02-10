@@ -55,7 +55,7 @@ export const SERVICE_DEFINITIONS: Record<ServiceSlug, ServiceDefinition> = {
       `Les leviers qui font vraiment baisser la facture à ${cityName} (date, volume, accès) — sans sacrifier la fiabilité.`,
     title: (cityName) => `Déménagement pas cher ${cityName} : astuces + devis comparables`,
     description: (cityName) =>
-      `Déménagement pas cher à ${cityName} : conseils concrets (dates, volume, accès) + 3 devis minimum comparables et sans spam via Moverz.`,
+      `Déménagement pas cher à ${cityName} : conseils concrets (dates, volume, accès) + des devis comparables et sans spam via Moverz.`,
     sections: (cityName) => [
       {
         title: `Ce qui fait varier le prix à ${cityName}`,
@@ -92,7 +92,7 @@ export const SERVICE_DEFINITIONS: Record<ServiceSlug, ServiceDefinition> = {
       `Box, self-stockage, garde-meuble via déménageur… comment choisir la bonne solution de stockage à ${cityName} (taille, sécurité, accès).`,
     title: (cityName) => `Garde-meuble ${cityName} : box, stockage, tarifs & devis`,
     description: (cityName) =>
-      `Garde-meuble à ${cityName} : comparer box/self-stockage et solutions avec déménageur. Tailles, sécurité, assurance + 3 devis minimum via Moverz.`,
+      `Garde-meuble à ${cityName} : comparer box/self-stockage et solutions avec déménageur. Tailles, sécurité, assurance + des devis de pros via Moverz.`,
     sections: (cityName) => [
       {
         title: `Quand un garde-meuble est utile à ${cityName} ?`,
@@ -128,7 +128,7 @@ export const SERVICE_DEFINITIONS: Record<ServiceSlug, ServiceDefinition> = {
       `Choisir le bon utilitaire à ${cityName} (volume, permis, assurance) et éviter les pièges (caution, stationnement, gabarit).`,
     title: (cityName) => `Location camion déménagement ${cityName} : volumes, prix & conseils`,
     description: (cityName) =>
-      `Location camion déménagement à ${cityName} : quel volume choisir, prix, conditions (permis, caution), conseils stationnement + alternative : comparer 3 devis minimum pros.`,
+      `Location camion déménagement à ${cityName} : quel volume choisir, prix, conditions (permis, caution), conseils stationnement + alternative : comparer des devis de pros.`,
     sections: (cityName) => [
       {
         title: "Quel volume d’utilitaire choisir ?",
@@ -161,7 +161,7 @@ export const SERVICE_DEFINITIONS: Record<ServiceSlug, ServiceDefinition> = {
       `Quelques meubles, un studio, une colocation ? Les options les plus efficaces pour un petit volume à ${cityName} : rapide, économique, sans surprise.`,
     title: (cityName) => `Petit déménagement ${cityName} : transport petit volume & devis`,
     description: (cityName) =>
-      `Petit déménagement à ${cityName} (petit volume) : options, accès, timing. Comparez 3 devis minimum pros pour transporter quelques meubles/cartons.`,
+      `Petit déménagement à ${cityName} (petit volume) : options, accès, timing. Comparez des devis de pros pour transporter quelques meubles/cartons.`,
     sections: (cityName) => [
       {
         title: "Petit volume : ce qui compte vraiment",
@@ -185,7 +185,7 @@ export const SERVICE_DEFINITIONS: Record<ServiceSlug, ServiceDefinition> = {
       `Main d’œuvre, manutention, matériel, monte-meuble : comment choisir une aide à la carte à ${cityName} et obtenir un devis clair.`,
     title: (cityName) => `Aide au déménagement ${cityName} : main d’œuvre, matériel, devis`,
     description: (cityName) =>
-      `Aide au déménagement à ${cityName} : porteurs, manutention, monte-meuble, matériel. Conseils + 3 devis minimum comparables, sans spam.`,
+      `Aide au déménagement à ${cityName} : porteurs, manutention, monte-meuble, matériel. Conseils + devis comparables, sans spam.`,
     sections: (cityName) => [
       {
         title: "Aide ponctuelle : les cas les plus fréquents",
@@ -206,7 +206,7 @@ export const SERVICE_DEFINITIONS: Record<ServiceSlug, ServiceDefinition> = {
       `Transfert de bureaux, archives, informatique : organiser un déménagement pro à ${cityName} sans rupture d’activité.`,
     title: (cityName) => `Déménagement entreprise ${cityName} : transfert bureaux, devis`,
     description: (cityName) =>
-      `Déménagement d'entreprise à ${cityName} : transfert de bureaux, informatique, archives. Méthode, continuité d'activité, assurance + 3 devis minimum comparables.`,
+      `Déménagement d'entreprise à ${cityName} : transfert de bureaux, informatique, archives. Méthode, continuité d'activité, assurance + devis comparables.`,
     sections: (cityName) => [
       {
         title: "Objectif : continuité d’activité",
@@ -231,7 +231,7 @@ export const SERVICE_DEFINITIONS: Record<ServiceSlug, ServiceDefinition> = {
       `Un piano est lourd et fragile : méthode, matériel et assurance comptent. Voici l’essentiel pour un transport sécurisé à ${cityName}.`,
     title: (cityName) => `Déménagement piano ${cityName} : transport sécurisé, devis`,
     description: (cityName) =>
-      `Déménagement piano à ${cityName} : piano droit ou à queue, accès, protections, assurance. Conseils + 3 devis minimum de pros pour un transport sécurisé.`,
+      `Déménagement piano à ${cityName} : piano droit ou à queue, accès, protections, assurance. Conseils + devis de pros pour un transport sécurisé.`,
     sections: (cityName) => [
       {
         title: "Pourquoi un piano nécessite un spécialiste",
@@ -252,7 +252,7 @@ export const SERVICE_DEFINITIONS: Record<ServiceSlug, ServiceDefinition> = {
       `Transport, documents, assurance, délais : les bases pour réussir un déménagement international depuis ou vers ${cityName}.`,
     title: (cityName) => `Déménagement international ${cityName} : Europe/monde, devis`,
     description: (cityName) =>
-      `Déménagement international depuis/vers ${cityName} : modes de transport, formalités, assurance, stockage. Conseils + 3 devis minimum comparables via Moverz.`,
+      `Déménagement international depuis/vers ${cityName} : modes de transport, formalités, assurance, stockage. Conseils + devis comparables via Moverz.`,
     sections: (cityName) => [
       {
         title: "International : cadrer le projet",

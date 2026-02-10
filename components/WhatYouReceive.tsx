@@ -123,7 +123,7 @@ export default function WhatYouReceive() {
 
               {/* Floating badge */}
               <div className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-lg px-4 py-3 border border-[#6BCFCF]/30">
-                <p className="text-2xl font-bold text-[#0F172A]">3+ devis</p>
+                <p className="text-2xl font-bold text-[#0F172A]">des devis</p>
                 <p className="text-xs text-[#1E293B]/70">comparables</p>
               </div>
             </div>
@@ -209,7 +209,7 @@ export default function WhatYouReceive() {
                   <Clock className="w-6 h-6 text-[#0F172A]" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#0F172A] mb-1">3 devis minimum comparables</h3>
+                  <h3 className="font-bold text-[#0F172A] mb-1">des devis comparables</h3>
                   <p className="text-[#1E293B]/70 text-sm">
                     Vous comparez prix, options et conditions sur un format standardisé.
                   </p>

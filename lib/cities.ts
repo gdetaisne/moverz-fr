@@ -21,7 +21,7 @@ const CORE_CITIES: CityInfo[] = [
     name: 'nice',
     nameCapitalized: 'Nice',
     url: 'https://devis-demenageur-nice.fr',
-    description: 'Comparez 3 devis minimum de déménageurs à Nice',
+    description: 'Comparez des devis de déménageurs vérifiés à Nice',
     region: 'Provence-Alpes-Côte d\'Azur',
   },
   {
@@ -29,7 +29,7 @@ const CORE_CITIES: CityInfo[] = [
     name: 'lyon',
     nameCapitalized: 'Lyon',
     url: 'https://devis-demenageur-lyon.fr',
-    description: 'Comparez 3 devis minimum de déménageurs à Lyon',
+    description: 'Comparez des devis de déménageurs vérifiés à Lyon',
     region: 'Auvergne-Rhône-Alpes',
   },
   {
@@ -37,7 +37,7 @@ const CORE_CITIES: CityInfo[] = [
     name: 'marseille',
     nameCapitalized: 'Marseille',
     url: 'https://devis-demenageur-marseille.fr',
-    description: 'Comparez 3 devis minimum de déménageurs à Marseille',
+    description: 'Comparez des devis de déménageurs vérifiés à Marseille',
     region: 'Provence-Alpes-Côte d\'Azur',
   },
   {
@@ -45,7 +45,7 @@ const CORE_CITIES: CityInfo[] = [
     name: 'toulouse',
     nameCapitalized: 'Toulouse',
     url: 'https://devis-demenageur-toulousain.fr', // ⚠️ Exception: -toulousain
-    description: 'Comparez 3 devis minimum de déménageurs à Toulouse',
+    description: 'Comparez des devis de déménageurs vérifiés à Toulouse',
     region: 'Occitanie',
   },
   {
@@ -53,7 +53,7 @@ const CORE_CITIES: CityInfo[] = [
     name: 'bordeaux',
     nameCapitalized: 'Bordeaux',
     url: 'https://www.bordeaux-demenageur.fr', // ⚠️ Exception: ordre inversé + www
-    description: 'Comparez 3 devis minimum de déménageurs à Bordeaux',
+    description: 'Comparez des devis de déménageurs vérifiés à Bordeaux',
     region: 'Nouvelle-Aquitaine',
   },
   {
@@ -61,7 +61,7 @@ const CORE_CITIES: CityInfo[] = [
     name: 'lille',
     nameCapitalized: 'Lille',
     url: 'https://devis-demenageur-lille.fr',
-    description: 'Comparez 3 devis minimum de déménageurs à Lille',
+    description: 'Comparez des devis de déménageurs vérifiés à Lille',
     region: 'Hauts-de-France',
   },
   {
@@ -69,7 +69,7 @@ const CORE_CITIES: CityInfo[] = [
     name: 'strasbourg',
     nameCapitalized: 'Strasbourg',
     url: 'https://devis-demenageur-strasbourg.fr',
-    description: 'Comparez 3 devis minimum de déménageurs à Strasbourg',
+    description: 'Comparez des devis de déménageurs vérifiés à Strasbourg',
     region: 'Grand Est',
   },
   {
@@ -77,7 +77,7 @@ const CORE_CITIES: CityInfo[] = [
     name: 'nantes',
     nameCapitalized: 'Nantes',
     url: 'https://devis-demenageur-nantes.fr',
-    description: 'Comparez 3 devis minimum de déménageurs à Nantes',
+    description: 'Comparez des devis de déménageurs vérifiés à Nantes',
     region: 'Pays de la Loire',
   },
   {
@@ -85,7 +85,7 @@ const CORE_CITIES: CityInfo[] = [
     name: 'rennes',
     nameCapitalized: 'Rennes',
     url: 'https://devis-demenageur-rennes.fr',
-    description: 'Comparez 3 devis minimum de déménageurs à Rennes',
+    description: 'Comparez des devis de déménageurs vérifiés à Rennes',
     region: 'Bretagne',
   },
   {
@@ -93,7 +93,7 @@ const CORE_CITIES: CityInfo[] = [
     name: 'rouen',
     nameCapitalized: 'Rouen',
     url: 'https://devis-demenageur-rouen.fr',
-    description: 'Comparez 3 devis minimum de déménageurs à Rouen',
+    description: 'Comparez des devis de déménageurs vérifiés à Rouen',
     region: 'Normandie',
   },
   {
@@ -101,7 +101,7 @@ const CORE_CITIES: CityInfo[] = [
     name: 'montpellier',
     nameCapitalized: 'Montpellier',
     url: 'https://devis-demenageur-montpellier.fr',
-    description: 'Comparez 3 devis minimum de déménageurs à Montpellier',
+    description: 'Comparez des devis de déménageurs vérifiés à Montpellier',
     region: 'Occitanie',
   },
   // Nouveaux sites qui seront progressivement redirigés vers moverz.fr
@@ -110,7 +110,7 @@ const CORE_CITIES: CityInfo[] = [
     name: 'paris',
     nameCapitalized: 'Paris',
     url: 'https://devis-demenageur-parisien.fr',
-    description: 'Comparez 3 devis minimum de déménageurs à Paris',
+    description: 'Comparez des devis de déménageurs vérifiés à Paris',
     region: 'Île-de-France',
   },
   {
@@ -118,7 +118,7 @@ const CORE_CITIES: CityInfo[] = [
     name: 'ile-de-france',
     nameCapitalized: 'Île-de-France',
     url: 'https://devis-demenageur-ile-de-france.fr',
-    description: 'Comparez 3 devis minimum de déménageurs en Île-de-France',
+    description: 'Comparez des devis de déménageurs vérifiés en Île-de-France',
     region: 'Île-de-France',
   },
   {
@@ -126,7 +126,7 @@ const CORE_CITIES: CityInfo[] = [
     name: 'grenoble',
     nameCapitalized: 'Grenoble',
     url: 'https://devis-demenageur-grenoble.fr',
-    description: 'Comparez 3 devis minimum de déménageurs à Grenoble',
+    description: 'Comparez des devis de déménageurs vérifiés à Grenoble',
     region: 'Auvergne-Rhône-Alpes',
   },
   {
@@ -134,7 +134,7 @@ const CORE_CITIES: CityInfo[] = [
     name: 'toulon',
     nameCapitalized: 'Toulon',
     url: 'https://devis-demenageur-toulon.fr',
-    description: 'Comparez 3 devis minimum de déménageurs à Toulon',
+    description: 'Comparez des devis de déménageurs vérifiés à Toulon',
     region: 'Provence-Alpes-Côte d\'Azur',
   },
   {
@@ -142,7 +142,7 @@ const CORE_CITIES: CityInfo[] = [
     name: 'dijon',
     nameCapitalized: 'Dijon',
     url: 'https://devis-demenageur-dijon.fr',
-    description: 'Comparez 3 devis minimum de déménageurs à Dijon',
+    description: 'Comparez des devis de déménageurs vérifiés à Dijon',
     region: 'Bourgogne-Franche-Comté',
   },
   {
@@ -150,7 +150,7 @@ const CORE_CITIES: CityInfo[] = [
     name: 'angers',
     nameCapitalized: 'Angers',
     url: 'https://devis-demenageur-angers.fr',
-    description: 'Comparez 3 devis minimum de déménageurs à Angers',
+    description: 'Comparez des devis de déménageurs vérifiés à Angers',
     region: 'Pays de la Loire',
   },
   {
@@ -158,7 +158,7 @@ const CORE_CITIES: CityInfo[] = [
     name: 'clermont-ferrand',
     nameCapitalized: 'Clermont-Ferrand',
     url: 'https://devis-demenageur-clermont-ferrand.fr',
-    description: 'Comparez 3 devis minimum de déménageurs à Clermont-Ferrand',
+    description: 'Comparez des devis de déménageurs vérifiés à Clermont-Ferrand',
     region: 'Auvergne-Rhône-Alpes',
   },
   {
@@ -166,7 +166,7 @@ const CORE_CITIES: CityInfo[] = [
     name: 'tours',
     nameCapitalized: 'Tours',
     url: 'https://devis-demenageur-tours.fr',
-    description: 'Comparez 3 devis minimum de déménageurs à Tours',
+    description: 'Comparez des devis de déménageurs vérifiés à Tours',
     region: 'Centre-Val de Loire',
   },
   {
@@ -174,7 +174,7 @@ const CORE_CITIES: CityInfo[] = [
     name: 'reims',
     nameCapitalized: 'Reims',
     url: 'https://devis-demenageur-reims.fr',
-    description: 'Comparez 3 devis minimum de déménageurs à Reims',
+    description: 'Comparez des devis de déménageurs vérifiés à Reims',
     region: 'Grand Est',
   },
   {
@@ -182,7 +182,7 @@ const CORE_CITIES: CityInfo[] = [
     name: 'le-havre',
     nameCapitalized: 'Le Havre',
     url: 'https://devis-demenageur-le-havre.fr',
-    description: 'Comparez 3 devis minimum de déménageurs au Havre',
+    description: 'Comparez des devis de déménageurs vérifiés au Havre',
     region: 'Normandie',
   },
   {
@@ -190,7 +190,7 @@ const CORE_CITIES: CityInfo[] = [
     name: 'saint-etienne',
     nameCapitalized: 'Saint-Étienne',
     url: 'https://moverz.fr', // Pas de site dédié
-    description: 'Comparez 3 devis minimum de déménageurs à Saint-Étienne',
+    description: 'Comparez des devis de déménageurs vérifiés à Saint-Étienne',
     region: 'Auvergne-Rhône-Alpes',
   },
 ];
@@ -203,7 +203,7 @@ function buildExtraCities(): CityInfo[] {
       name: slug,
       nameCapitalized,
       url: "https://moverz.fr",
-      description: `Comparez 3 devis minimum de déménageurs à ${nameCapitalized}`,
+      description: `Comparez des devis de déménageurs vérifiés à ${nameCapitalized}`,
       region,
     };
   });

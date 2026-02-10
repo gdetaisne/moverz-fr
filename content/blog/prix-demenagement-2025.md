@@ -238,7 +238,7 @@ Dans votre dossier Moverz, indiquez :
 
 ### Étape 4 : Comparer les devis
 
-Avec Moverz, vous recevez **3 devis minimum comparables** :
+Avec Moverz, vous recevez **des devis comparables** :
 - Même volume (ex: 30 m³)
 - Même description accès
 - Même formule
@@ -367,7 +367,7 @@ Avec Moverz, vous recevez **3 devis minimum comparables** :
 
 ---
 
-### 4. Comparer 3-5 devis (pas juste 1-2)
+### 4. Comparer des devis (pas juste 1-2)
 
 **Avec 2 devis** :
 - Écart de prix : 20-30%
@@ -378,7 +378,7 @@ Avec Moverz, vous recevez **3 devis minimum comparables** :
 - Vous identifiez les outliers (trop cher ou trop cheap = suspect)
 - **→ Vous négociez mieux** ✅
 
-**Moverz** : 3 devis minimum automatiquement, déménageurs contrôlés.
+**Moverz** : des devis automatiquement, déménageurs contrôlés.
 
 ---
 
@@ -435,7 +435,7 @@ Avec Moverz, vous recevez **3 devis minimum comparables** :
 - **→ Vous n'êtes pas seul** ✅
 
 > **Lancer votre comparaison**  
-> Créez votre dossier en 3 minutes, l'IA estime votre volume, recevez 3-5 devis comparables sur [devis.moverz.fr](https://devis.moverz.fr).
+> Créez votre dossier en 3 minutes, l'IA estime votre volume, recevez des devis comparables sur [devis.moverz.fr](https://devis.moverz.fr).
 
 ---
 
@@ -556,14 +556,14 @@ Avec Moverz, vous recevez **3 devis minimum comparables** :
 1. ✅ **Volume précis** (IA Moverz en 1 minute)
 2. ✅ **Accès bien décrits** (+ détails)
 3. ✅ **Période flexible** (semaine + hors été)
-4. ✅ **3-5 devis comparables** (même base de volume)
+4. ✅ **des devis comparables** (même base de volume)
 5. ✅ **Négociation** (si pertinent)
 
 ---
 
 ## Calculez votre prix exact maintenant
 
-**Estimation IA en 1 minute** · **3-5 devis comparables** · **Déménageurs contrôlés** · **100% gratuit**
+**Estimation IA en 1 minute** · **des devis comparables** · **Déménageurs contrôlés** · **100% gratuit**
 
 [Comparer les devis maintenant →](https://devis.moverz.fr)
 

@@ -62,7 +62,7 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
         title="Déménagement par ville : prix & conseils locaux"
         subtitle="Choisissez une ville pour accéder rapidement à ses guides (prix, quartiers, garde‑meuble, astuces locales)."
         primaryCta={{
-          label: "Comparer 5+ devis comparés gratuitement",
+          label: "Comparer des devis comparables gratuitement",
           href: "https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/blog/demenagement-par-ville/",
         }}
         secondaryCta={{ label: "Voir les guides prix", href: "/blog/prix-et-devis/" }}

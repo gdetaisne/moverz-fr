@@ -38,7 +38,7 @@ export function ServiceSchema({
     "@type": "Service",
     serviceType: "Comparateur de déménagement",
     name: `Comparateur Déménagement ${cityName}`,
-    description: `Recevez 5+ devis comparés pour votre déménagement à ${cityName}. Déménageurs contrôlés, 0 harcèlement, 100% gratuit.`,
+    description: `Comparez des devis comparables pour votre déménagement à ${cityName}. Déménageurs contrôlés, 0 harcèlement, 100% gratuit.`,
     provider: { "@id": "https://moverz.fr/#organization" },
     areaServed: {
       "@type": "City",

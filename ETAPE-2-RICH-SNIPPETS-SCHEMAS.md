@@ -36,14 +36,14 @@
 
 **Exemple SERP avec FAQ** :
 ```
-Déménagement France dès 450€ | 3+ Devis 48h | Contrôlés
-450€ minimum. Recevez 3+ devis comparables en 48h...
+Déménagement France dès 450€ | des devis 48h | Contrôlés
+450€ minimum. Recevez des devis comparables en 48h...
 
 ❓ Combien coûte un déménagement avec Moverz ?
-   Dès 450€ minimum. Recevez 3+ devis comparables en 48h...
+   Dès 450€ minimum. Recevez des devis comparables en 48h...
 
 ❓ Combien de devis vais-je recevoir ?
-   3+ devis minimum de déménageurs contrôlés et assurés...
+   des devis minimum de déménageurs contrôlés et assurés...
 ```
 
 ---
@@ -66,8 +66,8 @@ Accueil > Villes > Déménagement {Ville}
 ```
 moverz.fr › villes › déménagement › nice
 
-Déménagement Nice dès 450€ | 3+ Devis 48h | Contrôlés
-Déménager à Nice dès 450€. 3+ devis comparables en 48h...
+Déménagement Nice dès 450€ | des devis 48h | Contrôlés
+Déménager à Nice dès 450€. des devis comparables en 48h...
 ```
 
 ---
@@ -201,7 +201,7 @@ const faqSchema = {
       "name": "Combien coûte un déménagement avec Moverz ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Dès 450€ minimum. Recevez 3+ devis comparables en 48h pour comparer les prix. L'IA calcule votre volume précis pour éviter tout écart prix le jour J."
+        "text": "Dès 450€ minimum. Recevez des devis comparables en 48h pour comparer les prix. L'IA calcule votre volume précis pour éviter tout écart prix le jour J."
       }
     },
     // ... 4 autres questions

@@ -5,7 +5,7 @@ export const metadata = generateCityServiceMetadata({
   serviceSlug: "petit-demenagement",
   title: "Petit déménagement à Marseille : transport petit volume & devis",
   description:
-    "Petit déménagement à Marseille (petit volume) : options, fourchettes de prix, accès, timing. comparez 5+ devis comparés pros pour transporter quelques meubles/cartons.",
+    "Petit déménagement à Marseille (petit volume) : options, fourchettes de prix, accès, timing. comparez des devis comparables pros pour transporter quelques meubles/cartons.",
 });
 
 export default function Page() {
@@ -92,7 +92,7 @@ export default function Page() {
         {
           question: "Puis-je comparer plusieurs devis gratuitement ?",
           answer:
-            "Oui. Avec Moverz, vous remplissez un seul dossier et recevez 5+ devis comparés standardisés, sans engagement.",
+            "Oui. Avec Moverz, vous remplissez un seul dossier et Comparez des devis comparables standardisés, sans engagement.",
         },
         {
           question: "Et si j’ai surtout besoin de portage ?",

@@ -119,7 +119,7 @@ export function CityStats({ cityName }: CityStatsProps) {
                   <Check className="w-6 h-6 text-white" strokeWidth={2.5} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#0F172A] mb-1">3 devis minimum comparables</h3>
+                  <h3 className="font-bold text-[#0F172A] mb-1">des devis comparables</h3>
                   <p className="text-[#1E293B]/70 text-sm">
                     Tous basés sur le même dossier (infos + détails)
                   </p>

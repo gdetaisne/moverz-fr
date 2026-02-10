@@ -5,7 +5,7 @@ export const metadata = generateCityServiceMetadata({
   serviceSlug: "piano",
   title: "Déménagement piano Marseille : transport sécurisé, devis",
   description:
-    "Déménagement piano à Marseille : piano droit ou à queue, accès, protections, assurance. Conseils + 5+ devis comparés de pros pour un transport sécurisé.",
+    "Déménagement piano à Marseille : piano droit ou à queue, accès, protections, assurance. Conseils + des devis comparables de pros pour un transport sécurisé.",
 });
 
 export default function Page() {
@@ -95,7 +95,7 @@ export default function Page() {
         {
           question: "Puis-je comparer plusieurs devis gratuitement ?",
           answer:
-            "Oui. Avec Moverz, vous pouvez recevoir 5+ devis comparés standardisés et décider ensuite, sans engagement.",
+            "Oui. Avec Moverz, vous pouvez recevoir des devis comparables standardisés et décider ensuite, sans engagement.",
         },
       ]}
     />

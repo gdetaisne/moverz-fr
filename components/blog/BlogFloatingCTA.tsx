@@ -97,7 +97,7 @@ export default function BlogFloatingCTA() {
   )}&channel=blog-floating&event=lead_click&placement=blog_floating`;
 
   const title = "Comparer sans se faire harceler";
-  const promise = "Recevez 5+ devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement.";
+  const promise = "Comparez des devis comparables sous 5 à 7 jours. Dossier anonyme, 0 harcèlement.";
 
   const mobilityUrl =
     "https://yx1t4lgsza4.typeform.com/to/RluFyQFU?typeform-source=groupemobility.fr";
@@ -281,7 +281,7 @@ export default function BlogFloatingCTA() {
               <div className="min-w-0">
                 <p className="text-xs font-semibold text-[#0F172A] truncate">{title}</p>
                 <p className="text-xs text-[#475569] truncate">
-                  5+ devis comparés · 5–7 jours · 0 harcèlement
+                  des devis comparables · 5–7 jours · 0 harcèlement
                 </p>
               </div>
               <a

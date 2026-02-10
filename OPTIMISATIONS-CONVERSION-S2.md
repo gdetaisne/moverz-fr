@@ -8,7 +8,7 @@
 
 ### Avant :
 ```
-"Comparez 5+ devis gratuits"
+"Comparez des devis gratuits"
 ```
 
 ### Après :

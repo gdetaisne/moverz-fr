@@ -8,7 +8,7 @@ type QuoteBridgeCardProps = {
 };
 
 function getMailtoUrl(quoteUrl: string) {
-  const subject = "Moverz — lien pour obtenir 3 devis minimum";
+  const subject = "Moverz — lien pour obtenir des devis";
   const body =
     `Bonjour,\\n\\n` +
     `Voici mon lien Moverz : ${quoteUrl}\\n\\n` +
@@ -42,7 +42,7 @@ export default function QuoteBridgeCard({ quoteUrl }: QuoteBridgeCardProps) {
         </div>
 
         <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-[#0F172A]">
-          Comparez 3 devis minimum maintenant
+          Comparez des devis maintenant
         </h3>
         <p className="text-sm md:text-[15px] text-[#334155] leading-relaxed">
           Téléphone masqué, sans démarchage.

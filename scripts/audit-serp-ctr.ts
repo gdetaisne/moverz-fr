@@ -69,7 +69,7 @@ function scanFile(filePath: string, content: string) {
         severity: desc.includes("48h") || desc.includes("24h") ? "🔴 CRITIQUE" : "🟠 ÉLEVÉ",
         issue: `${desc} détecté`,
         line: lineNum,
-        suggestion: desc.includes("48h") ? "Utiliser '5-7j' ou '5+ devis sous 5–7j'" : undefined,
+        suggestion: desc.includes("48h") ? "Utiliser '5-7j' ou 'des devis sous 5–7j'" : undefined,
       });
     }
   });

@@ -25,7 +25,7 @@ Déménagement Nice vers Paris : devis gratuits, prix indicatifs...
 
 APRÈS:
 Déménagement Nice → Paris (860km) | Devis 5–7j · 2026
-Nice→Paris (860km) : 5+ devis sous 5–7j. Tarifs : T1 1620-2430€ · 
+Nice→Paris (860km) : des devis sous 5–7j. Tarifs : T1 1620-2430€ · 
 T2 2050-3070€ · Maison 3300-4940€. Pros contrôlés, 0€.
 ```
 
@@ -46,16 +46,16 @@ T2 2050-3070€ · Maison 3300-4940€. Pros contrôlés, 0€.
 **Changements:**
 ```
 AVANT:
-Title: "Déménagement {Quartier} ({Ville}) : 3 devis minimum en 3 min"
+Title: "Déménagement {Quartier} ({Ville}) : des devis en 3 min"
 Desc: "... Devis comparables en 3 min · IA volume · 0€..."
 
 APRÈS:
-Title: "Déménagement {Quartier} ({Ville}) | 5+ devis en 5–7j · Pros locaux"
-Desc: "{Quartier}, {Ville} : 5+ devis comparés sous 5–7j. Dossier anonyme, pros locaux contrôlés, 0€."
+Title: "Déménagement {Quartier} ({Ville}) | des devis en 5–7j · Pros locaux"
+Desc: "{Quartier}, {Ville} : des devis comparés sous 5–7j. Dossier anonyme, pros locaux contrôlés, 0€."
 ```
 
 **Gains:**
-- ✅ Messagerie unifiée "5+ devis" (home/villes/corridors/quartiers)
+- ✅ Messagerie unifiée "des devis" (home/villes/corridors/quartiers)
 - ✅ "Dossier anonyme" ajouté (différenciant anti-harcèlement)
 - ✅ Suppression "3 min" (peu crédible/différenciant)
 
@@ -70,7 +70,7 @@ Desc: "{Quartier}, {Ville} : 5+ devis comparés sous 5–7j. Dossier anonyme, pr
 ### ⏳ **4. Test A/B Titles Villes (EN ATTENTE)**
 **Variantes à tester:**
 - A (actuel): "Comparateur Déménagement {Ville} | Devis 5–7j"
-- B (test): "Déménagement {Ville} : 5+ devis comparés en 5–7j"
+- B (test): "Déménagement {Ville} : des devis comparés en 5–7j"
 
 **Status:** À implémenter post-stabilisation P0
 
@@ -128,7 +128,7 @@ SLA Moverz (vérités contractuelles):
 - Client: engagement envoi devis comparables sous 5–7 jours
 
 Messagerie SEO cohérente:
-"5+ devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 
+"des devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 
 Déménageurs contrôlés et assurés. 100% gratuit."
 ```
 
@@ -152,7 +152,7 @@ Déménageurs contrôlés et assurés. 100% gratuit."
    - +40 lignes (dont doc)
 
 ✅ components/templates/QuartierPage.tsx
-   - Harmonisation title/desc "5+ devis"
+   - Harmonisation title/desc "des devis"
    - +15 lignes (dont doc)
 ```
 
@@ -199,7 +199,7 @@ Déménageurs contrôlés et assurés. 100% gratuit."
 
 **Annotations GSC:**
 - "Optimisation meta corridors - distance + prix (formule ÉCO)"
-- "Harmonisation meta quartiers - messagerie 5+ devis"
+- "Harmonisation meta quartiers - messagerie des devis"
 
 ---
 
@@ -248,7 +248,7 @@ Déménageurs contrôlés et assurés. 100% gratuit."
 Homepage: "Comparateur Déménagement | Devis 5–7j | Contrôlés · Gratuit"
 Villes: "Comparateur Déménagement {Ville} | Devis 5–7j | Contrôlés"
 Corridors: "Déménagement {A} → {B} ({Xkm}) | Devis 5–7j · {Année}"
-Quartiers: "Déménagement {Quartier} ({Ville}) | 5+ devis en 5–7j · Pros locaux"
+Quartiers: "Déménagement {Quartier} ({Ville}) | des devis en 5–7j · Pros locaux"
 Blog: "{Sujet principal} (guide {AAAA})"
 ```
 
@@ -260,7 +260,7 @@ Blog: "{Sujet principal} (guide {AAAA})"
 
 **Terminé:**
 - ✅ Optimisation corridors (distance + prix formule ÉCO)
-- ✅ Harmonisation quartiers (messagerie "5+ devis")
+- ✅ Harmonisation quartiers (messagerie "des devis")
 - ✅ Documentation exhaustive (sources, formules, exemples)
 - ✅ Tests validation (pricing + build)
 

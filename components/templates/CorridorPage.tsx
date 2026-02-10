@@ -47,7 +47,7 @@ function slugify(input: string): string {
  * - Calcul prix basé sur formules officielles tunnel (pricing-corridors.ts)
  * 
  * Format title: "Déménagement {Ville A} → {Ville B} ({Distance}km) | Devis 5–7j · {Année}"
- * Format desc: "{A}→{B} ({Xkm}) : 5+ devis sous 5–7j. Tarifs : T1 X€ · T2 Y€ · Maison Z€. Pros contrôlés, 0€."
+ * Format desc: "{A}→{B} ({Xkm}) : devis comparables sous 5–7j. Tarifs : T1 X€ · T2 Y€ · Maison Z€. Pros contrôlés, 0€."
  */
 export function generateCorridorMetadata(
   originCitySlug: string,
@@ -66,7 +66,7 @@ export function generateCorridorMetadata(
     // ✅ Version optimisée (distance + prix)
     const title = `Déménagement ${originCityName} → ${destination} (${priceData.distanceKm}km) | Devis 5–7j · ${year}`;
     
-    const description = `${originCityName}→${destination} (${priceData.distanceKm}km) : 5+ devis sous 5–7j. Tarifs : T1 ${priceData.t1} · T2 ${priceData.t2} · Maison ${priceData.house}. Pros contrôlés, 0€.`;
+    const description = `${originCityName}→${destination} (${priceData.distanceKm}km) : devis comparables sous 5–7j. Tarifs : T1 ${priceData.t1} · T2 ${priceData.t2} · Maison ${priceData.house}. Pros contrôlés, 0€.`;
     
     return getFullMetadata(path, title, description);
   }
@@ -145,7 +145,7 @@ export function CorridorPage({
       {/* WebPage schema: contexte page corridor */}
       <WebPageSchema
         name={`Déménagement ${originCityName} → ${destination}`}
-        description={`Recevez 5+ devis comparés pour votre déménagement de ${originCityName} vers ${destination}. Distance, prix, conseils.`}
+        description={`Comparez des devis comparables pour votre déménagement de ${originCityName} vers ${destination}. Distance, prix, conseils.`}
         url={`https://moverz.fr/${originCitySlug}-vers-${destSlug}/`}
         about={`Déménagement ${originCityName} vers ${destination}`}
       />
@@ -428,7 +428,7 @@ export function CorridorPage({
           </h2>
 
           <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
-            Créez votre dossier en 3 minutes et recevez 3 devis minimum de déménageurs contrôlés.
+            Créez votre dossier en 3 minutes et recevez des devis de déménageurs contrôlés.
           </p>
 
           <div className="pt-4">

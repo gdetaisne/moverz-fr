@@ -213,7 +213,7 @@ Créer `components/schema/ServiceSchema.tsx` pour pages ville:
     "addressCountry": "FR"
   },
   "priceRange": "450€-2500€",
-  "description": "Recevez 5+ devis comparés pour votre déménagement à Paris."
+  "description": "Recevez des devis comparés pour votre déménagement à Paris."
 }
 ```
 
@@ -490,7 +490,7 @@ export function ServiceSchema({ cityName, citySlug, priceRange }: ServiceSchemaP
       addressCountry: "FR",
     },
     priceRange,
-    description: `Recevez 5+ devis comparés pour votre déménagement à ${cityName}. Pros contrôlés, 0€, sans harcèlement.`,
+    description: `Recevez des devis comparés pour votre déménagement à ${cityName}. Pros contrôlés, 0€, sans harcèlement.`,
     availableChannel: {
       "@type": "ServiceChannel",
       serviceUrl: `https://moverz.fr/demenagement/${citySlug}/`,

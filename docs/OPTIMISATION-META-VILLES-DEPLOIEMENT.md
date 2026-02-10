@@ -11,7 +11,7 @@
 
 **Description** (153-158 car) :
 ```
-Recevez 5+ devis comparés sous 5 à 7 jours pour votre projet depuis {Ville}. 
+Recevez des devis comparés sous 5 à 7 jours pour votre projet depuis {Ville}. 
 Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.
 ```
 
@@ -24,7 +24,7 @@ Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gra
 
 **Description** (150-155 car) :
 ```
-{Ville} en 2026 : 5+ devis sous 5–7j. Tarifs : T1 dès 330€ · T2 dès 470€ · Maison dès 920€. 
+{Ville} en 2026 : des devis sous 5–7j. Tarifs : T1 dès 330€ · T2 dès 470€ · Maison dès 920€. 
 Dossier anonyme, 0 harcèlement. Pros contrôlés. 100% gratuit.
 ```
 
@@ -46,7 +46,7 @@ Comparateur Déménagement Nice | Devis 5–7j | Contrôlés
 
 **Description** (150 car) :
 ```
-Nice en 2026 : 5+ devis sous 5–7j. Tarifs : T1 dès 330€ · T2 dès 470€ · Maison dès 920€. 
+Nice en 2026 : des devis sous 5–7j. Tarifs : T1 dès 330€ · T2 dès 470€ · Maison dès 920€. 
 Dossier anonyme, 0 harcèlement. Pros contrôlés. 100% gratuit.
 ```
 
@@ -59,7 +59,7 @@ Comparateur Déménagement Marseille | Devis 5–7j | Contrôlés
 
 **Description** (155 car) :
 ```
-Marseille en 2026 : 5+ devis sous 5–7j. Tarifs : T1 dès 330€ · T2 dès 470€ · Maison dès 920€. 
+Marseille en 2026 : des devis sous 5–7j. Tarifs : T1 dès 330€ · T2 dès 470€ · Maison dès 920€. 
 Dossier anonyme, 0 harcèlement. Pros contrôlés. 100% gratuit.
 ```
 
@@ -113,7 +113,7 @@ export function getCityPageMetadata(city: CityInfo): Metadata {
   const title = `Comparateur Déménagement ${city.nameCapitalized} | Devis 5–7j | Contrôlés`;
   
   // Description optimisée (année + prix)
-  const description = `${city.nameCapitalized} en ${year} : 5+ devis sous 5–7j. Tarifs : T1 dès ${prices.t1} · T2 dès ${prices.t2} · Maison dès ${prices.house}. Dossier anonyme, 0 harcèlement. Pros contrôlés. 100% gratuit.`;
+  const description = `${city.nameCapitalized} en ${year} : des devis sous 5–7j. Tarifs : T1 dès ${prices.t1} · T2 dès ${prices.t2} · Maison dès ${prices.house}. Dossier anonyme, 0 harcèlement. Pros contrôlés. 100% gratuit.`;
   
   return getFullMetadata(path, title, description);
 }
@@ -140,9 +140,9 @@ import { getCityPageMetadata } from './lib/seo/metadata';
 
 **Résultat** :
 ```
-Nice : Nice en 2026 : 5+ devis... T1 dès 330€ · T2 dès 470€ · Maison dès 920€...
-Lyon : Lyon en 2026 : 5+ devis... T1 dès 330€ · T2 dès 470€ · Maison dès 920€...
-Marseille : Marseille en 2026 : 5+ devis... T1 dès 330€ · T2 dès 470€ · Maison dès 920€...
+Nice : Nice en 2026 : des devis... T1 dès 330€ · T2 dès 470€ · Maison dès 920€...
+Lyon : Lyon en 2026 : des devis... T1 dès 330€ · T2 dès 470€ · Maison dès 920€...
+Marseille : Marseille en 2026 : des devis... T1 dès 330€ · T2 dès 470€ · Maison dès 920€...
 ```
 
 ✅ **Toutes validations OK** :
@@ -213,7 +213,7 @@ npm run build
 │ 📄 Comparateur Déménagement Nice | Devis 5–7j | Contrôlés   │
 │ moverz.fr › demenagement › nice                              │
 │                                                              │
-│ Recevez 5+ devis comparés sous 5 à 7 jours pour votre      │
+│ Recevez des devis comparés sous 5 à 7 jours pour votre      │
 │ projet depuis Nice. Dossier anonyme, 0 harcèlement.        │
 │ Déménageurs contrôlés et assurés. 100% gratuit.            │
 └─────────────────────────────────────────────────────────────┘
@@ -232,7 +232,7 @@ npm run build
 │ 📄 Comparateur Déménagement Nice | Devis 5–7j | Contrôlés   │
 │ moverz.fr › demenagement › nice                              │
 │                                                              │
-│ Nice en 2026 : 5+ devis sous 5–7j. Tarifs : T1 dès 330€    │
+│ Nice en 2026 : des devis sous 5–7j. Tarifs : T1 dès 330€    │
 │ · T2 dès 470€ · Maison dès 920€. Dossier anonyme, 0        │
 │ harcèlement. Pros contrôlés. 100% gratuit.                 │
 └─────────────────────────────────────────────────────────────┘

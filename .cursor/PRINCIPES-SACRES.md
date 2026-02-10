@@ -327,7 +327,7 @@ CITIES.map(city => (
 ### Wording
 
 **Hub** :
-- "Comparez 5+ devis dans toute la France"
+- "Comparez des devis dans toute la France"
 - "11 villes couvertes"
 - "Choisissez votre ville"
 

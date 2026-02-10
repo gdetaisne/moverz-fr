@@ -40,7 +40,7 @@
 ```
 ┌─────────────────────────────────────────────────────────┐
 │ Déménagement Nice → Paris (860km) | Devis 5–7j · 2026  │
-│ Nice→Paris (860km) : 5+ devis sous 5–7j. Tarifs :      │
+│ Nice→Paris (860km) : des devis sous 5–7j. Tarifs :      │
 │ T1 1870-2800€ · T2 2440-3650€ · Maison 4080-6110€.     │
 │ Pros contrôlés, 0€.                                     │
 └─────────────────────────────────────────────────────────┘
@@ -56,7 +56,7 @@
 ┌─────────────────────────────────────────────────────────┐
 │ Déménagement Lyon → Marseille (350km) | Devis 5–7j ·   │
 │ 2026                                                    │
-│ Lyon→Marseille (350km) : 5+ devis sous 5–7j. Tarifs :  │
+│ Lyon→Marseille (350km) : des devis sous 5–7j. Tarifs :  │
 │ T1 960-1440€ · T2 1300-1950€ · Maison 2290-3430€. Pros │
 │ contrôlés, 0€.                                          │
 └─────────────────────────────────────────────────────────┘
@@ -72,7 +72,7 @@
 ┌─────────────────────────────────────────────────────────┐
 │ Déménagement Toulouse → Bordeaux (260km) | Devis 5–7j  │
 │ · 2026                                                  │
-│ Toulouse→Bordeaux (260km) : 5+ devis sous 5–7j.        │
+│ Toulouse→Bordeaux (260km) : des devis sous 5–7j.        │
 │ Tarifs : T1 880-1310€ · T2 1220-1820€ · Maison         │
 │ 2200-3300€. Pros contrôlés, 0€.                        │
 └─────────────────────────────────────────────────────────┘
@@ -88,7 +88,7 @@
 ┌─────────────────────────────────────────────────────────┐
 │ Déménagement Strasbourg → Paris (500km) | Devis 5–7j · │
 │ 2026                                                    │
-│ Strasbourg→Paris (500km) : 5+ devis sous 5–7j. Tarifs :│
+│ Strasbourg→Paris (500km) : des devis sous 5–7j. Tarifs :│
 │ T1 1270-1910€ · T2 1700-2550€ · Maison 2950-4420€.     │
 │ Pros contrôlés, 0€.                                     │
 └─────────────────────────────────────────────────────────┘

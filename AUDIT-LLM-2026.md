@@ -249,7 +249,7 @@ R: SaaS pour déménageurs professionnels. Widget IA volumétrie marque blanche,
 
 **Constat actuel:**
 ```
-Description home: "Recevez 5+ devis comparés sous 5 à 7 jours. Dossier anonyme, 
+Description home: "Recevez des devis comparés sous 5 à 7 jours. Dossier anonyme, 
 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit."
 ```
 
@@ -258,7 +258,7 @@ Ajouter une **phrase de différenciation unique** en début de description:
 
 ```
 "Moverz est le seul comparateur anti-arnaque avec qualification détail IA. 
-Recevez 5+ devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 
+Recevez des devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 
 Déménageurs contrôlés et assurés. 100% gratuit."
 ```
 

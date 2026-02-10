@@ -37,7 +37,7 @@ export function CityFinalCTA({ cityName, quoteUrl }: CityFinalCTAProps) {
             </h2>
             
             <p className="text-lg text-[#6B7280] leading-relaxed">
-              Comparez 3 devis minimum de déménageurs contrôlés à {cityName}. 
+              Comparez des devis de déménageurs contrôlés à {cityName}. 
               Dossier anonyme, réponse rapide, zéro surprise le jour J.
             </p>
 

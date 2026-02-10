@@ -11,7 +11,7 @@
 **Métrique** : Form submissions sur devis.moverz.fr
 
 ### 💎 Objectif 2 : 1 dossier 100% complet + 1 devis validé
-**Métrique** : Dossier avec 3+ devis reçus + 1 client qui signe
+**Métrique** : Dossier avec des devis reçus + 1 client qui signe
 
 ### 💼 Objectif 3 : 6 leads SaaS/mois (offre Pro)
 **Métrique** : Demandes formulaire /pro
@@ -166,7 +166,7 @@ Bien cordialement,
 "Comparez des devis de déménageurs à Nice"
 
 // Après (call-to-action)
-"Déménagement Nice : IA estime votre volume en 1 min · 5+ devis comparables · Pros contrôlés · 0€ · Sans démarchage · 3 devis garantis en 7j"
+"Déménagement Nice : IA estime votre volume en 1 min · des devis comparables · Pros contrôlés · 0€ · Sans démarchage · 3 devis garantis en 7j"
 ```
 
 **Impact** : +20-30% CTR Google = +600-900 visiteurs/mois = +18-27 leads/mois
@@ -183,7 +183,7 @@ Bien cordialement,
 - J+0 : Dossier créé → Email confirmation
 - J+2 : Si incomplet → "Complétez en 2 min pour recevoir vos devis"
 - J+5 : 1er devis reçu → "Comparez avec 2-4 autres"
-- J+7 : 3+ devis reçus → "Prêt à choisir ? Besoin d'aide ?"
+- J+7 : des devis reçus → "Prêt à choisir ? Besoin d'aide ?"
 - J+10 : Pas de validation → "Un conseiller peut vous aider ?"
 
 **Impact** : 
@@ -195,7 +195,7 @@ Bien cordialement,
 #### Action 3.2 : Call de Qualification (Humain)
 
 **Process** :
-1. Dossier complet avec 3+ devis
+1. Dossier complet avec des devis
 2. Client n'a pas validé après 7j
 3. **Appel téléphone** : "Bonjour, je vois que vous avez reçu 3 devis. Des questions ? Je peux vous aider à choisir ?"
 

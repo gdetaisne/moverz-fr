@@ -43,9 +43,9 @@
 **Vérification** :
 ```typescript
 // ✅ Messaging actuel conforme (exemples)
-- Homepage: "5+ devis comparés sous 5 à 7 jours"
-- Villes: "5+ devis comparés par IA (5-7j)"
-- Corridors: "5+ devis sous 5–7j"
+- Homepage: "des devis comparés sous 5 à 7 jours"
+- Villes: "des devis comparés par IA (5-7j)"
+- Corridors: "des devis sous 5–7j"
 ```
 
 ### 2. Prix Hardcodés
@@ -82,7 +82,7 @@ const priceData = getCorridorPricesForMeta(originSlug, destSlug);
 
 ```typescript
 title: "Comparateur Déménagement | Devis 5–7j | Contrôlés · Gratuit"
-description: "Recevez 5+ devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit."
+description: "Recevez des devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit."
 ```
 
 **Status** : ✅ Conforme  
@@ -93,8 +93,8 @@ description: "Recevez 5+ devis comparés sous 5 à 7 jours. Dossier anonyme, 0 h
 ### Pages Villes (ex: Nice)
 
 ```typescript
-title: "Déménagement Nice dès 330€ | 5+ Devis 5-7j | Contrôlés"
-description: "Déménager à Nice : 5+ devis comparés par IA (5-7j). T1 dès 330€, T2 dès 470€, Maison dès 920€. 0 harcèlement. Pros contrôlés. Gratuit (2026)."
+title: "Déménagement Nice dès 330€ | des devis 5-7j | Contrôlés"
+description: "Déménager à Nice : des devis comparés par IA (5-7j). T1 dès 330€, T2 dès 470€, Maison dès 920€. 0 harcèlement. Pros contrôlés. Gratuit (2026)."
 ```
 
 **Status** : ✅ BEST IN CLASS  
@@ -112,7 +112,7 @@ description: "Déménager à Nice : 5+ devis comparés par IA (5-7j). T1 dès 33
 
 ```typescript
 title: "Déménagement Nice → Paris (860km) | Devis 5–7j · 2026"
-description: "Nice→Paris (860km) : 5+ devis sous 5–7j. Tarifs : T1 1620-2430€ · T2 2050-3070€ · Maison 3300-4940€. Pros contrôlés, 0€."
+description: "Nice→Paris (860km) : des devis sous 5–7j. Tarifs : T1 1620-2430€ · T2 2050-3070€ · Maison 3300-4940€. Pros contrôlés, 0€."
 ```
 
 **Status** : ✅ BEST IN CLASS  
@@ -156,7 +156,7 @@ lib/pricing-corridors.ts
 
 ```
 Partout dans les meta :
-  • "5+ devis comparés"
+  • "des devis comparés"
   • "sous 5 à 7 jours" (jamais "48h")
   • "Dossier anonyme, 0 harcèlement"
   • "Déménageurs contrôlés et assurés"
@@ -219,7 +219,7 @@ $ grep -r "450" app/page.tsx app/layout.tsx
 **Critères BEST IN CLASS** :
 - [x] 0 fausse promesse dans meta
 - [x] 0 prix hardcodé dans meta
-- [x] Messaging cohérent (5+ devis, 5-7j)
+- [x] Messaging cohérent (des devis, 5-7j)
 - [x] Pricing dynamique (formules officielles)
 - [x] USPs claires ("comparés par IA", "0 harcèlement")
 - [x] Année dynamique (fraîcheur SEO)

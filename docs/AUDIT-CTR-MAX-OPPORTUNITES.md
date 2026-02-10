@@ -25,7 +25,7 @@
 **Actuel** :
 ```
 Title: "Comparateur Déménagement | Devis 5–7j | Contrôlés · Gratuit" (62 car)
-Desc: "Recevez 5+ devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement..."
+Desc: "Recevez des devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement..."
 ```
 
 **Score CTR** : 75/100
@@ -37,8 +37,8 @@ Desc: "Recevez 5+ devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèle
 
 **Proposition optimisée** :
 ```
-Title: "Comparateur Déménagement dès 330€ | 5+ Devis 5-7j | ⭐4.9/5 | 2026" (70 car)
-Desc: "Recevez 5+ devis comparés par IA sous 5-7j. Dès 330€. Note 4.9/5 (1200+ clients). Dossier anonyme, 0 harcèlement. Déménageurs contrôlés. 100% gratuit."
+Title: "Comparateur Déménagement dès 330€ | des devis 5-7j | ⭐4.9/5 | 2026" (70 car)
+Desc: "Recevez des devis comparés par IA sous 5-7j. Dès 330€. Note 4.9/5 (1200+ clients). Dossier anonyme, 0 harcèlement. Déménageurs contrôlés. 100% gratuit."
 ```
 
 **Gain estimé CTR** : **+20-30%**  
@@ -56,7 +56,7 @@ Desc: "Recevez 5+ devis comparés par IA sous 5-7j. Dès 330€. Note 4.9/5 (120
 **Actuel** :
 ```
 Title: "Déménagement Nice → Paris (860km) | Devis 5–7j · 2026" (55 car)
-Desc: "Nice→Paris (860km) : 5+ devis sous 5–7j. Tarifs : T1 1620-2430€ · T2 2050-3070€..."
+Desc: "Nice→Paris (860km) : des devis sous 5–7j. Tarifs : T1 1620-2430€ · T2 2050-3070€..."
 ```
 
 **Score CTR** : 80/100
@@ -68,7 +68,7 @@ Desc: "Nice→Paris (860km) : 5+ devis sous 5–7j. Tarifs : T1 1620-2430€ · 
 **Proposition optimisée** :
 ```
 Title: "Déménagement Nice → Paris (860km) dès 1620€ | 5-7j ⭐4.9 | 2026" (68 car)
-Desc: "Nice→Paris (860km) : 5+ devis comparés par IA (5-7j). T1 dès 1620€, T2 dès 2050€, Maison dès 3300€. Note 4.9/5. Pros contrôlés, 0€."
+Desc: "Nice→Paris (860km) : des devis comparés par IA (5-7j). T1 dès 1620€, T2 dès 2050€, Maison dès 3300€. Note 4.9/5. Pros contrôlés, 0€."
 ```
 
 **Gain estimé CTR** : **+25-35%**  
@@ -85,8 +85,8 @@ Desc: "Nice→Paris (860km) : 5+ devis comparés par IA (5-7j). T1 dès 1620€,
 
 **Actuel** :
 ```
-Title: "Déménagement Nice dès 330€ | 5+ Devis 5-7j | Contrôlés" (56 car)
-Desc: "Déménager à Nice : 5+ devis comparés par IA (5-7j). T1 dès 330€, T2 dès 470€, Maison dès 920€. 0 harcèlement. Pros contrôlés. Gratuit (2026)."
+Title: "Déménagement Nice dès 330€ | des devis 5-7j | Contrôlés" (56 car)
+Desc: "Déménager à Nice : des devis comparés par IA (5-7j). T1 dès 330€, T2 dès 470€, Maison dès 920€. 0 harcèlement. Pros contrôlés. Gratuit (2026)."
 ```
 
 **Score CTR** : 85/100 ✅ (déjà très bon !)
@@ -97,8 +97,8 @@ Desc: "Déménager à Nice : 5+ devis comparés par IA (5-7j). T1 dès 330€, T
 
 **Proposition optimisée** :
 ```
-Title: "Déménagement Nice dès 330€ | 5+ Devis 5-7j ⭐4.9 | 2026" (62 car)
-Desc: "Nice 2026 : 5+ devis comparés par IA (5-7j). T1 dès 330€, T2 dès 470€, Maison dès 920€. Note 4.9/5 (1200+ clients). 0 harcèlement. Pros contrôlés. Gratuit."
+Title: "Déménagement Nice dès 330€ | des devis 5-7j ⭐4.9 | 2026" (62 car)
+Desc: "Nice 2026 : des devis comparés par IA (5-7j). T1 dès 330€, T2 dès 470€, Maison dès 920€. Note 4.9/5 (1200+ clients). 0 harcèlement. Pros contrôlés. Gratuit."
 ```
 
 **Gain estimé CTR** : **+10-15%**  
@@ -224,7 +224,7 @@ Article: "Comment préparer un déménagement"
 
 **Variant B (optimisé)** :
 ```
-"Comparateur Déménagement dès 330€ | 5+ Devis 5-7j | ⭐4.9/5"
+"Comparateur Déménagement dès 330€ | des devis 5-7j | ⭐4.9/5"
 ```
 
 **Hypothèse** : +20-30% CTR  
@@ -284,7 +284,7 @@ const SOCIAL_PROOF = "Note 4.9/5";
 ```typescript
 // Déplacer année de fin desc vers title ou début desc
 // Avant : "... Gratuit (2026)."
-// Après : "2026 : 5+ devis comparés..."
+// Après : "2026 : des devis comparés..."
 ```
 
 **Impact** : +5-10% CTR  

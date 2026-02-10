@@ -26,7 +26,7 @@ interface WebPageSchemaProps {
  * Usage typique :
  * <WebPageSchema
  *   name="Déménagement Paris"
- *   description="Recevez 5+ devis comparés..."
+ *   description="Comparez des devis comparables..."
  *   url="https://moverz.fr/demenagement/paris/"
  *   breadcrumbId="breadcrumb-schema-xyz"
  *   about="Déménagement à Paris"

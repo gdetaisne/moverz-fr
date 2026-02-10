@@ -8,7 +8,7 @@ export default function WithWithoutMoverz() {
   const withMoverz = [
     "Quelques questions, et c’est tout",
     "Dossier standardisé pour éviter les écarts",
-    "3 devis minimum alignés sur la même base, faciles à comparer",
+    "des devis alignés sur la même base, faciles à comparer",
   ];
 
   return (
@@ -68,14 +68,14 @@ export default function WithWithoutMoverz() {
             Dossier clair, devis comparables.
           </h3>
           <p className="text-sm md:text-base text-white/75 max-w-xl mx-auto">
-            En quelques minutes, vous obtenez 3 devis minimum comparables de déménageurs sérieux, sans spam.
+            En quelques minutes, vous obtenez des devis comparables de déménageurs sérieux, sans spam.
           </p>
           <a
             href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/with-without"
             rel="nofollow"
             className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-sm md:text-base font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
           >
-            Comparez 3 devis minimum gratuitement
+            Comparez des devis gratuitement
             <span className="text-lg leading-none">→</span>
           </a>
           <p className="text-[11px] md:text-xs text-white/70">

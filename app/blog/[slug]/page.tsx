@@ -124,7 +124,7 @@ export default function BlogPostPage({ params }: PageProps) {
       steps: [
         { name: "Calculer votre volume précis (Erreur #1)", text: "Utilisez l'IA Moverz pour estimer votre volume réel en 1 minute. Inclut cave, garage, extérieurs. Évite les surcoûts jour J." },
         { name: "Choisir la bonne période (Erreur #2)", text: "Évitez juillet-août et week-ends (surcoût +30-50%). Privilégiez octobre-mars et jours de semaine." },
-        { name: "Comparer 3-5 devis comparables (Erreur #3)", text: "Même volume, mêmes options. Évitez les devis 'low-cost' sans assurance. Utilisez Moverz pour standardiser." },
+        { name: "Comparer des devis comparables (Erreur #3)", text: "Même volume, mêmes options. Évitez les devis 'low-cost' sans assurance. Utilisez Moverz pour standardiser." },
         { name: "Vérifier le déménageur (Erreur #4)", text: "Checklist : SIREN valide, assurance RC Pro, pas de signaux faibles (faillite, litiges). Moverz automatise ces vérifications." },
         { name: "Documenter l'état avant départ (Erreur #5)", text: "Gardez une trace de l'état du logement et des meubles (liste, points d'attention, documents). Protège en cas de litige sur l'état initial." },
         { name: "Déclarer vos objets de valeur (Erreur #6)", text: "Déclarez pianos, œuvres d'art, objets >1500€. L'assurance standard ne couvre que 60€/m³." },
@@ -166,7 +166,7 @@ export default function BlogPostPage({ params }: PageProps) {
         { name: "Choisir votre formule", text: "Éco (vous emballez) vs Standard (déménageur emballe). Différence 30-40% sur le tarif total." },
         { name: "Repérer la période", text: "Haute saison (juin-août) = +30-50% vs basse saison (oct-mars). Préférez jours de semaine (-20% vs week-end)." },
         { name: "Utiliser les fourchettes de référence", text: "Studio 10-15m³ local : 400-800€. T3 30-40m³ longue distance : 1700-3200€. Maison 60-80m³ : 2000-6000€." },
-        { name: "Comparer 3-5 devis standardisés", text: "Même volume, mêmes options, même cahier des charges. Moverz automatise cette standardisation pour éviter devis incomparables." },
+        { name: "Comparer des devis standardisés", text: "Même volume, mêmes options, même cahier des charges. Moverz automatise cette standardisation pour éviter devis incomparables." },
       ],
     },
   };

@@ -5,7 +5,7 @@ export const metadata = generateCityServiceMetadata({
   serviceSlug: "location-camion",
   title: "Location camion déménagement Rouen : volumes, prix & conseils",
   description:
-    "Location camion déménagement à Rouen : quel volume choisir, prix, conditions (permis, caution), conseils stationnement + alternative : comparer 5+ devis comparés pros.",
+    "Location camion déménagement à Rouen : quel volume choisir, prix, conditions (permis, caution), conseils stationnement + alternative : comparer des devis comparables pros.",
 });
 
 export default function Page() {
@@ -96,7 +96,7 @@ export default function Page() {
         {
           question: "Puis-je comparer plusieurs devis gratuitement ?",
           answer:
-            "Oui. Vous pouvez demander 5+ devis comparés via Moverz avec un seul dossier, sans engagement.",
+            "Oui. Vous pouvez demander des devis comparables via Moverz avec un seul dossier, sans engagement.",
         },
       ]}
     />

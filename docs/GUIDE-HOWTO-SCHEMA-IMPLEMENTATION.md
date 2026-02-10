@@ -101,7 +101,7 @@ export default function BlogPostPage() {
           },
           {
             name: "Réserver votre déménageur (6 semaines avant)",
-            text: "Comparez 5+ devis de déménageurs contrôlés. Vérifiez les assurances, lisez les avis clients (note minimale 4/5). Réservez dès que possible pour les meilleures dates.",
+            text: "Comparez des devis de déménageurs contrôlés. Vérifiez les assurances, lisez les avis clients (note minimale 4/5). Réservez dès que possible pour les meilleures dates.",
             url: "https://moverz.fr/blog/comment-preparer-demenagement#etape-2"
           },
           {
@@ -166,7 +166,7 @@ export default function BlogPostPage() {
 ```typescript
 {
   name: "Réserver votre déménageur (6 semaines avant)",
-  text: "Comparez 5+ devis de déménageurs contrôlés. Vérifiez les assurances, lisez les avis clients (note minimale 4/5). Réservez dès que possible pour les meilleures dates.",
+  text: "Comparez des devis de déménageurs contrôlés. Vérifiez les assurances, lisez les avis clients (note minimale 4/5). Réservez dès que possible pour les meilleures dates.",
   url: "https://moverz.fr/blog/comment-preparer#etape-2"
 }
 ```

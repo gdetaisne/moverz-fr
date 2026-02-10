@@ -23,11 +23,11 @@ function cityHint(citySlug: string, cityName: string): string {
  * - Prix MIN dans title → Visibilité SERP maximale (+20-30% CTR estimé)
  * - "Déménagement {Ville}" vs "Comparateur" → Action-oriented, meilleur intent match
  * - Prix indicatifs T1/T2/Maison → Forte différenciation
- * - "comparés par IA" → USP majeure (devis activement comparés, pas juste envoyés)
+ * - "comparés par IA" → USP majeure (devis standardisés et comparables)
  * - Année en fin → Fraîcheur SEO sans alourdir début
  * 
- * Format title: "Déménagement {Ville} dès {PrixMin}€ | 5+ Devis 5-7j | Contrôlés"
- * Format desc: "Déménager à {Ville} : 5+ devis comparés par IA sous 5-7j. T1 dès X€, T2 dès Y€, Maison dès Z€. Dossier anonyme, 0 harcèlement. Pros contrôlés. Gratuit. ({Année})"
+ * Format title: "Déménagement {Ville} dès {PrixMin}€ | Devis 5-7j | Contrôlés"
+ * Format desc: "Déménager à {Ville} : devis comparables sous 5-7j. T1 dès X€, T2 dès Y€, Maison dès Z€. Dossier anonyme, 0 harcèlement. Pros contrôlés. Gratuit. ({Année})"
  */
 export function getCityPageMetadata(city: CityInfo): Metadata {
   const path = `demenagement/${city.slug}`;
@@ -37,11 +37,11 @@ export function getCityPageMetadata(city: CityInfo): Metadata {
   const prices = getLocalPricesForMeta(city.slug);
   
   // Title optimisé (prix MIN visible + action-oriented)
-  const title = `Déménagement ${city.nameCapitalized} dès ${prices.t1} | 5+ Devis 5-7j | Contrôlés`;
+  const title = `Déménagement ${city.nameCapitalized} dès ${prices.t1} | Devis 5–7j | Contrôlés`;
   
   // Description optimisée (USP "comparés par IA" + prix détaillés + année en fin)
   // Format compact pour tenir en 160 car max
-  const description = `Déménager à ${city.nameCapitalized} : 5+ devis comparés par IA (5-7j). T1 dès ${prices.t1}, T2 dès ${prices.t2}, Maison dès ${prices.house}. 0 harcèlement. Pros contrôlés. Gratuit (${year}).`;
+  const description = `Déménager à ${city.nameCapitalized} : devis comparables (5–7j). T1 dès ${prices.t1}, T2 dès ${prices.t2}, Maison dès ${prices.house}. 0 harcèlement. Pros contrôlés. Gratuit (${year}).`;
   
   return getFullMetadata(path, title, description);
 }
@@ -51,7 +51,7 @@ export function getCityServiceMetadata(args: { city: CityInfo; service: ServiceS
   const def = SERVICE_DEFINITIONS[service];
   const path = `demenagement/${city.slug}/${service}`;
   const title = def.title(city.nameCapitalized);
-  const description = `Recevez 5+ devis comparés sous 5 à 7 jours pour votre projet depuis ${city.nameCapitalized}. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.`;
+  const description = `Comparez des devis comparables sous 5 à 7 jours pour votre projet depuis ${city.nameCapitalized}. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.`;
   return getFullMetadata(path, title, description);
 }
 

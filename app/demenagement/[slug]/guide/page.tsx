@@ -130,7 +130,7 @@ export default async function CityGuidePage({ params }: PageProps) {
                 rel="nofollow"
                 className="inline-flex items-center justify-center rounded-full border border-[#0F172A] bg-[#0F172A] px-7 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[#1E293B]"
               >
-                Obtenir 5+ devis comparés (gratuit)
+                Obtenir des devis comparables (gratuit)
               </a>
               <p className="mt-2 text-xs text-[#6B7280]">Sans spam · Sans engagement · Dossier en 3 minutes</p>
             </div>

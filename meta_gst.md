@@ -29,7 +29,7 @@ Construire un système **cohérent, scalable et mesurable** pour les metas (Titl
 **Convention**: Title = *[Intent + Mot-clé]* + *[Ville/Destination si applicable]* + “| Moverz”
 
 #### Homepage (marque + proposition de valeur)
-- **Title**: `Comparateur de déménagement anti-arnaque | 5+ devis comparés | Moverz`
+- **Title**: `Comparateur de déménagement anti-arnaque | des devis comparés | Moverz`
 - **Meta description** (140–160 chars idéal SERP): bénéfice + preuve + différenciation.
 - **OG image**: image dédiée (1200×630) type “brand + proof”.
 
@@ -40,8 +40,8 @@ Construire un système **cohérent, scalable et mesurable** pour les metas (Titl
 - **Pagination**: Title/Desc doivent inclure `Page N` + canonical vers la page paginée (pas vers page 1).
 
 #### Pages Ville (ex: /demenagement/[ville]/)
-- **Title**: `Déménagement à {Ville} | 5+ devis comparés (5–7j) | Moverz`
-- **Desc**: `{Ville}: 5+ devis comparés sous 5 à 7 jours… + hook local (parking, accès, maison/centre-ville) + preuve avis`
+- **Title**: `Déménagement à {Ville} | des devis comparés (5–7j) | Moverz`
+- **Desc**: `{Ville}: des devis comparés sous 5 à 7 jours… + hook local (parking, accès, maison/centre-ville) + preuve avis`
 - **Schema**: BreadcrumbList + Service (si possible) + FAQPage si FAQ.
 
 #### Corridors (ex: /{ville}-vers-{destination}/)
@@ -67,7 +67,7 @@ Construire un système **cohérent, scalable et mesurable** pour les metas (Titl
   - Toujours inclure la **marque** en suffixe (sauf home où possible aussi).
 - **Description**:
   - 140–160 chars cible; unique; phrase lisible.
-  - Ajouter 1–2 “proof points” (ex: `⭐4.9/5`, `5+ devis`, `5–7 jours`, `sans harcèlement`) sans spam.
+  - Ajouter 1–2 “proof points” (ex: `⭐4.9/5`, `des devis`, `5–7 jours`, `sans harcèlement`) sans spam.
 - **Images OG**:
   - Toujours absolute URL.
   - Idéal: OG images par type (home, city, blog, corridor).
@@ -260,9 +260,9 @@ Construire un **Knowledge Graph cohérent** (Organization/WebSite/WebPage + type
 > Contraintes respectées: **zéro fausse promesse** (SLA: support <24h, partenaires <=48h recommandé, client 5–7 jours).
 
 #### P0 — Leads + confiance (zéro ambiguïté)
-- **P0.1 Clarifier “5+ devis comparés” (cohérence globale)** *(implémenté)*
-  - **constat (avant)**: mélange “3 devis minimum”, “5 devis minimum”, “5+ devis” selon pages.
-  - **action**: alignement des CTA + contenus principaux vers **“5+ devis comparés”** (sans réintroduire de promesse 48h).
+- **P0.1 Clarifier “des devis comparés” (cohérence globale)** *(implémenté)*
+  - **constat (avant)**: mélange “des devis”, “5 devis minimum”, “des devis” selon pages.
+  - **action**: alignement des CTA + contenus principaux vers **“des devis comparés”** (sans réintroduire de promesse 48h).
 
 #### P1 — CTR (qualité des snippets) sans dette
 - **P1.1 Templates Title “hyper maintenant” (sans date figée)** *(implémenté pour les pages concernées)*
@@ -334,9 +334,9 @@ On définit des templates stables (Title + Description) par grandes familles d�
     - **Partenaires**: recommandation d’envoyer les devis sous 48h (non garanti côté client).
     - **Client**: **engagement** d’envoi de devis comparables sous **5 à 7 jours**.
   - **Home + pages money** (description):
-    - `Recevez 5+ devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.`
+    - `Recevez des devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.`
   - **Pages villes** (description):
-    - `Recevez 5+ devis comparés sous 5 à 7 jours pour votre projet depuis [VILLE]. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.`
+    - `Recevez des devis comparés sous 5 à 7 jours pour votre projet depuis [VILLE]. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.`
   - **Règle**: on évite les promesses “temps réel” non garanties (ex: `48h` pour les devis) dans les metas. `5–7 jours` est OK car c’est un engagement Moverz.
 
 - **Home (`/`)** (transactionnel marque)

@@ -31,7 +31,7 @@ description: "Trouvez les meilleurs déménageurs à Lyon..."
 <h1>Comparez des déménageurs à Marseille</h1>
 
 // ✅ CORRECT : sur la page ville /demenagement/marseille/
-<h1>Déménagement à Marseille : comparez 5+ devis de pros contrôlés</h1>
+<h1>Déménagement à Marseille : comparez des devis de pros contrôlés</h1>
 ```
 
 **Conséquence** :
@@ -46,7 +46,7 @@ description: "Trouvez les meilleurs déménageurs à Lyon..."
 ```typescript
 // ✅ CORRECT : Focus national (home / hub)
 title: "Comparateur Déménagement — France | Moverz"
-description: "Comparez 5+ devis de déménageurs dans toute la France..."
+description: "Comparez des devis de déménageurs dans toute la France..."
 
 // ✅ CORRECT : Utiliser lib/cities.ts pour lister les villes
 import { CITIES } from '@/lib/cities';
@@ -115,7 +115,7 @@ Hub & pages villes Moverz.fr → https://devis.moverz.fr/?... → Tunnel de devi
 ```tsx
 // ✅ CORRECT : CTA hub (exemple home)
 <a href="https://devis.moverz.fr/?source=moverz.fr&from=/">
-  Comparez 5+ devis gratuitement
+  Comparez des devis gratuitement
 </a>
 
 // ✅ CORRECT : CTA page ville

@@ -5,7 +5,7 @@ export const metadata = generateCityServiceMetadata({
   serviceSlug: "international",
   title: "Déménagement international depuis Toulouse : démarches, devis",
   description:
-    "Déménagement international depuis/vers Toulouse : transport (route, maritime, aérien), douane, assurance, stockage. Conseils + 5+ devis comparés via Moverz.",
+    "Déménagement international depuis/vers Toulouse : transport (route, maritime, aérien), douane, assurance, stockage. Conseils + des devis comparables via Moverz.",
 });
 
 export default function Page() {

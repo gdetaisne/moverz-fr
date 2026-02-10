@@ -27,7 +27,7 @@ export function CityPricingTable({ cityName }: CityPricingTableProps) {
           <p className="text-base text-[#6B7280] max-w-3xl mx-auto text-center leading-relaxed">
             Un déménagement à {cityName} coûte entre <strong>450€ (studio)</strong> et <strong>3500€ (maison)</strong>. 
             Le prix dépend du volume (15-80 m³), de la distance et des services. 
-            Pour un tarif précis, comparez 3+ devis basés sur le même volume calculé par IA.
+            Pour un tarif précis, comparez des devis basés sur le même volume calculé par IA.
           </p>
 
           {/* Tableau HTML sémantique pour featured snippet */}
@@ -134,7 +134,7 @@ export function CityPricingTable({ cityName }: CityPricingTableProps) {
               </li>
             </ul>
             <p className="pt-2">
-              💡 <strong>Astuce</strong> : Recevez 3+ devis comparables sous 5 jours. Même volume IA = vous comparez 
+              💡 <strong>Astuce</strong> : Recevez des devis comparables sous 5 jours. Même volume IA = vous comparez 
               vraiment pommes avec pommes, pas de bluff.
             </p>
           </div>

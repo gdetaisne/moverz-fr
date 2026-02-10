@@ -19,7 +19,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 - Comment **l'IA Moverz élimine 5 erreurs majeures** automatiquement
 
 > **Éviter les erreurs dès le départ**  
-> L'IA Moverz calcule votre volume précis en 1 minute, vous compare 3-5 devis fiables, et vous guide étape par étape via [devis.moverz.fr](https://devis.moverz.fr).
+> L'IA Moverz calcule votre volume précis en 1 minute, vous compare des devis fiables, et vous guide étape par étape via [devis.moverz.fr](https://devis.moverz.fr).
 
 ---
 
@@ -654,7 +654,7 @@ Avec Moverz :
 ### 6-8 semaines avant
 
 - [ ] Calculer le volume avec l'IA Moverz
-- [ ] Comparer 3-5 devis
+- [ ] Comparer des devis
 - [ ] Réserver le déménageur choisi
 - [ ] Demander autorisation stationnement (si centre-ville)
 
@@ -770,7 +770,7 @@ L'IA + les déménageurs contrôlés + la checklist complète éliminent automat
 
 ## Déménagez sans erreur avec Moverz
 
-**Volume IA en 1 minute** · **3-5 devis comparables** · **Déménageurs contrôlés** · **Checklist complète** · **100% gratuit**
+**Volume IA en 1 minute** · **des devis comparables** · **Déménageurs contrôlés** · **Checklist complète** · **100% gratuit**
 
 [Comparer les devis maintenant →](https://devis.moverz.fr)
 

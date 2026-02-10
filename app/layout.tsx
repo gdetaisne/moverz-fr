@@ -23,12 +23,11 @@ export const metadata: Metadata = {
     default: "Comparateur Déménagement | Devis 5–7j | Contrôlés · Gratuit",
     template: "%s | Moverz"
   },
-  description: "Recevez 5+ devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.",
+  description: "Comparez des devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
   keywords: [
     "devis déménagement gratuit",
     "comparateur déménageurs fiable",
     "devis déménagement sans appel",
-    "3 devis déménagement",
     "anti-arnaque déménagement",
     "déménageurs vérifiés assurés",
     "devis comparables déménagement",
@@ -56,7 +55,7 @@ export const metadata: Metadata = {
     url: "https://moverz.fr/",
     siteName: "Moverz",
     title: "Comparateur Déménagement | Devis 5–7j | Contrôlés · Gratuit",
-    description: "Recevez 5+ devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.",
+    description: "Comparez des devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
     images: [
       {
         url: "/logo.png",
@@ -72,7 +71,7 @@ export const metadata: Metadata = {
     site: "@moverz",
     creator: "@moverz",
     title: "Comparateur Déménagement | Devis 5–7j | Contrôlés · Gratuit",
-    description: "Recevez 5+ devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.",
+    description: "Comparez des devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
     images: ["/logo.png"],
   },
   robots: {
@@ -144,7 +143,7 @@ export default function RootLayout({
               height: 512,
             },
             description:
-              "Comparateur de déménagement anti-arnaque. Recevez 5+ devis comparés sous 5 à 7 jours, sans harcèlement.",
+              "Comparateur de déménagement anti-arnaque. Comparez des devis comparables de déménageurs vérifiés sous 5 à 7 jours, sans harcèlement.",
             foundingDate: "2023",
             address: {
               "@type": "PostalAddress",

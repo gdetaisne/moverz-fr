@@ -193,7 +193,7 @@ export default function ExitIntentPopup() {
 
               <div className="space-y-1.5">
                 <p className="text-lg md:text-xl font-bold text-[#0F172A] leading-tight">
-                  Avant de partir, on vous sort 3 devis minimum comparables.
+                  Avant de partir, on vous sort des devis comparables.
                 </p>
                 <p className="text-sm text-[#64748B]">
                   Vous complétez un dossier guidé, on le standardise, et vous comparez sans surprises.

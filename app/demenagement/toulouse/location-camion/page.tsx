@@ -5,7 +5,7 @@ export const metadata = generateCityServiceMetadata({
   serviceSlug: "location-camion",
   title: "Location camion déménagement Toulouse : volumes, prix & conseils",
   description:
-    "Location camion déménagement à Toulouse : quel volume choisir, prix, conditions (permis, caution), conseils chargement + alternative : comparer 5+ devis comparés pros.",
+    "Location camion déménagement à Toulouse : quel volume choisir, prix, conditions (permis, caution), conseils chargement + alternative : comparer des devis comparables pros.",
 });
 
 export default function Page() {

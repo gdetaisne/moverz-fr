@@ -59,7 +59,7 @@ export default function Hero() {
                 animation: mounted ? 'fadeInUp 1s ease-out 0.2s both' : 'none',
               }}
             >
-              3 devis minimum fiables · 3 min · 100% gratuit
+              des devis comparables · 3 min · 100% gratuit
             </p>
 
             {/* CTA principal */}
@@ -112,7 +112,7 @@ export default function Hero() {
             animation: mounted ? 'fadeInUp 1s ease-out 0.4s both' : 'none',
           }}
         >
-          <HeroMockup scrollY={scrollY} />
+          <HeroMockup />
         </div>
         </div>
       </div>

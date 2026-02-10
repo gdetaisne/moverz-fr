@@ -5,8 +5,8 @@ import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = getFullMetadata(
   'choisir-ville',
-  "Votre Ville : Lyon, Nice, Marseille... → Recevez 5+ devis comparés",
-  "Recevez 5+ devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit."
+  "Votre Ville : Lyon, Nice, Marseille... → Comparez des devis comparables",
+  "Comparez des devis comparables sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit."
 );
 
 export default function ChoisirVillePage() {
@@ -25,7 +25,7 @@ export default function ChoisirVillePage() {
         ]}
         eyebrow="Accès direct au comparateur"
         title="Choisissez votre ville"
-        subtitle="Sélectionnez votre ville pour démarrer le comparateur et recevoir 5+ devis comparés de déménageurs contrôlés, sur une base standardisée."
+        subtitle="Sélectionnez votre ville pour démarrer le comparateur et recevoir des devis comparables de déménageurs contrôlés, sur une base standardisée."
         primaryCta={{
           label: "Démarrer le comparateur",
           href: "https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/choisir-ville/",

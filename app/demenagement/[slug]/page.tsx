@@ -192,7 +192,7 @@ export default function CityMovingPage({ params }: PageProps) {
       {/* WebPage schema: contexte page ville */}
       <WebPageSchema
         name={`Déménagement ${city.nameCapitalized}`}
-        description={`Recevez 5+ devis comparés pour votre déménagement à ${city.nameCapitalized}. Pros contrôlés, 0 harcèlement, 100% gratuit.`}
+        description={`Comparez des devis comparables pour votre déménagement à ${city.nameCapitalized}. Pros contrôlés, 0 harcèlement, 100% gratuit.`}
         url={`https://moverz.fr/demenagement/${city.slug}/`}
         about={`Déménagement à ${city.nameCapitalized}`}
       />

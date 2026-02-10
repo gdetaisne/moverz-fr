@@ -61,7 +61,7 @@ export default function WidgetActionSection({
                   { icon: "●", label: "3 min" },
                   { icon: "●", label: "IA" },
                   { icon: "●", label: "Sans démarchage" },
-                  { icon: "●", label: "3 devis minimum" },
+                  { icon: "●", label: "des devis" },
                 ].map((item, i) => (
                   <span
                     key={i}

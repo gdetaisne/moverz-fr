@@ -58,7 +58,7 @@
 ✅ **Cohérence meta/contenu** : Même data pour SERP et page  
 ✅ **Testable** : Scripts de validation automatiques  
 ✅ **Title template** : `%s | Moverz` (défini dans `app/layout.tsx`)  
-✅ **Messaging unifié** : "5+ devis comparés sous 5-7j" partout  
+✅ **Messaging unifié** : "des devis comparés sous 5-7j" partout  
 ✅ **Truthful copy** : Zéro fausse promesse
 
 ### Évolutions techniques 30 janvier
@@ -80,12 +80,12 @@
 
 **Title** (52 car) :
 ```
-Déménagement France dès 450€ | 3+ Devis 48h | Contrôlés
+Déménagement France dès 450€ | des devis 48h | Contrôlés
 ```
 
 **Description** (160 car) :
 ```
-450€ minimum. Recevez 3+ devis comparables en 48h. IA calcule volume = 0 écart prix jour J. 
+450€ minimum. Recevez des devis comparables en 48h. IA calcule volume = 0 écart prix jour J. 
 Dossier anonyme, 0 harcèlement. 1200+ déménagements ⭐4.9/5. Gratuit.
 ```
 
@@ -106,12 +106,12 @@ Dossier anonyme, 0 harcèlement. 1200+ déménagements ⭐4.9/5. Gratuit.
 
 **Title** (54-59 car) :
 ```
-Déménagement {Ville} dès {PrixMin}€ | 5+ Devis 5-7j | Contrôlés
+Déménagement {Ville} dès {PrixMin}€ | des devis 5-7j | Contrôlés
 ```
 
 **Description** (141-146 car) :
 ```
-Déménager à {Ville} : 5+ devis comparés par IA (5-7j). T1 dès {X}€, T2 dès {Y}€, 
+Déménager à {Ville} : des devis comparés par IA (5-7j). T1 dès {X}€, T2 dès {Y}€, 
 Maison dès {Z}€. 0 harcèlement. Pros contrôlés. Gratuit ({Année}).
 ```
 
@@ -119,9 +119,9 @@ Maison dès {Z}€. 0 harcèlement. Pros contrôlés. Gratuit ({Année}).
 
 | Ville | Title | Description (extrait) |
 |-------|-------|----------------------|
-| Nice | Déménagement Nice dès 330€ \| 5+ Devis 5-7j \| Contrôlés | Déménager à Nice : 5+ devis comparés par IA... T1 dès 330€... |
-| Lyon | Déménagement Lyon dès 330€ \| 5+ Devis 5-7j \| Contrôlés | Déménager à Lyon : 5+ devis comparés par IA... T1 dès 330€... |
-| Marseille | Déménagement Marseille dès 330€ \| 5+ Devis 5-7j \| Contrôlés | Déménager à Marseille : 5+ devis comparés par IA... T1 dès 330€... |
+| Nice | Déménagement Nice dès 330€ \| des devis 5-7j \| Contrôlés | Déménager à Nice : des devis comparés par IA... T1 dès 330€... |
+| Lyon | Déménagement Lyon dès 330€ \| des devis 5-7j \| Contrôlés | Déménager à Lyon : des devis comparés par IA... T1 dès 330€... |
+| Marseille | Déménagement Marseille dès 330€ \| des devis 5-7j \| Contrôlés | Déménager à Marseille : des devis comparés par IA... T1 dès 330€... |
 
 ### Fichier source
 
@@ -169,7 +169,7 @@ Déménagement {VilleA} → {VilleB} ({Distance}km) | Devis 5–7j · {Année}
 
 **Description** :
 ```
-{VilleA}→{VilleB} ({Distance}km) : 5+ devis sous 5–7j. Tarifs : T1 {X}€ · T2 {Y}€ · 
+{VilleA}→{VilleB} ({Distance}km) : des devis sous 5–7j. Tarifs : T1 {X}€ · T2 {Y}€ · 
 Maison {Z}€. Pros contrôlés, 0€.
 ```
 
@@ -235,12 +235,12 @@ const prices = getCorridorPricesForMeta(originSlug, destSlug);
 
 **Title** :
 ```
-Déménagement {Quartier} ({Ville}) | 5+ devis en 5–7j
+Déménagement {Quartier} ({Ville}) | des devis en 5–7j
 ```
 
 **Description** :
 ```
-{Quartier}, {Ville} : recevez 5+ devis comparés sous 5–7j. 
+{Quartier}, {Ville} : recevez des devis comparés sous 5–7j. 
 Déménageurs locaux contrôlés, dossier anonyme, 0€.
 ```
 
@@ -250,7 +250,7 @@ Déménageurs locaux contrôlés, dossier anonyme, 0€.
 
 ### Harmonisation (30 janvier 2026)
 
-**Problème initial** : Messaging incohérent "3 devis minimum en 3 min" vs stratégie globale "5+ devis 5-7j"
+**Problème initial** : Messaging incohérent "des devis en 3 min" vs stratégie globale "des devis 5-7j"
 
 **Solution** : Alignement sur messaging global + ajout "Dossier anonyme" (USP)
 
@@ -264,12 +264,12 @@ Déménageurs locaux contrôlés, dossier anonyme, 0€.
 
 **Title** :
 ```
-{Service} {Ville} dès 450€ | 3+ Devis 48h | Contrôlés
+{Service} {Ville} dès 450€ | des devis 48h | Contrôlés
 ```
 
 **Description** :
 ```
-Déménager à {Ville} dès 450€. 3+ devis comparables en 48h. IA calcule volume = 0 écart jour J. 
+Déménager à {Ville} dès 450€. des devis comparables en 48h. IA calcule volume = 0 écart jour J. 
 Dossier anonyme, 0 spam. {cityHint}. Gratuit.
 ```
 
@@ -327,7 +327,7 @@ Variable par article (défini dans lib/blog-canonique.ts)
 ### Composant clé : BlogFloatingCTA
 
 **USP affichées** :
-- ✅ "Recevez 5+ devis comparés sous 5–7j"
+- ✅ "Recevez des devis comparés sous 5–7j"
 - ✅ "Dossier anonyme, 0 harcèlement"
 - ✅ Reviews (4.9/5, 1200+ déménagements)
 
@@ -494,10 +494,10 @@ const DEFAULT_SURFACES = {
 | Date | Heure | Commit | Change | Reason |
 |------|-------|--------|--------|--------|
 | **30/01/2026** | 08:48 | `1468741` | **Title template** : `%s \| Moverz` + removal duplicate `\| Moverz` | Évite double brand |
-| **30/01/2026** | 08:48 | `1468741` | **Truthful copy** : Descriptions génériques honnêtes (5+ devis, 0 harcèlement) | Supprime fausses promesses |
+| **30/01/2026** | 08:48 | `1468741` | **Truthful copy** : Descriptions génériques honnêtes (des devis, 0 harcèlement) | Supprime fausses promesses |
 | **30/01/2026** | 08:48 | `1468741` | **FAQ schema** : Source unique `homeFaqs.ts` | Évite duplication visible/JSON-LD |
 | **30/01/2026** | 08:58 | `b65117e` | **SLAs harmonisés** : 5-7j partout, suppression 48h corridor FAQs | Cohérence globale |
-| **30/01/2026** | 09:06 | `4568dac` | **Messaging unifié** : "5+ devis comparés" partout + année dynamique | Consistency |
+| **30/01/2026** | 09:06 | `4568dac` | **Messaging unifié** : "des devis comparés" partout + année dynamique | Consistency |
 | **30/01/2026** | 09:28 | `b733306` | **Search box** : Ajout footer + blog | UX + engagement |
 | **30/01/2026** | 09:38 | `9902729` | **SearchAction + sameAs** : Schema WebSite enrichi | Rich results ⬆️ |
 | **30/01/2026** | 09:44 | `ca7bf9e` | **JsonLd wrapper** : Breadcrumbs + CTA | Maintenabilité |
@@ -519,7 +519,7 @@ const DEFAULT_SURFACES = {
 - ⚠️ Duplicate JSON-LD (Organization homepage + layout)
 
 **30 janvier matin (08:48-10:12)** :
-- ✅ **Harmonisation globale** : "5+ devis comparés sous 5-7j" partout
+- ✅ **Harmonisation globale** : "des devis comparés sous 5-7j" partout
 - ✅ **Title template** : `%s | Moverz` (évite double brand)
 - ✅ **Truthful copy** : Suppression toutes fausses promesses
 - ✅ **Structured data** : SearchAction, sameAs, tests automatisés

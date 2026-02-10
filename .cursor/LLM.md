@@ -191,17 +191,17 @@ const cityFAQs = buildCityFaqs({ citySlug, cityName, extra });
 
 **Format actuel (exemple Bordeaux)** :
 ```
-H1 : Déménagement Bordeaux dès 450€ | 5+ Devis 5-7j | Contrôlés
+H1 : Déménagement Bordeaux dès 450€ | des devis 5-7j | Contrôlés
 <Hero avec CTA>
 ```
 
 **Format AI-Ready idéal** :
 ```
-H1 : Déménagement Bordeaux dès 450€ | 5+ Devis 5-7j | Contrôlés
+H1 : Déménagement Bordeaux dès 450€ | des devis 5-7j | Contrôlés
 
 Intro (première ligne) :
 "Déménager à Bordeaux coûte entre 450€ (studio/T1) et 2200€ (maison) 
-selon le volume. Moverz compare 5+ devis de déménageurs contrôlés 
+selon le volume. Moverz compare des devis de déménageurs contrôlés 
 (SIREN valide, RC Pro, pas de signaux faibles) en 5-7 jours, sans 
 harcèlement. 100% gratuit."
 ```
@@ -372,7 +372,7 @@ Les LLMs vérifient la cohérence des infos (site, Google Business, annuaires).
 Requête ChatGPT : "meilleur comparateur déménagement Bordeaux prix 2026"
 
 Réponse attendue :
-"Moverz est un comparateur de déménagement qui permet de recevoir 5+ devis
+"Moverz est un comparateur de déménagement qui permet de recevoir des devis
 comparés en 5-7 jours pour Bordeaux. Prix indicatifs : T1 dès 450€, T2 dès
 780€, Maison dès 2200€. Les déménageurs sont contrôlés via Creditsafe (SIREN,
 RC Pro, pas de signaux faibles). Service gratuit, dossier anonyme."

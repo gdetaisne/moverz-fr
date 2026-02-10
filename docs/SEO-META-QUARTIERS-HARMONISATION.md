@@ -2,7 +2,7 @@
 
 **Date:** 2026-01-30  
 **Version:** 1.0  
-**Objectif:** Cohérence messaging "5+ devis" (alignement home/villes/corridors)
+**Objectif:** Cohérence messaging "des devis" (alignement home/villes/corridors)
 
 ---
 
@@ -12,13 +12,13 @@
 
 **Quartiers :**
 ```
-Title: "Déménagement {Quartier} ({Ville}) : 3 devis minimum en 3 min"
+Title: "Déménagement {Quartier} ({Ville}) : des devis en 3 min"
 Desc: "Déménageurs locaux contrôlés pour {Quartier} à {Ville}. Devis comparables en 3 min..."
 ```
 
 **Home / Villes / Corridors :**
 ```
-"5+ devis comparés sous 5 à 7 jours"
+"des devis comparés sous 5 à 7 jours"
 ```
 
 ❌ **Problème :** Messagerie contradictoire = confusion utilisateur + dilution marque
@@ -29,8 +29,8 @@ Desc: "Déménageurs locaux contrôlés pour {Quartier} à {Ville}. Devis compar
 
 ### **Quartiers (harmonisés) :**
 ```
-Title: "Déménagement {Quartier} ({Ville}) | 5+ devis en 5–7j · Pros locaux"
-Desc: "{Quartier}, {Ville} : 5+ devis comparés sous 5–7j. Dossier anonyme, pros locaux contrôlés, 0€."
+Title: "Déménagement {Quartier} ({Ville}) | des devis en 5–7j · Pros locaux"
+Desc: "{Quartier}, {Ville} : des devis comparés sous 5–7j. Dossier anonyme, pros locaux contrôlés, 0€."
 ```
 
 ### **Bénéfices :**
@@ -47,14 +47,14 @@ Desc: "{Quartier}, {Ville} : 5+ devis comparés sous 5–7j. Dossier anonyme, pr
 
 #### AVANT
 ```
-Déménagement Vieux-Nice (Nice) : 3 devis minimum en 3 min
+Déménagement Vieux-Nice (Nice) : des devis en 3 min
 Déménageurs locaux contrôlés pour Vieux-Nice à Nice. Devis comparables en 3 min · IA volume · 0€...
 ```
 
 #### APRÈS ✅
 ```
-Déménagement Vieux-Nice (Nice) | 5+ devis en 5–7j · Pros locaux
-Vieux-Nice, Nice : 5+ devis comparés sous 5–7j. Dossier anonyme, pros locaux contrôlés, 0€.
+Déménagement Vieux-Nice (Nice) | des devis en 5–7j · Pros locaux
+Vieux-Nice, Nice : des devis comparés sous 5–7j. Dossier anonyme, pros locaux contrôlés, 0€.
 ```
 
 ---
@@ -63,8 +63,8 @@ Vieux-Nice, Nice : 5+ devis comparés sous 5–7j. Dossier anonyme, pros locaux 
 
 #### APRÈS ✅
 ```
-Déménagement Presqu'île (Lyon) | 5+ devis en 5–7j · Pros locaux
-Presqu'île, Lyon : 5+ devis comparés sous 5–7j. Dossier anonyme, pros locaux contrôlés, 0€.
+Déménagement Presqu'île (Lyon) | des devis en 5–7j · Pros locaux
+Presqu'île, Lyon : des devis comparés sous 5–7j. Dossier anonyme, pros locaux contrôlés, 0€.
 ```
 
 ---
@@ -77,11 +77,11 @@ Presqu'île, Lyon : 5+ devis comparés sous 5–7j. Dossier anonyme, pros locaux
 
 **Changements :**
 ```diff
-- const title = `Déménagement ${quartierName} (${cityName}) : 3 devis minimum en 3 min`;
-+ const title = `Déménagement ${quartierName} (${cityName}) | 5+ devis en 5–7j · Pros locaux`;
+- const title = `Déménagement ${quartierName} (${cityName}) : des devis en 3 min`;
++ const title = `Déménagement ${quartierName} (${cityName}) | des devis en 5–7j · Pros locaux`;
 
 - const description = `Déménageurs locaux contrôlés pour ${quartierName} à ${cityName}. Devis comparables en 3 min · IA volume · 0€ · Sans démarchage`;
-+ const description = `${quartierName}, ${cityName} : 5+ devis comparés sous 5–7j. Dossier anonyme, pros locaux contrôlés, 0€.`;
++ const description = `${quartierName}, ${cityName} : des devis comparés sous 5–7j. Dossier anonyme, pros locaux contrôlés, 0€.`;
 ```
 
 **Documentation ajoutée :**
@@ -118,7 +118,7 @@ Presqu'île, Lyon : 5+ devis comparés sous 5–7j. Dossier anonyme, pros locaux
 **Justification :**
 - Alignement messaging = confiance utilisateur
 - "Dossier anonyme" = différenciant fort (anti-harcèlement)
-- "5+ devis" > "3 devis" = perception valeur supérieure
+- "des devis" > "3 devis" = perception valeur supérieure
 
 ---
 
@@ -133,7 +133,7 @@ Presqu'île, Lyon : 5+ devis comparés sous 5–7j. Dossier anonyme, pros locaux
 
 **Monitoring :**
 - GSC : CTR quartiers (baseline vs. post-déploiement)
-- Annotations : "Harmonisation meta quartiers 5+ devis"
+- Annotations : "Harmonisation meta quartiers des devis"
 
 ---
 
@@ -141,7 +141,7 @@ Presqu'île, Lyon : 5+ devis comparés sous 5–7j. Dossier anonyme, pros locaux
 
 ### 2026-01-30 — v1.0 (Initial)
 - ✅ Harmonisation title/desc quartiers
-- ✅ Alignement sur messaging "5+ devis sous 5–7j"
+- ✅ Alignement sur messaging "des devis sous 5–7j"
 - ✅ Ajout "Dossier anonyme" (différenciant)
 - ✅ Ajout "Pros locaux" (pertinence micro-locale)
 - ✅ Suppression "3 devis / 3 min" (incohérence)

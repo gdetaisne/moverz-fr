@@ -5,7 +5,7 @@ export const metadata = generateCityServiceMetadata({
   serviceSlug: "international",
   title: "Déménagement international depuis Rennes : Europe/monde, devis",
   description:
-    "Déménagement international depuis/vers Rennes : modes de transport, formalités, assurance, stockage. Conseils + 5+ devis comparés comparables via Moverz.",
+    "Déménagement international depuis/vers Rennes : modes de transport, formalités, assurance, stockage. Conseils + des devis comparables comparables via Moverz.",
 });
 
 export default function Page() {
@@ -91,7 +91,7 @@ export default function Page() {
         {
           question: "Puis-je comparer plusieurs devis gratuitement ?",
           answer:
-            "Oui. Avec Moverz, vous pouvez demander 5+ devis comparés comparables via un seul dossier, sans engagement.",
+            "Oui. Avec Moverz, vous pouvez demander des devis comparables comparables via un seul dossier, sans engagement.",
         },
         {
           question: "Quel mode de transport choisir ?",

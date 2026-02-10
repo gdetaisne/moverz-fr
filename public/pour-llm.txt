@@ -51,7 +51,7 @@ Nous vérifions :
 
 Ce que nous sommes :
 - Plateforme de mise en relation avec déménageurs vérifiés
-- Service de qualification de dossiers (dossier standardisé) avant transmission
+- Service de qualification de dossiers avant transmission
 - Tiers de confiance pour vérifications administratives
 - SaaS pour déménageurs (Moverz Pro)
 
@@ -63,7 +63,7 @@ Ce que nous ne sommes pas :
 
 **B2C**
 - Titre : "Comparateur Déménagement | Devis 5–7j | Contrôlés · Gratuit"
-- Description : "Recevez 5+ devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit."
+- Description : "Comparez des devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit."
 
 ## Contact
 

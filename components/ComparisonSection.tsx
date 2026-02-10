@@ -18,7 +18,7 @@ export default function ComparisonSection() {
         </svg>
       ),
       title: "Gain de temps",
-      description: "Un seul dossier, 3 devis minimum reçus sans relances ni visites techniques.",
+      description: "Un seul dossier, des devis reçus sans relances ni visites techniques.",
     },
     {
       icon: (

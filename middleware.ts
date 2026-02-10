@@ -58,13 +58,16 @@ function detectAiReferrerHost(referer: string | null): string | null {
   }
 }
 
-async function sendGa4Event(payload: unknown) {
+async function sendGa4Event(payload: unknown): Promise<
+  | { ok: true; status: number }
+  | { ok: false; reason: "missing_env" | "fetch_error"; status?: number }
+> {
   const measurementId = process.env.GA4_MEASUREMENT_ID;
   const apiSecret = process.env.GA4_API_SECRET;
-  if (!measurementId || !apiSecret) return;
+  if (!measurementId || !apiSecret) return { ok: false, reason: "missing_env" };
 
   try {
-    await fetch(
+    const res = await fetch(
       `https://www.google-analytics.com/mp/collect?measurement_id=${encodeURIComponent(
         measurementId,
       )}&api_secret=${encodeURIComponent(apiSecret)}`,
@@ -74,8 +77,10 @@ async function sendGa4Event(payload: unknown) {
         body: JSON.stringify(payload),
       },
     );
+    return { ok: res.ok, status: res.status };
   } catch {
     // Best effort: never break requests for tracking
+    return { ok: false, reason: "fetch_error" };
   }
 }
 
@@ -87,30 +92,45 @@ function makeGa4ClientId(): string {
   return `${a}.${b}`;
 }
 
-export function middleware(req: NextRequest, event: NextFetchEvent) {
+export async function middleware(req: NextRequest, event: NextFetchEvent) {
   const { pathname } = req.nextUrl;
   const mwDebug = req.nextUrl.searchParams.get("mwdebug");
   const bot = detectLlmBot(req.headers.get("user-agent"));
   const aiRefHost = detectAiReferrerHost(req.headers.get("referer"));
 
+  // If mwdebug is enabled, do a blocking GA4 call once so we can expose the result in headers.
+  // This avoids "did it send?" ambiguity in GA4 real-time.
+  const ga4DebugOut = mwDebug
+    ? await sendGa4Event({
+        client_id: makeGa4ClientId(),
+        events: [
+          {
+            name: "mw_debug",
+            params: {
+              path: pathname,
+              value: String(mwDebug).slice(0, 64),
+            },
+          },
+        ],
+      })
+    : null;
+
   const track = (res: NextResponse) => {
     if (mwDebug) {
       res.headers.set("x-mw-debug", "1");
-      // Triggerable test event to validate GA4 Measurement Protocol wiring end-to-end.
-      event.waitUntil(
-        sendGa4Event({
-          client_id: makeGa4ClientId(),
-          events: [
-            {
-              name: "mw_debug",
-              params: {
-                path: pathname,
-                value: String(mwDebug).slice(0, 64),
-              },
-            },
-          ],
-        }),
+      res.headers.set("x-mw-version", "ga4hdr-v2");
+      res.headers.set(
+        "x-ga4-configured",
+        process.env.GA4_MEASUREMENT_ID && process.env.GA4_API_SECRET ? "1" : "0",
       );
+      if (ga4DebugOut) {
+        res.headers.set(
+          "x-ga4-send",
+          ga4DebugOut.ok
+            ? "ok"
+            : `fail:${ga4DebugOut.reason}${ga4DebugOut.status ? `:${ga4DebugOut.status}` : ""}`,
+        );
+      }
     }
 
     if (aiRefHost) {
@@ -153,6 +173,7 @@ export function middleware(req: NextRequest, event: NextFetchEvent) {
         }),
       );
     }
+
     return res;
   };
 
@@ -192,11 +213,15 @@ export function middleware(req: NextRequest, event: NextFetchEvent) {
   }
 
   // Fast path: only care about "-vers-"
-  if (!pathname.includes("-vers-")) return track(NextResponse.next());
+  if (!pathname.includes("-vers-")) {
+    return track(NextResponse.next());
+  }
 
   // Match "/from-vers-to" with optional trailing slash
   const match = pathname.match(/^\/([a-z0-9-]+)-vers-([a-z0-9-]+)\/?$/);
-  if (!match) return track(NextResponse.next());
+  if (!match) {
+    return track(NextResponse.next());
+  }
 
   const from = match[1];
   const to = match[2];

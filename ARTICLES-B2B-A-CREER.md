@@ -98,7 +98,7 @@
 
 1. **Audit initial** (3-6 mois avant)
 2. **Cahier des charges**
-3. **Appel d'offres** (3-5 devis)
+3. **Appel d'offres** (des devis)
 4. **Planification** (1-2 mois avant)
 5. **Communication interne**
 6. **Jour J** (week-end ou nuit)

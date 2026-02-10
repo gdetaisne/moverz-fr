@@ -238,7 +238,7 @@ Créez votre dossier en 3 minutes sur [devis.moverz.fr](https://devis.moverz.fr)
 
 **Ce que vous obtenez :**
 - ✅ Volume estimé par IA (détails)
-- ✅ 3 devis minimum comparables
+- ✅ des devis comparables
 - ✅ Déménageurs contrôlés (score + litiges)
 - ✅ Sans démarchage, 0 appel intempestif
 - ✅ 100% gratuit

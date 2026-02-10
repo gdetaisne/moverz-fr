@@ -63,7 +63,7 @@ function extractMetadataFromLayout() {
   
   // Extraire la description
   const descMatch = content.match(/description:\s*"([^"]+)"/);
-  const description = descMatch ? descMatch[1] : '3+ devis comparables sous 5 jours. Déménageurs contrôlés & assurés. 0 harcèlement, dossier anonyme. IA calcule volume = 0 écart prix. 1200+ déménagements ⭐4.9/5. Service gratuit.';
+  const description = descMatch ? descMatch[1] : 'Comparez des devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.';
   
   return { title, description };
 }
