@@ -20,7 +20,7 @@ export default function MoverzVsOthers() {
       category: "Canal",
       icon: <Smartphone className="w-4 h-4" />,
       others: "Email / formulaire web", 
-      moverz: "WhatsApp (asynchrone)" 
+      moverz: "Multi-canal (web, email, mobile)" 
     },
     { 
       category: "Standardisation",
@@ -91,11 +91,11 @@ export default function MoverzVsOthers() {
 
                 {/* Comparison items */}
                 <div className="p-6 space-y-3">
-                  {/* WhatsApp async */}
+                  {/* Multi-canal */}
                   <div className="flex items-center justify-between p-3 rounded-xl bg-[#F8F9FA]">
                     <div className="flex items-center gap-3">
                       <Smartphone className="w-5 h-5 text-[#6BCFCF]" />
-                      <span className="text-sm font-medium text-[#0F172A]">WhatsApp (asynchrone)</span>
+                      <span className="text-sm font-medium text-[#0F172A]">Multi-canal</span>
                     </div>
                     <Check className="w-5 h-5 text-green-600" strokeWidth={3} />
                   </div>
@@ -172,9 +172,9 @@ export default function MoverzVsOthers() {
                   <Smartphone className="w-6 h-6 text-[#6BCFCF]" strokeWidth={2.5} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-white mb-2">WhatsApp (asynchrone)</h3>
+                  <h3 className="font-bold text-white mb-2">Multi-canal & mobile</h3>
                   <p className="text-white/70 text-sm">
-                    Vs formulaires longs ou rendez-vous obligatoires. Simple, rapide, sans friction.
+                    Web, email ou mobile. Vs formulaires longs ou rendez-vous obligatoires. Simple, rapide, sans friction.
                   </p>
                 </div>
               </div>

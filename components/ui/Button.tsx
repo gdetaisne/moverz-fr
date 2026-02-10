@@ -2,7 +2,7 @@
 
 import type { ReactNode } from "react";
 
-type ButtonVariant = "primary" | "secondary" | "ghost" | "whatsapp";
+type ButtonVariant = "primary" | "secondary" | "ghost";
 type ButtonSize = "sm" | "md";
 type ButtonRadius = "pill" | "2xl";
 
@@ -55,8 +55,6 @@ export default function Button({
       "bg-white text-[var(--brand-navy)] border-2 border-[var(--brand-navy)] hover:bg-gray-50",
     ghost:
       "bg-transparent text-white/85 hover:text-white hover:bg-white/10 border border-white/12",
-    whatsapp:
-      "bg-white/10 text-white hover:bg-white/15 border border-white/14",
   };
 
   const base =

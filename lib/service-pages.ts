@@ -206,7 +206,7 @@ export const SERVICE_DEFINITIONS: Record<ServiceSlug, ServiceDefinition> = {
       `Transfert de bureaux, archives, informatique : organiser un déménagement pro à ${cityName} sans rupture d’activité.`,
     title: (cityName) => `Déménagement entreprise ${cityName} : transfert bureaux, devis`,
     description: (cityName) =>
-      `Déménagement d’entreprise à ${cityName} : transfert de bureaux, informatique, archives. Méthode, continuité d’activité, assurance + 3 devis minimum comparables.`,
+      `Déménagement d'entreprise à ${cityName} : transfert de bureaux, informatique, archives. Méthode, continuité d'activité, assurance + 3 devis minimum comparables.`,
     sections: (cityName) => [
       {
         title: "Objectif : continuité d’activité",

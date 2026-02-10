@@ -26,7 +26,7 @@ export function generateWhatsAppMessage(source: string = "home"): string {
  * Generate WhatsApp web link (desktop + mobile web)
  */
 export function generateWhatsAppLink(
-  phoneNumber: string = "33752986581",
+  phoneNumber: string = "66952824035",
   source: string = "home"
 ): string {
   const message = generateWhatsAppMessage(source);
@@ -38,7 +38,7 @@ export function generateWhatsAppLink(
  * Generate WhatsApp deep link (mobile app)
  */
 export function generateWhatsAppDeepLink(
-  phoneNumber: string = "33752986581",
+  phoneNumber: string = "66952824035",
   source: string = "home"
 ): string {
   const message = generateWhatsAppMessage(source);
@@ -50,6 +50,6 @@ export function generateWhatsAppDeepLink(
  * Get WhatsApp Business phone number from env (with fallback)
  */
 export function getWhatsAppNumber(): string {
-  return process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "33752986581";
+  return process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "66952824035";
 }
 

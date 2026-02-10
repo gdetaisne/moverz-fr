@@ -20,22 +20,12 @@ export const PRO_FAQS = [
       "Dans la majorité des cas, oui. Le dossier est documenté (photos) et complété par des documents (inventaire, déclaration de valeur). En cas de doute (photos incomplètes / accès critique), vous gardez une voie de secours (photo manquante, appel court, ou visite).",
   },
   {
-    question: "Et si l’IA se trompe / n’arrive pas à analyser ?",
+    question: "Et si l'IA se trompe / n'arrive pas à analyser ?",
     answer:
-      "Best effort : si l’IA est en erreur ou incertaine, le dossier reste exploitable et vous gardez la main dans le backoffice. Nous prévoyons toujours une voie de secours (forçage / correction).",
+      "Best effort : si l'IA est en erreur ou incertaine, le dossier reste exploitable et vous gardez la main dans le backoffice. Nous prévoyons toujours une voie de secours (forçage / correction).",
   },
   {
-    question: "WhatsApp (Pro) : le numéro m’appartient-il ?",
-    answer:
-      "Non. En Pro, Moverz provisionne un numéro dédié intégré au système. En cas de résiliation, le numéro est perdu. (Enterprise : modalités possibles selon besoin.)",
-  },
-  {
-    question: "Qui gère l’opt-in et la conformité WhatsApp ?",
-    answer:
-      "Moverz s’occupe de l’opt-in et des contraintes opérationnelles (fenêtre 24h, templates pour messages proactifs) pour votre compte.",
-  },
-  {
-    question: "Qu’est-ce que j’exporte concrètement ?",
+    question: "Qu'est-ce que j'exporte concrètement ?",
     answer:
       "Dossier photos en PDF, déclaration de valeur en PDF, inventaire en Excel. Et pour vos outils : export CSV des tables leads/dossiers (Starter/Pro).",
   },

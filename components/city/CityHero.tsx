@@ -2,7 +2,6 @@
 
 import type { CityInfo } from "@/lib/cities";
 import { useEffect, useState } from "react";
-import WhatsAppCTA from "@/components/WhatsAppCTA";
 import Image from "next/image";
 
 type CityHeroProps = {
@@ -54,8 +53,16 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
               Des déménageurs locaux contrôlés. Des devis comparables. Sans démarchage.
             </p>
 
-            {/* WhatsApp CTA */}
-            <WhatsAppCTA source={`city-${city.slug}`} />
+            {/* CTA */}
+            <a
+              href={quoteUrl}
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-base font-semibold text-[#0F172A] shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <span>Comparer mes devis</span>
+            </a>
 
             <p className="text-sm text-white/50 mt-6">
               Conseil : ajoutez des photos (pièces + accès) pour des devis plus justes.

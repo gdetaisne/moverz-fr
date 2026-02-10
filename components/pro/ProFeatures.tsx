@@ -5,7 +5,6 @@ import {
   Images,
   Sparkles,
   Bell,
-  MessageCircle,
   Calculator,
   Download,
   Shield,
@@ -37,7 +36,6 @@ export default function ProFeatures() {
       icon: Calculator,
       features: [
         { icon: Bell, name: "Relances auto", desc: "Séquences configurables si incomplet" },
-        { icon: MessageCircle, name: "WhatsApp Pro", desc: "Notifs + numéro dédié provisionné" },
         { icon: Calculator, name: "Module devis", desc: "Chiffrage rapide depuis dossier propre" },
       ]
     }

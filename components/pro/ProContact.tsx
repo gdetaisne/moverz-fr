@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { MessageCircle, Mail, Calendar, Phone, CheckCircle2, Loader2 } from "lucide-react";
+import { Mail, Calendar, CheckCircle2, Loader2 } from "lucide-react";
 import Image from "next/image";
 import { useMemo, useState, type FormEvent } from "react";
 
@@ -58,7 +58,7 @@ export default function ProContact() {
         const data = (await res.json().catch(() => null)) as any;
         const message =
           data?.error ||
-          "Impossible d’envoyer pour le moment. Essayez WhatsApp ou email.";
+          "Impossible d'envoyer pour le moment. Essayez par email.";
         setError(message);
         return;
       }
@@ -66,7 +66,7 @@ export default function ProContact() {
       setIsSent(true);
       setForm({ name: "", company: "", email: "", phone: "", message: "" });
     } catch {
-      setError("Impossible d’envoyer pour le moment. Essayez WhatsApp ou email.");
+      setError("Impossible d'envoyer pour le moment. Essayez par email.");
     } finally {
       setIsSubmitting(false);
     }
@@ -272,19 +272,6 @@ export default function ProContact() {
               <div className="rounded-2xl border border-[#E3E5E8] bg-white p-6">
                 <p className="text-xs font-medium text-[#6B7280] mb-4">Autres canaux</p>
                 <div className="space-y-2">
-                  <a
-                    href="https://wa.me/66952824035?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Moverz%20Pro"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-2 rounded-lg hover:bg-[#F9FAFB] transition-colors group"
-                  >
-                    <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-[#25D366]/10 text-[#25D366]">
-                      <MessageCircle className="w-4 h-4" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-xs font-medium text-[#0F172A]">WhatsApp</p>
-                    </div>
-                  </a>
                   <a
                     href={mailtoHref}
                     className="flex items-center gap-3 p-2 rounded-lg hover:bg-[#F9FAFB] transition-colors group"

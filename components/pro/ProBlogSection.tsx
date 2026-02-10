@@ -25,7 +25,7 @@ export default function ProBlogSection() {
             Guides pour chiffrer plus vite (et éviter les surprises)
           </h2>
           <p className="text-lg text-[#6B7280] max-w-3xl mx-auto">
-            Visites techniques, litiges, relances WhatsApp, déclaration de valeur… des articles concrets
+            Visites techniques, litiges, relances, déclaration de valeur… des articles concrets
             pour gagner du temps et fiabiliser vos devis.
           </p>
         </motion.div>

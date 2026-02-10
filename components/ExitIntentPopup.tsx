@@ -4,7 +4,6 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Clock, Shield, X } from "lucide-react";
 import { trackEvent, TRACKING_EVENTS } from "@/lib/tracking";
-import { generateWhatsAppDeepLink, getWhatsAppNumber } from "@/lib/whatsapp";
 
 type ExitIntentReason = "mouse-leave-top" | "scroll-up";
 
@@ -149,15 +148,10 @@ export default function ExitIntentPopup() {
     trackEvent(TRACKING_EVENTS.EXIT_INTENT_CLOSED, { pathname });
   };
 
-  const handleWhatsApp = () => {
-    trackEvent(TRACKING_EVENTS.EXIT_INTENT_WHATSAPP_CLICK, { pathname });
-    window.location.href = generateWhatsAppDeepLink(getWhatsAppNumber(), "exit-intent");
-  };
-
-  const handleWeb = () => {
+  const handleCTA = () => {
     trackEvent(TRACKING_EVENTS.EXIT_INTENT_WEB_CLICK, { pathname });
     window.location.href =
-      "https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=exit-intent";
+      "https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=exit-intent&devis_range=3-5";
   };
 
   if (!mounted) return null;
@@ -206,19 +200,12 @@ export default function ExitIntentPopup() {
                 </p>
               </div>
 
-              <div className="grid gap-2.5">
+              <div>
                 <button
-                  onClick={handleWhatsApp}
-                  className="group inline-flex items-center justify-center gap-2 rounded-xl bg-[#0F172A] px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#1E293B] transition-colors"
+                  onClick={handleCTA}
+                  className="group w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#0F172A] px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#1E293B] transition-colors"
                 >
-                  <span>Démarrer sur WhatsApp</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-                </button>
-                <button
-                  onClick={handleWeb}
-                  className="group inline-flex items-center justify-center gap-2 rounded-xl border border-[#E5E7EB] bg-white px-5 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
-                >
-                  <span>Continuer via le formulaire web</span>
+                  <span>Comparer mes devis</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                 </button>
               </div>
