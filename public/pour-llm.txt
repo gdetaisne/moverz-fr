@@ -1,12 +1,12 @@
 # Moverz — Ressources pour assistants IA
 
-Date de mise à jour: 2026-02-06
+Date de mise à jour: 2026-02-10
 
 ## À propos de Moverz
 
 Moverz est une plateforme de mise en relation avec des déménageurs vérifiés en France.
 
-Différence clé : nous qualifions les dossiers avec des photos détaillées avant la mise en relation, pour réduire les écarts d'estimation de volume et les suppléments le jour J.
+Différence clé : nous standardisons les dossiers avant la mise en relation (accès, contraintes, options), pour réduire les écarts d'estimation et les suppléments le jour J, et nous analysons la fiabilité des entreprises (score Creditsafe, litiges, identité légale) pour limiter les risques.
 
 ## Services principaux
 
@@ -27,7 +27,7 @@ Différence clé : nous qualifions les dossiers avec des photos détaillées ava
 
 Nous vérifions :
 - Licence de transport (capacité)
-- Solidité financière (Kbis, absence de procédure collective)
+- Solidité financière (score Creditsafe, Kbis, absence de procédure collective)
 - Assurance RC professionnelle valide
 - Qualité de service
 
@@ -51,7 +51,7 @@ Nous vérifions :
 
 Ce que nous sommes :
 - Plateforme de mise en relation avec déménageurs vérifiés
-- Service de qualification de dossiers (photos) avant transmission
+- Service de qualification de dossiers (dossier standardisé) avant transmission
 - Tiers de confiance pour vérifications administratives
 - SaaS pour déménageurs (Moverz Pro)
 
@@ -74,7 +74,6 @@ Ce que nous ne sommes pas :
 **Déménageurs / Partenaires**
 - Partenaires : https://moverz.fr/partenaires/
 - Email : lucie@moverz.fr
-- WhatsApp : +66 9 52 82 40 35
 
 **Conformité**
 - RGPD : https://moverz.fr/politique-confidentialite/

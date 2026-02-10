@@ -196,7 +196,7 @@ export default function ExitIntentPopup() {
                   Avant de partir, on vous sort 3 devis minimum comparables.
                 </p>
                 <p className="text-sm text-[#64748B]">
-                  Vous envoyez quelques photos, on standardise le dossier, et vous comparez sans surprises.
+                  Vous complétez un dossier guidé, on le standardise, et vous comparez sans surprises.
                 </p>
               </div>
 
@@ -211,7 +211,7 @@ export default function ExitIntentPopup() {
               </div>
 
               <p className="text-[11px] text-[#94A3B8] text-center">
-                Astuce : 3 photos suffisent (rue/entrée/escaliers) pour fiabiliser les devis.
+                Astuce : plus le dossier est précis (accès, étages, options), plus les devis sont fiables.
               </p>
             </div>
           </div>

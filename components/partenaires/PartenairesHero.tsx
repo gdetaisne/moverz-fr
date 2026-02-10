@@ -57,7 +57,7 @@ export default function PartenairesHero() {
               transition={{ duration: 0.4, delay: 0.2 }}
               className="text-base md:text-lg text-white/80 leading-relaxed mb-8"
             >
-              Moverz sélectionne des déménageurs sérieux et vous transmet des dossiers complets (photos + infos) 
+              Moverz sélectionne des déménageurs sérieux et vous transmet des dossiers complets (infos standardisées) 
               pour que vous puissiez répondre vite et bien.
             </motion.p>
 

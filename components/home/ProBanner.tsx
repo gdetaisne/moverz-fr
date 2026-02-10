@@ -26,7 +26,7 @@ export default function ProBanner() {
           </h2>
           
           <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto mb-8">
-            Rejoignez notre réseau et recevez des dossiers qualifiés avec photos, inventaire IA et infos client pré-vérifiées.
+            Rejoignez notre réseau et recevez des dossiers qualifiés (infos standardisées), inventaire et infos client pré-vérifiées.
           </p>
 
           {/* CTAs */}

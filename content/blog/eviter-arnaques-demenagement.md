@@ -74,7 +74,7 @@ Cette fragmentation rend l'évaluation de la fiabilité très difficile pour un 
 **Conséquence** : Supplément de 300-500€ que vous êtes forcé de payer sur le moment.
 
 **Comment l'éviter** :
-- Exigez une visite technique ou envoyez des photos détaillées
+- Exigez une visite technique ou envoyez des détails détaillées
 - Comparez les volumes estimés entre plusieurs devis
 - Méfiez-vous du devis le moins cher si le volume est différent des autres
 
@@ -267,7 +267,7 @@ Ces données sont normalement réservées aux professionnels B2B. Nous les rendo
 → Impossible de comparer les prix !
 
 **Avec Moverz** :
-- Vous envoyez vos photos via WhatsApp
+- Vous envoyez vos détails via WhatsApp
 - L'IA calcule un volume unique : 29 m³
 - Tous les déménageurs reçoivent le même dossier
 - → Les devis sont enfin comparables
@@ -329,7 +329,7 @@ Vérifiez son existence légale (SIREN sur societe.com), lisez les avis Google (
 
 ### Que faire en cas de litige avec un déménageur ?
 
-1. **Documenter** : Photos des dégâts, emails, devis signé
+1. **Documenter** : détails des dégâts, emails, devis signé
 2. **Réclamer par écrit** : Lettre recommandée avec AR
 3. **Signaler** : SignalConso.gouv.fr (remonte à la DGCCRF)
 4. **Médiation** : Saisir un médiateur de la consommation
@@ -337,7 +337,7 @@ Vérifiez son existence légale (SIREN sur societe.com), lisez les avis Google (
 
 ### Un déménageur peut-il augmenter le prix le jour J ?
 
-Oui, si le volume réel est supérieur au volume estimé. C'est pourquoi il est crucial d'avoir une estimation précise dès le départ. Les photos envoyées à Moverz permettent de calculer un volume réaliste et d'éviter cette situation.
+Oui, si le volume réel est supérieur au volume estimé. C'est pourquoi il est crucial d'avoir une estimation précise dès le départ. Les détails envoyées à Moverz permettent de calculer un volume réaliste et d'éviter cette situation.
 
 ### Comment éviter les appels commerciaux après une demande de devis ?
 

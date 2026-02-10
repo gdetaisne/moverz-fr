@@ -102,7 +102,7 @@ export function getCityLongFormGuide(citySlug: string, cityName: string): CityLo
 
   const microTips = pickManyUnique(
     [
-      "Astuce express : faites 1 photo du passage le plus étroit (porte/couloir). C’est souvent là que se joue le devis.",
+      "Astuce express : repérez le passage le plus étroit (porte/couloir). C’est souvent là que se joue le devis.",
       "Astuce express : notez la distance camion→porte (même à l’œil). 15 m vs 80 m, ce n’est pas la même journée.",
       "Astuce express : si un meuble est “limite”, annoncez-le tôt. Les pros préfèrent anticiper que improviser.",
       "Astuce express : donnez 2–3 dates possibles. La flexibilité aide à obtenir un meilleur créneau (et souvent un meilleur prix).",
@@ -117,7 +117,7 @@ export function getCityLongFormGuide(citySlug: string, cityName: string): CityLo
       title: "1) Le dossier parfait (pour des devis vraiment comparables)",
       paragraphs: [
         `Objectif : que tous les déménageurs chiffrent la même chose. À ${cityName}, comme ailleurs, la plupart des “écarts de prix” viennent d’informations manquantes (ou différentes) : accès, portage, étage, ascenseur, gros meubles, fenêtre de dates.`,
-        "Le bon dossier tient en 5 lignes : adresse de départ/arrivée, type de logement, étage + ascenseur (oui/non), distance camion→porte, date (ou 2–3 options). Ensuite, vous ajoutez quelques photos : pièces + accès. Pas besoin d’un roman.",
+        "Le bon dossier tient en 5 lignes : adresse de départ/arrivée, type de logement, étage + ascenseur (oui/non), distance camion→porte, date (ou 2–3 options). Ensuite, vous précisez les accès et les objets volumineux. Pas besoin d’un roman.",
         "Important : votre but n’est pas de tout prévoir, mais de réduire l’incertitude. Un devis trop bas parce que l’accès a été sous-estimé finit souvent en stress. Un devis clair est plus facile à comparer et à faire respecter.",
         microTips[0],
       ],
@@ -134,15 +134,15 @@ export function getCityLongFormGuide(citySlug: string, cityName: string): CityLo
       title: "2) Accès & stationnement : le vrai facteur de coût (et de surprises)",
       paragraphs: [
         `Dans une ville comme ${cityName}, le stationnement et l’accès peuvent valoir plus que “10 cartons de plus”. Pourquoi ? Parce que ça détermine le temps de manutention : portage, allers-retours, rotations d’escalier, protection des parties communes.`,
-        "Un bon réflexe : pensez “trajet complet”. Où le camion se met ? À quelle distance de l’entrée ? Y a-t-il des marches, une cour, un couloir long, une porte étroite ? Même sans mesure précise, une photo et une estimation (court/moyen/long) suffisent à cadrer.",
+        "Un bon réflexe : pensez “trajet complet”. Où le camion se met ? À quelle distance de l’entrée ? Y a-t-il des marches, une cour, un couloir long, une porte étroite ? Même sans mesure précise, une description (court/moyen/long) suffit à cadrer.",
         "Si vous êtes en immeuble, l’ascenseur est un sujet à part entière. Dire “oui” ne suffit pas : une cabine petite peut imposer plus de manœuvres, ou du démontage sur certains meubles. Ce n’est pas grave — mais il faut l’intégrer dès le devis.",
         microTips[1],
       ],
       checklist: [
-        "Photo de la rue devant l’entrée (où s’arrêter, contraintes visibles)",
-        "Photo de l’entrée + hall + passage le plus étroit",
-        "Photo escalier (depuis le bas) + un palier (pour l’angle de rotation)",
-        "Photo ascenseur (porte ouverte + cabine) si présent",
+        "Rue devant l’entrée : où s’arrêter + contraintes visibles",
+        "Entrée + hall + passage le plus étroit",
+        "Escalier : bas + un palier (angle de rotation)",
+        "Ascenseur : porte ouverte + cabine (si présent)",
       ],
     },
     {
@@ -151,7 +151,7 @@ export function getCityLongFormGuide(citySlug: string, cityName: string): CityLo
       paragraphs: [
         "Le volume (m³) reste le levier principal : moins de volume = moins de camion, moins de main d’œuvre, moins de temps. C’est mathématique — et c’est souvent le levier le plus “propre” pour réduire le prix sans dégrader la qualité.",
         `Avant de demander des devis à ${cityName}, faites un tri en 3 piles : vendre/donner, recycler/déchetterie, à déménager. L’idée n’est pas d’être minimaliste : c’est d’éviter de payer pour déplacer des objets que vous ne voulez plus.`,
-        "Pour rendre les devis comparables, évitez les estimations vagues (“un T3 classique”). Ajoutez 3–4 photos par pièce et 1–2 photos des accès : c’est suffisant pour fiabiliser le volume et réduire le risque de supplément le jour J.",
+        "Pour rendre les devis comparables, évitez les estimations vagues (“un T3 classique”). Faites un inventaire rapide par pièce et décrivez les accès : c’est suffisant pour fiabiliser le volume et réduire le risque de supplément le jour J.",
         microTips[0],
       ],
       bullets: [
@@ -225,7 +225,7 @@ export function getCityLongFormGuide(citySlug: string, cityName: string): CityLo
         "Ascenseur : protégé / réservé si besoin (selon copropriété)",
         "Pièces étiquetées : “Cuisine”, “Chambre”, “Salon”…",
         "Boîte “essentiels 24h” non chargée par erreur",
-        "Photos rapides avant départ (utile en cas de doute)",
+        "Notes rapides avant départ (utile en cas de doute)",
       ],
     },
     {
@@ -243,7 +243,7 @@ export function getCityLongFormGuide(citySlug: string, cityName: string): CityLo
         "Énergie : électricité/gaz (ou équivalent) — ouverture/fermeture",
         "Internet : délais + rendez-vous (anticipez)",
         "Courrier : suivi/renvoi temporaire si nécessaire",
-        "État des lieux : photos, relevés, documents",
+        "État des lieux : relevés, documents",
       ],
     },
     {

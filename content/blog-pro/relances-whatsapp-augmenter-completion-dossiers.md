@@ -23,8 +23,8 @@ Le sujet n’est pas “faire plus de relances”. Le sujet est : **récupérer 
 
 Pour éviter les relances génériques, pilotez par statut :
 
-- **Sans photos**: formulaire rempli, pas de preuves
-- **Partiel**: photos incomplètes, infos manquantes ciblées
+- **Sans détails**: formulaire rempli, pas de preuves
+- **Partiel**: détails incomplètes, infos manquantes ciblées
 - **Complet**: dossier prêt → votre action = devis
 
 ## 2) La meilleure relance = “voici ce qui manque”
@@ -34,12 +34,12 @@ Votre message doit contenir :
 - 1 phrase de contexte
 - la liste courte des éléments manquants
 - un lien unique de reprise
-- une alternative (“si vous préférez, on avance sans les photos”)
+- une alternative (“si vous préférez, on avance sans les détails”)
 
 ### Exemple (partiel)
 
 > Bonjour 👋 on a bien reçu votre dossier.  
-> Il manque 2 photos pour chiffrer sans surprise : **cave** + **accès escalier**.  
+> Il manque 2 détails pour chiffrer sans surprise : **cave** + **accès escalier**.  
 > Vous pouvez les ajouter ici : (lien)  
 > Si vous préférez, répondez “OK” et on avance comme ça (avec une marge de sécurité).
 
@@ -56,7 +56,7 @@ Ensuite, stop ou bascule sur appel court (selon votre process).
 ## 4) Le piège à éviter : relancer sans “prochaine action”
 
 “Vous en êtes où ?” ne marche pas.  
-“Ajoutez 2 photos ici” marche.
+“Ajoutez 2 détails ici” marche.
 
 ## 5) Mesurer le ROI (sans sophistication)
 

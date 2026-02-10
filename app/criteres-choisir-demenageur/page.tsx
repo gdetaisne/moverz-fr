@@ -14,7 +14,7 @@ export default function CriteresChoisirDemenageurPage() {
     {
       question: "Un déménageur peut-il facturer plus le jour J ?",
       answer:
-        "Oui, c’est possible si le devis le prévoit (ex : volume réel supérieur, accès plus difficile, attente) ou si des prestations non prévues sont demandées. La prévention passe par une estimation de volume solide (visite/visio/photos) et un devis détaillé.",
+        "Oui, c’est possible si le devis le prévoit (ex : volume réel supérieur, accès plus difficile, attente) ou si des prestations non prévues sont demandées. La prévention passe par une estimation de volume solide (visite/visio) et un devis détaillé.",
     },
     {
       question: "Quelle assurance couvre la casse ?",
@@ -29,7 +29,7 @@ export default function CriteresChoisirDemenageurPage() {
     {
       question: "Dois-je accepter un devis au téléphone ?",
       answer:
-        "Non. Un devis doit être écrit, détaillé, daté, avec raison sociale, SIREN/SIRET, conditions, assurances, et prestations. Un prix “au téléphone” sans visite/visio/photos augmente le risque d’écart de volume.",
+        "Non. Un devis doit être écrit, détaillé, daté, avec raison sociale, SIREN/SIRET, conditions, assurances, et prestations. Un prix “au téléphone” sans visite/visio augmente le risque d’écart de volume.",
     },
     {
       question: "Comment comparer 3 devis ?",
@@ -47,9 +47,9 @@ export default function CriteresChoisirDemenageurPage() {
         "Vérifiez l’existence légale (SIREN/SIRET), la cohérence des documents (raison sociale identique sur devis/RIB/assurance), la licence/capacité de transport si applicable, et refusez les demandes de paiement atypiques.",
     },
     {
-      question: "Visite, visio ou photos : que choisir ?",
+      question: "Visite ou visio : que choisir ?",
       answer:
-        "L’important est d’avoir une base concrète (visite, visio ou photos détaillées). Une simple estimation téléphonique est plus risquée : erreurs de volume, sous-estimation du temps, et ajustements le jour J.",
+        "L’important est d’avoir une base concrète (visite ou visio). Une simple estimation téléphonique est plus risquée : erreurs de volume, sous-estimation du temps, et ajustements le jour J.",
     },
     {
       question: "Que faire si je ne comprends pas une ligne du devis ?",
@@ -126,10 +126,9 @@ export default function CriteresChoisirDemenageurPage() {
                   note: "Ne confondez pas responsabilité légale et couverture réelle de vos biens.",
                 },
                 {
-                  title: "4) Méthode d’estimation du volume : visite / visio / photos",
+                  title: "4) Méthode d’estimation du volume : visite / visio",
                   bullets: [
                     "Visite technique ou visio : idéal pour les accès et contraintes",
-                    "Photos détaillées : bonne alternative si c’est structuré",
                     "Évitez le “prix au téléphone” sans base concrète",
                   ],
                   note: "Une estimation fragile augmente le risque de supplément ou de changement de prestation.",
@@ -178,16 +177,16 @@ export default function CriteresChoisirDemenageurPage() {
             </div>
           </div>
 
-          {/* Photos/visio */}
+          {/* Visio / visite */}
           <div className="rounded-2xl border border-[#E5E7EB] bg-[#F8FAFC] p-6 md:p-8 space-y-4">
             <h2 className="text-lg md:text-xl font-semibold text-[#0F172A]">
-              Pourquoi photos/visio &gt; estimation téléphonique (risque “supplément volume”)
+              Pourquoi visio/visite &gt; estimation téléphonique (risque “supplément volume”)
             </h2>
             <p className="text-sm md:text-base text-[#6B7280] leading-relaxed">
               Une estimation au téléphone repose sur votre déclaration (souvent incomplète) et sur des hypothèses
               (“ça passe dans l’ascenseur”, “il y a peu de meubles”, etc.). En pratique, les écarts viennent de ce qui
               n’a pas été vu : placards, cave/garage, mobilier démontable, électroménager, accès, portage et
-              stationnement. Visite/visio/photos réduisent ces angles morts.
+              stationnement. Visite/visio réduisent ces angles morts.
             </p>
             <ul className="grid gap-2 text-sm md:text-base text-[#0F172A]/90">
               {[
@@ -217,7 +216,7 @@ export default function CriteresChoisirDemenageurPage() {
                   "Demandez un Kbis récent (raison sociale, adresse, dirigeants).",
                   "Demandez l’attestation d’assurance (validité, périmètre, franchise).",
                   "Vérifiez la cohérence raison sociale ↔ RIB ↔ devis ↔ assurance.",
-                  "Faites préciser la méthode d’estimation du volume (visite/visio/photos) et les hypothèses d’accès.",
+                  "Faites préciser la méthode d’estimation du volume (visite/visio) et les hypothèses d’accès.",
                   "Demandez une clarification écrite pour toute option ou surcoût potentiel (portage, stationnement, attente).",
                 ].map((s, i) => (
                   <li key={s} className="flex gap-3">
@@ -239,7 +238,7 @@ export default function CriteresChoisirDemenageurPage() {
                 "Devis sans SIREN/SIRET, ou identité légale floue",
                 "Refus de fournir une attestation d’assurance ou un Kbis récent",
                 "Demande de paiement total avant prestation, ou moyens de paiement non traçables",
-                "Prix donné “au téléphone” sans visite/visio/photos",
+                "Prix donné “au téléphone” sans visite/visio",
                 "Contradictions entre raison sociale, RIB et documents",
                 "Absence de détail sur accès/portage/conditions d’annulation",
               ].map((b) => (
@@ -259,7 +258,7 @@ export default function CriteresChoisirDemenageurPage() {
                 "☐ SIREN/SIRET vérifiés (raison sociale cohérente)",
                 "☐ Kbis récent demandé / reçu",
                 "☐ Attestation d’assurance à jour (périmètre + franchise)",
-                "☐ Méthode d’estimation : visite / visio / photos",
+                "☐ Méthode d’estimation : visite / visio",
                 "☐ Accès détaillés : étages, ascenseur, portage, stationnement",
                 "☐ Prestations incluses clairement listées",
                 "☐ Options et surcoûts possibles explicités",
@@ -325,7 +324,7 @@ export default function CriteresChoisirDemenageurPage() {
             <div className="space-y-1">
               <p className="text-sm font-semibold text-[#0F172A]">Besoin d’une estimation plus solide ?</p>
               <p className="text-sm text-[#6B7280]">
-                Obtenir des devis basés sur une base documentée (photos/visio) réduit les écarts de volume.
+                Obtenir des devis basés sur une base documentée (visio/visite) réduit les écarts de volume.
               </p>
             </div>
             <a
@@ -333,7 +332,7 @@ export default function CriteresChoisirDemenageurPage() {
               rel="nofollow"
               className="inline-flex items-center justify-center rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#1E293B] transition-colors"
             >
-              Obtenir des devis basés sur des photos →
+              Obtenir des devis basés sur une base claire →
             </a>
           </div>
         </div>

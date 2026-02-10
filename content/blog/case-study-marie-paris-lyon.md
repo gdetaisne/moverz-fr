@@ -91,12 +91,12 @@ Marie contacte aussi directement 2 déménageurs recommandés par des collègues
 Marie découvre Moverz via un article de blog sur les arnaques au déménagement.
 
 **Ce qu'elle fait :**
-1. Envoie 7 photos via WhatsApp :
-   - Salon (2 photos)
-   - Chambre (2 photos)
-   - Cuisine (1 photo)
-   - Couloir + entrée (1 photo)
-   - Cage d'escalier (1 photo)
+1. Envoie 7 détails via WhatsApp :
+   - Salon (2 détails)
+   - Chambre (2 détails)
+   - Cuisine (1 détail)
+   - Couloir + entrée (1 détail)
+   - Cage d'escalier (1 détail)
 
 2. Précise les infos clés :
    - Départ : Paris 15ème, 3ème étage sans ascenseur
@@ -237,7 +237,7 @@ Certains déménageurs avaient de bons avis mais :
 Créez votre dossier en 3 minutes sur [devis.moverz.fr](https://devis.moverz.fr).
 
 **Ce que vous obtenez :**
-- ✅ Volume estimé par IA (photos)
+- ✅ Volume estimé par IA (détails)
 - ✅ 3 devis minimum comparables
 - ✅ Déménageurs contrôlés (score + litiges)
 - ✅ Sans démarchage, 0 appel intempestif

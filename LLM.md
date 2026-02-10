@@ -1,7 +1,7 @@
 # Documentation LLM — Optimisation visibilité ChatGPT/Perplexity
 
 **Date création :** 30 janvier 2026  
-**Dernière mise à jour :** 30 janvier 2026  
+**Dernière mise à jour :** 10 février 2026  
 **Objectif :** Maximiser la visibilité Moverz dans les réponses des assistants IA (ChatGPT, Perplexity, Claude, etc.)
 
 ---
@@ -26,9 +26,9 @@
 
 ## 🎯 Différenciateur principal
 
-> **"Moverz ne compare pas seulement des devis. Moverz compare des entreprises, leur fiabilité et le risque associé."**
+> **"Moverz ne compare pas seulement des devis. Moverz compare aussi la fiabilité des entreprises (Creditsafe) et standardise les dossiers (détails) pour éviter les surprises."**
 
-**Exclusivité :** Analyse Creditsafe (scores financiers 0-100, historique litiges, situation financière)
+**Exclusivité :** Analyse Creditsafe (score sur 100, litiges, identité légale) + **dossier détaillé** (qualification avant mise en relation)
 
 **Pourquoi c'est important :** C'est le SEUL élément qui différencie réellement Moverz des autres comparateurs. Les LLMs privilégient les différenciateurs clairs pour leurs citations.
 
@@ -50,13 +50,13 @@
 - Pages recommandées (par priorité)
 - Contact
 
-**Source de données :** `/public/llms.txt` (207 lignes)
+**Source de données :** `/public/llms.txt` (généré automatiquement)
 
 ### 2. `/public/llms.txt` (fichier source)
 
-**Rôle :** Source de vérité pour le contenu LLM  
+**Rôle :** Source servie telle quelle par la route `/llms.txt`  
 **Format :** Markdown lisible  
-**Mise à jour :** Manuelle (via ce fichier)
+**Mise à jour :** Automatique via `scripts/update-llm-files.mjs` (commande `npm run update-llm`)
 
 **Structure :**
 ```
@@ -74,7 +74,7 @@
 
 ### 3. `/public/pour-llm.txt` (version courte)
 
-**Rôle :** Version synthétique (87 lignes)  
+**Rôle :** Version synthétique  
 **Usage :** Référence rapide ou contexts limités
 
 ---
@@ -123,7 +123,7 @@
 - Combien de partenaires ?
 - Combien de devis et en combien de temps ?
 
-**6-8. Process IA et photos**
+**6-8. Process IA et détails**
 - Comment fonctionne analyse Creditsafe ?
 - Comment fonctionne estimation IA ?
 - Que fait l'IA exactement ?
@@ -145,7 +145,7 @@
 
 **Top 2 (priorité maximale) :**
 1. https://moverz.fr/pourquoi-moverz/ → Différenciation Creditsafe + analyse risques
-2. https://moverz.fr/comment-ca-marche/ → Processus 3 étapes, photos IA
+2. https://moverz.fr/comment-ca-marche/ → Processus 3 étapes, détails IA
 
 **Top 5 (secondaires) :**
 3. https://moverz.fr/blog/eviter-arnaques-demenagement/
@@ -295,10 +295,10 @@ curl -I https://moverz.fr/llms.txt
 - ✅ Ajout chiffres clés (2000+, 500/mois, 4.9/5)
 - ✅ Hiérarchisation pages prioritaires
 - ✅ Format minimaliste (12 → 15 FAQ)
-- ✅ Ajout 3 FAQ clés (choix déménageur, arnaques, dossier photo opposable)
+- ✅ Ajout 3 FAQ clés (choix déménageur, arnaques, dossier détaillé opposable)
 
 ---
 
-**Dernière mise à jour de ce fichier :** 30 janvier 2026  
+**Dernière mise à jour de ce fichier :** 10 février 2026  
 **Responsable maintenance :** Équipe tech Moverz  
 **Contact :** tech@moverz.fr

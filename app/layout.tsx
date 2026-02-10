@@ -119,8 +119,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/logo.png" />
         
         {/* Preconnect aux domaines externes pour performance */}
-        <link rel="preconnect" href="https://images.unsplash.com" />
-        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        {/* (Unsplash retiré) */}
         
         {/* Preload du logo (ressource critique) */}
         <link

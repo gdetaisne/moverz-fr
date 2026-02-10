@@ -20,10 +20,10 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Si ascenseur : indiquez s’il est aux normes (porte, profondeur) — c’est souvent le point de blocage sur les gros meubles.",
       "Périodes souvent moins favorables : été (juin–septembre) · fins de mois · week-ends.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue devant l’entrée : largeur, possibilité de stationner/stopper, présence de potelets / zone piétonne",
       "Entrée de l’immeuble + hall + largeur des portes (prise de vue “de face”)",
-      "Escalier : photo depuis le bas + un palier (pour estimer les rotations)",
+      "Escalier : détail depuis le bas + un palier (pour estimer les rotations)",
       "Ascenseur (si présent) : porte ouverte + cabine (un objet de repère suffit)",
       "Balcon/fenêtre côté rue (utile si un monte-meubles est envisageable)",
     ],
@@ -44,12 +44,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Pour les gros meubles : indiquez s’ils passent par l’escalier (largeur) ou s’il faut prévoir démontage.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
-      "Point de stationnement possible (photo depuis la rue, avec la façade)",
+    accessChecklist: [
+      "Point de stationnement possible (détail depuis la rue, avec la façade)",
       "Porte cochère / entrée d’immeuble / cour intérieure (si applicable)",
-      "Escalier : photo en plongée + un palier (pour voir l’angle)",
+      "Escalier : détail en plongée + un palier (pour voir l’angle)",
       "Ascenseur : porte ouverte + profondeur de cabine (si présent)",
-      "Meubles volumineux (canapé, armoire) + accès (couloir/porte) sur une seule photo",
+      "Meubles volumineux (canapé, armoire) + accès (couloir/porte) sur une seule détail",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -68,12 +68,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets “à risque” (frigo, piano, vitrine) + précisez si démontage souhaité.",
       "Périodes souvent moins favorables : été (juin–septembre) · fins de mois · week-ends.",
     ],
-    photoChecklist: [
-      "Rue devant l’entrée : largeur + possibilité de s’arrêter (photo prise à hauteur de camion)",
+    accessChecklist: [
+      "Rue devant l’entrée : largeur + possibilité de s’arrêter (détail prise à hauteur de camion)",
       "Chemin d’accès à pied (si portage) : trottoir, marches, pente",
-      "Escalier : photo depuis le bas + un palier (pour estimer les rotations)",
+      "Escalier : détail depuis le bas + un palier (pour estimer les rotations)",
       "Ascenseur : porte ouverte + cabine (si présent)",
-      "Objets lourds/fragiles (une photo groupée suffit) + sortie (couloir/porte)",
+      "Objets lourds/fragiles (une détail groupée suffit) + sortie (couloir/porte)",
     ],
     avoidPeriods: ["Été (juin–septembre)", "Fin de mois", "Week-ends"],
   },
@@ -92,7 +92,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Notez la distance camion→porte (10 m vs 80 m, ce n’est pas le même monde).",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue devant l’entrée (place possible + contraintes visibles)",
       "Entrée d’immeuble + couloir/hall (largeur de passage)",
       "Escalier (depuis le bas) + un palier (pour les rotations)",
@@ -106,7 +106,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Toulouse, le bon déménagement, c’est celui où tout le monde est d’accord sur la réalité du terrain : accès, distance de portage, et timing. Le reste (cartons, m³) se gère beaucoup plus facilement.",
       "Si vous êtes en hypercentre ou dans une zone à circulation dense, le point clé est simple : où le camion s’arrête, et combien de mètres l’équipe marche. Ce “petit détail” peut faire varier le devis plus que le nombre de cartons.",
-      "Côté immeuble, l’ennemi classique c’est l’escalier étroit + palier tournant. Si vous avez déjà eu un meuble coincé une fois, c’est exactement le moment de le dire (et de le montrer en photo).",
+      "Côté immeuble, l’ennemi classique c’est l’escalier étroit + palier tournant. Si vous avez déjà eu un meuble coincé une fois, c’est exactement le moment de le dire (et de le montrer en détail).",
       "Côté planning, une fenêtre de 2–3 dates aide : certains créneaux partent vite, et la flexibilité augmente les chances d’avoir une équipe dispo (et sereine).",
       "Votre meilleur hack : un dossier propre, identique pour tous. Ça évite les devis “pas chers” mais incomplets, puis les ajustements.",
     ],
@@ -116,7 +116,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Escalier/ascenseur : si doute sur le passage des gros meubles, dites-le tout de suite.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Vue rue → entrée (pour visualiser stationnement/stop)",
       "Hall/porte/couloir (largeur)",
       "Escalier + palier (angle de rotation)",
@@ -132,7 +132,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Le point n°1 : où le camion se met. Si l’équipe doit faire 60 mètres de portage (ou gérer des obstacles), le temps grimpe — et le coût suit.",
       "Le point n°2 : les passages. Portes, couloirs, escaliers… l’immeuble décide souvent si un meuble passe “en une fois” ou s’il faut démonter, protéger davantage, ou adapter la méthode.",
       "Le point n°3 : la clarté. Plus votre dossier est précis, plus les devis sont comparables (et plus vous évitez le “oui oui ça passe” le jour J).",
-      "En pratique : 2–3 photos des accès + 2 photos des gros meubles, et vous avez déjà un devis beaucoup plus sérieux.",
+      "En pratique : 2–3 détails des accès + 2 détails des gros meubles, et vous avez déjà un devis beaucoup plus sérieux.",
     ],
     bullets: [
       "Objectif : devis comparables (même volume + mêmes accès).",
@@ -140,12 +140,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Si vous avez une cour / entrée étroite : montrez-la, c’est souvent le point bloquant.",
       "Périodes souvent moins favorables : fins de mois · week-ends · été (juin–septembre).",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue devant l’entrée (stationnement possible + distance)",
       "Entrée/hall + largeur de passage",
       "Escalier (bas + palier) ou ascenseur (porte + cabine)",
       "Couloir/porte la plus étroite (celle qui fait peur)",
-      "Meubles volumineux (canapé/frigo/armoire) : une photo suffit",
+      "Meubles volumineux (canapé/frigo/armoire) : une détail suffit",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Été (juin–septembre)"],
   },
@@ -156,7 +156,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Premier point : le parcours. Si le camion ne peut pas se rapprocher, chaque aller-retour devient du temps. Et le temps, c’est le vrai carburant d’un devis.",
       "Deuxième point : l’accès intérieur. Escaliers raides, paliers tournants, portes un peu étroites… ce n’est pas dramatique, mais il faut l’anticiper pour éviter les improvisations.",
       "Troisième point : les gros meubles. Si vous avez un canapé “un peu trop long” ou un frigo “un peu trop large”, dites-le. Les pros préfèrent 5 minutes de vérité maintenant que 50 minutes de blocage le jour J.",
-      "Faites simple : mêmes infos pour tous, mêmes photos, et vous comparez des devis réellement comparables.",
+      "Faites simple : mêmes infos pour tous, mêmes détails, et vous comparez des devis réellement comparables.",
     ],
     bullets: [
       "Objectif : devis comparables (volume + accès + date).",
@@ -164,12 +164,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Signalez tout obstacle : cour, marches, long couloir, escalier en colimaçon.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Point de stationnement possible + distance jusqu’à la porte",
       "Entrée + couloir/passage principal",
       "Escalier : bas + palier (pour voir l’angle)",
       "Ascenseur (si présent) : porte + cabine",
-      "Meubles volumineux + passage le plus étroit (sur la même photo si possible)",
+      "Meubles volumineux + passage le plus étroit (sur la même détail si possible)",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -188,12 +188,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets encombrants/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + endroit où le camion peut s’arrêter",
       "Entrée + couloir/hall",
       "Escalier (bas + palier) ou ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir) avec repère visuel",
-      "Objets “risque” (canapé, frigo, vitrine) : photo groupée",
+      "Objets “risque” (canapé, frigo, vitrine) : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -204,7 +204,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Premier point : le stationnement. Si le camion ne peut pas se rapprocher, le portage prend de la place dans le devis (et dans votre journée).",
       "Deuxième point : les passages. Entre escaliers, couloirs et portes, le risque n’est pas “ça ne passe jamais”, mais “ça passe… en 3 fois, avec démontage”. Autant l’anticiper.",
       "Troisième point : la date. Une fenêtre de 2–3 options, et vous augmentez vos chances d’avoir une équipe dispo et un planning propre.",
-      "En bref : photos des accès + liste des gros meubles = devis plus justes et comparaison plus simple.",
+      "En bref : détails des accès + liste des gros meubles = devis plus justes et comparaison plus simple.",
     ],
     bullets: [
       "Objectif : devis comparables (même volume + mêmes accès).",
@@ -212,12 +212,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Si vous avez un meuble “limite” : annoncez-le, c’est un gain de temps énorme.",
       "Périodes souvent moins favorables : fins de mois · week-ends · été (juin–septembre).",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue devant l’entrée (où s’arrêter)",
       "Entrée + largeur de passage (porte/couloir)",
       "Escalier (bas + palier) ou ascenseur (porte + cabine)",
       "Fenêtre/balcon côté rue (utile si une alternative type monte-meubles est possible)",
-      "Objets volumineux : une photo groupée suffit",
+      "Objets volumineux : une détail groupée suffit",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Été (juin–septembre)"],
   },
@@ -226,9 +226,9 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Rennes, le devis “juste” dépend surtout de la réalité des accès. Une adresse peut paraître simple, mais un long couloir, une cour, ou un escalier tournant suffit à rallonger le temps de manutention.",
       "Le point le plus rentable : documenter le parcours camion→porte. Plus c’est clair, plus les devis sont comparables, et moins vous payez l’incertitude.",
-      "Ensuite, l’immeuble : étage, ascenseur, largeur d’escalier. Même si vous n’avez pas de mesures, une photo de l’escalier et d’un palier raconte 90% de l’histoire.",
+      "Ensuite, l’immeuble : étage, ascenseur, largeur d’escalier. Même si vous n’avez pas de mesures, une détail de l’escalier et d’un palier raconte 90% de l’histoire.",
       "Côté organisation, une fenêtre de dates aide : ça évite de se bloquer sur un créneau “trop demandé” et ça augmente les options côté déménageurs.",
-      "Conclusion : mêmes infos, mêmes photos, et on compare une prestation (pas juste un prix).",
+      "Conclusion : mêmes infos, mêmes détails, et on compare une prestation (pas juste un prix).",
     ],
     bullets: [
       "Objectif : devis comparables (même dossier pour tous).",
@@ -236,12 +236,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible",
       "Entrée/hall + couloir principal",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux (canapé/frigo/armoire) : photo groupée",
+      "Objets volumineux (canapé/frigo/armoire) : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -250,7 +250,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Montpellier, la différence entre un devis “propre” et un devis “à corriger” vient souvent du combo : stationnement + accès. Si le camion ne se rapproche pas, le portage devient vite le poste principal.",
       "Premier réflexe : clarifier la distance camion→porte et les obstacles (marches, couloir long, angle serré). C’est ça qui fait varier le temps réel de l’équipe.",
-      "Deuxième réflexe : escaliers/ascenseur. Un ascenseur “petit” ou un escalier tournant change totalement le passage des gros meubles. Une photo suffit souvent à éviter un malentendu.",
+      "Deuxième réflexe : escaliers/ascenseur. Un ascenseur “petit” ou un escalier tournant change totalement le passage des gros meubles. Une détail suffit souvent à éviter un malentendu.",
       "Troisième réflexe : la date. Si vous pouvez proposer 2–3 options, vous donnez plus de marge pour trouver une bonne équipe et un créneau fluide.",
       "Résultat : des devis comparables, et moins de surprises le jour J.",
     ],
@@ -260,12 +260,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Si un meuble est “limite” : annoncez-le tout de suite (gain de temps énorme).",
       "Périodes souvent moins favorables : fins de mois · week-ends · été (juin–septembre).",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue devant l’entrée (stationnement possible + distance)",
       "Entrée + couloir/hall (largeur)",
       "Escalier (bas + palier) ou ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir) avec un repère",
-      "Objets volumineux (canapé, frigo, armoire) : photo groupée",
+      "Objets volumineux (canapé, frigo, armoire) : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Été (juin–septembre)"],
   },
@@ -274,9 +274,9 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Rouen, le devis fiable dépend surtout du “dernier tronçon” : où le camion peut se mettre, et combien de portage il faut réellement faire. C’est souvent là que les écarts se créent.",
       "Si l’accès est un peu contraint (rue étroite, entrée en retrait, marches), dites-le tout de suite. Ce n’est pas un problème : c’est juste de la logistique à prévoir.",
-      "Côté immeuble, le piège classique : palier tournant + gros meuble. Une photo de l’escalier et d’un palier évite les débats et les surprises.",
+      "Côté immeuble, le piège classique : palier tournant + gros meuble. Une détail de l’escalier et d’un palier évite les débats et les surprises.",
       "Côté organisation, une fenêtre de dates aide à obtenir des devis plus intéressants et une meilleure disponibilité.",
-      "Le meilleur moyen de comparer : mêmes infos pour tous, mêmes photos, même base.",
+      "Le meilleur moyen de comparer : mêmes infos pour tous, mêmes détails, même base.",
     ],
     bullets: [
       "Objectif : devis comparables (volume + accès + date).",
@@ -284,12 +284,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les meubles “à risque” (canapé, armoire, frigo, piano).",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance jusqu’à l’entrée",
       "Entrée + couloir/hall (largeur)",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Marches/obstacles sur le chemin (si portage)",
-      "Meubles volumineux : photo groupée",
+      "Meubles volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -300,7 +300,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Le point n°1 : le stationnement et la distance de portage. Si le camion ne se rapproche pas, chaque aller-retour compte. Dites-le tout de suite, même si c’est “juste un peu loin”.",
       "Le point n°2 : l’immeuble. Escaliers, ascenseur, paliers : c’est ce qui décide si un gros meuble passe facilement ou nécessite démontage/organisation spécifique.",
       "Le point n°3 : la fenêtre de dates. Plus vous êtes flexible, plus vous avez de chances d’obtenir une équipe disponible et un planning propre.",
-      "En résumé : 2–3 photos des accès + la liste des gros meubles, et vous gagnez déjà beaucoup en fiabilité de devis.",
+      "En résumé : 2–3 détails des accès + la liste des gros meubles, et vous gagnez déjà beaucoup en fiabilité de devis.",
     ],
     bullets: [
       "Objectif : devis comparables (même volume + mêmes accès).",
@@ -308,12 +308,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles : c’est ce qui change la méthode.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + endroit où s’arrêter (distance visible)",
       "Entrée + couloir/hall (largeur)",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux/lourds : photo groupée",
+      "Objets volumineux/lourds : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -322,7 +322,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "En Île-de-France, le prix n’est pas qu’une question de volume : c’est une question de temps. Et le temps dépend surtout de l’accès (stationnement + portage) et du bâtiment (escaliers/ascenseur).",
       "Le point qui change tout : la distance camion→porte. 15 mètres, c’est confortable. 80 mètres, c’est une autre planète (fatigue, allers-retours, protection). Donnez ce détail dès le départ.",
-      "Deuxième point : l’immeuble. Ascenseur petit, escaliers étroits, couloirs longs… ce n’est pas rare. Une photo de l’escalier et d’un palier vaut mieux qu’un roman.",
+      "Deuxième point : l’immeuble. Ascenseur petit, escaliers étroits, couloirs longs… ce n’est pas rare. Une détail de l’escalier et d’un palier vaut mieux qu’un roman.",
       "Troisième point : la date. Les créneaux “faciles” partent vite. Si vous pouvez donner 2–3 options, vous augmentez vos chances d’avoir une équipe dispo et un devis plus cohérent.",
       "Bref : un dossier clair = des devis comparables. Ensuite seulement, on optimise le prix.",
     ],
@@ -332,12 +332,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les gros meubles/objets fragiles (ça change la méthode).",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue devant l’entrée (stationnement possible + contraintes visibles)",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : couloir, cour, marches",
-      "Meubles volumineux/fragiles : photo groupée",
+      "Meubles volumineux/fragiles : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -347,7 +347,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "À Toulon, le facteur qui fait varier un devis plus qu’on ne croit : le stationnement réel. Si le camion ne se rapproche pas, le portage prend vite le contrôle du planning (et du prix).",
       "Deuxième point : les accès. Escaliers étroits, couloirs, ascenseur trop petit… c’est rarement un “non”, mais souvent un “oui, mais autrement” (démontage, protection, organisation).",
       "Troisième point : la date. Plus vous êtes flexible, plus vous avez de chances d’avoir une équipe disponible et un créneau fluide.",
-      "Le plus simple : mêmes infos + mêmes photos pour tous, et vous comparez enfin des devis comparables.",
+      "Le plus simple : mêmes infos + mêmes détails pour tous, et vous comparez enfin des devis comparables.",
     ],
     bullets: [
       "Objectif : devis comparables (volume + accès + date).",
@@ -355,12 +355,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · été (juin–septembre).",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue devant l’entrée : où s’arrêter + distance",
       "Entrée/hall + couloir principal",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir) avec un repère",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Été (juin–septembre)"],
   },
@@ -369,7 +369,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Dijon, un devis fiable se gagne sur l’accès : où le camion peut se poser, combien de portage, et comment on passe à l’intérieur (escaliers/ascenseur).",
       "Le piège classique : sous-estimer un couloir étroit ou un palier tournant. Un meuble “facile” peut devenir “compliqué” si l’angle est serré — et ça se règle mieux au devis qu’au dernier moment.",
-      "Le hack : 2–3 photos des accès + la liste des gros meubles. Ça suffit souvent pour obtenir des devis comparables et éviter les ajustements.",
+      "Le hack : 2–3 détails des accès + la liste des gros meubles. Ça suffit souvent pour obtenir des devis comparables et éviter les ajustements.",
       "Si vous pouvez donner 2–3 dates possibles, vous augmentez vos chances d’avoir un créneau fluide (et souvent un meilleur prix).",
     ],
     bullets: [
@@ -378,12 +378,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Si un meuble est “limite”, annoncez-le maintenant (gain de temps énorme).",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée + largeur du passage (porte/couloir)",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -392,7 +392,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Angers, la clé d’un devis solide, c’est la logistique réelle : stationnement, distance de portage, et accès intérieur. C’est simple, mais c’est là que les écarts naissent.",
       "Si le camion ne peut pas se rapprocher, le portage devient vite le poste principal. Donnez ce détail dès le départ (même approximatif).",
-      "Dans l’immeuble, une photo de l’escalier et d’un palier vaut mieux qu’une description : on voit tout de suite si les gros meubles passent.",
+      "Dans l’immeuble, une détail de l’escalier et d’un palier vaut mieux qu’une description : on voit tout de suite si les gros meubles passent.",
       "Et si vous avez 2–3 dates possibles, vous augmentez les options côté déménageurs (et souvent la qualité du devis).",
     ],
     bullets: [
@@ -401,19 +401,19 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les gros meubles/objets fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + endroit où s’arrêter (distance visible)",
       "Entrée/hall + couloir principal",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
   tours: {
     title: "Conseils locaux à Tours (accès, escaliers, meubles “limites”)",
     paragraphs: [
-      "À Tours, un devis fiable se construit sur deux photos clés : l’accès depuis la rue, et l’accès à l’intérieur (escalier/ascenseur). Ça évite 90% des surprises.",
+      "À Tours, un devis fiable se construit sur deux détails clés : l’accès depuis la rue, et l’accès à l’intérieur (escalier/ascenseur). Ça évite 90% des surprises.",
       "Le point qui fait varier le prix : la distance de portage. Si le camion est loin, le temps grimpe — et le devis aussi. Dites-le clairement.",
       "Et si vous avez un meuble “limite” (canapé long, armoire lourde), annoncez-le. Les pros préfèrent anticiper plutôt que bloquer au chargement.",
       "Enfin, une fenêtre de 2–3 dates = plus de chances d’obtenir une équipe dispo et un devis cohérent.",
@@ -424,12 +424,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée + couloir/hall (largeur)",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Meubles volumineux : photo groupée",
+      "Meubles volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -438,7 +438,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Reims, la différence entre deux devis vient souvent d’un détail invisible : l’accès. Stationnement, distance de portage, et étages décident du temps réel de l’équipe.",
       "Le plus rentable : clarifier le trajet camion→porte. Si c’est long, dites-le tout de suite. Un devis “trop bas” finit souvent par être corrigé au dernier moment.",
-      "Dans l’immeuble, une photo de l’escalier et d’un palier suffit souvent à éviter les malentendus sur les gros meubles.",
+      "Dans l’immeuble, une détail de l’escalier et d’un palier suffit souvent à éviter les malentendus sur les gros meubles.",
       "Et si vous donnez 2–3 dates possibles, vous augmentez la disponibilité (et la tranquillité).",
     ],
     bullets: [
@@ -447,12 +447,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les gros meubles/objets fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + endroit où s’arrêter (distance visible)",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Obstacle sur le chemin (marches/couloir long) si besoin",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -470,12 +470,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + couloir principal",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -484,7 +484,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Saint-Étienne, la façon la plus simple d’améliorer un devis, c’est de rendre l’accès clair (stationnement + étages) et le volume réaliste.",
       "Le point n°1 : l’accès. Distance camion→porte, marches, couloir long : ces détails font varier le temps de manutention, donc le prix.",
-      "Le point n°2 : les escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper les rotations et les gros meubles.",
+      "Le point n°2 : les escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper les rotations et les gros meubles.",
       "Le point n°3 : le volume. Un tri avant devis (vente/don/déchetterie) est souvent le meilleur levier pour payer moins sans rogner sur la qualité.",
     ],
     bullets: [
@@ -493,12 +493,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles “limites” dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible",
       "Entrée + couloir/hall",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -507,7 +507,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Clermont-Ferrand, un devis fiable se gagne sur l’accès : où le camion s’arrête, quelle distance de portage, et comment on passe dans l’immeuble.",
       "Le point clé : la distance camion→porte. Si c’est long, dites-le. Sinon vous comparez des prix qui n’incluent pas la même quantité de travail.",
-      "Deuxième point : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à éviter les mauvaises surprises sur les gros meubles.",
+      "Deuxième point : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à éviter les mauvaises surprises sur les gros meubles.",
       "Troisième point : la date. Une fenêtre de 2–3 options augmente la disponibilité et stabilise les devis.",
     ],
     bullets: [
@@ -516,12 +516,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -530,7 +530,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Caen, un devis solide est souvent un devis qui connaît vos accès. Le prix change moins avec “le nombre de cartons” qu’avec la distance de portage et les étages.",
       "Le point n°1 : où le camion se place. Si c’est loin, dites-le. Un portage long transforme vite un petit déménagement en grosse journée.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier donne une lecture claire des rotations et des passages difficiles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier donne une lecture claire des rotations et des passages difficiles.",
       "Le point n°3 : les meubles “limites”. Si vous avez un canapé long ou une armoire lourde, annoncez-le : c’est la base d’un devis fiable.",
     ],
     bullets: [
@@ -539,12 +539,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les gros meubles/objets fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée/hall + couloir principal",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Obstacle sur le chemin (marches/cour) si besoin",
-      "Meubles volumineux : photo groupée",
+      "Meubles volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -553,7 +553,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Brest, un devis fiable, c’est un devis qui a la même information que ses concurrents : accès, volume et date. Sinon, vous comparez des devis qui ne parlent pas du même déménagement.",
       "Le point n°1 : stationnement + portage. Si le camion est loin, le temps de manutention grimpe. Donnez la distance, même à l’œil.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
       "Le point n°3 : une fenêtre de dates. 2–3 options = plus de chances d’obtenir un bon créneau et une équipe disponible.",
     ],
     bullets: [
@@ -562,12 +562,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -576,7 +576,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Metz, un devis fiable dépend surtout de l’accès : stationnement, distance de portage, et passages à l’intérieur (escaliers/ascenseur).",
       "Le piège : minimiser un couloir étroit ou un palier tournant. Ça ne veut pas dire “impossible”, ça veut dire “plus long” — et il faut l’intégrer dès le devis.",
-      "Faites simple : photos des accès + liste des gros meubles. Ça rend les devis comparables et évite les surprises le jour J.",
+      "Faites simple : détails des accès + liste des gros meubles. Ça rend les devis comparables et évite les surprises le jour J.",
       "Et si vous avez 2–3 dates possibles, vous multipliez les options (et souvent la qualité du planning).",
     ],
     bullets: [
@@ -585,12 +585,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles “limites” dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -599,7 +599,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Nancy, le devis fiable est celui qui comprend votre accès réel : stationnement, distance de portage, et configuration d’immeuble.",
       "Le point n°1 : distance camion→porte. Si c’est long, dites-le. Sinon le devis peut être trop optimiste et se corriger le jour J.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper les rotations et les meubles volumineux.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper les rotations et les meubles volumineux.",
       "Le point n°3 : fenêtre de dates. 2–3 options = plus de chances de trouver un bon créneau.",
     ],
     bullets: [
@@ -608,12 +608,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + couloir principal",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -623,7 +623,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "À Mulhouse, un devis fiable dépend de la logistique réelle : stationnement, distance de portage, et passages à l’intérieur.",
       "Le point qui change tout : l’ascenseur. “Oui” ne suffit pas : si la cabine est petite, certains meubles passent quand même… mais différemment (démontage, protection, organisation).",
       "Deuxième point : le portage. Si le camion est loin, dites-le. C’est du temps de manutention, donc du coût.",
-      "Avec 2–3 photos des accès + la liste des gros meubles, vous obtenez des devis beaucoup plus comparables.",
+      "Avec 2–3 détails des accès + la liste des gros meubles, vous obtenez des devis beaucoup plus comparables.",
     ],
     bullets: [
       "Objectif : devis comparables (même volume + mêmes accès).",
@@ -631,12 +631,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée + largeur du passage (porte/couloir)",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -645,7 +645,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Nîmes, un devis fiable se gagne sur l’accès : stationnement, distance de portage, et étages. Sans ça, un devis “pas cher” peut se transformer en ajustement.",
       "Le point n°1 : où le camion s’arrête. Si c’est loin, dites-le. Un portage long pèse lourd dans le temps de manutention.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
       "Le point n°3 : la date. 2–3 options donnent plus de marge pour un bon créneau et une bonne équipe.",
     ],
     bullets: [
@@ -654,12 +654,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · été (juin–septembre).",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + couloir principal",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Obstacle sur le chemin (marches/cour) si besoin",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Été (juin–septembre)"],
   },
@@ -668,7 +668,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Perpignan, le meilleur moyen d’obtenir un devis fiable est de clarifier l’accès : où le camion s’arrête et combien de portage il faut faire.",
       "Le point n°1 : stationnement. Si le camion ne se rapproche pas, le temps grimpe. Donnez la distance camion→porte, même approximative.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier dit tout sur les rotations et les gros meubles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier dit tout sur les rotations et les gros meubles.",
       "Le point n°3 : la date. Une fenêtre de 2–3 options augmente la disponibilité et stabilise les devis.",
     ],
     bullets: [
@@ -677,12 +677,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · été (juin–septembre).",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Été (juin–septembre)"],
   },
@@ -690,7 +690,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     title: "Conseils locaux à Annecy (accès, stationnement, meubles “limites”)",
     paragraphs: [
       "À Annecy, un devis fiable dépend surtout du duo : stationnement + accès. Si le camion est loin, le portage prend vite le contrôle du planning.",
-      "Deuxième point : l’immeuble. Escaliers, paliers, ascenseur : une photo suffit souvent à anticiper les rotations et les gros meubles.",
+      "Deuxième point : l’immeuble. Escaliers, paliers, ascenseur : une détail suffit souvent à anticiper les rotations et les gros meubles.",
       "Troisième point : les meubles “limites”. Si vous avez un canapé long ou une armoire lourde, annoncez-le maintenant : c’est la base d’un devis propre.",
       "Enfin, une fenêtre de dates (2–3 options) aide à obtenir une meilleure disponibilité.",
     ],
@@ -700,12 +700,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez objets fragiles/lourds dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + couloir principal",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -714,7 +714,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Aix-en-Provence, un devis fiable se gagne sur l’accès : stationnement, distance de portage, et passages dans l’immeuble.",
       "Le point n°1 : où le camion se pose. Si l’équipe doit marcher loin, le temps grimpe. Donnez la distance camion→porte, même approximative.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier évite 90% des surprises sur les gros meubles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier évite 90% des surprises sur les gros meubles.",
       "Le point n°3 : la date. Une fenêtre de 2–3 options aide à obtenir une meilleure disponibilité.",
     ],
     bullets: [
@@ -723,12 +723,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · été (juin–septembre).",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Été (juin–septembre)"],
   },
@@ -736,7 +736,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     title: "Conseils locaux à Cannes (accès, stationnement, timing)",
     paragraphs: [
       "À Cannes, un devis fiable dépend surtout du stationnement et du timing. Si le camion ne se rapproche pas, le portage prend vite le contrôle du devis.",
-      "Deuxième point : l’immeuble. Ascenseur, escaliers, couloirs : une photo de l’accès suffit souvent à éviter les malentendus.",
+      "Deuxième point : l’immeuble. Ascenseur, escaliers, couloirs : une détail de l’accès suffit souvent à éviter les malentendus.",
       "Troisième point : les objets volumineux. Si vous avez un canapé long ou un frigo large, annoncez-le : c’est ce qui change la méthode.",
       "Le hack : mêmes infos pour tous + 2–3 dates possibles = devis comparables et meilleure dispo.",
     ],
@@ -746,12 +746,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · été (juin–septembre).",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + endroit où s’arrêter + distance",
       "Entrée/hall + couloir principal",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Été (juin–septembre)"],
   },
@@ -761,7 +761,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     title: "Conseils locaux à Boulogne‑Billancourt (accès, ascenseur, timing)",
     paragraphs: [
       "À Boulogne‑Billancourt, un devis fiable se joue sur l’accès réel : où le camion peut se poser, quelle distance de portage, et comment on passe dans l’immeuble.",
-      "Le piège classique : “il y a un ascenseur” — mais petit. Résultat : gros meubles en plusieurs manœuvres, ou démontage. Une photo de la cabine + de l’escalier évite les malentendus.",
+      "Le piège classique : “il y a un ascenseur” — mais petit. Résultat : gros meubles en plusieurs manœuvres, ou démontage. Une détail de la cabine + de l’escalier évite les malentendus.",
       "Côté rue, donnez la distance camion→porte (même à l’œil). En zone dense, 30 mètres de portage, c’est déjà un paramètre de devis.",
       "Enfin, si vous pouvez proposer 2–3 dates, vous augmentez la disponibilité (et vous comparez des devis plus cohérents).",
     ],
@@ -771,12 +771,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue devant l’entrée (stationnement possible + distance)",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier)",
       "Ascenseur (si présent) : porte + cabine",
-      "Meubles “risque” (canapé, frigo, armoire) : photo groupée",
+      "Meubles “risque” (canapé, frigo, armoire) : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -785,7 +785,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Saint‑Denis, la meilleure façon d’avoir un devis “qui tient”, c’est de rendre l’accès ultra clair. Le volume compte, mais le temps de manutention compte souvent encore plus.",
       "Le point n°1 : distance de portage. Si le camion ne se rapproche pas, chaque aller‑retour devient du temps. Donnez une estimation simple : proche / moyen / loin.",
-      "Le point n°2 : l’immeuble. Escaliers étroits, ascenseur petit, couloirs longs… une photo suffit souvent à anticiper la méthode.",
+      "Le point n°2 : l’immeuble. Escaliers étroits, ascenseur petit, couloirs longs… une détail suffit souvent à anticiper la méthode.",
       "Le point n°3 : la date. Une fenêtre de 2–3 options vous donne plus de chances d’obtenir une équipe disponible et un devis stable.",
     ],
     bullets: [
@@ -794,12 +794,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée + couloir/hall (largeur)",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : cour, couloir, marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -808,7 +808,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Argenteuil, un devis fiable ne dépend pas seulement des cartons : il dépend de l’accès. Stationnement, distance de portage et étages décident du temps réel.",
       "Le réflexe simple : dites où le camion peut se mettre, et combien de mètres il y a jusqu’à la porte. Un devis “optimiste” se corrige souvent le jour J.",
-      "Dans l’immeuble, une photo de l’escalier + un palier donne tout de suite la réalité des rotations. C’est particulièrement utile si vous avez un canapé long ou une armoire lourde.",
+      "Dans l’immeuble, une détail de l’escalier + un palier donne tout de suite la réalité des rotations. C’est particulièrement utile si vous avez un canapé long ou une armoire lourde.",
       "Plus votre dossier est clair, plus les devis deviennent comparables — et plus vous choisissez sur le prix *et* la qualité.",
     ],
     bullets: [
@@ -817,12 +817,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles “limites” (canapé, frigo, armoire) dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Meubles volumineux : photo groupée",
+      "Meubles volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -832,7 +832,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "À Montreuil, les devis varient surtout quand l’accès n’est pas clair : cour intérieure, long couloir, ou portage plus long que prévu.",
       "Le point n°1 : le parcours camion→porte. Si vous traversez une cour ou un couloir long, dites‑le. C’est du temps de manutention.",
       "Le point n°2 : escaliers/ascenseur. Une cabine petite peut transformer un déménagement “simple” en série de manœuvres sur les gros meubles.",
-      "Le hack : 2–3 photos des accès + la liste des meubles volumineux. Les devis deviennent beaucoup plus comparables.",
+      "Le hack : 2–3 détails des accès + la liste des meubles volumineux. Les devis deviennent beaucoup plus comparables.",
     ],
     bullets: [
       "Objectif : même base d’info pour tous (volume + accès + date).",
@@ -840,12 +840,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez tout obstacle : marches, couloir étroit, palier tournant.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée + cour/couloir (si applicable)",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -854,7 +854,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Nanterre, un devis fiable se construit sur la logistique : accès, distance de portage et étages. Sans ça, les devis ne décrivent pas la même prestation.",
       "Le point clé : distance camion→porte. Même approximative, elle change le temps de manutention — donc le coût.",
-      "Ensuite, l’immeuble : ascenseur oui/non, et surtout “petit ou grand”. Une photo de la cabine suffit souvent à éviter un devis sous‑dimensionné.",
+      "Ensuite, l’immeuble : ascenseur oui/non, et surtout “petit ou grand”. Une détail de la cabine suffit souvent à éviter un devis sous‑dimensionné.",
       "Enfin, une fenêtre de 2–3 dates donne plus de chances d’avoir une équipe dispo et un planning fluide.",
     ],
     bullets: [
@@ -863,12 +863,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier)",
       "Ascenseur (si présent) : porte + cabine",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -877,7 +877,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Versailles, le devis fiable dépend surtout des accès : stationnement, distance de portage, et passages dans l’immeuble. Les écarts viennent rarement “du volume seul”.",
       "Le point n°1 : le camion. Indiquez où il peut s’arrêter et combien de mètres jusqu’à la porte. Même une estimation “à la louche” aide énormément.",
-      "Le point n°2 : escaliers/ascenseur. Un palier tournant + un canapé long = le duo qui mérite une photo (et parfois un démontage anticipé).",
+      "Le point n°2 : escaliers/ascenseur. Un palier tournant + un canapé long = le duo qui mérite une détail (et parfois un démontage anticipé).",
       "Le point n°3 : la date. Avec 2–3 options, vous augmentez les chances d’un devis cohérent et d’une équipe disponible.",
     ],
     bullets: [
@@ -886,12 +886,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles “limites” dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Meubles volumineux : photo groupée",
+      "Meubles volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -899,7 +899,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     title: "Conseils locaux à Courbevoie (ascenseur, portage, devis fiables)",
     paragraphs: [
       "À Courbevoie, le devis fiable se joue souvent sur un trio : ascenseur (taille), distance de portage, et gros meubles. Ce sont les vrais “temps cachés”.",
-      "Le point n°1 : ascenseur. Une photo de la cabine (porte ouverte) évite les surprises sur les meubles volumineux.",
+      "Le point n°1 : ascenseur. Une détail de la cabine (porte ouverte) évite les surprises sur les meubles volumineux.",
       "Le point n°2 : distance camion→porte. Si le camion ne se rapproche pas, le portage prend de la place dans le devis.",
       "Le point n°3 : fenêtre de dates. 2–3 options = plus de chances d’un bon créneau et d’un devis stable.",
     ],
@@ -909,12 +909,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Ascenseur (si présent) : porte + cabine",
       "Escalier (bas + palier)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -923,7 +923,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Colombes, un devis fiable dépend surtout de l’accès : stationnement, portage, et passages (portes/couloirs/escaliers).",
       "Le point n°1 : distance camion→porte. Si c’est “un peu loin”, dites‑le. C’est du temps de manutention.",
-      "Le point n°2 : l’escalier. Un palier tournant change tout sur un canapé ou une armoire. Une photo évite de découvrir ça au chargement.",
+      "Le point n°2 : l’escalier. Un palier tournant change tout sur un canapé ou une armoire. Une détail évite de découvrir ça au chargement.",
       "Le point n°3 : mêmes infos pour tous. C’est la base pour comparer des devis réellement comparables.",
     ],
     bullets: [
@@ -932,12 +932,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Meubles volumineux : photo groupée",
+      "Meubles volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -945,7 +945,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     title: "Conseils locaux à Asnières‑sur‑Seine (accès, ascenseur, timing)",
     paragraphs: [
       "À Asnières‑sur‑Seine, un devis fiable dépend de l’accès réel : stationnement, distance de portage, et configuration d’immeuble.",
-      "Le point n°1 : ascenseur. “Oui” ne suffit pas : s’il est petit, certains meubles passent, mais pas au même rythme. Une photo de la cabine simplifie tout.",
+      "Le point n°1 : ascenseur. “Oui” ne suffit pas : s’il est petit, certains meubles passent, mais pas au même rythme. Une détail de la cabine simplifie tout.",
       "Le point n°2 : portage. Donnez une estimation de la distance camion→porte. C’est souvent le poste invisible qui crée des écarts.",
       "Le point n°3 : fenêtre de dates. 2–3 options rendent les devis plus réalistes et comparables.",
     ],
@@ -955,12 +955,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + endroit où s’arrêter + distance",
       "Entrée/hall + largeur du passage",
       "Ascenseur (si présent) : porte + cabine",
       "Escalier (bas + palier)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -969,7 +969,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Aulnay‑sous‑Bois, un devis solide se gagne sur la logistique : stationnement, distance de portage, et passages à l’intérieur.",
       "Le point n°1 : où le camion peut se mettre. Si c’est loin, le portage devient un vrai paramètre de devis.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper les rotations.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper les rotations.",
       "Le point n°3 : annoncez les meubles “limites” (canapé long, armoire lourde). C’est le meilleur moyen d’éviter un blocage le jour J.",
     ],
     bullets: [
@@ -978,12 +978,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Meubles volumineux : photo groupée",
+      "Meubles volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -992,7 +992,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Rueil‑Malmaison, les devis sont beaucoup plus fiables quand l’accès est documenté : stationnement, distance de portage, et étages.",
       "Le point n°1 : le portage. Donnez la distance camion→porte. C’est souvent ce qui change le temps de manutention (donc le coût).",
-      "Le point n°2 : l’ascenseur. Une photo de la cabine et de la porte évite les surprises sur les gros meubles.",
+      "Le point n°2 : l’ascenseur. Une détail de la cabine et de la porte évite les surprises sur les gros meubles.",
       "Le point n°3 : une fenêtre de dates. 2–3 options permettent de comparer des devis plus réalistes.",
     ],
     bullets: [
@@ -1001,12 +1001,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée/hall + largeur du passage",
       "Ascenseur (si présent) : porte + cabine",
       "Escalier (bas + palier)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1015,7 +1015,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Aubervilliers, le “bon devis” est celui qui a la même réalité que vous : où le camion s’arrête, combien on marche, et comment on monte.",
       "Le point n°1 : distance camion→porte. Même une estimation simple (court/moyen/long) rend les devis beaucoup plus comparables.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier + un palier évite de découvrir un angle serré au chargement.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier + un palier évite de découvrir un angle serré au chargement.",
       "Le point n°3 : annoncez les objets lourds/fragiles. C’est ce qui change la méthode (donc le prix).",
     ],
     bullets: [
@@ -1024,12 +1024,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les gros meubles/objets fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : couloir/cour/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1038,7 +1038,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Champigny‑sur‑Marne, un devis fiable se joue sur l’accès : stationnement, distance de portage, et étages. C’est ce qui décide du temps réel de l’équipe.",
       "Le point n°1 : clarifiez le camion. Où peut‑il se mettre ? Si c’est loin, le portage devient un vrai paramètre de prix.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper les rotations.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper les rotations.",
       "Le point n°3 : une fenêtre de dates aide à obtenir une meilleure disponibilité et des devis comparables.",
     ],
     bullets: [
@@ -1047,12 +1047,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1061,7 +1061,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Drancy, les devis deviennent fiables quand l’accès est clair : stationnement, distance de portage, et configuration de l’immeuble.",
       "Le point n°1 : la distance camion→porte. Un “petit portage” peut vite devenir un gros temps de manutention. Dites‑le.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages compliqués.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages compliqués.",
       "Le point n°3 : annoncez les meubles volumineux. Les pros préfèrent anticiper que bloquer au chargement.",
     ],
     bullets: [
@@ -1070,12 +1070,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : couloir/cour/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1083,7 +1083,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     title: "Conseils locaux à Issy‑les‑Moulineaux (ascenseur, accès, timing)",
     paragraphs: [
       "À Issy‑les‑Moulineaux, les devis varient surtout quand l’accès n’est pas documenté : où le camion se place, combien de portage, et la taille de l’ascenseur.",
-      "Le point n°1 : l’ascenseur. Une photo de la cabine (et de la porte) simplifie tout pour les meubles volumineux.",
+      "Le point n°1 : l’ascenseur. Une détail de la cabine (et de la porte) simplifie tout pour les meubles volumineux.",
       "Le point n°2 : la distance camion→porte. Donnez une estimation simple : court / moyen / long.",
       "Le point n°3 : la date. 2–3 options = plus de chances d’un bon créneau et d’un devis cohérent.",
     ],
@@ -1093,12 +1093,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + endroit où s’arrêter + distance",
       "Entrée/hall + largeur du passage",
       "Ascenseur (si présent) : porte + cabine",
       "Escalier (bas + palier)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1107,7 +1107,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Noisy‑le‑Grand, un devis fiable dépend du temps réel : distance de portage, accès à l’immeuble, et étages. C’est ce qui fait varier la manutention.",
       "Le point n°1 : clarifiez le stationnement. Où le camion se met‑il ? Si c’est loin, le portage devient un paramètre majeur.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier + un palier suffit souvent à anticiper les passages difficiles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier + un palier suffit souvent à anticiper les passages difficiles.",
       "Le point n°3 : mêmes infos pour tous. C’est la seule façon de comparer des devis “à armes égales”.",
     ],
     bullets: [
@@ -1116,12 +1116,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : couloir/cour/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1129,7 +1129,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     title: "Conseils locaux à Levallois‑Perret (dense, ascenseur, timing)",
     paragraphs: [
       "À Levallois‑Perret, la ville est dense : le devis fiable, c’est celui qui connaît votre accès réel (stationnement + portage) et votre ascenseur (taille).",
-      "Le point n°1 : l’ascenseur. Une cabine petite change tout sur un frigo, une armoire ou un canapé. Une photo de la cabine évite les surprises.",
+      "Le point n°1 : l’ascenseur. Une cabine petite change tout sur un frigo, une armoire ou un canapé. Une détail de la cabine évite les surprises.",
       "Le point n°2 : la distance camion→porte. Donnez une estimation, même simple.",
       "Le point n°3 : une fenêtre de dates. 2–3 options rendent les devis plus cohérents et comparables.",
     ],
@@ -1139,12 +1139,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + endroit où s’arrêter + distance",
       "Entrée/hall + largeur du passage",
       "Ascenseur (si présent) : porte + cabine",
       "Escalier (bas + palier)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1153,7 +1153,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Clichy, un devis fiable dépend de l’accès réel : stationnement, distance de portage, et passages dans l’immeuble.",
       "Le point n°1 : le portage. Dites si le camion est proche/moyen/loin de l’entrée. C’est du temps de manutention.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à éviter les surprises.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à éviter les surprises.",
       "Le point n°3 : annoncez les meubles “limites” dès le départ. Les pros préfèrent anticiper que improviser.",
     ],
     bullets: [
@@ -1162,12 +1162,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1175,7 +1175,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     title: "Conseils locaux à Créteil (ascenseur, portage, dossier clair)",
     paragraphs: [
       "À Créteil, les devis deviennent fiables quand l’accès est clair : où le camion se place, combien de portage, et comment on monte (ascenseur/escaliers).",
-      "Le point n°1 : ascenseur. Une photo de la cabine et de la porte simplifie tout pour les gros meubles.",
+      "Le point n°1 : ascenseur. Une détail de la cabine et de la porte simplifie tout pour les gros meubles.",
       "Le point n°2 : distance camion→porte. Donnez une estimation simple (court/moyen/long).",
       "Le point n°3 : fenêtre de dates. 2–3 options = plus de chances d’un devis stable et comparable.",
     ],
@@ -1185,12 +1185,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + endroit où s’arrêter + distance",
       "Entrée/hall + largeur du passage",
       "Ascenseur (si présent) : porte + cabine",
       "Escalier (bas + palier)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1199,7 +1199,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Vitry‑sur‑Seine, le devis fiable dépend surtout du temps réel : distance de portage, accès à l’immeuble, et étages.",
       "Le point n°1 : stationnement. Où le camion peut‑il se mettre ? Si c’est loin, le portage devient un paramètre majeur.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
       "Le point n°3 : la date. Avec 2–3 options, vous augmentez la disponibilité et la qualité des devis.",
     ],
     bullets: [
@@ -1208,12 +1208,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : couloir/cour/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1233,12 +1233,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1247,7 +1247,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Amiens, un devis fiable dépend plus du temps réel que du nombre de cartons. Et le temps, c’est l’accès : stationnement + portage + étages.",
       "Le point n°1 : où le camion se met. Si c’est loin, dites-le : un portage long change le devis.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
       "Le point n°3 : annoncez les meubles “limites” (canapé long, frigo large). Les pros préfèrent anticiper que bloquer au chargement.",
     ],
     bullets: [
@@ -1256,12 +1256,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : cour/couloir/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1270,7 +1270,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Roubaix, le devis “qui tient” est celui qui connaît votre accès réel : où le camion se place, combien de portage, et comment on monte.",
       "Le point n°1 : distance camion→porte. Donnez une estimation simple (court/moyen/long).",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier évite les mauvaises surprises sur les gros meubles.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier évite les mauvaises surprises sur les gros meubles.",
       "Le point n°3 : un dossier identique pour tous. Sinon, vous comparez des devis… qui ne décrivent pas le même déménagement.",
     ],
     bullets: [
@@ -1279,12 +1279,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier)",
       "Ascenseur (si présent) : porte + cabine",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1293,7 +1293,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Tourcoing, la fiabilité d’un devis dépend surtout de l’accès : stationnement, distance de portage, et étages.",
       "Le point n°1 : portage. Si le camion est loin, le temps grimpe. Dites-le dès le départ.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper la méthode.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper la méthode.",
       "Le point n°3 : annoncez les meubles “limites”. Ça évite les improvisations le jour J.",
     ],
     bullets: [
@@ -1302,12 +1302,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1316,7 +1316,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Dunkerque, un devis fiable se gagne sur le trio : accès, portage, timing. Si l’un est flou, les devis deviennent difficilement comparables.",
       "Le point n°1 : stationnement. Où le camion peut-il s’arrêter ? Donnez la distance camion→porte.",
-      "Le point n°2 : l’immeuble. Escaliers/ascenseur : une photo suffit souvent à anticiper les passages compliqués.",
+      "Le point n°2 : l’immeuble. Escaliers/ascenseur : une détail suffit souvent à anticiper les passages compliqués.",
       "Le point n°3 : fenêtre de dates. 2–3 options = meilleure disponibilité et devis plus stables.",
     ],
     bullets: [
@@ -1325,12 +1325,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : cour/couloir/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1339,7 +1339,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Calais, un devis fiable dépend surtout de l’accès : stationnement, distance de portage, et passages à l’intérieur.",
       "Le point n°1 : clarifiez où le camion se met et combien on marche jusqu’à la porte.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier évite les surprises sur les gros meubles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier évite les surprises sur les gros meubles.",
       "Le point n°3 : mêmes infos pour tous, sinon vous comparez des devis qui n’incluent pas la même quantité de travail.",
     ],
     bullets: [
@@ -1348,12 +1348,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1362,7 +1362,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Boulogne‑sur‑Mer, un devis fiable se joue sur l’accès : stationnement, distance de portage, et passages dans l’immeuble.",
       "Le point n°1 : distance camion→porte. Si c’est long, dites-le. Sinon le devis peut être trop optimiste.",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier suffit souvent à anticiper la méthode.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier suffit souvent à anticiper la méthode.",
       "Le point n°3 : annoncez les gros meubles dès le départ. C’est ce qui évite les blocages le jour J.",
     ],
     bullets: [
@@ -1371,12 +1371,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : marches/couloir",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1385,7 +1385,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Arras, un devis fiable dépend surtout des accès : stationnement, distance de portage, et étages.",
       "Le point n°1 : où le camion s’arrête. Donnez la distance camion→porte, même approximative.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier + un palier évite les malentendus sur les gros meubles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier + un palier évite les malentendus sur les gros meubles.",
       "Le point n°3 : mêmes infos pour tous les déménageurs. C’est la base de la comparaison.",
     ],
     bullets: [
@@ -1394,12 +1394,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1408,7 +1408,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Lens, la meilleure façon d’obtenir un devis fiable est de rendre l’accès très clair : stationnement, distance de portage, et étages.",
       "Le point n°1 : portage. Si le camion est loin, le temps grimpe. Dites-le dès le départ.",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
       "Le point n°3 : annoncez les meubles volumineux. On préfère anticiper que improviser.",
     ],
     bullets: [
@@ -1417,12 +1417,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : cour/couloir/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1431,7 +1431,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Liévin, un devis fiable se gagne sur la logistique : stationnement, portage, et passages dans l’immeuble.",
       "Le point n°1 : distance camion→porte. Donnez une estimation simple. C’est du temps de manutention.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper la méthode.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper la méthode.",
       "Le point n°3 : annoncez les meubles “limites” dès le départ. Ça évite les blocages le jour J.",
     ],
     bullets: [
@@ -1440,12 +1440,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier)",
       "Ascenseur (si présent) : porte + cabine",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1454,7 +1454,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Béthune, un devis fiable dépend surtout de l’accès : stationnement, distance de portage, et étages.",
       "Le point n°1 : où le camion peut s’arrêter. Donnez la distance camion→porte.",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier évite les surprises sur les gros meubles.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier évite les surprises sur les gros meubles.",
       "Le point n°3 : même dossier pour tous. C’est la base pour comparer des devis correctement.",
     ],
     bullets: [
@@ -1463,12 +1463,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1477,7 +1477,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Valenciennes, un devis fiable se gagne sur le temps réel : accès, portage et étages. C’est ce qui fait varier la manutention.",
       "Le point n°1 : clarifiez la distance camion→porte. Même approximative, elle change le devis.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages compliqués.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages compliqués.",
       "Le point n°3 : fenêtre de dates. 2–3 options = meilleure disponibilité et comparaison plus propre.",
     ],
     bullets: [
@@ -1486,12 +1486,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : couloir/cour/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1500,7 +1500,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Douai, un devis fiable dépend surtout de l’accès : stationnement, portage, et passages dans l’immeuble.",
       "Le point n°1 : distance camion→porte. Donnez une estimation simple. C’est du temps de manutention.",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier suffit souvent à anticiper la méthode sur les gros meubles.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier suffit souvent à anticiper la méthode sur les gros meubles.",
       "Le point n°3 : annoncez les objets lourds/fragiles. C’est ce qui change la méthode — donc le devis.",
     ],
     bullets: [
@@ -1509,12 +1509,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1523,7 +1523,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Cambrai, la fiabilité d’un devis dépend surtout de l’accès : stationnement, distance de portage, et étages.",
       "Le point n°1 : où le camion se met. Si c’est loin, le portage devient un paramètre majeur.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier évite les surprises sur les gros meubles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier évite les surprises sur les gros meubles.",
       "Le point n°3 : mêmes infos pour tous les déménageurs. C’est la base pour comparer des devis correctement.",
     ],
     bullets: [
@@ -1532,12 +1532,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : cour/couloir/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1546,7 +1546,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Saint‑Quentin, un devis fiable dépend surtout du temps réel : accès, portage, étages. C’est ce qui rend les devis comparables… ou pas.",
       "Le point n°1 : distance camion→porte. Donnez une estimation simple (court/moyen/long).",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
       "Le point n°3 : annoncez les meubles “limites”. On préfère anticiper que improviser le jour J.",
     ],
     bullets: [
@@ -1555,12 +1555,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1569,7 +1569,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Beauvais, un devis fiable dépend surtout de l’accès : stationnement, distance de portage, et passages (portes/couloirs/escaliers).",
       "Le point n°1 : clarifiez où le camion s’arrête et combien on marche jusqu’à la porte.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à éviter les surprises sur les gros meubles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à éviter les surprises sur les gros meubles.",
       "Le point n°3 : fenêtre de dates. 2–3 options = meilleure disponibilité et devis plus comparables.",
     ],
     bullets: [
@@ -1578,12 +1578,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : cour/couloir/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1592,7 +1592,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Compiègne, un devis fiable se gagne sur la logistique : stationnement, portage, et configuration d’immeuble.",
       "Le point n°1 : distance camion→porte. Même approximative, elle change le temps de manutention.",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier évite les surprises sur les gros meubles.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier évite les surprises sur les gros meubles.",
       "Le point n°3 : mêmes infos pour tous. C’est la base pour comparer des devis proprement.",
     ],
     bullets: [
@@ -1601,12 +1601,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1617,7 +1617,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Creil, la fiabilité d’un devis dépend surtout de l’accès : où le camion peut s’arrêter, combien de portage, et comment on monte (escaliers/ascenseur).",
       "Le point n°1 : distance camion→porte. Même une estimation “court/moyen/long” rend les devis beaucoup plus comparables.",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles (et les gros meubles).",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles (et les gros meubles).",
       "Le point n°3 : mêmes infos pour tous. C’est la base pour comparer le prix *et* la prestation.",
     ],
     bullets: [
@@ -1626,12 +1626,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : cour/couloir/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1640,7 +1640,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Hazebrouck, un devis fiable se gagne sur la logistique : stationnement, distance de portage, et passages à l’intérieur.",
       "Le point n°1 : clarifiez où le camion s’arrête et combien on marche jusqu’à la porte.",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier évite les surprises sur les gros meubles.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier évite les surprises sur les gros meubles.",
       "Le point n°3 : annoncez les objets lourds/fragiles dès le départ. C’est ce qui change la méthode (donc le devis).",
     ],
     bullets: [
@@ -1649,12 +1649,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles “limites” (canapé, frigo, armoire) dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée + largeur du passage (porte/couloir)",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1663,7 +1663,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Maubeuge, la fiabilité d’un devis dépend surtout du temps réel : accès, portage, étages. C’est ce qui rend les devis comparables.",
       "Le point n°1 : distance camion→porte. Donnez une estimation simple (court/moyen/long).",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages compliqués.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages compliqués.",
       "Le point n°3 : mêmes infos pour tous. Sinon, vous comparez des prix qui n’incluent pas la même quantité de travail.",
     ],
     bullets: [
@@ -1672,12 +1672,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : cour/couloir/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1686,7 +1686,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Wattrelos, un devis “qui tient” est celui qui connaît votre accès réel : stationnement, distance de portage, et étages.",
       "Le point n°1 : portage. Si le camion est loin, le temps grimpe. Dites-le dès le départ.",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier suffit souvent à éviter les surprises sur les gros meubles.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier suffit souvent à éviter les surprises sur les gros meubles.",
       "Le point n°3 : annoncez les meubles volumineux/fragiles. Les pros préfèrent anticiper que improviser.",
     ],
     bullets: [
@@ -1695,12 +1695,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1708,7 +1708,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     title: "Conseils locaux à Villeneuve‑d’Ascq (accès, ascenseur, timing)",
     paragraphs: [
       "À Villeneuve‑d’Ascq, un devis fiable dépend du trio : accès réel, ascenseur (taille) et distance de portage. C’est ce qui décide du temps de manutention.",
-      "Le point n°1 : ascenseur. Une photo de la cabine (porte ouverte) aide énormément pour les meubles volumineux.",
+      "Le point n°1 : ascenseur. Une détail de la cabine (porte ouverte) aide énormément pour les meubles volumineux.",
       "Le point n°2 : distance camion→porte. Donnez une estimation simple, même à l’œil.",
       "Le point n°3 : fenêtre de dates. 2–3 options rendent les devis plus comparables et le planning plus fluide.",
     ],
@@ -1718,12 +1718,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + endroit où s’arrêter + distance",
       "Entrée/hall + largeur du passage",
       "Ascenseur (si présent) : porte + cabine",
       "Escalier (bas + palier)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1733,7 +1733,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Blois, un devis fiable se gagne sur l’accès : stationnement, distance de portage, et étages. C’est là que naissent les écarts de temps (et donc de prix).",
       "Le point n°1 : distance camion→porte. Même estimée, elle change le devis.",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages compliqués.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages compliqués.",
       "Le point n°3 : mêmes infos pour tous les déménageurs. Ensuite, on compare vraiment.",
     ],
     bullets: [
@@ -1742,12 +1742,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1756,7 +1756,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Bourges, un devis fiable dépend surtout de l’accès : où le camion se pose, combien on marche, et comment on monte.",
       "Le point n°1 : portage. Si c’est long, dites‑le : ça change le temps de manutention.",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier évite les surprises sur les meubles volumineux.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier évite les surprises sur les meubles volumineux.",
       "Le point n°3 : annoncez les objets lourds/fragiles dès le départ (c’est ce qui change la méthode).",
     ],
     bullets: [
@@ -1765,12 +1765,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles “limites” (canapé, frigo, armoire) dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : cour/couloir/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1779,7 +1779,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Chartres, un devis fiable se gagne sur la même base pour tout le monde : accès, volume, date. Sinon, vous comparez des devis qui ne décrivent pas la même chose.",
       "Le point n°1 : distance camion→porte. Donnez une estimation simple.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
       "Le point n°3 : fenêtre de dates. 2–3 options donnent plus de disponibilité et des devis plus cohérents.",
     ],
     bullets: [
@@ -1788,12 +1788,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1802,7 +1802,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Châteauroux, la fiabilité d’un devis dépend surtout de l’accès : stationnement, distance de portage, et étages.",
       "Le point n°1 : où le camion s’arrête. Donnez la distance camion→porte, même approximative.",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier évite les surprises sur les meubles volumineux.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier évite les surprises sur les meubles volumineux.",
       "Le point n°3 : annoncez les objets lourds/fragiles. C’est ce qui change la méthode (donc le devis).",
     ],
     bullets: [
@@ -1811,12 +1811,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : cour/couloir/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1825,7 +1825,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Vierzon, un devis fiable se gagne sur l’accès : stationnement, distance de portage, et passages à l’intérieur.",
       "Le point n°1 : distance camion→porte. Même estimée, elle change le temps de manutention.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier + un palier suffit souvent à anticiper les passages compliqués.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier + un palier suffit souvent à anticiper les passages compliqués.",
       "Le point n°3 : annoncez les meubles “limites” dès le départ. Ça évite les blocages le jour J.",
     ],
     bullets: [
@@ -1834,12 +1834,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1848,7 +1848,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Joué‑lès‑Tours, un devis fiable dépend surtout du temps réel : accès, portage, et étages. C’est ce qui rend les devis comparables.",
       "Le point n°1 : distance camion→porte. Donnez une estimation simple, même à l’œil.",
-      "Le point n°2 : ascenseur/escaliers. Une photo de la cabine (ou de l’escalier) suffit souvent à anticiper les passages compliqués.",
+      "Le point n°2 : ascenseur/escaliers. Une détail de la cabine (ou de l’escalier) suffit souvent à anticiper les passages compliqués.",
       "Le point n°3 : fenêtre de dates. 2–3 options donnent plus de disponibilité et un planning plus fluide.",
     ],
     bullets: [
@@ -1857,12 +1857,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1871,7 +1871,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Saint‑Cyr‑sur‑Loire, un devis fiable se joue sur l’accès : stationnement, distance de portage, et étages.",
       "Le point n°1 : clarifiez où le camion peut s’arrêter et combien on marche jusqu’à la porte.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier évite les surprises sur les gros meubles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier évite les surprises sur les gros meubles.",
       "Le point n°3 : même dossier pour tous. C’est la base d’une comparaison propre.",
     ],
     bullets: [
@@ -1880,12 +1880,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : cour/couloir/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1894,7 +1894,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Saint‑Jean‑de‑Braye, un devis fiable dépend surtout de l’accès : stationnement, distance de portage, et configuration d’immeuble.",
       "Le point n°1 : distance camion→porte. Donnez une estimation simple (court/moyen/long).",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper la méthode.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper la méthode.",
       "Le point n°3 : annoncez les meubles volumineux/fragiles dès le départ. C’est ce qui évite les surprises le jour J.",
     ],
     bullets: [
@@ -1903,12 +1903,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1917,7 +1917,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Olivet, un devis fiable se gagne sur la logistique : stationnement, distance de portage, et étages.",
       "Le point n°1 : où le camion s’arrête. Donnez la distance camion→porte, même approximative.",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier évite les surprises sur les gros meubles.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier évite les surprises sur les gros meubles.",
       "Le point n°3 : mêmes infos pour tous les déménageurs. C’est la base d’une comparaison propre.",
     ],
     bullets: [
@@ -1926,12 +1926,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1940,7 +1940,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Vendôme, un devis fiable dépend surtout de l’accès : stationnement, distance de portage, et passages dans l’immeuble.",
       "Le point n°1 : distance camion→porte. Une estimation simple rend les devis beaucoup plus comparables.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages compliqués.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages compliqués.",
       "Le point n°3 : annoncez les meubles volumineux dès le départ. Ça évite les blocages le jour J.",
     ],
     bullets: [
@@ -1949,12 +1949,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : cour/couloir/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1963,7 +1963,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Montargis, un devis fiable se construit sur la réalité des accès : stationnement, distance de portage, et étages.",
       "Le point n°1 : distance camion→porte. Donnez une estimation simple, même à l’œil.",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
       "Le point n°3 : fenêtre de dates. 2–3 options = meilleure disponibilité et devis plus cohérents.",
     ],
     bullets: [
@@ -1972,12 +1972,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -1987,7 +1987,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "Au Mans, un devis fiable dépend surtout du temps réel : accès, portage, et étages. C’est ce qui rend les devis comparables.",
       "Le point n°1 : distance camion→porte. Même approximative, elle change le temps de manutention.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages compliqués.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages compliqués.",
       "Le point n°3 : une fenêtre de dates (2–3 options) améliore la disponibilité et la qualité des devis.",
     ],
     bullets: [
@@ -1996,12 +1996,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : cour/couloir/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2010,7 +2010,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Saint‑Nazaire, un devis fiable se gagne sur l’accès : stationnement, distance de portage, et étages.",
       "Le point n°1 : clarifiez où le camion peut s’arrêter et combien on marche jusqu’à la porte.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier évite les surprises sur les gros meubles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier évite les surprises sur les gros meubles.",
       "Le point n°3 : même dossier pour tous. C’est la base d’une comparaison propre.",
     ],
     bullets: [
@@ -2019,12 +2019,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2033,7 +2033,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Cholet, un devis fiable dépend surtout des accès : stationnement, distance de portage, et passages à l’intérieur.",
       "Le point n°1 : distance camion→porte. Donnez une estimation simple, même à l’œil.",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
       "Le point n°3 : annoncez les meubles volumineux/fragiles dès le départ. C’est ce qui évite les surprises le jour J.",
     ],
     bullets: [
@@ -2042,12 +2042,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : cour/couloir/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2056,7 +2056,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Laval, un devis fiable se gagne sur la logistique : stationnement, distance de portage, et étages.",
       "Le point n°1 : clarifiez où le camion s’arrête et combien on marche jusqu’à la porte.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier + un palier suffit souvent à anticiper les passages compliqués.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier + un palier suffit souvent à anticiper les passages compliqués.",
       "Le point n°3 : fenêtre de dates. 2–3 options = meilleure disponibilité et devis plus cohérents.",
     ],
     bullets: [
@@ -2065,12 +2065,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2081,7 +2081,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Cherbourg‑en‑Cotentin, un devis fiable se gagne sur l’accès : où le camion se pose, combien de portage, et comment on monte (escaliers/ascenseur).",
       "Le point n°1 : distance camion→porte. Même une estimation simple rend les devis bien plus comparables.",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier suffit souvent à anticiper les rotations et les gros meubles.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier suffit souvent à anticiper les rotations et les gros meubles.",
       "Le point n°3 : annoncez les objets lourds/fragiles dès le départ. C’est ce qui change la méthode (donc le devis).",
     ],
     bullets: [
@@ -2090,12 +2090,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles “limites” (canapé, frigo, armoire) dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : couloir/cour/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2104,7 +2104,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Évreux, les devis deviennent fiables quand l’accès est clair : stationnement, distance de portage, et configuration d’immeuble.",
       "Le point n°1 : où le camion s’arrête et combien on marche jusqu’à la porte. Donnez une estimation simple.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier + un palier suffit souvent à anticiper les passages difficiles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier + un palier suffit souvent à anticiper les passages difficiles.",
       "Le point n°3 : mêmes infos pour tous les déménageurs. Ensuite, on compare vraiment.",
     ],
     bullets: [
@@ -2113,12 +2113,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée + largeur du passage (porte/couloir)",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2127,7 +2127,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Dieppe, un devis fiable se joue sur le “dernier tronçon” : où le camion se met, combien de portage, et comment on passe à l’intérieur.",
       "Le point n°1 : distance camion→porte. Si c’est long, dites‑le. C’est du temps de manutention.",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier évite les surprises sur les meubles volumineux.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier évite les surprises sur les meubles volumineux.",
       "Le point n°3 : annoncez les meubles “limites” dès le départ. On préfère anticiper que improviser.",
     ],
     bullets: [
@@ -2136,12 +2136,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : couloir/cour/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2150,7 +2150,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Sotteville‑lès‑Rouen, un devis fiable dépend surtout du temps réel : accès, portage, et étages. C’est ce qui rend les devis comparables.",
       "Le point n°1 : clarifiez le stationnement et la distance camion→porte (même approximative).",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages compliqués.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages compliqués.",
       "Le point n°3 : mêmes infos pour tous. Sinon, vous comparez des prix qui n’incluent pas la même quantité de travail.",
     ],
     bullets: [
@@ -2159,12 +2159,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + endroit où s’arrêter + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2173,7 +2173,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Saint‑Étienne‑du‑Rouvray, un devis fiable se gagne sur une base simple : accès, volume, date. L’accès est souvent le point qui change tout.",
       "Le point n°1 : distance camion→porte. Donnez une estimation (court/moyen/long).",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier suffit souvent à anticiper la méthode.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier suffit souvent à anticiper la méthode.",
       "Le point n°3 : annoncez les objets lourds/fragiles. C’est ce qui change le matériel et l’organisation.",
     ],
     bullets: [
@@ -2182,12 +2182,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles “limites” dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : couloir/cour/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2196,7 +2196,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Elbeuf, un devis fiable dépend surtout du temps réel : stationnement, distance de portage, et étages.",
       "Le point n°1 : où le camion s’arrête et combien on marche jusqu’à la porte. Une estimation simple suffit.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier + un palier suffit souvent à anticiper les passages difficiles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier + un palier suffit souvent à anticiper les passages difficiles.",
       "Le point n°3 : mêmes infos pour tous les déménageurs. C’est la base d’une comparaison propre.",
     ],
     bullets: [
@@ -2205,12 +2205,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2219,7 +2219,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Lisieux, un devis fiable se gagne sur la logistique : accès, portage, et passages à l’intérieur.",
       "Le point n°1 : distance camion→porte. Si c’est long, dites‑le : c’est du temps de manutention.",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier évite les surprises sur les meubles volumineux.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier évite les surprises sur les meubles volumineux.",
       "Le point n°3 : annoncez les meubles “limites” dès le départ. On préfère anticiper que bloquer le jour J.",
     ],
     bullets: [
@@ -2228,12 +2228,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : couloir/cour/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2242,7 +2242,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Alençon, un devis fiable dépend surtout de l’accès : stationnement, distance de portage, et étages.",
       "Le point n°1 : clarifiez où le camion peut s’arrêter et combien on marche jusqu’à la porte.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
       "Le point n°3 : annoncez les objets lourds/fragiles. C’est ce qui change la méthode (et parfois l’équipe).",
     ],
     bullets: [
@@ -2251,12 +2251,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2265,7 +2265,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Granville, un devis fiable se gagne sur le trio : accès, portage, date. Si l’accès est flou, le devis l’est aussi.",
       "Le point n°1 : distance camion→porte. Même une estimation simple rend les devis comparables.",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier + un palier évite les surprises sur les gros meubles.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier + un palier évite les surprises sur les gros meubles.",
       "Le point n°3 : fenêtre de dates. 2–3 options donnent plus de disponibilité et des devis plus cohérents.",
     ],
     bullets: [
@@ -2274,12 +2274,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : couloir/cour/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2290,7 +2290,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Ivry‑sur‑Seine, un devis fiable dépend surtout du temps réel : distance de portage, accès à l’immeuble, et étages.",
       "Le point n°1 : clarifiez où le camion peut s’arrêter et combien on marche jusqu’à la porte (même approximatif).",
-      "Le point n°2 : ascenseur/escaliers. Une photo de l’escalier + un palier (ou de la cabine) évite les surprises sur les gros meubles.",
+      "Le point n°2 : ascenseur/escaliers. Une détail de l’escalier + un palier (ou de la cabine) évite les surprises sur les gros meubles.",
       "Le point n°3 : mêmes infos pour tous les déménageurs. C’est la base pour comparer vraiment.",
     ],
     bullets: [
@@ -2299,12 +2299,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + endroit où s’arrêter + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : cour/couloir/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2312,7 +2312,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     title: "Conseils locaux à Neuilly‑sur‑Seine (ascenseur, portage, timing)",
     paragraphs: [
       "À Neuilly‑sur‑Seine, le devis fiable se joue souvent sur l’ascenseur (taille) et la distance de portage. Ce sont les “temps cachés”.",
-      "Le point n°1 : ascenseur. Une photo de la cabine (porte ouverte) simplifie tout pour les meubles volumineux.",
+      "Le point n°1 : ascenseur. Une détail de la cabine (porte ouverte) simplifie tout pour les meubles volumineux.",
       "Le point n°2 : distance camion→porte. Donnez une estimation simple (court/moyen/long).",
       "Le point n°3 : fenêtre de dates. 2–3 options rendent les devis plus cohérents et comparables.",
     ],
@@ -2322,12 +2322,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + endroit où s’arrêter + distance",
       "Entrée/hall + largeur du passage",
       "Ascenseur (si présent) : porte + cabine",
       "Escalier (bas + palier)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2336,7 +2336,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Villejuif, un devis fiable dépend surtout de l’accès réel : stationnement, distance de portage, et étages.",
       "Le point n°1 : distance camion→porte. Même une estimation simple rend les devis plus comparables.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
       "Le point n°3 : annoncez les meubles “limites” dès le départ. C’est le meilleur anti‑surprise.",
     ],
     bullets: [
@@ -2345,12 +2345,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2359,7 +2359,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Sarcelles, un devis fiable se gagne sur la logistique : où le camion s’arrête, combien de portage, et comment on monte.",
       "Le point n°1 : distance camion→porte. Donnez une estimation simple (court/moyen/long).",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier évite les surprises sur les gros meubles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier évite les surprises sur les gros meubles.",
       "Le point n°3 : mêmes infos pour tous. C’est la base d’une comparaison propre.",
     ],
     bullets: [
@@ -2368,12 +2368,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : couloir/cour/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2382,7 +2382,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Bobigny, le devis fiable est celui qui connaît votre accès réel : stationnement, distance de portage, et étages.",
       "Le point n°1 : où le camion peut s’arrêter. Si c’est loin, dites‑le : le portage pèse dans le temps.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier + un palier suffit souvent à anticiper les passages difficiles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier + un palier suffit souvent à anticiper les passages difficiles.",
       "Le point n°3 : annoncez les objets lourds/fragiles. C’est ce qui change la méthode (donc le devis).",
     ],
     bullets: [
@@ -2391,12 +2391,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles “limites” dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2405,7 +2405,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Bondy, un devis fiable se gagne sur l’accès : stationnement, distance de portage, et étages. Le reste suit.",
       "Le point n°1 : distance camion→porte. Donnez une estimation simple : court/moyen/long.",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages compliqués.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages compliqués.",
       "Le point n°3 : mêmes infos pour tous. C’est la base pour comparer des devis à armes égales.",
     ],
     bullets: [
@@ -2414,12 +2414,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : couloir/cour/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2428,7 +2428,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Pantin, la ville est dense : le devis fiable, c’est celui qui connaît votre accès réel (stationnement + portage) et vos étages.",
       "Le point n°1 : distance camion→porte. Même une estimation “à l’œil” change le devis.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier + un palier évite les surprises sur les gros meubles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier + un palier évite les surprises sur les gros meubles.",
       "Le point n°3 : annoncez les meubles “limites” dès le départ. C’est le meilleur anti‑surprise.",
     ],
     bullets: [
@@ -2437,12 +2437,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Listez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + endroit où s’arrêter + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2451,7 +2451,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Fontenay‑sous‑Bois, un devis fiable dépend surtout du temps réel : accès, portage, et étages.",
       "Le point n°1 : où le camion peut se mettre et combien de mètres jusqu’à la porte. Donnez une estimation simple.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
       "Le point n°3 : mêmes infos pour tous. C’est la base pour comparer des devis correctement.",
     ],
     bullets: [
@@ -2460,12 +2460,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : couloir/cour/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2474,7 +2474,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Maisons‑Alfort, un devis fiable se gagne sur l’accès : stationnement, distance de portage, et étages. C’est le vrai “temps caché”.",
       "Le point n°1 : distance camion→porte. Donnez une estimation simple (court/moyen/long).",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier + un palier (ou de la cabine) suffit souvent à anticiper les passages compliqués.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier + un palier (ou de la cabine) suffit souvent à anticiper les passages compliqués.",
       "Le point n°3 : fenêtre de dates. 2–3 options = meilleure disponibilité et devis plus cohérents.",
     ],
     bullets: [
@@ -2483,12 +2483,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + endroit où s’arrêter + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2497,7 +2497,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Alfortville, un devis fiable dépend surtout de l’accès réel : stationnement, distance de portage, et étages.",
       "Le point n°1 : clarifiez où le camion peut s’arrêter et combien de mètres jusqu’à la porte.",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier évite les surprises sur les gros meubles.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier évite les surprises sur les gros meubles.",
       "Le point n°3 : annoncez les objets lourds/fragiles dès le départ. C’est ce qui change la méthode.",
     ],
     bullets: [
@@ -2506,12 +2506,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles “limites” dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : couloir/cour/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2519,7 +2519,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     title: "Conseils locaux à Massy (accès, ascenseur, planning)",
     paragraphs: [
       "À Massy, le devis fiable dépend souvent du trio : accès réel, ascenseur (taille) et distance de portage. Ce sont les “temps cachés”.",
-      "Le point n°1 : ascenseur. Une photo de la cabine (porte ouverte) simplifie tout pour les gros meubles.",
+      "Le point n°1 : ascenseur. Une détail de la cabine (porte ouverte) simplifie tout pour les gros meubles.",
       "Le point n°2 : distance camion→porte. Donnez une estimation simple.",
       "Le point n°3 : fenêtre de dates. 2–3 options rendent les devis plus cohérents et comparables.",
     ],
@@ -2529,12 +2529,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + endroit où s’arrêter + distance",
       "Entrée/hall + largeur du passage",
       "Ascenseur (si présent) : porte + cabine",
       "Escalier (bas + palier)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2545,7 +2545,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Antony, un devis fiable dépend surtout de l’accès : stationnement, distance de portage, et étages. C’est ce qui fait varier le temps réel de manutention.",
       "Le point n°1 : distance camion→porte. Une estimation simple (court/moyen/long) rend les devis beaucoup plus comparables.",
-      "Le point n°2 : ascenseur/escaliers. Une photo de la cabine (ou de l’escalier + palier) évite les surprises sur les gros meubles.",
+      "Le point n°2 : ascenseur/escaliers. Une détail de la cabine (ou de l’escalier + palier) évite les surprises sur les gros meubles.",
       "Le point n°3 : mêmes infos pour tous. Ensuite seulement, on compare le prix et la prestation.",
     ],
     bullets: [
@@ -2554,12 +2554,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2568,7 +2568,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Corbeil‑Essonnes, un devis fiable se gagne sur la logistique : où le camion s’arrête, combien de portage, et comment on monte.",
       "Le point n°1 : distance camion→porte. Même approximative, elle change le temps de manutention — donc le devis.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper les rotations et les gros meubles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper les rotations et les gros meubles.",
       "Le point n°3 : annoncez les meubles “limites” dès le départ (canapé long, frigo large). C’est le meilleur anti‑surprise.",
     ],
     bullets: [
@@ -2577,12 +2577,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : couloir/cour/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2590,7 +2590,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     title: "Conseils locaux à Évry‑Courcouronnes (accès, ascenseur, planning)",
     paragraphs: [
       "À Évry‑Courcouronnes, un devis fiable dépend souvent du trio : accès réel, distance de portage, et ascenseur (taille). Ce sont les “temps cachés”.",
-      "Le point n°1 : ascenseur. Une photo de la cabine (porte ouverte) simplifie tout pour les meubles volumineux.",
+      "Le point n°1 : ascenseur. Une détail de la cabine (porte ouverte) simplifie tout pour les meubles volumineux.",
       "Le point n°2 : distance camion→porte. Donnez une estimation simple, même à l’œil.",
       "Le point n°3 : fenêtre de dates. 2–3 options rendent les devis plus cohérents et comparables.",
     ],
@@ -2600,12 +2600,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + endroit où s’arrêter + distance",
       "Entrée/hall + largeur du passage",
       "Ascenseur (si présent) : porte + cabine",
       "Escalier (bas + palier)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2614,7 +2614,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Poissy, un devis fiable se gagne sur l’accès : stationnement, distance de portage, et étages. C’est ce qui fait varier le temps réel de manutention.",
       "Le point n°1 : clarifiez où le camion peut s’arrêter et combien on marche jusqu’à la porte.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier + un palier (ou de la cabine) suffit souvent à anticiper les passages difficiles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier + un palier (ou de la cabine) suffit souvent à anticiper les passages difficiles.",
       "Le point n°3 : mêmes infos pour tous les déménageurs. C’est la base d’une comparaison propre.",
     ],
     bullets: [
@@ -2623,12 +2623,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2637,7 +2637,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Sartrouville, un devis fiable dépend surtout de l’accès : stationnement, distance de portage, et ascenseur/escaliers.",
       "Le point n°1 : distance camion→porte. Donnez une estimation simple (court/moyen/long).",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier évite les surprises sur les meubles volumineux.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier évite les surprises sur les meubles volumineux.",
       "Le point n°3 : annoncez les objets lourds/fragiles dès le départ. C’est ce qui change la méthode (donc le devis).",
     ],
     bullets: [
@@ -2646,12 +2646,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles “limites” dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : couloir/cour/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2660,7 +2660,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Saint‑Germain‑en‑Laye, un devis fiable se gagne sur l’accès : stationnement, distance de portage, et étages. C’est le vrai facteur de temps.",
       "Le point n°1 : clarifiez où le camion peut s’arrêter et combien de mètres jusqu’à la porte.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier + un palier suffit souvent à anticiper les passages difficiles sur les gros meubles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier + un palier suffit souvent à anticiper les passages difficiles sur les gros meubles.",
       "Le point n°3 : fenêtre de dates. 2–3 options = meilleure disponibilité et devis plus cohérents.",
     ],
     bullets: [
@@ -2669,12 +2669,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2683,7 +2683,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Mantes‑la‑Jolie, le devis fiable, c’est celui qui connaît votre accès réel : stationnement, distance de portage, et étages.",
       "Le point n°1 : distance camion→porte. Une estimation simple suffit à rendre les devis comparables.",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier évite les surprises sur les meubles volumineux.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier évite les surprises sur les meubles volumineux.",
       "Le point n°3 : annoncez les objets lourds/fragiles. C’est ce qui change la méthode (et parfois l’équipe).",
     ],
     bullets: [
@@ -2692,12 +2692,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles “limites” dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : couloir/cour/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2705,7 +2705,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     title: "Conseils locaux à Cergy (accès, ascenseur, devis comparables)",
     paragraphs: [
       "À Cergy, un devis fiable dépend souvent de l’accès (stationnement + portage) et de l’ascenseur (taille). Ce sont les vrais “temps cachés”.",
-      "Le point n°1 : ascenseur. Une photo de la cabine (porte ouverte) simplifie tout pour les meubles volumineux.",
+      "Le point n°1 : ascenseur. Une détail de la cabine (porte ouverte) simplifie tout pour les meubles volumineux.",
       "Le point n°2 : distance camion→porte. Donnez une estimation simple, même à l’œil.",
       "Le point n°3 : fenêtre de dates. 2–3 options rendent les devis plus cohérents et comparables.",
     ],
@@ -2715,12 +2715,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + endroit où s’arrêter + distance",
       "Entrée/hall + largeur du passage",
       "Ascenseur (si présent) : porte + cabine",
       "Escalier (bas + palier)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2729,7 +2729,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Pontoise, un devis fiable se gagne sur l’accès : stationnement, distance de portage, et étages. C’est le facteur de temps principal.",
       "Le point n°1 : distance camion→porte. Donnez une estimation simple (court/moyen/long).",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier évite les surprises sur les meubles volumineux.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier évite les surprises sur les meubles volumineux.",
       "Le point n°3 : mêmes infos pour tous les déménageurs. C’est la base d’une comparaison propre.",
     ],
     bullets: [
@@ -2738,12 +2738,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2752,7 +2752,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Vincennes, la ville est dense : le devis fiable est celui qui connaît votre accès réel (stationnement + portage) et l’ascenseur (taille).",
       "Le point n°1 : distance camion→porte. Même une estimation “à l’œil” change le temps de manutention.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de la cabine (ou de l’escalier + palier) évite les surprises sur les gros meubles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de la cabine (ou de l’escalier + palier) évite les surprises sur les gros meubles.",
       "Le point n°3 : fenêtre de dates. 2–3 options rendent les devis plus cohérents et comparables.",
     ],
     bullets: [
@@ -2761,12 +2761,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + endroit où s’arrêter + distance",
       "Entrée/hall + largeur du passage",
       "Ascenseur (si présent) : porte + cabine",
       "Escalier (bas + palier)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2775,7 +2775,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Montrouge, un devis fiable dépend surtout du temps réel : accès, portage, et étages. C’est ce qui fait varier la manutention.",
       "Le point n°1 : distance camion→porte. Donnez une estimation simple (court/moyen/long).",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
       "Le point n°3 : mêmes infos pour tous les déménageurs. C’est la base d’une comparaison propre.",
     ],
     bullets: [
@@ -2784,12 +2784,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2798,7 +2798,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Saint‑Ouen‑sur‑Seine, le devis fiable, c’est celui qui connaît votre accès réel : stationnement, portage, et étages. Sans ça, les devis ne sont pas comparables.",
       "Le point n°1 : distance camion→porte. Une estimation simple suffit à rendre les devis plus cohérents.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier + un palier évite les surprises sur les gros meubles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier + un palier évite les surprises sur les gros meubles.",
       "Le point n°3 : annoncez les objets lourds/fragiles dès le départ. C’est ce qui change la méthode.",
     ],
     bullets: [
@@ -2807,12 +2807,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles “limites” dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + endroit où s’arrêter + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : couloir/cour/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2821,7 +2821,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Saint‑Maur‑des‑Fossés, un devis fiable dépend surtout de l’accès : stationnement, distance de portage, et étages.",
       "Le point n°1 : distance camion→porte. Donnez une estimation simple, même à l’œil.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
       "Le point n°3 : mêmes infos pour tous les déménageurs. C’est la base d’une comparaison propre.",
     ],
     bullets: [
@@ -2830,12 +2830,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2844,7 +2844,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Épinay‑sur‑Seine, un devis fiable se gagne sur la logistique : stationnement, distance de portage, et étages.",
       "Le point n°1 : distance camion→porte. Une estimation simple rend les devis plus comparables.",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier évite les surprises sur les meubles volumineux.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier évite les surprises sur les meubles volumineux.",
       "Le point n°3 : annoncez les objets lourds/fragiles dès le départ. C’est ce qui change la méthode (donc le devis).",
     ],
     bullets: [
@@ -2853,12 +2853,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles “limites” dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : couloir/cour/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2867,7 +2867,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "Au Blanc‑Mesnil, un devis fiable dépend surtout de l’accès : stationnement, distance de portage, et étages. C’est le facteur principal de temps.",
       "Le point n°1 : clarifiez où le camion peut s’arrêter et combien on marche jusqu’à la porte.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier + un palier suffit souvent à anticiper les passages difficiles sur les gros meubles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier + un palier suffit souvent à anticiper les passages difficiles sur les gros meubles.",
       "Le point n°3 : mêmes infos pour tous les déménageurs. C’est la base d’une comparaison propre.",
     ],
     bullets: [
@@ -2876,12 +2876,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2892,7 +2892,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Rezé, un devis fiable dépend surtout du temps réel : stationnement, distance de portage, et étages. C’est ce qui rend les devis comparables.",
       "Le point n°1 : distance camion→porte. Donnez une estimation simple (court/moyen/long).",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier + un palier suffit souvent à anticiper les passages difficiles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier + un palier suffit souvent à anticiper les passages difficiles.",
       "Le point n°3 : mêmes infos pour tous les déménageurs. C’est la base d’une comparaison propre.",
     ],
     bullets: [
@@ -2901,12 +2901,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : couloir/cour/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2914,7 +2914,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     title: "Conseils locaux à Saint‑Herblain (accès, ascenseur, planning)",
     paragraphs: [
       "À Saint‑Herblain, le devis fiable dépend surtout de l’accès (stationnement + portage) et de l’ascenseur (taille).",
-      "Le point n°1 : ascenseur. Une photo de la cabine (porte ouverte) simplifie tout pour les gros meubles.",
+      "Le point n°1 : ascenseur. Une détail de la cabine (porte ouverte) simplifie tout pour les gros meubles.",
       "Le point n°2 : distance camion→porte. Donnez une estimation simple.",
       "Le point n°3 : fenêtre de dates. 2–3 options rendent les devis plus cohérents et comparables.",
     ],
@@ -2924,12 +2924,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + endroit où s’arrêter + distance",
       "Entrée/hall + largeur du passage",
       "Ascenseur (si présent) : porte + cabine",
       "Escalier (bas + palier)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2938,7 +2938,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Orvault, un devis fiable se gagne sur la logistique : stationnement, distance de portage, et étages.",
       "Le point n°1 : distance camion→porte. Donnez une estimation simple, même à l’œil.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
       "Le point n°3 : mêmes infos pour tous. C’est la base d’une comparaison propre.",
     ],
     bullets: [
@@ -2947,12 +2947,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles volumineux/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2961,7 +2961,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À Vertou, un devis fiable dépend surtout de l’accès : stationnement, distance de portage, et étages. C’est ce qui fait varier le temps de manutention.",
       "Le point n°1 : clarifiez où le camion peut s’arrêter et combien on marche jusqu’à la porte.",
-      "Le point n°2 : escaliers/paliers. Une photo de l’escalier et d’un palier évite les surprises sur les meubles volumineux.",
+      "Le point n°2 : escaliers/paliers. Une détail de l’escalier et d’un palier évite les surprises sur les meubles volumineux.",
       "Le point n°3 : annoncez les objets lourds/fragiles dès le départ. C’est ce qui change la méthode (donc le devis).",
     ],
     bullets: [
@@ -2970,12 +2970,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les meubles “limites” dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible + distance",
       "Entrée/hall + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Chemin de portage (si long) : couloir/cour/marches",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },
@@ -2984,7 +2984,7 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
     paragraphs: [
       "À La Roche‑sur‑Yon, un devis fiable se gagne sur l’accès : stationnement, distance de portage, et étages. C’est le vrai facteur de temps.",
       "Le point n°1 : distance camion→porte. Même une estimation simple rend les devis comparables.",
-      "Le point n°2 : escaliers/ascenseur. Une photo de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
+      "Le point n°2 : escaliers/ascenseur. Une détail de l’escalier et d’un palier suffit souvent à anticiper les passages difficiles.",
       "Le point n°3 : fenêtre de dates. 2–3 options = meilleure disponibilité et devis plus cohérents.",
     ],
     bullets: [
@@ -2993,12 +2993,12 @@ export const LOCAL_INSIGHTS_OVERRIDES: Record<string, LocalInsightBlock> = {
       "Annoncez les objets lourds/fragiles dès le départ.",
       "Périodes souvent moins favorables : fins de mois · week-ends · vacances scolaires.",
     ],
-    photoChecklist: [
+    accessChecklist: [
       "Rue + stationnement possible (distance visible)",
       "Entrée + largeur du passage",
       "Escalier (bas + palier) / ascenseur (porte + cabine)",
       "Passage le plus étroit (porte/couloir)",
-      "Objets volumineux : photo groupée",
+      "Objets volumineux : détail groupée",
     ],
     avoidPeriods: ["Fin de mois", "Week-ends", "Vacances scolaires"],
   },

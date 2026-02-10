@@ -62,7 +62,7 @@ export default function Page() {
             "Avec Moverz, vous remplissez un seul dossier : l’IA aide à fiabiliser le volume pour comparer des devis sur une base identique.",
           ],
           bullets: [
-            "Décrivez le volume et prenez 2–3 photos : salon, chambre, cave/garage.",
+            "Décrivez le volume et listez les pièces principales : salon, chambre, cave/garage.",
             "Indiquez les contraintes (étage, ascenseur, stationnement, rue étroite).",
             "Précisez la durée (même approximative) : 1 mois vs 6 mois change le type d’offre.",
           ],

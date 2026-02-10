@@ -19,7 +19,7 @@ export default function CGVPartenairesPage() {
       <section className="relative overflow-hidden text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2000&auto=format&fit=crop"
+            src="https://images.unsplash.com/détail-1450101499163-c8848c66ca85?q=80&w=2000&auto=format&fit=crop"
             alt="CGV Partenaires"
             className="w-full h-full object-cover"
           />
@@ -97,7 +97,7 @@ export default function CGVPartenairesPage() {
                   <h3 className="text-lg font-semibold text-[#6BCFCF] mb-2">2.3 Qualité et transparence du devis</h3>
                   <ul className="list-disc pl-6 mt-3 space-y-2 text-white/80">
                     <li>Établir des devis clairs, détaillés et conformes à la réglementation (prestations incluses, volume estimé, conditions d'accès, options, modalités de paiement)</li>
-                    <li>Baser ses estimations sur les informations et photos fournies par Moverz (inventaire IA, photos client)</li>
+                    <li>Baser ses estimations sur les informations fournies par Moverz (inventaire, dossier client)</li>
                     <li>Respecter les délais de réponse raisonnables (idéalement sous 24-48h après réception du dossier)</li>
                     <li>Signaler clairement toute sous-traitance prévue avant signature du contrat</li>
                     <li>Ne pas facturer de prestations ou frais non mentionnés au devis initial (sauf circonstances exceptionnelles validées par le client)</li>
@@ -162,7 +162,7 @@ export default function CGVPartenairesPage() {
               <h2 className="text-2xl font-semibold text-white mb-3">Article 4 : Dossiers et mise en relation</h2>
               <p>Moverz s'engage à :</p>
               <ul className="list-disc pl-6 mt-3 space-y-2 text-white/80">
-                <li>Transmettre au Partenaire des dossiers de déménagement qualifiés comprenant : inventaire IA, photos du client, informations sur le logement (accès, étages, etc.)</li>
+                <li>Transmettre au Partenaire des dossiers de déménagement qualifiés comprenant : inventaire, informations sur le logement (accès, étages, etc.)</li>
                 <li>Centraliser les échanges entre le client et les déménageurs jusqu'au choix final du client</li>
                 <li>Faciliter la mise en relation directe entre le client et le Partenaire choisi</li>
               </ul>
@@ -257,7 +257,6 @@ export default function CGVPartenairesPage() {
               </p>
               <ul className="mt-3 space-y-1 text-white/80">
                 <li>Email : <a href="mailto:lucie@moverz.fr" className="text-[#6BCFCF] hover:underline">lucie@moverz.fr</a></li>
-                <li>WhatsApp Pro : <a href="https://wa.me/66952824035" className="text-[#6BCFCF] hover:underline">+66 9 52 82 40 35</a></li>
                 <li>Calendly : <a href="https://calendly.com/lucie-moverz/30min" className="text-[#6BCFCF] hover:underline" target="_blank" rel="noopener noreferrer">Prendre rendez-vous</a></li>
               </ul>
             </div>

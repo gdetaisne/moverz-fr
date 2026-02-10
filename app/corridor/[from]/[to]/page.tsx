@@ -54,7 +54,7 @@ export default function CorridorAutoPage({ params }: PageProps) {
   const conseils = [
     "Anticipez votre date (fin de mois et été = plus de demande).",
     "Faites estimer votre volume précisément pour éviter les suppléments le jour J.",
-    "Préparez des photos des accès (escaliers, ascenseur, rue) pour un devis juste.",
+    "Décrivez précisément les accès (escaliers, ascenseur, stationnement) pour un devis juste.",
     "Demandez l'autorisation de stationnement si nécessaire (mairie / syndic).",
   ];
 

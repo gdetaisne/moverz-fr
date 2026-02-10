@@ -8,10 +8,10 @@ export default function HeroMockup() {
 
   useEffect(() => {
     setMounted(true);
-    // Show typing indicator after photos appear
-    const typingTimer = setTimeout(() => setShowTyping(true), 3000);
+    // Simule une courte réponse
+    const typingTimer = setTimeout(() => setShowTyping(true), 2200);
     // Hide typing after 2 seconds
-    const hideTypingTimer = setTimeout(() => setShowTyping(false), 5000);
+    const hideTypingTimer = setTimeout(() => setShowTyping(false), 4200);
     
     return () => {
       clearTimeout(typingTimer);
@@ -57,58 +57,19 @@ export default function HeroMockup() {
             <div className="flex justify-start animate-[slideInLeft_0.5s_ease-out]">
               <div className="bg-white rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[85%] shadow-sm hover:shadow-md transition-shadow duration-200">
                 <p className="text-[#1F2937] text-sm leading-relaxed">
-                  Bonjour ! Envoyez-moi <strong>3 à 4 photos</strong> (pièces + accès) pour recevoir des devis précis 📸
+                  Bonjour ! Donnez-moi <strong>4 infos</strong> (départ, arrivée, date, type de logement) et je lance la comparaison.
                 </p>
                 <p className="text-[#667085] text-xs mt-1">10:24</p>
               </div>
             </div>
 
-            {/* User's photos (4 thumbnails in 2x2 grid) */}
+            {/* User message */}
             <div className="flex justify-end animate-[slideInRight_0.5s_ease-out_0.2s_both]">
-              <div className="bg-[#DCF8C6] rounded-2xl rounded-tr-sm px-3 py-3 max-w-[85%] shadow-sm hover:shadow-md transition-shadow duration-200">
-                <div className="grid grid-cols-2 gap-2">
-                  {/* Photo 1: Living room */}
-                  <div className="relative aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-200 cursor-pointer">
-                    <Image
-                      src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=200&h=200&fit=crop&q=80"
-                      alt="Salon"
-                      fill
-                      className="object-cover"
-                      sizes="100px"
-                    />
-                  </div>
-                  {/* Photo 2: Bedroom */}
-                  <div className="relative aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-200 cursor-pointer">
-                    <Image
-                      src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=200&h=200&fit=crop&q=80"
-                      alt="Chambre"
-                      fill
-                      className="object-cover"
-                      sizes="100px"
-                    />
-                  </div>
-                  {/* Photo 3: Kitchen */}
-                  <div className="relative aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-200 cursor-pointer">
-                    <Image
-                      src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=200&h=200&fit=crop&q=80"
-                      alt="Cuisine"
-                      fill
-                      className="object-cover"
-                      sizes="100px"
-                    />
-                  </div>
-                  {/* Photo 4: Boxes/moving */}
-                  <div className="relative aspect-square rounded-lg overflow-hidden hover:scale-105 transition-transform duration-200 cursor-pointer">
-                    <Image
-                      src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=200&h=200&fit=crop&q=80"
-                      alt="Cartons"
-                      fill
-                      className="object-cover"
-                      sizes="100px"
-                    />
-                  </div>
-                </div>
-                <p className="text-[#667085] text-xs mt-2 text-right">10:26</p>
+              <div className="bg-[#DCF8C6] rounded-2xl rounded-tr-sm px-4 py-2.5 max-w-[85%] shadow-sm hover:shadow-md transition-shadow duration-200">
+                <p className="text-[#1F2937] text-sm leading-relaxed">
+                  Départ : Paris • Arrivée : Lyon • Date : 15/03 • T2 (2e, sans ascenseur)
+                </p>
+                <p className="text-[#667085] text-xs mt-1 text-right">10:26</p>
               </div>
             </div>
 

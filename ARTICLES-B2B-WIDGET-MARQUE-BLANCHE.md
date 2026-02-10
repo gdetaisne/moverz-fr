@@ -5,8 +5,8 @@
 **Offre réelle Moverz Pro** :
 - Widget IA volumétrie en marque blanche
 - Intégration sur le site du déménageur (5 min, 0 dev)
-- Client calcule son volume en 1 min avec photos
-- Déménageur reçoit dossier complet (volume + photos + accès)
+- Client calcule son volume en 1 min avec détails
+- Déménageur reçoit dossier complet (volume + détails + accès)
 
 ---
 
@@ -33,7 +33,7 @@
 - Estimation à l'œil : 60-70% de précision → litiges
 - Formulaire manuel : chronophage, incomplet
 
-**Solution** : Widget IA qui calcule le volume à partir de photos
+**Solution** : Widget IA qui calcule le volume à partir de détails
 
 ---
 
@@ -143,8 +143,8 @@
 
 1. **Intégration** : Copier-coller 1 script sur votre site (5 min)
 2. **Personnalisation** : Vos couleurs, votre logo via dashboard
-3. **Utilisation** : Client prend photos, IA calcule volume (1 min)
-4. **Réception** : Vous recevez dossier complet (volume + photos + accès)
+3. **Utilisation** : Client prend détails, IA calcule volume (1 min)
+4. **Réception** : Vous recevez dossier complet (volume + détails + accès)
 
 ### Tarifs
 
@@ -353,7 +353,7 @@ Le client voit :
 
 1. Rendez-vous client (déplacement 30-60 min)
 2. Tour du logement (30-60 min)
-3. Notes / photos / liste
+3. Notes / détails / liste
 4. Retour bureau + saisie (30 min)
 
 **Total : 2-3h par dossier**
@@ -391,13 +391,13 @@ Le client voit :
 
 ---
 
-## Méthode 2 : IA + Photos (Moverz Pro)
+## Méthode 2 : IA + détails (Moverz Pro)
 
 ### Process
 
-1. **Client** : Prend photos de son logement (2-3 min)
-   - 3-4 photos par pièce (vue d'ensemble + détails)
-   - Photos accès (escaliers, parking, porte d'entrée)
+1. **Client** : Prend détails de son logement (2-3 min)
+   - 3-4 détails par pièce (vue d'ensemble + détails)
+   - détails accès (escaliers, parking, porte d'entrée)
 
 2. **IA Moverz** : Analyse automatique (30 secondes)
    - Détection objets (meubles, cartons, électroménager)
@@ -407,7 +407,7 @@ Le client voit :
 3. **Déménageur** : Reçoit dossier complet (instantané)
    - Volume : 32,5 m³
    - Inventaire détaillé pièce par pièce
-   - Photos haute résolution
+   - détails haute résolution
    - Contraintes accès
 
 **Total : 1-2 min (pour le déménageur)**
@@ -417,7 +417,7 @@ Le client voit :
 **90-95%**
 
 **Supérieur à visite technique car** :
-- IA voit tout (placards ouverts sur photos)
+- IA voit tout (placards ouverts sur détails)
 - Pas d'oublis (inventaire exhaustif)
 - Historique de 50k+ déménagements (machine learning)
 
@@ -436,13 +436,13 @@ Le client voit :
 ✅ Économique (2€ vs 80€/dossier)  
 ✅ Précis (90-95% vs 80-90%)  
 ✅ Scalable (100 ou 1000 dossiers/mois, même coût/temps)  
-✅ Preuve visuelle (photos en cas de litige)  
+✅ Preuve visuelle (détails en cas de litige)  
 ✅ Client autonome (pas besoin d'être disponible)
 
 ### Inconvénients
 
 ❌ Pas de contact direct avec le client (à compenser par appel après)  
-❌ Nécessite que le client prenne des photos de qualité  
+❌ Nécessite que le client prenne des détails de qualité  
 ❌ Nouveauté (adoption par le client)
 
 ---
@@ -455,7 +455,7 @@ Le client voit :
 | **Temps déménageur** | 2-3h | 1-2 min |
 | **Coût/dossier** | 70-110€ | 1,50-2€ |
 | **Scalabilité** | ❌ (8-10 max/jour) | ✅ (illimité) |
-| **Preuve visuelle** | ⚠️ (notes manuscrites) | ✅ (photos HD) |
+| **Preuve visuelle** | ⚠️ (notes manuscrites) | ✅ (détails HD) |
 | **Disponibilité client** | ✅ (obligatoire) | ❌ (autonome) |
 | **Contact client** | ✅ | ❌ (à faire par call après) |
 
@@ -465,7 +465,7 @@ Le client voit :
 
 **Moverz Pro (IA) pour la préqualification** :
 1. Client fait estimation IA sur votre site (2 min)
-2. Vous recevez dossier complet (volume + photos)
+2. Vous recevez dossier complet (volume + détails)
 3. Vous appelez le client pour confirmer/affiner (10-15 min)
 4. Si dossier complexe uniquement → visite technique ciblée
 
@@ -562,15 +562,15 @@ L'IA guide le client pièce par pièce. Taux d'exhaustivité : 95%+.
 
 ---
 
-## La solution : IA + Photos = Preuve incontestable
+## La solution : IA + détails = Preuve incontestable
 
 ### Comment Moverz Pro élimine les litiges
 
-**Étape 1 : Client prend photos** (guidé par l'app)
-- Salon : 3-4 photos
-- Cuisine : 3-4 photos
-- Chambres : 3-4 photos
-- Cave/garage : 3-4 photos
+**Étape 1 : Client prend détails** (guidé par l'app)
+- Salon : 3-4 détails
+- Cuisine : 3-4 détails
+- Chambres : 3-4 détails
+- Cave/garage : 3-4 détails
 
 **Étape 2 : IA analyse et calcule**
 - Volume détecté : **32,5 m³**
@@ -587,8 +587,8 @@ L'IA guide le client pièce par pièce. Taux d'exhaustivité : 95%+.
 
 **Étape 4 : Jour J**
 - Si volume réel = 32 m³ → Client heureux (précision)
-- Si volume réel = 35 m³ → Vous montrez les photos "Vous avez oublié de prendre en photo le grenier, voici le supplément"
-- **Client ne peut pas contester** (photos = preuve)
+- Si volume réel = 35 m³ → Vous montrez les détails "Vous avez oublié de prendre en détail le grenier, voici le supplément"
+- **Client ne peut pas contester** (détails = preuve)
 
 ---
 
@@ -601,10 +601,10 @@ L'IA guide le client pièce par pièce. Taux d'exhaustivité : 95%+.
 - Temps gestion litiges : 40 × 2h = 80h/mois
 - Coût (avis négatifs, stress, temps) : ~5k€/mois
 
-### Après Moverz Pro (IA + photos)
+### Après Moverz Pro (IA + détails)
 
 - 100 déménagements/mois
-- **4% de litiges volume** = 4 litiges (oublis clients malgré photos)
+- **4% de litiges volume** = 4 litiges (oublis clients malgré détails)
 - Temps gestion : 4 × 30 min = 2h/mois
 - Coût : ~200€/mois
 
@@ -620,7 +620,7 @@ IA > Humain pour détecter tous les objets
 
 ### 2. Preuve visuelle
 
-Photos HD = impossible de contester
+détails HD = impossible de contester
 
 ### 3. Validation client
 
@@ -632,7 +632,7 @@ Client approuve l'inventaire = engagement
 
 > "Avant Moverz, on avait 1 litige sur 3 déménagements. Le client disait 'Vous aviez dit 25 m³, pas 32 !' et on n'avait aucune preuve.  
 >  
-> Maintenant avec les photos IA, le client valide tout avant. Le jour J, zéro contestation. On a divisé nos litiges par 10."  
+> Maintenant avec les détails IA, le client valide tout avant. Le jour J, zéro contestation. On a divisé nos litiges par 10."  
 >  
 > — **Pierre, déménageur Marseille** (150 dém/an)
 
@@ -645,10 +645,10 @@ Client approuve l'inventaire = engagement
 ## FAQ
 
 ### Que se passe-t-il si le client oublie une pièce ?
-L'app guide pièce par pièce. Si oubli, les photos le prouvent → client ne peut pas contester le supplément.
+L'app guide pièce par pièce. Si oubli, les détails le prouvent → client ne peut pas contester le supplément.
 
-### Le client peut-il falsifier (photos de placards vides) ?
-Oui, mais le jour J vous voyez la réalité. Les photos montrent ce qu'il a déclaré → supplément justifié.
+### Le client peut-il falsifier (détails de placards vides) ?
+Oui, mais le jour J vous voyez la réalité. Les détails montrent ce qu'il a déclaré → supplément justifié.
 
 ### Quel est le coût de Moverz Pro ?
 50-150€/mois selon volume. ROI immédiat (économie litiges + temps).
@@ -751,7 +751,7 @@ Oui, mais le jour J vous voyez la réalité. Les photos montrent ce qu'il a déc
 - → Délai → Client va chez concurrent
 
 **Avec Moverz Pro** :
-- Client demande devis → "Faites vos photos maintenant, devis sous 1h"
+- Client demande devis → "Faites vos détails maintenant, devis sous 1h"
 - → Immédiateté → Taux conversion +30%
 
 ---

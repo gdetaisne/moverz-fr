@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import { 
   FileText,
-  Images,
   Sparkles,
   Bell,
   Calculator,
@@ -10,6 +9,7 @@ import {
   Shield,
   FileSpreadsheet,
   Receipt,
+  ClipboardList,
 } from "lucide-react";
 
 export default function ProFeatures() {
@@ -19,15 +19,15 @@ export default function ProFeatures() {
       icon: FileText,
       features: [
         { icon: FileText, name: "Backoffice déménageur", desc: "Créez leads, envoyez lien, suivez statuts" },
-        { icon: Images, name: "Tunnel client guidé", desc: "Formulaire + photos standardisées" },
+        { icon: ClipboardList, name: "Tunnel client guidé", desc: "Formulaire simple, infos standardisées" },
       ]
     },
     {
       title: "Preuves & documents",
       icon: Shield,
       features: [
-        { icon: Sparkles, name: "IA & inventaire", desc: "Analyse photos, génère inventaire Excel" },
-        { icon: Download, name: "Exports PDF/CSV", desc: "Dossier photos, déclaration valeur, CSV" },
+        { icon: Sparkles, name: "IA & inventaire", desc: "Estimation & inventaire, exploitable en chiffrage" },
+        { icon: Download, name: "Exports PDF/CSV", desc: "Dossier PDF, déclaration valeur, CSV" },
         { icon: Shield, name: "RGPD Europe", desc: "Hébergement EU, rétention claire" },
       ]
     },
@@ -120,10 +120,10 @@ export default function ProFeatures() {
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 {
-                  icon: Images,
+                  icon: FileText,
                   chip: "PDF",
-                  title: "Dossier photos",
-                  desc: "Pièces + accès. Périmètre documenté (opposable).",
+                  title: "Dossier",
+                  desc: "Infos standardisées. Base claire pour chiffrage comparable.",
                 },
                 {
                   icon: FileSpreadsheet,

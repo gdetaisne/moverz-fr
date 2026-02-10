@@ -192,7 +192,7 @@ export default function WhyMoverz() {
               animation: mounted ? 'fadeInUp 1s ease-out 0.4s both' : 'none',
             }}
           >
-            {/* Card 1: Photos + IA */}
+            {/* Card 1: Dossier standardisé */}
             <div className="group relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-8 hover:bg-white/10 hover:border-[#6BCFCF]/50 transition-all duration-300">
               <div className="relative">
                 <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#6BCFCF]/20 to-[#6BCFCF]/5 border border-[#6BCFCF]/30 mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -200,12 +200,12 @@ export default function WhyMoverz() {
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-3">
-                  Photos + IA
+                  Dossier standardisé
                 </h3>
 
                 <p className="text-white/70 leading-relaxed mb-4">
-                  L'IA analyse vos photos pour créer un dossier standardisé. 
-                  Résultat : <span className="text-[#6BCFCF] font-semibold">devis comparables</span>.
+                  On standardise les informations clés (adresses, date, accès, options) pour que les déménageurs chiffrent
+                  sur <span className="text-[#6BCFCF] font-semibold">la même base</span>.
                 </p>
 
                 <div className="inline-flex items-center gap-2 text-sm text-white/80">
@@ -215,7 +215,7 @@ export default function WhyMoverz() {
               </div>
             </div>
 
-            {/* Card 2: WhatsApp */}
+            {/* Card 2: Suivi simple */}
             <div className="group relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-8 hover:bg-white/10 hover:border-[#6BCFCF]/50 transition-all duration-300">
               <div className="relative">
                 <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#6BCFCF]/20 to-[#6BCFCF]/5 border border-[#6BCFCF]/30 mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -223,12 +223,12 @@ export default function WhyMoverz() {
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-3">
-                  WhatsApp
+                  Suivi simple
                 </h3>
 
                 <p className="text-white/70 leading-relaxed mb-4">
-                  Envoyez vos photos quand vous voulez, recevez vos devis sans pression. 
-                  <span className="text-[#6BCFCF] font-semibold"> Fini les formulaires longs</span>.
+                  Un parcours court, lisible, sans harcèlement. 
+                  <span className="text-[#6BCFCF] font-semibold"> Vous gardez la main</span> du début à la fin.
                 </p>
 
                 <div className="inline-flex items-center gap-2 text-sm text-white/80">

@@ -49,7 +49,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 
 **Solution 1 : IA Moverz (1 minute)** ✅
 - L'app vous guide pièce par pièce
-- "Avez-vous une cave ?" → Si oui : "Prenez 3 photos"
+- "Avez-vous une cave ?" → Si oui : "Prenez 3 détails"
 - L'IA calcule automatiquement : **38 m³**
 - **→ Volume précis dès le départ** ✅
 
@@ -162,7 +162,7 @@ Avec Moverz :
 - Parking camion : Place dédiée devant l'immeuble
 - Contraintes : RAS
 
-**+ Ajoutez des photos** (escaliers, entrée, parking)
+**+ Ajoutez des détails** (escaliers, entrée, parking)
 
 **→ Le déménageur chiffre correctement dès le départ** ✅
 
@@ -443,8 +443,8 @@ Avec Moverz :
 **Vous déménagez**
 
 **Vous oubliez de faire** :
-- Photos "avant déménagement" de votre ancien logement (murs, sols, plafonds)
-- Photos "après déménagement" (idem)
+- détails "avant déménagement" de votre ancien logement (murs, sols, plafonds)
+- détails "après déménagement" (idem)
 
 **2 semaines après** :
 - Propriétaire retient 400€ de caution : "Vous avez abîmé le parquet"
@@ -458,20 +458,20 @@ Avec Moverz :
 
 ### Comment l'éviter
 
-**Faites des photos/vidéos "avant-après"** ✅
+**Faites des détails/vidéos "avant-après"** ✅
 
 **La veille du déménagement** (ancien logement) :
 - Vidéo complète de tout le logement (5 min)
-- Photos de chaque pièce (murs, sols, plafonds)
-- Photos des éventuels défauts pré-existants
+- détails de chaque pièce (murs, sols, plafonds)
+- détails des éventuels défauts pré-existants
 
 **Le jour du déménagement** (nouveau logement) :
 - Vidéo complète à l'arrivée (avant de déballer)
-- Photos de chaque pièce
+- détails de chaque pièce
 
 **Le jour du départ** (ancien logement) :
 - Vidéo complète après nettoyage
-- Photos de chaque pièce vide et propre
+- détails de chaque pièce vide et propre
 
 **→ Preuve incontestable = caution récupérée intégralement** ✅
 
@@ -638,7 +638,7 @@ Avec Moverz :
 ### 4. Oubli de décrire les accès ✅
 
 **Sans Moverz** : Formulaire vague → Mauvaise estimation  
-**Avec Moverz** : Photos des accès demandées automatiquement
+**Avec Moverz** : détails des accès demandées automatiquement
 
 ---
 
@@ -680,19 +680,19 @@ Avec Moverz :
 ### La veille
 
 - [ ] Finir l'emballage
-- [ ] Vidéo + photos de l'ancien logement (état des lieux)
+- [ ] Vidéo + détails de l'ancien logement (état des lieux)
 - [ ] Rassembler les objets de valeur (transport perso)
 
 ### Le jour J
 
 - [ ] Accueillir le déménageur (8h en général)
 - [ ] Vérifier l'inventaire
-- [ ] Vidéo + photos du logement vide et propre
+- [ ] Vidéo + détails du logement vide et propre
 - [ ] Remettre les clés
 
 ### Après l'arrivée
 
-- [ ] Vidéo + photos du nouveau logement (avant déballage)
+- [ ] Vidéo + détails du nouveau logement (avant déballage)
 - [ ] Déballer le carton "Première Nuit"
 - [ ] Vérifier qu'il n'y a pas de casse
 - [ ] Commencer le déballage progressif
@@ -756,7 +756,7 @@ L'IA + les déménageurs contrôlés + la checklist complète éliminent automat
 9. ❌ Ne pas trier avant (280€ + 15h perdues)
 10. ❌ Mauvais cartons (100€ casse + stress)
 11. ❌ Pas d'étiquettes (3h perdues)
-12. ❌ Pas d'état des lieux photo (200-800€ caution retenue)
+12. ❌ Pas d'état des lieux détail (200-800€ caution retenue)
 
 **Coût total évitable : 1 500-3 000€** + 20-40h de temps perdu + stress
 

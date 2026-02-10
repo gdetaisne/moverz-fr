@@ -19,6 +19,26 @@ import { LONGTAIL_PACK2_POSTS } from "./blog-longtail-pack2";
 import { BLOG_PRO_META } from "./blog-pro";
 import { CANONICAL_PRO_BLOG_POSTS } from "./blog-pro-canonique";
 
+// Les fonctionnalités "détails" ont été retirées du site : on dépublie les contenus de blog
+// qui y sont liés, pour éviter de créer de la confusion.
+const EXCLUDED_BLOG_SLUGS = new Set<string>([
+  // Blog (B2C) — widget IA basé sur détails
+  "widget-ia-volumetrie-demenagement-comparatif",
+  "roi-widget-volumetrie-demenageur",
+
+  // Blog Pro (B2B) — dossier détaillé / checklist / RGPD détails
+  "visite-technique-vs-dossier-détail-impact-marge",
+  "rgpd-détails-retention-sous-traitance-demenageur",
+  "reduire-litiges-jour-j-checklist-détails-declaration-valeur",
+  "checklist-dossier-opposable-détails-inventaire",
+]);
+
+function isExcludedFromPublication(slug: string): boolean {
+  // Par défaut : on exclut tout slug explicitement listé, et tout slug contenant "détail".
+  // (Les slugs "détail" sont quasi exclusivement liés à l'ancien parcours.)
+  return EXCLUDED_BLOG_SLUGS.has(slug) || slug.includes("détail");
+}
+
 // P1-SEO-PRIX-TOP20 : 20 articles Prix à mettre en avant en priorité
 const PRIORITY_SLUGS: string[] = [
   // Guide national longue distance
@@ -169,12 +189,12 @@ const ALL_CANONICAL_POSTS = [
   ...LONGTAIL_BLOG_POSTS,
   ...LONGTAIL_PACK2_POSTS,
   ...CANONICAL_PRO_BLOG_POSTS,
-];
+].filter((p) => !isExcludedFromPublication(p.slug));
 const CANONICAL_SLUG_SET = new Set(ALL_CANONICAL_POSTS.map((p) => p.slug));
 
 // Liste des articles réellement publiés (évite d'exposer des placeholders "en cours de réécriture")
 export const PUBLISHED_BLOG_POSTS: BlogPostMeta[] = BLOG_POSTS.filter((post) =>
-  CANONICAL_SLUG_SET.has(post.slug) && !post.slug.includes("$")
+  CANONICAL_SLUG_SET.has(post.slug) && !post.slug.includes("$") && !isExcludedFromPublication(post.slug)
 );
 
 export function getPostBySlug(slug: string): BlogPostMeta | undefined {
@@ -187,6 +207,7 @@ export function getPublishedPostBySlug(slug: string): BlogPostMeta | undefined {
 
 // Récupérer le body markdown canonique pour un slug donné (si disponible)
 export function getCanonicalBodyBySlug(slug: string): string | undefined {
+  if (isExcludedFromPublication(slug)) return undefined;
   const canonical = ALL_CANONICAL_POSTS.find((post) => post.slug === slug);
   return canonical?.body;
 }

@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { MessageSquare, Camera, CheckCircle } from "lucide-react";
+import { MessageSquare, ClipboardList, CheckCircle } from "lucide-react";
 
   const steps = [
     {
@@ -11,9 +11,9 @@ import { MessageSquare, Camera, CheckCircle } from "lucide-react";
   },
   {
     number: "2",
-    icon: Camera,
-      title: "Envoyez vos photos",
-    description: "Toutes vos pièces : l'IA analyse le volume et prépare votre dossier",
+    icon: ClipboardList,
+      title: "Complétez le dossier",
+    description: "Infos standardisées (accès, options…) pour des devis comparables",
   },
   {
     number: "3",
@@ -75,8 +75,8 @@ export default function FlowAndIA() {
                         <CheckCircle className="w-5 h-5 text-green-600" />
                       </div>
                       <div className="flex-1 pt-2">
-                        <p className="text-sm font-semibold text-[#0F172A]">7 photos envoyées</p>
-                        <p className="text-xs text-[#1E293B]/60 mt-1">IA : ~45m³ estimés</p>
+                        <p className="text-sm font-semibold text-[#0F172A]">Dossier complété</p>
+                        <p className="text-xs text-[#1E293B]/60 mt-1">Base identique envoyée à tous</p>
                       </div>
                     </div>
 
@@ -166,7 +166,7 @@ export default function FlowAndIA() {
             {/* Bottom reassurance */}
             <div className="mt-8 p-4 rounded-xl bg-[#A8E8E8]/20 border border-[#6BCFCF]/30">
               <p className="text-sm font-medium text-[#0F172A]">
-                🤖 L'IA analyse vos photos et prépare un dossier clair pour tous les déménageurs.
+                Un dossier clair et standardisé pour tous les déménageurs, pour comparer sans surprises.
               </p>
             </div>
           </div>

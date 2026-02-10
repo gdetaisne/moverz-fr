@@ -19,7 +19,7 @@ export function buildCityFaqs(args: {
     {
       question: "Les déménageurs font une visite technique ?",
       answer:
-        "Pas nécessaire : quelques photos suffisent. L’IA aide à fiabiliser le volume pour des devis comparables, sans pression commerciale.",
+        "Pas nécessaire dans la majorité des cas : un dossier bien rempli (volume + accès + date) suffit pour obtenir des devis comparables, sans pression commerciale.",
     },
     {
       question: "Moverz est vraiment gratuit ?",
@@ -44,9 +44,9 @@ export function buildCityFaqs(args: {
       answer: `En général, évitez : ${insights.avoidPeriods.join(" · ")}.`,
     },
     {
-      question: "Quelles photos sont les plus utiles ?",
+      question: "Quelles infos sont les plus utiles ?",
       answer:
-        "2–3 photos suffisent. Priorité : accès (entrée, escalier/ascenseur) et possibilité de stationner. Cela réduit le risque de sous-estimation et de suppléments.",
+        "Priorité : accès (entrée, escaliers/ascenseur) + possibilité de stationner + distance camion→porte. Cela réduit le risque de sous-estimation et de suppléments.",
     },
   ];
 

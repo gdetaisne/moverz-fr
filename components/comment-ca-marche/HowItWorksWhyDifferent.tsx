@@ -12,10 +12,10 @@ export default function HowItWorksWhyDifferent() {
   ];
 
   const moverz = [
-    "Vous envoyez des photos (5–10 min)",
+    "Vous complétez un dossier guidé (3–5 min)",
     "Dossier qualifié transmis à un nombre limité de pros",
     "Vous recevez des devis écrits, comparables (pas de spam)",
-    "Base commune (photos + infos) → chiffrage plus précis",
+    "Base commune (infos) → chiffrage plus précis",
     "Partenaires engagés contractuellement (légalité, assurance, qualité)",
   ];
 

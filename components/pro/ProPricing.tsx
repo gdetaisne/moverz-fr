@@ -12,7 +12,7 @@ export default function ProPricing() {
       description: "Pour démarrer rapidement",
       features: [
         "Backoffice déménageur (leads/dossiers)",
-        "Tunnel client (formulaire + photos)",
+        "Tunnel client (formulaire guidé)",
         "IA + statut de complétude",
         "Dossier PDF + déclaration de valeur (PDF)",
         "Inventaire (Excel) + exports CSV (leads/dossiers)",
@@ -178,7 +178,7 @@ export default function ProPricing() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-3">
                 <p className="text-sm text-[#6B7280]">
-                  <strong className="text-[#0F172A]">100 leads/mois inclus</strong> (Starter & Pro). Un lead = dossier complété (formulaire rempli, photos optionnelles).
+                  <strong className="text-[#0F172A]">100 leads/mois inclus</strong> (Starter & Pro). Un lead = dossier complété (formulaire rempli).
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {[

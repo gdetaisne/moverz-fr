@@ -1,3 +1,8 @@
+# Ressources LLM (ChatGPT / Perplexity / Claude)
+
+- **Doc interne** : `LLM.md`
+- **Fichier standard crawlers IA (site)** : `/llms.txt` (servi depuis `app/llms.txt/route.ts`, contenu généré dans `public/llms.txt` via `npm run update-llm`)
+
 # Moverz Hub (moverz.fr)
 
 This is the main Moverz website, serving as a hub for our 11 local moving comparison sites.

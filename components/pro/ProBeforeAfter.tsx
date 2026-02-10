@@ -16,7 +16,7 @@ export default function ProBeforeAfter() {
             Avant / Après : chiffrage sans visite
           </h2>
           <p className="text-lg text-[#6B7280] max-w-2xl mx-auto">
-            Remplacez la visite technique par un dossier photo opposable (et exploitable).
+            Remplacez la visite technique par un dossier standardisé (et exploitable).
           </p>
         </motion.div>
 
@@ -68,7 +68,7 @@ export default function ProBeforeAfter() {
             
             <div className="space-y-6">
               {[
-                { icon: Clock, metric: "15min", label: "dossier prêt", desc: "Photos + inventaire IA + déclaration de valeur" },
+                { icon: Clock, metric: "15min", label: "dossier prêt", desc: "Infos + inventaire + déclaration de valeur" },
                 { icon: Shield, metric: "-70%", label: "litiges évitables", desc: "Périmètre documenté (preuves + documents)" },
                 { icon: TrendingUp, metric: "3x", label: "plus rapide", desc: "Relances auto → complétion → chiffrage" },
               ].map((item, i) => (

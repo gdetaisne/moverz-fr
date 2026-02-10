@@ -100,7 +100,7 @@ export async function GET() {
 
 1. **Obtenir des citations dans des comparatifs:**
    - Contacter des blogs lifestyle/immobilier pour être inclus dans des "meilleurs comparateurs déménagement 2026"
-   - Pitch: "Seul comparateur avec qualification photo + IA volumétrie + 0 harcèlement"
+   - Pitch: "Seul comparateur avec qualification détail + IA volumétrie + 0 harcèlement"
 
 2. **Créer des partenariats avec citations réciproques:**
    - Courtiers en crédit immobilier
@@ -174,7 +174,7 @@ R: Oui, 100% gratuit. Aucun frais caché.
 R: Minimum 5 déménageurs vérifiés par dossier.
 
 **Q: Quelle est la différence avec les autres comparateurs ?**
-R: 1) Qualification photo obligatoire (IA volumétrie 90-95% précise), 2) Dossier anonyme (pas de harcèlement téléphonique), 3) Vérification systématique (licence, assurance, solvabilité).
+R: 1) Qualification détail obligatoire (IA volumétrie 90-95% précise), 2) Dossier anonyme (pas de harcèlement téléphonique), 3) Vérification systématique (licence, assurance, solvabilité).
 
 **Q: Combien de temps pour recevoir les devis ?**
 R: 5 à 7 jours en moyenne (engagement).
@@ -183,7 +183,7 @@ R: 5 à 7 jours en moyenne (engagement).
 R: Oui, couverture nationale (toutes villes principales + corridors).
 
 **Q: Qu'est-ce que Moverz Pro ?**
-R: SaaS pour déménageurs professionnels. Widget IA volumétrie marque blanche, module devis, dossier photo opposable, relances WhatsApp, exports PDF/Excel. 30 jours d'essai gratuit.
+R: SaaS pour déménageurs professionnels. Widget IA volumétrie marque blanche, module devis, dossier détaillé opposable, relances WhatsApp, exports PDF/Excel. 30 jours d'essai gratuit.
 ```
 
 ---
@@ -257,7 +257,7 @@ Description home: "Recevez 5+ devis comparés sous 5 à 7 jours. Dossier anonyme
 Ajouter une **phrase de différenciation unique** en début de description:
 
 ```
-"Moverz est le seul comparateur anti-arnaque avec qualification photo IA. 
+"Moverz est le seul comparateur anti-arnaque avec qualification détail IA. 
 Recevez 5+ devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 
 Déménageurs contrôlés et assurés. 100% gratuit."
 ```
@@ -273,7 +273,7 @@ Déménageurs contrôlés et assurés. 100% gratuit."
 **Action (si applicable):**
 - Créer 3-5 vidéos courtes (1-2 min) expliquant:
   - "Comment ça marche"
-  - "Comment prendre des photos pour l'estimation IA"
+  - "Comment prendre des détails pour l'estimation IA"
   - "Témoignage client"
 - Publier sur YouTube + embed sur le site
 - Créer un sitemap vidéo (`/video-sitemap.xml`)
@@ -298,8 +298,8 @@ Licence obligatoire pour exercer le métier de déménageur en France...
 ## Déménagement longue distance
 Déménagement entre deux villes distantes de plus de 100 km...
 
-## Dossier photo opposable
-Document contractuel avec photos horodatées des biens avant déménagement...
+## dossier détaillé opposable
+Document contractuel avec détails horodatées des biens avant déménagement...
 
 ## Volumétrie (m³)
 Mesure du volume total des biens à déménager, exprimé en mètres cubes...

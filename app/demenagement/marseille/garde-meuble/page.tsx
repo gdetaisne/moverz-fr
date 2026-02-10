@@ -62,7 +62,7 @@ export default function Page() {
             "Avec Moverz, un seul dossier : l’IA aide à fiabiliser le volume pour comparer sur une base identique.",
           ],
           bullets: [
-            "2–3 photos des pièces principales pour estimer le volume.",
+            "Décrivez les pièces principales pour estimer le volume.",
             "Contraintes (étage, ascenseur, stationnement, rue étroite).",
             "Durée estimée (1 mois vs 6 mois change l’offre).",
           ],

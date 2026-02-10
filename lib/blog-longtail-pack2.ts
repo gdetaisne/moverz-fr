@@ -9,19 +9,19 @@ const COMMON_APPENDIX = `
 Ce que vous cherchez, ce n’est pas “le devis le moins cher”. C’est **un devis fiable** (donc comparable). Pour ça, il suffit de standardiser 6 infos :
 
 - Logement : appartement/maison, étage, ascenseur oui/non
-- Accès camion : photo du point d’arrêt possible
+- Accès camion : détail du point d’arrêt possible
 - Distance camion → porte : en pas
-- Passage le plus étroit : photo
-- Objets “limites” : 2–5 photos (gros/meubles lourds/fragiles)
+- Passage le plus étroit : détail
+- Objets “limites” : 2–5 détails (gros/meubles lourds/fragiles)
 - Dates : 2–3 options si possible (la flexibilité aide souvent)
 
 Message copier/coller :
 
 - Logement : ___ (étage ___, ascenseur oui/non)
-- Accès camion : photo jointe
+- Accès camion : détail jointe
 - Distance camion→porte : ___ pas
-- Passage le plus étroit : photo jointe
-- Gros meubles / objets lourds : photos jointes
+- Passage le plus étroit : détail jointe
+- Gros meubles / objets lourds : détails jointes
 - Dates possibles : ___ / ___ / ___
 `;
 
@@ -35,7 +35,7 @@ export const LONGTAIL_PACK2_FAQS: Record<string, BlogFAQItem[]> = {
     {
       question: "Quelles infos faut-il généralement fournir ?",
       answer:
-        "Adresse, date/horaires, type de véhicule, longueur approximative, et un contact sur place. Joindre une photo du lieu peut aider à éviter les malentendus.",
+        "Adresse, date/horaires, type de véhicule, longueur approximative, et un contact sur place. Joindre une détail du lieu peut aider à éviter les malentendus.",
     },
     {
       question: "Combien de temps à l’avance faut-il s’y prendre ?",
@@ -69,12 +69,12 @@ export const LONGTAIL_PACK2_FAQS: Record<string, BlogFAQItem[]> = {
     {
       question: "Que dois-je préparer avant le jour J ?",
       answer:
-        "Une liste courte des objets de valeur/fragiles, des photos simples, et une estimation de valeur cohérente. L’objectif est d’éviter une “zone grise” si un dommage arrive.",
+        "Une liste courte des objets de valeur/fragiles, des détails simples, et une estimation de valeur cohérente. L’objectif est d’éviter une “zone grise” si un dommage arrive.",
     },
     {
       question: "Comment éviter les disputes après ?",
       answer:
-        "En standardisant l’inventaire, en photographiant l’état des objets sensibles, et en vérifiant les documents à la fin (sans se presser).",
+        "En standardisant l’inventaire, en documentant l’état des objets sensibles, et en vérifiant les documents à la fin (sans se presser).",
     },
   ],
   "emballer-vaisselle-rapide-sans-casse": [
@@ -166,7 +166,7 @@ export const LONGTAIL_PACK2_FAQS: Record<string, BlogFAQItem[]> = {
     {
       question: "Quelles infos donner pour un devis fiable ?",
       answer:
-        "Photo du frigo + photo du passage le plus étroit + escalier/ascenseur + distance camion→porte.",
+        "détail du frigo + détail du passage le plus étroit + escalier/ascenseur + distance camion→porte.",
     },
     {
       question: "Faut-il un monte‑meuble ?",
@@ -205,12 +205,12 @@ export const LONGTAIL_PACK2_FAQS: Record<string, BlogFAQItem[]> = {
     {
       question: "Qu’est-ce qui fait la différence dans un devis ?",
       answer:
-        "Les objets “limites” (lourds/fragiles) et l’accès réel (photos + distance camion→porte).",
+        "Les objets “limites” (lourds/fragiles) et l’accès réel (détails + distance camion→porte).",
     },
     {
       question: "Le format le plus efficace ?",
       answer:
-        "3 listes (gros meubles, cartons, objets limites) + 4 photos d’accès. Rapide et très fiable.",
+        "3 listes (gros meubles, cartons, objets limites) + 4 détails d’accès. Rapide et très fiable.",
     },
   ],
   "demenagement-sous-la-pluie-proteger": [
@@ -251,7 +251,7 @@ export const LONGTAIL_PACK2_FAQS: Record<string, BlogFAQItem[]> = {
     {
       question: "Comment savoir si un canapé passera ?",
       answer:
-        "Identifier le passage le plus étroit (porte/couloir/angle) et comparer avec le gabarit du canapé. Une photo du passage aide beaucoup.",
+        "Identifier le passage le plus étroit (porte/couloir/angle) et comparer avec le gabarit du canapé. Une détail du passage aide beaucoup.",
     },
     {
       question: "Le démontage suffit-il toujours ?",
@@ -285,7 +285,7 @@ export const LONGTAIL_PACK2_FAQS: Record<string, BlogFAQItem[]> = {
     {
       question: "Que faire en priorité avant de rendre les clés ?",
       answer:
-        "Vérifier les zones souvent oubliées (placards, cave, balcon), faire un mini tour photo, et garder vos documents accessibles.",
+        "Vérifier les zones souvent oubliées (placards, cave, balcon), faire un mini tour détail, et garder vos documents accessibles.",
     },
     {
       question: "Comment éviter d’oublier des affaires ?",
@@ -312,7 +312,7 @@ export const LONGTAIL_PACK2_FAQS: Record<string, BlogFAQItem[]> = {
     {
       question: "Comment le signaler dans le devis ?",
       answer:
-        "Liste courte + photos. Plus c’est clair, plus la méthode est cadrée (protection/équipe).",
+        "Liste courte + détails. Plus c’est clair, plus la méthode est cadrée (protection/équipe).",
     },
   ],
   "hauteur-camion-demenagement-gabarit": [
@@ -329,7 +329,7 @@ export const LONGTAIL_PACK2_FAQS: Record<string, BlogFAQItem[]> = {
     {
       question: "Quelle info donner au déménageur ?",
       answer:
-        "Photos de l’accès et du point le plus contraignant. L’objectif : choisir la bonne logistique.",
+        "détails de l’accès et du point le plus contraignant. L’objectif : choisir la bonne logistique.",
     },
   ],
   "demenagement-weekend-comment-eviter-surcout": [
@@ -385,7 +385,7 @@ Le but est de rendre la demande concrète :
 - Date + plage horaire (prévoir large)
 - Type de véhicule (camion, petit utilitaire)
 - Longueur/occupation approximative (si demandé)
-- Une photo simple du lieu (point d’arrêt possible)
+- Une détail simple du lieu (point d’arrêt possible)
 - Un contact joignable le jour J
 
 ## 3) Modèle de demande (copier/coller)
@@ -398,7 +398,7 @@ Bonjour,
 
 Je souhaite effectuer un déménagement à l’adresse suivante : **[ADRESSE]** le **[DATE]** sur le créneau **[HEURE DÉBUT – HEURE FIN]**.
 
-Afin de faciliter l’accès du véhicule de déménagement et éviter toute gêne, je sollicite **[autorisation de stationnement / réservation d’emplacement / autre]** à proximité de l’entrée (photo jointe).
+Afin de faciliter l’accès du véhicule de déménagement et éviter toute gêne, je sollicite **[autorisation de stationnement / réservation d’emplacement / autre]** à proximité de l’entrée (détail jointe).
 
 Véhicule prévu : **[type]** – contact sur place : **[nom + téléphone]**.
 
@@ -415,7 +415,7 @@ Erreur fréquente : demander “une place” sans préciser où. Or le point d�
 - compatible avec la manœuvre
 - cohérent avec les contraintes (largeur, circulation)
 
-Une photo + 1 phrase (“idéalement devant le portail / à hauteur de…”) évite beaucoup d’aller-retours.
+Une détail + 1 phrase (“idéalement devant le portail / à hauteur de…”) évite beaucoup d’aller-retours.
 
 ## 5) À faire le jour J (anti‑stress)
 
@@ -434,7 +434,7 @@ Une photo + 1 phrase (“idéalement devant le portail / à hauteur de…”) é
 Souvent oui si vous devez réserver un emplacement ou stationner de manière exceptionnelle. Les règles varient : anticipez.
 
 ### Quelles infos fournir ?
-Adresse, date/horaires, type de véhicule, contact, et si possible une photo du lieu.
+Adresse, date/horaires, type de véhicule, contact, et si possible une détail du lieu.
 
 ### Combien de temps à l’avance ?
 Le plus tôt possible dès que la date est fixée.
@@ -553,9 +553,9 @@ Pas un inventaire exhaustif. Une liste “risque” :
 - objets fragiles
 - objets lourds difficiles
 
-### B) Photos simples
+### B) détails simples
 
-2 photos par objet sensible, sans mise en scène. L’objectif : documenter l’état.
+2 détails par objet sensible, sans mise en scène. L’objectif : documenter l’état.
 
 ### C) Déclaration cohérente
 
@@ -589,7 +589,7 @@ Et ne pas se presser : mieux vaut 10 minutes calmes que 2 jours de mails flous.
 Non. Ça dépend du contrat, de la déclaration, et parfois de conditions (emballage/manutention).
 
 ### Que préparer avant le jour J ?
-Liste d’objets sensibles + photos simples + déclaration cohérente.
+Liste d’objets sensibles + détails simples + déclaration cohérente.
 
 ### Comment éviter les disputes après ?
 Standardiser l’inventaire et vérifier les objets sensibles sans se presser.
@@ -934,7 +934,7 @@ ${COMMON_APPENDIX}
 Le frigo américain est un classique des surprises : lourd, encombrant, sensible aux chocs. La clé : annoncer l’objet, documenter l’accès, et sécuriser la manutention.
 
 > [CTA] Comparer des devis (objet lourd inclus)
-> Déclarez l’objet + envoyez les photos : devis plus fiables.
+> Déclarez l’objet + envoyez les détails : devis plus fiables.
 
 ## 1) Préparation simple
 
@@ -944,8 +944,8 @@ Le frigo américain est un classique des surprises : lourd, encombrant, sensible
 
 ## 2) Accès : ce qui compte vraiment
 
-- passage le plus étroit (photo)
-- escalier/palier ou ascenseur (photo)
+- passage le plus étroit (détail)
+- escalier/palier ou ascenseur (détail)
 - distance camion→porte (en pas)
 
 ## 3) Transport : calage + protection
@@ -965,7 +965,7 @@ L’objectif est d’éviter choc et torsion.
 ## FAQ
 
 ### Infos devis ?
-Photos accès + objet.
+détails accès + objet.
 
 ### Monte‑meuble ?
 Uniquement si nécessaire selon accès.
@@ -1021,7 +1021,7 @@ ${COMMON_APPENDIX}
     slug: "inventaire-demenagement-modele-simple",
     title: "Inventaire de déménagement : modèle simple (devis comparables) + méthode en 20 minutes",
     description:
-      "3 listes + 4 photos : la méthode la plus simple pour rendre vos devis comparables sans y passer la journée.",
+      "3 listes + 4 détails : la méthode la plus simple pour rendre vos devis comparables sans y passer la journée.",
     type: "pilier",
     body: `# Inventaire de déménagement : modèle simple (devis comparables) + méthode en 20 minutes
 
@@ -1036,7 +1036,7 @@ Un inventaire sert à rendre les devis comparables. S’il est trop long, vous a
 - Cartons (estimation)
 - Objets “limites” (lourd/fragile/encombrant)
 
-## 2) 4 photos
+## 2) 4 détails
 
 - rue/stationnement
 - entrée/couloir
@@ -1045,7 +1045,7 @@ Un inventaire sert à rendre les devis comparables. S’il est trop long, vous a
 
 ## 3) Méthode 20 minutes
 
-5 min liste meubles + 5 min cartons + 5 min photos accès + 5 min objets limites.
+5 min liste meubles + 5 min cartons + 5 min détails accès + 5 min objets limites.
 
 ## FAQ
 
@@ -1056,7 +1056,7 @@ Non, cohérent suffit.
 Objets limites + accès.
 
 ### Format le plus efficace ?
-3 listes + 4 photos.
+3 listes + 4 détails.
 ${COMMON_APPENDIX}
 `,
   },
@@ -1181,7 +1181,7 @@ Souvent : porte d’entrée, couloir, angle sur palier.
 
 ## 2) Étape 2 : la rotation (le vrai piège)
 
-Même si ça passe en largeur, ça peut bloquer en rotation. Photo palier + photo escalier = gain de temps.
+Même si ça passe en largeur, ça peut bloquer en rotation. détail palier + détail escalier = gain de temps.
 
 ## 3) Étape 3 : options
 
@@ -1244,7 +1244,7 @@ ${COMMON_APPENDIX}
     slug: "etat-des-lieux-jour-demenagement-checklist",
     title: "État des lieux le jour du déménagement : checklist pour ne rien oublier (et rester zen)",
     description:
-      "Check “dernier passage” : placards, cave, balcon, photos, documents. Une checklist courte qui évite les galères après.",
+      "Check “dernier passage” : placards, cave, balcon, détails, documents. Une checklist courte qui évite les galères après.",
     type: "pilier",
     body: `# État des lieux le jour du déménagement : checklist pour ne rien oublier (et rester zen)
 
@@ -1263,9 +1263,9 @@ Le danger le jour J : se presser après le chargement et oublier un détail (pla
 
 Ordre simple, sans sauter d’étape.
 
-## 3) Mini tour photo
+## 3) Mini tour détail
 
-Quelques photos des zones clés évitent les discussions floues.
+Quelques détails des zones clés évitent les discussions floues.
 
 ## FAQ
 
@@ -1284,14 +1284,14 @@ ${COMMON_APPENDIX}
     slug: "demenager-objets-fragiles-vitrine-miroir-table",
     title: "Déménager une vitrine, un miroir, une table fragile : protections, transport, erreurs à éviter",
     description:
-      "Fragiles = angles + torsion. Guide : rigidifier, protéger, caler, et cadrer la méthode dans le devis (photos + liste courte).",
+      "Fragiles = angles + torsion. Guide : rigidifier, protéger, caler, et cadrer la méthode dans le devis (détails + liste courte).",
     type: "satellite",
     body: `# Déménager une vitrine, un miroir, une table fragile : protections, transport, erreurs à éviter
 
 Les objets fragiles cassent rarement “au milieu”. Ils cassent sur un coin, une pression, ou une torsion. La méthode : angles protégés + rigidité + calage.
 
 > [CTA] Devis comparables (fragiles inclus)
-> Photos + liste courte = méthode cadrée.
+> détails + liste courte = méthode cadrée.
 
 ## 1) Angles protégés
 
@@ -1314,7 +1314,7 @@ Vitrines, miroirs, plateaux fragiles.
 Angles + rigidité + pas de pression.
 
 ### Dans le devis ?
-Liste courte + photos.
+Liste courte + détails.
 ${COMMON_APPENDIX}
 `,
   },
@@ -1322,14 +1322,14 @@ ${COMMON_APPENDIX}
     slug: "hauteur-camion-demenagement-gabarit",
     title: "Hauteur / gabarit du camion : comment éviter l’accès impossible (et le portage long)",
     description:
-      "Gabarit camion = accès. Guide : passages critiques, photos utiles, et plan B (distance) pour éviter l’improvisation.",
+      "Gabarit camion = accès. Guide : passages critiques, détails utiles, et plan B (distance) pour éviter l’improvisation.",
     type: "satellite",
     body: `# Hauteur / gabarit du camion : comment éviter l’accès impossible (et le portage long)
 
 Si le camion ne peut pas se rapprocher, tout bascule : portage plus long, journée plus lente. La solution : identifier les points critiques et prévoir un plan B.
 
 > [CTA] Devis comparables (accès documenté)
-> Photos d’accès = logistique plus fiable.
+> détails d’accès = logistique plus fiable.
 
 ## 1) Identifier les points de passage
 
@@ -1351,7 +1351,7 @@ Accès impossible = portage long.
 Point le plus contraignant + plan B.
 
 ### Quelle info donner ?
-Photos accès + point critique.
+détails accès + point critique.
 ${COMMON_APPENDIX}
 `,
   },
@@ -1375,7 +1375,7 @@ Le week‑end est demandé. Les créneaux sont plus rares. La stratégie : regag
 
 ## 2) Accès clair = moins de suppléments
 
-Photos + distance + passage étroit.
+détails + distance + passage étroit.
 
 ## FAQ
 

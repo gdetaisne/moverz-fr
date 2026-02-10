@@ -82,7 +82,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 - **→ Supplément de 280€ + client mécontent** ❌
 
 **La solution Moverz** :
-- L'**IA calcule votre volume en ~1 minute** à partir d'un inventaire photo guidé
+- L'**IA calcule votre volume en ~1 minute** à partir d'un inventaire détail guidé
 - Tous les déménageurs reçoivent **la même base de volume**
 - **→ Devis comparables + 0 surprise jour J** ✅
 
@@ -111,7 +111,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 - Accès étroit (monte-meuble nécessaire)
 - **→ Impact : +30-50%** (300-500€ sur un T3)
 
-**Astuce Moverz** : Dans votre dossier, ajoutez des photos des accès (escaliers, entrée, parking). Les déménageurs chiffrent au plus juste dès le départ.
+**Astuce Moverz** : Dans votre dossier, ajoutez des détails des accès (escaliers, entrée, parking). Les déménageurs chiffrent au plus juste dès le départ.
 
 ---
 
@@ -195,14 +195,14 @@ Dans ce guide ultra-complet, vous allez découvrir :
 **→ Devis non comparables** (bases de volume différentes)
 
 **La solution Moverz** :
-- L'**IA calcule votre volume précis** à partir de vos photos (précision 90-95%)
+- L'**IA calcule votre volume précis** à partir de vos détails (précision 90-95%)
 - **Tous les déménageurs reçoivent le même volume** (ex: 30 m³)
 - **→ Devis vraiment comparables** ✅
 
 **Process** :
-1. Vous prenez 10-15 photos de votre logement (guidé pièce par pièce)
+1. Vous prenez 10-15 détails de votre logement (guidé pièce par pièce)
 2. L'IA analyse et calcule : "Votre volume : 30,5 m³"
-3. Votre dossier (volume + photos + accès) est partagé avec 3-5 déménageurs
+3. Votre dossier (volume + détails + accès) est partagé avec 3-5 déménageurs
 4. Vous recevez des devis **sur la même base de 30,5 m³**
 
 **→ Vous comparez des pommes avec des pommes** ✅
@@ -217,7 +217,7 @@ Dans votre dossier Moverz, indiquez :
 - **Distance porte ↔ parking camion** : 5m, 20m, 50m, etc.
 - **Contraintes** : Rue étroite, piétonne, autorisation stationnement nécessaire, etc.
 
-**Ajoutez des photos des accès** (escaliers, entrée immeuble, rue) → Les déménageurs chiffrent au plus juste dès le départ.
+**Ajoutez des détails des accès** (escaliers, entrée immeuble, rue) → Les déménageurs chiffrent au plus juste dès le départ.
 
 ---
 
@@ -310,7 +310,7 @@ Avec Moverz, vous recevez **3 devis minimum comparables** :
 
 ---
 
-### Piège 4 : Accepter un devis sans visite ni photos
+### Piège 4 : Accepter un devis sans visite ni détails
 
 **Déménageur** : "Je vous fais 800€ pour un T2, sans visite"
 
@@ -323,7 +323,7 @@ Avec Moverz, vous recevez **3 devis minimum comparables** :
 **→ Aucune base de calcul = litige quasi-garanti** ❌
 
 **La solution Moverz** :
-- Volume IA documenté avec photos
+- Volume IA documenté avec détails
 - Tous les déménageurs chiffrent **la même base**
 - **→ Devis ferme, 0 surprise jour J** ✅
 
@@ -338,7 +338,7 @@ Avec Moverz, vous recevez **3 devis minimum comparables** :
 - Risque de choisir le moins cher... qui va vous surprendre jour J
 
 **Avec IA Moverz** :
-- Volume précis en 1 minute (photos guidées)
+- Volume précis en 1 minute (détails guidées)
 - Base commune pour tous les devis
 - **→ Vous comparez vraiment les prix** ✅
 
@@ -350,7 +350,7 @@ Avec Moverz, vous recevez **3 devis minimum comparables** :
 - Déménageur chiffre sans savoir que vous êtes 5e sans ascenseur
 - Jour J : "Il y a un supplément de 200€ pour portage"
 
-**Accès bien décrits + photos** :
+**Accès bien décrits + détails** :
 - Déménageur sait exactement ce qui l'attend
 - Il chiffre correctement dès le départ
 - **→ 0 surprise** ✅
@@ -476,8 +476,8 @@ Avec Moverz, vous recevez **3 devis minimum comparables** :
 - Le volume et les accès sont conformes à l'estimation
 
 **Avec Moverz** :
-- Volume IA documenté avec photos
-- Accès documentés avec photos
+- Volume IA documenté avec détails
+- Accès documentés avec détails
 - **→ Le déménageur ne peut pas augmenter le prix sans preuve** ✅
 
 ---
@@ -554,7 +554,7 @@ Avec Moverz, vous recevez **3 devis minimum comparables** :
 
 **Comment obtenir le meilleur prix** :
 1. ✅ **Volume précis** (IA Moverz en 1 minute)
-2. ✅ **Accès bien décrits** (+ photos)
+2. ✅ **Accès bien décrits** (+ détails)
 3. ✅ **Période flexible** (semaine + hors été)
 4. ✅ **3-5 devis comparables** (même base de volume)
 5. ✅ **Négociation** (si pertinent)

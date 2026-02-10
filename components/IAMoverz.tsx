@@ -3,8 +3,8 @@
 export default function IAMoverz() {
   const bullets = [
     {
-      title: "Lit vos photos de pièces",
-      text: "Vous prenez quelques photos, l’IA Moverz repère ce qui prend de la place.",
+      title: "Standardise votre dossier",
+      text: "Vous renseignez les infos essentielles, l’IA Moverz aide à cadrer une base exploitable pour le chiffrage.",
     },
     {
       title: "Calcule une volumétrie ultra précise",

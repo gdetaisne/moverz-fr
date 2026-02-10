@@ -148,7 +148,7 @@ function padToMinimumWords(sections: CityGuideSection[], baseTitle: string): Cit
   const MIN_WORDS = 2000;
   const PAD_BLOCKS = [
     "Si vous voulez un devis fiable, ne cherchez pas la perfection : cherchez la cohérence. La même info envoyée à plusieurs déménageurs (accès, portage, passages, objets lourds) donne des devis comparables.",
-    "Le meilleur “anti‑surprise” reste la photo du passage le plus étroit + la photo escalier/palier (ou ascenseur cabine). C’est souvent là que se joue la méthode sur les gros meubles.",
+    "Le meilleur “anti‑surprise” reste la détail du passage le plus étroit + la détail escalier/palier (ou ascenseur cabine). C’est souvent là que se joue la méthode sur les gros meubles.",
     "Dernier levier simple : la flexibilité. Proposer 2–3 dates possibles augmente la disponibilité et réduit les devis faits “au hasard” faute de créneau réaliste.",
     "Une journée fluide est une journée sans frottements : accès dégagé, zone tampon près de la porte, étiquetage clair. Ce sont des minutes gagnées qui deviennent des heures.",
     "Avant le jour J, faites une mini‑liste “risques” : meuble trop large, couloir étroit, ascenseur petit, portage long. Un risque identifié tôt devient une méthode prévue (et évite les suppléments).",
@@ -162,8 +162,8 @@ function padToMinimumWords(sections: CityGuideSection[], baseTitle: string): Cit
     "Protégez le fragile en priorité (verres, écrans, tableaux). L’objectif n’est pas d’emballer tout, mais d’éviter les chocs qui coûtent cher.",
     "Planifiez l’eau et une petite collation. Une équipe qui tourne bien, c’est aussi une équipe qui ne se met pas en difficulté.",
     "Si vous pouvez, évitez les fins de mois et week‑ends. À défaut, compensez par une fenêtre de dates (2–3 options) pour garder de la marge.",
-    "Photos utiles : rue + entrée + escalier/ascenseur + passage le plus étroit. C’est la base universelle d’un devis comparable.",
-    "Gardez votre dossier “copier‑coller” prêt : mêmes infos, mêmes photos, même prestation. Vous comparez alors des prix, pas des hypothèses.",
+    "détails utiles : rue + entrée + escalier/ascenseur + passage le plus étroit. C’est la base universelle d’un devis comparable.",
+    "Gardez votre dossier “copier‑coller” prêt : mêmes infos, mêmes détails, même prestation. Vous comparez alors des prix, pas des hypothèses.",
     "À l’arrivée, identifiez les pièces (affichette sur la porte ou post‑it). Les cartons arrivent au bon endroit du premier coup.",
     "Pensez “sécurité” : couloir dégagé, animaux/enfants à l’écart des zones de passage. Ça évite les accidents et les arrêts.",
     "Après déchargement, faites un tour rapide (placards, cave, balcon). Les oublis coûtent plus cher qu’un check de 5 minutes.",

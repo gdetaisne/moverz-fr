@@ -1,6 +1,6 @@
 ---
 title: "Définir un “lead facturable” : la règle simple qui évite les débats"
-description: "Une définition contractuelle claire (formulaire complété, photos optionnelles) pour éviter les malentendus et standardiser votre tunnel."
+description: "Une définition contractuelle claire (formulaire complété, détails optionnelles) pour éviter les malentendus et standardiser votre tunnel."
 date: "2026-01-15"
 slug: "definition-lead-facturable-dossier-complet"
 category: "pro"
@@ -16,7 +16,7 @@ tags:
 - Quand facturer ? À la création, au formulaire, à l’IA, à la conversion ?
 
 ## La définition simple (et défendable)
-- Lead = formulaire complété (photos optionnelles)
+- Lead = formulaire complété (détails optionnelles)
 - Un client = un dossier (les modifications ne changent pas la facturation)
 
 ## Doublons : la règle opérationnelle

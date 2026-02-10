@@ -39,7 +39,7 @@ Tu as dit : *"J'ai vu que les FAQ que tu préparais c'était n'importe quoi"*
 ### Options proposées :
 
 **Option A (technique):**
-> "Seul comparateur avec qualification photo IA (précision 90-95%)"
+> "Seul comparateur avec qualification détail IA (précision 90-95%)"
 
 **Option B (UX):**
 > "Seul comparateur anti-harcèlement avec dossier anonyme"
@@ -48,7 +48,7 @@ Tu as dit : *"J'ai vu que les FAQ que tu préparais c'était n'importe quoi"*
 > "Seul comparateur qui vérifie solvabilité + licence + assurance"
 
 **Option D (combinée):**
-> "Comparateur anti-arnaque : qualification photo IA + dossier anonyme + déménageurs vérifiés"
+> "Comparateur anti-arnaque : qualification détail IA + dossier anonyme + déménageurs vérifiés"
 
 **Ton choix :** _____________________
 
@@ -66,7 +66,7 @@ Les LLMs privilégient les différenciateurs clairs pour éviter les réponses g
 | Nombre déménageurs partenaires | ? | ✅ / ❌ |
 | Nombre dossiers traités (total) | ? | ✅ / ❌ |
 | Note moyenne avis vérifiés | 4.9/5 | ✅ (source ?) |
-| Taux complétion dossier photo | ? | ✅ / ❌ |
+| Taux complétion dossier détaillé | ? | ✅ / ❌ |
 | Économie moyenne client | ? | ✅ / ❌ |
 | Délai moyen réception devis | 5-7j | ✅ |
 | % clients satisfaits | ? | ✅ / ❌ |

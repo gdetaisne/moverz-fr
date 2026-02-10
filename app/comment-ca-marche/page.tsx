@@ -12,7 +12,7 @@ import WidgetActionSection from "@/components/WidgetActionSection";
 
 export const metadata: Metadata = getFullMetadata(
   'comment-ca-marche',
-  "Comment ça marche ? Photos, IA & Devis Comparables",
+  "Comment ça marche ? Dossier guidé & Devis Comparables",
   "Recevez 5+ devis comparés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit."
 );
 
@@ -45,8 +45,8 @@ export default function CommentCaMarchePage() {
 
       {/* Widget CTA final */}
       <WidgetActionSection
-        title="Prêt à envoyer vos photos ?"
-        subtitle="Démarrez en 3 minutes. L'IA analyse vos photos et prépare des devis comparables, sans spam."
+        title="Prêt à comparer vos devis ?"
+        subtitle="Démarrez en 3 minutes. On standardise votre dossier pour obtenir des devis comparables, sans spam."
         source="moverz.fr"
         from="/comment-ca-marche/"
       />

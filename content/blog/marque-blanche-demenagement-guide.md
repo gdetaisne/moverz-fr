@@ -455,9 +455,9 @@ Après estimation, rediriger vers : votresite.com/merci
 - Couleurs : Vos couleurs ✅
 - Titre : "Calculez votre volume en 1 minute" ✅
 
-**Écran 2 - Prise de photos** :
+**Écran 2 - Prise de détails** :
 - Logo : Déménagements Dupont ✅
-- Instructions : "Prenez une photo de votre salon" ✅
+- Instructions : "Prenez une détail de votre salon" ✅
 - Aucune mention Moverz ✅
 
 **Écran 3 - Résultat** :

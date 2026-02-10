@@ -20,7 +20,7 @@ export const HOME_FAQS: HomeFaqItem[] = [
   {
     question: "L'IA est vraiment précise ?",
     answer:
-      "Oui. L'IA analyse vos photos et estime le volume avec une grande précision. Si besoin, les déménageurs peuvent affiner lors de la visite technique.",
+      "Oui. L’IA aide à estimer et à standardiser votre dossier pour comparer des devis cohérents. Si besoin, les déménageurs peuvent affiner lors d’une visite technique.",
   },
   {
     question: "Et si je n'aime aucun devis ?",

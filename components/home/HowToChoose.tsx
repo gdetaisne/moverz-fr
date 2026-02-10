@@ -36,7 +36,7 @@ export function HowToChoose() {
       number: 5,
       icon: <FileCheck className="w-6 h-6" />,
       title: "Demander une visite pré-déménagement",
-      description: "Visite sur place ou estimation IA par photos. Volume précis = pas d'écart prix jour J. Méfiez-vous des devis téléphoniques approximatifs (« environ 40 m³ »)."
+      description: "Visite sur place ou estimation précise du volume via un dossier standardisé. Volume précis = pas d'écart prix jour J. Méfiez-vous des devis téléphoniques approximatifs (« environ 40 m³ »)."
     }
   ];
 

@@ -17,7 +17,7 @@ export function CityLocalInsights({ citySlug, cityName, quoteUrl }: CityLocalIns
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">Local</p>
             <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A]">{insights.title}</h2>
             <p className="text-sm md:text-base text-[#6B7280]">
-              2–3 photos suffisent. Objectif : éviter les suppléments le jour J et comparer des devis vraiment comparables.
+              Quelques précisions suffisent. Objectif : éviter les suppléments le jour J et comparer des devis vraiment comparables.
             </p>
           </div>
 
@@ -38,17 +38,7 @@ export function CityLocalInsights({ citySlug, cityName, quoteUrl }: CityLocalIns
             ))}
           </div>
 
-          <div className="rounded-2xl border border-[#E5E7EB] bg-[#F8FAFC] p-6 md:p-7 space-y-3">
-            <p className="text-sm font-semibold text-[#0F172A]">Photos utiles (checklist)</p>
-            <ul className="grid gap-2 text-sm text-[#6B7280]">
-              {insights.photoChecklist.map((item) => (
-                <li key={item} className="flex gap-2">
-                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#2B7A78] shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Checklist retirée : les utilisateurs se perdaient */}
 
           <div className="text-center pt-2">
             <a

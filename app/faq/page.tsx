@@ -24,11 +24,11 @@ const faqCategories = [
     items: [
       {
         q: "Qu'est-ce que Moverz ?",
-        a: "Moverz est un comparateur de devis de déménageurs qui s'appuie sur l'IA pour préparer un dossier ultra précis à partir de quelques questions et de vos photos. L'IA Moverz estime la volumétrie de votre déménagement et structure un inventaire unique, envoyé à des déménageurs contrôlés. Résultat : des devis enfin comparables, 100% gratuits et sans harcèlement téléphonique.",
+        a: "Moverz est un comparateur de devis de déménageurs qui s'appuie sur l'IA pour préparer un dossier ultra précis à partir de quelques questions. L'IA Moverz aide à estimer la volumétrie de votre déménagement et structure un inventaire unique, envoyé à des déménageurs contrôlés. Résultat : des devis enfin comparables, 100% gratuits et sans harcèlement téléphonique.",
       },
       {
         q: "Quelle est la différence entre Moverz et les autres comparateurs ?",
-        a: "La plupart des comparateurs (45-50% du marché) se contentent de revendre vos coordonnées aux déménageurs. Moverz va beaucoup plus loin : nous créons un dossier standardisé via photos/vidéos WhatsApp, nous vérifions la santé financière de chaque entreprise (score Creditsafe), leur historique de litiges, et leur identité légale. Le prix ne fait pas tout : nous vous aidons à choisir un déménageur fiable, pas juste le moins cher. En savoir plus sur <a href='/pourquoi-moverz/' class='underline text-[#6BCFCF]'>notre approche unique</a>.",
+        a: "La plupart des comparateurs (45-50% du marché) se contentent de revendre vos coordonnées aux déménageurs. Moverz va beaucoup plus loin : nous standardisons votre dossier, et nous vérifions la santé financière de chaque entreprise (score Creditsafe), leur historique de litiges, et leur identité légale. Le prix ne fait pas tout : nous vous aidons à choisir un déménageur fiable, pas juste le moins cher. En savoir plus sur <a href='/pourquoi-moverz/' class='underline text-[#6BCFCF]'>notre approche unique</a>.",
       },
       {
         q: "Combien de devis vais-je recevoir ?",
@@ -56,7 +56,7 @@ const faqCategories = [
       },
       {
         q: "Comment Moverz garantit-il des devis comparables ?",
-        a: "Vous décrivez votre déménagement, envoyez des photos et laissez l’IA Moverz faire le travail. Elle estime le volume global et crée un dossier standardisé (même volumétrie, mêmes informations) envoyé à tous les déménageurs partenaires. Ils chiffrent ainsi la même base, ce qui rend les devis directement comparables et limite les mauvaises surprises.",
+        a: "Vous décrivez votre déménagement et l’IA Moverz aide à cadrer un dossier standardisé (même volumétrie, mêmes informations) envoyé à tous les déménageurs partenaires. Ils chiffrent ainsi la même base, ce qui rend les devis directement comparables et limite les mauvaises surprises.",
       }
     ]
   },

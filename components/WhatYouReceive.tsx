@@ -146,7 +146,7 @@ export default function WhatYouReceive() {
             </h2>
 
             <p className="text-lg text-[#1E293B]/70 leading-relaxed mb-8">
-              Grâce à vos photos et aux infos que vous partagez, chaque déménageur reçoit{" "}
+              Grâce aux infos que vous partagez, chaque déménageur reçoit{" "}
               <strong className="text-[#0F172A]">exactement les mêmes informations</strong>.
             </p>
 
@@ -185,7 +185,7 @@ export default function WhatYouReceive() {
                 <div>
                   <h3 className="font-bold text-[#0F172A] mb-1">Même volume, même accès</h3>
                   <p className="text-[#1E293B]/70 text-sm">
-                    Tous les déménageurs estiment sur la base des mêmes photos et informations.
+                    Tous les déménageurs estiment sur la base des mêmes informations.
                   </p>
                 </div>
               </div>

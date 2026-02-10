@@ -19,7 +19,7 @@ export default function CGUPage() {
       <section className="relative overflow-hidden text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1516542076529-1ea3854896e1?q=80&w=2000&auto=format&fit=crop"
+            src="https://images.unsplash.com/détail-1516542076529-1ea3854896e1?q=80&w=2000&auto=format&fit=crop"
             alt="Conditions Générales d'Utilisation"
             className="w-full h-full object-cover"
           />

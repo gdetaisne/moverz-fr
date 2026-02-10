@@ -139,7 +139,7 @@ export function CityServicePage({
             <div className="text-center space-y-2">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">Local</p>
               <h2 className="text-xl md:text-2xl font-bold text-[#0F172A]">{insights.title}</h2>
-              <p className="text-sm text-[#6B7280]">2–3 photos suffisent pour fiabiliser le volume (et éviter les surprises).</p>
+              <p className="text-sm text-[#6B7280]">Quelques précisions suffisent pour fiabiliser le devis (et éviter les surprises).</p>
             </div>
 
             <div className="space-y-3">
@@ -159,17 +159,7 @@ export function CityServicePage({
               ))}
             </div>
 
-            <div className="rounded-2xl border border-[#E5E7EB] bg-[#F8FAFC] p-5 md:p-6 space-y-3">
-              <p className="text-sm font-semibold text-[#0F172A]">Photos utiles (checklist)</p>
-              <ul className="grid gap-2 text-sm text-[#6B7280]">
-                {insights.photoChecklist.map((item) => (
-                  <li key={item} className="flex gap-2">
-                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#2B7A78] shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {/* Checklist retirée : les utilisateurs se perdaient */}
 
             <div className="text-center">
               <a

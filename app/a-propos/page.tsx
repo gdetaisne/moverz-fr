@@ -86,7 +86,7 @@ export default function AProposPage() {
               </h1>
 
               <p className="mt-5 text-lg text-white/80 max-w-xl">
-                Moverz n’est pas un “formulaire à leads”. On standardise votre dossier (photos, accès,
+                Moverz n’est pas un “formulaire à leads”. On standardise votre dossier (accès,
                 contraintes) pour obtenir des devis comparables — et on vous évite les mauvaises
                 surprises.
               </p>
@@ -148,9 +148,9 @@ export default function AProposPage() {
                 <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#6BCFCF]/15 text-[#6BCFCF] mb-4">
                   <Camera className="h-5 w-5" />
                 </div>
-                <p className="text-sm font-semibold">Les photos, c’est la vérité</p>
+                <p className="text-sm font-semibold">Les détails, c’est la vérité</p>
                 <p className="mt-2 text-sm text-white/70">
-                  Elles évitent 90% des malentendus (“ah, il y avait une cave…”).
+                  Ils évitent 90% des malentendus (“ah, il y avait une cave…”).
                 </p>
               </div>
               <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
@@ -215,7 +215,7 @@ export default function AProposPage() {
                     <Camera className="h-4 w-4" />
                   </span>
                   <div className="text-[#1E293B]/75">
-                    <p className="font-semibold text-[#0F172A]">Dossier photo</p>
+                    <p className="font-semibold text-[#0F172A]">Dossier clair</p>
                     <p className="text-sm">Pour limiter les “ajustements” de dernière minute.</p>
                   </div>
                 </div>
@@ -373,7 +373,7 @@ export default function AProposPage() {
                 <p className="text-xs font-semibold text-[#6B7280] uppercase tracking-wider">Solution</p>
                 <p className="mt-2 font-semibold text-[#0F172A]">Dossier standardisé</p>
                 <p className="mt-2 text-sm text-[#1E293B]/70">
-                  Photos + contraintes + règles de comparaison: on compare “à cahier des charges égal”.
+                  Infos + contraintes + règles de comparaison : on compare “à cahier des charges égal”.
                 </p>
               </div>
               <div className="rounded-2xl border border-[#E3E5E8] bg-[#FAFBFC] p-6">
@@ -401,14 +401,6 @@ export default function AProposPage() {
             On vous répond vite.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a
-              href="https://wa.me/33752986581?text=Bonjour%20!%20J%E2%80%99ai%20une%20question%20sur%20mon%20d%C3%A9m%C3%A9nagement."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-[#25D366] px-8 py-4 text-base font-semibold text-white shadow-sm hover:shadow-[0_10px_25px_rgba(37,211,102,0.25)] hover:scale-[1.02] active:scale-[0.99] transition-all"
-            >
-              WhatsApp <span aria-hidden="true">→</span>
-            </a>
             <a
               href="/contact/"
               className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-base font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"

@@ -27,13 +27,13 @@ export const LONGTAIL_LINKS: LongTailLink[] = [
   {
     slug: "portage-long-camion-loin-entree",
     title: "Portage long : camion loin de l’entrée (cour, couloir, allée) — comment éviter les surprises",
-    description: "Estimer en pas + photos, standardiser les infos, comparer des devis sans hypothèses.",
+    description: "Estimer en pas + détails, standardiser les infos, comparer des devis sans hypothèses.",
     tags: ["acces", "portage"],
   },
   {
     slug: "monte-meuble-quand-indispensable",
     title: "Monte‑meuble (lift) : quand c’est indispensable, quelles infos donner",
-    description: "Décider sur photos (fenêtre/accès), cadrer l’option dans le devis, éviter l’improvisation.",
+    description: "Décider sur détails (fenêtre/accès), cadrer l’option dans le devis, éviter l’improvisation.",
     tags: ["lift", "acces"],
   },
   {
@@ -63,7 +63,7 @@ export const LONGTAIL_LINKS: LongTailLink[] = [
   {
     slug: "demenagement-objets-lourds-frigo-piano-coffre",
     title: "Objets lourds (frigo, piano, coffre) : infos à donner pour éviter casse + suppléments",
-    description: "Photos + passages : cadrer la méthode (protection, équipe, option lift) dans le devis.",
+    description: "détails + passages : cadrer la méthode (protection, équipe, option lift) dans le devis.",
     tags: ["objets-lourds", "lift", "acces"],
   },
   {
@@ -93,7 +93,7 @@ export const LONGTAIL_LINKS: LongTailLink[] = [
   {
     slug: "assurance-demenagement-dommages-que-couvre",
     title: "Assurance déménagement : ce que couvre vraiment la casse (et comment éviter les zones grises)",
-    description: "Méthode simple : objets sensibles, photos, déclaration cohérente, et vérifs post‑déménagement.",
+    description: "Méthode simple : objets sensibles, détails, déclaration cohérente, et vérifs post‑déménagement.",
     tags: ["planning"],
   },
   {
@@ -141,7 +141,7 @@ export const LONGTAIL_LINKS: LongTailLink[] = [
   {
     slug: "inventaire-demenagement-modele-simple",
     title: "Inventaire déménagement : modèle simple (devis comparables) en 20 min",
-    description: "3 listes + 4 photos : le format minimal qui rend les devis comparables.",
+    description: "3 listes + 4 détails : le format minimal qui rend les devis comparables.",
     tags: ["planning", "acces"],
   },
   {
@@ -171,7 +171,7 @@ export const LONGTAIL_LINKS: LongTailLink[] = [
   {
     slug: "etat-des-lieux-jour-demenagement-checklist",
     title: "État des lieux le jour J : checklist dernier passage",
-    description: "Placards, cave, balcon, mini tour photo : éviter les oublis et les galères après.",
+    description: "Placards, cave, balcon, mini tour détail : éviter les oublis et les galères après.",
     tags: ["planning"],
   },
   {

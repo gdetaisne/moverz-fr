@@ -115,7 +115,7 @@ export function CityPricingTable({ cityName }: CityPricingTableProps) {
             <ul className="space-y-2 ml-4">
               <li className="flex gap-2">
                 <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#6BCFCF] shrink-0" />
-                <span><strong className="text-[#0F172A]">Le volume réel</strong> : L'IA calcule votre volume exact en m³ (photos de vos pièces). 
+                <span><strong className="text-[#0F172A]">Le volume réel</strong> : plus l’estimation est précise, plus le devis est fiable. 
                 Plus précis = pas de mauvaise surprise jour J.</span>
               </li>
               <li className="flex gap-2">

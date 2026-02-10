@@ -13,21 +13,21 @@ export type ProBlogMeta = {
 // Source: `content/blog-pro/*.md` (frontmatter). Ce fichier peut être régénéré via `scripts/generate-blog-pro.ts`.
 export const BLOG_PRO_META: ProBlogMeta[] = [
   {
-    slug: "visite-technique-vs-dossier-photo-impact-marge",
-    title: "Visite technique vs dossier photo : quel impact sur la marge ?",
+    slug: "visite-technique-vs-dossier-détail-impact-marge",
+    title: "Visite technique vs dossier détaillé : quel impact sur la marge ?",
     description:
-      "Comparer coût réel d’une visite technique vs dossier photo opposable. Où vous gagnez (ou perdez) de la marge, et comment fiabiliser vos devis.",
+      "Comparer coût réel d’une visite technique vs dossier détaillé opposable. Où vous gagnez (ou perdez) de la marge, et comment fiabiliser vos devis.",
     publishedAt: "2026-01-15T00:00:00.000Z",
     tags: ["marge", "devis", "process", "rentabilite"],
     readingTimeMinutes: 9,
   },
   {
-    slug: "reduire-litiges-jour-j-checklist-photos-declaration-valeur",
-    title: "Réduire les litiges le jour J : checklist photos + déclaration de valeur",
+    slug: "reduire-litiges-jour-j-checklist-détails-declaration-valeur",
+    title: "Réduire les litiges le jour J : checklist détails + déclaration de valeur",
     description:
-      "La méthode simple (photos + déclaration de valeur) pour cadrer le périmètre, éviter les “ajouts”, et réduire les discussions le jour J.",
+      "La méthode simple (détails + déclaration de valeur) pour cadrer le périmètre, éviter les “ajouts”, et réduire les discussions le jour J.",
     publishedAt: "2026-01-15T00:00:00.000Z",
-    tags: ["litiges", "photos", "assurance", "process"],
+    tags: ["litiges", "détails", "assurance", "process"],
     readingTimeMinutes: 10,
   },
   {
@@ -43,25 +43,25 @@ export const BLOG_PRO_META: ProBlogMeta[] = [
     slug: "definition-lead-facturable-dossier-complet",
     title: "Définir un “lead facturable” : la règle simple qui évite les débats",
     description:
-      "Une définition contractuelle claire (formulaire complété, photos optionnelles) pour éviter les malentendus et standardiser votre tunnel.",
+      "Une définition contractuelle claire (formulaire complété, détails optionnelles) pour éviter les malentendus et standardiser votre tunnel.",
     publishedAt: "2026-01-15T00:00:00.000Z",
     tags: ["pricing", "process", "ops"],
     readingTimeMinutes: 6,
   },
   {
-    slug: "checklist-dossier-opposable-photos-inventaire",
-    title: "Dossier opposable : la checklist minimale (photos, inventaire, valeur)",
+    slug: "checklist-dossier-opposable-détails-inventaire",
+    title: "Dossier opposable : la checklist minimale (détails, inventaire, valeur)",
     description:
-      "Le minimum viable pour un dossier “opposable” : quelles photos, quels champs, quel inventaire, et quand forcer un dossier incomplet.",
+      "Le minimum viable pour un dossier “opposable” : quelles détails, quels champs, quel inventaire, et quand forcer un dossier incomplet.",
     publishedAt: "2026-01-15T00:00:00.000Z",
-    tags: ["photos", "inventaire", "process", "qualif"],
+    tags: ["détails", "inventaire", "process", "qualif"],
     readingTimeMinutes: 7,
   },
   {
     slug: "devis-fiable-sans-visite-technique-methodologie",
     title: "Devis fiable sans visite technique : la méthodologie en 3 étapes",
     description:
-      "Comment chiffrer plus vite sans dégrader la qualité : infos projet, photos guidées, inventaire IA, et garde-fous anti-surprise.",
+      "Comment chiffrer plus vite sans dégrader la qualité : infos projet, détails guidées, inventaire IA, et garde-fous anti-surprise.",
     publishedAt: "2026-01-15T00:00:00.000Z",
     tags: ["devis", "process", "qualif"],
     readingTimeMinutes: 8,
@@ -85,12 +85,12 @@ export const BLOG_PRO_META: ProBlogMeta[] = [
     readingTimeMinutes: 7,
   },
   {
-    slug: "rgpd-photos-retention-sous-traitance-demenageur",
-    title: "RGPD & photos : rétention, suppression, portabilité — le guide pragmatique",
+    slug: "rgpd-détails-retention-sous-traitance-demenageur",
+    title: "RGPD & détails : rétention, suppression, portabilité — le guide pragmatique",
     description:
       "Qui est responsable de traitement ? Comment gérer suppression/portabilité ? Quoi dire au client sur l’hébergement et la rétention.",
     publishedAt: "2026-01-15T00:00:00.000Z",
-    tags: ["rgpd", "conformite", "photos"],
+    tags: ["rgpd", "conformite", "détails"],
     readingTimeMinutes: 8,
   },
   {
@@ -106,16 +106,16 @@ export const BLOG_PRO_META: ProBlogMeta[] = [
 
 export const CANONICAL_PRO_BLOG_POSTS: CanonicalBlogPost[] = [
   {
-    slug: "visite-technique-vs-dossier-photo-impact-marge",
-    title: "Visite technique vs dossier photo : quel impact sur la marge ?",
+    slug: "visite-technique-vs-dossier-détail-impact-marge",
+    title: "Visite technique vs dossier détaillé : quel impact sur la marge ?",
     description:
-      "Comparer coût réel d’une visite technique vs dossier photo opposable. Où vous gagnez (ou perdez) de la marge, et comment fiabiliser vos devis.",
+      "Comparer coût réel d’une visite technique vs dossier détaillé opposable. Où vous gagnez (ou perdez) de la marge, et comment fiabiliser vos devis.",
     type: "pilier",
-    body: `# Visite technique vs dossier photo : quel impact sur la marge ?
+    body: `# Visite technique vs dossier détaillé : quel impact sur la marge ?
 
 Si vous êtes déménageur, vous connaissez le dilemme : **visite technique = devis plus fiable**, mais **visite technique = temps + déplacements + no-show**. À l’inverse, “tout au téléphone” va vite… et ouvre la porte aux surprises le jour J.
 
-L’objectif ici : comparer **l’impact sur votre marge** (pas juste “le temps”) et poser une méthode simple pour chiffrer **sans visite**, avec un **dossier digital opposable** (photos + inventaire + déclaration de valeur).
+L’objectif ici : comparer **l’impact sur votre marge** (pas juste “le temps”) et poser une méthode simple pour chiffrer **sans visite**, avec un **dossier digital opposable** (détails + inventaire + déclaration de valeur).
 
 > [DEMO]
 > Voir Moverz en action (15 min).
@@ -143,17 +143,17 @@ La visite technique sert surtout à réduire 3 aléas :
 
 Si vous supprimez la visite **sans remplacer la preuve**, vous économisez du temps… mais vous “achetez” du risque.
 
-## 3) Dossier photo opposable : comment récupérer la marge sans déplacement
+## 3) dossier détaillé opposable : comment récupérer la marge sans déplacement
 
 L’idée n’est pas “pas de visite”, c’est :
 
 - **standardiser l’info** (même checklist pour tous les clients)
-- **documenter** (photos) → opposable
+- **documenter** (détails) → opposable
 - **industrialiser** (inventaire IA + relances automatiques)
 
 ### Le trio minimal (qui change la marge)
 
-1) **Photos guidées** pièce par pièce + zones “à risque” (cave, grenier, garage)  
+1) **détails guidées** pièce par pièce + zones “à risque” (cave, grenier, garage)  
 2) **Inventaire** (automatique ou semi-automatique) pour sortir du “ça doit faire 25m³”  
 3) **Déclaration de valeur** signée (et cohérente) pour cadrer assurance / responsabilité
 
@@ -163,12 +163,12 @@ Avec ça, vous récupérez le bénéfice de la visite (fiabilité) sans son coû
 
 Il faut garder une porte de secours. Deux cas typiques :
 
-- **Photos incomplètes / incohérentes** (pièces manquantes, zones sensibles absentes)
+- **détails incomplètes / incohérentes** (pièces manquantes, zones sensibles absentes)
 - **Contrainte d’accès critique** (lift obligatoire, portage long, restrictions camion)
 
 Dans ces cas, vous pouvez :
 
-- demander 3 photos ciblées supplémentaires, ou
+- demander 3 détails ciblées supplémentaires, ou
 - faire un appel de 10 minutes, ou
 - déclencher une visite (exception)
 
@@ -188,40 +188,40 @@ La visite technique protège la marge… mais coûte cher à produire. Un **doss
 `,
   },
   {
-    slug: "reduire-litiges-jour-j-checklist-photos-declaration-valeur",
-    title: "Réduire les litiges le jour J : checklist photos + déclaration de valeur",
+    slug: "reduire-litiges-jour-j-checklist-détails-declaration-valeur",
+    title: "Réduire les litiges le jour J : checklist détails + déclaration de valeur",
     description:
-      "La méthode simple (photos + déclaration de valeur) pour cadrer le périmètre, éviter les “ajouts”, et réduire les discussions le jour J.",
+      "La méthode simple (détails + déclaration de valeur) pour cadrer le périmètre, éviter les “ajouts”, et réduire les discussions le jour J.",
     type: "pilier",
-    body: `# Réduire les litiges le jour J : checklist photos + déclaration de valeur
+    body: `# Réduire les litiges le jour J : checklist détails + déclaration de valeur
 
 Les litiges “jour J” coûtent cher : temps perdu, équipe bloquée, tension client, parfois remise “pour calmer”, voire impayé. Dans 80% des cas, la racine est la même : **périmètre flou**.
 
-Voici un protocole simple, réplicable par votre équipe : **photos + déclaration de valeur**, pour rendre le dossier **opposable**.
+Voici un protocole simple, réplicable par votre équipe : **détails + déclaration de valeur**, pour rendre le dossier **opposable**.
 
 > [DEMO]
 > Obtenir un dossier opposable automatiquement.
-> Photos guidées + inventaire IA + déclaration de valeur.
+> détails guidées + inventaire IA + déclaration de valeur.
 
 ## 1) Les 3 litiges les plus fréquents (et comment les neutraliser)
 
 ### “Vous aviez dit 25m³, pas 32”
-- Cause: photos absentes / inventaire approximatif  
-- Fix: photos guidées + inventaire + statut “complet / partiel”
+- Cause: détails absentes / inventaire approximatif  
+- Fix: détails guidées + inventaire + statut “complet / partiel”
 
 ### “Ah mais il y a aussi la cave / le garage”
 - Cause: zones “hors champ” jamais documentées  
-- Fix: checklist explicite des zones à inclure + photo “porte ouverte”
+- Fix: checklist explicite des zones à inclure + détail “porte ouverte”
 
 ### “Ce meuble n’était pas dans le devis”
 - Cause: objet “sensibilité” (piano, frigo américain, armoire massive) non cadré  
-- Fix: photos dédiées + champ “objets lourds / fragiles”
+- Fix: détails dédiées + champ “objets lourds / fragiles”
 
-## 2) Checklist photos (minimum viable)
+## 2) Checklist détails (minimum viable)
 
-Objectif: **assez de preuve** pour chiffrer et éviter les surprises, sans demander 200 photos.
+Objectif: **assez de preuve** pour chiffrer et éviter les surprises, sans demander 200 détails.
 
-### Départ (photos recommandées)
+### Départ (détails recommandées)
 - Salon: plan large + meubles volumineux
 - Cuisine: plan large + électroménager (frigo, congélateur)
 - Chambres: plan large + armoires/commodes
@@ -229,13 +229,13 @@ Objectif: **assez de preuve** pour chiffrer et éviter les surprises, sans deman
 - Couloir/escaliers: contraintes passage
 - Cave / grenier / garage: plan large + volumes
 - Balcon / terrasse: mobilier
-- Cartons: 1 photo par “zone cartons”
+- Cartons: 1 détail par “zone cartons”
 
-### Accès (photos “anti-surprise”)
+### Accès (détails “anti-surprise”)
 - Rue devant logement (stationnement possible ?)
 - Entrée immeuble / portillon
 - Escalier (largeur) et/ou ascenseur (dimensions)
-- Étages: photo du palier + couloirs étroits
+- Étages: détail du palier + couloirs étroits
 
 ## 3) Déclaration de valeur : pourquoi ça change (vraiment) la discussion
 
@@ -249,7 +249,7 @@ Surtout, c’est un document qui remet du **factuel** dans l’échange.
 
 ## 4) La règle “dossier incomplet” (pour éviter le piège)
 
-Si le client ne met pas toutes les photos, vous avez 2 options claires :
+Si le client ne met pas toutes les détails, vous avez 2 options claires :
 
 - **forcer le dossier** (“j’avance comme ça”) → vous chiffragez avec prudence (et vous l’assumez)
 - **relancer** avec ce qui manque → vous sécurisez le devis
@@ -266,7 +266,7 @@ Quand le dossier est standardisé, votre équipe gagne :
 
 ## Conclusion
 
-Vous ne supprimez pas tous les imprévus… mais vous supprimez les litiges évitables : ceux causés par un dossier non documenté. Photos + déclaration de valeur = base d’un dossier opposable.
+Vous ne supprimez pas tous les imprévus… mais vous supprimez les litiges évitables : ceux causés par un dossier non documenté. détails + déclaration de valeur = base d’un dossier opposable.
 `,
   },
   {
@@ -287,8 +287,8 @@ Le sujet n’est pas “faire plus de relances”. Le sujet est : **récupérer 
 
 Pour éviter les relances génériques, pilotez par statut :
 
-- **Sans photos**: formulaire rempli, pas de preuves
-- **Partiel**: photos incomplètes, infos manquantes ciblées
+- **Sans détails**: formulaire rempli, pas de preuves
+- **Partiel**: détails incomplètes, infos manquantes ciblées
 - **Complet**: dossier prêt → votre action = devis
 
 ## 2) La meilleure relance = “voici ce qui manque”
@@ -298,12 +298,12 @@ Votre message doit contenir :
 - 1 phrase de contexte
 - la liste courte des éléments manquants
 - un lien unique de reprise
-- une alternative (“si vous préférez, on avance sans les photos”)
+- une alternative (“si vous préférez, on avance sans les détails”)
 
 ### Exemple (partiel)
 
 > Bonjour 👋 on a bien reçu votre dossier.  
-> Il manque 2 photos pour chiffrer sans surprise : **cave** + **accès escalier**.  
+> Il manque 2 détails pour chiffrer sans surprise : **cave** + **accès escalier**.  
 > Vous pouvez les ajouter ici : (lien)  
 > Si vous préférez, répondez “OK” et on avance comme ça (avec une marge de sécurité).
 
@@ -320,7 +320,7 @@ Ensuite, stop ou bascule sur appel court (selon votre process).
 ## 4) Le piège à éviter : relancer sans “prochaine action”
 
 “Vous en êtes où ?” ne marche pas.  
-“Ajoutez 2 photos ici” marche.
+“Ajoutez 2 détails ici” marche.
 
 ## 5) Mesurer le ROI (sans sophistication)
 
@@ -337,7 +337,7 @@ WhatsApp n’est pas un gadget : c’est un accélérateur de cycle.
     slug: "definition-lead-facturable-dossier-complet",
     title: "Définir un “lead facturable” : la règle simple qui évite les débats",
     description:
-      "Une définition contractuelle claire (formulaire complété, photos optionnelles) pour éviter les malentendus et standardiser votre tunnel.",
+      "Une définition contractuelle claire (formulaire complété, détails optionnelles) pour éviter les malentendus et standardiser votre tunnel.",
     type: "satellite",
     body: `# Définir un “lead facturable” : la règle simple qui évite les débats
 
@@ -345,7 +345,7 @@ WhatsApp n’est pas un gadget : c’est un accélérateur de cycle.
 - Quand facturer ? À la création, au formulaire, à l’IA, à la conversion ?
 
 ## La définition simple (et défendable)
-- Lead = formulaire complété (photos optionnelles)
+- Lead = formulaire complété (détails optionnelles)
 - Un client = un dossier (les modifications ne changent pas la facturation)
 
 ## Doublons : la règle opérationnelle
@@ -356,16 +356,16 @@ WhatsApp n’est pas un gadget : c’est un accélérateur de cycle.
 `,
   },
   {
-    slug: "checklist-dossier-opposable-photos-inventaire",
-    title: "Dossier opposable : la checklist minimale (photos, inventaire, valeur)",
+    slug: "checklist-dossier-opposable-détails-inventaire",
+    title: "Dossier opposable : la checklist minimale (détails, inventaire, valeur)",
     description:
-      "Le minimum viable pour un dossier “opposable” : quelles photos, quels champs, quel inventaire, et quand forcer un dossier incomplet.",
+      "Le minimum viable pour un dossier “opposable” : quelles détails, quels champs, quel inventaire, et quand forcer un dossier incomplet.",
     type: "satellite",
-    body: `# Dossier opposable : la checklist minimale (photos, inventaire, valeur)
+    body: `# Dossier opposable : la checklist minimale (détails, inventaire, valeur)
 
 ## Le “minimum viable” (ce qui doit être dans 100% des dossiers)
 - Infos client + projet (adresses, dates/flex, formule)
-- Photos guidées (pièces + accès)
+- détails guidées (pièces + accès)
 - Inventaire (même partiel)
 - Déclaration de valeur
 
@@ -381,7 +381,7 @@ WhatsApp n’est pas un gadget : c’est un accélérateur de cycle.
     slug: "devis-fiable-sans-visite-technique-methodologie",
     title: "Devis fiable sans visite technique : la méthodologie en 3 étapes",
     description:
-      "Comment chiffrer plus vite sans dégrader la qualité : infos projet, photos guidées, inventaire IA, et garde-fous anti-surprise.",
+      "Comment chiffrer plus vite sans dégrader la qualité : infos projet, détails guidées, inventaire IA, et garde-fous anti-surprise.",
     type: "satellite",
     body: `# Devis fiable sans visite technique : la méthodologie en 3 étapes
 
@@ -389,7 +389,7 @@ WhatsApp n’est pas un gadget : c’est un accélérateur de cycle.
 - adresses, dates/flex, contraintes, formule
 
 ## Étape 2 — Capturer la preuve
-- photos + accès + zones à risque
+- détails + accès + zones à risque
 
 ## Étape 3 — Convertir en devis
 - règles de calcul + options + historique
@@ -407,7 +407,7 @@ WhatsApp n’est pas un gadget : c’est un accélérateur de cycle.
     body: `# Exports (PDF/Excel/CSV) : brancher votre process sans tout refaire
 
 ## 3 exports utiles (et quand les utiliser)
-- PDF dossier photos (preuve)
+- PDF dossier détaillé (preuve)
 - Excel inventaire (exploitation)
 - CSV leads/dossiers (outils internes)
 
@@ -439,19 +439,19 @@ WhatsApp n’est pas un gadget : c’est un accélérateur de cycle.
 `,
   },
   {
-    slug: "rgpd-photos-retention-sous-traitance-demenageur",
-    title: "RGPD & photos : rétention, suppression, portabilité — le guide pragmatique",
+    slug: "rgpd-détails-retention-sous-traitance-demenageur",
+    title: "RGPD & détails : rétention, suppression, portabilité — le guide pragmatique",
     description:
       "Qui est responsable de traitement ? Comment gérer suppression/portabilité ? Quoi dire au client sur l’hébergement et la rétention.",
     type: "satellite",
-    body: `# RGPD & photos : rétention, suppression, portabilité — le guide pragmatique
+    body: `# RGPD & détails : rétention, suppression, portabilité — le guide pragmatique
 
 ## Rôles
 - déménageur = responsable de traitement
 - Moverz = sous-traitant
 
 ## Rétention et suppression
-- photos conservées jusqu’à 60 jours après la date prévue, puis suppression
+- détails conservées jusqu’à 60 jours après la date prévue, puis suppression
 - dossiers anonymisés ensuite
 
 ## Portabilité

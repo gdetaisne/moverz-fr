@@ -11,7 +11,7 @@ updatedAt: "2025-12-11"
 
 L'estimation du volume est **le point de départ de tout devis de déménagement**. Une erreur de 10-20% = litige quasi-garanti le jour J.
 
-Pendant des décennies, la **visite technique sur place** était la seule méthode fiable. Aujourd'hui, l'**IA par photos** prétend faire aussi bien (voire mieux) en 2 minutes au lieu de 2 heures.
+Pendant des décennies, la **visite technique sur place** était la seule méthode fiable. Aujourd'hui, l'**IA par détails** prétend faire aussi bien (voire mieux) en 2 minutes au lieu de 2 heures.
 
 **Mais est-ce vraiment vrai ?**
 
@@ -19,7 +19,7 @@ Dans ce guide complet, vous allez découvrir :
 
 - Les **enjeux critiques** de l'estimation du volume
 - **Visite technique** : process, précision (80-90%), coûts réels
-- **IA par photos** : comment ça marche, précision (90-95%), limites
+- **IA par détails** : comment ça marche, précision (90-95%), limites
 - **Comparatif détaillé** : temps, coût, précision, scalabilité
 - **ROI calcul** : économie sur 100 dossiers/mois
 - Le **scénario hybride** recommandé (IA + visite ciblée)
@@ -78,7 +78,7 @@ Dans ce guide complet, vous allez découvrir :
 **Étape 3 : Tour du logement**
 - Vous visitez pièce par pièce
 - Vous prenez des notes (papier ou tablette)
-- Vous photographiez les accès (escaliers, parking)
+- Vous décrivez les accès (escaliers, parking)
 - Vous posez des questions : "Vous prenez tout ? Cave aussi ?"
 - **→ Temps : 30-60 min**
 
@@ -164,22 +164,22 @@ Dans ce guide complet, vous allez découvrir :
 
 ---
 
-## Méthode 2 : IA + Photos (Moverz Pro)
+## Méthode 2 : IA + détails (Moverz Pro)
 
 ### Le process IA
 
 **Étape 1 : Client demande devis**
 - Client sur votre site : "Je veux un devis"
-- Widget IA : "Prenez des photos, estimation en 2 min"
+- Widget IA : "Prenez des détails, estimation en 2 min"
 - **→ Délai : 0 (instantané)**
 
-**Étape 2 : Client prend photos** (guidé par l'app)
-- Salon : 3-4 photos
-- Cuisine : 3-4 photos
-- Chambres : 3-4 photos
-- Salle de bain, WC, couloirs : 1-2 photos
-- Cave/garage/grenier : 3-4 photos
-- Accès : 2-3 photos (escaliers, entrée, parking)
+**Étape 2 : Client prend détails** (guidé par l'app)
+- Salon : 3-4 détails
+- Cuisine : 3-4 détails
+- Chambres : 3-4 détails
+- Salle de bain, WC, couloirs : 1-2 détails
+- Cave/garage/grenier : 3-4 détails
+- Accès : 2-3 détails (escaliers, entrée, parking)
 - **→ Temps client : 2-3 min**
 
 **Étape 3 : IA analyse** (automatique)
@@ -193,7 +193,7 @@ Dans ce guide complet, vous allez découvrir :
 - Dossier complet :
   - Volume : 32,5 m³
   - Inventaire détaillé pièce par pièce
-  - Photos HD téléchargeables
+  - détails HD téléchargeables
   - Accès (escaliers, parking, contraintes)
 - **→ Temps pour vous : 1-2 min (lecture)**
 
@@ -208,7 +208,7 @@ Dans ce guide complet, vous allez découvrir :
 **Technologie : Vision par ordinateur + Machine learning**
 
 **Étape 1 : Détection d'objets**
-- IA analyse la photo du salon
+- IA analyse la détail du salon
 - IA détecte : 1 canapé 3 places, 1 table basse, 1 meuble TV, 1 étagère, 4 cartons
 - **Précision détection : 95-98%**
 
@@ -245,11 +245,11 @@ Dans ce guide complet, vous allez découvrir :
 
 1. **L'IA ne se fatigue pas**
    - Visite humaine : Après 10 visites dans la journée, le commercial fatigue → erreurs
-   - IA : Analyse la 100ème photo avec la même précision que la 1ère
+   - IA : Analyse la 100ème détail avec la même précision que la 1ère
 
 2. **L'IA voit TOUT**
    - Visite humaine : Placards fermés = contenu invisible
-   - IA : Client prend photos placards ouverts = IA voit tout
+   - IA : Client prend détails placards ouverts = IA voit tout
 
 3. **L'IA a une base de données de 50 000+ déménagements**
    - Humain : Expérience limitée (quelques centaines de déménagements)
@@ -257,7 +257,7 @@ Dans ce guide complet, vous allez découvrir :
 
 4. **L'IA ne fait pas d'oublis**
    - Humain : Peut oublier de demander "Cave ? Garage ?"
-   - IA : Checklist automatique ("Avez-vous une cave ? Si oui, prenez des photos")
+   - IA : Checklist automatique ("Avez-vous une cave ? Si oui, prenez des détails")
 
 **Résultat : 90-95% de précision vs 80-90% pour visite humaine**
 
@@ -267,15 +267,15 @@ Dans ce guide complet, vous allez découvrir :
 
 **L'IA n'est pas magique, elle a des limites :**
 
-1. **Nécessite photos de qualité**
-   - Photos floues → IA demande de refaire
-   - Photos trop sombres → IA demande plus de lumière
-   - **Taux de réussite : 95%** (le client arrive à faire des photos correctes)
+1. **Nécessite détails de qualité**
+   - détails floues → IA demande de refaire
+   - détails trop sombres → IA demande plus de lumière
+   - **Taux de réussite : 95%** (le client arrive à faire des détails correctes)
 
 2. **Client peut "tricher"** (volontairement ou non)
-   - Client prend photos de placards vides (alors qu'ils seront pleins jour J)
+   - Client prend détails de placards vides (alors qu'ils seront pleins jour J)
    - IA calcule 25 m³, réalité = 32 m³
-   - **Solution** : Photos = preuve → Supplément justifié jour J
+   - **Solution** : détails = preuve → Supplément justifié jour J
 
 3. **Objets atypiques**
    - Piano à queue, aquarium 500L, sculpture 3m → IA peut mal estimer
@@ -313,7 +313,7 @@ Dans ce guide complet, vous allez découvrir :
 ✅ **Économique** : 2€/dossier (vs 100€)  
 ✅ **Précis** : 90-95% (vs 80-90%)  
 ✅ **Scalable** : 100 ou 1000 dossiers/mois, même coût/temps  
-✅ **Preuve visuelle** : Photos = impossible de contester  
+✅ **Preuve visuelle** : détails = impossible de contester  
 ✅ **Client autonome** : Pas besoin d'être disponible pour rdv  
 ✅ **Immédiateté** : Client obtient estimation en 2 min (vs 3-15 jours d'attente)
 
@@ -322,9 +322,9 @@ Dans ce guide complet, vous allez découvrir :
 ### Inconvénients de l'IA
 
 ❌ **Pas de contact humain initial** (à compenser par call après)  
-❌ **Nécessite photos de qualité** (mais taux de réussite 95%)  
+❌ **Nécessite détails de qualité** (mais taux de réussite 95%)  
 ❌ **Nouveauté** : Certains clients préfèrent le "classique"  
-❌ **Client peut tricher** (mais photos = preuve)
+❌ **Client peut tricher** (mais détails = preuve)
 
 ---
 
@@ -338,7 +338,7 @@ Dans ce guide complet, vous allez découvrir :
 | **Coût/dossier** | 100€ | 1-2€ |
 | **Délai** | 3-15 jours | Instantané |
 | **Scalabilité** | ❌ (8-10/jour max) | ✅ (illimité) |
-| **Preuve visuelle** | ⚠️ (notes manuscrites) | ✅ (photos HD) |
+| **Preuve visuelle** | ⚠️ (notes manuscrites) | ✅ (détails HD) |
 | **Disponibilité client** | ✅ (obligatoire) | ❌ (autonome) |
 | **Contact humain** | ✅ | ❌ (à faire par call après) |
 | **Météo** | ⚠️ (peut annuler) | ✅ (aucun impact) |
@@ -417,7 +417,7 @@ Abonnement 100€/mois ÷ Économie 98€/dossier (100€ - 2€) = **1,02 dossi
 - **→ Visite ciblée ou call vidéo**
 
 **Cas 3 : Accès complexes**
-- Photos montrent escaliers très étroits, pas d'ascenseur, rue piétonne
+- détails montrent escaliers très étroits, pas d'ascenseur, rue piétonne
 - Besoin de voir en vrai pour évaluer faisabilité
 - **→ Visite ciblée recommandée**
 
@@ -432,14 +432,14 @@ Abonnement 100€/mois ÷ Économie 98€/dossier (100€ - 2€) = **1,02 dossi
 ### Process hybride optimal
 
 **Étape 1 : Client fait estimation IA** (2 min)
-- Client prend photos
+- Client prend détails
 - IA calcule volume : 32,5 m³
 - Client reçoit estimation instantanée
 
 **Étape 2 : Vous recevez dossier**
 - Volume : 32,5 m³
 - Inventaire détaillé
-- Photos HD
+- détails HD
 - Accès : RDC, parking OK
 
 **Étape 3 : Analyse rapide** (30 secondes)
@@ -471,7 +471,7 @@ Abonnement 100€/mois ÷ Économie 98€/dossier (100€ - 2€) = **1,02 dossi
 
 **Avantages** :
 - **80% des dossiers** : Gain de 3h (temps + coût)
-- **20% des dossiers** : Visite ciblée plus efficace (vous savez déjà ce qu'il y a grâce aux photos)
+- **20% des dossiers** : Visite ciblée plus efficace (vous savez déjà ce qu'il y a grâce aux détails)
 - **Précision globale** : 95%+ (meilleur des deux mondes)
 - **Relation client** : Call 10-15 min = suffisant pour 80% des cas
 
@@ -537,18 +537,18 @@ Abonnement 100€/mois ÷ Économie 98€/dossier (100€ - 2€) = **1,02 dossi
 - **80-90% des dossiers** : IA seule suffit (T1-T3 standards, accès simples)
 - **10-20% des dossiers** : IA + visite ciblée (gros volumes > 80 m³, accès complexes, objets atypiques)
 
-**L'IA permet de faire des visites plus efficaces** : Vous savez déjà ce qu'il y a (photos IA) → Visite ciblée sur les points critiques uniquement.
+**L'IA permet de faire des visites plus efficaces** : Vous savez déjà ce qu'il y a (détails IA) → Visite ciblée sur les points critiques uniquement.
 
 ---
 
-### Que se passe-t-il si le client triche (photos de placards vides) ?
+### Que se passe-t-il si le client triche (détails de placards vides) ?
 
-**Jour J** : Vous voyez que les placards sont pleins (alors que photos IA montraient vides).
+**Jour J** : Vous voyez que les placards sont pleins (alors que détails IA montraient vides).
 
-**Solution** : Vous montrez les photos IA au client :
-- "Sur vos photos, les placards étaient vides. Maintenant ils sont pleins. Il y a 3 m³ supplémentaires, soit 90€ de supplément."
+**Solution** : Vous montrez les détails IA au client :
+- "Sur vos détails, les placards étaient vides. Maintenant ils sont pleins. Il y a 3 m³ supplémentaires, soit 90€ de supplément."
 
-**Le client ne peut pas contester** (photos = preuve).
+**Le client ne peut pas contester** (détails = preuve).
 
 **Dans la pratique** : Très rare (< 5% des cas). Plupart des clients sont honnêtes.
 
@@ -595,7 +595,7 @@ Abonnement 100€/mois ÷ Économie 98€/dossier (100€ - 2€) = **1,02 dossi
 ✅ **Précision** : 90-95% (IA) vs 80-90% (humain)  
 ✅ **Immédiateté** : Client obtient estimation en 2 min (vs 3-15 jours d'attente)  
 ✅ **Scalabilité** : 100 ou 1000 dossiers/mois, même coût  
-✅ **Preuve visuelle** : Photos = impossible de contester  
+✅ **Preuve visuelle** : détails = impossible de contester  
 
 **ROI** : Rentable dès **2 estimations/mois** → Économie 94k-118k€/an pour 100 dossiers/mois 🚀
 

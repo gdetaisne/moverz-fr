@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import HeroMockup from "./HeroMockup";
 
 export default function Hero() {
@@ -105,7 +105,7 @@ export default function Hero() {
             </div>
           </div>
 
-        {/* ========== COLONNE DROITE – WIDGET PHOTOS ========== */}
+        {/* ========== COLONNE DROITE – WIDGET ========== */}
         <div 
           className="relative mx-auto w-full max-w-[560px] lg:mx-0"
           style={{

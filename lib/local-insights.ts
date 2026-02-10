@@ -2,7 +2,7 @@ export type LocalInsightBlock = {
   title: string;
   paragraphs: string[];
   bullets: string[];
-  photoChecklist: string[];
+  accessChecklist: string[];
   avoidPeriods: string[];
 };
 
@@ -15,6 +15,22 @@ type Focus =
   | "planning"
   | "objets-lourds"
   | "distance";
+
+function sanitizeText(s: string): string {
+  return s
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
+function sanitizeBlock(block: LocalInsightBlock): LocalInsightBlock {
+  return {
+    ...block,
+    title: sanitizeText(block.title),
+    paragraphs: block.paragraphs.map(sanitizeText),
+    bullets: block.bullets.map(sanitizeText),
+    accessChecklist: block.accessChecklist.map(sanitizeText),
+  };
+}
 
 function focusLabel(focus: Focus): string {
   switch (focus) {
@@ -51,7 +67,7 @@ function buildHook(cityName: string, focus: Focus): string {
 }
 
 function buildClosing(cityName: string): string {
-  return `Mini-mission avant d’envoyer vos photos : notez l’étage, la distance camion→porte, et tout “truc relou” (ruelle, couloir étroit, absence d’ascenseur). À ${cityName} comme ailleurs, ces détails évitent les surprises le jour J.`;
+  return `Mini-mission avant de demander des devis : notez l’étage, la distance camion→porte, et tout “truc relou” (ruelle, couloir étroit, absence d’ascenseur). À ${cityName} comme ailleurs, ces détails évitent les surprises le jour J.`;
 }
 
 function hashSlug(input: string): number {
@@ -84,7 +100,7 @@ function pickManyUnique<T>(arr: T[], seed: number, count: number): T[] {
 
 export function getLocalInsights(citySlug: string, cityName: string): LocalInsightBlock {
   const override = LOCAL_INSIGHTS_OVERRIDES[citySlug];
-  if (override) return override;
+  if (override) return sanitizeBlock(override);
 
   const seed = hashSlug(citySlug);
   const focus: Focus = pick(
@@ -104,10 +120,10 @@ export function getLocalInsights(citySlug: string, cityName: string): LocalInsig
     3
   );
 
-  const photoChecklist = pickManyUnique(
+  const accessChecklist = pickManyUnique(
     [
       "Entrée de l’immeuble + largeur du passage (porte/couloir)",
-      "Escalier (une photo depuis le bas + un palier)",
+      "Escalier (vue depuis le bas + un palier)",
       "Ascenseur (si présent) : porte ouverte + dimensions approximatives",
       "Rue devant l’entrée : possibilité de stationner/stopper le camion",
       "Objets “hors gabarit” : canapé, frigo, piano, armoire",
@@ -119,7 +135,7 @@ export function getLocalInsights(citySlug: string, cityName: string): LocalInsig
   const bulletsBase = [
     "Objectif : des devis comparables (même volume + mêmes accès).",
     "Donnez la même info à tout le monde : accès, stationnement, date (ou fenêtre de dates).",
-    "2–3 photos suffisent souvent à fiabiliser le volume (et éviter une visite technique).",
+    "2–3 précisions suffisent souvent à fiabiliser le volume (et éviter une visite technique).",
   ];
 
   const localAngle =
@@ -157,13 +173,13 @@ export function getLocalInsights(citySlug: string, cityName: string): LocalInsig
 
   const bullets = [...bulletsBase, `Périodes souvent moins favorables : ${avoidPeriods.join(" · ")}.`];
 
-  return {
+  return sanitizeBlock({
     title: `Conseils locaux à ${cityName} : ${focusLabel(focus)}`,
     paragraphs,
     bullets,
-    photoChecklist,
+    accessChecklist,
     avoidPeriods,
-  };
+  });
 }
 
 

@@ -13,7 +13,7 @@ tags:
 # Exports (PDF/Excel/CSV) : brancher votre process sans tout refaire
 
 ## 3 exports utiles (et quand les utiliser)
-- PDF dossier photos (preuve)
+- PDF dossier détaillé (preuve)
 - Excel inventaire (exploitation)
 - CSV leads/dossiers (outils internes)
 

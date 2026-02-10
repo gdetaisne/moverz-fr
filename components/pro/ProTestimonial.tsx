@@ -16,7 +16,7 @@ export default function ProTestimonial() {
       ],
     },
     {
-      quote: "Le widget en marque blanche est ultra simple à intégrer. J'ai copié-collé 3 lignes de code et ça marchait. Mes clients adorent : photos en 2 minutes, devis le jour même. Mon taux de conversion est passé de 18% à 34%.",
+      quote: "Le widget en marque blanche est ultra simple à intégrer. J'ai copié-collé 3 lignes de code et ça marchait. Mes clients adorent : dossier en 2 minutes, devis le jour même. Mon taux de conversion est passé de 18% à 34%.",
       author: "Sophie Martin",
       company: "Move & Co",
       location: "Lyon",

@@ -1,13 +1,13 @@
 "use client";
 
-import { Shield, Camera, CheckCircle2, PhoneOff } from "lucide-react";
+import { Shield, ClipboardList, CheckCircle2, PhoneOff } from "lucide-react";
 
 export default function HowItWorksNoSurprises() {
   const points = [
     {
-      icon: Camera,
-      title: "Photos → volume plus précis",
-      desc: "Les déménageurs voient exactement ce qu’il y a à transporter : moins d’approximation, moins de surprises.",
+      icon: ClipboardList,
+      title: "Dossier clair → devis plus fiables",
+      desc: "Les déménageurs chiffrent sur une base identique : moins d’approximation, moins de surprises.",
     },
     {
       icon: PhoneOff,
@@ -17,7 +17,7 @@ export default function HowItWorksNoSurprises() {
     {
       icon: CheckCircle2,
       title: "Devis plus engageants",
-      desc: "Le chiffrage se fait sur une base commune (photos + infos), ce qui réduit le risque de “volume sous-estimé”.",
+      desc: "Le chiffrage se fait sur une base commune (infos), ce qui réduit le risque de “volume sous-estimé”.",
     },
   ];
 
@@ -39,7 +39,7 @@ export default function HowItWorksNoSurprises() {
 
             <p className="text-lg text-[#1E293B]/70 leading-relaxed">
               Chez Moverz, on fait différemment : au lieu d&apos;un formulaire de 2 minutes suivi de démarchage, on
-              qualifie d&apos;abord votre dossier avec des photos. Résultat : des devis plus fiables et un risque réduit de
+              qualifie d&apos;abord votre dossier avec des informations standardisées. Résultat : des devis plus fiables et un risque réduit de
               supplément &quot;volume sous-estimé&quot; le jour J.
             </p>
 
@@ -48,7 +48,7 @@ export default function HowItWorksNoSurprises() {
                 <Shield className="w-5 h-5 text-[#0F172A]" />
               </div>
               <div className="text-sm text-[#1E293B]/80">
-                <span className="font-semibold text-[#0F172A]">Même base d&apos;infos</span> pour tous les devis (photos + accès + contraintes).
+                <span className="font-semibold text-[#0F172A]">Même base d&apos;infos</span> pour tous les devis (accès + contraintes).
               </div>
             </div>
           </div>

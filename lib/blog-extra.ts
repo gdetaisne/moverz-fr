@@ -52,7 +52,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     slug: "portage-long-camion-loin-entree",
     title: "Portage long : camion loin de l’entrée (cour, couloir, allée) — comment éviter les surprises",
     description:
-      "Portage long = temps de manutention. Comment l’estimer (en pas + photos), standardiser les infos, et comparer des devis sans hypothèses.",
+      "Portage long = temps de manutention. Comment l’estimer (en pas + détails), standardiser les infos, et comparer des devis sans hypothèses.",
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 10,
@@ -62,7 +62,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     title:
       "Monte‑meuble (lift) : quand c’est indispensable, quelles infos donner, et comment éviter une décision “au hasard”",
     description:
-      "Guide lift/monte‑meuble : cas où c’est nécessaire, photos à fournir, checklists accès/fenêtre, et comment cadrer l’option dans un devis sans surprises.",
+      "Guide lift/monte‑meuble : cas où c’est nécessaire, détails à fournir, checklists accès/fenêtre, et comment cadrer l’option dans un devis sans surprises.",
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 12,
@@ -71,7 +71,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     slug: "demenagement-parking-souterrain",
     title: "Déménagement avec parking souterrain : hauteur, accès camion, portage — le guide pour un devis fiable",
     description:
-      "Parking souterrain = contraintes d’accès. Quelles infos donner (photos + distance), comment éviter les surprises, et checklist jour J.",
+      "Parking souterrain = contraintes d’accès. Quelles infos donner (détails + distance), comment éviter les surprises, et checklist jour J.",
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 9,
@@ -107,7 +107,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     slug: "demenagement-objets-lourds-frigo-piano-coffre",
     title: "Objets lourds (frigo américain, piano, coffre) : les infos à donner pour éviter casse + suppléments",
     description:
-      "Guide pratique : photos/informations à fournir, méthode, et comment cadrer objets lourds dans un devis sans surprises.",
+      "Guide pratique : détails/informations à fournir, méthode, et comment cadrer objets lourds dans un devis sans surprises.",
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 12,
@@ -153,7 +153,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     slug: "assurance-demenagement-dommages-que-couvre",
     title: "Assurance déménagement : que couvre vraiment la “casse” (et comment éviter les zones grises)",
     description:
-      "Méthode simple : objets sensibles, photos, déclaration cohérente, et vérifs post‑déménagement pour éviter les disputes.",
+      "Méthode simple : objets sensibles, détails, déclaration cohérente, et vérifs post‑déménagement pour éviter les disputes.",
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 10,
@@ -225,7 +225,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     slug: "inventaire-demenagement-modele-simple",
     title: "Inventaire de déménagement : modèle simple (devis comparables) + méthode en 20 minutes",
     description:
-      "3 listes + 4 photos : le format minimal qui rend les devis comparables (sans y passer la journée).",
+      "3 listes + 4 détails : le format minimal qui rend les devis comparables (sans y passer la journée).",
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 8,
@@ -270,7 +270,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     slug: "etat-des-lieux-jour-demenagement-checklist",
     title: "État des lieux le jour du déménagement : checklist pour ne rien oublier (et rester zen)",
     description:
-      "Placards, cave, balcon, mini tour photo : checklist “dernier passage” pour éviter les galères après.",
+      "Placards, cave, balcon, mini tour détail : checklist “dernier passage” pour éviter les galères après.",
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 8,

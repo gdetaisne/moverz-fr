@@ -199,7 +199,7 @@ export default function VerificationsPartenairesPage() {
             <div className="space-y-1">
               <p className="text-sm font-semibold text-[#0F172A]">Envie d'une base d'estimation plus claire ?</p>
               <p className="text-sm text-[#6B7280]">
-                Une visite, une visio ou des photos détaillées réduisent les ambiguïtés sur le volume et les accès.
+                Une visite ou une visio réduisent les ambiguïtés sur le volume et les accès.
               </p>
             </div>
             <a

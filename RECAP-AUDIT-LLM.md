@@ -35,7 +35,7 @@
 ## 🎖️ TON VRAI DIFFÉRENCIATEUR (maintenant visible)
 
 ### Avant (générique) :
-> "Moverz qualifie les dossiers avec photos IA"  
+> "Moverz qualifie les dossiers avec détails IA"  
 → **Problème :** Pas unique, pas citable
 
 ### Après (unique) :

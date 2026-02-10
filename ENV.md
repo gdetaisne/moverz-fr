@@ -11,6 +11,22 @@ Notes:
 - `NEXT_PUBLIC_BACKOFFICE_URL` is normalized (trim + optional trailing `/api` or `/public` removed).
 - Required for `/confirm-email`.
 
+## Tracking bots IA (optionnel)
+
+Le middleware détecte certains user-agents (ChatGPT/Perplexity/Claude, etc.) et peut envoyer :
+- un événement GA4 `llm_bot_hit` (hits bots)
+- un événement GA4 `ai_referral_hit` (trafic humain venant de ChatGPT/Perplexity/Claude/Copilot via le header `Referer`)
+
+Pour activer l’envoi GA4 (server-side Measurement Protocol), ajouter :
+
+```
+GA4_MEASUREMENT_ID=G-XXXXXXXXXX
+GA4_API_SECRET=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+Debug (optionnel) :
+- Endpoint : `/api/ga4-debug?name=mw_debug&value=1` (retourne un JSON et envoie un event GA4)
+
 ## Email (Contact + Pro)
 
 Les formulaires `/contact` et `/pro/#contact` envoient des emails via SMTP (API routes Next.js).

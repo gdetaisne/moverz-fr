@@ -40,7 +40,7 @@ export default function ProCTA() {
             </h2>
 
             <p className="text-lg text-white/70 mb-8 leading-relaxed">
-              Rejoignez Moverz Pro et accédez à des dossiers ultra-préparés (photos, IA, volumes). Plus de temps pour déménager, moins pour courir après les infos.
+              Rejoignez Moverz Pro et accédez à des dossiers ultra-préparés (infos standardisées, inventaire, documents). Plus de temps pour déménager, moins pour courir après les infos.
             </p>
 
             {/* Features */}
@@ -51,7 +51,7 @@ export default function ProCTA() {
                 </div>
                 <div>
                   <p className="font-semibold text-white">Dossiers ultra-préparés</p>
-                  <p className="text-sm text-white/60">Photos, IA, volumes → tout est prêt pour votre devis</p>
+                  <p className="text-sm text-white/60">Infos, inventaire, documents → tout est prêt pour votre devis</p>
                 </div>
               </div>
 

@@ -10,12 +10,9 @@ export function generateWhatsAppMessage(source: string = "home"): string {
 📍 Ville d'arrivée :
 📅 Date souhaitée :
 
-📸 Je vais envoyer des photos de TOUTES mes pièces :
-✓ Salon, chambres, cuisine
-✓ Cave, garage, grenier (si concerné)
-✓ Entrée immeuble + escaliers/ascenseur
-✓ Parking / Stationnement
-✓ Chaque meuble volumineux
+🏠 Type de logement (ex: T2, maison, étage/ascenseur) :
+📦 Volume approximatif (si vous savez) / nombre de pièces :
+🚧 Contraintes d’accès (rue étroite, stationnement, escaliers…) :
 
 ⚡ 1 message/jour max • Stop quand vous voulez • Sans démarchage`;
 

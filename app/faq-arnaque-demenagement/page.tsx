@@ -19,7 +19,7 @@ export default function FaqArnaqueDemenagementPage() {
     {
       question: "Un déménageur peut-il exiger un supplément le jour J ?",
       answer:
-        "Un ajustement est possible si le devis le prévoit et si le périmètre réel diffère (volume, accès, attentes, prestations ajoutées). Le risque baisse fortement si l’estimation est faite via visite/visio/photos et si le devis décrit clairement les conditions de révision.",
+        "Un ajustement est possible si le devis le prévoit et si le périmètre réel diffère (volume, accès, attentes, prestations ajoutées). Le risque baisse fortement si l’estimation est faite via visite/visio et si le devis décrit clairement les conditions de révision.",
     },
     {
       question: "Quel acompte est raisonnable ?",
@@ -54,12 +54,12 @@ export default function FaqArnaqueDemenagementPage() {
     {
       question: "Puis-je accepter un devis “au téléphone” ?",
       answer:
-        "C’est déconseillé : sans visite/visio/photos, le volume et les accès sont souvent mal estimés. Exigez un devis écrit et une base d’estimation documentée avant de vous engager.",
+        "C’est déconseillé : sans visite/visio, le volume et les accès sont souvent mal estimés. Exigez un devis écrit et une base d’estimation documentée avant de vous engager.",
     },
     {
       question: "Que faire en cas de problème (retard, casse, litige) ?",
       answer:
-        "Conservez tous les échanges et le devis, notez les réserves par écrit (sur documents de livraison si applicable), prenez des photos, et contactez l’entreprise rapidement. En cas de désaccord, privilégiez une trace écrite et informez-vous sur les voies de recours (médiation, assurance, protection juridique).",
+        "Conservez tous les échanges et le devis, notez les réserves par écrit (sur documents de livraison si applicable), documentez l'état, et contactez l’entreprise rapidement. En cas de désaccord, privilégiez une trace écrite et informez-vous sur les voies de recours (médiation, assurance, protection juridique).",
     },
   ];
 
@@ -88,7 +88,7 @@ export default function FaqArnaqueDemenagementPage() {
             <div className="space-y-1">
               <p className="text-sm font-semibold text-[#0F172A]">Astuce simple (et pas magique)</p>
               <p className="text-sm text-[#6B7280]">
-                Une estimation basée sur visite/visio/photos réduit les écarts de volume et les ambiguïtés du devis.
+                Une estimation basée sur visite/visio réduit les écarts de volume et les ambiguïtés du devis.
               </p>
             </div>
             <a

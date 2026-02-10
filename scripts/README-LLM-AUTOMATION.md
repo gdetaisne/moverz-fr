@@ -52,8 +52,6 @@ Pour mettre à jour les informations de contact, modifier la constante `CONTACT_
 
 ```javascript
 const CONTACT_INFO = {
-  whatsapp: '+33 7 52 98 65 81',
-  whatsappPro: '+66 9 52 82 40 35',
   email: 'contact@moverz.fr',
   emailPro: 'lucie@moverz.fr',
   calendly: 'https://calendly.com/lucie-moverz/30min',

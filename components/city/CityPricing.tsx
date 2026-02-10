@@ -62,7 +62,7 @@ export function CityPricing({ cityName }: CityPricingProps) {
                 <div className="p-4 rounded-2xl bg-[#6BCFCF]/10 border border-[#6BCFCF]/30 mb-4">
                   <p className="text-xs text-gray-600 mb-1">Volume détecté (IA)</p>
                   <p className="text-3xl font-bold text-[#0F172A]">42 m³</p>
-                  <p className="text-xs text-gray-500 mt-1">7 photos analysées</p>
+                  <p className="text-xs text-gray-500 mt-1">Estimation basée sur votre dossier</p>
                 </div>
 
                 {/* Price calculation */}

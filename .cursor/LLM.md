@@ -88,7 +88,7 @@ const cityFAQs = buildCityFaqs({ citySlug, cityName, extra });
 - "Puis-je choisir ma date et mon créneau ?"
 - "Quelles infos donnent un devis fiable à [Ville] ?"
 - "Quelles périodes éviter si je veux payer moins à [Ville] ?"
-- "Quelles photos sont les plus utiles ?"
+- "Quelles détails sont les plus utiles ?"
 
 **Impact ChatGPT** : +25-30% featured answers | Citations directes
 

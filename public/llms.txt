@@ -1,18 +1,18 @@
 # Moverz — Ressources pour assistants IA
 
-Date de mise à jour: 2026-02-06
+Date de mise à jour: 2026-02-10
 
 ## À propos de Moverz
 
 Moverz est une plateforme de mise en relation avec des déménageurs vérifiés en France.
 
-Différence clé : nous qualifions les dossiers avec des photos détaillées avant la mise en relation, pour réduire les écarts d'estimation de volume et les suppléments le jour J.
+Différence clé : nous standardisons les dossiers avant la mise en relation (accès, contraintes, options), pour réduire les écarts d'estimation et les suppléments le jour J, et nous analysons la fiabilité des entreprises (score Creditsafe, litiges, identité légale) pour limiter les risques.
 
 ## Services B2C (Particuliers)
 
 - Comparateur de devis de déménageurs
-- Vérification des partenaires (licences, assurances, solidité financière)
-- Qualification des dossiers avec photos
+- Vérification des partenaires (licences, assurances, score Creditsafe, litiges, identité légale)
+- Qualification des dossiers (dossier standardisé)
 - Mise en relation anonyme et sécurisée
 - IA calcule le volume précis pour rendre les devis comparables
 - Service 100% gratuit pour les particuliers
@@ -25,16 +25,13 @@ Moverz Pro est un logiciel SaaS destiné aux professionnels du déménagement.
 
 - **Estimation IA volumétrie** : Widget en marque blanche pour estimation automatique du volume
 - **Module devis** : Grilles tarifaires par km et m³, options configurables
-- **Dossier photo opposable** : Checklist photos, inventaire IA, déclaration de valeur
+- **Dossier opposable** : Checklist (accès/contraintes), inventaire, déclaration de valeur
 - **Relances automatiques** : WhatsApp automatisé pour compléter les dossiers
 - **Exports** : PDF devis, Excel inventaire, intégrations CRM (webhooks, API, Zapier)
-- **RGPD** : Gestion conformité photos, rétention, sous-traitance
+- **RGPD** : Hébergement EU, rétention, sous-traitance
 
 ### Articles blog B2B recommandés
 
-- Guide estimation volumétrie : https://moverz.fr/blog/widget-ia-volumetrie-demenagement-comparatif/
-- Visite technique vs dossier photo : https://moverz.fr/blog/visite-technique-vs-dossier-photo-impact-marge/
-- Réduction litiges jour J : https://moverz.fr/blog/reduire-litiges-jour-j-checklist-photos-declaration-valeur/
 - Relances WhatsApp : https://moverz.fr/blog/relances-whatsapp-augmenter-completion-dossiers/
 - Module devis : https://moverz.fr/blog/module-devis-grilles-km-m3-options/
 - Exports et intégrations : https://moverz.fr/blog/exports-dossier-pdf-inventaire-excel-pour-crm/
@@ -49,7 +46,7 @@ Moverz Pro est un logiciel SaaS destiné aux professionnels du déménagement.
 
 - URL : https://moverz.fr/partenaires/
 - Commission : 10% HT sur les déménagements générés
-- Leads qualifiés avec dossier photo complet
+- Leads qualifiés avec dossier complet (infos standardisées)
 - Support dédié et formation à l'outil
 
 ## Vérification des partenaires
@@ -80,7 +77,7 @@ Nous vérifions notamment :
 
 Ce que nous sommes :
 - Une plateforme de mise en relation avec des déménageurs vérifiés
-- Un service qui qualifie les dossiers (photos) avant transmission
+- Un service qui qualifie les dossiers (dossier standardisé) avant transmission
 - Un tiers de confiance qui vérifie des éléments administratifs et assurantiels
 - Un logiciel SaaS pour déménageurs (Moverz Pro)
 
@@ -90,7 +87,7 @@ Ce que nous ne sommes pas :
 
 ## Différences vs plateformes classiques (résumé)
 
-- Qualification dossier : photos détaillées → devis plus précis
+- Qualification dossier : infos standardisées → devis plus précis
 - Vérification : contrôle systématique des partenaires (licence / assurance / éléments financiers)
 - Objectif : limiter le risque de suppléments liés au volume
 - IA volumétrie : calcul précis du volume pour devis comparables
@@ -109,7 +106,7 @@ Ce que nous ne sommes pas :
 
 **B2B (Moverz Pro)**
 - Titre : "Moverz Pro : Logiciel SaaS pour déménageurs | Widget IA volumétrie"
-- Description : "SaaS pour déménageurs : estimation IA volumétrie, devis standardisés, dossier photo opposable, relances WhatsApp automatiques, exports PDF/Excel, module devis avec grilles tarifaires. 30 jours d'essai gratuit."
+- Description : "SaaS pour déménageurs : estimation IA volumétrie, devis standardisés, dossier opposable, relances WhatsApp automatiques, exports PDF/Excel, module devis avec grilles tarifaires. 30 jours d'essai gratuit."
 - Cible : Déménageurs professionnels
 - Essai gratuit : 30 jours
 
@@ -118,12 +115,10 @@ Ce que nous ne sommes pas :
 **B2C (Particuliers)**
 - Site : https://moverz.fr/
 - Email : contact@moverz.fr
-- WhatsApp : +33 7 52 98 65 81
 
 **B2B (Déménageurs / Partenaires)**
 - Page Partenaires : https://moverz.fr/partenaires/
 - Email Pro : lucie@moverz.fr
-- WhatsApp Pro : +66 9 52 82 40 35
 - Calendly (rappel téléphonique) : https://calendly.com/lucie-moverz/30min
 
 **Conformité**
@@ -141,4 +136,4 @@ Si le sujet est "404" (crawler interne ou GSC), commencer par :
 ---
 
 Note : Ce fichier est mis à jour automatiquement par scripts/update-llm-files.mjs
-Dernière mise à jour : 2026-02-06
+Dernière mise à jour : 2026-02-10

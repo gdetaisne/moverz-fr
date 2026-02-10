@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Camera, MessageSquare, CheckCircle } from "lucide-react";
+import { ClipboardList, MessageSquare, CheckCircle } from "lucide-react";
 
 export default function HowItWorksHero() {
   const [mounted, setMounted] = useState(false);
@@ -47,7 +47,7 @@ export default function HowItWorksHero() {
             </h1>
 
             <p className="text-xl text-white/70 mb-10 leading-relaxed">
-              En 3 minutes, l'IA analyse vos photos et prépare 3 devis minimum comparables. Simple, rapide, sans démarchage.
+              En 3 minutes, vous complétez un dossier guidé et recevez 3 devis minimum comparables. Simple, rapide, sans démarchage.
             </p>
 
             {/* CTA */}
@@ -76,11 +76,11 @@ export default function HowItWorksHero() {
 
             <div className="flex items-center gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
               <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[#6BCFCF]/10">
-                <Camera className="w-6 h-6 text-[#6BCFCF]" />
+                <ClipboardList className="w-6 h-6 text-[#6BCFCF]" />
               </div>
               <div>
-                <p className="font-semibold text-white">2. Envoyez vos photos</p>
-                <p className="text-sm text-white/60">L'IA estime le volume</p>
+                <p className="font-semibold text-white">2. Complétez le dossier</p>
+                <p className="text-sm text-white/60">Infos standardisées → devis comparables</p>
               </div>
             </div>
 

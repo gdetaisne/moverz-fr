@@ -56,8 +56,8 @@ export function CityStats({ cityName }: CityStatsProps) {
                   </div>
 
                   <div className="p-3 rounded-xl bg-[#F8F9FA]">
-                    <p className="text-xs text-[#1E293B]/60 mb-1">7 photos envoyées</p>
-                    <p className="text-sm font-semibold text-[#0F172A]">IA : ~45m³ estimés</p>
+                    <p className="text-xs text-[#1E293B]/60 mb-1">Dossier complété</p>
+                    <p className="text-sm font-semibold text-[#0F172A]">Base identique envoyée à tous</p>
                   </div>
 
                   <div className="p-3 rounded-xl bg-[#F8F9FA]">
@@ -121,7 +121,7 @@ export function CityStats({ cityName }: CityStatsProps) {
                 <div>
                   <h3 className="font-bold text-[#0F172A] mb-1">3 devis minimum comparables</h3>
                   <p className="text-[#1E293B]/70 text-sm">
-                    Tous basés sur le même dossier (photos IA + détails)
+                    Tous basés sur le même dossier (infos + détails)
                   </p>
                 </div>
               </div>

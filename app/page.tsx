@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Hero from "@/components/Hero";
-import PhotoChecklist from "@/components/PhotoChecklist";
 import WhatYouReceive from "@/components/WhatYouReceive";
 import ProblemSolution from "@/components/ProblemSolution";
 import FlowAndIA from "@/components/FlowAndIA";

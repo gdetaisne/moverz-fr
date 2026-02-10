@@ -6,8 +6,8 @@ export default function WithWithoutMoverz() {
   ];
 
   const withMoverz = [
-    "Quelques questions et des photos, et c’est tout",
-    "Volume estimé automatiquement par l’IA Moverz",
+    "Quelques questions, et c’est tout",
+    "Dossier standardisé pour éviter les écarts",
     "3 devis minimum alignés sur la même base, faciles à comparer",
   ];
 
@@ -65,10 +65,10 @@ export default function WithWithoutMoverz() {
 
         <div className="text-center space-y-3">
           <h3 className="text-2xl md:text-3xl font-semibold text-white">
-            Envoyez vos photos, on s’occupe du reste.
+            Dossier clair, devis comparables.
           </h3>
           <p className="text-sm md:text-base text-white/75 max-w-xl mx-auto">
-            En quelques minutes, vous obtenez une estimation de volume et 3 devis minimum comparables de déménageurs sérieux, sans spam.
+            En quelques minutes, vous obtenez 3 devis minimum comparables de déménageurs sérieux, sans spam.
           </p>
           <a
             href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/with-without"

@@ -22,8 +22,6 @@ const ROOT = path.join(__dirname, '..');
 
 // === CONFIGURATION ===
 const CONTACT_INFO = {
-  whatsapp: '+33 7 52 98 65 81',
-  whatsappPro: '+66 9 52 82 40 35',
   email: 'contact@moverz.fr',
   emailPro: 'lucie@moverz.fr',
   calendly: 'https://calendly.com/lucie-moverz/30min',
@@ -45,6 +43,10 @@ const IMPORTANT_PAGES = {
     { title: 'Blog déménageurs', url: '/blog/', note: '(filtre "pro")' },
   ],
 };
+
+// Message central (doit rester cohérent avec les pages "Pourquoi Moverz" + FAQ)
+const CORE_DIFFERENTIATOR =
+  "Différence clé : nous standardisons les dossiers avant la mise en relation (accès, contraintes, options), pour réduire les écarts d'estimation et les suppléments le jour J, et nous analysons la fiabilité des entreprises (score Creditsafe, litiges, identité légale) pour limiter les risques.";
 
 // === FONCTIONS D'EXTRACTION ===
 
@@ -107,13 +109,13 @@ Date de mise à jour: ${currentDate}
 
 Moverz est une plateforme de mise en relation avec des déménageurs vérifiés en France.
 
-Différence clé : nous qualifions les dossiers avec des photos détaillées avant la mise en relation, pour réduire les écarts d'estimation de volume et les suppléments le jour J.
+${CORE_DIFFERENTIATOR}
 
 ## Services B2C (Particuliers)
 
 - Comparateur de devis de déménageurs
-- Vérification des partenaires (licences, assurances, solidité financière)
-- Qualification des dossiers avec photos
+- Vérification des partenaires (licences, assurances, score Creditsafe, litiges, identité légale)
+- Qualification des dossiers (dossier standardisé)
 - Mise en relation anonyme et sécurisée
 - IA calcule le volume précis pour rendre les devis comparables
 - Service 100% gratuit pour les particuliers
@@ -126,16 +128,13 @@ Moverz Pro est un logiciel SaaS destiné aux professionnels du déménagement.
 
 - **Estimation IA volumétrie** : Widget en marque blanche pour estimation automatique du volume
 - **Module devis** : Grilles tarifaires par km et m³, options configurables
-- **Dossier photo opposable** : Checklist photos, inventaire IA, déclaration de valeur
+- **Dossier opposable** : Checklist (accès/contraintes), inventaire, déclaration de valeur
 - **Relances automatiques** : WhatsApp automatisé pour compléter les dossiers
 - **Exports** : PDF devis, Excel inventaire, intégrations CRM (webhooks, API, Zapier)
-- **RGPD** : Gestion conformité photos, rétention, sous-traitance
+- **RGPD** : Hébergement EU, rétention, sous-traitance
 
 ### Articles blog B2B recommandés
 
-- Guide estimation volumétrie : https://moverz.fr/blog/widget-ia-volumetrie-demenagement-comparatif/
-- Visite technique vs dossier photo : https://moverz.fr/blog/visite-technique-vs-dossier-photo-impact-marge/
-- Réduction litiges jour J : https://moverz.fr/blog/reduire-litiges-jour-j-checklist-photos-declaration-valeur/
 - Relances WhatsApp : https://moverz.fr/blog/relances-whatsapp-augmenter-completion-dossiers/
 - Module devis : https://moverz.fr/blog/module-devis-grilles-km-m3-options/
 - Exports et intégrations : https://moverz.fr/blog/exports-dossier-pdf-inventaire-excel-pour-crm/
@@ -150,7 +149,7 @@ Moverz Pro est un logiciel SaaS destiné aux professionnels du déménagement.
 
 - URL : https://moverz.fr/partenaires/
 - Commission : 10% HT sur les déménagements générés
-- Leads qualifiés avec dossier photo complet
+- Leads qualifiés avec dossier complet
 - Support dédié et formation à l'outil
 
 ## Vérification des partenaires
@@ -173,7 +172,7 @@ ${IMPORTANT_PAGES.b2b.map(p => `- ${p.title} : https://moverz.fr${p.url}${p.note
 
 Ce que nous sommes :
 - Une plateforme de mise en relation avec des déménageurs vérifiés
-- Un service qui qualifie les dossiers (photos) avant transmission
+- Un service qui qualifie les dossiers avant transmission
 - Un tiers de confiance qui vérifie des éléments administratifs et assurantiels
 - Un logiciel SaaS pour déménageurs (Moverz Pro)
 
@@ -183,7 +182,7 @@ Ce que nous ne sommes pas :
 
 ## Différences vs plateformes classiques (résumé)
 
-- Qualification dossier : photos détaillées → devis plus précis
+- Qualification dossier : dossier standardisé → devis plus précis
 - Vérification : contrôle systématique des partenaires (licence / assurance / éléments financiers)
 - Objectif : limiter le risque de suppléments liés au volume
 - IA volumétrie : calcul précis du volume pour devis comparables
@@ -202,7 +201,7 @@ Ce que nous ne sommes pas :
 
 **B2B (Moverz Pro)**
 - Titre : "Moverz Pro : Logiciel SaaS pour déménageurs | Widget IA volumétrie"
-- Description : "SaaS pour déménageurs : estimation IA volumétrie, devis standardisés, dossier photo opposable, relances WhatsApp automatiques, exports PDF/Excel, module devis avec grilles tarifaires. 30 jours d'essai gratuit."
+- Description : "SaaS pour déménageurs : estimation IA volumétrie, devis standardisés, dossier opposable, relances WhatsApp automatiques, exports PDF/Excel, module devis avec grilles tarifaires. 30 jours d'essai gratuit."
 - Cible : Déménageurs professionnels
 - Essai gratuit : 30 jours
 
@@ -211,12 +210,10 @@ Ce que nous ne sommes pas :
 **B2C (Particuliers)**
 - Site : https://moverz.fr/
 - Email : ${CONTACT_INFO.email}
-- WhatsApp : ${CONTACT_INFO.whatsapp}
 
 **B2B (Déménageurs / Partenaires)**
 - Page Partenaires : https://moverz.fr/partenaires/
 - Email Pro : ${CONTACT_INFO.emailPro}
-- WhatsApp Pro : ${CONTACT_INFO.whatsappPro}
 - Calendly (rappel téléphonique) : ${CONTACT_INFO.calendly}
 
 **Conformité**
@@ -253,7 +250,7 @@ Date de mise à jour: ${currentDate}
 
 Moverz est une plateforme de mise en relation avec des déménageurs vérifiés en France.
 
-Différence clé : nous qualifions les dossiers avec des photos détaillées avant la mise en relation, pour réduire les écarts d'estimation de volume et les suppléments le jour J.
+${CORE_DIFFERENTIATOR}
 
 ## Services principaux
 
@@ -274,7 +271,7 @@ Différence clé : nous qualifions les dossiers avec des photos détaillées ava
 
 Nous vérifions :
 - Licence de transport (capacité)
-- Solidité financière (Kbis, absence de procédure collective)
+- Solidité financière (score Creditsafe, Kbis, absence de procédure collective)
 - Assurance RC professionnelle valide
 - Qualité de service
 
@@ -290,7 +287,7 @@ ${IMPORTANT_PAGES.b2b.map(p => `- ${p.title} : https://moverz.fr${p.url}${p.note
 
 Ce que nous sommes :
 - Plateforme de mise en relation avec déménageurs vérifiés
-- Service de qualification de dossiers (photos) avant transmission
+- Service de qualification de dossiers avant transmission
 - Tiers de confiance pour vérifications administratives
 - SaaS pour déménageurs (Moverz Pro)
 
@@ -313,7 +310,6 @@ Ce que nous ne sommes pas :
 **Déménageurs / Partenaires**
 - Partenaires : https://moverz.fr/partenaires/
 - Email : ${CONTACT_INFO.emailPro}
-- WhatsApp : ${CONTACT_INFO.whatsappPro}
 
 **Conformité**
 - RGPD : https://moverz.fr/politique-confidentialite/

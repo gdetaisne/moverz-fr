@@ -31,7 +31,7 @@ export function StickyCTAMobile({ quoteUrl, text = 'Comparer maintenant' }: Stic
         {text}
       </a>
       <p className="mt-2 text-center text-[11px] text-gray-600">
-        Astuce : ajoutez des photos pour des devis plus précis
+        Astuce : plus le dossier est précis, plus les devis sont fiables
       </p>
     </div>
   )

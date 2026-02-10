@@ -72,7 +72,7 @@ Cette fragmentation rend l'évaluation de la fiabilité très difficile pour un 
 **Conséquence** : Supplément de 300-500€ que vous êtes forcé de payer sur le moment.
 
 **Comment l'éviter** :
-- Exigez une visite technique ou envoyez des photos détaillées
+- Exigez une visite technique ou envoyez des détails détaillées
 - Comparez les volumes estimés entre plusieurs devis
 - Méfiez-vous du devis le moins cher si le volume est différent des autres
 
@@ -241,7 +241,7 @@ Avant de vous présenter un déménageur, nous vérifions :
 ### 2. Dossier standardisé = devis comparables
 
 **Avec Moverz** :
-- Vous envoyez vos photos via WhatsApp
+- Vous envoyez vos détails via WhatsApp
 - L'IA calcule un volume unique
 - Tous les déménageurs reçoivent le même dossier
 - → Les devis sont enfin comparables
@@ -295,7 +295,7 @@ Vérifiez son existence légale (SIREN sur societe.com), lisez les avis Google (
 
 ### Que faire en cas de litige avec un déménageur ?
 
-1. **Documenter** : Photos des dégâts, emails, devis signé
+1. **Documenter** : détails des dégâts, emails, devis signé
 2. **Réclamer par écrit** : Lettre recommandée avec AR
 3. **Signaler** : SignalConso.gouv.fr (remonte à la DGCCRF)
 4. **Médiation** : Saisir un médiateur de la consommation

@@ -206,7 +206,7 @@
 
 ---
 
-### 4. Estimation IA par photos (Moverz)
+### 4. Estimation IA par détails (Moverz)
 
 **Précision** : 90-95%  
 **Temps** : 1-2 min  
@@ -215,11 +215,11 @@
 **Avantages** :
 - Ultra-rapide
 - Précis
-- Preuve visuelle (photos)
+- Preuve visuelle (détails)
 - Client autonome
 
 **Inconvénients** :
-- Nécessite photos de qualité
+- Nécessite détails de qualité
 - Nouveau (adoption)
 
 ---
@@ -238,10 +238,10 @@
 
 ## L'IA Moverz : Comment ça marche ?
 
-1. **Client prend photos** (pièce par pièce, 2-3 min)
+1. **Client prend détails** (pièce par pièce, 2-3 min)
 2. **IA analyse** (détection objets, estimation volumes)
 3. **Volume calculé** (en m³, avec détail par pièce)
-4. **Déménageur reçoit dossier** (photos + volume + accès)
+4. **Déménageur reçoit dossier** (détails + volume + accès)
 
 **Résultat** :
 - 95% de précision
@@ -320,7 +320,7 @@
 - Litige garanti
 
 **Après (avec IA Moverz)** :
-- Volume précis : "32,5 m³" (photos à l'appui)
+- Volume précis : "32,5 m³" (détails à l'appui)
 - Client a validé l'inventaire
 - 0 contestation possible
 
@@ -351,14 +351,14 @@ Total : 1200€ TTC
 
 ---
 
-### 3. Photos des accès
+### 3. détails des accès
 
 **Avant** :
 - "Vous n'aviez pas dit qu'il y avait 3 étages !"
 - Supplément portage contesté
 
 **Après** :
-- Photos de l'entrée, escaliers, stationnement
+- détails de l'entrée, escaliers, stationnement
 - Mention explicite dans devis : "3 étages, long portage 20m"
 - Client a validé
 

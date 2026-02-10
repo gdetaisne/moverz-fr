@@ -80,35 +80,26 @@ export default function ProHeroMockup() {
               </div>
             </div>
 
-            {/* Photos grid */}
-            <div className="grid grid-cols-4 gap-2 mb-3">
+            {/* Dossier (aperçu) */}
+            <div className="flex flex-wrap gap-2 mb-4">
               {[
-                // miniatures “intérieur” (fake) – juste pour crédibiliser le mockup
-                "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=220&q=60",
-                "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=220&q=60",
-                "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=220&q=60",
-                "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=220&q=60",
-              ].map((src, i) => (
-                <div
-                  key={src}
-                  className="relative aspect-square rounded-lg bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden border border-gray-200"
+                "Type : T3 • 60m² • 3ᵉ étage",
+                "Accès : portage 30m",
+                "Options : démontage, fragile",
+              ].map((label) => (
+                <span
+                  key={label}
+                  className="inline-flex items-center rounded-full border border-gray-200 bg-[#F8F9FA] px-3 py-1 text-xs font-semibold text-gray-700"
                 >
-                  <img
-                    src={src}
-                    alt=""
-                    aria-hidden="true"
-                    loading="lazy"
-                    className="h-full w-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
-                </div>
+                  {label}
+                </span>
               ))}
             </div>
 
             {/* Details */}
             <div className="space-y-2.5 mb-5">
               <div className="flex items-center justify-between text-sm">
-                <span className="text-gray-700 font-medium">Volume IA</span>
+                <span className="text-gray-700 font-medium">Volume estimé</span>
                 <span className="font-bold text-[#0F172A]">22m3</span>
               </div>
               <div className="flex items-center justify-between text-sm">

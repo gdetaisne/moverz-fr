@@ -82,7 +82,7 @@ export default function PourquoiHero() {
               </div>
               <div>
                 <p className="font-semibold text-white">Devis comparables</p>
-                <p className="text-sm text-white/60">Même base (photos IA) pour tous</p>
+                <p className="text-sm text-white/60">Même base (dossier standardisé) pour tous</p>
               </div>
             </div>
 

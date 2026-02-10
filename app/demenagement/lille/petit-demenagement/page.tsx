@@ -62,7 +62,7 @@ export default function Page() {
             "Moverz standardise votre dossier et l’IA aide à estimer le volume pour des devis comparables.",
           ],
           bullets: [
-            "Nombre de pièces + 2–3 photos (salon/chambre).",
+            "Nombre de pièces + liste des meubles principaux (salon/chambre).",
             "Étages, ascenseur, distance camion → porte, contraintes de stationnement.",
             "Adresse départ/arrivée et date souhaitée (ou fourchette).",
           ],

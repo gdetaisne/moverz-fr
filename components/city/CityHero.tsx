@@ -65,7 +65,7 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
             </a>
 
             <p className="text-sm text-white/50 mt-6">
-              Conseil : ajoutez des photos (pièces + accès) pour des devis plus justes.
+              Conseil : précisez le type de logement et les contraintes d’accès pour des devis plus justes.
             </p>
           </div>
 
@@ -101,7 +101,7 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
                     <div className="flex justify-start">
                       <div className="bg-white rounded-2xl rounded-tl-sm p-3 max-w-[85%] shadow-sm">
                         <p className="text-[#1F2937] text-sm leading-relaxed">
-                          Bonjour ! Pour votre déménagement à <strong>{city.nameCapitalized}</strong>, envoyez-moi des photos de toutes les pièces 📸
+                          Bonjour ! Pour votre déménagement à <strong>{city.nameCapitalized}</strong>, donnez-moi 4 infos (départ, arrivée, date, type de logement) et je lance la comparaison.
                         </p>
                         <p className="text-[#1F2937]/50 text-xs mt-1">10:24</p>
                       </div>
@@ -110,7 +110,7 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
                     {/* User response (green bubble) */}
                     <div className="flex justify-end">
                       <div className="bg-[#DCF8C6] rounded-2xl rounded-tr-sm p-3 max-w-[75%] shadow-sm">
-                        <p className="text-[#1F2937] text-sm">📸📸📸</p>
+                        <p className="text-[#1F2937] text-sm">Paris → {city.nameCapitalized} • 15/03 • T2 (2e, sans ascenseur)</p>
                         <p className="text-[#1F2937]/50 text-xs mt-1 text-right">10:26</p>
                       </div>
                     </div>

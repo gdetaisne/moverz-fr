@@ -4,10 +4,8 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import ContactForm from "@/components/ContactForm";
 import Image from "next/image";
 import {
-  ArrowRight,
   Clock,
   Mail,
-  MessageCircle,
   ShieldCheck,
   Users,
   Linkedin,
@@ -48,21 +46,11 @@ export default function ContactPage() {
               </h1>
 
               <p className="mt-5 text-base md:text-lg text-[#1E293B]/70 max-w-xl">
-                Besoin d’aide sur un devis, une arnaque, ou votre dossier ? Le plus rapide: WhatsApp
-                (photos + contexte). Sinon, envoyez un message via le formulaire.
+                Besoin d’aide sur un devis, une arnaque, ou votre dossier ? Le plus simple : envoyez un message via le
+                formulaire (avec un maximum de contexte).
               </p>
 
               <div className="mt-7 flex flex-col sm:flex-row gap-3">
-                <a
-                  href="https://wa.me/33752986581?text=Bonjour%20!%20J%E2%80%99ai%20une%20question%20sur%20mon%20d%C3%A9m%C3%A9nagement."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-[#25D366] px-6 py-4 text-sm font-semibold text-white shadow-sm hover:shadow-[0_10px_25px_rgba(37,211,102,0.25)] hover:scale-[1.02] active:scale-[0.99] transition-all"
-                >
-                  <MessageCircle className="h-4 w-4" />
-                  Démarrer sur WhatsApp
-                  <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
-                </a>
                 <a
                   href="#form"
                   className="group inline-flex items-center justify-center gap-2 rounded-2xl border border-[#0F172A]/15 bg-white px-6 py-4 text-sm font-semibold text-[#0F172A] hover:bg-gray-50 transition-colors"
@@ -166,7 +154,7 @@ export default function ContactPage() {
               <div className="rounded-3xl border border-[#E3E5E8] bg-white p-7 shadow-sm">
                 <p className="text-sm font-semibold text-[#0F172A]">Astuce</p>
                 <p className="mt-2 text-sm text-[#1E293B]/70">
-                  Si vous avez un devis “bizarre”, envoyez une capture + 2 photos (accès / étage / cave). On vous dit tout de suite ce qui cloche.
+                  Si vous avez un devis “bizarre”, envoyez une capture + quelques détails (accès / étage / cave). On vous dit tout de suite ce qui cloche.
                 </p>
               </div>
             </div>

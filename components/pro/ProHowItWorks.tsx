@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Send, Camera, FileText } from "lucide-react";
+import { Send, ClipboardList, FileText } from "lucide-react";
 
 export default function ProHowItWorks() {
   const steps = [
@@ -12,9 +12,9 @@ export default function ProHowItWorks() {
     },
     {
       step: "2",
-      icon: Camera,
+      icon: ClipboardList,
       title: "Le client complète",
-      description: "Formulaire + adresses/dates + photos guidées (pièces, accès, zones à risque).",
+      description: "Formulaire + adresses/dates + infos clés (accès, contraintes, options).",
     },
     {
       step: "3",

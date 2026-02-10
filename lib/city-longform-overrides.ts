@@ -22,7 +22,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   antony: {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Antony, vous aurez souvent deux cas de figure : résidence avec ascenseur (super… si la cabine est assez grande) ou immeuble plus ancien avec escaliers/paliers serrés. Dans les deux cas, une photo “porte ouverte” de l’ascenseur et une photo du palier vous évitent un devis approximatif.",
+        "À Antony, vous aurez souvent deux cas de figure : résidence avec ascenseur (super… si la cabine est assez grande) ou immeuble plus ancien avec escaliers/paliers serrés. Dans les deux cas, une détail “porte ouverte” de l’ascenseur et une détail du palier vous évitent un devis approximatif.",
       ],
       date: [
         "Si vous bougez sur un créneau serré, le meilleur “hack” est la flexibilité : proposez deux dates de semaine et une option week-end. Vous augmentez mécaniquement la probabilité d’obtenir une équipe disponible et un devis stable.",
@@ -39,7 +39,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   "evry-courcouronnes": {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Évry‑Courcouronnes, le facteur “temps caché” classique est l’accès réel au bâtiment : couloirs, parkings, entrées multiples, ascenseur parfois éloigné. Une photo du chemin complet camion→porte + une photo de l’ascenseur (cabine) clarifient énormément le devis.",
+        "À Évry‑Courcouronnes, le facteur “temps caché” classique est l’accès réel au bâtiment : couloirs, parkings, entrées multiples, ascenseur parfois éloigné. Une détail du chemin complet camion→porte + une détail de l’ascenseur (cabine) clarifient énormément le devis.",
       ],
       "jour-j": [
         "Jour J : gardez une personne “référent accès” (badge, clés, portes) et une personne “référent cartons”. Quand tout le monde sait qui décide, ça évite les frictions et ça fait gagner du temps.",
@@ -56,14 +56,14 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   sartrouville: {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Sartrouville, beaucoup de déménagements alternent entre maison et résidence. Pour une maison : attention au trajet jardin/portillon/escaliers. Pour une résidence : attention au couple ascenseur + distance de portage. Dans les deux cas, 2 photos bien prises valent mieux que 10 lignes de description.",
+        "À Sartrouville, beaucoup de déménagements alternent entre maison et résidence. Pour une maison : attention au trajet jardin/portillon/escaliers. Pour une résidence : attention au couple ascenseur + distance de portage. Dans les deux cas, 2 détails bien prises valent mieux que 10 lignes de description.",
       ],
     },
   },
   "saint-germain-en-laye": {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Saint‑Germain‑en‑Laye, le centre (et certaines zones d’immeubles anciens) peut rendre l’accès plus délicat : paliers tournants, passages étroits, distance de portage. Le bon réflexe : photographier l’escalier depuis le bas + un palier, et indiquer si le camion peut s’arrêter “devant” ou “à proximité”.",
+        "À Saint‑Germain‑en‑Laye, le centre (et certaines zones d’immeubles anciens) peut rendre l’accès plus délicat : paliers tournants, passages étroits, distance de portage. Le bon réflexe : décrire l’escalier depuis le bas + un palier, et indiquer si le camion peut s’arrêter “devant” ou “à proximité”.",
       ],
     },
   },
@@ -77,7 +77,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   cergy: {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Cergy, beaucoup de résidences ont des accès “propres” mais parfois indirects (parking, entrée secondaire, ascenseur éloigné). Le devis fiable est celui qui connaît le vrai chemin : camion → porte → ascenseur → palier. Une photo du trajet (ou 2–3 photos clés) suffit.",
+        "À Cergy, beaucoup de résidences ont des accès “propres” mais parfois indirects (parking, entrée secondaire, ascenseur éloigné). Le devis fiable est celui qui connaît le vrai chemin : camion → porte → ascenseur → palier. Une détail du trajet (ou 2–3 détails clés) suffit.",
       ],
     },
   },
@@ -91,14 +91,14 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   vincennes: {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Vincennes, l’accès et le stationnement sont souvent le facteur dominant (zone dense). Le meilleur repère est simple : distance camion→porte + photo du passage le plus étroit. Cela évite les devis sous-estimés… et les ajustements.",
+        "À Vincennes, l’accès et le stationnement sont souvent le facteur dominant (zone dense). Le meilleur repère est simple : distance camion→porte + détail du passage le plus étroit. Cela évite les devis sous-estimés… et les ajustements.",
       ],
     },
   },
   montrouge: {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Montrouge, beaucoup de logements sont en immeuble : la question #1 est “ascenseur oui/non” et #2 “il est grand comment ?”. Une photo de la cabine (porte ouverte) + une photo du palier rendent la réponse évidente.",
+        "À Montrouge, beaucoup de logements sont en immeuble : la question #1 est “ascenseur oui/non” et #2 “il est grand comment ?”. Une détail de la cabine (porte ouverte) + une détail du palier rendent la réponse évidente.",
       ],
     },
   },
@@ -119,7 +119,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   "epinay-sur-seine": {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Épinay‑sur‑Seine, le duo gagnant pour un devis fiable : photo du stationnement potentiel + photo de l’accès intérieur. Le reste (cartons, volume) devient beaucoup plus simple à estimer.",
+        "À Épinay‑sur‑Seine, le duo gagnant pour un devis fiable : détail du stationnement potentiel + détail de l’accès intérieur. Le reste (cartons, volume) devient beaucoup plus simple à estimer.",
       ],
     },
   },
@@ -147,14 +147,14 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   orvault: {
     appendBySectionId: {
       "volume-tri": [
-        "Pour une maison (ou un logement avec cave/garage), pensez à inclure ces zones dans les photos. Beaucoup de devis sous-estiment le volume parce que ces espaces “hors pièces” sont oubliés.",
+        "Pour une maison (ou un logement avec cave/garage), pensez à inclure ces zones dans les détails. Beaucoup de devis sous-estiment le volume parce que ces espaces “hors pièces” sont oubliés.",
       ],
     },
   },
   vertou: {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Vertou, si vous êtes en maison, le “portage extérieur” (allée, marches, jardin, portail) est souvent le facteur qui surprend. Une photo du chemin de sortie (porte → rue) rend le devis plus fiable.",
+        "À Vertou, si vous êtes en maison, le “portage extérieur” (allée, marches, jardin, portail) est souvent le facteur qui surprend. Une détail du chemin de sortie (porte → rue) rend le devis plus fiable.",
       ],
     },
   },
@@ -171,7 +171,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   brest: {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Brest, le meilleur moyen d’avoir un devis stable est de rendre l’accès “visible” : photo de la rue + photo de l’entrée + photo de l’escalier/ascenseur. Ça évite les estimations au feeling et ça rend les devis réellement comparables.",
+        "À Brest, le meilleur moyen d’avoir un devis stable est de rendre l’accès “visible” : détail de la rue + détail de l’entrée + détail de l’escalier/ascenseur. Ça évite les estimations au feeling et ça rend les devis réellement comparables.",
       ],
       "jour-j": [
         "Jour J : préparez une “zone tampon” près de la porte (cartons prêts, meubles démontés, couloir dégagé). Plus l’accès est fluide, plus l’équipe est efficace — et plus la journée se termine tôt.",
@@ -184,14 +184,14 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         "Ajoutez une ligne “accès extérieur” si vous êtes en maison (allée, marches, portail). C’est souvent l’info oubliée qui change le temps réel de manutention.",
       ],
       "volume-tri": [
-        "Si vous avez cave/garage, photographiez-les aussi : ces zones “hors pièces” sont un classique des devis sous-estimés.",
+        "Si vous avez cave/garage, décrivez-les aussi : ces zones “hors pièces” sont un classique des devis sous-estimés.",
       ],
     },
   },
   lorient: {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Lorient, un devis fiable est souvent un devis qui connaît la distance camion→porte. Même sans mesure, notez “proche / moyen / loin” et ajoutez une photo : ça évite les écarts de portage entre devis.",
+        "À Lorient, un devis fiable est souvent un devis qui connaît la distance camion→porte. Même sans mesure, notez “proche / moyen / loin” et ajoutez une détail : ça évite les écarts de portage entre devis.",
       ],
       date: [
         "Si vous voulez optimiser le prix sans sacrifier la qualité, essayez de proposer 2 dates en semaine + 1 option “secours”. La flexibilité augmente les chances d’un bon créneau.",
@@ -211,7 +211,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   "saint-malo": {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Saint‑Malo, la différence entre un devis “OK” et un devis “surprise” vient souvent du trajet réel camion→porte. Documentez-le : photo de la rue + photo de l’entrée + photo de l’escalier/ascenseur.",
+        "À Saint‑Malo, la différence entre un devis “OK” et un devis “surprise” vient souvent du trajet réel camion→porte. Documentez-le : détail de la rue + détail de l’entrée + détail de l’escalier/ascenseur.",
       ],
       "dossier": [
         "Si vous hésitez sur un passage (porte étroite, palier tournant), écrivez-le tel quel. Un doute annoncé = une méthode prévue = un devis plus fiable.",
@@ -238,7 +238,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   morlaix: {
     appendBySectionId: {
       "acces-stationnement": [
-        "Si vous avez des marches, une pente ou un portillon (maison), ajoutez une photo du chemin de sortie (porte → rue). Ça rend le devis beaucoup plus juste.",
+        "Si vous avez des marches, une pente ou un portillon (maison), ajoutez une détail du chemin de sortie (porte → rue). Ça rend le devis beaucoup plus juste.",
       ],
       "emballage": [
         "Astuce : regroupez les vis de démontage dans des sachets scotchés directement au meuble correspondant. Au remontage, vous gagnez un temps énorme.",
@@ -258,7 +258,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   auray: {
     appendBySectionId: {
       "volume-tri": [
-        "Avant devis, faites une photo des meubles volumineux (canapé, armoire, frigo) près d’une porte/couloir : ça aide à estimer passage + démontage, donc à fiabiliser le devis.",
+        "Avant devis, faites une détail des meubles volumineux (canapé, armoire, frigo) près d’une porte/couloir : ça aide à estimer passage + démontage, donc à fiabiliser le devis.",
       ],
     },
   },
@@ -267,7 +267,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   metz: {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Metz, le devis “qui tient” est celui qui connaît vos accès : stationnement possible, distance camion→porte, et passage intérieur (escalier/ascenseur). Documentez 3 photos, et vous évitez 80% des surprises.",
+        "À Metz, le devis “qui tient” est celui qui connaît vos accès : stationnement possible, distance camion→porte, et passage intérieur (escalier/ascenseur). Documentez 3 détails, et vous évitez 80% des surprises.",
       ],
       "assurance": [
         "Comparez aussi les conditions : ce qui est inclus/exclu, comment l’accès est chiffré, et la procédure en cas de dommage. Un devis clair est souvent plus fiable qu’un devis ultra court.",
@@ -280,14 +280,14 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         "Ajoutez un mini-inventaire “objets à risque” (fragiles/lourds). Ce n’est pas pour compliquer : c’est pour éviter qu’un devis sous-estime la méthode (protection, manutention).",
       ],
       "acces-stationnement": [
-        "Si vous êtes en immeuble, la photo la plus utile est souvent l’escalier depuis le bas + un palier. On voit tout de suite les rotations et la faisabilité des gros meubles.",
+        "Si vous êtes en immeuble, la détail la plus utile est souvent l’escalier depuis le bas + un palier. On voit tout de suite les rotations et la faisabilité des gros meubles.",
       ],
     },
   },
   mulhouse: {
     appendBySectionId: {
       "acces-stationnement": [
-        "Le duo gagnant pour un devis fiable : photo du stationnement potentiel + photo de l’accès intérieur. Ensuite, le volume devient beaucoup plus simple à estimer correctement.",
+        "Le duo gagnant pour un devis fiable : détail du stationnement potentiel + détail de l’accès intérieur. Ensuite, le volume devient beaucoup plus simple à estimer correctement.",
       ],
       "jour-j": [
         "Jour J : étiquetez les cartons par pièce + priorité (ouvrir d’abord / peut attendre). Au déchargement, ça fait gagner un temps énorme.",
@@ -324,7 +324,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   haguenau: {
     appendBySectionId: {
       dossier: [
-        "Ajoutez une ligne “passage le plus étroit” (porte, couloir, escalier). Une seule photo de ce point suffit souvent à fiabiliser le devis sur les gros meubles.",
+        "Ajoutez une ligne “passage le plus étroit” (porte, couloir, escalier). Une seule détail de ce point suffit souvent à fiabiliser le devis sur les gros meubles.",
       ],
     },
   },
@@ -344,14 +344,14 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         "Jour J : gardez une personne “référent accès” (clés, portes, ascenseur) et une personne “référent cartons”. Ça évite les quiproquos quand tout va vite.",
       ],
       "acces-stationnement": [
-        "Si l’ascenseur est présent, une photo de la cabine (porte ouverte) suffit souvent à éviter un devis trop optimiste sur les gros meubles.",
+        "Si l’ascenseur est présent, une détail de la cabine (porte ouverte) suffit souvent à éviter un devis trop optimiste sur les gros meubles.",
       ],
     },
   },
   selestat: {
     appendBySectionId: {
       "acces-stationnement": [
-        "Si vous avez une maison, pensez à l’accès extérieur : allée, marches, portail, distance jusqu’au camion. Une photo du chemin “porte → rue” rend le devis beaucoup plus juste.",
+        "Si vous avez une maison, pensez à l’accès extérieur : allée, marches, portail, distance jusqu’au camion. Une détail du chemin “porte → rue” rend le devis beaucoup plus juste.",
       ],
       "emballage": [
         "Astuce : préparez une boîte “outils” (tournevis, clé, ruban) qui reste accessible. Un démontage rapide au bon moment évite des blocages.",
@@ -364,7 +364,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   "aix-en-provence": {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Aix‑en‑Provence, le meilleur “anti‑surprise” est de documenter le trajet complet camion→porte. Même sans chiffres précis, 3 photos (rue, entrée, escalier/ascenseur) suffisent souvent à stabiliser les devis.",
+        "À Aix‑en‑Provence, le meilleur “anti‑surprise” est de documenter le trajet complet camion→porte. Même sans chiffres précis, 3 détails (rue, entrée, escalier/ascenseur) suffisent souvent à stabiliser les devis.",
       ],
       dossier: [
         "Ajoutez une ligne “accès extérieur” si vous êtes en maison (allée, marches, portail). C’est souvent l’info oubliée qui change le temps de manutention.",
@@ -374,7 +374,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   avignon: {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Avignon, le point qui fait varier un devis plus qu’on ne croit : la distance de portage. Notez “proche / moyen / loin” et ajoutez une photo de la rue : vous rendez les devis comparables immédiatement.",
+        "À Avignon, le point qui fait varier un devis plus qu’on ne croit : la distance de portage. Notez “proche / moyen / loin” et ajoutez une détail de la rue : vous rendez les devis comparables immédiatement.",
       ],
       date: [
         "Si vous voulez optimiser sans stresser, proposez 2 dates en semaine + 1 option de secours. La flexibilité augmente la disponibilité et rend les devis plus réalistes.",
@@ -384,7 +384,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   cannes: {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Cannes, un devis fiable est souvent un devis qui connaît l’accès réel au bâtiment : où s’arrêter, combien de portage, et si l’ascenseur est “grand comment”. Une photo de cabine (porte ouverte) fait gagner un temps énorme au chiffrage.",
+        "À Cannes, un devis fiable est souvent un devis qui connaît l’accès réel au bâtiment : où s’arrêter, combien de portage, et si l’ascenseur est “grand comment”. Une détail de cabine (porte ouverte) fait gagner un temps énorme au chiffrage.",
       ],
       "jour-j": [
         "Jour J : gardez une personne “référent accès” (clés, badges, portes) et une personne “référent cartons”. Quand ça va vite, ça évite les quiproquos.",
@@ -404,17 +404,17 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   "la-seyne-sur-mer": {
     appendBySectionId: {
       "acces-stationnement": [
-        "À La Seyne‑sur‑Mer, le duo qui rend les devis fiables : photo du stationnement potentiel + photo de l’accès intérieur. Ensuite, le volume devient beaucoup plus simple à estimer correctement.",
+        "À La Seyne‑sur‑Mer, le duo qui rend les devis fiables : détail du stationnement potentiel + détail de l’accès intérieur. Ensuite, le volume devient beaucoup plus simple à estimer correctement.",
       ],
       "volume-tri": [
-        "Si vous avez cave/garage, incluez‑les dans les photos : ce sont des zones souvent oubliées qui font gonfler le volume réel.",
+        "Si vous avez cave/garage, incluez‑les dans les détails : ce sont des zones souvent oubliées qui font gonfler le volume réel.",
       ],
     },
   },
   hyeres: {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Hyères, si vous êtes en maison, pensez au “portage extérieur” (allée, marches, portail). Une photo du chemin “porte → rue” suffit à fiabiliser le devis.",
+        "À Hyères, si vous êtes en maison, pensez au “portage extérieur” (allée, marches, portail). Une détail du chemin “porte → rue” suffit à fiabiliser le devis.",
       ],
       "assurance": [
         "Dernier rappel utile : si vous avez des objets à forte valeur (financière ou sentimentale), mentionnez‑le. Le bon devis est celui qui prévoit protection/assurance alignée.",
@@ -434,7 +434,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   "saint-raphael": {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Saint‑Raphaël, notez la distance camion→porte (même en pas) et ajoutez une photo de l’entrée : c’est le repère le plus simple pour rendre les devis comparables.",
+        "À Saint‑Raphaël, notez la distance camion→porte (même en pas) et ajoutez une détail de l’entrée : c’est le repère le plus simple pour rendre les devis comparables.",
       ],
       "emballage": [
         "Astuce : sachets de vis scotchés au meuble correspondant. Au remontage, vous gagnez un temps énorme.",
@@ -454,7 +454,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   martigues: {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Martigues, beaucoup d’écarts de devis viennent du portage sous‑estimé. Une estimation “court/moyen/long” + une photo de la rue suffit souvent à cadrer.",
+        "À Martigues, beaucoup d’écarts de devis viennent du portage sous‑estimé. Une estimation “court/moyen/long” + une détail de la rue suffit souvent à cadrer.",
       ],
       "assurance": [
         "Comparez aussi les conditions (inclus/exclus, accès pris en compte, procédure en cas de dommage). Un devis clair est souvent plus fiable qu’un devis ultra court.",
@@ -466,7 +466,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   "la-rochelle": {
     appendBySectionId: {
       "acces-stationnement": [
-        "À La Rochelle, le devis fiable est celui qui voit l’accès : photo de la rue + photo de l’entrée + photo de l’escalier/ascenseur. Ça évite les estimations au feeling et rend les devis comparables.",
+        "À La Rochelle, le devis fiable est celui qui voit l’accès : détail de la rue + détail de l’entrée + détail de l’escalier/ascenseur. Ça évite les estimations au feeling et rend les devis comparables.",
       ],
       date: [
         "Pour optimiser sans stress : proposez 2–3 dates possibles. La flexibilité augmente la disponibilité et stabilise les devis.",
@@ -486,7 +486,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   poitiers: {
     appendBySectionId: {
       "acces-stationnement": [
-        "Le repère le plus simple pour comparer des devis à Poitiers : distance camion→porte + photo du passage le plus étroit. Avec ça, les écarts deviennent compréhensibles (et évitables).",
+        "Le repère le plus simple pour comparer des devis à Poitiers : distance camion→porte + détail du passage le plus étroit. Avec ça, les écarts deviennent compréhensibles (et évitables).",
       ],
       "emballage": [
         "Astuce : faites une “boîte essentiels 24h” (chargeurs, draps, papiers, café/thé). Ne la chargez pas par erreur : ça vous sauve la soirée.",
@@ -506,7 +506,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   angouleme: {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Angoulême, l’accès intérieur (escaliers/paliers) est souvent le point qui fait varier le temps. Une photo de l’escalier depuis le bas + un palier vaut mieux qu’une description.",
+        "À Angoulême, l’accès intérieur (escaliers/paliers) est souvent le point qui fait varier le temps. Une détail de l’escalier depuis le bas + un palier vaut mieux qu’une description.",
       ],
       dossier: [
         "Si vous doutez du passage d’un meuble, dites‑le. Un doute annoncé = une méthode prévue = un devis plus fiable.",
@@ -526,10 +526,10 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   perigueux: {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Périgueux, un devis fiable se gagne sur la logistique : stationnement, portage, et passages. 3 photos bien choisies rendent les devis comparables instantanément.",
+        "À Périgueux, un devis fiable se gagne sur la logistique : stationnement, portage, et passages. 3 détails bien choisies rendent les devis comparables instantanément.",
       ],
       "volume-tri": [
-        "N’oubliez pas cave/garage/grenier dans les photos. C’est un classique des volumes sous‑estimés.",
+        "N’oubliez pas cave/garage/grenier dans les détails. C’est un classique des volumes sous‑estimés.",
       ],
     },
   },
@@ -546,7 +546,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   agen: {
     appendBySectionId: {
       "acces-stationnement": [
-        "Le portage est souvent le facteur sous‑estimé. À Agen, notez la distance camion→porte (même en pas) et ajoutez une photo de la rue : vous stabilisez les devis.",
+        "Le portage est souvent le facteur sous‑estimé. À Agen, notez la distance camion→porte (même en pas) et ajoutez une détail de la rue : vous stabilisez les devis.",
       ],
       "assurance": [
         "Comparez aussi les conditions : inclus/exclus, accès pris en compte, procédure en cas de dommage. Un devis clair est souvent plus fiable qu’un devis ultra court.",
@@ -556,7 +556,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   bayonne: {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Bayonne, documentez l’accès comme un mini‑projet : où s’arrêter, distance de portage, et passages intérieurs. Une photo de la rue + entrée + escalier/ascenseur suffit souvent à rendre le devis très fiable.",
+        "À Bayonne, documentez l’accès comme un mini‑projet : où s’arrêter, distance de portage, et passages intérieurs. Une détail de la rue + entrée + escalier/ascenseur suffit souvent à rendre le devis très fiable.",
       ],
       "jour-j": [
         "Jour J : gardez un sac perso “à ne pas charger” (papiers, clés, ordinateur). C’est le petit détail qui évite la panique.",
@@ -568,10 +568,10 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   nimes: {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Nîmes, le plus gros levier de fiabilité, c’est l’accès : photo de la rue + photo de l’entrée + photo escalier/ascenseur. Ça évite les devis “au feeling” et rend la comparaison beaucoup plus juste.",
+        "À Nîmes, le plus gros levier de fiabilité, c’est l’accès : détail de la rue + détail de l’entrée + détail escalier/ascenseur. Ça évite les devis “au feeling” et rend la comparaison beaucoup plus juste.",
       ],
       dossier: [
-        "Ajoutez une ligne “passage le plus étroit” (porte/couloir/escalier). Une seule photo de ce point suffit souvent à fiabiliser le devis sur les gros meubles.",
+        "Ajoutez une ligne “passage le plus étroit” (porte/couloir/escalier). Une seule détail de ce point suffit souvent à fiabiliser le devis sur les gros meubles.",
       ],
     },
     extraSections: [
@@ -581,14 +581,14 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         paragraphs: [
           "À Nîmes, le devis devient fiable quand vous décrivez votre logement comme un parcours : entrée → escalier/ascenseur → palier → pièce principale. Ce n’est pas du “détail”, c’est du temps de manutention (donc du prix).",
           "Si vous êtes en maison, le sujet est souvent l’extérieur : portillon, marches, allée, distance jusqu’au camion. Si vous êtes en immeuble, le sujet est l’intérieur : largeur de couloir, rotations d’escalier, ascenseur petit/grand.",
-          "Le bon réflexe : une mini-checklist photo + 2 infos écrites (étage/ascenseur, distance camion→porte).",
+          "Le bon réflexe : une mini-checklist accès + 2 infos écrites (étage/ascenseur, distance camion→porte).",
         ],
         checklist: [
-          "Photo rue : où le camion peut s’arrêter (même approximatif)",
+          "détail rue : où le camion peut s’arrêter (même approximatif)",
           "Distance camion→porte : proche / moyen / long (ou en pas)",
-          "Photo entrée + couloir/porte la plus étroite",
-          "Photo escalier (bas + palier) ou ascenseur (porte + cabine)",
-          "Photo des 2–3 meubles “limites” (canapé, frigo, armoire) près d’un passage",
+          "détail entrée + couloir/porte la plus étroite",
+          "détail escalier (bas + palier) ou ascenseur (porte + cabine)",
+          "détail des 2–3 meubles “limites” (canapé, frigo, armoire) près d’un passage",
         ],
       },
     ],
@@ -596,7 +596,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   perpignan: {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Perpignan, le portage est souvent sous-estimé. Notez la distance camion→porte (même en pas) + une photo de la rue : vous stabilisez les devis immédiatement.",
+        "À Perpignan, le portage est souvent sous-estimé. Notez la distance camion→porte (même en pas) + une détail de la rue : vous stabilisez les devis immédiatement.",
       ],
       date: [
         "Pour optimiser sans stress : proposez 2 dates en semaine + 1 option de secours. La flexibilité augmente la disponibilité et rend les devis plus réalistes.",
@@ -612,11 +612,11 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
           "But : que tout le monde chiffre la même logistique, pour comparer des devis comparables.",
         ],
         checklist: [
-          "Photo du stationnement potentiel (ou de l’endroit où s’arrêter)",
+          "détail du stationnement potentiel (ou de l’endroit où s’arrêter)",
           "Distance camion→porte (même en pas)",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier (bas + palier) / ascenseur (porte + cabine)",
-          "Liste + photo des objets lourds/fragiles (frigo, vitrine, électroménager)",
+          "détail entrée + passage le plus étroit",
+          "détail escalier (bas + palier) / ascenseur (porte + cabine)",
+          "Liste + détail des objets lourds/fragiles (frigo, vitrine, électroménager)",
         ],
       },
     ],
@@ -636,15 +636,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Béziers (et checklist locale)",
         paragraphs: [
           "À Béziers, la qualité d’un devis dépend surtout de la clarté : accès + volume + date. Quand ces trois éléments sont stables, les prix deviennent comparables et les surprises disparaissent.",
-          "Le duo gagnant : 1 photo du stationnement et 1 photo de l’accès intérieur. Ajoutez ensuite les meubles “limites” (canapé, armoire) et vous évitez les devis trop optimistes.",
+          "Le duo gagnant : 1 détail du stationnement et 1 détail de l’accès intérieur. Ajoutez ensuite les meubles “limites” (canapé, armoire) et vous évitez les devis trop optimistes.",
           "Conseil : gardez la checklist ci-dessous identique pour tous les déménageurs.",
         ],
         checklist: [
-          "Photo rue : endroit où le camion peut s’arrêter",
+          "détail rue : endroit où le camion peut s’arrêter",
           "Distance camion→porte : court/moyen/long",
-          "Photo entrée + couloir/porte la plus étroite",
-          "Photo escalier (bas + palier) / ascenseur (cabine)",
-          "Photos rapides des meubles volumineux + mention démontage souhaité (oui/non)",
+          "détail entrée + couloir/porte la plus étroite",
+          "détail escalier (bas + palier) / ascenseur (cabine)",
+          "détails rapides des meubles volumineux + mention démontage souhaité (oui/non)",
         ],
       },
     ],
@@ -652,7 +652,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   narbonne: {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Narbonne, la meilleure façon d’obtenir des devis comparables est de documenter le trajet complet camion→porte. 3 photos bien choisies valent mieux que 10 lignes de description.",
+        "À Narbonne, la meilleure façon d’obtenir des devis comparables est de documenter le trajet complet camion→porte. 3 détails bien choisies valent mieux que 10 lignes de description.",
       ],
       "assurance": [
         "Comparez aussi les conditions : inclus/exclus, accès pris en compte, procédure en cas de dommage. Un devis clair est souvent plus fiable qu’un devis ultra court.",
@@ -664,15 +664,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Narbonne (et checklist locale)",
         paragraphs: [
           "À Narbonne, les devis se comparent bien quand l’accès est “visible”. L’idée est simple : le même parcours pour tout le monde = la même base de chiffrage.",
-          "Même si vous ne mesurez rien, une photo de la rue, une photo de l’entrée, et une photo de l’escalier/ascenseur donnent une image fidèle du temps de manutention.",
+          "Même si vous ne mesurez rien, une détail de la rue, une détail de l’entrée, et une détail de l’escalier/ascenseur donnent une image fidèle du temps de manutention.",
           "Ensuite, annoncez les exceptions : meubles lourds, passage étroit, portage long. C’est ça, la fiabilité.",
         ],
         checklist: [
-          "Photo stationnement / arrêt possible",
+          "détail stationnement / arrêt possible",
           "Distance camion→porte (même en pas)",
-          "Photo de l’entrée + largeur du passage",
-          "Photo escalier (bas + palier) ou ascenseur (porte + cabine)",
-          "Photo du passage le plus étroit + meubles “limites”",
+          "détail de l’entrée + largeur du passage",
+          "détail escalier (bas + palier) ou ascenseur (porte + cabine)",
+          "détail du passage le plus étroit + meubles “limites”",
         ],
       },
     ],
@@ -680,7 +680,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   montauban: {
     appendBySectionId: {
       "volume-tri": [
-        "Avant devis, pensez “zones hors pièces” : garage, cave, cellier. Ce sont des classiques des volumes sous-estimés. Une photo suffit souvent à éviter l’oubli.",
+        "Avant devis, pensez “zones hors pièces” : garage, cave, cellier. Ce sont des classiques des volumes sous-estimés. Une détail suffit souvent à éviter l’oubli.",
       ],
       "emballage": [
         "Astuce : vis dans des sachets scotchés au meuble correspondant. Ça rend le remontage beaucoup plus rapide (et propre).",
@@ -696,11 +696,11 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
           "La checklist ci-dessous suffit à rendre vos devis comparables.",
         ],
         checklist: [
-          "Photos des zones hors pièces (garage/cave/cellier) si elles existent",
-          "Photo rue : stationnement possible + distance",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier/ascenseur (si immeuble)",
-          "Liste des meubles volumineux + 1 photo groupée",
+          "détails des zones hors pièces (garage/cave/cellier) si elles existent",
+          "détail rue : stationnement possible + distance",
+          "détail entrée + passage le plus étroit",
+          "détail escalier/ascenseur (si immeuble)",
+          "Liste des meubles volumineux + 1 détail groupée",
         ],
       },
     ],
@@ -708,7 +708,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   albi: {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Albi, l’accès intérieur (escaliers/paliers) peut être le point qui fait varier le temps. Une photo de l’escalier depuis le bas + un palier fiabilise le devis sur les gros meubles.",
+        "À Albi, l’accès intérieur (escaliers/paliers) peut être le point qui fait varier le temps. Une détail de l’escalier depuis le bas + un palier fiabilise le devis sur les gros meubles.",
       ],
       dossier: [
         "Si vous doutez du passage d’un meuble, dites-le. Un doute annoncé = une méthode prévue = un devis plus fiable.",
@@ -719,16 +719,16 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         id: "specificites-logement-acces",
         title: "Spécificités logement & accès à Albi (et checklist locale)",
         paragraphs: [
-          "À Albi, l’écart entre deux devis vient souvent d’un détail de passage : un palier tournant, une porte un peu étroite, un couloir long. Une photo rend ces points évidents.",
+          "À Albi, l’écart entre deux devis vient souvent d’un détail de passage : un palier tournant, une porte un peu étroite, un couloir long. Une détail rend ces points évidents.",
           "Le bon réflexe : montrer le “goulot d’étranglement” (porte/couloir/escalier) + annoncer les meubles qui posent question. Ça rend le devis réaliste.",
           "La checklist ci-dessous est conçue pour éviter les suppléments liés aux accès.",
         ],
         checklist: [
-          "Photo du passage le plus étroit (porte/couloir/escalier)",
-          "Photo escalier (bas + palier) ou ascenseur (cabine)",
-          "Photo rue : stationnement possible + distance",
+          "détail du passage le plus étroit (porte/couloir/escalier)",
+          "détail escalier (bas + palier) ou ascenseur (cabine)",
+          "détail rue : stationnement possible + distance",
           "Distance camion→porte : court/moyen/long",
-          "Photo des meubles “limites” (canapé, armoire, frigo)",
+          "détail des meubles “limites” (canapé, armoire, frigo)",
         ],
       },
     ],
@@ -748,15 +748,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Carcassonne (et checklist locale)",
         paragraphs: [
           "À Carcassonne, ce qui rend un devis fiable, c’est la visibilité sur l’accès et le timing. Si l’accès est clair et la fenêtre de date réaliste, la logistique devient prévisible.",
-          "Le meilleur format : photos courtes et utiles (rue, entrée, escalier/ascenseur), puis 2–3 infos écrites (étage/ascenseur, distance camion→porte, meubles limites).",
+          "Le meilleur format : détails courtes et utiles (rue, entrée, escalier/ascenseur), puis 2–3 infos écrites (étage/ascenseur, distance camion→porte, meubles limites).",
           "Avec ça, vous comparez une prestation, pas un chiffre au hasard.",
         ],
         checklist: [
-          "Photo rue : où le camion peut s’arrêter",
+          "détail rue : où le camion peut s’arrêter",
           "Distance camion→porte (même en pas)",
-          "Photo entrée + couloir/porte la plus étroite",
-          "Photo escalier (bas + palier) / ascenseur (cabine)",
-          "2–3 dates possibles + photo des meubles volumineux",
+          "détail entrée + couloir/porte la plus étroite",
+          "détail escalier (bas + palier) / ascenseur (cabine)",
+          "2–3 dates possibles + détail des meubles volumineux",
         ],
       },
     ],
@@ -764,7 +764,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   sete: {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Sète, le duo gagnant pour un devis fiable : photo du stationnement potentiel + photo de l’accès intérieur. Ensuite, le volume devient beaucoup plus simple à estimer correctement.",
+        "À Sète, le duo gagnant pour un devis fiable : détail du stationnement potentiel + détail de l’accès intérieur. Ensuite, le volume devient beaucoup plus simple à estimer correctement.",
       ],
       "emballage": [
         "Astuce : standardisez l’étiquetage (pièce + priorité). Au déchargement, ça réduit les manipulations inutiles.",
@@ -780,11 +780,11 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
           "La checklist ci-dessous aide à rendre vos devis comparables, sans blabla.",
         ],
         checklist: [
-          "Photo stationnement / arrêt possible",
+          "détail stationnement / arrêt possible",
           "Distance camion→porte : court/moyen/long",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier (bas + palier) / ascenseur (cabine)",
-          "Photo objets “hors gabarit” (canapé, frigo, armoire)",
+          "détail entrée + passage le plus étroit",
+          "détail escalier (bas + palier) / ascenseur (cabine)",
+          "détail objets “hors gabarit” (canapé, frigo, armoire)",
         ],
       },
     ],
@@ -804,15 +804,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Tarbes (et checklist locale)",
         paragraphs: [
           "À Tarbes, les devis deviennent comparables dès que vous clarifiez l’accès : stationnement, distance de portage, et étages.",
-          "En maison, le détail qui surprend est souvent le chemin extérieur (portail, marches, allée). En immeuble, le détail qui surprend est l’escalier/palier. Montrez-le en photo, et le devis devient réaliste.",
+          "En maison, le détail qui surprend est souvent le chemin extérieur (portail, marches, allée). En immeuble, le détail qui surprend est l’escalier/palier. Montrez-le en détail, et le devis devient réaliste.",
           "Ensuite, mentionnez vos objets fragiles/lourds pour aligner la protection et l’assurance.",
         ],
         checklist: [
-          "Photo de la rue + stationnement possible",
+          "détail de la rue + stationnement possible",
           "Distance camion→porte (même en pas)",
-          "Photo du chemin extérieur (si maison) ou escalier/ascenseur (si immeuble)",
-          "Photo passage le plus étroit (porte/couloir)",
-          "Liste des objets fragiles/lourds + photo groupée",
+          "détail du chemin extérieur (si maison) ou escalier/ascenseur (si immeuble)",
+          "détail passage le plus étroit (porte/couloir)",
+          "Liste des objets fragiles/lourds + détail groupée",
         ],
       },
     ],
@@ -831,15 +831,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         id: "specificites-logement-acces",
         title: "Spécificités logement & accès à Alès (et checklist locale)",
         paragraphs: [
-          "À Alès, un devis fiable se construit sur une base simple : accès + volume + date. Le volume se fiabilise avec les photos des pièces, l’accès avec 2–3 photos clés (rue, entrée, escalier/ascenseur).",
+          "À Alès, un devis fiable se construit sur une base simple : accès + volume + date. Le volume se fiabilise avec les détails des pièces, l’accès avec 2–3 détails clés (rue, entrée, escalier/ascenseur).",
           "Si vous faites un tri, annoncez-le (et faites-le avant de demander des devis). C’est le levier le plus propre pour réduire la facture sans réduire la qualité.",
           "La checklist ci-dessous vous aide à donner les mêmes infos à tout le monde.",
         ],
         checklist: [
-          "Photos des pièces (3–4 photos par pièce)",
-          "Photo rue : stationnement possible + distance",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier/ascenseur (si applicable)",
+          "détails des pièces (3–4 détails par pièce)",
+          "détail rue : stationnement possible + distance",
+          "détail entrée + passage le plus étroit",
+          "détail escalier/ascenseur (si applicable)",
           "Sac “à ne pas charger” + boîte essentiels 24h",
         ],
       },
@@ -848,7 +848,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   colomiers: {
     appendBySectionId: {
       "acces-stationnement": [
-        "À Colomiers, le repère le plus simple pour comparer des devis : distance camion→porte + photo du passage le plus étroit. Avec ça, les écarts deviennent compréhensibles (et évitables).",
+        "À Colomiers, le repère le plus simple pour comparer des devis : distance camion→porte + détail du passage le plus étroit. Avec ça, les écarts deviennent compréhensibles (et évitables).",
       ],
     },
     extraSections: [
@@ -856,16 +856,16 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         id: "specificites-logement-acces",
         title: "Spécificités logement & accès à Colomiers (et checklist locale)",
         paragraphs: [
-          "À Colomiers, la plupart des écarts de devis viennent d’informations d’accès différentes (ou manquantes). Le bon réflexe est donc de standardiser : mêmes photos, mêmes infos, pour tous.",
-          "Même sans mesures, distance camion→porte + photo du passage le plus étroit suffisent souvent à rendre le devis réaliste.",
+          "À Colomiers, la plupart des écarts de devis viennent d’informations d’accès différentes (ou manquantes). Le bon réflexe est donc de standardiser : mêmes détails, mêmes infos, pour tous.",
+          "Même sans mesures, distance camion→porte + détail du passage le plus étroit suffisent souvent à rendre le devis réaliste.",
           "Ensuite, annoncez vos meubles “limites” : mieux vaut 5 minutes de clarté que 50 minutes de blocage.",
         ],
         checklist: [
           "Distance camion→porte (court/moyen/long)",
-          "Photo du passage le plus étroit (porte/couloir)",
-          "Photo escalier (bas + palier) / ascenseur (cabine) si immeuble",
-          "Photo de la rue (où s’arrêter)",
-          "Photo des 2–3 meubles volumineux",
+          "détail du passage le plus étroit (porte/couloir)",
+          "détail escalier (bas + palier) / ascenseur (cabine) si immeuble",
+          "détail de la rue (où s’arrêter)",
+          "détail des 2–3 meubles volumineux",
         ],
       },
     ],
@@ -889,11 +889,11 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
           "La checklist ci-dessous donne un standard facile à reproduire.",
         ],
         checklist: [
-          "Photo rue : stationnement possible + distance",
+          "détail rue : stationnement possible + distance",
           "Distance camion→porte (même en pas)",
-          "Photo entrée + couloir/porte la plus étroite",
-          "Photo escalier/ascenseur (si applicable)",
-          "Liste + photo des meubles volumineux (et démontage souhaité oui/non)",
+          "détail entrée + couloir/porte la plus étroite",
+          "détail escalier/ascenseur (si applicable)",
+          "Liste + détail des meubles volumineux (et démontage souhaité oui/non)",
         ],
       },
     ],
@@ -913,15 +913,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Blagnac (et checklist locale)",
         paragraphs: [
           "À Blagnac, une partie de la fiabilité se joue sur le “chemin réel” : parfois l’entrée n’est pas au même endroit que le stationnement, ou l’ascenseur est plus loin que prévu. Montrez le trajet, et le devis devient solide.",
-          "Le bon réflexe est de documenter le parcours en 3 photos : rue (où s’arrêter), entrée (passage), escalier/ascenseur (montée).",
+          "Le bon réflexe est de documenter le parcours en 3 détails : rue (où s’arrêter), entrée (passage), escalier/ascenseur (montée).",
           "Ajoutez ensuite les meubles volumineux “limites” et vous évitez les devis trop optimistes.",
         ],
         checklist: [
-          "Photo rue : stationnement/arrêt possible",
+          "détail rue : stationnement/arrêt possible",
           "Distance camion→entrée (même approximative)",
-          "Photo entrée + passage le plus étroit",
-          "Photo ascenseur (cabine) ou escalier (bas + palier)",
-          "Photo des meubles volumineux + mention démontage souhaité",
+          "détail entrée + passage le plus étroit",
+          "détail ascenseur (cabine) ou escalier (bas + palier)",
+          "détail des meubles volumineux + mention démontage souhaité",
         ],
       },
     ],
@@ -929,7 +929,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   muret: {
     appendBySectionId: {
       "volume-tri": [
-        "Si vous avez garage/cellier, incluez-les dans les photos : ces zones “hors pièces” sont souvent oubliées et font gonfler le volume réel.",
+        "Si vous avez garage/cellier, incluez-les dans les détails : ces zones “hors pièces” sont souvent oubliées et font gonfler le volume réel.",
       ],
     },
     extraSections: [
@@ -937,16 +937,16 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         id: "specificites-logement-acces",
         title: "Spécificités logement & accès à Muret (et checklist locale)",
         paragraphs: [
-          "À Muret, le volume réel dépend souvent des zones “hors pièces” : garage, cellier, abri, grenier. Si vous les incluez dans les photos, le devis devient beaucoup plus fiable.",
+          "À Muret, le volume réel dépend souvent des zones “hors pièces” : garage, cellier, abri, grenier. Si vous les incluez dans les détails, le devis devient beaucoup plus fiable.",
           "Côté accès, clarifiez simplement : stationnement possible, distance camion→porte, et présence de marches/escaliers. Ce sont les vrais facteurs de temps.",
           "La checklist ci-dessous suffit pour standardiser la demande.",
         ],
         checklist: [
-          "Photos garage/cellier/annexes (si existants)",
-          "Photo rue : stationnement possible + distance",
+          "détails garage/cellier/annexes (si existants)",
+          "détail rue : stationnement possible + distance",
           "Distance camion→porte (court/moyen/long)",
-          "Photo entrée + passage le plus étroit",
-          "Photo des meubles volumineux (canapé, armoire, frigo)",
+          "détail entrée + passage le plus étroit",
+          "détail des meubles volumineux (canapé, armoire, frigo)",
         ],
       },
     ],
@@ -971,7 +971,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         ],
         checklist: [
           "Niveau de prestation souhaité (éco/standard/clé en main)",
-          "Photo accès : rue + entrée + escalier/ascenseur",
+          "détail accès : rue + entrée + escalier/ascenseur",
           "Distance camion→porte (même en pas)",
           "Liste des objets fragiles/encombrants",
           "2–3 dates possibles (si flexible)",
@@ -982,7 +982,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   rodez: {
     appendBySectionId: {
       dossier: [
-        "Si vous hésitez sur un escalier/palier, une photo vaut mieux qu’une estimation. Les déménageurs n’ont pas besoin de perfection : ils ont besoin de visibilité.",
+        "Si vous hésitez sur un escalier/palier, une détail vaut mieux qu’une estimation. Les déménageurs n’ont pas besoin de perfection : ils ont besoin de visibilité.",
       ],
       "jour-j": [
         "Jour J : préparez une boîte “essentiels 24h” (draps, chargeurs, documents). Gardez-la hors du camion : ça vous sauve la première soirée.",
@@ -993,15 +993,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         id: "specificites-logement-acces",
         title: "Spécificités logement & accès à Rodez (et checklist locale)",
         paragraphs: [
-          "À Rodez, la fiabilité vient de la visibilité. Une photo de l’escalier + un palier répond à 90% des questions sur les gros meubles.",
+          "À Rodez, la fiabilité vient de la visibilité. Une détail de l’escalier + un palier répond à 90% des questions sur les gros meubles.",
           "Ensuite, clarifiez le stationnement et la distance de portage. Le portage est du temps : c’est ce qui fait varier les devis.",
           "La checklist ci-dessous vous donne un dossier standard facile à partager.",
         ],
         checklist: [
-          "Photo escalier (bas + palier) ou ascenseur (cabine)",
-          "Photo rue : stationnement possible + distance",
+          "détail escalier (bas + palier) ou ascenseur (cabine)",
+          "détail rue : stationnement possible + distance",
           "Distance camion→porte (court/moyen/long)",
-          "Photo entrée + passage le plus étroit",
+          "détail entrée + passage le plus étroit",
           "Boîte “essentiels 24h” + sac perso “à ne pas charger”",
         ],
       },
@@ -1010,7 +1010,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   millau: {
     appendBySectionId: {
       "acces-stationnement": [
-        "Le portage extérieur (allée, marches, portail) surprend souvent en maison. Une photo du chemin “porte → rue” rend le devis plus juste.",
+        "Le portage extérieur (allée, marches, portail) surprend souvent en maison. Une détail du chemin “porte → rue” rend le devis plus juste.",
       ],
     },
     extraSections: [
@@ -1018,16 +1018,16 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         id: "specificites-logement-acces",
         title: "Spécificités logement & accès à Millau (et checklist locale)",
         paragraphs: [
-          "À Millau, si vous êtes en maison, le sujet qui surprend est souvent l’extérieur : marches, allée, portillon, distance jusqu’à la rue. Une photo du chemin “porte → rue” rend le devis plus juste.",
-          "En immeuble, le sujet est le passage intérieur (porte/couloir/escalier). Une photo du point le plus étroit suffit souvent à fiabiliser.",
+          "À Millau, si vous êtes en maison, le sujet qui surprend est souvent l’extérieur : marches, allée, portillon, distance jusqu’à la rue. Une détail du chemin “porte → rue” rend le devis plus juste.",
+          "En immeuble, le sujet est le passage intérieur (porte/couloir/escalier). Une détail du point le plus étroit suffit souvent à fiabiliser.",
           "Objectif : éliminer l’incertitude sur l’accès, pour comparer des devis comparables.",
         ],
         checklist: [
-          "Photo du chemin extérieur (si maison) : porte → rue",
-          "Photo du passage le plus étroit (porte/couloir/escalier)",
-          "Photo rue : stationnement possible + distance",
+          "détail du chemin extérieur (si maison) : porte → rue",
+          "détail du passage le plus étroit (porte/couloir/escalier)",
+          "détail rue : stationnement possible + distance",
           "Distance camion→porte (même approximative)",
-          "Photo des meubles volumineux",
+          "détail des meubles volumineux",
         ],
       },
     ],
@@ -1046,16 +1046,16 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         id: "specificites-logement-acces",
         title: "Spécificités logement & accès à Cahors (et checklist locale)",
         paragraphs: [
-          "À Cahors, un devis fiable est un devis qui sait ce qu’il transporte (volume) et comment il le transporte (accès). Les deux se fiabilisent avec quelques photos bien choisies.",
+          "À Cahors, un devis fiable est un devis qui sait ce qu’il transporte (volume) et comment il le transporte (accès). Les deux se fiabilisent avec quelques détails bien choisies.",
           "Si vous avez des objets à forte valeur, mentionnez-le : ça aligne la protection/assurance avec vos attentes, et ça évite les incompréhensions.",
           "La checklist ci-dessous donne un standard “sans surprise”.",
         ],
         checklist: [
-          "Photos des pièces (volume) + objets fragiles/valeur",
-          "Photo rue : stationnement possible + distance",
+          "détails des pièces (volume) + objets fragiles/valeur",
+          "détail rue : stationnement possible + distance",
           "Distance camion→porte (même en pas)",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier/ascenseur (si applicable)",
+          "détail entrée + passage le plus étroit",
+          "détail escalier/ascenseur (si applicable)",
         ],
       },
     ],
@@ -1075,15 +1075,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Auch (et checklist locale)",
         paragraphs: [
           "À Auch, le meilleur boost “prix” est souvent le tri, et le meilleur boost “fiabilité” est l’accès. Réduire le volume avant devis + clarifier la distance camion→porte stabilise rapidement les devis.",
-          "Si vous avez des annexes (garage/cave), incluez-les dans les photos : c’est une source fréquente de sous-estimation.",
+          "Si vous avez des annexes (garage/cave), incluez-les dans les détails : c’est une source fréquente de sous-estimation.",
           "La checklist ci-dessous est un standard simple à appliquer.",
         ],
         checklist: [
           "Tri en 3 piles (don/vente, recycler, à déménager) avant demande",
-          "Photos des annexes (garage/cave/cellier) si existantes",
+          "détails des annexes (garage/cave/cellier) si existantes",
           "Distance camion→porte (court/moyen/long)",
-          "Photo entrée + passage le plus étroit",
-          "Photo des meubles volumineux + photo escalier/ascenseur si besoin",
+          "détail entrée + passage le plus étroit",
+          "détail des meubles volumineux + détail escalier/ascenseur si besoin",
         ],
       },
     ],
@@ -1091,7 +1091,7 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
   lunel: {
     appendBySectionId: {
       "acces-stationnement": [
-        "Le duo gagnant pour fiabiliser un devis : photo de la rue (où s’arrêter) + photo de l’accès intérieur (entrée/escalier/ascenseur). Le reste devient plus simple à chiffrer.",
+        "Le duo gagnant pour fiabiliser un devis : détail de la rue (où s’arrêter) + détail de l’accès intérieur (entrée/escalier/ascenseur). Le reste devient plus simple à chiffrer.",
       ],
     },
     extraSections: [
@@ -1099,16 +1099,16 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         id: "specificites-logement-acces",
         title: "Spécificités logement & accès à Lunel (et checklist locale)",
         paragraphs: [
-          "À Lunel, la différence entre un devis “propre” et un devis “à corriger” vient souvent de l’accès. La bonne nouvelle : 2–3 photos bien prises suffisent à clarifier.",
+          "À Lunel, la différence entre un devis “propre” et un devis “à corriger” vient souvent de l’accès. La bonne nouvelle : 2–3 détails bien prises suffisent à clarifier.",
           "Montrez où le camion peut s’arrêter, puis montrez le passage intérieur (entrée + escalier/ascenseur). Ajoutez ensuite les meubles volumineux.",
           "Objectif : donner la même base d’info à tout le monde pour comparer sans surprise.",
         ],
         checklist: [
-          "Photo rue : stationnement/arrêt possible",
+          "détail rue : stationnement/arrêt possible",
           "Distance camion→porte (même approximative)",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier (bas + palier) / ascenseur (cabine)",
-          "Photo meubles volumineux + objets fragiles",
+          "détail entrée + passage le plus étroit",
+          "détail escalier (bas + palier) / ascenseur (cabine)",
+          "détail meubles volumineux + objets fragiles",
         ],
       },
     ],
@@ -1123,15 +1123,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Orléans (et checklist locale)",
         paragraphs: [
           "À Orléans, un devis fiable se gagne sur un point simple : rendre l’accès “visible”. Stationnement possible, distance de portage, et passage intérieur (porte/couloir/escalier) = le trio qui détermine le temps de manutention.",
-          "Si vous êtes en immeuble, la photo la plus utile est souvent l’escalier depuis le bas + un palier (ou l’ascenseur cabine porte ouverte). Si vous êtes en maison, c’est le chemin extérieur (portail, allée, marches).",
+          "Si vous êtes en immeuble, la détail la plus utile est souvent l’escalier depuis le bas + un palier (ou l’ascenseur cabine porte ouverte). Si vous êtes en maison, c’est le chemin extérieur (portail, allée, marches).",
           "Objectif : donner la même base d’info à tout le monde pour comparer des devis comparables.",
         ],
         checklist: [
-          "Photo rue : où le camion peut s’arrêter",
+          "détail rue : où le camion peut s’arrêter",
           "Distance camion→porte (court/moyen/long ou en pas)",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier (bas + palier) / ascenseur (cabine)",
-          "Photo des 2–3 meubles “limites” (canapé, frigo, armoire)",
+          "détail entrée + passage le plus étroit",
+          "détail escalier (bas + palier) / ascenseur (cabine)",
+          "détail des 2–3 meubles “limites” (canapé, frigo, armoire)",
         ],
       },
     ],
@@ -1147,11 +1147,11 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
           "Gardez la checklist identique pour tous les déménageurs : c’est la base de la comparaison.",
         ],
         checklist: [
-          "Photo stationnement/arrêt possible",
+          "détail stationnement/arrêt possible",
           "Distance camion→porte (même approximative)",
-          "Photo du passage le plus étroit (porte/couloir)",
-          "Photo escalier (bas + palier) / ascenseur (cabine)",
-          "Liste + photo groupée des objets lourds/fragiles",
+          "détail du passage le plus étroit (porte/couloir)",
+          "détail escalier (bas + palier) / ascenseur (cabine)",
+          "Liste + détail groupée des objets lourds/fragiles",
         ],
       },
     ],
@@ -1167,11 +1167,11 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
           "Avec une base claire, vous comparez une prestation et pas un chiffre au hasard.",
         ],
         checklist: [
-          "Photos des annexes (cave/garage/cellier) si existantes",
-          "Photo rue + endroit où s’arrêter",
+          "détails des annexes (cave/garage/cellier) si existantes",
+          "détail rue + endroit où s’arrêter",
           "Distance camion→porte",
-          "Photo escalier/ascenseur + palier",
-          "Photo meubles volumineux + passage le plus étroit",
+          "détail escalier/ascenseur + palier",
+          "détail meubles volumineux + passage le plus étroit",
         ],
       },
     ],
@@ -1183,15 +1183,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Bourges (et checklist locale)",
         paragraphs: [
           "À Bourges, le devis fiable se joue sur la logistique réelle : stationnement, portage, et passages. Le volume seul ne suffit pas.",
-          "Si vous êtes en immeuble, la photo escalier (bas + palier) est le meilleur “résumé” des contraintes. Si vous êtes en maison, photographiez le chemin porte → rue (portail/marches).",
+          "Si vous êtes en immeuble, la détail escalier (bas + palier) est le meilleur “résumé” des contraintes. Si vous êtes en maison, décrivez le chemin porte → rue (portail/marches).",
           "Annoncez aussi les meubles “limites” : c’est souvent ce détail qui évite un blocage le jour J.",
         ],
         checklist: [
-          "Photo rue : stationnement possible + distance",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier (bas + palier) / ascenseur (cabine)",
-          "Photo chemin extérieur (si maison)",
-          "Photo + liste des meubles volumineux/fragiles",
+          "détail rue : stationnement possible + distance",
+          "détail entrée + passage le plus étroit",
+          "détail escalier (bas + palier) / ascenseur (cabine)",
+          "détail chemin extérieur (si maison)",
+          "détail + liste des meubles volumineux/fragiles",
         ],
       },
     ],
@@ -1203,15 +1203,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Chartres (et checklist locale)",
         paragraphs: [
           "À Chartres, l’objectif est simple : réduire l’incertitude. Plus l’accès est clair (portage, étages, passages), plus les devis deviennent comparables et fiables.",
-          "Même sans mesure, une estimation “court/moyen/long” + 3 photos (rue, entrée, escalier/ascenseur) suffisent souvent à cadrer correctement.",
+          "Même sans mesure, une estimation “court/moyen/long” + 3 détails (rue, entrée, escalier/ascenseur) suffisent souvent à cadrer correctement.",
           "Ajoutez ensuite les objets lourds/fragiles pour aligner la méthode et l’assurance.",
         ],
         checklist: [
           "Distance camion→porte (en pas si besoin)",
-          "Photo rue : arrêt possible",
-          "Photo entrée + couloir/porte la plus étroite",
-          "Photo escalier/ascenseur",
-          "Photo objets lourds/fragiles (groupée)",
+          "détail rue : arrêt possible",
+          "détail entrée + couloir/porte la plus étroite",
+          "détail escalier/ascenseur",
+          "détail objets lourds/fragiles (groupée)",
         ],
       },
     ],
@@ -1222,16 +1222,16 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         id: "specificites-logement-acces",
         title: "Spécificités logement & accès à Châteauroux (et checklist locale)",
         paragraphs: [
-          "À Châteauroux, les devis deviennent fiables quand vous standardisez deux choses : l’accès et le volume. Le volume via photos des pièces; l’accès via photos rue/entrée/escalier.",
+          "À Châteauroux, les devis deviennent fiables quand vous standardisez deux choses : l’accès et le volume. Le volume via détails des pièces; l’accès via détails rue/entrée/escalier.",
           "Si vous avez des annexes (cave/garage), montrez-les : c’est une source fréquente de sous-estimation de volume.",
           "Le but n’est pas de tout prévoir, mais de rendre la logistique comparable entre déménageurs.",
         ],
         checklist: [
-          "Photos des pièces + annexes (si existantes)",
-          "Photo rue : stationnement possible",
+          "détails des pièces + annexes (si existantes)",
+          "détail rue : stationnement possible",
           "Distance camion→porte",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier/ascenseur + palier",
+          "détail entrée + passage le plus étroit",
+          "détail escalier/ascenseur + palier",
         ],
       },
     ],
@@ -1247,11 +1247,11 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
           "La checklist ci-dessous permet de donner la même base d’info à tous.",
         ],
         checklist: [
-          "Photo stationnement/arrêt possible",
+          "détail stationnement/arrêt possible",
           "Distance camion→porte (court/moyen/long)",
-          "Photo passage le plus étroit",
-          "Photo escalier (bas + palier) / ascenseur (cabine)",
-          "Photo meubles volumineux + objets fragiles",
+          "détail passage le plus étroit",
+          "détail escalier (bas + palier) / ascenseur (cabine)",
+          "détail meubles volumineux + objets fragiles",
         ],
       },
     ],
@@ -1263,15 +1263,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Joué‑lès‑Tours (et checklist locale)",
         paragraphs: [
           "À Joué‑lès‑Tours, les devis deviennent comparables quand l’accès est clair : distance camion→porte + étage/ascenseur + passage le plus étroit.",
-          "Si l’ascenseur est présent, une photo de cabine porte ouverte suffit souvent à éviter un devis trop optimiste pour les gros meubles.",
-          "Ajoutez une photo de la rue (où s’arrêter) et vous avez une base solide.",
+          "Si l’ascenseur est présent, une détail de cabine porte ouverte suffit souvent à éviter un devis trop optimiste pour les gros meubles.",
+          "Ajoutez une détail de la rue (où s’arrêter) et vous avez une base solide.",
         ],
         checklist: [
-          "Photo rue : stationnement possible + distance",
+          "détail rue : stationnement possible + distance",
           "Distance camion→porte (en pas si besoin)",
-          "Photo entrée + passage le plus étroit",
-          "Photo ascenseur (cabine) / escalier (bas + palier)",
-          "Photo des 2–3 meubles volumineux",
+          "détail entrée + passage le plus étroit",
+          "détail ascenseur (cabine) / escalier (bas + palier)",
+          "détail des 2–3 meubles volumineux",
         ],
       },
     ],
@@ -1282,16 +1282,16 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         id: "specificites-logement-acces",
         title: "Spécificités logement & accès à Saint‑Cyr‑sur‑Loire (et checklist locale)",
         paragraphs: [
-          "À Saint‑Cyr‑sur‑Loire, la fiabilité se joue souvent sur la clarté : accès extérieur (maison) ou accès intérieur (immeuble). Dans les deux cas, une photo du chemin réel suffit à cadrer.",
+          "À Saint‑Cyr‑sur‑Loire, la fiabilité se joue souvent sur la clarté : accès extérieur (maison) ou accès intérieur (immeuble). Dans les deux cas, une détail du chemin réel suffit à cadrer.",
           "Si vous êtes en maison, montrez portail/allée/marches. Si vous êtes en immeuble, montrez escalier/palier/ascenseur. C’est du temps de manutention.",
           "Ensuite, annoncez les objets fragiles/lourds pour aligner la méthode.",
         ],
         checklist: [
-          "Photo du chemin extérieur (si maison) : porte → rue",
-          "Photo escalier/ascenseur (si immeuble)",
-          "Photo rue : stationnement possible",
+          "détail du chemin extérieur (si maison) : porte → rue",
+          "détail escalier/ascenseur (si immeuble)",
+          "détail rue : stationnement possible",
           "Distance camion→porte",
-          "Photo objets fragiles/lourds (groupée)",
+          "détail objets fragiles/lourds (groupée)",
         ],
       },
     ],
@@ -1304,14 +1304,14 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         paragraphs: [
           "À Saint‑Jean‑de‑Braye, la clé est d’éviter les devis “à hypothèses”. On documente l’accès (rue, entrée, escalier/ascenseur) et on obtient des devis comparables.",
           "Même sans mesurer, la distance camion→porte (en pas) est un repère puissant. Ajoutez le passage le plus étroit et vous avez l’essentiel.",
-          "Pour les meubles volumineux, une photo suffit souvent à prévenir un blocage.",
+          "Pour les meubles volumineux, une détail suffit souvent à prévenir un blocage.",
         ],
         checklist: [
           "Distance camion→porte (en pas)",
-          "Photo rue : arrêt possible",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier/ascenseur + palier",
-          "Photo meubles volumineux (canapé/armoire/frigo)",
+          "détail rue : arrêt possible",
+          "détail entrée + passage le plus étroit",
+          "détail escalier/ascenseur + palier",
+          "détail meubles volumineux (canapé/armoire/frigo)",
         ],
       },
     ],
@@ -1325,15 +1325,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Dijon (et checklist locale)",
         paragraphs: [
           "À Dijon, le devis devient fiable quand on connaît les passages : portes, couloirs, escaliers/paliers. Ce sont eux qui décident si un meuble passe “en une fois” ou nécessite démontage.",
-          "Le bon réflexe : une photo du passage le plus étroit + une photo escalier/ascenseur. Ensuite, tout le monde chiffre la même méthode.",
+          "Le bon réflexe : une détail du passage le plus étroit + une détail escalier/ascenseur. Ensuite, tout le monde chiffre la même méthode.",
           "Ajoutez la distance camion→porte et vous supprimez une grande partie de l’incertitude.",
         ],
         checklist: [
-          "Photo passage le plus étroit (porte/couloir/escalier)",
-          "Photo escalier (bas + palier) / ascenseur (cabine)",
-          "Photo rue : stationnement possible + distance",
+          "détail passage le plus étroit (porte/couloir/escalier)",
+          "détail escalier (bas + palier) / ascenseur (cabine)",
+          "détail rue : stationnement possible + distance",
           "Distance camion→porte (en pas)",
-          "Photo objets fragiles/volumineux (groupée)",
+          "détail objets fragiles/volumineux (groupée)",
         ],
       },
     ],
@@ -1345,15 +1345,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Besançon (et checklist locale)",
         paragraphs: [
           "À Besançon, le devis “qui tient” est celui qui connaît votre accès réel : stationnement, portage, et passage intérieur. Sans ça, les devis ne décrivent pas la même prestation.",
-          "Une photo de l’escalier depuis le bas + un palier est souvent le meilleur résumé des contraintes. Ajoutez l’entrée et la rue, et le chiffrage devient fiable.",
+          "Une détail de l’escalier depuis le bas + un palier est souvent le meilleur résumé des contraintes. Ajoutez l’entrée et la rue, et le chiffrage devient fiable.",
           "Pensez aussi aux annexes (cave/garage) si elles existent : elles changent le volume réel.",
         ],
         checklist: [
-          "Photos annexes (cave/garage) si existantes",
-          "Photo rue : arrêt possible",
+          "détails annexes (cave/garage) si existantes",
+          "détail rue : arrêt possible",
           "Distance camion→porte",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier/ascenseur + palier",
+          "détail entrée + passage le plus étroit",
+          "détail escalier/ascenseur + palier",
         ],
       },
     ],
@@ -1365,15 +1365,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Belfort (et checklist locale)",
         paragraphs: [
           "À Belfort, la fiabilité d’un devis tient à une chose : le temps réel de manutention. Et le temps dépend de l’accès : portage, étages, ascenseur, passages.",
-          "Même sans mesures, distance camion→porte + photo du passage le plus étroit suffisent à rendre le devis réaliste.",
+          "Même sans mesures, distance camion→porte + détail du passage le plus étroit suffisent à rendre le devis réaliste.",
           "Annoncez aussi les objets lourds/fragiles : ça change la méthode (protection, manutention).",
         ],
         checklist: [
           "Distance camion→porte (court/moyen/long)",
-          "Photo rue : stationnement possible",
-          "Photo passage le plus étroit",
-          "Photo escalier/ascenseur",
-          "Liste + photo objets lourds/fragiles",
+          "détail rue : stationnement possible",
+          "détail passage le plus étroit",
+          "détail escalier/ascenseur",
+          "Liste + détail objets lourds/fragiles",
         ],
       },
     ],
@@ -1389,11 +1389,11 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
           "Gardez la checklist identique pour tout le monde et comparez sereinement.",
         ],
         checklist: [
-          "Photo rue : arrêt possible + distance",
+          "détail rue : arrêt possible + distance",
           "Distance camion→porte (en pas)",
-          "Photo entrée + couloir/porte la plus étroite",
-          "Photo escalier/ascenseur + palier",
-          "Photo meubles volumineux + objets fragiles",
+          "détail entrée + couloir/porte la plus étroite",
+          "détail escalier/ascenseur + palier",
+          "détail meubles volumineux + objets fragiles",
         ],
       },
     ],
@@ -1405,15 +1405,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Mâcon (et checklist locale)",
         paragraphs: [
           "À Mâcon, la fiabilité vient d’un dossier clair : où le camion se met, combien on marche, et comment on monte. Ce sont les vrais facteurs de temps.",
-          "Une photo de l’accès intérieur (escalier/ascenseur) + une photo du passage le plus étroit suffisent souvent à éviter un devis trop optimiste.",
+          "Une détail de l’accès intérieur (escalier/ascenseur) + une détail du passage le plus étroit suffisent souvent à éviter un devis trop optimiste.",
           "Ajoutez vos meubles volumineux et tout le monde chiffre la même méthode.",
         ],
         checklist: [
-          "Photo rue : stationnement possible",
+          "détail rue : stationnement possible",
           "Distance camion→porte (court/moyen/long)",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier/ascenseur",
-          "Photo des 2–3 meubles volumineux",
+          "détail entrée + passage le plus étroit",
+          "détail escalier/ascenseur",
+          "détail des 2–3 meubles volumineux",
         ],
       },
     ],
@@ -1424,16 +1424,16 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         id: "specificites-logement-acces",
         title: "Spécificités logement & accès à Auxerre (et checklist locale)",
         paragraphs: [
-          "À Auxerre, l’accès est souvent le point qui fait varier un devis. Une photo de la rue + une photo de l’entrée + une photo escalier/ascenseur rend la logistique comparable.",
+          "À Auxerre, l’accès est souvent le point qui fait varier un devis. Une détail de la rue + une détail de l’entrée + une détail escalier/ascenseur rend la logistique comparable.",
           "Si vous avez des marches, un couloir long, ou un passage étroit, montrez-le : c’est ce qui évite les surprises le jour J.",
           "Ensuite, comparez les devis sur la même prestation (emballage/démontage/assurance).",
         ],
         checklist: [
-          "Photo du stationnement/arrêt possible",
+          "détail du stationnement/arrêt possible",
           "Distance camion→porte (en pas)",
-          "Photo passage le plus étroit",
-          "Photo escalier/ascenseur + palier",
-          "Photo objets fragiles/volumineux",
+          "détail passage le plus étroit",
+          "détail escalier/ascenseur + palier",
+          "détail objets fragiles/volumineux",
         ],
       },
     ],
@@ -1445,15 +1445,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Nevers (et checklist locale)",
         paragraphs: [
           "À Nevers, un devis fiable dépend du temps réel, pas du feeling. Le temps se lit dans l’accès : distance de portage, étages, passages.",
-          "Le réflexe simple : distance camion→porte + photo de l’escalier/palier (ou ascenseur). Ajoutez ensuite les meubles volumineux.",
+          "Le réflexe simple : distance camion→porte + détail de l’escalier/palier (ou ascenseur). Ajoutez ensuite les meubles volumineux.",
           "Avec ça, les devis deviennent comparables et les surprises diminuent fortement.",
         ],
         checklist: [
           "Distance camion→porte (court/moyen/long)",
-          "Photo rue : stationnement possible",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier/ascenseur",
-          "Photo meubles volumineux + objets fragiles",
+          "détail rue : stationnement possible",
+          "détail entrée + passage le plus étroit",
+          "détail escalier/ascenseur",
+          "détail meubles volumineux + objets fragiles",
         ],
       },
     ],
@@ -1465,15 +1465,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Sens (et checklist locale)",
         paragraphs: [
           "À Sens, pour un devis fiable, l’essentiel est d’éviter les angles morts : portage long, escaliers étroits, annexes oubliées.",
-          "Même une estimation simple + quelques photos (rue/entrée/escalier) suffisent à rendre le chiffrage réaliste.",
+          "Même une estimation simple + quelques détails (rue/entrée/escalier) suffisent à rendre le chiffrage réaliste.",
           "Ensuite, comparez aussi l’assurance et les prestations incluses pour éviter les mauvaises surprises.",
         ],
         checklist: [
-          "Photos des annexes (cave/garage) si existantes",
-          "Photo rue : arrêt possible",
+          "détails des annexes (cave/garage) si existantes",
+          "détail rue : arrêt possible",
           "Distance camion→porte",
-          "Photo escalier/ascenseur + palier",
-          "Photo du passage le plus étroit + meubles volumineux",
+          "détail escalier/ascenseur + palier",
+          "détail du passage le plus étroit + meubles volumineux",
         ],
       },
     ],
@@ -1485,15 +1485,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Montbéliard (et checklist locale)",
         paragraphs: [
           "À Montbéliard, la fiabilité d’un devis dépend surtout de l’accès : stationnement, portage, et passages. C’est le facteur de temps principal.",
-          "Si l’ascenseur est présent, une photo de cabine porte ouverte évite beaucoup de devis trop optimistes sur les gros meubles.",
+          "Si l’ascenseur est présent, une détail de cabine porte ouverte évite beaucoup de devis trop optimistes sur les gros meubles.",
           "Ajoutez ensuite la liste des objets lourds/fragiles pour aligner la méthode.",
         ],
         checklist: [
-          "Photo rue : stationnement possible + distance",
+          "détail rue : stationnement possible + distance",
           "Distance camion→porte (en pas)",
-          "Photo entrée + passage le plus étroit",
-          "Photo ascenseur (cabine) / escalier (bas + palier)",
-          "Liste + photo objets lourds/fragiles",
+          "détail entrée + passage le plus étroit",
+          "détail ascenseur (cabine) / escalier (bas + palier)",
+          "Liste + détail objets lourds/fragiles",
         ],
       },
     ],
@@ -1505,15 +1505,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Dole (et checklist locale)",
         paragraphs: [
           "À Dole, le bon devis est un devis qui connaît votre logistique réelle : où le camion se place, combien de portage, et comment on passe à l’intérieur.",
-          "Une photo du passage le plus étroit + une photo escalier/ascenseur rendent la méthode claire, surtout pour les meubles volumineux.",
+          "Une détail du passage le plus étroit + une détail escalier/ascenseur rendent la méthode claire, surtout pour les meubles volumineux.",
           "Gardez la checklist identique pour tous les déménageurs : c’est la base d’une comparaison propre.",
         ],
         checklist: [
-          "Photo stationnement/arrêt possible",
+          "détail stationnement/arrêt possible",
           "Distance camion→porte (court/moyen/long)",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier/ascenseur + palier",
-          "Photo meubles volumineux (canapé, armoire, frigo)",
+          "détail entrée + passage le plus étroit",
+          "détail escalier/ascenseur + palier",
+          "détail meubles volumineux (canapé, armoire, frigo)",
         ],
       },
     ],
@@ -1527,15 +1527,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Rouen (et checklist locale)",
         paragraphs: [
           "À Rouen, le devis le plus fiable est celui qui connaît le “dernier tronçon” : où le camion peut s’arrêter, combien de portage il faut faire, et comment on passe à l’intérieur (escaliers/ascenseur).",
-          "Le bon réflexe : photographier l’escalier depuis le bas + un palier (ou l’ascenseur cabine), et indiquer la distance camion→porte (même en pas).",
+          "Le bon réflexe : décrire l’escalier depuis le bas + un palier (ou l’ascenseur cabine), et indiquer la distance camion→porte (même en pas).",
           "Objectif : rendre l’accès comparable entre devis, pour éviter les ajustements le jour J.",
         ],
         checklist: [
-          "Photo rue : stationnement/arrêt possible + distance visible",
+          "détail rue : stationnement/arrêt possible + distance visible",
           "Distance camion→porte (court/moyen/long ou en pas)",
-          "Photo entrée + passage le plus étroit (porte/couloir)",
-          "Photo escalier (bas + palier) / ascenseur (cabine)",
-          "Photo des 2–3 meubles “limites” (canapé, armoire, frigo)",
+          "détail entrée + passage le plus étroit (porte/couloir)",
+          "détail escalier (bas + palier) / ascenseur (cabine)",
+          "détail des 2–3 meubles “limites” (canapé, armoire, frigo)",
         ],
       },
     ],
@@ -1547,15 +1547,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Caen (et checklist locale)",
         paragraphs: [
           "À Caen, la fiabilité d’un devis dépend surtout du temps réel de manutention : portage, étages, passages. Le volume compte, mais l’accès décide souvent du tempo.",
-          "Une photo du passage le plus étroit + une photo escalier/ascenseur suffisent souvent à fiabiliser le chiffrage sur les gros meubles.",
+          "Une détail du passage le plus étroit + une détail escalier/ascenseur suffisent souvent à fiabiliser le chiffrage sur les gros meubles.",
           "Gardez la checklist identique pour tous les déménageurs : c’est la base d’une comparaison propre.",
         ],
         checklist: [
-          "Photo rue : endroit où s’arrêter",
+          "détail rue : endroit où s’arrêter",
           "Distance camion→porte (même approximative)",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier/ascenseur + palier",
-          "Photo objets lourds/fragiles (groupée)",
+          "détail entrée + passage le plus étroit",
+          "détail escalier/ascenseur + palier",
+          "détail objets lourds/fragiles (groupée)",
         ],
       },
     ],
@@ -1567,15 +1567,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès au Havre (et checklist locale)",
         paragraphs: [
           "Au Havre, les devis deviennent comparables dès que vous clarifiez l’accès : stationnement, distance de portage, et ascenseur (oui/non + taille).",
-          "Le meilleur “résumé” est une photo de l’entrée + une photo de l’ascenseur (cabine porte ouverte) ou de l’escalier + un palier.",
+          "Le meilleur “résumé” est une détail de l’entrée + une détail de l’ascenseur (cabine porte ouverte) ou de l’escalier + un palier.",
           "Ajoutez vos meubles volumineux et le devis devient beaucoup plus fiable.",
         ],
         checklist: [
-          "Photo rue : arrêt possible + distance",
+          "détail rue : arrêt possible + distance",
           "Distance camion→porte (en pas si besoin)",
-          "Photo entrée + couloir/porte la plus étroite",
-          "Photo ascenseur (cabine) / escalier (bas + palier)",
-          "Photo meubles volumineux + objets fragiles",
+          "détail entrée + couloir/porte la plus étroite",
+          "détail ascenseur (cabine) / escalier (bas + palier)",
+          "détail meubles volumineux + objets fragiles",
         ],
       },
     ],
@@ -1587,15 +1587,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Cherbourg‑en‑Cotentin (et checklist locale)",
         paragraphs: [
           "À Cherbourg‑en‑Cotentin, un devis fiable se construit sur l’accès réel : où le camion peut se mettre, combien on marche, et comment on monte (escaliers/ascenseur).",
-          "Même sans mesures, la distance camion→porte (en pas) + une photo de l’escalier/ascenseur rendent la manutention prévisible.",
+          "Même sans mesures, la distance camion→porte (en pas) + une détail de l’escalier/ascenseur rendent la manutention prévisible.",
           "C’est cette visibilité qui évite les surprises le jour J.",
         ],
         checklist: [
-          "Photo stationnement/arrêt possible",
+          "détail stationnement/arrêt possible",
           "Distance camion→porte (court/moyen/long)",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier/ascenseur",
-          "Photo objets “hors gabarit” (canapé, frigo, armoire)",
+          "détail entrée + passage le plus étroit",
+          "détail escalier/ascenseur",
+          "détail objets “hors gabarit” (canapé, frigo, armoire)",
         ],
       },
     ],
@@ -1606,16 +1606,16 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         id: "specificites-logement-acces",
         title: "Spécificités logement & accès à Évreux (et checklist locale)",
         paragraphs: [
-          "À Évreux, la plupart des écarts de devis viennent de l’accès : portage long, étage sans ascenseur, passage étroit. Une photo rend ces contraintes évidentes.",
+          "À Évreux, la plupart des écarts de devis viennent de l’accès : portage long, étage sans ascenseur, passage étroit. Une détail rend ces contraintes évidentes.",
           "Le bon réflexe : rue + entrée + escalier/ascenseur, puis la liste des meubles volumineux. C’est simple et très efficace.",
           "Objectif : que tout le monde chiffre la même logistique.",
         ],
         checklist: [
-          "Photo rue : stationnement possible + distance",
+          "détail rue : stationnement possible + distance",
           "Distance camion→porte (en pas)",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier (bas + palier) / ascenseur (cabine)",
-          "Photo meubles volumineux + objets fragiles",
+          "détail entrée + passage le plus étroit",
+          "détail escalier (bas + palier) / ascenseur (cabine)",
+          "détail meubles volumineux + objets fragiles",
         ],
       },
     ],
@@ -1631,11 +1631,11 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
           "Avec la checklist ci-dessous, vous comparez des devis sur une base claire.",
         ],
         checklist: [
-          "Photo rue : où s’arrêter",
+          "détail rue : où s’arrêter",
           "Distance camion→porte (court/moyen/long)",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier/ascenseur + palier",
-          "Photo des meubles “limites” + mention démontage souhaité (oui/non)",
+          "détail entrée + passage le plus étroit",
+          "détail escalier/ascenseur + palier",
+          "détail des meubles “limites” + mention démontage souhaité (oui/non)",
         ],
       },
     ],
@@ -1647,15 +1647,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Elbeuf (et checklist locale)",
         paragraphs: [
           "À Elbeuf, l’accès est souvent le facteur qui fait varier un devis : où le camion se place, combien de portage, et comment on monte.",
-          "Une estimation simple de la distance + une photo de l’escalier/palier suffisent à rendre le chiffrage réaliste.",
-          "Ajoutez une photo des meubles volumineux, et vous évitez les devis trop optimistes.",
+          "Une estimation simple de la distance + une détail de l’escalier/palier suffisent à rendre le chiffrage réaliste.",
+          "Ajoutez une détail des meubles volumineux, et vous évitez les devis trop optimistes.",
         ],
         checklist: [
-          "Photo stationnement/arrêt possible + distance",
+          "détail stationnement/arrêt possible + distance",
           "Distance camion→porte (en pas)",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier/ascenseur",
-          "Photo meubles volumineux + objets fragiles",
+          "détail entrée + passage le plus étroit",
+          "détail escalier/ascenseur",
+          "détail meubles volumineux + objets fragiles",
         ],
       },
     ],
@@ -1666,16 +1666,16 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         id: "specificites-logement-acces",
         title: "Spécificités logement & accès à Lisieux (et checklist locale)",
         paragraphs: [
-          "À Lisieux, un devis fiable se gagne sur la clarté : accès + volume + date. L’accès se fiabilise avec 3 photos (rue, entrée, escalier/ascenseur).",
+          "À Lisieux, un devis fiable se gagne sur la clarté : accès + volume + date. L’accès se fiabilise avec 3 détails (rue, entrée, escalier/ascenseur).",
           "Si vous êtes en maison, montrez le chemin porte → rue (portail/marches). C’est souvent l’info oubliée qui change le temps.",
           "Gardez la checklist identique pour tous, et comparez sereinement.",
         ],
         checklist: [
-          "Photo du chemin extérieur (si maison)",
-          "Photo rue : arrêt possible + distance",
+          "détail du chemin extérieur (si maison)",
+          "détail rue : arrêt possible + distance",
           "Distance camion→porte",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier/ascenseur + palier",
+          "détail entrée + passage le plus étroit",
+          "détail escalier/ascenseur + palier",
         ],
       },
     ],
@@ -1687,15 +1687,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Alençon (et checklist locale)",
         paragraphs: [
           "À Alençon, le facteur #1 d’un devis fiable est la logistique réelle : portage, étages, passages. Sans ces infos, les devis ne décrivent pas la même prestation.",
-          "Même sans mesures, distance camion→porte + photo du passage le plus étroit suffisent à cadrer correctement.",
+          "Même sans mesures, distance camion→porte + détail du passage le plus étroit suffisent à cadrer correctement.",
           "Ajoutez vos objets fragiles/lourds pour aligner méthode et assurance.",
         ],
         checklist: [
           "Distance camion→porte (court/moyen/long)",
-          "Photo rue : stationnement possible",
-          "Photo passage le plus étroit (porte/couloir/escalier)",
-          "Photo escalier/ascenseur",
-          "Liste + photo objets fragiles/lourds",
+          "détail rue : stationnement possible",
+          "détail passage le plus étroit (porte/couloir/escalier)",
+          "détail escalier/ascenseur",
+          "Liste + détail objets fragiles/lourds",
         ],
       },
     ],
@@ -1711,11 +1711,11 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
           "Avec la checklist ci-dessous, vous donnez la même base d’info à tout le monde.",
         ],
         checklist: [
-          "Photo rue : arrêt possible + distance",
+          "détail rue : arrêt possible + distance",
           "Distance camion→porte (en pas)",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier/ascenseur + palier",
-          "2–3 dates possibles + photo meubles volumineux",
+          "détail entrée + passage le plus étroit",
+          "détail escalier/ascenseur + palier",
+          "2–3 dates possibles + détail meubles volumineux",
         ],
       },
     ],
@@ -1729,15 +1729,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Amiens (et checklist locale)",
         paragraphs: [
           "À Amiens, un devis fiable dépend surtout du temps réel : portage, étages, passages. C’est souvent plus déterminant que “10 cartons de plus”.",
-          "Le meilleur standard : distance camion→porte + photo escalier/palier (ou ascenseur) + photo du passage le plus étroit. Avec ça, les devis deviennent comparables.",
+          "Le meilleur standard : distance camion→porte + détail escalier/palier (ou ascenseur) + détail du passage le plus étroit. Avec ça, les devis deviennent comparables.",
           "Annoncez aussi les meubles volumineux : c’est ce qui évite les blocages le jour J.",
         ],
         checklist: [
-          "Photo rue : stationnement/arrêt possible",
+          "détail rue : stationnement/arrêt possible",
           "Distance camion→porte (court/moyen/long)",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier/ascenseur + palier",
-          "Photo meubles volumineux + objets fragiles",
+          "détail entrée + passage le plus étroit",
+          "détail escalier/ascenseur + palier",
+          "détail meubles volumineux + objets fragiles",
         ],
       },
     ],
@@ -1749,15 +1749,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Dunkerque (et checklist locale)",
         paragraphs: [
           "À Dunkerque, la comparaison de devis devient simple quand l’accès est clair : où s’arrêter, distance de portage, et passages à l’intérieur.",
-          "Même sans mesurer, une estimation en pas + 2–3 photos suffit à rendre le chiffrage réaliste.",
+          "Même sans mesurer, une estimation en pas + 2–3 détails suffit à rendre le chiffrage réaliste.",
           "Gardez le même dossier pour tous les déménageurs pour éviter les écarts artificiels.",
         ],
         checklist: [
-          "Photo stationnement/arrêt possible",
+          "détail stationnement/arrêt possible",
           "Distance camion→porte (en pas)",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier/ascenseur",
-          "Photo des 2–3 meubles volumineux",
+          "détail entrée + passage le plus étroit",
+          "détail escalier/ascenseur",
+          "détail des 2–3 meubles volumineux",
         ],
       },
     ],
@@ -1773,11 +1773,11 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
           "La checklist ci-dessous suffit à standardiser votre demande et comparer des devis comparables.",
         ],
         checklist: [
-          "Photo rue : endroit où s’arrêter",
+          "détail rue : endroit où s’arrêter",
           "Distance camion→porte (court/moyen/long)",
-          "Photo entrée + couloir/porte la plus étroite",
-          "Photo escalier/ascenseur + palier",
-          "Photo objets lourds/fragiles (groupée)",
+          "détail entrée + couloir/porte la plus étroite",
+          "détail escalier/ascenseur + palier",
+          "détail objets lourds/fragiles (groupée)",
         ],
       },
     ],
@@ -1793,11 +1793,11 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
           "Ajoutez les meubles volumineux, et tout le monde chiffre la même méthode.",
         ],
         checklist: [
-          "Photo stationnement/arrêt possible",
+          "détail stationnement/arrêt possible",
           "Distance camion→porte (en pas)",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier/ascenseur",
-          "Photo meubles volumineux (canapé, frigo, armoire)",
+          "détail entrée + passage le plus étroit",
+          "détail escalier/ascenseur",
+          "détail meubles volumineux (canapé, frigo, armoire)",
         ],
       },
     ],
@@ -1809,15 +1809,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Arras (et checklist locale)",
         paragraphs: [
           "À Arras, un devis fiable se construit sur l’accès : stationnement, portage, et passages. Sans ça, les devis ne décrivent pas la même prestation.",
-          "Même sans mesures, une photo du passage le plus étroit + une photo escalier/ascenseur suffisent souvent à cadrer correctement.",
+          "Même sans mesures, une détail du passage le plus étroit + une détail escalier/ascenseur suffisent souvent à cadrer correctement.",
           "Gardez la checklist identique pour tous pour comparer sereinement.",
         ],
         checklist: [
-          "Photo rue : arrêt possible + distance",
+          "détail rue : arrêt possible + distance",
           "Distance camion→porte (court/moyen/long)",
-          "Photo passage le plus étroit",
-          "Photo escalier/ascenseur + palier",
-          "Photo meubles volumineux + objets fragiles",
+          "détail passage le plus étroit",
+          "détail escalier/ascenseur + palier",
+          "détail meubles volumineux + objets fragiles",
         ],
       },
     ],
@@ -1829,15 +1829,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Lens (et checklist locale)",
         paragraphs: [
           "À Lens, la fiabilité dépend surtout du temps réel de manutention : portage, étages, passages. C’est le vrai facteur de coût.",
-          "Notez la distance camion→porte (même en pas) et photographiez l’escalier/palier. Ça suffit souvent à éviter les devis trop optimistes.",
-          "Ajoutez une photo des meubles volumineux et vous sécurisez le devis.",
+          "Notez la distance camion→porte (même en pas) et décrivez l’escalier/palier. Ça suffit souvent à éviter les devis trop optimistes.",
+          "Ajoutez une détail des meubles volumineux et vous sécurisez le devis.",
         ],
         checklist: [
           "Distance camion→porte (en pas)",
-          "Photo rue : stationnement possible",
-          "Photo escalier (bas + palier) / ascenseur (cabine)",
-          "Photo passage le plus étroit",
-          "Photo meubles volumineux",
+          "détail rue : stationnement possible",
+          "détail escalier (bas + palier) / ascenseur (cabine)",
+          "détail passage le plus étroit",
+          "détail meubles volumineux",
         ],
       },
     ],
@@ -1848,16 +1848,16 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         id: "specificites-logement-acces",
         title: "Spécificités logement & accès à Liévin (et checklist locale)",
         paragraphs: [
-          "À Liévin, un devis fiable vient d’un dossier standard : accès, volume, date. L’accès se fiabilise avec 3 photos (rue, entrée, escalier/ascenseur).",
+          "À Liévin, un devis fiable vient d’un dossier standard : accès, volume, date. L’accès se fiabilise avec 3 détails (rue, entrée, escalier/ascenseur).",
           "Si vous avez un meuble “limite”, annoncez-le : c’est souvent ce détail qui évite un blocage le jour J.",
           "La checklist ci-dessous est un standard simple à réutiliser.",
         ],
         checklist: [
-          "Photo rue : arrêt possible",
+          "détail rue : arrêt possible",
           "Distance camion→porte (court/moyen/long)",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier/ascenseur",
-          "Photo objets fragiles/lourds (groupée)",
+          "détail entrée + passage le plus étroit",
+          "détail escalier/ascenseur",
+          "détail objets fragiles/lourds (groupée)",
         ],
       },
     ],
@@ -1869,15 +1869,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Béthune (et checklist locale)",
         paragraphs: [
           "À Béthune, les devis deviennent comparables quand l’accès est clair : où le camion s’arrête, combien de portage, et comment on monte.",
-          "Une photo du passage le plus étroit + une photo escalier/ascenseur suffisent souvent à rendre le devis réaliste.",
+          "Une détail du passage le plus étroit + une détail escalier/ascenseur suffisent souvent à rendre le devis réaliste.",
           "Ajoutez les meubles volumineux et vous évitez les devis “au feeling”.",
         ],
         checklist: [
-          "Photo rue : stationnement possible + distance",
+          "détail rue : stationnement possible + distance",
           "Distance camion→porte (en pas)",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier/ascenseur + palier",
-          "Photo meubles volumineux",
+          "détail entrée + passage le plus étroit",
+          "détail escalier/ascenseur + palier",
+          "détail meubles volumineux",
         ],
       },
     ],
@@ -1889,15 +1889,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Valenciennes (et checklist locale)",
         paragraphs: [
           "À Valenciennes, le devis fiable est celui qui connaît le temps réel de manutention : portage, étages, passages. C’est ce qui fait varier la facture.",
-          "Le bon standard : distance camion→porte + photo escalier/palier + photo du passage le plus étroit. Ensuite, on compare enfin des devis comparables.",
+          "Le bon standard : distance camion→porte + détail escalier/palier + détail du passage le plus étroit. Ensuite, on compare enfin des devis comparables.",
           "Annoncez les objets fragiles/lourds pour aligner la méthode et l’assurance.",
         ],
         checklist: [
           "Distance camion→porte (court/moyen/long)",
-          "Photo rue : arrêt possible",
-          "Photo passage le plus étroit",
-          "Photo escalier/ascenseur",
-          "Liste + photo objets fragiles/lourds",
+          "détail rue : arrêt possible",
+          "détail passage le plus étroit",
+          "détail escalier/ascenseur",
+          "Liste + détail objets fragiles/lourds",
         ],
       },
     ],
@@ -1909,15 +1909,15 @@ export const CITY_LONGFORM_OVERRIDES: Record<string, CityLongFormOverride> = {
         title: "Spécificités logement & accès à Douai (et checklist locale)",
         paragraphs: [
           "À Douai, la fiabilité d’un devis dépend de l’accès : stationnement, portage, et passages. Sans ces infos, vous comparez des devis qui n’incluent pas la même quantité de travail.",
-          "Une photo de l’escalier + un palier et une photo du passage le plus étroit suffisent souvent à fiabiliser le chiffrage.",
+          "Une détail de l’escalier + un palier et une détail du passage le plus étroit suffisent souvent à fiabiliser le chiffrage.",
           "Gardez la checklist identique pour tous pour comparer sereinement.",
         ],
         checklist: [
-          "Photo stationnement/arrêt possible",
+          "détail stationnement/arrêt possible",
           "Distance camion→porte (en pas)",
-          "Photo entrée + passage le plus étroit",
-          "Photo escalier/ascenseur + palier",
-          "Photo meubles volumineux + objets fragiles",
+          "détail entrée + passage le plus étroit",
+          "détail escalier/ascenseur + palier",
+          "détail meubles volumineux + objets fragiles",
         ],
       },
     ],

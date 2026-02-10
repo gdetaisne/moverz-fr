@@ -2,7 +2,7 @@ export const PRO_FAQS = [
   {
     question: "C’est quoi un “lead” chez vous ?",
     answer:
-      "Un lead est compté dès que le client a complété son dossier (formulaire rempli), avec ou sans photos. À ce stade vous avez les infos client + projet (adresses, dates, formule, contraintes).",
+      "Un lead est compté dès que le client a complété son dossier (formulaire rempli). À ce stade vous avez les infos client + projet (adresses, dates, formule, contraintes).",
   },
   {
     question: "Et si le client ne signe pas avec moi ?",
@@ -17,7 +17,7 @@ export const PRO_FAQS = [
   {
     question: "Est-ce que je peux vraiment supprimer les visites techniques ?",
     answer:
-      "Dans la majorité des cas, oui. Le dossier est documenté (photos) et complété par des documents (inventaire, déclaration de valeur). En cas de doute (photos incomplètes / accès critique), vous gardez une voie de secours (photo manquante, appel court, ou visite).",
+      "Dans la majorité des cas, oui. Le dossier est standardisé et complété par des documents (inventaire, déclaration de valeur). En cas de doute (accès critique / cas hors norme), vous gardez une voie de secours (appel court, ou visite).",
   },
   {
     question: "Et si l'IA se trompe / n'arrive pas à analyser ?",
@@ -27,12 +27,12 @@ export const PRO_FAQS = [
   {
     question: "Qu'est-ce que j'exporte concrètement ?",
     answer:
-      "Dossier photos en PDF, déclaration de valeur en PDF, inventaire en Excel. Et pour vos outils : export CSV des tables leads/dossiers (Starter/Pro).",
+      "Dossier en PDF, déclaration de valeur en PDF, inventaire en Excel. Et pour vos outils : export CSV des tables leads/dossiers (Starter/Pro).",
   },
   {
-    question: "RGPD : où sont hébergées les données ? Combien de temps gardez-vous les photos ?",
+    question: "RGPD : où sont hébergées les données ? Combien de temps gardez-vous les dossiers ?",
     answer:
-      "Hébergement en Europe. Les photos sont conservées jusqu’à 60 jours après la date prévue du déménagement, puis supprimées. Les dossiers sont ensuite anonymisés (suppression des éléments identifiants, conservation éventuelle de données agrégées).",
+      "Hébergement en Europe. Les dossiers sont conservés le temps nécessaire au traitement du projet, puis anonymisés (suppression des éléments identifiants, conservation éventuelle de données agrégées).",
   },
 ] as const;
 

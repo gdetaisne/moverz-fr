@@ -11,10 +11,10 @@ Si vous ne devez retenir qu’une chose : **un devis fiable dépend d’un accè
 ### 1) Les 6 infos qui stabilisent un devis
 
 - **Adresse + type** : appartement/maison, étage, ascenseur oui/non.
-- **Accès camion** : où le camion peut s’arrêter (photo rue).
+- **Accès camion** : où le camion peut s’arrêter (détail rue).
 - **Distance camion → porte** : en pas (même approximatif, ça suffit).
-- **Passage le plus étroit** : photo (porte/couloir/angle/palier).
-- **Objets “limites”** : 2–5 photos (canapé, frigo, armoire, machine).
+- **Passage le plus étroit** : détail (porte/couloir/angle/palier).
+- **Objets “limites”** : 2–5 détails (canapé, frigo, armoire, machine).
 - **Fenêtre de date** : 2–3 options si possible (ça améliore les chances d’un bon créneau).
 
 ### 2) Le message copier/coller à envoyer aux déménageurs
@@ -22,10 +22,10 @@ Si vous ne devez retenir qu’une chose : **un devis fiable dépend d’un accè
 Vous pouvez envoyer ceci tel quel (en complétant les champs) :
 
 - Logement : ___ (étage ___, ascenseur oui/non)
-- Accès camion : photo jointe
+- Accès camion : détail jointe
 - Distance camion→porte : ___ pas
-- Passage le plus étroit : photo jointe
-- Gros meubles / objets lourds : photos jointes
+- Passage le plus étroit : détail jointe
+- Gros meubles / objets lourds : détails jointes
 - Dates possibles : ___ / ___ / ___
 
 ### 3) Checklist organisation (J‑7 → jour J)
@@ -37,7 +37,7 @@ Vous pouvez envoyer ceci tel quel (en complétant les champs) :
 
 ### 4) Les 5 erreurs qui créent des surprises
 
-1. “Accès facile” sans photo (ça ne veut rien dire).
+1. “Accès facile” sans détail (ça ne veut rien dire).
 2. Sous‑estimer la distance camion→porte (portage).
 3. Oublier 1–2 objets lourds (et les annoncer trop tard).
 4. Cartons trop lourds (ça ralentit tout).
@@ -49,17 +49,17 @@ export const LONGTAIL_FAQS: Record<string, BlogFAQItem[]> = {
     {
       question: "Un déménagement au 5e sans ascenseur coûte-t-il forcément beaucoup plus cher ?",
       answer:
-        "Souvent oui, parce que la manutention prend plus de temps (escaliers, rotations, pauses). Mais vous pouvez limiter l’écart en fiabilisant l’accès (photos + passage le plus étroit), en réduisant le volume (tri) et en choisissant une fenêtre de date plus flexible.",
+        "Souvent oui, parce que la manutention prend plus de temps (escaliers, rotations, pauses). Mais vous pouvez limiter l’écart en fiabilisant l’accès (détails + passage le plus étroit), en réduisant le volume (tri) et en choisissant une fenêtre de date plus flexible.",
     },
     {
       question: "Que faut-il envoyer comme infos pour éviter les suppléments ?",
       answer:
-        "Au minimum : étage exact, largeur du passage le plus étroit (photo), escalier (photo bas + palier), distance camion→porte (en pas), et liste des meubles “limites”. L’idée est que tous chiffrent la même méthode.",
+        "Au minimum : étage exact, largeur du passage le plus étroit (détail), escalier (détail bas + palier), distance camion→porte (en pas), et liste des meubles “limites”. L’idée est que tous chiffrent la même méthode.",
     },
     {
       question: "Est-ce qu’un monte-meuble est toujours nécessaire ?",
       answer:
-        "Non. Il est utile quand un meuble ne passe pas, quand l’escalier est très contraignant, ou quand vous voulez réduire le temps de manutention. Il faut le décider en fonction des photos et du passage, pas “au feeling”.",
+        "Non. Il est utile quand un meuble ne passe pas, quand l’escalier est très contraignant, ou quand vous voulez réduire le temps de manutention. Il faut le décider en fonction des détails et du passage, pas “au feeling”.",
     },
   ],
   "portage-long-camion-loin-entree": [
@@ -71,7 +71,7 @@ export const LONGTAIL_FAQS: Record<string, BlogFAQItem[]> = {
     {
       question: "Comment estimer la distance sans mesurer ?",
       answer:
-        "Comptez en pas (ou en repères “court / moyen / long”) et envoyez une photo du trajet camion→entrée. L’objectif est de rendre le portage comparable entre devis.",
+        "Comptez en pas (ou en repères “court / moyen / long”) et envoyez une détail du trajet camion→entrée. L’objectif est de rendre le portage comparable entre devis.",
     },
     {
       question: "Le portage peut-il faire varier beaucoup un devis ?",
@@ -86,9 +86,9 @@ export const LONGTAIL_FAQS: Record<string, BlogFAQItem[]> = {
         "Quand un meuble ne passe pas (porte/couloir/palier), quand l’escalier est trop contraignant, ou quand l’objectif est de réduire fortement la manutention et le risque de dégâts.",
     },
     {
-      question: "Quelles photos envoyer pour décider vite ?",
+      question: "Quelles détails envoyer pour décider vite ?",
       answer:
-        "Fenêtre (ouverte), façade/accès, passage intérieur le plus étroit, escalier bas + palier, et photo du meuble “limite”.",
+        "Fenêtre (ouverte), façade/accès, passage intérieur le plus étroit, escalier bas + palier, et détail du meuble “limite”.",
     },
     {
       question: "Qui réserve le monte-meuble ?",
@@ -105,7 +105,7 @@ export const LONGTAIL_FAQS: Record<string, BlogFAQItem[]> = {
     {
       question: "Quelles infos donner pour un devis fiable ?",
       answer:
-        "Photos de l’accès parking, hauteur affichée si visible, trajet parking→entrée, ascenseur (cabine), et passage le plus étroit.",
+        "détails de l’accès parking, hauteur affichée si visible, trajet parking→entrée, ascenseur (cabine), et passage le plus étroit.",
     },
     {
       question: "Faut-il toujours un petit camion ?",
@@ -127,7 +127,7 @@ export const LONGTAIL_FAQS: Record<string, BlogFAQItem[]> = {
     {
       question: "Est-ce qu’un transbordement est possible ?",
       answer:
-        "Oui, parfois. Mais il faut le prévoir et le chiffrer (c’est du temps). D’où l’intérêt de rendre l’accès visible via photos.",
+        "Oui, parfois. Mais il faut le prévoir et le chiffrer (c’est du temps). D’où l’intérêt de rendre l’accès visible via détails.",
     },
   ],
   "petit-demenagement-10-15-cartons": [
@@ -173,7 +173,7 @@ export const LONGTAIL_FAQS: Record<string, BlogFAQItem[]> = {
     {
       question: "Quelles infos donner au déménageur ?",
       answer:
-        "Photo de l’objet, dimensions si vous les avez, et surtout photo du passage le plus étroit + escalier/palier/ascenseur. L’objectif : choisir la bonne méthode (protection, démontage, équipe).",
+        "détail de l’objet, dimensions si vous les avez, et surtout détail du passage le plus étroit + escalier/palier/ascenseur. L’objectif : choisir la bonne méthode (protection, démontage, équipe).",
     },
     {
       question: "Peut-on les transporter sans matériel spécifique ?",
@@ -257,7 +257,7 @@ Si une de ces 3 zones est floue, vous prenez le risque d’un devis optimiste �
 
 ## 2) La règle d’or : rendre la méthode “visible”
 
-Le meilleur anti‑surprise, ce n’est pas un roman. C’est 4 photos :
+Le meilleur anti‑surprise, ce n’est pas un roman. C’est 4 détails :
 
 1. **Rue / stationnement** (où le camion peut s’arrêter)
 2. **Entrée / couloir** (le chemin réel)
@@ -277,8 +277,8 @@ Votre objectif : standardiser.
 - Étage : 5e (sans ascenseur)
 - Type : appartement
 - Distance camion → entrée : ___ (en pas ou court/moyen/long)
-- Passage le plus étroit : ___ (photo)
-- Meubles “limites” : ___ (photos)
+- Passage le plus étroit : ___ (détail)
+- Meubles “limites” : ___ (détails)
 - Date : ___ (ou 2–3 options)
 
 ### Bonus qui rend le devis “béton”
@@ -295,7 +295,7 @@ Pas toujours. Il devient intéressant quand :
 - Les rotations d’escalier sont très contraignantes
 - Vous voulez réduire fortement le temps de manutention
 
-Pour décider vite : envoyez **photo fenêtre** (ouverte) + **photo meuble** + **photo escalier/palier**. La décision doit être prise sur des contraintes réelles, pas “au feeling”.
+Pour décider vite : envoyez **détail fenêtre** (ouverte) + **détail meuble** + **détail escalier/palier**. La décision doit être prise sur des contraintes réelles, pas “au feeling”.
 
 ## 5) Le plan simple (J‑7 → jour J)
 
@@ -321,11 +321,11 @@ Pour décider vite : envoyez **photo fenêtre** (ouverte) + **photo meuble** + *
 
 ### Checklist devis (à envoyer)
 
-- Photo rue + stationnement
+- détail rue + stationnement
 - Distance camion→porte (en pas)
-- Photo escalier (bas + palier)
-- Photo passage le plus étroit
-- Photos meubles volumineux (canapé / frigo / armoire)
+- détail escalier (bas + palier)
+- détail passage le plus étroit
+- détails meubles volumineux (canapé / frigo / armoire)
 
 ### Checklist jour J (anti‑galère)
 
@@ -360,13 +360,13 @@ Pour décider vite : envoyez **photo fenêtre** (ouverte) + **photo meuble** + *
 ## FAQ
 
 ### Un déménagement au 5e sans ascenseur coûte-t-il forcément beaucoup plus cher ?
-Souvent oui, car la manutention prend plus de temps. Mais vous pouvez réduire l’écart en fiabilisant l’accès (photos), en réduisant le volume (tri) et en étant flexible sur la date.
+Souvent oui, car la manutention prend plus de temps. Mais vous pouvez réduire l’écart en fiabilisant l’accès (détails), en réduisant le volume (tri) et en étant flexible sur la date.
 
 ### Que faut-il envoyer comme infos pour éviter les suppléments ?
-Étages, distance camion→porte, photos escalier/palier, passage le plus étroit, et meubles “limites”. L’idée : que tout le monde chiffre la même méthode.
+Étages, distance camion→porte, détails escalier/palier, passage le plus étroit, et meubles “limites”. L’idée : que tout le monde chiffre la même méthode.
 
 ### Est-ce qu’un monte-meuble est toujours nécessaire ?
-Non. Il est utile quand un meuble ne passe pas, ou quand vous voulez réduire fortement la manutention. Il faut décider sur photos et contraintes, pas au hasard.
+Non. Il est utile quand un meuble ne passe pas, ou quand vous voulez réduire fortement la manutention. Il faut décider sur détails et contraintes, pas au hasard.
 ${COMMON_APPENDIX}
 `,
   },
@@ -374,14 +374,14 @@ ${COMMON_APPENDIX}
     slug: "portage-long-camion-loin-entree",
     title: "Portage long : camion loin de l’entrée (cour, couloir, allée) — comment éviter les surprises",
     description:
-      "Portage long = temps de manutention. Guide complet : comment l’estimer, quelles photos envoyer, comment obtenir des devis comparables, checklists et erreurs à éviter.",
+      "Portage long = temps de manutention. Guide complet : comment l’estimer, quelles détails envoyer, comment obtenir des devis comparables, checklists et erreurs à éviter.",
     type: "satellite",
     body: `# Portage long : camion loin de l’entrée (cour, couloir, allée) — comment éviter les surprises
 
 Le **portage long** est l’une des causes #1 de devis “qui bougent” : le volume est correct, mais la logistique réelle (distance) a été sous‑estimée. Bonne nouvelle : c’est un problème facile à régler si vous standardisez vos infos.
 
 > [CTA] Obtenir des devis comparables (sans surprises)
-> Envoyez les mêmes photos et la distance camion→porte à plusieurs pros : vous comparez enfin des devis comparables.
+> Envoyez les mêmes détails et la distance camion→porte à plusieurs pros : vous comparez enfin des devis comparables.
 
 ## 1) Portage long : définition simple
 
@@ -395,7 +395,7 @@ Ce n’est pas “un détail”. C’est du temps de manutention.
 
 - **En pas** (ex: 60 pas)
 - **En repères** (court / moyen / long)
-- **En photos** (trajet camion→entrée en 2–3 images)
+- **En détails** (trajet camion→entrée en 2–3 images)
 
 L’objectif n’est pas la précision millimétrique. L’objectif est de **réduire l’incertitude**.
 
@@ -415,7 +415,7 @@ Le dossier minimum :
 
 - Distance camion→porte (en pas)
 - Obstacles (marches, pente, porte lourde)
-- Photos : rue, entrée, passage étroit
+- détails : rue, entrée, passage étroit
 - Étages + ascenseur (si concerné)
 - Meubles volumineux “limites”
 
@@ -430,21 +430,21 @@ Le devis doit refléter une méthode réaliste.
 
 ## 5) La méthode “anti‑surprise” en 6 lignes (copier/coller)
 
-- Accès camion : ___ (photo rue)
+- Accès camion : ___ (détail rue)
 - Distance camion→entrée : ___ pas
 - Obstacles : ___ (marches / pente / porte)
 - Étages : ___ + ascenseur : oui/non
-- Passage le plus étroit : photo
-- Meubles volumineux : photos + “limites”
+- Passage le plus étroit : détail
+- Meubles volumineux : détails + “limites”
 
 ## 5) Checklists
 
-### Checklist photos à envoyer
+### Checklist détails à envoyer
 
-- Photo rue (où le camion s’arrête)
-- Photo du trajet (cour/couloir/allée)
-- Photo passage le plus étroit
-- Photo escalier/ascenseur (si applicable)
+- détail rue (où le camion s’arrête)
+- détail du trajet (cour/couloir/allée)
+- détail passage le plus étroit
+- détail escalier/ascenseur (si applicable)
 
 ### Checklist jour J
 
@@ -454,7 +454,7 @@ Le devis doit refléter une méthode réaliste.
 
 ## 6) Les erreurs fréquentes (et comment les éviter)
 
-1. Dire “on peut se garer” sans photo : parfois oui… parfois non.
+1. Dire “on peut se garer” sans détail : parfois oui… parfois non.
 2. Oublier la distance réelle : “dans la cour” peut faire 10 m… ou 120 m.
 3. Ne pas mentionner les obstacles : une pente ou 5 marches changent le rythme.
 4. Cartons non standardisés : si c’est trop lourd, tout ralentit.
@@ -470,7 +470,7 @@ Le devis doit refléter une méthode réaliste.
 C’est quand le camion ne peut pas se rapprocher et qu’il faut porter sur une distance significative (cour, couloir, allée, parking).
 
 ### Comment estimer la distance sans mesurer ?
-Comptez en pas et envoyez une photo du trajet camion→entrée.
+Comptez en pas et envoyez une détail du trajet camion→entrée.
 
 ### Le portage peut-il faire varier beaucoup un devis ?
 Oui : c’est du temps de manutention, donc du coût.
@@ -481,7 +481,7 @@ ${COMMON_APPENDIX}
     slug: "monte-meuble-quand-indispensable",
     title: "Monte‑meuble (lift) : quand c’est indispensable, quelles infos donner, et comment éviter une décision “au hasard”",
     description:
-      "Guide lift/monte‑meuble : cas où c’est nécessaire, photos à fournir, checklists accès/fenêtre, et comment cadrer l’option dans un devis sans surprises.",
+      "Guide lift/monte‑meuble : cas où c’est nécessaire, détails à fournir, checklists accès/fenêtre, et comment cadrer l’option dans un devis sans surprises.",
     type: "pilier",
     body: `# Monte‑meuble (lift) : quand c’est indispensable, quelles infos donner, et comment éviter une décision “au hasard”
 
@@ -490,7 +490,7 @@ Le monte‑meuble (lift) est souvent présenté comme une “option” vague. En
 Le problème arrive quand la décision est prise trop tard, ou sur une info floue. Résultat : stress, perte de temps, et devis qui change. Ici, on pose une méthode claire.
 
 > [CTA] Comparer des devis avec (ou sans) option lift
-> Avec 3 photos et 2 mesures simples, vous savez si le lift est utile — et vous évitez une décision à la dernière minute.
+> Avec 3 détails et 2 mesures simples, vous savez si le lift est utile — et vous évitez une décision à la dernière minute.
 
 ## 1) Les 4 cas où le lift devient “indispensable”
 
@@ -503,13 +503,13 @@ Note : “indispensable” ne veut pas dire “toujours”. Ça veut dire “mé
 
 ## 2) Les infos à donner (la checklist qui décide en 5 minutes)
 
-### Photos
+### détails
 
 - Fenêtre (ouverte) ou balcon (garde‑corps) — **côté extérieur**
 - Façade / cour / rue (où se place le lift)
 - Passage intérieur le plus étroit (si vous tentez sans lift)
 - Escalier bas + palier (si vous tentez sans lift)
-- Meuble “limite” (photo + angle)
+- Meuble “limite” (détail + angle)
 
 ### Infos simples
 
@@ -533,12 +533,12 @@ Pour éviter les surprises, le devis doit préciser :
 
 - Option lift incluse ou non
 - Qui fournit et qui opère
-- Quelles contraintes d’accès sont prises en compte (photos)
+- Quelles contraintes d’accès sont prises en compte (détails)
 - Quels meubles sont concernés (liste courte)
 
 ## 5) Les erreurs classiques
 
-1. Décider “au feeling” sans photos
+1. Décider “au feeling” sans détails
 2. Oublier l’accès extérieur (où placer le lift)
 3. Ne pas lister les meubles concernés
 4. Penser que “tout passe au lift” sans vérifier la fenêtre/balcon
@@ -553,8 +553,8 @@ Pour éviter les surprises, le devis doit préciser :
 ### Quand un monte-meuble devient-il indispensable ?
 Quand un meuble ne passe pas, quand l’escalier est très contraignant, ou quand vous voulez sécuriser le timing et réduire la manutention.
 
-### Quelles photos envoyer pour décider vite ?
-Fenêtre ouverte, accès extérieur, passage intérieur étroit, escalier/palier, et photo du meuble “limite”.
+### Quelles détails envoyer pour décider vite ?
+Fenêtre ouverte, accès extérieur, passage intérieur étroit, escalier/palier, et détail du meuble “limite”.
 
 ### Qui réserve le monte-meuble ?
 Ça dépend. L’important est que le devis précise qui fournit, qui opère, et quelles contraintes d’accès sont prises en compte.
@@ -572,7 +572,7 @@ ${COMMON_APPENDIX}
 Le parking souterrain est un “petit détail” qui devient énorme quand il n’est pas cadré : camion trop haut, accès impossible, ou portage long non anticipé. La solution : documenter l’accès et standardiser ce que vous envoyez.
 
 > [CTA] Recevoir des devis comparables (parking inclus)
-> Envoyez les mêmes photos + contraintes d’accès à plusieurs pros : vous comparez des devis propres, pas des hypothèses.
+> Envoyez les mêmes détails + contraintes d’accès à plusieurs pros : vous comparez des devis propres, pas des hypothèses.
 
 ## 1) Les 3 contraintes à vérifier
 
@@ -582,10 +582,10 @@ Le parking souterrain est un “petit détail” qui devient énorme quand il n�
 
 ## 2) Quelles infos donner (sans inventer)
 
-- Photos : entrée parking, rampe/virage si visible, trajet vers l’entrée, ascenseur (porte ouverte)
+- détails : entrée parking, rampe/virage si visible, trajet vers l’entrée, ascenseur (porte ouverte)
 - Distance parking → entrée (en pas)
 - Étages + ascenseur : oui/non
-- Meubles volumineux “limites” (photos)
+- Meubles volumineux “limites” (détails)
 
 ## 3) Faut-il toujours un petit camion ?
 
@@ -608,7 +608,7 @@ Non. Parfois le camion peut se mettre en surface près de l’entrée. Parfois l
 Parce que l’accès et la logistique (hauteur, virages, portage) conditionnent la méthode et le temps.
 
 ### Quelles infos donner pour un devis fiable ?
-Photos accès parking + trajet + ascenseur, distance en pas, et meubles “limites”.
+détails accès parking + trajet + ascenseur, distance en pas, et meubles “limites”.
 
 ### Faut-il toujours un petit camion ?
 Non. Il faut choisir selon les contraintes réelles : surface ou parking, selon ce qui est possible et fiable.
@@ -639,17 +639,17 @@ L’objectif de ce guide : rendre la logistique visible, pour que le devis refl�
 
 ## 2) Les infos à envoyer (simple et suffisant)
 
-- Photo de la rue (largeur perçue)
-- Photo du point où le camion peut s’arrêter
+- détail de la rue (largeur perçue)
+- détail du point où le camion peut s’arrêter
 - Distance camion→entrée (en pas)
 - Obstacles : pente, marche, portail, angle
-- Passage le plus étroit (photo)
+- Passage le plus étroit (détail)
 
 ## 3) Comment éviter le “surcoût surprise”
 
 Le surcoût arrive quand l’accès réel n’était pas dans le devis. Donc :
 
-- Tout rendre visible (photos)
+- Tout rendre visible (détails)
 - Tout rendre comparable (même dossier)
 - Tout rendre explicite (méthode)
 
@@ -727,7 +727,7 @@ Pertinent si :
 ## 3) Le dossier “devis propre”
 
 - Volume : 10–15 cartons + liste des gros meubles
-- Accès : photos (rue/entrée/escaliers)
+- Accès : détails (rue/entrée/escaliers)
 - Distance camion→porte : en pas
 - Date : 2–3 options
 
@@ -831,14 +831,14 @@ ${COMMON_APPENDIX}
     slug: "demenagement-objets-lourds-frigo-piano-coffre",
     title: "Objets lourds (frigo américain, piano, coffre) : les infos à donner pour éviter casse + suppléments",
     description:
-      "Guide ultra pratique : comment préparer le déménagement d’objets lourds (frigo américain, piano, coffre-fort) avec la bonne méthode, les bonnes photos, et un devis sans surprises.",
+      "Guide ultra pratique : comment préparer le déménagement d’objets lourds (frigo américain, piano, coffre-fort) avec la bonne méthode, les bonnes détails, et un devis sans surprises.",
     type: "pilier",
     body: `# Objets lourds (frigo américain, piano, coffre) : les infos à donner pour éviter casse + suppléments
 
 Les objets lourds sont un double risque : **manutention** (poids/gabarit) et **dommages** (sols, murs, objet). Le bon réflexe : ne jamais laisser ces objets “dans le flou” du devis.
 
 > [CTA] Comparer des devis (objets lourds inclus)
-> Envoyez photos + passages + liste des objets lourds : vous évitez les surprises et vous comparez une vraie méthode.
+> Envoyez détails + passages + liste des objets lourds : vous évitez les surprises et vous comparez une vraie méthode.
 
 ## 1) Ce qui rend un objet “compliqué”
 
@@ -851,10 +851,10 @@ Ce n’est pas seulement le poids :
 
 ## 2) La checklist d’infos à donner
 
-- Photo de l’objet (2 angles)
+- détail de l’objet (2 angles)
 - Dimensions si vous les avez (sinon OK)
-- Photo passage le plus étroit
-- Photo escalier/palier ou ascenseur (cabine porte ouverte)
+- détail passage le plus étroit
+- détail escalier/palier ou ascenseur (cabine porte ouverte)
 - Distance camion→porte
 
 ## 3) Spécifique frigo américain
@@ -885,7 +885,7 @@ Ce n’est pas seulement le poids :
 Frigo américain, piano, coffre-fort, gros électroménager, grandes armoires. Ce qui compte : poids + gabarit + fragilité.
 
 ### Quelles infos donner au déménageur ?
-Photo de l’objet + photo du passage étroit + escalier/ascenseur. Objectif : cadrer la méthode.
+détail de l’objet + détail du passage étroit + escalier/ascenseur. Objectif : cadrer la méthode.
 
 ### Peut-on les transporter sans matériel spécifique ?
 Parfois, mais il faut le cadrer dans le devis : protection, sangles, équipe, option lift si nécessaire.
@@ -924,7 +924,7 @@ Ce guide vous aide à choisir une stratégie réaliste : économiser sans transf
 Être flexible ne veut pas dire être flou. Au contraire :
 
 - Fixez une fenêtre (ex : mardi/mercredi/jeudi)
-- Validez l’accès (photos)
+- Validez l’accès (détails)
 - Standardisez les infos (inventaire)
 
 ## Liens utiles
@@ -977,7 +977,7 @@ Bien fait, un stockage court améliore la qualité du devis (et du jour J) parce
 
 - Cartons standardisés + étiquetés
 - Liste “essentiels 24h” séparée
-- Photos meubles volumineux
+- détails meubles volumineux
 - Accès documenté (enlèvement + livraison)
 
 ## 4) Erreurs fréquentes
