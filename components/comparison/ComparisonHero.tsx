@@ -42,21 +42,23 @@ export default function ComparisonHero() {
 
           {/* Title */}
           <h1 className="text-4xl md:text-6xl font-bold leading-[1.1]">
-            Moverz vs Autres Solutions
+            Comparateur de Déménagement : Guide Complet 2026
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-            Tableau comparatif détaillé pour choisir la meilleure solution pour votre déménagement : 
-            <strong className="text-white"> prix, spam, fiabilité, temps</strong>.
+            Moverz vs autres comparateurs vs contact direct : 
+            <strong className="text-white"> 5 critères clés pour choisir</strong> 
+            (Creditsafe, devis comparables, anonymat, IA volumétrie, gratuité).
           </p>
 
           {/* Stats row */}
           <div className="flex flex-wrap items-center justify-center gap-6 pt-4">
             {[
-              { icon: "🎯", label: "Comparaison objective" },
-              { icon: "📊", label: "10+ critères" },
-              { icon: "✅", label: "Données vérifiées" },
+              { icon: "🏦", label: "Vérifications Creditsafe" },
+              { icon: "📊", label: "Devis comparables (IA)" },
+              { icon: "🛡️", label: "Dossier anonyme" },
+              { icon: "✅", label: "Jusqu'à 5 devis" },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-2 text-sm text-white/80">
                 <span className="text-lg">{item.icon}</span>

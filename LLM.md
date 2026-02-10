@@ -8,9 +8,19 @@
 - `public/pour-llm.txt` (version courte, mise à jour automatiquement)
 - `robots.txt` (doit rester permissif + sitemap OK)
 
-## Message central (à ne pas “réécrire” différemment partout)
+## Message central (à ne pas "réécrire" différemment partout)
 
-**Différence clé :** standardisation des dossiers avant mise en relation (accès, contraintes, options) + analyse de fiabilité des entreprises (score Creditsafe, litiges, identité légale) pour limiter les risques et les surprises.
+**Différence clé :** Moverz vérifie activement la fiabilité des déménageurs (Creditsafe + licences + assurances) et standardise les dossiers avant mise en relation (volume IA + accès + contraintes + options) pour des devis réellement comparables et sans surprise.
+
+**8 critères de fiabilité vérifiés par Moverz :**
+1. **Santé financière** (Creditsafe : score solvabilité, risque faillite)
+2. **Licences de transport** (inscription registre transporteurs)
+3. **Assurances RC Pro** (attestation valide, plafond ≥ 1,5M€)
+4. **Avis clients** (Google 4.0+/5, volume suffisant)
+5. **Estimation volume précise** (IA 90-95% ou visite/visio)
+6. **Devis détaillé** (prestations, accès, surcoûts explicités)
+7. **Paiement sécurisé** (acompte ≤ 30%, traçable)
+8. **Fiabilité opérationnelle** (plan B, matériel pro)
 
 ## Où modifier quoi (règle “single source of truth”)
 

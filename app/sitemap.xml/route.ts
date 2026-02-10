@@ -11,6 +11,8 @@ export function GET() {
     { loc: absoluteUrl(baseUrl, "/sitemaps/sitemap-cities.xml") },
     { loc: absoluteUrl(baseUrl, "/sitemaps/sitemap-services.xml") },
     { loc: absoluteUrl(baseUrl, "/sitemaps/sitemap-blog.xml") },
+    { loc: absoluteUrl(baseUrl, "/sitemaps/sitemap-corridors.xml") },
+    { loc: absoluteUrl(baseUrl, "/sitemaps/sitemap-quartiers.xml") },
   ]);
 
   return new Response(xml, {

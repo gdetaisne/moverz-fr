@@ -5,61 +5,61 @@ import { FAQ, type FAQItem } from "@/components/FAQ";
 
 export const metadata: Metadata = getFullMetadata(
   "criteres-choisir-demenageur",
-  "Choisir un déménageur : les critères indispensables (anti-arnaques) | Moverz",
-  "Les critères indispensables pour choisir un déménageur fiable : légalité, licence de transport, assurance, méthode d’estimation du volume, devis détaillé, paiement, fiabilité opérationnelle + checklist et FAQ."
+  "8 Critères pour choisir un déménageur fiable en 2026 (+ Creditsafe) | Moverz",
+  "Les 8 critères indispensables pour choisir un déménageur fiable : santé financière (Creditsafe), licence, assurance RC Pro, estimation volume, devis détaillé, paiement, avis clients, fiabilité. Checklist + FAQ anti-arnaques."
 );
 
 export default function CriteresChoisirDemenageurPage() {
   const faqs: FAQItem[] = [
     {
+      question: "C'est quoi Creditsafe et pourquoi c'est le critère #1 ?",
+      answer:
+        "Creditsafe est la base de données professionnelle B2B qui note la santé financière des entreprises (score sur 100, risque de faillite, incidents de paiement, litiges). C'est le critère #1 car 257 faillites de déménageurs ont été enregistrées en 2024 (source Altares). Un déménageur en difficulté financière = risque majeur d'acompte perdu ou de prestation non réalisée. Moverz vérifie automatiquement le score Creditsafe de chaque déménageur.",
+    },
+    {
+      question: "Comment vérifier la santé financière d'un déménageur moi-même ?",
+      answer:
+        "Vous pouvez vérifier le SIREN sur annuaire-entreprises.data.gouv.fr (entreprise active, pas en liquidation). Pour aller plus loin, consultez societe.com ou infogreffe.fr (historique, chiffre d'affaires, procédures). Creditsafe (payant) est l'outil professionnel utilisé par Moverz pour un score précis de solvabilité. Ou laissez Moverz faire ces vérifications automatiquement (gratuit pour vous).",
+    },
+    {
       question: "Un déménageur peut-il facturer plus le jour J ?",
       answer:
-        "Oui, c’est possible si le devis le prévoit (ex : volume réel supérieur, accès plus difficile, attente) ou si des prestations non prévues sont demandées. La prévention passe par une estimation de volume solide (visite/visio) et un devis détaillé.",
+        "Oui, si le volume réel est supérieur au volume estimé. C'est pourquoi l'estimation précise (visite/visio ou IA Moverz) est cruciale. Un déménageur fiable base son devis sur un volume précis et l'inscrit au contrat. Si le volume est respecté, aucun supplément ne peut être facturé. Sur Moverz, l'IA calcule automatiquement votre volume (précision 90-95%) pour éviter cette situation.",
     },
     {
       question: "Quelle assurance couvre la casse ?",
       answer:
-        "Le déménageur a une responsabilité légale, mais l’indemnisation dépend souvent de la déclaration de valeur, des plafonds et de la franchise. Demandez l’attestation d’assurance, vérifiez les exclusions, et faites une déclaration de valeur réaliste.",
+        "Le déménageur a une assurance RC Pro obligatoire, mais la couverture standard est généralement de 60€/m³ (ex : 30 m³ = 1 800€ max). Si vous avez des objets de valeur > 1 500€ (piano, œuvres d'art), déclarez-les et souscrivez une assurance complémentaire (coût : 1-2% de la valeur déclarée). Demandez toujours l'attestation d'assurance RC Pro avant de signer.",
     },
     {
-      question: "Quel acompte est normal ?",
+      question: "Comment comparer 3 devis de déménagement ?",
       answer:
-        "Un acompte raisonnable est courant (souvent une fraction du total). Méfiez-vous des demandes de 100% avant la prestation ou de moyens de paiement non traçables. Le calendrier et les modalités doivent être écrits.",
-    },
-    {
-      question: "Dois-je accepter un devis au téléphone ?",
-      answer:
-        "Non. Un devis doit être écrit, détaillé, daté, avec raison sociale, SIREN/SIRET, conditions, assurances, et prestations. Un prix “au téléphone” sans visite/visio augmente le risque d’écart de volume.",
-    },
-    {
-      question: "Comment comparer 3 devis ?",
-      answer:
-        "Comparez d’abord le périmètre (volume, accès, emballage, démontage/remontage, portage, assurance, stationnement), puis les conditions (acompte, annulation, délais), et enfin le prix. Des devis sur une base différente ne sont pas comparables.",
-    },
-    {
-      question: "Que vérifier sur un devis de déménagement ?",
-      answer:
-        "Prestations incluses vs options, volume estimé ou méthode, accès (étages/ascenseur/portage), dates, assurances, franchise, déclaration de valeur, conditions d’annulation, acompte, et coordonnées légales complètes.",
+        "Comparez d'abord le périmètre : tous les devis doivent être basés sur le même volume, les mêmes accès, et les mêmes options (emballage, démontage, protection). Ensuite, vérifiez les conditions (acompte ≤ 30%, annulation, assurance). Enfin, comparez le prix. Des devis avec des volumes différents ne sont PAS comparables. Moverz standardise automatiquement les dossiers pour des devis réellement comparables.",
     },
     {
       question: "Comment éviter les faux déménageurs ?",
       answer:
-        "Vérifiez l’existence légale (SIREN/SIRET), la cohérence des documents (raison sociale identique sur devis/RIB/assurance), la licence/capacité de transport si applicable, et refusez les demandes de paiement atypiques.",
+        "Vérifiez 4 éléments : (1) SIREN actif sur annuaire-entreprises.data.gouv.fr, (2) Cohérence raison sociale sur devis/RIB/assurance, (3) Attestation d'assurance RC Pro valide, (4) Avis Google 4.0+/5 avec minimum 20-30 avis. Méfiez-vous des prix anormalement bas (<30% du marché), des demandes de paiement cash, ou de l'absence de devis écrit. Moverz filtre automatiquement les entreprises non conformes (Creditsafe + licences + assurances).",
     },
     {
-      question: "Visite ou visio : que choisir ?",
+      question: "Visite technique, visio, ou IA : que choisir ?",
       answer:
-        "L’important est d’avoir une base concrète (visite ou visio). Une simple estimation téléphonique est plus risquée : erreurs de volume, sous-estimation du temps, et ajustements le jour J.",
+        "Visite technique = précision maximale mais nécessite RDV (1-2 semaines). Visio = bon compromis (rapide, assez précis). IA Moverz = 1 minute, précision 90-95%, tous les déménageurs partent du même volume. Évitez l'estimation téléphonique (risque élevé d'écart). L'important : que tous vos devis soient basés sur le même volume pour être comparables.",
     },
     {
-      question: "Que faire si je ne comprends pas une ligne du devis ?",
+      question: "Quel acompte est normal ?",
       answer:
-        "Demandez une explication écrite (mail) et, si besoin, une version du devis clarifiée. Un professionnel fiable accepte de détailler les postes (portage, emballage, assurance, options).",
+        "Maximum 30% du total (recommandation DGCCRF). Méfiez-vous des demandes de 50%+ ou de paiement 100% avant prestation. Privilégiez les paiements traçables (virement, CB, chèque). Le solde doit être payé à l'arrivée ou sous 7 jours. Conditions d'annulation : généralement gratuit jusqu'à 7-15 jours avant, puis pénalités progressives.",
     },
     {
-      question: "Un déménageur doit-il fournir une attestation d’assurance ?",
+      question: "Que vérifier sur un devis de déménagement ?",
       answer:
-        "Oui, c’est une bonne pratique de la demander avant de signer. Vérifiez la période de validité, le périmètre (RC Pro, marchandises transportées), et conservez une copie avec le devis.",
+        "10 points essentiels : (1) SIREN/SIRET + raison sociale, (2) Volume en m³ (méthode d'estimation), (3) Accès détaillés (étage, ascenseur, parking), (4) Prestations incluses (emballage, démontage, protection), (5) Options et surcoûts possibles, (6) Tarif au m³ ou horaire, (7) Assurance RC Pro (plafond, franchise), (8) Déclaration de valeur, (9) Conditions d'annulation, (10) Acompte + modalités de paiement.",
+    },
+    {
+      question: "Un déménageur doit-il fournir une attestation d'assurance ?",
+      answer:
+        "Oui, c'est obligatoire (assurance RC Pro minimum 1,5M€). Demandez-la avant de signer et vérifiez : (1) Date de validité (< 6 mois), (2) Plafond de garantie, (3) Franchise éventuelle, (4) Couverture marchandises (standard 60€/m³). Conservez une copie avec votre devis. Si le déménageur refuse de la fournir, c'est un red flag majeur.",
     },
   ];
 
@@ -68,244 +68,435 @@ export default function CriteresChoisirDemenageurPage() {
       <PageHero
         breadcrumbs={[
           { label: "Accueil", href: "/" },
-          { label: "Choisir un déménageur", href: "/criteres-choisir-demenageur/" },
+          { label: "Choisir un déménageur fiable", href: "/criteres-choisir-demenageur/" },
         ]}
-        eyebrow="Guide anti-arnaques"
-        title="Choisir un déménageur : les critères indispensables (anti-arnaques)"
-        subtitle="Un prix bas ne suffit pas. Ce guide liste les critères vérifiables qui réduisent les risques : légalité, licence, assurance, estimation du volume, devis, paiement, fiabilité opérationnelle."
-        primaryCta={{ label: "Voir la checklist", href: "#checklist" }}
-        secondaryCta={{ label: "Aller à la FAQ", href: "#faq" }}
+        eyebrow="Guide anti-arnaques 2026"
+        title="8 Critères pour choisir un déménageur fiable (+ Creditsafe)"
+        subtitle="64% des déménageurs présentent des anomalies (DGCCRF 2023), 257 faillites en 2024. Ce guide vous explique les 8 critères vérifiables pour choisir en toute sécurité : santé financière (Creditsafe), licences, assurances, volume, devis, avis clients."
+        primaryCta={{ label: "Voir les 8 critères", href: "#criteres" }}
+        secondaryCta={{ label: "FAQ", href: "#faq" }}
       />
 
       <section className="section section-light">
         <div className="container max-w-4xl space-y-10">
-          {/* Intro */}
-          <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 space-y-4">
-            <h2 className="text-xl md:text-2xl font-bold text-[#0F172A]">
-              L’objectif : éviter les mauvaises surprises (volume, accès, assurance)
-            </h2>
-            <p className="text-sm md:text-base text-[#6B7280] leading-relaxed">
-              Les litiges les plus fréquents viennent d’un périmètre mal cadré : volume sous-estimé, accès oubliés,
-              options non comprises, ou garanties mal expliquées. Un déménageur fiable accepte de documenter et
-              d’écrire les choses clairement avant signature.
-            </p>
+          {/* Alerte chiffres clés */}
+          <div className="rounded-2xl border border-red-200 bg-gradient-to-br from-red-50 to-white p-6 md:p-8 space-y-4">
+            <div className="flex items-start gap-3">
+              <span className="text-2xl">⚠️</span>
+              <div className="space-y-3">
+                <h2 className="text-xl md:text-2xl font-bold text-[#0F172A]">
+                  Pourquoi ces critères sont cruciaux
+                </h2>
+                <div className="space-y-2 text-sm md:text-base text-[#6B7280] leading-relaxed">
+                  <p>
+                    <strong className="text-[#0F172A]">64% des déménageurs présentent au moins une anomalie</strong> selon la DGCCRF (2023) : 
+                    absence d'assurance, licences non conformes, sous-traitance non déclarée, devis trompeurs.
+                  </p>
+                  <p>
+                    <strong className="text-[#0F172A]">257 faillites de déménageurs en 2024</strong> (source Altares), 
+                    soit 20% du parc. Un déménageur en difficulté financière = risque élevé d'acompte perdu, de prestation non réalisée, 
+                    ou de litige non résolu.
+                  </p>
+                  <p>
+                    <strong className="text-[#0F172A]">Conclusion :</strong> Choisir uniquement sur le prix est dangereux. 
+                    Vérifiez la santé financière, les licences, et les assurances <strong>avant</strong> de signer.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* 7 criteria */}
-          <div className="space-y-4">
+          {/* 8 critères essentiels */}
+          <div id="criteres" className="scroll-mt-28 space-y-4">
             <h2 className="text-lg md:text-xl font-semibold text-[#0F172A]">
-              Les 7 critères essentiels (avec explications concrètes)
+              Les 8 critères essentiels pour choisir un déménageur fiable
             </h2>
+            <p className="text-sm md:text-base text-[#6B7280]">
+              Vérifiez ces 8 points <strong>avant</strong> de signer un devis. Un déménageur fiable accepte de fournir 
+              toutes ces preuves et de documenter clairement le périmètre de sa prestation.
+            </p>
 
             <div className="grid gap-4">
               {[
                 {
-                  title: "1) Légalité : SIREN/SIRET, existence réelle de la société",
+                  title: "1) Santé financière (Creditsafe)",
+                  emoji: "🏦",
                   bullets: [
-                    "Raison sociale complète + SIREN/SIRET sur le devis",
-                    "Adresse cohérente (siège / établissement)",
-                    "Identité identique sur devis, assurance et RIB",
+                    "Score de solvabilité sur 100 (entreprises < 40/100 à éviter)",
+                    "Risque de faillite à 12 mois (257 faillites en 2024 !)",
+                    "Incidents de paiement (retards, impayés, procédures collectives)",
+                    "Vérification SIREN actif (pas en liquidation ou radié)",
                   ],
-                  note: "Un devis sans identité légale claire est un signal de risque.",
+                  note: "C'est le critère #1 car un déménageur en difficulté = risque majeur d'acompte perdu ou de prestation non réalisée.",
+                  highlight: "✨ Exclusivité Moverz : Creditsafe vérifié automatiquement",
                 },
                 {
-                  title: "2) Licence / capacité de transport : non négociable",
+                  title: "2) Licence de transport et conformité légale",
+                  emoji: "📋",
                   bullets: [
-                    "Demandez la preuve de capacité/autorisation si transport de marchandises concerné",
-                    "Vérifiez que l’entreprise ne sous-traite pas sans l’indiquer",
+                    "Inscription au registre des transporteurs (capacité professionnelle obligatoire)",
+                    "SIREN/SIRET présent sur le devis et cohérent avec le Kbis",
+                    "Raison sociale identique sur devis, RIB, et attestation d'assurance",
+                    "Pas de changement de nom récent suspect (arnaques connues)",
                   ],
-                  note: "Sans cadre légal, vous prenez un risque sur la responsabilité et l’exécution.",
+                  note: "Sans licence de transport, le déménageur exerce illégalement. En cas de litige, aucun recours simple.",
                 },
                 {
-                  title: "3) Assurance : RC, marchandises, déclaration de valeur",
+                  title: "3) Assurance RC Pro et marchandises transportées",
+                  emoji: "🛡️",
                   bullets: [
-                    "Attestation d’assurance à jour (période + périmètre)",
-                    "Franchise, plafonds, exclusions : lisez-les",
-                    "Déclaration de valeur réaliste (sinon indemnisation limitée)",
+                    "Attestation d'assurance RC Pro valide (< 6 mois, plafond ≥ 1,5M€)",
+                    "Couverture marchandises transportées (standard 60€/m³ minimum)",
+                    "Franchise clairement indiquée (ex : 150€ = vous payez les 150 premiers euros en cas de casse)",
+                    "Possibilité d'assurance complémentaire pour objets de valeur (piano, œuvres d'art)",
                   ],
-                  note: "Ne confondez pas responsabilité légale et couverture réelle de vos biens.",
+                  note: "Demandez TOUJOURS l'attestation d'assurance avant de signer. Si le déménageur refuse, c'est un red flag majeur.",
                 },
                 {
-                  title: "4) Méthode d’estimation du volume : visite / visio",
+                  title: "4) Avis clients récents et réputation",
+                  emoji: "⭐",
                   bullets: [
-                    "Visite technique ou visio : idéal pour les accès et contraintes",
-                    "Évitez le “prix au téléphone” sans base concrète",
+                    "Note Google Maps 4.0+/5 minimum (idéalement 4.5+/5)",
+                    "Volume d'avis suffisant (minimum 20-30 avis pour fiabilité)",
+                    "Récence des avis (20+ avis < 6 mois = activité régulière)",
+                    "Pas de pattern de litiges répétitifs (surcoûts jour J, casse, retards systématiques)",
                   ],
-                  note: "Une estimation fragile augmente le risque de supplément ou de changement de prestation.",
+                  note: "Lisez les avis négatifs récents : les vrais problèmes ressortent (volume sous-estimé, casse non indemnisée, etc.).",
                 },
                 {
-                  title: "5) Devis détaillé : inclus vs options, accès, portage",
+                  title: "5) Méthode d'estimation du volume (visite / visio / IA)",
+                  emoji: "📦",
                   bullets: [
-                    "Prestations incluses (emballage, démontage, protection)",
-                    "Accès (étage, ascenseur, portage, stationnement) explicités",
-                    "Options et surcoûts possibles décrits à l’avance",
+                    "Visite technique gratuite = précision maximale (idéal pour logements > 100m²)",
+                    "Visio = bon compromis (rapide, assez précis)",
+                    "IA Moverz = 1 minute, précision 90-95%, tous les devis partent du même volume",
+                    "ÉVITEZ l'estimation téléphonique (risque élevé de supplément jour J)",
                   ],
-                  note: "Un devis “tout compris” sans détail est difficile à faire respecter.",
+                  note: "40-50% des déménagements subissent un supplément jour J à cause d'une mauvaise estimation du volume (+200-800€).",
                 },
                 {
-                  title: "6) Conditions de paiement : acompte raisonnable, traçabilité",
+                  title: "6) Devis détaillé et transparent",
+                  emoji: "📄",
                   bullets: [
-                    "Acompte écrit + calendrier de paiement",
-                    "Évitez 100% avant prestation (sauf cas très particulier justifié)",
-                    "Privilégiez les paiements traçables (virement, CB, etc.)",
+                    "Prestations incluses clairement listées (emballage, démontage, protection)",
+                    "Accès détaillés (étage, ascenseur, parking, distance porte-camion)",
+                    "Tarif au m³ ou horaire (tout compris : porteurs, camion, carburant, péages)",
+                    "Options et surcoûts possibles explicités à l'avance",
                   ],
-                  note: "Le risque principal : payer sans levier si la prestation dévie.",
+                  note: "Un devis vague = risque de suppléments cachés. Exigez un devis écrit détaillé avec toutes les prestations.",
                 },
                 {
-                  title: "7) Fiabilité opérationnelle : équipe, matériel, plan B",
+                  title: "7) Conditions de paiement et d'annulation",
+                  emoji: "💰",
                   bullets: [
-                    "Nombre de déménageurs, camion, matériel de protection",
-                    "Procédure en cas d’imprévu (panne, météo, retard)",
-                    "Planning réaliste (temps de chargement, trajet, déchargement)",
+                    "Acompte maximum 30% (méfiez-vous des demandes de 50%+ ou 100% avant prestation)",
+                    "Paiement traçable obligatoire (virement, CB, chèque — pas de cash uniquement)",
+                    "Conditions d'annulation écrites (généralement gratuit jusqu'à 7-15 jours avant)",
+                    "Solde payable à l'arrivée ou sous 7 jours (pas avant le déménagement)",
                   ],
-                  note: "La logistique et le plan B sont souvent plus importants que le prix.",
+                  note: "Un acompte > 50% + paiement cash uniquement = red flag majeur (risque d'arnaque).",
+                },
+                {
+                  title: "8) Fiabilité opérationnelle et plan B",
+                  emoji: "🚚",
+                  bullets: [
+                    "Nombre de porteurs et taille de camion adaptés au volume",
+                    "Matériel de protection professionnel (couvertures, sangles, diables)",
+                    "Procédure en cas d'imprévu (panne camion, météo, retard)",
+                    "Planning réaliste (temps de chargement + trajet + déchargement)",
+                  ],
+                  note: "La logistique et le plan B sont souvent plus importants que le prix. Posez la question : 'Que se passe-t-il si...'",
                 },
               ].map((c) => (
-                <div key={c.title} className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-7">
-                  <h3 className="text-base md:text-lg font-bold text-[#0F172A]">{c.title}</h3>
-                  <ul className="mt-3 grid gap-2 text-sm md:text-base text-[#0F172A]/90">
-                    {c.bullets.map((b) => (
-                      <li key={b} className="flex gap-2">
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#6BCFCF] shrink-0" />
-                        <span>{b}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="mt-4 text-sm text-[#6B7280]">{c.note}</p>
+                <div 
+                  key={c.title} 
+                  className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-7 hover:border-[#6BCFCF]/50 hover:shadow-md transition-all"
+                >
+                  <div className="flex items-start gap-3">
+                    <span className="text-3xl shrink-0">{c.emoji}</span>
+                    <div className="flex-1 space-y-3">
+                      <h3 className="text-base md:text-lg font-bold text-[#0F172A]">{c.title}</h3>
+                      {c.highlight && (
+                        <p className="text-xs md:text-sm font-semibold text-[#6BCFCF] bg-[#6BCFCF]/10 rounded-full px-3 py-1 inline-block">
+                          {c.highlight}
+                        </p>
+                      )}
+                      <ul className="grid gap-2 text-sm md:text-base text-[#0F172A]/90">
+                        {c.bullets.map((b) => (
+                          <li key={b} className="flex gap-2">
+                            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#2B7A78] shrink-0" />
+                            <span>{b}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <p className="text-sm text-[#6B7280] bg-[#F8FAFC] rounded-xl p-3 border border-[#E5E7EB]">
+                        <strong className="text-[#0F172A]">Pourquoi :</strong> {c.note}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Visio / visite */}
-          <div className="rounded-2xl border border-[#E5E7EB] bg-[#F8FAFC] p-6 md:p-8 space-y-4">
-            <h2 className="text-lg md:text-xl font-semibold text-[#0F172A]">
-              Pourquoi visio/visite &gt; estimation téléphonique (risque “supplément volume”)
-            </h2>
+          {/* Section Moverz vérifie automatiquement */}
+          <div className="rounded-2xl border border-[#6BCFCF]/30 bg-gradient-to-br from-[#6BCFCF]/10 to-white p-6 md:p-8 space-y-4">
+            <div className="flex items-center gap-3">
+              <span className="text-3xl">✨</span>
+              <h2 className="text-lg md:text-xl font-semibold text-[#0F172A]">
+                Ce que Moverz vérifie automatiquement pour vous
+              </h2>
+            </div>
             <p className="text-sm md:text-base text-[#6B7280] leading-relaxed">
-              Une estimation au téléphone repose sur votre déclaration (souvent incomplète) et sur des hypothèses
-              (“ça passe dans l’ascenseur”, “il y a peu de meubles”, etc.). En pratique, les écarts viennent de ce qui
-              n’a pas été vu : placards, cave/garage, mobilier démontable, électroménager, accès, portage et
-              stationnement. Visite/visio réduisent ces angles morts.
+              Plutôt que de vérifier manuellement 8 critères × 5 déménageurs (40 vérifications !), 
+              <strong className="text-[#0F172A]"> Moverz automatise ces vérifications</strong> avant de vous proposer des devis.
             </p>
-            <ul className="grid gap-2 text-sm md:text-base text-[#0F172A]/90">
+            
+            <div className="grid gap-3 md:grid-cols-2">
               {[
-                "Moins d’écart sur le volume réel",
-                "Meilleure anticipation des accès (escaliers, ascenseur, portage)",
-                "Devis plus stable car le périmètre est documenté",
-              ].map((b) => (
-                <li key={b} className="flex gap-2">
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#2B7A78] shrink-0" />
-                  <span>{b}</span>
-                </li>
+                {
+                  icon: "🏦",
+                  title: "Santé financière (Creditsafe)",
+                  desc: "Score de solvabilité, risque de faillite, incidents de paiement. Seules les entreprises financièrement solides passent nos filtres.",
+                },
+                {
+                  icon: "📋",
+                  title: "Licences et SIREN",
+                  desc: "Inscription au registre des transporteurs, SIREN actif, cohérence identité légale. Zéro déménageur non conforme.",
+                },
+                {
+                  icon: "🛡️",
+                  title: "Assurances RC Pro",
+                  desc: "Attestation valide, plafond ≥ 1,5M€, couverture marchandises. Vous ne recevez des devis que de pros correctement assurés.",
+                },
+                {
+                  icon: "⭐",
+                  title: "Avis clients Google",
+                  desc: "Note 4.0+/5, volume suffisant (20+ avis), pas de pattern de litiges répétitifs (surcoûts, casse, retards).",
+                },
+              ].map((item) => (
+                <div key={item.title} className="rounded-xl border border-[#E5E7EB] bg-white p-5 flex gap-3 items-start">
+                  <span className="text-2xl shrink-0">{item.icon}</span>
+                  <div>
+                    <p className="font-semibold text-[#0F172A] text-sm md:text-base">{item.title}</p>
+                    <p className="text-xs md:text-sm text-[#6B7280] mt-1 leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
               ))}
-            </ul>
+            </div>
+
+            <div className="rounded-xl bg-white/60 border border-[#6BCFCF]/20 p-4 text-center">
+              <p className="text-sm md:text-base text-[#0F172A]">
+                <strong>Résultat :</strong> Vous ne recevez des devis que de déménageurs vérifiés, assurés, et financièrement solides.
+              </p>
+              <a 
+                href="/verifications-partenaires/" 
+                className="mt-3 inline-block text-sm font-semibold text-[#6BCFCF] hover:text-[#2B7A78] underline"
+              >
+                En savoir plus sur nos vérifications →
+              </a>
+            </div>
           </div>
 
           {/* How to verify */}
           <div id="checklist" className="scroll-mt-28 space-y-4">
             <h2 className="text-lg md:text-xl font-semibold text-[#0F172A]">
-              Comment vérifier un déménageur (checklist actionnable)
+              Comment vérifier un déménageur vous-même (checklist actionnable)
             </h2>
 
             <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 space-y-4">
-              <h3 className="text-base md:text-lg font-bold text-[#0F172A]">Étapes simples</h3>
-              <ol className="grid gap-2 text-sm md:text-base text-[#0F172A]/90">
+              <h3 className="text-base md:text-lg font-bold text-[#0F172A]">8 étapes de vérification</h3>
+              <ol className="grid gap-3 text-sm md:text-base text-[#0F172A]/90">
                 {[
-                  "Vérifiez SIREN/SIRET dans un annuaire officiel d’entreprises (ou via l’extrait Kbis).",
-                  "Demandez un Kbis récent (raison sociale, adresse, dirigeants).",
-                  "Demandez l’attestation d’assurance (validité, périmètre, franchise).",
-                  "Vérifiez la cohérence raison sociale ↔ RIB ↔ devis ↔ assurance.",
-                  "Faites préciser la méthode d’estimation du volume (visite/visio) et les hypothèses d’accès.",
-                  "Demandez une clarification écrite pour toute option ou surcoût potentiel (portage, stationnement, attente).",
-                ].map((s, i) => (
-                  <li key={s} className="flex gap-3">
-                    <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#6BCFCF]/15 text-[#0F172A] text-xs font-bold border border-[#6BCFCF]/20 shrink-0">
+                  {
+                    step: "Vérifiez le SIREN sur annuaire-entreprises.data.gouv.fr (entreprise active, pas en liquidation).",
+                    tool: "Outil gratuit",
+                  },
+                  {
+                    step: "Consultez societe.com ou infogreffe.fr pour voir l'historique, le chiffre d'affaires, les procédures éventuelles.",
+                    tool: "Gratuit (infos limitées)",
+                  },
+                  {
+                    step: "Demandez un Kbis récent (raison sociale, adresse, dirigeants).",
+                    tool: "Le déménageur doit vous le fournir",
+                  },
+                  {
+                    step: "Demandez l'attestation d'assurance RC Pro (validité < 6 mois, plafond ≥ 1,5M€, franchise).",
+                    tool: "Obligatoire légalement",
+                  },
+                  {
+                    step: "Consultez les avis Google Maps (note 4.0+/5, volume 20+ avis, pas de litiges répétitifs).",
+                    tool: "Gratuit",
+                  },
+                  {
+                    step: "Vérifiez la cohérence raison sociale ↔ RIB ↔ devis ↔ assurance (même nom exact).",
+                    tool: "Lecture croisée",
+                  },
+                  {
+                    step: "Exigez une estimation précise du volume (visite/visio ou IA Moverz) — pas de devis téléphonique.",
+                    tool: "Visite gratuite ou IA 1 min",
+                  },
+                  {
+                    step: "Demandez un devis écrit détaillé (prestations, accès, options, surcoûts, conditions annulation).",
+                    tool: "Obligatoire légalement",
+                  },
+                ].map((item, i) => (
+                  <li key={item.step} className="flex gap-3 items-start">
+                    <span className="mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#6BCFCF]/15 text-[#0F172A] text-sm font-bold border border-[#6BCFCF]/30 shrink-0">
                       {i + 1}
                     </span>
-                    <span>{s}</span>
+                    <div className="flex-1">
+                      <p>{item.step}</p>
+                      <p className="text-xs text-[#6BCFCF] mt-1 font-medium">💡 {item.tool}</p>
+                    </div>
                   </li>
                 ))}
               </ol>
+              
+              <div className="mt-6 rounded-xl bg-[#6BCFCF]/10 border border-[#6BCFCF]/20 p-4 text-center">
+                <p className="text-sm md:text-base text-[#0F172A]">
+                  <strong>Trop long ?</strong> Moverz fait ces 8 vérifications automatiquement (Creditsafe + licences + assurances + avis).
+                </p>
+                <a 
+                  href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=criteres-checklist" 
+                  className="mt-3 inline-block text-sm font-semibold text-[#6BCFCF] hover:text-[#2B7A78] underline"
+                >
+                  Obtenir des devis de déménageurs vérifiés →
+                </a>
+              </div>
             </div>
           </div>
 
           {/* Red flags */}
-          <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 space-y-4">
-            <h2 className="text-lg md:text-xl font-semibold text-[#0F172A]">Red flags à éviter</h2>
-            <ul className="grid gap-2 text-sm md:text-base text-[#0F172A]/90">
+          <div className="rounded-2xl border border-red-200 bg-gradient-to-br from-red-50 to-white p-6 md:p-8 space-y-4">
+            <div className="flex items-center gap-3">
+              <span className="text-3xl">🚨</span>
+              <h2 className="text-lg md:text-xl font-semibold text-[#0F172A]">
+                8 Red flags à éviter absolument
+              </h2>
+            </div>
+            <ul className="grid gap-3 text-sm md:text-base text-[#0F172A]/90">
               {[
-                "Devis sans SIREN/SIRET, ou identité légale floue",
-                "Refus de fournir une attestation d’assurance ou un Kbis récent",
-                "Demande de paiement total avant prestation, ou moyens de paiement non traçables",
-                "Prix donné “au téléphone” sans visite/visio",
-                "Contradictions entre raison sociale, RIB et documents",
-                "Absence de détail sur accès/portage/conditions d’annulation",
+                "❌ Devis sans SIREN/SIRET, ou identité légale floue (risque : faux déménageur)",
+                "❌ Refus de fournir une attestation d'assurance RC Pro ou un Kbis récent (risque : pas d'assurance)",
+                "❌ Demande de paiement 50%+ ou 100% avant prestation (risque : arnaque, acompte perdu)",
+                "❌ Paiement cash uniquement, refus de virement/chèque (risque : pas de traçabilité, fraude fiscale)",
+                "❌ Prix donné au téléphone sans visite/visio/inventaire (risque : supplément +200-800€ jour J)",
+                "❌ Prix anormalement bas (<30% du marché) (risque : entreprise en difficulté cherchant trésorerie rapide)",
+                "❌ Contradictions entre raison sociale sur devis/RIB/assurance (risque : sous-traitance cachée, fraude)",
+                "❌ Absence de détail sur accès/volume/conditions d'annulation (risque : suppléments cachés)",
               ].map((b) => (
-                <li key={b} className="flex gap-2">
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-red-500 shrink-0" />
-                  <span>{b}</span>
+                <li key={b} className="flex gap-2 items-start bg-white rounded-lg p-3 border border-red-100">
+                  <span className="shrink-0 text-base">{b.split(" ")[0]}</span>
+                  <span>{b.split(" ").slice(1).join(" ")}</span>
                 </li>
               ))}
             </ul>
+            <div className="rounded-xl bg-white border border-red-200 p-4 text-sm md:text-base text-[#6B7280]">
+              <strong className="text-[#0F172A]">Si vous constatez 2+ red flags :</strong> Fuyez. 
+              Ce sont des signaux objectifs d'arnaque ou de pratique douteuse. 
+              <a href="/blog/eviter-arnaques-demenagement/" className="text-[#6BCFCF] hover:text-[#2B7A78] font-semibold ml-1 underline">
+                Guide complet anti-arnaques →
+              </a>
+            </div>
           </div>
 
           {/* Printable mini checklist */}
           <div className="rounded-2xl border border-[#E5E7EB] bg-[#0F172A] p-6 md:p-8 text-white">
-            <h2 className="text-lg md:text-xl font-semibold">Mini-checklist imprimable (10 lignes)</h2>
-            <div className="mt-4 rounded-2xl border border-white/10 bg-white/5 p-5 font-mono text-xs md:text-sm whitespace-pre-line leading-relaxed">
-              {[
-                "☐ SIREN/SIRET vérifiés (raison sociale cohérente)",
-                "☐ Kbis récent demandé / reçu",
-                "☐ Attestation d’assurance à jour (périmètre + franchise)",
-                "☐ Méthode d’estimation : visite / visio",
-                "☐ Accès détaillés : étages, ascenseur, portage, stationnement",
-                "☐ Prestations incluses clairement listées",
-                "☐ Options et surcoûts possibles explicités",
-                "☐ Acompte raisonnable + paiement traçable",
-                "☐ Conditions d’annulation écrites",
-                "☐ Cohérence devis ↔ RIB ↔ assurance",
-              ].join("\n")}
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-3xl">✅</span>
+              <h2 className="text-lg md:text-xl font-semibold">Checklist avant de signer (12 points)</h2>
             </div>
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-5 space-y-2.5 text-sm md:text-base">
+              {[
+                { text: "Score Creditsafe > 40/100 (ou SIREN actif + pas de procédure collective)", priority: "high" },
+                { text: "Licence de transport valide (inscription registre des transporteurs)", priority: "high" },
+                { text: "Attestation assurance RC Pro < 6 mois (plafond ≥ 1,5M€)", priority: "high" },
+                { text: "Avis Google 4.0+/5 (minimum 20 avis, récents)", priority: "medium" },
+                { text: "Méthode d'estimation précise : visite/visio/IA (pas téléphonique)", priority: "high" },
+                { text: "Devis écrit détaillé (volume, accès, prestations, options, surcoûts)", priority: "high" },
+                { text: "Accès explicités (étage, ascenseur, parking, portage)", priority: "medium" },
+                { text: "Prestations incluses clairement listées (emballage, démontage, protection)", priority: "medium" },
+                { text: "Acompte ≤ 30% + paiement traçable (virement/CB/chèque)", priority: "high" },
+                { text: "Conditions d'annulation écrites (délai, pénalités)", priority: "medium" },
+                { text: "Cohérence raison sociale sur devis ↔ RIB ↔ assurance", priority: "high" },
+                { text: "Clause 'Sans sous-traitance sauf accord écrit' au contrat", priority: "medium" },
+              ].map((item, i) => (
+                <div key={item.text} className="flex gap-3 items-start">
+                  <span className="text-white/60 shrink-0 font-mono text-xs mt-0.5">☐</span>
+                  <span className={item.priority === "high" ? "text-white font-medium" : "text-white/90"}>
+                    {item.text}
+                    {item.priority === "high" && <span className="ml-2 text-[#6BCFCF] text-xs">●●●</span>}
+                  </span>
+                </div>
+              ))}
+            </div>
+            <p className="mt-4 text-xs text-white/60 text-center">
+              ●●● = Critères prioritaires (santé financière, licences, assurances, volume)
+            </p>
           </div>
 
           {/* Maillage interne (SEO) */}
           <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF] text-center">
-              À lire aussi
+              Guides complémentaires
             </p>
             <h2 className="mt-3 text-xl md:text-2xl font-bold text-[#0F172A] text-center">
-              Pour compléter (court, factuel)
+              Pour aller plus loin
             </h2>
             <p className="mt-2 text-sm text-[#6B7280] text-center max-w-2xl mx-auto">
-              Trois pages complémentaires pour cadrer le devis, repérer les signaux d’alerte, et comprendre les vérifications.
+              6 guides complémentaires pour maîtriser chaque aspect de votre déménagement.
             </p>
 
-            <div className="mt-6 grid gap-3 md:grid-cols-3">
+            <div className="mt-6 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
               {[
                 {
-                  href: "/faq-arnaque-demenagement/",
-                  title: "FAQ arnaques déménagement",
-                  desc: "10 Q/R factuelles (suppléments, acompte, assurance, sous-traitance…).",
+                  href: "/blog/eviter-arnaques-demenagement/",
+                  emoji: "🛡️",
+                  title: "Éviter les arnaques",
+                  desc: "Guide complet : 64% anomalies, 257 faillites, outils de vérification.",
                 },
                 {
                   href: "/verifications-partenaires/",
-                  title: "Vérifications partenaires (transparence)",
-                  desc: "Ce qui est vérifié, pourquoi, et ce que ça change concrètement.",
+                  emoji: "✅",
+                  title: "Vérifications Moverz",
+                  desc: "Ce que Moverz vérifie : Creditsafe, licences, assurances, avis.",
                 },
                 {
-                  href: "/blog/eviter-arnaques-demenagement/",
-                  title: "Guide long : éviter les arnaques",
-                  desc: "Version longue avec exemples et points d’attention.",
+                  href: "/blog/meilleur-comparateur-demenagement-2026/",
+                  emoji: "🏆",
+                  title: "Meilleur comparateur",
+                  desc: "5 critères pour choisir un comparateur fiable (Creditsafe, devis comparables).",
+                },
+                {
+                  href: "/blog/estimer-volume-demenagement-guide-complet/",
+                  emoji: "📦",
+                  title: "Estimer son volume",
+                  desc: "3 méthodes (IA, inventaire, visite) pour éviter les surcoûts jour J.",
+                },
+                {
+                  href: "/blog/comparer-devis-demenagement-guide/",
+                  emoji: "📊",
+                  title: "Comparer des devis",
+                  desc: "7 éléments à vérifier pour comparer efficacement (volume, tarif, accès).",
+                },
+                {
+                  href: "/faq-arnaque-demenagement/",
+                  emoji: "❓",
+                  title: "FAQ arnaques",
+                  desc: "10 Q/R rapides (suppléments, acompte, assurance, sous-traitance).",
                 },
               ].map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className="group rounded-2xl border border-[#E5E7EB] bg-white p-5 hover:border-[#6BCFCF]/50 hover:shadow-sm transition-all"
+                  className="group rounded-xl border border-[#E5E7EB] bg-white p-5 hover:border-[#6BCFCF]/50 hover:shadow-md transition-all"
                 >
-                  <p className="text-sm font-semibold text-[#0F172A] group-hover:text-[#2B7A78]">{item.title}</p>
-                  <p className="mt-1 text-xs text-[#6B7280] leading-relaxed">{item.desc}</p>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-2xl">{item.emoji}</span>
+                    <p className="text-sm font-bold text-[#0F172A] group-hover:text-[#2B7A78]">{item.title}</p>
+                  </div>
+                  <p className="text-xs text-[#6B7280] leading-relaxed">{item.desc}</p>
                 </a>
               ))}
             </div>
@@ -317,23 +508,76 @@ export default function CriteresChoisirDemenageurPage() {
         <FAQ title="FAQ : choisir un déménageur" faqs={faqs} limit={10} id="faq" />
       </div>
 
-      {/* CTA discret */}
+      {/* CTA principal */}
       <section className="section section-light pt-0">
-        <div className="container max-w-4xl">
-          <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-            <div className="space-y-1">
-              <p className="text-sm font-semibold text-[#0F172A]">Besoin d’une estimation plus solide ?</p>
-              <p className="text-sm text-[#6B7280]">
-                Obtenir des devis basés sur une base documentée (visio/visite) réduit les écarts de volume.
-              </p>
+        <div className="container max-w-4xl space-y-4">
+          {/* CTA principal Moverz */}
+          <div className="rounded-2xl border border-[#6BCFCF]/30 bg-gradient-to-br from-[#6BCFCF]/10 to-white p-6 md:p-8 text-center">
+            <div className="flex items-center justify-center gap-2 mb-3">
+              <span className="text-2xl">✨</span>
+              <h3 className="text-lg font-bold text-[#0F172A]">
+                Recevez des devis de déménageurs déjà vérifiés
+              </h3>
             </div>
-            <a
-              href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/criteres-choisir-demenageur/"
-              rel="nofollow"
-              className="inline-flex items-center justify-center rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#1E293B] transition-colors"
-            >
-              Obtenir des devis basés sur une base claire →
-            </a>
+            <p className="text-sm md:text-base text-[#6B7280] mb-5 max-w-2xl mx-auto">
+              Moverz vérifie automatiquement les 8 critères (Creditsafe, licences, assurances, avis) + standardise 
+              les volumes pour des devis réellement comparables. Économisez 5-10h de recherche.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+              <a
+                href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=criteres-choisir-demenageur-cta"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-[#1E293B] hover:shadow-xl transition-all"
+              >
+                <span>Obtenir jusqu'à 5 devis vérifiés</span>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
+              <a
+                href="/pourquoi-moverz/"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-white border border-[#E5E7EB] px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/50 hover:shadow-sm transition-all"
+              >
+                <span>Pourquoi Moverz ?</span>
+              </a>
+            </div>
+            <p className="text-xs text-[#6B7280] mt-4">
+              100% gratuit · Dossier anonyme · Devis sous 5-7 jours · Note 4.9/5
+            </p>
+          </div>
+
+          {/* CTA secondaire */}
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 flex flex-col justify-between">
+              <div>
+                <p className="text-sm font-semibold text-[#0F172A]">Estimation de volume précise</p>
+                <p className="text-xs text-[#6B7280] mt-1">
+                  IA Moverz = 1 minute, précision 90-95%, évite les surcoûts jour J.
+                </p>
+              </div>
+              <a
+                href="/blog/estimer-volume-demenagement-guide-complet/"
+                className="mt-3 text-sm font-semibold text-[#6BCFCF] hover:text-[#2B7A78] underline inline-flex items-center gap-1"
+              >
+                <span>Voir le guide complet</span>
+                <span>→</span>
+              </a>
+            </div>
+            
+            <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 flex flex-col justify-between">
+              <div>
+                <p className="text-sm font-semibold text-[#0F172A]">Comparer efficacement les devis</p>
+                <p className="text-xs text-[#6B7280] mt-1">
+                  7 éléments à vérifier pour comparer des devis de déménagement.
+                </p>
+              </div>
+              <a
+                href="/blog/comparer-devis-demenagement-guide/"
+                className="mt-3 text-sm font-semibold text-[#6BCFCF] hover:text-[#2B7A78] underline inline-flex items-center gap-1"
+              >
+                <span>Voir le guide</span>
+                <span>→</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>

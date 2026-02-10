@@ -191,12 +191,23 @@ const nextConfig = {
       },
       {
         source: '/volume',
-        destination: '/calculateur-volume-demenagement/',
+        destination: '/blog/estimer-volume-demenagement-guide-complet/',
         permanent: true,
       },
       {
         source: '/volume/',
-        destination: '/calculateur-volume-demenagement/',
+        destination: '/blog/estimer-volume-demenagement-guide-complet/',
+        permanent: true,
+      },
+      // Redirection ancienne page calculateur vers nouveau guide complet
+      {
+        source: '/calculateur-volume-demenagement',
+        destination: '/blog/estimer-volume-demenagement-guide-complet/',
+        permanent: true,
+      },
+      {
+        source: '/calculateur-volume-demenagement/',
+        destination: '/blog/estimer-volume-demenagement-guide-complet/',
         permanent: true,
       },
       {
