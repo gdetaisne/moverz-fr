@@ -16,18 +16,25 @@ import { WebPageSchema } from "@/components/schema/WebPageSchema";
 import { HOME_FAQS } from "@/components/home/homeFaqs";
 
 export const metadata: Metadata = {
-  title: "Comparateur Déménagement | Devis 5–7j | Contrôlés · Gratuit",
+  title: "Comparateur Déménagement | Jusqu'à 5 devis | Contrôlés · Gratuit",
   description:
-    "Comparez des devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
+    "Comparez jusqu'à 5 devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
   alternates: {
     canonical: 'https://moverz.fr/',
   },
   openGraph: {
-    title: "Comparateur Déménagement | Devis 5–7j | Contrôlés · Gratuit",
-    description: "Comparez des devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
+    title: "Comparateur Déménagement | Jusqu'à 5 devis | Contrôlés · Gratuit",
+    description: "Comparez jusqu'à 5 devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
     url: 'https://moverz.fr/',
     siteName: 'Moverz',
-    images: [{ url: '/logo.png', width: 1200, height: 630, alt: 'Moverz - Comparateur Déménagement · Devis 5–7j · Contrôlés · Gratuit · Note 4.9/5' }],
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Moverz - Comparateur Déménagement · Jusqu'à 5 devis · Contrôlés · Gratuit · Note 4.9/5",
+      },
+    ],
     type: 'website',
   },
 };
@@ -40,8 +47,8 @@ export default function Home() {
       <main className="bg-white">
         {/* WebPage schema: contexte homepage */}
         <WebPageSchema
-          name="Comparateur Déménagement | Devis 5–7j | Contrôlés · Gratuit"
-          description="Comparez des devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit."
+          name="Comparateur Déménagement | Jusqu'à 5 devis | Contrôlés · Gratuit"
+          description="Comparez jusqu'à 5 devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit."
           url="https://moverz.fr/"
           about="Comparateur de déménagement"
         />

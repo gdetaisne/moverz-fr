@@ -5,41 +5,41 @@ import { FAQ, type FAQItem } from "@/components/FAQ";
 
 export const metadata: Metadata = getFullMetadata(
   "verifications-partenaires",
-  "Critères de sélection des partenaires Moverz | Déménageurs engagés",
-  "Découvrez les critères de sélection et les engagements contractuels des déménageurs partenaires Moverz : légalité, assurance, qualité, transparence."
+  "Comment Moverz vérifie les déménageurs | Creditsafe + Licences + Assurances",
+  "Découvrez comment Moverz vérifie systématiquement les déménageurs : santé financière (Creditsafe), licences de transport, assurances RC Pro. Ce que vous recevez concrètement."
 );
 
 export default function VerificationsPartenairesPage() {
   const faqs: FAQItem[] = [
     {
-      question: "Comment garantissez-vous la qualité des partenaires ?",
+      question: "Quelles vérifications Moverz effectue-t-elle concrètement ?",
       answer:
-        "Les déménageurs du réseau Moverz s'engagent contractuellement (via les CGV Partenaires) à respecter des critères de légalité, d'assurance, de qualité de service et de transparence. En cas de manquement, nous nous réservons le droit de suspendre ou résilier le partenariat.",
+        "Nous vérifions systématiquement : (1) La santé financière via Creditsafe (score de solvabilité, risque de faillite, incidents de paiement), (2) La licence de transport et le SIREN actif, (3) L'assurance RC Pro valide. Ces vérifications sont effectuées avant qu'un déménageur ne puisse recevoir des dossiers.",
     },
     {
-      question: "Les partenaires ont-ils une assurance valide ?",
+      question: "C'est quoi Creditsafe et pourquoi c'est important ?",
       answer:
-        "Oui. Tous les partenaires s'engagent contractuellement à maintenir une assurance RC Pro et une assurance marchandises valides, et à fournir une attestation à jour sur demande du client.",
+        "Creditsafe est la base de données professionnelle B2B qui note la santé financière des entreprises (score sur 100, risque de faillite, incidents de paiement, litiges). C'est crucial : 257 faillites de déménageurs ont été enregistrées en 2024 (source Altares). Creditsafe nous permet d'écarter les entreprises en difficulté avant qu'elles ne reçoivent votre dossier.",
     },
     {
-      question: "Que se passe-t-il en cas de litige avec un partenaire ?",
+      question: "Comment puis-je vérifier qu'un déménageur proposé est vraiment vérifié ?",
       answer:
-        "Le partenaire est contractuellement tenu de traiter les réclamations de manière constructive et de rechercher une solution amiable. Moverz suit les dossiers pour garantir la qualité du réseau.",
+        "Tous les déménageurs qui reçoivent votre dossier ont passé nos filtres Creditsafe + licences + assurances. Vous pouvez demander à voir l'attestation d'assurance RC Pro et vérifier le SIREN sur annuaire-entreprises.data.gouv.fr. Moverz ne transmet jamais votre dossier à un déménageur qui n'a pas été vérifié.",
     },
     {
-      question: "Les partenaires peuvent-ils sous-traiter ?",
+      question: "Que se passe-t-il si un déménageur ne respecte pas ses engagements ?",
       answer:
-        "Oui, mais ils s'engagent à signaler clairement toute sous-traitance prévue avant signature du contrat avec le client, pour garantir la transparence.",
+        "En plus des vérifications initiales, nos partenaires s'engagent contractuellement (CGV Partenaires) à maintenir leurs assurances, à respecter la transparence des devis, et à traiter les litiges de manière constructive. En cas de manquement répété, nous suspendons ou excluons le partenaire du réseau.",
     },
     {
-      question: "Comment Moverz vérifie-t-elle les engagements ?",
+      question: "Les déménageurs low-cost sont-ils aussi vérifiés ?",
       answer:
-        "Au moment de rejoindre le réseau, chaque partenaire accepte contractuellement les CGV Partenaires. Nous suivons les retours clients et les litiges pour maintenir un réseau de qualité.",
+        "Oui. Même les déménageurs proposant des tarifs compétitifs passent les mêmes filtres Creditsafe + licences + assurances. Un tarif bas n'est pas un problème si l'entreprise est saine financièrement et correctement assurée. En revanche, un tarif anormalement bas (<30% du marché) est un signal d'alerte que Creditsafe détecte souvent (entreprise en difficulté cherchant de la trésorerie rapide).",
     },
     {
-      question: "Puis-je consulter les CGV Partenaires ?",
+      question: "Moverz vérifie-t-elle les avis clients des déménageurs ?",
       answer:
-        "Oui, les CGV Partenaires sont publiques et détaillent tous les engagements contractuels des déménageurs du réseau.",
+        "Oui, nous consultons les avis Google Maps (note globale, récence, patterns de litiges répétitifs). Nous croisons ces avis avec les données Creditsafe pour avoir une vision complète : santé financière + réputation terrain. Un déménageur peut avoir un bon score Creditsafe mais de mauvais avis (ou l'inverse) : nous prenons les deux en compte.",
     },
   ];
 
@@ -48,99 +48,95 @@ export default function VerificationsPartenairesPage() {
       <PageHero
         breadcrumbs={[
           { label: "Accueil", href: "/" },
-          { label: "Critères de sélection", href: "/verifications-partenaires/" },
+          { label: "Vérifications partenaires", href: "/verifications-partenaires/" },
         ]}
-        eyebrow="Transparence"
-        title="Critères de sélection des partenaires"
-        subtitle="Pour rejoindre le réseau Moverz, les déménageurs s'engagent contractuellement à respecter des critères de qualité, de transparence et de professionnalisme."
-        primaryCta={{ label: "Voir les critères", href: "#criteres" }}
+        eyebrow="Zéro arnaque"
+        title="Comment Moverz vérifie les déménageurs"
+        subtitle="Nous vérifions systématiquement la santé financière (Creditsafe), les licences de transport, et les assurances RC Pro. Vous ne recevez des devis que de déménageurs vérifiés et financièrement solides."
+        primaryCta={{ label: "Voir les vérifications", href: "#verifications" }}
         secondaryCta={{ label: "Voir la FAQ", href: "#faq" }}
       />
 
-      <section id="criteres" className="section section-light scroll-mt-28">
+      <section id="verifications" className="section section-light scroll-mt-28">
         <div className="container max-w-4xl space-y-10">
           
-          {/* Pourquoi c'est important */}
+          {/* Pourquoi c'est crucial */}
           <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 space-y-3">
-            <h2 className="text-xl md:text-2xl font-bold text-[#0F172A]">Notre approche : engagement contractuel</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-[#0F172A]">Pourquoi ces vérifications sont cruciales</h2>
             <p className="text-sm md:text-base text-[#6B7280] leading-relaxed">
-              Plutôt que de prétendre "vérifier" chaque déménageur en amont, nous avons fait le choix de la 
-              <strong className="text-[#0F172A]"> responsabilisation contractuelle</strong>.
+              <strong className="text-[#0F172A]">64% des déménageurs présentent des anomalies</strong> (DGCCRF 2023) : 
+              absence d'assurance, licences non conformes, sous-traitance non déclarée, ou pratiques commerciales trompeuses.
             </p>
             <p className="text-sm md:text-base text-[#6B7280] leading-relaxed">
-              Chaque déménageur qui rejoint le réseau Moverz accepte nos{" "}
-              <a href="/cgv-partenaires/" className="text-[#6BCFCF] hover:underline font-semibold">
-                CGV Partenaires
-              </a>
-              {" "}et s'engage contractuellement à respecter des critères stricts de légalité, d'assurance, 
-              de qualité et de transparence.
+              Pire encore : <strong className="text-[#0F172A]">257 faillites de déménageurs ont été enregistrées en 2024</strong> (source Altares). 
+              Un déménageur en difficulté financière = risque élevé d'acompte perdu, de prestation non réalisée, ou de litige non résolu.
+            </p>
+            <p className="text-sm md:text-base text-[#6B7280] leading-relaxed">
+              <strong className="text-[#0F172A]">C'est pour ça que Moverz vérifie systématiquement</strong> la santé financière 
+              (Creditsafe), les licences, et les assurances de chaque déménageur <strong>avant</strong> de lui transmettre votre dossier.
             </p>
           </div>
 
-          {/* Les critères */}
+          {/* Les vérifications actives */}
           <div className="space-y-4">
-            <h2 className="text-lg md:text-xl font-semibold text-[#0F172A]">Les engagements contractuels des partenaires</h2>
+            <h2 className="text-lg md:text-xl font-semibold text-[#0F172A]">Ce que nous vérifions systématiquement</h2>
 
             <div className="grid gap-4">
               {[
                 {
-                  title: "1) Légalité et conformité",
-                  desc: "Le partenaire s'engage à être en règle avec toutes les obligations légales.",
+                  title: "1) Santé financière (Creditsafe)",
+                  desc: "Nous vérifions la solidité financière de chaque déménageur via Creditsafe, la base de données B2B professionnelle.",
                   bullets: [
-                    "Immatriculation RCS ou RM active",
-                    "SIRET/SIREN valide et en règle",
-                    "Licences et autorisations requises pour le déménagement",
-                    "Respect de la réglementation transport de marchandises",
+                    "Score de solvabilité sur 100 (entreprises < 40/100 écartées automatiquement)",
+                    "Risque de faillite à 12 mois (alerte si risque élevé)",
+                    "Incidents de paiement (retards, impayés, procédures en cours)",
+                    "Procédures collectives (liquidation, redressement, sauvegarde)",
+                  ],
+                  highlight: "Exclusivité Moverz : seul comparateur à vérifier Creditsafe",
+                },
+                {
+                  title: "2) Licence de transport et SIREN",
+                  desc: "Nous vérifions que le déménageur est légalement habilité à exercer.",
+                  bullets: [
+                    "SIREN actif et non radié (via annuaire-entreprises.data.gouv.fr)",
+                    "Inscription au registre des transporteurs (capacité professionnelle)",
+                    "Correspondance identité légale (SIREN / Kbis / dirigeants)",
+                    "Pas de radiation récente ou de changement de nom suspect (arnaques connues)",
                   ],
                 },
                 {
-                  title: "2) Assurance",
-                  desc: "Le partenaire s'engage à maintenir des assurances professionnelles valides.",
+                  title: "3) Assurance RC Pro valide",
+                  desc: "Nous vérifions que le déménageur dispose d'une assurance responsabilité civile professionnelle à jour.",
                   bullets: [
-                    "Assurance RC Pro à jour",
-                    "Assurance marchandises transportées",
-                    "Capacité à fournir une attestation d'assurance sur demande",
-                    "Transparence sur les conditions de garantie et franchises",
+                    "Attestation d'assurance RC Pro datant de < 6 mois",
+                    "Plafond de garantie minimum 1,5M€ (recommandation DGCCRF)",
+                    "Assurance marchandises transportées (couverture standard 60€/m³ minimum)",
+                    "Possibilité de fournir l'attestation au client sur demande",
                   ],
                 },
                 {
-                  title: "3) Qualité et transparence du devis",
-                  desc: "Le partenaire s'engage à établir des devis clairs et conformes.",
+                  title: "4) Avis Google Maps et réputation",
+                  desc: "Nous consultons les avis clients récents pour détecter des patterns de litiges répétitifs.",
                   bullets: [
-                    "Devis détaillés (prestations, volumes, accès, conditions)",
-                    "Délais de réponse raisonnables (24-48h recommandé)",
-                    "Signalement clair de toute sous-traitance prévue",
-                    "Pas de frais cachés ou non mentionnés au devis",
-                  ],
-                },
-                {
-                  title: "4) Qualité de service",
-                  desc: "Le partenaire s'engage à respecter ses engagements et à assurer un service professionnel.",
-                  bullets: [
-                    "Respect des délais et conditions convenus",
-                    "Prestation réalisée avec professionnalisme et soin",
-                    "Communication transparente et réactive avec le client",
-                    "Traitement constructif des réclamations",
-                  ],
-                },
-                {
-                  title: "5) Protection des données (RGPD)",
-                  desc: "Le partenaire s'engage à respecter la confidentialité des données client.",
-                  bullets: [
-                    "Respect du RGPD",
-                    "Utilisation des données uniquement pour la prestation",
-                    "Pas de revente ou transfert des données",
-                    "Suppression des données après la prestation (sauf obligations légales)",
+                    "Note globale Google Maps (4.0+/5 minimum, 4.5+/5 recommandé)",
+                    "Volume d'avis (minimum 20-30 avis pour fiabilité)",
+                    "Récence des avis (20+ avis < 6 mois = activité régulière)",
+                    "Patterns de litiges (surcoûts jour J, casse non indemnisée, retards répétés)",
                   ],
                 },
               ].map((c) => (
                 <div key={c.title} className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-7">
                   <h3 className="text-base md:text-lg font-bold text-[#0F172A]">{c.title}</h3>
+                  {c.highlight && (
+                    <p className="mt-2 text-xs md:text-sm font-semibold text-[#6BCFCF] bg-[#6BCFCF]/10 rounded-full px-3 py-1 inline-block">
+                      ✨ {c.highlight}
+                    </p>
+                  )}
                   <p className="mt-2 text-sm md:text-base text-[#6B7280] leading-relaxed">{c.desc}</p>
                   <ul className="mt-4 grid gap-2 text-sm md:text-base text-[#0F172A]/90">
                     {c.bullets.map((b) => (
                       <li key={b} className="flex gap-2">
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#6BCFCF] shrink-0" />
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#2B7A78] shrink-0" />
                         <span>{b}</span>
                       </li>
                     ))}
@@ -150,36 +146,73 @@ export default function VerificationsPartenairesPage() {
             </div>
           </div>
 
-          {/* Ce que cela change */}
-          <div className="rounded-2xl border border-[#E5E7EB] bg-[#F8FAFC] p-6 md:p-8 space-y-3">
-            <h2 className="text-lg md:text-xl font-semibold text-[#0F172A]">Ce que cela change concrètement</h2>
-            <ul className="grid gap-2 text-sm md:text-base text-[#0F172A]/90">
+          {/* Ce que vous recevez concrètement */}
+          <div className="rounded-2xl border border-[#6BCFCF]/30 bg-gradient-to-br from-[#6BCFCF]/10 to-white p-6 md:p-8 space-y-4">
+            <h2 className="text-lg md:text-xl font-semibold text-[#0F172A]">Ce que vous recevez concrètement</h2>
+            <p className="text-sm md:text-base text-[#6B7280] leading-relaxed">
+              Grâce à ces vérifications, vous recevez jusqu'à 5 devis de déménageurs qui ont passé nos filtres :
+            </p>
+            <ul className="grid gap-3 text-sm md:text-base text-[#0F172A]/90">
               {[
-                "Des partenaires qui s'engagent contractuellement (pas juste une promesse marketing)",
-                "Un recours en cas de manquement (suspension ou exclusion du réseau)",
-                "Une responsabilité claire du déménageur vis-à-vis du client",
-                "Une traçabilité des engagements via les CGV Partenaires",
+                {
+                  title: "✅ Financièrement solides",
+                  desc: "Score Creditsafe vérifié, risque de faillite faible, aucun incident de paiement grave. Vous évitez les entreprises en difficulté qui risquent de disparaître avec votre acompte.",
+                },
+                {
+                  title: "✅ Légalement conformes",
+                  desc: "SIREN actif, licence de transport valide, inscription au registre des transporteurs. Vous ne traitez qu'avec des pros habilités à exercer.",
+                },
+                {
+                  title: "✅ Correctement assurés",
+                  desc: "Assurance RC Pro valide, plafond de garantie ≥ 1,5M€, couverture marchandises ≥ 60€/m³. En cas de casse, vous êtes protégé.",
+                },
+                {
+                  title: "✅ Bien notés par leurs clients",
+                  desc: "Avis Google 4.0+/5, pas de pattern de litiges répétitifs (surcoûts, casse, retards). Vous choisissez parmi des pros qui ont fait leurs preuves.",
+                },
+                {
+                  title: "✅ Engagés contractuellement",
+                  desc: "En plus des vérifications, nos partenaires acceptent nos CGV (transparence des devis, traitement constructif des litiges, respect du RGPD). En cas de manquement, nous suspendons ou excluons le partenaire.",
+                },
               ].map((b) => (
-                <li key={b} className="flex gap-2">
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#2B7A78] shrink-0" />
-                  <span>{b}</span>
+                <li key={b.title} className="flex gap-3 items-start">
+                  <div className="shrink-0 mt-1">
+                    <span className="text-[#2B7A78] font-bold text-lg">{b.title.split(" ")[0]}</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-[#0F172A]">{b.title.split(" ").slice(1).join(" ")}</p>
+                    <p className="text-[#6B7280] mt-1 text-sm">{b.desc}</p>
+                  </div>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* CTA vers CGV-P */}
-          <div className="rounded-2xl border border-[#6BCFCF]/30 bg-gradient-to-br from-[#6BCFCF]/10 to-white p-6 md:p-8 text-center">
+          {/* CTA principal */}
+          <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 text-center">
             <h3 className="text-lg font-bold text-[#0F172A] mb-3">
-              Consultez les engagements complets
+              Prêt à comparer des devis de déménageurs vérifiés ?
             </h3>
             <p className="text-sm md:text-base text-[#6B7280] mb-5 max-w-2xl mx-auto">
-              Pour connaître le détail de tous les engagements contractuels des déménageurs du réseau Moverz, 
-              consultez les Conditions Générales de Vente Partenaires.
+              Obtenez jusqu'à 5 devis comparables de déménageurs vérifiés (Creditsafe + licences + assurances) sous 5-7 jours. 
+              Dossier anonyme, zéro harcèlement, 100% gratuit.
+            </p>
+            <a
+              href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=verifications-partenaires"
+              className="inline-flex items-center justify-center rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-[#1E293B] hover:shadow-xl transition-all"
+            >
+              Obtenir mes devis →
+            </a>
+          </div>
+
+          {/* CTA secondaire vers CGV-P */}
+          <div className="rounded-2xl border border-[#E5E7EB] bg-[#F8FAFC] p-6 md:p-8 text-center">
+            <p className="text-sm md:text-base text-[#6B7280] mb-4 max-w-2xl mx-auto">
+              Pour connaître le détail des engagements contractuels des déménageurs du réseau Moverz :
             </p>
             <a
               href="/cgv-partenaires/"
-              className="inline-flex items-center justify-center rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-[#1E293B] hover:shadow-xl transition-all"
+              className="inline-flex items-center justify-center rounded-full bg-white border border-[#E5E7EB] px-6 py-3 text-sm font-semibold text-[#0F172A] hover:bg-[#F8FAFC] transition-colors"
             >
               Consulter les CGV Partenaires →
             </a>

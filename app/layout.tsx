@@ -5,7 +5,6 @@ import "./globals.css";
 import { MOVERZ_REVIEWS, getAverageRating, getTotalReviews } from "@/lib/reviews";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import ContentSquare from "@/components/ContentSquare";
-import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ExitIntentPopup from "@/components/ExitIntentPopup";
 import { ConversionIntentTracker } from "@/components/ConversionIntentTracker";
 import { JsonLd } from "@/components/schema/JsonLd";
@@ -20,10 +19,10 @@ const inter = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://moverz.fr'),
   title: {
-    default: "Comparateur Déménagement | Devis 5–7j | Contrôlés · Gratuit",
+    default: "Comparateur Déménagement | Jusqu'à 5 devis | Contrôlés · Gratuit",
     template: "%s | Moverz"
   },
-  description: "Comparez des devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
+  description: "Comparez jusqu'à 5 devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
   keywords: [
     "devis déménagement gratuit",
     "comparateur déménageurs fiable",
@@ -54,14 +53,14 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "https://moverz.fr/",
     siteName: "Moverz",
-    title: "Comparateur Déménagement | Devis 5–7j | Contrôlés · Gratuit",
-    description: "Comparez des devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
+    title: "Comparateur Déménagement | Jusqu'à 5 devis | Contrôlés · Gratuit",
+    description: "Comparez jusqu'à 5 devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Moverz - Comparateur Déménagement · Devis 5–7j · Contrôlés · Gratuit · Note 4.9/5",
+        alt: "Moverz - Comparateur Déménagement · Jusqu'à 5 devis · Contrôlés · Gratuit · Note 4.9/5",
         type: "image/png",
       },
     ],
@@ -70,8 +69,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@moverz",
     creator: "@moverz",
-    title: "Comparateur Déménagement | Devis 5–7j | Contrôlés · Gratuit",
-    description: "Comparez des devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
+    title: "Comparateur Déménagement | Jusqu'à 5 devis | Contrôlés · Gratuit",
+    description: "Comparez jusqu'à 5 devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
     images: ["/logo.png"],
   },
   robots: {
@@ -143,7 +142,7 @@ export default function RootLayout({
               height: 512,
             },
             description:
-              "Comparateur de déménagement anti-arnaque. Comparez des devis comparables de déménageurs vérifiés sous 5 à 7 jours, sans harcèlement.",
+              "Comparateur de déménagement anti-arnaque. Comparez jusqu'à 5 devis comparables de déménageurs vérifiés sous 5 à 7 jours, sans harcèlement.",
             foundingDate: "2023",
             address: {
               "@type": "PostalAddress",
@@ -211,7 +210,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <GoogleAnalytics />
         <ConversionIntentTracker />
-        <FloatingWhatsApp />
         <ExitIntentPopup />
         {/* Header */}
         <header className="sticky top-0 z-40 w-full bg-white border-b border-[#E3E5E8] shadow-sm">
@@ -311,7 +309,6 @@ export default function RootLayout({
               <div>
                 <h3 className="font-semibold mb-4 text-white">Professionnels</h3>
                 <ul className="space-y-2 text-sm">
-                  <li><a href="/partenaires/" className="text-[#6BCFCF] hover:text-white transition-colors font-medium">Devenir partenaire</a></li>
                   <li><a href="/partenaires/" className="text-white/70 hover:text-white transition-colors">Devenir partenaire</a></li>
                   <li><a href="/verifications-partenaires/" className="text-white/70 hover:text-white transition-colors">Critères de sélection</a></li>
                   <li><a href="/cgv-partenaires/" className="text-white/70 hover:text-white transition-colors">CGV Partenaires</a></li>

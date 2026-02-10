@@ -1,6 +1,5 @@
 "use client";
 
-import HeroMockup from "@/components/HeroMockup";
 import Image from "next/image";
 
 type WidgetActionSectionProps = {
@@ -61,7 +60,7 @@ export default function WidgetActionSection({
                   { icon: "●", label: "3 min" },
                   { icon: "●", label: "IA" },
                   { icon: "●", label: "Sans démarchage" },
-                  { icon: "●", label: "des devis" },
+                  { icon: "●", label: "Jusqu'à 5 devis" },
                 ].map((item, i) => (
                   <span
                     key={i}
@@ -74,14 +73,8 @@ export default function WidgetActionSection({
               </div>
             </div>
 
-            {/* Mockup + CTA */}
-            <div className="lg:col-span-7 space-y-6">
-              {/* Mockup */}
-              <div className="mx-auto w-full max-w-[340px]">
-                <HeroMockup />
-              </div>
-              
-              {/* CTA */}
+            {/* CTA */}
+            <div className="lg:col-span-7 flex items-center justify-center">
               <div className="max-w-sm mx-auto text-center">
                 <a
                   href={`https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=${from}&devis_range=3-5${citySlug ? `&city=${citySlug}` : ''}`}
