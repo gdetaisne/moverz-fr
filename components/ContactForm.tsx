@@ -87,25 +87,25 @@ export default function ContactForm() {
 
   if (isSent) {
     return (
-      <div className="rounded-3xl border border-[#6BCFCF]/30 bg-gradient-to-br from-[#E6FFFA] to-white p-8 text-center">
-        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#6BCFCF]/15 text-[#0F172A]">
-          <span className="text-2xl" aria-hidden="true">
-            ✓
-          </span>
+      <div className="rounded-2xl border border-cyan-200/50 bg-gradient-to-br from-cyan-50 to-blue-50 backdrop-blur-sm p-8 text-center shadow-[0_8px_24px_rgba(6,182,212,0.15)]">
+        <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/30">
+          <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth={3} viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
         </div>
-        <h3 className="text-xl font-bold text-[#0F172A] mb-2">Message envoyé</h3>
-        <p className="text-[#1E293B]/70">
+        <h3 className="text-2xl font-bold text-[#0F172A] mb-3">Message envoyé</h3>
+        <p className="text-gray-600">
           {sentViaMailClient
-            ? "Votre client mail vient de s’ouvrir. Envoyez le message pour nous écrire directement."
-            : "On revient vers vous sous 24h ouvrées. Si c’est urgent, privilégiez WhatsApp."}
+            ? "Votre client mail vient de s'ouvrir. Envoyez le message pour nous écrire directement."
+            : "On revient vers vous sous 24h ouvrées. Si c'est urgent, privilégiez WhatsApp."}
         </p>
         {sentViaMailClient ? (
-          <div className="mt-5">
+          <div className="mt-6">
             <a
-              className="underline underline-offset-2 text-sm font-semibold text-[#0F172A]"
+              className="underline underline-offset-2 text-sm font-bold text-cyan-700 hover:text-cyan-900 transition-colors"
               href={mailtoHref}
             >
-              Si rien ne s’est ouvert, cliquez ici pour envoyer par email
+              Si rien ne s'est ouvert, cliquez ici pour envoyer par email
             </a>
             .
           </div>
@@ -139,7 +139,7 @@ export default function ContactForm() {
             required
             value={form.name}
             onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
-            className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-[#04163a] focus:border-[#6BCFCF]/60 focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]/20 transition-all"
+            className="w-full rounded-xl border-2 border-gray-200 bg-white px-4 py-3 text-[#04163a] focus:border-cyan-400 focus:outline-none focus:ring-4 focus:ring-cyan-100 transition-all"
             placeholder="Votre nom"
           />
         </div>
@@ -154,7 +154,7 @@ export default function ContactForm() {
             required
             value={form.email}
             onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-            className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-[#04163a] focus:border-[#6BCFCF]/60 focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]/20 transition-all"
+            className="w-full rounded-xl border-2 border-gray-200 bg-white px-4 py-3 text-[#04163a] focus:border-cyan-400 focus:outline-none focus:ring-4 focus:ring-cyan-100 transition-all"
             placeholder="votre@email.com"
           />
         </div>
@@ -171,7 +171,7 @@ export default function ContactForm() {
             name="phone"
             value={form.phone}
             onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
-            className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-[#04163a] focus:border-[#6BCFCF]/60 focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]/20 transition-all"
+            className="w-full rounded-xl border-2 border-gray-200 bg-white px-4 py-3 text-[#04163a] focus:border-cyan-400 focus:outline-none focus:ring-4 focus:ring-cyan-100 transition-all"
             placeholder="+33…"
           />
         </div>
@@ -187,7 +187,7 @@ export default function ContactForm() {
             onChange={(e) =>
               setForm((f) => ({ ...f, subject: e.target.value as ContactSubject }))
             }
-            className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-[#04163a] focus:border-[#6BCFCF]/60 focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]/20 transition-all"
+            className="w-full rounded-xl border-2 border-gray-200 bg-white px-4 py-3 text-[#04163a] focus:border-cyan-400 focus:outline-none focus:ring-4 focus:ring-cyan-100 transition-all"
           >
             <option>Devis & déménagement</option>
             <option>Facturation / administratif</option>
@@ -226,17 +226,22 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-lg font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-300"
+        className="w-full group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-cyan-600 via-cyan-700 to-blue-700 px-8 py-4 text-lg font-bold text-white shadow-[0_12px_32px_rgba(6,182,212,0.35)] hover:shadow-[0_16px_48px_rgba(6,182,212,0.45)] hover:scale-[1.03] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-300"
       >
-        <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
-        <span className="relative">{isSubmitting ? "Envoi…" : "Envoyer le message"}</span>
-        <span className="relative text-xl leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
+        <span className="absolute inset-0 bg-gradient-to-r from-blue-700 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <span className="relative z-10">{isSubmitting ? "Envoi…" : "Envoyer le message"}</span>
+        <svg className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
       </button>
       <a
         href={mailtoHref}
-        className="w-full inline-flex items-center justify-center gap-2 rounded-2xl border border-[#0F172A]/15 bg-white px-8 py-4 text-base font-semibold text-[#0F172A] hover:bg-gray-50 transition-colors"
+        className="w-full inline-flex items-center justify-center gap-2 rounded-xl border-2 border-gray-200 bg-white px-8 py-4 text-base font-bold text-[#0F172A] hover:border-cyan-300 hover:bg-gray-50 transition-all"
       >
-        Envoyer par email <span aria-hidden="true">→</span>
+        Envoyer par email
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
       </a>
       <p className="text-xs text-[#6B7280] text-center">
         Pas de démarchage. Si c’est urgent, WhatsApp est plus rapide.

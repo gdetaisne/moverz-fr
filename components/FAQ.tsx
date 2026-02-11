@@ -19,10 +19,10 @@ function FAQItem({ faq, isOpen, onToggle }: { faq: FAQItem; isOpen: boolean; onT
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      className={`group relative overflow-hidden rounded-2xl border backdrop-blur-sm transition-all duration-300 ${
+      className={`group relative overflow-hidden rounded-xl border backdrop-blur-sm transition-all duration-300 ${
         isOpen
-          ? "border-[#6BCFCF]/50 bg-white shadow-lg shadow-[#6BCFCF]/5"
-          : "border-gray-200 bg-white/60 hover:bg-white hover:border-gray-300 hover:shadow-md"
+          ? "border-cyan-300/60 bg-white shadow-[0_8px_24px_rgba(6,182,212,0.15)]"
+          : "border-gray-200 bg-white/70 hover:bg-white hover:border-cyan-200 hover:shadow-md"
       }`}
     >
       {/* Gradient accent on hover/open */}

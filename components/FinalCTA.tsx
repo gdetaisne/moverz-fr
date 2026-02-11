@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { Clock, Gift, FileCheck } from "lucide-react";
 
 export default function FinalCTA() {
   const [mounted, setMounted] = useState(false);
@@ -9,63 +10,65 @@ export default function FinalCTA() {
   }, []);
 
   return (
-    <section className="py-24 md:py-32 bg-gradient-to-b from-white to-[#A8E8E8]/20">
+    <section className="relative py-24 md:py-32 bg-gradient-to-br from-cyan-50 via-white to-blue-50 overflow-hidden">
+      {/* Subtle grid pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(#E5E7EB_1px,transparent_1px)] [background-size:24px_24px] opacity-10" />
+      
       <div 
-        className="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+        className="relative container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
         style={{
           animation: mounted ? 'fadeInUp 1s ease-out' : 'none',
         }}
       >
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-2 text-sm font-semibold text-[#0F172A] mb-8">
-          <span className="h-2 w-2 rounded-full bg-[#6BCFCF] animate-pulse" />
+        {/* Badge moderne */}
+        <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-200/50 backdrop-blur-sm px-5 py-2.5 text-sm font-semibold text-[#0F172A] mb-8 shadow-sm">
+          <span className="h-2 w-2 rounded-full bg-cyan-500 animate-pulse shadow-[0_0_12px_rgba(6,182,212,0.6)]" />
           Gratuit · Sans démarchage · 0 engagement
         </div>
 
-        {/* Title */}
-        <h2 className="text-4xl md:text-6xl font-bold text-[#0F172A] mb-6 leading-[1.1]">
-          Prêt à déménager
-          <br />
-          sans stress ?
+        {/* Title avec gradient */}
+        <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-[1.1]">
+          <span className="block text-[#0F172A]">Prêt à déménager</span>
+          <span className="block mt-2 bg-gradient-to-r from-cyan-600 via-cyan-700 to-blue-700 bg-clip-text text-transparent">
+            sans stress ?
+          </span>
         </h2>
 
         {/* Subtitle */}
-        <p className="text-xl text-[#1E293B]/60 mb-12 font-light max-w-2xl mx-auto">
+        <p className="text-xl text-gray-600 mb-12 font-normal max-w-2xl mx-auto">
           1 200+ personnes ont déjà simplifié leur déménagement.
         </p>
 
-        {/* CTA principal */}
-        <div className="max-w-md mx-auto">
+        {/* CTA principal moderne */}
+        <div className="max-w-md mx-auto mb-12">
           <a
             href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=final-cta&devis_range=3-5"
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-[0_10px_40px_rgba(15,23,42,0.25)] hover:shadow-[0_14px_60px_rgba(15,23,42,0.35)] hover:-translate-y-0.5 transition-all duration-300"
+            className="group relative inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-600 via-cyan-700 to-blue-700 px-8 py-5 text-base font-bold text-white shadow-[0_12px_40px_rgba(6,182,212,0.35)] hover:shadow-[0_16px_60px_rgba(6,182,212,0.45)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 overflow-hidden"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            <svg className="w-5 h-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
-              <span>Comparer mes devis</span>
+            <span className="relative z-10">Comparer mes devis</span>
+            <svg className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </a>
         </div>
 
-        {/* Trust indicators */}
-        <div className="flex flex-wrap items-center justify-center gap-6 mt-12 text-sm text-[#1E293B]/60">
-          <div className="flex items-center gap-2">
-            <svg className="w-4 h-4 text-[#6BCFCF]" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
-            <span>3 minutes</span>
+        {/* Trust indicators — Pills modernes */}
+        <div className="flex flex-wrap items-center justify-center gap-3 text-sm">
+          <div className="group flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 hover:border-cyan-300 hover:shadow-md hover:shadow-cyan-100/50 transition-all duration-300">
+            <Clock className="w-4 h-4 text-cyan-600 group-hover:scale-110 transition-transform" />
+            <span className="font-medium text-[#0F172A]">3 minutes</span>
           </div>
-          <div className="flex items-center gap-2">
-            <svg className="w-4 h-4 text-[#6BCFCF]" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
-            <span>100% gratuit</span>
+          <div className="group flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 hover:border-cyan-300 hover:shadow-md hover:shadow-cyan-100/50 transition-all duration-300">
+            <Gift className="w-4 h-4 text-cyan-600 group-hover:scale-110 transition-transform" />
+            <span className="font-medium text-[#0F172A]">100% gratuit</span>
           </div>
-          <div className="flex items-center gap-2">
-            <svg className="w-4 h-4 text-[#6BCFCF]" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
-            <span>des devis comparables</span>
+          <div className="group flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 hover:border-cyan-300 hover:shadow-md hover:shadow-cyan-100/50 transition-all duration-300">
+            <FileCheck className="w-4 h-4 text-cyan-600 group-hover:scale-110 transition-transform" />
+            <span className="font-medium text-[#0F172A]">Devis comparables</span>
           </div>
         </div>
       </div>

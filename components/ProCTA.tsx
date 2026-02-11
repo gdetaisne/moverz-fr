@@ -79,10 +79,11 @@ export default function ProCTA() {
             {/* CTA */}
             <a
               href="/partenaires/"
-              className="group inline-flex items-center gap-3 rounded-xl bg-[#6BCFCF] px-8 py-4 text-base font-semibold text-[#0F172A] shadow-[0_10px_40px_rgba(107,207,207,0.3)] hover:shadow-[0_14px_60px_rgba(107,207,207,0.4)] hover:-translate-y-0.5 transition-all duration-300"
+              className="group relative inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-cyan-500 via-cyan-600 to-blue-600 px-8 py-4 text-base font-bold text-white shadow-[0_12px_40px_rgba(6,182,212,0.4)] hover:shadow-[0_16px_56px_rgba(6,182,212,0.5)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 overflow-hidden"
             >
-              <span>Devenir partenaire</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <span className="relative z-10">Devenir partenaire</span>
+              <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </a>
           </div>
 

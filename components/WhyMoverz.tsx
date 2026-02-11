@@ -31,8 +31,8 @@ export default function WhyMoverz() {
               animation: mounted ? 'fadeInUp 1s ease-out' : 'none',
             }}
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm px-4 py-1.5 text-sm font-semibold text-white mb-6">
-              <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2 text-sm font-bold text-white mb-6 shadow-lg shadow-cyan-500/10">
+              <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_12px_rgba(6,182,212,0.8)]" />
               Pourquoi ça change tout
             </div>
 

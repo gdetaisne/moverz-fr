@@ -31,12 +31,15 @@ export default function FlowAndIA() {
   }, []);
 
   // Couleurs par étape pour les icônes
-  const stepColors = ["text-[#6BCFCF]", "text-[#8B5CF6]", "text-[#10B981]"];
-  const stepBgColors = ["from-[#6BCFCF]/10 to-[#A8E8E8]/10", "from-[#8B5CF6]/10 to-[#A78BFA]/10", "from-[#10B981]/10 to-[#34D399]/10"];
+  const stepColors = ["text-cyan-600", "text-blue-600", "text-cyan-700"];
+  const stepBgColors = ["from-cyan-100 to-cyan-50", "from-blue-100 to-blue-50", "from-cyan-100 to-blue-50"];
 
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-b from-white to-[#F8F9FA]">
-      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-20 md:py-32 bg-gradient-to-br from-white via-cyan-50/30 to-white overflow-hidden">
+      {/* Subtle grid pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(#E5E7EB_1px,transparent_1px)] [background-size:24px_24px] opacity-10" />
+      
+      <div className="relative container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-[40%_1fr] gap-12 lg:gap-16 items-center">
           {/* Left: Mockup timeline */}
           <div 
@@ -124,16 +127,19 @@ export default function FlowAndIA() {
               animation: mounted ? 'fadeInUp 1s ease-out 0.2s both' : 'none',
             }}
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-sm font-semibold text-[#0F172A] mb-6">
-              <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-200/50 backdrop-blur-sm px-5 py-2 text-sm font-bold text-[#0F172A] mb-6">
+              <span className="h-2 w-2 rounded-full bg-cyan-500 animate-pulse shadow-[0_0_12px_rgba(6,182,212,0.6)]" />
               Comment ça marche
             </div>
 
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] mb-6 leading-tight">
-            3 étapes, 3 minutes
-          </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+              <span className="block text-[#0F172A]">3 étapes,</span>
+              <span className="block mt-2 bg-gradient-to-r from-cyan-600 via-cyan-700 to-blue-700 bg-clip-text text-transparent">
+                3 minutes
+              </span>
+            </h2>
 
-            <p className="text-lg text-[#1E293B]/70 leading-relaxed mb-10">
+            <p className="text-lg text-gray-600 leading-relaxed mb-10 font-normal">
               L'IA fait le travail, vous gardez le contrôle.
           </p>
 
@@ -168,8 +174,8 @@ export default function FlowAndIA() {
         </div>
 
             {/* Bottom reassurance */}
-            <div className="mt-8 p-5 rounded-2xl bg-gradient-to-br from-[#A8E8E8]/20 to-[#6BCFCF]/10 border border-[#6BCFCF]/30 shadow-[0_2px_8px_rgba(107,207,207,0.1)]">
-              <p className="text-sm font-medium text-[#0F172A] leading-relaxed">
+            <div className="mt-8 p-6 rounded-2xl bg-gradient-to-br from-cyan-50 to-blue-50 border border-cyan-200/50 backdrop-blur-sm shadow-[0_4px_16px_rgba(6,182,212,0.1)]">
+              <p className="text-sm font-bold text-[#0F172A] leading-relaxed">
                 Un dossier clair et standardisé pour tous les déménageurs, pour comparer sans surprises.
               </p>
             </div>
