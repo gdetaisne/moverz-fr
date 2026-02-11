@@ -52,8 +52,8 @@ async function fetchEstimate(
     const res = await fetch(`https://devis.moverz.fr/api/estimate?${params}`);
     if (!res.ok) return null;
     const data = await res.json();
-    const min = typeof data.min === "number" ? data.min : Number(data.min);
-    const max = typeof data.max === "number" ? data.max : Number(data.max);
+    const min = typeof data.prixMin === "number" ? data.prixMin : Number(data.prixMin);
+    const max = typeof data.prixMax === "number" ? data.prixMax : Number(data.prixMax);
     if (isNaN(min) || isNaN(max)) return null;
     return { min, max };
   } catch {
@@ -185,7 +185,7 @@ function CityAutocomplete({
           {suggestions.map((s, i) => (
             <li
               key={`${s.postcode}-${i}`}
-              onClick={() => pick(s)}
+              onMouseDown={(e) => { e.preventDefault(); pick(s); }}
               className="cursor-pointer px-3 py-2 text-sm hover:bg-[#F0FDFA] transition-colors"
             >
               {s.label}
