@@ -331,6 +331,16 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
       <p className="text-[11px] text-center text-[#94A3B8]">
         Gratuit · Sans engagement · Sans appel
       </p>
+
+      <a
+        href="https://www.google.com/maps/place/Moverz/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center justify-center gap-1.5 text-[11px] text-[#94A3B8] hover:text-[#0F172A] transition-colors"
+      >
+        <span className="text-amber-400">★★★★★</span>
+        <span>4,5+ sur Google</span>
+      </a>
     </div>
   );
 }
