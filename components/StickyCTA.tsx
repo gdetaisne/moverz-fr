@@ -33,67 +33,92 @@ export default function StickyCTA() {
         willChange: visible ? "auto" : "transform, opacity",
       }}
     >
-      {/* VERSION MOBILE : Moderne */}
+      {/* VERSION MOBILE : Plus visible */}
       <div className="md:hidden">
-        <div className="relative bg-white/95 backdrop-blur-xl border-t border-white/60 px-4 py-3 shadow-[0_-12px_40px_rgba(0,0,0,0.1)]">
+        <div className="relative bg-white/95 backdrop-blur-xl border-t border-white/60 px-4 py-4 shadow-[0_-12px_40px_rgba(0,0,0,0.1)]">
           {/* Gradient accent line at top */}
           <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-brand-turquoise to-transparent" />
           
-          <div className="flex items-center gap-2">
-            <a
-              href={quoteUrl}
-              className="group relative flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-turquoise-300 via-brand-turquoise to-brand-turquoise-500 px-4 py-3 text-sm font-bold text-white shadow-glow-turquoise active:scale-95 transition-all duration-300 overflow-hidden border border-white/20"
-              aria-label="Comparer mes devis"
-            >
-              <span className="relative z-10">Comparer</span>
-              <svg className="w-4 h-4 relative z-10" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-              <div className="absolute inset-0 bg-gradient-to-r from-brand-turquoise-200 to-brand-turquoise-400 opacity-0 group-active:opacity-100 transition-opacity duration-200" />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-100%] group-active:translate-x-[100%] transition-transform duration-500" />
-            </a>
+          {/* Badge "Gratuit" petit */}
+          <div className="flex items-center justify-center gap-1.5 mb-2">
+            <span className="relative inline-flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-turquoise opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-turquoise" />
+            </span>
+            <span className="text-xs font-bold text-gray-700">Gratuit · 3 min · 0 démarchage</span>
           </div>
+          
+          <a
+            href={quoteUrl}
+            className="group relative w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-turquoise-300 via-brand-turquoise to-brand-turquoise-500 px-6 py-4 text-base font-bold text-white shadow-glow-turquoise active:scale-95 transition-all duration-300 overflow-hidden border border-white/20"
+            aria-label="Obtenir mes devis gratuits"
+          >
+            <span className="relative z-10">Obtenir mes devis</span>
+            <svg className="w-5 h-5 relative z-10" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-turquoise-200 to-brand-turquoise-400 opacity-0 group-active:opacity-100 transition-opacity duration-200" />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-100%] group-active:translate-x-[100%] transition-transform duration-500" />
+          </a>
         </div>
       </div>
 
-      {/* VERSION DESKTOP : Moderne glassmorphism */}
+      {/* VERSION DESKTOP : Logo visible + Bouton imposant */}
       <div className="hidden md:block">
         <div className="mx-auto max-w-5xl px-6 pb-6">
           <div className="relative overflow-hidden rounded-2xl bg-white/95 backdrop-blur-xl border border-white/60 shadow-[0_-12px_48px_rgba(0,0,0,0.12)]">
             {/* Gradient accent line moderne */}
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-brand-turquoise to-transparent" />
             
-            <div className="relative flex items-center justify-between gap-6 px-6 py-4">
-              {/* Icône + Texte structuré */}
+            <div className="relative flex items-center justify-between gap-6 px-8 py-5">
+              {/* Logo + Texte - AMÉLIORÉ */}
               <div className="flex items-center gap-4">
-                <div className="relative flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-turquoise to-brand-turquoise-500 shadow-lg shadow-brand-turquoise/30">
+                {/* Logo plus visible avec background blanc */}
+                <div className="relative flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl bg-white border-2 border-brand-turquoise shadow-lg shadow-brand-turquoise/20">
                   <Image
                     src="/logo.png"
                     alt="Moverz"
-                    width={28}
-                    height={28}
+                    width={40}
+                    height={40}
                     className="relative"
                   />
+                  {/* Point animé en overlay */}
+                  <span className="absolute -top-1 -right-1">
+                    <span className="relative inline-flex h-3 w-3">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-turquoise opacity-75" />
+                      <span className="relative inline-flex rounded-full h-3 w-3 bg-brand-turquoise" />
+                    </span>
+                  </span>
                 </div>
+                
+                {/* Textes plus lisibles */}
                 <div className="space-y-1">
-                  <p className="text-sm font-bold text-[#0F172A] leading-tight">
+                  <p className="text-base font-bold text-[#0F172A] leading-tight">
                     3 min · devis comparables · 0 démarchage
                   </p>
-                  <p className="text-xs text-gray-600 font-medium">
+                  <p className="text-sm text-gray-600 font-medium">
                     Numéro masqué · Entreprises vérifiées
                   </p>
                 </div>
               </div>
 
-              {/* CTA Button moderne */}
-              <div className="flex items-center gap-2 flex-shrink-0">
+              {/* CTA Button PLUS GRAND avec badge */}
+              <div className="flex items-center gap-3 flex-shrink-0">
+                {/* Badge "Gratuit" avec violet */}
+                <span className="hidden lg:inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-brand-turquoise-100 to-brand-accent-100 border border-brand-accent-300/50 px-3 py-1.5 text-xs font-bold text-brand-accent shadow-sm">
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  100% Gratuit
+                </span>
+                
                 <a
                   href={quoteUrl}
-                  className="group relative inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-turquoise-300 via-brand-turquoise to-brand-turquoise-500 px-6 py-3 text-sm font-bold text-white shadow-glow-turquoise hover:shadow-glow-turquoise-lg hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 overflow-hidden border border-white/20"
-                  aria-label="Lancer le comparateur"
+                  className="group relative inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-turquoise-300 via-brand-turquoise to-brand-turquoise-500 px-8 py-4 text-base font-bold text-white shadow-glow-turquoise hover:shadow-glow-turquoise-lg hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 overflow-hidden border border-white/20"
+                  aria-label="Obtenir mes devis gratuits"
                 >
-                  <span className="relative z-10">Comparer</span>
-                  <svg className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                  <span className="relative z-10">Obtenir mes devis</span>
+                  <svg className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                   <div className="absolute inset-0 bg-gradient-to-r from-brand-turquoise-200 to-brand-turquoise-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
