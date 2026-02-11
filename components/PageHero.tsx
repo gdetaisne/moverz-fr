@@ -92,13 +92,10 @@ export default function PageHero({
                 <a
                   href={primaryCta.href}
                   rel={relFor(primaryCta.href)}
-                  className="group relative inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-600 via-cyan-700 to-blue-700 px-8 py-4 text-base font-bold text-white shadow-[0_12px_32px_rgba(6,182,212,0.35)] hover:shadow-[0_16px_48px_rgba(6,182,212,0.45)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 overflow-hidden"
+                  className="group inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-[0_8px_30px_rgba(15,23,42,0.3)] hover:shadow-[0_12px_50px_rgba(15,23,42,0.4)] hover:scale-105 transition-all duration-300"
                 >
-                  <span className="relative z-10">{primaryCta.label}</span>
-                  <svg className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <span>{primaryCta.label}</span>
+                  <span className="text-xl leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
                 </a>
               )}
               {secondaryCta && (

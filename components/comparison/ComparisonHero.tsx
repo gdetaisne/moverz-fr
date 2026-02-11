@@ -34,21 +34,21 @@ export default function ComparisonHero() {
         </nav>
 
         <div className="text-center space-y-6">
-          {/* Badge moderne */}
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2 text-sm font-bold shadow-lg shadow-cyan-500/10">
-            <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_12px_rgba(6,182,212,0.8)]" />
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold">
+            <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
             Guide comparatif
           </div>
 
-          {/* Title avec gradient */}
+          {/* Title */}
           <h1 className="text-4xl md:text-6xl font-bold leading-[1.1]">
-            <span className="bg-gradient-to-r from-cyan-400 via-cyan-500 to-blue-500 bg-clip-text text-transparent">Comparateur de Déménagement</span> : Guide Complet 2026
+            Comparateur de Déménagement : Guide Complet 2026
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed font-normal">
+          <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
             Moverz vs autres comparateurs vs contact direct : 
-            <strong className="text-white font-bold"> 5 critères clés pour choisir</strong> 
+            <strong className="text-white"> 5 critères clés pour choisir</strong> 
             (Creditsafe, devis comparables, anonymat, IA volumétrie, gratuité).
           </p>
 

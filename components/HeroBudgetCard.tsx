@@ -279,14 +279,17 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
           type="button"
           disabled={redirecting}
           onClick={handleRedirect}
-          className="btn-primary w-full disabled:opacity-60"
+          className="group relative block w-full rounded-xl bg-gradient-to-r from-cyan-600 via-cyan-700 to-blue-700 py-4 text-center text-sm font-bold text-white shadow-[0_8px_24px_rgba(6,182,212,0.3)] hover:shadow-[0_12px_32px_rgba(6,182,212,0.4)] disabled:opacity-60 active:scale-[0.98] md:hover:scale-[1.02] transition-all duration-300 touch-manipulation overflow-hidden"
         >
-          {redirecting ? "Redirection…" : "Obtenir mes devis"}
-          {!redirecting && (
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          )}
+          <span className="relative z-10 flex items-center justify-center gap-2">
+            {redirecting ? "Redirection…" : "Affiner mon budget"}
+            {!redirecting && (
+              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            )}
+          </span>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </button>
 
         <button
@@ -355,14 +358,17 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
         type="button"
         disabled={!canSubmit || loading}
         onClick={handleEstimate}
-        className="btn-primary w-full disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:scale-100"
+        className="group relative w-full rounded-xl bg-gradient-to-r from-cyan-600 via-cyan-700 to-blue-700 py-4 text-sm font-bold text-white disabled:opacity-40 disabled:cursor-not-allowed shadow-[0_8px_24px_rgba(6,182,212,0.3)] hover:shadow-[0_12px_32px_rgba(6,182,212,0.4)] active:scale-[0.98] md:hover:scale-[1.02] transition-all duration-300 disabled:hover:scale-100 disabled:hover:shadow-[0_8px_24px_rgba(6,182,212,0.3)] touch-manipulation overflow-hidden"
       >
-        {loading ? "Calcul en cours…" : "Voir mon estimation"}
-        {!loading && (
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-          </svg>
-        )}
+        <span className="relative z-10 flex items-center justify-center gap-2">
+          {loading ? "Calcul en cours…" : "Voir mon estimation"}
+          {!loading && (
+            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          )}
+        </span>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </button>
 
       <p className="text-xs text-center text-gray-500 font-medium">

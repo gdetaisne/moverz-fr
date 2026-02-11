@@ -10,7 +10,7 @@ export default function WhatYouReceive() {
   }, []);
 
   return (
-    <section className="section relative bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/30 overflow-hidden">
+    <section className="relative py-20 md:py-32 bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/30 overflow-hidden">
       {/* Subtle grid pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(#E5E7EB_1px,transparent_1px)] [background-size:24px_24px] opacity-10" />
       
