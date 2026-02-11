@@ -36,14 +36,14 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
           >
             {/* Badge */}
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold mb-8 backdrop-blur-sm">
-              <span className="h-2 w-2 rounded-full bg-[#6BCFCF] animate-pulse" />
+              <span className="h-2 w-2 rounded-full bg-brand-turquoise animate-pulse" />
               <span>{city.nameCapitalized}</span>
             </div>
 
             {/* Title */}
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-[1.1]">
               Déménager à{" "}
-              <span className="text-[#6BCFCF]">{city.nameCapitalized}</span> ?
+              <span className="text-brand-turquoise">{city.nameCapitalized}</span> ?
               <br />
               <span className="text-white">3 min, des devis.</span>
             </h1>
@@ -129,12 +129,12 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
               </div>
 
               {/* Floating badges */}
-              <div className="absolute -right-4 top-20 bg-white rounded-xl shadow-xl px-3 py-2 rotate-6 border border-[#6BCFCF]/30">
+              <div className="absolute -right-4 top-20 bg-white rounded-xl shadow-xl px-3 py-2 rotate-6 border border-brand-turquoise/30">
                 <p className="text-xs font-bold text-[#0F172A]">Locaux</p>
                 <p className="text-xs text-[#1E293B]/60">Contrôlés</p>
               </div>
 
-              <div className="absolute -left-4 bottom-32 bg-white rounded-xl shadow-xl px-3 py-2 -rotate-6 border border-[#6BCFCF]/30">
+              <div className="absolute -left-4 bottom-32 bg-white rounded-xl shadow-xl px-3 py-2 -rotate-6 border border-brand-turquoise/30">
                 <p className="text-xs font-bold text-[#0F172A]">Sans démarchage</p>
                 <p className="text-xs text-[#1E293B]/60">Gratuit</p>
               </div>

@@ -125,7 +125,7 @@ export default function WhatYouReceive() {
               </div>
 
               {/* Floating badge */}
-              <div className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-lg px-4 py-3 border border-[#6BCFCF]/30">
+              <div className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-lg px-4 py-3 border border-brand-turquoise/30">
                 <p className="text-2xl font-bold text-[#0F172A]">des devis</p>
                 <p className="text-xs text-[#1E293B]/70">comparables</p>
               </div>
@@ -188,8 +188,8 @@ export default function WhatYouReceive() {
             <div className="space-y-6">
               {/* Feature 1 */}
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-[#6BCFCF]/10 to-[#A8E8E8]/10 shadow-sm">
-                  <Check className="w-6 h-6 text-[#6BCFCF]" strokeWidth={2} />
+                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-brand-turquoise/10 to-[#A8E8E8]/10 shadow-sm">
+                  <Check className="w-6 h-6 text-brand-turquoise" strokeWidth={2} />
                 </div>
                 <div>
                   <h3 className="font-bold text-[#0F172A] mb-1">Même volume, même accès</h3>

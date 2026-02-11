@@ -60,13 +60,13 @@ export default function MentionsLegalesPage() {
               </p>
               <p className="mt-2">
                 <span className="font-semibold">Site web :</span>{" "}
-                <a href="https://moverz.fr" className="underline text-[#6bcfcf]">
+                <a href="https://moverz.fr" className="underline text-brand-turquoise">
                   https://moverz.fr
                 </a>
               </p>
               <p className="mt-2">
                 <span className="font-semibold">Email :</span>{" "}
-                <a href="mailto:contact@moverz.fr" className="underline text-[#6bcfcf]">
+                <a href="mailto:contact@moverz.fr" className="underline text-brand-turquoise">
                   contact@moverz.fr
                 </a>
               </p>
@@ -121,7 +121,7 @@ export default function MentionsLegalesPage() {
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
               <h2 className="text-2xl font-semibold text-white mb-3">Données personnelles</h2>
               <p>
-                Le traitement des données est décrit dans notre <a className="underline text-[#6bcfcf]" href="/politique-confidentialite/">Politique de
+                Le traitement des données est décrit dans notre <a className="underline text-brand-turquoise" href="/politique-confidentialite/">Politique de
                 confidentialité</a>. Conformément au RGPD, vous disposez de droits
                 d'accès, de rectification, d'opposition, de limitation et
                 d'effacement. Contact RGPD: contact@moverz.fr

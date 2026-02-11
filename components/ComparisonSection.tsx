@@ -55,11 +55,11 @@ export default function ComparisonSection() {
             style={{ animationDelay: `${index * 100}ms` }}
           >
             {/* Glow effect au hover */}
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#6BCFCF]/0 to-[#4FB8B8]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-10" />
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-brand-turquoise/0 to-[#4FB8B8]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-10" />
             
             <div className="relative flex items-start gap-4">
               {/* Pictogramme SVG avec animation */}
-              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#6BCFCF]/20 to-[#4FB8B8]/30 border border-[#6BCFCF]/30 text-[#6BCFCF] transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-[0_0_20px_rgba(107,207,207,0.4)]">
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-turquoise/20 to-[#4FB8B8]/30 border border-brand-turquoise/30 text-brand-turquoise transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-[0_0_20px_rgba(107,207,207,0.4)]">
                 {benefit.icon}
           </div>
 

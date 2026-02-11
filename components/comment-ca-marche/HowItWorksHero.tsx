@@ -38,7 +38,7 @@ export default function HowItWorksHero() {
           {/* Left: Content */}
           <div>
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold mb-8">
-              <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
+              <span className="h-2 w-2 rounded-full bg-brand-turquoise" />
               Processus en 3 étapes
             </div>
 
@@ -65,8 +65,8 @@ export default function HowItWorksHero() {
           {/* Right: Quick steps icons */}
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-[0_4px_16px_rgba(107,207,207,0.05)] hover:shadow-[0_8px_32px_rgba(107,207,207,0.15)] md:hover:scale-[1.02] transition-all duration-300">
-              <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-[#6BCFCF]/10 to-[#A8E8E8]/10 shadow-sm">
-                <MessageSquare className="w-6 h-6 text-[#6BCFCF]" strokeWidth={2} />
+              <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-brand-turquoise/10 to-[#A8E8E8]/10 shadow-sm">
+                <MessageSquare className="w-6 h-6 text-brand-turquoise" strokeWidth={2} />
               </div>
               <div>
                 <p className="font-semibold text-white">1. Décrivez</p>

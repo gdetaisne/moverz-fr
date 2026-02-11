@@ -65,7 +65,7 @@ export default function TrustSignals() {
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: i * 0.05 }}
             >
-              <div className="text-[#6BCFCF]">{signal.icon}</div>
+              <div className="text-brand-turquoise">{signal.icon}</div>
               <span className="text-sm font-medium">{signal.text}</span>
             </motion.div>
           ))}

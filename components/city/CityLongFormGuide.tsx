@@ -14,7 +14,7 @@ export function CityLongFormGuide({ citySlug, cityName, quoteUrl }: CityLongForm
       <div className="container max-w-4xl">
         <div className="rounded-2xl border border-[#E5E7EB] bg-white p-8 md:p-10 space-y-6">
           <div className="text-center space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">Guide local</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">Guide local</p>
             <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A]">{guide.title}</h2>
             <p className="text-sm md:text-base text-[#6B7280] max-w-2xl mx-auto">
               {guide.subtitle} <span className="text-[#0F172A]/70">≈ {guide.estimatedReadingMinutes} min • {guide.wordCount} mots</span>
@@ -67,7 +67,7 @@ export function CityLongFormGuide({ citySlug, cityName, quoteUrl }: CityLongForm
                       <ul className="mt-4 grid gap-2 text-sm md:text-base text-[#0F172A]">
                         {s.bullets.map((b) => (
                           <li key={b} className="flex gap-2">
-                            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#6BCFCF] shrink-0" />
+                            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-brand-turquoise shrink-0" />
                             <span className="text-[#0F172A]/90">{b}</span>
                           </li>
                         ))}

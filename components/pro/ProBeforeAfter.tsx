@@ -59,10 +59,10 @@ export default function ProBeforeAfter() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative rounded-2xl border-2 border-[#6BCFCF]/40 bg-gradient-to-br from-[#F0F9FF] to-white p-8 shadow-sm"
+            className="relative rounded-2xl border-2 border-brand-turquoise/40 bg-gradient-to-br from-[#F0F9FF] to-white p-8 shadow-sm"
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-2 text-sm font-medium text-[#0F172A] border border-[#6BCFCF]/30 mb-6">
-              <Zap className="w-3.5 h-3.5 text-[#6BCFCF]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-2 text-sm font-medium text-[#0F172A] border border-brand-turquoise/30 mb-6">
+              <Zap className="w-3.5 h-3.5 text-brand-turquoise" />
               Avec Moverz Pro
             </div>
             
@@ -74,8 +74,8 @@ export default function ProBeforeAfter() {
               ].map((item, i) => (
                 <div key={i} className="space-y-2">
                   <div className="flex items-center gap-3">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#6BCFCF]/10 flex items-center justify-center">
-                      <item.icon className="w-5 h-5 text-[#6BCFCF]" />
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-turquoise/10 flex items-center justify-center">
+                      <item.icon className="w-5 h-5 text-brand-turquoise" />
                     </div>
                     <div>
                       <p className="text-3xl font-bold text-[#0F172A] leading-none">{item.metric}</p>

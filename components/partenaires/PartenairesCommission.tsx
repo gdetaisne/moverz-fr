@@ -4,10 +4,10 @@ import { CircleOff, XCircle, CheckCircle2, Percent } from "lucide-react";
 
 export default function PartenairesCommission() {
   const points = [
-    { icon: CircleOff, text: "Pas d'abonnement", color: "text-[#6BCFCF]" },
-    { icon: XCircle, text: "Aucun paiement si le dossier n'aboutit pas", color: "text-[#6BCFCF]" },
-    { icon: CheckCircle2, text: "Moverz est rémunéré uniquement si le client confirme", color: "text-[#6BCFCF]" },
-    { icon: Percent, text: "Commission facturée après versement des arrhes par le client", color: "text-[#6BCFCF]" }
+    { icon: CircleOff, text: "Pas d'abonnement", color: "text-brand-turquoise" },
+    { icon: XCircle, text: "Aucun paiement si le dossier n'aboutit pas", color: "text-brand-turquoise" },
+    { icon: CheckCircle2, text: "Moverz est rémunéré uniquement si le client confirme", color: "text-brand-turquoise" },
+    { icon: Percent, text: "Commission facturée après versement des arrhes par le client", color: "text-brand-turquoise" }
   ];
 
   return (
@@ -50,7 +50,7 @@ export default function PartenairesCommission() {
             ))}
           </ul>
 
-          <div className="p-6 rounded-xl bg-white border border-[#6BCFCF]/30">
+          <div className="p-6 rounded-xl bg-white border border-brand-turquoise/30">
             <h3 className="font-bold text-[#0F172A] mb-2">Modèle de rémunération</h3>
             <p className="text-[#6B7280]">
               Commission : <span className="font-semibold text-[#0F172A]">10% HT</span> sur les dossiers payants

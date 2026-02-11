@@ -6,8 +6,8 @@ export default function HowItWorksIA() {
       <div className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="rounded-3xl border border-[#E3E5E8] bg-[#F9FAFB] p-8 md:p-10">
           <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-sm font-semibold text-[#0F172A]">
-              <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-sm font-semibold text-[#0F172A]">
+              <span className="h-2 w-2 rounded-full bg-brand-turquoise" />
               Dossier standardisé
             </div>
             <h2 className="text-2xl md:text-4xl font-bold text-[#0F172A] leading-tight">

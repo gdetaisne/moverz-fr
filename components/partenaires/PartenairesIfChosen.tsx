@@ -18,8 +18,8 @@ export default function PartenairesIfChosen() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#6BCFCF]/10 mb-6">
-            <UserCheck className="w-8 h-8 text-[#6BCFCF]" />
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-brand-turquoise/10 mb-6">
+            <UserCheck className="w-8 h-8 text-brand-turquoise" />
           </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[#0F172A]">
             Si le client vous choisit
@@ -49,15 +49,15 @@ export default function PartenairesIfChosen() {
                 transition={{ delay: i * 0.1 }}
                 className="flex items-center gap-4"
               >
-                <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-lg bg-[#6BCFCF]/10">
-                  <step.icon className="w-5 h-5 text-[#6BCFCF]" />
+                <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-lg bg-brand-turquoise/10">
+                  <step.icon className="w-5 h-5 text-brand-turquoise" />
                 </div>
                 <span className="text-[#1E293B]">{step.text}</span>
               </motion.li>
             ))}
           </ul>
 
-          <div className="p-5 rounded-xl bg-gradient-to-r from-[#6BCFCF]/10 to-[#A8E8E8]/10 border border-[#6BCFCF]/30">
+          <div className="p-5 rounded-xl bg-gradient-to-r from-brand-turquoise/10 to-[#A8E8E8]/10 border border-brand-turquoise/30">
             <p className="text-[#0F172A] font-semibold">
               👉 À ce stade, vous n'êtes plus en concurrence : le client vous a choisi.
             </p>

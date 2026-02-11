@@ -89,8 +89,8 @@ export default function FlowAndIA() {
 
                     {/* Step 3 - In progress */}
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-[#6BCFCF]/20 border-2 border-[#6BCFCF]">
-                        <div className="w-2 h-2 rounded-full bg-[#6BCFCF] animate-pulse" />
+                      <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-brand-turquoise/20 border-2 border-brand-turquoise">
+                        <div className="w-2 h-2 rounded-full bg-brand-turquoise animate-pulse" />
                       </div>
                       <div className="flex-1 pt-2">
                         <p className="text-sm font-semibold text-[#0F172A]">5 déménageurs contactés</p>
@@ -99,13 +99,13 @@ export default function FlowAndIA() {
                     </div>
 
                     {/* Progress card */}
-                    <div className="mt-6 p-4 rounded-xl bg-[#6BCFCF]/10 border border-[#6BCFCF]/30">
+                    <div className="mt-6 p-4 rounded-xl bg-brand-turquoise/10 border border-brand-turquoise/30">
                       <div className="flex items-center justify-between mb-2">
                         <p className="text-xs font-semibold text-[#0F172A]">Progression</p>
-                        <p className="text-xs font-semibold text-[#6BCFCF]">66%</p>
+                        <p className="text-xs font-semibold text-brand-turquoise">66%</p>
                       </div>
                       <div className="w-full h-2 bg-white rounded-full overflow-hidden">
-                        <div className="h-full bg-gradient-to-r from-[#6BCFCF] to-[#A8E8E8] rounded-full" style={{ width: '66%' }} />
+                        <div className="h-full bg-gradient-to-r from-brand-turquoise to-[#A8E8E8] rounded-full" style={{ width: '66%' }} />
                       </div>
                     </div>
                   </div>
@@ -113,7 +113,7 @@ export default function FlowAndIA() {
               </div>
 
               {/* Floating badge */}
-              <div className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-lg px-4 py-3 border border-[#6BCFCF]/30">
+              <div className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-lg px-4 py-3 border border-brand-turquoise/30">
                 <p className="text-2xl font-bold text-[#0F172A]">3</p>
                 <p className="text-xs text-[#1E293B]/70">étapes</p>
               </div>

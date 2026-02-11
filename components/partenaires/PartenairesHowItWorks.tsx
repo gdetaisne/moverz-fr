@@ -39,8 +39,8 @@ export default function PartenairesHowItWorks() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-2 text-sm font-medium text-[#0F172A] mb-6">
-            <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
+          <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-2 text-sm font-medium text-[#0F172A] mb-6">
+            <span className="h-2 w-2 rounded-full bg-brand-turquoise" />
             Process simple
           </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[#0F172A]">
@@ -53,7 +53,7 @@ export default function PartenairesHowItWorks() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
             {/* Ligne de connexion (desktop) */}
             <div className="absolute top-12 left-0 right-0 h-0.5 bg-[#E3E5E8] hidden lg:block" />
-            <div className="absolute top-12 left-0 w-3/4 h-0.5 bg-gradient-to-r from-[#6BCFCF] to-[#6BCFCF]/30 hidden lg:block" />
+            <div className="absolute top-12 left-0 w-3/4 h-0.5 bg-gradient-to-r from-brand-turquoise to-brand-turquoise/30 hidden lg:block" />
             
             {steps.map((item, i) => (
               <motion.div
@@ -66,10 +66,10 @@ export default function PartenairesHowItWorks() {
               >
                 <div className="flex flex-col items-center text-center">
                   <div className="relative flex items-center justify-center w-24 h-24 rounded-2xl bg-white border-2 border-[#E3E5E8] shadow-sm mb-4 z-10">
-                    <div className="absolute -top-2 -right-2 flex items-center justify-center w-6 h-6 rounded-full bg-[#6BCFCF] text-white text-xs font-bold">
+                    <div className="absolute -top-2 -right-2 flex items-center justify-center w-6 h-6 rounded-full bg-brand-turquoise text-white text-xs font-bold">
                       {item.step}
                     </div>
-                    <item.icon className="w-10 h-10 text-[#6BCFCF]" />
+                    <item.icon className="w-10 h-10 text-brand-turquoise" />
                   </div>
                   
                   <h3 className="text-base font-bold text-[#0F172A] mb-3">

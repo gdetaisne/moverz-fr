@@ -35,7 +35,7 @@ export default function ProHeroMockup() {
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-[#6BCFCF] animate-pulse" />
+            <div className="w-2 h-2 rounded-full bg-brand-turquoise animate-pulse" />
             <span className="text-white/80 text-xs">En ligne</span>
           </div>
         </div>
@@ -54,7 +54,7 @@ export default function ProHeroMockup() {
                 className="bg-white rounded-xl p-3.5 border border-gray-200 shadow-sm"
               >
                 <div className="flex items-center justify-between mb-2">
-                  <stat.icon className="w-4 h-4 text-[#6BCFCF]" />
+                  <stat.icon className="w-4 h-4 text-brand-turquoise" />
                 </div>
                 <p className="text-2xl font-bold text-[#0F172A] leading-none">
                   {stat.value}
@@ -65,7 +65,7 @@ export default function ProHeroMockup() {
           </div>
 
           {/* New lead card */}
-          <div className="bg-white rounded-2xl border-2 border-[#6BCFCF]/25 p-5 shadow-lg">
+          <div className="bg-white rounded-2xl border-2 border-brand-turquoise/25 p-5 shadow-lg">
             <div className="flex items-start justify-between mb-3">
               <div>
                 <p className="font-bold text-[#0F172A] text-base leading-tight mb-1">
@@ -75,7 +75,7 @@ export default function ProHeroMockup() {
                   Paris → Lyon · 22m³
                 </p>
               </div>
-              <div className="px-3 py-1.5 rounded-full bg-[#6BCFCF]/10 text-[#2B7A78] text-sm font-semibold">
+              <div className="px-3 py-1.5 rounded-full bg-brand-turquoise/10 text-[#2B7A78] text-sm font-semibold">
                 Nouveau
               </div>
             </div>
@@ -114,7 +114,7 @@ export default function ProHeroMockup() {
 
             {/* Action buttons */}
             <div className="flex gap-2">
-              <button className="flex-1 bg-[#6BCFCF] text-white text-sm font-semibold py-2.5 rounded-lg hover:bg-[#5AB0B0] transition-colors">
+              <button className="flex-1 bg-brand-turquoise text-white text-sm font-semibold py-2.5 rounded-lg hover:bg-[#5AB0B0] transition-colors">
                 Envoyer le devis
               </button>
               <button className="px-4 bg-gray-100 text-gray-800 text-sm font-semibold py-2.5 rounded-lg hover:bg-gray-200 transition-colors">
@@ -126,7 +126,7 @@ export default function ProHeroMockup() {
       </div>
 
       {/* Glow effect */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-[#6BCFCF]/20 to-transparent blur-3xl -z-10" />
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-brand-turquoise/20 to-transparent blur-3xl -z-10" />
 
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes float {

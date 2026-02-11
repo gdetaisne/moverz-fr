@@ -176,7 +176,7 @@ export default function ComparisonTable() {
                 <th className="px-6 py-4 text-left text-sm font-semibold">Critère</th>
                 <th className="px-6 py-4 text-center text-sm font-semibold">
                   <div className="flex flex-col items-center gap-1">
-                    <span className="text-[#6BCFCF] text-lg">⭐</span>
+                    <span className="text-brand-turquoise text-lg">⭐</span>
                     <span>Moverz</span>
                   </div>
                 </th>
@@ -200,7 +200,7 @@ export default function ComparisonTable() {
                   <td className="px-6 py-4">
                     <div className="space-y-1">
                       {(index === 0 || filteredData[index - 1].category !== row.category) && (
-                        <p className="text-xs font-bold uppercase tracking-wider text-[#6BCFCF]">
+                        <p className="text-xs font-bold uppercase tracking-wider text-brand-turquoise">
                           {row.category}
                         </p>
                       )}

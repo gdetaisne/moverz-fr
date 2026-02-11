@@ -10,8 +10,8 @@ export default function ProDashboardPreview() {
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center space-y-4 mb-12">
-          <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-2 text-sm font-semibold text-[#0F172A]">
-            <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
+          <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-2 text-sm font-semibold text-[#0F172A]">
+            <span className="h-2 w-2 rounded-full bg-brand-turquoise" />
             Dashboard Pro
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A]">
@@ -67,7 +67,7 @@ export default function ProDashboardPreview() {
                 {/* Header */}
                 <div className="flex items-center justify-between mb-6">
                   <h3 className="text-xl font-bold text-[#0F172A]">Nouveaux dossiers</h3>
-                  <span className="px-3 py-1 rounded-full bg-[#6BCFCF]/10 text-[#0F172A] text-sm font-medium">
+                  <span className="px-3 py-1 rounded-full bg-brand-turquoise/10 text-[#0F172A] text-sm font-medium">
                     3 nouveaux aujourd'hui
                   </span>
                 </div>
@@ -90,7 +90,7 @@ export default function ProDashboardPreview() {
                     volume: "22m³",
                     date: "20 mars 2025",
                     status: "En cours",
-                    statusColor: "bg-blue-100 text-blue-700",
+                    statusColor: "bg-brand-turquoise-100 text-brand-turquoise-700",
                   },
                   {
                     id: "#2845",
@@ -104,7 +104,7 @@ export default function ProDashboardPreview() {
                 ].map((dossier) => (
                   <div
                     key={dossier.id}
-                    className="p-4 rounded-xl border border-[#E3E5E8] hover:border-[#6BCFCF] hover:shadow-md transition-all cursor-pointer"
+                    className="p-4 rounded-xl border border-[#E3E5E8] hover:border-brand-turquoise hover:shadow-md transition-all cursor-pointer"
                   >
                     <div className="flex items-start justify-between mb-3">
                       <div>
@@ -158,7 +158,7 @@ export default function ProDashboardPreview() {
                   <p className="text-sm font-semibold text-[#0F172A] mb-4">Évolution des dossiers</p>
                   <div className="h-48 flex items-end gap-2">
                     {[30, 45, 38, 52, 47, 61, 55].map((height, i) => (
-                      <div key={i} className="flex-1 bg-gradient-to-t from-[#6BCFCF] to-[#A8E8E8] rounded-t-lg transition-all hover:opacity-80" style={{ height: `${height}%` }} />
+                      <div key={i} className="flex-1 bg-gradient-to-t from-brand-turquoise to-[#A8E8E8] rounded-t-lg transition-all hover:opacity-80" style={{ height: `${height}%` }} />
                     ))}
                   </div>
                   <div className="flex justify-between text-xs text-[#1E293B]/60 mt-2">
@@ -193,7 +193,7 @@ export default function ProDashboardPreview() {
                     title: "Client a répondu",
                     desc: "Thomas L. a des questions sur votre devis",
                     time: "Il y a 1h",
-                    color: "border-l-blue-500",
+                    color: "border-l-brand-turquoise",
                   },
                   {
                     type: "won",
@@ -201,7 +201,7 @@ export default function ProDashboardPreview() {
                     title: "Dossier gagné !",
                     desc: "Sophie M. a accepté votre devis (2 450€)",
                     time: "Il y a 3h",
-                    color: "border-l-[#6BCFCF]",
+                    color: "border-l-brand-turquoise",
                   },
                   {
                     type: "reminder",

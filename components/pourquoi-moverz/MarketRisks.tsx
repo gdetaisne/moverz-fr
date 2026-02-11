@@ -80,8 +80,8 @@ export default function MarketRisks() {
               animation: mounted ? 'fadeInUp 1s ease-out 0.2s both' : 'none',
             }}
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-sm font-semibold text-[#0F172A] mb-6">
-              <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-sm font-semibold text-[#0F172A] mb-6">
+              <span className="h-2 w-2 rounded-full bg-brand-turquoise" />
               Les chiffres du secteur
             </div>
 
@@ -136,7 +136,7 @@ export default function MarketRisks() {
             </div>
 
             {/* Protection card */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#6BCFCF]/10 to-[#A8E8E8]/10 border border-[#6BCFCF]/30">
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-brand-turquoise/10 to-[#A8E8E8]/10 border border-brand-turquoise/30">
               <div className="flex items-center gap-2 mb-3">
                 <Shield className="w-5 h-5 text-[#0F172A]" />
                 <p className="font-bold text-[#0F172A]">Moverz vous protège</p>

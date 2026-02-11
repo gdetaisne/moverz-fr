@@ -23,7 +23,7 @@ export default function WidgetActionSection({
     <section className="section relative overflow-hidden bg-gradient-to-br from-[#1E293B] via-[#0F172A] to-[#1E3A5F] text-white">
       {/* Subtle gradient overlays for depth */}
       <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#6BCFCF]/20 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-turquoise/20 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#2B7A78]/20 rounded-full blur-3xl" />
       </div>
       
@@ -42,7 +42,7 @@ export default function WidgetActionSection({
                       height={26}
                     />
                   </div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
                     {eyebrow}
                   </p>
                 </div>
@@ -66,7 +66,7 @@ export default function WidgetActionSection({
                     key={i}
                     className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/90"
                   >
-                    <span className="text-[#6BCFCF]">{item.icon}</span>
+                    <span className="text-brand-turquoise">{item.icon}</span>
                     {item.label}
                   </span>
                 ))}

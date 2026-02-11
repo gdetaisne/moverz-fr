@@ -46,7 +46,7 @@ export function HowToChoose() {
         <div className="rounded-2xl border border-[#E5E7EB] bg-white p-8 md:p-10 space-y-8">
           {/* Question exacte pour featured snippet */}
           <div className="text-center space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
               Guide anti-arnaque
             </p>
             <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A]">
@@ -66,14 +66,14 @@ export function HowToChoose() {
             {steps.map((step) => (
               <li key={step.number} className="flex gap-5">
                 {/* Numéro */}
-                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[#6BCFCF] text-white font-bold text-lg">
+                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-brand-turquoise text-white font-bold text-lg">
                   {step.number}
                 </div>
                 
                 {/* Contenu */}
                 <div className="flex-1 pt-1">
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="text-[#6BCFCF]">
+                    <div className="text-brand-turquoise">
                       {step.icon}
                     </div>
                     <h3 className="text-lg font-bold text-[#0F172A]">
@@ -90,7 +90,7 @@ export function HowToChoose() {
 
           {/* CTA */}
           <div className="pt-6 border-t border-[#E5E7EB]">
-            <div className="bg-gradient-to-br from-[#6BCFCF]/10 to-[#A8E8E8]/10 rounded-2xl p-6 text-center">
+            <div className="bg-gradient-to-br from-brand-turquoise/10 to-[#A8E8E8]/10 rounded-2xl p-6 text-center">
               <p className="text-sm font-semibold text-[#0F172A] mb-3">
                 ✅ Moverz fait ces 5 vérifications pour vous
               </p>

@@ -84,22 +84,22 @@ export default function ProPricing() {
               transition={{ delay: i * 0.1 }}
               className={`relative rounded-2xl p-8 ${
                 plan.highlight
-                  ? "bg-white border-2 border-[#6BCFCF] shadow-lg"
+                  ? "bg-white border-2 border-brand-turquoise shadow-lg"
                   : "bg-white border border-gray-200"
               }`}
             >
               {/* Badge subtil */}
               {plan.badge && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-[#6BCFCF] text-white text-xs font-semibold shadow-sm">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-brand-turquoise text-white text-xs font-semibold shadow-sm">
                   Recommandé
                 </div>
               )}
 
               {/* Icon */}
               <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl mb-4 ${
-                plan.highlight ? "bg-[#6BCFCF]/10" : "bg-[#F0F9FF]"
+                plan.highlight ? "bg-brand-turquoise/10" : "bg-[#F0F9FF]"
               }`}>
-                <plan.icon className="w-6 h-6 text-[#6BCFCF]" />
+                <plan.icon className="w-6 h-6 text-brand-turquoise" />
               </div>
 
               {/* Name */}
@@ -137,7 +137,7 @@ export default function ProPricing() {
                 href="#contact"
                 className={`block w-full text-center px-6 py-3 rounded-xl font-semibold transition-all duration-300 mb-6 ${
                   plan.highlight
-                    ? "bg-[#6BCFCF] text-white hover:bg-[#5AB0B0] shadow-sm hover:shadow-md"
+                    ? "bg-brand-turquoise text-white hover:bg-[#5AB0B0] shadow-sm hover:shadow-md"
                     : "bg-white border-2 border-[#0F172A] text-[#0F172A] hover:bg-[#0F172A] hover:text-white"
                 }`}
               >
@@ -148,7 +148,7 @@ export default function ProPricing() {
               <div className="space-y-3">
                 {plan.features.map((feature, j) => (
                   <div key={j} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5 text-[#6BCFCF]" />
+                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5 text-brand-turquoise" />
                     <span className="text-sm text-[#6B7280]">
                       {feature}
                     </span>
@@ -158,7 +158,7 @@ export default function ProPricing() {
 
               {/* Glow subtil pour Pro */}
               {plan.highlight && (
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-[#6BCFCF]/20 to-[#6BCFCF]/10 rounded-2xl blur -z-10" />
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-brand-turquoise/20 to-brand-turquoise/10 rounded-2xl blur -z-10" />
               )}
             </motion.div>
           ))}
@@ -192,7 +192,7 @@ export default function ProPricing() {
                     >
                       <span className="text-sm font-semibold text-[#0F172A]">{x.k}</span>
                       <span className="text-xs text-[#6B7280]">→</span>
-                      <span className="text-sm font-bold text-[#6BCFCF]">{x.v}</span>
+                      <span className="text-sm font-bold text-brand-turquoise">{x.v}</span>
                     </div>
                   ))}
                 </div>

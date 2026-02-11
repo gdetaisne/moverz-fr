@@ -52,8 +52,8 @@ export default function AProposPage() {
       <section className="relative overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A]" />
-        <div className="absolute -top-20 left-1/4 h-72 w-72 rounded-full bg-[#6BCFCF]/15 blur-[90px]" />
-        <div className="absolute -bottom-20 right-1/4 h-72 w-72 rounded-full bg-[#6BCFCF]/15 blur-[90px]" />
+        <div className="absolute -top-20 left-1/4 h-72 w-72 rounded-full bg-brand-turquoise/15 blur-[90px]" />
+        <div className="absolute -bottom-20 right-1/4 h-72 w-72 rounded-full bg-brand-turquoise/15 blur-[90px]" />
         <div
           className="absolute inset-0 opacity-[0.06]"
           style={{
@@ -74,15 +74,15 @@ export default function AProposPage() {
           <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white/90 backdrop-blur-sm">
-                <Sparkles className="h-4 w-4 text-[#6BCFCF]" />
+                <Sparkles className="h-4 w-4 text-brand-turquoise" />
                 Anti-arnaque · 100% orienté clarté
               </div>
 
               <h1 className="mt-6 text-4xl md:text-6xl font-bold leading-[1.05]">
                 On rend le déménagement{" "}
-                <span className="text-[#6BCFCF]">simple</span>,{" "}
-                <span className="text-[#6BCFCF]">clair</span>,{" "}
-                <span className="text-[#6BCFCF]">sans stress</span>.
+                <span className="text-brand-turquoise">simple</span>,{" "}
+                <span className="text-brand-turquoise">clair</span>,{" "}
+                <span className="text-brand-turquoise">sans stress</span>.
               </h1>
 
               <p className="mt-5 text-lg text-white/80 max-w-xl">
@@ -110,15 +110,15 @@ export default function AProposPage() {
 
               <div className="mt-6 flex flex-wrap items-center gap-2 text-xs text-white/70">
                 <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
                   Sans démarchage
                 </span>
                 <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
                   Dossier anonyme
                 </span>
                 <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
                   Devis comparables
                 </span>
               </div>
@@ -127,7 +127,7 @@ export default function AProposPage() {
             {/* Right: mini cards */}
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-                <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#6BCFCF]/15 text-[#6BCFCF] mb-4">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-turquoise/15 text-brand-turquoise mb-4">
                   <ShieldCheck className="h-5 w-5" />
                 </div>
                 <p className="text-sm font-semibold">On déteste les surprises</p>
@@ -136,7 +136,7 @@ export default function AProposPage() {
                 </p>
               </div>
               <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-                <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#6BCFCF]/15 text-[#6BCFCF] mb-4">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-turquoise/15 text-brand-turquoise mb-4">
                   <Scale className="h-5 w-5" />
                 </div>
                 <p className="text-sm font-semibold">On compare proprement</p>
@@ -145,7 +145,7 @@ export default function AProposPage() {
                 </p>
               </div>
               <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-                <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#6BCFCF]/15 text-[#6BCFCF] mb-4">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-turquoise/15 text-brand-turquoise mb-4">
                   <Camera className="h-5 w-5" />
                 </div>
                 <p className="text-sm font-semibold">Les détails, c’est la vérité</p>
@@ -154,7 +154,7 @@ export default function AProposPage() {
                 </p>
               </div>
               <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-                <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#6BCFCF]/15 text-[#6BCFCF] mb-4">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-turquoise/15 text-brand-turquoise mb-4">
                   <MessageCircle className="h-5 w-5" />
                 </div>
                 <p className="text-sm font-semibold">Humain quand il faut</p>
@@ -196,13 +196,13 @@ export default function AProposPage() {
           <div className="mt-10 space-y-6">
             {/* Full-width anti-scam block (évite le “trou” de grid) */}
             <div className="relative overflow-hidden rounded-3xl border border-[#E3E5E8] bg-gradient-to-b from-white to-[#FAFBFC] p-7 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
-              <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-[#6BCFCF]/70 via-[#0F172A]/20 to-[#6BCFCF]/70" />
+              <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-brand-turquoise/70 via-[#0F172A]/20 to-brand-turquoise/70" />
               <h3 className="text-xl md:text-2xl font-bold text-[#0F172A]">
                 Comment on évite les arnaques (vraiment)
               </h3>
               <div className="mt-6 grid gap-6 lg:grid-cols-3">
                 <div className="flex items-start gap-3">
-                  <span className="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#6BCFCF]/15 text-[#2B7A78]">
+                  <span className="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-full bg-brand-turquoise/15 text-[#2B7A78]">
                     <BadgeCheck className="h-4 w-4" />
                   </span>
                   <div className="text-[#1E293B]/75">
@@ -211,7 +211,7 @@ export default function AProposPage() {
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#6BCFCF]/15 text-[#2B7A78]">
+                  <span className="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-full bg-brand-turquoise/15 text-[#2B7A78]">
                     <Camera className="h-4 w-4" />
                   </span>
                   <div className="text-[#1E293B]/75">
@@ -220,7 +220,7 @@ export default function AProposPage() {
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#6BCFCF]/15 text-[#2B7A78]">
+                  <span className="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-full bg-brand-turquoise/15 text-[#2B7A78]">
                     <Scale className="h-4 w-4" />
                   </span>
                   <div className="text-[#1E293B]/75">
@@ -286,7 +286,7 @@ export default function AProposPage() {
                       </p>
                     </div>
                   </div>
-                  <div className="mt-4 rounded-xl border border-[#6BCFCF]/25 bg-white p-4 text-sm text-[#0F172A]">
+                  <div className="mt-4 rounded-xl border border-brand-turquoise/25 bg-white p-4 text-sm text-[#0F172A]">
                     <p className="font-semibold">Fun fact</p>
                     <p className="mt-1 text-[#0F172A]/75">
                       Lucie et ses déménagements “intempestifs” : elle a un talent rare pour trouver un
@@ -330,7 +330,7 @@ export default function AProposPage() {
                       </p>
                     </div>
                   </div>
-                  <div className="mt-4 rounded-xl border border-[#6BCFCF]/25 bg-white p-4 text-sm text-[#0F172A]">
+                  <div className="mt-4 rounded-xl border border-brand-turquoise/25 bg-white p-4 text-sm text-[#0F172A]">
                     <p className="font-semibold inline-flex items-center gap-2">
                       Fun fact <Cat className="h-4 w-4 text-[#2B7A78]" />
                     </p>
@@ -403,7 +403,7 @@ export default function AProposPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
               href="/contact/"
-              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-base font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-brand-turquoise via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-base font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
               <span className="relative">Contact</span>

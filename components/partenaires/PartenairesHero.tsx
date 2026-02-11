@@ -11,8 +11,8 @@ export default function PartenairesHero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white">
       {/* Background effects */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#6BCFCF]/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#6BCFCF]/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }} />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-turquoise/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-turquoise/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }} />
       
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <Breadcrumbs
@@ -32,7 +32,7 @@ export default function PartenairesHero() {
               transition={{ duration: 0.4 }}
               className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2 text-sm font-medium text-white/90 backdrop-blur-sm mb-8"
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise animate-pulse" />
               <span>Réseau de déménageurs sélectionnés</span>
             </motion.div>
 
@@ -47,7 +47,7 @@ export default function PartenairesHero() {
               <br />
               Envoyez votre devis.
               <br />
-              <span className="text-[#6BCFCF]">Gagnez des clients.</span>
+              <span className="text-brand-turquoise">Gagnez des clients.</span>
             </motion.h1>
 
             {/* Subtitle */}
@@ -74,7 +74,7 @@ export default function PartenairesHero() {
                 "Process habituel"
               ].map((item, i) => (
                 <span key={i} className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1.5 text-xs font-medium text-white">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#6BCFCF]" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-brand-turquoise" />
                   {item}
                 </span>
               ))}
@@ -90,7 +90,7 @@ export default function PartenairesHero() {
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                 <a
                   href="/contact"
-                  className="group inline-flex items-center gap-2 rounded-xl bg-[#6BCFCF] px-8 py-4 text-base font-semibold text-[#0F172A] shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+                  className="group inline-flex items-center gap-2 rounded-xl bg-brand-turquoise px-8 py-4 text-base font-semibold text-[#0F172A] shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
                 >
                   <span>Nous contacter</span>
                   <span className="text-lg leading-none group-hover:translate-x-1 transition-transform">→</span>
@@ -127,7 +127,7 @@ export default function PartenairesHero() {
             </div>
             
             {/* Badge "1 min" */}
-            <div className="absolute -bottom-4 -right-4 bg-[#6BCFCF] rounded-full px-4 py-2 shadow-lg">
+            <div className="absolute -bottom-4 -right-4 bg-brand-turquoise rounded-full px-4 py-2 shadow-lg">
               <p className="text-sm font-bold text-[#0F172A]">⏱️ 1 min</p>
             </div>
           </motion.div>

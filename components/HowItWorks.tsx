@@ -85,7 +85,7 @@ export default function HowItWorks() {
         {steps.map((step, index) => (
           <div
             key={step.number}
-            className="group relative flex flex-col gap-4 rounded-2xl border border-[#E3E5E8] bg-white p-6 md:p-8 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md hover:border-[#6BCFCF]/40"
+            className="group relative flex flex-col gap-4 rounded-2xl border border-[#E3E5E8] bg-white p-6 md:p-8 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md hover:border-brand-turquoise/40"
             style={{ animationDelay: `${index * 100 + 400}ms` }}
           >
             
@@ -93,7 +93,7 @@ export default function HowItWorks() {
               {/* Numéro + Pictogramme combinés */}
               <div className="relative">
                 <div 
-                  className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#6BCFCF]/15 border-2 border-[#6BCFCF]/30 text-[#2B7A78] transition-all duration-200 group-hover:scale-105"
+                  className="flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-turquoise/15 border-2 border-brand-turquoise/30 text-[#2B7A78] transition-all duration-200 group-hover:scale-105"
                   style={{
                     opacity: isInView ? 1 : 0,
                     transform: isInView ? 'scale(1)' : 'scale(0.8)',

@@ -20,8 +20,8 @@ export default function WhyMoverz() {
         }} />
         
         {/* Gradient orbs for depth */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#6BCFCF]/20 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#6BCFCF]/10 rounded-full blur-[120px]" />
+        <div className="absolute top-0 left-0 w-96 h-96 bg-brand-turquoise/20 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-brand-turquoise/10 rounded-full blur-[120px]" />
         
         <div className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Header central */}
@@ -41,7 +41,7 @@ export default function WhyMoverz() {
 
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight max-w-4xl mx-auto">
               Le seul comparateur qui vérifie{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6BCFCF] to-[#A8E8E8]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-turquoise to-[#A8E8E8]">
                 la solidité des entreprises
               </span>
             </h2>
@@ -54,16 +54,16 @@ export default function WhyMoverz() {
               animation: mounted ? 'fadeInUp 1s ease-out 0.2s both' : 'none',
             }}
           >
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#6BCFCF]/15 via-[#6BCFCF]/5 to-transparent backdrop-blur-sm border-2 border-[#6BCFCF]/40 shadow-[0_8px_32px_rgba(107,207,207,0.2)]">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-turquoise/15 via-brand-turquoise/5 to-transparent backdrop-blur-sm border-2 border-brand-turquoise/40 shadow-[0_8px_32px_rgba(107,207,207,0.2)]">
               {/* Glow effects */}
-              <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#6BCFCF]/20 rounded-full blur-3xl" />
-              <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-[#6BCFCF]/10 rounded-full blur-3xl" />
+              <div className="absolute -top-24 -right-24 w-64 h-64 bg-brand-turquoise/20 rounded-full blur-3xl" />
+              <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-brand-turquoise/10 rounded-full blur-3xl" />
               
               <div className="relative p-8 md:p-12">
                 <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                   {/* Left: Content */}
                   <div>
-                    <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/20 backdrop-blur-sm px-3 py-1 text-xs font-bold text-[#6BCFCF] mb-6 border border-[#6BCFCF]/30">
+                    <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/20 backdrop-blur-sm px-3 py-1 text-xs font-bold text-brand-turquoise mb-6 border border-brand-turquoise/30">
                       <Shield className="w-3 h-3" />
                       EXCLUSIVITÉ MOVERZ
                     </div>
@@ -79,20 +79,20 @@ export default function WhyMoverz() {
 
                     <div className="space-y-3">
                       <div className="flex items-center gap-3">
-                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#6BCFCF]/30 flex items-center justify-center">
-                          <Check className="w-4 h-4 text-[#6BCFCF]" strokeWidth={3} />
+                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-turquoise/30 flex items-center justify-center">
+                          <Check className="w-4 h-4 text-brand-turquoise" strokeWidth={3} />
                         </div>
                         <span className="text-white/90">Score de solvabilité en temps réel</span>
                       </div>
                       <div className="flex items-center gap-3">
-                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#6BCFCF]/30 flex items-center justify-center">
-                          <Check className="w-4 h-4 text-[#6BCFCF]" strokeWidth={3} />
+                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-turquoise/30 flex items-center justify-center">
+                          <Check className="w-4 h-4 text-brand-turquoise" strokeWidth={3} />
                         </div>
                         <span className="text-white/90">Historique des litiges et jugements</span>
                       </div>
                       <div className="flex items-center gap-3">
-                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#6BCFCF]/30 flex items-center justify-center">
-                          <Check className="w-4 h-4 text-[#6BCFCF]" strokeWidth={3} />
+                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-turquoise/30 flex items-center justify-center">
+                          <Check className="w-4 h-4 text-brand-turquoise" strokeWidth={3} />
                         </div>
                         <span className="text-white/90">Bilans financiers des 3 dernières années</span>
                       </div>
@@ -110,7 +110,7 @@ export default function WhyMoverz() {
                         {/* Screen */}
                         <div className="relative bg-[#F8F9FA] rounded-[2rem] overflow-hidden h-[500px]">
                           {/* Header */}
-                          <div className="bg-gradient-to-r from-[#6BCFCF] to-[#A8E8E8] px-5 py-3 text-[#0F172A]">
+                          <div className="bg-gradient-to-r from-brand-turquoise to-[#A8E8E8] px-5 py-3 text-[#0F172A]">
                             <div className="flex items-center gap-2">
                               <Shield className="w-4 h-4" />
                               <p className="text-xs font-bold">Vérification Creditsafe</p>
@@ -167,7 +167,7 @@ export default function WhyMoverz() {
                             </div>
 
                             {/* Badge confiance */}
-                            <div className="bg-gradient-to-r from-green-50 to-[#6BCFCF]/10 rounded-xl p-3 border border-green-200 text-center">
+                            <div className="bg-gradient-to-r from-green-50 to-brand-turquoise/10 rounded-xl p-3 border border-green-200 text-center">
                               <p className="text-xs font-bold text-green-900">
                                 ✓ Entreprise de confiance
                               </p>
@@ -177,9 +177,9 @@ export default function WhyMoverz() {
                       </div>
 
                       {/* Floating badge */}
-                      <div className="absolute -right-4 top-16 bg-white rounded-xl shadow-2xl px-3 py-2 border-2 border-[#6BCFCF] rotate-6">
+                      <div className="absolute -right-4 top-16 bg-white rounded-xl shadow-2xl px-3 py-2 border-2 border-brand-turquoise rotate-6">
                         <p className="text-[10px] text-[#1E293B]/70 font-medium">Données</p>
-                        <p className="text-lg font-bold text-[#6BCFCF]">Certifiées</p>
+                        <p className="text-lg font-bold text-brand-turquoise">Certifiées</p>
                       </div>
                     </div>
                   </div>
@@ -196,10 +196,10 @@ export default function WhyMoverz() {
             }}
           >
             {/* Card 1: Dossier standardisé */}
-            <div className="group relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-8 shadow-[0_4px_16px_rgba(107,207,207,0.05)] hover:bg-white/10 hover:border-[#6BCFCF]/50 hover:shadow-[0_8px_32px_rgba(107,207,207,0.15)] md:hover:scale-[1.02] transition-all duration-300">
+            <div className="group relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-8 shadow-[0_4px_16px_rgba(107,207,207,0.05)] hover:bg-white/10 hover:border-brand-turquoise/50 hover:shadow-[0_8px_32px_rgba(107,207,207,0.15)] md:hover:scale-[1.02] transition-all duration-300">
               <div className="relative">
-                <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#6BCFCF]/20 to-[#6BCFCF]/5 border border-[#6BCFCF]/30 mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Sparkles className="w-8 h-8 text-[#6BCFCF]" strokeWidth={2.5} />
+                <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-turquoise/20 to-brand-turquoise/5 border border-brand-turquoise/30 mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Sparkles className="w-8 h-8 text-brand-turquoise" strokeWidth={2.5} />
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-3">
@@ -208,7 +208,7 @@ export default function WhyMoverz() {
 
                 <p className="text-white/70 leading-relaxed mb-4">
                   On standardise les informations clés (adresses, date, accès, options) pour que les déménageurs chiffrent
-                  sur <span className="text-[#6BCFCF] font-semibold">la même base</span>.
+                  sur <span className="text-brand-turquoise font-semibold">la même base</span>.
                 </p>
 
                 <div className="inline-flex items-center gap-2 text-sm text-white/80">
@@ -219,10 +219,10 @@ export default function WhyMoverz() {
             </div>
 
             {/* Card 2: Suivi simple */}
-            <div className="group relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-8 shadow-[0_4px_16px_rgba(107,207,207,0.05)] hover:bg-white/10 hover:border-[#6BCFCF]/50 hover:shadow-[0_8px_32px_rgba(107,207,207,0.15)] md:hover:scale-[1.02] transition-all duration-300">
+            <div className="group relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-8 shadow-[0_4px_16px_rgba(107,207,207,0.05)] hover:bg-white/10 hover:border-brand-turquoise/50 hover:shadow-[0_8px_32px_rgba(107,207,207,0.15)] md:hover:scale-[1.02] transition-all duration-300">
               <div className="relative">
-                <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#6BCFCF]/20 to-[#6BCFCF]/5 border border-[#6BCFCF]/30 mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Smartphone className="w-8 h-8 text-[#6BCFCF]" strokeWidth={2.5} />
+                <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-turquoise/20 to-brand-turquoise/5 border border-brand-turquoise/30 mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Smartphone className="w-8 h-8 text-brand-turquoise" strokeWidth={2.5} />
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-3">
@@ -231,7 +231,7 @@ export default function WhyMoverz() {
 
                 <p className="text-white/70 leading-relaxed mb-4">
                   Un parcours court, lisible, sans harcèlement. 
-                  <span className="text-[#6BCFCF] font-semibold"> Vous gardez la main</span> du début à la fin.
+                  <span className="text-brand-turquoise font-semibold"> Vous gardez la main</span> du début à la fin.
                 </p>
 
                 <div className="inline-flex items-center gap-2 text-sm text-white/80">

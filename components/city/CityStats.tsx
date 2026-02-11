@@ -33,7 +33,7 @@ export function CityStats({ cityName }: CityStatsProps) {
                     <p className="text-xs text-[#1E293B]/60 font-medium">Votre déménagement</p>
                     <p className="text-lg font-bold text-[#0F172A]">Paris → {cityName}</p>
                   </div>
-                  <Sparkles className="w-6 h-6 text-[#6BCFCF]" />
+                  <Sparkles className="w-6 h-6 text-brand-turquoise" />
                 </div>
 
                 {/* Progress bar */}
@@ -43,7 +43,7 @@ export function CityStats({ cityName }: CityStatsProps) {
                     <span className="text-[#0F172A] font-bold">66%</span>
                   </div>
                   <div className="w-full h-2 bg-[#F8F9FA] rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-[#6BCFCF] to-[#A8E8E8] rounded-full" style={{ width: '66%' }} />
+                    <div className="h-full bg-gradient-to-r from-brand-turquoise to-[#A8E8E8] rounded-full" style={{ width: '66%' }} />
                   </div>
                   <p className="text-xs text-[#1E293B]/60 mt-1">3 étapes</p>
                 </div>
@@ -67,7 +67,7 @@ export function CityStats({ cityName }: CityStatsProps) {
                 </div>
 
                 {/* CTA button */}
-                <div className="p-4 rounded-2xl bg-gradient-to-br from-[#6BCFCF]/10 to-[#A8E8E8]/10 border border-[#6BCFCF]/30 text-center">
+                <div className="p-4 rounded-2xl bg-gradient-to-br from-brand-turquoise/10 to-[#A8E8E8]/10 border border-brand-turquoise/30 text-center">
                   <div className="flex items-center justify-center gap-2 mb-1">
                     <Check className="w-4 h-4 text-green-600" strokeWidth={3} />
                     <p className="text-sm font-bold text-green-900">Dossier envoyé</p>
@@ -85,14 +85,14 @@ export function CityStats({ cityName }: CityStatsProps) {
               animation: mounted ? 'fadeInUp 1s ease-out 0.2s both' : 'none',
             }}
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-sm font-semibold text-[#0F172A] mb-6">
-              <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-sm font-semibold text-[#0F172A] mb-6">
+              <span className="h-2 w-2 rounded-full bg-brand-turquoise" />
               Moverz à {cityName}
             </div>
 
             <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] mb-6 leading-tight">
               Ça marche à{" "}
-              <span className="text-[#6BCFCF]">{cityName}</span> aussi
+              <span className="text-brand-turquoise">{cityName}</span> aussi
             </h2>
 
             <p className="text-lg text-[#1E293B]/70 leading-relaxed mb-8">
@@ -102,7 +102,7 @@ export function CityStats({ cityName }: CityStatsProps) {
             <div className="space-y-5">
               {/* Stat 1 */}
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[#6BCFCF]/10">
+                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-brand-turquoise/10">
                   <Clock className="w-6 h-6 text-[#0F172A]" strokeWidth={2.5} />
                 </div>
                 <div>
@@ -114,7 +114,7 @@ export function CityStats({ cityName }: CityStatsProps) {
               </div>
 
               {/* Stat 2 */}
-              <div className="flex items-start gap-4 p-4 rounded-xl bg-[#6BCFCF]/10 border border-[#6BCFCF]/30">
+              <div className="flex items-start gap-4 p-4 rounded-xl bg-brand-turquoise/10 border border-brand-turquoise/30">
                 <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[#0F172A]">
                   <Check className="w-6 h-6 text-white" strokeWidth={2.5} />
                 </div>
@@ -128,7 +128,7 @@ export function CityStats({ cityName }: CityStatsProps) {
 
               {/* Stat 3 */}
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[#6BCFCF]/10">
+                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-brand-turquoise/10">
                   <DollarSign className="w-6 h-6 text-[#0F172A]" strokeWidth={2.5} />
                 </div>
                 <div>

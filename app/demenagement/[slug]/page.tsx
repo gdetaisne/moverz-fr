@@ -247,7 +247,7 @@ export default function CityMovingPage({ params }: PageProps) {
       <section className="section section-light">
         <div className="container max-w-4xl">
           <div className="rounded-2xl border border-[#E5E7EB] bg-white p-8 md:p-10 space-y-5 text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">Guide local</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">Guide local</p>
             <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A]">
               Guide complet : déménager à {city.nameCapitalized}
             </h2>
@@ -272,7 +272,7 @@ export default function CityMovingPage({ params }: PageProps) {
           <div className="container max-w-4xl">
             <div className="rounded-2xl border border-[#E5E7EB] bg-white p-8 md:p-10 space-y-6">
               <div className="text-center space-y-3">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
                   Maillage local
                 </p>
                 <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A]">
@@ -288,7 +288,7 @@ export default function CityMovingPage({ params }: PageProps) {
                   <a
                     key={c.slug}
                     href={`/demenagement/${c.slug}/`}
-                    className="rounded-full border border-[#E5E7EB] bg-[#FAFAFA] px-3 py-1.5 text-xs text-[#0F172A] hover:border-[#6BCFCF]/50 hover:bg-white transition-colors"
+                    className="rounded-full border border-[#E5E7EB] bg-[#FAFAFA] px-3 py-1.5 text-xs text-[#0F172A] hover:border-brand-turquoise/50 hover:bg-white transition-colors"
                   >
                     Déménagement {c.nameCapitalized}
                   </a>
@@ -304,7 +304,7 @@ export default function CityMovingPage({ params }: PageProps) {
         <div className="container max-w-4xl">
           <div className="rounded-2xl border border-[#E5E7EB] bg-white p-8 md:p-10 space-y-6">
             <div className="text-center space-y-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
                 Services à {city.nameCapitalized}
               </p>
               <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A]">
@@ -320,7 +320,7 @@ export default function CityMovingPage({ params }: PageProps) {
                 <a
                   key={card.href}
                   href={card.href}
-                  className="group rounded-2xl border border-[#E5E7EB] bg-white p-5 hover:border-[#6BCFCF]/50 hover:shadow-sm transition-all"
+                  className="group rounded-2xl border border-[#E5E7EB] bg-white p-5 hover:border-brand-turquoise/50 hover:shadow-sm transition-all"
                 >
                   <p className="text-sm font-semibold text-[#0F172A] group-hover:text-[#2B7A78]">
                     {card.title}
@@ -338,7 +338,7 @@ export default function CityMovingPage({ params }: PageProps) {
         <section className="section section-light">
           <div className="container max-w-4xl">
             <div className="rounded-2xl border border-[#E5E7EB] bg-white p-8 md:p-10 text-center space-y-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
                 Guide prix
               </p>
               <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A]">
@@ -364,7 +364,7 @@ export default function CityMovingPage({ params }: PageProps) {
         <div className="container max-w-4xl">
           <div className="rounded-2xl border border-[#E5E7EB] bg-white p-8 md:p-10 space-y-6">
             <div className="text-center space-y-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
                 Guides & ressources
               </p>
               <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A]">
@@ -385,21 +385,21 @@ export default function CityMovingPage({ params }: PageProps) {
               </a>
               <a
                 href="/blog/checklists-et-guides/"
-                className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise/60 hover:bg-[#FAFAFA] transition-colors"
               >
                 <span>Checklists & guides</span>
                 <span>→</span>
               </a>
               <a
                 href="/blog/conseils-demenagement/"
-                className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise/60 hover:bg-[#FAFAFA] transition-colors"
               >
                 <span>Conseils déménagement</span>
                 <span>→</span>
               </a>
               <a
                 href="/blog/demenagement-par-ville/"
-                className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise/60 hover:bg-[#FAFAFA] transition-colors"
               >
                 <span>Articles par ville</span>
                 <span>→</span>
@@ -416,7 +416,7 @@ export default function CityMovingPage({ params }: PageProps) {
                     <a
                       key={post.slug}
                       href={`/blog/${post.slug}/`}
-                      className="group rounded-2xl border border-[#E5E7EB] bg-white p-4 hover:border-[#6BCFCF]/50 hover:shadow-sm transition-all"
+                      className="group rounded-2xl border border-[#E5E7EB] bg-white p-4 hover:border-brand-turquoise/50 hover:shadow-sm transition-all"
                     >
                       <p className="text-sm font-semibold text-[#0F172A] group-hover:text-[#2B7A78] line-clamp-2">
                         {post.title}
@@ -441,8 +441,8 @@ export default function CityMovingPage({ params }: PageProps) {
         <section className="section section-light">
           <div className="container max-w-4xl">
             <div className="text-center mb-10 space-y-6">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+              <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-xs font-medium text-brand-turquoise">
+                <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
                 Zones couvertes
               </div>
               <h2 className="text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl text-[#0F172A]">
@@ -530,7 +530,7 @@ export default function CityMovingPage({ params }: PageProps) {
                         <a
                           key={dest}
                           href={`/${city.slug}-vers-${dest}/`}
-                          className="rounded-full border border-[#E5E7EB] bg-[#FAFAFA] px-3 py-1.5 text-xs text-[#0F172A] hover:border-[#6BCFCF]/50 hover:bg-white transition-colors"
+                          className="rounded-full border border-[#E5E7EB] bg-[#FAFAFA] px-3 py-1.5 text-xs text-[#0F172A] hover:border-brand-turquoise/50 hover:bg-white transition-colors"
                         >
                           {city.nameCapitalized} → {getCityBySlug(dest)?.nameCapitalized ?? dest}
                         </a>
@@ -562,7 +562,7 @@ export default function CityMovingPage({ params }: PageProps) {
                         <a
                           key={q.slug}
                           href={`/${city.slug}/${q.slug}/`}
-                          className="rounded-full border border-[#E5E7EB] bg-[#FAFAFA] px-3 py-1.5 text-xs text-[#0F172A] hover:border-[#6BCFCF]/50 hover:bg-white transition-colors"
+                          className="rounded-full border border-[#E5E7EB] bg-[#FAFAFA] px-3 py-1.5 text-xs text-[#0F172A] hover:border-brand-turquoise/50 hover:bg-white transition-colors"
                         >
                           Déménagement {q.name} ({city.nameCapitalized})
                         </a>
@@ -593,7 +593,7 @@ export default function CityMovingPage({ params }: PageProps) {
         <div className="container max-w-4xl">
           <div className="text-center mb-12 space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90 backdrop-blur-sm">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
               Avis clients
             </div>
             <h2 className="text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl text-white">
@@ -624,7 +624,7 @@ export default function CityMovingPage({ params }: PageProps) {
       <section className="section section-light">
         <div className="container max-w-3xl">
           <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 text-center space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
               À lire ensuite
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -637,7 +637,7 @@ export default function CityMovingPage({ params }: PageProps) {
               </a>
               <a
                 href="/blog/checklists-et-guides/"
-                className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise/60 hover:bg-[#FAFAFA] transition-colors"
               >
                 <span>Checklists & guides</span>
                 <span>→</span>

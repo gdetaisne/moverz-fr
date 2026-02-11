@@ -119,8 +119,8 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
                     href={`/blog/demenagement-par-ville/?city=${encodeURIComponent(city)}`}
                     className={`rounded-full border px-3 py-1.5 text-xs font-semibold transition-colors ${
                       selectedCity === city
-                        ? "border-[#6BCFCF] bg-[#E6FFFA] text-[#205a5a]"
-                        : "border-[#E3E5E8] bg-white text-[#04163a] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA]"
+                        ? "border-brand-turquoise bg-[#E6FFFA] text-[#205a5a]"
+                        : "border-[#E3E5E8] bg-white text-[#04163a] hover:border-brand-turquoise/60 hover:bg-[#FAFAFA]"
                     }`}
                   >
                     {formatCityLabel(city)} · {count}
@@ -129,7 +129,7 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
               {selectedCity && (
                 <a
                   href="/blog/demenagement-par-ville/"
-                  className="rounded-full border border-[#E3E5E8] bg-white px-3 py-1.5 text-xs font-semibold text-[#6B7280] hover:text-[#04163a] hover:border-[#6BCFCF]/60 transition-colors"
+                  className="rounded-full border border-[#E3E5E8] bg-white px-3 py-1.5 text-xs font-semibold text-[#6B7280] hover:text-[#04163a] hover:border-brand-turquoise/60 transition-colors"
                 >
                   Réinitialiser
                 </a>
@@ -161,7 +161,7 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
                   <a
                     key={post.slug}
                     href={`/blog/${post.slug}/`}
-                    className="group flex flex-col gap-1 rounded-2xl border border-[#E3E5E8] bg-white px-5 py-4 hover:border-[#6BCFCF]/50 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200"
+                    className="group flex flex-col gap-1 rounded-2xl border border-[#E3E5E8] bg-white px-5 py-4 hover:border-brand-turquoise/50 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200"
                   >
                     <div className="flex flex-wrap items-center gap-2 text-xs text-[#6B7280]">
                       <span className="rounded-full bg-[#F0F4F8] px-2 py-0.5 font-semibold text-[11px] text-[#2B7A78]">
@@ -195,7 +195,7 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
                     <a
                       key={city}
                       href={`/blog/demenagement-par-ville/?city=${encodeURIComponent(city)}`}
-                      className="group rounded-2xl border border-[#E3E5E8] bg-white p-5 hover:border-[#6BCFCF]/60 hover:shadow-md transition-all"
+                      className="group rounded-2xl border border-[#E3E5E8] bg-white p-5 hover:border-brand-turquoise/60 hover:shadow-md transition-all"
                     >
                       <p className="text-xs text-[#6B7280]">Ville</p>
                       <h3 className="text-base md:text-lg font-semibold text-[#04163a] group-hover:text-[#2B7A78] transition-colors">
@@ -207,7 +207,7 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
                 {postsByCity.autres?.length ? (
                   <a
                     href="/blog/demenagement-par-ville/?city=autres"
-                    className="group rounded-2xl border border-[#E3E5E8] bg-white p-5 hover:border-[#6BCFCF]/60 hover:shadow-md transition-all"
+                    className="group rounded-2xl border border-[#E3E5E8] bg-white p-5 hover:border-brand-turquoise/60 hover:shadow-md transition-all"
                   >
                     <p className="text-xs text-[#6B7280]">Ville</p>
                     <h3 className="text-base md:text-lg font-semibold text-[#04163a] group-hover:text-[#2B7A78] transition-colors">

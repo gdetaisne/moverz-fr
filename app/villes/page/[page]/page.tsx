@@ -73,7 +73,7 @@ export default function VillesPaginatedPage({ params }: PageProps) {
               <a
                 key={city.slug}
                 href={`/demenagement/${city.slug}/`}
-                className="rounded-xl border border-[#E3E5E8] bg-white px-4 py-3 hover:border-[#6BCFCF]/40 hover:shadow-sm transition-all"
+                className="rounded-xl border border-[#E3E5E8] bg-white px-4 py-3 hover:border-brand-turquoise/40 hover:shadow-sm transition-all"
               >
                 <div className="flex items-center justify-between gap-4">
                   <div>

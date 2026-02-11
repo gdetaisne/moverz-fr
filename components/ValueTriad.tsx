@@ -45,7 +45,7 @@ export default function ValueTriad() {
   return (
     <div className="space-y-8">
       <div className="text-center space-y-3">
-        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6bcfcf]">
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
           Nos garanties
         </p>
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
@@ -61,21 +61,21 @@ export default function ValueTriad() {
         {items.map((item, idx) => (
           <div
             key={item.title}
-            className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8 shadow-lg shadow-black/30 backdrop-blur-sm transition-all duration-300 hover:border-[#6BCFCF]/40 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/40"
+            className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8 shadow-lg shadow-black/30 backdrop-blur-sm transition-all duration-300 hover:border-brand-turquoise/40 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/40"
             style={{ animationDelay: `${idx * 80}ms` }}
           >
             {/* Filament lumineux */}
-            <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#6BCFCF]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-brand-turquoise/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             
             {/* Gradient subtil au hover */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#6BCFCF]/0 to-[#4FB8B8]/0 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.05]" />
+            <div className="absolute inset-0 bg-gradient-to-br from-brand-turquoise/0 to-[#4FB8B8]/0 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.05]" />
             
             <div className="relative flex items-start gap-4">
-              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#6BCFCF]/20 to-[#4FB8B8]/30 border border-[#6BCFCF]/30 text-[#6BCFCF] transition-all duration-300 group-hover:scale-110 group-hover:border-[#6BCFCF]/50 group-hover:shadow-[0_0_20px_rgba(107,207,207,0.3)]">
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-turquoise/20 to-[#4FB8B8]/30 border border-brand-turquoise/30 text-brand-turquoise transition-all duration-300 group-hover:scale-110 group-hover:border-brand-turquoise/50 group-hover:shadow-[0_0_20px_rgba(107,207,207,0.3)]">
                 {item.icon}
               </div>
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-[#6BCFCF] transition-colors duration-300">
+                <h3 className="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-brand-turquoise transition-colors duration-300">
                   {item.title}
                 </h3>
                 <p className="text-sm md:text-base text-white/75 leading-relaxed">

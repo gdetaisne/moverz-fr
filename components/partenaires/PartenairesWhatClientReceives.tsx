@@ -42,8 +42,8 @@ export default function PartenairesWhatClientReceives() {
               transition={{ delay: i * 0.1 }}
               className="flex items-center gap-4 p-6 rounded-2xl bg-gradient-to-r from-[#F9FAFB] to-white border border-[#E3E5E8]"
             >
-              <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[#6BCFCF]/10">
-                <item.icon className="w-6 h-6 text-[#6BCFCF]" />
+              <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-brand-turquoise/10">
+                <item.icon className="w-6 h-6 text-brand-turquoise" />
               </div>
               <p className="text-[#1E293B] font-medium">
                 {item.text}

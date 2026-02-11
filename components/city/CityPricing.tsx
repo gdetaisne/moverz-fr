@@ -55,11 +55,11 @@ export function CityPricing({ cityName }: CityPricingProps) {
                     <p className="text-xs text-gray-600 font-medium">Estimation prix</p>
                     <p className="text-lg font-bold">T3 • 60m² → {cityName}</p>
                   </div>
-                  <Calculator className="w-6 h-6 text-[#6BCFCF]" />
+                  <Calculator className="w-6 h-6 text-brand-turquoise" />
                 </div>
 
                 {/* Volume detected */}
-                <div className="p-4 rounded-2xl bg-[#6BCFCF]/10 border border-[#6BCFCF]/30 mb-4">
+                <div className="p-4 rounded-2xl bg-brand-turquoise/10 border border-brand-turquoise/30 mb-4">
                   <p className="text-xs text-gray-600 mb-1">Volume détecté (IA)</p>
                   <p className="text-3xl font-bold text-[#0F172A]">42 m³</p>
                   <p className="text-xs text-gray-500 mt-1">Estimation basée sur votre dossier</p>
@@ -82,7 +82,7 @@ export function CityPricing({ cityName }: CityPricingProps) {
                 </div>
 
                 {/* Total */}
-                <div className="p-5 rounded-2xl bg-gradient-to-br from-[#6BCFCF]/20 to-[#A8E8E8]/20 border-2 border-[#6BCFCF]">
+                <div className="p-5 rounded-2xl bg-gradient-to-br from-brand-turquoise/20 to-[#A8E8E8]/20 border-2 border-brand-turquoise">
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-xs text-gray-600 mb-1">Fourchette estimée</p>
@@ -108,7 +108,7 @@ export function CityPricing({ cityName }: CityPricingProps) {
             }}
           >
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-semibold mb-6 backdrop-blur-sm">
-              <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
+              <span className="h-2 w-2 rounded-full bg-brand-turquoise" />
               Prix indicatifs
             </div>
 
@@ -126,14 +126,14 @@ export function CityPricing({ cityName }: CityPricingProps) {
                   key={item.label}
                   className={`p-5 rounded-2xl border ${
                     item.highlight 
-                      ? 'border-[#6BCFCF] bg-[#6BCFCF]/10' 
+                      ? 'border-brand-turquoise bg-brand-turquoise/10' 
                       : 'border-white/20 bg-white/5'
-                  } backdrop-blur-sm hover:border-[#6BCFCF]/70 transition-all`}
+                  } backdrop-blur-sm hover:border-brand-turquoise/70 transition-all`}
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <div className={`flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl ${
-                        item.highlight ? 'bg-[#6BCFCF] text-[#0F172A]' : 'bg-white/10 text-white'
+                        item.highlight ? 'bg-brand-turquoise text-[#0F172A]' : 'bg-white/10 text-white'
                       }`}>
                         {item.icon}
                       </div>
@@ -142,7 +142,7 @@ export function CityPricing({ cityName }: CityPricingProps) {
                         <p className="text-sm text-white/60">{item.volume}</p>
                       </div>
                     </div>
-                    <p className="text-2xl font-bold text-[#6BCFCF]">{item.price}</p>
+                    <p className="text-2xl font-bold text-brand-turquoise">{item.price}</p>
                   </div>
                 </div>
               ))}
@@ -152,19 +152,19 @@ export function CityPricing({ cityName }: CityPricingProps) {
               <p className="text-sm font-semibold text-white mb-3">Ce qui fait varier le prix</p>
               <ul className="space-y-2 text-sm text-white/70">
                 <li className="flex gap-2">
-                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#6BCFCF] shrink-0" />
+                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-brand-turquoise shrink-0" />
                   <span><strong className="text-white">Volume (m³)</strong> : principal levier — trier avant = payer moins</span>
                 </li>
                 <li className="flex gap-2">
-                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#6BCFCF] shrink-0" />
+                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-brand-turquoise shrink-0" />
                   <span><strong className="text-white">Accès</strong> : étages, ascenseur, distance camion→entrée</span>
                 </li>
                 <li className="flex gap-2">
-                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#6BCFCF] shrink-0" />
+                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-brand-turquoise shrink-0" />
                   <span><strong className="text-white">Période</strong> : été, week-ends, fins de mois = plus cher</span>
                 </li>
                 <li className="flex gap-2">
-                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#6BCFCF] shrink-0" />
+                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-brand-turquoise shrink-0" />
                   <span><strong className="text-white">Formule</strong> : éco vs standard vs clé en main</span>
                 </li>
               </ul>

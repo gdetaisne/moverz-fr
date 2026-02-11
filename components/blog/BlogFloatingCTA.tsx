@@ -182,14 +182,14 @@ export default function BlogFloatingCTA() {
         <div
           className={`rounded-2xl border bg-white overflow-hidden transition-shadow duration-500 ${
             visible
-              ? "border-[#6BCFCF]/35 shadow-[0_18px_60px_rgba(15,23,42,0.14),0_0_0_1px_rgba(107,207,207,0.18)]"
+              ? "border-brand-turquoise/35 shadow-[0_18px_60px_rgba(15,23,42,0.14),0_0_0_1px_rgba(107,207,207,0.18)]"
               : "border-[#E3E5E8] shadow-[0_18px_60px_rgba(15,23,42,0.12)]"
           }`}
         >
           {/* Scroll progress (premium, unobtrusive) */}
           <div className="h-1 w-full bg-[#E3E5E8]" aria-hidden="true">
             <div
-              className="h-full bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#0F172A] transition-[width] duration-150 ease-out"
+              className="h-full bg-gradient-to-r from-brand-turquoise via-[#4FB8B8] to-[#0F172A] transition-[width] duration-150 ease-out"
               style={{ width: `${Math.round(scrollProgress * 100)}%` }}
             />
           </div>
@@ -252,7 +252,7 @@ export default function BlogFloatingCTA() {
                 rel="noopener noreferrer"
                 data-ga-tracked="1"
                 onClick={onMobilityClick}
-                className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-4 py-3 text-sm font-semibold text-[#0F172A] border border-[#0F172A]/10 shadow-sm hover:bg-[#FAFAFA] hover:border-[#6BCFCF]/50 transition-colors"
+                className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-4 py-3 text-sm font-semibold text-[#0F172A] border border-[#0F172A]/10 shadow-sm hover:bg-[#FAFAFA] hover:border-brand-turquoise/50 transition-colors"
               >
                 Être accompagné(e) <span aria-hidden="true">→</span>
               </a>
@@ -273,7 +273,7 @@ export default function BlogFloatingCTA() {
             {/* Scroll progress (mobile) */}
             <div className="mb-2 h-1 w-full overflow-hidden rounded-full bg-[#E3E5E8]" aria-hidden="true">
               <div
-                className="h-full bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#0F172A] transition-[width] duration-150 ease-out"
+                className="h-full bg-gradient-to-r from-brand-turquoise via-[#4FB8B8] to-[#0F172A] transition-[width] duration-150 ease-out"
                 style={{ width: `${Math.round(scrollProgress * 100)}%` }}
               />
             </div>
@@ -301,7 +301,7 @@ export default function BlogFloatingCTA() {
               rel="noopener noreferrer"
               data-ga-tracked="1"
               onClick={onMobilityClick}
-              className="mt-2 block rounded-xl border border-[#E3E5E8] bg-white px-3 py-2 text-xs font-semibold text-[#0F172A] hover:border-[#6BCFCF]/50 hover:bg-[#FAFAFA] transition-colors"
+              className="mt-2 block rounded-xl border border-[#E3E5E8] bg-white px-3 py-2 text-xs font-semibold text-[#0F172A] hover:border-brand-turquoise/50 hover:bg-[#FAFAFA] transition-colors"
             >
               À la recherche d&apos;un logement ? Relocation → 
             </a>

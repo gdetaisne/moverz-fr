@@ -208,7 +208,7 @@ export default function ContactForm() {
           value={form.message}
           onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
           rows={6}
-          className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-[#04163a] focus:border-[#6BCFCF]/60 focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]/20 transition-all resize-none"
+          className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-[#04163a] focus:border-brand-turquoise/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all resize-none"
           placeholder="Ex: dates, ville départ/arrivée, volume approximatif, étages, accès, ascenseur…"
         />
       </div>

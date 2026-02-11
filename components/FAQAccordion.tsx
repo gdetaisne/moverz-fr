@@ -19,16 +19,16 @@ function FAQAccordionItem({ item, isOpen, onToggle }: { item: FAQItem; isOpen: b
       animate={{ opacity: 1, y: 0 }}
       className={`group relative overflow-hidden rounded-2xl border backdrop-blur-sm transition-all duration-300 ${
         isOpen
-          ? "border-[#6BCFCF]/50 bg-white shadow-xl shadow-[#6BCFCF]/5"
-          : "border-gray-200 bg-white/80 hover:bg-white hover:border-[#6BCFCF]/30 hover:shadow-lg"
+          ? "border-brand-turquoise/50 bg-white shadow-xl shadow-[rgba(107,207,207,0.05)]"
+          : "border-gray-200 bg-white/80 hover:bg-white hover:border-brand-turquoise/30 hover:shadow-lg"
       }`}
     >
       {/* Gradient accent */}
-      <div className={`absolute inset-0 bg-gradient-to-br from-[#6BCFCF]/5 via-transparent to-[#2B7A78]/5 opacity-0 transition-opacity duration-300 ${isOpen ? "opacity-100" : "group-hover:opacity-100"}`} />
+      <div className={`absolute inset-0 bg-gradient-to-br from-brand-turquoise/5 via-transparent to-[#2B7A78]/5 opacity-0 transition-opacity duration-300 ${isOpen ? "opacity-100" : "group-hover:opacity-100"}`} />
       
       {/* Glow effect on open */}
       {isOpen && (
-        <div className="absolute top-0 right-0 w-32 h-32 bg-[#6BCFCF]/10 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-32 h-32 bg-brand-turquoise/10 rounded-full blur-3xl" />
       )}
 
       <button
@@ -41,8 +41,8 @@ function FAQAccordionItem({ item, isOpen, onToggle }: { item: FAQItem; isOpen: b
             whileHover={{ scale: 1.1, rotate: 5 }}
             className={`mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
               isOpen
-                ? "bg-[#6BCFCF] text-white shadow-lg shadow-[#6BCFCF]/30"
-                : "bg-[#6BCFCF]/10 text-[#2B7A78] group-hover:bg-[#6BCFCF]/20"
+                ? "bg-brand-turquoise text-white shadow-lg shadow-[rgba(107,207,207,0.3)]"
+                : "bg-brand-turquoise/10 text-[#2B7A78] group-hover:bg-brand-turquoise/20"
             }`}
           >
             <HelpCircle className="w-4 h-4" />
@@ -58,8 +58,8 @@ function FAQAccordionItem({ item, isOpen, onToggle }: { item: FAQItem; isOpen: b
         >
           <div className={`flex h-8 w-8 items-center justify-center rounded-full border-2 transition-all duration-300 ${
             isOpen
-              ? "border-[#6BCFCF] bg-[#6BCFCF]/10 text-[#2B7A78]"
-              : "border-gray-200 bg-gray-50 text-gray-500 group-hover:border-[#6BCFCF]/30 group-hover:bg-[#6BCFCF]/5"
+              ? "border-brand-turquoise bg-brand-turquoise/10 text-[#2B7A78]"
+              : "border-gray-200 bg-gray-50 text-gray-500 group-hover:border-brand-turquoise/30 group-hover:bg-brand-turquoise/5"
           }`}>
             <ChevronDown className="w-4 h-4" />
           </div>
@@ -78,7 +78,7 @@ function FAQAccordionItem({ item, isOpen, onToggle }: { item: FAQItem; isOpen: b
             <div className="relative px-5 md:px-6 pb-5 md:pb-6">
               <div className="pl-11 pr-4">
                 {/* Premium separator */}
-                <div className="h-px bg-gradient-to-r from-[#6BCFCF]/40 via-[#6BCFCF]/60 to-transparent mb-4" />
+                <div className="h-px bg-gradient-to-r from-brand-turquoise/40 via-brand-turquoise/60 to-transparent mb-4" />
                 <motion.div
                   initial={{ y: -10, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}

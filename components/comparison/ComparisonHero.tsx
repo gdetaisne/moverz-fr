@@ -36,7 +36,7 @@ export default function ComparisonHero() {
         <div className="text-center space-y-6">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold">
-            <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
+            <span className="h-2 w-2 rounded-full bg-brand-turquoise" />
             Guide comparatif
           </div>
 

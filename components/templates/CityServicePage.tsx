@@ -93,7 +93,7 @@ export function CityServicePage({
 
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
               {badge}
             </div>
 
@@ -137,7 +137,7 @@ export function CityServicePage({
           {/* Bloc local (anti-template) */}
           <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 space-y-4">
             <div className="text-center space-y-2">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">Local</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">Local</p>
               <h2 className="text-xl md:text-2xl font-bold text-[#0F172A]">{insights.title}</h2>
               <p className="text-sm text-[#6B7280]">Quelques précisions suffisent pour fiabiliser le devis (et éviter les surprises).</p>
             </div>
@@ -153,7 +153,7 @@ export function CityServicePage({
             <div className="grid gap-2">
               {insights.bullets.map((b, i) => (
                 <div key={i} className="flex gap-2 text-sm md:text-base text-[#0F172A]">
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#6BCFCF] shrink-0" />
+                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-brand-turquoise shrink-0" />
                   <span className="text-[#0F172A]/90">{b}</span>
                 </div>
               ))}
@@ -164,7 +164,7 @@ export function CityServicePage({
             <div className="text-center">
               <a
                 href={`https://devis.moverz.fr/devis-gratuits-v3?city_slug=${citySlug}&source=moverz.fr&from=${encodeURIComponent(fromPath)}`}
-                className="inline-flex items-center justify-center rounded-full border border-[#6BCFCF] bg-[#6BCFCF] px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[#2B7A78] hover:border-[#2B7A78]"
+                className="inline-flex items-center justify-center rounded-full border border-brand-turquoise bg-brand-turquoise px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[#2B7A78] hover:border-[#2B7A78]"
               >
                 Comparer des devis (gratuit)
               </a>
@@ -186,7 +186,7 @@ export function CityServicePage({
                 <ul className="grid gap-2 text-sm md:text-base text-[#0F172A]">
                   {s.bullets.map((b, i) => (
                     <li key={i} className="flex gap-2">
-                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#6BCFCF] shrink-0" />
+                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-brand-turquoise shrink-0" />
                       <span className="text-[#0F172A]/90">{b}</span>
                     </li>
                   ))}

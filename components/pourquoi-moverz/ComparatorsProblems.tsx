@@ -92,8 +92,8 @@ export default function ComparatorsProblems() {
               animation: mounted ? 'fadeInUp 1s ease-out 0.2s both' : 'none',
             }}
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-sm font-semibold text-[#0F172A] mb-6">
-              <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-sm font-semibold text-[#0F172A] mb-6">
+              <span className="h-2 w-2 rounded-full bg-brand-turquoise" />
               Le constat
             </div>
 

@@ -51,9 +51,9 @@ export default function PageHero({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="inline-flex items-center gap-2 rounded-full bg-white/90 px-5 py-2 text-sm font-semibold text-[#0F172A] shadow-md backdrop-blur-sm border border-[#6BCFCF]/30"
+              className="inline-flex items-center gap-2 rounded-full bg-white/90 px-5 py-2 text-sm font-semibold text-[#0F172A] shadow-md backdrop-blur-sm border border-brand-turquoise/30"
             >
-              <span className="h-2 w-2 rounded-full bg-[#6BCFCF] animate-pulse shadow-[0_0_8px_rgba(107,207,207,0.6)]" />
+              <span className="h-2 w-2 rounded-full bg-brand-turquoise animate-pulse shadow-[0_0_8px_rgba(107,207,207,0.6)]" />
               <span>{eyebrow}</span>
             </motion.div>
           )}

@@ -86,8 +86,8 @@ export default function VolumeCalculator() {
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center space-y-4 mb-12">
-          <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-2 text-sm font-semibold text-[#0F172A]">
-            <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
+          <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-2 text-sm font-semibold text-[#0F172A]">
+            <span className="h-2 w-2 rounded-full bg-brand-turquoise" />
             Outil gratuit
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-[#0F172A]">
@@ -113,8 +113,8 @@ export default function VolumeCalculator() {
                     onClick={() => setHousingType(type)}
                     className={`p-4 rounded-xl border-2 transition-all ${
                       housingType === type
-                        ? "border-[#6BCFCF] bg-[#6BCFCF]/10"
-                        : "border-[#E3E5E8] hover:border-[#6BCFCF]/50"
+                        ? "border-brand-turquoise bg-brand-turquoise/10"
+                        : "border-[#E3E5E8] hover:border-brand-turquoise/50"
                     }`}
                   >
                     <p className="text-sm font-semibold text-[#0F172A] capitalize">
@@ -166,14 +166,14 @@ export default function VolumeCalculator() {
                       key={item.id}
                       className={`p-4 rounded-xl border-2 transition-all ${
                         qty > 0
-                          ? "border-[#6BCFCF] bg-[#6BCFCF]/5"
+                          ? "border-brand-turquoise bg-brand-turquoise/5"
                           : "border-[#E3E5E8]"
                       }`}
                     >
                       <div className="flex items-start justify-between mb-2">
                         <span className="text-2xl">{item.icon}</span>
                         {qty > 0 && (
-                          <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#6BCFCF] text-white text-xs font-bold">
+                          <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-brand-turquoise text-white text-xs font-bold">
                             {qty}
                           </span>
                         )}
@@ -225,7 +225,7 @@ export default function VolumeCalculator() {
                   <div className="flex justify-between items-end">
                     <span className="text-sm text-white/70">Volume total</span>
                     <div className="text-right">
-                      <p className="text-4xl font-bold text-[#6BCFCF]">
+                      <p className="text-4xl font-bold text-brand-turquoise">
                         {totalVolume}
                       </p>
                       <p className="text-sm text-white/70">m³</p>
@@ -248,7 +248,7 @@ export default function VolumeCalculator() {
               {/* CTA */}
               <a
                 href={`https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/calculateur-volume-demenagement/&estimated_volume=${totalVolume}`}
-                className="block w-full text-center py-4 rounded-xl bg-[#6BCFCF] text-[#0F172A] font-semibold hover:bg-[#A8E8E8] transition-colors"
+                className="block w-full text-center py-4 rounded-xl bg-brand-turquoise text-[#0F172A] font-semibold hover:bg-[#A8E8E8] transition-colors"
               >
                 Obtenir des devis →
               </a>

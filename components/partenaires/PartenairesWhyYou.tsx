@@ -53,10 +53,10 @@ export default function PartenairesWhyYou() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-br from-[#F9FAFB] to-white border border-[#E3E5E8] hover:border-[#6BCFCF]/30 transition-colors"
+              className="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-br from-[#F9FAFB] to-white border border-[#E3E5E8] hover:border-brand-turquoise/30 transition-colors"
             >
-              <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[#6BCFCF]/10">
-                <item.icon className="w-6 h-6 text-[#6BCFCF]" />
+              <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-brand-turquoise/10">
+                <item.icon className="w-6 h-6 text-brand-turquoise" />
               </div>
               <div>
                 <h3 className="font-bold text-[#0F172A] mb-1">
@@ -80,14 +80,14 @@ export default function PartenairesWhyYou() {
         >
           <a
             href="/verifications-partenaires"
-            className="inline-flex items-center gap-2 text-[#0F172A] hover:text-[#6BCFCF] transition-colors font-medium"
+            className="inline-flex items-center gap-2 text-[#0F172A] hover:text-brand-turquoise transition-colors font-medium"
           >
             <span>En savoir plus sur nos critères de sélection</span>
             <span className="text-lg">→</span>
           </a>
           <div className="text-sm text-[#6B7280]">
             En rejoignant notre réseau, vous acceptez nos{" "}
-            <a href="/cgv-partenaires/" className="text-[#6BCFCF] hover:underline font-semibold">
+            <a href="/cgv-partenaires/" className="text-brand-turquoise hover:underline font-semibold">
               CGV Partenaires
             </a>
           </div>

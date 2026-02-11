@@ -168,8 +168,8 @@ export default function ExitIntentPopup() {
           onClick={(e) => e.stopPropagation()}
         >
           <div className="relative overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white shadow-2xl">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#6BCFCF]/10 via-transparent to-transparent pointer-events-none" />
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#6BCFCF] via-[#2B7A78] to-[#6BCFCF]" />
+            <div className="absolute inset-0 bg-gradient-to-br from-brand-turquoise/10 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-turquoise via-[#2B7A78] to-brand-turquoise" />
 
             <button
               onClick={handleClose}
@@ -181,12 +181,12 @@ export default function ExitIntentPopup() {
 
             <div className="relative p-5 md:p-6 space-y-4">
               <div className="flex items-center justify-between gap-3">
-                <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 border border-[#6BCFCF]/20 px-3 py-1.5">
+                <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 border border-brand-turquoise/20 px-3 py-1.5">
                   <Clock className="w-3.5 h-3.5 text-[#2B7A78]" />
                   <span className="text-xs font-semibold text-[#2B7A78]">3 minutes</span>
                 </div>
                 <div className="inline-flex items-center gap-1.5 text-xs text-[#64748B]">
-                  <Shield className="w-3.5 h-3.5 text-[#6BCFCF]" />
+                  <Shield className="w-3.5 h-3.5 text-brand-turquoise" />
                   <span>Sans démarchage • sécurisé</span>
                 </div>
               </div>

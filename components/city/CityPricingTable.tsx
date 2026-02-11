@@ -15,7 +15,7 @@ export function CityPricingTable({ cityName }: CityPricingTableProps) {
         <div className="rounded-2xl border border-[#E5E7EB] bg-white p-8 md:p-10 space-y-6">
           {/* Question exacte pour featured snippet */}
           <div className="text-center space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
               Prix déménagement
             </p>
             <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A]">
@@ -54,7 +54,7 @@ export function CityPricingTable({ cityName }: CityPricingTableProps) {
                   <td className="border border-[#E5E7EB] px-4 py-3 text-sm text-[#6B7280]">
                     15-20 m³
                   </td>
-                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm font-semibold text-[#6BCFCF]">
+                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm font-semibold text-brand-turquoise">
                     450-800€
                   </td>
                 </tr>
@@ -65,7 +65,7 @@ export function CityPricingTable({ cityName }: CityPricingTableProps) {
                   <td className="border border-[#E5E7EB] px-4 py-3 text-sm text-[#6B7280]">
                     25-35 m³
                   </td>
-                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm font-semibold text-[#6BCFCF]">
+                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm font-semibold text-brand-turquoise">
                     700-1200€
                   </td>
                 </tr>
@@ -76,7 +76,7 @@ export function CityPricingTable({ cityName }: CityPricingTableProps) {
                   <td className="border border-[#E5E7EB] px-4 py-3 text-sm text-[#6B7280]">
                     40-50 m³
                   </td>
-                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm font-semibold text-[#6BCFCF]">
+                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm font-semibold text-brand-turquoise">
                     1000-1800€
                   </td>
                 </tr>
@@ -87,7 +87,7 @@ export function CityPricingTable({ cityName }: CityPricingTableProps) {
                   <td className="border border-[#E5E7EB] px-4 py-3 text-sm text-[#6B7280]">
                     55-70 m³
                   </td>
-                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm font-semibold text-[#6BCFCF]">
+                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm font-semibold text-brand-turquoise">
                     1500-2500€
                   </td>
                 </tr>
@@ -98,7 +98,7 @@ export function CityPricingTable({ cityName }: CityPricingTableProps) {
                   <td className="border border-[#E5E7EB] px-4 py-3 text-sm text-[#6B7280]">
                     70-90 m³
                   </td>
-                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm font-semibold text-[#6BCFCF]">
+                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm font-semibold text-brand-turquoise">
                     2000-3500€
                   </td>
                 </tr>
@@ -114,21 +114,21 @@ export function CityPricingTable({ cityName }: CityPricingTableProps) {
             </p>
             <ul className="space-y-2 ml-4">
               <li className="flex gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#6BCFCF] shrink-0" />
+                <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-brand-turquoise shrink-0" />
                 <span><strong className="text-[#0F172A]">Le volume réel</strong> : plus l’estimation est précise, plus le devis est fiable. 
                 Plus précis = pas de mauvaise surprise jour J.</span>
               </li>
               <li className="flex gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#6BCFCF] shrink-0" />
+                <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-brand-turquoise shrink-0" />
                 <span><strong className="text-[#0F172A]">L'accès</strong> : Étages (avec/sans ascenseur), distance parking-entrée, 
                 autorisation stationnement.</span>
               </li>
               <li className="flex gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#6BCFCF] shrink-0" />
+                <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-brand-turquoise shrink-0" />
                 <span><strong className="text-[#0F172A]">La période</strong> : Été (juin-septembre), fins de mois, week-ends = tarifs +20-30%.</span>
               </li>
               <li className="flex gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#6BCFCF] shrink-0" />
+                <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-brand-turquoise shrink-0" />
                 <span><strong className="text-[#0F172A]">Les services</strong> : Éco (vous aidez), Standard (pros seuls), 
                 ou Clé en main (emballage + déballage).</span>
               </li>

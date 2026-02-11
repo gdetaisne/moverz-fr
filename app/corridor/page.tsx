@@ -20,7 +20,7 @@ export default function CorridorIndexPage() {
         <div className="container mx-auto max-w-6xl px-4 py-16 md:py-24 space-y-6">
           <Breadcrumbs items={[{ label: "Accueil", href: "/" }, { label: "Trajets", href: "/corridor/" }]} />
           <div className="text-center space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
               Corridors
             </p>
             <h1 className="text-3xl md:text-5xl font-bold">
@@ -40,7 +40,7 @@ export default function CorridorIndexPage() {
               <a
                 key={city.slug}
                 href={`/corridor/${city.slug}/`}
-                className="group rounded-2xl border border-[#E5E7EB] bg-white p-5 hover:border-[#6BCFCF]/60 hover:shadow-md transition-all"
+                className="group rounded-2xl border border-[#E5E7EB] bg-white p-5 hover:border-brand-turquoise/60 hover:shadow-md transition-all"
               >
                 <p className="text-sm text-[#6B7280]">Trajets depuis</p>
                 <h2 className="text-base md:text-lg font-semibold text-[#0F172A] group-hover:text-[#2B7A78] transition-colors">

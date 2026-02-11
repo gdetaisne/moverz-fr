@@ -26,7 +26,7 @@ function FAQItem({ faq, isOpen, onToggle }: { faq: FAQItem; isOpen: boolean; onT
       }`}
     >
       {/* Gradient accent on hover/open */}
-      <div className={`absolute inset-0 bg-gradient-to-r from-[#6BCFCF]/5 to-transparent opacity-0 transition-opacity duration-300 ${isOpen ? "opacity-100" : "group-hover:opacity-50"}`} />
+      <div className={`absolute inset-0 bg-gradient-to-r from-brand-turquoise/5 to-transparent opacity-0 transition-opacity duration-300 ${isOpen ? "opacity-100" : "group-hover:opacity-50"}`} />
       
       <button
         onClick={onToggle}
@@ -43,8 +43,8 @@ function FAQItem({ faq, isOpen, onToggle }: { faq: FAQItem; isOpen: boolean; onT
         >
           <div className={`flex items-center justify-center w-8 h-8 rounded-full transition-all duration-300 ${
             isOpen
-              ? "bg-[#6BCFCF]/15 text-[#2B7A78]"
-              : "bg-gray-100 text-gray-500 group-hover:bg-[#6BCFCF]/10 group-hover:text-[#2B7A78]"
+              ? "bg-brand-turquoise/15 text-[#2B7A78]"
+              : "bg-gray-100 text-gray-500 group-hover:bg-brand-turquoise/10 group-hover:text-[#2B7A78]"
           }`}>
             <ChevronDown className="w-5 h-5" />
           </div>
@@ -64,7 +64,7 @@ function FAQItem({ faq, isOpen, onToggle }: { faq: FAQItem; isOpen: boolean; onT
       >
         <div className="relative px-5 md:px-6 pb-5 md:pb-6">
           {/* Separator line */}
-          <div className="h-px bg-gradient-to-r from-[#6BCFCF]/20 via-[#6BCFCF]/40 to-transparent mb-4" />
+          <div className="h-px bg-gradient-to-r from-brand-turquoise/20 via-brand-turquoise/40 to-transparent mb-4" />
           <motion.p
             initial={false}
             animate={{ y: isOpen ? 0 : -10, opacity: isOpen ? 1 : 0 }}
@@ -96,9 +96,9 @@ export function FAQ({ title, faqs, id = "faq", limit = 8 }: FAQProps) {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#6BCFCF]/10 to-[#2B7A78]/10 border border-[#6BCFCF]/20 px-4 py-2 text-sm font-semibold text-[#2B7A78]"
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-[#2B7A78]/10 border border-brand-turquoise/20 px-4 py-2 text-sm font-semibold text-[#2B7A78]"
           >
-            <span className="h-2 w-2 rounded-full bg-[#6BCFCF] animate-pulse" />
+            <span className="h-2 w-2 rounded-full bg-brand-turquoise animate-pulse" />
             Questions fréquentes
           </motion.div>
           <motion.h2

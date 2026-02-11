@@ -44,7 +44,7 @@ export default function CGVPartenairesPage() {
           <div className="space-y-10 text-white/90">
             
             {/* Préambule */}
-            <div className="bg-[#6BCFCF]/10 border border-[#6BCFCF]/30 rounded-2xl p-6">
+            <div className="bg-brand-turquoise/10 border border-brand-turquoise/30 rounded-2xl p-6">
               <p className="text-white">
                 En rejoignant le réseau Moverz, vous acceptez les présentes Conditions Générales de Vente Partenaires 
                 et vous vous engagez à respecter les critères de qualité, de transparence et de professionnalisme décrits ci-dessous.
@@ -71,8 +71,8 @@ export default function CGVPartenairesPage() {
 
               <div className="space-y-6">
                 {/* 2.1 */}
-                <div className="pl-4 border-l-2 border-[#6BCFCF]/50">
-                  <h3 className="text-lg font-semibold text-[#6BCFCF] mb-2">2.1 Légalité et conformité</h3>
+                <div className="pl-4 border-l-2 border-brand-turquoise/50">
+                  <h3 className="text-lg font-semibold text-brand-turquoise mb-2">2.1 Légalité et conformité</h3>
                   <ul className="list-disc pl-6 mt-3 space-y-2 text-white/80">
                     <li>Être immatriculé au Registre du Commerce et des Sociétés (RCS) ou au Répertoire des Métiers (RM)</li>
                     <li>Disposer d'un numéro SIRET/SIREN actif et en règle avec les obligations fiscales et sociales</li>
@@ -82,8 +82,8 @@ export default function CGVPartenairesPage() {
                 </div>
 
                 {/* 2.2 */}
-                <div className="pl-4 border-l-2 border-[#6BCFCF]/50">
-                  <h3 className="text-lg font-semibold text-[#6BCFCF] mb-2">2.2 Assurance</h3>
+                <div className="pl-4 border-l-2 border-brand-turquoise/50">
+                  <h3 className="text-lg font-semibold text-brand-turquoise mb-2">2.2 Assurance</h3>
                   <ul className="list-disc pl-6 mt-3 space-y-2 text-white/80">
                     <li>Maintenir une assurance Responsabilité Civile Professionnelle (RC Pro) valide et à jour</li>
                     <li>Disposer d'une assurance couvrant les marchandises transportées (assurance déménagement)</li>
@@ -93,8 +93,8 @@ export default function CGVPartenairesPage() {
                 </div>
 
                 {/* 2.3 */}
-                <div className="pl-4 border-l-2 border-[#6BCFCF]/50">
-                  <h3 className="text-lg font-semibold text-[#6BCFCF] mb-2">2.3 Qualité et transparence du devis</h3>
+                <div className="pl-4 border-l-2 border-brand-turquoise/50">
+                  <h3 className="text-lg font-semibold text-brand-turquoise mb-2">2.3 Qualité et transparence du devis</h3>
                   <ul className="list-disc pl-6 mt-3 space-y-2 text-white/80">
                     <li>Établir des devis clairs, détaillés et conformes à la réglementation (prestations incluses, volume estimé, conditions d'accès, options, modalités de paiement)</li>
                     <li>Baser ses estimations sur les informations fournies par Moverz (inventaire, dossier client)</li>
@@ -105,8 +105,8 @@ export default function CGVPartenairesPage() {
                 </div>
 
                 {/* 2.4 */}
-                <div className="pl-4 border-l-2 border-[#6BCFCF]/50">
-                  <h3 className="text-lg font-semibold text-[#6BCFCF] mb-2">2.4 Qualité de service et respect des engagements</h3>
+                <div className="pl-4 border-l-2 border-brand-turquoise/50">
+                  <h3 className="text-lg font-semibold text-brand-turquoise mb-2">2.4 Qualité de service et respect des engagements</h3>
                   <ul className="list-disc pl-6 mt-3 space-y-2 text-white/80">
                     <li>Respecter les délais annoncés et les conditions convenues avec le client</li>
                     <li>Assurer la prestation de déménagement avec professionnalisme et soin</li>
@@ -117,8 +117,8 @@ export default function CGVPartenairesPage() {
                 </div>
 
                 {/* 2.5 */}
-                <div className="pl-4 border-l-2 border-[#6BCFCF]/50">
-                  <h3 className="text-lg font-semibold text-[#6BCFCF] mb-2">2.5 Tarification et facturation</h3>
+                <div className="pl-4 border-l-2 border-brand-turquoise/50">
+                  <h3 className="text-lg font-semibold text-brand-turquoise mb-2">2.5 Tarification et facturation</h3>
                   <ul className="list-disc pl-6 mt-3 space-y-2 text-white/80">
                     <li>Proposer des tarifs cohérents avec le marché et la réalité de la prestation</li>
                     <li>Émettre des factures conformes à la législation française (mentions obligatoires, TVA le cas échéant)</li>
@@ -127,8 +127,8 @@ export default function CGVPartenairesPage() {
                 </div>
 
                 {/* 2.6 */}
-                <div className="pl-4 border-l-2 border-[#6BCFCF]/50">
-                  <h3 className="text-lg font-semibold text-[#6BCFCF] mb-2">2.6 Protection des données personnelles (RGPD)</h3>
+                <div className="pl-4 border-l-2 border-brand-turquoise/50">
+                  <h3 className="text-lg font-semibold text-brand-turquoise mb-2">2.6 Protection des données personnelles (RGPD)</h3>
                   <ul className="list-disc pl-6 mt-3 space-y-2 text-white/80">
                     <li>Respecter le Règlement Général sur la Protection des Données (RGPD)</li>
                     <li>N'utiliser les données client transmises par Moverz que dans le cadre strict de l'établissement du devis et de la prestation de déménagement</li>
@@ -250,14 +250,14 @@ export default function CGVPartenairesPage() {
             </div>
 
             {/* Contact */}
-            <div className="bg-[#6BCFCF]/10 border border-[#6BCFCF]/30 rounded-2xl p-6">
+            <div className="bg-brand-turquoise/10 border border-brand-turquoise/30 rounded-2xl p-6">
               <h2 className="text-xl font-semibold text-white mb-3">Contact</h2>
               <p className="text-white/90">
                 Pour toute question relative aux présentes CGV-P, contactez-nous :
               </p>
               <ul className="mt-3 space-y-1 text-white/80">
-                <li>Email : <a href="mailto:lucie@moverz.fr" className="text-[#6BCFCF] hover:underline">lucie@moverz.fr</a></li>
-                <li>Calendly : <a href="https://calendly.com/lucie-moverz/30min" className="text-[#6BCFCF] hover:underline" target="_blank" rel="noopener noreferrer">Prendre rendez-vous</a></li>
+                <li>Email : <a href="mailto:lucie@moverz.fr" className="text-brand-turquoise hover:underline">lucie@moverz.fr</a></li>
+                <li>Calendly : <a href="https://calendly.com/lucie-moverz/30min" className="text-brand-turquoise hover:underline" target="_blank" rel="noopener noreferrer">Prendre rendez-vous</a></li>
               </ul>
             </div>
 

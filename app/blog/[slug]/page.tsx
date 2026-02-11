@@ -197,10 +197,10 @@ export default function BlogPostPage({ params }: PageProps) {
         const description = lines.slice(1).join(' ') || 'Obtenez plusieurs devis comparables en quelques minutes.';
 
         return (
-          <div className="my-8 rounded-2xl border-2 border-[#6BCFCF] bg-gradient-to-br from-[#F0F9FF] to-[#E0F2FE] p-6 md:p-8 text-center shadow-md">
+          <div className="my-8 rounded-2xl border-2 border-brand-turquoise bg-gradient-to-br from-[#F0F9FF] to-[#E0F2FE] p-6 md:p-8 text-center shadow-md">
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/20 px-4 py-1.5 text-xs font-semibold text-[#0F172A]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+              <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/20 px-4 py-1.5 text-xs font-semibold text-[#0F172A]">
+                <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
                 Action recommandée
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-[#0F172A] leading-tight">
@@ -212,7 +212,7 @@ export default function BlogPostPage({ params }: PageProps) {
               <a
                 href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/blog-article-cta"
                 rel="nofollow"
-                className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF] px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#5AB9B9] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#5AB9B9] transition-colors"
               >
                 <span>Comparer les devis gratuitement</span>
                 <span className="text-lg leading-none">→</span>
@@ -232,10 +232,10 @@ export default function BlogPostPage({ params }: PageProps) {
           "Démo rapide : dossier digital opposable, inventaire IA, déclaration de valeur, relances et exports.";
 
         return (
-          <div className="my-8 rounded-2xl border-2 border-[#6BCFCF] bg-gradient-to-br from-[#0F172A] to-[#1E293B] p-6 md:p-8 text-center shadow-md">
+          <div className="my-8 rounded-2xl border-2 border-brand-turquoise bg-gradient-to-br from-[#0F172A] to-[#1E293B] p-6 md:p-8 text-center shadow-md">
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold text-white/90 backdrop-blur-sm">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+                <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
                 Démo (déménageurs)
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-white leading-tight">
@@ -246,7 +246,7 @@ export default function BlogPostPage({ params }: PageProps) {
               </p>
               <a
                 href="/partenaires/#contact"
-                className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF] px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#5AB9B9] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#5AB9B9] transition-colors"
               >
                 <span>Demander une démo</span>
                 <span className="text-lg leading-none">→</span>
@@ -258,7 +258,7 @@ export default function BlogPostPage({ params }: PageProps) {
 
       // Blockquotes normales
       return (
-        <blockquote className="border-l-4 border-[#6BCFCF] bg-[#F0F9FF] py-3 px-4 my-6 not-italic text-[#04163a]" {...props}>
+        <blockquote className="border-l-4 border-brand-turquoise bg-[#F0F9FF] py-3 px-4 my-6 not-italic text-[#04163a]" {...props}>
           {children}
         </blockquote>
       );
@@ -312,7 +312,7 @@ export default function BlogPostPage({ params }: PageProps) {
       {/* Hero article */}
       <section className="section section-contrast">
         <div className="container max-w-3xl space-y-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
             Blog déménagement
           </p>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
@@ -320,7 +320,7 @@ export default function BlogPostPage({ params }: PageProps) {
           </h1>
           <div className="flex flex-wrap items-center gap-3 text-xs text-white/70">
             {post.category && (
-              <span className="rounded-full bg-white/10 px-2 py-0.5 font-semibold text-[11px] text-[#6BCFCF]">
+              <span className="rounded-full bg-white/10 px-2 py-0.5 font-semibold text-[11px] text-brand-turquoise">
                 {post.category}
               </span>
             )}
@@ -332,7 +332,7 @@ export default function BlogPostPage({ params }: PageProps) {
             {city && (
               <a
                 href={`/demenagement/${city.slug}/`}
-                className="rounded-full bg-white/10 px-3 py-0.5 text-[11px] text-[#6BCFCF] hover:bg-white/20 hover:text-white transition-colors"
+                className="rounded-full bg-white/10 px-3 py-0.5 text-[11px] text-brand-turquoise hover:bg-white/20 hover:text-white transition-colors"
               >
                 Déménagement {city.nameCapitalized}
               </a>
@@ -357,11 +357,11 @@ export default function BlogPostPage({ params }: PageProps) {
                 id="blog-article-search-q"
                 name="q"
                 placeholder="Rechercher (blog, villes)…"
-                className="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]"
+                className="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-brand-turquoise"
               />
               <button
                 type="submit"
-                className="shrink-0 rounded-xl bg-[#6BCFCF] px-5 py-3 text-sm font-semibold text-[#0F172A] hover:bg-[#5AB9B9] transition-colors"
+                className="shrink-0 rounded-xl bg-brand-turquoise px-5 py-3 text-sm font-semibold text-[#0F172A] hover:bg-[#5AB9B9] transition-colors"
               >
                 OK
               </button>
@@ -406,8 +406,8 @@ export default function BlogPostPage({ params }: PageProps) {
         <section className="section section-light">
           <div className="container max-w-3xl">
             <div className="rounded-3xl bg-white px-6 py-12 md:px-12 md:py-16 shadow-sm border border-[#E3E5E8] text-center space-y-6">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+              <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-xs font-medium text-brand-turquoise">
+                <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
                 Article en cours de réécriture
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-[#04163a]">
@@ -442,7 +442,7 @@ export default function BlogPostPage({ params }: PageProps) {
                 <a
                   key={item.slug}
                   href={`/blog/${item.slug}/`}
-                  className="group flex flex-col gap-1 rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 hover:border-[#6BCFCF]/50 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200"
+                  className="group flex flex-col gap-1 rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 hover:border-brand-turquoise/50 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200"
                 >
                   <div className="flex flex-wrap items-center gap-2 text-xs text-[#6B7280]">
                     {item.category && (
@@ -468,7 +468,7 @@ export default function BlogPostPage({ params }: PageProps) {
       <section className="section section-light">
         <div className="container max-w-3xl text-[#04163a]">
           <div className="rounded-2xl border border-[#E3E5E8] bg-white p-6 md:p-8 text-center space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
               Ressources utiles
             </p>
             <p className="text-sm text-[#6B7280] max-w-2xl mx-auto">
@@ -496,7 +496,7 @@ export default function BlogPostPage({ params }: PageProps) {
               {city ? (
                 <a
                   href={`/quartiers-${city.slug}/`}
-                  className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise/60 hover:bg-[#FAFAFA] transition-colors"
                 >
                   <span>Quartiers de {city.nameCapitalized}</span>
                   <span>→</span>
@@ -506,7 +506,7 @@ export default function BlogPostPage({ params }: PageProps) {
               {cityPricePost ? (
                 <a
                   href={`/blog/${cityPricePost.slug}/`}
-                  className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise/60 hover:bg-[#FAFAFA] transition-colors"
                 >
                   <span>Prix à {city?.nameCapitalized}</span>
                   <span>→</span>
@@ -514,7 +514,7 @@ export default function BlogPostPage({ params }: PageProps) {
               ) : (
                 <a
                   href="/blog/prix-et-devis/"
-                  className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise/60 hover:bg-[#FAFAFA] transition-colors"
                 >
                   <span>Guides prix & devis</span>
                   <span>→</span>
@@ -523,7 +523,7 @@ export default function BlogPostPage({ params }: PageProps) {
 
               <a
                 href="/blog/checklists-et-guides/"
-                className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise/60 hover:bg-[#FAFAFA] transition-colors"
               >
                 <span>Checklists & guides</span>
                 <span>→</span>
@@ -536,7 +536,7 @@ export default function BlogPostPage({ params }: PageProps) {
       {/* CTA vers le comparateur */}
       <section className="section section-contrast">
         <div className="container max-w-3xl text-center space-y-5">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
             Passer à l&apos;action
           </p>
           <h2 className="text-2xl md:text-3xl font-semibold text-white">

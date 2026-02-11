@@ -102,7 +102,7 @@ export default function HeroMockup() {
       </div>
 
       {/* Subtle glow effect */}
-      <div className="absolute inset-0 rounded-[48px] bg-gradient-to-b from-[#6BCFCF]/10 to-transparent group-hover:from-[#6BCFCF]/20 blur-2xl -z-10 transition-all duration-500" />
+      <div className="absolute inset-0 rounded-[48px] bg-gradient-to-b from-brand-turquoise/10 to-transparent group-hover:from-brand-turquoise/20 blur-2xl -z-10 transition-all duration-500" />
 
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes float {

@@ -279,11 +279,11 @@ export default function RootLayout({
                     id="footer-search-q"
                     name="q"
                     placeholder="Rechercher (blog, villes)…"
-                    className="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-2 text-sm text-white placeholder:text-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]"
+                    className="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-2 text-sm text-white placeholder:text-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-brand-turquoise"
                   />
                   <button
                     type="submit"
-                    className="shrink-0 rounded-xl bg-[#6BCFCF] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:bg-[#5AB9B9] transition-colors"
+                    className="shrink-0 rounded-xl bg-brand-turquoise px-4 py-2 text-sm font-semibold text-[#0F172A] hover:bg-[#5AB9B9] transition-colors"
                   >
                     OK
                   </button>
@@ -323,7 +323,7 @@ export default function RootLayout({
                   <li><a href="/demenagement/lyon/" className="text-white/70 hover:text-white transition-colors">Lyon</a></li>
                   <li><a href="/demenagement/marseille/" className="text-white/70 hover:text-white transition-colors">Marseille</a></li>
                   <li><a href="/demenagement/toulouse/" className="text-white/70 hover:text-white transition-colors">Toulouse</a></li>
-                  <li><a href="/villes/" className="text-[#6BCFCF] hover:text-white transition-colors">Voir toutes les villes →</a></li>
+                  <li><a href="/villes/" className="text-brand-turquoise hover:text-white transition-colors">Voir toutes les villes →</a></li>
                 </ul>
               </div>
 

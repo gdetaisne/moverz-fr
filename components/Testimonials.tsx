@@ -51,12 +51,12 @@ function TestimonialCard({ review, index }: { review: any; index: number }) {
       }}
     >
       {/* Glow effect au hover */}
-      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#6BCFCF]/0 to-[#4FB8B8]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-10" />
+      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-brand-turquoise/0 to-[#4FB8B8]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-10" />
       
       <div className="relative space-y-5">
         {/* Avatar + Info */}
         <div className="flex items-center gap-4">
-          <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#6BCFCF]/30 to-[#4FB8B8]/40 border-2 border-[#6BCFCF]/40 transition-all duration-300 group-hover:border-[#6BCFCF]/60 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(107,207,207,0.5)]">
+          <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-turquoise/30 to-[#4FB8B8]/40 border-2 border-brand-turquoise/40 transition-all duration-300 group-hover:border-brand-turquoise/60 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(107,207,207,0.5)]">
             <span className="text-sm font-bold text-white">
               {initials}
             </span>
@@ -89,7 +89,7 @@ export default function Testimonials() {
     <div className="space-y-10">
       {/* Header avec contraste bleu */}
       <div className="space-y-4 text-center">
-        <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#6BCFCF]">
+        <p className="text-xs font-bold uppercase tracking-[0.3em] text-brand-turquoise">
           Avis clients
         </p>
         <h2 className="text-3xl font-bold text-white md:text-4xl lg:text-5xl leading-tight">

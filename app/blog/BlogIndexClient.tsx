@@ -116,15 +116,15 @@ export default function BlogIndexClient() {
       {/* Hero Premium */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white">
         {/* Animated background */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#6BCFCF]/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#6BCFCF]/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }} />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-turquoise/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-turquoise/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }} />
         
         <div className="relative container mx-auto max-w-6xl px-4 py-20 md:py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Content */}
             <div className="space-y-8 animate-fade-in">
               <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2 text-sm font-medium backdrop-blur-sm">
-                <BookOpen className="w-4 h-4 text-[#6BCFCF]" />
+                <BookOpen className="w-4 h-4 text-brand-turquoise" />
                 <span>{isPro ? "Ressources déménageurs" : "Blog déménagement"}</span>
               </div>
 
@@ -133,12 +133,12 @@ export default function BlogIndexClient() {
                   <>
                     {heroTitle}
                     <br />
-                    <span className="text-[#6BCFCF]">devis · litiges · relances</span>
+                    <span className="text-brand-turquoise">devis · litiges · relances</span>
                   </>
                 ) : (
                   <>
                     Guides, prix &<br />
-                    <span className="text-[#6BCFCF]">checklists</span>
+                    <span className="text-brand-turquoise">checklists</span>
                   </>
                 )}
               </h1>
@@ -156,11 +156,11 @@ export default function BlogIndexClient() {
                     id="blog-search-q"
                     name="q"
                     placeholder="Rechercher (blog, villes)…"
-                    className="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]"
+                    className="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-brand-turquoise"
                   />
                   <button
                     type="submit"
-                    className="shrink-0 rounded-xl bg-[#6BCFCF] px-5 py-3 text-sm font-semibold text-[#0F172A] hover:bg-[#5AB9B9] transition-colors"
+                    className="shrink-0 rounded-xl bg-brand-turquoise px-5 py-3 text-sm font-semibold text-[#0F172A] hover:bg-[#5AB9B9] transition-colors"
                   >
                     OK
                   </button>
@@ -175,7 +175,7 @@ export default function BlogIndexClient() {
                   <>
                     <a
                       href="/partenaires/#contact"
-                      className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF] px-6 py-3 text-base font-semibold text-[#0F172A] hover:scale-105 transition-transform duration-300"
+                      className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise px-6 py-3 text-base font-semibold text-[#0F172A] hover:scale-105 transition-transform duration-300"
                     >
                       <span>Demander une démo</span>
                       <ArrowRight className="w-4 h-4" />
@@ -191,7 +191,7 @@ export default function BlogIndexClient() {
                   <>
                     <a
                       href="#articles"
-                      className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF] px-6 py-3 text-base font-semibold text-[#0F172A] hover:scale-105 transition-transform duration-300"
+                      className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise px-6 py-3 text-base font-semibold text-[#0F172A] hover:scale-105 transition-transform duration-300"
                     >
                       <span>Explorer les articles</span>
                       <ArrowRight className="w-4 h-4" />
@@ -214,17 +214,17 @@ export default function BlogIndexClient() {
                   icon: BookOpen,
                   label: isPro ? "Articles déménageurs" : "Articles publiés",
                   value: (isPro ? proPosts.length : PUBLISHED_BLOG_POSTS.length).toString(),
-                  color: "text-[#6BCFCF]",
+                  color: "text-brand-turquoise",
                 },
-                { icon: TrendingUp, label: "Lectures/mois", value: "12 000+", color: "text-[#6BCFCF]" },
-                { icon: Clock, label: "Temps de lecture moyen", value: "5 min", color: "text-[#6BCFCF]" },
+                { icon: TrendingUp, label: "Lectures/mois", value: "12 000+", color: "text-brand-turquoise" },
+                { icon: Clock, label: "Temps de lecture moyen", value: "5 min", color: "text-brand-turquoise" },
               ].map((stat, i) => (
                 <div
                   key={i}
-                  className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-[#6BCFCF]/50 transition-all duration-300"
+                  className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-brand-turquoise/50 transition-all duration-300"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#6BCFCF]/10 flex items-center justify-center">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-brand-turquoise/10 flex items-center justify-center">
                       <stat.icon className={`w-6 h-6 ${stat.color}`} />
                     </div>
                     <div>
@@ -243,8 +243,8 @@ export default function BlogIndexClient() {
       <section id="featured" className="py-20 md:py-32 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto max-w-6xl px-4">
           <div className="mb-16 text-center space-y-4">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-2 text-sm font-semibold text-[#6BCFCF]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-2 text-sm font-semibold text-brand-turquoise">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise animate-pulse" />
               À lire en priorité
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A]">
@@ -262,17 +262,17 @@ export default function BlogIndexClient() {
                   href={`/blog/${post.slug}/`}
                   className="group block h-full"
                 >
-                  <article className="h-full rounded-2xl border-2 border-gray-200 bg-white p-8 hover:border-[#6BCFCF] hover:shadow-2xl transition-all duration-300">
+                  <article className="h-full rounded-2xl border-2 border-gray-200 bg-white p-8 hover:border-brand-turquoise hover:shadow-2xl transition-all duration-300">
                     {/* Category badge */}
                     {post.category && (
-                      <span className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-3 py-1.5 text-xs font-bold text-[#6BCFCF] mb-4">
+                      <span className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-3 py-1.5 text-xs font-bold text-brand-turquoise mb-4">
                         {CATEGORIES.find((c) => c.slug === post.category)?.icon}
                         {CATEGORIES.find((c) => c.slug === post.category)?.label ?? post.category}
                       </span>
                     )}
 
                     {/* Title */}
-                    <h3 className="text-xl font-bold text-[#0F172A] group-hover:text-[#6BCFCF] transition-colors line-clamp-2 mb-4">
+                    <h3 className="text-xl font-bold text-[#0F172A] group-hover:text-brand-turquoise transition-colors line-clamp-2 mb-4">
                       {post.title}
                     </h3>
 
@@ -289,7 +289,7 @@ export default function BlogIndexClient() {
                           <span>{post.readingTimeMinutes} min</span>
                         </div>
                       )}
-                      <span className="inline-flex items-center gap-1 text-[#6BCFCF] font-semibold group-hover:gap-2 transition-all">
+                      <span className="inline-flex items-center gap-1 text-brand-turquoise font-semibold group-hover:gap-2 transition-all">
                         Lire l'article
                         <ArrowRight className="w-3.5 h-3.5" />
                       </span>
@@ -332,7 +332,7 @@ export default function BlogIndexClient() {
                     <span>{cat.icon}</span>
                     <span>{cat.label}</span>
                     <span className="text-xs text-[#6B7280]">({getCategoryCount(cat.slug)})</span>
-                    <span className="text-xs text-[#6BCFCF] group-hover:text-[#0F172A] transition-colors">→</span>
+                    <span className="text-xs text-brand-turquoise group-hover:text-[#0F172A] transition-colors">→</span>
                   </Link>
                 ) : (
                   <button
@@ -408,11 +408,11 @@ export default function BlogIndexClient() {
                     href={`/blog/${post.slug}/`}
                     className="group block h-full"
                   >
-                    <article className="h-full rounded-xl border border-gray-200 bg-white p-6 hover:border-[#6BCFCF] hover:shadow-lg transition-all duration-300">
+                    <article className="h-full rounded-xl border border-gray-200 bg-white p-6 hover:border-brand-turquoise hover:shadow-lg transition-all duration-300">
                       {/* Meta tags */}
                       <div className="flex flex-wrap items-center gap-2 mb-3">
                         {post.category && (
-                          <span className="text-xs font-semibold text-[#6BCFCF]">
+                          <span className="text-xs font-semibold text-brand-turquoise">
                             {CATEGORIES.find(c => c.slug === post.category)?.icon}
                           </span>
                         )}
@@ -424,7 +424,7 @@ export default function BlogIndexClient() {
                       </div>
 
                       {/* Title */}
-                      <h3 className="text-base font-bold text-[#0F172A] group-hover:text-[#6BCFCF] transition-colors line-clamp-2 mb-3">
+                      <h3 className="text-base font-bold text-[#0F172A] group-hover:text-brand-turquoise transition-colors line-clamp-2 mb-3">
                         {post.title}
                       </h3>
 
@@ -443,7 +443,7 @@ export default function BlogIndexClient() {
                             <span>{post.readingTimeMinutes} min</span>
                           </div>
                         )}
-                        <span className="text-xs font-semibold text-[#6BCFCF] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                        <span className="text-xs font-semibold text-brand-turquoise group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
                           Lire <ArrowRight className="w-3 h-3" />
                         </span>
                       </div>

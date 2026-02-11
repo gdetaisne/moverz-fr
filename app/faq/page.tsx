@@ -28,7 +28,7 @@ const faqCategories = [
       },
       {
         q: "Quelle est la différence entre Moverz et les autres comparateurs ?",
-        a: "La plupart des comparateurs (45-50% du marché) se contentent de revendre vos coordonnées aux déménageurs. Moverz va beaucoup plus loin : nous standardisons votre dossier, et nous vérifions la santé financière de chaque entreprise (score Creditsafe), leur historique de litiges, et leur identité légale. Le prix ne fait pas tout : nous vous aidons à choisir un déménageur fiable, pas juste le moins cher. En savoir plus sur <a href='/pourquoi-moverz/' class='underline text-[#6BCFCF]'>notre approche unique</a>.",
+        a: "La plupart des comparateurs (45-50% du marché) se contentent de revendre vos coordonnées aux déménageurs. Moverz va beaucoup plus loin : nous standardisons votre dossier, et nous vérifions la santé financière de chaque entreprise (score Creditsafe), leur historique de litiges, et leur identité légale. Le prix ne fait pas tout : nous vous aidons à choisir un déménageur fiable, pas juste le moins cher. En savoir plus sur <a href='/pourquoi-moverz/' class='underline text-brand-turquoise'>notre approche unique</a>.",
       },
       {
         q: "Combien de devis vais-je recevoir ?",
@@ -76,7 +76,7 @@ const faqCategories = [
       },
       {
         q: "Le marché du déménagement est-il risqué ?",
-        a: "Oui, malheureusement. Selon une enquête DGCCRF de 2023, 64% des entreprises de déménagement contrôlées présentaient au moins une anomalie. En 2024, 257 entreprises du secteur ont fait faillite sur environ 1 300 établissements. Et 90% des sociétés ont moins de 20 salariés, ce qui rend l'évaluation de leur fiabilité très difficile sans outils spécialisés. Consultez notre guide complet : <a href='/blog/eviter-arnaques-demenagement/' class='underline text-[#6BCFCF]'>Comment éviter les arnaques au déménagement</a>.",
+        a: "Oui, malheureusement. Selon une enquête DGCCRF de 2023, 64% des entreprises de déménagement contrôlées présentaient au moins une anomalie. En 2024, 257 entreprises du secteur ont fait faillite sur environ 1 300 établissements. Et 90% des sociétés ont moins de 20 salariés, ce qui rend l'évaluation de leur fiabilité très difficile sans outils spécialisés. Consultez notre guide complet : <a href='/blog/eviter-arnaques-demenagement/' class='underline text-brand-turquoise'>Comment éviter les arnaques au déménagement</a>.",
       },
       {
         q: "Comment Moverz vérifie-t-il les déménageurs ?",
@@ -153,7 +153,7 @@ export default function FAQPage() {
         <div className="container max-w-5xl">
           <div className="rounded-2xl border border-[#E3E5E8] bg-white p-6 md:p-8">
             <div className="text-center space-y-3 mb-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">À lire aussi</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">À lire aussi</p>
               <h2 className="text-xl md:text-2xl font-bold text-[#0F172A]">Guides utiles (sans blabla)</h2>
               <p className="text-sm text-[#6B7280] max-w-2xl mx-auto">
                 Des pages courtes et actionnables pour vérifier un déménageur et éviter les zones floues.
@@ -181,7 +181,7 @@ export default function FAQPage() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="group rounded-2xl border border-[#E5E7EB] bg-white p-5 hover:border-[#6BCFCF]/50 hover:shadow-sm transition-all"
+                  className="group rounded-2xl border border-[#E5E7EB] bg-white p-5 hover:border-brand-turquoise/50 hover:shadow-sm transition-all"
                 >
                   <p className="text-sm font-semibold text-[#0F172A] group-hover:text-[#2B7A78]">{item.title}</p>
                   <p className="mt-1 text-xs text-[#6B7280] leading-relaxed">{item.desc}</p>
@@ -224,7 +224,7 @@ export default function FAQPage() {
             ].map((item, i) => (
               <div 
                 key={i}
-                className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white/90 backdrop-blur-sm p-5 shadow-[0_4px_16px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] md:hover:scale-[1.02] hover:border-[#6BCFCF]/30 transition-all duration-300"
+                className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white/90 backdrop-blur-sm p-5 shadow-[0_4px_16px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] md:hover:scale-[1.02] hover:border-brand-turquoise/30 transition-all duration-300"
               >
                 {/* Gradient overlay on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
@@ -248,8 +248,8 @@ export default function FAQPage() {
       <section className="section section-light pt-4">
         <div className="container max-w-4xl">
           <div className="text-center mb-12 space-y-3">
-            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#6BCFCF]/10 to-[#2B7A78]/10 border border-[#6BCFCF]/20 px-4 py-2 text-sm font-semibold text-[#2B7A78]">
-              <span className="h-2 w-2 rounded-full bg-[#6BCFCF] animate-pulse" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-[#2B7A78]/10 border border-brand-turquoise/20 px-4 py-2 text-sm font-semibold text-[#2B7A78]">
+              <span className="h-2 w-2 rounded-full bg-brand-turquoise animate-pulse" />
               Questions & Réponses
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
@@ -290,11 +290,11 @@ export default function FAQPage() {
           {/* Encore une question ? - Premium Tech */}
           <div className="mt-16 relative overflow-hidden rounded-3xl border border-gray-200 bg-gradient-to-br from-white via-gray-50 to-white p-8 md:p-12 text-center shadow-xl">
             {/* Gradient overlays */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#6BCFCF]/10 rounded-full blur-3xl" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-turquoise/10 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#2B7A78]/10 rounded-full blur-3xl" />
             
             <div className="relative space-y-6">
-              <div className="inline-flex items-center justify-center h-20 w-20 rounded-2xl bg-gradient-to-br from-[#6BCFCF]/20 to-[#2B7A78]/20 border border-[#6BCFCF]/30 mx-auto text-[#2B7A78] shadow-lg hover:scale-110 transition-transform duration-300">
+              <div className="inline-flex items-center justify-center h-20 w-20 rounded-2xl bg-gradient-to-br from-brand-turquoise/20 to-[#2B7A78]/20 border border-brand-turquoise/30 mx-auto text-[#2B7A78] shadow-lg hover:scale-110 transition-transform duration-300">
                 <svg className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>

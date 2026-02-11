@@ -61,7 +61,7 @@ export default function CorridorHubFromPage({ params }: PageProps) {
     <main className="bg-white">
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white">
         <div className="container mx-auto max-w-6xl px-4 py-16 md:py-24 space-y-6 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
             Trajets de déménagement
           </p>
           <h1 className="text-3xl md:text-5xl font-bold">
@@ -107,7 +107,7 @@ export default function CorridorHubFromPage({ params }: PageProps) {
               <a
                 key={to.slug}
                 href={`/${from.slug}-vers-${to.slug}/`}
-                className="group rounded-2xl border border-[#E5E7EB] bg-white p-5 hover:border-[#6BCFCF]/60 hover:shadow-md transition-all"
+                className="group rounded-2xl border border-[#E5E7EB] bg-white p-5 hover:border-brand-turquoise/60 hover:shadow-md transition-all"
               >
                 <p className="text-sm text-[#6B7280]">Déménagement</p>
                 <h3 className="text-base md:text-lg font-semibold text-[#0F172A] group-hover:text-[#2B7A78] transition-colors">

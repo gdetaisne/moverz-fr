@@ -6,8 +6,8 @@ export default function ProFinalCTA() {
   return (
     <section className="relative py-20 md:py-32 bg-gradient-to-br from-[#0F172A] to-[#1E293B] overflow-hidden">
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#6BCFCF] rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#6BCFCF] rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }} />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-turquoise rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-turquoise rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }} />
       </div>
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -45,15 +45,15 @@ export default function ProFinalCTA() {
 
           <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-white/70 pt-4">
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[#6BCFCF]" />
+              <CheckCircle2 className="w-4 h-4 text-brand-turquoise" />
               Dossier opposable
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[#6BCFCF]" />
+              <CheckCircle2 className="w-4 h-4 text-brand-turquoise" />
               Relances automatiques
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[#6BCFCF]" />
+              <CheckCircle2 className="w-4 h-4 text-brand-turquoise" />
               Exports & devis
             </div>
           </div>

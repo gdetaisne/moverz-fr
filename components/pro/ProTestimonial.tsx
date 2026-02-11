@@ -31,8 +31,8 @@ export default function ProTestimonial() {
   return (
     <section className="relative py-20 md:py-32 bg-gradient-to-br from-[#0F172A] to-[#1E293B] text-white overflow-hidden">
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-0 w-96 h-96 bg-[#6BCFCF] rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
-        <div className="absolute bottom-20 right-0 w-96 h-96 bg-[#6BCFCF] rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }} />
+        <div className="absolute top-20 left-0 w-96 h-96 bg-brand-turquoise rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
+        <div className="absolute bottom-20 right-0 w-96 h-96 bg-brand-turquoise rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }} />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -42,7 +42,7 @@ export default function ProTestimonial() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-2 text-sm font-medium text-[#6BCFCF] border border-[#6BCFCF]/20 mb-6">
+          <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-2 text-sm font-medium text-brand-turquoise border border-brand-turquoise/20 mb-6">
             <Quote className="w-4 h-4" />
             Témoignages
           </div>
@@ -64,9 +64,9 @@ export default function ProTestimonial() {
               transition={{ delay: i * 0.1 }}
               className="relative"
             >
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-[#6BCFCF]/50 transition-all duration-300">
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-brand-turquoise/50 transition-all duration-300">
                 {/* Quote icon */}
-                <Quote className="w-10 h-10 text-[#6BCFCF]/30 mb-6" />
+                <Quote className="w-10 h-10 text-brand-turquoise/30 mb-6" />
 
                 {/* Quote text */}
                 <blockquote className="text-lg leading-relaxed mb-8">
@@ -75,7 +75,7 @@ export default function ProTestimonial() {
 
                 {/* Author */}
                 <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/10">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#6BCFCF] to-[#2B7A78] flex items-center justify-center text-lg font-bold">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-brand-turquoise to-[#2B7A78] flex items-center justify-center text-lg font-bold">
                     {testimonial.author.split(' ').map(n => n[0]).join('')}
                   </div>
                   <div>
@@ -88,10 +88,10 @@ export default function ProTestimonial() {
                 <div className="grid grid-cols-3 gap-4">
                   {testimonial.stats.map((stat, j) => (
                     <div key={j} className="text-center">
-                      <div className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-[#6BCFCF]/10 mb-2">
-                        <stat.icon className="w-4 h-4 text-[#6BCFCF]" />
+                      <div className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-turquoise/10 mb-2">
+                        <stat.icon className="w-4 h-4 text-brand-turquoise" />
                       </div>
-                      <p className="text-2xl font-bold text-[#6BCFCF] mb-1">{stat.value}</p>
+                      <p className="text-2xl font-bold text-brand-turquoise mb-1">{stat.value}</p>
                       <p className="text-xs text-white/70">{stat.label}</p>
                     </div>
                   ))}
@@ -115,7 +115,7 @@ export default function ProTestimonial() {
             { value: "95%", label: "Taux de satisfaction" },
           ].map((stat, i) => (
             <div key={i}>
-              <p className="text-4xl font-bold text-[#6BCFCF] mb-2">{stat.value}</p>
+              <p className="text-4xl font-bold text-brand-turquoise mb-2">{stat.value}</p>
               <p className="text-sm text-white/70">{stat.label}</p>
             </div>
           ))}

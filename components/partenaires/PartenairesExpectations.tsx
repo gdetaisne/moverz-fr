@@ -46,15 +46,15 @@ export default function PartenairesExpectations() {
                 transition={{ delay: i * 0.1 }}
                 className="flex items-start gap-3"
               >
-                <CheckCircle2 className="w-6 h-6 text-[#6BCFCF] flex-shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-6 h-6 text-brand-turquoise flex-shrink-0 mt-0.5" />
                 <span className="text-[#1E293B]">{item}</span>
               </motion.li>
             ))}
           </ul>
 
-          <div className="p-5 rounded-xl bg-[#6BCFCF]/10 border border-[#6BCFCF]/30">
+          <div className="p-5 rounded-xl bg-brand-turquoise/10 border border-brand-turquoise/30">
             <p className="text-[#0F172A]">
-              <span className="font-bold">Délai conseillé :</span> idéalement sous <span className="font-semibold text-[#6BCFCF]">24–48h</span> 
+              <span className="font-bold">Délai conseillé :</span> idéalement sous <span className="font-semibold text-brand-turquoise">24–48h</span> 
               {" "}(plus vite = plus de chances d'être choisi).
             </p>
           </div>

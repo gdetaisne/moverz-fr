@@ -122,7 +122,7 @@ export default function ProofStrip() {
       
       {/* Header simplifié et centré */}
       <div className="relative text-center space-y-4">
-        <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#6BCFCF]">
+        <p className="text-xs font-bold uppercase tracking-[0.3em] text-brand-turquoise">
           Pourquoi Moverz
         </p>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#04163a] leading-tight">
@@ -153,20 +153,20 @@ export default function ProofStrip() {
               key={stat.label}
               className={`group relative rounded-3xl border p-6 md:p-8 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.12)] motion-safe:animate-fade-up-soft ${
                 stat.highlight 
-                  ? 'border-[#6BCFCF]/40 bg-[#6BCFCF]/5 hover:border-[#6BCFCF]/60 hover:shadow-[0_20px_60px_rgba(107,207,207,0.25)]' 
-                  : 'border-[#E3E5E8] bg-white hover:border-[#6BCFCF]/30'
+                  ? 'border-brand-turquoise/40 bg-brand-turquoise/5 hover:border-brand-turquoise/60 hover:shadow-[0_20px_60px_rgba(107,207,207,0.25)]' 
+                  : 'border-[#E3E5E8] bg-white hover:border-brand-turquoise/30'
               }`}
               style={{ animationDelay: `${index * 80}ms` }}
             >
               {/* Glow effect au hover */}
-              <div className="absolute inset-0 rounded-3xl bg-[#6BCFCF]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-5" />
+              <div className="absolute inset-0 rounded-3xl bg-brand-turquoise/0 opacity-0 transition-opacity duration-500 group-hover:opacity-5" />
               
               <div className="relative space-y-4">
                 {/* Pictogramme SVG */}
                 <div className={`flex h-12 w-12 items-center justify-center rounded-2xl border-2 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 ${
                   stat.highlight
-                    ? 'bg-[#6BCFCF]/20 border-[#6BCFCF]/40 text-[#6BCFCF] group-hover:shadow-[0_0_20px_rgba(107,207,207,0.4)]'
-                    : 'bg-[#F8F9FA] border-[#E3E5E8] text-[#4b5c6b] group-hover:border-[#6BCFCF]/40'
+                    ? 'bg-brand-turquoise/20 border-brand-turquoise/40 text-brand-turquoise group-hover:shadow-[0_0_20px_rgba(107,207,207,0.4)]'
+                    : 'bg-[#F8F9FA] border-[#E3E5E8] text-[#4b5c6b] group-hover:border-brand-turquoise/40'
                 }`}>
                   {stat.icon}
       </div>
@@ -178,8 +178,8 @@ export default function ProofStrip() {
                   <div className="flex items-baseline gap-1">
                     <span className={`text-4xl md:text-5xl font-bold leading-none transition-all duration-300 ${
                       stat.highlight 
-                        ? 'text-[#6BCFCF]'
-                        : 'text-[#04163a] group-hover:text-[#6BCFCF]'
+                        ? 'text-brand-turquoise'
+                        : 'text-[#04163a] group-hover:text-brand-turquoise'
                     }`}>
                       {displayValue}
                     </span>
@@ -197,12 +197,12 @@ export default function ProofStrip() {
       
       {/* Pills réassurance en bas */}
       <div className="relative flex flex-wrap items-center justify-center gap-3 pt-4">
-        <span className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-4 py-2.5 text-xs md:text-sm font-semibold text-[#04163a] shadow-sm hover:border-[#6BCFCF]/40 hover:bg-[#F8F9FA] transition-all duration-300">
-          <span className="h-2 w-2 rounded-full bg-[#6BCFCF] animate-pulse" />
+        <span className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-4 py-2.5 text-xs md:text-sm font-semibold text-[#04163a] shadow-sm hover:border-brand-turquoise/40 hover:bg-[#F8F9FA] transition-all duration-300">
+          <span className="h-2 w-2 rounded-full bg-brand-turquoise animate-pulse" />
           Déménageurs contrôlés
         </span>
-        <span className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-4 py-2.5 text-xs md:text-sm font-semibold text-[#04163a] shadow-sm hover:border-[#6BCFCF]/40 hover:bg-[#F8F9FA] transition-all duration-300">
-          <span className="h-2 w-2 rounded-full bg-[#6BCFCF] animate-pulse" />
+        <span className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-4 py-2.5 text-xs md:text-sm font-semibold text-[#04163a] shadow-sm hover:border-brand-turquoise/40 hover:bg-[#F8F9FA] transition-all duration-300">
+          <span className="h-2 w-2 rounded-full bg-brand-turquoise animate-pulse" />
           Dossier anonyme
         </span>
       </div>

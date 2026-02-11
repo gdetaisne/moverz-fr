@@ -76,8 +76,8 @@ export default function ProContact() {
     return (
       <section id="contact" className="relative py-20 md:py-32 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto rounded-3xl border border-[#6BCFCF]/30 bg-gradient-to-br from-[#E6FFFA] to-white p-8 text-center">
-            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#6BCFCF]/15 text-[#0F172A]">
+          <div className="max-w-3xl mx-auto rounded-3xl border border-brand-turquoise/30 bg-gradient-to-br from-[#E6FFFA] to-white p-8 text-center">
+            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-turquoise/15 text-[#0F172A]">
               <span className="text-2xl" aria-hidden="true">
                 ✓
               </span>
@@ -126,7 +126,7 @@ export default function ProContact() {
         >
           <div className="grid lg:grid-cols-2 gap-8 items-start">
             <div className="relative overflow-hidden rounded-3xl border border-[#E3E5E8] bg-white shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
-              <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-[#6BCFCF]/70 via-[#2B7A78]/40 to-[#6BCFCF]/70" />
+              <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-brand-turquoise/70 via-[#2B7A78]/40 to-brand-turquoise/70" />
               <div className="p-7 md:p-8">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="relative">
@@ -139,7 +139,7 @@ export default function ProContact() {
                         className="h-14 w-14 object-cover"
                       />
                     </div>
-                    <div className="absolute -bottom-1 -right-1 h-6 w-6 rounded-full bg-[#6BCFCF] border-2 border-white flex items-center justify-center">
+                    <div className="absolute -bottom-1 -right-1 h-6 w-6 rounded-full bg-brand-turquoise border-2 border-white flex items-center justify-center">
                       <CheckCircle2 className="w-4 h-4 text-[#0F172A]" />
                     </div>
                   </div>
@@ -167,7 +167,7 @@ export default function ProContact() {
                         required
                         value={form.name}
                         onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
-                        className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]/20 focus:border-[#6BCFCF]/50"
+                        className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 focus:border-brand-turquoise/50"
                         placeholder="Votre nom"
                       />
                     </div>
@@ -180,7 +180,7 @@ export default function ProContact() {
                         required
                         value={form.company}
                         onChange={(e) => setForm((f) => ({ ...f, company: e.target.value }))}
-                        className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]/20 focus:border-[#6BCFCF]/50"
+                        className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 focus:border-brand-turquoise/50"
                         placeholder="Nom de votre société"
                       />
                     </div>
@@ -197,7 +197,7 @@ export default function ProContact() {
                         required
                         value={form.email}
                         onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-                        className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]/20 focus:border-[#6BCFCF]/50"
+                        className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 focus:border-brand-turquoise/50"
                         placeholder="vous@entreprise.fr"
                       />
                     </div>
@@ -209,7 +209,7 @@ export default function ProContact() {
                         id="pro-phone"
                         value={form.phone}
                         onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
-                        className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]/20 focus:border-[#6BCFCF]/50"
+                        className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 focus:border-brand-turquoise/50"
                         placeholder="+33 ..."
                       />
                     </div>
@@ -223,7 +223,7 @@ export default function ProContact() {
                       id="pro-message"
                       value={form.message}
                       onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
-                      className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]/20 focus:border-[#6BCFCF]/50"
+                      className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 focus:border-brand-turquoise/50"
                       rows={4}
                       placeholder="Ex: 40 dossiers/mois, beaucoup de visites techniques, litiges sur le volume..."
                     />
@@ -240,7 +240,7 @@ export default function ProContact() {
                   ) : null}
 
                   {isSent ? (
-                    <div className="rounded-2xl border border-[#6BCFCF]/30 bg-[#6BCFCF]/10 px-4 py-3 text-sm text-[#0F172A]">
+                    <div className="rounded-2xl border border-brand-turquoise/30 bg-brand-turquoise/10 px-4 py-3 text-sm text-[#0F172A]">
                       Message envoyé à <strong>lucie@moverz.fr</strong>. Je reviens vers vous rapidement.
                     </div>
                   ) : null}
@@ -276,7 +276,7 @@ export default function ProContact() {
                     href={mailtoHref}
                     className="flex items-center gap-3 p-2 rounded-lg hover:bg-[#F9FAFB] transition-colors group"
                   >
-                    <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-[#6BCFCF]/10 text-[#6BCFCF]">
+                    <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-brand-turquoise/10 text-brand-turquoise">
                       <Mail className="w-4 h-4" />
                     </div>
                     <div className="flex-1">

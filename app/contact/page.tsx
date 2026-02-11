@@ -34,7 +34,7 @@ export default function ContactPage() {
 
           <div className="mt-8 grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#6BCFCF]/30 bg-white/70 px-4 py-2 text-sm font-semibold text-[#0F172A] backdrop-blur-sm">
+              <div className="inline-flex items-center gap-2 rounded-full border border-brand-turquoise/30 bg-white/70 px-4 py-2 text-sm font-semibold text-[#0F172A] backdrop-blur-sm">
                 <Clock className="h-4 w-4 text-[#2B7A78]" />
                 Réponse sous 24h ouvrées
               </div>
@@ -80,7 +80,7 @@ export default function ContactPage() {
             <div className="space-y-4">
               <div className="rounded-3xl border border-[#E3E5E8] bg-white/95 backdrop-blur-sm p-7 shadow-[0_8px_32px_rgba(0,0,0,0.08)]">
                 <div className="flex items-center gap-3">
-                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#6BCFCF]/10 text-[#2B7A78]">
+                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-turquoise/10 text-[#2B7A78]">
                     <Users className="h-5 w-5" />
                   </div>
                   <div>
@@ -170,7 +170,7 @@ export default function ContactPage() {
               id="form"
               className="relative overflow-hidden rounded-3xl border border-[#E3E5E8] bg-gradient-to-b from-white to-[#FAFBFC] p-8 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
             >
-              <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-[#6BCFCF]/70 via-[#0F172A]/20 to-[#6BCFCF]/70" />
+              <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-brand-turquoise/70 via-[#0F172A]/20 to-brand-turquoise/70" />
               <div className="mb-6">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A]">
                   Envoyer un message
@@ -222,7 +222,7 @@ export default function ContactPage() {
                 <p className="text-sm font-semibold text-[#0F172A]">Nos garanties</p>
                 <ul className="mt-4 space-y-3 text-sm text-[#1E293B]/70">
                   <li className="flex items-start gap-3">
-                    <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#6BCFCF]/15 text-[#2B7A78]">
+                    <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-turquoise/15 text-[#2B7A78]">
                       <ShieldCheck className="h-4 w-4" />
                     </span>
                     <span>
@@ -230,7 +230,7 @@ export default function ContactPage() {
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#6BCFCF]/15 text-[#2B7A78]">
+                    <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-turquoise/15 text-[#2B7A78]">
                       <ShieldCheck className="h-4 w-4" />
                     </span>
                     <span>
@@ -238,7 +238,7 @@ export default function ContactPage() {
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#6BCFCF]/15 text-[#2B7A78]">
+                    <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-turquoise/15 text-[#2B7A78]">
                       <ShieldCheck className="h-4 w-4" />
                     </span>
                     <span>
@@ -246,7 +246,7 @@ export default function ContactPage() {
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#6BCFCF]/15 text-[#2B7A78]">
+                    <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-turquoise/15 text-[#2B7A78]">
                       <ShieldCheck className="h-4 w-4" />
                     </span>
                     <span>
@@ -270,7 +270,7 @@ export default function ContactPage() {
           </p>
             <a
             href="/faq/"
-            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-lg font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] active:scale-[0.98] md:hover:scale-[1.02] transition-all duration-300 touch-manipulation min-h-[48px]"
+            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-brand-turquoise via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-lg font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] active:scale-[0.98] md:hover:scale-[1.02] transition-all duration-300 touch-manipulation min-h-[48px]"
           >
             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
             <span className="relative">Accéder à la FAQ</span>

@@ -59,7 +59,7 @@ export default function ProblemSolution() {
           transition={{ duration: 0.4 }}
         >
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/10 px-4 py-1.5 text-xs font-medium text-white/90">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
+            <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise animate-pulse" />
             Notre promesse
           </div>
           <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
@@ -84,13 +84,13 @@ export default function ProblemSolution() {
             >
               <div className={`relative rounded-2xl border p-6 text-center space-y-3 transition-all duration-300 ${
                 stat.accent
-                  ? "border-[#6BCFCF]/50 bg-white/5 hover:bg-white/10 hover:border-[#6BCFCF]"
+                  ? "border-brand-turquoise/50 bg-white/5 hover:bg-white/10 hover:border-brand-turquoise"
                   : "border-white/10 bg-white/5 hover:bg-white/10"
               }`}>
                 {/* Icon badge */}
                 <div className={`inline-flex items-center justify-center h-10 w-10 rounded-lg transition-all duration-300 ${
                   stat.accent
-                    ? "bg-[#6BCFCF] text-white"
+                    ? "bg-brand-turquoise text-white"
                     : "bg-white/10 text-white/70 group-hover:bg-white/20 group-hover:text-white"
                 }`}>
                   {stat.icon}
@@ -98,7 +98,7 @@ export default function ProblemSolution() {
 
                 {/* Value */}
                 <div className={`text-3xl md:text-4xl font-semibold ${
-                  stat.accent ? "text-[#6BCFCF]" : "text-white"
+                  stat.accent ? "text-brand-turquoise" : "text-white"
                 }`}>
                   {stat.value}<span className="text-white/50">{stat.suffix}</span>
                 </div>

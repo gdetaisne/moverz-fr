@@ -13,8 +13,8 @@ export function CityFinalCTA({ cityName, quoteUrl }: CityFinalCTAProps) {
     <section className="relative py-20 md:py-32 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-40">
-        <div className="absolute top-20 left-0 w-96 h-96 bg-[#6BCFCF]/20 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
-        <div className="absolute bottom-20 right-0 w-96 h-96 bg-[#6BCFCF]/20 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }} />
+        <div className="absolute top-20 left-0 w-96 h-96 bg-brand-turquoise/20 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
+        <div className="absolute bottom-20 right-0 w-96 h-96 bg-brand-turquoise/20 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }} />
       </div>
 
       <div className="container max-w-6xl relative">
@@ -27,8 +27,8 @@ export function CityFinalCTA({ cityName, quoteUrl }: CityFinalCTAProps) {
         >
           {/* Left: Content */}
           <div className="space-y-8 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-2 text-sm font-semibold text-[#6BCFCF] border border-[#6BCFCF]/20">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-2 text-sm font-semibold text-brand-turquoise border border-brand-turquoise/20">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise animate-pulse" />
               <span>100% gratuit · Sans démarchage</span>
             </div>
             
@@ -44,13 +44,13 @@ export function CityFinalCTA({ cityName, quoteUrl }: CityFinalCTAProps) {
             {/* Trust points */}
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                { icon: Clock, label: "Devis sous 5 jours", color: "text-[#6BCFCF]" },
-                { icon: Shield, label: "Déménageurs vérifiés", color: "text-[#6BCFCF]" },
-                { icon: TrendingUp, label: "Note 4.8/5", color: "text-[#6BCFCF]" },
-                { icon: CheckCircle2, label: "2847 clients satisfaits", color: "text-[#6BCFCF]" },
+                { icon: Clock, label: "Devis sous 5 jours", color: "text-brand-turquoise" },
+                { icon: Shield, label: "Déménageurs vérifiés", color: "text-brand-turquoise" },
+                { icon: TrendingUp, label: "Note 4.8/5", color: "text-brand-turquoise" },
+                { icon: CheckCircle2, label: "2847 clients satisfaits", color: "text-brand-turquoise" },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#6BCFCF]/10 flex items-center justify-center">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-turquoise/10 flex items-center justify-center">
                     <item.icon className={`w-5 h-5 ${item.color}`} />
                   </div>
                   <span className="text-sm font-medium text-[#0F172A]">{item.label}</span>
@@ -61,14 +61,14 @@ export function CityFinalCTA({ cityName, quoteUrl }: CityFinalCTAProps) {
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
               <a
                 href={quoteUrl}
-                className="group inline-flex items-center gap-2 rounded-full bg-[#6BCFCF] px-8 py-4 text-base font-semibold text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                className="group inline-flex items-center gap-2 rounded-full bg-brand-turquoise px-8 py-4 text-base font-semibold text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
               >
                 <span>Comparer maintenant</span>
                 <span className="text-lg leading-none group-hover:translate-x-1 transition-transform">→</span>
               </a>
               <a
                 href="/comment-ca-marche/"
-                className="inline-flex items-center gap-2 rounded-full border-2 border-[#0F172A]/20 bg-white px-8 py-4 text-base font-semibold text-[#0F172A] hover:border-[#6BCFCF]/50 hover:bg-gray-50 transition-all duration-300"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-[#0F172A]/20 bg-white px-8 py-4 text-base font-semibold text-[#0F172A] hover:border-brand-turquoise/50 hover:bg-gray-50 transition-all duration-300"
               >
                 <span>Comment ça marche ?</span>
               </a>
@@ -83,11 +83,11 @@ export function CityFinalCTA({ cityName, quoteUrl }: CityFinalCTAProps) {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <div className="rounded-2xl border-2 border-[#6BCFCF]/20 bg-white p-8 shadow-xl">
+            <div className="rounded-2xl border-2 border-brand-turquoise/20 bg-white p-8 shadow-xl">
               <div className="space-y-6">
                 {/* Header */}
                 <div className="flex items-center gap-3 pb-6 border-b border-gray-200">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#6BCFCF] to-[#2B7A78] flex items-center justify-center text-white font-bold text-lg">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-brand-turquoise to-[#2B7A78] flex items-center justify-center text-white font-bold text-lg">
                     M
                   </div>
                   <div>
@@ -103,7 +103,7 @@ export function CityFinalCTA({ cityName, quoteUrl }: CityFinalCTAProps) {
                       <p className="text-sm text-[#6B7280]">Clients à {cityName}</p>
                       <p className="text-2xl font-bold text-[#0F172A]">150+</p>
                     </div>
-                    <TrendingUp className="w-8 h-8 text-[#6BCFCF]" />
+                    <TrendingUp className="w-8 h-8 text-brand-turquoise" />
                   </div>
 
                   <div className="flex items-center justify-between p-4 rounded-xl bg-[#F0F9FF]">
@@ -111,7 +111,7 @@ export function CityFinalCTA({ cityName, quoteUrl }: CityFinalCTAProps) {
                       <p className="text-sm text-[#6B7280]">Économie moyenne</p>
                       <p className="text-2xl font-bold text-[#0F172A]">320€</p>
                     </div>
-                    <CheckCircle2 className="w-8 h-8 text-[#6BCFCF]" />
+                    <CheckCircle2 className="w-8 h-8 text-brand-turquoise" />
                   </div>
 
                   <div className="flex items-center justify-between p-4 rounded-xl bg-[#F0F9FF]">
@@ -121,7 +121,7 @@ export function CityFinalCTA({ cityName, quoteUrl }: CityFinalCTAProps) {
                     </div>
                     <div className="flex gap-0.5">
                       {[1,2,3,4,5].map(i => (
-                        <svg key={i} className="w-4 h-4 text-[#6BCFCF] fill-current" viewBox="0 0 20 20">
+                        <svg key={i} className="w-4 h-4 text-brand-turquoise fill-current" viewBox="0 0 20 20">
                           <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                         </svg>
                       ))}
@@ -139,7 +139,7 @@ export function CityFinalCTA({ cityName, quoteUrl }: CityFinalCTAProps) {
             </div>
 
             {/* Glow effect */}
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-[#6BCFCF] to-[#2B7A78] rounded-2xl blur opacity-20 -z-10" />
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-brand-turquoise to-[#2B7A78] rounded-2xl blur opacity-20 -z-10" />
           </motion.div>
         </motion.div>
       </div>

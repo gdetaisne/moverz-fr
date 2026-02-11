@@ -17,8 +17,8 @@ export default function ProBlogSection() {
           viewport={{ once: true }}
           className="text-center mb-12 space-y-4"
         >
-          <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-2 text-sm font-semibold text-[#0F172A]">
-            <BookOpen className="w-4 h-4 text-[#6BCFCF]" />
+          <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-2 text-sm font-semibold text-[#0F172A]">
+            <BookOpen className="w-4 h-4 text-brand-turquoise" />
             Ressources pour déménageurs
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A]">
@@ -41,8 +41,8 @@ export default function ProBlogSection() {
               className="h-full"
             >
               <Link href={`/blog/${post.slug}/`} className="group block h-full">
-                <article className="h-full rounded-2xl border border-gray-200 bg-white p-6 hover:border-[#6BCFCF]/60 hover:shadow-lg transition-all duration-300">
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#6BCFCF]">
+                <article className="h-full rounded-2xl border border-gray-200 bg-white p-6 hover:border-brand-turquoise/60 hover:shadow-lg transition-all duration-300">
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-turquoise">
                     Déménageurs · Pro
                   </p>
                   <h3 className="mt-3 text-lg font-bold text-[#0F172A] group-hover:text-[#2B7A78] transition-colors">

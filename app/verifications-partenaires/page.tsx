@@ -128,7 +128,7 @@ export default function VerificationsPartenairesPage() {
                 <div key={c.title} className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-7">
                   <h3 className="text-base md:text-lg font-bold text-[#0F172A]">{c.title}</h3>
                   {c.highlight && (
-                    <p className="mt-2 text-xs md:text-sm font-semibold text-[#6BCFCF] bg-[#6BCFCF]/10 rounded-full px-3 py-1 inline-block">
+                    <p className="mt-2 text-xs md:text-sm font-semibold text-brand-turquoise bg-brand-turquoise/10 rounded-full px-3 py-1 inline-block">
                       ✨ {c.highlight}
                     </p>
                   )}
@@ -147,7 +147,7 @@ export default function VerificationsPartenairesPage() {
           </div>
 
           {/* Ce que vous recevez concrètement */}
-          <div className="rounded-2xl border border-[#6BCFCF]/30 bg-gradient-to-br from-[#6BCFCF]/10 to-white p-6 md:p-8 space-y-4">
+          <div className="rounded-2xl border border-brand-turquoise/30 bg-gradient-to-br from-brand-turquoise/10 to-white p-6 md:p-8 space-y-4">
             <h2 className="text-lg md:text-xl font-semibold text-[#0F172A]">Ce que vous recevez concrètement</h2>
             <p className="text-sm md:text-base text-[#6B7280] leading-relaxed">
               Grâce à ces vérifications, vous recevez jusqu'à 5 devis de déménageurs qui ont passé nos filtres :
@@ -244,7 +244,7 @@ export default function VerificationsPartenairesPage() {
           </div>
 
           {/* CTA Devenir partenaire */}
-          <div className="rounded-2xl border border-[#6BCFCF]/30 bg-gradient-to-br from-[#6BCFCF]/5 to-white p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div className="rounded-2xl border border-brand-turquoise/30 bg-gradient-to-br from-brand-turquoise/5 to-white p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div className="space-y-1">
               <p className="text-sm font-semibold text-[#0F172A]">Vous êtes déménageur ?</p>
               <p className="text-sm text-[#6B7280]">
@@ -253,7 +253,7 @@ export default function VerificationsPartenairesPage() {
             </div>
             <a
               href="/partenaires/"
-              className="inline-flex items-center justify-center rounded-full bg-[#6BCFCF] px-6 py-3 text-sm font-semibold text-[#0F172A] shadow-sm hover:bg-[#2B7A78] hover:text-white transition-all whitespace-nowrap"
+              className="inline-flex items-center justify-center rounded-full bg-brand-turquoise px-6 py-3 text-sm font-semibold text-[#0F172A] shadow-sm hover:bg-[#2B7A78] hover:text-white transition-all whitespace-nowrap"
             >
               Devenir partenaire →
             </a>

@@ -20,8 +20,8 @@ export default function CreditsafeScoring() {
               animation: mounted ? 'fadeInUp 1s ease-out' : 'none',
             }}
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-sm font-semibold text-[#0F172A] mb-6">
-              <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-sm font-semibold text-[#0F172A] mb-6">
+              <span className="h-2 w-2 rounded-full bg-brand-turquoise" />
               Exclusivité Moverz
             </div>
 
@@ -168,7 +168,7 @@ export default function CreditsafeScoring() {
             </p>
             <a
               href="/blog/eviter-arnaques-demenagement/"
-              className="inline-block mt-4 text-[#6BCFCF] text-sm font-medium hover:text-[#0F172A] transition-colors"
+              className="inline-block mt-4 text-brand-turquoise text-sm font-medium hover:text-[#0F172A] transition-colors"
             >
               → Lire notre guide complet sur les arnaques au déménagement
             </a>

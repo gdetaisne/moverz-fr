@@ -73,7 +73,7 @@ export default function SearchPage({ searchParams }: SearchPageProps) {
 
       <section className="section section-contrast">
         <div className="container max-w-3xl space-y-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
             Recherche
           </p>
           <h1 className="text-3xl md:text-4xl font-bold text-white">
@@ -92,11 +92,11 @@ export default function SearchPage({ searchParams }: SearchPageProps) {
               name="q"
               defaultValue={q}
               placeholder="Rechercher…"
-              className="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]"
+              className="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-brand-turquoise"
             />
             <button
               type="submit"
-              className="shrink-0 rounded-xl bg-[#6BCFCF] px-5 py-3 text-sm font-semibold text-[#0F172A] hover:bg-[#5AB9B9] transition-colors"
+              className="shrink-0 rounded-xl bg-brand-turquoise px-5 py-3 text-sm font-semibold text-[#0F172A] hover:bg-[#5AB9B9] transition-colors"
             >
               OK
             </button>
@@ -131,7 +131,7 @@ export default function SearchPage({ searchParams }: SearchPageProps) {
                   <a
                     key={city.slug}
                     href={`/demenagement/${city.slug}/`}
-                    className="group rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 hover:border-[#6BCFCF]/60 hover:shadow-sm transition-all"
+                    className="group rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 hover:border-brand-turquoise/60 hover:shadow-sm transition-all"
                   >
                     <p className="text-sm font-semibold text-[#04163a] group-hover:text-[#2B7A78]">
                       Déménagement {city.nameCapitalized}
@@ -151,7 +151,7 @@ export default function SearchPage({ searchParams }: SearchPageProps) {
                   <a
                     key={post.slug}
                     href={`/blog/${post.slug}/`}
-                    className="group flex flex-col gap-2 rounded-2xl border border-[#E3E5E8] bg-white px-5 py-4 hover:border-[#6BCFCF]/50 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200"
+                    className="group flex flex-col gap-2 rounded-2xl border border-[#E3E5E8] bg-white px-5 py-4 hover:border-brand-turquoise/50 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200"
                   >
                     <div className="flex flex-wrap items-center gap-2 text-xs text-[#6B7280]">
                       {post.category ? (

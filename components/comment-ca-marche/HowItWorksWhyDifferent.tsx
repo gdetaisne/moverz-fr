@@ -23,8 +23,8 @@ export default function HowItWorksWhyDifferent() {
     <section className="py-20 md:py-28 bg-gradient-to-b from-white to-[#F8F9FA]">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-12">
-          <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#6BCFCF]/10 to-[#2B7A78]/10 border border-[#6BCFCF]/20 px-4 py-2 text-sm font-semibold text-[#2B7A78]">
-            <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
+          <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-[#2B7A78]/10 border border-brand-turquoise/20 px-4 py-2 text-sm font-semibold text-[#2B7A78]">
+            <span className="h-2 w-2 rounded-full bg-brand-turquoise" />
             Pourquoi c&apos;est différent
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
@@ -64,15 +64,15 @@ export default function HowItWorksWhyDifferent() {
           </div>
 
           {/* Moverz */}
-          <div className="relative overflow-hidden rounded-3xl border border-[#6BCFCF]/30 bg-white p-7 md:p-8 shadow-sm">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#6BCFCF]/8 via-transparent to-[#2B7A78]/8" />
+          <div className="relative overflow-hidden rounded-3xl border border-brand-turquoise/30 bg-white p-7 md:p-8 shadow-sm">
+            <div className="absolute inset-0 bg-gradient-to-br from-brand-turquoise/8 via-transparent to-[#2B7A78]/8" />
             <div className="relative space-y-5">
               <div className="flex items-center justify-between gap-4">
                 <div className="space-y-1">
                   <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#2B7A78]">Moverz</p>
                   <p className="text-lg font-bold text-[#0F172A]">Plus précis, plus serein</p>
                 </div>
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#6BCFCF]/10 border border-[#6BCFCF]/25">
+                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-turquoise/10 border border-brand-turquoise/25">
                   <CheckCircle2 className="w-5 h-5 text-[#2B7A78]" />
                 </div>
               </div>
@@ -80,7 +80,7 @@ export default function HowItWorksWhyDifferent() {
               <ol className="space-y-3">
                 {moverz.map((line, i) => (
                   <li key={line} className="flex items-start gap-3 text-sm text-[#1E293B]/75">
-                    <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#6BCFCF]/12 text-[#0F172A] text-xs font-bold border border-[#6BCFCF]/20">
+                    <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-turquoise/12 text-[#0F172A] text-xs font-bold border border-brand-turquoise/20">
                       {i + 1}
                     </span>
                     <span>{line}</span>

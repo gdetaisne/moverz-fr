@@ -29,14 +29,14 @@ export default function ProCTA() {
           {/* Left: Value prop */}
           <div>
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold mb-8">
-              <Zap className="w-4 h-4 text-[#6BCFCF]" />
+              <Zap className="w-4 h-4 text-brand-turquoise" />
               Pour les déménageurs
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               On révolutionne le déménagement,
               <br />
-              <span className="text-[#6BCFCF]">ensemble</span>
+              <span className="text-brand-turquoise">ensemble</span>
             </h2>
 
             <p className="text-lg text-white/70 mb-8 leading-relaxed">
@@ -46,8 +46,8 @@ export default function ProCTA() {
             {/* Features */}
             <div className="space-y-4 mb-10">
               <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-lg bg-[#6BCFCF]/10">
-                  <Users className="w-4 h-4 text-[#6BCFCF]" />
+                <div className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-lg bg-brand-turquoise/10">
+                  <Users className="w-4 h-4 text-brand-turquoise" />
                 </div>
                 <div>
                   <p className="font-semibold text-white">Dossiers ultra-préparés</p>
@@ -56,8 +56,8 @@ export default function ProCTA() {
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-lg bg-[#6BCFCF]/10">
-                  <TrendingUp className="w-4 h-4 text-[#6BCFCF]" />
+                <div className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-lg bg-brand-turquoise/10">
+                  <TrendingUp className="w-4 h-4 text-brand-turquoise" />
                 </div>
                 <div>
                   <p className="font-semibold text-white">Dashboard qui simplifie votre vie</p>
@@ -66,8 +66,8 @@ export default function ProCTA() {
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-lg bg-[#6BCFCF]/10">
-                  <Zap className="w-4 h-4 text-[#6BCFCF]" />
+                <div className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-lg bg-brand-turquoise/10">
+                  <Zap className="w-4 h-4 text-brand-turquoise" />
                 </div>
                 <div>
                   <p className="font-semibold text-white">Clients déjà convaincus</p>
@@ -94,7 +94,7 @@ export default function ProCTA() {
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <div className="flex items-center justify-between mb-2">
                 <p className="text-white/60 text-sm font-medium">Déménagements facilités/mois</p>
-                <TrendingUp className="w-5 h-5 text-[#6BCFCF]" />
+                <TrendingUp className="w-5 h-5 text-brand-turquoise" />
               </div>
               <p className="text-4xl font-bold text-white mb-1">1 200+</p>
               <p className="text-xs text-white/50">Et ça monte chaque mois</p>
@@ -104,7 +104,7 @@ export default function ProCTA() {
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <div className="flex items-center justify-between mb-2">
                 <p className="text-white/60 text-sm font-medium">Clients satisfaits</p>
-                <Zap className="w-5 h-5 text-[#6BCFCF]" />
+                <Zap className="w-5 h-5 text-brand-turquoise" />
               </div>
               <p className="text-4xl font-bold text-white mb-1">4.9/5</p>
               <p className="text-xs text-white/50">Déménagement réussi = client heureux</p>
@@ -114,7 +114,7 @@ export default function ProCTA() {
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <div className="flex items-center justify-between mb-2">
                 <p className="text-white/60 text-sm font-medium">Partenaires Moverz Pro</p>
-                <Users className="w-5 h-5 text-[#6BCFCF]" />
+                <Users className="w-5 h-5 text-brand-turquoise" />
               </div>
               <p className="text-4xl font-bold text-white mb-1">150+</p>
               <p className="text-xs text-white/50">Partout en France</p>

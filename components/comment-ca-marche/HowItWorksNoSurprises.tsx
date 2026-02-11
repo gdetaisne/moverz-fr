@@ -26,8 +26,8 @@ export default function HowItWorksNoSurprises() {
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           <div className="lg:col-span-5 space-y-5">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-sm font-semibold text-[#0F172A]">
-              <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-sm font-semibold text-[#0F172A]">
+              <span className="h-2 w-2 rounded-full bg-brand-turquoise" />
               Le déménagement sans mauvaises surprises
             </div>
 
@@ -43,8 +43,8 @@ export default function HowItWorksNoSurprises() {
               supplément &quot;volume sous-estimé&quot; le jour J.
             </p>
 
-            <div className="flex items-center gap-3 rounded-2xl border border-[#6BCFCF]/25 bg-white px-5 py-4 shadow-sm">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#6BCFCF]/10">
+            <div className="flex items-center gap-3 rounded-2xl border border-brand-turquoise/25 bg-white px-5 py-4 shadow-sm">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-turquoise/10">
                 <Shield className="w-5 h-5 text-[#0F172A]" />
               </div>
               <div className="text-sm text-[#1E293B]/80">
@@ -61,9 +61,9 @@ export default function HowItWorksNoSurprises() {
                   key={p.title}
                   className="relative overflow-hidden rounded-2xl border border-[#E3E5E8] bg-white p-6 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#6BCFCF]/6 via-transparent to-[#2B7A78]/6 opacity-70" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-brand-turquoise/6 via-transparent to-[#2B7A78]/6 opacity-70" />
                   <div className="relative space-y-3">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#6BCFCF]/10 border border-[#6BCFCF]/20">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-turquoise/10 border border-brand-turquoise/20">
                       <Icon className="w-6 h-6 text-[#0F172A]" strokeWidth={1.5} />
                     </div>
                     <div className="space-y-1">

@@ -188,8 +188,8 @@ export default function QuartiersGenericPage({ params }: PageProps) {
         <section className="section section-light">
           <div className="container max-w-5xl">
             <div className="text-center mb-12 space-y-4">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+              <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-xs font-medium text-brand-turquoise">
+                <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
                 {isParis ? "20 arrondissements" : `${cityNeighborhoods.length} zones principales`}
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
@@ -207,7 +207,7 @@ export default function QuartiersGenericPage({ params }: PageProps) {
               {cityNeighborhoods.map((neighborhood) => (
                 <div
                   key={neighborhood}
-                  className="rounded-xl border border-[#E5E7EB] bg-white p-4 hover:border-[#6BCFCF]/50 hover:shadow-md transition-all duration-200"
+                  className="rounded-xl border border-[#E5E7EB] bg-white p-4 hover:border-brand-turquoise/50 hover:shadow-md transition-all duration-200"
                 >
                   <p className="font-medium text-[#0F172A]">{neighborhood}</p>
                 </div>
@@ -250,8 +250,8 @@ export default function QuartiersGenericPage({ params }: PageProps) {
         <section className="section section-white">
           <div className="container max-w-5xl">
             <div className="text-center mb-12 space-y-4">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+              <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-xs font-medium text-brand-turquoise">
+                <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
                 Métropole élargie
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
@@ -267,7 +267,7 @@ export default function QuartiersGenericPage({ params }: PageProps) {
               {citySuburbs.map((suburb) => (
                 <div
                   key={suburb}
-                  className="rounded-xl border border-[#E5E7EB] bg-white p-4 hover:border-[#6BCFCF]/50 hover:shadow-md transition-all duration-200"
+                  className="rounded-xl border border-[#E5E7EB] bg-white p-4 hover:border-brand-turquoise/50 hover:shadow-md transition-all duration-200"
                 >
                   <p className="font-medium text-[#0F172A]">{suburb}</p>
                 </div>
@@ -281,7 +281,7 @@ export default function QuartiersGenericPage({ params }: PageProps) {
         <div className="container max-w-3xl">
           <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 md:p-12 text-center space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
               Gratuit · Sans engagement
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white">

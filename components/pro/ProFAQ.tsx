@@ -33,7 +33,7 @@ export default function ProFAQ() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="rounded-xl border-2 border-gray-200 bg-white overflow-hidden hover:border-[#6BCFCF]/50 transition-colors"
+              className="rounded-xl border-2 border-gray-200 bg-white overflow-hidden hover:border-brand-turquoise/50 transition-colors"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
@@ -44,7 +44,7 @@ export default function ProFAQ() {
                   {faq.question}
                 </span>
                 <ChevronDown 
-                  className={`w-5 h-5 text-[#6BCFCF] flex-shrink-0 transition-transform duration-300 ${
+                  className={`w-5 h-5 text-brand-turquoise flex-shrink-0 transition-transform duration-300 ${
                     openIndex === i ? 'rotate-180' : ''
                   }`}
                 />
@@ -77,7 +77,7 @@ export default function ProFAQ() {
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 text-[#6BCFCF] font-semibold hover:text-[#5AB0B0] transition-colors"
+            className="inline-flex items-center gap-2 text-brand-turquoise font-semibold hover:text-[#5AB0B0] transition-colors"
           >
             <span>Contactez notre équipe</span>
             <span className="group-hover:translate-x-1 transition-transform">→</span>

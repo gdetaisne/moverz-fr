@@ -19,7 +19,7 @@ export function LongTailInternalLinks({ cityName, serviceSlug, limit = 10 }: Lon
       <div className="container max-w-4xl">
         <div className="rounded-2xl border border-[#E5E7EB] bg-white p-8 md:p-10 space-y-6">
           <div className="text-center space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
               Long tail (SEO)
             </p>
             <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A]">{title}</h2>
@@ -50,7 +50,7 @@ export function LongTailInternalLinks({ cityName, serviceSlug, limit = 10 }: Lon
                 <a
                   key={l.slug}
                   href={`/blog/${l.slug}/`}
-                  className="group rounded-2xl border border-[#E5E7EB] bg-white p-5 hover:border-[#6BCFCF]/50 hover:shadow-sm transition-all"
+                  className="group rounded-2xl border border-[#E5E7EB] bg-white p-5 hover:border-brand-turquoise/50 hover:shadow-sm transition-all"
                 >
                   <p className="text-sm font-semibold text-[#0F172A] group-hover:text-[#2B7A78]">
                     {l.title}
@@ -70,7 +70,7 @@ export function LongTailInternalLinks({ cityName, serviceSlug, limit = 10 }: Lon
               </a>
               <a
                 href="/blog/checklists-et-guides/"
-                className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise/60 hover:bg-[#FAFAFA] transition-colors"
               >
                 <span>Voir toutes les checklists</span>
                 <span>→</span>
