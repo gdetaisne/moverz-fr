@@ -39,7 +39,13 @@ export default function PageHero({
     href && href.startsWith("https://devis.moverz.fr") ? "nofollow" : undefined;
 
   return (
-    <section className="relative overflow-hidden bg-[#A8E8E8]">
+    <section className="relative overflow-hidden bg-gradient-to-br from-white via-brand-turquoise-50/30 to-brand-accent-50/20">
+      {/* Background glow effects */}
+      <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-brand-turquoise/10 rounded-full blur-[120px]" />
+      <div className="absolute bottom-0 left-1/3 w-[500px] h-[500px] bg-brand-accent/12 rounded-full blur-[120px]" />
+      
+      {/* Subtle grid pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(rgba(107,207,207,0.08)_1px,transparent_1px)] [background-size:24px_24px]" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <Breadcrumbs items={breadcrumbs} />

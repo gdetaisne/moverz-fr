@@ -47,8 +47,8 @@ const faqCategories = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    color: "from-emerald-500/10 to-teal-500/20",
-    borderColor: "border-emerald-500/30",
+    color: "from-brand-turquoise/10 to-brand-turquoise-200/20",
+    borderColor: "border-brand-turquoise/30",
     items: [
       {
         q: "Combien coûte le service Moverz ?",
@@ -67,8 +67,8 @@ const faqCategories = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     ),
-    color: "from-purple-500/10 to-pink-500/20",
-    borderColor: "border-purple-500/30",
+    color: "from-brand-accent/10 to-brand-accent-300/20",
+    borderColor: "border-brand-accent/30",
     items: [
       {
         q: "Est-ce que je vais être harcelé par téléphone ?",
@@ -95,8 +95,8 @@ const faqCategories = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    color: "from-orange-500/10 to-red-500/20",
-    borderColor: "border-orange-500/30",
+    color: "from-brand-turquoise-200/10 to-brand-accent/15",
+    borderColor: "border-brand-accent-300/30",
     items: [
       {
         q: "Puis-je utiliser Moverz pour un déménagement international ?",
@@ -148,19 +148,30 @@ export default function FAQPage() {
         secondaryCta={{ label: "Comment ça marche", href: "/comment-ca-marche/" }}
       />
 
-      {/* Maillage interne (SEO) */}
+      {/* Maillage interne (SEO) - Premium 2026 */}
       <section className="section section-light pt-8 pb-0">
         <div className="container max-w-5xl">
-          <div className="rounded-2xl border border-[#E3E5E8] bg-white p-6 md:p-8">
-            <div className="text-center space-y-3 mb-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">À lire aussi</p>
-              <h2 className="text-xl md:text-2xl font-bold text-[#0F172A]">Guides utiles (sans blabla)</h2>
-              <p className="text-sm text-[#6B7280] max-w-2xl mx-auto">
+          <div className="relative rounded-3xl border border-brand-turquoise/20 bg-white/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_20px_80px_rgba(0,0,0,0.06)]">
+            {/* Gradient accent top */}
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-brand-turquoise to-brand-accent opacity-50 rounded-t-3xl" />
+            
+            <div className="text-center space-y-4 mb-8">
+              <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-brand-accent/10 border border-brand-turquoise/30 px-4 py-2 text-xs font-bold text-[#0F172A]">
+                <span className="relative inline-flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-accent shadow-[0_0_12px_rgba(167,139,250,0.8)]" />
+                </span>
+                À lire aussi
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#0F172A] via-brand-turquoise to-brand-accent bg-clip-text text-transparent">
+                Guides utiles (sans blabla)
+              </h2>
+              <p className="text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed">
                 Des pages courtes et actionnables pour vérifier un déménageur et éviter les zones floues.
               </p>
             </div>
 
-            <div className="grid gap-3 md:grid-cols-3">
+            <div className="grid gap-4 md:grid-cols-3">
               {[
                 {
                   href: "/faq-arnaque-demenagement/",
@@ -181,10 +192,15 @@ export default function FAQPage() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="group rounded-2xl border border-[#E5E7EB] bg-white p-5 hover:border-brand-turquoise/50 hover:shadow-sm transition-all"
+                  className="group relative rounded-2xl border border-brand-turquoise/20 bg-white/80 backdrop-blur-sm p-6 hover:border-brand-accent/40 hover:shadow-[0_10px_40px_rgba(167,139,250,0.15)] hover:scale-[1.02] transition-all duration-300"
                 >
-                  <p className="text-sm font-semibold text-[#0F172A] group-hover:text-[#2B7A78]">{item.title}</p>
-                  <p className="mt-1 text-xs text-[#6B7280] leading-relaxed">{item.desc}</p>
+                  {/* Glow violet au hover */}
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-brand-accent/0 to-brand-accent/0 opacity-0 group-hover:opacity-10 transition-opacity duration-300 blur-xl" />
+                  
+                  <div className="relative">
+                    <p className="text-sm font-bold text-[#0F172A] group-hover:text-brand-accent mb-2 transition-colors duration-300">{item.title}</p>
+                    <p className="text-xs text-gray-600 leading-relaxed">{item.desc}</p>
+                  </div>
                 </a>
               ))}
             </div>
@@ -207,33 +223,33 @@ export default function FAQPage() {
                 icon: <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" /></svg>,
                 stat: "100%", 
                 label: "Gratuit & sans engagement",
-                gradient: "from-emerald-500 to-teal-500"
+                gradient: "from-brand-turquoise to-brand-turquoise-600"
               },
               { 
                 icon: <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>,
                 stat: "Sans démarchage", 
                 label: "Aucun appel intempestif",
-                gradient: "from-purple-500 to-pink-500"
+                gradient: "from-brand-accent to-brand-accent-600"
               },
               { 
                 icon: <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>,
                 stat: "5+", 
                 label: "Devis comparables",
-                gradient: "from-orange-500 to-red-500"
+                gradient: "from-brand-turquoise-600 to-brand-accent"
               }
             ].map((item, i) => (
               <div 
                 key={i}
-                className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white/90 backdrop-blur-sm p-5 shadow-[0_4px_16px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] md:hover:scale-[1.02] hover:border-brand-turquoise/30 transition-all duration-300"
+                className="group relative overflow-hidden rounded-2xl border border-brand-turquoise/20 bg-white/90 backdrop-blur-sm p-6 shadow-[0_8px_24px_rgba(107,207,207,0.12)] hover:shadow-[0_12px_40px_rgba(167,139,250,0.2)] md:hover:scale-[1.05] hover:border-brand-accent/40 transition-all duration-300"
               >
                 {/* Gradient overlay on hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-8 transition-opacity duration-300`} />
                 
-                <div className="relative text-center space-y-2.5">
-                  <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${item.gradient} bg-opacity-10 text-[#2B7A78] group-hover:scale-110 transition-transform duration-300`}>
+                <div className="relative text-center space-y-3">
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br ${item.gradient} shadow-lg shadow-brand-turquoise/30 group-hover:shadow-brand-accent/40 text-white group-hover:scale-110 transition-all duration-300`}>
                     {item.icon}
                   </div>
-                  <div className="text-2xl md:text-3xl font-bold bg-gradient-to-br from-[#0F172A] to-[#2B7A78] bg-clip-text text-transparent">
+                  <div className={`text-2xl md:text-3xl font-bold bg-gradient-to-br ${item.gradient} bg-clip-text text-transparent`}>
                     {item.stat}
                   </div>
                   <div className="text-xs text-gray-600 font-medium leading-tight">{item.label}</div>
@@ -247,12 +263,15 @@ export default function FAQPage() {
       {/* FAQ par catégories - Premium Tech */}
       <section className="section section-light pt-4">
         <div className="container max-w-4xl">
-          <div className="text-center mb-12 space-y-3">
-            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-[#2B7A78]/10 border border-brand-turquoise/20 px-4 py-2 text-sm font-semibold text-[#2B7A78]">
-              <span className="h-2 w-2 rounded-full bg-brand-turquoise animate-pulse" />
+          <div className="text-center mb-12 space-y-4">
+            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-brand-accent/10 border border-brand-turquoise/30 backdrop-blur-sm px-5 py-2.5 text-sm font-bold text-[#0F172A] shadow-sm">
+              <span className="relative inline-flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-accent shadow-[0_0_12px_rgba(167,139,250,0.8)]" />
+              </span>
               Questions & Réponses
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#0F172A] via-brand-turquoise to-brand-accent bg-clip-text text-transparent">
               Tout ce que vous voulez savoir
             </h2>
           </div>
@@ -263,17 +282,17 @@ export default function FAQPage() {
                 {/* Premium category header */}
                 <div className="mb-6 flex items-center gap-4 group">
                   <div className="relative">
-                    <div className={`flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${category.color} border ${category.borderColor} text-[#2B7A78] shadow-sm group-hover:shadow-md group-hover:scale-105 transition-all duration-300`}>
+                    <div className={`flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br ${category.color} border ${category.borderColor} text-brand-accent shadow-lg shadow-brand-turquoise/20 group-hover:shadow-brand-accent/30 group-hover:scale-110 transition-all duration-300`}>
                       {category.icon}
                     </div>
-                    {/* Glow effect */}
-                    <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-50 blur-xl transition-opacity duration-300 -z-10`} />
+                    {/* Glow effect turquoise→violet */}
+                    <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br from-brand-turquoise/30 to-brand-accent/30 opacity-0 group-hover:opacity-60 blur-xl transition-opacity duration-300 -z-10`} />
                   </div>
                   <div>
-                    <h3 className="text-xl md:text-2xl font-bold text-[#0F172A] group-hover:text-[#2B7A78] transition-colors">
+                    <h3 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-[#0F172A] to-brand-accent bg-clip-text text-transparent group-hover:from-brand-turquoise group-hover:to-brand-accent transition-all duration-300">
                       {category.title}
                     </h3>
-                    <p className="text-sm text-gray-500 font-medium">
+                    <p className="text-sm text-gray-600 font-medium">
                       {category.items.length} question{category.items.length > 1 ? 's' : ''}
                     </p>
                   </div>
@@ -287,30 +306,33 @@ export default function FAQPage() {
             ))}
           </div>
 
-          {/* Encore une question ? - Premium Tech */}
-          <div className="mt-16 relative overflow-hidden rounded-3xl border border-gray-200 bg-gradient-to-br from-white via-gray-50 to-white p-8 md:p-12 text-center shadow-xl">
-            {/* Gradient overlays */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-turquoise/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#2B7A78]/10 rounded-full blur-3xl" />
+          {/* Encore une question ? - Ultra-Premium 2026 */}
+          <div className="group mt-16 relative overflow-hidden rounded-3xl border border-brand-turquoise/20 bg-white/90 backdrop-blur-xl p-10 md:p-14 text-center shadow-[0_20px_80px_rgba(0,0,0,0.08)] hover:shadow-[0_25px_100px_rgba(167,139,250,0.15)] transition-all duration-500">
+            {/* Gradient overlays turquoise→violet */}
+            <div className="absolute top-0 right-0 w-80 h-80 bg-brand-turquoise/12 rounded-full blur-[100px]" />
+            <div className="absolute bottom-0 left-0 w-80 h-80 bg-brand-accent/15 rounded-full blur-[100px]" />
+            
+            {/* Grid pattern */}
+            <div className="absolute inset-0 bg-[radial-gradient(rgba(107,207,207,0.08)_1px,transparent_1px)] [background-size:20px_20px]" />
             
             <div className="relative space-y-6">
-              <div className="inline-flex items-center justify-center h-20 w-20 rounded-2xl bg-gradient-to-br from-brand-turquoise/20 to-[#2B7A78]/20 border border-brand-turquoise/30 mx-auto text-[#2B7A78] shadow-lg hover:scale-110 transition-transform duration-300">
-                <svg className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <div className="inline-flex items-center justify-center h-20 w-20 rounded-2xl bg-gradient-to-br from-brand-turquoise to-brand-accent border border-brand-turquoise/30 mx-auto text-white shadow-lg shadow-brand-turquoise/30 group-hover:shadow-brand-accent/40 group-hover:scale-110 transition-all duration-300">
+                <svg className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-[#0F172A]">
+              <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#0F172A] via-brand-turquoise to-brand-accent bg-clip-text text-transparent">
                 Encore une question ?
               </h3>
-              <p className="text-base text-gray-600 max-w-xl mx-auto leading-relaxed">
+              <p className="text-base text-gray-700 max-w-xl mx-auto leading-relaxed font-medium">
                 Pas de soucis ! Notre équipe adore discuter déménagement (oui, vraiment). On vous répond en mode humain, pas en mode robot.
               </p>
               <a
                 href="/contact/"
-                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#0F172A] to-[#1E293B] px-8 py-4 text-base font-semibold text-white shadow-[0_4px_16px_rgba(15,23,42,0.3)] hover:shadow-[0_8px_24px_rgba(15,23,42,0.4)] active:scale-[0.98] md:hover:scale-[1.02] transition-all duration-200 touch-manipulation min-h-[48px]"
+                className="group/btn inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-turquoise to-brand-accent px-8 py-4 text-base font-bold text-white shadow-lg shadow-brand-turquoise/40 hover:shadow-xl hover:shadow-brand-accent/50 active:scale-[0.98] md:hover:scale-[1.05] transition-all duration-300 touch-manipulation min-h-[48px]"
               >
                 <span>Posez votre question</span>
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <svg className="h-5 w-5 group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </a>
