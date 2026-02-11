@@ -12,7 +12,7 @@ export default function WhyMoverz() {
   return (
     <>
       {/* Section unifiée: Pourquoi Moverz change tout */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="section-dark relative overflow-hidden">
         {/* Subtle grid background */}
         <div className="absolute inset-0 opacity-[0.02]" style={{
           backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
@@ -20,10 +20,10 @@ export default function WhyMoverz() {
         }} />
         
         {/* Gradient orbs for depth */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#6BCFCF]/20 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#6BCFCF]/10 rounded-full blur-[120px]" />
+        <div className="absolute top-0 left-0 w-96 h-96 bg-[#B5F2DB]/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#B5F2DB]/5 rounded-full blur-[120px]" />
         
-        <div className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="container max-w-6xl relative z-10">
           {/* Header central */}
           <div 
             className="text-center mb-12 md:mb-16"

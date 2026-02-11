@@ -4,8 +4,8 @@ export default function VisualProof() {
       <div className="container max-w-4xl">
         {/* Header minimal */}
         <div className="text-center mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/10 px-4 py-1.5 text-xs font-medium text-white/90">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2 text-sm font-bold text-white shadow-lg shadow-cyan-500/10">
+            <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_12px_rgba(6,182,212,0.8)]" />
             Ce qui se passe après
           </div>
           <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl text-white">
