@@ -333,7 +333,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
       </p>
 
       <a
-        href="https://www.google.com/maps/place/Moverz/"
+        href="https://www.google.com/maps/place/Moverz/@46.881154,3.0417412,6z/data=!3m1!4b1!4m6!3m5!1s0x65777ea3ad50b1c1:0xdcc12b2e04254f4!8m2!3d46.881154!4d3.0417412!16s%2Fg%2F11ylmz4jk6?entry=ttu"
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center justify-center gap-1.5 text-[11px] text-[#94A3B8] hover:text-[#0F172A] transition-colors"
