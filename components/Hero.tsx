@@ -44,12 +44,12 @@ export default function Hero({ abVariant }: HeroProps) {
       : "des devis comparables · 3 min · 100% gratuit";
 
   return (
-    <section className="relative overflow-hidden font-sans bg-gradient-to-br from-[#E0F7F7] via-white to-[#E0F7F7]/20">
+    <section className="section-hero bg-hero relative overflow-hidden font-sans">
       {/* Subtle grid pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(#E5E7EB_1px,transparent_1px)] [background-size:24px_24px] opacity-10" />
 
-      {/* Spacing uniforme */}
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+      {/* Container */}
+      <div className="container relative">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
           
           {/* ========== COLONNE GAUCHE – TEXTE ========== */}
@@ -88,27 +88,27 @@ export default function Hero({ abVariant }: HeroProps) {
               {heroPromise}
             </p>
 
-            {/* Pills modernes de réassurance */}
+            {/* Pills uniformes de réassurance */}
             <div
               className="mt-8 flex flex-wrap gap-3 justify-center lg:justify-start"
               style={{
                 animation: mounted ? "fadeInUp 1.2s ease-out 0.3s both" : "none",
               }}
             >
-              <div className="group flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 hover:border-cyan-300 hover:shadow-md hover:shadow-cyan-100/50 transition-all duration-300">
-                <ShieldCheck className="w-4 h-4 text-cyan-600 group-hover:scale-110 transition-transform" />
-                <span className="text-sm font-medium text-[#0F172A]">Numéro masqué</span>
-              </div>
+              <span className="pill">
+                <ShieldCheck className="w-4 h-4" />
+                Numéro masqué
+              </span>
               
-              <div className="group flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 hover:border-cyan-300 hover:shadow-md hover:shadow-cyan-100/50 transition-all duration-300">
-                <PhoneOff className="w-4 h-4 text-cyan-600 group-hover:scale-110 transition-transform" />
-                <span className="text-sm font-medium text-[#0F172A]">Aucun appel</span>
-              </div>
+              <span className="pill">
+                <PhoneOff className="w-4 h-4" />
+                Aucun appel
+              </span>
               
-              <div className="group flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 hover:border-cyan-300 hover:shadow-md hover:shadow-cyan-100/50 transition-all duration-300">
-                <BadgeCheck className="w-4 h-4 text-cyan-600 group-hover:scale-110 transition-transform" />
-                <span className="text-sm font-medium text-[#0F172A]">Entreprises vérifiées</span>
-              </div>
+              <span className="pill-success">
+                <BadgeCheck className="w-4 h-4" />
+                Entreprises vérifiées
+              </span>
             </div>
 
             {/* Note Google modernisée */}

@@ -29,7 +29,7 @@ export default function RealStories() {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 bg-gradient-to-br from-white via-cyan-50/20 to-white overflow-hidden">
+    <section className="section relative bg-gradient-to-br from-white via-cyan-50/20 to-white overflow-hidden">
       {/* Subtle grid pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(#E5E7EB_1px,transparent_1px)] [background-size:24px_24px] opacity-10" />
       

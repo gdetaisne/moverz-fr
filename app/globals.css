@@ -2,28 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ========================================
+   DESIGN SYSTEM 2026 - CSS VARIABLES
+   ======================================== */
+
 :root {
-  /* Brand core */
+  /* ========================================
+     NOUVELLE PALETTE 2026
+     ======================================== */
+  
+  /* Brand Core */
+  --brand-deep-teal: #042F34;
+  --brand-charcoal-teal: #16232B;
+  --brand-mint: #B5F2DB;
+  --brand-warm-yellow: #FFC933;
+
+  /* Neutrals */
+  --neutral-pale-blue-gray: #E4EEF0;
+  --neutral-light-gray: #F8FAFB;
+  --neutral-muted-gray: #8A9BA8;
+  --neutral-white: #FFFFFF;
+
+  /* Text */
+  --text-primary: #16232B;
+  --text-heading: #042F34;
+  --text-muted: #8A9BA8;
+  --text-on-dark: #FFFFFF;
+  --text-on-yellow: #16232B;
+
+  /* Surfaces */
+  --surface-white: #FFFFFF;
+  --surface-light: #F8FAFB;
+  --surface-alt: #E4EEF0;
+  --surface-dark: #16232B;
+  --surface-dark-accent: #042F34;
+  
+  /* ========================================
+     LEGACY (à migrer progressivement)
+     ======================================== */
+  
   --brand-navy: #0f172a;
   --brand-navy-2: #04163a;
   --brand-slate: #1e293b;
-
-  /* Brand accents */
-  --brand-deep: #2b7a78; /* DBA: main brand accent */
-  --brand-teal: #6bcfcf; /* spark / highlight */
+  --brand-deep: #2b7a78;
+  --brand-teal: #6bcfcf;
   --brand-teal-2: #4fb8b8;
   --brand-teal-3: #3da5a5;
-  --brand-warm: #f59e0b; /* subtle warm counter-accent */
-
-  /* Surfaces (lighter feel) */
+  --brand-warm: #f59e0b;
   --surface-0: #ffffff;
   --surface-1: #fbfeff;
   --surface-2: #f3fbfb;
   --surface-3: #eef8f8;
-
-  /* Text */
   --text-strong: #04163a;
-  --text-muted: #4b5c6b;
 }
 
 @layer base {
@@ -37,7 +67,37 @@
   
   body {
     @apply min-h-screen antialiased;
-    color: var(--text-strong);
+    color: var(--text-primary);
+    background: var(--surface-white);
+    /* Padding pour compenser le sticky CTA (éviter qu'il masque le contenu) */
+    padding-bottom: 80px;
+  }
+  
+  @media (min-width: 768px) {
+    body {
+      padding-bottom: 100px;
+    }
+  }
+  
+  /* Typography - Hiérarchie stricte */
+  h1, .h1 {
+    @apply text-4xl md:text-5xl font-bold leading-tight tracking-tight;
+    color: var(--text-heading);
+  }
+  
+  h2, .h2 {
+    @apply text-3xl md:text-4xl font-semibold leading-snug;
+    color: var(--text-heading);
+  }
+  
+  h3, .h3 {
+    @apply text-2xl md:text-3xl font-semibold leading-snug;
+    color: var(--text-heading);
+  }
+  
+  p, .body {
+    @apply text-base leading-relaxed;
+    color: var(--text-primary);
   }
 }
 
@@ -118,18 +178,37 @@
 }
 
 @layer components {
-  /* Conteneurs sections - UNIFORME */
+  /* ========================================
+     SECTIONS - DESIGN SYSTEM 2026
+     ======================================== */
+  
   .section {
-    @apply relative w-full py-16 md:py-24 overflow-hidden;
+    @apply relative w-full py-12 md:py-16 overflow-hidden;
+  }
+
+  .section-compact {
+    @apply relative w-full py-8 md:py-12 overflow-hidden;
+  }
+
+  .section-hero {
+    @apply relative w-full py-16 md:py-20 overflow-hidden;
   }
 
   .section-light {
-    /* Fond blanc pur - premium clean */
-    @apply bg-white;
+    background: var(--surface-white);
   }
 
+  .section-alt {
+    background: var(--surface-alt);
+  }
+
+  .section-dark {
+    background: var(--surface-dark);
+    color: var(--text-on-dark);
+  }
+
+  /* Legacy */
   .section-contrast {
-    /* Fond navy solide - premium contrast */
     @apply bg-[var(--brand-navy)] text-white;
   }
 
@@ -137,21 +216,129 @@
     @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
   }
 
-  /* Hero background - SOLIDE */
+  /* ========================================
+     HERO BACKGROUND - NOUVELLE VERSION
+     ======================================== */
+  
   .bg-hero {
-    /* Premium: mint → white gradient (less "block of color") */
-    background: radial-gradient(900px 420px at 20% 12%, rgba(107, 207, 207, 0.26), transparent 60%),
-      radial-gradient(700px 380px at 80% 18%, rgba(168, 232, 232, 0.60), transparent 62%),
-      linear-gradient(180deg, #a8e8e8 0%, #eafafa 42%, #ffffff 100%);
+    background: 
+      radial-gradient(900px 420px at 20% 12%, rgba(181, 242, 219, 0.20), transparent 60%),
+      radial-gradient(700px 380px at 80% 18%, rgba(228, 238, 240, 0.60), transparent 62%),
+      linear-gradient(180deg, var(--surface-alt) 0%, var(--surface-light) 42%, var(--surface-white) 100%);
   }
 
-  /* Boutons - SOLIDES UNIFORMES */
+  /* ========================================
+     BOUTONS - DESIGN SYSTEM 2026
+     ======================================== */
+
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-[var(--brand-navy)] px-8 py-4 text-base font-semibold text-white shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-200;
+    @apply inline-flex items-center justify-center gap-2;
+    @apply px-8 py-4 rounded-button;
+    @apply font-semibold text-base;
+    @apply transition-all duration-200;
+    @apply focus:outline-none focus:ring-4;
+    
+    background: var(--brand-warm-yellow);
+    color: var(--text-on-yellow);
+    box-shadow: none;
+  }
+
+  .btn-primary:hover {
+    @apply shadow-soft scale-[1.02];
+  }
+
+  .btn-primary:active {
+    @apply scale-[0.98];
+  }
+
+  .btn-primary:focus {
+    ring-color: rgba(255, 201, 51, 0.3);
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-[var(--brand-navy)] bg-white px-8 py-4 text-base font-semibold text-[var(--brand-navy)] hover:bg-gray-50 transition-all duration-200;
+    @apply inline-flex items-center justify-center gap-2;
+    @apply px-8 py-4 rounded-button;
+    @apply font-semibold text-base;
+    @apply transition-all duration-200;
+    @apply focus:outline-none focus:ring-4;
+    
+    background: var(--brand-deep-teal);
+    color: var(--text-on-dark);
+    box-shadow: none;
+  }
+
+  .btn-secondary:hover {
+    @apply shadow-soft;
+    background: #053A40;
+  }
+
+  .btn-secondary:focus {
+    ring-color: rgba(4, 47, 52, 0.3);
+  }
+
+  .btn-tertiary {
+    @apply inline-flex items-center justify-center gap-2;
+    @apply px-8 py-4 rounded-button;
+    @apply font-semibold text-base;
+    @apply bg-transparent border-2;
+    @apply transition-all duration-200;
+    @apply focus:outline-none focus:ring-4;
+    
+    border-color: var(--brand-deep-teal);
+    color: var(--brand-deep-teal);
+  }
+
+  .btn-tertiary:hover {
+    background: var(--neutral-pale-blue-gray);
+  }
+
+  .btn-tertiary:focus {
+    ring-color: rgba(4, 47, 52, 0.2);
+  }
+
+  /* ========================================
+     CARDS - DESIGN SYSTEM 2026
+     ======================================== */
+
+  .card {
+    @apply bg-white rounded-card p-6;
+    @apply transition-all duration-200;
+    border: 1px solid var(--neutral-pale-blue-gray);
+    box-shadow: none;
+  }
+
+  .card-hoverable {
+    @apply card;
+  }
+
+  .card-hoverable:hover {
+    @apply shadow-soft;
+    border-color: rgba(4, 47, 52, 0.2);
+  }
+
+  .card-on-dark {
+    @apply rounded-card p-6 backdrop-blur-sm;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* ========================================
+     PILLS / BADGES - DESIGN SYSTEM 2026
+     ======================================== */
+
+  .pill {
+    @apply inline-flex items-center gap-2;
+    @apply px-4 py-2 rounded-full;
+    @apply text-sm font-medium;
+    
+    background: var(--neutral-pale-blue-gray);
+    color: var(--text-primary);
+  }
+
+  .pill-success {
+    @apply pill;
+    background: rgba(181, 242, 219, 0.2);
+    color: var(--brand-deep-teal);
   }
 }
 
