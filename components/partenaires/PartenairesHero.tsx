@@ -30,13 +30,13 @@ export default function PartenairesHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2 text-sm font-bold text-white shadow-lg shadow-cyan-500/10 mb-8"
+              className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2 text-sm font-medium text-white/90 backdrop-blur-sm mb-8"
             >
-              <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_12px_rgba(6,182,212,0.8)]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
               <span>Réseau de déménageurs sélectionnés</span>
             </motion.div>
 
-            {/* Title avec gradient */}
+            {/* Title */}
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -47,7 +47,7 @@ export default function PartenairesHero() {
               <br />
               Envoyez votre devis.
               <br />
-              <span className="bg-gradient-to-r from-cyan-400 via-cyan-500 to-blue-500 bg-clip-text text-transparent">Gagnez des clients.</span>
+              <span className="text-[#6BCFCF]">Gagnez des clients.</span>
             </motion.h1>
 
             {/* Subtitle */}
