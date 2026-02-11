@@ -20,71 +20,103 @@ export default function WidgetActionSection({
   citySlug,
 }: WidgetActionSectionProps) {
   return (
-    <section className="section relative overflow-hidden bg-gradient-to-br from-[#1E293B] via-[#0F172A] to-[#1E3A5F] text-white">
-      {/* Subtle gradient overlays for depth */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-turquoise/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#2B7A78]/20 rounded-full blur-3xl" />
-      </div>
+    <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1a2332] to-[#0F172A]">
+      {/* Background glow effects premium */}
+      <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-brand-turquoise/10 rounded-full blur-[150px]" />
+      <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-brand-accent/10 rounded-full blur-[150px]" />
+      
+      {/* Subtle grid pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.03)_1px,transparent_1px)] [background-size:32px_32px]" />
       
       <div className="container max-w-5xl relative z-10">
-        <div className="relative rounded-2xl border border-white/20 bg-white/5 backdrop-blur-sm px-6 py-7 md:px-10 md:py-8 text-white shadow-xl">
-          <div className="grid gap-7 lg:grid-cols-12 lg:items-start">
-            {/* Copy */}
-            <div className="lg:col-span-5 space-y-4">
-              <div className="space-y-3">
+        {/* Card glassmorphic premium avec border glow */}
+        <div className="group relative rounded-3xl border border-white/20 bg-white/5 backdrop-blur-2xl px-8 py-10 md:px-12 md:py-12 text-white shadow-[0_20px_80px_rgba(0,0,0,0.3)] hover:shadow-[0_25px_100px_rgba(0,0,0,0.4)] transition-all duration-500">
+          {/* Border glow animé au hover */}
+          <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-brand-turquoise/0 via-brand-turquoise/20 to-brand-turquoise/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm -z-10" />
+          
+          {/* Gradient accent top */}
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-brand-turquoise to-transparent" />
+          
+          <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
+            {/* Copy premium */}
+            <div className="lg:col-span-5 space-y-6">
+              <div className="space-y-4">
+                {/* Logo + Badge premium */}
                 <div className="flex items-center gap-3">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10">
+                  <div className="relative flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 border border-white/20 backdrop-blur-xl shadow-lg">
                     <Image
                       src="/logo.png"
                       alt="Moverz"
-                      width={26}
-                      height={26}
+                      width={28}
+                      height={28}
+                      className="relative z-10"
                     />
+                    {/* Glow effect */}
+                    <div className="absolute inset-0 rounded-xl bg-brand-turquoise/20 blur-lg" />
                   </div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-xl px-4 py-1.5 text-xs font-semibold text-brand-turquoise shadow-sm">
+                    <span className="relative inline-flex h-1.5 w-1.5">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-turquoise opacity-75" />
+                      <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-brand-turquoise" />
+                    </span>
                     {eyebrow}
-                  </p>
+                  </div>
                 </div>
 
-                <h2 className="text-2xl md:text-3xl font-bold leading-tight">
+                {/* Titre impactant */}
+                <h2 className="text-3xl md:text-4xl font-bold leading-tight bg-gradient-to-r from-white via-white to-white/80 bg-clip-text text-transparent">
                   {title}
                 </h2>
-                <p className="text-base text-white/95 leading-relaxed">
+                
+                {/* Subtitle */}
+                <p className="text-base md:text-lg text-white/85 leading-relaxed">
                   {subtitle}
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-2">
+              {/* Features badges premium */}
+              <div className="flex flex-wrap gap-3">
                 {[
-                  { icon: "●", label: "3 min" },
-                  { icon: "●", label: "IA" },
-                  { icon: "●", label: "Sans démarchage" },
-                  { icon: "●", label: "Jusqu'à 5 devis" },
+                  { label: "3 min", icon: "⚡" },
+                  { label: "IA", icon: "✓" },
+                  { label: "Sans démarchage", icon: "✓" },
+                  { label: "Jusqu'à 5 devis", icon: "✓" },
                 ].map((item, i) => (
-                  <span
+                  <div
                     key={i}
-                    className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/90"
+                    className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/10 backdrop-blur-sm px-4 py-2 text-sm font-medium text-white/90 hover:bg-white/15 hover:border-brand-turquoise/30 transition-all duration-300"
                   >
                     <span className="text-brand-turquoise">{item.icon}</span>
-                    {item.label}
-                  </span>
+                    <span>{item.label}</span>
+                  </div>
                 ))}
               </div>
             </div>
 
-            {/* CTA */}
+            {/* CTA ultra-premium */}
             <div className="lg:col-span-7 flex items-center justify-center">
-              <div className="max-w-sm mx-auto text-center">
+              <div className="w-full max-w-md mx-auto space-y-4">
                 <a
                   href={`https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=${from}&devis_range=3-5${citySlug ? `&city=${citySlug}` : ''}`}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-base font-semibold text-[#0F172A] shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                  className="group relative w-full inline-flex items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-brand-turquoise-300 via-brand-turquoise to-brand-turquoise-500 px-10 py-5 text-lg font-bold text-white shadow-glow-turquoise hover:shadow-glow-turquoise-lg hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 overflow-hidden border border-white/20"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  <svg className="w-6 h-6 relative z-10" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
-                  <span>Comparer mes devis</span>
+                  <span className="relative z-10">Comparer mes devis</span>
+                  <span className="relative z-10 text-2xl leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
+                  
+                  {/* Gradient overlay au hover */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-brand-turquoise-200 to-brand-turquoise-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  
+                  {/* Shine effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
                 </a>
+                
+                {/* Note de réassurance */}
+                <p className="text-center text-sm text-white/70">
+                  100% gratuit · Réponse sous 5-7 jours · Zéro engagement
+                </p>
               </div>
             </div>
           </div>
@@ -93,5 +125,3 @@ export default function WidgetActionSection({
     </section>
   );
 }
-
-
