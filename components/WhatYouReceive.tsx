@@ -10,7 +10,7 @@ export default function WhatYouReceive() {
   }, []);
 
   return (
-    <section className="relative py-20 md:py-32 bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/30 overflow-hidden">
+    <section className="relative py-20 md:py-32 bg-gradient-to-br from-white via-brand-turquoise-50/30 to-brand-accent-50/20 overflow-hidden">
       {/* Subtle grid pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(#E5E7EB_1px,transparent_1px)] [background-size:24px_24px] opacity-10" />
       
@@ -61,7 +61,7 @@ export default function WhatYouReceive() {
                         <p className="text-xs text-[#1E293B]/80">Assurance tous risques incluse</p>
                       </div>
                       <div className="flex items-center gap-2 mt-1">
-                        <Clock className="w-4 h-4 text-blue-600" />
+                        <Clock className="w-4 h-4 text-brand-turquoise-600" />
                         <p className="text-xs text-[#1E293B]/80">Disponible le 15 mars</p>
                       </div>
                     </div>
@@ -86,7 +86,7 @@ export default function WhatYouReceive() {
                         <p className="text-xs text-[#1E293B]/80">Protection standard incluse</p>
                       </div>
                       <div className="flex items-center gap-2 mt-1">
-                        <Clock className="w-4 h-4 text-blue-600" />
+                        <Clock className="w-4 h-4 text-brand-turquoise-600" />
                         <p className="text-xs text-[#1E293B]/80">Disponible le 12 mars</p>
                       </div>
                     </div>
@@ -111,7 +111,7 @@ export default function WhatYouReceive() {
                         <p className="text-xs text-[#1E293B]/80">Assurance premium incluse</p>
                       </div>
                       <div className="flex items-center gap-2 mt-1">
-                        <Clock className="w-4 h-4 text-blue-600" />
+                        <Clock className="w-4 h-4 text-brand-turquoise-600" />
                         <p className="text-xs text-[#1E293B]/80">Disponible le 10 mars</p>
                       </div>
                     </div>
@@ -139,14 +139,17 @@ export default function WhatYouReceive() {
               animation: mounted ? 'fadeInUp 1s ease-out 0.2s both' : 'none',
             }}
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-200/50 backdrop-blur-sm px-5 py-2 text-sm font-bold text-[#0F172A] mb-6">
-              <span className="h-2 w-2 rounded-full bg-cyan-500 animate-pulse shadow-[0_0_12px_rgba(6,182,212,0.6)]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-brand-accent/10 border border-brand-turquoise-200/50 backdrop-blur-sm px-5 py-2 text-sm font-bold text-[#0F172A] mb-6">
+              <span className="relative inline-flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-turquoise opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-turquoise shadow-[0_0_12px_rgba(107,207,207,0.8)]" />
+              </span>
               Ce que vous recevez
             </div>
 
             <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
               <span className="block text-[#0F172A]">Des devis détaillés</span>
-              <span className="block mt-2 bg-gradient-to-r from-cyan-600 via-blue-600 to-cyan-700 bg-clip-text text-transparent">
+              <span className="block mt-2 bg-gradient-to-r from-brand-turquoise-600 via-brand-turquoise to-brand-accent bg-clip-text text-transparent">
                 et comparables
               </span>
             </h2>
@@ -157,26 +160,26 @@ export default function WhatYouReceive() {
             </p>
 
             {/* Verified movers card */}
-            <div className="rounded-2xl border border-cyan-200/50 bg-white/95 backdrop-blur-sm p-5 md:p-6 shadow-[0_8px_24px_rgba(6,182,212,0.12)] mb-8">
+            <div className="rounded-2xl border border-brand-turquoise-200/50 bg-white/95 backdrop-blur-sm p-5 md:p-6 shadow-[0_8px_24px_rgba(107,207,207,0.12)] mb-8">
               <h3 className="text-base font-bold text-[#0F172A] mb-4">Déménageurs sélectionnés</h3>
               <ul className="space-y-3 text-sm text-gray-700">
                 <li className="flex items-start gap-2.5">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-cyan-500 shadow-[0_0_8px_rgba(6,182,212,0.5)]" />
+                  <span className="mt-1 h-2 w-2 rounded-full bg-brand-turquoise shadow-[0_0_8px_rgba(107,207,207,0.5)]" />
                   Engagés contractuellement sur la légalité (SIRET, licences)
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-cyan-500 shadow-[0_0_8px_rgba(6,182,212,0.5)]" />
+                  <span className="mt-1 h-2 w-2 rounded-full bg-brand-turquoise shadow-[0_0_8px_rgba(107,207,207,0.5)]" />
                   Assurance RC Pro et marchandises maintenues à jour
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-cyan-500 shadow-[0_0_8px_rgba(6,182,212,0.5)]" />
+                  <span className="mt-1 h-2 w-2 rounded-full bg-brand-turquoise shadow-[0_0_8px_rgba(107,207,207,0.5)]" />
                   Qualité de service et transparence (devis clairs, délais respectés)
                 </li>
               </ul>
-              <div className="mt-5 rounded-xl bg-gradient-to-br from-cyan-50 to-blue-50 border border-cyan-200/50 px-4 py-3.5 text-xs">
-                <span className="font-bold text-[#0F172A]">Objectif : <span className="text-cyan-700">au moins 3 devis</span> rapidement (sous 5 jours, selon disponibilité).</span>
+              <div className="mt-5 rounded-xl bg-gradient-to-br from-brand-turquoise-50 to-brand-accent-50 border border-brand-turquoise-200/50 px-4 py-3.5 text-xs">
+                <span className="font-bold text-[#0F172A]">Objectif : <span className="text-brand-turquoise-600">au moins 3 devis</span> rapidement (sous 5 jours, selon disponibilité).</span>
                 <br />
-                <a href="/verifications-partenaires/" className="text-cyan-700 hover:text-cyan-900 font-bold underline underline-offset-2 transition-colors">
+                <a href="/verifications-partenaires/" className="text-brand-turquoise-600 hover:text-brand-turquoise-700 font-bold underline underline-offset-2 transition-colors">
                   Voir nos critères de sélection →
                 </a>
               </div>
@@ -224,7 +227,7 @@ export default function WhatYouReceive() {
             </div>
 
             {/* Bottom reassurance */}
-            <div className="mt-8 p-6 rounded-2xl bg-gradient-to-br from-cyan-50 to-blue-50 border border-cyan-200/50 backdrop-blur-sm shadow-[0_4px_16px_rgba(6,182,212,0.1)]">
+            <div className="mt-8 p-6 rounded-2xl bg-gradient-to-br from-brand-turquoise-50 to-brand-accent-50 border border-brand-turquoise-200/50 backdrop-blur-sm shadow-[0_4px_16px_rgba(107,207,207,0.1)]">
               <p className="text-sm font-bold text-[#0F172A] leading-relaxed">
                 💬 Votre téléphone reste masqué jusqu'à ce que vous choisissiez un déménageur.
               </p>

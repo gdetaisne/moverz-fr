@@ -31,11 +31,11 @@ export default function FlowAndIA() {
   }, []);
 
   // Couleurs par étape pour les icônes
-  const stepColors = ["text-cyan-600", "text-blue-600", "text-cyan-700"];
-  const stepBgColors = ["from-cyan-100 to-cyan-50", "from-blue-100 to-blue-50", "from-cyan-100 to-blue-50"];
+  const stepColors = ["text-brand-turquoise-600", "text-brand-turquoise-600", "text-brand-accent"];
+  const stepBgColors = ["from-brand-turquoise-100 to-brand-turquoise-50", "from-brand-turquoise-100 to-brand-turquoise-50", "from-brand-turquoise-100 to-brand-accent-50"];
 
   return (
-    <section className="relative py-20 md:py-32 bg-gradient-to-br from-white via-cyan-50/30 to-white overflow-hidden">
+    <section className="relative py-20 md:py-32 bg-gradient-to-br from-white via-brand-turquoise-50/30 to-white overflow-hidden">
       {/* Subtle grid pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(#E5E7EB_1px,transparent_1px)] [background-size:24px_24px] opacity-10" />
       
@@ -127,14 +127,17 @@ export default function FlowAndIA() {
               animation: mounted ? 'fadeInUp 1s ease-out 0.2s both' : 'none',
             }}
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-200/50 backdrop-blur-sm px-5 py-2 text-sm font-bold text-[#0F172A] mb-6">
-              <span className="h-2 w-2 rounded-full bg-cyan-500 animate-pulse shadow-[0_0_12px_rgba(6,182,212,0.6)]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-brand-accent/10 border border-brand-turquoise-200/50 backdrop-blur-sm px-5 py-2 text-sm font-bold text-[#0F172A] mb-6">
+              <span className="relative inline-flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-turquoise opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-turquoise shadow-[0_0_12px_rgba(107,207,207,0.8)]" />
+              </span>
               Comment ça marche
             </div>
 
             <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
               <span className="block text-[#0F172A]">3 étapes,</span>
-              <span className="block mt-2 bg-gradient-to-r from-cyan-600 via-cyan-700 to-blue-700 bg-clip-text text-transparent">
+              <span className="block mt-2 bg-gradient-to-r from-brand-turquoise-600 via-brand-turquoise to-brand-accent bg-clip-text text-transparent">
                 3 minutes
               </span>
             </h2>
@@ -174,7 +177,7 @@ export default function FlowAndIA() {
         </div>
 
             {/* Bottom reassurance */}
-            <div className="mt-8 p-6 rounded-2xl bg-gradient-to-br from-cyan-50 to-blue-50 border border-cyan-200/50 backdrop-blur-sm shadow-[0_4px_16px_rgba(6,182,212,0.1)]">
+            <div className="mt-8 p-6 rounded-2xl bg-gradient-to-br from-brand-turquoise-50 to-brand-accent-50 border border-brand-turquoise-200/50 backdrop-blur-sm shadow-[0_4px_16px_rgba(107,207,207,0.1)]">
               <p className="text-sm font-bold text-[#0F172A] leading-relaxed">
                 Un dossier clair et standardisé pour tous les déménageurs, pour comparer sans surprises.
               </p>

@@ -172,8 +172,8 @@ function CityAutocomplete({
             unrecognized
               ? "border-amber-400 focus:border-amber-500 focus:ring-amber-500/20"
               : value
-                ? "border-emerald-400 focus:border-cyan-500 focus:ring-cyan-500/20"
-                : "border-gray-200 focus:border-cyan-500 focus:ring-cyan-500/20"
+                ? "border-emerald-400 focus:border-brand-turquoise focus:ring-brand-turquoise/20"
+                : "border-gray-200 focus:border-brand-turquoise focus:ring-brand-turquoise/20"
           }`}
         />
         {statusIcon}
@@ -187,7 +187,7 @@ function CityAutocomplete({
             <li
               key={`${s.postcode}-${i}`}
               onMouseDown={(e) => { e.preventDefault(); pick(s); }}
-              className="cursor-pointer px-4 py-2.5 text-sm hover:bg-cyan-50 transition-colors first:rounded-t-xl last:rounded-b-xl"
+              className="cursor-pointer px-4 py-2.5 text-sm hover:bg-brand-turquoise-50 transition-colors first:rounded-t-xl last:rounded-b-xl"
             >
               {s.label}
             </li>
@@ -260,7 +260,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
     return (
       <div className="rounded-3xl bg-white/95 backdrop-blur-xl shadow-[0_20px_60px_rgba(0,0,0,0.12)] border border-white/60 p-8 space-y-6">
         <div className="text-center pb-2">
-          <p className="text-xs font-bold uppercase tracking-[0.15em] text-cyan-600">
+          <p className="text-xs font-bold uppercase tracking-[0.15em] text-brand-turquoise-600">
             Estimation indicative
           </p>
         </div>
@@ -279,7 +279,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
           type="button"
           disabled={redirecting}
           onClick={handleRedirect}
-          className="group relative block w-full rounded-xl bg-gradient-to-r from-cyan-600 via-cyan-700 to-blue-700 py-4 text-center text-sm font-bold text-white shadow-[0_8px_24px_rgba(6,182,212,0.3)] hover:shadow-[0_12px_32px_rgba(6,182,212,0.4)] disabled:opacity-60 active:scale-[0.98] md:hover:scale-[1.02] transition-all duration-300 touch-manipulation overflow-hidden"
+          className="group relative block w-full rounded-xl bg-gradient-to-r from-brand-turquoise-300 via-brand-turquoise to-brand-turquoise-500 py-4 text-center text-sm font-bold text-white shadow-glow-turquoise hover:shadow-glow-turquoise-lg disabled:opacity-60 active:scale-[0.98] md:hover:scale-[1.02] transition-all duration-300 touch-manipulation overflow-hidden border border-white/20"
         >
           <span className="relative z-10 flex items-center justify-center gap-2">
             {redirecting ? "Redirection…" : "Affiner mon budget"}
@@ -289,7 +289,8 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
               </svg>
             )}
           </span>
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-turquoise-200 to-brand-turquoise-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
         </button>
 
         <button
@@ -307,7 +308,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
   return (
     <div className="rounded-3xl bg-white/95 backdrop-blur-xl shadow-[0_20px_60px_rgba(0,0,0,0.12)] border border-white/60 p-8 space-y-5">
       <div className="text-center pb-2">
-        <p className="text-xs font-bold uppercase tracking-[0.15em] text-cyan-600">
+        <p className="text-xs font-bold uppercase tracking-[0.15em] text-brand-turquoise-600">
           Estimez votre budget
         </p>
       </div>
@@ -338,7 +339,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
           value={surface}
           onChange={(e) => setSurface(e.target.value)}
           placeholder="Ex : 60"
-          className="w-full rounded-xl border-2 border-gray-200 bg-white px-4 py-3 text-sm text-[#0F172A] placeholder:text-gray-400 focus:border-cyan-500 focus:outline-none focus:ring-4 focus:ring-cyan-500/20 transition-all duration-300"
+          className="w-full rounded-xl border-2 border-gray-200 bg-white px-4 py-3 text-sm text-[#0F172A] placeholder:text-gray-400 focus:border-brand-turquoise focus:outline-none focus:ring-4 focus:ring-brand-turquoise/20 transition-all duration-300"
         />
       </div>
 
@@ -358,7 +359,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
         type="button"
         disabled={!canSubmit || loading}
         onClick={handleEstimate}
-        className="group relative w-full rounded-xl bg-gradient-to-r from-cyan-600 via-cyan-700 to-blue-700 py-4 text-sm font-bold text-white disabled:opacity-40 disabled:cursor-not-allowed shadow-[0_8px_24px_rgba(6,182,212,0.3)] hover:shadow-[0_12px_32px_rgba(6,182,212,0.4)] active:scale-[0.98] md:hover:scale-[1.02] transition-all duration-300 disabled:hover:scale-100 disabled:hover:shadow-[0_8px_24px_rgba(6,182,212,0.3)] touch-manipulation overflow-hidden"
+        className="group relative w-full rounded-xl bg-gradient-to-r from-brand-turquoise-300 via-brand-turquoise to-brand-turquoise-500 py-4 text-sm font-bold text-white disabled:opacity-40 disabled:cursor-not-allowed shadow-glow-turquoise hover:shadow-glow-turquoise-lg active:scale-[0.98] md:hover:scale-[1.02] transition-all duration-300 disabled:hover:scale-100 disabled:hover:shadow-glow-turquoise touch-manipulation overflow-hidden border border-white/20"
       >
         <span className="relative z-10 flex items-center justify-center gap-2">
           {loading ? "Calcul en cours…" : "Voir mon estimation"}
@@ -368,7 +369,8 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
             </svg>
           )}
         </span>
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-turquoise-200 to-brand-turquoise-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
       </button>
 
       <p className="text-xs text-center text-gray-500 font-medium">

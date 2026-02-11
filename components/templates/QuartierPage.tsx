@@ -100,14 +100,14 @@ export function QuartierPage({
           <div className="max-w-4xl mx-auto text-center space-y-6">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
               {quartierName} · {cityName}
             </div>
 
             {/* Titre */}
             <h1 className="text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl">
               Déménager à {quartierName} ?<br />
-              <span className="text-[#6BCFCF]">3 min, des devis.</span>
+              <span className="text-brand-turquoise">3 min, des devis.</span>
             </h1>
 
             {/* Sous-titre */}
@@ -159,8 +159,8 @@ export function QuartierPage({
       <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto max-w-4xl px-4 space-y-8">
           <div className="text-center space-y-4">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-xs font-medium text-brand-turquoise">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
               Pourquoi Moverz
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
@@ -177,8 +177,8 @@ export function QuartierPage({
       <section className="py-12 md:py-20 bg-gradient-to-br from-[#fdfeff] via-[#f9fdff] to-[#f5fbfc]">
         <div className="container mx-auto max-w-4xl px-4 space-y-8">
           <div className="text-center space-y-4">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-xs font-medium text-brand-turquoise">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
               Accès & Stationnement
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
@@ -192,7 +192,7 @@ export function QuartierPage({
           {/* Maillage interne : ressources utiles */}
           <div className="pt-4">
             <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 text-center space-y-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
                 Ressources utiles
               </p>
               <p className="text-sm text-[#6B7280] max-w-2xl mx-auto">
@@ -208,7 +208,7 @@ export function QuartierPage({
                 </a>
                 <a
                   href={`/quartiers-${citySlug}/`}
-                  className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise-200 hover:bg-[#FAFAFA] transition-colors"
                 >
                   <span>Tous les quartiers de {cityName}</span>
                   <span>→</span>
@@ -216,7 +216,7 @@ export function QuartierPage({
                 {pricePost ? (
                   <a
                     href={`/blog/${pricePost.slug}/`}
-                    className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                    className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise-200 hover:bg-[#FAFAFA] transition-colors"
                   >
                     <span>Prix à {cityName}</span>
                     <span>→</span>
@@ -224,7 +224,7 @@ export function QuartierPage({
                 ) : (
                   <a
                     href="/blog/prix-et-devis/"
-                    className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                    className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise-200 hover:bg-[#FAFAFA] transition-colors"
                   >
                     <span>Guides prix & devis</span>
                     <span>→</span>
@@ -241,8 +241,8 @@ export function QuartierPage({
         <section className="py-12 md:py-20 bg-white">
           <div className="container mx-auto max-w-6xl px-4 space-y-10">
             <div className="text-center space-y-4">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+              <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-xs font-medium text-brand-turquoise">
+                <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
                 Destinations fréquentes
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
@@ -255,9 +255,9 @@ export function QuartierPage({
                 <a
                   key={dest.href}
                   href={dest.href}
-                  className="group rounded-2xl border border-[#E5E7EB] bg-white p-6 hover:border-[#6BCFCF] hover:shadow-lg transition-all"
+                  className="group rounded-2xl border border-[#E5E7EB] bg-white p-6 hover:border-brand-turquoise hover:shadow-lg transition-all"
                 >
-                  <h3 className="text-xl font-bold text-[#0F172A] group-hover:text-[#6BCFCF] transition-colors mb-2">
+                  <h3 className="text-xl font-bold text-[#0F172A] group-hover:text-brand-turquoise-600 transition-colors mb-2">
                     {dest.title}
                   </h3>
                   <p className="text-sm text-[#6B7280]">{dest.description}</p>
@@ -272,8 +272,8 @@ export function QuartierPage({
       <section className="py-12 md:py-20 bg-gradient-to-br from-[#fdfeff] via-[#f9fdff] to-[#f5fbfc]">
         <div className="container mx-auto max-w-4xl px-4 space-y-10">
           <div className="text-center space-y-4">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-xs font-medium text-brand-turquoise">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
               Questions fréquentes
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
@@ -300,7 +300,7 @@ export function QuartierPage({
       <section className="py-16 md:py-24 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white">
         <div className="container mx-auto max-w-4xl px-4 text-center space-y-6">
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+            <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
             Gratuit · Sans spam · Sans engagement
           </div>
 

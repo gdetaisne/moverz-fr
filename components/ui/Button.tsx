@@ -50,9 +50,9 @@ export default function Button({
 
   const variants: Record<ButtonVariant, string> = {
     primary:
-      "bg-gradient-to-r from-cyan-600 via-cyan-700 to-blue-700 text-white shadow-[0_8px_24px_rgba(6,182,212,0.3)] hover:shadow-[0_12px_32px_rgba(6,182,212,0.4)] hover:scale-[1.03] active:scale-[0.98]",
+      "bg-gradient-to-r from-brand-turquoise-300 via-brand-turquoise to-brand-turquoise-500 text-white shadow-glow-turquoise hover:shadow-glow-turquoise-lg hover:scale-[1.03] active:scale-[0.98] border border-white/20",
     secondary:
-      "bg-white text-[#0F172A] border-2 border-gray-200 hover:border-cyan-300 hover:shadow-md hover:shadow-cyan-100/50 hover:scale-[1.02]",
+      "bg-white text-[#0F172A] border-2 border-gray-200 hover:border-brand-turquoise-200 hover:shadow-md hover:shadow-brand-turquoise-100/50 hover:scale-[1.02]",
     ghost:
       "bg-white/10 backdrop-blur-sm text-white border border-white/20 hover:bg-white/20 hover:border-white/30 hover:scale-[1.02]",
   };

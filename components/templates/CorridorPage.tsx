@@ -195,28 +195,28 @@ export function CorridorPage({
           <div className="max-w-4xl mx-auto text-center space-y-6">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
               Longue distance
             </div>
 
             {/* Titre */}
             <h1 className="text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl">
               {originCityName} → {destination}<br />
-              <span className="text-[#6BCFCF]">Devis gratuits en 3 min</span>
+              <span className="text-brand-turquoise">Devis gratuits en 3 min</span>
             </h1>
 
             {/* Infos rapides */}
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm md:text-base text-white/80">
               <span className="flex items-center gap-2">
-                <span className="text-[#6BCFCF]">📍</span> {distance}
+                <span className="text-brand-turquoise">📍</span> {distance}
               </span>
               <span>·</span>
               <span className="flex items-center gap-2">
-                <span className="text-[#6BCFCF]">⏱</span> ~{tempsMoyen}
+                <span className="text-brand-turquoise">⏱</span> ~{tempsMoyen}
               </span>
               <span>·</span>
               <span className="flex items-center gap-2">
-                <span className="text-[#6BCFCF]">📅</span> Idéal {periodeConseillee}
+                <span className="text-brand-turquoise">📅</span> Idéal {periodeConseillee}
               </span>
             </div>
 
@@ -238,8 +238,8 @@ export function CorridorPage({
       <section className="py-12 md:py-20 bg-gradient-to-br from-[#fdfeff] via-[#f9fdff] to-[#f5fbfc]">
         <div className="container mx-auto max-w-6xl px-4 space-y-10">
           <div className="text-center space-y-4">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-xs font-medium text-brand-turquoise">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
               Prix indicatifs
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
@@ -253,7 +253,7 @@ export function CorridorPage({
                 key={index}
                 className="rounded-2xl border border-[#E5E7EB] bg-white p-6 space-y-3"
               >
-                <div className="text-sm font-semibold text-[#6BCFCF] uppercase tracking-wider">
+                <div className="text-sm font-semibold text-brand-turquoise uppercase tracking-wider">
                   {prix.type}
                 </div>
                 <div className="text-3xl font-bold text-[#0F172A]">{prix.prix}</div>
@@ -271,7 +271,7 @@ export function CorridorPage({
           {/* Maillage interne : guides prix liés */}
           {(originPricePost || destPricePost) && (
             <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 text-center space-y-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
                 Guides liés
               </p>
               <p className="text-sm text-[#6B7280]">
@@ -290,7 +290,7 @@ export function CorridorPage({
                 {destPricePost && (
                   <a
                     href={`/blog/${destPricePost.slug}/`}
-                    className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                    className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise-200 hover:bg-[#FAFAFA] transition-colors"
                   >
                     <span>Prix à {destinationCity?.nameCapitalized}</span>
                     <span>→</span>
@@ -306,8 +306,8 @@ export function CorridorPage({
       <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto max-w-4xl px-4 space-y-8">
           <div className="text-center space-y-4">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-xs font-medium text-brand-turquoise">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
               Accès & Contraintes
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
@@ -325,8 +325,8 @@ export function CorridorPage({
         <section className="py-12 md:py-20 bg-gradient-to-br from-[#fdfeff] via-[#f9fdff] to-[#f5fbfc]">
           <div className="container mx-auto max-w-4xl px-4 space-y-10">
             <div className="text-center space-y-4">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+              <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-xs font-medium text-brand-turquoise">
+                <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
                 Conseils pratiques
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
@@ -340,7 +340,7 @@ export function CorridorPage({
                   key={index}
                   className="flex gap-3 rounded-xl border border-[#E5E7EB] bg-white p-4"
                 >
-                  <span className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-[#6BCFCF]/10 text-[#6BCFCF] text-sm font-bold">
+                  <span className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-brand-turquoise/10 text-brand-turquoise text-sm font-bold">
                     ✓
                   </span>
                   <p className="text-sm text-[#4b5c6b]">{conseil}</p>
@@ -355,8 +355,8 @@ export function CorridorPage({
       <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto max-w-4xl px-4 space-y-10">
           <div className="text-center space-y-4">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-xs font-medium text-brand-turquoise">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
               Questions fréquentes
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
@@ -380,7 +380,7 @@ export function CorridorPage({
           {/* Maillage SEO : "à lire ensuite" (2 liens max) */}
           <div className="pt-2">
             <div className="rounded-2xl border border-[#E5E7EB] bg-gradient-to-br from-white to-[#FAFAFA] p-6 md:p-8 text-center space-y-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
                 À lire ensuite
               </p>
               <p className="text-sm text-[#6B7280] max-w-2xl mx-auto">
@@ -404,7 +404,7 @@ export function CorridorPage({
                 </a>
                 <a
                   href="/blog/checklists-et-guides/"
-                  className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-white transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise-200 hover:bg-white transition-colors"
                 >
                   <span>Checklists & guides</span>
                   <span>→</span>
@@ -419,7 +419,7 @@ export function CorridorPage({
       <section className="py-16 md:py-24 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white">
         <div className="container mx-auto max-w-4xl px-4 text-center space-y-6">
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+            <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
             Gratuit · Sans spam · Sans engagement
           </div>
 

@@ -56,12 +56,15 @@ export default function Hero({ abVariant }: HeroProps) {
           <div className="mx-auto max-w-2xl text-center lg:mx-0 lg:text-left">
             {/* Badge moderne avec gradient */}
             <div 
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-200/50 backdrop-blur-sm px-5 py-2.5 text-sm font-semibold text-[#0F172A] shadow-sm"
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-brand-accent/10 border border-brand-turquoise-200/50 backdrop-blur-sm px-5 py-2.5 text-sm font-semibold text-[#0F172A] shadow-sm"
               style={{
                 animation: mounted ? 'fadeInUp 0.6s ease-out' : 'none',
               }}
             >
-              <span className="h-2 w-2 rounded-full bg-cyan-500 animate-pulse shadow-[0_0_12px_rgba(6,182,212,0.6)]" />
+              <span className="relative inline-flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-turquoise opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-turquoise shadow-[0_0_12px_rgba(107,207,207,0.8)]" />
+              </span>
               Déménageurs vérifiés
             </div>
 
@@ -73,7 +76,7 @@ export default function Hero({ abVariant }: HeroProps) {
               }}
             >
               <span className="block text-[#0F172A]">Vous déménagez.</span>
-              <span className="block mt-2 bg-gradient-to-r from-cyan-600 via-cyan-700 to-blue-700 bg-clip-text text-transparent">
+              <span className="block mt-2 bg-gradient-to-r from-brand-turquoise-600 via-brand-turquoise to-brand-accent bg-clip-text text-transparent">
                 On compare.
               </span>
             </h1>
@@ -95,18 +98,18 @@ export default function Hero({ abVariant }: HeroProps) {
                 animation: mounted ? "fadeInUp 1.2s ease-out 0.3s both" : "none",
               }}
             >
-              <div className="group flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 hover:border-cyan-300 hover:shadow-md hover:shadow-cyan-100/50 transition-all duration-300">
-                <ShieldCheck className="w-4 h-4 text-cyan-600 group-hover:scale-110 transition-transform" />
+              <div className="group flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 hover:border-brand-turquoise-200 hover:shadow-md hover:shadow-brand-turquoise-100/50 transition-all duration-300">
+                <ShieldCheck className="w-4 h-4 text-brand-turquoise-600 group-hover:scale-110 transition-transform" />
                 <span className="text-sm font-medium text-[#0F172A]">Numéro masqué</span>
               </div>
               
-              <div className="group flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 hover:border-cyan-300 hover:shadow-md hover:shadow-cyan-100/50 transition-all duration-300">
-                <PhoneOff className="w-4 h-4 text-cyan-600 group-hover:scale-110 transition-transform" />
+              <div className="group flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 hover:border-brand-turquoise-200 hover:shadow-md hover:shadow-brand-turquoise-100/50 transition-all duration-300">
+                <PhoneOff className="w-4 h-4 text-brand-turquoise-600 group-hover:scale-110 transition-transform" />
                 <span className="text-sm font-medium text-[#0F172A]">Aucun appel</span>
               </div>
               
-              <div className="group flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 hover:border-cyan-300 hover:shadow-md hover:shadow-cyan-100/50 transition-all duration-300">
-                <BadgeCheck className="w-4 h-4 text-cyan-600 group-hover:scale-110 transition-transform" />
+              <div className="group flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 hover:border-brand-turquoise-200 hover:shadow-md hover:shadow-brand-turquoise-100/50 transition-all duration-300">
+                <BadgeCheck className="w-4 h-4 text-brand-turquoise-600 group-hover:scale-110 transition-transform" />
                 <span className="text-sm font-medium text-[#0F172A]">Entreprises vérifiées</span>
               </div>
             </div>
@@ -145,7 +148,7 @@ export default function Hero({ abVariant }: HeroProps) {
           }}
         >
           {/* Glow effect derrière la card */}
-          <div className="absolute -inset-6 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-cyan-500/20 rounded-3xl blur-3xl opacity-60" />
+          <div className="absolute -inset-6 bg-gradient-to-r from-brand-turquoise/20 via-brand-accent/15 to-brand-turquoise/20 rounded-3xl blur-3xl opacity-60" />
           <div className="relative">
             <HeroBudgetCard ab={ab} />
           </div>

@@ -21,8 +21,8 @@ function FAQItem({ faq, isOpen, onToggle }: { faq: FAQItem; isOpen: boolean; onT
       animate={{ opacity: 1, y: 0 }}
       className={`group relative overflow-hidden rounded-xl border backdrop-blur-sm transition-all duration-300 ${
         isOpen
-          ? "border-cyan-300/60 bg-white shadow-[0_8px_24px_rgba(6,182,212,0.15)]"
-          : "border-gray-200 bg-white/70 hover:bg-white hover:border-cyan-200 hover:shadow-md"
+          ? "border-brand-turquoise-200/60 bg-white shadow-[0_8px_24px_rgba(107,207,207,0.15)]"
+          : "border-gray-200 bg-white/70 hover:bg-white hover:border-brand-turquoise-200 hover:shadow-md"
       }`}
     >
       {/* Gradient accent on hover/open */}

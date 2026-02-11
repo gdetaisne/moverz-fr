@@ -29,19 +29,22 @@ export default function RealStories() {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 bg-gradient-to-br from-white via-cyan-50/20 to-white overflow-hidden">
+    <section className="relative py-20 md:py-32 bg-gradient-to-br from-white via-brand-turquoise-50/20 to-white overflow-hidden">
       {/* Subtle grid pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(#E5E7EB_1px,transparent_1px)] [background-size:24px_24px] opacity-10" />
       
       <div className="relative container max-w-6xl mx-auto px-4">
         {/* Header minimal */}
         <div className="text-center mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-200/50 backdrop-blur-sm px-5 py-2 text-sm font-bold text-[#0F172A]">
-            <span className="h-2 w-2 rounded-full bg-cyan-500 animate-pulse shadow-[0_0_12px_rgba(6,182,212,0.6)]" />
+          <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-brand-accent/10 border border-brand-turquoise-200/50 backdrop-blur-sm px-5 py-2 text-sm font-bold text-[#0F172A]">
+            <span className="relative inline-flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-turquoise opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-turquoise shadow-[0_0_12px_rgba(107,207,207,0.8)]" />
+            </span>
             Témoignages
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0F172A]">
-            Ça marche <span className="bg-gradient-to-r from-cyan-600 via-cyan-700 to-blue-700 bg-clip-text text-transparent">vraiment</span>
+            Ça marche <span className="bg-gradient-to-r from-brand-turquoise-600 via-brand-turquoise to-brand-accent bg-clip-text text-transparent">vraiment</span>
           </h2>
           <p className="text-lg text-gray-600">
             Pas de blabla. Juste des résultats.
@@ -53,10 +56,10 @@ export default function RealStories() {
           {stories.map((story, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-cyan-200/40 bg-white/95 backdrop-blur-sm p-6 shadow-[0_8px_24px_rgba(6,182,212,0.1)] hover:shadow-[0_12px_32px_rgba(6,182,212,0.18)] hover:border-cyan-300/60 md:hover:scale-[1.03] transition-all duration-300"
+              className="rounded-2xl border border-brand-turquoise-200/40 bg-white/95 backdrop-blur-sm p-6 shadow-[0_8px_24px_rgba(107,207,207,0.1)] hover:shadow-[0_12px_32px_rgba(107,207,207,0.18)] hover:border-brand-turquoise-200/60 md:hover:scale-[1.03] transition-all duration-300"
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-600 to-blue-700 text-sm font-bold text-white shadow-lg shadow-cyan-500/30">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-turquoise to-brand-turquoise-500 text-sm font-bold text-white shadow-lg shadow-brand-turquoise/30">
                   {story.initials}
                 </div>
                 <div className="flex-1">
@@ -73,7 +76,7 @@ export default function RealStories() {
                 ))}
               </div>
               <div className="mb-4">
-                <span className="inline-flex items-center rounded-full bg-gradient-to-r from-cyan-100 to-blue-100 border border-cyan-300/50 px-3 py-1.5 text-xs font-bold text-cyan-900 shadow-sm">
+                <span className="inline-flex items-center rounded-full bg-gradient-to-r from-brand-turquoise-100 to-brand-accent-100 border border-brand-accent-300/50 px-3 py-1.5 text-xs font-bold text-brand-turquoise-700 shadow-sm">
                   {story.outcome}
                 </span>
               </div>
