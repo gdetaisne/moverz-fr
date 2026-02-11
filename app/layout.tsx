@@ -304,9 +304,12 @@ export default function RootLayout({
                   />
                   <button
                     type="submit"
-                    className="shrink-0 rounded-xl bg-gradient-to-r from-brand-turquoise to-brand-accent px-5 py-2.5 text-sm font-bold text-white hover:scale-105 transition-all duration-300 shadow-[0_4px_16px_rgba(107,207,207,0.3)]"
+                    className="shrink-0 rounded-xl bg-gradient-to-r from-brand-turquoise to-brand-accent p-2.5 text-white hover:scale-105 transition-all duration-300 shadow-[0_4px_16px_rgba(107,207,207,0.3)]"
+                    aria-label="Rechercher"
                   >
-                    OK
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
                   </button>
                 </form>
               </div>
