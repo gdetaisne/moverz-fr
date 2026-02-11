@@ -50,7 +50,7 @@ export default function RealStories() {
           {stories.map((story, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-[#E3E5E8] bg-white/95 backdrop-blur-sm p-6 shadow-[0_4px_16px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] hover:border-[#6BCFCF]/50 hover:scale-[1.02] transition-all duration-300"
+              className="rounded-2xl border border-[#E3E5E8] bg-white/95 backdrop-blur-sm p-6 shadow-[0_4px_16px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] hover:border-[#6BCFCF]/50 md:hover:scale-[1.02] transition-all duration-300"
             >
               <div className="flex items-center gap-3 mb-3">
                 <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#0F172A] text-sm font-semibold text-white">

@@ -37,7 +37,7 @@ async function fetchCities(q: string): Promise<CitySuggestion[]> {
   }
 }
 
-/** Appel API estimate du tunnel */
+/** Appel API estimate du tunnel devis (même endpoint que le tunnel) */
 async function fetchEstimate(
   originPostalCode: string,
   destinationPostalCode: string,
@@ -61,8 +61,8 @@ async function fetchEstimate(
   }
 }
 
-/** Construit le deep-link vers step 3 du tunnel */
-function buildDeepLink(
+/** Construit le deep-link vers le tunnel devis (pré-rempli depuis la home) */
+function buildDevisLinkFromHome(
   originPostalCode: string,
   originCity: string,
   destinationPostalCode: string,
@@ -70,14 +70,15 @@ function buildDeepLink(
   surfaceM2: number,
 ): string {
   const p = new URLSearchParams({
-    step: "3",
+    // Tracking: demandé pour la home (valeur encodée automatiquement)
+    from: "https://moverz.fr",
     originPostalCode,
     originCity,
     destinationPostalCode,
     destinationCity,
     surfaceM2: String(surfaceM2),
+    // On garde source=moverz.fr pour cohérence avec les autres CTAs du site
     source: "moverz.fr",
-    from: "home",
   });
   return `https://devis.moverz.fr/devis-gratuits-v3?${p.toString()}`;
 }
@@ -206,6 +207,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
   const [surface, setSurface] = useState<string>("");
   const [estimate, setEstimate] = useState<Estimate | null>(null);
   const [loading, setLoading] = useState(false);
+  const [redirecting, setRedirecting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const canSubmit = origin && destination && Number(surface) > 0;
@@ -223,18 +225,37 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
     }
   };
 
+  const handleRedirect = () => {
+    if (!origin || !destination || !surface) return;
+    setRedirecting(true);
+    setError(null);
+    try {
+      const url = buildDevisLinkFromHome(
+        origin.postcode,
+        origin.city,
+        destination.postcode,
+        destination.city,
+        Number(surface),
+      );
+      window.location.assign(url);
+    } catch {
+      setRedirecting(false);
+      setError("Redirection indisponible. Réessayez.");
+    }
+  };
+
   const deepLink =
     origin && destination && surface
-      ? buildDeepLink(origin.postcode, origin.city, destination.postcode, destination.city, Number(surface))
+      ? buildDevisLinkFromHome(origin.postcode, origin.city, destination.postcode, destination.city, Number(surface))
       : "#";
 
-  // Reset estimate when inputs change
+  // Reset estimate/errors when inputs change
   useEffect(() => {
     setEstimate(null);
     setError(null);
   }, [origin, destination, surface]);
 
-  /* ---------- RESULT STATE ---------- */
+  /* ---------- RESULT STATE (Step 2) ---------- */
   if (estimate) {
     return (
       <div className="rounded-3xl bg-white/90 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-white/40 p-8 space-y-5">
@@ -252,12 +273,14 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
           <p className="text-xs text-[#94A3B8]">Formule standard · Estimation non contractuelle</p>
         </div>
 
-        <a
-          href={deepLink}
-          className="block w-full rounded-xl bg-gradient-to-r from-[#0F172A] to-[#1E293B] py-3.5 text-center text-sm font-semibold text-white shadow-[0_4px_16px_rgba(15,23,42,0.3)] hover:shadow-[0_8px_24px_rgba(15,23,42,0.4)] hover:scale-[1.02] transition-all duration-200"
+        <button
+          type="button"
+          disabled={redirecting}
+          onClick={handleRedirect}
+          className="block w-full rounded-xl bg-gradient-to-r from-[#0F172A] to-[#1E293B] py-4 text-center text-sm font-semibold text-white shadow-[0_4px_16px_rgba(15,23,42,0.3)] hover:shadow-[0_8px_24px_rgba(15,23,42,0.4)] disabled:opacity-60 active:scale-[0.98] md:hover:scale-[1.02] transition-all duration-200 touch-manipulation"
         >
-          Affiner mon budget →
-        </a>
+          {redirecting ? "Redirection…" : "Affiner mon budget →"}
+        </button>
 
         <button
           type="button"
@@ -323,7 +346,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
         type="button"
         disabled={!canSubmit || loading}
         onClick={handleEstimate}
-        className="w-full rounded-xl bg-gradient-to-r from-[#0F172A] to-[#1E293B] py-3.5 text-sm font-semibold text-white disabled:opacity-40 shadow-[0_4px_16px_rgba(15,23,42,0.3)] hover:shadow-[0_8px_24px_rgba(15,23,42,0.4)] hover:scale-[1.02] transition-all duration-200 disabled:hover:scale-100 disabled:hover:shadow-[0_4px_16px_rgba(15,23,42,0.3)]"
+        className="w-full rounded-xl bg-gradient-to-r from-[#0F172A] to-[#1E293B] py-4 text-sm font-semibold text-white disabled:opacity-40 shadow-[0_4px_16px_rgba(15,23,42,0.3)] hover:shadow-[0_8px_24px_rgba(15,23,42,0.4)] active:scale-[0.98] md:hover:scale-[1.02] transition-all duration-200 disabled:hover:scale-100 disabled:hover:shadow-[0_4px_16px_rgba(15,23,42,0.3)] touch-manipulation"
       >
         {loading ? "Calcul en cours…" : "Voir mon estimation →"}
       </button>

@@ -53,7 +53,7 @@ export default function ContactPage() {
               <div className="mt-7 flex flex-col sm:flex-row gap-3">
                 <a
                   href="#form"
-                  className="group inline-flex items-center justify-center gap-2 rounded-2xl border border-[#0F172A]/15 bg-white px-6 py-4 text-sm font-semibold text-[#0F172A] hover:bg-gray-50 transition-colors"
+                  className="group inline-flex items-center justify-center gap-2 rounded-2xl border border-[#0F172A]/15 bg-white px-6 py-4 text-sm font-semibold text-[#0F172A] hover:bg-gray-50 active:scale-[0.98] transition-all touch-manipulation min-h-[48px]"
                 >
                   <Mail className="h-4 w-4" />
                   Envoyer un message
@@ -78,7 +78,7 @@ export default function ContactPage() {
             </div>
 
             <div className="space-y-4">
-              <div className="rounded-3xl border border-[#E3E5E8] bg-white p-7 shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
+              <div className="rounded-3xl border border-[#E3E5E8] bg-white/95 backdrop-blur-sm p-7 shadow-[0_8px_32px_rgba(0,0,0,0.08)]">
                 <div className="flex items-center gap-3">
                   <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#6BCFCF]/10 text-[#2B7A78]">
                     <Users className="h-5 w-5" />
@@ -151,7 +151,7 @@ export default function ContactPage() {
 
               </div>
 
-              <div className="rounded-3xl border border-[#E3E5E8] bg-white p-7 shadow-sm">
+              <div className="rounded-3xl border border-[#E3E5E8] bg-white/95 backdrop-blur-sm p-7 shadow-[0_4px_16px_rgba(0,0,0,0.04)]">
                 <p className="text-sm font-semibold text-[#0F172A]">Astuce</p>
                 <p className="mt-2 text-sm text-[#1E293B]/70">
                   Si vous avez un devis “bizarre”, envoyez une capture + quelques détails (accès / étage / cave). On vous dit tout de suite ce qui cloche.
@@ -184,7 +184,7 @@ export default function ContactPage() {
             </div>
 
             <div className="space-y-6">
-              <div className="rounded-3xl border border-[#E3E5E8] bg-white p-7 md:p-8 shadow-sm">
+              <div className="rounded-3xl border border-[#E3E5E8] bg-white/95 backdrop-blur-sm p-7 md:p-8 shadow-[0_4px_16px_rgba(0,0,0,0.04)]">
                 <p className="text-sm font-semibold text-[#0F172A]">Coordonnées</p>
                 <div className="mt-4 space-y-4 text-sm text-[#1E293B]/70">
                   <div>
@@ -218,7 +218,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="rounded-3xl border border-[#E3E5E8] bg-white p-7 md:p-8 shadow-sm">
+              <div className="rounded-3xl border border-[#E3E5E8] bg-white/95 backdrop-blur-sm p-7 md:p-8 shadow-[0_4px_16px_rgba(0,0,0,0.04)]">
                 <p className="text-sm font-semibold text-[#0F172A]">Nos garanties</p>
                 <ul className="mt-4 space-y-3 text-sm text-[#1E293B]/70">
                   <li className="flex items-start gap-3">
@@ -268,9 +268,9 @@ export default function ContactPage() {
           <p className="text-lg text-white/75 max-w-2xl mx-auto">
             Consultez notre FAQ pour trouver les réponses aux questions les plus fréquentes.
           </p>
-          <a
+            <a
             href="/faq/"
-            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-lg font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-lg font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] active:scale-[0.98] md:hover:scale-[1.02] transition-all duration-300 touch-manipulation min-h-[48px]"
           >
             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
             <span className="relative">Accéder à la FAQ</span>

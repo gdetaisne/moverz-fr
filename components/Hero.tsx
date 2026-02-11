@@ -87,7 +87,7 @@ export default function Hero({ abVariant }: HeroProps) {
 
             {/* Mini-badges de réassurance (version compacte) */}
             <div
-              className="mt-8 flex items-center gap-2 justify-center lg:justify-start text-xs text-[#64748B] font-medium"
+              className="mt-8 flex flex-wrap items-center gap-2 justify-center lg:justify-start text-xs text-[#64748B] font-medium"
               style={{
                 animation: mounted ? "fadeInUp 1.2s ease-out 0.4s both" : "none",
               }}

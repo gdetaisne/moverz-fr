@@ -55,7 +55,7 @@ export default function PourquoiHero() {
             {/* CTA */}
             <a
               href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=pourquoi-moverz&devis_range=3-5"
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-base font-semibold text-[#0F172A] shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-base font-semibold text-[#0F172A] shadow-[0_4px_16px_rgba(255,255,255,0.3)] hover:shadow-[0_8px_24px_rgba(255,255,255,0.4)] active:scale-[0.98] md:hover:scale-[1.02] transition-all duration-200 touch-manipulation min-h-[48px]"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -66,9 +66,9 @@ export default function PourquoiHero() {
 
           {/* Right: Key features cards */}
           <div className="flex flex-col gap-6">
-            <div className="flex items-center gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-              <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[#6BCFCF]/10">
-                <Shield className="w-6 h-6 text-[#6BCFCF]" />
+            <div className="flex items-center gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-[0_4px_16px_rgba(107,207,207,0.05)] hover:shadow-[0_8px_32px_rgba(107,207,207,0.15)] md:hover:scale-[1.02] transition-all duration-300">
+              <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-[#6BCFCF]/10 to-[#A8E8E8]/10 shadow-sm">
+                <Shield className="w-6 h-6 text-[#6BCFCF]" strokeWidth={2} />
               </div>
               <div>
                 <p className="font-semibold text-white">Pros vérifiés</p>
@@ -76,9 +76,9 @@ export default function PourquoiHero() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-              <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[#6BCFCF]/10">
-                <TrendingUp className="w-6 h-6 text-[#6BCFCF]" />
+            <div className="flex items-center gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-[0_4px_16px_rgba(107,207,207,0.05)] hover:shadow-[0_8px_32px_rgba(107,207,207,0.15)] md:hover:scale-[1.02] transition-all duration-300">
+              <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-[#8B5CF6]/10 to-[#A78BFA]/10 shadow-sm">
+                <TrendingUp className="w-6 h-6 text-[#8B5CF6]" strokeWidth={2} />
               </div>
               <div>
                 <p className="font-semibold text-white">Devis comparables</p>
@@ -86,9 +86,9 @@ export default function PourquoiHero() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-              <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[#6BCFCF]/10">
-                <Users className="w-6 h-6 text-[#6BCFCF]" />
+            <div className="flex items-center gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-[0_4px_16px_rgba(107,207,207,0.05)] hover:shadow-[0_8px_32px_rgba(107,207,207,0.15)] md:hover:scale-[1.02] transition-all duration-300">
+              <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-[#10B981]/10 to-[#34D399]/10 shadow-sm">
+                <Users className="w-6 h-6 text-[#10B981]" strokeWidth={2} />
               </div>
               <div>
                 <p className="font-semibold text-white">Sans démarchage</p>

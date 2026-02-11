@@ -224,7 +224,7 @@ export default function FAQPage() {
             ].map((item, i) => (
               <div 
                 key={i}
-                className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white/80 backdrop-blur-sm p-5 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-[#6BCFCF]/30 transition-all duration-300"
+                className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white/90 backdrop-blur-sm p-5 shadow-[0_4px_16px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] md:hover:scale-[1.02] hover:border-[#6BCFCF]/30 transition-all duration-300"
               >
                 {/* Gradient overlay on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
@@ -307,7 +307,7 @@ export default function FAQPage() {
               </p>
               <a
                 href="/contact/"
-                className="inline-flex items-center gap-2 rounded-xl bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#0F172A] to-[#1E293B] px-8 py-4 text-base font-semibold text-white shadow-[0_4px_16px_rgba(15,23,42,0.3)] hover:shadow-[0_8px_24px_rgba(15,23,42,0.4)] active:scale-[0.98] md:hover:scale-[1.02] transition-all duration-200 touch-manipulation min-h-[48px]"
               >
                 <span>Posez votre question</span>
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

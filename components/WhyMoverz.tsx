@@ -193,7 +193,7 @@ export default function WhyMoverz() {
             }}
           >
             {/* Card 1: Dossier standardisé */}
-            <div className="group relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-8 shadow-[0_4px_16px_rgba(107,207,207,0.05)] hover:bg-white/10 hover:border-[#6BCFCF]/50 hover:shadow-[0_8px_32px_rgba(107,207,207,0.15)] hover:scale-[1.02] transition-all duration-300">
+            <div className="group relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-8 shadow-[0_4px_16px_rgba(107,207,207,0.05)] hover:bg-white/10 hover:border-[#6BCFCF]/50 hover:shadow-[0_8px_32px_rgba(107,207,207,0.15)] md:hover:scale-[1.02] transition-all duration-300">
               <div className="relative">
                 <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#6BCFCF]/20 to-[#6BCFCF]/5 border border-[#6BCFCF]/30 mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Sparkles className="w-8 h-8 text-[#6BCFCF]" strokeWidth={2.5} />
@@ -216,7 +216,7 @@ export default function WhyMoverz() {
             </div>
 
             {/* Card 2: Suivi simple */}
-            <div className="group relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-8 shadow-[0_4px_16px_rgba(107,207,207,0.05)] hover:bg-white/10 hover:border-[#6BCFCF]/50 hover:shadow-[0_8px_32px_rgba(107,207,207,0.15)] hover:scale-[1.02] transition-all duration-300">
+            <div className="group relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-8 shadow-[0_4px_16px_rgba(107,207,207,0.05)] hover:bg-white/10 hover:border-[#6BCFCF]/50 hover:shadow-[0_8px_32px_rgba(107,207,207,0.15)] md:hover:scale-[1.02] transition-all duration-300">
               <div className="relative">
                 <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#6BCFCF]/20 to-[#6BCFCF]/5 border border-[#6BCFCF]/30 mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Smartphone className="w-8 h-8 text-[#6BCFCF]" strokeWidth={2.5} />
