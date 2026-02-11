@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import HeroMockup from "./HeroMockup";
+import HeroBudgetCard from "./HeroBudgetCard";
 
 type AbPromiseVariant = "A" | "B";
 
@@ -24,21 +24,11 @@ function readCookie(name: string): string {
 }
 
 export default function Hero({ abVariant }: HeroProps) {
-  const [scrollY, setScrollY] = useState(0);
   const [mounted, setMounted] = useState(false);
   const [ab, setAb] = useState<AbPromiseVariant>(abVariant ?? "A");
 
   useEffect(() => {
     setMounted(true);
-    
-    if (typeof window === "undefined") return;
-
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -49,11 +39,8 @@ export default function Hero({ abVariant }: HeroProps) {
 
   const heroPromise =
     ab === "B"
-      ? "Jusqu’à 5 devis comparables · Déménageurs vérifiés · 3 min · 100% gratuit"
+      ? "Jusqu'à 5 devis comparables · Déménageurs vérifiés · 3 min · 100% gratuit"
       : "des devis comparables · 3 min · 100% gratuit";
-
-  const heroCtaHref =
-    `https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=home&devis_range=3-5&ab_promise=${ab}`;
 
   return (
     <section className="relative overflow-hidden font-sans bg-hero">
@@ -98,30 +85,9 @@ export default function Hero({ abVariant }: HeroProps) {
               {heroPromise}
             </p>
 
-            {/* CTA principal */}
-            <div 
-              className="mt-8"
-              style={{
-                animation: mounted ? 'fadeInUp 1.2s ease-out 0.3s both' : 'none',
-              }}
-            >
-              <a
-                href={heroCtaHref}
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-[0_10px_40px_rgba(15,23,42,0.25)] hover:shadow-[0_14px_60px_rgba(15,23,42,0.35)] hover:-translate-y-0.5 transition-all duration-300"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-                <span>Comparer mes devis</span>
-              </a>
-              <p className="mt-3 text-xs font-medium text-center text-[#1E293B]/70">
-                3 minutes • dossier guidé • sans appels
-              </p>
-            </div>
-
             {/* Mini-badges de réassurance (hyper scannables) */}
             <div
-              className="mt-6 flex flex-wrap gap-2 justify-center lg:justify-start"
+              className="mt-8 flex flex-wrap gap-2 justify-center lg:justify-start"
               style={{
                 animation: mounted ? "fadeInUp 1.2s ease-out 0.4s both" : "none",
               }}
@@ -141,18 +107,17 @@ export default function Hero({ abVariant }: HeroProps) {
             </div>
           </div>
 
-        {/* ========== COLONNE DROITE – WIDGET ========== */}
+        {/* ========== COLONNE DROITE – FORMULAIRE BUDGET ========== */}
         <div 
-          className="relative mx-auto w-full max-w-[560px] lg:mx-0"
+          className="relative mx-auto w-full max-w-[440px] lg:mx-0"
           style={{
             animation: mounted ? 'fadeInUp 1s ease-out 0.4s both' : 'none',
           }}
         >
-          <HeroMockup />
+          <HeroBudgetCard ab={ab} />
         </div>
         </div>
       </div>
     </section>
   );
 }
-
