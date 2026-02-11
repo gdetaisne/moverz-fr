@@ -104,6 +104,24 @@ export default function Hero({ abVariant }: HeroProps) {
                 <span className="text-emerald-500">✓</span> Entreprises vérifiées
               </span>
             </div>
+
+            {/* Note Google */}
+            <div
+              className="mt-6 flex justify-center lg:justify-start"
+              style={{
+                animation: mounted ? "fadeInUp 1.4s ease-out 0.5s both" : "none",
+              }}
+            >
+              <a
+                href="https://www.google.com/maps/place/Moverz/@46.881154,3.0417412,6z/data=!3m1!4b1!4m6!3m5!1s0x65777ea3ad50b1c1:0xdcc12b2e04254f4!8m2!3d46.881154!4d3.0417412!16s%2Fg%2F11ylmz4jk6?entry=ttu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-full bg-amber-50 border border-amber-200/60 px-4 py-1.5 text-xs font-medium text-[#78350F] hover:bg-amber-100 transition-colors"
+              >
+                <span className="text-amber-400 text-sm tracking-tight">★★★★★</span>
+                <span>4,5+ sur Google</span>
+              </a>
+            </div>
           </div>
 
         {/* ========== COLONNE DROITE – FORMULAIRE BUDGET ========== */}
