@@ -167,12 +167,12 @@ function CityAutocomplete({
           onFocus={() => { setFocused(true); suggestions.length > 0 && setOpen(true); }}
           onBlur={() => setFocused(false)}
           placeholder={placeholder}
-          className={`w-full rounded-lg border bg-white px-3 py-2.5 pr-9 text-sm text-[#0F172A] focus:outline-none focus:ring-2 transition-colors ${
+          className={`w-full rounded-lg border bg-white px-3 py-2.5 pr-9 text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all ${
             unrecognized
-              ? "border-amber-400 focus:border-amber-400 focus:ring-amber-200/50"
+              ? "border-amber-400 focus:border-amber-400 focus:ring-amber-200/50 shadow-[0_0_0_3px_rgba(251,191,36,0.1)]"
               : value
-                ? "border-emerald-400 focus:border-[#6BCFCF] focus:ring-[#6BCFCF]/30"
-                : "border-[#D1D5DB] focus:border-[#6BCFCF] focus:ring-[#6BCFCF]/30"
+                ? "border-emerald-400 focus:border-[#6BCFCF] focus:ring-[#6BCFCF]/40 shadow-[0_0_0_3px_rgba(16,185,129,0.1)]"
+                : "border-[#D1D5DB] focus:border-[#6BCFCF] focus:ring-[#6BCFCF]/40"
           }`}
         />
         {statusIcon}
@@ -237,7 +237,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
   /* ---------- RESULT STATE ---------- */
   if (estimate) {
     return (
-      <div className="rounded-2xl border border-[#E5E7EB] bg-white shadow-lg p-6 space-y-5">
+      <div className="rounded-3xl bg-white/90 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-white/40 p-8 space-y-5">
         <p className="text-xs font-semibold uppercase tracking-widest text-[#6BCFCF]">
           Estimation indicative
         </p>
@@ -254,7 +254,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
 
         <a
           href={deepLink}
-          className="block w-full rounded-xl bg-[#0F172A] py-3.5 text-center text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+          className="block w-full rounded-xl bg-gradient-to-r from-[#0F172A] to-[#1E293B] py-3.5 text-center text-sm font-semibold text-white shadow-[0_4px_16px_rgba(15,23,42,0.3)] hover:shadow-[0_8px_24px_rgba(15,23,42,0.4)] hover:scale-[1.02] transition-all duration-200"
         >
           Affiner mon budget →
         </a>
@@ -272,7 +272,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
 
   /* ---------- FORM STATE ---------- */
   return (
-    <div className="rounded-2xl border border-[#E5E7EB] bg-white shadow-lg p-6 space-y-4">
+    <div className="rounded-3xl bg-white/90 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-white/40 p-8 space-y-4">
       <p className="text-xs font-semibold uppercase tracking-widest text-[#6BCFCF]">
         Estimez votre budget
       </p>
@@ -303,12 +303,12 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
           value={surface}
           onChange={(e) => setSurface(e.target.value)}
           placeholder="Ex : 60"
-          className="w-full rounded-lg border border-[#D1D5DB] bg-white px-3 py-2.5 text-sm text-[#0F172A] focus:border-[#6BCFCF] focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]/30"
+          className="w-full rounded-lg border border-[#D1D5DB] bg-white px-3 py-2.5 text-sm text-[#0F172A] focus:border-[#6BCFCF] focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]/40 focus:ring-offset-2 transition-all"
         />
       </div>
 
       {error && (
-        <div className="text-xs text-red-600 bg-red-50 rounded-lg px-3 py-2">
+        <div className="text-xs text-red-600 bg-red-50 rounded-xl px-3 py-2 border border-red-100">
           {error}
           <a
             href={deepLink}
@@ -323,7 +323,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
         type="button"
         disabled={!canSubmit || loading}
         onClick={handleEstimate}
-        className="w-full rounded-xl bg-[#0F172A] py-3.5 text-sm font-semibold text-white disabled:opacity-40 hover:bg-[#1E293B] transition-colors"
+        className="w-full rounded-xl bg-gradient-to-r from-[#0F172A] to-[#1E293B] py-3.5 text-sm font-semibold text-white disabled:opacity-40 shadow-[0_4px_16px_rgba(15,23,42,0.3)] hover:shadow-[0_8px_24px_rgba(15,23,42,0.4)] hover:scale-[1.02] transition-all duration-200 disabled:hover:scale-100 disabled:hover:shadow-[0_4px_16px_rgba(15,23,42,0.3)]"
       >
         {loading ? "Calcul en cours…" : "Voir mon estimation →"}
       </button>

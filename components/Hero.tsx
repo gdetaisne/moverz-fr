@@ -46,7 +46,7 @@ export default function Hero({ abVariant }: HeroProps) {
     <section className="relative overflow-hidden font-sans bg-hero">
 
       {/* Spacing uniforme */}
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-32">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
           
           {/* ========== COLONNE GAUCHE – TEXTE ========== */}
@@ -85,25 +85,24 @@ export default function Hero({ abVariant }: HeroProps) {
               {heroPromise}
             </p>
 
-            {/* Mini-badges de réassurance (hyper scannables) */}
+            {/* Mini-badges de réassurance (version compacte) */}
             <div
-              className="mt-8 flex flex-wrap gap-2 justify-center lg:justify-start"
+              className="mt-8 flex items-center gap-2 justify-center lg:justify-start text-xs text-[#64748B] font-medium"
               style={{
                 animation: mounted ? "fadeInUp 1.2s ease-out 0.4s both" : "none",
               }}
             >
-              {[
-                "✓ Numéro masqué jusqu'au choix",
-                "✓ Aucun démarchage / aucun appel",
-                "✓ Entreprises vérifiées (assurance + licence + solvabilité)"
-              ].map((badge, i) => (
-                <span 
-                  key={i}
-                  className="inline-flex items-center gap-1.5 rounded-full bg-white/90 backdrop-blur-sm border border-[#E3E5E8] px-3 py-2 text-xs font-semibold text-[#0F172A] shadow-sm"
-                >
-                  {badge}
-                </span>
-              ))}
+              <span className="flex items-center gap-1.5">
+                <span className="text-emerald-500">✓</span> Numéro masqué
+              </span>
+              <span className="text-[#CBD5E1]">•</span>
+              <span className="flex items-center gap-1.5">
+                <span className="text-emerald-500">✓</span> Aucun appel
+              </span>
+              <span className="text-[#CBD5E1]">•</span>
+              <span className="flex items-center gap-1.5">
+                <span className="text-emerald-500">✓</span> Entreprises vérifiées
+              </span>
             </div>
           </div>
 

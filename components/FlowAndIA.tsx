@@ -30,10 +30,14 @@ export default function FlowAndIA() {
     setMounted(true);
   }, []);
 
+  // Couleurs par étape pour les icônes
+  const stepColors = ["text-[#6BCFCF]", "text-[#8B5CF6]", "text-[#10B981]"];
+  const stepBgColors = ["from-[#6BCFCF]/10 to-[#A8E8E8]/10", "from-[#8B5CF6]/10 to-[#A78BFA]/10", "from-[#10B981]/10 to-[#34D399]/10"];
+
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-white to-[#F8F9FA]">
+    <section className="py-20 md:py-32 bg-gradient-to-b from-white to-[#F8F9FA]">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-[40%_1fr] gap-12 lg:gap-16 items-center">
           {/* Left: Mockup timeline */}
           <div 
             className="relative order-2 lg:order-1"
@@ -49,7 +53,7 @@ export default function FlowAndIA() {
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-[#1F2937] rounded-b-3xl z-10" />
 
                 {/* Screen content */}
-                <div className="relative bg-gradient-to-b from-[#F8F9FA] to-white rounded-[36px] overflow-hidden" style={{ aspectRatio: '9/19.5' }}>
+                <div className="relative bg-gradient-to-b from-[#F1F5F9] to-[#F8FAFC] rounded-[36px] overflow-hidden" style={{ aspectRatio: '9/19.5' }}>
                   {/* Header */}
                   <div className="bg-gradient-to-br from-[#0F172A] to-[#1E293B] px-5 py-6 text-white">
                     <p className="text-sm font-semibold">Votre déménagement</p>
@@ -141,10 +145,10 @@ export default function FlowAndIA() {
                   <div key={index} className="flex items-start gap-5">
                     {/* Number + Icon */}
                     <div className="flex-shrink-0 relative">
-                      <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-[#6BCFCF]/10 to-[#A8E8E8]/10">
-                        <Icon className="w-7 h-7 text-[#0F172A]" strokeWidth={1.5} />
+                      <div className={`flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br ${stepBgColors[index]}`}>
+                        <Icon className={`w-7 h-7 ${stepColors[index]}`} strokeWidth={1.5} />
                       </div>
-                      <div className="absolute -top-2 -left-2 flex items-center justify-center w-6 h-6 rounded-full bg-[#0F172A] text-white text-xs font-bold">
+                      <div className="absolute -top-2 -left-2 flex items-center justify-center w-6 h-6 rounded-full bg-[#0F172A] text-white text-xs font-bold shadow-lg">
                         {step.number}
                       </div>
                     </div>
@@ -164,8 +168,8 @@ export default function FlowAndIA() {
         </div>
 
             {/* Bottom reassurance */}
-            <div className="mt-8 p-4 rounded-xl bg-[#A8E8E8]/20 border border-[#6BCFCF]/30">
-              <p className="text-sm font-medium text-[#0F172A]">
+            <div className="mt-8 p-5 rounded-2xl bg-gradient-to-br from-[#A8E8E8]/20 to-[#6BCFCF]/10 border border-[#6BCFCF]/30 shadow-[0_2px_8px_rgba(107,207,207,0.1)]">
+              <p className="text-sm font-medium text-[#0F172A] leading-relaxed">
                 Un dossier clair et standardisé pour tous les déménageurs, pour comparer sans surprises.
               </p>
             </div>
