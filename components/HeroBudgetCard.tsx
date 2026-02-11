@@ -78,17 +78,24 @@ function CityAutocomplete({
   placeholder,
   value,
   onSelect,
+  onClear,
 }: {
   label: string;
   placeholder: string;
   value: CitySuggestion | null;
   onSelect: (s: CitySuggestion) => void;
+  onClear: () => void;
 }) {
   const [query, setQuery] = useState(value?.label ?? "");
   const [suggestions, setSuggestions] = useState<CitySuggestion[]>([]);
   const [open, setOpen] = useState(false);
+  const [focused, setFocused] = useState(false);
+  const [searched, setSearched] = useState(false);
   const timer = useRef<ReturnType<typeof setTimeout>>();
   const wrapperRef = useRef<HTMLDivElement>(null);
+
+  // Ville non reconnue : texte saisi (≥2 car.) + aucune sélection + pas en train d'éditer
+  const unrecognized = !focused && query.length >= 2 && !value;
 
   // Close dropdown on outside click
   useEffect(() => {
@@ -105,13 +112,17 @@ function CityAutocomplete({
     (q: string) => {
       setQuery(q);
       setOpen(true);
+      setSearched(false);
+      // Si l'utilisateur modifie le texte après sélection, on invalide
+      onClear();
       clearTimeout(timer.current);
       timer.current = setTimeout(async () => {
         const results = await fetchCities(q);
         setSuggestions(results);
+        setSearched(true);
       }, 250);
     },
-    [],
+    [onClear],
   );
 
   const pick = (s: CitySuggestion) => {
@@ -120,17 +131,43 @@ function CityAutocomplete({
     setOpen(false);
   };
 
+  // Icône de statut à droite de l'input
+  const statusIcon = value ? (
+    // ✓ vert — ville reconnue
+    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-emerald-500 pointer-events-none" title="Ville reconnue">
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+    </span>
+  ) : unrecognized ? (
+    // ⚠ orange — ville non reconnue
+    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-amber-500 pointer-events-none" title="Ville non reconnue — choisissez dans la liste">
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" /></svg>
+    </span>
+  ) : null;
+
   return (
     <div ref={wrapperRef} className="relative">
       <label className="block text-sm font-medium text-[#0F172A] mb-1">{label}</label>
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => onChange(e.target.value)}
-        onFocus={() => suggestions.length > 0 && setOpen(true)}
-        placeholder={placeholder}
-        className="w-full rounded-lg border border-[#D1D5DB] bg-white px-3 py-2.5 text-sm text-[#0F172A] focus:border-[#6BCFCF] focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]/30"
-      />
+      <div className="relative">
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => onChange(e.target.value)}
+          onFocus={() => { setFocused(true); suggestions.length > 0 && setOpen(true); }}
+          onBlur={() => setFocused(false)}
+          placeholder={placeholder}
+          className={`w-full rounded-lg border bg-white px-3 py-2.5 pr-9 text-sm text-[#0F172A] focus:outline-none focus:ring-2 transition-colors ${
+            unrecognized
+              ? "border-amber-400 focus:border-amber-400 focus:ring-amber-200/50"
+              : value
+                ? "border-emerald-400 focus:border-[#6BCFCF] focus:ring-[#6BCFCF]/30"
+                : "border-[#D1D5DB] focus:border-[#6BCFCF] focus:ring-[#6BCFCF]/30"
+          }`}
+        />
+        {statusIcon}
+      </div>
+      {unrecognized && (
+        <p className="mt-1 text-xs text-amber-600">Sélectionnez une ville dans la liste</p>
+      )}
       {open && suggestions.length > 0 && (
         <ul className="absolute z-50 mt-1 w-full rounded-lg border border-[#E5E7EB] bg-white shadow-lg max-h-48 overflow-y-auto">
           {suggestions.map((s, i) => (
@@ -233,6 +270,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
         placeholder="Ex : Paris"
         value={origin}
         onSelect={setOrigin}
+        onClear={() => setOrigin(null)}
       />
 
       <CityAutocomplete
@@ -240,6 +278,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
         placeholder="Ex : Marseille"
         value={destination}
         onSelect={setDestination}
+        onClear={() => setDestination(null)}
       />
 
       <div>
