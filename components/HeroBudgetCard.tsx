@@ -22,15 +22,19 @@ type Estimate = {
 /** Appel api-adresse.data.gouv.fr (municipalités uniquement) */
 async function fetchCities(q: string): Promise<CitySuggestion[]> {
   if (q.length < 2) return [];
-  const url = `https://api-adresse.data.gouv.fr/search/?q=${encodeURIComponent(q)}&type=municipality&limit=5`;
-  const res = await fetch(url);
-  if (!res.ok) return [];
-  const data = await res.json();
-  return (data.features ?? []).map((f: any) => ({
-    label: `${f.properties.city} (${f.properties.postcode})`,
-    city: f.properties.city as string,
-    postcode: f.properties.postcode as string,
-  }));
+  try {
+    const params = new URLSearchParams({ q, type: "municipality", limit: "5" });
+    const res = await fetch(`https://api-adresse.data.gouv.fr/search/?${params}`);
+    if (!res.ok) return [];
+    const data = await res.json();
+    return (data.features ?? []).map((f: any) => ({
+      label: `${f.properties.city} (${f.properties.postcode})`,
+      city: f.properties.city as string,
+      postcode: f.properties.postcode as string,
+    }));
+  } catch {
+    return [];
+  }
 }
 
 /** Appel API estimate du tunnel */
@@ -40,10 +44,18 @@ async function fetchEstimate(
   surface: number,
 ): Promise<Estimate | null> {
   try {
-    const url = `https://devis.moverz.fr/api/estimate?originPostalCode=${originPostalCode}&destinationPostalCode=${destinationPostalCode}&surface=${surface}`;
-    const res = await fetch(url);
+    const params = new URLSearchParams({
+      originPostalCode,
+      destinationPostalCode,
+      surface: String(surface),
+    });
+    const res = await fetch(`https://devis.moverz.fr/api/estimate?${params}`);
     if (!res.ok) return null;
-    return (await res.json()) as Estimate;
+    const data = await res.json();
+    const min = typeof data.min === "number" ? data.min : Number(data.min);
+    const max = typeof data.max === "number" ? data.max : Number(data.max);
+    if (isNaN(min) || isNaN(max)) return null;
+    return { min, max };
   } catch {
     return null;
   }
