@@ -63,7 +63,7 @@ export function generateCorridorMetadata(
   const priceData = getCorridorPricesForMeta(originCitySlug, destSlug);
   
   if (priceData) {
-    // ✅ Version optimisée (distance + prix)
+    // Version optimisée (distance + prix)
     const title = `Déménagement ${originCityName} → ${destination} (${priceData.distanceKm}km) | Devis 5–7j · ${year}`;
     
     const description = `${originCityName}→${destination} (${priceData.distanceKm}km) : devis comparables sous 5–7j. Tarifs : T1 ${priceData.t1} · T2 ${priceData.t2} · Maison ${priceData.house}. Pros contrôlés, 0€.`;

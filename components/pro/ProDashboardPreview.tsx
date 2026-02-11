@@ -25,9 +25,9 @@ export default function ProDashboardPreview() {
         {/* Tabs */}
         <div className="flex justify-center gap-2 mb-8">
           {[
-            { id: "dossiers", label: "📋 Dossiers", desc: "Gérez vos leads" },
-            { id: "stats", label: "📊 Statistiques", desc: "Suivez vos perfs" },
-            { id: "notifications", label: "🔔 Notifications", desc: "Temps réel" },
+            { id: "dossiers", label: "Dossiers", desc: "Gérez vos leads" },
+            { id: "stats", label: "Statistiques", desc: "Suivez vos perfs" },
+            { id: "notifications", label: "Notifications", desc: "Temps réel" },
           ].map((tab) => (
             <button
               key={tab.id}
@@ -139,13 +139,12 @@ export default function ProDashboardPreview() {
                 {/* Stats cards */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {[
-                    { label: "Dossiers reçus", value: "47", trend: "+12%", icon: "📋" },
-                    { label: "Devis envoyés", value: "38", trend: "+8%", icon: "📄" },
-                    { label: "Taux de réponse", value: "81%", trend: "+5%", icon: "✅" },
-                    { label: "Taux de conversion", value: "34%", trend: "+3%", icon: "🎯" },
+                    { label: "Dossiers reçus", value: "47", trend: "+12%" },
+                    { label: "Devis envoyés", value: "38", trend: "+8%" },
+                    { label: "Taux de réponse", value: "81%", trend: "+5%" },
+                    { label: "Taux de conversion", value: "34%", trend: "+3%" },
                   ].map((stat, i) => (
                     <div key={i} className="p-4 rounded-xl bg-gradient-to-br from-[#F8F9FA] to-white border border-[#E3E5E8]">
-                      <div className="text-2xl mb-2">{stat.icon}</div>
                       <p className="text-2xl font-bold text-[#0F172A]">{stat.value}</p>
                       <p className="text-xs text-[#1E293B]/60 mt-1">{stat.label}</p>
                       <p className="text-xs text-green-600 font-medium mt-2">{stat.trend}</p>
@@ -197,7 +196,7 @@ export default function ProDashboardPreview() {
                   },
                   {
                     type: "won",
-                    icon: "🎉",
+                    icon: "✓",
                     title: "Dossier gagné !",
                     desc: "Sophie M. a accepté votre devis (2 450€)",
                     time: "Il y a 3h",

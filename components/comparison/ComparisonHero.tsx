@@ -55,14 +55,14 @@ export default function ComparisonHero() {
           {/* Stats row */}
           <div className="flex flex-wrap items-center justify-center gap-6 pt-4">
             {[
-              { icon: "🏦", label: "Vérifications Creditsafe" },
-              { icon: "📊", label: "Devis comparables (IA)" },
-              { icon: "🛡️", label: "Dossier anonyme" },
-              { icon: "✅", label: "Jusqu'à 5 devis" },
-            ].map((item, i) => (
-              <div key={i} className="flex items-center gap-2 text-sm text-white/80">
-                <span className="text-lg">{item.icon}</span>
-                <span>{item.label}</span>
+              "Vérifications Creditsafe",
+              "Devis comparables (IA)",
+              "Dossier anonyme",
+              "Jusqu'à 5 devis"
+            ].map((label, i) => (
+              <div key={i} className="flex items-center gap-2 text-sm text-white/90 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-turquoise"></span>
+                <span>{label}</span>
               </div>
             ))}
           </div>

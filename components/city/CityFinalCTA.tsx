@@ -132,7 +132,7 @@ export function CityFinalCTA({ cityName, quoteUrl }: CityFinalCTAProps) {
                 {/* CTA in card */}
                 <div className="pt-4 border-t border-gray-200">
                   <p className="text-xs text-center text-[#6B7280]">
-                    🚀 Rejoignez les 2847 personnes qui ont comparé avec Moverz
+                    Rejoignez les 2847 personnes qui ont comparé avec Moverz
                   </p>
                 </div>
               </div>

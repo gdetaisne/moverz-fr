@@ -11,13 +11,13 @@ import BlogFloatingCTA from "@/components/blog/BlogFloatingCTA";
 const ITEMS_PER_PAGE = 12;
 
 const CATEGORIES = [
-  { slug: "all", label: "Tous les articles", icon: "📚" },
-  { slug: "prix-et-devis", label: "Prix & devis", icon: "💰" },
-  { slug: "checklists-et-guides", label: "Checklists & guides", icon: "✅" },
-  { slug: "demenagement-par-ville", label: "Par ville", icon: "🏙️" },
-  { slug: "cas-frequents", label: "Cas fréquents", icon: "🧩" },
-  { slug: "conseils-demenagement", label: "Conseils", icon: "💡" },
-  { slug: "pro", label: "Déménageurs (Pro)", icon: "🏢" },
+  { slug: "all", label: "Tous les articles" },
+  { slug: "prix-et-devis", label: "Prix & devis" },
+  { slug: "checklists-et-guides", label: "Checklists & guides" },
+  { slug: "demenagement-par-ville", label: "Par ville" },
+  { slug: "cas-frequents", label: "Cas fréquents" },
+  { slug: "conseils-demenagement", label: "Conseils" },
+  { slug: "pro", label: "Déménageurs (Pro)" },
 ];
 
 export default function BlogIndexClient() {

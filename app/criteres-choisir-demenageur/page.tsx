@@ -82,7 +82,9 @@ export default function CriteresChoisirDemenageurPage() {
           {/* Alerte chiffres clés */}
           <div className="rounded-2xl border border-red-200 bg-gradient-to-br from-red-50 to-white p-6 md:p-8 space-y-4">
             <div className="flex items-start gap-3">
-              <span className="text-2xl">⚠️</span>
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-red-600 font-bold text-lg">
+                !
+              </div>
               <div className="space-y-3">
                 <h2 className="text-xl md:text-2xl font-bold text-[#0F172A]">
                   Pourquoi ces critères sont cruciaux
@@ -120,7 +122,7 @@ export default function CriteresChoisirDemenageurPage() {
               {[
                 {
                   title: "1) Santé financière (Creditsafe)",
-                  emoji: "🏦",
+                  emoji: "€",
                   bullets: [
                     "Score de solvabilité sur 100 (entreprises < 40/100 à éviter)",
                     "Risque de faillite à 12 mois (257 faillites en 2024 !)",
@@ -128,11 +130,11 @@ export default function CriteresChoisirDemenageurPage() {
                     "Vérification SIREN actif (pas en liquidation ou radié)",
                   ],
                   note: "C'est le critère #1 car un déménageur en difficulté = risque majeur d'acompte perdu ou de prestation non réalisée.",
-                  highlight: "✨ Exclusivité Moverz : Creditsafe vérifié automatiquement",
+                  highlight: "Exclusivité Moverz : Creditsafe vérifié automatiquement",
                 },
                 {
                   title: "2) Licence de transport et conformité légale",
-                  emoji: "📋",
+                  emoji: "✓",
                   bullets: [
                     "Inscription au registre des transporteurs (capacité professionnelle obligatoire)",
                     "SIREN/SIRET présent sur le devis et cohérent avec le Kbis",
@@ -143,7 +145,7 @@ export default function CriteresChoisirDemenageurPage() {
                 },
                 {
                   title: "3) Assurance RC Pro et marchandises transportées",
-                  emoji: "🛡️",
+                  emoji: "◆",
                   bullets: [
                     "Attestation d'assurance RC Pro valide (< 6 mois, plafond ≥ 1,5M€)",
                     "Couverture marchandises transportées (standard 60€/m³ minimum)",
@@ -154,7 +156,7 @@ export default function CriteresChoisirDemenageurPage() {
                 },
                 {
                   title: "4) Avis clients récents et réputation",
-                  emoji: "⭐",
+                  emoji: "★",
                   bullets: [
                     "Note Google Maps 4.0+/5 minimum (idéalement 4.5+/5)",
                     "Volume d'avis suffisant (minimum 20-30 avis pour fiabilité)",
@@ -176,7 +178,7 @@ export default function CriteresChoisirDemenageurPage() {
                 },
                 {
                   title: "6) Devis détaillé et transparent",
-                  emoji: "📄",
+                  emoji: "≡",
                   bullets: [
                     "Prestations incluses clairement listées (emballage, démontage, protection)",
                     "Accès détaillés (étage, ascenseur, parking, distance porte-camion)",
@@ -187,7 +189,7 @@ export default function CriteresChoisirDemenageurPage() {
                 },
                 {
                   title: "7) Conditions de paiement et d'annulation",
-                  emoji: "💰",
+                  emoji: "€",
                   bullets: [
                     "Acompte maximum 30% (méfiez-vous des demandes de 50%+ ou 100% avant prestation)",
                     "Paiement traçable obligatoire (virement, CB, chèque — pas de cash uniquement)",
@@ -242,7 +244,9 @@ export default function CriteresChoisirDemenageurPage() {
           {/* Section Moverz vérifie automatiquement */}
           <div className="rounded-2xl border border-brand-turquoise/30 bg-gradient-to-br from-brand-turquoise/10 to-white p-6 md:p-8 space-y-4">
             <div className="flex items-center gap-3">
-              <span className="text-3xl">✨</span>
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-brand-turquoise/20 flex items-center justify-center text-brand-turquoise font-bold text-lg">
+                ✓
+              </div>
               <h2 className="text-lg md:text-xl font-semibold text-[#0F172A]">
                 Ce que Moverz vérifie automatiquement pour vous
               </h2>
@@ -255,22 +259,22 @@ export default function CriteresChoisirDemenageurPage() {
             <div className="grid gap-3 md:grid-cols-2">
               {[
                 {
-                  icon: "🏦",
+                  icon: "€",
                   title: "Santé financière (Creditsafe)",
                   desc: "Score de solvabilité, risque de faillite, incidents de paiement. Seules les entreprises financièrement solides passent nos filtres.",
                 },
                 {
-                  icon: "📋",
+                  icon: "✓",
                   title: "Licences et SIREN",
                   desc: "Inscription au registre des transporteurs, SIREN actif, cohérence identité légale. Zéro déménageur non conforme.",
                 },
                 {
-                  icon: "🛡️",
+                  icon: "◆",
                   title: "Assurances RC Pro",
                   desc: "Attestation valide, plafond ≥ 1,5M€, couverture marchandises. Vous ne recevez des devis que de pros correctement assurés.",
                 },
                 {
-                  icon: "⭐",
+                  icon: "★",
                   title: "Avis clients Google",
                   desc: "Note 4.0+/5, volume suffisant (20+ avis), pas de pattern de litiges répétitifs (surcoûts, casse, retards).",
                 },
@@ -347,7 +351,7 @@ export default function CriteresChoisirDemenageurPage() {
                     </span>
                     <div className="flex-1">
                       <p>{item.step}</p>
-                      <p className="text-xs text-brand-turquoise mt-1 font-medium">💡 {item.tool}</p>
+                      <p className="text-xs text-brand-turquoise mt-1 font-medium">→ {item.tool}</p>
                     </div>
                   </li>
                 ))}
@@ -377,14 +381,14 @@ export default function CriteresChoisirDemenageurPage() {
             </div>
             <ul className="grid gap-3 text-sm md:text-base text-[#0F172A]/90">
               {[
-                "❌ Devis sans SIREN/SIRET, ou identité légale floue (risque : faux déménageur)",
-                "❌ Refus de fournir une attestation d'assurance RC Pro ou un Kbis récent (risque : pas d'assurance)",
-                "❌ Demande de paiement 50%+ ou 100% avant prestation (risque : arnaque, acompte perdu)",
-                "❌ Paiement cash uniquement, refus de virement/chèque (risque : pas de traçabilité, fraude fiscale)",
-                "❌ Prix donné au téléphone sans visite/visio/inventaire (risque : supplément +200-800€ jour J)",
-                "❌ Prix anormalement bas (<30% du marché) (risque : entreprise en difficulté cherchant trésorerie rapide)",
-                "❌ Contradictions entre raison sociale sur devis/RIB/assurance (risque : sous-traitance cachée, fraude)",
-                "❌ Absence de détail sur accès/volume/conditions d'annulation (risque : suppléments cachés)",
+                "Devis sans SIREN/SIRET, ou identité légale floue (risque : faux déménageur)",
+                "Refus de fournir une attestation d'assurance RC Pro ou un Kbis récent (risque : pas d'assurance)",
+                "Demande de paiement 50%+ ou 100% avant prestation (risque : arnaque, acompte perdu)",
+                "Paiement cash uniquement, refus de virement/chèque (risque : pas de traçabilité, fraude fiscale)",
+                "Prix donné au téléphone sans visite/visio/inventaire (risque : supplément +200-800€ jour J)",
+                "Prix anormalement bas (<30% du marché) (risque : entreprise en difficulté cherchant trésorerie rapide)",
+                "Contradictions entre raison sociale sur devis/RIB/assurance (risque : sous-traitance cachée, fraude)",
+                "Absence de détail sur accès/volume/conditions d'annulation (risque : suppléments cachés)",
               ].map((b) => (
                 <li key={b} className="flex gap-2 items-start bg-white rounded-lg p-3 border border-red-100">
                   <span className="shrink-0 text-base">{b.split(" ")[0]}</span>
@@ -404,7 +408,9 @@ export default function CriteresChoisirDemenageurPage() {
           {/* Printable mini checklist */}
           <div className="rounded-2xl border border-[#E5E7EB] bg-[#0F172A] p-6 md:p-8 text-white">
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-3xl">✅</span>
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-brand-turquoise flex items-center justify-center text-white font-bold text-lg">
+                ✓
+              </div>
               <h2 className="text-lg md:text-xl font-semibold">Checklist avant de signer (12 points)</h2>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5 space-y-2.5 text-sm md:text-base">
@@ -452,31 +458,31 @@ export default function CriteresChoisirDemenageurPage() {
               {[
                 {
                   href: "/blog/eviter-arnaques-demenagement/",
-                  emoji: "🛡️",
+                  emoji: "◆",
                   title: "Éviter les arnaques",
                   desc: "Guide complet : 64% anomalies, 257 faillites, outils de vérification.",
                 },
                 {
                   href: "/verifications-partenaires/",
-                  emoji: "✅",
+                  emoji: "✓",
                   title: "Vérifications Moverz",
                   desc: "Ce que Moverz vérifie : Creditsafe, licences, assurances, avis.",
                 },
                 {
                   href: "/blog/meilleur-comparateur-demenagement-2026/",
-                  emoji: "🏆",
+                  emoji: "★",
                   title: "Meilleur comparateur",
                   desc: "5 critères pour choisir un comparateur fiable (Creditsafe, devis comparables).",
                 },
                 {
                   href: "/blog/estimer-volume-demenagement-guide-complet/",
-                  emoji: "📦",
+                  emoji: "≡",
                   title: "Estimer son volume",
                   desc: "3 méthodes (IA, inventaire, visite) pour éviter les surcoûts jour J.",
                 },
                 {
                   href: "/blog/comparer-devis-demenagement-guide/",
-                  emoji: "📊",
+                  emoji: "=",
                   title: "Comparer des devis",
                   desc: "7 éléments à vérifier pour comparer efficacement (volume, tarif, accès).",
                 },
@@ -513,8 +519,10 @@ export default function CriteresChoisirDemenageurPage() {
         <div className="container max-w-4xl space-y-4">
           {/* CTA principal Moverz */}
           <div className="rounded-2xl border border-brand-turquoise/30 bg-gradient-to-br from-brand-turquoise/10 to-white p-6 md:p-8 text-center">
-            <div className="flex items-center justify-center gap-2 mb-3">
-              <span className="text-2xl">✨</span>
+            <div className="flex items-center justify-center gap-3 mb-3">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-turquoise flex items-center justify-center text-white font-bold">
+                ✓
+              </div>
               <h3 className="text-lg font-bold text-[#0F172A]">
                 Recevez des devis de déménageurs déjà vérifiés
               </h3>

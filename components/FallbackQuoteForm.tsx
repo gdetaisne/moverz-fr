@@ -14,7 +14,9 @@ export default function FallbackQuoteForm() {
   if (submitted) {
     return (
       <div className="rounded-3xl border border-brand-turquoise/40 bg-gradient-to-br from-[#E6FFFA] to-white p-8 text-center">
-        <div className="text-4xl mb-4">✅</div>
+        <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-brand-turquoise text-white text-2xl font-bold">
+          ✓
+        </div>
         <h3 className="text-xl font-bold text-[#04163a] mb-2">Demande de devis envoyée</h3>
         <p className="text-[#4b5c6b]">
           Nous avons bien reçu votre demande. Un membre de l&apos;équipe Moverz vous répondra rapidement

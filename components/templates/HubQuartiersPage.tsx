@@ -220,8 +220,8 @@ export function HubQuartiersPage({
             </div>
 
             <div className="text-center space-y-3">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-turquoise/10 text-brand-turquoise text-xl font-bold">
-                📊
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-turquoise/10 text-brand-turquoise text-lg font-bold">
+                =
               </div>
               <h3 className="text-base font-bold text-[#0F172A]">
                 Devis comparables

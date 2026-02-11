@@ -129,7 +129,7 @@ export default function VerificationsPartenairesPage() {
                   <h3 className="text-base md:text-lg font-bold text-[#0F172A]">{c.title}</h3>
                   {c.highlight && (
                     <p className="mt-2 text-xs md:text-sm font-semibold text-brand-turquoise bg-brand-turquoise/10 rounded-full px-3 py-1 inline-block">
-                      ✨ {c.highlight}
+                      {c.highlight}
                     </p>
                   )}
                   <p className="mt-2 text-sm md:text-base text-[#6B7280] leading-relaxed">{c.desc}</p>
@@ -155,23 +155,23 @@ export default function VerificationsPartenairesPage() {
             <ul className="grid gap-3 text-sm md:text-base text-[#0F172A]/90">
               {[
                 {
-                  title: "✅ Financièrement solides",
+                  title: "Financièrement solides",
                   desc: "Score Creditsafe vérifié, risque de faillite faible, aucun incident de paiement grave. Vous évitez les entreprises en difficulté qui risquent de disparaître avec votre acompte.",
                 },
                 {
-                  title: "✅ Légalement conformes",
+                  title: "Légalement conformes",
                   desc: "SIREN actif, licence de transport valide, inscription au registre des transporteurs. Vous ne traitez qu'avec des pros habilités à exercer.",
                 },
                 {
-                  title: "✅ Correctement assurés",
+                  title: "Correctement assurés",
                   desc: "Assurance RC Pro valide, plafond de garantie ≥ 1,5M€, couverture marchandises ≥ 60€/m³. En cas de casse, vous êtes protégé.",
                 },
                 {
-                  title: "✅ Bien notés par leurs clients",
+                  title: "Bien notés par leurs clients",
                   desc: "Avis Google 4.0+/5, pas de pattern de litiges répétitifs (surcoûts, casse, retards). Vous choisissez parmi des pros qui ont fait leurs preuves.",
                 },
                 {
-                  title: "✅ Engagés contractuellement",
+                  title: "Engagés contractuellement",
                   desc: "En plus des vérifications, nos partenaires acceptent nos CGV (transparence des devis, traitement constructif des litiges, respect du RGPD). En cas de manquement, nous suspendons ou excluons le partenaire.",
                 },
               ].map((b) => (

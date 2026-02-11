@@ -36,7 +36,7 @@ export default function ProPricing() {
       ],
       cta: "Demander une démo",
       highlight: true,
-      badge: "⭐ Recommandé",
+      badge: "Recommandé",
     },
     {
       name: "Entreprises",

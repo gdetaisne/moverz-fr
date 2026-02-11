@@ -133,8 +133,8 @@ export function CityPricingTable({ cityName }: CityPricingTableProps) {
                 ou Clé en main (emballage + déballage).</span>
               </li>
             </ul>
-            <p className="pt-2">
-              💡 <strong>Astuce</strong> : Recevez des devis comparables sous 5 jours. Même volume IA = vous comparez 
+            <p className="pt-2 text-sm text-[#6B7280]">
+              <strong className="text-[#0F172A]">Astuce</strong> : Recevez des devis comparables sous 5 jours. Même volume IA = vous comparez 
               vraiment pommes avec pommes, pas de bluff.
             </p>
           </div>

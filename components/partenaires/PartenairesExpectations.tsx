@@ -62,7 +62,7 @@ export default function PartenairesExpectations() {
           {/* Note */}
           <div className="mt-6 p-5 rounded-xl bg-gradient-to-r from-[#F9FAFB] to-white border border-[#E3E5E8]">
             <p className="text-sm text-[#6B7280]">
-              💡 <span className="font-semibold text-[#0F172A]">Besoin d'un outil pour gérer vos dossiers ?</span>
+              <span className="font-semibold text-[#0F172A]">Besoin d'un outil pour gérer vos dossiers ?</span>
               {" "}Contactez-nous pour découvrir nos solutions SaaS pour déménageurs.
             </p>
           </div>

@@ -90,9 +90,9 @@ export function HowToChoose() {
 
           {/* CTA */}
           <div className="pt-6 border-t border-[#E5E7EB]">
-            <div className="bg-gradient-to-br from-brand-turquoise/10 to-[#A8E8E8]/10 rounded-2xl p-6 text-center">
+            <div className="bg-gradient-to-br from-brand-turquoise/10 to-brand-turquoise-200/10 rounded-2xl p-6 text-center">
               <p className="text-sm font-semibold text-[#0F172A] mb-3">
-                ✅ Moverz fait ces 5 vérifications pour vous
+                Moverz fait ces 5 vérifications pour vous
               </p>
               <p className="text-xs text-[#6B7280] max-w-2xl mx-auto">
                 Tous les déménageurs du réseau Moverz sont contrôlés : assurance vérifiée, 

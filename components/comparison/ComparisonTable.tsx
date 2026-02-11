@@ -21,9 +21,9 @@ const comparisonData: ComparisonData[] = [
   {
     category: "Prix & Transparence",
     criteria: "Devis comparables",
-    moverz: { value: "✅ Même volume IA", score: "good" },
-    comparateurs: { value: "❌ Volumes différents", score: "bad" },
-    direct: { value: "⚠️ Estimation manuelle", score: "ok" },
+    moverz: { value: "Même volume IA", score: "good" },
+    comparateurs: { value: "Volumes différents", score: "bad" },
+    direct: { value: "Estimation manuelle", score: "ok" },
   },
   {
     category: "Prix & Transparence",
@@ -44,9 +44,9 @@ const comparisonData: ComparisonData[] = [
   {
     category: "Spam & Harcèlement",
     criteria: "Revente de données",
-    moverz: { value: "❌ Jamais", score: "good" },
-    comparateurs: { value: "✅ Business model", score: "bad" },
-    direct: { value: "❌ Non", score: "good" },
+    moverz: { value: "Jamais", score: "good" },
+    comparateurs: { value: "Oui (business model)", score: "bad" },
+    direct: { value: "Non", score: "good" },
   },
   
   // Fiabilité & Contrôle
@@ -176,8 +176,7 @@ export default function ComparisonTable() {
                 <th className="px-6 py-4 text-left text-sm font-semibold">Critère</th>
                 <th className="px-6 py-4 text-center text-sm font-semibold">
                   <div className="flex flex-col items-center gap-1">
-                    <span className="text-brand-turquoise text-lg">⭐</span>
-                    <span>Moverz</span>
+                    <span className="text-brand-turquoise font-bold">Moverz</span>
                   </div>
                 </th>
                 <th className="px-6 py-4 text-center text-sm font-semibold">Comparateurs</th>

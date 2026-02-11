@@ -50,7 +50,7 @@ export default function ProPartenairesBanner() {
           className="mt-6 p-4 rounded-xl bg-white border border-[#E3E5E8]"
         >
           <p className="text-xs text-[#6B7280] leading-relaxed">
-            💡 <span className="font-semibold text-[#0F172A]">Quelle différence ?</span>{" "}
+            <span className="font-semibold text-[#0F172A]">Quelle différence ?</span>{" "}
             <strong>Partenaire</strong> = vous recevez des dossiers du marketplace Moverz (commission au succès).{" "}
             <strong>Moverz Pro</strong> = SaaS pour gérer VOS propres dossiers (abonnement mensuel). Les deux sont compatibles !
           </p>
