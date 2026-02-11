@@ -159,7 +159,7 @@ function CityAutocomplete({
 
   return (
     <div ref={wrapperRef} className="relative">
-      <label className="block text-sm font-medium text-[#0F172A] mb-1">{label}</label>
+      <label className="block text-sm font-semibold text-[#0F172A] mb-2">{label}</label>
       <div className="relative">
         <input
           type="text"
@@ -168,26 +168,26 @@ function CityAutocomplete({
           onFocus={() => { setFocused(true); suggestions.length > 0 && setOpen(true); }}
           onBlur={() => setFocused(false)}
           placeholder={placeholder}
-          className={`w-full rounded-lg border bg-white px-3 py-2.5 pr-9 text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all ${
+          className={`w-full rounded-xl border-2 bg-white px-4 py-3 pr-10 text-sm text-[#0F172A] placeholder:text-gray-400 focus:outline-none focus:ring-4 transition-all duration-300 ${
             unrecognized
-              ? "border-amber-400 focus:border-amber-400 focus:ring-amber-200/50 shadow-[0_0_0_3px_rgba(251,191,36,0.1)]"
+              ? "border-amber-400 focus:border-amber-500 focus:ring-amber-500/20"
               : value
-                ? "border-emerald-400 focus:border-[#6BCFCF] focus:ring-[#6BCFCF]/40 shadow-[0_0_0_3px_rgba(16,185,129,0.1)]"
-                : "border-[#D1D5DB] focus:border-[#6BCFCF] focus:ring-[#6BCFCF]/40"
+                ? "border-emerald-400 focus:border-cyan-500 focus:ring-cyan-500/20"
+                : "border-gray-200 focus:border-cyan-500 focus:ring-cyan-500/20"
           }`}
         />
         {statusIcon}
       </div>
       {unrecognized && (
-        <p className="mt-1 text-xs text-amber-600">Sélectionnez une ville dans la liste</p>
+        <p className="mt-1.5 text-xs text-amber-600 font-medium">Sélectionnez une ville dans la liste</p>
       )}
       {open && suggestions.length > 0 && (
-        <ul className="absolute z-50 mt-1 w-full rounded-lg border border-[#E5E7EB] bg-white shadow-lg max-h-48 overflow-y-auto">
+        <ul className="absolute z-50 mt-2 w-full rounded-xl border border-gray-200 bg-white shadow-2xl max-h-48 overflow-y-auto">
           {suggestions.map((s, i) => (
             <li
               key={`${s.postcode}-${i}`}
               onMouseDown={(e) => { e.preventDefault(); pick(s); }}
-              className="cursor-pointer px-3 py-2 text-sm hover:bg-[#F0FDFA] transition-colors"
+              className="cursor-pointer px-4 py-2.5 text-sm hover:bg-cyan-50 transition-colors first:rounded-t-xl last:rounded-b-xl"
             >
               {s.label}
             </li>
@@ -258,34 +258,44 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
   /* ---------- RESULT STATE (Step 2) ---------- */
   if (estimate) {
     return (
-      <div className="rounded-3xl bg-white/90 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-white/40 p-8 space-y-5">
-        <p className="text-xs font-semibold uppercase tracking-widest text-[#6BCFCF]">
-          Estimation indicative
-        </p>
+      <div className="rounded-3xl bg-white/95 backdrop-blur-xl shadow-[0_20px_60px_rgba(0,0,0,0.12)] border border-white/60 p-8 space-y-6">
+        <div className="text-center pb-2">
+          <p className="text-xs font-bold uppercase tracking-[0.15em] text-cyan-600">
+            Estimation indicative
+          </p>
+        </div>
 
-        <div className="text-center space-y-1">
-          <p className="text-sm text-[#64748B]">
+        <div className="text-center space-y-2">
+          <p className="text-sm text-gray-600 font-medium">
             {origin!.city} → {destination!.city} · {surface} m²
           </p>
-          <p className="text-4xl font-bold text-[#0F172A]">
+          <p className="text-4xl font-bold text-[#0F172A] tracking-tight">
             {estimate.min.toLocaleString("fr-FR")} € – {estimate.max.toLocaleString("fr-FR")} €
           </p>
-          <p className="text-xs text-[#94A3B8]">Formule standard · Estimation non contractuelle</p>
+          <p className="text-xs text-gray-500">Formule standard · Estimation non contractuelle</p>
         </div>
 
         <button
           type="button"
           disabled={redirecting}
           onClick={handleRedirect}
-          className="block w-full rounded-xl bg-gradient-to-r from-[#0F172A] to-[#1E293B] py-4 text-center text-sm font-semibold text-white shadow-[0_4px_16px_rgba(15,23,42,0.3)] hover:shadow-[0_8px_24px_rgba(15,23,42,0.4)] disabled:opacity-60 active:scale-[0.98] md:hover:scale-[1.02] transition-all duration-200 touch-manipulation"
+          className="group relative block w-full rounded-xl bg-gradient-to-r from-cyan-600 via-cyan-700 to-blue-700 py-4 text-center text-sm font-bold text-white shadow-[0_8px_24px_rgba(6,182,212,0.3)] hover:shadow-[0_12px_32px_rgba(6,182,212,0.4)] disabled:opacity-60 active:scale-[0.98] md:hover:scale-[1.02] transition-all duration-300 touch-manipulation overflow-hidden"
         >
-          {redirecting ? "Redirection…" : "Affiner mon budget →"}
+          <span className="relative z-10 flex items-center justify-center gap-2">
+            {redirecting ? "Redirection…" : "Affiner mon budget"}
+            {!redirecting && (
+              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            )}
+          </span>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </button>
 
         <button
           type="button"
           onClick={() => setEstimate(null)}
-          className="block w-full text-center text-xs font-medium text-[#64748B] hover:text-[#0F172A] transition-colors"
+          className="block w-full text-center text-sm font-semibold text-gray-600 hover:text-[#0F172A] transition-colors"
         >
           ← Modifier mes infos
         </button>
@@ -295,10 +305,12 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
 
   /* ---------- FORM STATE ---------- */
   return (
-    <div className="rounded-3xl bg-white/90 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-white/40 p-8 space-y-4">
-      <p className="text-xs font-semibold uppercase tracking-widest text-[#6BCFCF]">
-        Estimez votre budget
-      </p>
+    <div className="rounded-3xl bg-white/95 backdrop-blur-xl shadow-[0_20px_60px_rgba(0,0,0,0.12)] border border-white/60 p-8 space-y-5">
+      <div className="text-center pb-2">
+        <p className="text-xs font-bold uppercase tracking-[0.15em] text-cyan-600">
+          Estimez votre budget
+        </p>
+      </div>
 
       <CityAutocomplete
         label="Ville de départ"
@@ -317,7 +329,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
       />
 
       <div>
-        <label className="block text-sm font-medium text-[#0F172A] mb-1">Surface (m²)</label>
+        <label className="block text-sm font-semibold text-[#0F172A] mb-2">Surface (m²)</label>
         <input
           type="number"
           inputMode="numeric"
@@ -326,7 +338,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
           value={surface}
           onChange={(e) => setSurface(e.target.value)}
           placeholder="Ex : 60"
-          className="w-full rounded-lg border border-[#D1D5DB] bg-white px-3 py-2.5 text-sm text-[#0F172A] focus:border-[#6BCFCF] focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]/40 focus:ring-offset-2 transition-all"
+          className="w-full rounded-xl border-2 border-gray-200 bg-white px-4 py-3 text-sm text-[#0F172A] placeholder:text-gray-400 focus:border-cyan-500 focus:outline-none focus:ring-4 focus:ring-cyan-500/20 transition-all duration-300"
         />
       </div>
 
@@ -346,12 +358,20 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
         type="button"
         disabled={!canSubmit || loading}
         onClick={handleEstimate}
-        className="w-full rounded-xl bg-gradient-to-r from-[#0F172A] to-[#1E293B] py-4 text-sm font-semibold text-white disabled:opacity-40 shadow-[0_4px_16px_rgba(15,23,42,0.3)] hover:shadow-[0_8px_24px_rgba(15,23,42,0.4)] active:scale-[0.98] md:hover:scale-[1.02] transition-all duration-200 disabled:hover:scale-100 disabled:hover:shadow-[0_4px_16px_rgba(15,23,42,0.3)] touch-manipulation"
+        className="group relative w-full rounded-xl bg-gradient-to-r from-cyan-600 via-cyan-700 to-blue-700 py-4 text-sm font-bold text-white disabled:opacity-40 disabled:cursor-not-allowed shadow-[0_8px_24px_rgba(6,182,212,0.3)] hover:shadow-[0_12px_32px_rgba(6,182,212,0.4)] active:scale-[0.98] md:hover:scale-[1.02] transition-all duration-300 disabled:hover:scale-100 disabled:hover:shadow-[0_8px_24px_rgba(6,182,212,0.3)] touch-manipulation overflow-hidden"
       >
-        {loading ? "Calcul en cours…" : "Voir mon estimation →"}
+        <span className="relative z-10 flex items-center justify-center gap-2">
+          {loading ? "Calcul en cours…" : "Voir mon estimation"}
+          {!loading && (
+            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          )}
+        </span>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </button>
 
-      <p className="text-[11px] text-center text-[#94A3B8]">
+      <p className="text-xs text-center text-gray-500 font-medium">
         Gratuit · Sans engagement · Sans appel
       </p>
     </div>
