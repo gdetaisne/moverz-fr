@@ -10,10 +10,11 @@ export default function QuickFAQ() {
   const faqs = HOME_FAQS;
 
   return (
-    <section className="relative py-20 md:py-32 bg-gradient-to-br from-[#0F172A] via-[#1a2332] to-[#0F172A] overflow-hidden">
-      {/* Background glow effects */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-turquoise/10 rounded-full blur-[120px]" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-accent/10 rounded-full blur-[120px]" />
+    <section className="relative py-20 md:py-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-brand-navy overflow-hidden">
+      {/* Background glow effects - Plus de violet */}
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-brand-turquoise/12 rounded-full blur-[140px]" />
+      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-brand-accent/15 rounded-full blur-[140px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-brand-accent/8 rounded-full blur-[160px]" />
       
       <div className="relative container max-w-3xl">
         {/* Header premium */}
@@ -27,7 +28,7 @@ export default function QuickFAQ() {
               Questions fréquentes
             </div>
           </div>
-          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-white">
+          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl bg-gradient-to-r from-white via-brand-turquoise-200 to-brand-accent-200 bg-clip-text text-transparent">
             Une dernière question ?
           </h2>
           <p className="text-lg text-white/70 max-w-2xl mx-auto">
@@ -40,17 +41,19 @@ export default function QuickFAQ() {
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className="group rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden transition-all duration-300 hover:bg-white/10 hover:border-brand-turquoise/30 hover:shadow-[0_0_30px_rgba(107,207,207,0.15)]"
+              className="group relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden transition-all duration-500 hover:bg-white/10 hover:border-brand-accent/40 hover:shadow-[0_0_40px_rgba(167,139,250,0.25)]"
             >
+              {/* Glow violet au hover */}
+              <div className="absolute inset-0 bg-gradient-to-r from-brand-turquoise/0 via-brand-accent/5 to-brand-turquoise/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full flex items-center justify-between p-6 md:p-7 text-left"
+                className="relative w-full flex items-center justify-between p-6 md:p-7 text-left z-10"
               >
-                <span className="font-semibold text-base md:text-lg pr-4 text-white group-hover:text-brand-turquoise transition-colors duration-300">
+                <span className="font-semibold text-base md:text-lg pr-4 text-white group-hover:bg-gradient-to-r group-hover:from-brand-turquoise group-hover:to-brand-accent group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                   {faq.question}
                 </span>
                 <span
-                  className={`flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-white/5 border border-white/10 text-white group-hover:bg-brand-turquoise/20 group-hover:border-brand-turquoise/50 transition-all duration-300 ${
+                  className={`flex-shrink-0 flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-br from-white/5 to-white/10 border border-white/10 text-white group-hover:bg-gradient-to-br group-hover:from-brand-turquoise/30 group-hover:to-brand-accent/30 group-hover:border-brand-accent/50 group-hover:shadow-lg group-hover:shadow-brand-accent/30 transition-all duration-300 ${
                     openIndex === i ? "rotate-180" : ""
                   }`}
                 >
@@ -76,10 +79,12 @@ export default function QuickFAQ() {
         <div className="text-center mt-12 space-y-4">
           <a
             href="/faq/"
-            className="group inline-flex items-center gap-2 rounded-xl bg-white/10 border border-white/20 backdrop-blur-xl px-6 py-3 text-sm font-semibold text-white hover:bg-white/15 hover:border-brand-turquoise/40 hover:shadow-lg transition-all duration-300"
+            className="group relative inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-turquoise/10 to-brand-accent/10 border border-white/20 backdrop-blur-xl px-6 py-3.5 text-sm font-bold text-white hover:border-brand-accent/40 hover:shadow-lg hover:shadow-brand-accent/20 hover:scale-105 transition-all duration-300 overflow-hidden"
           >
-            <span>Voir toutes les questions</span>
-            <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+            <span className="relative z-10">Voir toutes les questions</span>
+            <span className="relative z-10 group-hover:translate-x-1 transition-transform duration-300">→</span>
+            {/* Shine effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
           </a>
           <div>
             <a
