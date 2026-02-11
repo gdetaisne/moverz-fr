@@ -10,7 +10,7 @@ export default function WhatYouReceive() {
   }, []);
 
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-white to-[#A8E8E8]/10">
+    <section className="py-20 md:py-32 bg-gradient-to-b from-white to-[#A8E8E8]/10">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Mockup des devis */}
@@ -23,7 +23,7 @@ export default function WhatYouReceive() {
             {/* Phone mockup with devis list */}
             <div className="relative w-full max-w-[380px] mx-auto">
               {/* iPhone frame */}
-              <div className="relative bg-white rounded-[48px] shadow-[0_20px_60px_rgba(0,0,0,0.15)] p-3 border-[12px] border-[#1F2937]">
+              <div className="relative bg-white rounded-[48px] shadow-[0_20px_60px_rgba(0,0,0,0.12)] p-3 border-[12px] border-[#1F2937]">
                 {/* Notch */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-[#1F2937] rounded-b-3xl z-10" />
 
@@ -151,7 +151,7 @@ export default function WhatYouReceive() {
             </p>
 
             {/* Verified movers card */}
-            <div className="rounded-2xl border border-[#E3E5E8] bg-white p-5 md:p-6 shadow-sm mb-8">
+            <div className="rounded-2xl border border-[#E3E5E8] bg-white/95 backdrop-blur-sm p-5 md:p-6 shadow-[0_4px_16px_rgba(0,0,0,0.06)] mb-8">
               <h3 className="text-sm font-bold text-[#0F172A] mb-3">Déménageurs sélectionnés</h3>
               <ul className="space-y-2 text-sm text-[#1E293B]/75">
                 <li className="flex items-start gap-2">
@@ -167,10 +167,10 @@ export default function WhatYouReceive() {
                   Qualité de service et transparence (devis clairs, délais respectés)
                 </li>
               </ul>
-              <div className="mt-4 rounded-xl bg-[#A8E8E8]/20 border border-[#6BCFCF]/25 px-4 py-3 text-xs">
+              <div className="mt-4 rounded-xl bg-gradient-to-br from-[#A8E8E8]/20 to-[#6BCFCF]/10 border border-[#6BCFCF]/30 shadow-[0_2px_4px_rgba(107,207,207,0.08)] px-4 py-3 text-xs">
                 <span className="font-semibold text-[#0F172A]">Objectif : <span className="font-bold">au moins 3 devis</span> rapidement (sous 5 jours, selon disponibilité).</span>
                 <br />
-                <a href="/verifications-partenaires/" className="text-[#0F172A] hover:text-[#6BCFCF] font-medium underline underline-offset-2">
+                <a href="/verifications-partenaires/" className="text-[#0F172A] hover:text-[#6BCFCF] font-medium underline underline-offset-2 transition-colors">
                   Voir nos critères de sélection →
                 </a>
               </div>
@@ -179,8 +179,8 @@ export default function WhatYouReceive() {
             <div className="space-y-6">
               {/* Feature 1 */}
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[#6BCFCF]/10">
-                  <Check className="w-6 h-6 text-[#0F172A]" />
+                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-[#6BCFCF]/10 to-[#A8E8E8]/10 shadow-sm">
+                  <Check className="w-6 h-6 text-[#6BCFCF]" strokeWidth={2} />
                 </div>
                 <div>
                   <h3 className="font-bold text-[#0F172A] mb-1">Même volume, même accès</h3>
@@ -192,8 +192,8 @@ export default function WhatYouReceive() {
 
               {/* Feature 2 */}
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[#6BCFCF]/10">
-                  <Shield className="w-6 h-6 text-[#0F172A]" />
+                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-[#8B5CF6]/10 to-[#A78BFA]/10 shadow-sm">
+                  <Shield className="w-6 h-6 text-[#8B5CF6]" strokeWidth={2} />
                 </div>
                 <div>
                   <h3 className="font-bold text-[#0F172A] mb-1">Pros sélectionnés</h3>
@@ -205,8 +205,8 @@ export default function WhatYouReceive() {
 
               {/* Feature 3 */}
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[#6BCFCF]/10">
-                  <Clock className="w-6 h-6 text-[#0F172A]" />
+                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-[#10B981]/10 to-[#34D399]/10 shadow-sm">
+                  <Clock className="w-6 h-6 text-[#10B981]" strokeWidth={2} />
                 </div>
                 <div>
                   <h3 className="font-bold text-[#0F172A] mb-1">des devis comparables</h3>
@@ -218,8 +218,8 @@ export default function WhatYouReceive() {
             </div>
 
             {/* Bottom reassurance */}
-            <div className="mt-8 p-4 rounded-xl bg-[#A8E8E8]/20 border border-[#6BCFCF]/30">
-              <p className="text-sm font-medium text-[#0F172A]">
+            <div className="mt-8 p-5 rounded-2xl bg-gradient-to-br from-[#A8E8E8]/20 to-[#6BCFCF]/10 border border-[#6BCFCF]/30 shadow-[0_2px_8px_rgba(107,207,207,0.1)]">
+              <p className="text-sm font-medium text-[#0F172A] leading-relaxed">
                 💬 Votre téléphone reste masqué jusqu'à ce que vous choisissiez un déménageur.
               </p>
             </div>
