@@ -41,64 +41,88 @@ export function HowToChoose() {
   ];
 
   return (
-    <section className="section section-light">
-      <div className="container max-w-4xl">
-        <div className="rounded-2xl border border-[#E5E7EB] bg-white p-8 md:p-10 space-y-8">
-          {/* Question exacte pour featured snippet */}
-          <div className="text-center space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
-              Guide anti-arnaque
-            </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A]">
-              Comment choisir un bon déménageur ?
-            </h2>
-          </div>
+    <section className="relative py-20 md:py-32 bg-gradient-to-br from-white via-brand-turquoise-50/20 to-brand-accent-50/15 overflow-hidden">
+      {/* Background glow effects */}
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-brand-turquoise/8 rounded-full blur-[120px]" />
+      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-brand-accent/10 rounded-full blur-[120px]" />
+      
+      {/* Subtle grid pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(rgba(107,207,207,0.06)_1px,transparent_1px)] [background-size:24px_24px]" />
+      
+      <div className="relative container max-w-4xl">
+        {/* Card glassmorphic ultra-premium avec border glow */}
+        <div className="group relative rounded-3xl border border-brand-turquoise/20 bg-white/90 backdrop-blur-xl p-10 md:p-12 shadow-[0_20px_80px_rgba(0,0,0,0.08)] hover:shadow-[0_25px_100px_rgba(167,139,250,0.15)] transition-all duration-500">
+          
+          {/* Border glow violet animé au hover */}
+          <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-brand-turquoise/0 via-brand-accent/20 to-brand-turquoise/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm -z-10" />
+          
+          {/* Gradient accent top */}
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-brand-turquoise to-brand-accent opacity-50" />
+          
+          <div className="relative space-y-10">
+            {/* Header avec badge premium */}
+            <div className="text-center space-y-4">
+              <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-brand-accent/10 border border-brand-turquoise/30 backdrop-blur-sm px-5 py-2.5 text-xs font-bold text-[#0F172A] shadow-sm">
+                <span className="relative inline-flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-turquoise opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-turquoise shadow-[0_0_12px_rgba(107,207,207,0.8)]" />
+                </span>
+                Guide anti-arnaque
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#0F172A] via-brand-turquoise to-brand-accent bg-clip-text text-transparent leading-tight">
+                Comment choisir un bon déménageur ?
+              </h2>
+              <p className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Choisir un bon déménageur en 5 étapes : vérifier l'assurance obligatoire, 
+                comparer des devis sur une base identique (même volume), lire les avis récents vérifiés, 
+                contrôler la santé financière (Creditsafe), et exiger une estimation précise du volume.
+              </p>
+            </div>
 
-          {/* Réponse courte (40-60 mots) pour featured snippet paragraphe */}
-          <p className="text-base text-[#6B7280] max-w-3xl mx-auto text-center leading-relaxed">
-            Choisir un bon déménageur en 5 étapes : vérifier l'assurance obligatoire, 
-            comparer des devis sur une base identique (même volume), lire les avis récents vérifiés, 
-            contrôler la santé financière (Creditsafe), et exiger une estimation précise du volume.
-          </p>
-
-          {/* Liste numérotée HTML sémantique pour featured snippet */}
-          <ol className="space-y-6 counter-reset">
-            {steps.map((step) => (
-              <li key={step.number} className="flex gap-5">
-                {/* Numéro */}
-                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-brand-turquoise text-white font-bold text-lg">
-                  {step.number}
-                </div>
-                
-                {/* Contenu */}
-                <div className="flex-1 pt-1">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="text-brand-turquoise">
-                      {step.icon}
-                    </div>
-                    <h3 className="text-lg font-bold text-[#0F172A]">
-                      {step.title}
-                    </h3>
+            {/* Liste numérotée HTML sémantique premium */}
+            <ol className="space-y-8">
+              {steps.map((step) => (
+                <li key={step.number} className="flex gap-6 group/item">
+                  {/* Numéro avec gradient turquoise→violet */}
+                  <div className="flex-shrink-0 flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-brand-turquoise to-brand-accent text-white font-bold text-lg shadow-lg shadow-brand-turquoise/30 group-hover/item:shadow-brand-accent/40 group-hover/item:scale-110 transition-all duration-300">
+                    {step.number}
                   </div>
-                  <p className="text-sm text-[#6B7280] leading-relaxed">
-                    {step.description}
+                  
+                  {/* Contenu */}
+                  <div className="flex-1 pt-1">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="text-brand-accent group-hover/item:text-brand-turquoise transition-colors duration-300">
+                        {step.icon}
+                      </div>
+                      <h3 className="text-lg font-bold text-[#0F172A]">
+                        {step.title}
+                      </h3>
+                    </div>
+                    <p className="text-sm text-gray-700 leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+
+            {/* CTA box glassmorphic avec grid pattern */}
+            <div className="pt-8 border-t border-brand-turquoise/20">
+              <div className="relative rounded-2xl border border-brand-accent/20 bg-gradient-to-br from-brand-turquoise/10 via-white/50 to-brand-accent/10 backdrop-blur-sm p-8 text-center overflow-hidden shadow-inner">
+                {/* Grid pattern overlay */}
+                <div className="absolute inset-0 bg-[radial-gradient(rgba(107,207,207,0.15)_1px,transparent_1px)] [background-size:20px_20px]" />
+                
+                <div className="relative space-y-3">
+                  <p className="text-base font-bold bg-gradient-to-r from-[#0F172A] to-brand-accent bg-clip-text text-transparent">
+                    Moverz fait ces 5 vérifications pour vous
+                  </p>
+                  <p className="text-sm text-gray-700 max-w-2xl mx-auto leading-relaxed">
+                    Tous les déménageurs du réseau Moverz sont contrôlés : assurance vérifiée, 
+                    Creditsafe validé, avis authentiques, volume calculé par IA (même base pour tous). 
+                    Vous recevez des devis vraiment comparables sous 5 jours.
                   </p>
                 </div>
-              </li>
-            ))}
-          </ol>
-
-          {/* CTA */}
-          <div className="pt-6 border-t border-[#E5E7EB]">
-            <div className="bg-gradient-to-br from-brand-turquoise/10 to-brand-turquoise-200/10 rounded-2xl p-6 text-center">
-              <p className="text-sm font-semibold text-[#0F172A] mb-3">
-                Moverz fait ces 5 vérifications pour vous
-              </p>
-              <p className="text-xs text-[#6B7280] max-w-2xl mx-auto">
-                Tous les déménageurs du réseau Moverz sont contrôlés : assurance vérifiée, 
-                Creditsafe validé, avis authentiques, volume calculé par IA (même base pour tous). 
-                Vous recevez des devis vraiment comparables sous 5 jours.
-              </p>
+              </div>
             </div>
           </div>
         </div>
