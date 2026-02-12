@@ -269,7 +269,7 @@ export function HeroV4() {
         <svg class="w-5 h-5" style="color: var(--color-accent)" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
         </svg>
-        <span class="text-sm font-semibold" style="color: var(--color-text)">✅ Vos informations sont sauvegardées</span>
+        <span class="text-sm font-semibold" style="color: var(--color-text)">Vos informations sont sauvegardées</span>
       </div>
       <p class="text-xs mt-1" style="color: var(--color-text-secondary)">Vous allez être redirigé vers l'étape suivante...</p>
     `;
@@ -547,7 +547,7 @@ export function HeroV4() {
                           className="mt-1.5 text-[10px] md:text-[10px] text-[11px]"
                           style={{ color: "var(--color-text-muted)" }}
                         >
-                          💡 T2 ≈ 50m² · T3 ≈ 70m² · T4 ≈ 90m²
+                          T2 ≈ 50m² · T3 ≈ 70m² · T4 ≈ 90m²
                         </motion.p>
                       )}
                     </div>

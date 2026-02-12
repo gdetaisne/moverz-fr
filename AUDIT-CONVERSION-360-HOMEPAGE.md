@@ -437,7 +437,7 @@ CONVERSION ✅
   {/* Helper contextuel */}
   {!surface && (
     <div className="absolute -bottom-6 left-0 text-[10px] text-muted">
-      💡 Astuce : T2 ≈ 50m² · T3 ≈ 70m² · T4 ≈ 90m²
+      Astuce : T2 ≈ 50m² · T3 ≈ 70m² · T4 ≈ 90m²
     </div>
   )}
 </div>

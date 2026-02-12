@@ -167,7 +167,7 @@ export default function CriteresChoisirDemenageurPage() {
                 },
                 {
                   title: "5) Méthode d'estimation du volume (visite / visio / IA)",
-                  emoji: "📦",
+                  emoji: "□",
                   bullets: [
                     "Visite technique gratuite = précision maximale (idéal pour logements > 100m²)",
                     "Visio = bon compromis (rapide, assez précis)",
@@ -200,7 +200,7 @@ export default function CriteresChoisirDemenageurPage() {
                 },
                 {
                   title: "8) Fiabilité opérationnelle et plan B",
-                  emoji: "🚚",
+                  emoji: "▪",
                   bullets: [
                     "Nombre de porteurs et taille de camion adaptés au volume",
                     "Matériel de protection professionnel (couvertures, sangles, diables)",
@@ -212,26 +212,26 @@ export default function CriteresChoisirDemenageurPage() {
               ].map((c) => (
                 <div 
                   key={c.title} 
-                  className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-7 hover:border-[var(--color-accent)]/50 hover:shadow-md transition-all"
+                  className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-7 hover:border-brand-turquoise/50 hover:shadow-md transition-all"
                 >
                   <div className="flex items-start gap-3">
                     <span className="text-3xl shrink-0">{c.emoji}</span>
                     <div className="flex-1 space-y-3">
                       <h3 className="text-base md:text-lg font-bold text-[var(--color-text)]">{c.title}</h3>
                       {c.highlight && (
-                        <p className="text-xs md:text-sm font-semibold text-[var(--color-accent)] bg-[var(--color-accent)]/10 rounded-full px-3 py-1 inline-block">
+                        <p className="text-xs md:text-sm font-semibold text-brand-turquoise bg-brand-turquoise/10 rounded-full px-3 py-1 inline-block">
                           {c.highlight}
                         </p>
                       )}
                       <ul className="grid gap-2 text-sm md:text-base text-[var(--color-text)]/90">
                         {c.bullets.map((b) => (
                           <li key={b} className="flex gap-2">
-                            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--color-accent)] shrink-0" />
+                            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#2B7A78] shrink-0" />
                             <span>{b}</span>
                           </li>
                         ))}
                       </ul>
-                      <p className="text-sm text-[var(--color-text-secondary)] bg-[var(--color-bg)] rounded-xl p-3 border border-[var(--color-border)]">
+                      <p className="text-sm text-[var(--color-text-secondary)] bg-[#F8FAFC] rounded-xl p-3 border border-[var(--color-border)]">
                         <strong className="text-[var(--color-text)]">Pourquoi :</strong> {c.note}
                       </p>
                     </div>
@@ -242,9 +242,9 @@ export default function CriteresChoisirDemenageurPage() {
           </div>
 
           {/* Section Moverz vérifie automatiquement */}
-          <div className="rounded-2xl border border-[var(--color-accent)]/30 bg-gradient-to-br from-brand-turquoise/10 to-white p-6 md:p-8 space-y-4">
+          <div className="rounded-2xl border border-brand-turquoise/30 bg-gradient-to-br from-brand-turquoise/10 to-white p-6 md:p-8 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[var(--color-accent)]/20 flex items-center justify-center text-[var(--color-accent)] font-bold text-lg">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-brand-turquoise/20 flex items-center justify-center text-brand-turquoise font-bold text-lg">
                 ✓
               </div>
               <h2 className="text-lg md:text-xl font-semibold text-[var(--color-text)]">
@@ -289,13 +289,13 @@ export default function CriteresChoisirDemenageurPage() {
               ))}
             </div>
 
-            <div className="rounded-xl bg-white/60 border border-[var(--color-accent)]/20 p-4 text-center">
+            <div className="rounded-xl bg-white/60 border border-brand-turquoise/20 p-4 text-center">
               <p className="text-sm md:text-base text-[var(--color-text)]">
                 <strong>Résultat :</strong> Vous ne recevez des devis que de déménageurs vérifiés, assurés, et financièrement solides.
               </p>
               <a 
                 href="/verifications-partenaires/" 
-                className="mt-3 inline-block text-sm font-semibold text-[var(--color-accent)] hover:text-[var(--color-accent)] underline"
+                className="mt-3 inline-block text-sm font-semibold text-brand-turquoise hover:text-[#2B7A78] underline"
               >
                 En savoir plus sur nos vérifications →
               </a>
@@ -346,24 +346,24 @@ export default function CriteresChoisirDemenageurPage() {
                   },
                 ].map((item, i) => (
                   <li key={item.step} className="flex gap-3 items-start">
-                    <span className="mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded-full bg-[var(--color-accent)]/15 text-[var(--color-text)] text-sm font-bold border border-[var(--color-accent)]/30 shrink-0">
+                    <span className="mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded-full bg-brand-turquoise/15 text-[var(--color-text)] text-sm font-bold border border-brand-turquoise/30 shrink-0">
                       {i + 1}
                     </span>
                     <div className="flex-1">
                       <p>{item.step}</p>
-                      <p className="text-xs text-[var(--color-accent)] mt-1 font-medium">→ {item.tool}</p>
+                      <p className="text-xs text-brand-turquoise mt-1 font-medium">→ {item.tool}</p>
                     </div>
                   </li>
                 ))}
               </ol>
               
-              <div className="mt-6 rounded-xl bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/20 p-4 text-center">
+              <div className="mt-6 rounded-xl bg-brand-turquoise/10 border border-brand-turquoise/20 p-4 text-center">
                 <p className="text-sm md:text-base text-[var(--color-text)]">
                   <strong>Trop long ?</strong> Moverz fait ces 8 vérifications automatiquement (Creditsafe + licences + assurances + avis).
                 </p>
                 <a 
                   href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=criteres-checklist" 
-                  className="mt-3 inline-block text-sm font-semibold text-[var(--color-accent)] hover:text-[var(--color-accent)] underline"
+                  className="mt-3 inline-block text-sm font-semibold text-brand-turquoise hover:text-[#2B7A78] underline"
                 >
                   Obtenir des devis de déménageurs vérifiés →
                 </a>
@@ -399,7 +399,7 @@ export default function CriteresChoisirDemenageurPage() {
             <div className="rounded-xl bg-white border border-red-200 p-4 text-sm md:text-base text-[var(--color-text-secondary)]">
               <strong className="text-[var(--color-text)]">Si vous constatez 2+ red flags :</strong> Fuyez. 
               Ce sont des signaux objectifs d'arnaque ou de pratique douteuse. 
-              <a href="/blog/eviter-arnaques-demenagement/" className="text-[var(--color-accent)] hover:text-[var(--color-accent)] font-semibold ml-1 underline">
+              <a href="/blog/eviter-arnaques-demenagement/" className="text-brand-turquoise hover:text-[#2B7A78] font-semibold ml-1 underline">
                 Guide complet anti-arnaques →
               </a>
             </div>
@@ -408,7 +408,7 @@ export default function CriteresChoisirDemenageurPage() {
           {/* Printable mini checklist */}
           <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-dark)] p-6 md:p-8 text-white">
             <div className="flex items-center gap-3 mb-4">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[var(--color-accent)] flex items-center justify-center text-white font-bold text-lg">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-brand-turquoise flex items-center justify-center text-white font-bold text-lg">
                 ✓
               </div>
               <h2 className="text-lg md:text-xl font-semibold">Checklist avant de signer (12 points)</h2>
@@ -432,7 +432,7 @@ export default function CriteresChoisirDemenageurPage() {
                   <span className="text-white/60 shrink-0 font-mono text-xs mt-0.5">☐</span>
                   <span className={item.priority === "high" ? "text-white font-medium" : "text-white/90"}>
                     {item.text}
-                    {item.priority === "high" && <span className="ml-2 text-[var(--color-accent)] text-xs">●●●</span>}
+                    {item.priority === "high" && <span className="ml-2 text-brand-turquoise text-xs">●●●</span>}
                   </span>
                 </div>
               ))}
@@ -444,7 +444,7 @@ export default function CriteresChoisirDemenageurPage() {
 
           {/* Maillage interne (SEO) */}
           <div className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-accent)] text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise text-center">
               Guides complémentaires
             </p>
             <h2 className="mt-3 text-xl md:text-2xl font-bold text-[var(--color-text)] text-center">
@@ -488,7 +488,7 @@ export default function CriteresChoisirDemenageurPage() {
                 },
                 {
                   href: "/faq-arnaque-demenagement/",
-                  emoji: "❓",
+                  emoji: "?",
                   title: "FAQ arnaques",
                   desc: "10 Q/R rapides (suppléments, acompte, assurance, sous-traitance).",
                 },
@@ -496,11 +496,11 @@ export default function CriteresChoisirDemenageurPage() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="group rounded-xl border border-[var(--color-border)] bg-white p-5 hover:border-[var(--color-accent)]/50 hover:shadow-md transition-all"
+                  className="group rounded-xl border border-[var(--color-border)] bg-white p-5 hover:border-brand-turquoise/50 hover:shadow-md transition-all"
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-2xl">{item.emoji}</span>
-                    <p className="text-sm font-bold text-[var(--color-text)] group-hover:text-[var(--color-accent)]">{item.title}</p>
+                    <p className="text-sm font-bold text-[var(--color-text)] group-hover:text-[#2B7A78]">{item.title}</p>
                   </div>
                   <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">{item.desc}</p>
                 </a>
@@ -518,9 +518,9 @@ export default function CriteresChoisirDemenageurPage() {
       <section className="section section-light pt-0">
         <div className="container max-w-4xl space-y-4">
           {/* CTA principal Moverz */}
-          <div className="rounded-2xl border border-[var(--color-accent)]/30 bg-gradient-to-br from-brand-turquoise/10 to-white p-6 md:p-8 text-center">
+          <div className="rounded-2xl border border-brand-turquoise/30 bg-gradient-to-br from-brand-turquoise/10 to-white p-6 md:p-8 text-center">
             <div className="flex items-center justify-center gap-3 mb-3">
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[var(--color-accent)] flex items-center justify-center text-white font-bold">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-turquoise flex items-center justify-center text-white font-bold">
                 ✓
               </div>
               <h3 className="text-lg font-bold text-[var(--color-text)]">
@@ -543,7 +543,7 @@ export default function CriteresChoisirDemenageurPage() {
               </a>
               <a
                 href="/pourquoi-moverz/"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-white border border-[var(--color-border)] px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-[var(--color-accent)]/50 hover:shadow-sm transition-all"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-white border border-[var(--color-border)] px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-brand-turquoise/50 hover:shadow-sm transition-all"
               >
                 <span>Pourquoi Moverz ?</span>
               </a>
@@ -564,7 +564,7 @@ export default function CriteresChoisirDemenageurPage() {
               </div>
               <a
                 href="/blog/estimer-volume-demenagement-guide-complet/"
-                className="mt-3 text-sm font-semibold text-[var(--color-accent)] hover:text-[var(--color-accent)] underline inline-flex items-center gap-1"
+                className="mt-3 text-sm font-semibold text-brand-turquoise hover:text-[#2B7A78] underline inline-flex items-center gap-1"
               >
                 <span>Voir le guide complet</span>
                 <span>→</span>
@@ -580,7 +580,7 @@ export default function CriteresChoisirDemenageurPage() {
               </div>
               <a
                 href="/blog/comparer-devis-demenagement-guide/"
-                className="mt-3 text-sm font-semibold text-[var(--color-accent)] hover:text-[var(--color-accent)] underline inline-flex items-center gap-1"
+                className="mt-3 text-sm font-semibold text-brand-turquoise hover:text-[#2B7A78] underline inline-flex items-center gap-1"
               >
                 <span>Voir le guide</span>
                 <span>→</span>

@@ -108,56 +108,56 @@ export default function ComparateurDemenageursPage() {
                     "Vérification de la santé financière (Creditsafe : score solvabilité, risque faillite)",
                     "Le risque : être mis en relation avec des entreprises peu scrupuleuses ou en difficulté (257 faillites en 2024 !)",
                   ],
-                  highlight: "✨ Moverz vérifie automatiquement Creditsafe + licences + assurances",
+                  highlight: "Moverz vérifie automatiquement Creditsafe + licences + assurances",
                 },
                 {
                   title: "2. Comparabilité des devis",
-                  emoji: "📊",
+                  emoji: "▪",
                   desc: "Recevoir 5 devis, c'est bien. Recevoir 5 devis que vous pouvez réellement comparer, c'est mieux.",
                   points: [
                     "Une base commune (volume, accès, prestations) pour tous les devis",
                     "Le risque : des devis avec des volumes différents (20m³ vs 32m³), des options floues, rendant la comparaison impossible",
                     "Résultat : risque de surcoût le jour J (+200-800€)",
                   ],
-                  highlight: "✨ Moverz utilise l'IA pour standardiser le volume (précision 90-95%)",
+                  highlight: "Moverz utilise l'IA pour standardiser le volume (précision 90-95%)",
                 },
                 {
                   title: "3. Anonymat et protection contre le démarchage",
-                  emoji: "🛡️",
+                  emoji: "◆",
                   desc: "Votre tranquillité est primordiale.",
                   points: [
                     "Une plateforme qui ne transmet pas vos coordonnées directes aux déménageurs sans votre accord",
                     "Le risque : être inondé d'appels et de mails non sollicités (5-10 appels/jour pendant 2 semaines)",
                     "Certains comparateurs revendent vos données à 10-20 déménageurs dès validation du formulaire",
                   ],
-                  highlight: "✨ Moverz : dossier anonyme, vous choisissez qui peut vous contacter",
+                  highlight: "Moverz : dossier anonyme, vous choisissez qui peut vous contacter",
                 },
                 {
                   title: "4. Utilisation de l'IA pour l'estimation du volume",
-                  emoji: "📦",
+                  emoji: "□",
                   desc: "L'estimation du volume est la clé d'un devis précis.",
                   points: [
                     "Un outil d'estimation précis, idéalement basé sur l'IA, pour éviter les sous-estimations",
                     "Le risque : un volume mal estimé entraîne des suppléments coûteux le jour du déménagement",
                     "40-50% des déménagements subissent des surcoûts à cause d'une mauvaise estimation",
                   ],
-                  highlight: "✨ Moverz : IA volumétrie 1 minute, précision 90-95%",
+                  highlight: "Moverz : IA volumétrie 1 minute, précision 90-95%",
                 },
                 {
                   title: "5. Gratuité et transparence",
-                  emoji: "💰",
+                  emoji: "€",
                   desc: "Le service doit être clair et sans frais cachés pour le particulier.",
                   points: [
                     "Un service 100% gratuit pour le client, avec un modèle économique transparent",
                     "Business model : commission sur les déménageurs (10-20% du prix final, payée par le pro)",
                     "Le risque : des frais cachés ou un service qui n'est pas réellement gratuit",
                   ],
-                  highlight: "✨ Moverz : 100% gratuit, commission uniquement sur les déménageurs",
+                  highlight: "Moverz : 100% gratuit, commission uniquement sur les déménageurs",
                 },
               ].map((c) => (
                 <div 
                   key={c.title} 
-                  className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-7 hover:border-[var(--color-accent)]/50 hover:shadow-md transition-all"
+                  className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-7 hover:border-brand-turquoise/50 hover:shadow-md transition-all"
                 >
                   <div className="flex items-start gap-3">
                     <span className="text-3xl shrink-0">{c.emoji}</span>
@@ -167,13 +167,13 @@ export default function ComparateurDemenageursPage() {
                       <ul className="grid gap-2 text-sm md:text-base text-[var(--color-text)]/90">
                         {c.points.map((p) => (
                           <li key={p} className="flex gap-2">
-                            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--color-accent)] shrink-0" />
+                            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#2B7A78] shrink-0" />
                             <span>{p}</span>
                           </li>
                         ))}
                       </ul>
                       {c.highlight && (
-                        <p className="text-xs md:text-sm font-semibold text-[var(--color-accent)] bg-[var(--color-accent)]/10 rounded-full px-3 py-2 inline-block">
+                        <p className="text-xs md:text-sm font-semibold text-brand-turquoise bg-brand-turquoise/10 rounded-full px-3 py-2 inline-block">
                           {c.highlight}
                         </p>
                       )}
@@ -192,9 +192,8 @@ export default function ComparateurDemenageursPage() {
       {/* Section différence Moverz */}
       <section className="section section-light">
         <div className="container max-w-4xl">
-          <div className="rounded-2xl border border-[var(--color-accent)]/30 bg-gradient-to-br from-brand-turquoise/10 to-white p-6 md:p-8 space-y-6">
+          <div className="rounded-2xl border border-brand-turquoise/30 bg-gradient-to-br from-brand-turquoise/10 to-white p-6 md:p-8 space-y-6">
             <div className="flex items-center gap-3">
-              <span className="text-3xl">✨</span>
               <h2 className="text-lg md:text-xl font-semibold text-[var(--color-text)]">
                 Ce qui fait la différence Moverz (vs autres comparateurs)
               </h2>
@@ -226,13 +225,13 @@ export default function ComparateurDemenageursPage() {
               ))}
             </div>
 
-            <div className="rounded-xl bg-white/60 border border-[var(--color-accent)]/20 p-4 text-center">
+            <div className="rounded-xl bg-white/60 border border-brand-turquoise/20 p-4 text-center">
               <p className="text-sm md:text-base text-[var(--color-text)]">
                 <strong>Résultat :</strong> Moverz est le seul comparateur qui vérifie ET standardise ET protège votre anonymat.
               </p>
               <a 
                 href="/blog/meilleur-comparateur-demenagement-2026/" 
-                className="mt-3 inline-block text-sm font-semibold text-[var(--color-accent)] hover:text-[var(--color-accent)] underline"
+                className="mt-3 inline-block text-sm font-semibold text-brand-turquoise hover:text-[#2B7A78] underline"
               >
                 Lire le comparatif détaillé →
               </a>
@@ -245,7 +244,7 @@ export default function ComparateurDemenageursPage() {
       <section className="section section-light pt-0">
         <div className="container max-w-4xl">
           <div className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-accent)] text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise text-center">
               Guides complémentaires
             </p>
             <h2 className="mt-3 text-xl md:text-2xl font-bold text-[var(--color-text)] text-center">
@@ -259,7 +258,7 @@ export default function ComparateurDemenageursPage() {
               {[
                 {
                   href: "/blog/meilleur-comparateur-demenagement-2026/",
-                  emoji: "🏆",
+                  emoji: "★",
                   title: "Meilleur comparateur 2026",
                   desc: "Comparatif détaillé : 5 critères pour choisir (Creditsafe, devis comparables, anonymat).",
                 },
@@ -271,19 +270,19 @@ export default function ComparateurDemenageursPage() {
                 },
                 {
                   href: "/blog/eviter-arnaques-demenagement/",
-                  emoji: "🛡️",
+                  emoji: "◆",
                   title: "Éviter les arnaques",
                   desc: "64% anomalies (DGCCRF), 257 faillites 2024, outils de vérification gratuits.",
                 },
                 {
                   href: "/blog/estimer-volume-demenagement-guide-complet/",
-                  emoji: "📦",
+                  emoji: "□",
                   title: "Estimer son volume",
                   desc: "3 méthodes (IA 1 min, inventaire, visite) pour éviter les surcoûts jour J.",
                 },
                 {
                   href: "/blog/comparer-devis-demenagement-guide/",
-                  emoji: "📊",
+                  emoji: "=",
                   title: "Comparer des devis",
                   desc: "7 éléments à vérifier (volume, accès, tarif, assurance, conditions).",
                 },
@@ -291,11 +290,11 @@ export default function ComparateurDemenageursPage() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="group rounded-xl border border-[var(--color-border)] bg-white p-5 hover:border-[var(--color-accent)]/50 hover:shadow-md transition-all"
+                  className="group rounded-xl border border-[var(--color-border)] bg-white p-5 hover:border-brand-turquoise/50 hover:shadow-md transition-all"
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-2xl">{item.emoji}</span>
-                    <p className="text-sm font-bold text-[var(--color-text)] group-hover:text-[var(--color-accent)]">{item.title}</p>
+                    <p className="text-sm font-bold text-[var(--color-text)] group-hover:text-[#2B7A78]">{item.title}</p>
                   </div>
                   <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">{item.desc}</p>
                 </a>
@@ -313,9 +312,8 @@ export default function ComparateurDemenageursPage() {
       {/* CTA Final */}
       <section className="section section-light pt-0">
         <div className="container max-w-4xl">
-          <div className="rounded-2xl border border-[var(--color-accent)]/30 bg-gradient-to-br from-brand-turquoise/10 to-white p-6 md:p-8 text-center">
+          <div className="rounded-2xl border border-brand-turquoise/30 bg-gradient-to-br from-brand-turquoise/10 to-white p-6 md:p-8 text-center">
             <div className="flex items-center justify-center gap-2 mb-3">
-              <span className="text-2xl">✨</span>
               <h3 className="text-lg font-bold text-[var(--color-text)]">
                 Prêt à comparer intelligemment ?
               </h3>
@@ -336,7 +334,7 @@ export default function ComparateurDemenageursPage() {
               </a>
               <a
                 href="/pourquoi-moverz/"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-white border border-[var(--color-border)] px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-[var(--color-accent)]/50 hover:shadow-sm transition-all"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-white border border-[var(--color-border)] px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-brand-turquoise/50 hover:shadow-sm transition-all"
               >
                 <span>Pourquoi Moverz ?</span>
               </a>

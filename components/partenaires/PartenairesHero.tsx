@@ -128,7 +128,7 @@ export default function PartenairesHero() {
             
             {/* Badge "1 min" */}
             <div className="absolute -bottom-4 -right-4 bg-[var(--color-accent)] rounded-full px-4 py-2 shadow-lg">
-              <p className="text-sm font-bold text-[var(--color-text)]">⏱️ 1 min</p>
+              <p className="text-sm font-bold text-[var(--color-text)]">1 min</p>
             </div>
           </motion.div>
         </div>
