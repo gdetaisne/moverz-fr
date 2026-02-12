@@ -169,7 +169,7 @@ export default function ExitIntentPopup() {
         >
           <div className="relative overflow-hidden rounded-2xl border border-[var(--color-border)] bg-white shadow-2xl">
             <div className="absolute inset-0 bg-gradient-to-br from-brand-turquoise/10 via-transparent to-transparent pointer-events-none" />
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-turquoise via-[#2B7A78] to-brand-turquoise" />
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-turquoise via-[var(--color-accent)] to-brand-turquoise" />
 
             <button
               onClick={handleClose}
@@ -182,8 +182,8 @@ export default function ExitIntentPopup() {
             <div className="relative p-5 md:p-6 space-y-4">
               <div className="flex items-center justify-between gap-3">
                 <div className="inline-flex items-center gap-2 rounded-full bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/20 px-3 py-1.5">
-                  <Clock className="w-3.5 h-3.5 text-[#2B7A78]" />
-                  <span className="text-xs font-semibold text-[#2B7A78]">3 minutes</span>
+                  <Clock className="w-3.5 h-3.5 text-[var(--color-accent)]" />
+                  <span className="text-xs font-semibold text-[var(--color-accent)]">3 minutes</span>
                 </div>
                 <div className="inline-flex items-center gap-1.5 text-xs text-[var(--color-text-secondary)]">
                   <Shield className="w-3.5 h-3.5 text-[var(--color-accent)]" />

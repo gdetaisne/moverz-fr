@@ -19,7 +19,7 @@ export default function ProHeroMockup() {
       {/* Dashboard mockup */}
       <div className="relative bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.25)] overflow-hidden border border-[var(--color-border)]">
         {/* Header bar */}
-        <div className="bg-gradient-to-r from-[var(--color-bg-dark)] to-[#1E293B] px-6 py-4 flex items-center justify-between">
+        <div className="bg-gradient-to-r from-[var(--color-bg-dark)] to-[var(--color-bg-dark)] px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-lg bg-white/10 border border-white/10 flex items-center justify-center overflow-hidden">
               <img
@@ -41,7 +41,7 @@ export default function ProHeroMockup() {
         </div>
 
         {/* Content area */}
-        <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
+        <div className="p-6 bg-gradient-to-br from-[var(--color-bg)] to-white">
           {/* Stats cards */}
           <div className="grid grid-cols-3 gap-3 mb-6">
             {[
@@ -75,7 +75,7 @@ export default function ProHeroMockup() {
                   Paris → Lyon · 22m³
                 </p>
               </div>
-              <div className="px-3 py-1.5 rounded-full bg-[var(--color-accent)]/10 text-[#2B7A78] text-sm font-semibold">
+              <div className="px-3 py-1.5 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)] text-sm font-semibold">
                 Nouveau
               </div>
             </div>
@@ -89,7 +89,7 @@ export default function ProHeroMockup() {
               ].map((label) => (
                 <span
                   key={label}
-                  className="inline-flex items-center rounded-full border border-[var(--color-border)] bg-[#F8F9FA] px-3 py-1 text-xs font-semibold text-[var(--color-text-secondary)]"
+                  className="inline-flex items-center rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-1 text-xs font-semibold text-[var(--color-text-secondary)]"
                 >
                   {label}
                 </span>
@@ -114,10 +114,10 @@ export default function ProHeroMockup() {
 
             {/* Action buttons */}
             <div className="flex gap-2">
-              <button className="flex-1 bg-[var(--color-accent)] text-white text-sm font-semibold py-2.5 rounded-lg hover:bg-[#5AB0B0] transition-colors">
+              <button className="flex-1 bg-[var(--color-accent)] text-white text-sm font-semibold py-2.5 rounded-lg hover:bg-[var(--color-accent)] transition-colors">
                 Envoyer le devis
               </button>
-              <button className="px-4 bg-[var(--color-border-light)] text-gray-800 text-sm font-semibold py-2.5 rounded-lg hover:bg-gray-200 transition-colors">
+              <button className="px-4 bg-[var(--color-border-light)] text-[var(--color-text)] text-sm font-semibold py-2.5 rounded-lg hover:bg-[var(--color-border)] transition-colors">
                 Voir détails
               </button>
             </div>

@@ -44,7 +44,7 @@ export default function HowItWorksFAQ() {
         <div className="container max-w-3xl text-center">
           <a
             href="/politique-confidentialite/"
-            className="text-sm font-semibold text-[#2B7A78] hover:text-[var(--color-text)] transition-colors"
+            className="text-sm font-semibold text-[var(--color-accent)] hover:text-[var(--color-text)] transition-colors"
           >
             Voir notre politique de confidentialité →
           </a>

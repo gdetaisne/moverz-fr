@@ -71,9 +71,9 @@ export default async function CityGuidePage({ params }: PageProps) {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-[var(--color-border)] bg-[#F8FAFC] p-6 md:p-7">
+            <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6 md:p-7">
               <p className="text-sm font-semibold text-[var(--color-text)] mb-3">Sommaire</p>
-              <ol className="grid gap-2 text-sm text-[#2B7A78]">
+              <ol className="grid gap-2 text-sm text-[var(--color-accent)]">
                 {guide.sections.map((s) => (
                   <li key={s.id}>
                     <a className="hover:underline" href={`#guide-${city.slug}-${s.id}`}>
@@ -113,7 +113,7 @@ export default async function CityGuidePage({ params }: PageProps) {
                       <ul className="mt-3 grid gap-2 text-sm text-[var(--color-text-secondary)]">
                         {s.checklist.map((item) => (
                           <li key={item} className="flex gap-2">
-                            <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#2B7A78] shrink-0" />
+                            <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[var(--color-accent)] shrink-0" />
                             <span>{item}</span>
                           </li>
                         ))}

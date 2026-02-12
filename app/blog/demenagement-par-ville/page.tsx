@@ -149,7 +149,7 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
                 {selectedCity !== "autres" && (
                   <a
                     href={`/demenagement/${selectedCity}/`}
-                    className="text-xs md:text-sm text-[#2B7A78] hover:text-[var(--color-text)] underline underline-offset-4"
+                    className="text-xs md:text-sm text-[var(--color-accent)] hover:text-[var(--color-text)] underline underline-offset-4"
                   >
                     Voir la page déménagement {formatCityLabel(selectedCity)}
                   </a>
@@ -164,12 +164,12 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
                     className="group flex flex-col gap-1 rounded-2xl border border-[var(--color-border)] bg-white px-5 py-4 hover:border-[var(--color-accent)]/50 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200"
                   >
                     <div className="flex flex-wrap items-center gap-2 text-xs text-[var(--color-text-secondary)]">
-                      <span className="rounded-full bg-[#F0F4F8] px-2 py-0.5 font-semibold text-[11px] text-[#2B7A78]">
+                      <span className="rounded-full bg-[#F0F4F8] px-2 py-0.5 font-semibold text-[11px] text-[var(--color-accent)]">
                         {selectedCity === "autres" ? "Ville" : formatCityLabel(selectedCity)}
                       </span>
                       {post.readingTimeMinutes && <span>{post.readingTimeMinutes} min de lecture</span>}
                     </div>
-                    <h3 className="text-sm md:text-base font-semibold text-[var(--color-text)] group-hover:text-[#2B7A78]">
+                    <h3 className="text-sm md:text-base font-semibold text-[var(--color-text)] group-hover:text-[var(--color-accent)]">
                       {post.title}
                     </h3>
                     <p className="text-sm text-[var(--color-text-secondary)] line-clamp-2">{post.description}</p>
@@ -198,7 +198,7 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
                       className="group rounded-2xl border border-[var(--color-border)] bg-white p-5 hover:border-[var(--color-accent)]/60 hover:shadow-md transition-all"
                     >
                       <p className="text-xs text-[var(--color-text-secondary)]">Ville</p>
-                      <h3 className="text-base md:text-lg font-semibold text-[var(--color-text)] group-hover:text-[#2B7A78] transition-colors">
+                      <h3 className="text-base md:text-lg font-semibold text-[var(--color-text)] group-hover:text-[var(--color-accent)] transition-colors">
                         {formatCityLabel(city)}
                       </h3>
                       <p className="mt-1 text-sm text-[var(--color-text-secondary)]">{count} article{count > 1 ? "s" : ""}</p>
@@ -210,7 +210,7 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
                     className="group rounded-2xl border border-[var(--color-border)] bg-white p-5 hover:border-[var(--color-accent)]/60 hover:shadow-md transition-all"
                   >
                     <p className="text-xs text-[var(--color-text-secondary)]">Ville</p>
-                    <h3 className="text-base md:text-lg font-semibold text-[var(--color-text)] group-hover:text-[#2B7A78] transition-colors">
+                    <h3 className="text-base md:text-lg font-semibold text-[var(--color-text)] group-hover:text-[var(--color-accent)] transition-colors">
                       Autres
                     </h3>
                     <p className="mt-1 text-sm text-[var(--color-text-secondary)]">

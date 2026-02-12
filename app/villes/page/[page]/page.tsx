@@ -80,7 +80,7 @@ export default function VillesPaginatedPage({ params }: PageProps) {
                     <p className="text-sm font-bold text-[var(--color-text)]">{city.nameCapitalized}</p>
                     <p className="text-xs text-[var(--color-text-secondary)]">{city.region}</p>
                   </div>
-                  <span className="text-xs font-semibold text-[#2B7A78]">→</span>
+                  <span className="text-xs font-semibold text-[var(--color-accent)]">→</span>
                 </div>
               </a>
             ))}

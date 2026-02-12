@@ -136,7 +136,7 @@ export default function VerificationsPartenairesPage() {
                   <ul className="mt-4 grid gap-2 text-sm md:text-base text-[var(--color-text)]/90">
                     {c.bullets.map((b) => (
                       <li key={b} className="flex gap-2">
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#2B7A78] shrink-0" />
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--color-accent)] shrink-0" />
                         <span>{b}</span>
                       </li>
                     ))}
@@ -177,7 +177,7 @@ export default function VerificationsPartenairesPage() {
               ].map((b) => (
                 <li key={b.title} className="flex gap-3 items-start">
                   <div className="shrink-0 mt-1">
-                    <span className="text-[#2B7A78] font-bold text-lg">{b.title.split(" ")[0]}</span>
+                    <span className="text-[var(--color-accent)] font-bold text-lg">{b.title.split(" ")[0]}</span>
                   </div>
                   <div>
                     <p className="font-semibold text-[var(--color-text)]">{b.title.split(" ").slice(1).join(" ")}</p>
@@ -206,13 +206,13 @@ export default function VerificationsPartenairesPage() {
           </div>
 
           {/* CTA secondaire vers CGV-P */}
-          <div className="rounded-2xl border border-[var(--color-border)] bg-[#F8FAFC] p-6 md:p-8 text-center">
+          <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6 md:p-8 text-center">
             <p className="text-sm md:text-base text-[var(--color-text-secondary)] mb-4 max-w-2xl mx-auto">
               Pour connaître le détail des engagements contractuels des déménageurs du réseau Moverz :
             </p>
             <a
               href="/cgv-partenaires/"
-              className="inline-flex items-center justify-center rounded-full bg-white border border-[var(--color-border)] px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:bg-[#F8FAFC] transition-colors"
+              className="inline-flex items-center justify-center rounded-full bg-white border border-[var(--color-border)] px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:bg-[var(--color-bg)] transition-colors"
             >
               Consulter les CGV Partenaires →
             </a>
@@ -253,7 +253,7 @@ export default function VerificationsPartenairesPage() {
             </div>
             <a
               href="/partenaires/"
-              className="inline-flex items-center justify-center rounded-full bg-[var(--color-accent)] px-6 py-3 text-sm font-semibold text-[var(--color-text)] shadow-sm hover:bg-[#2B7A78] hover:text-white transition-all whitespace-nowrap"
+              className="inline-flex items-center justify-center rounded-full bg-[var(--color-accent)] px-6 py-3 text-sm font-semibold text-[var(--color-text)] shadow-sm hover:bg-[var(--color-accent)] hover:text-white transition-all whitespace-nowrap"
             >
               Devenir partenaire →
             </a>

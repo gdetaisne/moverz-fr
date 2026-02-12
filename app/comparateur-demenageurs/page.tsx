@@ -167,7 +167,7 @@ export default function ComparateurDemenageursPage() {
                       <ul className="grid gap-2 text-sm md:text-base text-[var(--color-text)]/90">
                         {c.points.map((p) => (
                           <li key={p} className="flex gap-2">
-                            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#2B7A78] shrink-0" />
+                            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--color-accent)] shrink-0" />
                             <span>{p}</span>
                           </li>
                         ))}
@@ -232,7 +232,7 @@ export default function ComparateurDemenageursPage() {
               </p>
               <a 
                 href="/blog/meilleur-comparateur-demenagement-2026/" 
-                className="mt-3 inline-block text-sm font-semibold text-[var(--color-accent)] hover:text-[#2B7A78] underline"
+                className="mt-3 inline-block text-sm font-semibold text-[var(--color-accent)] hover:text-[var(--color-accent)] underline"
               >
                 Lire le comparatif détaillé →
               </a>
@@ -295,7 +295,7 @@ export default function ComparateurDemenageursPage() {
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-2xl">{item.emoji}</span>
-                    <p className="text-sm font-bold text-[var(--color-text)] group-hover:text-[#2B7A78]">{item.title}</p>
+                    <p className="text-sm font-bold text-[var(--color-text)] group-hover:text-[var(--color-accent)]">{item.title}</p>
                   </div>
                   <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">{item.desc}</p>
                 </a>

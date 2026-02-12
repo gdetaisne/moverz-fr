@@ -26,7 +26,7 @@ export default function PourquoiMoverzContent() {
       <MoverzVsOthers />
 
       {/* Section 5: Legal info */}
-      <section className="py-12 bg-[#F8F9FA] border-t border-[var(--color-border)]">
+      <section className="py-12 bg-[var(--color-bg)] border-t border-[var(--color-border)]">
         <div className="container max-w-3xl mx-auto px-4 text-center">
             <p className="text-[var(--color-text-secondary)]/70">
               <span className="font-semibold text-[var(--color-text)]">Moverz</span> est une marque exploitée par{" "}

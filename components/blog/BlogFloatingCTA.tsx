@@ -187,9 +187,9 @@ export default function BlogFloatingCTA() {
           }`}
         >
           {/* Scroll progress (premium, unobtrusive) */}
-          <div className="h-1 w-full bg-[#E3E5E8]" aria-hidden="true">
+          <div className="h-1 w-full bg-[var(--color-border)]" aria-hidden="true">
             <div
-              className="h-full bg-gradient-to-r from-brand-turquoise via-[#4FB8B8] to-[var(--color-bg-dark)] transition-[width] duration-150 ease-out"
+              className="h-full bg-gradient-to-r from-brand-turquoise via-[var(--color-accent)] to-[var(--color-bg-dark)] transition-[width] duration-150 ease-out"
               style={{ width: `${Math.round(scrollProgress * 100)}%` }}
             />
           </div>
@@ -202,7 +202,7 @@ export default function BlogFloatingCTA() {
             <Stars value={rating} />
 
             {review ? (
-              <div className="rounded-xl border border-[var(--color-border)] bg-[#F8FAFC] p-3">
+              <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)] p-3">
                 <p className="text-xs font-semibold text-[var(--color-text)]">
                   “{review.summary}”
                 </p>
@@ -271,9 +271,9 @@ export default function BlogFloatingCTA() {
         <div className="mx-auto max-w-md px-3 pb-5">
           <div className="rounded-2xl border border-[var(--color-border)] bg-white/95 backdrop-blur shadow-[0_-10px_40px_rgba(15,23,42,0.10)] px-3 py-3">
             {/* Scroll progress (mobile) */}
-            <div className="mb-2 h-1 w-full overflow-hidden rounded-full bg-[#E3E5E8]" aria-hidden="true">
+            <div className="mb-2 h-1 w-full overflow-hidden rounded-full bg-[var(--color-border)]" aria-hidden="true">
               <div
-                className="h-full bg-gradient-to-r from-brand-turquoise via-[#4FB8B8] to-[var(--color-bg-dark)] transition-[width] duration-150 ease-out"
+                className="h-full bg-gradient-to-r from-brand-turquoise via-[var(--color-accent)] to-[var(--color-bg-dark)] transition-[width] duration-150 ease-out"
                 style={{ width: `${Math.round(scrollProgress * 100)}%` }}
               />
             </div>

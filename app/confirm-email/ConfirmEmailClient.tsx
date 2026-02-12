@@ -109,7 +109,7 @@ export default function ConfirmEmailClient() {
               ) : ui.kind === "success" ? (
                 <div className="space-y-4">
                   <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/25">
-                    <CheckCircle2 className="h-7 w-7 text-[#2B7A78]" />
+                    <CheckCircle2 className="h-7 w-7 text-[var(--color-accent)]" />
                   </div>
                   <div className="space-y-2">
                     <p className="text-xl md:text-2xl font-bold text-[var(--color-text)]">Adresse email confirmée</p>

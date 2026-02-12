@@ -226,12 +226,12 @@ export default function CriteresChoisirDemenageurPage() {
                       <ul className="grid gap-2 text-sm md:text-base text-[var(--color-text)]/90">
                         {c.bullets.map((b) => (
                           <li key={b} className="flex gap-2">
-                            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#2B7A78] shrink-0" />
+                            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--color-accent)] shrink-0" />
                             <span>{b}</span>
                           </li>
                         ))}
                       </ul>
-                      <p className="text-sm text-[var(--color-text-secondary)] bg-[#F8FAFC] rounded-xl p-3 border border-[var(--color-border)]">
+                      <p className="text-sm text-[var(--color-text-secondary)] bg-[var(--color-bg)] rounded-xl p-3 border border-[var(--color-border)]">
                         <strong className="text-[var(--color-text)]">Pourquoi :</strong> {c.note}
                       </p>
                     </div>
@@ -295,7 +295,7 @@ export default function CriteresChoisirDemenageurPage() {
               </p>
               <a 
                 href="/verifications-partenaires/" 
-                className="mt-3 inline-block text-sm font-semibold text-[var(--color-accent)] hover:text-[#2B7A78] underline"
+                className="mt-3 inline-block text-sm font-semibold text-[var(--color-accent)] hover:text-[var(--color-accent)] underline"
               >
                 En savoir plus sur nos vérifications →
               </a>
@@ -363,7 +363,7 @@ export default function CriteresChoisirDemenageurPage() {
                 </p>
                 <a 
                   href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=criteres-checklist" 
-                  className="mt-3 inline-block text-sm font-semibold text-[var(--color-accent)] hover:text-[#2B7A78] underline"
+                  className="mt-3 inline-block text-sm font-semibold text-[var(--color-accent)] hover:text-[var(--color-accent)] underline"
                 >
                   Obtenir des devis de déménageurs vérifiés →
                 </a>
@@ -399,7 +399,7 @@ export default function CriteresChoisirDemenageurPage() {
             <div className="rounded-xl bg-white border border-red-200 p-4 text-sm md:text-base text-[var(--color-text-secondary)]">
               <strong className="text-[var(--color-text)]">Si vous constatez 2+ red flags :</strong> Fuyez. 
               Ce sont des signaux objectifs d'arnaque ou de pratique douteuse. 
-              <a href="/blog/eviter-arnaques-demenagement/" className="text-[var(--color-accent)] hover:text-[#2B7A78] font-semibold ml-1 underline">
+              <a href="/blog/eviter-arnaques-demenagement/" className="text-[var(--color-accent)] hover:text-[var(--color-accent)] font-semibold ml-1 underline">
                 Guide complet anti-arnaques →
               </a>
             </div>
@@ -500,7 +500,7 @@ export default function CriteresChoisirDemenageurPage() {
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-2xl">{item.emoji}</span>
-                    <p className="text-sm font-bold text-[var(--color-text)] group-hover:text-[#2B7A78]">{item.title}</p>
+                    <p className="text-sm font-bold text-[var(--color-text)] group-hover:text-[var(--color-accent)]">{item.title}</p>
                   </div>
                   <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">{item.desc}</p>
                 </a>
@@ -564,7 +564,7 @@ export default function CriteresChoisirDemenageurPage() {
               </div>
               <a
                 href="/blog/estimer-volume-demenagement-guide-complet/"
-                className="mt-3 text-sm font-semibold text-[var(--color-accent)] hover:text-[#2B7A78] underline inline-flex items-center gap-1"
+                className="mt-3 text-sm font-semibold text-[var(--color-accent)] hover:text-[var(--color-accent)] underline inline-flex items-center gap-1"
               >
                 <span>Voir le guide complet</span>
                 <span>→</span>
@@ -580,7 +580,7 @@ export default function CriteresChoisirDemenageurPage() {
               </div>
               <a
                 href="/blog/comparer-devis-demenagement-guide/"
-                className="mt-3 text-sm font-semibold text-[var(--color-accent)] hover:text-[#2B7A78] underline inline-flex items-center gap-1"
+                className="mt-3 text-sm font-semibold text-[var(--color-accent)] hover:text-[var(--color-accent)] underline inline-flex items-center gap-1"
               >
                 <span>Voir le guide</span>
                 <span>→</span>

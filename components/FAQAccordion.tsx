@@ -24,7 +24,7 @@ function FAQAccordionItem({ item, isOpen, onToggle }: { item: FAQItem; isOpen: b
       }`}
     >
       {/* Gradient accent */}
-      <div className={`absolute inset-0 bg-gradient-to-br from-brand-turquoise/5 via-transparent to-[#2B7A78]/5 opacity-0 transition-opacity duration-300 ${isOpen ? "opacity-100" : "group-hover:opacity-100"}`} />
+      <div className={`absolute inset-0 bg-gradient-to-br from-brand-turquoise/5 via-transparent to-[var(--color-accent)]/5 opacity-0 transition-opacity duration-300 ${isOpen ? "opacity-100" : "group-hover:opacity-100"}`} />
       
       {/* Glow effect on open */}
       {isOpen && (
@@ -42,7 +42,7 @@ function FAQAccordionItem({ item, isOpen, onToggle }: { item: FAQItem; isOpen: b
             className={`mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
               isOpen
                 ? "bg-[var(--color-accent)] text-white shadow-lg shadow-[rgba(107,207,207,0.3)]"
-                : "bg-[var(--color-accent)]/10 text-[#2B7A78] group-hover:bg-[var(--color-accent)]/20"
+                : "bg-[var(--color-accent)]/10 text-[var(--color-accent)] group-hover:bg-[var(--color-accent)]/20"
             }`}
           >
             <HelpCircle className="w-4 h-4" />
@@ -58,7 +58,7 @@ function FAQAccordionItem({ item, isOpen, onToggle }: { item: FAQItem; isOpen: b
         >
           <div className={`flex h-8 w-8 items-center justify-center rounded-full border-2 transition-all duration-300 ${
             isOpen
-              ? "border-[var(--color-accent)] bg-[var(--color-accent)]/10 text-[#2B7A78]"
+              ? "border-[var(--color-accent)] bg-[var(--color-accent)]/10 text-[var(--color-accent)]"
               : "border-[var(--color-border)] bg-[var(--color-bg)] text-[var(--color-text-muted)] group-hover:border-[var(--color-accent)]/30 group-hover:bg-[var(--color-accent)]/5"
           }`}>
             <ChevronDown className="w-4 h-4" />

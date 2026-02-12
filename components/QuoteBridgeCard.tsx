@@ -91,7 +91,7 @@ export default function QuoteBridgeCard({ quoteUrl }: QuoteBridgeCardProps) {
             "Type de logement / accès",
           ].map((label) => (
             <div key={label} className="flex items-center gap-2">
-              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[var(--color-accent)]/12 text-[#2B7A78]">
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[var(--color-accent)]/12 text-[var(--color-accent)]">
                 <Check className="h-3.5 w-3.5" />
               </span>
               <span>{label}</span>
@@ -112,7 +112,7 @@ export default function QuoteBridgeCard({ quoteUrl }: QuoteBridgeCardProps) {
         </button>
         <a
           href={quoteUrl}
-          className="text-xs font-semibold text-[#2B7A78] hover:underline inline-flex items-center gap-1"
+          className="text-xs font-semibold text-[var(--color-accent)] hover:underline inline-flex items-center gap-1"
         >
           Continuer sur cet appareil <ArrowRight className="h-4 w-4" />
         </a>
