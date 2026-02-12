@@ -3,161 +3,79 @@
 @tailwind utilities;
 
 :root {
-  /* Brand core */
-  --brand-navy: #0f172a;
-  --brand-navy-2: #04163a;
-  --brand-slate: #1e293b;
+  /* ===== MOVERZ V4 RADICAL — DESIGN TOKENS ===== */
 
-  /* Brand accents */
-  --brand-deep: #2b7a78; /* DBA: main brand accent */
-  --brand-teal: #6bcfcf; /* spark / highlight */
-  --brand-teal-2: #4fb8b8;
-  --brand-teal-3: #3da5a5;
-  --brand-warm: #f59e0b; /* subtle warm counter-accent */
-
-  /* Surfaces (lighter feel) */
-  --surface-0: #ffffff;
-  --surface-1: #fbfeff;
-  --surface-2: #f3fbfb;
-  --surface-3: #eef8f8;
+  /* Backgrounds */
+  --color-bg: #FAFAFA;
+  --color-bg-dark: #0B0F14;
+  --color-surface: #FFFFFF;
 
   /* Text */
-  --text-strong: #04163a;
-  --text-muted: #4b5c6b;
+  --color-text: #0B0F19;
+  --color-text-secondary: #6B7280;
+  --color-text-muted: #9CA3AF;
+
+  /* Accent */
+  --color-accent: #0EA5A6;
+
+  /* Borders */
+  --color-border: #E5E7EB;
+  --color-border-light: #F3F4F6;
+
+  /* Semantic */
+  --color-success: #16A34A;
+  --color-danger: #DC2626;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+
+  /* Legacy — backward compat for other pages */
+  --brand-navy: #0f172a;
+  --brand-teal: #6bcfcf;
+
+  /* Legacy RGB tokens */
+  --bg: 250 250 250;
+  --surface: 255 255 255;
+  --text: 11 15 25;
+  --text-2: 107 114 128;
+  --muted: 156 163 175;
+  --border: 229 231 235;
+  --border-2: 243 244 246;
+  --primary: 11 15 25;
+  --primary-contrast: 255 255 255;
+  --accent: 14 165 166;
+  --accent-2: 14 165 166;
+  --success: 22 163 74;
+  --danger: 220 38 38;
+  --warning: 245 158 11;
+  --focus: rgba(14, 165, 166, 0.3);
+  --radius-card: 12px;
+  --radius-btn: 8px;
+  --radius-input: 8px;
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
 }
 
 @layer base {
-  * {
-    @apply m-0 p-0 box-border;
-  }
-  
   html {
     @apply scroll-smooth;
   }
-  
+
   body {
     @apply min-h-screen antialiased;
-    color: var(--text-strong);
+    font-family: var(--font-inter), system-ui, sans-serif;
+    color: var(--color-text);
+    background: var(--color-bg);
   }
 }
 
 @layer utilities {
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-      transform: translateY(4px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes progressLine {
-    from {
-      transform: translateX(-100%);
-    }
-    to {
-      transform: translateX(100%);
-    }
-  }
-
-  .animate-fade-in {
-    animation: fade-in 0.5s ease-out;
-  }
-
-  @keyframes glow {
-    0%, 100% {
-      text-shadow: 0 0 20px rgba(107, 207, 207, 0.5), 0 0 30px rgba(107, 207, 207, 0.3);
-    }
-    50% {
-      text-shadow: 0 0 30px rgba(107, 207, 207, 0.8), 0 0 50px rgba(107, 207, 207, 0.5);
-    }
-  }
-
-  @keyframes slideInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes slideInRight {
-    from {
-      opacity: 0;
-      transform: translateX(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  .animate-slide-in-left {
-    animation: slideInLeft 0.8s ease-out both;
-  }
-
-  .animate-slide-in-right {
-    animation: slideInRight 0.8s ease-out both;
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
   }
 }
-
-@layer components {
-  /* Conteneurs sections - UNIFORME */
-  .section {
-    @apply relative w-full py-16 md:py-24 overflow-hidden;
-  }
-
-  .section-light {
-    /* Fond blanc pur - premium clean */
-    @apply bg-white;
-  }
-
-  .section-contrast {
-    /* Fond navy solide - premium contrast */
-    @apply bg-[var(--brand-navy)] text-white;
-  }
-
-  .container {
-    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
-  }
-
-  /* Hero background - SOLIDE */
-  .bg-hero {
-    /* Premium: mint → white gradient (less "block of color") */
-    background: radial-gradient(900px 420px at 20% 12%, rgba(107, 207, 207, 0.26), transparent 60%),
-      radial-gradient(700px 380px at 80% 18%, rgba(168, 232, 232, 0.60), transparent 62%),
-      linear-gradient(180deg, #a8e8e8 0%, #eafafa 42%, #ffffff 100%);
-  }
-
-  /* Boutons - SOLIDES UNIFORMES */
-  .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-[var(--brand-navy)] px-8 py-4 text-base font-semibold text-white shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-200;
-  }
-
-  .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-[var(--brand-navy)] bg-white px-8 py-4 text-base font-semibold text-[var(--brand-navy)] hover:bg-gray-50 transition-all duration-200;
-  }
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-

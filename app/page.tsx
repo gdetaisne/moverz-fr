@@ -1,92 +1,37 @@
-import type { Metadata } from "next";
-import Hero from "@/components/Hero";
-import WhatYouReceive from "@/components/WhatYouReceive";
-import ProblemSolution from "@/components/ProblemSolution";
-import FlowAndIA from "@/components/FlowAndIA";
-import RealStories from "@/components/RealStories";
-import TrustSignals from "@/components/TrustSignals";
-import QuickFAQ from "@/components/QuickFAQ";
-import StickyCTA from "@/components/StickyCTA";
-import FinalCTA from "@/components/FinalCTA";
-import WhyMoverz from "@/components/WhyMoverz";
-import { HowToChoose } from "@/components/home/HowToChoose";
-import ProBanner from "@/components/home/ProBanner";
-import { FAQSchema } from "@/components/schema/FAQSchema";
-import { WebPageSchema } from "@/components/schema/WebPageSchema";
-import { HOME_FAQS } from "@/components/home/homeFaqs";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Comparateur Déménagement | Jusqu'à 5 devis | Contrôlés · Gratuit",
-  description:
-    "Comparez jusqu'à 5 devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
-  alternates: {
-    canonical: 'https://moverz.fr/',
-  },
-  openGraph: {
-    title: "Comparateur Déménagement | Jusqu'à 5 devis | Contrôlés · Gratuit",
-    description: "Comparez jusqu'à 5 devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
-    url: 'https://moverz.fr/',
-    siteName: 'Moverz',
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Moverz - Comparateur Déménagement · Jusqu'à 5 devis · Contrôlés · Gratuit · Note 4.9/5",
-      },
-    ],
-    type: 'website',
-  },
-};
+/**
+ * MOVERZ HOMEPAGE V4 RADICAL
+ * 
+ * Architecture finale :
+ * 1. Hero product-first (form + comparison table)
+ * 2. "Des devis détaillés et comparables" (mockup iPhone + contenu)
+ * 3. "Voyez exactement ce que vous comparez" (tableau comparatif)
+ * 4. Chapitre dark unique : Creditsafe + Dossier + Suivi
+ * 5. Témoignage humain fort (1 seule citation)
+ * 6. FAQ
+ *
+ * Formulaire : logique métier intacte (Zod + redirect devis.moverz.fr)
+ * Motion : fadeUp uniquement
+ * Un seul chapitre dark (CreditsafeChapter)
+ */
+
+import { HeroV4 } from "@/components/sections/HeroV4";
+import { ComparableQuotesMock } from "@/components/sections/ComparableQuotesMock";
+import { ComparisonExplainer } from "@/components/sections/ComparisonExplainer";
+import { CreditsafeChapter } from "@/components/sections/CreditsafeChapter";
+import { TestimonialV4 } from "@/components/sections/TestimonialV4";
+import { FAQV4 } from "@/components/sections/FAQV4";
 
 export default function Home() {
-  // short FAQ retirée de la home pour alléger la page (FAQ complète sur /faq)
-
   return (
     <>
-      <main className="bg-white">
-        {/* WebPage schema: contexte homepage */}
-        <WebPageSchema
-          name="Comparateur Déménagement | Jusqu'à 5 devis | Contrôlés · Gratuit"
-          description="Comparez jusqu'à 5 devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit."
-          url="https://moverz.fr/"
-          about="Comparateur de déménagement"
-        />
-        
-        {/* FAQ JSON-LD: single source of truth with the visible home FAQ */}
-        <FAQSchema faqs={HOME_FAQS} />
-        
-        {/* 1. Hero - Promesse + CTA + Preuves */}
-        <Hero />
-
-      {/* 2. Comment ça marche - 3 étapes compactes (FlowAndIA) */}
-      <FlowAndIA />
-
-      {/* 3. Pourquoi c'est sûr - Creditsafe + déménageurs vérifiés + WhatsApp */}
-      <WhyMoverz />
-
-      {/* 4. Ce que vous recevez - Devis comparables + exemple */}
-      <WhatYouReceive />
-
-      {/* 5. Social proof - Notes + Témoignages + Chiffres */}
-      <RealStories />
-
-      {/* 6. Comment choisir un bon déménageur (featured snippet) */}
-      <HowToChoose />
-
-      {/* 7. FAQ */}
-      <QuickFAQ />
-
-      {/* 8. Banner Pro (déménageurs) */}
-      <ProBanner />
-
-      {/* 9. CTA final */}
-      <FinalCTA />
-
-        {/* Sticky CTA global */}
-        <StickyCTA />
-      </main>
+      <HeroV4 />
+      <ComparableQuotesMock />
+      <ComparisonExplainer />
+      <CreditsafeChapter />
+      <TestimonialV4 />
+      <FAQV4 />
     </>
   );
 }
-

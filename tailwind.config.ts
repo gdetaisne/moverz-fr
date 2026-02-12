@@ -10,71 +10,95 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: { DEFAULT: "1rem", md: "1.5rem" },
+      padding: { DEFAULT: "1.25rem", md: "1.5rem", lg: "2rem" },
       screens: {
-        "2xl": "1400px"
-      }
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1120px",
+        "2xl": "1200px",
+      },
     },
     extend: {
-      boxShadow: {
-        'marketing-xl': '0 10px 30px -10px rgba(0,0,0,0.35)',
-        'marketing-2xl': '0 25px 60px -12px rgba(0,0,0,0.4)',
-        card: '0 8px 30px rgba(0,0,0,.12)',
-        soft: '0 4px 16px rgba(0,0,0,.08)',
-        glow: '0 0 0 4px rgba(107,207,207,.22)',
-        // Premium 2026 shadows
-        'glow-turquoise': '0 8px 30px rgba(107,207,207,0.35)',
-        'glow-turquoise-lg': '0 12px 40px rgba(107,207,207,0.5)',
-        'glow-accent': '0 8px 30px rgba(167,139,250,0.3)',
-        'glow-accent-lg': '0 12px 40px rgba(167,139,250,0.45)',
+      fontFamily: {
+        heading: ["var(--font-sora)", "system-ui", "sans-serif"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
       colors: {
+        // V4 Radical tokens
+        v4: {
+          bg: "var(--color-bg)",
+          "bg-dark": "var(--color-bg-dark)",
+          surface: "var(--color-surface)",
+          text: "var(--color-text)",
+          "text-secondary": "var(--color-text-secondary)",
+          "text-muted": "var(--color-text-muted)",
+          accent: "var(--color-accent)",
+          border: "var(--color-border)",
+          "border-light": "var(--color-border-light)",
+        },
+        // Legacy RGB tokens (backward compat)
+        bg: "rgb(var(--bg) / <alpha-value>)",
+        surface: "rgb(var(--surface) / <alpha-value>)",
+        text: {
+          DEFAULT: "rgb(var(--text) / <alpha-value>)",
+          2: "rgb(var(--text-2) / <alpha-value>)",
+        },
+        muted: "rgb(var(--muted) / <alpha-value>)",
+        border: {
+          DEFAULT: "rgb(var(--border) / <alpha-value>)",
+          2: "rgb(var(--border-2) / <alpha-value>)",
+        },
+        primary: {
+          DEFAULT: "rgb(var(--primary) / <alpha-value>)",
+          contrast: "rgb(var(--primary-contrast) / <alpha-value>)",
+        },
+        accent: {
+          DEFAULT: "rgb(var(--accent) / <alpha-value>)",
+          2: "rgb(var(--accent-2) / <alpha-value>)",
+        },
+        success: "rgb(var(--success) / <alpha-value>)",
+        danger: "rgb(var(--danger) / <alpha-value>)",
+        warning: "rgb(var(--warning) / <alpha-value>)",
+        // Legacy brand colors
         brand: {
-          DEFAULT: '#04163a',
-          navy: '#04163a',
-          primary: '#04163a',
-          white: '#ffffff',
-          black: '#0A0A0A',
-          // TURQUOISE MOVERZ - Couleur signature 🏡
+          DEFAULT: "#04163a",
+          navy: "#04163a",
+          primary: "#04163a",
           turquoise: {
-            50: '#F0FDFB',
-            100: '#CCFBF1',
-            200: '#A8E6D8',
-            300: '#7DD3C0',
-            DEFAULT: '#6BCFCF',
-            500: '#5AB8B8',
-            600: '#4AA8A5',
-            700: '#3A8885',
+            DEFAULT: "#6BCFCF",
+            100: "#E0F7F7",
+            200: "#B3EBEB",
+            300: "#8FDFDF",
+            400: "#6BCFCF",
+            500: "#4FBFBF",
           },
-          // VIOLET PREMIUM - Accent moderne 💜
           accent: {
-            50: '#FAF5FF',
-            100: '#F3E8FF',
-            200: '#E9D5FF',
-            300: '#C4B5FD',
-            DEFAULT: '#A78BFA',
-            500: '#8B5CF6',
-            600: '#7C3AED',
-            700: '#6D28D9',
-          }
-        }
+            DEFAULT: "#A78BFA",
+            100: "#EDE9FE",
+            300: "#C4B5FD",
+          },
+        },
       },
       borderRadius: {
-        xl: '0.875rem',
-        '2xl': '1.25rem',
-        '3xl': '1.75rem'
+        card: "var(--radius-card)",
+        btn: "var(--radius-btn)",
+        input: "var(--radius-input)",
       },
-      transitionTimingFunction: {
-        smooth: 'cubic-bezier(.2,.8,.2,1)'
+      boxShadow: {
+        xs: "var(--shadow-xs)",
+        sm: "var(--shadow-sm)",
+        md: "var(--shadow-md)",
+        lg: "var(--shadow-lg)",
+        "glow-turquoise": "0 4px 16px rgba(107,207,207,0.3)",
+        "glow-turquoise-lg": "0 6px 24px rgba(107,207,207,0.5)",
       },
       animation: {
-        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-      }
-    }
+        "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+      },
+    },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ]
+  plugins: [require("@tailwindcss/typography")],
 } satisfies Config;
 
 export default config;
