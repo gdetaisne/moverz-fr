@@ -70,6 +70,7 @@ function buildDevisLinkFromHome(
   surfaceM2: number,
 ): string {
   const p = new URLSearchParams({
+    step: "3",
     // Tracking: demandé pour la home (valeur encodée automatiquement)
     from: "https://moverz.fr",
     originPostalCode,

@@ -68,10 +68,12 @@ export function TunnelEntryForm({ onDataChange, compact = false }: TunnelEntryFo
       // Pour l'instant, on redirige vers le formulaire de devis
       // Adapter cette URL selon votre architecture de tunnel
       const params = new URLSearchParams({
-        from: data.fromCity,
-        to: data.toCity,
-        area: data.areaM2.toString(),
-        source: "homepage-hero",
+        step: "3",
+        from: "https://moverz.fr/premium",
+        originCity: data.fromCity,
+        destinationCity: data.toCity,
+        surfaceM2: data.areaM2.toString(),
+        source: "premium-form",
       });
       
       router.push(`https://devis.moverz.fr/devis-gratuits-v3?${params.toString()}`);
