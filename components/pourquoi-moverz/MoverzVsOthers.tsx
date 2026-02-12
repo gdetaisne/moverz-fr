@@ -84,7 +84,7 @@ export default function MoverzVsOthers() {
             <div className="relative w-full max-w-[480px] mx-auto">
               <div className="bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.25)] overflow-hidden">
                 {/* Header */}
-                <div className="bg-gradient-to-r from-brand-turquoise to-[#A8E8E8] px-6 py-5 text-[#0F172A]">
+                <div className="bg-gradient-to-r from-brand-turquoise to-[#A8E8E8] px-6 py-5 text-[var(--color-text)]">
                   <p className="text-xs font-semibold opacity-70 mb-1">Comparaison complète</p>
                   <p className="text-lg font-bold">Moverz vs Comparateurs</p>
                 </div>
@@ -95,7 +95,7 @@ export default function MoverzVsOthers() {
                   <div className="flex items-center justify-between p-3 rounded-xl bg-[#F8F9FA]">
                     <div className="flex items-center gap-3">
                       <Smartphone className="w-5 h-5 text-brand-turquoise" />
-                      <span className="text-sm font-medium text-[#0F172A]">Multi-canal</span>
+                      <span className="text-sm font-medium text-[var(--color-text)]">Multi-canal</span>
                     </div>
                     <Check className="w-5 h-5 text-green-600" strokeWidth={3} />
                   </div>
@@ -104,7 +104,7 @@ export default function MoverzVsOthers() {
                   <div className="flex items-center justify-between p-3 rounded-xl bg-[#F8F9FA]">
                     <div className="flex items-center gap-3">
                       <TrendingUp className="w-5 h-5 text-brand-turquoise" />
-                      <span className="text-sm font-medium text-[#0F172A]">Dossier standardisé</span>
+                      <span className="text-sm font-medium text-[var(--color-text)]">Dossier standardisé</span>
                     </div>
                     <Check className="w-5 h-5 text-green-600" strokeWidth={3} />
                   </div>
@@ -112,8 +112,8 @@ export default function MoverzVsOthers() {
                   {/* Vérif entreprises */}
                   <div className="flex items-center justify-between p-3 rounded-xl bg-brand-turquoise/10 border-2 border-brand-turquoise">
                     <div className="flex items-center gap-3">
-                      <Shield className="w-5 h-5 text-[#0F172A]" />
-                      <span className="text-sm font-bold text-[#0F172A]">Vérification entreprises</span>
+                      <Shield className="w-5 h-5 text-[var(--color-text)]" />
+                      <span className="text-sm font-bold text-[var(--color-text)]">Vérification entreprises</span>
                     </div>
                     <Check className="w-5 h-5 text-green-600" strokeWidth={3} />
                   </div>
@@ -121,8 +121,8 @@ export default function MoverzVsOthers() {
                   {/* Données financières */}
                   <div className="flex items-center justify-between p-3 rounded-xl bg-brand-turquoise/10 border-2 border-brand-turquoise">
                     <div className="flex items-center gap-3">
-                      <Shield className="w-5 h-5 text-[#0F172A]" />
-                      <span className="text-sm font-bold text-[#0F172A]">Données financières</span>
+                      <Shield className="w-5 h-5 text-[var(--color-text)]" />
+                      <span className="text-sm font-bold text-[var(--color-text)]">Données financières</span>
                     </div>
                     <Check className="w-5 h-5 text-green-600" strokeWidth={3} />
                   </div>
@@ -130,8 +130,8 @@ export default function MoverzVsOthers() {
                   {/* Litiges visibles */}
                   <div className="flex items-center justify-between p-3 rounded-xl bg-brand-turquoise/10 border-2 border-brand-turquoise">
                     <div className="flex items-center gap-3">
-                      <Shield className="w-5 h-5 text-[#0F172A]" />
-                      <span className="text-sm font-bold text-[#0F172A]">Historique litiges</span>
+                      <Shield className="w-5 h-5 text-[var(--color-text)]" />
+                      <span className="text-sm font-bold text-[var(--color-text)]">Historique litiges</span>
                     </div>
                     <Check className="w-5 h-5 text-green-600" strokeWidth={3} />
                   </div>
@@ -140,7 +140,7 @@ export default function MoverzVsOthers() {
                   <div className="flex items-center justify-between p-3 rounded-xl bg-[#F8F9FA]">
                     <div className="flex items-center gap-3">
                       <Check className="w-5 h-5 text-brand-turquoise" />
-                      <span className="text-sm font-medium text-[#0F172A]">Dossier standardisé</span>
+                      <span className="text-sm font-medium text-[var(--color-text)]">Dossier standardisé</span>
                     </div>
                     <Check className="w-5 h-5 text-green-600" strokeWidth={3} />
                   </div>

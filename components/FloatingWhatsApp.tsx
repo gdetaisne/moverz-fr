@@ -79,10 +79,10 @@ export default function FloatingWhatsApp() {
       {/* Tooltip on first appearance */}
       {visible && (
         <div className="absolute bottom-full right-0 mb-2 animate-[fadeInUp_0.5s_ease-out]">
-          <div className="bg-white rounded-lg shadow-lg px-4 py-2 text-sm font-medium text-[#0F172A] whitespace-nowrap">
+          <div className="rounded-lg shadow-lg px-4 py-2 text-sm font-medium whitespace-nowrap" style={{ background: "var(--color-surface)", color: "var(--color-text)" }}>
             💬 Besoin d'aide ? Écrivez-nous !
             {/* Arrow */}
-            <div className="absolute -bottom-1 right-6 w-2 h-2 bg-white rotate-45" />
+            <div className="absolute -bottom-1 right-6 w-2 h-2 rotate-45" style={{ background: "var(--color-surface)" }} />
           </div>
         </div>
       )}

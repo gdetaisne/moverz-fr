@@ -10,7 +10,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { staggerContainer, staggerItem } from "@/components/motion";
-import { ArrowRight, CheckCircle2, Shield, Clock, Ban } from "lucide-react";
+import { ArrowRight, CheckCircle2, Shield, Clock, Ban, Star } from "lucide-react";
 
 /* ------------------------------------------------------------------ */
 /*  Types & Helpers                                                   */
@@ -310,6 +310,30 @@ export function HeroV4() {
                   </span>
                 </div>
               ))}
+            </motion.div>
+
+            {/* Note Google */}
+            <motion.div variants={staggerItem}>
+              <a
+                href="https://www.google.com/maps/place/Moverz/@46.881154,3.0417412,6z/data=!3m1!4b1!4m6!3m5!1s0x65777ea3ad50b1c1:0xdcc12b2e04254f4!8m2!3d46.881154!4d3.0417412!16s%2Fg%2F11ylmz4jk6?entry=ttu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-3 px-4 py-2.5 rounded-xl border transition-all duration-300 hover:shadow-lg"
+                style={{
+                  borderColor: "var(--color-border)",
+                  background: "var(--color-surface)",
+                }}
+              >
+                <div className="flex gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                  ))}
+                </div>
+                <div className="flex items-baseline gap-1.5">
+                  <span className="text-base font-bold" style={{ color: "var(--color-text)" }}>4,5+</span>
+                  <span className="text-sm" style={{ color: "var(--color-text-muted)" }}>sur Google</span>
+                </div>
+              </a>
             </motion.div>
           </motion.div>
 

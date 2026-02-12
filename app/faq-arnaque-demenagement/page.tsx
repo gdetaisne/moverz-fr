@@ -84,16 +84,16 @@ export default function FaqArnaqueDemenagementPage() {
       {/* CTA discret */}
       <section className="section section-light pt-0">
         <div className="container max-w-4xl">
-          <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div className="space-y-1">
-              <p className="text-sm font-semibold text-[#0F172A]">Astuce simple (et pas magique)</p>
-              <p className="text-sm text-[#6B7280]">
+              <p className="text-sm font-semibold text-[var(--color-text)]">Astuce simple (et pas magique)</p>
+              <p className="text-sm text-[var(--color-text-secondary)]">
                 Une estimation basée sur visite/visio réduit les écarts de volume et les ambiguïtés du devis.
               </p>
             </div>
             <a
               href="/comment-ca-marche/"
-              className="inline-flex items-center justify-center rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#1E293B] transition-colors"
+              className="inline-flex items-center justify-center rounded-full bg-[var(--color-bg-dark)] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[var(--color-bg-dark)] transition-colors"
             >
               Voir une méthode d’estimation plus solide →
             </a>

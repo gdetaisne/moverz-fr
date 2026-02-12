@@ -20,18 +20,18 @@ export default function CreditsafeScoring() {
               animation: mounted ? 'fadeInUp 1s ease-out' : 'none',
             }}
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-sm font-semibold text-[#0F172A] mb-6">
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-sm font-semibold text-[var(--color-text)] mb-6">
               <span className="h-2 w-2 rounded-full bg-brand-turquoise" />
               Exclusivité Moverz
             </div>
 
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] mb-6 leading-tight">
+            <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text)] mb-6 leading-tight">
               Ce qu'aucun comparateur ne vous montre
             </h2>
 
-            <p className="text-lg text-[#1E293B]/70 leading-relaxed mb-8">
+            <p className="text-lg text-[var(--color-text-secondary)]/70 leading-relaxed mb-8">
               Le prix ne fait pas tout. Nous analysons chaque déménageur avec des{" "}
-              <strong className="text-[#0F172A]">outils spécialisés</strong> (Creditsafe, registres publics).
+              <strong className="text-[var(--color-text)]">outils spécialisés</strong> (Creditsafe, registres publics).
             </p>
 
             <div className="space-y-5">
@@ -39,8 +39,8 @@ export default function CreditsafeScoring() {
               <div className="flex items-start gap-4 p-4 rounded-xl bg-green-50 border border-green-200">
                 <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                 <div>
-                  <h3 className="font-semibold text-[#0F172A] mb-1">✓ Déménageur A</h3>
-                  <p className="text-[#1E293B]/70 text-sm">
+                  <h3 className="font-semibold text-[var(--color-text)] mb-1">✓ Déménageur A</h3>
+                  <p className="text-[var(--color-text-secondary)]/70 text-sm">
                     Score 78/100 (↑), 0 litige, bénéficiaire depuis 3 ans → Le plus fiable
                   </p>
                 </div>
@@ -50,8 +50,8 @@ export default function CreditsafeScoring() {
               <div className="flex items-start gap-4 p-4 rounded-xl bg-orange-50 border border-orange-200">
                 <AlertCircle className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                 <div>
-                  <h3 className="font-semibold text-[#0F172A] mb-1">⚠ Déménageur B</h3>
-                  <p className="text-[#1E293B]/70 text-sm">
+                  <h3 className="font-semibold text-[var(--color-text)] mb-1">⚠ Déménageur B</h3>
+                  <p className="text-[var(--color-text-secondary)]/70 text-sm">
                     Score 52/100 (↓), pertes récentes → Fragile, négociez bien les conditions
                   </p>
                 </div>
@@ -61,15 +61,15 @@ export default function CreditsafeScoring() {
               <div className="flex items-start gap-4 p-4 rounded-xl bg-red-50 border border-red-200">
                 <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                 <div>
-                  <h3 className="font-semibold text-[#0F172A] mb-1">⚠ Déménageur C</h3>
-                  <p className="text-[#1E293B]/70 text-sm">
+                  <h3 className="font-semibold text-[var(--color-text)] mb-1">⚠ Déménageur C</h3>
+                  <p className="text-[var(--color-text-secondary)]/70 text-sm">
                     Score 71/100, mais 1 litige avec condamnation (2023) → Vigilance
                   </p>
                 </div>
               </div>
             </div>
 
-            <p className="text-sm text-[#1E293B]/60 mt-6 text-center lg:text-left">
+            <p className="text-sm text-[var(--color-text-secondary)]/60 mt-6 text-center lg:text-left">
               Données Creditsafe • Mise à jour mensuelle • Exemple illustratif
             </p>
           </div>
@@ -82,7 +82,7 @@ export default function CreditsafeScoring() {
             }}
           >
             <div className="relative w-full max-w-[420px] mx-auto">
-              <div className="bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.15)] overflow-hidden border border-[#E3E5E8]">
+              <div className="bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.15)] overflow-hidden border border-[var(--color-border)]">
                 {/* Header */}
                 <div className="bg-gradient-to-br from-[#0F172A] to-[#1E293B] px-6 py-5 text-white">
                   <p className="text-xs font-semibold opacity-70 mb-1">Comparaison Creditsafe</p>
@@ -94,7 +94,7 @@ export default function CreditsafeScoring() {
                   {/* A - Green */}
                   <div className="p-4 rounded-xl bg-green-50 border-2 border-green-200">
                     <div className="flex items-center justify-between mb-3">
-                      <p className="font-bold text-[#0F172A]">Déménageur A</p>
+                      <p className="font-bold text-[var(--color-text)]">Déménageur A</p>
                       <TrendingUp className="w-5 h-5 text-green-600" />
                     </div>
                     <div className="flex items-center gap-3">
@@ -115,7 +115,7 @@ export default function CreditsafeScoring() {
                   {/* B - Orange */}
                   <div className="p-4 rounded-xl bg-orange-50 border-2 border-orange-200">
                     <div className="flex items-center justify-between mb-3">
-                      <p className="font-bold text-[#0F172A]">Déménageur B</p>
+                      <p className="font-bold text-[var(--color-text)]">Déménageur B</p>
                       <TrendingDown className="w-5 h-5 text-orange-600" />
                     </div>
                     <div className="flex items-center gap-3">
@@ -135,8 +135,8 @@ export default function CreditsafeScoring() {
                   {/* C - Yellow */}
                   <div className="p-4 rounded-xl bg-yellow-50 border-2 border-yellow-200">
                     <div className="flex items-center justify-between mb-3">
-                      <p className="font-bold text-[#0F172A]">Déménageur C</p>
-                      <Minus className="w-5 h-5 text-gray-600" />
+                      <p className="font-bold text-[var(--color-text)]">Déménageur C</p>
+                      <Minus className="w-5 h-5 text-[var(--color-text-secondary)]" />
                     </div>
                     <div className="flex items-center gap-3">
                       <div className="text-3xl font-bold text-gray-900">71</div>
@@ -159,16 +159,16 @@ export default function CreditsafeScoring() {
 
         {/* Bottom explanation */}
         <div className="max-w-3xl mx-auto text-center mt-16">
-          <div className="bg-white rounded-2xl p-8 shadow-[0_10px_40px_rgba(0,0,0,0.06)] border border-[#E3E5E8]">
-            <p className="text-sm font-semibold text-[#0F172A] mb-2">
+          <div className="bg-white rounded-2xl p-8 shadow-[0_10px_40px_rgba(0,0,0,0.06)] border border-[var(--color-border)]">
+            <p className="text-sm font-semibold text-[var(--color-text)] mb-2">
               Pourquoi personne d'autre ne le fait ?
             </p>
-            <p className="text-[#1E293B]/70 text-sm">
+            <p className="text-[var(--color-text-secondary)]/70 text-sm">
               Coût élevé, complexité d'accès aux données, et surtout : conflit d'intérêt. Difficile de noter financièrement un client qui vous paie.
             </p>
             <a
               href="/blog/eviter-arnaques-demenagement/"
-              className="inline-block mt-4 text-brand-turquoise text-sm font-medium hover:text-[#0F172A] transition-colors"
+              className="inline-block mt-4 text-brand-turquoise text-sm font-medium hover:text-[var(--color-text)] transition-colors"
             >
               → Lire notre guide complet sur les arnaques au déménagement
             </a>

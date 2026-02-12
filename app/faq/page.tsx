@@ -67,7 +67,7 @@ const faqCategories = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     ),
-    color: "from-brand-accent/10 to-brand-accent-300/20",
+    color: "from-brand-accent/10 to-brand-accent/20",
     borderColor: "border-brand-accent/30",
     items: [
       {
@@ -96,7 +96,7 @@ const faqCategories = [
       </svg>
     ),
     color: "from-brand-turquoise-200/10 to-brand-accent/15",
-    borderColor: "border-brand-accent-300/30",
+    borderColor: "border-brand-accent/30",
     items: [
       {
         q: "Puis-je utiliser Moverz pour un déménagement international ?",
@@ -156,7 +156,7 @@ export default function FAQPage() {
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-brand-turquoise to-brand-accent opacity-50 rounded-t-3xl" />
             
             <div className="text-center space-y-4 mb-8">
-              <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-brand-accent/10 border border-brand-turquoise/30 px-4 py-2 text-xs font-bold text-[#0F172A]">
+              <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-brand-accent/10 border border-brand-turquoise/30 px-4 py-2 text-xs font-bold text-[var(--color-text)]">
                 <span className="relative inline-flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-accent shadow-[0_0_12px_rgba(167,139,250,0.8)]" />
@@ -166,7 +166,7 @@ export default function FAQPage() {
               <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#0F172A] via-brand-turquoise to-brand-accent bg-clip-text text-transparent">
                 Guides utiles (sans blabla)
               </h2>
-              <p className="text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-sm text-[var(--color-text-secondary)] max-w-2xl mx-auto leading-relaxed">
                 Des pages courtes et actionnables pour vérifier un déménageur et éviter les zones floues.
               </p>
             </div>
@@ -198,8 +198,8 @@ export default function FAQPage() {
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-brand-accent/0 to-brand-accent/0 opacity-0 group-hover:opacity-10 transition-opacity duration-300 blur-xl" />
                   
                   <div className="relative">
-                    <p className="text-sm font-bold text-[#0F172A] group-hover:text-brand-accent mb-2 transition-colors duration-300">{item.title}</p>
-                    <p className="text-xs text-gray-600 leading-relaxed">{item.desc}</p>
+                    <p className="text-sm font-bold text-[var(--color-text)] group-hover:text-brand-accent mb-2 transition-colors duration-300">{item.title}</p>
+                    <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">{item.desc}</p>
                   </div>
                 </a>
               ))}
@@ -223,19 +223,19 @@ export default function FAQPage() {
                 icon: <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" /></svg>,
                 stat: "100%", 
                 label: "Gratuit & sans engagement",
-                gradient: "from-brand-turquoise to-brand-turquoise-600"
+                gradient: "from-brand-turquoise to-brand-turquoise"
               },
               { 
                 icon: <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>,
                 stat: "Sans démarchage", 
                 label: "Aucun appel intempestif",
-                gradient: "from-brand-accent to-brand-accent-600"
+                gradient: "from-brand-accent to-brand-accent"
               },
               { 
                 icon: <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>,
                 stat: "5+", 
                 label: "Devis comparables",
-                gradient: "from-brand-turquoise-600 to-brand-accent"
+                gradient: "from-brand-turquoise to-brand-accent"
               }
             ].map((item, i) => (
               <div 
@@ -252,7 +252,7 @@ export default function FAQPage() {
                   <div className={`text-2xl md:text-3xl font-bold bg-gradient-to-br ${item.gradient} bg-clip-text text-transparent`}>
                     {item.stat}
                   </div>
-                  <div className="text-xs text-gray-600 font-medium leading-tight">{item.label}</div>
+                  <div className="text-xs text-[var(--color-text-secondary)] font-medium leading-tight">{item.label}</div>
                 </div>
               </div>
             ))}
@@ -264,7 +264,7 @@ export default function FAQPage() {
       <section className="section section-light pt-4">
         <div className="container max-w-4xl">
           <div className="text-center mb-12 space-y-4">
-            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-brand-accent/10 border border-brand-turquoise/30 backdrop-blur-sm px-5 py-2.5 text-sm font-bold text-[#0F172A] shadow-sm">
+            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-brand-accent/10 border border-brand-turquoise/30 backdrop-blur-sm px-5 py-2.5 text-sm font-bold text-[var(--color-text)] shadow-sm">
               <span className="relative inline-flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-accent shadow-[0_0_12px_rgba(167,139,250,0.8)]" />
@@ -292,7 +292,7 @@ export default function FAQPage() {
                     <h3 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-[#0F172A] to-brand-accent bg-clip-text text-transparent group-hover:from-brand-turquoise group-hover:to-brand-accent transition-all duration-300">
                       {category.title}
                     </h3>
-                    <p className="text-sm text-gray-600 font-medium">
+                    <p className="text-sm text-[var(--color-text-secondary)] font-medium">
                       {category.items.length} question{category.items.length > 1 ? 's' : ''}
                     </p>
                   </div>
@@ -324,7 +324,7 @@ export default function FAQPage() {
               <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#0F172A] via-brand-turquoise to-brand-accent bg-clip-text text-transparent">
                 Encore une question ?
               </h3>
-              <p className="text-base text-gray-700 max-w-xl mx-auto leading-relaxed font-medium">
+              <p className="text-base text-[var(--color-text-secondary)] max-w-xl mx-auto leading-relaxed font-medium">
                 Pas de soucis ! Notre équipe adore discuter déménagement (oui, vraiment). On vous répond en mode humain, pas en mode robot.
               </p>
               <a

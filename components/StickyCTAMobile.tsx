@@ -23,14 +23,14 @@ export function StickyCTAMobile({ quoteUrl, text = 'Comparer maintenant' }: Stic
   if (!isVisible) return null
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white border-t border-gray-200 shadow-lg p-4 animate-in slide-in-from-bottom duration-300">
+    <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white border-t border-[var(--color-border)] shadow-lg p-4 animate-in slide-in-from-bottom duration-300">
       <a
         href={quoteUrl}
         className="block w-full bg-[#2B7A78] text-white text-center py-3 rounded-lg font-semibold hover:bg-[#236663] transition-colors"
       >
         {text}
       </a>
-      <p className="mt-2 text-center text-[11px] text-gray-600">
+      <p className="mt-2 text-center text-[11px] text-[var(--color-text-secondary)]">
         Astuce : plus le dossier est précis, plus les devis sont fiables
       </p>
     </div>

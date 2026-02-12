@@ -68,7 +68,7 @@ export function QuartierPage({
 
   return (
     <main className="bg-white">
-      <div className="bg-[#0F172A]">
+      <div className="bg-[var(--color-bg-dark)]">
         <div className="container max-w-6xl pt-6">
           <Breadcrumbs
             items={[
@@ -119,7 +119,7 @@ export function QuartierPage({
             <div className="pt-4">
               <a
                 href={quoteUrl}
-                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#F3F4F6] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[var(--color-text)] shadow-lg hover:bg-[#F3F4F6] transition-colors"
               >
                 <span>Comparer les déménageurs</span>
                 <span className="text-lg leading-none">→</span>
@@ -134,22 +134,22 @@ export function QuartierPage({
         <div className="container mx-auto max-w-6xl px-4">
           <div className="grid grid-cols-3 gap-6 md:gap-8">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-[var(--color-text)] mb-2">
                 {stats.dossiers}
               </div>
-              <div className="text-sm text-[#6B7280]">Dossiers traités</div>
+              <div className="text-sm text-[var(--color-text-secondary)]">Dossiers traités</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-[var(--color-text)] mb-2">
                 {stats.demenageurs}
               </div>
-              <div className="text-sm text-[#6B7280]">Déménageurs contrôlés</div>
+              <div className="text-sm text-[var(--color-text-secondary)]">Déménageurs contrôlés</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-[var(--color-text)] mb-2">
                 {stats.delai}j
               </div>
-              <div className="text-sm text-[#6B7280]">Délai moyen</div>
+              <div className="text-sm text-[var(--color-text-secondary)]">Délai moyen</div>
             </div>
           </div>
         </div>
@@ -163,11 +163,11 @@ export function QuartierPage({
               <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
               Pourquoi Moverz
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)]">
               Déménager à {quartierName} avec Moverz
             </h2>
           </div>
-          <p className="text-base md:text-lg text-[#4b5c6b] leading-relaxed">
+          <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
             {pourquoiMoverz}
           </p>
         </div>
@@ -181,34 +181,34 @@ export function QuartierPage({
               <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
               Accès & Stationnement
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)]">
               Contraintes d'accès à {quartierName}
             </h2>
           </div>
-          <p className="text-base md:text-lg text-[#4b5c6b] leading-relaxed">
+          <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
             {accesStationnement}
           </p>
 
           {/* Maillage interne : ressources utiles */}
           <div className="pt-4">
-            <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 text-center space-y-4">
+            <div className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-8 text-center space-y-4">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
                 Ressources utiles
               </p>
-              <p className="text-sm text-[#6B7280] max-w-2xl mx-auto">
+              <p className="text-sm text-[var(--color-text-secondary)] max-w-2xl mx-auto">
                 Pour préparer votre déménagement à {quartierName}, voici les pages les plus utiles.
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3">
                 <a
                   href={`/demenagement/${citySlug}/`}
-                  className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-bg-dark)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--color-bg-dark)] transition-colors"
                 >
                   <span>Guide déménagement {cityName}</span>
                   <span>→</span>
                 </a>
                 <a
                   href={`/quartiers-${citySlug}/`}
-                  className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise-200 hover:bg-[#FAFAFA] transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-white px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-brand-turquoise-200 hover:bg-[var(--color-bg)] transition-colors"
                 >
                   <span>Tous les quartiers de {cityName}</span>
                   <span>→</span>
@@ -216,7 +216,7 @@ export function QuartierPage({
                 {pricePost ? (
                   <a
                     href={`/blog/${pricePost.slug}/`}
-                    className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise-200 hover:bg-[#FAFAFA] transition-colors"
+                    className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-white px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-brand-turquoise-200 hover:bg-[var(--color-bg)] transition-colors"
                   >
                     <span>Prix à {cityName}</span>
                     <span>→</span>
@@ -224,7 +224,7 @@ export function QuartierPage({
                 ) : (
                   <a
                     href="/blog/prix-et-devis/"
-                    className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise-200 hover:bg-[#FAFAFA] transition-colors"
+                    className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-white px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-brand-turquoise-200 hover:bg-[var(--color-bg)] transition-colors"
                   >
                     <span>Guides prix & devis</span>
                     <span>→</span>
@@ -245,7 +245,7 @@ export function QuartierPage({
                 <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
                 Destinations fréquentes
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)]">
                 Depuis {quartierName}
               </h2>
             </div>
@@ -255,12 +255,12 @@ export function QuartierPage({
                 <a
                   key={dest.href}
                   href={dest.href}
-                  className="group rounded-2xl border border-[#E5E7EB] bg-white p-6 hover:border-brand-turquoise hover:shadow-lg transition-all"
+                  className="group rounded-2xl border border-[var(--color-border)] bg-white p-6 hover:border-brand-turquoise hover:shadow-lg transition-all"
                 >
-                  <h3 className="text-xl font-bold text-[#0F172A] group-hover:text-brand-turquoise-600 transition-colors mb-2">
+                  <h3 className="text-xl font-bold text-[var(--color-text)] group-hover:text-brand-turquoise transition-colors mb-2">
                     {dest.title}
                   </h3>
-                  <p className="text-sm text-[#6B7280]">{dest.description}</p>
+                  <p className="text-sm text-[var(--color-text-secondary)]">{dest.description}</p>
                 </a>
               ))}
             </div>
@@ -276,7 +276,7 @@ export function QuartierPage({
               <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
               Questions fréquentes
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)]">
               FAQ {quartierName}
             </h2>
           </div>
@@ -284,10 +284,10 @@ export function QuartierPage({
           <div className="space-y-6">
             {faq.map((item, index) => (
               <div key={index} className="space-y-2">
-                <h3 className="text-base md:text-lg font-bold text-[#0F172A]">
+                <h3 className="text-base md:text-lg font-bold text-[var(--color-text)]">
                   {item.question}
                 </h3>
-                <p className="text-sm md:text-base text-[#6B7280] leading-relaxed">
+                <p className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed">
                   {item.answer}
                 </p>
               </div>
@@ -315,7 +315,7 @@ export function QuartierPage({
           <div className="pt-4">
             <a
               href={quoteUrl}
-              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#F3F4F6] transition-colors"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[var(--color-text)] shadow-lg hover:bg-[#F3F4F6] transition-colors"
             >
               <span>Lancer mon comparateur</span>
               <span className="text-lg leading-none">→</span>

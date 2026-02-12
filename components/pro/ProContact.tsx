@@ -77,18 +77,18 @@ export default function ProContact() {
       <section id="contact" className="relative py-20 md:py-32 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto rounded-3xl border border-brand-turquoise/30 bg-gradient-to-br from-[#E6FFFA] to-white p-8 text-center">
-            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-turquoise/15 text-[#0F172A]">
+            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-turquoise/15 text-[var(--color-text)]">
               <span className="text-2xl" aria-hidden="true">
                 ✓
               </span>
             </div>
-            <h3 className="text-xl font-bold text-[#0F172A] mb-2">Presque terminé</h3>
-            <p className="text-[#1E293B]/70">
+            <h3 className="text-xl font-bold text-[var(--color-text)] mb-2">Presque terminé</h3>
+            <p className="text-[var(--color-text-secondary)]/70">
               Votre client mail vient de s’ouvrir. Envoyez le message pour écrire directement à{" "}
               <strong>lucie@moverz.fr</strong>.
             </p>
             <div className="mt-5">
-              <a className="underline underline-offset-2 text-sm font-semibold text-[#0F172A]" href={mailtoHref}>
+              <a className="underline underline-offset-2 text-sm font-semibold text-[var(--color-text)]" href={mailtoHref}>
                 Si rien ne s’est ouvert, cliquez ici pour envoyer par email
               </a>
               .
@@ -108,10 +108,10 @@ export default function ProContact() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text)] mb-4">
             Demander une démo
           </h2>
-          <p className="text-lg text-[#6B7280] max-w-3xl mx-auto">
+          <p className="text-lg text-[var(--color-text-secondary)] max-w-3xl mx-auto">
             15–20 minutes pour comprendre votre process actuel et vous montrer comment Moverz standardise
             les dossiers (preuves + docs) pour chiffrer plus vite.
           </p>
@@ -125,12 +125,12 @@ export default function ProContact() {
           className="max-w-5xl mx-auto mb-12"
         >
           <div className="grid lg:grid-cols-2 gap-8 items-start">
-            <div className="relative overflow-hidden rounded-3xl border border-[#E3E5E8] bg-white shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
+            <div className="relative overflow-hidden rounded-3xl border border-[var(--color-border)] bg-white shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
               <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-brand-turquoise/70 via-[#2B7A78]/40 to-brand-turquoise/70" />
               <div className="p-7 md:p-8">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="relative">
-                    <div className="h-14 w-14 rounded-2xl overflow-hidden border border-[#E3E5E8]">
+                    <div className="h-14 w-14 rounded-2xl overflow-hidden border border-[var(--color-border)]">
                       <Image
                         src="/lucie-profile.jpg"
                         alt="Lucie, responsable partenaire Moverz"
@@ -140,17 +140,17 @@ export default function ProContact() {
                       />
                     </div>
                     <div className="absolute -bottom-1 -right-1 h-6 w-6 rounded-full bg-brand-turquoise border-2 border-white flex items-center justify-center">
-                      <CheckCircle2 className="w-4 h-4 text-[#0F172A]" />
+                      <CheckCircle2 className="w-4 h-4 text-[var(--color-text)]" />
                     </div>
                   </div>
                   <div className="min-w-0">
-                    <p className="text-sm font-semibold text-[#0F172A] leading-tight">
+                    <p className="text-sm font-semibold text-[var(--color-text)] leading-tight">
                       Lucie{" "}
-                      <span className="text-[#6B7280] font-medium">
+                      <span className="text-[var(--color-text-secondary)] font-medium">
                         · Responsable partenaire
                       </span>
                     </p>
-                    <p className="text-sm text-[#6B7280]">
+                    <p className="text-sm text-[var(--color-text-secondary)]">
                       Réponse rapide. Démo orientée ROI (temps, litiges, fiabilité devis).
                     </p>
                   </div>
@@ -159,7 +159,7 @@ export default function ProContact() {
                 <form onSubmit={onSubmit} className="space-y-4">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="pro-name" className="block text-sm font-semibold text-[#0F172A] mb-2">
+                      <label htmlFor="pro-name" className="block text-sm font-semibold text-[var(--color-text)] mb-2">
                         Nom
                       </label>
                       <input
@@ -167,12 +167,12 @@ export default function ProContact() {
                         required
                         value={form.name}
                         onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
-                        className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 focus:border-brand-turquoise/50"
+                        className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-sm text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 focus:border-brand-turquoise/50"
                         placeholder="Votre nom"
                       />
                     </div>
                     <div>
-                      <label htmlFor="pro-company" className="block text-sm font-semibold text-[#0F172A] mb-2">
+                      <label htmlFor="pro-company" className="block text-sm font-semibold text-[var(--color-text)] mb-2">
                         Entreprise
                       </label>
                       <input
@@ -180,7 +180,7 @@ export default function ProContact() {
                         required
                         value={form.company}
                         onChange={(e) => setForm((f) => ({ ...f, company: e.target.value }))}
-                        className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 focus:border-brand-turquoise/50"
+                        className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-sm text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 focus:border-brand-turquoise/50"
                         placeholder="Nom de votre société"
                       />
                     </div>
@@ -188,7 +188,7 @@ export default function ProContact() {
 
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="pro-email" className="block text-sm font-semibold text-[#0F172A] mb-2">
+                      <label htmlFor="pro-email" className="block text-sm font-semibold text-[var(--color-text)] mb-2">
                         Email
                       </label>
                       <input
@@ -197,33 +197,33 @@ export default function ProContact() {
                         required
                         value={form.email}
                         onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-                        className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 focus:border-brand-turquoise/50"
+                        className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-sm text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 focus:border-brand-turquoise/50"
                         placeholder="vous@entreprise.fr"
                       />
                     </div>
                     <div>
-                      <label htmlFor="pro-phone" className="block text-sm font-semibold text-[#0F172A] mb-2">
+                      <label htmlFor="pro-phone" className="block text-sm font-semibold text-[var(--color-text)] mb-2">
                         Téléphone (optionnel)
                       </label>
                       <input
                         id="pro-phone"
                         value={form.phone}
                         onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
-                        className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 focus:border-brand-turquoise/50"
+                        className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-sm text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 focus:border-brand-turquoise/50"
                         placeholder="+33 ..."
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="pro-message" className="block text-sm font-semibold text-[#0F172A] mb-2">
+                    <label htmlFor="pro-message" className="block text-sm font-semibold text-[var(--color-text)] mb-2">
                       Message
                     </label>
                     <textarea
                       id="pro-message"
                       value={form.message}
                       onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
-                      className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 focus:border-brand-turquoise/50"
+                      className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-sm text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 focus:border-brand-turquoise/50"
                       rows={4}
                       placeholder="Ex: 40 dossiers/mois, beaucoup de visites techniques, litiges sur le volume..."
                     />
@@ -240,7 +240,7 @@ export default function ProContact() {
                   ) : null}
 
                   {isSent ? (
-                    <div className="rounded-2xl border border-brand-turquoise/30 bg-brand-turquoise/10 px-4 py-3 text-sm text-[#0F172A]">
+                    <div className="rounded-2xl border border-brand-turquoise/30 bg-brand-turquoise/10 px-4 py-3 text-sm text-[var(--color-text)]">
                       Message envoyé à <strong>lucie@moverz.fr</strong>. Je reviens vers vous rapidement.
                     </div>
                   ) : null}
@@ -248,7 +248,7 @@ export default function ProContact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-[#0F172A] px-6 py-4 text-sm font-semibold text-white hover:bg-[#1E293B] disabled:opacity-60 disabled:cursor-not-allowed transition-colors"
+                    className="w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-[var(--color-bg-dark)] px-6 py-4 text-sm font-semibold text-white hover:bg-[var(--color-bg-dark)] disabled:opacity-60 disabled:cursor-not-allowed transition-colors"
                   >
                     {isSubmitting ? (
                       <>
@@ -260,7 +260,7 @@ export default function ProContact() {
                     )}
                   </button>
 
-                  <p className="text-xs text-[#6B7280] text-center">
+                  <p className="text-xs text-[var(--color-text-secondary)] text-center">
                     Le message est envoyé directement à <strong>lucie@moverz.fr</strong>.
                   </p>
                 </form>
@@ -269,8 +269,8 @@ export default function ProContact() {
 
             <div className="flex flex-col justify-start">
               {/* Canaux alternatifs - ultra secondaires */}
-              <div className="rounded-2xl border border-[#E3E5E8] bg-white p-6">
-                <p className="text-xs font-medium text-[#6B7280] mb-4">Autres canaux</p>
+              <div className="rounded-2xl border border-[var(--color-border)] bg-white p-6">
+                <p className="text-xs font-medium text-[var(--color-text-secondary)] mb-4">Autres canaux</p>
                 <div className="space-y-2">
                   <a
                     href={mailtoHref}
@@ -280,7 +280,7 @@ export default function ProContact() {
                       <Mail className="w-4 h-4" />
                     </div>
                     <div className="flex-1">
-                      <p className="text-xs font-medium text-[#0F172A]">Email</p>
+                      <p className="text-xs font-medium text-[var(--color-text)]">Email</p>
                     </div>
                   </a>
                   <a
@@ -289,11 +289,11 @@ export default function ProContact() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 p-2 rounded-lg hover:bg-[#F9FAFB] transition-colors group"
                   >
-                    <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-[#0F172A]/10 text-[#0F172A]">
+                    <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-[var(--color-bg-dark)]/10 text-[var(--color-text)]">
                       <Calendar className="w-4 h-4" />
                     </div>
                     <div className="flex-1">
-                      <p className="text-xs font-medium text-[#0F172A]">Calendly</p>
+                      <p className="text-xs font-medium text-[var(--color-text)]">Calendly</p>
                     </div>
                   </a>
                 </div>

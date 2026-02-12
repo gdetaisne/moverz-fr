@@ -17,7 +17,7 @@ export default function ProHeroMockup() {
       }}
     >
       {/* Dashboard mockup */}
-      <div className="relative bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.25)] overflow-hidden border border-gray-200">
+      <div className="relative bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.25)] overflow-hidden border border-[var(--color-border)]">
         {/* Header bar */}
         <div className="bg-gradient-to-r from-[#0F172A] to-[#1E293B] px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -51,15 +51,15 @@ export default function ProHeroMockup() {
             ].map((stat, i) => (
               <div
                 key={i}
-                className="bg-white rounded-xl p-3.5 border border-gray-200 shadow-sm"
+                className="bg-white rounded-xl p-3.5 border border-[var(--color-border)] shadow-sm"
               >
                 <div className="flex items-center justify-between mb-2">
                   <stat.icon className="w-4 h-4 text-brand-turquoise" />
                 </div>
-                <p className="text-2xl font-bold text-[#0F172A] leading-none">
+                <p className="text-2xl font-bold text-[var(--color-text)] leading-none">
                   {stat.value}
                 </p>
-                <p className="text-sm text-gray-600">{stat.label}</p>
+                <p className="text-sm text-[var(--color-text-secondary)]">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -68,10 +68,10 @@ export default function ProHeroMockup() {
           <div className="bg-white rounded-2xl border-2 border-brand-turquoise/25 p-5 shadow-lg">
             <div className="flex items-start justify-between mb-3">
               <div>
-                <p className="font-bold text-[#0F172A] text-base leading-tight mb-1">
+                <p className="font-bold text-[var(--color-text)] text-base leading-tight mb-1">
                   Nouveau dossier
                 </p>
-                <p className="text-sm text-gray-600 font-medium">
+                <p className="text-sm text-[var(--color-text-secondary)] font-medium">
                   Paris → Lyon · 22m³
                 </p>
               </div>
@@ -89,7 +89,7 @@ export default function ProHeroMockup() {
               ].map((label) => (
                 <span
                   key={label}
-                  className="inline-flex items-center rounded-full border border-gray-200 bg-[#F8F9FA] px-3 py-1 text-xs font-semibold text-gray-700"
+                  className="inline-flex items-center rounded-full border border-[var(--color-border)] bg-[#F8F9FA] px-3 py-1 text-xs font-semibold text-[var(--color-text-secondary)]"
                 >
                   {label}
                 </span>
@@ -99,16 +99,16 @@ export default function ProHeroMockup() {
             {/* Details */}
             <div className="space-y-2.5 mb-5">
               <div className="flex items-center justify-between text-sm">
-                <span className="text-gray-700 font-medium">Volume estimé</span>
-                <span className="font-bold text-[#0F172A]">22m3</span>
+                <span className="text-[var(--color-text-secondary)] font-medium">Volume estimé</span>
+                <span className="font-bold text-[var(--color-text)]">22m3</span>
               </div>
               <div className="flex items-center justify-between text-sm">
-                <span className="text-gray-700 font-medium">Inventaire</span>
-                <span className="font-bold text-[#0F172A]">13 items et 30 cartons</span>
+                <span className="text-[var(--color-text-secondary)] font-medium">Inventaire</span>
+                <span className="font-bold text-[var(--color-text)]">13 items et 30 cartons</span>
               </div>
               <div className="flex items-center justify-between text-sm">
-                <span className="text-gray-700 font-medium">Date souhaitée</span>
-                <span className="font-bold text-[#0F172A]">15 mars (+/- 1 semaine)</span>
+                <span className="text-[var(--color-text-secondary)] font-medium">Date souhaitée</span>
+                <span className="font-bold text-[var(--color-text)]">15 mars (+/- 1 semaine)</span>
               </div>
             </div>
 

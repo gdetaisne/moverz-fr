@@ -105,12 +105,12 @@ export default function WhyMoverz() {
                       {/* iPhone mockup compact */}
                       <div className="relative bg-white rounded-[2.5rem] shadow-[0_20px_60px_rgba(107,207,207,0.3)] p-2.5 border-[12px] border-[#0F172A]">
                         {/* Notch */}
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-5 bg-[#0F172A] rounded-b-2xl z-10" />
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-5 bg-[var(--color-bg-dark)] rounded-b-2xl z-10" />
                         
                         {/* Screen */}
                         <div className="relative bg-[#F8F9FA] rounded-[2rem] overflow-hidden h-[500px]">
                           {/* Header */}
-                          <div className="bg-gradient-to-r from-brand-turquoise to-[#A8E8E8] px-5 py-3 text-[#0F172A]">
+                          <div className="bg-gradient-to-r from-brand-turquoise to-[#A8E8E8] px-5 py-3 text-[var(--color-text)]">
                             <div className="flex items-center gap-2">
                               <Shield className="w-4 h-4" />
                               <p className="text-xs font-bold">Vérification Creditsafe</p>
@@ -120,10 +120,10 @@ export default function WhyMoverz() {
                           <div className="p-5 space-y-3">
                             {/* Score card */}
                             <div className="bg-white rounded-xl p-4 shadow-sm border-2 border-green-200">
-                              <p className="text-xs text-[#1E293B]/60 mb-1">Score de solvabilité</p>
+                              <p className="text-xs text-[var(--color-text-secondary)]/60 mb-1">Score de solvabilité</p>
                               <div className="flex items-baseline gap-2 mb-2">
                                 <p className="text-3xl font-bold text-green-600">85</p>
-                                <p className="text-sm text-[#1E293B]/60">/100</p>
+                                <p className="text-sm text-[var(--color-text-secondary)]/60">/100</p>
                               </div>
                               <div className="flex items-center gap-1.5">
                                 <div className="flex-1 h-2 rounded-full bg-green-100">
@@ -133,32 +133,32 @@ export default function WhyMoverz() {
                             </div>
 
                             {/* Litiges */}
-                            <div className="bg-white rounded-xl p-4 shadow-sm border border-[#E3E5E8]">
+                            <div className="bg-white rounded-xl p-4 shadow-sm border border-[var(--color-border)]">
                               <div className="flex items-center justify-between mb-2">
-                                <p className="text-xs font-semibold text-[#0F172A]">Historique litiges</p>
+                                <p className="text-xs font-semibold text-[var(--color-text)]">Historique litiges</p>
                                 <Check className="w-4 h-4 text-green-600" strokeWidth={3} />
                               </div>
                               <p className="text-xs text-green-600 font-medium">✓ Aucun litige en cours</p>
                             </div>
 
                             {/* Bilans */}
-                            <div className="bg-white rounded-xl p-4 shadow-sm border border-[#E3E5E8]">
-                              <p className="text-xs font-semibold text-[#0F172A] mb-2">Chiffre d'affaires</p>
+                            <div className="bg-white rounded-xl p-4 shadow-sm border border-[var(--color-border)]">
+                              <p className="text-xs font-semibold text-[var(--color-text)] mb-2">Chiffre d'affaires</p>
                               <div className="space-y-1.5">
                                 <div className="flex items-center justify-between text-xs">
-                                  <span className="text-[#1E293B]/60">2023</span>
-                                  <span className="font-semibold text-[#0F172A]">1.2M€</span>
+                                  <span className="text-[var(--color-text-secondary)]/60">2023</span>
+                                  <span className="font-semibold text-[var(--color-text)]">1.2M€</span>
                                 </div>
                                 <div className="flex items-center justify-between text-xs">
-                                  <span className="text-[#1E293B]/60">2022</span>
-                                  <span className="font-semibold text-[#0F172A]">980K€</span>
+                                  <span className="text-[var(--color-text-secondary)]/60">2022</span>
+                                  <span className="font-semibold text-[var(--color-text)]">980K€</span>
                                 </div>
                                 <div className="flex items-center justify-between text-xs">
-                                  <span className="text-[#1E293B]/60">2021</span>
-                                  <span className="font-semibold text-[#0F172A]">850K€</span>
+                                  <span className="text-[var(--color-text-secondary)]/60">2021</span>
+                                  <span className="font-semibold text-[var(--color-text)]">850K€</span>
                                 </div>
                               </div>
-                              <div className="mt-3 pt-3 border-t border-[#E3E5E8]">
+                              <div className="mt-3 pt-3 border-t border-[var(--color-border)]">
                                 <div className="flex items-center gap-1.5 text-xs text-green-600 font-medium">
                                   <TrendingUp className="w-3 h-3" />
                                   <span>Croissance +41% sur 2 ans</span>
@@ -178,7 +178,7 @@ export default function WhyMoverz() {
 
                       {/* Floating badge */}
                       <div className="absolute -right-4 top-16 bg-white rounded-xl shadow-2xl px-3 py-2 border-2 border-brand-turquoise rotate-6">
-                        <p className="text-[10px] text-[#1E293B]/70 font-medium">Données</p>
+                        <p className="text-[10px] text-[var(--color-text-secondary)]/70 font-medium">Données</p>
                         <p className="text-lg font-bold text-brand-turquoise">Certifiées</p>
                       </div>
                     </div>

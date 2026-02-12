@@ -40,10 +40,10 @@ export default function VillesPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#2B7A78] mb-3">
               Notre couverture nationale
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#04163a] mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)] mb-4">
               Comparez dans toute la France
             </h2>
-            <p className="text-base md:text-lg text-[#4b5c6b] max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-[var(--color-text-secondary)] max-w-2xl mx-auto">
               Moverz est disponible partout en France. Ces villes ont un comparateur local dédié avec des déménageurs contrôlés.
             </p>
           </div>
@@ -54,7 +54,7 @@ export default function VillesPage() {
               <div key={region} className="space-y-6">
                 <div className="flex items-center gap-3">
                   <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[#E3E5E8] to-transparent" />
-                  <h3 className="text-sm font-bold uppercase tracking-wider text-[#6B7280]">{region}</h3>
+                  <h3 className="text-sm font-bold uppercase tracking-wider text-[var(--color-text-secondary)]">{region}</h3>
                   <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[#E3E5E8] to-transparent" />
                 </div>
                 
@@ -63,7 +63,7 @@ export default function VillesPage() {
                     <a
                       key={city.slug}
                       href={`/demenagement/${city.slug}/`}
-                      className="group relative overflow-hidden rounded-2xl border border-[#E3E5E8] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-brand-turquoise/40"
+                      className="group relative overflow-hidden rounded-2xl border border-[var(--color-border)] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-brand-turquoise/40"
                       style={{ animationDelay: `${index * 60}ms` }}
                     >
                       {/* Gradient subtil au hover */}
@@ -82,14 +82,14 @@ export default function VillesPage() {
                               </svg>
                             </div>
                             <div>
-                              <h4 className="text-lg font-bold text-[#04163a] group-hover:text-[#2B7A78] transition-colors">
+                              <h4 className="text-lg font-bold text-[var(--color-text)] group-hover:text-[#2B7A78] transition-colors">
                                 {city.nameCapitalized}
                               </h4>
-                              <p className="text-xs text-[#6B7280]">{city.region}</p>
+                              <p className="text-xs text-[var(--color-text-secondary)]">{city.region}</p>
                             </div>
                           </div>
                           
-                          <p className="text-sm text-[#4b5c6b] leading-relaxed mb-4">
+                          <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed mb-4">
                             {city.description}
                           </p>
                           
@@ -110,21 +110,21 @@ export default function VillesPage() {
 
           {/* Ville non couverte */}
           <div className="mt-12 text-center">
-            <div className="inline-block rounded-2xl border border-[#E3E5E8] bg-gradient-to-br from-white to-[#F8F9FA] p-8 shadow-sm">
+            <div className="inline-block rounded-2xl border border-[var(--color-border)] bg-gradient-to-br from-white to-[#F8F9FA] p-8 shadow-sm">
               <div className="flex items-center justify-center gap-3 mb-4">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-brand-turquoise/10 to-[#4FB8B8]/20">
                   <svg className="h-5 w-5 text-[#2B7A78]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-bold text-[#04163a]">Votre ville n'est pas dans la liste ?</h3>
+                <h3 className="text-lg font-bold text-[var(--color-text)]">Votre ville n'est pas dans la liste ?</h3>
               </div>
-              <p className="text-sm text-[#4b5c6b] mb-6 max-w-xl">
+              <p className="text-sm text-[var(--color-text-secondary)] mb-6 max-w-xl">
                 Nous ajoutons régulièrement de nouvelles villes. Contactez-nous pour manifester votre intérêt.
               </p>
               <a
                 href="/contact/"
-                className="inline-flex items-center gap-2 rounded-xl border-2 border-brand-turquoise/40 bg-white px-6 py-3 text-sm font-semibold text-[#04163a] hover:bg-[#F8F9FA] hover:border-brand-turquoise/60 transition-all duration-300"
+                className="inline-flex items-center gap-2 rounded-xl border-2 border-brand-turquoise/40 bg-white px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:bg-[#F8F9FA] hover:border-brand-turquoise/60 transition-all duration-300"
               >
                 <span>Nous contacter</span>
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -142,21 +142,21 @@ export default function VillesPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
             Annuaire
           </p>
-          <h2 className="text-2xl md:text-3xl font-bold text-[#04163a]">
+          <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-text)]">
             Toutes les villes (paginé)
           </h2>
-          <p className="text-sm text-[#4b5c6b] max-w-2xl mx-auto">
+          <p className="text-sm text-[var(--color-text-secondary)] max-w-2xl mx-auto">
             Pour une navigation plus rapide, l’annuaire complet est disponible en pages (60 villes par page).
           </p>
           <div className="flex flex-wrap items-center justify-center gap-2">
             <a
               href="/villes/page/1/"
-              className="inline-flex items-center gap-2 rounded-xl bg-[#0F172A] px-5 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+              className="inline-flex items-center gap-2 rounded-xl bg-[var(--color-bg-dark)] px-5 py-3 text-sm font-semibold text-white hover:bg-[var(--color-bg-dark)] transition-colors"
             >
               <span>Ouvrir l’annuaire</span>
               <span>→</span>
             </a>
-            <span className="text-xs text-[#6B7280]">
+            <span className="text-xs text-[var(--color-text-secondary)]">
               {CITIES.length} villes · {totalPages} pages
             </span>
           </div>

@@ -34,14 +34,14 @@ export default function ProHowItWorks() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-2 text-sm font-medium text-[#0F172A] mb-6">
+          <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-2 text-sm font-medium text-[var(--color-text)] mb-6">
             <span className="h-2 w-2 rounded-full bg-brand-turquoise" />
             Process simple
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[#0F172A]">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[var(--color-text)]">
             Comment ça marche (en 3 étapes)
           </h2>
-          <p className="text-lg text-[#6B7280] max-w-2xl mx-auto">
+          <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl mx-auto">
             Un process simple pour qualifier sans déplacement — et envoyer des devis plus fiables.
           </p>
         </motion.div>
@@ -65,14 +65,14 @@ export default function ProHowItWorks() {
                 >
                   {/* Step number + icon */}
                   <div className="flex flex-col items-center mb-4">
-                    <div className="relative flex items-center justify-center w-24 h-24 rounded-2xl bg-white border-2 border-[#E3E5E8] shadow-sm mb-3 z-10">
+                    <div className="relative flex items-center justify-center w-24 h-24 rounded-2xl bg-white border-2 border-[var(--color-border)] shadow-sm mb-3 z-10">
                       <div className="absolute -top-2 -right-2 flex items-center justify-center w-6 h-6 rounded-full bg-brand-turquoise text-white text-xs font-bold">
                         {item.step}
                       </div>
                       <item.icon className="w-10 h-10 text-brand-turquoise" />
                     </div>
-                    <h3 className="text-base font-bold text-[#0F172A] text-center mb-2">{item.title}</h3>
-                    <p className="text-xs text-[#6B7280] text-center leading-relaxed">{item.description}</p>
+                    <h3 className="text-base font-bold text-[var(--color-text)] text-center mb-2">{item.title}</h3>
+                    <p className="text-xs text-[var(--color-text-secondary)] text-center leading-relaxed">{item.description}</p>
                   </div>
                 </motion.div>
               ))}

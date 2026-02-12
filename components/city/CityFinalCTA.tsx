@@ -32,11 +32,11 @@ export function CityFinalCTA({ cityName, quoteUrl }: CityFinalCTAProps) {
               <span>100% gratuit · Sans démarchage</span>
             </div>
             
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] leading-tight">
+            <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text)] leading-tight">
               Votre déménagement<br />à {cityName} commence ici
             </h2>
             
-            <p className="text-lg text-[#6B7280] leading-relaxed">
+            <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed">
               Comparez des devis de déménageurs contrôlés à {cityName}. 
               Dossier anonyme, réponse rapide, zéro surprise le jour J.
             </p>
@@ -53,7 +53,7 @@ export function CityFinalCTA({ cityName, quoteUrl }: CityFinalCTAProps) {
                   <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-turquoise/10 flex items-center justify-center">
                     <item.icon className={`w-5 h-5 ${item.color}`} />
                   </div>
-                  <span className="text-sm font-medium text-[#0F172A]">{item.label}</span>
+                  <span className="text-sm font-medium text-[var(--color-text)]">{item.label}</span>
                 </div>
               ))}
             </div>
@@ -68,7 +68,7 @@ export function CityFinalCTA({ cityName, quoteUrl }: CityFinalCTAProps) {
               </a>
               <a
                 href="/comment-ca-marche/"
-                className="inline-flex items-center gap-2 rounded-full border-2 border-[#0F172A]/20 bg-white px-8 py-4 text-base font-semibold text-[#0F172A] hover:border-brand-turquoise/50 hover:bg-gray-50 transition-all duration-300"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-[#0F172A]/20 bg-white px-8 py-4 text-base font-semibold text-[var(--color-text)] hover:border-brand-turquoise/50 hover:bg-gray-50 transition-all duration-300"
               >
                 <span>Comment ça marche ?</span>
               </a>
@@ -86,13 +86,13 @@ export function CityFinalCTA({ cityName, quoteUrl }: CityFinalCTAProps) {
             <div className="rounded-2xl border-2 border-brand-turquoise/20 bg-white p-8 shadow-xl">
               <div className="space-y-6">
                 {/* Header */}
-                <div className="flex items-center gap-3 pb-6 border-b border-gray-200">
+                <div className="flex items-center gap-3 pb-6 border-b border-[var(--color-border)]">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-brand-turquoise to-[#2B7A78] flex items-center justify-center text-white font-bold text-lg">
                     M
                   </div>
                   <div>
-                    <p className="font-bold text-[#0F172A]">Moverz</p>
-                    <p className="text-xs text-[#6B7280]">Comparateur déménagement</p>
+                    <p className="font-bold text-[var(--color-text)]">Moverz</p>
+                    <p className="text-xs text-[var(--color-text-secondary)]">Comparateur déménagement</p>
                   </div>
                 </div>
 
@@ -100,24 +100,24 @@ export function CityFinalCTA({ cityName, quoteUrl }: CityFinalCTAProps) {
                 <div className="space-y-4">
                   <div className="flex items-center justify-between p-4 rounded-xl bg-[#F0F9FF]">
                     <div>
-                      <p className="text-sm text-[#6B7280]">Clients à {cityName}</p>
-                      <p className="text-2xl font-bold text-[#0F172A]">150+</p>
+                      <p className="text-sm text-[var(--color-text-secondary)]">Clients à {cityName}</p>
+                      <p className="text-2xl font-bold text-[var(--color-text)]">150+</p>
                     </div>
                     <TrendingUp className="w-8 h-8 text-brand-turquoise" />
                   </div>
 
                   <div className="flex items-center justify-between p-4 rounded-xl bg-[#F0F9FF]">
                     <div>
-                      <p className="text-sm text-[#6B7280]">Économie moyenne</p>
-                      <p className="text-2xl font-bold text-[#0F172A]">320€</p>
+                      <p className="text-sm text-[var(--color-text-secondary)]">Économie moyenne</p>
+                      <p className="text-2xl font-bold text-[var(--color-text)]">320€</p>
                     </div>
                     <CheckCircle2 className="w-8 h-8 text-brand-turquoise" />
                   </div>
 
                   <div className="flex items-center justify-between p-4 rounded-xl bg-[#F0F9FF]">
                     <div>
-                      <p className="text-sm text-[#6B7280]">Note moyenne</p>
-                      <p className="text-2xl font-bold text-[#0F172A]">4.8/5</p>
+                      <p className="text-sm text-[var(--color-text-secondary)]">Note moyenne</p>
+                      <p className="text-2xl font-bold text-[var(--color-text)]">4.8/5</p>
                     </div>
                     <div className="flex gap-0.5">
                       {[1,2,3,4,5].map(i => (
@@ -130,8 +130,8 @@ export function CityFinalCTA({ cityName, quoteUrl }: CityFinalCTAProps) {
                 </div>
 
                 {/* CTA in card */}
-                <div className="pt-4 border-t border-gray-200">
-                  <p className="text-xs text-center text-[#6B7280]">
+                <div className="pt-4 border-t border-[var(--color-border)]">
+                  <p className="text-xs text-center text-[var(--color-text-secondary)]">
                     Rejoignez les 2847 personnes qui ont comparé avec Moverz
                   </p>
                 </div>

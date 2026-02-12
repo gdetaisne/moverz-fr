@@ -40,17 +40,17 @@ export default function RealStories() {
       <div className="relative container max-w-6xl mx-auto px-4">
         {/* Header premium */}
         <div className="text-center mb-16 space-y-5">
-          <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-brand-accent/10 border border-brand-turquoise/30 backdrop-blur-sm px-5 py-2.5 text-sm font-bold text-[#0F172A] shadow-sm">
+          <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-brand-accent/10 border border-brand-turquoise/30 backdrop-blur-sm px-5 py-2.5 text-sm font-bold text-[var(--color-text)] shadow-sm">
             <span className="relative inline-flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-turquoise opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-turquoise shadow-[0_0_12px_rgba(107,207,207,0.8)]" />
             </span>
             Témoignages
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0F172A]">
-            Ça marche <span className="bg-gradient-to-r from-brand-turquoise via-brand-turquoise-600 to-brand-accent bg-clip-text text-transparent">vraiment</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--color-text)]">
+            Ça marche <span className="bg-gradient-to-r from-brand-turquoise via-brand-turquoise to-brand-accent bg-clip-text text-transparent">vraiment</span>
           </h2>
-          <p className="text-lg text-gray-600 font-medium">
+          <p className="text-lg text-[var(--color-text-secondary)] font-medium">
             Pas de blabla. Juste des résultats.
           </p>
         </div>
@@ -71,8 +71,8 @@ export default function RealStories() {
                     {story.initials}
                   </div>
                   <div className="flex-1">
-                    <p className="font-bold text-[#0F172A] text-base">{story.name}</p>
-                    <p className="text-xs text-gray-600 font-medium">{story.city}</p>
+                    <p className="font-bold text-[var(--color-text)] text-base">{story.name}</p>
+                    <p className="text-xs text-[var(--color-text-secondary)] font-medium">{story.city}</p>
                   </div>
                 </div>
                 
@@ -91,7 +91,7 @@ export default function RealStories() {
                   </span>
                 </div>
                 
-                <p className="text-sm text-gray-700 leading-relaxed font-medium">
+                <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed font-medium">
                   "{story.quote}"
                 </p>
               </div>

@@ -27,7 +27,7 @@ export default function PartenairesWhatClientReceives() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[#0F172A]">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[var(--color-text)]">
             Ce que reçoit le client
           </h2>
         </motion.div>
@@ -40,12 +40,12 @@ export default function PartenairesWhatClientReceives() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="flex items-center gap-4 p-6 rounded-2xl bg-gradient-to-r from-[#F9FAFB] to-white border border-[#E3E5E8]"
+              className="flex items-center gap-4 p-6 rounded-2xl bg-gradient-to-r from-[#F9FAFB] to-white border border-[var(--color-border)]"
             >
               <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-brand-turquoise/10">
                 <item.icon className="w-6 h-6 text-brand-turquoise" />
               </div>
-              <p className="text-[#1E293B] font-medium">
+              <p className="text-[var(--color-text-secondary)] font-medium">
                 {item.text}
               </p>
             </motion.div>

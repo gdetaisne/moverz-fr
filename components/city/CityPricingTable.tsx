@@ -12,19 +12,19 @@ export function CityPricingTable({ cityName }: CityPricingTableProps) {
   return (
     <section className="section section-light">
       <div className="container max-w-4xl">
-        <div className="rounded-2xl border border-[#E5E7EB] bg-white p-8 md:p-10 space-y-6">
+        <div className="rounded-2xl border border-[var(--color-border)] bg-white p-8 md:p-10 space-y-6">
           {/* Question exacte pour featured snippet */}
           <div className="text-center space-y-3">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
               Prix déménagement
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A]">
+            <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-text)]">
               Combien coûte un déménagement à {cityName} ?
             </h2>
           </div>
 
           {/* Réponse courte (40-60 mots) pour featured snippet paragraphe */}
-          <p className="text-base text-[#6B7280] max-w-3xl mx-auto text-center leading-relaxed">
+          <p className="text-base text-[var(--color-text-secondary)] max-w-3xl mx-auto text-center leading-relaxed">
             Un déménagement à {cityName} coûte entre <strong>450€ (studio)</strong> et <strong>3500€ (maison)</strong>. 
             Le prix dépend du volume (15-80 m³), de la distance et des services. 
             Pour un tarif précis, comparez des devis basés sur le même volume calculé par IA.
@@ -35,70 +35,70 @@ export function CityPricingTable({ cityName }: CityPricingTableProps) {
             <table className="w-full border-collapse">
               <thead>
                 <tr className="bg-[#F8FAFC]">
-                  <th className="border border-[#E5E7EB] px-4 py-3 text-left text-sm font-semibold text-[#0F172A]">
+                  <th className="border border-[var(--color-border)] px-4 py-3 text-left text-sm font-semibold text-[var(--color-text)]">
                     Type de logement
                   </th>
-                  <th className="border border-[#E5E7EB] px-4 py-3 text-left text-sm font-semibold text-[#0F172A]">
+                  <th className="border border-[var(--color-border)] px-4 py-3 text-left text-sm font-semibold text-[var(--color-text)]">
                     Volume moyen
                   </th>
-                  <th className="border border-[#E5E7EB] px-4 py-3 text-left text-sm font-semibold text-[#0F172A]">
+                  <th className="border border-[var(--color-border)] px-4 py-3 text-left text-sm font-semibold text-[var(--color-text)]">
                     Prix {cityName}
                   </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm text-[#0F172A]">
+                  <td className="border border-[var(--color-border)] px-4 py-3 text-sm text-[var(--color-text)]">
                     Studio (20-30m²)
                   </td>
-                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm text-[#6B7280]">
+                  <td className="border border-[var(--color-border)] px-4 py-3 text-sm text-[var(--color-text-secondary)]">
                     15-20 m³
                   </td>
-                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm font-semibold text-brand-turquoise">
+                  <td className="border border-[var(--color-border)] px-4 py-3 text-sm font-semibold text-brand-turquoise">
                     450-800€
                   </td>
                 </tr>
                 <tr className="bg-[#F8FAFC]">
-                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm text-[#0F172A]">
+                  <td className="border border-[var(--color-border)] px-4 py-3 text-sm text-[var(--color-text)]">
                     T2 (40-50m²)
                   </td>
-                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm text-[#6B7280]">
+                  <td className="border border-[var(--color-border)] px-4 py-3 text-sm text-[var(--color-text-secondary)]">
                     25-35 m³
                   </td>
-                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm font-semibold text-brand-turquoise">
+                  <td className="border border-[var(--color-border)] px-4 py-3 text-sm font-semibold text-brand-turquoise">
                     700-1200€
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm text-[#0F172A]">
+                  <td className="border border-[var(--color-border)] px-4 py-3 text-sm text-[var(--color-text)]">
                     T3 (60-70m²)
                   </td>
-                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm text-[#6B7280]">
+                  <td className="border border-[var(--color-border)] px-4 py-3 text-sm text-[var(--color-text-secondary)]">
                     40-50 m³
                   </td>
-                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm font-semibold text-brand-turquoise">
+                  <td className="border border-[var(--color-border)] px-4 py-3 text-sm font-semibold text-brand-turquoise">
                     1000-1800€
                   </td>
                 </tr>
                 <tr className="bg-[#F8FAFC]">
-                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm text-[#0F172A]">
+                  <td className="border border-[var(--color-border)] px-4 py-3 text-sm text-[var(--color-text)]">
                     T4+ (80-100m²)
                   </td>
-                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm text-[#6B7280]">
+                  <td className="border border-[var(--color-border)] px-4 py-3 text-sm text-[var(--color-text-secondary)]">
                     55-70 m³
                   </td>
-                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm font-semibold text-brand-turquoise">
+                  <td className="border border-[var(--color-border)] px-4 py-3 text-sm font-semibold text-brand-turquoise">
                     1500-2500€
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm text-[#0F172A]">
+                  <td className="border border-[var(--color-border)] px-4 py-3 text-sm text-[var(--color-text)]">
                     Maison (100-150m²)
                   </td>
-                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm text-[#6B7280]">
+                  <td className="border border-[var(--color-border)] px-4 py-3 text-sm text-[var(--color-text-secondary)]">
                     70-90 m³
                   </td>
-                  <td className="border border-[#E5E7EB] px-4 py-3 text-sm font-semibold text-brand-turquoise">
+                  <td className="border border-[var(--color-border)] px-4 py-3 text-sm font-semibold text-brand-turquoise">
                     2000-3500€
                   </td>
                 </tr>
@@ -107,34 +107,34 @@ export function CityPricingTable({ cityName }: CityPricingTableProps) {
           </div>
 
           {/* Contexte additionnel (SEO + clarté) */}
-          <div className="pt-4 space-y-4 text-sm text-[#6B7280]">
+          <div className="pt-4 space-y-4 text-sm text-[var(--color-text-secondary)]">
             <p>
-              <strong className="text-[#0F172A]">Prix indicatifs 2026</strong> pour un déménagement local à {cityName} (distance &lt; 50 km). 
+              <strong className="text-[var(--color-text)]">Prix indicatifs 2026</strong> pour un déménagement local à {cityName} (distance &lt; 50 km). 
               Les tarifs varient selon :
             </p>
             <ul className="space-y-2 ml-4">
               <li className="flex gap-2">
                 <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-brand-turquoise shrink-0" />
-                <span><strong className="text-[#0F172A]">Le volume réel</strong> : plus l’estimation est précise, plus le devis est fiable. 
+                <span><strong className="text-[var(--color-text)]">Le volume réel</strong> : plus l’estimation est précise, plus le devis est fiable. 
                 Plus précis = pas de mauvaise surprise jour J.</span>
               </li>
               <li className="flex gap-2">
                 <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-brand-turquoise shrink-0" />
-                <span><strong className="text-[#0F172A]">L'accès</strong> : Étages (avec/sans ascenseur), distance parking-entrée, 
+                <span><strong className="text-[var(--color-text)]">L'accès</strong> : Étages (avec/sans ascenseur), distance parking-entrée, 
                 autorisation stationnement.</span>
               </li>
               <li className="flex gap-2">
                 <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-brand-turquoise shrink-0" />
-                <span><strong className="text-[#0F172A]">La période</strong> : Été (juin-septembre), fins de mois, week-ends = tarifs +20-30%.</span>
+                <span><strong className="text-[var(--color-text)]">La période</strong> : Été (juin-septembre), fins de mois, week-ends = tarifs +20-30%.</span>
               </li>
               <li className="flex gap-2">
                 <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-brand-turquoise shrink-0" />
-                <span><strong className="text-[#0F172A]">Les services</strong> : Éco (vous aidez), Standard (pros seuls), 
+                <span><strong className="text-[var(--color-text)]">Les services</strong> : Éco (vous aidez), Standard (pros seuls), 
                 ou Clé en main (emballage + déballage).</span>
               </li>
             </ul>
-            <p className="pt-2 text-sm text-[#6B7280]">
-              <strong className="text-[#0F172A]">Astuce</strong> : Recevez des devis comparables sous 5 jours. Même volume IA = vous comparez 
+            <p className="pt-2 text-sm text-[var(--color-text-secondary)]">
+              <strong className="text-[var(--color-text)]">Astuce</strong> : Recevez des devis comparables sous 5 jours. Même volume IA = vous comparez 
               vraiment pommes avec pommes, pas de bluff.
             </p>
           </div>

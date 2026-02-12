@@ -64,7 +64,7 @@ export function CityServicePage({
 
   return (
     <main className="bg-white">
-      <div className="bg-[#0F172A]">
+      <div className="bg-[var(--color-bg-dark)]">
         <div className="container max-w-7xl pt-6">
           <Breadcrumbs
             items={[
@@ -108,7 +108,7 @@ export function CityServicePage({
             <div className="pt-3">
               <a
                 href={`https://devis.moverz.fr/devis-gratuits-v3?city_slug=${citySlug}&source=moverz.fr&from=${encodeURIComponent(fromPath)}`}
-                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#F3F4F6] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[var(--color-text)] shadow-lg hover:bg-[#F3F4F6] transition-colors"
               >
                 <span>Recevoir des devis comparables</span>
                 <span className="text-lg leading-none">→</span>
@@ -135,16 +135,16 @@ export function CityServicePage({
       <section className="py-12 md:py-20 bg-gradient-to-br from-[#fdfeff] via-[#f9fdff] to-[#f5fbfc]">
         <div className="container mx-auto max-w-5xl px-4 space-y-8">
           {/* Bloc local (anti-template) */}
-          <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 space-y-4">
+          <div className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-8 space-y-4">
             <div className="text-center space-y-2">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">Local</p>
-              <h2 className="text-xl md:text-2xl font-bold text-[#0F172A]">{insights.title}</h2>
-              <p className="text-sm text-[#6B7280]">Quelques précisions suffisent pour fiabiliser le devis (et éviter les surprises).</p>
+              <h2 className="text-xl md:text-2xl font-bold text-[var(--color-text)]">{insights.title}</h2>
+              <p className="text-sm text-[var(--color-text-secondary)]">Quelques précisions suffisent pour fiabiliser le devis (et éviter les surprises).</p>
             </div>
 
             <div className="space-y-3">
               {insights.paragraphs.map((p, i) => (
-                <p key={i} className="text-sm md:text-base text-[#6B7280] leading-relaxed">
+                <p key={i} className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed">
                   {p}
                 </p>
               ))}
@@ -152,9 +152,9 @@ export function CityServicePage({
 
             <div className="grid gap-2">
               {insights.bullets.map((b, i) => (
-                <div key={i} className="flex gap-2 text-sm md:text-base text-[#0F172A]">
+                <div key={i} className="flex gap-2 text-sm md:text-base text-[var(--color-text)]">
                   <span className="mt-2 h-1.5 w-1.5 rounded-full bg-brand-turquoise shrink-0" />
-                  <span className="text-[#0F172A]/90">{b}</span>
+                  <span className="text-[var(--color-text)]/90">{b}</span>
                 </div>
               ))}
             </div>
@@ -168,26 +168,26 @@ export function CityServicePage({
               >
                 Comparer des devis (gratuit)
               </a>
-              <p className="mt-2 text-xs text-[#6B7280]">Sans spam · Sans engagement</p>
+              <p className="mt-2 text-xs text-[var(--color-text-secondary)]">Sans spam · Sans engagement</p>
             </div>
           </div>
 
           {sections.map((s) => (
-            <div key={s.title} className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 space-y-4">
-              <h2 className="text-xl md:text-2xl font-bold text-[#0F172A]">{s.title}</h2>
+            <div key={s.title} className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-8 space-y-4">
+              <h2 className="text-xl md:text-2xl font-bold text-[var(--color-text)]">{s.title}</h2>
               <div className="space-y-3">
                 {s.paragraphs.map((p, i) => (
-                  <p key={i} className="text-sm md:text-base text-[#6B7280] leading-relaxed">
+                  <p key={i} className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed">
                     {p}
                   </p>
                 ))}
               </div>
               {s.bullets && s.bullets.length > 0 && (
-                <ul className="grid gap-2 text-sm md:text-base text-[#0F172A]">
+                <ul className="grid gap-2 text-sm md:text-base text-[var(--color-text)]">
                   {s.bullets.map((b, i) => (
                     <li key={i} className="flex gap-2">
                       <span className="mt-2 h-1.5 w-1.5 rounded-full bg-brand-turquoise shrink-0" />
-                      <span className="text-[#0F172A]/90">{b}</span>
+                      <span className="text-[var(--color-text)]/90">{b}</span>
                     </li>
                   ))}
                 </ul>

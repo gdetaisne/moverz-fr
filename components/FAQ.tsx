@@ -22,7 +22,7 @@ function FAQItem({ faq, isOpen, onToggle }: { faq: FAQItem; isOpen: boolean; onT
       className={`group relative overflow-hidden rounded-xl border backdrop-blur-sm transition-all duration-300 ${
         isOpen
           ? "border-brand-turquoise-200/60 bg-white shadow-[0_8px_24px_rgba(107,207,207,0.15)]"
-          : "border-gray-200 bg-white/70 hover:bg-white hover:border-brand-turquoise-200 hover:shadow-md"
+          : "border-[var(--color-border)] bg-white/70 hover:bg-white hover:border-brand-turquoise-200 hover:shadow-md"
       }`}
     >
       {/* Gradient accent on hover/open */}
@@ -33,7 +33,7 @@ function FAQItem({ faq, isOpen, onToggle }: { faq: FAQItem; isOpen: boolean; onT
         className="relative w-full flex items-start justify-between gap-4 p-5 md:p-6 text-left"
         aria-expanded={isOpen}
       >
-        <h3 className="text-base md:text-lg font-bold text-[#0F172A] leading-tight pr-2">
+        <h3 className="text-base md:text-lg font-bold text-[var(--color-text)] leading-tight pr-2">
           {faq.question}
         </h3>
         <motion.div
@@ -44,7 +44,7 @@ function FAQItem({ faq, isOpen, onToggle }: { faq: FAQItem; isOpen: boolean; onT
           <div className={`flex items-center justify-center w-8 h-8 rounded-full transition-all duration-300 ${
             isOpen
               ? "bg-brand-turquoise/15 text-[#2B7A78]"
-              : "bg-gray-100 text-gray-500 group-hover:bg-brand-turquoise/10 group-hover:text-[#2B7A78]"
+              : "bg-gray-100 text-[var(--color-text-muted)] group-hover:bg-brand-turquoise/10 group-hover:text-[#2B7A78]"
           }`}>
             <ChevronDown className="w-5 h-5" />
           </div>
@@ -69,7 +69,7 @@ function FAQItem({ faq, isOpen, onToggle }: { faq: FAQItem; isOpen: boolean; onT
             initial={false}
             animate={{ y: isOpen ? 0 : -10, opacity: isOpen ? 1 : 0 }}
             transition={{ duration: 0.25 }}
-            className="text-sm md:text-base text-gray-600 leading-relaxed"
+            className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed"
           >
             {faq.answer}
           </motion.p>
@@ -106,7 +106,7 @@ export function FAQ({ title, faqs, id = "faq", limit = 8 }: FAQProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl md:text-4xl font-bold text-[#0F172A]"
+            className="text-3xl md:text-4xl font-bold text-[var(--color-text)]"
           >
             {title}
           </motion.h2>

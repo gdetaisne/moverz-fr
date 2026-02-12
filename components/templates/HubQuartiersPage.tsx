@@ -36,7 +36,7 @@ export function HubQuartiersPage({
 
   return (
     <main className="bg-white">
-      <div className="bg-[#0F172A]">
+      <div className="bg-[var(--color-bg-dark)]">
         <div className="container max-w-6xl pt-6">
           <Breadcrumbs
             items={[
@@ -75,7 +75,7 @@ export function HubQuartiersPage({
             <div className="pt-4">
               <a
                 href={quoteUrl}
-                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#F3F4F6] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[var(--color-text)] shadow-lg hover:bg-[#F3F4F6] transition-colors"
               >
                 <span>Comparer les déménageurs</span>
                 <span className="text-lg leading-none">→</span>
@@ -93,10 +93,10 @@ export function HubQuartiersPage({
               <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
               Zones couvertes
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)]">
               Tous nos quartiers à {cityName}
             </h2>
-            <p className="text-sm md:text-base text-[#6B7280] max-w-2xl mx-auto">
+            <p className="text-sm md:text-base text-[var(--color-text-secondary)] max-w-2xl mx-auto">
               {neighborhoods.length} quartiers couverts par nos déménageurs partenaires
             </p>
           </div>
@@ -106,15 +106,15 @@ export function HubQuartiersPage({
               <a
                 key={neighborhood.slug}
                 href={`/${citySlug}/${neighborhood.slug}/`}
-                className="group rounded-2xl border border-[#E5E7EB] bg-white p-6 hover:border-brand-turquoise hover:shadow-lg transition-all"
+                className="group rounded-2xl border border-[var(--color-border)] bg-white p-6 hover:border-brand-turquoise hover:shadow-lg transition-all"
               >
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex-1">
-                    <h3 className="text-lg font-bold text-[#0F172A] group-hover:text-brand-turquoise transition-colors mb-2">
+                    <h3 className="text-lg font-bold text-[var(--color-text)] group-hover:text-brand-turquoise transition-colors mb-2">
                       {neighborhood.name}
                     </h3>
                     {neighborhood.description && (
-                      <p className="text-sm text-[#6B7280]">
+                      <p className="text-sm text-[var(--color-text-secondary)]">
                         {neighborhood.description}
                       </p>
                     )}
@@ -129,17 +129,17 @@ export function HubQuartiersPage({
 
           {/* Maillage interne : ressources utiles */}
           <div className="pt-6">
-            <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 text-center space-y-4">
+            <div className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-8 text-center space-y-4">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
                 Ressources utiles
               </p>
-              <p className="text-sm text-[#6B7280] max-w-2xl mx-auto">
+              <p className="text-sm text-[var(--color-text-secondary)] max-w-2xl mx-auto">
                 Avant de comparer vos devis, voici les pages les plus utiles pour préparer votre déménagement à {cityName}.
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3">
                 <a
                   href={`/demenagement/${citySlug}/`}
-                  className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-bg-dark)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--color-bg-dark)] transition-colors"
                 >
                   <span>Guide déménagement {cityName}</span>
                   <span>→</span>
@@ -147,7 +147,7 @@ export function HubQuartiersPage({
                 {pricePost ? (
                   <a
                     href={`/blog/${pricePost.slug}/`}
-                    className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise/60 hover:bg-[#FAFAFA] transition-colors"
+                    className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-white px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-brand-turquoise/60 hover:bg-[var(--color-bg)] transition-colors"
                   >
                     <span>Prix à {cityName}</span>
                     <span>→</span>
@@ -155,7 +155,7 @@ export function HubQuartiersPage({
                 ) : (
                   <a
                     href="/blog/prix-et-devis/"
-                    className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise/60 hover:bg-[#FAFAFA] transition-colors"
+                    className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-white px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-brand-turquoise/60 hover:bg-[var(--color-bg)] transition-colors"
                   >
                     <span>Guides prix & devis</span>
                     <span>→</span>
@@ -163,14 +163,14 @@ export function HubQuartiersPage({
                 )}
                 <a
                   href="/blog/checklists-et-guides/"
-                  className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise/60 hover:bg-[#FAFAFA] transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-white px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-brand-turquoise/60 hover:bg-[var(--color-bg)] transition-colors"
                 >
                   <span>Checklists & guides</span>
                   <span>→</span>
                 </a>
                 <a
                   href="/blog/conseils-demenagement/"
-                  className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise/60 hover:bg-[#FAFAFA] transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-white px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-brand-turquoise/60 hover:bg-[var(--color-bg)] transition-colors"
                 >
                   <span>Conseils déménagement</span>
                   <span>→</span>
@@ -189,7 +189,7 @@ export function HubQuartiersPage({
               <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
               Pourquoi Moverz
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)]">
               Pourquoi comparer avec Moverz ?
             </h2>
           </div>
@@ -199,10 +199,10 @@ export function HubQuartiersPage({
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-turquoise/10 text-brand-turquoise text-xl font-bold">
                 ✓
               </div>
-              <h3 className="text-base font-bold text-[#0F172A]">
+              <h3 className="text-base font-bold text-[var(--color-text)]">
                 Déménageurs contrôlés
               </h3>
-              <p className="text-sm text-[#6B7280]">
+              <p className="text-sm text-[var(--color-text-secondary)]">
                 Assurances, solvabilité, historique vérifié
               </p>
             </div>
@@ -211,10 +211,10 @@ export function HubQuartiersPage({
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-turquoise/10 text-brand-turquoise text-xl font-bold">
                 🤖
               </div>
-              <h3 className="text-base font-bold text-[#0F172A]">
+              <h3 className="text-base font-bold text-[var(--color-text)]">
                 IA volume en 1 minute
               </h3>
-              <p className="text-sm text-[#6B7280]">
+              <p className="text-sm text-[var(--color-text-secondary)]">
                 Estimation précise de votre cubage
               </p>
             </div>
@@ -223,10 +223,10 @@ export function HubQuartiersPage({
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-turquoise/10 text-brand-turquoise text-lg font-bold">
                 =
               </div>
-              <h3 className="text-base font-bold text-[#0F172A]">
+              <h3 className="text-base font-bold text-[var(--color-text)]">
                 Devis comparables
               </h3>
-              <p className="text-sm text-[#6B7280]">
+              <p className="text-sm text-[var(--color-text-secondary)]">
                 Même volume, même base pour tous
               </p>
             </div>
@@ -253,7 +253,7 @@ export function HubQuartiersPage({
           <div className="pt-4">
             <a
               href={quoteUrl}
-              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#F3F4F6] transition-colors"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[var(--color-text)] shadow-lg hover:bg-[#F3F4F6] transition-colors"
             >
               <span>Lancer mon comparateur</span>
               <span className="text-lg leading-none">→</span>

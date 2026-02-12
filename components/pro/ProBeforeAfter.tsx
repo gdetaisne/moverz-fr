@@ -12,10 +12,10 @@ export default function ProBeforeAfter() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text)] mb-4">
             Avant / Après : chiffrage sans visite
           </h2>
-          <p className="text-lg text-[#6B7280] max-w-2xl mx-auto">
+          <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl mx-auto">
             Remplacez la visite technique par un dossier standardisé (et exploitable).
           </p>
         </motion.div>
@@ -26,9 +26,9 @@ export default function ProBeforeAfter() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative rounded-2xl border border-[#E3E5E8] bg-[#F9FAFB] p-8"
+            className="relative rounded-2xl border border-[var(--color-border)] bg-[#F9FAFB] p-8"
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-white border border-[#E3E5E8] px-4 py-2 text-sm font-medium text-[#6B7280] mb-6">
+            <div className="inline-flex items-center gap-2 rounded-full bg-white border border-[var(--color-border)] px-4 py-2 text-sm font-medium text-[var(--color-text-secondary)] mb-6">
               Sans Moverz Pro
             </div>
             
@@ -40,15 +40,15 @@ export default function ProBeforeAfter() {
               ].map((item, i) => (
                 <div key={i} className="space-y-2">
                   <div className="flex items-center gap-3">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white border border-[#E3E5E8] flex items-center justify-center">
-                      <item.icon className="w-5 h-5 text-[#6B7280]" />
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white border border-[var(--color-border)] flex items-center justify-center">
+                      <item.icon className="w-5 h-5 text-[var(--color-text-secondary)]" />
                     </div>
                     <div>
-                      <p className="text-3xl font-bold text-[#0F172A] leading-none">{item.metric}</p>
-                      <p className="text-xs text-[#6B7280] mt-1">{item.label}</p>
+                      <p className="text-3xl font-bold text-[var(--color-text)] leading-none">{item.metric}</p>
+                      <p className="text-xs text-[var(--color-text-secondary)] mt-1">{item.label}</p>
                     </div>
                   </div>
-                  <p className="text-xs text-[#6B7280] leading-relaxed ml-13">{item.desc}</p>
+                  <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed ml-13">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -61,7 +61,7 @@ export default function ProBeforeAfter() {
             viewport={{ once: true }}
             className="relative rounded-2xl border-2 border-brand-turquoise/40 bg-gradient-to-br from-[#F0F9FF] to-white p-8 shadow-sm"
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-2 text-sm font-medium text-[#0F172A] border border-brand-turquoise/30 mb-6">
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-2 text-sm font-medium text-[var(--color-text)] border border-brand-turquoise/30 mb-6">
               <Zap className="w-3.5 h-3.5 text-brand-turquoise" />
               Avec Moverz Pro
             </div>
@@ -78,11 +78,11 @@ export default function ProBeforeAfter() {
                       <item.icon className="w-5 h-5 text-brand-turquoise" />
                     </div>
                     <div>
-                      <p className="text-3xl font-bold text-[#0F172A] leading-none">{item.metric}</p>
-                      <p className="text-xs text-[#6B7280] mt-1">{item.label}</p>
+                      <p className="text-3xl font-bold text-[var(--color-text)] leading-none">{item.metric}</p>
+                      <p className="text-xs text-[var(--color-text-secondary)] mt-1">{item.label}</p>
                     </div>
                   </div>
-                  <p className="text-xs text-[#6B7280] leading-relaxed ml-13">{item.desc}</p>
+                  <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed ml-13">{item.desc}</p>
                 </div>
               ))}
             </div>

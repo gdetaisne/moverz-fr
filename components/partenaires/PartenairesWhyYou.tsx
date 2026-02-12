@@ -35,11 +35,11 @@ export default function PartenairesWhyYou() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[#0F172A]">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[var(--color-text)]">
             Pourquoi vous recevez ce dossier
           </h2>
-          <p className="text-lg text-[#6B7280] max-w-3xl mx-auto">
-            Chez Moverz, ce n'est pas un <span className="font-semibold text-[#0F172A]">« lead au hasard »</span>.
+          <p className="text-lg text-[var(--color-text-secondary)] max-w-3xl mx-auto">
+            Chez Moverz, ce n'est pas un <span className="font-semibold text-[var(--color-text)]">« lead au hasard »</span>.
             <br />
             Vous avez été retenu parce que vous cochez des critères concrets :
           </p>
@@ -53,16 +53,16 @@ export default function PartenairesWhyYou() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-br from-[#F9FAFB] to-white border border-[#E3E5E8] hover:border-brand-turquoise/30 transition-colors"
+              className="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-br from-[#F9FAFB] to-white border border-[var(--color-border)] hover:border-brand-turquoise/30 transition-colors"
             >
               <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-brand-turquoise/10">
                 <item.icon className="w-6 h-6 text-brand-turquoise" />
               </div>
               <div>
-                <h3 className="font-bold text-[#0F172A] mb-1">
+                <h3 className="font-bold text-[var(--color-text)] mb-1">
                   {item.title}
                 </h3>
-                <p className="text-sm text-[#6B7280]">
+                <p className="text-sm text-[var(--color-text-secondary)]">
                   {item.description}
                 </p>
               </div>
@@ -80,12 +80,12 @@ export default function PartenairesWhyYou() {
         >
           <a
             href="/verifications-partenaires"
-            className="inline-flex items-center gap-2 text-[#0F172A] hover:text-brand-turquoise transition-colors font-medium"
+            className="inline-flex items-center gap-2 text-[var(--color-text)] hover:text-brand-turquoise transition-colors font-medium"
           >
             <span>En savoir plus sur nos critères de sélection</span>
             <span className="text-lg">→</span>
           </a>
-          <div className="text-sm text-[#6B7280]">
+          <div className="text-sm text-[var(--color-text-secondary)]">
             En rejoignant notre réseau, vous acceptez nos{" "}
             <a href="/cgv-partenaires/" className="text-brand-turquoise hover:underline font-semibold">
               CGV Partenaires

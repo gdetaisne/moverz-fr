@@ -72,28 +72,28 @@ export default function ComparateurDemenageursPage() {
       {/* Section intro : Pourquoi utiliser un comparateur */}
       <section className="section section-light">
         <div className="container max-w-4xl space-y-10">
-          <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 space-y-4">
-            <h2 className="text-xl md:text-2xl font-bold text-[#0F172A]">
+          <div className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-8 space-y-4">
+            <h2 className="text-xl md:text-2xl font-bold text-[var(--color-text)]">
               Pourquoi utiliser un comparateur de déménagement ?
             </h2>
-            <p className="text-sm md:text-base text-[#6B7280] leading-relaxed">
+            <p className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed">
               Avant l'ère des comparateurs, obtenir des devis de déménagement était un parcours du combattant : 
               multiples appels (répéter 10 fois les mêmes infos), visites techniques chronophages, devis incomparables 
               (formats et volumes différents), et démarchage agressif une fois vos coordonnées partagées.
             </p>
-            <p className="text-sm md:text-base text-[#6B7280] leading-relaxed">
-              Un <strong className="text-[#0F172A]">bon comparateur</strong> vise à simplifier ce processus, 
-              <strong className="text-[#0F172A]"> mais tous ne se valent pas</strong>. Certains se contentent de revendre 
+            <p className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed">
+              Un <strong className="text-[var(--color-text)]">bon comparateur</strong> vise à simplifier ce processus, 
+              <strong className="text-[var(--color-text)]"> mais tous ne se valent pas</strong>. Certains se contentent de revendre 
               vos coordonnées à 10-20 déménageurs (d'où le spam), sans aucune vérification ni standardisation.
             </p>
           </div>
 
           {/* 5 critères pour choisir */}
           <div className="space-y-4">
-            <h2 className="text-lg md:text-xl font-semibold text-[#0F172A]">
+            <h2 className="text-lg md:text-xl font-semibold text-[var(--color-text)]">
               5 critères clés pour choisir votre comparateur
             </h2>
-            <p className="text-sm md:text-base text-[#6B7280]">
+            <p className="text-sm md:text-base text-[var(--color-text-secondary)]">
               Pour évaluer un comparateur de déménagement, concentrez-vous sur ces 5 points essentiels :
             </p>
 
@@ -157,14 +157,14 @@ export default function ComparateurDemenageursPage() {
               ].map((c) => (
                 <div 
                   key={c.title} 
-                  className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-7 hover:border-brand-turquoise/50 hover:shadow-md transition-all"
+                  className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-7 hover:border-brand-turquoise/50 hover:shadow-md transition-all"
                 >
                   <div className="flex items-start gap-3">
                     <span className="text-3xl shrink-0">{c.emoji}</span>
                     <div className="flex-1 space-y-3">
-                      <h3 className="text-base md:text-lg font-bold text-[#0F172A]">{c.title}</h3>
-                      <p className="text-sm md:text-base text-[#6B7280]">{c.desc}</p>
-                      <ul className="grid gap-2 text-sm md:text-base text-[#0F172A]/90">
+                      <h3 className="text-base md:text-lg font-bold text-[var(--color-text)]">{c.title}</h3>
+                      <p className="text-sm md:text-base text-[var(--color-text-secondary)]">{c.desc}</p>
+                      <ul className="grid gap-2 text-sm md:text-base text-[var(--color-text)]/90">
                         {c.points.map((p) => (
                           <li key={p} className="flex gap-2">
                             <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#2B7A78] shrink-0" />
@@ -195,7 +195,7 @@ export default function ComparateurDemenageursPage() {
           <div className="rounded-2xl border border-brand-turquoise/30 bg-gradient-to-br from-brand-turquoise/10 to-white p-6 md:p-8 space-y-6">
             <div className="flex items-center gap-3">
               <span className="text-3xl">✨</span>
-              <h2 className="text-lg md:text-xl font-semibold text-[#0F172A]">
+              <h2 className="text-lg md:text-xl font-semibold text-[var(--color-text)]">
                 Ce qui fait la différence Moverz (vs autres comparateurs)
               </h2>
             </div>
@@ -219,15 +219,15 @@ export default function ComparateurDemenageursPage() {
                   desc: "Moverz est gratuit pour vous, commission uniquement sur les déménageurs (si déménagement réalisé). Les autres = même modèle mais avec revente de données.",
                 },
               ].map((item) => (
-                <div key={item.title} className="rounded-xl border border-[#E5E7EB] bg-white p-5">
-                  <p className="font-semibold text-[#0F172A] text-sm md:text-base mb-2">{item.title}</p>
-                  <p className="text-xs md:text-sm text-[#6B7280] leading-relaxed">{item.desc}</p>
+                <div key={item.title} className="rounded-xl border border-[var(--color-border)] bg-white p-5">
+                  <p className="font-semibold text-[var(--color-text)] text-sm md:text-base mb-2">{item.title}</p>
+                  <p className="text-xs md:text-sm text-[var(--color-text-secondary)] leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
 
             <div className="rounded-xl bg-white/60 border border-brand-turquoise/20 p-4 text-center">
-              <p className="text-sm md:text-base text-[#0F172A]">
+              <p className="text-sm md:text-base text-[var(--color-text)]">
                 <strong>Résultat :</strong> Moverz est le seul comparateur qui vérifie ET standardise ET protège votre anonymat.
               </p>
               <a 
@@ -244,14 +244,14 @@ export default function ComparateurDemenageursPage() {
       {/* Maillage interne */}
       <section className="section section-light pt-0">
         <div className="container max-w-4xl">
-          <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8">
+          <div className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-8">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise text-center">
               Guides complémentaires
             </p>
-            <h2 className="mt-3 text-xl md:text-2xl font-bold text-[#0F172A] text-center">
+            <h2 className="mt-3 text-xl md:text-2xl font-bold text-[var(--color-text)] text-center">
               Pour aller plus loin
             </h2>
-            <p className="mt-2 text-sm text-[#6B7280] text-center max-w-2xl mx-auto">
+            <p className="mt-2 text-sm text-[var(--color-text-secondary)] text-center max-w-2xl mx-auto">
               5 guides pour maîtriser chaque aspect de votre déménagement.
             </p>
 
@@ -291,13 +291,13 @@ export default function ComparateurDemenageursPage() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="group rounded-xl border border-[#E5E7EB] bg-white p-5 hover:border-brand-turquoise/50 hover:shadow-md transition-all"
+                  className="group rounded-xl border border-[var(--color-border)] bg-white p-5 hover:border-brand-turquoise/50 hover:shadow-md transition-all"
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-2xl">{item.emoji}</span>
-                    <p className="text-sm font-bold text-[#0F172A] group-hover:text-[#2B7A78]">{item.title}</p>
+                    <p className="text-sm font-bold text-[var(--color-text)] group-hover:text-[#2B7A78]">{item.title}</p>
                   </div>
-                  <p className="text-xs text-[#6B7280] leading-relaxed">{item.desc}</p>
+                  <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">{item.desc}</p>
                 </a>
               ))}
             </div>
@@ -316,18 +316,18 @@ export default function ComparateurDemenageursPage() {
           <div className="rounded-2xl border border-brand-turquoise/30 bg-gradient-to-br from-brand-turquoise/10 to-white p-6 md:p-8 text-center">
             <div className="flex items-center justify-center gap-2 mb-3">
               <span className="text-2xl">✨</span>
-              <h3 className="text-lg font-bold text-[#0F172A]">
+              <h3 className="text-lg font-bold text-[var(--color-text)]">
                 Prêt à comparer intelligemment ?
               </h3>
             </div>
-            <p className="text-sm md:text-base text-[#6B7280] mb-5 max-w-2xl mx-auto">
+            <p className="text-sm md:text-base text-[var(--color-text-secondary)] mb-5 max-w-2xl mx-auto">
               Créez votre dossier en 3 minutes. Moverz standardise vos infos (volume IA) et vérifie les déménageurs (Creditsafe + licences + assurances). 
               Recevez jusqu'à 5 devis comparables sous 5-7 jours. Dossier anonyme, 0 démarchage.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
               <a
                 href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=comparateur-demenageurs-cta"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-[#1E293B] hover:shadow-xl transition-all"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-bg-dark)] px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-[var(--color-bg-dark)] hover:shadow-xl transition-all"
               >
                 <span>Comparer mes devis</span>
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -336,12 +336,12 @@ export default function ComparateurDemenageursPage() {
               </a>
               <a
                 href="/pourquoi-moverz/"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-white border border-[#E5E7EB] px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise/50 hover:shadow-sm transition-all"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-white border border-[var(--color-border)] px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-brand-turquoise/50 hover:shadow-sm transition-all"
               >
                 <span>Pourquoi Moverz ?</span>
               </a>
             </div>
-            <p className="text-xs text-[#6B7280] mt-4">
+            <p className="text-xs text-[var(--color-text-secondary)] mt-4">
               ●3 min ●IA volumétrie ●Sans démarchage ●Jusqu'à 5 devis comparables ●100% gratuit ●Note 4.9/5
             </p>
           </div>

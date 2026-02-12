@@ -150,7 +150,7 @@ export function CorridorPage({
         about={`Déménagement ${originCityName} vers ${destination}`}
       />
       
-      <div className="bg-[#0F172A]">
+      <div className="bg-[var(--color-bg-dark)]">
         <div className="container max-w-7xl pt-6">
           <Breadcrumbs
             items={[
@@ -224,7 +224,7 @@ export function CorridorPage({
             <div className="pt-4">
               <a
                 href={quoteUrl}
-                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#F3F4F6] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[var(--color-text)] shadow-lg hover:bg-[#F3F4F6] transition-colors"
               >
                 <span>Comparer les déménageurs</span>
                 <span className="text-lg leading-none">→</span>
@@ -242,7 +242,7 @@ export function CorridorPage({
               <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
               Prix indicatifs
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)]">
               Combien coûte un déménagement<br />{originCityName} → {destination} ?
             </h2>
           </div>
@@ -251,37 +251,37 @@ export function CorridorPage({
             {prixIndicatifs.map((prix, index) => (
               <div
                 key={index}
-                className="rounded-2xl border border-[#E5E7EB] bg-white p-6 space-y-3"
+                className="rounded-2xl border border-[var(--color-border)] bg-white p-6 space-y-3"
               >
                 <div className="text-sm font-semibold text-brand-turquoise uppercase tracking-wider">
                   {prix.type}
                 </div>
-                <div className="text-3xl font-bold text-[#0F172A]">{prix.prix}</div>
-                <p className="text-sm text-[#6B7280]">{prix.description}</p>
+                <div className="text-3xl font-bold text-[var(--color-text)]">{prix.prix}</div>
+                <p className="text-sm text-[var(--color-text-secondary)]">{prix.description}</p>
               </div>
             ))}
           </div>
 
           <div className="text-center">
-            <p className="text-sm text-[#6B7280] max-w-2xl mx-auto">
+            <p className="text-sm text-[var(--color-text-secondary)] max-w-2xl mx-auto">
               Prix indicatifs pour {distance} de trajet. Le prix final dépend du volume exact, des accès et de la période.
             </p>
           </div>
 
           {/* Maillage interne : guides prix liés */}
           {(originPricePost || destPricePost) && (
-            <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 text-center space-y-4">
+            <div className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-8 text-center space-y-4">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
                 Guides liés
               </p>
-              <p className="text-sm text-[#6B7280]">
+              <p className="text-sm text-[var(--color-text-secondary)]">
                 Pour aller plus loin sur les tarifs et la lecture des devis.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                 {originPricePost && (
                   <a
                     href={`/blog/${originPricePost.slug}/`}
-                    className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+                    className="inline-flex items-center gap-2 rounded-full bg-[var(--color-bg-dark)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--color-bg-dark)] transition-colors"
                   >
                     <span>Prix à {originCityName}</span>
                     <span>→</span>
@@ -290,7 +290,7 @@ export function CorridorPage({
                 {destPricePost && (
                   <a
                     href={`/blog/${destPricePost.slug}/`}
-                    className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise-200 hover:bg-[#FAFAFA] transition-colors"
+                    className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-white px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-brand-turquoise-200 hover:bg-[var(--color-bg)] transition-colors"
                   >
                     <span>Prix à {destinationCity?.nameCapitalized}</span>
                     <span>→</span>
@@ -310,11 +310,11 @@ export function CorridorPage({
               <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
               Accès & Contraintes
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)]">
               Arriver à {destination}
             </h2>
           </div>
-          <p className="text-base md:text-lg text-[#4b5c6b] leading-relaxed">
+          <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
             {accesArrivee}
           </p>
         </div>
@@ -329,7 +329,7 @@ export function CorridorPage({
                 <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
                 Conseils pratiques
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)]">
                 Réussir votre déménagement
               </h2>
             </div>
@@ -338,12 +338,12 @@ export function CorridorPage({
               {conseils.map((conseil, index) => (
                 <div
                   key={index}
-                  className="flex gap-3 rounded-xl border border-[#E5E7EB] bg-white p-4"
+                  className="flex gap-3 rounded-xl border border-[var(--color-border)] bg-white p-4"
                 >
                   <span className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-brand-turquoise/10 text-brand-turquoise text-sm font-bold">
                     ✓
                   </span>
-                  <p className="text-sm text-[#4b5c6b]">{conseil}</p>
+                  <p className="text-sm text-[var(--color-text-secondary)]">{conseil}</p>
                 </div>
               ))}
             </div>
@@ -359,7 +359,7 @@ export function CorridorPage({
               <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
               Questions fréquentes
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)]">
               FAQ {originCityName} → {destination}
             </h2>
           </div>
@@ -367,10 +367,10 @@ export function CorridorPage({
           <div className="space-y-6">
             {faq.map((item, index) => (
               <div key={index} className="space-y-2">
-                <h3 className="text-base md:text-lg font-bold text-[#0F172A]">
+                <h3 className="text-base md:text-lg font-bold text-[var(--color-text)]">
                   {item.question}
                 </h3>
-                <p className="text-sm md:text-base text-[#6B7280] leading-relaxed">
+                <p className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed">
                   {item.answer}
                 </p>
               </div>
@@ -379,11 +379,11 @@ export function CorridorPage({
 
           {/* Maillage SEO : "à lire ensuite" (2 liens max) */}
           <div className="pt-2">
-            <div className="rounded-2xl border border-[#E5E7EB] bg-gradient-to-br from-white to-[#FAFAFA] p-6 md:p-8 text-center space-y-4">
+            <div className="rounded-2xl border border-[var(--color-border)] bg-gradient-to-br from-white to-[#FAFAFA] p-6 md:p-8 text-center space-y-4">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
                 À lire ensuite
               </p>
-              <p className="text-sm text-[#6B7280] max-w-2xl mx-auto">
+              <p className="text-sm text-[var(--color-text-secondary)] max-w-2xl mx-auto">
                 Deux ressources clés pour comprendre les prix et préparer votre déménagement longue distance.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -393,7 +393,7 @@ export function CorridorPage({
                       ? `/blog/${longDistancePricePost.slug}/`
                       : "/blog/prix-et-devis/"
                   }
-                  className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-bg-dark)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--color-bg-dark)] transition-colors"
                 >
                   <span>
                     {longDistancePricePost
@@ -404,7 +404,7 @@ export function CorridorPage({
                 </a>
                 <a
                   href="/blog/checklists-et-guides/"
-                  className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise-200 hover:bg-white transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-white px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-brand-turquoise-200 hover:bg-white transition-colors"
                 >
                   <span>Checklists & guides</span>
                   <span>→</span>
@@ -434,7 +434,7 @@ export function CorridorPage({
           <div className="pt-4">
             <a
               href={quoteUrl}
-              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#F3F4F6] transition-colors"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[var(--color-text)] shadow-lg hover:bg-[#F3F4F6] transition-colors"
             >
               <span>Lancer mon comparateur</span>
               <span className="text-lg leading-none">→</span>

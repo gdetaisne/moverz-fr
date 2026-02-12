@@ -19,13 +19,13 @@ export default function KeyBenefits() {
       <div className="container">
         <div className="space-y-8 text-center">
           <div className="space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#2B7A78]">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em]" style={{ color: "var(--color-accent)" }}>
               Pourquoi passer par Moverz ?
             </p>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#04163a]">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading" style={{ color: "var(--color-text)" }}>
               On simplifie vraiment votre déménagement
             </h2>
-            <p className="text-sm md:text-base text-[#4b5c6b] max-w-2xl mx-auto">
+            <p className="text-sm md:text-base max-w-2xl mx-auto" style={{ color: "var(--color-text-secondary)" }}>
               Moins de stress, moins de temps perdu, moins de mauvaises surprises.
             </p>
           </div>
@@ -34,12 +34,13 @@ export default function KeyBenefits() {
             {items.map((item) => (
               <div
                 key={item.title}
-                className="rounded-2xl border border-[#E3E5E8] bg-white p-5 md:p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+                className="rounded-2xl p-5 md:p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+                style={{ border: "1px solid var(--color-border)", background: "var(--color-surface)" }}
               >
-                <h3 className="text-base md:text-lg font-semibold text-[#04163a] mb-2">
+                <h3 className="text-base md:text-lg font-semibold font-heading mb-2" style={{ color: "var(--color-text)" }}>
                   {item.title}
                 </h3>
-                <p className="text-sm text-[#4b5c6b] leading-relaxed">
+                <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
                   {item.text}
                 </p>
               </div>

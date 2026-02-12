@@ -98,7 +98,7 @@ export default function WidgetActionSection({
               <div className="w-full max-w-md mx-auto space-y-4">
                 <a
                   href={`https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=${from}&devis_range=3-5${citySlug ? `&city=${citySlug}` : ''}`}
-                  className="group relative w-full inline-flex items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-brand-turquoise-300 via-brand-turquoise to-brand-turquoise-500 px-10 py-5 text-lg font-bold text-white shadow-glow-turquoise hover:shadow-glow-turquoise-lg hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 overflow-hidden border border-white/20"
+                  className="group relative w-full inline-flex items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-brand-turquoise via-brand-turquoise to-brand-turquoise px-10 py-5 text-lg font-bold text-white shadow-glow-turquoise hover:shadow-glow-turquoise-lg hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 overflow-hidden border border-white/20"
                 >
                   <svg className="w-6 h-6 relative z-10" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -107,7 +107,7 @@ export default function WidgetActionSection({
                   <span className="relative z-10 text-2xl leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
                   
                   {/* Gradient overlay au hover */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-brand-turquoise-200 to-brand-turquoise-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-brand-turquoise-200 to-brand-turquoise opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   
                   {/* Shine effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />

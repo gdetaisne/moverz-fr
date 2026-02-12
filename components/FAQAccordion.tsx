@@ -20,7 +20,7 @@ function FAQAccordionItem({ item, isOpen, onToggle }: { item: FAQItem; isOpen: b
       className={`group relative overflow-hidden rounded-2xl border backdrop-blur-sm transition-all duration-300 ${
         isOpen
           ? "border-brand-turquoise/50 bg-white shadow-xl shadow-[rgba(107,207,207,0.05)]"
-          : "border-gray-200 bg-white/80 hover:bg-white hover:border-brand-turquoise/30 hover:shadow-lg"
+          : "border-[var(--color-border)] bg-white/80 hover:bg-white hover:border-brand-turquoise/30 hover:shadow-lg"
       }`}
     >
       {/* Gradient accent */}
@@ -47,7 +47,7 @@ function FAQAccordionItem({ item, isOpen, onToggle }: { item: FAQItem; isOpen: b
           >
             <HelpCircle className="w-4 h-4" />
           </motion.div>
-          <h3 className="text-base md:text-lg font-bold text-[#0F172A] leading-tight">
+          <h3 className="text-base md:text-lg font-bold text-[var(--color-text)] leading-tight">
             {item.q}
           </h3>
         </div>
@@ -59,7 +59,7 @@ function FAQAccordionItem({ item, isOpen, onToggle }: { item: FAQItem; isOpen: b
           <div className={`flex h-8 w-8 items-center justify-center rounded-full border-2 transition-all duration-300 ${
             isOpen
               ? "border-brand-turquoise bg-brand-turquoise/10 text-[#2B7A78]"
-              : "border-gray-200 bg-gray-50 text-gray-500 group-hover:border-brand-turquoise/30 group-hover:bg-brand-turquoise/5"
+              : "border-[var(--color-border)] bg-gray-50 text-[var(--color-text-muted)] group-hover:border-brand-turquoise/30 group-hover:bg-brand-turquoise/5"
           }`}>
             <ChevronDown className="w-4 h-4" />
           </div>
@@ -83,7 +83,7 @@ function FAQAccordionItem({ item, isOpen, onToggle }: { item: FAQItem; isOpen: b
                   initial={{ y: -10, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.1, duration: 0.3 }}
-                  className="text-sm md:text-base text-gray-600 leading-relaxed"
+                  className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed"
                   dangerouslySetInnerHTML={{ __html: item.a }}
                 />
               </div>

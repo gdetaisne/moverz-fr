@@ -12,18 +12,18 @@ export function CityLocalInsights({ citySlug, cityName, quoteUrl }: CityLocalIns
   return (
     <section className="section section-light">
       <div className="container max-w-4xl space-y-6">
-        <div className="rounded-2xl border border-[#E5E7EB] bg-white p-8 md:p-10 space-y-6">
+        <div className="rounded-2xl border border-[var(--color-border)] bg-white p-8 md:p-10 space-y-6">
           <div className="space-y-3 text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">Local</p>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A]">{insights.title}</h2>
-            <p className="text-sm md:text-base text-[#6B7280]">
+            <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-text)]">{insights.title}</h2>
+            <p className="text-sm md:text-base text-[var(--color-text-secondary)]">
               Quelques précisions suffisent. Objectif : éviter les suppléments le jour J et comparer des devis vraiment comparables.
             </p>
           </div>
 
           <div className="space-y-4">
             {insights.paragraphs.map((p, i) => (
-              <p key={i} className="text-sm md:text-base text-[#6B7280] leading-relaxed">
+              <p key={i} className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed">
                 {p}
               </p>
             ))}
@@ -31,9 +31,9 @@ export function CityLocalInsights({ citySlug, cityName, quoteUrl }: CityLocalIns
 
           <div className="grid gap-2">
             {insights.bullets.map((b, i) => (
-              <div key={i} className="flex gap-2 text-sm md:text-base text-[#0F172A]">
+              <div key={i} className="flex gap-2 text-sm md:text-base text-[var(--color-text)]">
                 <span className="mt-2 h-1.5 w-1.5 rounded-full bg-brand-turquoise shrink-0" />
-                <span className="text-[#0F172A]/90">{b}</span>
+                <span className="text-[var(--color-text)]/90">{b}</span>
               </div>
             ))}
           </div>
@@ -47,7 +47,7 @@ export function CityLocalInsights({ citySlug, cityName, quoteUrl }: CityLocalIns
             >
               Obtenir des devis (gratuit)
             </a>
-            <p className="mt-2 text-xs text-[#6B7280]">Sans spam · Sans engagement · Dossier en 3 minutes</p>
+            <p className="mt-2 text-xs text-[var(--color-text-secondary)]">Sans spam · Sans engagement · Dossier en 3 minutes</p>
           </div>
         </div>
       </div>

@@ -31,7 +31,7 @@ export default function FlowAndIA() {
   }, []);
 
   // Couleurs par étape pour les icônes
-  const stepColors = ["text-brand-turquoise-600", "text-brand-turquoise-600", "text-brand-accent"];
+  const stepColors = ["text-brand-turquoise", "text-brand-turquoise", "text-brand-accent"];
   const stepBgColors = ["from-brand-turquoise-100 to-brand-turquoise-50", "from-brand-turquoise-100 to-brand-turquoise-50", "from-brand-turquoise-100 to-brand-accent-50"];
 
   return (
@@ -71,8 +71,8 @@ export default function FlowAndIA() {
                         <CheckCircle className="w-5 h-5 text-green-600" />
                       </div>
                       <div className="flex-1 pt-2">
-                        <p className="text-sm font-semibold text-[#0F172A]">Infos envoyées</p>
-                        <p className="text-xs text-[#1E293B]/60 mt-1">T3 • 60m² • 3ᵉ étage</p>
+                        <p className="text-sm font-semibold text-[var(--color-text)]">Infos envoyées</p>
+                        <p className="text-xs text-[var(--color-text-secondary)]/60 mt-1">T3 • 60m² • 3ᵉ étage</p>
                       </div>
                     </div>
 
@@ -82,8 +82,8 @@ export default function FlowAndIA() {
                         <CheckCircle className="w-5 h-5 text-green-600" />
                       </div>
                       <div className="flex-1 pt-2">
-                        <p className="text-sm font-semibold text-[#0F172A]">Dossier complété</p>
-                        <p className="text-xs text-[#1E293B]/60 mt-1">Base identique envoyée à tous</p>
+                        <p className="text-sm font-semibold text-[var(--color-text)]">Dossier complété</p>
+                        <p className="text-xs text-[var(--color-text-secondary)]/60 mt-1">Base identique envoyée à tous</p>
                       </div>
                     </div>
 
@@ -93,15 +93,15 @@ export default function FlowAndIA() {
                         <div className="w-2 h-2 rounded-full bg-brand-turquoise animate-pulse" />
                       </div>
                       <div className="flex-1 pt-2">
-                        <p className="text-sm font-semibold text-[#0F172A]">5 déménageurs contactés</p>
-                        <p className="text-xs text-[#1E293B]/60 mt-1">Réponse sous 48-72h</p>
+                        <p className="text-sm font-semibold text-[var(--color-text)]">5 déménageurs contactés</p>
+                        <p className="text-xs text-[var(--color-text-secondary)]/60 mt-1">Réponse sous 48-72h</p>
                       </div>
                     </div>
 
                     {/* Progress card */}
                     <div className="mt-6 p-4 rounded-xl bg-brand-turquoise/10 border border-brand-turquoise/30">
                       <div className="flex items-center justify-between mb-2">
-                        <p className="text-xs font-semibold text-[#0F172A]">Progression</p>
+                        <p className="text-xs font-semibold text-[var(--color-text)]">Progression</p>
                         <p className="text-xs font-semibold text-brand-turquoise">66%</p>
                       </div>
                       <div className="w-full h-2 bg-white rounded-full overflow-hidden">
@@ -114,8 +114,8 @@ export default function FlowAndIA() {
 
               {/* Floating badge */}
               <div className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-lg px-4 py-3 border border-brand-turquoise/30">
-                <p className="text-2xl font-bold text-[#0F172A]">3</p>
-                <p className="text-xs text-[#1E293B]/70">étapes</p>
+                <p className="text-2xl font-bold text-[var(--color-text)]">3</p>
+                <p className="text-xs text-[var(--color-text-secondary)]/70">étapes</p>
               </div>
             </div>
           </div>
@@ -127,7 +127,7 @@ export default function FlowAndIA() {
               animation: mounted ? 'fadeInUp 1s ease-out 0.2s both' : 'none',
             }}
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-brand-accent/10 border border-brand-turquoise-200/50 backdrop-blur-sm px-5 py-2 text-sm font-bold text-[#0F172A] mb-6">
+            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-brand-accent/10 border border-brand-turquoise-200/50 backdrop-blur-sm px-5 py-2 text-sm font-bold text-[var(--color-text)] mb-6">
               <span className="relative inline-flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-turquoise opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-turquoise shadow-[0_0_12px_rgba(107,207,207,0.8)]" />
@@ -136,13 +136,13 @@ export default function FlowAndIA() {
             </div>
 
             <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
-              <span className="block text-[#0F172A]">3 étapes,</span>
-              <span className="block mt-2 bg-gradient-to-r from-brand-turquoise-600 via-brand-turquoise to-brand-accent bg-clip-text text-transparent">
+              <span className="block text-[var(--color-text)]">3 étapes,</span>
+              <span className="block mt-2 bg-gradient-to-r from-brand-turquoise via-brand-turquoise to-brand-accent bg-clip-text text-transparent">
                 3 minutes
               </span>
             </h2>
 
-            <p className="text-lg text-gray-600 leading-relaxed mb-10 font-normal">
+            <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed mb-10 font-normal">
               L'IA fait le travail, vous gardez le contrôle.
           </p>
 
@@ -157,17 +157,17 @@ export default function FlowAndIA() {
                       <div className={`flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br ${stepBgColors[index]}`}>
                         <Icon className={`w-7 h-7 ${stepColors[index]}`} strokeWidth={1.5} />
                       </div>
-                      <div className="absolute -top-2 -left-2 flex items-center justify-center w-6 h-6 rounded-full bg-[#0F172A] text-white text-xs font-bold shadow-lg">
+                      <div className="absolute -top-2 -left-2 flex items-center justify-center w-6 h-6 rounded-full bg-[var(--color-bg-dark)] text-white text-xs font-bold shadow-lg">
                         {step.number}
                       </div>
                     </div>
 
                     {/* Content */}
                     <div className="flex-1 pt-2">
-                      <h3 className="text-lg font-bold text-[#0F172A] mb-2">
+                      <h3 className="text-lg font-bold text-[var(--color-text)] mb-2">
                         {step.title}
                       </h3>
-                      <p className="text-[#1E293B]/70 text-sm leading-relaxed">
+                      <p className="text-[var(--color-text-secondary)]/70 text-sm leading-relaxed">
                         {step.description}
                       </p>
                     </div>
@@ -178,7 +178,7 @@ export default function FlowAndIA() {
 
             {/* Bottom reassurance */}
             <div className="mt-8 p-6 rounded-2xl bg-gradient-to-br from-brand-turquoise-50 to-brand-accent-50 border border-brand-turquoise-200/50 backdrop-blur-sm shadow-[0_4px_16px_rgba(107,207,207,0.1)]">
-              <p className="text-sm font-bold text-[#0F172A] leading-relaxed">
+              <p className="text-sm font-bold text-[var(--color-text)] leading-relaxed">
                 Un dossier clair et standardisé pour tous les déménageurs, pour comparer sans surprises.
               </p>
             </div>

@@ -55,14 +55,14 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
                 <>
                   <a
                     href={item.href}
-                    className="text-[#1E293B]/70 hover:text-[#0F172A] transition-colors duration-300"
+                    className="text-[var(--color-text-secondary)]/70 hover:text-[var(--color-text)] transition-colors duration-300"
                   >
                     {item.label}
                   </a>
-                  <span className="text-[#1E293B]/50">/</span>
+                  <span className="text-[var(--color-text-secondary)]/50">/</span>
                 </>
               ) : (
-                <span className="text-[#0F172A] font-semibold">{item.label}</span>
+                <span className="text-[var(--color-text)] font-semibold">{item.label}</span>
               )}
             </li>
           );

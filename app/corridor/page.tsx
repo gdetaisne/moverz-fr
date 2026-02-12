@@ -40,13 +40,13 @@ export default function CorridorIndexPage() {
               <a
                 key={city.slug}
                 href={`/corridor/${city.slug}/`}
-                className="group rounded-2xl border border-[#E5E7EB] bg-white p-5 hover:border-brand-turquoise/60 hover:shadow-md transition-all"
+                className="group rounded-2xl border border-[var(--color-border)] bg-white p-5 hover:border-brand-turquoise/60 hover:shadow-md transition-all"
               >
-                <p className="text-sm text-[#6B7280]">Trajets depuis</p>
-                <h2 className="text-base md:text-lg font-semibold text-[#0F172A] group-hover:text-[#2B7A78] transition-colors">
+                <p className="text-sm text-[var(--color-text-secondary)]">Trajets depuis</p>
+                <h2 className="text-base md:text-lg font-semibold text-[var(--color-text)] group-hover:text-[#2B7A78] transition-colors">
                   {city.nameCapitalized}
                 </h2>
-                <p className="mt-1 text-sm text-[#4b5c6b]">
+                <p className="mt-1 text-sm text-[var(--color-text-secondary)]">
                   Voir toutes les destinations
                 </p>
               </a>

@@ -20,11 +20,11 @@ export default function PartenairesExpectations() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[#0F172A]">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[var(--color-text)]">
             Ce qu'on attend de vous
           </h2>
-          <p className="text-lg text-[#6B7280]">
-            Votre mission est simple : <span className="font-semibold text-[#0F172A]">répondre proprement et rapidement</span>.
+          <p className="text-lg text-[var(--color-text-secondary)]">
+            Votre mission est simple : <span className="font-semibold text-[var(--color-text)]">répondre proprement et rapidement</span>.
           </p>
         </motion.div>
 
@@ -32,9 +32,9 @@ export default function PartenairesExpectations() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white rounded-3xl p-8 md:p-12 border border-[#E3E5E8] shadow-sm"
+          className="bg-white rounded-3xl p-8 md:p-12 border border-[var(--color-border)] shadow-sm"
         >
-          <h3 className="text-xl font-bold text-[#0F172A] mb-6">Checklist</h3>
+          <h3 className="text-xl font-bold text-[var(--color-text)] mb-6">Checklist</h3>
           
           <ul className="space-y-4 mb-8">
             {checklist.map((item, i) => (
@@ -47,22 +47,22 @@ export default function PartenairesExpectations() {
                 className="flex items-start gap-3"
               >
                 <CheckCircle2 className="w-6 h-6 text-brand-turquoise flex-shrink-0 mt-0.5" />
-                <span className="text-[#1E293B]">{item}</span>
+                <span className="text-[var(--color-text-secondary)]">{item}</span>
               </motion.li>
             ))}
           </ul>
 
           <div className="p-5 rounded-xl bg-brand-turquoise/10 border border-brand-turquoise/30">
-            <p className="text-[#0F172A]">
+            <p className="text-[var(--color-text)]">
               <span className="font-bold">Délai conseillé :</span> idéalement sous <span className="font-semibold text-brand-turquoise">24–48h</span> 
               {" "}(plus vite = plus de chances d'être choisi).
             </p>
           </div>
 
           {/* Note */}
-          <div className="mt-6 p-5 rounded-xl bg-gradient-to-r from-[#F9FAFB] to-white border border-[#E3E5E8]">
-            <p className="text-sm text-[#6B7280]">
-              <span className="font-semibold text-[#0F172A]">Besoin d'un outil pour gérer vos dossiers ?</span>
+          <div className="mt-6 p-5 rounded-xl bg-gradient-to-r from-[#F9FAFB] to-white border border-[var(--color-border)]">
+            <p className="text-sm text-[var(--color-text-secondary)]">
+              <span className="font-semibold text-[var(--color-text)]">Besoin d'un outil pour gérer vos dossiers ?</span>
               {" "}Contactez-nous pour découvrir nos solutions SaaS pour déménageurs.
             </p>
           </div>

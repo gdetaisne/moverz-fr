@@ -132,10 +132,10 @@ export default function ComparisonTable() {
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center space-y-4 mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A]">
+          <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text)]">
             Tableau Comparatif Détaillé
           </h2>
-          <p className="text-lg text-[#1E293B]/70 max-w-3xl mx-auto">
+          <p className="text-lg text-[var(--color-text-secondary)]/70 max-w-3xl mx-auto">
             Comparez objectivement les 3 options pour obtenir vos devis de déménagement
           </p>
         </div>
@@ -146,8 +146,8 @@ export default function ComparisonTable() {
             onClick={() => setActiveFilter("all")}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
               activeFilter === "all"
-                ? "bg-[#0F172A] text-white"
-                : "bg-white text-[#1E293B] border border-[#E3E5E8] hover:border-[#0F172A]"
+                ? "bg-[var(--color-bg-dark)] text-white"
+                : "bg-white text-[var(--color-text-secondary)] border border-[var(--color-border)] hover:border-[#0F172A]"
             }`}
           >
             Tous les critères
@@ -158,8 +158,8 @@ export default function ComparisonTable() {
               onClick={() => setActiveFilter(cat)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                 activeFilter === cat
-                  ? "bg-[#0F172A] text-white"
-                  : "bg-white text-[#1E293B] border border-[#E3E5E8] hover:border-[#0F172A]"
+                  ? "bg-[var(--color-bg-dark)] text-white"
+                  : "bg-white text-[var(--color-text-secondary)] border border-[var(--color-border)] hover:border-[#0F172A]"
               }`}
             >
               {cat}
@@ -172,7 +172,7 @@ export default function ComparisonTable() {
           <table className="w-full bg-white rounded-2xl shadow-lg overflow-hidden">
             {/* Header */}
             <thead>
-              <tr className="bg-[#0F172A] text-white">
+              <tr className="bg-[var(--color-bg-dark)] text-white">
                 <th className="px-6 py-4 text-left text-sm font-semibold">Critère</th>
                 <th className="px-6 py-4 text-center text-sm font-semibold">
                   <div className="flex flex-col items-center gap-1">
@@ -189,7 +189,7 @@ export default function ComparisonTable() {
               {filteredData.map((row, index) => (
                 <tr
                   key={index}
-                  className={`border-b border-[#E3E5E8] hover:bg-[#F8F9FA] transition-colors ${
+                  className={`border-b border-[var(--color-border)] hover:bg-[#F8F9FA] transition-colors ${
                     index === 0 || filteredData[index - 1].category !== row.category
                       ? "border-t-2 border-t-[#0F172A]"
                       : ""
@@ -203,7 +203,7 @@ export default function ComparisonTable() {
                           {row.category}
                         </p>
                       )}
-                      <p className="text-sm font-medium text-[#0F172A]">{row.criteria}</p>
+                      <p className="text-sm font-medium text-[var(--color-text)]">{row.criteria}</p>
                     </div>
                   </td>
 
@@ -211,7 +211,7 @@ export default function ComparisonTable() {
                   <td className="px-6 py-4">
                     <div className={`inline-flex items-center gap-2 px-3 py-2 rounded-lg border ${getScoreColor(row.moverz.score)}`}>
                       {getScoreIcon(row.moverz.score)}
-                      <span className="text-sm font-medium text-[#0F172A]">{row.moverz.value}</span>
+                      <span className="text-sm font-medium text-[var(--color-text)]">{row.moverz.value}</span>
                     </div>
                   </td>
 
@@ -219,7 +219,7 @@ export default function ComparisonTable() {
                   <td className="px-6 py-4">
                     <div className={`inline-flex items-center gap-2 px-3 py-2 rounded-lg border ${getScoreColor(row.comparateurs.score)}`}>
                       {getScoreIcon(row.comparateurs.score)}
-                      <span className="text-sm font-medium text-[#0F172A]">{row.comparateurs.value}</span>
+                      <span className="text-sm font-medium text-[var(--color-text)]">{row.comparateurs.value}</span>
                     </div>
                   </td>
 
@@ -227,7 +227,7 @@ export default function ComparisonTable() {
                   <td className="px-6 py-4">
                     <div className={`inline-flex items-center gap-2 px-3 py-2 rounded-lg border ${getScoreColor(row.direct.score)}`}>
                       {getScoreIcon(row.direct.score)}
-                      <span className="text-sm font-medium text-[#0F172A]">{row.direct.value}</span>
+                      <span className="text-sm font-medium text-[var(--color-text)]">{row.direct.value}</span>
                     </div>
                   </td>
                 </tr>
@@ -240,15 +240,15 @@ export default function ComparisonTable() {
         <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm">
           <div className="flex items-center gap-2">
             <span className="text-green-600">✓</span>
-            <span className="text-[#1E293B]/70">Excellent</span>
+            <span className="text-[var(--color-text-secondary)]/70">Excellent</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="text-orange-500">○</span>
-            <span className="text-[#1E293B]/70">Correct</span>
+            <span className="text-[var(--color-text-secondary)]/70">Correct</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="text-red-600">✗</span>
-            <span className="text-[#1E293B]/70">Problématique</span>
+            <span className="text-[var(--color-text-secondary)]/70">Problématique</span>
           </div>
         </div>
       </div>

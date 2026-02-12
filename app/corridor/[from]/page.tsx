@@ -75,7 +75,7 @@ export default function CorridorHubFromPage({ params }: PageProps) {
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <a
               href={`/demenagement/${from.slug}/`}
-              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:bg-[#F3F4F6] transition-colors"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:bg-[#F3F4F6] transition-colors"
             >
               <span>Guide déménagement {from.nameCapitalized}</span>
               <span>→</span>
@@ -94,10 +94,10 @@ export default function CorridorHubFromPage({ params }: PageProps) {
       <section className="py-12 md:py-20 bg-gradient-to-br from-[#fdfeff] via-[#f9fdff] to-[#f5fbfc]">
         <div className="container mx-auto max-w-6xl px-4 space-y-8">
           <div className="text-center space-y-2">
-            <h2 className="text-2xl md:text-3xl font-semibold text-[#0F172A]">
+            <h2 className="text-2xl md:text-3xl font-semibold text-[var(--color-text)]">
               Destinations depuis {from.nameCapitalized}
             </h2>
-            <p className="text-sm text-[#6B7280]">
+            <p className="text-sm text-[var(--color-text-secondary)]">
               {destinations.length} destinations (sélection) — cliquez pour voir la page dédiée.
             </p>
           </div>
@@ -107,13 +107,13 @@ export default function CorridorHubFromPage({ params }: PageProps) {
               <a
                 key={to.slug}
                 href={`/${from.slug}-vers-${to.slug}/`}
-                className="group rounded-2xl border border-[#E5E7EB] bg-white p-5 hover:border-brand-turquoise/60 hover:shadow-md transition-all"
+                className="group rounded-2xl border border-[var(--color-border)] bg-white p-5 hover:border-brand-turquoise/60 hover:shadow-md transition-all"
               >
-                <p className="text-sm text-[#6B7280]">Déménagement</p>
-                <h3 className="text-base md:text-lg font-semibold text-[#0F172A] group-hover:text-[#2B7A78] transition-colors">
+                <p className="text-sm text-[var(--color-text-secondary)]">Déménagement</p>
+                <h3 className="text-base md:text-lg font-semibold text-[var(--color-text)] group-hover:text-[#2B7A78] transition-colors">
                   {from.nameCapitalized} → {to.nameCapitalized}
                 </h3>
-                <p className="mt-1 text-sm text-[#4b5c6b]">
+                <p className="mt-1 text-sm text-[var(--color-text-secondary)]">
                   Devis & prix indicatifs · Conseils · Déménageurs contrôlés
                 </p>
               </a>

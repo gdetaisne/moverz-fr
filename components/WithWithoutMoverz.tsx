@@ -49,7 +49,7 @@ export default function WithWithoutMoverz() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#0f766e]">
               Avec Moverz
             </p>
-            <h3 className="text-lg md:text-xl font-semibold text-[#04163a] mb-2">
+            <h3 className="text-lg md:text-xl font-semibold text-[var(--color-text)] mb-2">
               On prépare le terrain pour vous
             </h3>
             <ul className="space-y-2 text-sm md:text-base text-[#0f172a] text-left">

@@ -95,7 +95,7 @@ export default function AProposPage() {
                 <a
                   href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=a-propos-cta"
                   rel="nofollow"
-                  className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-6 py-4 text-sm font-semibold text-[#0F172A] shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.99] transition-all"
+                  className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-6 py-4 text-sm font-semibold text-[var(--color-text)] shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.99] transition-all"
                 >
                   Comparer mes devis{" "}
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
@@ -170,23 +170,23 @@ export default function AProposPage() {
       <section className="section section-light">
         <div className="container max-w-6xl">
           <div className="grid gap-6 lg:grid-cols-3">
-            <div className="rounded-3xl border border-[#E3E5E8] bg-white p-7 md:p-8 shadow-sm">
-              <h2 className="text-2xl font-bold text-[#0F172A]">Notre mission</h2>
-              <p className="mt-3 text-[#1E293B]/70 leading-relaxed">
+            <div className="rounded-3xl border border-[var(--color-border)] bg-white p-7 md:p-8 shadow-sm">
+              <h2 className="text-2xl font-bold text-[var(--color-text)]">Notre mission</h2>
+              <p className="mt-3 text-[var(--color-text-secondary)]/70 leading-relaxed">
                 Transformer un moment stressant en une décision simple: un dossier clair, des devis
                 comparables, et zéro zone grise.
               </p>
             </div>
-            <div className="rounded-3xl border border-[#E3E5E8] bg-white p-7 md:p-8 shadow-sm">
-              <h2 className="text-2xl font-bold text-[#0F172A]">Notre promesse</h2>
-              <p className="mt-3 text-[#1E293B]/70 leading-relaxed">
+            <div className="rounded-3xl border border-[var(--color-border)] bg-white p-7 md:p-8 shadow-sm">
+              <h2 className="text-2xl font-bold text-[var(--color-text)]">Notre promesse</h2>
+              <p className="mt-3 text-[var(--color-text-secondary)]/70 leading-relaxed">
                 Vous aider à choisir un déménageur fiable — pas juste “le moins cher” — sans démarchage
                 ni surprise.
               </p>
             </div>
-            <div className="rounded-3xl border border-[#E3E5E8] bg-white p-7 md:p-8 shadow-sm">
-              <h2 className="text-2xl font-bold text-[#0F172A]">Notre obsession</h2>
-              <p className="mt-3 text-[#1E293B]/70 leading-relaxed">
+            <div className="rounded-3xl border border-[var(--color-border)] bg-white p-7 md:p-8 shadow-sm">
+              <h2 className="text-2xl font-bold text-[var(--color-text)]">Notre obsession</h2>
+              <p className="mt-3 text-[var(--color-text-secondary)]/70 leading-relaxed">
                 Les détails qui font exploser les prix (étages, accès, cave, objets lourds). On les
                 capture avant de comparer.
               </p>
@@ -195,9 +195,9 @@ export default function AProposPage() {
 
           <div className="mt-10 space-y-6">
             {/* Full-width anti-scam block (évite le “trou” de grid) */}
-            <div className="relative overflow-hidden rounded-3xl border border-[#E3E5E8] bg-gradient-to-b from-white to-[#FAFBFC] p-7 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
+            <div className="relative overflow-hidden rounded-3xl border border-[var(--color-border)] bg-gradient-to-b from-white to-[#FAFBFC] p-7 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
               <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-brand-turquoise/70 via-[#0F172A]/20 to-brand-turquoise/70" />
-              <h3 className="text-xl md:text-2xl font-bold text-[#0F172A]">
+              <h3 className="text-xl md:text-2xl font-bold text-[var(--color-text)]">
                 Comment on évite les arnaques (vraiment)
               </h3>
               <div className="mt-6 grid gap-6 lg:grid-cols-3">
@@ -205,8 +205,8 @@ export default function AProposPage() {
                   <span className="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-full bg-brand-turquoise/15 text-[#2B7A78]">
                     <BadgeCheck className="h-4 w-4" />
                   </span>
-                  <div className="text-[#1E293B]/75">
-                    <p className="font-semibold text-[#0F172A]">Contrôles</p>
+                  <div className="text-[var(--color-text-secondary)]/75">
+                    <p className="font-semibold text-[var(--color-text)]">Contrôles</p>
                     <p className="text-sm">Pro, solvabilité, signaux faibles — avant de vous faire choisir.</p>
                   </div>
                 </div>
@@ -214,8 +214,8 @@ export default function AProposPage() {
                   <span className="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-full bg-brand-turquoise/15 text-[#2B7A78]">
                     <Camera className="h-4 w-4" />
                   </span>
-                  <div className="text-[#1E293B]/75">
-                    <p className="font-semibold text-[#0F172A]">Dossier clair</p>
+                  <div className="text-[var(--color-text-secondary)]/75">
+                    <p className="font-semibold text-[var(--color-text)]">Dossier clair</p>
                     <p className="text-sm">Pour limiter les “ajustements” de dernière minute.</p>
                   </div>
                 </div>
@@ -223,8 +223,8 @@ export default function AProposPage() {
                   <span className="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-full bg-brand-turquoise/15 text-[#2B7A78]">
                     <Scale className="h-4 w-4" />
                   </span>
-                  <div className="text-[#1E293B]/75">
-                    <p className="font-semibold text-[#0F172A]">Comparaison propre</p>
+                  <div className="text-[var(--color-text-secondary)]/75">
+                    <p className="font-semibold text-[var(--color-text)]">Comparaison propre</p>
                     <p className="text-sm">Même cahier des charges, mêmes options.</p>
                   </div>
                 </div>
@@ -232,7 +232,7 @@ export default function AProposPage() {
               <div className="mt-7">
                 <a
                   href="/verifications-partenaires/"
-                  className="inline-flex items-center gap-2 rounded-full border border-[#0F172A]/15 bg-white px-5 py-2.5 text-sm font-semibold text-[#0F172A] hover:bg-gray-50 transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full border border-[#0F172A]/15 bg-white px-5 py-2.5 text-sm font-semibold text-[var(--color-text)] hover:bg-gray-50 transition-colors"
                 >
                   Voir nos vérifications <span aria-hidden="true">→</span>
                 </a>
@@ -240,13 +240,13 @@ export default function AProposPage() {
             </div>
 
             {/* Team block */}
-            <div className="rounded-3xl border border-[#E3E5E8] bg-white p-7 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
+            <div className="rounded-3xl border border-[var(--color-border)] bg-white p-7 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
               <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-[#0F172A]">
+                  <h3 className="text-xl md:text-2xl font-bold text-[var(--color-text)]">
                     Qui est derrière Moverz ?
                   </h3>
-                  <p className="mt-1 text-sm text-[#1E293B]/70">
+                  <p className="mt-1 text-sm text-[var(--color-text-secondary)]/70">
                     Deux humains, zéro blabla, beaucoup de check-lists.
                   </p>
                 </div>
@@ -254,9 +254,9 @@ export default function AProposPage() {
 
               <div className="mt-6 grid gap-4 lg:grid-cols-2">
                 {/* Lucie */}
-                <div className="rounded-2xl border border-[#E3E5E8] bg-[#FAFBFC] p-6">
+                <div className="rounded-2xl border border-[var(--color-border)] bg-[#FAFBFC] p-6">
                   <div className="flex items-start gap-4">
-                    <div className="relative h-14 w-14 overflow-hidden rounded-2xl border border-[#E3E5E8] bg-white">
+                    <div className="relative h-14 w-14 overflow-hidden rounded-2xl border border-[var(--color-border)] bg-white">
                       <Image
                         src="/lucie-profile.jpg"
                         alt="Lucie, cofondateur Moverz"
@@ -267,28 +267,28 @@ export default function AProposPage() {
                     </div>
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center justify-between gap-3">
-                        <p className="text-sm font-semibold text-[#0F172A]">
-                          Lucie <span className="text-[#6B7280] font-medium">· Cofondateur</span>
+                        <p className="text-sm font-semibold text-[var(--color-text)]">
+                          Lucie <span className="text-[var(--color-text-secondary)] font-medium">· Cofondateur</span>
                         </p>
                         <a
                           href="https://www.linkedin.com/in/lucieveltz/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 rounded-full border border-[#0F172A]/10 bg-white px-3 py-1.5 text-xs font-semibold text-[#0F172A] hover:bg-gray-50 transition-colors"
+                          className="inline-flex items-center gap-1 rounded-full border border-[#0F172A]/10 bg-white px-3 py-1.5 text-xs font-semibold text-[var(--color-text)] hover:bg-gray-50 transition-colors"
                           aria-label="LinkedIn de Lucie"
                         >
                           <Linkedin className="h-3.5 w-3.5" />
                           LinkedIn
                         </a>
                       </div>
-                      <p className="mt-2 text-sm text-[#1E293B]/70">
+                      <p className="mt-2 text-sm text-[var(--color-text-secondary)]/70">
                         Obsédée par le “dossier clair” (pour que le prix du devis soit le prix final).
                       </p>
                     </div>
                   </div>
-                  <div className="mt-4 rounded-xl border border-brand-turquoise/25 bg-white p-4 text-sm text-[#0F172A]">
+                  <div className="mt-4 rounded-xl border border-brand-turquoise/25 bg-white p-4 text-sm text-[var(--color-text)]">
                     <p className="font-semibold">Fun fact</p>
-                    <p className="mt-1 text-[#0F172A]/75">
+                    <p className="mt-1 text-[var(--color-text)]/75">
                       Lucie et ses déménagements “intempestifs” : elle a un talent rare pour trouver un
                       appart… puis décider de partir 3 mois après. Résultat: la check-list cartons est devenue
                       une seconde langue.
@@ -297,9 +297,9 @@ export default function AProposPage() {
                 </div>
 
                 {/* Guillaume */}
-                <div className="rounded-2xl border border-[#E3E5E8] bg-[#FAFBFC] p-6">
+                <div className="rounded-2xl border border-[var(--color-border)] bg-[#FAFBFC] p-6">
                   <div className="flex items-start gap-4">
-                    <div className="relative h-14 w-14 overflow-hidden rounded-2xl border border-[#E3E5E8] bg-white">
+                    <div className="relative h-14 w-14 overflow-hidden rounded-2xl border border-[var(--color-border)] bg-white">
                       <Image
                         src="/guillaume-profile.jpg"
                         alt="Guillaume, cofondateur Moverz"
@@ -310,31 +310,31 @@ export default function AProposPage() {
                     </div>
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center justify-between gap-3">
-                        <p className="text-sm font-semibold text-[#0F172A]">
+                        <p className="text-sm font-semibold text-[var(--color-text)]">
                           Guillaume{" "}
-                          <span className="text-[#6B7280] font-medium">· Cofondateur</span>
+                          <span className="text-[var(--color-text-secondary)] font-medium">· Cofondateur</span>
                         </p>
                         <a
                           href="https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 rounded-full border border-[#0F172A]/10 bg-white px-3 py-1.5 text-xs font-semibold text-[#0F172A] hover:bg-gray-50 transition-colors"
+                          className="inline-flex items-center gap-1 rounded-full border border-[#0F172A]/10 bg-white px-3 py-1.5 text-xs font-semibold text-[var(--color-text)] hover:bg-gray-50 transition-colors"
                           aria-label="LinkedIn de Guillaume"
                         >
                           <Linkedin className="h-3.5 w-3.5" />
                           LinkedIn
                         </a>
                       </div>
-                      <p className="mt-2 text-sm text-[#1E293B]/70">
+                      <p className="mt-2 text-sm text-[var(--color-text-secondary)]/70">
                         Fan de process simples et de décisions nettes: “on compare proprement, point”.
                       </p>
                     </div>
                   </div>
-                  <div className="mt-4 rounded-xl border border-brand-turquoise/25 bg-white p-4 text-sm text-[#0F172A]">
+                  <div className="mt-4 rounded-xl border border-brand-turquoise/25 bg-white p-4 text-sm text-[var(--color-text)]">
                     <p className="font-semibold inline-flex items-center gap-2">
                       Fun fact <Cat className="h-4 w-4 text-[#2B7A78]" />
                     </p>
-                    <p className="mt-1 text-[#0F172A]/75">
+                    <p className="mt-1 text-[var(--color-text)]/75">
                       Guillaume ne déménage <strong>jamais</strong> sans ses chats. Le camion peut être en retard,
                       les cartons pas finis… mais les chats, eux, ont toujours leur “kit premium” (coussin + croquettes + plan d’évacuation).
                     </p>
@@ -345,13 +345,13 @@ export default function AProposPage() {
               <div className="mt-7 flex flex-col sm:flex-row gap-3">
                 <a
                   href="/contact/"
-                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[var(--color-bg-dark)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--color-bg-dark)] transition-colors"
                 >
                   Nous écrire <span aria-hidden="true">→</span>
                 </a>
                 <a
                   href="/partenaires/"
-                  className="inline-flex items-center justify-center gap-2 rounded-2xl border border-[#0F172A]/15 bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:bg-gray-50 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl border border-[#0F172A]/15 bg-white px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:bg-gray-50 transition-colors"
                 >
                   Devenir partenaire <span aria-hidden="true">→</span>
                 </a>
@@ -359,33 +359,33 @@ export default function AProposPage() {
             </div>
           </div>
 
-          <div className="mt-10 rounded-3xl border border-[#E3E5E8] bg-white p-7 md:p-10">
-            <h3 className="text-xl md:text-2xl font-bold text-[#0F172A]">Notre histoire (version courte)</h3>
+          <div className="mt-10 rounded-3xl border border-[var(--color-border)] bg-white p-7 md:p-10">
+            <h3 className="text-xl md:text-2xl font-bold text-[var(--color-text)]">Notre histoire (version courte)</h3>
             <div className="mt-6 grid gap-4 md:grid-cols-3">
-              <div className="rounded-2xl border border-[#E3E5E8] bg-[#FAFBFC] p-6">
-                <p className="text-xs font-semibold text-[#6B7280] uppercase tracking-wider">Constat</p>
-                <p className="mt-2 font-semibold text-[#0F172A]">Devis incomparables</p>
-                <p className="mt-2 text-sm text-[#1E293B]/70">
+              <div className="rounded-2xl border border-[var(--color-border)] bg-[#FAFBFC] p-6">
+                <p className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-wider">Constat</p>
+                <p className="mt-2 font-semibold text-[var(--color-text)]">Devis incomparables</p>
+                <p className="mt-2 text-sm text-[var(--color-text-secondary)]/70">
                   Trop de “détails” oubliés, et des surprises qui tombent à la fin.
                 </p>
               </div>
-              <div className="rounded-2xl border border-[#E3E5E8] bg-[#FAFBFC] p-6">
-                <p className="text-xs font-semibold text-[#6B7280] uppercase tracking-wider">Solution</p>
-                <p className="mt-2 font-semibold text-[#0F172A]">Dossier standardisé</p>
-                <p className="mt-2 text-sm text-[#1E293B]/70">
+              <div className="rounded-2xl border border-[var(--color-border)] bg-[#FAFBFC] p-6">
+                <p className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-wider">Solution</p>
+                <p className="mt-2 font-semibold text-[var(--color-text)]">Dossier standardisé</p>
+                <p className="mt-2 text-sm text-[var(--color-text-secondary)]/70">
                   Infos + contraintes + règles de comparaison : on compare “à cahier des charges égal”.
                 </p>
               </div>
-              <div className="rounded-2xl border border-[#E3E5E8] bg-[#FAFBFC] p-6">
-                <p className="text-xs font-semibold text-[#6B7280] uppercase tracking-wider">Aujourd’hui</p>
-                <p className="mt-2 font-semibold text-[#0F172A]">Anti-arnaque + Pro</p>
-                <p className="mt-2 text-sm text-[#1E293B]/70">
+              <div className="rounded-2xl border border-[var(--color-border)] bg-[#FAFBFC] p-6">
+                <p className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-wider">Aujourd’hui</p>
+                <p className="mt-2 font-semibold text-[var(--color-text)]">Anti-arnaque + Pro</p>
+                <p className="mt-2 text-sm text-[var(--color-text-secondary)]/70">
                   On aide les particuliers à choisir mieux, et les pros à chiffrer plus vite.
                 </p>
               </div>
             </div>
-            <div className="mt-6 text-xs text-[#6B7280]">
-              Société: <span className="text-[#0F172A] font-medium">GSLV EURL</span> · 5 Rue Jean Coyttar · 17290 Thairé (FR)
+            <div className="mt-6 text-xs text-[var(--color-text-secondary)]">
+              Société: <span className="text-[var(--color-text)] font-medium">GSLV EURL</span> · 5 Rue Jean Coyttar · 17290 Thairé (FR)
             </div>
           </div>
         </div>

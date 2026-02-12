@@ -160,7 +160,7 @@ export default function BlogIndexClient() {
                   />
                   <button
                     type="submit"
-                    className="shrink-0 rounded-xl bg-brand-turquoise px-5 py-3 text-sm font-semibold text-[#0F172A] hover:bg-[#5AB9B9] transition-colors"
+                    className="shrink-0 rounded-xl bg-brand-turquoise px-5 py-3 text-sm font-semibold text-[var(--color-text)] hover:bg-[#5AB9B9] transition-colors"
                   >
                     OK
                   </button>
@@ -175,7 +175,7 @@ export default function BlogIndexClient() {
                   <>
                     <a
                       href="/partenaires/#contact"
-                      className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise px-6 py-3 text-base font-semibold text-[#0F172A] hover:scale-105 transition-transform duration-300"
+                      className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise px-6 py-3 text-base font-semibold text-[var(--color-text)] hover:scale-105 transition-transform duration-300"
                     >
                       <span>Demander une démo</span>
                       <ArrowRight className="w-4 h-4" />
@@ -191,7 +191,7 @@ export default function BlogIndexClient() {
                   <>
                     <a
                       href="#articles"
-                      className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise px-6 py-3 text-base font-semibold text-[#0F172A] hover:scale-105 transition-transform duration-300"
+                      className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise px-6 py-3 text-base font-semibold text-[var(--color-text)] hover:scale-105 transition-transform duration-300"
                     >
                       <span>Explorer les articles</span>
                       <ArrowRight className="w-4 h-4" />
@@ -247,10 +247,10 @@ export default function BlogIndexClient() {
               <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise animate-pulse" />
               À lire en priorité
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A]">
+            <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text)]">
               Nos meilleurs guides
             </h2>
-            <p className="text-lg text-[#6B7280] max-w-2xl mx-auto">
+            <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl mx-auto">
               Les articles les plus complets pour réussir votre déménagement
             </p>
           </div>
@@ -262,7 +262,7 @@ export default function BlogIndexClient() {
                   href={`/blog/${post.slug}/`}
                   className="group block h-full"
                 >
-                  <article className="h-full rounded-2xl border-2 border-gray-200 bg-white p-8 hover:border-brand-turquoise hover:shadow-2xl transition-all duration-300">
+                  <article className="h-full rounded-2xl border-2 border-[var(--color-border)] bg-white p-8 hover:border-brand-turquoise hover:shadow-2xl transition-all duration-300">
                     {/* Category badge */}
                     {post.category && (
                       <span className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-3 py-1.5 text-xs font-bold text-brand-turquoise mb-4">
@@ -272,17 +272,17 @@ export default function BlogIndexClient() {
                     )}
 
                     {/* Title */}
-                    <h3 className="text-xl font-bold text-[#0F172A] group-hover:text-brand-turquoise transition-colors line-clamp-2 mb-4">
+                    <h3 className="text-xl font-bold text-[var(--color-text)] group-hover:text-brand-turquoise transition-colors line-clamp-2 mb-4">
                       {post.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-sm text-[#6B7280] line-clamp-3 mb-6 leading-relaxed">
+                    <p className="text-sm text-[var(--color-text-secondary)] line-clamp-3 mb-6 leading-relaxed">
                       {post.description}
                     </p>
 
                     {/* Meta */}
-                    <div className="flex items-center gap-4 text-xs text-[#6B7280] pt-4 border-t border-gray-200">
+                    <div className="flex items-center gap-4 text-xs text-[var(--color-text-secondary)] pt-4 border-t border-[var(--color-border)]">
                       {post.readingTimeMinutes && (
                         <div className="flex items-center gap-1">
                           <Clock className="w-3.5 h-3.5" />
@@ -303,14 +303,14 @@ export default function BlogIndexClient() {
       </section>
 
       {/* All Articles with Filters */}
-      <section id="articles" className="py-20 md:py-32 bg-white border-t border-gray-200">
+      <section id="articles" className="py-20 md:py-32 bg-white border-t border-[var(--color-border)]">
         <div className="container mx-auto max-w-6xl px-4">
           {/* Section header */}
           <div className="mb-12 text-center space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)]">
               Tous les articles
             </h2>
-            <p className="text-lg text-[#6B7280]">
+            <p className="text-lg text-[var(--color-text-secondary)]">
               Explorez notre bibliothèque de guides et conseils
             </p>
           </div>
@@ -318,8 +318,8 @@ export default function BlogIndexClient() {
           {/* Filters */}
           <div className="mb-12">
             <div className="flex items-center justify-center gap-2 mb-6">
-              <Filter className="w-4 h-4 text-[#6B7280]" />
-              <p className="text-sm font-medium text-[#6B7280]">Filtrer par catégorie</p>
+              <Filter className="w-4 h-4 text-[var(--color-text-secondary)]" />
+              <p className="text-sm font-medium text-[var(--color-text-secondary)]">Filtrer par catégorie</p>
             </div>
             <div className="flex flex-wrap justify-center gap-3">
               {CATEGORIES.map((cat) => (
@@ -327,12 +327,12 @@ export default function BlogIndexClient() {
                   <Link
                     key={cat.slug}
                     href="/blog/cas-frequents/"
-                    className="group inline-flex items-center gap-2 rounded-full bg-gray-100 px-5 py-2.5 text-sm font-semibold text-[#6B7280] hover:bg-gray-200 hover:scale-102 transition-all"
+                    className="group inline-flex items-center gap-2 rounded-full bg-gray-100 px-5 py-2.5 text-sm font-semibold text-[var(--color-text-secondary)] hover:bg-gray-200 hover:scale-102 transition-all"
                   >
                     <span>{cat.icon}</span>
                     <span>{cat.label}</span>
-                    <span className="text-xs text-[#6B7280]">({getCategoryCount(cat.slug)})</span>
-                    <span className="text-xs text-brand-turquoise group-hover:text-[#0F172A] transition-colors">→</span>
+                    <span className="text-xs text-[var(--color-text-secondary)]">({getCategoryCount(cat.slug)})</span>
+                    <span className="text-xs text-brand-turquoise group-hover:text-[var(--color-text)] transition-colors">→</span>
                   </Link>
                 ) : (
                   <button
@@ -340,15 +340,15 @@ export default function BlogIndexClient() {
                     onClick={() => handleCategoryChange(cat.slug)}
                     className={`group inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all ${
                       activeCategory === cat.slug
-                        ? "bg-[#0F172A] text-white shadow-lg scale-105"
-                        : "bg-gray-100 text-[#6B7280] hover:bg-gray-200 hover:scale-102"
+                        ? "bg-[var(--color-bg-dark)] text-white shadow-lg scale-105"
+                        : "bg-gray-100 text-[var(--color-text-secondary)] hover:bg-gray-200 hover:scale-102"
                     }`}
                   >
                     <span>{cat.icon}</span>
                     <span>{cat.label}</span>
                     <span
                       className={`text-xs ${
-                        activeCategory === cat.slug ? "text-white/70" : "text-[#6B7280]"
+                        activeCategory === cat.slug ? "text-white/70" : "text-[var(--color-text-secondary)]"
                       }`}
                     >
                       ({getCategoryCount(cat.slug)})
@@ -363,14 +363,14 @@ export default function BlogIndexClient() {
           {(activeCategory === "pro" || activeTag) && availableTags.length > 0 && (
             <div className="mb-10">
               <div className="flex items-center justify-center gap-2 mb-4">
-                <Filter className="w-4 h-4 text-[#6B7280]" />
-                <p className="text-sm font-medium text-[#6B7280]">Filtrer par tag</p>
+                <Filter className="w-4 h-4 text-[var(--color-text-secondary)]" />
+                <p className="text-sm font-medium text-[var(--color-text-secondary)]">Filtrer par tag</p>
               </div>
               <div className="flex flex-wrap justify-center gap-2">
                 <button
                   onClick={() => handleTagChange(null)}
                   className={`rounded-full px-4 py-2 text-xs font-semibold transition-all ${
-                    !activeTag ? "bg-[#0F172A] text-white" : "bg-gray-100 text-[#6B7280] hover:bg-gray-200"
+                    !activeTag ? "bg-[var(--color-bg-dark)] text-white" : "bg-gray-100 text-[var(--color-text-secondary)] hover:bg-gray-200"
                   }`}
                 >
                   Tous
@@ -381,8 +381,8 @@ export default function BlogIndexClient() {
                     onClick={() => handleTagChange(tag)}
                     className={`rounded-full px-4 py-2 text-xs font-semibold transition-all ${
                       activeTag === tag
-                        ? "bg-[#0F172A] text-white"
-                        : "bg-gray-100 text-[#6B7280] hover:bg-gray-200"
+                        ? "bg-[var(--color-bg-dark)] text-white"
+                        : "bg-gray-100 text-[var(--color-text-secondary)] hover:bg-gray-200"
                     }`}
                   >
                     {tag}
@@ -394,8 +394,8 @@ export default function BlogIndexClient() {
 
           {/* Results count */}
           <div className="mb-8 text-center">
-            <p className="text-sm font-medium text-[#6B7280]">
-              <span className="text-[#0F172A] font-bold">{filteredPosts.length}</span> article{filteredPosts.length > 1 ? "s" : ""} trouvé{filteredPosts.length > 1 ? "s" : ""}
+            <p className="text-sm font-medium text-[var(--color-text-secondary)]">
+              <span className="text-[var(--color-text)] font-bold">{filteredPosts.length}</span> article{filteredPosts.length > 1 ? "s" : ""} trouvé{filteredPosts.length > 1 ? "s" : ""}
             </p>
           </div>
 
@@ -408,7 +408,7 @@ export default function BlogIndexClient() {
                     href={`/blog/${post.slug}/`}
                     className="group block h-full"
                   >
-                    <article className="h-full rounded-xl border border-gray-200 bg-white p-6 hover:border-brand-turquoise hover:shadow-lg transition-all duration-300">
+                    <article className="h-full rounded-xl border border-[var(--color-border)] bg-white p-6 hover:border-brand-turquoise hover:shadow-lg transition-all duration-300">
                       {/* Meta tags */}
                       <div className="flex flex-wrap items-center gap-2 mb-3">
                         {post.category && (
@@ -417,20 +417,20 @@ export default function BlogIndexClient() {
                           </span>
                         )}
                         {post.citySlug && (
-                          <span className="text-xs text-[#6B7280] bg-gray-100 rounded-full px-2 py-0.5">
+                          <span className="text-xs text-[var(--color-text-secondary)] bg-gray-100 rounded-full px-2 py-0.5">
                             {post.citySlug}
                           </span>
                         )}
                       </div>
 
                       {/* Title */}
-                      <h3 className="text-base font-bold text-[#0F172A] group-hover:text-brand-turquoise transition-colors line-clamp-2 mb-3">
+                      <h3 className="text-base font-bold text-[var(--color-text)] group-hover:text-brand-turquoise transition-colors line-clamp-2 mb-3">
                         {post.title}
                       </h3>
 
                       {/* Description */}
                       {post.description && (
-                        <p className="text-sm text-[#6B7280] line-clamp-2 mb-4">
+                        <p className="text-sm text-[var(--color-text-secondary)] line-clamp-2 mb-4">
                           {post.description}
                         </p>
                       )}
@@ -438,7 +438,7 @@ export default function BlogIndexClient() {
                       {/* Footer */}
                       <div className="flex items-center justify-between pt-3 border-t border-gray-100">
                         {post.readingTimeMinutes && (
-                          <div className="flex items-center gap-1 text-xs text-[#6B7280]">
+                          <div className="flex items-center gap-1 text-xs text-[var(--color-text-secondary)]">
                             <Clock className="w-3 h-3" />
                             <span>{post.readingTimeMinutes} min</span>
                           </div>
@@ -454,7 +454,7 @@ export default function BlogIndexClient() {
             </div>
           ) : (
             <div className="text-center py-16">
-              <p className="text-[#6B7280] text-lg">Aucun article dans cette catégorie.</p>
+              <p className="text-[var(--color-text-secondary)] text-lg">Aucun article dans cette catégorie.</p>
             </div>
           )}
 
@@ -464,7 +464,7 @@ export default function BlogIndexClient() {
               <button
                 onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
                 disabled={currentPage === 1}
-                className="rounded-lg px-4 py-2 text-sm font-semibold text-[#6B7280] hover:bg-gray-100 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                className="rounded-lg px-4 py-2 text-sm font-semibold text-[var(--color-text-secondary)] hover:bg-gray-100 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
               >
                 ← Précédent
               </button>
@@ -488,8 +488,8 @@ export default function BlogIndexClient() {
                       onClick={() => setCurrentPage(pageNum)}
                       className={`h-10 w-10 rounded-lg text-sm font-bold transition-all ${
                         currentPage === pageNum
-                          ? "bg-[#0F172A] text-white shadow-md scale-110"
-                          : "text-[#6B7280] hover:bg-gray-100"
+                          ? "bg-[var(--color-bg-dark)] text-white shadow-md scale-110"
+                          : "text-[var(--color-text-secondary)] hover:bg-gray-100"
                       }`}
                     >
                       {pageNum}
@@ -501,7 +501,7 @@ export default function BlogIndexClient() {
               <button
                 onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
                 disabled={currentPage === totalPages}
-                className="rounded-lg px-4 py-2 text-sm font-semibold text-[#6B7280] hover:bg-gray-100 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                className="rounded-lg px-4 py-2 text-sm font-semibold text-[var(--color-text-secondary)] hover:bg-gray-100 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
               >
                 Suivant →
               </button>

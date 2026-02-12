@@ -17,8 +17,8 @@ export default function FallbackQuoteForm() {
         <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-brand-turquoise text-white text-2xl font-bold">
           ✓
         </div>
-        <h3 className="text-xl font-bold text-[#04163a] mb-2">Demande de devis envoyée</h3>
-        <p className="text-[#4b5c6b]">
+        <h3 className="text-xl font-bold text-[var(--color-text)] mb-2">Demande de devis envoyée</h3>
+        <p className="text-[var(--color-text-secondary)]">
           Nous avons bien reçu votre demande. Un membre de l&apos;équipe Moverz vous répondra rapidement
           avec les prochaines étapes.
         </p>
@@ -30,7 +30,7 @@ export default function FallbackQuoteForm() {
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid gap-6 md:grid-cols-2">
         <div>
-          <label htmlFor="name" className="block text-sm font-semibold text-[#04163a] mb-2">
+          <label htmlFor="name" className="block text-sm font-semibold text-[var(--color-text)] mb-2">
             Nom et prénom
           </label>
           <input
@@ -38,12 +38,12 @@ export default function FallbackQuoteForm() {
             id="name"
             name="name"
             required
-            className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-[#04163a] focus:border-brand-turquoise/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all"
+            className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-brand-turquoise/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all"
             placeholder="Votre nom"
           />
         </div>
         <div>
-          <label htmlFor="email" className="block text-sm font-semibold text-[#04163a] mb-2">
+          <label htmlFor="email" className="block text-sm font-semibold text-[var(--color-text)] mb-2">
             Email
           </label>
           <input
@@ -51,7 +51,7 @@ export default function FallbackQuoteForm() {
             id="email"
             name="email"
             required
-            className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-[#04163a] focus:border-brand-turquoise/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all"
+            className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-brand-turquoise/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all"
             placeholder="votre@email.com"
           />
         </div>
@@ -59,7 +59,7 @@ export default function FallbackQuoteForm() {
 
       <div className="grid gap-6 md:grid-cols-2">
         <div>
-          <label htmlFor="city" className="block text-sm font-semibold text-[#04163a] mb-2">
+          <label htmlFor="city" className="block text-sm font-semibold text-[var(--color-text)] mb-2">
             Ville de départ / d&apos;arrivée
           </label>
           <input
@@ -67,12 +67,12 @@ export default function FallbackQuoteForm() {
             id="city"
             name="city"
             required
-            className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-[#04163a] focus:border-brand-turquoise/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all"
+            className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-brand-turquoise/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all"
             placeholder="Ex : Paris 11e → Lyon 3e"
           />
         </div>
         <div>
-          <label htmlFor="date" className="block text-sm font-semibold text-[#04163a] mb-2">
+          <label htmlFor="date" className="block text-sm font-semibold text-[var(--color-text)] mb-2">
             Date souhaitée (approx.)
           </label>
           <input
@@ -80,7 +80,7 @@ export default function FallbackQuoteForm() {
             id="date"
             name="date"
             required
-            className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-[#04163a] focus:border-brand-turquoise/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all"
+            className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-brand-turquoise/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all"
             placeholder="Ex : semaine du 15 juin"
           />
         </div>
@@ -88,14 +88,14 @@ export default function FallbackQuoteForm() {
 
       <div className="grid gap-6 md:grid-cols-2">
         <div>
-          <label htmlFor="housing" className="block text-sm font-semibold text-[#04163a] mb-2">
+          <label htmlFor="housing" className="block text-sm font-semibold text-[var(--color-text)] mb-2">
             Type de logement
           </label>
           <select
             id="housing"
             name="housing"
             required
-            className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-[#04163a] focus:border-brand-turquoise/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all"
+            className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-brand-turquoise/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all"
           >
             <option value="">Sélectionnez une option</option>
             <option value="studio">Studio / T1</option>
@@ -107,28 +107,28 @@ export default function FallbackQuoteForm() {
           </select>
         </div>
         <div>
-          <label htmlFor="phone" className="block text-sm font-semibold text-[#04163a] mb-2">
+          <label htmlFor="phone" className="block text-sm font-semibold text-[var(--color-text)] mb-2">
             Téléphone (optionnel)
           </label>
           <input
             type="tel"
             id="phone"
             name="phone"
-            className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-[#04163a] focus:border-brand-turquoise/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all"
+            className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-brand-turquoise/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all"
             placeholder="Pour vous rappeler si besoin"
           />
         </div>
       </div>
 
       <div>
-        <label htmlFor="details" className="block text-sm font-semibold text-[#04163a] mb-2">
+        <label htmlFor="details" className="block text-sm font-semibold text-[var(--color-text)] mb-2">
           Détails importants
         </label>
         <textarea
           id="details"
           name="details"
           rows={5}
-          className="w-full rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 text-[#04163a] focus:border-brand-turquoise/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all resize-none"
+          className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-brand-turquoise/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all resize-none"
           placeholder="Etages, ascenseur, stationnement, volume approximatif..."
         />
       </div>

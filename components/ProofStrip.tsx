@@ -108,7 +108,7 @@ export default function ProofStrip() {
   return (
     <div 
       ref={sectionRef}
-      className="relative overflow-hidden space-y-10 rounded-3xl bg-gradient-to-br from-white via-[#F8F9FA] to-[#F0F4F8] p-8 md:p-12 lg:p-16 text-[#04163a] shadow-[0_32px_90px_rgba(0,0,0,0.08)] border border-[#E3E5E8]"
+      className="relative overflow-hidden space-y-10 rounded-3xl bg-gradient-to-br from-white via-[#F8F9FA] to-[#F0F4F8] p-8 md:p-12 lg:p-16 text-[var(--color-text)] shadow-[0_32px_90px_rgba(0,0,0,0.08)] border border-[var(--color-border)]"
     >
       {/* Halos lumineux subtils (version claire) */}
       <div 
@@ -125,10 +125,10 @@ export default function ProofStrip() {
         <p className="text-xs font-bold uppercase tracking-[0.3em] text-brand-turquoise">
           Pourquoi Moverz
         </p>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#04163a] leading-tight">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-text)] leading-tight">
           Pourquoi des milliers de déménagements passent par Moverz
         </h2>
-        <p className="text-base md:text-lg text-[#4b5c6b] leading-relaxed max-w-2xl mx-auto font-light">
+        <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed max-w-2xl mx-auto font-light">
           Quelques chiffres issus de dossiers réellement comparés en France.
         </p>
       </div>
@@ -154,7 +154,7 @@ export default function ProofStrip() {
               className={`group relative rounded-3xl border p-6 md:p-8 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.12)] motion-safe:animate-fade-up-soft ${
                 stat.highlight 
                   ? 'border-brand-turquoise/40 bg-brand-turquoise/5 hover:border-brand-turquoise/60 hover:shadow-[0_20px_60px_rgba(107,207,207,0.25)]' 
-                  : 'border-[#E3E5E8] bg-white hover:border-brand-turquoise/30'
+                  : 'border-[var(--color-border)] bg-white hover:border-brand-turquoise/30'
               }`}
               style={{ animationDelay: `${index * 80}ms` }}
             >
@@ -166,28 +166,28 @@ export default function ProofStrip() {
                 <div className={`flex h-12 w-12 items-center justify-center rounded-2xl border-2 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 ${
                   stat.highlight
                     ? 'bg-brand-turquoise/20 border-brand-turquoise/40 text-brand-turquoise group-hover:shadow-[0_0_20px_rgba(107,207,207,0.4)]'
-                    : 'bg-[#F8F9FA] border-[#E3E5E8] text-[#4b5c6b] group-hover:border-brand-turquoise/40'
+                    : 'bg-[#F8F9FA] border-[var(--color-border)] text-[var(--color-text-secondary)] group-hover:border-brand-turquoise/40'
                 }`}>
                   {stat.icon}
       </div>
 
                 <div className="space-y-2">
-                  <div className="text-xs md:text-sm font-bold uppercase tracking-[0.18em] text-[#4b5c6b]">
+                  <div className="text-xs md:text-sm font-bold uppercase tracking-[0.18em] text-[var(--color-text-secondary)]">
               {stat.label}
             </div>
                   <div className="flex items-baseline gap-1">
                     <span className={`text-4xl md:text-5xl font-bold leading-none transition-all duration-300 ${
                       stat.highlight 
                         ? 'text-brand-turquoise'
-                        : 'text-[#04163a] group-hover:text-brand-turquoise'
+                        : 'text-[var(--color-text)] group-hover:text-brand-turquoise'
                     }`}>
                       {displayValue}
                     </span>
-                    <span className="text-xl md:text-2xl font-bold text-[#4b5c6b] leading-none">
+                    <span className="text-xl md:text-2xl font-bold text-[var(--color-text-secondary)] leading-none">
                       {stat.suffix}
                     </span>
                   </div>
-                  <p className="text-sm text-[#4b5c6b] leading-relaxed">{stat.caption}</p>
+                  <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{stat.caption}</p>
                 </div>
               </div>
             </div>
@@ -197,11 +197,11 @@ export default function ProofStrip() {
       
       {/* Pills réassurance en bas */}
       <div className="relative flex flex-wrap items-center justify-center gap-3 pt-4">
-        <span className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-4 py-2.5 text-xs md:text-sm font-semibold text-[#04163a] shadow-sm hover:border-brand-turquoise/40 hover:bg-[#F8F9FA] transition-all duration-300">
+        <span className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-white px-4 py-2.5 text-xs md:text-sm font-semibold text-[var(--color-text)] shadow-sm hover:border-brand-turquoise/40 hover:bg-[#F8F9FA] transition-all duration-300">
           <span className="h-2 w-2 rounded-full bg-brand-turquoise animate-pulse" />
           Déménageurs contrôlés
         </span>
-        <span className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-4 py-2.5 text-xs md:text-sm font-semibold text-[#04163a] shadow-sm hover:border-brand-turquoise/40 hover:bg-[#F8F9FA] transition-all duration-300">
+        <span className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-white px-4 py-2.5 text-xs md:text-sm font-semibold text-[var(--color-text)] shadow-sm hover:border-brand-turquoise/40 hover:bg-[#F8F9FA] transition-all duration-300">
           <span className="h-2 w-2 rounded-full bg-brand-turquoise animate-pulse" />
           Dossier anonyme
         </span>

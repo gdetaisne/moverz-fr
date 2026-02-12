@@ -1,6 +1,6 @@
 export default function VisualProof() {
   return (
-    <section className="relative py-20 md:py-32 bg-[#0F172A] text-white">
+    <section className="relative py-20 md:py-32 bg-[var(--color-bg-dark)] text-white">
       <div className="container max-w-4xl">
         {/* Header minimal */}
         <div className="text-center mb-16 space-y-4">

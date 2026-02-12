@@ -56,7 +56,7 @@ export default function HeroMockup() {
             {/* Message from Moverz */}
             <div className="flex justify-start animate-[slideInLeft_0.5s_ease-out]">
               <div className="bg-white rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[85%] shadow-sm hover:shadow-md transition-shadow duration-200">
-                <p className="text-[#1F2937] text-sm leading-relaxed">
+                <p className="text-[var(--color-text)] text-sm leading-relaxed">
                   Bonjour ! Donnez-moi <strong>4 infos</strong> (départ, arrivée, date, type de logement) et je lance la comparaison.
                 </p>
                 <p className="text-[#667085] text-xs mt-1">10:24</p>
@@ -66,7 +66,7 @@ export default function HeroMockup() {
             {/* User message */}
             <div className="flex justify-end animate-[slideInRight_0.5s_ease-out_0.2s_both]">
               <div className="bg-[#DCF8C6] rounded-2xl rounded-tr-sm px-4 py-2.5 max-w-[85%] shadow-sm hover:shadow-md transition-shadow duration-200">
-                <p className="text-[#1F2937] text-sm leading-relaxed">
+                <p className="text-[var(--color-text)] text-sm leading-relaxed">
                   Départ : Paris • Arrivée : Lyon • Date : 15/03 • T2 (2e, sans ascenseur)
                 </p>
                 <p className="text-[#667085] text-xs mt-1 text-right">10:26</p>
@@ -90,7 +90,7 @@ export default function HeroMockup() {
             {!showTyping && (
               <div className="flex justify-start animate-[slideInLeft_0.5s_ease-out_0.4s_both]">
                 <div className="bg-white rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[85%] shadow-sm hover:shadow-md transition-shadow duration-200">
-                  <p className="text-[#1F2937] text-sm leading-relaxed">
+                  <p className="text-[var(--color-text)] text-sm leading-relaxed">
                     Parfait ! Vous recevrez <strong>des devis</strong> dans les prochains jours.
                   </p>
                   <p className="text-[#667085] text-xs mt-1">10:27</p>

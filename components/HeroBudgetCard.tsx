@@ -159,7 +159,7 @@ function CityAutocomplete({
 
   return (
     <div ref={wrapperRef} className="relative">
-      <label className="block text-sm font-semibold text-[#0F172A] mb-2">{label}</label>
+      <label className="block text-sm font-semibold mb-2" style={{ color: "var(--color-text)" }}>{label}</label>
       <div className="relative">
         <input
           type="text"
@@ -168,26 +168,28 @@ function CityAutocomplete({
           onFocus={() => { setFocused(true); suggestions.length > 0 && setOpen(true); }}
           onBlur={() => setFocused(false)}
           placeholder={placeholder}
-          className={`w-full rounded-xl border-2 bg-white px-4 py-3 pr-10 text-sm text-[#0F172A] placeholder:text-gray-400 focus:outline-none focus:ring-4 transition-all duration-300 ${
-            unrecognized
-              ? "border-amber-400 focus:border-amber-500 focus:ring-amber-500/20"
-              : value
-                ? "border-emerald-400 focus:border-brand-turquoise focus:ring-brand-turquoise/20"
-                : "border-gray-200 focus:border-brand-turquoise focus:ring-brand-turquoise/20"
-          }`}
+          className="w-full rounded-xl border-2 px-4 py-3 pr-10 text-sm focus:outline-none focus:ring-4 transition-all duration-300"
+          style={{
+            background: "var(--color-surface)",
+            color: "var(--color-text)",
+            borderColor: unrecognized ? "var(--color-warning)" : (value ? "var(--color-accent)" : "var(--color-border)"),
+          }}
         />
         {statusIcon}
       </div>
       {unrecognized && (
-        <p className="mt-1.5 text-xs text-amber-600 font-medium">Sélectionnez une ville dans la liste</p>
+        <p className="mt-1.5 text-xs font-medium" style={{ color: "var(--color-warning)" }}>Sélectionnez une ville dans la liste</p>
       )}
       {open && suggestions.length > 0 && (
-        <ul className="absolute z-50 mt-2 w-full rounded-xl border border-gray-200 bg-white shadow-2xl max-h-48 overflow-y-auto">
+        <ul className="absolute z-50 mt-2 w-full rounded-xl shadow-2xl max-h-48 overflow-y-auto" style={{ border: "1px solid var(--color-border)", background: "var(--color-surface)" }}>
           {suggestions.map((s, i) => (
             <li
               key={`${s.postcode}-${i}`}
               onMouseDown={(e) => { e.preventDefault(); pick(s); }}
-              className="cursor-pointer px-4 py-2.5 text-sm hover:bg-brand-turquoise-50 transition-colors first:rounded-t-xl last:rounded-b-xl"
+              className="cursor-pointer px-4 py-2.5 text-sm transition-colors first:rounded-t-xl last:rounded-b-xl"
+              style={{ color: "var(--color-text)" }}
+              onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(14,165,166,0.05)")}
+              onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
             >
               {s.label}
             </li>
@@ -258,28 +260,29 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
   /* ---------- RESULT STATE (Step 2) ---------- */
   if (estimate) {
     return (
-      <div className="rounded-3xl bg-white/95 backdrop-blur-xl shadow-[0_20px_60px_rgba(0,0,0,0.12)] border border-white/60 p-8 space-y-6">
+      <div className="rounded-3xl backdrop-blur-xl p-8 space-y-6" style={{ background: "rgba(255,255,255,0.95)", boxShadow: "var(--shadow-md)", border: "1px solid var(--color-border)" }}>
         <div className="text-center pb-2">
-          <p className="text-xs font-bold uppercase tracking-[0.15em] text-brand-turquoise-600">
+          <p className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "var(--color-accent)" }}>
             Estimation indicative
           </p>
         </div>
 
         <div className="text-center space-y-2">
-          <p className="text-sm text-gray-600 font-medium">
+          <p className="text-sm font-medium" style={{ color: "var(--color-text-secondary)" }}>
             {origin!.city} → {destination!.city} · {surface} m²
           </p>
-          <p className="text-4xl font-bold text-[#0F172A] tracking-tight">
+          <p className="text-4xl font-bold tracking-tight" style={{ color: "var(--color-text)" }}>
             {estimate.min.toLocaleString("fr-FR")} € – {estimate.max.toLocaleString("fr-FR")} €
           </p>
-          <p className="text-xs text-gray-500">Formule standard · Estimation non contractuelle</p>
+          <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>Formule standard · Estimation non contractuelle</p>
         </div>
 
         <button
           type="button"
           disabled={redirecting}
           onClick={handleRedirect}
-          className="group relative block w-full rounded-xl bg-gradient-to-r from-brand-turquoise-300 via-brand-turquoise to-brand-turquoise-500 py-4 text-center text-sm font-bold text-white shadow-glow-turquoise hover:shadow-glow-turquoise-lg disabled:opacity-60 active:scale-[0.98] md:hover:scale-[1.02] transition-all duration-300 touch-manipulation overflow-hidden border border-white/20"
+          className="group relative block w-full rounded-xl py-4 text-center text-sm font-bold text-white disabled:opacity-60 active:scale-[0.98] md:hover:scale-[1.02] transition-all duration-300 touch-manipulation overflow-hidden"
+          style={{ background: "var(--color-accent)", boxShadow: "0 4px 16px rgba(14,165,166,0.3)" }}
         >
           <span className="relative z-10 flex items-center justify-center gap-2">
             {redirecting ? "Redirection…" : "Affiner mon budget"}
@@ -289,14 +292,14 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
               </svg>
             )}
           </span>
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-turquoise-200 to-brand-turquoise-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300" style={{ background: "var(--color-surface)" }} />
         </button>
 
         <button
           type="button"
           onClick={() => setEstimate(null)}
-          className="block w-full text-center text-sm font-semibold text-gray-600 hover:text-[#0F172A] transition-colors"
+          className="block w-full text-center text-sm font-semibold transition-colors"
+          style={{ color: "var(--color-text-secondary)" }}
         >
           ← Modifier mes infos
         </button>
@@ -306,9 +309,9 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
 
   /* ---------- FORM STATE ---------- */
   return (
-    <div className="rounded-3xl bg-white/95 backdrop-blur-xl shadow-[0_20px_60px_rgba(0,0,0,0.12)] border border-white/60 p-8 space-y-5">
+    <div className="rounded-3xl backdrop-blur-xl p-8 space-y-5" style={{ background: "rgba(255,255,255,0.95)", boxShadow: "var(--shadow-md)", border: "1px solid var(--color-border)" }}>
       <div className="text-center pb-2">
-        <p className="text-xs font-bold uppercase tracking-[0.15em] text-brand-turquoise-600">
+        <p className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "var(--color-accent)" }}>
           Estimez votre budget
         </p>
       </div>
@@ -330,7 +333,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
       />
 
       <div>
-        <label className="block text-sm font-semibold text-[#0F172A] mb-2">Surface (m²)</label>
+        <label className="block text-sm font-semibold mb-2" style={{ color: "var(--color-text)" }}>Surface (m²)</label>
         <input
           type="number"
           inputMode="numeric"
@@ -339,16 +342,22 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
           value={surface}
           onChange={(e) => setSurface(e.target.value)}
           placeholder="Ex : 60"
-          className="w-full rounded-xl border-2 border-gray-200 bg-white px-4 py-3 text-sm text-[#0F172A] placeholder:text-gray-400 focus:border-brand-turquoise focus:outline-none focus:ring-4 focus:ring-brand-turquoise/20 transition-all duration-300"
+          className="w-full rounded-xl border-2 px-4 py-3 text-sm focus:outline-none focus:ring-4 transition-all duration-300"
+          style={{
+            background: "var(--color-surface)",
+            color: "var(--color-text)",
+            borderColor: "var(--color-border)",
+          }}
         />
       </div>
 
       {error && (
-        <div className="text-xs text-red-600 bg-red-50 rounded-xl px-3 py-2 border border-red-100">
+        <div className="text-xs rounded-xl px-3 py-2" style={{ color: "var(--color-danger)", background: "rgba(220,38,38,0.05)", border: "1px solid rgba(220,38,38,0.2)" }}>
           {error}
           <a
             href={deepLink}
-            className="block mt-1 font-semibold text-red-700 underline"
+            className="block mt-1 font-semibold underline"
+            style={{ color: "var(--color-danger)" }}
           >
             Aller au comparateur →
           </a>
@@ -359,7 +368,8 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
         type="button"
         disabled={!canSubmit || loading}
         onClick={handleEstimate}
-        className="group relative w-full rounded-xl bg-gradient-to-r from-brand-turquoise-300 via-brand-turquoise to-brand-turquoise-500 py-4 text-sm font-bold text-white disabled:opacity-40 disabled:cursor-not-allowed shadow-glow-turquoise hover:shadow-glow-turquoise-lg active:scale-[0.98] md:hover:scale-[1.02] transition-all duration-300 disabled:hover:scale-100 disabled:hover:shadow-glow-turquoise touch-manipulation overflow-hidden border border-white/20"
+        className="group relative w-full rounded-xl py-4 text-sm font-bold text-white disabled:opacity-40 disabled:cursor-not-allowed active:scale-[0.98] md:hover:scale-[1.02] transition-all duration-300 disabled:hover:scale-100 touch-manipulation overflow-hidden"
+        style={{ background: "var(--color-accent)", boxShadow: "0 4px 16px rgba(14,165,166,0.3)" }}
       >
         <span className="relative z-10 flex items-center justify-center gap-2">
           {loading ? "Calcul en cours…" : "Voir mon estimation"}
@@ -369,11 +379,10 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
             </svg>
           )}
         </span>
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-turquoise-200 to-brand-turquoise-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300" style={{ background: "var(--color-surface)" }} />
       </button>
 
-      <p className="text-xs text-center text-gray-500 font-medium">
+      <p className="text-xs text-center font-medium" style={{ color: "var(--color-text-muted)" }}>
         Gratuit · Sans engagement · Sans appel
       </p>
     </div>

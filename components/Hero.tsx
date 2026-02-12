@@ -44,9 +44,9 @@ export default function Hero({ abVariant }: HeroProps) {
       : "des devis comparables · 3 min · 100% gratuit";
 
   return (
-    <section className="relative overflow-hidden font-sans bg-gradient-to-br from-[#E0F7F7] via-white to-[#E0F7F7]/20">
+    <section className="relative overflow-hidden font-sans" style={{ background: "var(--color-bg)" }}>
       {/* Subtle grid pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(#E5E7EB_1px,transparent_1px)] [background-size:24px_24px] opacity-10" />
+      <div className="absolute inset-0 bg-[radial-gradient(var(--color-border)_1px,transparent_1px)] [background-size:24px_24px] opacity-10" />
 
       {/* Spacing uniforme */}
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-32">
@@ -56,36 +56,40 @@ export default function Hero({ abVariant }: HeroProps) {
           <div className="mx-auto max-w-2xl text-center lg:mx-0 lg:text-left">
             {/* Badge moderne avec gradient */}
             <div 
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-brand-accent/10 border border-brand-turquoise-200/50 backdrop-blur-sm px-5 py-2.5 text-sm font-semibold text-[#0F172A] shadow-sm"
+              className="inline-flex items-center gap-2 rounded-full backdrop-blur-sm px-5 py-2.5 text-sm font-semibold shadow-sm"
               style={{
                 animation: mounted ? 'fadeInUp 0.6s ease-out' : 'none',
+                background: "rgba(14,165,166,0.1)",
+                border: "1px solid rgba(14,165,166,0.2)",
+                color: "var(--color-text)",
               }}
             >
               <span className="relative inline-flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-turquoise opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-turquoise shadow-[0_0_12px_rgba(107,207,207,0.8)]" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style={{ background: "var(--color-accent)" }} />
+                <span className="relative inline-flex rounded-full h-2 w-2 shadow-[0_0_12px_rgba(14,165,166,0.8)]" style={{ background: "var(--color-accent)" }} />
               </span>
               Déménageurs vérifiés
             </div>
 
             {/* Titre émotionnel avec gradient */}
             <h1 
-              className="mt-8 text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl lg:text-7xl"
+              className="mt-8 text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl lg:text-7xl font-heading"
               style={{
                 animation: mounted ? 'fadeInUp 0.8s ease-out 0.1s both' : 'none',
               }}
             >
-              <span className="block text-[#0F172A]">Vous déménagez.</span>
-              <span className="block mt-2 bg-gradient-to-r from-brand-turquoise-600 via-brand-turquoise to-brand-accent bg-clip-text text-transparent">
+              <span className="block" style={{ color: "var(--color-text)" }}>Vous déménagez.</span>
+              <span className="block mt-2" style={{ color: "var(--color-accent)" }}>
                 On compare.
               </span>
             </h1>
 
             {/* Sous-titre clair */}
             <p 
-              className="mt-6 text-base md:text-lg lg:text-xl text-[#334155] leading-relaxed max-w-xl mx-auto lg:mx-0"
+              className="mt-6 text-base md:text-lg lg:text-xl leading-relaxed max-w-xl mx-auto lg:mx-0"
               style={{
                 animation: mounted ? 'fadeInUp 1s ease-out 0.2s both' : 'none',
+                color: "var(--color-text-secondary)",
               }}
             >
               {heroPromise}
@@ -98,19 +102,19 @@ export default function Hero({ abVariant }: HeroProps) {
                 animation: mounted ? "fadeInUp 1.2s ease-out 0.3s both" : "none",
               }}
             >
-              <div className="group flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 hover:border-brand-turquoise-200 hover:shadow-md hover:shadow-brand-turquoise-100/50 transition-all duration-300">
-                <ShieldCheck className="w-4 h-4 text-brand-turquoise-600 group-hover:scale-110 transition-transform" />
-                <span className="text-sm font-medium text-[#0F172A]">Numéro masqué</span>
+              <div className="group flex items-center gap-2 px-4 py-2.5 rounded-full backdrop-blur-sm transition-all duration-300" style={{ background: "rgba(255,255,255,0.8)", border: "1px solid var(--color-border)" }}>
+                <ShieldCheck className="w-4 h-4 group-hover:scale-110 transition-transform" style={{ color: "var(--color-accent)" }} />
+                <span className="text-sm font-medium" style={{ color: "var(--color-text)" }}>Numéro masqué</span>
               </div>
               
-              <div className="group flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 hover:border-brand-turquoise-200 hover:shadow-md hover:shadow-brand-turquoise-100/50 transition-all duration-300">
-                <PhoneOff className="w-4 h-4 text-brand-turquoise-600 group-hover:scale-110 transition-transform" />
-                <span className="text-sm font-medium text-[#0F172A]">Aucun appel</span>
+              <div className="group flex items-center gap-2 px-4 py-2.5 rounded-full backdrop-blur-sm transition-all duration-300" style={{ background: "rgba(255,255,255,0.8)", border: "1px solid var(--color-border)" }}>
+                <PhoneOff className="w-4 h-4 group-hover:scale-110 transition-transform" style={{ color: "var(--color-accent)" }} />
+                <span className="text-sm font-medium" style={{ color: "var(--color-text)" }}>Aucun appel</span>
               </div>
               
-              <div className="group flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 hover:border-brand-turquoise-200 hover:shadow-md hover:shadow-brand-turquoise-100/50 transition-all duration-300">
-                <BadgeCheck className="w-4 h-4 text-brand-turquoise-600 group-hover:scale-110 transition-transform" />
-                <span className="text-sm font-medium text-[#0F172A]">Entreprises vérifiées</span>
+              <div className="group flex items-center gap-2 px-4 py-2.5 rounded-full backdrop-blur-sm transition-all duration-300" style={{ background: "rgba(255,255,255,0.8)", border: "1px solid var(--color-border)" }}>
+                <BadgeCheck className="w-4 h-4 group-hover:scale-110 transition-transform" style={{ color: "var(--color-accent)" }} />
+                <span className="text-sm font-medium" style={{ color: "var(--color-text)" }}>Entreprises vérifiées</span>
               </div>
             </div>
 
@@ -125,7 +129,8 @@ export default function Hero({ abVariant }: HeroProps) {
                 href="https://www.google.com/maps/place/Moverz/@46.881154,3.0417412,6z/data=!3m1!4b1!4m6!3m5!1s0x65777ea3ad50b1c1:0xdcc12b2e04254f4!8m2!3d46.881154!4d3.0417412!16s%2Fg%2F11ylmz4jk6?entry=ttu"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-3 px-5 py-3 rounded-2xl bg-white/90 backdrop-blur-sm border border-gray-200 hover:border-amber-300 hover:shadow-lg hover:shadow-amber-100/50 transition-all duration-300"
+                className="group flex items-center gap-3 px-5 py-3 rounded-2xl backdrop-blur-sm transition-all duration-300"
+                style={{ background: "rgba(255,255,255,0.9)", border: "1px solid var(--color-border)" }}
               >
                 <div className="flex gap-0.5">
                   {[...Array(5)].map((_, i) => (
@@ -133,8 +138,8 @@ export default function Hero({ abVariant }: HeroProps) {
                   ))}
                 </div>
                 <div className="flex items-baseline gap-1.5">
-                  <span className="text-lg font-bold text-[#0F172A]">4,5+</span>
-                  <span className="text-sm text-[#64748B]">sur Google</span>
+                  <span className="text-lg font-bold" style={{ color: "var(--color-text)" }}>4,5+</span>
+                  <span className="text-sm" style={{ color: "var(--color-text-secondary)" }}>sur Google</span>
                 </div>
               </a>
             </div>
@@ -148,7 +153,7 @@ export default function Hero({ abVariant }: HeroProps) {
           }}
         >
           {/* Glow effect derrière la card */}
-          <div className="absolute -inset-6 bg-gradient-to-r from-brand-turquoise/20 via-brand-accent/15 to-brand-turquoise/20 rounded-3xl blur-3xl opacity-60" />
+          <div className="absolute -inset-6 rounded-3xl blur-3xl opacity-60" style={{ background: "radial-gradient(circle, rgba(14,165,166,0.2), transparent 70%)" }} />
           <div className="relative">
             <HeroBudgetCard ab={ab} />
           </div>

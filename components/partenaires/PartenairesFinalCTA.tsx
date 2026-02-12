@@ -20,7 +20,7 @@ export default function PartenairesFinalCTA() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a
               href="#demo"
-              className="group inline-flex items-center gap-2 rounded-xl bg-brand-turquoise px-8 py-4 text-base font-semibold text-[#0F172A] shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+              className="group inline-flex items-center gap-2 rounded-xl bg-brand-turquoise px-8 py-4 text-base font-semibold text-[var(--color-text)] shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
             >
               <span>Voir la démo (1 min)</span>
               <span className="text-lg leading-none group-hover:translate-x-1 transition-transform">→</span>

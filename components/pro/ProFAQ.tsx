@@ -17,10 +17,10 @@ export default function ProFAQ() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text)] mb-4">
             Questions fréquentes
           </h2>
-          <p className="text-lg text-[#6B7280]">
+          <p className="text-lg text-[var(--color-text-secondary)]">
             Tout ce que vous devez savoir sur Moverz Pro
           </p>
         </motion.div>
@@ -33,14 +33,14 @@ export default function ProFAQ() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="rounded-xl border-2 border-gray-200 bg-white overflow-hidden hover:border-brand-turquoise/50 transition-colors"
+              className="rounded-xl border-2 border-[var(--color-border)] bg-white overflow-hidden hover:border-brand-turquoise/50 transition-colors"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 aria-expanded={openIndex === i}
                 className="w-full flex items-center justify-between p-6 text-left"
               >
-                <span className="font-bold text-[#0F172A] text-lg pr-4">
+                <span className="font-bold text-[var(--color-text)] text-lg pr-4">
                   {faq.question}
                 </span>
                 <ChevronDown 
@@ -56,7 +56,7 @@ export default function ProFAQ() {
                 }`}
               >
                 <div className="px-6 pb-6">
-                  <p className="text-[#6B7280] leading-relaxed">
+                  <p className="text-[var(--color-text-secondary)] leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
@@ -72,7 +72,7 @@ export default function ProFAQ() {
           viewport={{ once: true }}
           className="mt-12 text-center"
         >
-          <p className="text-[#6B7280] mb-4">
+          <p className="text-[var(--color-text-secondary)] mb-4">
             Vous avez d'autres questions ?
           </p>
           <a

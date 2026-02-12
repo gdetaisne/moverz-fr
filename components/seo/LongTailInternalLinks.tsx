@@ -17,26 +17,26 @@ export function LongTailInternalLinks({ cityName, serviceSlug, limit = 10 }: Lon
   return (
     <section className="section section-light">
       <div className="container max-w-4xl">
-        <div className="rounded-2xl border border-[#E5E7EB] bg-white p-8 md:p-10 space-y-6">
+        <div className="rounded-2xl border border-[var(--color-border)] bg-white p-8 md:p-10 space-y-6">
           <div className="text-center space-y-3">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
               Long tail (SEO)
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A]">{title}</h2>
-            <p className="text-sm md:text-base text-[#6B7280] max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-text)]">{title}</h2>
+            <p className="text-sm md:text-base text-[var(--color-text-secondary)] max-w-2xl mx-auto">
               Ces cas “niche” sont ceux qui créent le plus de surprises quand ils ne sont pas documentés. Lisez 3 minutes,
               puis comparez des devis sur une base claire.
             </p>
           </div>
 
-          <details className="group rounded-2xl border border-[#E5E7EB] bg-[#F8FAFC] p-6 md:p-7">
+          <details className="group rounded-2xl border border-[var(--color-border)] bg-[#F8FAFC] p-6 md:p-7">
             <summary className="cursor-pointer list-none">
               <div className="flex items-center justify-between gap-3">
                 <div>
-                  <p className="text-sm font-semibold text-[#0F172A]">
+                  <p className="text-sm font-semibold text-[var(--color-text)]">
                     Voir {Math.min(limit, links.length)} guides “cas fréquents”
                   </p>
-                  <p className="mt-1 text-xs text-[#6B7280]">
+                  <p className="mt-1 text-xs text-[var(--color-text-secondary)]">
                     Sans blabla : checklists + méthode pour devis comparables.
                   </p>
                 </div>
@@ -50,12 +50,12 @@ export function LongTailInternalLinks({ cityName, serviceSlug, limit = 10 }: Lon
                 <a
                   key={l.slug}
                   href={`/blog/${l.slug}/`}
-                  className="group rounded-2xl border border-[#E5E7EB] bg-white p-5 hover:border-brand-turquoise/50 hover:shadow-sm transition-all"
+                  className="group rounded-2xl border border-[var(--color-border)] bg-white p-5 hover:border-brand-turquoise/50 hover:shadow-sm transition-all"
                 >
-                  <p className="text-sm font-semibold text-[#0F172A] group-hover:text-[#2B7A78]">
+                  <p className="text-sm font-semibold text-[var(--color-text)] group-hover:text-[#2B7A78]">
                     {l.title}
                   </p>
-                  <p className="mt-1 text-xs text-[#6B7280]">{l.description}</p>
+                  <p className="mt-1 text-xs text-[var(--color-text-secondary)]">{l.description}</p>
                 </a>
               ))}
             </div>
@@ -63,14 +63,14 @@ export function LongTailInternalLinks({ cityName, serviceSlug, limit = 10 }: Lon
             <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
               <a
                 href="/blog/cas-frequents/"
-                className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-[var(--color-bg-dark)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--color-bg-dark)] transition-colors"
               >
                 <span>Voir tous les cas fréquents ({total})</span>
                 <span>→</span>
               </a>
               <a
                 href="/blog/checklists-et-guides/"
-                className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise/60 hover:bg-[#FAFAFA] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-white px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-brand-turquoise/60 hover:bg-[var(--color-bg)] transition-colors"
               >
                 <span>Voir toutes les checklists</span>
                 <span>→</span>

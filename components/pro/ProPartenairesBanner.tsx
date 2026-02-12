@@ -4,7 +4,7 @@ import { Users, Zap } from "lucide-react";
 
 export default function ProPartenairesBanner() {
   return (
-    <section className="relative py-12 md:py-16 bg-gradient-to-r from-[#F9FAFB] to-white border-y border-[#E3E5E8]">
+    <section className="relative py-12 md:py-16 bg-gradient-to-r from-[#F9FAFB] to-white border-y border-[var(--color-border)]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -14,14 +14,14 @@ export default function ProPartenairesBanner() {
         >
           {/* Texte principal */}
           <div className="flex-1 text-center md:text-left">
-            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-3 py-1 text-xs font-medium text-[#0F172A] mb-3">
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-3 py-1 text-xs font-medium text-[var(--color-text)] mb-3">
               <Users className="w-3.5 h-3.5" />
               <span>Nouveau déménageur ?</span>
             </div>
-            <h3 className="text-xl md:text-2xl font-bold text-[#0F172A] mb-2">
+            <h3 className="text-xl md:text-2xl font-bold text-[var(--color-text)] mb-2">
               Commencez par rejoindre notre réseau
             </h3>
-            <p className="text-[#6B7280] leading-relaxed">
+            <p className="text-[var(--color-text-secondary)] leading-relaxed">
               <strong>Moverz Pro</strong> est un SaaS de gestion de dossiers.{" "}
               <strong>Si vous n'êtes pas encore partenaire</strong>, commencez par rejoindre le réseau Moverz 
               pour recevoir des demandes de devis qualifiées.
@@ -32,7 +32,7 @@ export default function ProPartenairesBanner() {
           <div className="flex-shrink-0">
             <a
               href="/partenaires/"
-              className="group inline-flex items-center gap-2 rounded-xl bg-brand-turquoise px-6 py-3 text-base font-semibold text-[#0F172A] shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+              className="group inline-flex items-center gap-2 rounded-xl bg-brand-turquoise px-6 py-3 text-base font-semibold text-[var(--color-text)] shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
             >
               <Zap className="w-4 h-4" />
               <span>Devenir partenaire</span>
@@ -47,10 +47,10 @@ export default function ProPartenairesBanner() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="mt-6 p-4 rounded-xl bg-white border border-[#E3E5E8]"
+          className="mt-6 p-4 rounded-xl bg-white border border-[var(--color-border)]"
         >
-          <p className="text-xs text-[#6B7280] leading-relaxed">
-            <span className="font-semibold text-[#0F172A]">Quelle différence ?</span>{" "}
+          <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+            <span className="font-semibold text-[var(--color-text)]">Quelle différence ?</span>{" "}
             <strong>Partenaire</strong> = vous recevez des dossiers du marketplace Moverz (commission au succès).{" "}
             <strong>Moverz Pro</strong> = SaaS pour gérer VOS propres dossiers (abonnement mensuel). Les deux sont compatibles !
           </p>

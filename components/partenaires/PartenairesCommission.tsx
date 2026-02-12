@@ -19,7 +19,7 @@ export default function PartenairesCommission() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[#0F172A]">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[var(--color-text)]">
             Comment Moverz est rémunéré
           </h2>
         </motion.div>
@@ -28,7 +28,7 @@ export default function PartenairesCommission() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-br from-[#F9FAFB] to-white rounded-3xl p-8 md:p-12 border border-[#E3E5E8]"
+          className="bg-gradient-to-br from-[#F9FAFB] to-white rounded-3xl p-8 md:p-12 border border-[var(--color-border)]"
         >
           <ul className="space-y-5 mb-8">
             {points.map((point, i) => (
@@ -40,10 +40,10 @@ export default function PartenairesCommission() {
                 transition={{ delay: i * 0.1 }}
                 className="flex items-start gap-4"
               >
-                <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-lg bg-white border border-[#E3E5E8]">
+                <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-lg bg-white border border-[var(--color-border)]">
                   <point.icon className={`w-5 h-5 ${point.color}`} />
                 </div>
-                <span className="text-[#1E293B] pt-2 font-medium">
+                <span className="text-[var(--color-text-secondary)] pt-2 font-medium">
                   {point.text}
                 </span>
               </motion.li>
@@ -51,9 +51,9 @@ export default function PartenairesCommission() {
           </ul>
 
           <div className="p-6 rounded-xl bg-white border border-brand-turquoise/30">
-            <h3 className="font-bold text-[#0F172A] mb-2">Modèle de rémunération</h3>
-            <p className="text-[#6B7280]">
-              Commission : <span className="font-semibold text-[#0F172A]">10% HT</span> sur les dossiers payants
+            <h3 className="font-bold text-[var(--color-text)] mb-2">Modèle de rémunération</h3>
+            <p className="text-[var(--color-text-secondary)]">
+              Commission : <span className="font-semibold text-[var(--color-text)]">10% HT</span> sur les dossiers payants
             </p>
           </div>
         </motion.div>

@@ -26,12 +26,12 @@ export function CityStats({ cityName }: CityStatsProps) {
             }}
           >
             <div className="relative w-full max-w-[420px] mx-auto">
-              <div className="bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.15)] p-6 border border-[#E3E5E8]">
+              <div className="bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.15)] p-6 border border-[var(--color-border)]">
                 {/* Header */}
-                <div className="flex items-center justify-between mb-6 pb-4 border-b border-[#E3E5E8]">
+                <div className="flex items-center justify-between mb-6 pb-4 border-b border-[var(--color-border)]">
                   <div>
-                    <p className="text-xs text-[#1E293B]/60 font-medium">Votre déménagement</p>
-                    <p className="text-lg font-bold text-[#0F172A]">Paris → {cityName}</p>
+                    <p className="text-xs text-[var(--color-text-secondary)]/60 font-medium">Votre déménagement</p>
+                    <p className="text-lg font-bold text-[var(--color-text)]">Paris → {cityName}</p>
                   </div>
                   <Sparkles className="w-6 h-6 text-brand-turquoise" />
                 </div>
@@ -39,30 +39,30 @@ export function CityStats({ cityName }: CityStatsProps) {
                 {/* Progress bar */}
                 <div className="mb-6">
                   <div className="flex items-center justify-between text-xs mb-2">
-                    <span className="text-[#1E293B]/70 font-medium">Progression</span>
-                    <span className="text-[#0F172A] font-bold">66%</span>
+                    <span className="text-[var(--color-text-secondary)]/70 font-medium">Progression</span>
+                    <span className="text-[var(--color-text)] font-bold">66%</span>
                   </div>
                   <div className="w-full h-2 bg-[#F8F9FA] rounded-full overflow-hidden">
                     <div className="h-full bg-gradient-to-r from-brand-turquoise to-[#A8E8E8] rounded-full" style={{ width: '66%' }} />
                   </div>
-                  <p className="text-xs text-[#1E293B]/60 mt-1">3 étapes</p>
+                  <p className="text-xs text-[var(--color-text-secondary)]/60 mt-1">3 étapes</p>
                 </div>
 
                 {/* Info grid */}
                 <div className="space-y-3 mb-6">
                   <div className="p-3 rounded-xl bg-[#F8F9FA]">
-                    <p className="text-xs text-[#1E293B]/60 mb-1">Infos envoyées</p>
-                    <p className="text-sm font-semibold text-[#0F172A]">T3 • 60m² • 3ᵉ étage</p>
+                    <p className="text-xs text-[var(--color-text-secondary)]/60 mb-1">Infos envoyées</p>
+                    <p className="text-sm font-semibold text-[var(--color-text)]">T3 • 60m² • 3ᵉ étage</p>
                   </div>
 
                   <div className="p-3 rounded-xl bg-[#F8F9FA]">
-                    <p className="text-xs text-[#1E293B]/60 mb-1">Dossier complété</p>
-                    <p className="text-sm font-semibold text-[#0F172A]">Base identique envoyée à tous</p>
+                    <p className="text-xs text-[var(--color-text-secondary)]/60 mb-1">Dossier complété</p>
+                    <p className="text-sm font-semibold text-[var(--color-text)]">Base identique envoyée à tous</p>
                   </div>
 
                   <div className="p-3 rounded-xl bg-[#F8F9FA]">
-                    <p className="text-xs text-[#1E293B]/60 mb-1">5 déménageurs contactés</p>
-                    <p className="text-sm font-semibold text-[#0F172A]">Réponse sous 48-72h</p>
+                    <p className="text-xs text-[var(--color-text-secondary)]/60 mb-1">5 déménageurs contactés</p>
+                    <p className="text-sm font-semibold text-[var(--color-text)]">Réponse sous 48-72h</p>
                   </div>
                 </div>
 
@@ -72,7 +72,7 @@ export function CityStats({ cityName }: CityStatsProps) {
                     <Check className="w-4 h-4 text-green-600" strokeWidth={3} />
                     <p className="text-sm font-bold text-green-900">Dossier envoyé</p>
                   </div>
-                  <p className="text-xs text-[#1E293B]/70">Vous serez notifié par WhatsApp</p>
+                  <p className="text-xs text-[var(--color-text-secondary)]/70">Vous serez notifié par WhatsApp</p>
                 </div>
               </div>
             </div>
@@ -85,17 +85,17 @@ export function CityStats({ cityName }: CityStatsProps) {
               animation: mounted ? 'fadeInUp 1s ease-out 0.2s both' : 'none',
             }}
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-sm font-semibold text-[#0F172A] mb-6">
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-sm font-semibold text-[var(--color-text)] mb-6">
               <span className="h-2 w-2 rounded-full bg-brand-turquoise" />
               Moverz à {cityName}
             </div>
 
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] mb-6 leading-tight">
+            <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text)] mb-6 leading-tight">
               Ça marche à{" "}
               <span className="text-brand-turquoise">{cityName}</span> aussi
             </h2>
 
-            <p className="text-lg text-[#1E293B]/70 leading-relaxed mb-8">
+            <p className="text-lg text-[var(--color-text-secondary)]/70 leading-relaxed mb-8">
               Même processus, mêmes garanties, déménageurs locaux vérifiés.
             </p>
 
@@ -103,11 +103,11 @@ export function CityStats({ cityName }: CityStatsProps) {
               {/* Stat 1 */}
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-brand-turquoise/10">
-                  <Clock className="w-6 h-6 text-[#0F172A]" strokeWidth={2.5} />
+                  <Clock className="w-6 h-6 text-[var(--color-text)]" strokeWidth={2.5} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#0F172A] mb-1">5 jours</h3>
-                  <p className="text-[#1E293B]/70 text-sm">
+                  <h3 className="font-bold text-[var(--color-text)] mb-1">5 jours</h3>
+                  <p className="text-[var(--color-text-secondary)]/70 text-sm">
                     Temps moyen de réponse pour recevoir vos devis
                   </p>
                 </div>
@@ -115,12 +115,12 @@ export function CityStats({ cityName }: CityStatsProps) {
 
               {/* Stat 2 */}
               <div className="flex items-start gap-4 p-4 rounded-xl bg-brand-turquoise/10 border border-brand-turquoise/30">
-                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[#0F172A]">
+                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[var(--color-bg-dark)]">
                   <Check className="w-6 h-6 text-white" strokeWidth={2.5} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#0F172A] mb-1">des devis comparables</h3>
-                  <p className="text-[#1E293B]/70 text-sm">
+                  <h3 className="font-bold text-[var(--color-text)] mb-1">des devis comparables</h3>
+                  <p className="text-[var(--color-text-secondary)]/70 text-sm">
                     Tous basés sur le même dossier (infos + détails)
                   </p>
                 </div>
@@ -129,11 +129,11 @@ export function CityStats({ cityName }: CityStatsProps) {
               {/* Stat 3 */}
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-brand-turquoise/10">
-                  <DollarSign className="w-6 h-6 text-[#0F172A]" strokeWidth={2.5} />
+                  <DollarSign className="w-6 h-6 text-[var(--color-text)]" strokeWidth={2.5} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#0F172A] mb-1">0€</h3>
-                  <p className="text-[#1E293B]/70 text-sm">
+                  <h3 className="font-bold text-[var(--color-text)] mb-1">0€</h3>
+                  <p className="text-[var(--color-text-secondary)]/70 text-sm">
                     Gratuit pour vous, payé par les déménageurs
                   </p>
                 </div>

@@ -33,7 +33,7 @@ export default function WhatYouReceive() {
                 {/* Screen content */}
                 <div className="relative bg-[#F8F9FA] rounded-[36px] overflow-hidden" style={{ aspectRatio: '9/19.5' }}>
                   {/* Header */}
-                  <div className="bg-[#0F172A] px-4 py-4 text-white">
+                  <div className="bg-[var(--color-bg-dark)] px-4 py-4 text-white">
                     <p className="text-xs font-medium opacity-70">Vos devis</p>
                     <h3 className="text-lg font-bold mt-1">Paris → Lyon</h3>
                     <p className="text-xs opacity-80 mt-1">T3 • 60m² • 3ᵉ étage avec ascenseur</p>
@@ -42,83 +42,83 @@ export default function WhatYouReceive() {
                   {/* Devis cards */}
                   <div className="p-4 space-y-3">
                     {/* Devis 1 */}
-                    <div className="bg-white rounded-xl p-4 shadow-sm border border-[#E3E5E8]">
+                    <div className="bg-white rounded-xl p-4 shadow-sm border border-[var(--color-border)]">
                       <div className="flex items-start justify-between mb-2">
                         <div>
-                          <p className="font-bold text-[#0F172A] text-sm">Déménagements Martin</p>
+                          <p className="font-bold text-[var(--color-text)] text-sm">Déménagements Martin</p>
                           <div className="flex items-center gap-1 mt-1">
                             <span className="text-xs text-yellow-600">★★★★★</span>
-                            <span className="text-xs text-[#1E293B]/60">(487 avis)</span>
+                            <span className="text-xs text-[var(--color-text-secondary)]/60">(487 avis)</span>
                           </div>
                         </div>
                         <div className="text-right">
-                          <p className="text-lg font-bold text-[#0F172A]">1 850€</p>
-                          <p className="text-xs text-[#1E293B]/60">TTC</p>
+                          <p className="text-lg font-bold text-[var(--color-text)]">1 850€</p>
+                          <p className="text-xs text-[var(--color-text-secondary)]/60">TTC</p>
                         </div>
                       </div>
                       <div className="flex items-center gap-2 mt-3">
                         <Check className="w-4 h-4 text-green-600" />
-                        <p className="text-xs text-[#1E293B]/80">Assurance tous risques incluse</p>
+                        <p className="text-xs text-[var(--color-text-secondary)]/80">Assurance tous risques incluse</p>
                       </div>
                       <div className="flex items-center gap-2 mt-1">
-                        <Clock className="w-4 h-4 text-brand-turquoise-600" />
-                        <p className="text-xs text-[#1E293B]/80">Disponible le 15 mars</p>
+                        <Clock className="w-4 h-4 text-brand-turquoise" />
+                        <p className="text-xs text-[var(--color-text-secondary)]/80">Disponible le 15 mars</p>
                       </div>
                     </div>
 
                     {/* Devis 2 */}
-                    <div className="bg-white rounded-xl p-4 shadow-sm border border-[#E3E5E8]">
+                    <div className="bg-white rounded-xl p-4 shadow-sm border border-[var(--color-border)]">
                       <div className="flex items-start justify-between mb-2">
                         <div>
-                          <p className="font-bold text-[#0F172A] text-sm">Express Déménagement</p>
+                          <p className="font-bold text-[var(--color-text)] text-sm">Express Déménagement</p>
                           <div className="flex items-center gap-1 mt-1">
                             <span className="text-xs text-yellow-600">★★★★☆</span>
-                            <span className="text-xs text-[#1E293B]/60">(312 avis)</span>
+                            <span className="text-xs text-[var(--color-text-secondary)]/60">(312 avis)</span>
                           </div>
                         </div>
                         <div className="text-right">
-                          <p className="text-lg font-bold text-[#0F172A]">1 950€</p>
-                          <p className="text-xs text-[#1E293B]/60">TTC</p>
+                          <p className="text-lg font-bold text-[var(--color-text)]">1 950€</p>
+                          <p className="text-xs text-[var(--color-text-secondary)]/60">TTC</p>
                         </div>
                       </div>
                       <div className="flex items-center gap-2 mt-3">
                         <Check className="w-4 h-4 text-green-600" />
-                        <p className="text-xs text-[#1E293B]/80">Protection standard incluse</p>
+                        <p className="text-xs text-[var(--color-text-secondary)]/80">Protection standard incluse</p>
                       </div>
                       <div className="flex items-center gap-2 mt-1">
-                        <Clock className="w-4 h-4 text-brand-turquoise-600" />
-                        <p className="text-xs text-[#1E293B]/80">Disponible le 12 mars</p>
+                        <Clock className="w-4 h-4 text-brand-turquoise" />
+                        <p className="text-xs text-[var(--color-text-secondary)]/80">Disponible le 12 mars</p>
                       </div>
                     </div>
 
                     {/* Devis 3 */}
-                    <div className="bg-white rounded-xl p-4 shadow-sm border border-[#E3E5E8]">
+                    <div className="bg-white rounded-xl p-4 shadow-sm border border-[var(--color-border)]">
                       <div className="flex items-start justify-between mb-2">
                         <div>
-                          <p className="font-bold text-[#0F172A] text-sm">Lyon Trans Services</p>
+                          <p className="font-bold text-[var(--color-text)] text-sm">Lyon Trans Services</p>
                           <div className="flex items-center gap-1 mt-1">
                             <span className="text-xs text-yellow-600">★★★★★</span>
-                            <span className="text-xs text-[#1E293B]/60">(653 avis)</span>
+                            <span className="text-xs text-[var(--color-text-secondary)]/60">(653 avis)</span>
                           </div>
                         </div>
                         <div className="text-right">
-                          <p className="text-lg font-bold text-[#0F172A]">2 100€</p>
-                          <p className="text-xs text-[#1E293B]/60">TTC</p>
+                          <p className="text-lg font-bold text-[var(--color-text)]">2 100€</p>
+                          <p className="text-xs text-[var(--color-text-secondary)]/60">TTC</p>
                         </div>
                       </div>
                       <div className="flex items-center gap-2 mt-3">
                         <Shield className="w-4 h-4 text-purple-600" />
-                        <p className="text-xs text-[#1E293B]/80">Assurance premium incluse</p>
+                        <p className="text-xs text-[var(--color-text-secondary)]/80">Assurance premium incluse</p>
                       </div>
                       <div className="flex items-center gap-2 mt-1">
-                        <Clock className="w-4 h-4 text-brand-turquoise-600" />
-                        <p className="text-xs text-[#1E293B]/80">Disponible le 10 mars</p>
+                        <Clock className="w-4 h-4 text-brand-turquoise" />
+                        <p className="text-xs text-[var(--color-text-secondary)]/80">Disponible le 10 mars</p>
                       </div>
                     </div>
 
                     {/* Badge "2 autres devis" */}
                     <div className="text-center py-3">
-                      <p className="text-xs font-medium text-[#1E293B]/60">+ 2 autres devis disponibles</p>
+                      <p className="text-xs font-medium text-[var(--color-text-secondary)]/60">+ 2 autres devis disponibles</p>
                     </div>
                   </div>
                 </div>
@@ -126,8 +126,8 @@ export default function WhatYouReceive() {
 
               {/* Floating badge */}
               <div className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-lg px-4 py-3 border border-brand-turquoise/30">
-                <p className="text-2xl font-bold text-[#0F172A]">des devis</p>
-                <p className="text-xs text-[#1E293B]/70">comparables</p>
+                <p className="text-2xl font-bold text-[var(--color-text)]">des devis</p>
+                <p className="text-xs text-[var(--color-text-secondary)]/70">comparables</p>
               </div>
             </div>
           </div>
@@ -139,7 +139,7 @@ export default function WhatYouReceive() {
               animation: mounted ? 'fadeInUp 1s ease-out 0.2s both' : 'none',
             }}
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-brand-accent/10 border border-brand-turquoise-200/50 backdrop-blur-sm px-5 py-2 text-sm font-bold text-[#0F172A] mb-6">
+            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-brand-accent/10 border border-brand-turquoise-200/50 backdrop-blur-sm px-5 py-2 text-sm font-bold text-[var(--color-text)] mb-6">
               <span className="relative inline-flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-turquoise opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-turquoise shadow-[0_0_12px_rgba(107,207,207,0.8)]" />
@@ -148,21 +148,21 @@ export default function WhatYouReceive() {
             </div>
 
             <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
-              <span className="block text-[#0F172A]">Des devis détaillés</span>
-              <span className="block mt-2 bg-gradient-to-r from-brand-turquoise-600 via-brand-turquoise to-brand-accent bg-clip-text text-transparent">
+              <span className="block text-[var(--color-text)]">Des devis détaillés</span>
+              <span className="block mt-2 bg-gradient-to-r from-brand-turquoise via-brand-turquoise to-brand-accent bg-clip-text text-transparent">
                 et comparables
               </span>
             </h2>
 
-            <p className="text-lg text-gray-600 leading-relaxed mb-8 font-normal">
+            <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed mb-8 font-normal">
               Grâce aux infos que vous partagez, chaque déménageur reçoit{" "}
-              <strong className="text-[#0F172A] font-bold">exactement les mêmes informations</strong>.
+              <strong className="text-[var(--color-text)] font-bold">exactement les mêmes informations</strong>.
             </p>
 
             {/* Verified movers card */}
             <div className="rounded-2xl border border-brand-turquoise-200/50 bg-white/95 backdrop-blur-sm p-5 md:p-6 shadow-[0_8px_24px_rgba(107,207,207,0.12)] mb-8">
-              <h3 className="text-base font-bold text-[#0F172A] mb-4">Déménageurs sélectionnés</h3>
-              <ul className="space-y-3 text-sm text-gray-700">
+              <h3 className="text-base font-bold text-[var(--color-text)] mb-4">Déménageurs sélectionnés</h3>
+              <ul className="space-y-3 text-sm text-[var(--color-text-secondary)]">
                 <li className="flex items-start gap-2.5">
                   <span className="mt-1 h-2 w-2 rounded-full bg-brand-turquoise shadow-[0_0_8px_rgba(107,207,207,0.5)]" />
                   Engagés contractuellement sur la légalité (SIRET, licences)
@@ -177,9 +177,9 @@ export default function WhatYouReceive() {
                 </li>
               </ul>
               <div className="mt-5 rounded-xl bg-gradient-to-br from-brand-turquoise-50 to-brand-accent-50 border border-brand-turquoise-200/50 px-4 py-3.5 text-xs">
-                <span className="font-bold text-[#0F172A]">Objectif : <span className="text-brand-turquoise-600">au moins 3 devis</span> rapidement (sous 5 jours, selon disponibilité).</span>
+                <span className="font-bold text-[var(--color-text)]">Objectif : <span className="text-brand-turquoise">au moins 3 devis</span> rapidement (sous 5 jours, selon disponibilité).</span>
                 <br />
-                <a href="/verifications-partenaires/" className="text-brand-turquoise-600 hover:text-brand-turquoise-700 font-bold underline underline-offset-2 transition-colors">
+                <a href="/verifications-partenaires/" className="text-brand-turquoise hover:text-brand-turquoise-700 font-bold underline underline-offset-2 transition-colors">
                   Voir nos critères de sélection →
                 </a>
               </div>
@@ -192,8 +192,8 @@ export default function WhatYouReceive() {
                   <Check className="w-6 h-6 text-brand-turquoise" strokeWidth={2} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#0F172A] mb-1">Même volume, même accès</h3>
-                  <p className="text-[#1E293B]/70 text-sm">
+                  <h3 className="font-bold text-[var(--color-text)] mb-1">Même volume, même accès</h3>
+                  <p className="text-[var(--color-text-secondary)]/70 text-sm">
                     Tous les déménageurs estiment sur la base des mêmes informations.
                   </p>
                 </div>
@@ -205,8 +205,8 @@ export default function WhatYouReceive() {
                   <Shield className="w-6 h-6 text-[#8B5CF6]" strokeWidth={2} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#0F172A] mb-1">Pros sélectionnés</h3>
-                  <p className="text-[#1E293B]/70 text-sm">
+                  <h3 className="font-bold text-[var(--color-text)] mb-1">Pros sélectionnés</h3>
+                  <p className="text-[var(--color-text-secondary)]/70 text-sm">
                     Chaque déménageur s'engage contractuellement sur la légalité, l'assurance et la qualité de service.
                   </p>
                 </div>
@@ -218,8 +218,8 @@ export default function WhatYouReceive() {
                   <Clock className="w-6 h-6 text-[#10B981]" strokeWidth={2} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#0F172A] mb-1">des devis comparables</h3>
-                  <p className="text-[#1E293B]/70 text-sm">
+                  <h3 className="font-bold text-[var(--color-text)] mb-1">des devis comparables</h3>
+                  <p className="text-[var(--color-text-secondary)]/70 text-sm">
                     Vous comparez prix, options et conditions sur un format standardisé.
                   </p>
                 </div>
@@ -228,7 +228,7 @@ export default function WhatYouReceive() {
 
             {/* Bottom reassurance */}
             <div className="mt-8 p-6 rounded-2xl bg-gradient-to-br from-brand-turquoise-50 to-brand-accent-50 border border-brand-turquoise-200/50 backdrop-blur-sm shadow-[0_4px_16px_rgba(107,207,207,0.1)]">
-              <p className="text-sm font-bold text-[#0F172A] leading-relaxed">
+              <p className="text-sm font-bold text-[var(--color-text)] leading-relaxed">
                 💬 Votre téléphone reste masqué jusqu'à ce que vous choisissiez un déménageur.
               </p>
             </div>

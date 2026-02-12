@@ -90,7 +90,7 @@ export default function PartenairesHero() {
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                 <a
                   href="/contact"
-                  className="group inline-flex items-center gap-2 rounded-xl bg-brand-turquoise px-8 py-4 text-base font-semibold text-[#0F172A] shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+                  className="group inline-flex items-center gap-2 rounded-xl bg-brand-turquoise px-8 py-4 text-base font-semibold text-[var(--color-text)] shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
                 >
                   <span>Nous contacter</span>
                   <span className="text-lg leading-none group-hover:translate-x-1 transition-transform">→</span>
@@ -128,7 +128,7 @@ export default function PartenairesHero() {
             
             {/* Badge "1 min" */}
             <div className="absolute -bottom-4 -right-4 bg-brand-turquoise rounded-full px-4 py-2 shadow-lg">
-              <p className="text-sm font-bold text-[#0F172A]">⏱️ 1 min</p>
+              <p className="text-sm font-bold text-[var(--color-text)]">⏱️ 1 min</p>
             </div>
           </motion.div>
         </div>

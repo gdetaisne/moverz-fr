@@ -57,7 +57,7 @@ export default function PageHero({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="inline-flex items-center gap-2 rounded-full bg-white/90 px-5 py-2 text-sm font-semibold text-[#0F172A] shadow-md backdrop-blur-sm border border-brand-turquoise/30"
+              className="inline-flex items-center gap-2 rounded-full bg-white/90 px-5 py-2 text-sm font-semibold text-[var(--color-text)] shadow-md backdrop-blur-sm border border-brand-turquoise/30"
             >
               <span className="h-2 w-2 rounded-full bg-brand-turquoise animate-pulse shadow-[0_0_8px_rgba(107,207,207,0.6)]" />
               <span>{eyebrow}</span>
@@ -69,7 +69,7 @@ export default function PageHero({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 }}
-            className="text-4xl md:text-6xl font-bold leading-tight text-[#0F172A]"
+            className="text-4xl md:text-6xl font-bold leading-tight text-[var(--color-text)]"
           >
             {title}
           </motion.h1>
@@ -80,7 +80,7 @@ export default function PageHero({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
-              className={`text-lg md:text-xl text-[#1E293B] leading-relaxed ${isCenter ? "max-w-2xl mx-auto" : "max-w-2xl"}`}
+              className={`text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed ${isCenter ? "max-w-2xl mx-auto" : "max-w-2xl"}`}
             >
               {subtitle}
             </motion.p>
@@ -98,7 +98,7 @@ export default function PageHero({
                 <a
                   href={primaryCta.href}
                   rel={relFor(primaryCta.href)}
-                  className="group inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-[0_8px_30px_rgba(15,23,42,0.3)] hover:shadow-[0_12px_50px_rgba(15,23,42,0.4)] hover:scale-105 transition-all duration-300"
+                  className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-bg-dark)] px-8 py-4 text-base font-semibold text-white shadow-[0_8px_30px_rgba(15,23,42,0.3)] hover:shadow-[0_12px_50px_rgba(15,23,42,0.4)] hover:scale-105 transition-all duration-300"
                 >
                   <span>{primaryCta.label}</span>
                   <span className="text-xl leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
@@ -108,7 +108,7 @@ export default function PageHero({
                 <a
                   href={secondaryCta.href}
                   rel={relFor(secondaryCta.href)}
-                  className="inline-flex items-center gap-2 rounded-full border-2 border-[#0F172A]/30 bg-white/60 px-8 py-4 text-base font-semibold text-[#0F172A] backdrop-blur-sm hover:bg-white/80 transition-all duration-300"
+                  className="inline-flex items-center gap-2 rounded-full border-2 border-[#0F172A]/30 bg-white/60 px-8 py-4 text-base font-semibold text-[var(--color-text)] backdrop-blur-sm hover:bg-white/80 transition-all duration-300"
                 >
                   <span>{secondaryCta.label}</span>
                 </a>
@@ -122,7 +122,7 @@ export default function PageHero({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.4 }}
-              className={`pt-8 flex flex-wrap items-center gap-6 text-sm text-[#1E293B]/80 font-medium ${isCenter ? "justify-center" : ""}`}
+              className={`pt-8 flex flex-wrap items-center gap-6 text-sm text-[var(--color-text-secondary)]/80 font-medium ${isCenter ? "justify-center" : ""}`}
             >
               {socialProof.map((item, i) => (
                 <div key={i} className="flex items-center gap-2">

@@ -48,7 +48,7 @@ export default function ProblemSolution() {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 bg-[#0F172A] text-white overflow-hidden">
+    <section className="relative py-20 md:py-32 bg-[var(--color-bg-dark)] text-white overflow-hidden">
       <div className="container max-w-5xl relative">
         {/* Title with animation */}
         <motion.div 

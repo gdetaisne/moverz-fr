@@ -50,10 +50,10 @@ export default function ProFeatures() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text)] mb-4">
             Une solution SaaS complète
           </h2>
-          <p className="text-lg text-[#6B7280] max-w-2xl mx-auto">
+          <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl mx-auto">
             Tout ce dont vous avez besoin pour automatiser vos estimations
           </p>
         </motion.div>
@@ -69,13 +69,13 @@ export default function ProFeatures() {
               transition={{ delay: i * 0.1 }}
               className="relative"
             >
-              <div className="h-full rounded-2xl border border-[#E3E5E8] bg-white p-6 hover:border-brand-turquoise/50 hover:shadow-lg transition-all duration-300">
+              <div className="h-full rounded-2xl border border-[var(--color-border)] bg-white p-6 hover:border-brand-turquoise/50 hover:shadow-lg transition-all duration-300">
                 {/* Pillar header */}
-                <div className="flex items-center gap-3 mb-6 pb-4 border-b border-[#E3E5E8]">
+                <div className="flex items-center gap-3 mb-6 pb-4 border-b border-[var(--color-border)]">
                   <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-brand-turquoise/10 text-brand-turquoise">
                     <pillar.icon className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg font-bold text-[#0F172A]">
+                  <h3 className="text-lg font-bold text-[var(--color-text)]">
                     {pillar.title}
                   </h3>
                 </div>
@@ -88,10 +88,10 @@ export default function ProFeatures() {
                         <feature.icon className="w-4 h-4 text-brand-turquoise" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="text-sm font-semibold text-[#0F172A] leading-tight mb-1">
+                        <p className="text-sm font-semibold text-[var(--color-text)] leading-tight mb-1">
                           {feature.name}
                         </p>
-                        <p className="text-xs text-[#6B7280] leading-relaxed">
+                        <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
                           {feature.desc}
                         </p>
                       </div>
@@ -110,7 +110,7 @@ export default function ProFeatures() {
           viewport={{ once: true }}
           className="mt-20 max-w-4xl mx-auto"
         >
-          <h3 className="text-2xl md:text-3xl font-bold text-[#0F172A] mb-8 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-[var(--color-text)] mb-8 text-center">
             Ce que vous récupérez concrètement
           </h3>
 
@@ -140,24 +140,24 @@ export default function ProFeatures() {
               ].map((item) => (
                 <div key={item.title} className="group relative h-full">
                   <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-br from-brand-turquoise/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="relative h-full rounded-2xl border border-[#E3E5E8] bg-white p-6 shadow-sm hover:shadow-md transition-all flex flex-col">
+                  <div className="relative h-full rounded-2xl border border-[var(--color-border)] bg-white p-6 shadow-sm hover:shadow-md transition-all flex flex-col">
                     <div className="flex items-start justify-between gap-4 mb-4">
                       <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-brand-turquoise/10 text-brand-turquoise">
                         <item.icon className="w-6 h-6" />
                       </div>
-                      <span className="inline-flex items-center h-6 rounded-full border border-[#E3E5E8] bg-[#F9FAFB] px-2.5 py-1 text-xs font-semibold text-[#0F172A]">
+                      <span className="inline-flex items-center h-6 rounded-full border border-[var(--color-border)] bg-[#F9FAFB] px-2.5 py-1 text-xs font-semibold text-[var(--color-text)]">
                         {item.chip}
                       </span>
                     </div>
 
-                    <p className="text-base font-bold text-[#0F172A] mb-2">
+                    <p className="text-base font-bold text-[var(--color-text)] mb-2">
                       {item.title}
                     </p>
-                    <p className="text-sm text-[#6B7280] leading-relaxed flex-1 mb-4">
+                    <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed flex-1 mb-4">
                       {item.desc}
                     </p>
 
-                    <div className="flex items-center gap-2 text-xs text-brand-turquoise font-semibold pt-3 border-t border-[#E3E5E8]">
+                    <div className="flex items-center gap-2 text-xs text-brand-turquoise font-semibold pt-3 border-t border-[var(--color-border)]">
                       <Download className="w-4 h-4" />
                       Export en 1 clic
                     </div>
@@ -166,9 +166,9 @@ export default function ProFeatures() {
               ))}
             </div>
 
-            <p className="mt-6 text-center text-sm text-[#6B7280]">
-              Vous pouvez aussi exporter les tables <strong className="text-[#0F172A]">leads</strong> et{" "}
-              <strong className="text-[#0F172A]">dossiers</strong> en CSV (Starter/Pro).
+            <p className="mt-6 text-center text-sm text-[var(--color-text-secondary)]">
+              Vous pouvez aussi exporter les tables <strong className="text-[var(--color-text)]">leads</strong> et{" "}
+              <strong className="text-[var(--color-text)]">dossiers</strong> en CSV (Starter/Pro).
             </p>
           </div>
         </motion.div>

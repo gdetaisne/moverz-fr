@@ -38,47 +38,47 @@ export default function BlogCasFrequentsPage() {
       <section className="section section-light">
         <div className="container max-w-5xl space-y-8">
           <div className="space-y-2">
-            <h2 className="text-2xl md:text-3xl font-semibold text-[#04163a]">
+            <h2 className="text-2xl md:text-3xl font-semibold text-[var(--color-text)]">
               Tous les cas fréquents ( {links.length} )
             </h2>
-            <p className="text-sm md:text-base text-[#4b5c6b]">
+            <p className="text-sm md:text-base text-[var(--color-text-secondary)]">
               Des contenus courts à scanner, mais assez précis pour rendre vos devis comparables et
               éviter les galères le jour J.
             </p>
           </div>
 
-          <div className="rounded-2xl border border-[#E3E5E8] bg-white p-6 md:p-8 text-center space-y-4">
+          <div className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-8 text-center space-y-4">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
               Hubs utiles
             </p>
-            <p className="text-sm text-[#6B7280] max-w-2xl mx-auto">
+            <p className="text-sm text-[var(--color-text-secondary)] max-w-2xl mx-auto">
               Pour approfondir : checklists complètes, conseils et guides prix.
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3">
               <a
                 href="/blog/checklists-et-guides/"
-                className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-[var(--color-bg-dark)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--color-bg-dark)] transition-colors"
               >
                 <span>Checklists & guides</span>
                 <span>→</span>
               </a>
               <a
                 href="/blog/conseils-demenagement/"
-                className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise/60 hover:bg-[#FAFAFA] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-white px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-brand-turquoise/60 hover:bg-[var(--color-bg)] transition-colors"
               >
                 <span>Conseils déménagement</span>
                 <span>→</span>
               </a>
               <a
                 href="/blog/prix-et-devis/"
-                className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise/60 hover:bg-[#FAFAFA] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-white px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-brand-turquoise/60 hover:bg-[var(--color-bg)] transition-colors"
               >
                 <span>Prix & devis</span>
                 <span>→</span>
               </a>
               <a
                 href="/villes/"
-                className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise/60 hover:bg-[#FAFAFA] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-white px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-brand-turquoise/60 hover:bg-[var(--color-bg)] transition-colors"
               >
                 <span>Guides par ville</span>
                 <span>→</span>
@@ -91,9 +91,9 @@ export default function BlogCasFrequentsPage() {
               <a
                 key={l.slug}
                 href={`/blog/${l.slug}/`}
-                className="group flex flex-col gap-2 rounded-2xl border border-[#E3E5E8] bg-white px-5 py-4 hover:border-brand-turquoise/50 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200"
+                className="group flex flex-col gap-2 rounded-2xl border border-[var(--color-border)] bg-white px-5 py-4 hover:border-brand-turquoise/50 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200"
               >
-                <div className="flex flex-wrap items-center gap-2 text-xs text-[#6B7280]">
+                <div className="flex flex-wrap items-center gap-2 text-xs text-[var(--color-text-secondary)]">
                   {l.tags.slice(0, 3).map((t) => (
                     <span
                       key={t}
@@ -103,10 +103,10 @@ export default function BlogCasFrequentsPage() {
                     </span>
                   ))}
                 </div>
-                <h2 className="text-base md:text-lg font-semibold text-[#04163a] group-hover:text-[#2B7A78]">
+                <h2 className="text-base md:text-lg font-semibold text-[var(--color-text)] group-hover:text-[#2B7A78]">
                   {l.title}
                 </h2>
-                <p className="text-sm text-[#4b5c6b] line-clamp-2">{l.description}</p>
+                <p className="text-sm text-[var(--color-text-secondary)] line-clamp-2">{l.description}</p>
               </a>
             ))}
           </div>

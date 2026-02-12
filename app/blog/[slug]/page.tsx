@@ -199,20 +199,20 @@ export default function BlogPostPage({ params }: PageProps) {
         return (
           <div className="my-8 rounded-2xl border-2 border-brand-turquoise bg-gradient-to-br from-[#F0F9FF] to-[#E0F2FE] p-6 md:p-8 text-center shadow-md">
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/20 px-4 py-1.5 text-xs font-semibold text-[#0F172A]">
+              <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/20 px-4 py-1.5 text-xs font-semibold text-[var(--color-text)]">
                 <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
                 Action recommandée
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-[#0F172A] leading-tight">
+              <h3 className="text-xl md:text-2xl font-bold text-[var(--color-text)] leading-tight">
                 {title}
               </h3>
-              <p className="text-sm md:text-base text-[#4b5c6b] max-w-2xl mx-auto leading-relaxed">
+              <p className="text-sm md:text-base text-[var(--color-text-secondary)] max-w-2xl mx-auto leading-relaxed">
                 {description}
               </p>
               <a
                 href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/blog-article-cta"
                 rel="nofollow"
-                className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#5AB9B9] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise px-6 py-3 text-sm md:text-base font-semibold text-[var(--color-text)] shadow-lg hover:bg-[#5AB9B9] transition-colors"
               >
                 <span>Comparer les devis gratuitement</span>
                 <span className="text-lg leading-none">→</span>
@@ -246,7 +246,7 @@ export default function BlogPostPage({ params }: PageProps) {
               </p>
               <a
                 href="/partenaires/#contact"
-                className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#5AB9B9] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise px-6 py-3 text-sm md:text-base font-semibold text-[var(--color-text)] shadow-lg hover:bg-[#5AB9B9] transition-colors"
               >
                 <span>Demander une démo</span>
                 <span className="text-lg leading-none">→</span>
@@ -258,7 +258,7 @@ export default function BlogPostPage({ params }: PageProps) {
 
       // Blockquotes normales
       return (
-        <blockquote className="border-l-4 border-brand-turquoise bg-[#F0F9FF] py-3 px-4 my-6 not-italic text-[#04163a]" {...props}>
+        <blockquote className="border-l-4 border-brand-turquoise bg-[#F0F9FF] py-3 px-4 my-6 not-italic text-[var(--color-text)]" {...props}>
           {children}
         </blockquote>
       );
@@ -361,7 +361,7 @@ export default function BlogPostPage({ params }: PageProps) {
               />
               <button
                 type="submit"
-                className="shrink-0 rounded-xl bg-brand-turquoise px-5 py-3 text-sm font-semibold text-[#0F172A] hover:bg-[#5AB9B9] transition-colors"
+                className="shrink-0 rounded-xl bg-brand-turquoise px-5 py-3 text-sm font-semibold text-[var(--color-text)] hover:bg-[#5AB9B9] transition-colors"
               >
                 OK
               </button>
@@ -373,14 +373,14 @@ export default function BlogPostPage({ params }: PageProps) {
       {/* Contenu article */}
       {canonicalBody ? (
         <section className="section section-light">
-          <div className="container max-w-3xl text-[#04163a]">
-            <div className="rounded-3xl bg-white px-4 py-6 md:px-10 md:py-10 shadow-sm border border-[#E3E5E8]">
+          <div className="container max-w-3xl text-[var(--color-text)]">
+            <div className="rounded-3xl bg-white px-4 py-6 md:px-10 md:py-10 shadow-sm border border-[var(--color-border)]">
               {toc.length >= 3 ? (
-                <div className="mb-8 rounded-2xl border border-[#E3E5E8] bg-[#F9FAFB] px-5 py-4">
-                  <p className="text-sm font-semibold text-[#04163a] mb-3">
+                <div className="mb-8 rounded-2xl border border-[var(--color-border)] bg-[#F9FAFB] px-5 py-4">
+                  <p className="text-sm font-semibold text-[var(--color-text)] mb-3">
                     Sommaire
                   </p>
-                  <ul className="space-y-2 text-sm text-[#4b5c6b]">
+                  <ul className="space-y-2 text-sm text-[var(--color-text-secondary)]">
                     {toc.map((item) => (
                       <li key={item.id} className={item.level === 3 ? "pl-4" : ""}>
                         <a
@@ -394,7 +394,7 @@ export default function BlogPostPage({ params }: PageProps) {
                   </ul>
                 </div>
               ) : null}
-              <article className="prose prose-base lg:prose-lg max-w-none prose-headings:font-bold prose-headings:text-[#04163a] prose-h1:text-3xl prose-h1:mb-6 prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:text-[#4b5c6b] prose-p:leading-relaxed prose-p:mb-4 prose-li:text-[#4b5c6b] prose-li:leading-relaxed prose-strong:text-[#04163a] prose-strong:font-semibold prose-a:text-[#2B7A78] prose-a:font-medium prose-a:no-underline hover:prose-a:underline prose-ul:my-4 prose-ul:list-disc prose-ul:pl-5 prose-ol:my-4 prose-ol:list-decimal prose-ol:pl-5 prose-table:text-sm prose-th:bg-[#F9FAFB] prose-th:text-[#04163a] prose-th:font-semibold prose-th:p-3 prose-td:p-3 prose-td:border-[#E5E7EB] prose-hr:my-8 prose-hr:border-[#E5E7EB]">
+              <article className="prose prose-base lg:prose-lg max-w-none prose-headings:font-bold prose-headings:text-[var(--color-text)] prose-h1:text-3xl prose-h1:mb-6 prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:text-[var(--color-text-secondary)] prose-p:leading-relaxed prose-p:mb-4 prose-li:text-[var(--color-text-secondary)] prose-li:leading-relaxed prose-strong:text-[var(--color-text)] prose-strong:font-semibold prose-a:text-[#2B7A78] prose-a:font-medium prose-a:no-underline hover:prose-a:underline prose-ul:my-4 prose-ul:list-disc prose-ul:pl-5 prose-ol:my-4 prose-ol:list-decimal prose-ol:pl-5 prose-table:text-sm prose-th:bg-[#F9FAFB] prose-th:text-[var(--color-text)] prose-th:font-semibold prose-th:p-3 prose-td:p-3 prose-td:border-[var(--color-border)] prose-hr:my-8 prose-hr:border-[var(--color-border)]">
                 <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
                   {canonicalBody}
                 </ReactMarkdown>
@@ -405,22 +405,22 @@ export default function BlogPostPage({ params }: PageProps) {
       ) : (
         <section className="section section-light">
           <div className="container max-w-3xl">
-            <div className="rounded-3xl bg-white px-6 py-12 md:px-12 md:py-16 shadow-sm border border-[#E3E5E8] text-center space-y-6">
+            <div className="rounded-3xl bg-white px-6 py-12 md:px-12 md:py-16 shadow-sm border border-[var(--color-border)] text-center space-y-6">
               <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-xs font-medium text-brand-turquoise">
                 <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise" />
                 Article en cours de réécriture
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-[#04163a]">
+              <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-text)]">
                 Contenu en cours de finalisation
               </h2>
-              <p className="text-sm md:text-base text-[#4b5c6b] max-w-xl mx-auto">
+              <p className="text-sm md:text-base text-[var(--color-text-secondary)] max-w-xl mx-auto">
                 Cet article est en cours de migration et de réécriture depuis nos anciens sites.
                 En attendant, vous pouvez déjà comparer des devis pour votre déménagement.
               </p>
               <a
                 href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/blog-placeholder"
                 rel="nofollow"
-                className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-[#1E293B] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-[var(--color-bg-dark)] px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-[var(--color-bg-dark)] transition-colors"
               >
                 <span>Comparer les devis maintenant</span>
                 <span className="text-lg leading-none">→</span>
@@ -433,7 +433,7 @@ export default function BlogPostPage({ params }: PageProps) {
       {/* Articles liés */}
       {related.length > 0 && (
         <section className="section section-light">
-          <div className="container max-w-3xl space-y-4 text-[#04163a]">
+          <div className="container max-w-3xl space-y-4 text-[var(--color-text)]">
             <h2 className="text-xl md:text-2xl font-semibold">
               Articles qui peuvent aussi vous intéresser
             </h2>
@@ -442,19 +442,19 @@ export default function BlogPostPage({ params }: PageProps) {
                 <a
                   key={item.slug}
                   href={`/blog/${item.slug}/`}
-                  className="group flex flex-col gap-1 rounded-2xl border border-[#E3E5E8] bg-white px-4 py-3 hover:border-brand-turquoise/50 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200"
+                  className="group flex flex-col gap-1 rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 hover:border-brand-turquoise/50 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200"
                 >
-                  <div className="flex flex-wrap items-center gap-2 text-xs text-[#6B7280]">
+                  <div className="flex flex-wrap items-center gap-2 text-xs text-[var(--color-text-secondary)]">
                     {item.category && (
                       <span className="rounded-full bg-[#F0F4F8] px-2 py-0.5 font-semibold text-[11px] text-[#2B7A78]">
                         {item.category}
                       </span>
                     )}
                     {item.citySlug && (
-                      <span className="text-[#6B7280]">{item.citySlug}</span>
+                      <span className="text-[var(--color-text-secondary)]">{item.citySlug}</span>
                     )}
                   </div>
-                  <p className="text-sm font-semibold text-[#04163a] group-hover:text-[#2B7A78]">
+                  <p className="text-sm font-semibold text-[var(--color-text)] group-hover:text-[#2B7A78]">
                     {item.title}
                   </p>
                 </a>
@@ -466,19 +466,19 @@ export default function BlogPostPage({ params }: PageProps) {
 
       {/* Maillage SEO : ressources utiles */}
       <section className="section section-light">
-        <div className="container max-w-3xl text-[#04163a]">
-          <div className="rounded-2xl border border-[#E3E5E8] bg-white p-6 md:p-8 text-center space-y-4">
+        <div className="container max-w-3xl text-[var(--color-text)]">
+          <div className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-8 text-center space-y-4">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">
               Ressources utiles
             </p>
-            <p className="text-sm text-[#6B7280] max-w-2xl mx-auto">
+            <p className="text-sm text-[var(--color-text-secondary)] max-w-2xl mx-auto">
               Les pages les plus utiles à lire ensuite (prix, checklists, et guides par ville).
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3">
               {city ? (
                 <a
                   href={`/demenagement/${city.slug}/`}
-                  className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-bg-dark)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--color-bg-dark)] transition-colors"
                 >
                   <span>Guide déménagement {city.nameCapitalized}</span>
                   <span>→</span>
@@ -486,7 +486,7 @@ export default function BlogPostPage({ params }: PageProps) {
               ) : (
                 <a
                   href="/villes/"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-bg-dark)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--color-bg-dark)] transition-colors"
                 >
                   <span>Guides par ville</span>
                   <span>→</span>
@@ -496,7 +496,7 @@ export default function BlogPostPage({ params }: PageProps) {
               {city ? (
                 <a
                   href={`/quartiers-${city.slug}/`}
-                  className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise/60 hover:bg-[#FAFAFA] transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-white px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-brand-turquoise/60 hover:bg-[var(--color-bg)] transition-colors"
                 >
                   <span>Quartiers de {city.nameCapitalized}</span>
                   <span>→</span>
@@ -506,7 +506,7 @@ export default function BlogPostPage({ params }: PageProps) {
               {cityPricePost ? (
                 <a
                   href={`/blog/${cityPricePost.slug}/`}
-                  className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise/60 hover:bg-[#FAFAFA] transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-white px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-brand-turquoise/60 hover:bg-[var(--color-bg)] transition-colors"
                 >
                   <span>Prix à {city?.nameCapitalized}</span>
                   <span>→</span>
@@ -514,7 +514,7 @@ export default function BlogPostPage({ params }: PageProps) {
               ) : (
                 <a
                   href="/blog/prix-et-devis/"
-                  className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise/60 hover:bg-[#FAFAFA] transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-white px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-brand-turquoise/60 hover:bg-[var(--color-bg)] transition-colors"
                 >
                   <span>Guides prix & devis</span>
                   <span>→</span>
@@ -523,7 +523,7 @@ export default function BlogPostPage({ params }: PageProps) {
 
               <a
                 href="/blog/checklists-et-guides/"
-                className="inline-flex items-center gap-2 rounded-full border border-[#E3E5E8] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-brand-turquoise/60 hover:bg-[#FAFAFA] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-white px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-brand-turquoise/60 hover:bg-[var(--color-bg)] transition-colors"
               >
                 <span>Checklists & guides</span>
                 <span>→</span>

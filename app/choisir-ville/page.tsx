@@ -40,10 +40,10 @@ export default function ChoisirVillePage() {
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#2B7A78] mb-3">
               Accès rapide
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#04163a] mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)] mb-4">
               Où déménagez-vous ?
             </h2>
-            <p className="text-base text-[#4b5c6b] max-w-2xl mx-auto">
+            <p className="text-base text-[var(--color-text-secondary)] max-w-2xl mx-auto">
               Chaque ville dispose de son comparateur dédié avec des déménageurs locaux vérifiés.
             </p>
           </div>
@@ -59,7 +59,7 @@ export default function ChoisirVillePage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                     </svg>
                   </div>
-                  <h3 className="text-base font-bold text-[#04163a]">{region}</h3>
+                  <h3 className="text-base font-bold text-[var(--color-text)]">{region}</h3>
                   <div className="h-px flex-1 bg-gradient-to-r from-[#E3E5E8] to-transparent" />
                 </div>
                 
@@ -69,7 +69,7 @@ export default function ChoisirVillePage() {
                     <a
                       key={city.slug}
                       href={quoteUrlForCity(city.slug)}
-                      className="group relative overflow-hidden flex items-center justify-between gap-4 rounded-xl border border-[#E3E5E8] bg-white p-4 shadow-sm transition-all duration-300 hover:shadow-md hover:border-brand-turquoise/50 hover:-translate-y-0.5"
+                      className="group relative overflow-hidden flex items-center justify-between gap-4 rounded-xl border border-[var(--color-border)] bg-white p-4 shadow-sm transition-all duration-300 hover:shadow-md hover:border-brand-turquoise/50 hover:-translate-y-0.5"
                     >
                       {/* Filament subtil */}
                       <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-brand-turquoise/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -82,10 +82,10 @@ export default function ChoisirVillePage() {
                           </svg>
                         </div>
                         <div className="flex-1">
-                          <div className="font-bold text-[#04163a] group-hover:text-[#2B7A78] transition-colors">
+                          <div className="font-bold text-[var(--color-text)] group-hover:text-[#2B7A78] transition-colors">
                             {city.nameCapitalized}
                           </div>
-                          <div className="text-xs text-[#6B7280]">{city.description}</div>
+                          <div className="text-xs text-[var(--color-text-secondary)]">{city.description}</div>
                         </div>
                       </div>
                       
@@ -101,12 +101,12 @@ export default function ChoisirVillePage() {
           </div>
 
           {/* Liste alphabétique compacte */}
-          <div className="mt-10 relative overflow-hidden rounded-2xl border border-[#E3E5E8] bg-gradient-to-br from-white to-[#FAFBFC] p-8">
+          <div className="mt-10 relative overflow-hidden rounded-2xl border border-[var(--color-border)] bg-gradient-to-br from-white to-[#FAFBFC] p-8">
             <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-brand-turquoise/30 via-[#4f46e5]/20 to-[#22c55e]/30" />
             
             <div className="text-center mb-6">
-              <h3 className="text-lg font-bold text-[#04163a] mb-2">Liste alphabétique</h3>
-              <p className="text-sm text-[#6B7280]">Toutes nos villes en un coup d'œil</p>
+              <h3 className="text-lg font-bold text-[var(--color-text)] mb-2">Liste alphabétique</h3>
+              <p className="text-sm text-[var(--color-text-secondary)]">Toutes nos villes en un coup d'œil</p>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-2">
@@ -114,7 +114,7 @@ export default function ChoisirVillePage() {
                 <a
                   key={city.slug}
                   href={quoteUrlForCity(city.slug)}
-                  className="group flex items-center gap-2 text-sm text-[#4b5c6b] hover:text-[#2B7A78] font-medium transition-colors py-1.5"
+                  className="group flex items-center gap-2 text-sm text-[var(--color-text-secondary)] hover:text-[#2B7A78] font-medium transition-colors py-1.5"
                 >
                   <svg className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -127,21 +127,21 @@ export default function ChoisirVillePage() {
 
           {/* CTA ville non couverte */}
           <div className="mt-8 text-center">
-            <div className="inline-block rounded-2xl border border-[#E3E5E8] bg-white p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <div className="inline-block rounded-2xl border border-[var(--color-border)] bg-white p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
               <div className="flex items-center justify-center gap-3 mb-4">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-brand-turquoise/10 to-[#4FB8B8]/20">
                   <svg className="h-5 w-5 text-[#2B7A78]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-bold text-[#04163a]">Votre ville n'est pas listée ?</h3>
+                <h3 className="text-lg font-bold text-[var(--color-text)]">Votre ville n'est pas listée ?</h3>
               </div>
-              <p className="text-sm text-[#4b5c6b] mb-6 max-w-md mx-auto">
+              <p className="text-sm text-[var(--color-text-secondary)] mb-6 max-w-md mx-auto">
                 Nous développons de nouvelles villes chaque mois. Manifestez votre intérêt pour accélérer l'ouverture.
               </p>
               <a
                 href="/contact/"
-                className="inline-flex items-center gap-2 rounded-xl border-2 border-brand-turquoise/40 bg-white px-6 py-3 text-sm font-semibold text-[#04163a] hover:bg-[#F8F9FA] hover:border-brand-turquoise/60 transition-all duration-300"
+                className="inline-flex items-center gap-2 rounded-xl border-2 border-brand-turquoise/40 bg-white px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:bg-[#F8F9FA] hover:border-brand-turquoise/60 transition-all duration-300"
               >
                 <span>Contactez-nous</span>
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

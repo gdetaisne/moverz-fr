@@ -16,7 +16,7 @@ export default function Chip({ children, tone = "teal", size = "md", className =
     brand: "border border-[var(--brand-teal)]/25 bg-[var(--brand-teal)]/10 text-[var(--brand-deep)]",
     neutral: "border border-black/10 bg-white/70 text-[var(--text-muted)]",
     dark: "border border-white/15 bg-white/8 text-white/85",
-    light: "border border-brand-turquoise/25 bg-brand-turquoise/10 text-[#0F172A]",
+    light: "border border-brand-turquoise/25 bg-brand-turquoise/10 text-[var(--color-text)]",
   };
 
   return <span className={`${base} ${sizes[size]} ${tones[tone]} ${className}`}>{children}</span>;

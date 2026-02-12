@@ -21,11 +21,11 @@ export default function ComparatorsProblems() {
             }}
           >
             <div className="relative w-full max-w-[420px] mx-auto">
-              <div className="bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.15)] p-6 border border-[#E3E5E8]">
+              <div className="bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.15)] p-6 border border-[var(--color-border)]">
                 {/* Header */}
-                <div className="mb-6 pb-4 border-b border-[#E3E5E8]">
-                  <p className="text-xs text-[#1E293B]/60 font-medium">Analyse du marché</p>
-                  <p className="text-lg font-bold text-[#0F172A]">Types de comparateurs</p>
+                <div className="mb-6 pb-4 border-b border-[var(--color-border)]">
+                  <p className="text-xs text-[var(--color-text-secondary)]/60 font-medium">Analyse du marché</p>
+                  <p className="text-lg font-bold text-[var(--color-text)]">Types de comparateurs</p>
                 </div>
 
                 {/* Problems list */}
@@ -37,12 +37,12 @@ export default function ComparatorsProblems() {
                         <FileText className="w-5 h-5 text-red-600" />
                       </div>
                       <div className="flex-1">
-                        <p className="text-sm font-bold text-[#0F172A]">Lead-gen</p>
+                        <p className="text-sm font-bold text-[var(--color-text)]">Lead-gen</p>
                         <p className="text-xs text-red-900/70">45-50% du marché</p>
                       </div>
                       <AlertTriangle className="w-4 h-4 text-red-500" />
                     </div>
-                    <p className="text-xs text-[#1E293B]/70 mt-2">
+                    <p className="text-xs text-[var(--color-text-secondary)]/70 mt-2">
                       Formulaire → vos données vendues. Aucune comparaison réelle.
                     </p>
                   </div>
@@ -54,12 +54,12 @@ export default function ComparatorsProblems() {
                         <Video className="w-5 h-5 text-orange-600" />
                       </div>
                       <div className="flex-1">
-                        <p className="text-sm font-bold text-[#0F172A]">Courtiers visio</p>
+                        <p className="text-sm font-bold text-[var(--color-text)]">Courtiers visio</p>
                         <p className="text-xs text-orange-900/70">25-30% du marché</p>
                       </div>
                       <AlertTriangle className="w-4 h-4 text-orange-500" />
                     </div>
-                    <p className="text-xs text-[#1E293B]/70 mt-2">
+                    <p className="text-xs text-[var(--color-text-secondary)]/70 mt-2">
                       RDV obligatoire, délais longs, friction élevée.
                     </p>
                   </div>
@@ -71,12 +71,12 @@ export default function ComparatorsProblems() {
                         <Building2 className="w-5 h-5 text-yellow-700" />
                       </div>
                       <div className="flex-1">
-                        <p className="text-sm font-bold text-[#0F172A]">Réseaux fermés</p>
+                        <p className="text-sm font-bold text-[var(--color-text)]">Réseaux fermés</p>
                         <p className="text-xs text-yellow-900/70">15-20% du marché</p>
                       </div>
                       <AlertTriangle className="w-4 h-4 text-yellow-600" />
                     </div>
-                    <p className="text-xs text-[#1E293B]/70 mt-2">
+                    <p className="text-xs text-[var(--color-text-secondary)]/70 mt-2">
                       Limité à leurs membres. Pas neutre par définition.
                     </p>
                   </div>
@@ -92,18 +92,18 @@ export default function ComparatorsProblems() {
               animation: mounted ? 'fadeInUp 1s ease-out 0.2s both' : 'none',
             }}
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-sm font-semibold text-[#0F172A] mb-6">
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-1.5 text-sm font-semibold text-[var(--color-text)] mb-6">
               <span className="h-2 w-2 rounded-full bg-brand-turquoise" />
               Le constat
             </div>
 
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] mb-6 leading-tight">
+            <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text)] mb-6 leading-tight">
               Le vrai problème des{" "}
               <span className="text-red-500">comparateurs</span>
             </h2>
 
-            <p className="text-lg text-[#1E293B]/70 leading-relaxed mb-8">
-              Sur les 20–30 premiers résultats Google, <strong className="text-[#0F172A]">la plupart des comparateurs ne comparent rien</strong>.
+            <p className="text-lg text-[var(--color-text-secondary)]/70 leading-relaxed mb-8">
+              Sur les 20–30 premiers résultats Google, <strong className="text-[var(--color-text)]">la plupart des comparateurs ne comparent rien</strong>.
               Ils revendent vos coordonnées.
             </p>
 
@@ -114,8 +114,8 @@ export default function ComparatorsProblems() {
                   <FileText className="w-5 h-5 text-red-600" strokeWidth={2.5} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#0F172A] mb-1">Lead-gen (45-50%)</h3>
-                  <p className="text-[#1E293B]/70 text-sm">
+                  <h3 className="font-bold text-[var(--color-text)] mb-1">Lead-gen (45-50%)</h3>
+                  <p className="text-[var(--color-text-secondary)]/70 text-sm">
                     Formulaire → vos données vendues aux déménageurs. Aucune comparaison réelle.
                   </p>
                 </div>
@@ -127,8 +127,8 @@ export default function ComparatorsProblems() {
                   <Video className="w-5 h-5 text-orange-600" strokeWidth={2.5} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#0F172A] mb-1">Courtiers visio (25-30%)</h3>
-                  <p className="text-[#1E293B]/70 text-sm">
+                  <h3 className="font-bold text-[var(--color-text)] mb-1">Courtiers visio (25-30%)</h3>
+                  <p className="text-[var(--color-text-secondary)]/70 text-sm">
                     Rendez-vous obligatoire, délais longs, friction élevée. Difficile à scaler.
                   </p>
                 </div>
@@ -140,8 +140,8 @@ export default function ComparatorsProblems() {
                   <Building2 className="w-5 h-5 text-yellow-700" strokeWidth={2.5} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#0F172A] mb-1">Réseaux fermés (15-20%)</h3>
-                  <p className="text-[#1E293B]/70 text-sm">
+                  <h3 className="font-bold text-[var(--color-text)] mb-1">Réseaux fermés (15-20%)</h3>
+                  <p className="text-[var(--color-text-secondary)]/70 text-sm">
                     Comparaison limitée à leurs membres. Pas neutre par définition.
                   </p>
                 </div>
@@ -152,11 +152,11 @@ export default function ComparatorsProblems() {
             <div className="p-6 rounded-2xl bg-gradient-to-br from-red-50 to-orange-50 border border-red-200">
               <div className="flex items-center gap-3 mb-3">
                 <AlertTriangle className="w-5 h-5 text-red-600" />
-                <p className="font-bold text-[#0F172A]">Conséquence</p>
+                <p className="font-bold text-[var(--color-text)]">Conséquence</p>
               </div>
-              <p className="text-sm text-[#1E293B]/70">
-                Le devis <strong className="text-[#0F172A]">le moins cher</strong> n'est pas nécessairement{" "}
-                <strong className="text-[#0F172A]">le moins risqué</strong>.
+              <p className="text-sm text-[var(--color-text-secondary)]/70">
+                Le devis <strong className="text-[var(--color-text)]">le moins cher</strong> n'est pas nécessairement{" "}
+                <strong className="text-[var(--color-text)]">le moins risqué</strong>.
               </p>
             </div>
           </div>

@@ -34,18 +34,18 @@ export default function ContactPage() {
 
           <div className="mt-8 grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-brand-turquoise/30 bg-white/70 px-4 py-2 text-sm font-semibold text-[#0F172A] backdrop-blur-sm">
+              <div className="inline-flex items-center gap-2 rounded-full border border-brand-turquoise/30 bg-white/70 px-4 py-2 text-sm font-semibold text-[var(--color-text)] backdrop-blur-sm">
                 <Clock className="h-4 w-4 text-[#2B7A78]" />
                 Réponse sous 24h ouvrées
               </div>
 
-              <h1 className="mt-6 text-4xl md:text-6xl font-bold leading-[1.05] text-[#0F172A]">
+              <h1 className="mt-6 text-4xl md:text-6xl font-bold leading-[1.05] text-[var(--color-text)]">
                 On répond vite.
                 <br />
-                <span className="text-[#0F172A]/80">Et on répond clair.</span>
+                <span className="text-[var(--color-text)]/80">Et on répond clair.</span>
               </h1>
 
-              <p className="mt-5 text-base md:text-lg text-[#1E293B]/70 max-w-xl">
+              <p className="mt-5 text-base md:text-lg text-[var(--color-text-secondary)]/70 max-w-xl">
                 Besoin d’aide sur un devis, une arnaque, ou votre dossier ? Le plus simple : envoyez un message via le
                 formulaire (avec un maximum de contexte).
               </p>
@@ -53,7 +53,7 @@ export default function ContactPage() {
               <div className="mt-7 flex flex-col sm:flex-row gap-3">
                 <a
                   href="#form"
-                  className="group inline-flex items-center justify-center gap-2 rounded-2xl border border-[#0F172A]/15 bg-white px-6 py-4 text-sm font-semibold text-[#0F172A] hover:bg-gray-50 active:scale-[0.98] transition-all touch-manipulation min-h-[48px]"
+                  className="group inline-flex items-center justify-center gap-2 rounded-2xl border border-[#0F172A]/15 bg-white px-6 py-4 text-sm font-semibold text-[var(--color-text)] hover:bg-gray-50 active:scale-[0.98] transition-all touch-manipulation min-h-[48px]"
                 >
                   <Mail className="h-4 w-4" />
                   Envoyer un message
@@ -61,7 +61,7 @@ export default function ContactPage() {
                 </a>
               </div>
 
-              <div className="mt-6 flex flex-wrap items-center gap-2 text-xs text-[#0F172A]/60">
+              <div className="mt-6 flex flex-wrap items-center gap-2 text-xs text-[var(--color-text)]/60">
                 <span className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 backdrop-blur-sm border border-white/60">
                   <ShieldCheck className="h-3.5 w-3.5 text-[#2B7A78]" />
                   Sans démarchage
@@ -78,21 +78,21 @@ export default function ContactPage() {
             </div>
 
             <div className="space-y-4">
-              <div className="rounded-3xl border border-[#E3E5E8] bg-white/95 backdrop-blur-sm p-7 shadow-[0_8px_32px_rgba(0,0,0,0.08)]">
+              <div className="rounded-3xl border border-[var(--color-border)] bg-white/95 backdrop-blur-sm p-7 shadow-[0_8px_32px_rgba(0,0,0,0.08)]">
                 <div className="flex items-center gap-3">
                   <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-turquoise/10 text-[#2B7A78]">
                     <Users className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-[#0F172A]">On vous répond</p>
-                    <p className="text-sm text-[#1E293B]/70">Une vraie équipe, pas un bot.</p>
+                    <p className="text-sm font-semibold text-[var(--color-text)]">On vous répond</p>
+                    <p className="text-sm text-[var(--color-text-secondary)]/70">Une vraie équipe, pas un bot.</p>
                   </div>
                 </div>
 
                 <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                  <div className="rounded-2xl border border-[#E3E5E8] bg-[#FAFBFC] p-4">
+                  <div className="rounded-2xl border border-[var(--color-border)] bg-[#FAFBFC] p-4">
                     <div className="flex items-center gap-3">
-                      <div className="relative h-10 w-10 overflow-hidden rounded-xl border border-[#E3E5E8] bg-white">
+                      <div className="relative h-10 w-10 overflow-hidden rounded-xl border border-[var(--color-border)] bg-white">
                         <Image
                           src="/lucie-profile.jpg"
                           alt="Lucie, cofondateur Moverz"
@@ -102,26 +102,26 @@ export default function ContactPage() {
                         />
                       </div>
                       <div className="min-w-0">
-                        <p className="text-sm font-semibold text-[#0F172A] leading-tight">
+                        <p className="text-sm font-semibold text-[var(--color-text)] leading-tight">
                           Lucie
                         </p>
-                        <p className="text-xs text-[#6B7280]">Cofondateur</p>
+                        <p className="text-xs text-[var(--color-text-secondary)]">Cofondateur</p>
                       </div>
                     </div>
                     <a
                       href="https://www.linkedin.com/in/lucieveltz/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-[#0F172A]/80 hover:text-[#0F172A] transition-colors"
+                      className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-[var(--color-text)]/80 hover:text-[var(--color-text)] transition-colors"
                     >
                       <Linkedin className="h-3.5 w-3.5" />
                       LinkedIn
                     </a>
                   </div>
 
-                  <div className="rounded-2xl border border-[#E3E5E8] bg-[#FAFBFC] p-4">
+                  <div className="rounded-2xl border border-[var(--color-border)] bg-[#FAFBFC] p-4">
                     <div className="flex items-center gap-3">
-                      <div className="relative h-10 w-10 overflow-hidden rounded-xl border border-[#E3E5E8] bg-white">
+                      <div className="relative h-10 w-10 overflow-hidden rounded-xl border border-[var(--color-border)] bg-white">
                         <Image
                           src="/guillaume-profile.jpg"
                           alt="Guillaume, cofondateur Moverz"
@@ -131,17 +131,17 @@ export default function ContactPage() {
                         />
                       </div>
                       <div className="min-w-0">
-                        <p className="text-sm font-semibold text-[#0F172A] leading-tight">
+                        <p className="text-sm font-semibold text-[var(--color-text)] leading-tight">
                           Guillaume
                         </p>
-                        <p className="text-xs text-[#6B7280]">Cofondateur</p>
+                        <p className="text-xs text-[var(--color-text-secondary)]">Cofondateur</p>
                       </div>
                     </div>
                     <a
                       href="https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-[#0F172A]/80 hover:text-[#0F172A] transition-colors"
+                      className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-[var(--color-text)]/80 hover:text-[var(--color-text)] transition-colors"
                     >
                       <Linkedin className="h-3.5 w-3.5" />
                       LinkedIn
@@ -151,9 +151,9 @@ export default function ContactPage() {
 
               </div>
 
-              <div className="rounded-3xl border border-[#E3E5E8] bg-white/95 backdrop-blur-sm p-7 shadow-[0_4px_16px_rgba(0,0,0,0.04)]">
-                <p className="text-sm font-semibold text-[#0F172A]">Astuce</p>
-                <p className="mt-2 text-sm text-[#1E293B]/70">
+              <div className="rounded-3xl border border-[var(--color-border)] bg-white/95 backdrop-blur-sm p-7 shadow-[0_4px_16px_rgba(0,0,0,0.04)]">
+                <p className="text-sm font-semibold text-[var(--color-text)]">Astuce</p>
+                <p className="mt-2 text-sm text-[var(--color-text-secondary)]/70">
                   Si vous avez un devis “bizarre”, envoyez une capture + quelques détails (accès / étage / cave). On vous dit tout de suite ce qui cloche.
                 </p>
               </div>
@@ -168,14 +168,14 @@ export default function ContactPage() {
           <div className="grid gap-6 lg:grid-cols-2 lg:items-start">
             <div
               id="form"
-              className="relative overflow-hidden rounded-3xl border border-[#E3E5E8] bg-gradient-to-b from-white to-[#FAFBFC] p-8 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
+              className="relative overflow-hidden rounded-3xl border border-[var(--color-border)] bg-gradient-to-b from-white to-[#FAFBFC] p-8 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
             >
               <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-brand-turquoise/70 via-[#0F172A]/20 to-brand-turquoise/70" />
               <div className="mb-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A]">
+                <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-text)]">
                   Envoyer un message
                 </h2>
-                <p className="mt-2 text-sm md:text-base text-[#1E293B]/70">
+                <p className="mt-2 text-sm md:text-base text-[var(--color-text-secondary)]/70">
                   Donnez un peu de contexte (dates, villes, volume, contraintes). On vous répond sous 24h
                   ouvrées.
                 </p>
@@ -184,11 +184,11 @@ export default function ContactPage() {
             </div>
 
             <div className="space-y-6">
-              <div className="rounded-3xl border border-[#E3E5E8] bg-white/95 backdrop-blur-sm p-7 md:p-8 shadow-[0_4px_16px_rgba(0,0,0,0.04)]">
-                <p className="text-sm font-semibold text-[#0F172A]">Coordonnées</p>
-                <div className="mt-4 space-y-4 text-sm text-[#1E293B]/70">
+              <div className="rounded-3xl border border-[var(--color-border)] bg-white/95 backdrop-blur-sm p-7 md:p-8 shadow-[0_4px_16px_rgba(0,0,0,0.04)]">
+                <p className="text-sm font-semibold text-[var(--color-text)]">Coordonnées</p>
+                <div className="mt-4 space-y-4 text-sm text-[var(--color-text-secondary)]/70">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-[#6B7280] mb-1">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-[var(--color-text-secondary)] mb-1">
                       Email
                     </p>
                     <a
@@ -199,14 +199,14 @@ export default function ContactPage() {
                     </a>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-[#6B7280] mb-1">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-[var(--color-text-secondary)] mb-1">
                       Horaires
                     </p>
                     <p>Lundi - Vendredi : 9h - 18h</p>
-                    <p className="text-xs text-[#6B7280] mt-0.5">Réponse sous 24h ouvrées</p>
+                    <p className="text-xs text-[var(--color-text-secondary)] mt-0.5">Réponse sous 24h ouvrées</p>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-[#6B7280] mb-1">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-[var(--color-text-secondary)] mb-1">
                       Adresse
                     </p>
                     <p className="leading-relaxed">
@@ -218,15 +218,15 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="rounded-3xl border border-[#E3E5E8] bg-white/95 backdrop-blur-sm p-7 md:p-8 shadow-[0_4px_16px_rgba(0,0,0,0.04)]">
-                <p className="text-sm font-semibold text-[#0F172A]">Nos garanties</p>
-                <ul className="mt-4 space-y-3 text-sm text-[#1E293B]/70">
+              <div className="rounded-3xl border border-[var(--color-border)] bg-white/95 backdrop-blur-sm p-7 md:p-8 shadow-[0_4px_16px_rgba(0,0,0,0.04)]">
+                <p className="text-sm font-semibold text-[var(--color-text)]">Nos garanties</p>
+                <ul className="mt-4 space-y-3 text-sm text-[var(--color-text-secondary)]/70">
                   <li className="flex items-start gap-3">
                     <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-turquoise/15 text-[#2B7A78]">
                       <ShieldCheck className="h-4 w-4" />
                     </span>
                     <span>
-                      <strong className="text-[#0F172A]">Dossier anonyme</strong> — coordonnées partagées après votre choix.
+                      <strong className="text-[var(--color-text)]">Dossier anonyme</strong> — coordonnées partagées après votre choix.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
@@ -234,7 +234,7 @@ export default function ContactPage() {
                       <ShieldCheck className="h-4 w-4" />
                     </span>
                     <span>
-                      <strong className="text-[#0F172A]">Déménageurs contrôlés</strong> — solvabilité + signaux faibles.
+                      <strong className="text-[var(--color-text)]">Déménageurs contrôlés</strong> — solvabilité + signaux faibles.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
@@ -242,7 +242,7 @@ export default function ContactPage() {
                       <ShieldCheck className="h-4 w-4" />
                     </span>
                     <span>
-                      <strong className="text-[#0F172A]">Devis comparables</strong> — même cahier des charges pour tous.
+                      <strong className="text-[var(--color-text)]">Devis comparables</strong> — même cahier des charges pour tous.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
@@ -250,7 +250,7 @@ export default function ContactPage() {
                       <ShieldCheck className="h-4 w-4" />
                     </span>
                     <span>
-                      <strong className="text-[#0F172A]">Sans démarchage</strong> — vous choisissez quand échanger.
+                      <strong className="text-[var(--color-text)]">Sans démarchage</strong> — vous choisissez quand échanger.
                     </span>
                   </li>
                 </ul>

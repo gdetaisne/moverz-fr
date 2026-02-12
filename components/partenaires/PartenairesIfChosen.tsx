@@ -21,10 +21,10 @@ export default function PartenairesIfChosen() {
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-brand-turquoise/10 mb-6">
             <UserCheck className="w-8 h-8 text-brand-turquoise" />
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[#0F172A]">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[var(--color-text)]">
             Si le client vous choisit
           </h2>
-          <p className="text-lg text-[#6B7280] mb-8">
+          <p className="text-lg text-[var(--color-text-secondary)] mb-8">
             Moverz vous met en relation directement avec le client.
           </p>
         </motion.div>
@@ -33,9 +33,9 @@ export default function PartenairesIfChosen() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white rounded-3xl p-8 md:p-12 border border-[#E3E5E8] shadow-sm"
+          className="bg-white rounded-3xl p-8 md:p-12 border border-[var(--color-border)] shadow-sm"
         >
-          <p className="text-[#1E293B] mb-6">
+          <p className="text-[var(--color-text-secondary)] mb-6">
             Ensuite, vous prenez la main comme d'habitude :
           </p>
 
@@ -52,13 +52,13 @@ export default function PartenairesIfChosen() {
                 <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-lg bg-brand-turquoise/10">
                   <step.icon className="w-5 h-5 text-brand-turquoise" />
                 </div>
-                <span className="text-[#1E293B]">{step.text}</span>
+                <span className="text-[var(--color-text-secondary)]">{step.text}</span>
               </motion.li>
             ))}
           </ul>
 
           <div className="p-5 rounded-xl bg-gradient-to-r from-brand-turquoise/10 to-[#A8E8E8]/10 border border-brand-turquoise/30">
-            <p className="text-[#0F172A] font-semibold">
+            <p className="text-[var(--color-text)] font-semibold">
               👉 À ce stade, vous n'êtes plus en concurrence : le client vous a choisi.
             </p>
           </div>

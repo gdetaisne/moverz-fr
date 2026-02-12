@@ -47,7 +47,7 @@ export default function TrustSignals() {
   ];
 
   return (
-    <section className="section section-light border-y border-[#E3E5E8]">
+    <section className="section section-light border-y border-[var(--color-border)]">
       <div className="container max-w-6xl">
         <motion.div
           className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4"
@@ -59,7 +59,7 @@ export default function TrustSignals() {
           {signals.map((signal, i) => (
             <motion.div
               key={signal.text}
-              className="flex items-center gap-2 text-[#1E293B]/70"
+              className="flex items-center gap-2 text-[var(--color-text-secondary)]/70"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}

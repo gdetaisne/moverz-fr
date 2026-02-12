@@ -66,10 +66,10 @@ export default function ProPricing() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text)] mb-4">
             Tarifs transparents
           </h2>
-          <p className="text-lg text-[#6B7280] max-w-2xl mx-auto">
+          <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl mx-auto">
             Starter / Pro incluent 100 leads/mois · Dépassement par tranches · Lead = dossier complété
           </p>
         </motion.div>
@@ -85,7 +85,7 @@ export default function ProPricing() {
               className={`relative rounded-2xl p-8 ${
                 plan.highlight
                   ? "bg-white border-2 border-brand-turquoise shadow-lg"
-                  : "bg-white border border-gray-200"
+                  : "bg-white border border-[var(--color-border)]"
               }`}
             >
               {/* Badge subtil */}
@@ -103,10 +103,10 @@ export default function ProPricing() {
               </div>
 
               {/* Name */}
-              <h3 className="text-2xl font-bold mb-2 text-[#0F172A]">
+              <h3 className="text-2xl font-bold mb-2 text-[var(--color-text)]">
                 {plan.name}
               </h3>
-              <p className="text-sm mb-6 text-[#6B7280]">
+              <p className="text-sm mb-6 text-[var(--color-text-secondary)]">
                 {plan.description}
               </p>
 
@@ -114,21 +114,21 @@ export default function ProPricing() {
               <div className="mb-6">
                 <div className="flex items-baseline gap-1">
                   {plan.price !== "Sur mesure" && (
-                    <span className="text-5xl font-bold text-[#0F172A]">
+                    <span className="text-5xl font-bold text-[var(--color-text)]">
                       {plan.price}€
                     </span>
                   )}
                   {plan.price === "Sur mesure" && (
-                    <span className="text-3xl font-bold text-[#0F172A]">
+                    <span className="text-3xl font-bold text-[var(--color-text)]">
                       {plan.price}
                     </span>
                   )}
-                  <span className="text-lg text-[#6B7280]">
+                  <span className="text-lg text-[var(--color-text-secondary)]">
                     {plan.period}
                   </span>
                 </div>
                 {plan.price !== "Sur mesure" && (
-                  <p className="text-xs text-[#6B7280] mt-1">HT/mois · 100 leads inclus</p>
+                  <p className="text-xs text-[var(--color-text-secondary)] mt-1">HT/mois · 100 leads inclus</p>
                 )}
               </div>
 
@@ -138,7 +138,7 @@ export default function ProPricing() {
                 className={`block w-full text-center px-6 py-3 rounded-xl font-semibold transition-all duration-300 mb-6 ${
                   plan.highlight
                     ? "bg-brand-turquoise text-white hover:bg-[#5AB0B0] shadow-sm hover:shadow-md"
-                    : "bg-white border-2 border-[#0F172A] text-[#0F172A] hover:bg-[#0F172A] hover:text-white"
+                    : "bg-white border-2 border-[#0F172A] text-[var(--color-text)] hover:bg-[var(--color-bg-dark)] hover:text-white"
                 }`}
               >
                 {plan.cta}
@@ -149,7 +149,7 @@ export default function ProPricing() {
                 {plan.features.map((feature, j) => (
                   <div key={j} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5 text-brand-turquoise" />
-                    <span className="text-sm text-[#6B7280]">
+                    <span className="text-sm text-[var(--color-text-secondary)]">
                       {feature}
                     </span>
                   </div>
@@ -171,14 +171,14 @@ export default function ProPricing() {
           viewport={{ once: true }}
           className="mt-12 max-w-4xl mx-auto"
         >
-          <div className="bg-white rounded-2xl border border-[#E3E5E8] p-6 md:p-8">
-            <h3 className="text-lg font-bold text-[#0F172A] mb-4">
+          <div className="bg-white rounded-2xl border border-[var(--color-border)] p-6 md:p-8">
+            <h3 className="text-lg font-bold text-[var(--color-text)] mb-4">
               Quotas & dépassements
             </h3>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-3">
-                <p className="text-sm text-[#6B7280]">
-                  <strong className="text-[#0F172A]">100 leads/mois inclus</strong> (Starter & Pro). Un lead = dossier complété (formulaire rempli).
+                <p className="text-sm text-[var(--color-text-secondary)]">
+                  <strong className="text-[var(--color-text)]">100 leads/mois inclus</strong> (Starter & Pro). Un lead = dossier complété (formulaire rempli).
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {[
@@ -188,17 +188,17 @@ export default function ProPricing() {
                   ].map((x) => (
                     <div
                       key={x.k}
-                      className="inline-flex items-center gap-2 rounded-lg border border-[#E3E5E8] bg-[#F9FAFB] px-3 py-2"
+                      className="inline-flex items-center gap-2 rounded-lg border border-[var(--color-border)] bg-[#F9FAFB] px-3 py-2"
                     >
-                      <span className="text-sm font-semibold text-[#0F172A]">{x.k}</span>
-                      <span className="text-xs text-[#6B7280]">→</span>
+                      <span className="text-sm font-semibold text-[var(--color-text)]">{x.k}</span>
+                      <span className="text-xs text-[var(--color-text-secondary)]">→</span>
                       <span className="text-sm font-bold text-brand-turquoise">{x.v}</span>
                     </div>
                   ))}
                 </div>
               </div>
               <div className="flex items-center">
-                <p className="text-xs text-[#6B7280] leading-relaxed">
+                <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
                   Pas de surprise : vous recevez une notification à 80% de quota. Dépassement facturé au prorata. Annulation ou changement de plan possible chaque mois.
                 </p>
               </div>

@@ -62,7 +62,7 @@ export function HowToChoose() {
           <div className="relative space-y-10">
             {/* Header avec badge premium */}
             <div className="text-center space-y-4">
-              <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-brand-accent/10 border border-brand-turquoise/30 backdrop-blur-sm px-5 py-2.5 text-xs font-bold text-[#0F172A] shadow-sm">
+              <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-brand-accent/10 border border-brand-turquoise/30 backdrop-blur-sm px-5 py-2.5 text-xs font-bold text-[var(--color-text)] shadow-sm">
                 <span className="relative inline-flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-turquoise opacity-75" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-turquoise shadow-[0_0_12px_rgba(107,207,207,0.8)]" />
@@ -72,7 +72,7 @@ export function HowToChoose() {
               <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#0F172A] via-brand-turquoise to-brand-accent bg-clip-text text-transparent leading-tight">
                 Comment choisir un bon déménageur ?
               </h2>
-              <p className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-base text-[var(--color-text-secondary)] max-w-3xl mx-auto leading-relaxed">
                 Choisir un bon déménageur en 5 étapes : vérifier l'assurance obligatoire, 
                 comparer des devis sur une base identique (même volume), lire les avis récents vérifiés, 
                 contrôler la santé financière (Creditsafe), et exiger une estimation précise du volume.
@@ -94,11 +94,11 @@ export function HowToChoose() {
                       <div className="text-brand-accent group-hover/item:text-brand-turquoise transition-colors duration-300">
                         {step.icon}
                       </div>
-                      <h3 className="text-lg font-bold text-[#0F172A]">
+                      <h3 className="text-lg font-bold text-[var(--color-text)]">
                         {step.title}
                       </h3>
                     </div>
-                    <p className="text-sm text-gray-700 leading-relaxed">
+                    <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
                       {step.description}
                     </p>
                   </div>
@@ -116,7 +116,7 @@ export function HowToChoose() {
                   <p className="text-base font-bold bg-gradient-to-r from-[#0F172A] to-brand-accent bg-clip-text text-transparent">
                     Moverz fait ces 5 vérifications pour vous
                   </p>
-                  <p className="text-sm text-gray-700 max-w-2xl mx-auto leading-relaxed">
+                  <p className="text-sm text-[var(--color-text-secondary)] max-w-2xl mx-auto leading-relaxed">
                     Tous les déménageurs du réseau Moverz sont contrôlés : assurance vérifiée, 
                     Creditsafe validé, avis authentiques, volume calculé par IA (même base pour tous). 
                     Vous recevez des devis vraiment comparables sous 5 jours.
