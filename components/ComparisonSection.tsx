@@ -59,7 +59,7 @@ export default function ComparisonSection() {
             
             <div className="relative flex items-start gap-4">
               {/* Pictogramme SVG avec animation */}
-              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-turquoise/20 to-[#4FB8B8]/30 border border-brand-turquoise/30 text-brand-turquoise transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-[0_0_20px_rgba(107,207,207,0.4)]">
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-turquoise/20 to-[#4FB8B8]/30 border border-[var(--color-accent)]/30 text-[var(--color-accent)] transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-[0_0_20px_rgba(107,207,207,0.4)]">
                 {benefit.icon}
           </div>
 

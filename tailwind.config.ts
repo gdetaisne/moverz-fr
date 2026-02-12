@@ -60,23 +60,23 @@ const config = {
         success: "rgb(var(--success) / <alpha-value>)",
         danger: "rgb(var(--danger) / <alpha-value>)",
         warning: "rgb(var(--warning) / <alpha-value>)",
-        // Legacy brand colors
+        // Legacy brand colors (mapped to V4 for consistency)
         brand: {
-          DEFAULT: "#04163a",
-          navy: "#04163a",
-          primary: "#04163a",
+          DEFAULT: "#0B0F19", // mapped to V4 text
+          navy: "#0B0F19", // mapped to V4 text
+          primary: "#0B0F19", // mapped to V4 text
           turquoise: {
-            DEFAULT: "#6BCFCF",
-            100: "#E0F7F7",
-            200: "#B3EBEB",
-            300: "#8FDFDF",
-            400: "#6BCFCF",
-            500: "#4FBFBF",
+            DEFAULT: "#0EA5A6", // ✅ V4 accent color
+            100: "rgba(14, 165, 166, 0.1)",
+            200: "rgba(14, 165, 166, 0.2)",
+            300: "rgba(14, 165, 166, 0.3)",
+            400: "rgba(14, 165, 166, 0.4)",
+            500: "#0EA5A6",
           },
           accent: {
-            DEFAULT: "#A78BFA",
-            100: "#EDE9FE",
-            300: "#C4B5FD",
+            DEFAULT: "#0EA5A6", // ✅ V4 accent color
+            100: "rgba(14, 165, 166, 0.1)",
+            300: "rgba(14, 165, 166, 0.3)",
           },
         },
       },
@@ -90,8 +90,8 @@ const config = {
         sm: "var(--shadow-sm)",
         md: "var(--shadow-md)",
         lg: "var(--shadow-lg)",
-        "glow-turquoise": "0 4px 16px rgba(107,207,207,0.3)",
-        "glow-turquoise-lg": "0 6px 24px rgba(107,207,207,0.5)",
+        "glow-turquoise": "0 4px 16px rgba(14,165,166,0.3)", // V4 accent
+        "glow-turquoise-lg": "0 6px 24px rgba(14,165,166,0.5)", // V4 accent
       },
       animation: {
         "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",

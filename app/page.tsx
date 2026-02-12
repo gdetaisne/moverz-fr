@@ -17,21 +17,27 @@
  */
 
 import { HeroV4 } from "@/components/sections/HeroV4";
+import { TrustBadgeMinimal } from "@/components/sections/TrustBadgeMinimal";
 import { ComparableQuotesMock } from "@/components/sections/ComparableQuotesMock";
 import { ComparisonExplainer } from "@/components/sections/ComparisonExplainer";
 import { CreditsafeChapter } from "@/components/sections/CreditsafeChapter";
 import { TestimonialV4 } from "@/components/sections/TestimonialV4";
 import { FAQV4 } from "@/components/sections/FAQV4";
+import StickyCTA from "@/components/StickyCTA";
 
 export default function Home() {
   return (
     <>
       <HeroV4 />
+      <TrustBadgeMinimal />
       <ComparableQuotesMock />
       <ComparisonExplainer />
       <CreditsafeChapter />
       <TestimonialV4 />
       <FAQV4 />
+      
+      {/* Sticky CTA - Desktop + Mobile */}
+      <StickyCTA />
     </>
   );
 }

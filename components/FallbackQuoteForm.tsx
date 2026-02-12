@@ -13,8 +13,8 @@ export default function FallbackQuoteForm() {
 
   if (submitted) {
     return (
-      <div className="rounded-3xl border border-brand-turquoise/40 bg-gradient-to-br from-[#E6FFFA] to-white p-8 text-center">
-        <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-brand-turquoise text-white text-2xl font-bold">
+      <div className="rounded-3xl border border-[var(--color-accent)]/40 bg-gradient-to-br from-[#E6FFFA] to-white p-8 text-center">
+        <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-[var(--color-accent)] text-white text-2xl font-bold">
           ✓
         </div>
         <h3 className="text-xl font-bold text-[var(--color-text)] mb-2">Demande de devis envoyée</h3>
@@ -38,7 +38,7 @@ export default function FallbackQuoteForm() {
             id="name"
             name="name"
             required
-            className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-brand-turquoise/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all"
+            className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-[var(--color-accent)]/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all"
             placeholder="Votre nom"
           />
         </div>
@@ -51,7 +51,7 @@ export default function FallbackQuoteForm() {
             id="email"
             name="email"
             required
-            className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-brand-turquoise/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all"
+            className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-[var(--color-accent)]/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all"
             placeholder="votre@email.com"
           />
         </div>
@@ -67,7 +67,7 @@ export default function FallbackQuoteForm() {
             id="city"
             name="city"
             required
-            className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-brand-turquoise/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all"
+            className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-[var(--color-accent)]/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all"
             placeholder="Ex : Paris 11e → Lyon 3e"
           />
         </div>
@@ -80,7 +80,7 @@ export default function FallbackQuoteForm() {
             id="date"
             name="date"
             required
-            className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-brand-turquoise/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all"
+            className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-[var(--color-accent)]/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all"
             placeholder="Ex : semaine du 15 juin"
           />
         </div>
@@ -95,7 +95,7 @@ export default function FallbackQuoteForm() {
             id="housing"
             name="housing"
             required
-            className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-brand-turquoise/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all"
+            className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-[var(--color-accent)]/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all"
           >
             <option value="">Sélectionnez une option</option>
             <option value="studio">Studio / T1</option>
@@ -114,7 +114,7 @@ export default function FallbackQuoteForm() {
             type="tel"
             id="phone"
             name="phone"
-            className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-brand-turquoise/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all"
+            className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-[var(--color-accent)]/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all"
             placeholder="Pour vous rappeler si besoin"
           />
         </div>
@@ -128,7 +128,7 @@ export default function FallbackQuoteForm() {
           id="details"
           name="details"
           rows={5}
-          className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-brand-turquoise/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all resize-none"
+          className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-[var(--color-accent)]/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all resize-none"
           placeholder="Etages, ascenseur, stationnement, volume approximatif..."
         />
       </div>

@@ -43,8 +43,8 @@ function FAQItem({ faq, isOpen, onToggle }: { faq: FAQItem; isOpen: boolean; onT
         >
           <div className={`flex items-center justify-center w-8 h-8 rounded-full transition-all duration-300 ${
             isOpen
-              ? "bg-brand-turquoise/15 text-[#2B7A78]"
-              : "bg-gray-100 text-[var(--color-text-muted)] group-hover:bg-brand-turquoise/10 group-hover:text-[#2B7A78]"
+              ? "bg-[var(--color-accent)]/15 text-[#2B7A78]"
+              : "bg-[var(--color-border-light)] text-[var(--color-text-muted)] group-hover:bg-[var(--color-accent)]/10 group-hover:text-[#2B7A78]"
           }`}>
             <ChevronDown className="w-5 h-5" />
           </div>
@@ -96,9 +96,9 @@ export function FAQ({ title, faqs, id = "faq", limit = 8 }: FAQProps) {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-[#2B7A78]/10 border border-brand-turquoise/20 px-4 py-2 text-sm font-semibold text-[#2B7A78]"
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-[#2B7A78]/10 border border-[var(--color-accent)]/20 px-4 py-2 text-sm font-semibold text-[#2B7A78]"
           >
-            <span className="h-2 w-2 rounded-full bg-brand-turquoise animate-pulse" />
+            <span className="h-2 w-2 rounded-full bg-[var(--color-accent)] animate-pulse" />
             Questions fréquentes
           </motion.div>
           <motion.h2

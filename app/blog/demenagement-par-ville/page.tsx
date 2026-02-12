@@ -119,8 +119,8 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
                     href={`/blog/demenagement-par-ville/?city=${encodeURIComponent(city)}`}
                     className={`rounded-full border px-3 py-1.5 text-xs font-semibold transition-colors ${
                       selectedCity === city
-                        ? "border-brand-turquoise bg-[#E6FFFA] text-[#205a5a]"
-                        : "border-[var(--color-border)] bg-white text-[var(--color-text)] hover:border-brand-turquoise/60 hover:bg-[var(--color-bg)]"
+                        ? "border-[var(--color-accent)] bg-[#E6FFFA] text-[#205a5a]"
+                        : "border-[var(--color-border)] bg-white text-[var(--color-text)] hover:border-[var(--color-accent)]/60 hover:bg-[var(--color-bg)]"
                     }`}
                   >
                     {formatCityLabel(city)} · {count}
@@ -129,7 +129,7 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
               {selectedCity && (
                 <a
                   href="/blog/demenagement-par-ville/"
-                  className="rounded-full border border-[var(--color-border)] bg-white px-3 py-1.5 text-xs font-semibold text-[var(--color-text-secondary)] hover:text-[var(--color-text)] hover:border-brand-turquoise/60 transition-colors"
+                  className="rounded-full border border-[var(--color-border)] bg-white px-3 py-1.5 text-xs font-semibold text-[var(--color-text-secondary)] hover:text-[var(--color-text)] hover:border-[var(--color-accent)]/60 transition-colors"
                 >
                   Réinitialiser
                 </a>
@@ -161,7 +161,7 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
                   <a
                     key={post.slug}
                     href={`/blog/${post.slug}/`}
-                    className="group flex flex-col gap-1 rounded-2xl border border-[var(--color-border)] bg-white px-5 py-4 hover:border-brand-turquoise/50 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200"
+                    className="group flex flex-col gap-1 rounded-2xl border border-[var(--color-border)] bg-white px-5 py-4 hover:border-[var(--color-accent)]/50 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200"
                   >
                     <div className="flex flex-wrap items-center gap-2 text-xs text-[var(--color-text-secondary)]">
                       <span className="rounded-full bg-[#F0F4F8] px-2 py-0.5 font-semibold text-[11px] text-[#2B7A78]">
@@ -195,7 +195,7 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
                     <a
                       key={city}
                       href={`/blog/demenagement-par-ville/?city=${encodeURIComponent(city)}`}
-                      className="group rounded-2xl border border-[var(--color-border)] bg-white p-5 hover:border-brand-turquoise/60 hover:shadow-md transition-all"
+                      className="group rounded-2xl border border-[var(--color-border)] bg-white p-5 hover:border-[var(--color-accent)]/60 hover:shadow-md transition-all"
                     >
                       <p className="text-xs text-[var(--color-text-secondary)]">Ville</p>
                       <h3 className="text-base md:text-lg font-semibold text-[var(--color-text)] group-hover:text-[#2B7A78] transition-colors">
@@ -207,7 +207,7 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
                 {postsByCity.autres?.length ? (
                   <a
                     href="/blog/demenagement-par-ville/?city=autres"
-                    className="group rounded-2xl border border-[var(--color-border)] bg-white p-5 hover:border-brand-turquoise/60 hover:shadow-md transition-all"
+                    className="group rounded-2xl border border-[var(--color-border)] bg-white p-5 hover:border-[var(--color-accent)]/60 hover:shadow-md transition-all"
                   >
                     <p className="text-xs text-[var(--color-text-secondary)]">Ville</p>
                     <h3 className="text-base md:text-lg font-semibold text-[var(--color-text)] group-hover:text-[#2B7A78] transition-colors">

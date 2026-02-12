@@ -73,7 +73,7 @@ export default function VillesPaginatedPage({ params }: PageProps) {
               <a
                 key={city.slug}
                 href={`/demenagement/${city.slug}/`}
-                className="rounded-xl border border-[var(--color-border)] bg-white px-4 py-3 hover:border-brand-turquoise/40 hover:shadow-sm transition-all"
+                className="rounded-xl border border-[var(--color-border)] bg-white px-4 py-3 hover:border-[var(--color-accent)]/40 hover:shadow-sm transition-all"
               >
                 <div className="flex items-center justify-between gap-4">
                   <div>
@@ -91,7 +91,7 @@ export default function VillesPaginatedPage({ params }: PageProps) {
               href={`/villes/page/${Math.max(1, pageNum - 1)}/`}
               aria-disabled={pageNum === 1}
               className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
-                pageNum === 1 ? "text-[#94A3B8] pointer-events-none" : "text-[var(--color-text)] hover:bg-[#F9FAFB]"
+                pageNum === 1 ? "text-[#94A3B8] pointer-events-none" : "text-[var(--color-text)] hover:bg-[var(--color-bg)]"
               }`}
             >
               ← Précédent
@@ -105,7 +105,7 @@ export default function VillesPaginatedPage({ params }: PageProps) {
               href={`/villes/page/${Math.min(totalPages, pageNum + 1)}/`}
               aria-disabled={pageNum === totalPages}
               className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
-                pageNum === totalPages ? "text-[#94A3B8] pointer-events-none" : "text-[var(--color-text)] hover:bg-[#F9FAFB]"
+                pageNum === totalPages ? "text-[#94A3B8] pointer-events-none" : "text-[var(--color-text)] hover:bg-[var(--color-bg)]"
               }`}
             >
               Suivant →

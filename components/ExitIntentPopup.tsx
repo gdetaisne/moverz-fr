@@ -181,12 +181,12 @@ export default function ExitIntentPopup() {
 
             <div className="relative p-5 md:p-6 space-y-4">
               <div className="flex items-center justify-between gap-3">
-                <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 border border-brand-turquoise/20 px-3 py-1.5">
+                <div className="inline-flex items-center gap-2 rounded-full bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/20 px-3 py-1.5">
                   <Clock className="w-3.5 h-3.5 text-[#2B7A78]" />
                   <span className="text-xs font-semibold text-[#2B7A78]">3 minutes</span>
                 </div>
                 <div className="inline-flex items-center gap-1.5 text-xs text-[var(--color-text-secondary)]">
-                  <Shield className="w-3.5 h-3.5 text-brand-turquoise" />
+                  <Shield className="w-3.5 h-3.5 text-[var(--color-accent)]" />
                   <span>Sans démarchage • sécurisé</span>
                 </div>
               </div>

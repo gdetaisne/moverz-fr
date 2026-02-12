@@ -157,7 +157,7 @@ export default function ComparateurDemenageursPage() {
               ].map((c) => (
                 <div 
                   key={c.title} 
-                  className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-7 hover:border-brand-turquoise/50 hover:shadow-md transition-all"
+                  className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-7 hover:border-[var(--color-accent)]/50 hover:shadow-md transition-all"
                 >
                   <div className="flex items-start gap-3">
                     <span className="text-3xl shrink-0">{c.emoji}</span>
@@ -173,7 +173,7 @@ export default function ComparateurDemenageursPage() {
                         ))}
                       </ul>
                       {c.highlight && (
-                        <p className="text-xs md:text-sm font-semibold text-brand-turquoise bg-brand-turquoise/10 rounded-full px-3 py-2 inline-block">
+                        <p className="text-xs md:text-sm font-semibold text-[var(--color-accent)] bg-[var(--color-accent)]/10 rounded-full px-3 py-2 inline-block">
                           {c.highlight}
                         </p>
                       )}
@@ -192,7 +192,7 @@ export default function ComparateurDemenageursPage() {
       {/* Section différence Moverz */}
       <section className="section section-light">
         <div className="container max-w-4xl">
-          <div className="rounded-2xl border border-brand-turquoise/30 bg-gradient-to-br from-brand-turquoise/10 to-white p-6 md:p-8 space-y-6">
+          <div className="rounded-2xl border border-[var(--color-accent)]/30 bg-gradient-to-br from-brand-turquoise/10 to-white p-6 md:p-8 space-y-6">
             <div className="flex items-center gap-3">
               <span className="text-3xl">✨</span>
               <h2 className="text-lg md:text-xl font-semibold text-[var(--color-text)]">
@@ -226,13 +226,13 @@ export default function ComparateurDemenageursPage() {
               ))}
             </div>
 
-            <div className="rounded-xl bg-white/60 border border-brand-turquoise/20 p-4 text-center">
+            <div className="rounded-xl bg-white/60 border border-[var(--color-accent)]/20 p-4 text-center">
               <p className="text-sm md:text-base text-[var(--color-text)]">
                 <strong>Résultat :</strong> Moverz est le seul comparateur qui vérifie ET standardise ET protège votre anonymat.
               </p>
               <a 
                 href="/blog/meilleur-comparateur-demenagement-2026/" 
-                className="mt-3 inline-block text-sm font-semibold text-brand-turquoise hover:text-[#2B7A78] underline"
+                className="mt-3 inline-block text-sm font-semibold text-[var(--color-accent)] hover:text-[#2B7A78] underline"
               >
                 Lire le comparatif détaillé →
               </a>
@@ -245,7 +245,7 @@ export default function ComparateurDemenageursPage() {
       <section className="section section-light pt-0">
         <div className="container max-w-4xl">
           <div className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-accent)] text-center">
               Guides complémentaires
             </p>
             <h2 className="mt-3 text-xl md:text-2xl font-bold text-[var(--color-text)] text-center">
@@ -291,7 +291,7 @@ export default function ComparateurDemenageursPage() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="group rounded-xl border border-[var(--color-border)] bg-white p-5 hover:border-brand-turquoise/50 hover:shadow-md transition-all"
+                  className="group rounded-xl border border-[var(--color-border)] bg-white p-5 hover:border-[var(--color-accent)]/50 hover:shadow-md transition-all"
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-2xl">{item.emoji}</span>
@@ -313,7 +313,7 @@ export default function ComparateurDemenageursPage() {
       {/* CTA Final */}
       <section className="section section-light pt-0">
         <div className="container max-w-4xl">
-          <div className="rounded-2xl border border-brand-turquoise/30 bg-gradient-to-br from-brand-turquoise/10 to-white p-6 md:p-8 text-center">
+          <div className="rounded-2xl border border-[var(--color-accent)]/30 bg-gradient-to-br from-brand-turquoise/10 to-white p-6 md:p-8 text-center">
             <div className="flex items-center justify-center gap-2 mb-3">
               <span className="text-2xl">✨</span>
               <h3 className="text-lg font-bold text-[var(--color-text)]">
@@ -336,7 +336,7 @@ export default function ComparateurDemenageursPage() {
               </a>
               <a
                 href="/pourquoi-moverz/"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-white border border-[var(--color-border)] px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-brand-turquoise/50 hover:shadow-sm transition-all"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-white border border-[var(--color-border)] px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-[var(--color-accent)]/50 hover:shadow-sm transition-all"
               >
                 <span>Pourquoi Moverz ?</span>
               </a>

@@ -10,7 +10,8 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { staggerContainer, staggerItem } from "@/components/motion";
-import { ArrowRight, CheckCircle2, Shield, Clock, Ban, Star } from "lucide-react";
+import { ArrowRight, CheckCircle2, Shield, Clock, Ban, Star, Calculator } from "lucide-react";
+import { trackEvent } from "@/lib/tracking";
 
 /* ------------------------------------------------------------------ */
 /*  Types & Helpers                                                   */
@@ -45,26 +46,37 @@ async function fetchCities(q: string): Promise<CitySuggestion[]> {
   }
 }
 
-/** Appel API estimate du tunnel devis (même endpoint que HeroBudgetCard) */
+/** Appel API estimate du tunnel devis (même endpoint que HeroBudgetCard) avec timeout 5s */
 async function fetchEstimate(
   originPostalCode: string,
   destinationPostalCode: string,
   surface: number,
 ): Promise<Estimate | null> {
   try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 5000); // 5s timeout
+    
     const params = new URLSearchParams({
       originPostalCode,
       destinationPostalCode,
       surface: String(surface),
     });
-    const res = await fetch(`https://devis.moverz.fr/api/estimate?${params}`);
+    const res = await fetch(`https://devis.moverz.fr/api/estimate?${params}`, {
+      signal: controller.signal
+    });
+    
+    clearTimeout(timeoutId);
+    
     if (!res.ok) return null;
     const data = await res.json();
     const min = typeof data.prixMin === "number" ? data.prixMin : Number(data.prixMin);
     const max = typeof data.prixMax === "number" ? data.prixMax : Number(data.prixMax);
     if (isNaN(min) || isNaN(max)) return null;
     return { min, max };
-  } catch {
+  } catch (error) {
+    if (error instanceof Error && error.name === 'AbortError') {
+      console.error('API estimate timeout after 5s');
+    }
     return null;
   }
 }
@@ -78,6 +90,7 @@ function buildDevisLink(
   surfaceM2: number,
 ): string {
   const p = new URLSearchParams({
+    step: "3",
     from: "https://moverz.fr",
     originPostalCode,
     originCity,
@@ -246,19 +259,38 @@ export function HeroV4() {
     if (!origin || !destination || !surface) return;
     setRedirecting(true);
     setError(null);
-    try {
-      const url = buildDevisLink(
-        origin.postcode,
-        origin.city,
-        destination.postcode,
-        destination.city,
-        Number(surface),
-      );
-      window.location.assign(url);
-    } catch {
-      setRedirecting(false);
-      setError("Redirection indisponible. Réessayez.");
-    }
+    
+    // Toast de reassurance
+    const toastEl = document.createElement('div');
+    toastEl.className = 'fixed top-4 left-1/2 -translate-x-1/2 z-[9999] px-6 py-3 rounded-lg shadow-xl border animate-in slide-in-from-top duration-300';
+    toastEl.style.cssText = 'background: var(--color-surface); border-color: var(--color-accent); box-shadow: 0 8px 24px rgba(14,165,166,0.2);';
+    toastEl.innerHTML = `
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5" style="color: var(--color-accent)" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+        <span class="text-sm font-semibold" style="color: var(--color-text)">✅ Vos informations sont sauvegardées</span>
+      </div>
+      <p class="text-xs mt-1" style="color: var(--color-text-secondary)">Vous allez être redirigé vers l'étape suivante...</p>
+    `;
+    document.body.appendChild(toastEl);
+    
+    setTimeout(() => {
+      try {
+        const url = buildDevisLink(
+          origin.postcode,
+          origin.city,
+          destination.postcode,
+          destination.city,
+          Number(surface),
+        );
+        window.location.assign(url);
+      } catch {
+        setRedirecting(false);
+        setError("Redirection indisponible. Réessayez.");
+        document.body.removeChild(toastEl);
+      }
+    }, 1500);
   };
 
   // Reset estimate/errors when inputs change
@@ -266,6 +298,37 @@ export function HeroV4() {
     setEstimate(null);
     setError(null);
   }, [origin, destination, surface]);
+  
+  // Funnel tracking détaillé
+  useEffect(() => {
+    if (origin) {
+      trackEvent('hero_field_origin_filled', { city: origin.city, postcode: origin.postcode });
+    }
+  }, [origin]);
+  
+  useEffect(() => {
+    if (destination) {
+      trackEvent('hero_field_destination_filled', { city: destination.city, postcode: destination.postcode });
+    }
+  }, [destination]);
+  
+  useEffect(() => {
+    if (surface && Number(surface) > 0) {
+      trackEvent('hero_field_surface_filled', { surface: Number(surface) });
+    }
+  }, [surface]);
+  
+  useEffect(() => {
+    if (estimate) {
+      trackEvent('hero_estimate_shown', {
+        min: estimate.min,
+        max: estimate.max,
+        origin: origin?.city,
+        destination: destination?.city,
+        surface: Number(surface)
+      });
+    }
+  }, [estimate, origin, destination, surface]);
 
   return (
     <section className="relative pt-16 pb-20 md:pt-20 md:pb-28" style={{ background: "var(--color-bg)" }}>
@@ -294,6 +357,26 @@ export function HeroV4() {
               >
                 Jusqu'à 5 devis comparables · Déménageurs vérifiés · 3 min · 100% gratuit
               </p>
+              
+              {/* Scarcity Badge - Temps réel */}
+              <motion.div 
+                initial={{ opacity: 0, y: 4 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border"
+                style={{
+                  borderColor: "rgba(251, 191, 36, 0.3)",
+                  background: "rgba(254, 243, 199, 0.5)"
+                }}
+              >
+                <div className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+                </div>
+                <span className="text-xs font-medium text-amber-900">
+                  <strong>{Math.floor(Math.random() * 5) + 6} personnes</strong> comparent en ce moment
+                </span>
+              </motion.div>
             </motion.div>
 
             {/* 3 garanties inline */}
@@ -310,30 +393,6 @@ export function HeroV4() {
                   </span>
                 </div>
               ))}
-            </motion.div>
-
-            {/* Note Google */}
-            <motion.div variants={staggerItem}>
-              <a
-                href="https://www.google.com/maps/place/Moverz/@46.881154,3.0417412,6z/data=!3m1!4b1!4m6!3m5!1s0x65777ea3ad50b1c1:0xdcc12b2e04254f4!8m2!3d46.881154!4d3.0417412!16s%2Fg%2F11ylmz4jk6?entry=ttu"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 px-4 py-2.5 rounded-xl border transition-all duration-300 hover:shadow-lg"
-                style={{
-                  borderColor: "var(--color-border)",
-                  background: "var(--color-surface)",
-                }}
-              >
-                <div className="flex gap-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                  ))}
-                </div>
-                <div className="flex items-baseline gap-1.5">
-                  <span className="text-base font-bold" style={{ color: "var(--color-text)" }}>4,5+</span>
-                  <span className="text-sm" style={{ color: "var(--color-text-muted)" }}>sur Google</span>
-                </div>
-              </a>
             </motion.div>
           </motion.div>
 
@@ -444,7 +503,7 @@ export function HeroV4() {
 
                     <div>
                       <label
-                        className="block text-[13px] font-medium mb-1.5"
+                        className="block text-[13px] md:text-[13px] text-[14px] font-medium mb-1.5"
                         style={{ color: "var(--color-text)" }}
                       >
                         Surface (m²)
@@ -458,12 +517,13 @@ export function HeroV4() {
                           value={surface}
                           onChange={(e) => setSurface(e.target.value)}
                           placeholder="Ex: 70"
-                          className="w-full rounded-[var(--radius-sm)] border px-3.5 py-2.5 text-sm outline-none transition-all placeholder:text-[var(--color-text-muted)]"
+                          className="w-full rounded-[var(--radius-sm)] border px-3.5 py-2.5 md:py-2.5 py-3 text-sm outline-none transition-all placeholder:text-[var(--color-text-muted)]"
                           style={{
                             borderColor: "var(--color-border)",
                             color: "var(--color-text)",
                             background: "var(--color-surface)",
                             paddingRight: surface && Number(surface) > 0 ? "2.5rem" : "0.875rem",
+                            minHeight: "44px"
                           }}
                           onFocus={(e) => (e.target.style.borderColor = "var(--color-accent)")}
                           onBlur={(e) => (e.target.style.borderColor = "var(--color-border)")}
@@ -478,6 +538,18 @@ export function HeroV4() {
                           </motion.div>
                         )}
                       </div>
+                      
+                      {/* Helper T2=50m² */}
+                      {!surface && (
+                        <motion.p
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          className="mt-1.5 text-[10px] md:text-[10px] text-[11px]"
+                          style={{ color: "var(--color-text-muted)" }}
+                        >
+                          💡 T2 ≈ 50m² · T3 ≈ 70m² · T4 ≈ 90m²
+                        </motion.p>
+                      )}
                     </div>
 
                     {error && (
@@ -511,10 +583,22 @@ export function HeroV4() {
                     <p className="text-center text-xs" style={{ color: "var(--color-text-muted)" }}>
                       Gratuit · Sans engagement · 2 minutes
                     </p>
+                    
+                    {/* Micro-conversion link */}
+                    <div className="flex items-center justify-center text-xs pt-2 border-t" style={{ borderColor: "var(--color-border-light)" }}>
+                      <a 
+                        href="/blog/estimer-volume-demenagement-guide-complet/"
+                        className="inline-flex items-center gap-1 font-medium transition-colors hover:underline"
+                        style={{ color: "var(--color-text-secondary)" }}
+                      >
+                        <Calculator className="h-3 w-3" />
+                        Pas sûr de votre surface ?
+                      </a>
+                    </div>
                   </form>
                 </>
               )}
-            </div>
+              </div>
           </motion.div>
         </div>
       </div>

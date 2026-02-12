@@ -41,7 +41,7 @@ export default function PageHero({
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-white via-brand-turquoise-50/30 to-brand-accent-50/20">
       {/* Background glow effects */}
-      <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-brand-turquoise/10 rounded-full blur-[120px]" />
+      <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[var(--color-accent)]/10 rounded-full blur-[120px]" />
       <div className="absolute bottom-0 left-1/3 w-[500px] h-[500px] bg-brand-accent/12 rounded-full blur-[120px]" />
       
       {/* Subtle grid pattern */}
@@ -57,9 +57,9 @@ export default function PageHero({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="inline-flex items-center gap-2 rounded-full bg-white/90 px-5 py-2 text-sm font-semibold text-[var(--color-text)] shadow-md backdrop-blur-sm border border-brand-turquoise/30"
+              className="inline-flex items-center gap-2 rounded-full bg-white/90 px-5 py-2 text-sm font-semibold text-[var(--color-text)] shadow-md backdrop-blur-sm border border-[var(--color-accent)]/30"
             >
-              <span className="h-2 w-2 rounded-full bg-brand-turquoise animate-pulse shadow-[0_0_8px_rgba(107,207,207,0.6)]" />
+              <span className="h-2 w-2 rounded-full bg-[var(--color-accent)] animate-pulse shadow-[0_0_8px_rgba(107,207,207,0.6)]" />
               <span>{eyebrow}</span>
             </motion.div>
           )}

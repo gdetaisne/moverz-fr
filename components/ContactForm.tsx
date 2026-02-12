@@ -102,7 +102,7 @@ export default function ContactForm() {
         {sentViaMailClient ? (
           <div className="mt-6">
             <a
-              className="underline underline-offset-2 text-sm font-bold text-brand-turquoise hover:text-brand-turquoise-700 transition-colors"
+              className="underline underline-offset-2 text-sm font-bold text-[var(--color-accent)] hover:text-brand-turquoise-700 transition-colors"
               href={mailtoHref}
             >
               Si rien ne s'est ouvert, cliquez ici pour envoyer par email
@@ -139,7 +139,7 @@ export default function ContactForm() {
             required
             value={form.name}
             onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
-            className="w-full rounded-xl border-2 border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-brand-turquoise focus:outline-none focus:ring-4 focus:ring-brand-turquoise/20 transition-all"
+            className="w-full rounded-xl border-2 border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-[var(--color-accent)] focus:outline-none focus:ring-4 focus:ring-brand-turquoise/20 transition-all"
             placeholder="Votre nom"
           />
         </div>
@@ -154,7 +154,7 @@ export default function ContactForm() {
             required
             value={form.email}
             onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-            className="w-full rounded-xl border-2 border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-brand-turquoise focus:outline-none focus:ring-4 focus:ring-brand-turquoise/20 transition-all"
+            className="w-full rounded-xl border-2 border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-[var(--color-accent)] focus:outline-none focus:ring-4 focus:ring-brand-turquoise/20 transition-all"
             placeholder="votre@email.com"
           />
         </div>
@@ -171,7 +171,7 @@ export default function ContactForm() {
             name="phone"
             value={form.phone}
             onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
-            className="w-full rounded-xl border-2 border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-brand-turquoise focus:outline-none focus:ring-4 focus:ring-brand-turquoise/20 transition-all"
+            className="w-full rounded-xl border-2 border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-[var(--color-accent)] focus:outline-none focus:ring-4 focus:ring-brand-turquoise/20 transition-all"
             placeholder="+33…"
           />
         </div>
@@ -187,7 +187,7 @@ export default function ContactForm() {
             onChange={(e) =>
               setForm((f) => ({ ...f, subject: e.target.value as ContactSubject }))
             }
-            className="w-full rounded-xl border-2 border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-brand-turquoise focus:outline-none focus:ring-4 focus:ring-brand-turquoise/20 transition-all"
+            className="w-full rounded-xl border-2 border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-[var(--color-accent)] focus:outline-none focus:ring-4 focus:ring-brand-turquoise/20 transition-all"
           >
             <option>Devis & déménagement</option>
             <option>Facturation / administratif</option>
@@ -208,7 +208,7 @@ export default function ContactForm() {
           value={form.message}
           onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
           rows={6}
-          className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-brand-turquoise/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all resize-none"
+          className="w-full rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-text)] focus:border-[var(--color-accent)]/60 focus:outline-none focus:ring-2 focus:ring-brand-turquoise/20 transition-all resize-none"
           placeholder="Ex: dates, ville départ/arrivée, volume approximatif, étages, accès, ascenseur…"
         />
       </div>
@@ -237,7 +237,7 @@ export default function ContactForm() {
       </button>
       <a
         href={mailtoHref}
-        className="w-full inline-flex items-center justify-center gap-2 rounded-xl border-2 border-[var(--color-border)] bg-white px-8 py-4 text-base font-bold text-[var(--color-text)] hover:border-brand-turquoise-200 hover:bg-gray-50 transition-all"
+        className="w-full inline-flex items-center justify-center gap-2 rounded-xl border-2 border-[var(--color-border)] bg-white px-8 py-4 text-base font-bold text-[var(--color-text)] hover:border-brand-turquoise-200 hover:bg-[var(--color-bg)] transition-all"
       >
         Envoyer par email
         <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">

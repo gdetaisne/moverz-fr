@@ -97,7 +97,7 @@ export default function ConfirmEmailClient() {
               {ui.kind === "loading" ? (
                 <div className="space-y-4">
                   <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--color-bg-dark)]/5 border border-[var(--color-border)]">
-                    <div className="h-6 w-6 rounded-full border-2 border-brand-turquoise border-t-transparent animate-spin" />
+                    <div className="h-6 w-6 rounded-full border-2 border-[var(--color-accent)] border-t-transparent animate-spin" />
                   </div>
                   <div className="space-y-2">
                     <p className="text-xl md:text-2xl font-bold text-[var(--color-text)]">Confirmation en cours…</p>
@@ -108,7 +108,7 @@ export default function ConfirmEmailClient() {
                 </div>
               ) : ui.kind === "success" ? (
                 <div className="space-y-4">
-                  <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-turquoise/10 border border-brand-turquoise/25">
+                  <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/25">
                     <CheckCircle2 className="h-7 w-7 text-[#2B7A78]" />
                   </div>
                   <div className="space-y-2">

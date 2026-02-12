@@ -14,7 +14,7 @@ export default function ProPartenairesBanner() {
         >
           {/* Texte principal */}
           <div className="flex-1 text-center md:text-left">
-            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-3 py-1 text-xs font-medium text-[var(--color-text)] mb-3">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[var(--color-accent)]/10 px-3 py-1 text-xs font-medium text-[var(--color-text)] mb-3">
               <Users className="w-3.5 h-3.5" />
               <span>Nouveau déménageur ?</span>
             </div>
@@ -32,7 +32,7 @@ export default function ProPartenairesBanner() {
           <div className="flex-shrink-0">
             <a
               href="/partenaires/"
-              className="group inline-flex items-center gap-2 rounded-xl bg-brand-turquoise px-6 py-3 text-base font-semibold text-[var(--color-text)] shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+              className="group inline-flex items-center gap-2 rounded-xl bg-[var(--color-accent)] px-6 py-3 text-base font-semibold text-[var(--color-text)] shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
             >
               <Zap className="w-4 h-4" />
               <span>Devenir partenaire</span>

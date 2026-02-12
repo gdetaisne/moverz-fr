@@ -19,7 +19,7 @@ export default function ProHeroMockup() {
       {/* Dashboard mockup */}
       <div className="relative bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.25)] overflow-hidden border border-[var(--color-border)]">
         {/* Header bar */}
-        <div className="bg-gradient-to-r from-[#0F172A] to-[#1E293B] px-6 py-4 flex items-center justify-between">
+        <div className="bg-gradient-to-r from-[var(--color-bg-dark)] to-[#1E293B] px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-lg bg-white/10 border border-white/10 flex items-center justify-center overflow-hidden">
               <img
@@ -35,7 +35,7 @@ export default function ProHeroMockup() {
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-brand-turquoise animate-pulse" />
+            <div className="w-2 h-2 rounded-full bg-[var(--color-accent)] animate-pulse" />
             <span className="text-white/80 text-xs">En ligne</span>
           </div>
         </div>
@@ -54,7 +54,7 @@ export default function ProHeroMockup() {
                 className="bg-white rounded-xl p-3.5 border border-[var(--color-border)] shadow-sm"
               >
                 <div className="flex items-center justify-between mb-2">
-                  <stat.icon className="w-4 h-4 text-brand-turquoise" />
+                  <stat.icon className="w-4 h-4 text-[var(--color-accent)]" />
                 </div>
                 <p className="text-2xl font-bold text-[var(--color-text)] leading-none">
                   {stat.value}
@@ -65,7 +65,7 @@ export default function ProHeroMockup() {
           </div>
 
           {/* New lead card */}
-          <div className="bg-white rounded-2xl border-2 border-brand-turquoise/25 p-5 shadow-lg">
+          <div className="bg-white rounded-2xl border-2 border-[var(--color-accent)]/25 p-5 shadow-lg">
             <div className="flex items-start justify-between mb-3">
               <div>
                 <p className="font-bold text-[var(--color-text)] text-base leading-tight mb-1">
@@ -75,7 +75,7 @@ export default function ProHeroMockup() {
                   Paris → Lyon · 22m³
                 </p>
               </div>
-              <div className="px-3 py-1.5 rounded-full bg-brand-turquoise/10 text-[#2B7A78] text-sm font-semibold">
+              <div className="px-3 py-1.5 rounded-full bg-[var(--color-accent)]/10 text-[#2B7A78] text-sm font-semibold">
                 Nouveau
               </div>
             </div>
@@ -114,10 +114,10 @@ export default function ProHeroMockup() {
 
             {/* Action buttons */}
             <div className="flex gap-2">
-              <button className="flex-1 bg-brand-turquoise text-white text-sm font-semibold py-2.5 rounded-lg hover:bg-[#5AB0B0] transition-colors">
+              <button className="flex-1 bg-[var(--color-accent)] text-white text-sm font-semibold py-2.5 rounded-lg hover:bg-[#5AB0B0] transition-colors">
                 Envoyer le devis
               </button>
-              <button className="px-4 bg-gray-100 text-gray-800 text-sm font-semibold py-2.5 rounded-lg hover:bg-gray-200 transition-colors">
+              <button className="px-4 bg-[var(--color-border-light)] text-gray-800 text-sm font-semibold py-2.5 rounded-lg hover:bg-gray-200 transition-colors">
                 Voir détails
               </button>
             </div>

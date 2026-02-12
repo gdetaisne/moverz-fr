@@ -19,8 +19,8 @@ function FAQAccordionItem({ item, isOpen, onToggle }: { item: FAQItem; isOpen: b
       animate={{ opacity: 1, y: 0 }}
       className={`group relative overflow-hidden rounded-2xl border backdrop-blur-sm transition-all duration-300 ${
         isOpen
-          ? "border-brand-turquoise/50 bg-white shadow-xl shadow-[rgba(107,207,207,0.05)]"
-          : "border-[var(--color-border)] bg-white/80 hover:bg-white hover:border-brand-turquoise/30 hover:shadow-lg"
+          ? "border-[var(--color-accent)]/50 bg-white shadow-xl shadow-[rgba(107,207,207,0.05)]"
+          : "border-[var(--color-border)] bg-white/80 hover:bg-white hover:border-[var(--color-accent)]/30 hover:shadow-lg"
       }`}
     >
       {/* Gradient accent */}
@@ -28,7 +28,7 @@ function FAQAccordionItem({ item, isOpen, onToggle }: { item: FAQItem; isOpen: b
       
       {/* Glow effect on open */}
       {isOpen && (
-        <div className="absolute top-0 right-0 w-32 h-32 bg-brand-turquoise/10 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-accent)]/10 rounded-full blur-3xl" />
       )}
 
       <button
@@ -41,8 +41,8 @@ function FAQAccordionItem({ item, isOpen, onToggle }: { item: FAQItem; isOpen: b
             whileHover={{ scale: 1.1, rotate: 5 }}
             className={`mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
               isOpen
-                ? "bg-brand-turquoise text-white shadow-lg shadow-[rgba(107,207,207,0.3)]"
-                : "bg-brand-turquoise/10 text-[#2B7A78] group-hover:bg-brand-turquoise/20"
+                ? "bg-[var(--color-accent)] text-white shadow-lg shadow-[rgba(107,207,207,0.3)]"
+                : "bg-[var(--color-accent)]/10 text-[#2B7A78] group-hover:bg-[var(--color-accent)]/20"
             }`}
           >
             <HelpCircle className="w-4 h-4" />
@@ -58,8 +58,8 @@ function FAQAccordionItem({ item, isOpen, onToggle }: { item: FAQItem; isOpen: b
         >
           <div className={`flex h-8 w-8 items-center justify-center rounded-full border-2 transition-all duration-300 ${
             isOpen
-              ? "border-brand-turquoise bg-brand-turquoise/10 text-[#2B7A78]"
-              : "border-[var(--color-border)] bg-gray-50 text-[var(--color-text-muted)] group-hover:border-brand-turquoise/30 group-hover:bg-brand-turquoise/5"
+              ? "border-[var(--color-accent)] bg-[var(--color-accent)]/10 text-[#2B7A78]"
+              : "border-[var(--color-border)] bg-[var(--color-bg)] text-[var(--color-text-muted)] group-hover:border-[var(--color-accent)]/30 group-hover:bg-[var(--color-accent)]/5"
           }`}>
             <ChevronDown className="w-4 h-4" />
           </div>

@@ -182,20 +182,20 @@ export default function BlogFloatingCTA() {
         <div
           className={`rounded-2xl border bg-white overflow-hidden transition-shadow duration-500 ${
             visible
-              ? "border-brand-turquoise/35 shadow-[0_18px_60px_rgba(15,23,42,0.14),0_0_0_1px_rgba(107,207,207,0.18)]"
+              ? "border-[var(--color-accent)]/35 shadow-[0_18px_60px_rgba(15,23,42,0.14),0_0_0_1px_rgba(107,207,207,0.18)]"
               : "border-[var(--color-border)] shadow-[0_18px_60px_rgba(15,23,42,0.12)]"
           }`}
         >
           {/* Scroll progress (premium, unobtrusive) */}
           <div className="h-1 w-full bg-[#E3E5E8]" aria-hidden="true">
             <div
-              className="h-full bg-gradient-to-r from-brand-turquoise via-[#4FB8B8] to-[#0F172A] transition-[width] duration-150 ease-out"
+              className="h-full bg-gradient-to-r from-brand-turquoise via-[#4FB8B8] to-[var(--color-bg-dark)] transition-[width] duration-150 ease-out"
               style={{ width: `${Math.round(scrollProgress * 100)}%` }}
             />
           </div>
           <div className="px-5 py-4 border-b border-[var(--color-border)] bg-gradient-to-br from-[#F8FAFC] to-white">
             <p className="text-sm font-bold text-[var(--color-text)]">{title}</p>
-            <p className="mt-1 text-sm text-[#334155] leading-snug">{promise}</p>
+            <p className="mt-1 text-sm text-[var(--color-text-secondary)] leading-snug">{promise}</p>
           </div>
 
           <div className="px-5 py-4 space-y-3">
@@ -206,13 +206,13 @@ export default function BlogFloatingCTA() {
                 <p className="text-xs font-semibold text-[var(--color-text)]">
                   “{review.summary}”
                 </p>
-                <p className="mt-1 text-xs text-[#475569] leading-relaxed line-clamp-3">
+                <p className="mt-1 text-xs text-[var(--color-text-secondary)] leading-relaxed line-clamp-3">
                   {review.body}
                 </p>
               </div>
             ) : null}
 
-            <ul className="text-xs text-[#334155] space-y-1.5">
+            <ul className="text-xs text-[var(--color-text-secondary)] space-y-1.5">
               <li>
                 <span className="font-semibold text-[var(--color-text)]">Dossier anonyme</span>
               </li>
@@ -243,7 +243,7 @@ export default function BlogFloatingCTA() {
           <div className="px-5 pb-5">
             <div className="rounded-2xl border border-[var(--color-border)] bg-gradient-to-br from-[#F8FAFC] to-white p-4">
               <p className="text-sm font-bold text-[var(--color-text)]">À la recherche d&apos;un logement ?</p>
-              <p className="mt-1 text-sm text-[#334155] leading-snug">
+              <p className="mt-1 text-sm text-[var(--color-text-secondary)] leading-snug">
                 Nous vous accompagnons dans votre relocation et gérons l&apos;ensemble de vos démarches.
               </p>
               <a
@@ -252,7 +252,7 @@ export default function BlogFloatingCTA() {
                 rel="noopener noreferrer"
                 data-ga-tracked="1"
                 onClick={onMobilityClick}
-                className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-4 py-3 text-sm font-semibold text-[var(--color-text)] border border-[#0F172A]/10 shadow-sm hover:bg-[var(--color-bg)] hover:border-brand-turquoise/50 transition-colors"
+                className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-4 py-3 text-sm font-semibold text-[var(--color-text)] border border-[#0F172A]/10 shadow-sm hover:bg-[var(--color-bg)] hover:border-[var(--color-accent)]/50 transition-colors"
               >
                 Être accompagné(e) <span aria-hidden="true">→</span>
               </a>
@@ -273,14 +273,14 @@ export default function BlogFloatingCTA() {
             {/* Scroll progress (mobile) */}
             <div className="mb-2 h-1 w-full overflow-hidden rounded-full bg-[#E3E5E8]" aria-hidden="true">
               <div
-                className="h-full bg-gradient-to-r from-brand-turquoise via-[#4FB8B8] to-[#0F172A] transition-[width] duration-150 ease-out"
+                className="h-full bg-gradient-to-r from-brand-turquoise via-[#4FB8B8] to-[var(--color-bg-dark)] transition-[width] duration-150 ease-out"
                 style={{ width: `${Math.round(scrollProgress * 100)}%` }}
               />
             </div>
             <div className="flex items-center justify-between gap-3">
               <div className="min-w-0">
                 <p className="text-xs font-semibold text-[var(--color-text)] truncate">{title}</p>
-                <p className="text-xs text-[#475569] truncate">
+                <p className="text-xs text-[var(--color-text-secondary)] truncate">
                   des devis comparables · 5–7 jours · 0 harcèlement
                 </p>
               </div>
@@ -301,7 +301,7 @@ export default function BlogFloatingCTA() {
               rel="noopener noreferrer"
               data-ga-tracked="1"
               onClick={onMobilityClick}
-              className="mt-2 block rounded-xl border border-[var(--color-border)] bg-white px-3 py-2 text-xs font-semibold text-[var(--color-text)] hover:border-brand-turquoise/50 hover:bg-[var(--color-bg)] transition-colors"
+              className="mt-2 block rounded-xl border border-[var(--color-border)] bg-white px-3 py-2 text-xs font-semibold text-[var(--color-text)] hover:border-[var(--color-accent)]/50 hover:bg-[var(--color-bg)] transition-colors"
             >
               À la recherche d&apos;un logement ? Relocation → 
             </a>

@@ -10,7 +10,7 @@ export default function PourquoiHero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white py-20 md:py-32">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[var(--color-bg-dark)] via-[var(--color-bg-dark)] to-[var(--color-bg-dark)] text-white py-20 md:py-32">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -38,13 +38,13 @@ export default function PourquoiHero() {
           {/* Left: Content */}
           <div>
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold mb-8">
-              <span className="h-2 w-2 rounded-full bg-brand-turquoise" />
+              <span className="h-2 w-2 rounded-full bg-[var(--color-accent)]" />
               Ce qui nous différencie
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-[1.1]">
+            <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6 leading-[1.1]">
               Pourquoi choisir{" "}
-              <span className="text-brand-turquoise">Moverz</span> ?
+              <span className="text-[var(--color-accent)]">Moverz</span> ?
             </h1>
 
             <p className="text-xl text-white/70 mb-10 leading-relaxed">
@@ -68,7 +68,7 @@ export default function PourquoiHero() {
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-[0_4px_16px_rgba(107,207,207,0.05)] hover:shadow-[0_8px_32px_rgba(107,207,207,0.15)] md:hover:scale-[1.02] transition-all duration-300">
               <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-brand-turquoise/10 to-[#A8E8E8]/10 shadow-sm">
-                <Shield className="w-6 h-6 text-brand-turquoise" strokeWidth={2} />
+                <Shield className="w-6 h-6 text-[var(--color-accent)]" strokeWidth={2} />
               </div>
               <div>
                 <p className="font-semibold text-white">Pros vérifiés</p>

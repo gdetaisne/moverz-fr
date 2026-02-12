@@ -43,7 +43,7 @@ export default function ConfirmEmailPage() {
 
                     <div className="space-y-4">
                       <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--color-bg-dark)]/5 border border-[var(--color-border)]">
-                        <div className="h-6 w-6 rounded-full border-2 border-brand-turquoise border-t-transparent animate-spin" />
+                        <div className="h-6 w-6 rounded-full border-2 border-[var(--color-accent)] border-t-transparent animate-spin" />
                       </div>
                       <div className="space-y-2">
                         <p className="text-xl md:text-2xl font-bold text-[var(--color-text)]">Confirmation en cours…</p>

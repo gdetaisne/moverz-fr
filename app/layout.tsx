@@ -7,6 +7,7 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 import ContentSquare from "@/components/ContentSquare";
 import ExitIntentPopup from "@/components/ExitIntentPopup";
 import { ConversionIntentTracker } from "@/components/ConversionIntentTracker";
+import { ScrollDepthTracker } from "@/components/ScrollDepthTracker";
 import { JsonLd } from "@/components/schema/JsonLd";
 
 // ===== Fonts V4 Radical =====
@@ -211,6 +212,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <GoogleAnalytics />
         <ConversionIntentTracker />
+        <ScrollDepthTracker />
         <ExitIntentPopup />
 
         {/* ===== HEADER V4 — Un seul, sticky, propre ===== */}

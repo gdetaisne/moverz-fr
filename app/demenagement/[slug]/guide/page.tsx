@@ -58,7 +58,7 @@ export default async function CityGuidePage({ params }: PageProps) {
         <div className="container max-w-4xl">
           <div className="rounded-2xl border border-[var(--color-border)] bg-white p-8 md:p-10 space-y-8">
             <div className="space-y-3 text-center">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-turquoise">Guide local</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-accent)]">Guide local</p>
               <h1 className="text-2xl md:text-3xl font-bold text-[var(--color-text)]">{guide.title}</h1>
               <p className="text-sm md:text-base text-[var(--color-text-secondary)] max-w-2xl mx-auto">
                 {guide.subtitle}{" "}
@@ -100,7 +100,7 @@ export default async function CityGuidePage({ params }: PageProps) {
                     <ul className="mt-4 grid gap-2 text-sm md:text-base text-[var(--color-text)]">
                       {s.bullets.map((b) => (
                         <li key={b} className="flex gap-2">
-                          <span className="mt-2 h-1.5 w-1.5 rounded-full bg-brand-turquoise shrink-0" />
+                          <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--color-accent)] shrink-0" />
                           <span className="text-[var(--color-text)]/90">{b}</span>
                         </li>
                       ))}

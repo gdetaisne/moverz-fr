@@ -4,9 +4,9 @@ import { Briefcase, Zap, TrendingUp } from "lucide-react";
 
 export default function ProBanner() {
   return (
-    <section className="relative py-20 md:py-28 bg-gradient-to-br from-[#0A0A0A] via-[#1E293B] to-brand-navy overflow-hidden">
+    <section className="relative py-20 md:py-28 bg-gradient-to-br from-[#0A0A0A] via-[var(--color-bg-dark)] to-brand-navy overflow-hidden">
       {/* Background glow effects - Plus intenses */}
-      <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-brand-turquoise/15 rounded-full blur-[160px] animate-pulse" style={{animationDuration: '6s'}} />
+      <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-[var(--color-accent)]/15 rounded-full blur-[160px] animate-pulse" style={{animationDuration: '6s'}} />
       <div className="absolute bottom-0 left-0 w-[700px] h-[700px] bg-brand-accent/18 rounded-full blur-[160px] animate-pulse" style={{animationDuration: '8s'}} />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-r from-brand-turquoise/10 to-brand-accent/10 rounded-full blur-[180px]" />
       
@@ -29,7 +29,7 @@ export default function ProBanner() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-xl px-5 py-2.5 text-sm font-semibold text-white shadow-[0_0_30px_rgba(107,207,207,0.2)] mb-8"
           >
-            <Briefcase className="w-4 h-4 text-brand-turquoise" />
+            <Briefcase className="w-4 h-4 text-[var(--color-accent)]" />
             <span>Espace Professionnels</span>
           </motion.div>
 
@@ -72,7 +72,7 @@ export default function ProBanner() {
                 key={i}
                 className={`group inline-flex items-center gap-2 rounded-full bg-gradient-to-r ${feature.gradient} border border-white/20 backdrop-blur-xl px-5 py-2.5 text-sm font-semibold text-white hover:border-brand-accent/40 hover:shadow-lg hover:shadow-brand-accent/20 hover:scale-105 transition-all duration-300`}
               >
-                <feature.icon className="w-4 h-4 text-brand-accent group-hover:text-brand-turquoise transition-colors duration-300" />
+                <feature.icon className="w-4 h-4 text-brand-accent group-hover:text-[var(--color-accent)] transition-colors duration-300" />
                 <span>{feature.text}</span>
               </div>
             ))}

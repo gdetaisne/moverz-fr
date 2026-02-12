@@ -7,11 +7,11 @@ import { CheckCircle2 } from "lucide-react";
 export default function ProHero() {
   return (
     <section className="relative overflow-hidden text-white">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-bg-dark)] via-[var(--color-bg-dark)] to-[var(--color-bg-dark)]" />
       
       {/* Animated background elements */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-turquoise/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-turquoise/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }} />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[var(--color-accent)]/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[var(--color-accent)]/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }} />
       
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <Breadcrumbs
@@ -31,7 +31,7 @@ export default function ProHero() {
               transition={{ duration: 0.4 }}
               className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2 text-sm font-medium text-white/90 backdrop-blur-sm"
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise animate-pulse" />
+              <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-accent)] animate-pulse" />
               <span>SaaS pour déménageurs · dossier digital opposable</span>
             </motion.div>
 
@@ -44,7 +44,7 @@ export default function ProHero() {
             >
               Nous augmentons votre CA.
               <br />
-              <span className="text-brand-turquoise">Zéro visite technique.</span>
+              <span className="text-[var(--color-accent)]">Zéro visite technique.</span>
             </motion.h1>
 
             {/* Subtitle */}
@@ -73,7 +73,7 @@ export default function ProHero() {
                 "Déclaration valeur"
               ].map((item, i) => (
                 <span key={i} className="inline-flex items-center gap-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1.5 text-xs font-medium text-white">
-                  <CheckCircle2 className="w-3 h-3 text-brand-turquoise" />
+                  <CheckCircle2 className="w-3 h-3 text-[var(--color-accent)]" />
                   {item}
                 </span>
               ))}
