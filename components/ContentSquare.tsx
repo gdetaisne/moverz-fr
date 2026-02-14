@@ -10,7 +10,7 @@ export default function ContentSquare() {
   return (
     <Script
       id="contentsquare"
-      strategy="afterInteractive"
+      strategy="lazyOnload"
       src={CONTENTSQUARE_SRC}
     />
   );

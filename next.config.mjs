@@ -112,11 +112,6 @@ const nextConfig = {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()'
           },
-          // Preconnect pour Google Analytics
-          {
-            key: 'Link',
-            value: '<https://www.googletagmanager.com>; rel=preconnect; crossorigin'
-          },
         ],
       },
       // Cache agressif pour assets statiques (images)

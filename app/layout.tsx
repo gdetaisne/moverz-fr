@@ -5,9 +5,7 @@ import "./globals.css";
 import { MOVERZ_REVIEWS, getAverageRating, getTotalReviews } from "@/lib/reviews";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import ContentSquare from "@/components/ContentSquare";
-import ExitIntentPopup from "@/components/ExitIntentPopup";
-import { ConversionIntentTracker } from "@/components/ConversionIntentTracker";
-import { ScrollDepthTracker } from "@/components/ScrollDepthTracker";
+import DeferredClientFeatures from "@/components/DeferredClientFeatures";
 import { JsonLd } from "@/components/schema/JsonLd";
 
 // ===== Fonts V4 Radical =====
@@ -122,9 +120,9 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${sora.variable} ${inter.variable}`}>
       <head>
-        <link rel="icon" href="/logo.png" />
-        <link rel="apple-touch-icon" href="/logo.png" />
-        <link rel="preload" href="/logo.png" as="image" type="image/png" />
+        <link rel="icon" href="/logo-ui.png" />
+        <link rel="apple-touch-icon" href="/logo-ui.png" />
+        <link rel="preload" href="/logo-ui.png" as="image" type="image/png" />
 
         <JsonLd
           id="organization-schema"
@@ -211,9 +209,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <GoogleAnalytics />
-        <ConversionIntentTracker />
-        <ScrollDepthTracker />
-        <ExitIntentPopup />
+        <DeferredClientFeatures />
 
         {/* ===== HEADER V4 — Un seul, sticky, propre ===== */}
         <header
@@ -226,7 +222,7 @@ export default function RootLayout({
           <nav className="mx-auto flex h-14 max-w-[1200px] items-center justify-between px-5 md:px-6 lg:px-8">
             <a href="/" className="flex items-center gap-2.5" title="Moverz">
               <Image
-                src="/logo.png"
+                src="/logo-ui.png"
                 alt="Logo Moverz"
                 width={32}
                 height={32}
@@ -291,7 +287,7 @@ export default function RootLayout({
               {/* Col 1: Brand */}
               <div className="col-span-2 md:col-span-1 space-y-3">
                 <a href="/" className="inline-flex items-center gap-2" title="Moverz">
-                  <Image src="/logo.png" alt="Logo Moverz" width={28} height={28} className="h-7 w-7" />
+                  <Image src="/logo-ui.png" alt="Logo Moverz" width={28} height={28} className="h-7 w-7" />
                   <span
                     className="text-base font-semibold"
                     style={{ color: "var(--color-text)", fontFamily: "var(--font-sora)" }}

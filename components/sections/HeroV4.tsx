@@ -233,6 +233,7 @@ export function HeroV4() {
   const [loading, setLoading] = useState(false);
   const [redirecting, setRedirecting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [socialProofCount, setSocialProofCount] = useState(8);
 
   // Progress : 0% → 8% → 17% → 25%
   let progress = 0;
@@ -298,6 +299,11 @@ export function HeroV4() {
     setEstimate(null);
     setError(null);
   }, [origin, destination, surface]);
+
+  // Keep hydration deterministic, then randomize after mount for social-proof micro-copy.
+  useEffect(() => {
+    setSocialProofCount(Math.floor(Math.random() * 5) + 6);
+  }, []);
   
   // Funnel tracking détaillé
   useEffect(() => {
@@ -342,7 +348,7 @@ export function HeroV4() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
           {/* COLONNE GAUCHE — H1 + 3 garanties */}
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="space-y-8">
-            <motion.div variants={staggerItem} className="space-y-5">
+            <div className="space-y-5">
               <h1
                 className="font-heading text-[clamp(36px,6vw,64px)] leading-[1.05] font-bold tracking-[-0.025em]"
                 style={{ color: "var(--color-text)" }}
@@ -374,10 +380,10 @@ export function HeroV4() {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
                 </div>
                 <span className="text-xs font-medium text-amber-900">
-                  <strong>{Math.floor(Math.random() * 5) + 6} personnes</strong> comparent en ce moment
+                  <strong>{socialProofCount} personnes</strong> comparent en ce moment
                 </span>
               </motion.div>
-            </motion.div>
+            </div>
 
             {/* 3 garanties inline */}
             <motion.div variants={staggerItem} className="flex flex-wrap items-center gap-x-6 gap-y-3">

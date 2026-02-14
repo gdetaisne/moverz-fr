@@ -1,5 +1,3 @@
-"use client";
-
 /**
  * MOVERZ HOMEPAGE V4 RADICAL
  * 
@@ -23,7 +21,11 @@ import { ComparisonExplainer } from "@/components/sections/ComparisonExplainer";
 import { CreditsafeChapter } from "@/components/sections/CreditsafeChapter";
 import { TestimonialV4 } from "@/components/sections/TestimonialV4";
 import { FAQV4 } from "@/components/sections/FAQV4";
-import StickyCTA from "@/components/StickyCTA";
+import dynamic from "next/dynamic";
+
+const StickyCTA = dynamic(() => import("@/components/StickyCTA"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
