@@ -30,17 +30,13 @@ type Estimate = {
 
 /** Appel api-adresse.data.gouv.fr (municipalités uniquement) */
 async function fetchCities(q: string): Promise<CitySuggestion[]> {
-  if (q.length < 2) return [];
+  if (q.length < 3) return [];
   try {
-    const params = new URLSearchParams({ q, type: "municipality", limit: "5" });
-    const res = await fetch(`https://api-adresse.data.gouv.fr/search/?${params}`);
+    const params = new URLSearchParams({ q, limit: "5" });
+    const res = await fetch(`/api/cities?${params}`);
     if (!res.ok) return [];
     const data = await res.json();
-    return (data.features ?? []).map((f: any) => ({
-      label: `${f.properties.city} (${f.properties.postcode})`,
-      city: f.properties.city as string,
-      postcode: f.properties.postcode as string,
-    }));
+    return Array.isArray(data) ? (data as CitySuggestion[]) : [];
   } catch {
     return [];
   }
@@ -122,8 +118,11 @@ function CityAutocomplete({
   const [suggestions, setSuggestions] = useState<CitySuggestion[]>([]);
   const [open, setOpen] = useState(false);
   const [focused, setFocused] = useState(false);
+  const [loadingSuggestions, setLoadingSuggestions] = useState(false);
   const timer = useRef<ReturnType<typeof setTimeout>>();
   const wrapperRef = useRef<HTMLDivElement>(null);
+  const requestIdRef = useRef(0);
+  const cacheRef = useRef<Map<string, CitySuggestion[]>>(new Map());
 
   const unrecognized = !focused && query.length >= 2 && !value;
 
@@ -144,8 +143,28 @@ function CityAutocomplete({
       onClear();
       clearTimeout(timer.current);
       timer.current = setTimeout(async () => {
+        const normalized = q.trim().toLowerCase();
+        if (normalized.length < 3) {
+          setSuggestions([]);
+          setLoadingSuggestions(false);
+          return;
+        }
+
+        const cached = cacheRef.current.get(normalized);
+        if (cached) {
+          setSuggestions(cached);
+          setLoadingSuggestions(false);
+          return;
+        }
+
+        setLoadingSuggestions(true);
+        const requestId = ++requestIdRef.current;
         const results = await fetchCities(q);
+        if (requestId !== requestIdRef.current) return;
+
+        cacheRef.current.set(normalized, results);
         setSuggestions(results);
+        setLoadingSuggestions(false);
       }, 250);
     },
     [onClear],
@@ -170,8 +189,13 @@ function CityAutocomplete({
           type="text"
           value={query}
           onChange={(e) => onChange(e.target.value)}
-          onFocus={() => { setFocused(true); suggestions.length > 0 && setOpen(true); }}
-          onBlur={() => setFocused(false)}
+          onFocus={() => {
+            setFocused(true);
+            if (query.trim().length >= 3) setOpen(true);
+          }}
+          onBlur={() => {
+            setFocused(false);
+          }}
           placeholder={placeholder}
           className="w-full rounded-[var(--radius-sm)] border px-3.5 py-2.5 text-sm outline-none transition-all placeholder:text-[var(--color-text-muted)]"
           style={{
@@ -183,10 +207,6 @@ function CityAutocomplete({
             color: "var(--color-text)",
             background: "var(--color-surface)",
             paddingRight: value ? "2.5rem" : "0.875rem",
-          }}
-          onFocus={(e) => (e.target.style.borderColor = "var(--color-accent)")}
-          onBlur={(e) => {
-            if (!unrecognized) e.target.style.borderColor = value ? "var(--color-accent)" : "var(--color-border)";
           }}
         />
         {value && (
@@ -202,6 +222,16 @@ function CityAutocomplete({
       {unrecognized && (
         <p className="mt-1 text-xs" style={{ color: "var(--color-danger)" }}>
           Sélectionnez une ville dans la liste
+        </p>
+      )}
+      {!value && focused && query.trim().length > 0 && query.trim().length < 3 && (
+        <p className="mt-1 text-xs" style={{ color: "var(--color-text-muted)" }}>
+          Tapez au moins 3 lettres
+        </p>
+      )}
+      {loadingSuggestions && (
+        <p className="mt-1 text-xs" style={{ color: "var(--color-text-muted)" }}>
+          Recherche en cours...
         </p>
       )}
       {open && suggestions.length > 0 && (
