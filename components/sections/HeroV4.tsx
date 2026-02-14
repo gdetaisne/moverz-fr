@@ -107,12 +107,14 @@ function CityAutocomplete({
   value,
   onSelect,
   onClear,
+  onTypingStart,
 }: {
   label: string;
   placeholder: string;
   value: CitySuggestion | null;
   onSelect: (s: CitySuggestion) => void;
   onClear: () => void;
+  onTypingStart?: () => void;
 }) {
   const [query, setQuery] = useState(value?.label ?? "");
   const [suggestions, setSuggestions] = useState<CitySuggestion[]>([]);
@@ -140,6 +142,7 @@ function CityAutocomplete({
     (q: string) => {
       setQuery(q);
       setOpen(true);
+      if (q.trim().length > 0) onTypingStart?.();
       onClear();
       clearTimeout(timer.current);
       timer.current = setTimeout(async () => {
@@ -167,7 +170,7 @@ function CityAutocomplete({
         setLoadingSuggestions(false);
       }, 250);
     },
-    [onClear],
+    [onClear, onTypingStart],
   );
 
   const pick = (s: CitySuggestion) => {
@@ -264,6 +267,7 @@ export function HeroV4() {
   const [redirecting, setRedirecting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [socialProofCount, setSocialProofCount] = useState(8);
+  const hasTrackedTypingStart = useRef(false);
 
   // Progress : 0% → 8% → 17% → 25%
   let progress = 0;
@@ -275,6 +279,11 @@ export function HeroV4() {
 
   const handleEstimate = async () => {
     if (!origin || !destination || !surface) return;
+    trackEvent("lead_clic_home_step2", {
+      origin: origin.city,
+      destination: destination.city,
+      surface: Number(surface),
+    });
     setLoading(true);
     setError(null);
     const result = await fetchEstimate(origin.postcode, destination.postcode, Number(surface));
@@ -288,6 +297,13 @@ export function HeroV4() {
 
   const handleRedirect = () => {
     if (!origin || !destination || !surface) return;
+    trackEvent("Lead_clic_home", {
+      origin: origin.city,
+      destination: destination.city,
+      surface: Number(surface),
+      estimateMin: estimate?.min,
+      estimateMax: estimate?.max,
+    });
     setRedirecting(true);
     setError(null);
     
@@ -468,10 +484,43 @@ export function HeroV4() {
                     </div>
 
                     <div className="text-center">
-                      <p className="text-4xl font-bold tabular-nums" style={{ color: "var(--color-text)" }}>
-                        {estimate.min.toLocaleString("fr-FR")} € – {estimate.max.toLocaleString("fr-FR")} €
+                      <p className="text-xs font-medium uppercase tracking-wider" style={{ color: "var(--color-text-muted)" }}>
+                        Budget moyen estimé
                       </p>
-                      <p className="text-xs mt-2" style={{ color: "var(--color-text-muted)" }}>
+                      <p className="text-4xl font-bold tabular-nums mt-1" style={{ color: "var(--color-text)" }}>
+                        ≈ {Math.round((estimate.min + estimate.max) / 2).toLocaleString("fr-FR")} €
+                      </p>
+                      <div className="grid grid-cols-2 gap-2 mt-3">
+                        <div
+                          className="rounded-[var(--radius-sm)] border px-3 py-2 text-left"
+                          style={{
+                            borderColor: "rgba(16,185,129,0.3)",
+                            background: "rgba(16,185,129,0.08)",
+                          }}
+                        >
+                          <p className="text-[10px] font-semibold uppercase tracking-wide" style={{ color: "#047857" }}>
+                            Min
+                          </p>
+                          <p className="text-sm font-semibold tabular-nums" style={{ color: "#047857" }}>
+                            {estimate.min.toLocaleString("fr-FR")} €
+                          </p>
+                        </div>
+                        <div
+                          className="rounded-[var(--radius-sm)] border px-3 py-2 text-right"
+                          style={{
+                            borderColor: "rgba(245,158,11,0.35)",
+                            background: "rgba(245,158,11,0.08)",
+                          }}
+                        >
+                          <p className="text-[10px] font-semibold uppercase tracking-wide" style={{ color: "#b45309" }}>
+                            Max
+                          </p>
+                          <p className="text-sm font-semibold tabular-nums" style={{ color: "#b45309" }}>
+                            {estimate.max.toLocaleString("fr-FR")} €
+                          </p>
+                        </div>
+                      </div>
+                      <p className="text-xs mt-3" style={{ color: "var(--color-text-muted)" }}>
                         Formule standard · Estimation non contractuelle
                       </p>
                     </div>
@@ -527,6 +576,11 @@ export function HeroV4() {
                         value={origin}
                         onSelect={setOrigin}
                         onClear={() => setOrigin(null)}
+                        onTypingStart={() => {
+                          if (hasTrackedTypingStart.current) return;
+                          hasTrackedTypingStart.current = true;
+                          trackEvent("lead_clic_home_start");
+                        }}
                       />
                       <CityAutocomplete
                         label="Ville d'arrivée"
@@ -534,6 +588,11 @@ export function HeroV4() {
                         value={destination}
                         onSelect={setDestination}
                         onClear={() => setDestination(null)}
+                        onTypingStart={() => {
+                          if (hasTrackedTypingStart.current) return;
+                          hasTrackedTypingStart.current = true;
+                          trackEvent("lead_clic_home_start");
+                        }}
                       />
                     </div>
 
