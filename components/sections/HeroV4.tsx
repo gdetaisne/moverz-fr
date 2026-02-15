@@ -490,36 +490,15 @@ export function HeroV4() {
                       <p className="text-4xl font-bold tabular-nums mt-1" style={{ color: "var(--color-text)" }}>
                         ≈ {Math.round((estimate.min + estimate.max) / 2).toLocaleString("fr-FR")} €
                       </p>
-                      <div className="grid grid-cols-2 gap-2 mt-3">
-                        <div
-                          className="rounded-[var(--radius-sm)] border px-3 py-2 text-left"
-                          style={{
-                            borderColor: "rgba(16,185,129,0.3)",
-                            background: "rgba(16,185,129,0.08)",
-                          }}
-                        >
-                          <p className="text-[10px] font-semibold uppercase tracking-wide" style={{ color: "#047857" }}>
-                            Min
-                          </p>
-                          <p className="text-sm font-semibold tabular-nums" style={{ color: "#047857" }}>
-                            {estimate.min.toLocaleString("fr-FR")} €
-                          </p>
-                        </div>
-                        <div
-                          className="rounded-[var(--radius-sm)] border px-3 py-2 text-right"
-                          style={{
-                            borderColor: "rgba(245,158,11,0.35)",
-                            background: "rgba(245,158,11,0.08)",
-                          }}
-                        >
-                          <p className="text-[10px] font-semibold uppercase tracking-wide" style={{ color: "#b45309" }}>
-                            Max
-                          </p>
-                          <p className="text-sm font-semibold tabular-nums" style={{ color: "#b45309" }}>
-                            {estimate.max.toLocaleString("fr-FR")} €
-                          </p>
-                        </div>
-                      </div>
+                      <p className="mt-3 text-sm tabular-nums" style={{ color: "var(--color-text-muted)" }}>
+                        <span className="font-medium" style={{ color: "#047857" }}>
+                          Min {estimate.min.toLocaleString("fr-FR")} €
+                        </span>
+                        <span className="mx-2">·</span>
+                        <span className="font-medium" style={{ color: "#b45309" }}>
+                          Max {estimate.max.toLocaleString("fr-FR")} €
+                        </span>
+                      </p>
                       <p className="text-xs mt-3" style={{ color: "var(--color-text-muted)" }}>
                         Formule standard · Estimation non contractuelle
                       </p>
