@@ -31,9 +31,11 @@ const HARDCODED_CORRIDORS = [
 
 export function GET() {
   const baseUrl = env.SITE_URL;
+  const lastmod = new Date().toISOString().split("T")[0];
 
   const urls = HARDCODED_CORRIDORS.map((slug) => ({
     loc: absoluteUrl(baseUrl, `/${slug}`),
+    lastmod,
     changefreq: "monthly" as const,
     priority: 0.6,
   }));

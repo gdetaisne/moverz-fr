@@ -7,3 +7,6 @@ node_modules/
 .turbo
 moverz-redirect-router.tar.gz
 public/data/city-guides/*.json
+reports/
+.env
+tsconfig.tsbuildinfo

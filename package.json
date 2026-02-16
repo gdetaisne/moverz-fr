@@ -14,12 +14,16 @@
     "seo:inventory": "tsx scripts/seo-inventory.ts > seo-inventory.csv",
     "seo:healthcheck": "tsx scripts/seo-healthcheck.ts",
     "seo:city-guides-wordcount": "tsx scripts/seo-city-guides-wordcount.ts > seo-city-guides-wordcount.csv",
-    "update-llm": "node scripts/update-llm-files.mjs"
+    "update-llm": "node scripts/update-llm-files.mjs",
+    "seo:monitor": "node scripts/gsc-monitor.mjs",
+    "seo:monitor:weekly": "node scripts/gsc-monitor.mjs --days 7",
+    "seo:monitor:monthly": "node scripts/gsc-monitor.mjs --days 28"
   },
   "dependencies": {
     "@types/qrcode": "^1.5.6",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.25",
+    "googleapis": "^171.4.0",
     "lucide-react": "^0.453.0",
     "next": "^14.2.6",
     "next-sitemap": "^4.2.3",

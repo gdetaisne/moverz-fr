@@ -7,6 +7,7 @@ export const runtime = "nodejs";
 
 export function GET() {
   const baseUrl = env.SITE_URL;
+  const lastmod = new Date().toISOString().split("T")[0];
   const supportedQuartiers = new Set<string>(QUARTIER_HUB_SLUGS as unknown as string[]);
 
   const staticPaths = [
@@ -31,12 +32,14 @@ export function GET() {
   const urls = [
     ...staticPaths.map((p) => ({
       loc: absoluteUrl(baseUrl, p),
+      lastmod,
       changefreq: "monthly" as const,
       priority: p === "/" ? 1.0 : 0.8,
     })),
     // Hubs quartiers (only supported)
     ...CITIES.filter((c) => supportedQuartiers.has(c.slug)).map((c) => ({
       loc: absoluteUrl(baseUrl, `/quartiers-${c.slug}`),
+      lastmod,
       changefreq: "monthly" as const,
       priority: 0.6,
     })),

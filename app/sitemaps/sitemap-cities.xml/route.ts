@@ -6,6 +6,7 @@ export const runtime = "nodejs";
 
 export function GET() {
   const baseUrl = env.SITE_URL;
+  const lastmod = new Date().toISOString().split("T")[0]; // Build date
 
   // SEO (2026-02-16): only include core cities in sitemap.
   // Non-core city + guide pages are noindexed (template thin content).
@@ -17,12 +18,14 @@ export function GET() {
   const urls = CITIES.filter(c => CORE_CITY_SLUGS.has(c.slug)).flatMap((city) => {
     const cityUrl = {
       loc: absoluteUrl(baseUrl, `/demenagement/${city.slug}`),
+      lastmod,
       changefreq: "weekly" as const,
       priority: 0.9,
     };
 
     const guideUrl = {
       loc: absoluteUrl(baseUrl, `/demenagement/${city.slug}/guide`),
+      lastmod,
       changefreq: "monthly" as const,
       priority: 0.7,
     };

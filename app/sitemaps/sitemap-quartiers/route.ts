@@ -7,10 +7,13 @@ export const runtime = "nodejs";
 export function GET() {
   const baseUrl = env.SITE_URL;
 
+  const now = new Date().toISOString();
+
   // Collecter toutes les URLs de quartiers depuis cityData
   const urls = Object.values(cityData).flatMap((city) =>
     city.neighborhoods.map((neighborhood) => ({
       loc: absoluteUrl(baseUrl, `/${city.slug}/${neighborhood.slug}`),
+      lastmod: now,
       changefreq: "monthly" as const,
       priority: 0.5,
     })),

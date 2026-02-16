@@ -20,12 +20,14 @@ const CORE_SERVICE_CITIES = new Set([
 
 export function GET() {
   const baseUrl = env.SITE_URL;
+  const lastmod = new Date().toISOString().split("T")[0];
 
   const urls = CITIES
     .filter((city) => CORE_SERVICE_CITIES.has(city.slug))
     .flatMap((city) =>
       SERVICE_SLUGS.map((service) => ({
         loc: absoluteUrl(baseUrl, `/demenagement/${city.slug}/${service}`),
+        lastmod,
         changefreq: "monthly" as const,
         priority: 0.7,
       }))
