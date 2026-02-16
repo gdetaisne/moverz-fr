@@ -7,15 +7,19 @@ export const runtime = "nodejs";
 export function GET() {
   const baseUrl = env.SITE_URL;
 
-  const urls = CITIES.flatMap((city) => {
+  // SEO (2026-02-16): only include core cities in sitemap.
+  // Non-core city + guide pages are noindexed (template thin content).
+  const CORE_CITY_SLUGS = new Set([
+    "bordeaux", "lille", "lyon", "marseille", "montpellier", "nantes",
+    "nice", "paris", "rennes", "rouen", "strasbourg", "toulouse",
+  ]);
+
+  const urls = CITIES.filter(c => CORE_CITY_SLUGS.has(c.slug)).flatMap((city) => {
     const cityUrl = {
       loc: absoluteUrl(baseUrl, `/demenagement/${city.slug}`),
       changefreq: "weekly" as const,
       priority: 0.9,
     };
-
-    // Guides long-form (pré-générés). On évite l'IDF (pas de JSON généré actuellement).
-    if (city.slug === "ile-de-france") return [cityUrl];
 
     const guideUrl = {
       loc: absoluteUrl(baseUrl, `/demenagement/${city.slug}/guide`),

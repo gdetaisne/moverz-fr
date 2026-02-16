@@ -14,9 +14,22 @@ export function generateStaticParams() {
   return CITIES.filter((c) => c.slug !== "ile-de-france").map((city) => ({ slug: city.slug }));
 }
 
+// SEO (2026-02-16): only core cities keep guide indexation.
+const CORE_CITY_SLUGS = new Set([
+  "bordeaux", "lille", "lyon", "marseille", "montpellier", "nantes",
+  "nice", "paris", "rennes", "rouen", "strasbourg", "toulouse",
+]);
+
 export function generateMetadata({ params }: PageProps): Metadata {
   const city = getCityBySlug(params.slug);
   if (!city) return {};
+
+  // noindex non-core guide pages (template thin content)
+  if (!CORE_CITY_SLUGS.has(city.slug)) {
+    return {
+      robots: { index: false, follow: true },
+    };
+  }
 
   const path = `demenagement/${city.slug}/guide`;
   const title = `Guide déménagement ${city.nameCapitalized} (2000+ mots) : méthode, checklists, devis fiables | Moverz`;
