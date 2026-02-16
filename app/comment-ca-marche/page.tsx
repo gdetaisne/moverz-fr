@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getFullMetadata } from "@/lib/canonical-helper";
+import { HowToSchema } from "@/components/schema/HowToSchema";
 import HowItWorksHero from "@/components/comment-ca-marche/HowItWorksHero";
 import HowItWorksSteps from "@/components/comment-ca-marche/HowItWorksSteps";
 import HowItWorksIA from "@/components/comment-ca-marche/HowItWorksIA";
@@ -19,6 +20,28 @@ export const metadata: Metadata = getFullMetadata(
 export default function CommentCaMarchePage() {
   return (
     <main className="bg-white min-h-screen">
+      {/* HowTo schema — rich snippet Google "étapes" */}
+      <HowToSchema
+        title="Comment comparer des devis de déménagement avec Moverz"
+        description="Obtenez jusqu'à 5 devis comparables de déménageurs vérifiés en 3 étapes simples. 100% gratuit, sans démarchage."
+        totalTime="PT3M"
+        estimatedCost={{ value: "0", currency: "EUR" }}
+        steps={[
+          {
+            name: "Décrivez votre déménagement",
+            text: "Renseignez votre ville de départ et d'arrivée, la date souhaitée et le type de logement (studio, T2, T3, maison…). 30 secondes suffisent.",
+            url: "https://moverz.fr/comment-ca-marche/",
+          },
+          {
+            name: "Complétez le dossier standardisé",
+            text: "Ajoutez les détails d'accès (étage, ascenseur, distance parking-entrée), les options (emballage, monte-meuble) et éventuellement des photos. L'IA estime le volume pour que chaque devis soit basé sur les mêmes données.",
+          },
+          {
+            name: "Recevez et comparez vos devis",
+            text: "Recevez jusqu'à 5 devis comparables sous 5 jours. Tous les déménageurs ont reçu le même dossier : vous comparez sur une base claire, sans surprise. Vous choisissez librement, sans pression.",
+          },
+        ]}
+      />
       {/* Hero premium */}
       <HowItWorksHero />
 
