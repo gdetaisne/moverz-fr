@@ -204,6 +204,24 @@ export async function middleware(req: NextRequest, event: NextFetchEvent) {
     return track(new NextResponse(null, { status: 404 }));
   }
 
+  // SEO fix (2026-02-16): redirect nested blog URLs → flat /blog/{child}/.
+  // blog-canonique.ts contains ~1 400 internal links using /blog/{parent}/{child} pattern
+  // but routing only supports /blog/[slug]/ (single segment).  Permanent 301 to stop 346 GSC 404s.
+  const blogNested = pathname.match(/^\/blog\/([a-z0-9-]+)\/([a-z0-9-]+)\/?$/);
+  if (blogNested) {
+    const child = blogNested[2];
+    // Exclude known category sub-paths that have their own page.tsx
+    const blogCategories = new Set([
+      "prix-et-devis", "checklists-et-guides", "cas-frequents",
+      "conseils-demenagement", "demenagement-par-ville",
+    ]);
+    if (!blogCategories.has(blogNested[1])) {
+      const url = req.nextUrl.clone();
+      url.pathname = `/blog/${child}/`;
+      return track(NextResponse.redirect(url, 301));
+    }
+  }
+
   // Quartiers hubs: serve "/quartiers-<slug>/" via a dynamic route "/quartiers/<slug>/" (implementation detail).
   // This prevents 404s while keeping the public URL stable (SEO) and avoids adding 20+ nearly-identical files.
   const quartiersHub = pathname.match(/^\/quartiers-([a-z0-9-]+)\/?$/);

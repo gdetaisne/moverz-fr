@@ -165,10 +165,35 @@ const nextConfig = {
 
   async redirects() {
     return [
-      // Legacy HTML URLs
+      // Legacy HTML/old URLs (SEO fix 2026-02-16)
       {
         source: '/paris-devis-demenagement.html',
         destination: '/demenagement/paris/',
+        permanent: true,
+      },
+      {
+        source: '/lyon-devis-demenagement',
+        destination: '/demenagement/lyon/',
+        permanent: true,
+      },
+      {
+        source: '/lyon-devis-demenagement.html',
+        destination: '/demenagement/lyon/',
+        permanent: true,
+      },
+      {
+        source: '/contact.html',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/blog.html',
+        destination: '/blog/',
+        permanent: true,
+      },
+      {
+        source: '/demenagement',
+        destination: '/villes/',
         permanent: true,
       },
 
