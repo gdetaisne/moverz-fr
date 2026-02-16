@@ -208,6 +208,17 @@ const nextConfig = {
         destination: '/blog/prix-et-devis/',
         permanent: true,
       },
+      // SEO: /prix-demenagement/ is a high-value URL that was returning 404
+      {
+        source: '/prix-demenagement',
+        destination: '/blog/prix-et-devis/',
+        permanent: true,
+      },
+      {
+        source: '/prix-demenagement/',
+        destination: '/blog/prix-et-devis/',
+        permanent: true,
+      },
       {
         source: '/checklist',
         destination: '/blog/checklists-et-guides/',

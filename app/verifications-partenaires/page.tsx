@@ -5,8 +5,8 @@ import { FAQ, type FAQItem } from "@/components/FAQ";
 
 export const metadata: Metadata = getFullMetadata(
   "verifications-partenaires",
-  "Comment Moverz vérifie les déménageurs | Creditsafe + Licences + Assurances",
-  "Découvrez comment Moverz vérifie systématiquement les déménageurs : santé financière (Creditsafe), licences de transport, assurances RC Pro. Ce que vous recevez concrètement."
+  "Comment Moverz vérifie les déménageurs",
+  "Vérifications systématiques : Creditsafe, licences transport, assurances RC Pro. Ce que vous recevez concrètement."
 );
 
 export default function VerificationsPartenairesPage() {

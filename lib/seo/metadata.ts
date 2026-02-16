@@ -36,8 +36,8 @@ export function getCityPageMetadata(city: CityInfo): Metadata {
   // Calcul prix locaux (déménagement intra-ville)
   const prices = getLocalPricesForMeta(city.slug);
   
-  // Title optimisé (prix MIN visible + action-oriented)
-  const title = `Déménagement ${city.nameCapitalized} dès ${prices.t1} | Devis 5–7j | Contrôlés`;
+  // Title optimisé: ≤ 51 chars avant "| Moverz" (ajouté par layout.tsx template)
+  const title = `Déménagement ${city.nameCapitalized} dès ${prices.t1} · Devis 5–7j`;
   
   // Description optimisée (USP "comparés par IA" + prix détaillés + année en fin)
   // Format compact pour tenir en 160 car max

@@ -13,8 +13,8 @@ import WidgetActionSection from "@/components/WidgetActionSection";
 
 export const metadata: Metadata = getFullMetadata(
   'comment-ca-marche',
-  "Comment ça marche ? Dossier guidé & Devis Comparables",
-  "Comparez des devis comparables sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit."
+  "Comment ça marche ? Devis comparables en 3 étapes",
+  "Décrivez votre déménagement, l'IA calibre le volume, recevez des devis comparables sous 5–7j. Anonyme, gratuit, sans démarchage."
 );
 
 export default function CommentCaMarchePage() {

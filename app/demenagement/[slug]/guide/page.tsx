@@ -32,8 +32,8 @@ export function generateMetadata({ params }: PageProps): Metadata {
   }
 
   const path = `demenagement/${city.slug}/guide`;
-  const title = `Guide déménagement ${city.nameCapitalized} (2000+ mots) : méthode, checklists, devis fiables`;
-  const description = `Guide long format (2000+ mots) pour déménager à ${city.nameCapitalized}: dossier pour des devis comparables, accès & stationnement, checklists, erreurs fréquentes, méthode jour J.`;
+  const title = `Guide déménagement ${city.nameCapitalized} : méthode & devis`;
+  const description = `Guide complet pour déménager à ${city.nameCapitalized} : checklists, accès, devis comparables, erreurs fréquentes. Méthode étape par étape.`;
 
   return getFullMetadata(path, title, description);
 }

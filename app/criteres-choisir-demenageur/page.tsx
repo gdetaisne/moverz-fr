@@ -5,8 +5,8 @@ import { FAQ, type FAQItem } from "@/components/FAQ";
 
 export const metadata: Metadata = getFullMetadata(
   "criteres-choisir-demenageur",
-  "8 Critères pour choisir un déménageur fiable en 2026 (+ Creditsafe) | Moverz",
-  "Les 8 critères indispensables pour choisir un déménageur fiable : santé financière (Creditsafe), licence, assurance RC Pro, estimation volume, devis détaillé, paiement, avis clients, fiabilité. Checklist + FAQ anti-arnaques."
+  "8 Critères pour choisir un déménageur fiable",
+  "Critères clés : santé financière (Creditsafe), licence, assurance RC Pro, devis détaillé. Checklist + FAQ anti-arnaques."
 );
 
 export default function CriteresChoisirDemenageurPage() {

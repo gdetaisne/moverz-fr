@@ -28,9 +28,9 @@ export function generateMetadata({ params }: PageProps): Metadata {
   const post = getPublishedPostBySlug(params.slug);
   if (!post) { return {}; }
   const path = `blog/${post.slug}`;
-  const title = post.category === "pro"
-    ? `${post.title} | Blog déménageurs`
-    : `${post.title} | Blog déménagement`;
+  // Le suffixe "| Moverz" est ajouté par layout.tsx template.
+  // Pas besoin d'un suffixe intermédiaire qui allonge le title en SERP.
+  const title = post.title;
   const description = post.description;
   const meta = getFullMetadata(path, title, description);
 

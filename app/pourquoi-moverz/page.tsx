@@ -4,8 +4,8 @@ import PourquoiMoverzContent from "./PourquoiMoverzContent";
 
 export const metadata: Metadata = getFullMetadata(
   'pourquoi-moverz',
-  "Pourquoi Moverz ? Comparateur de Déménagement Fiable",
-  "Découvrez pourquoi Moverz est différent : dossier standardisé, vérification financière des entreprises (Creditsafe). Le seul comparateur qui compare aussi la fiabilité."
+  "Pourquoi Moverz ? Le comparateur qui vérifie",
+  "Moverz vérifie chaque déménageur (Creditsafe) et standardise votre dossier. Devis comparables, sans harcèlement. Gratuit."
 );
 
 export default function PourquoiMoverzPage() {

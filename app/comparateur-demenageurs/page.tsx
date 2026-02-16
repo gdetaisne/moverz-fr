@@ -6,8 +6,8 @@ import { FAQ, type FAQItem } from "@/components/FAQ";
 
 export const metadata: Metadata = baseGenerateMetadata(
   "comparateur-demenageurs",
-  `Comparateur de Déménagement : Guide Complet 2026 (Moverz vs Alternatives)`,
-  "Choisir le meilleur comparateur de déménagement en 2026 : 5 critères clés (Creditsafe, devis comparables, anonymat, IA volume, gratuité). Comparatif Moverz vs plateformes classiques vs contact direct."
+  "Comparateur Déménagement 2026 : Moverz vs Autres",
+  "Quel comparateur de déménagement choisir ? 5 critères clés : Creditsafe, devis comparables, anonymat, IA volume. Comparatif objectif."
 );
 
 export default function ComparateurDemenageursPage() {

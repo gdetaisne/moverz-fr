@@ -13,8 +13,8 @@ import { FAQSchema } from "@/components/schema/FAQSchema";
 
 export const metadata: Metadata = getFullMetadata(
   "partenaires",
-  "Devenir partenaire Moverz : recevez des dossiers qualifiés",
-  "Rejoignez le réseau Moverz et recevez des dossiers complets (infos standardisées) pour envoyer vos devis. Paiement uniquement au succès, pas d'abonnement."
+  "Devenir partenaire Moverz : dossiers qualifiés",
+  "Rejoignez le réseau Moverz : dossiers complets et standardisés. Paiement au succès, pas d'abonnement."
 );
 
 const FAQ_DATA = [
