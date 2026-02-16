@@ -1,3 +1,4 @@
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import { getFullMetadata } from "@/lib/canonical-helper";
@@ -198,7 +199,7 @@ export default function VerificationsPartenairesPage() {
               Dossier anonyme, zéro harcèlement, 100% gratuit.
             </p>
             <a
-              href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=verifications-partenaires"
+              href={buildTunnelUrl({ from: "verifications-partenaires" })}
               className="inline-flex items-center justify-center rounded-full bg-[var(--color-bg-dark)] px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-[var(--color-bg-dark)] hover:shadow-xl transition-all"
             >
               Obtenir mes devis →

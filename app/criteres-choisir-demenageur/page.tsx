@@ -1,3 +1,4 @@
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import { getFullMetadata } from "@/lib/canonical-helper";
@@ -362,7 +363,7 @@ export default function CriteresChoisirDemenageurPage() {
                   <strong>Trop long ?</strong> Moverz fait ces 8 vérifications automatiquement (Creditsafe + licences + assurances + avis).
                 </p>
                 <a 
-                  href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=criteres-checklist" 
+                  href={buildTunnelUrl({ from: "criteres-checklist" })} 
                   className="mt-3 inline-block text-sm font-semibold text-brand-turquoise hover:text-[#2B7A78] underline"
                 >
                   Obtenir des devis de déménageurs vérifiés →
@@ -533,7 +534,7 @@ export default function CriteresChoisirDemenageurPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
               <a
-                href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=criteres-choisir-demenageur-cta"
+                href={buildTunnelUrl({ from: "criteres-choisir-demenageur-cta" })}
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-bg-dark)] px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-[var(--color-bg-dark)] hover:shadow-xl transition-all"
               >
                 <span>Obtenir jusqu'à 5 devis vérifiés</span>

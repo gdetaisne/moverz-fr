@@ -1,4 +1,5 @@
 "use client";
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 import { useState, useEffect } from "react";
 import { Clock, Gift, FileCheck } from "lucide-react";
 
@@ -45,7 +46,7 @@ export default function FinalCTA() {
         {/* CTA principal moderne */}
         <div className="max-w-md mx-auto mb-12">
           <a
-            href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=final-cta&devis_range=3-5"
+            href={buildTunnelUrl({ from: "final-cta", devisRange: "3-5" })}
             className="group relative inline-flex items-center justify-center gap-2 rounded-xl px-8 py-5 text-base font-bold text-white hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 overflow-hidden"
             style={{ background: "var(--color-accent)", boxShadow: "0 4px 16px rgba(14,165,166,0.3)" }}
           >

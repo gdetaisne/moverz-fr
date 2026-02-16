@@ -1,3 +1,4 @@
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 import type { Metadata } from "next";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import { getPricePostForCity } from "@/lib/blog";
@@ -114,7 +115,7 @@ export function CityServicePage({
             </p>
             <div className="pt-3">
               <a
-                href={`https://devis.moverz.fr/devis-gratuits-v3?city_slug=${citySlug}&source=moverz.fr&from=${encodeURIComponent(fromPath)}`}
+                href={buildTunnelUrl({ citySlug, from: fromPath })}
                 className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[var(--color-text)] shadow-lg hover:bg-[#F3F4F6] transition-colors"
               >
                 <span>Recevoir des devis comparables</span>
@@ -179,7 +180,7 @@ export function CityServicePage({
             </div>
             <div className="text-center">
               <a
-                href={`https://devis.moverz.fr/devis-gratuits-v3?city_slug=${citySlug}&source=moverz.fr&from=${encodeURIComponent(fromPath)}`}
+                href={buildTunnelUrl({ citySlug, from: fromPath })}
                 className="inline-flex items-center justify-center rounded-full border border-[var(--color-accent)] bg-[var(--color-accent)] px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[var(--color-accent)] hover:border-[var(--color-accent)]"
               >
                 Comparer des devis (gratuit)

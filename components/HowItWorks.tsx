@@ -1,4 +1,5 @@
 "use client";
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 import { useEffect, useRef, useState } from "react";
 
 function useInView(ref: React.RefObject<HTMLDivElement | null>, threshold: number = 0.3) {
@@ -132,7 +133,7 @@ export default function HowItWorks() {
       {/* CTA principal */}
       <div className="relative mt-12 flex items-center justify-center text-center">
         <a
-          href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/comment-ca-marche"
+          href={buildTunnelUrl({ from: "/comment-ca-marche" })}
           rel="nofollow"
           className="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-semibold text-white shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
           style={{ background: "var(--color-text)" }}

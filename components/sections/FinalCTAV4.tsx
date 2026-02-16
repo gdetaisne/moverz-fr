@@ -1,4 +1,5 @@
 "use client";
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 
 /**
  * V4 RADICAL — Final CTA
@@ -23,7 +24,7 @@ export function FinalCTAV4() {
         </h2>
 
         <a
-          href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=homepage-final-cta"
+          href={buildTunnelUrl({ from: "homepage-final-cta" })}
           className="group inline-flex items-center justify-center gap-2 rounded-[var(--radius-sm)] px-8 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:opacity-90 active:scale-[0.98]"
           style={{ background: "var(--color-text)" }}
         >

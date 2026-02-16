@@ -1,4 +1,5 @@
 "use client";
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
@@ -22,7 +23,7 @@ export default function StickyCTA() {
     setFromPath(window.location.pathname || "/");
   }, []);
 
-  const quoteUrl = `https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=${encodeURIComponent(fromPath)}`;
+  const quoteUrl = buildTunnelUrl({ from: fromPath });
 
   return (
     <div

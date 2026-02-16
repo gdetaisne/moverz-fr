@@ -1,3 +1,4 @@
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -61,7 +62,7 @@ export default function VillesPaginatedPage({ params }: PageProps) {
         subtitle={`Page ${pageNum}/${totalPages} — trouvez votre guide local et comparez des devis comparables.`}
         primaryCta={{
           label: "Comparer des devis comparables gratuitement",
-          href: "https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/villes-page",
+          href: buildTunnelUrl({ from: "/villes-page" }),
         }}
         secondaryCta={{ label: "Retour à la page régions", href: "/villes/" }}
       />

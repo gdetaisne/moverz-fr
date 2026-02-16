@@ -1,3 +1,4 @@
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 import type { Metadata } from "next";
 import { generateMetadata as baseGenerateMetadata } from "@/lib/metadata";
 import ComparisonTable from "@/components/comparison/ComparisonTable";
@@ -324,7 +325,7 @@ export default function ComparateurDemenageursPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
               <a
-                href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=comparateur-demenageurs-cta"
+                href={buildTunnelUrl({ from: "comparateur-demenageurs-cta" })}
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-bg-dark)] px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-[var(--color-bg-dark)] hover:shadow-xl transition-all"
               >
                 <span>Comparer mes devis</span>

@@ -1,3 +1,4 @@
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -72,7 +73,7 @@ export default function CityMovingPage({ params }: PageProps) {
   }
 
   const isParis = city.slug === "paris";
-  const quoteUrl = `https://devis.moverz.fr/devis-gratuits-v3?city_slug=${city.slug}&source=moverz.fr&from=/demenagement/${city.slug}/`;
+  const quoteUrl = buildTunnelUrl({ citySlug: city.slug, from: `/demenagement/${city.slug}/` });
 
   const pricePost = getPricePostForCity(city.slug);
   const cityGuides = PUBLISHED_BLOG_POSTS.filter(

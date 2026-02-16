@@ -1,4 +1,5 @@
 "use client";
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -76,7 +77,7 @@ export function TunnelEntryForm({ onDataChange, compact = false }: TunnelEntryFo
         source: "premium-form",
       });
       
-      router.push(`https://devis.moverz.fr/devis-gratuits-v3?${params.toString()}`);
+      router.push(buildTunnelUrl({ from: "premium-form", extra: Object.fromEntries(params) }));
     } catch (error) {
       if (error instanceof z.ZodError) {
         const fieldErrors: Record<string, string> = {};

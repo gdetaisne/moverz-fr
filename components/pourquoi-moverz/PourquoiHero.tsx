@@ -1,4 +1,5 @@
 "use client";
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 import { useEffect, useState } from "react";
 import { Shield, TrendingUp, Users } from "lucide-react";
 
@@ -54,7 +55,7 @@ export default function PourquoiHero() {
 
             {/* CTA */}
             <a
-              href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=pourquoi-moverz&devis_range=3-5"
+              href={buildTunnelUrl({ from: "pourquoi-moverz", devisRange: "3-5" })}
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-base font-semibold text-[var(--color-text)] shadow-[0_4px_16px_rgba(255,255,255,0.3)] hover:shadow-[0_8px_24px_rgba(255,255,255,0.4)] active:scale-[0.98] md:hover:scale-[1.02] transition-all duration-200 touch-manipulation min-h-[48px]"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

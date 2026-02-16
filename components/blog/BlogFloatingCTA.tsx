@@ -1,4 +1,5 @@
 "use client";
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { MOVERZ_REVIEWS, getAverageRating, getTotalReviews } from "@/lib/reviews";
@@ -92,9 +93,7 @@ export default function BlogFloatingCTA() {
     setReviewIndex(idx);
   }, []);
 
-  const quoteUrl = `https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=${encodeURIComponent(
-    fromPath
-  )}&channel=blog-floating&event=lead_click&placement=blog_floating`;
+  const quoteUrl = buildTunnelUrl({ from: fromPath, extra: { channel: "blog-floating", event: "lead_click", placement: "blog_floating" } });
 
   const title = "Comparer sans se faire harceler";
   const promise = "Comparez des devis comparables sous 5 à 7 jours. Dossier anonyme, 0 harcèlement.";

@@ -1,4 +1,5 @@
 "use client";
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 import { useState } from "react";
 
 type HousingType = "studio" | "t2" | "t3" | "t4" | "maison";
@@ -246,7 +247,7 @@ export default function VolumeCalculator() {
 
               {/* CTA */}
               <a
-                href={`https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/calculateur-volume-demenagement/&estimated_volume=${totalVolume}`}
+                href={buildTunnelUrl({ from: "/calculateur-volume-demenagement/", estimatedVolume: totalVolume })}
                 className="block w-full text-center py-4 rounded-xl bg-brand-turquoise text-[var(--color-text)] font-semibold hover:bg-[#A8E8E8] transition-colors"
               >
                 Obtenir des devis →

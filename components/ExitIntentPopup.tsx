@@ -1,4 +1,5 @@
 "use client";
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 import { useEffect, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
@@ -151,7 +152,7 @@ export default function ExitIntentPopup() {
   const handleCTA = () => {
     trackEvent(TRACKING_EVENTS.EXIT_INTENT_WEB_CLICK, { pathname });
     window.location.href =
-      "https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=exit-intent&devis_range=3-5";
+      buildTunnelUrl({ from: "exit-intent", devisRange: "3-5" });
   };
 
   if (!mounted) return null;

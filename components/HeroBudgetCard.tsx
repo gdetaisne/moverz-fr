@@ -1,4 +1,5 @@
 "use client";
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 import { useState, useEffect, useRef, useCallback } from "react";
 
 /* ------------------------------------------------------------------ */
@@ -81,7 +82,7 @@ function buildDevisLinkFromHome(
     // On garde source=moverz.fr pour cohérence avec les autres CTAs du site
     source: "moverz.fr",
   });
-  return `https://devis.moverz.fr/devis-gratuits-v3?${p.toString()}`;
+  return buildTunnelUrl({ from: "home", extra: Object.fromEntries(p) });
 }
 
 /* ------------------------------------------------------------------ */

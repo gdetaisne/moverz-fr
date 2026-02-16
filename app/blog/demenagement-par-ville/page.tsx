@@ -1,3 +1,4 @@
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 import type { Metadata } from "next";
 import { PUBLISHED_BLOG_POSTS } from "@/lib/blog";
 import { getFullMetadata } from "@/lib/canonical-helper";
@@ -63,7 +64,7 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
         subtitle="Choisissez une ville pour accéder rapidement à ses guides (prix, quartiers, garde‑meuble, astuces locales)."
         primaryCta={{
           label: "Comparer des devis comparables gratuitement",
-          href: "https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=/blog/demenagement-par-ville/",
+          href: buildTunnelUrl({ from: "/blog/demenagement-par-ville/" }),
         }}
         secondaryCta={{ label: "Voir les guides prix", href: "/blog/prix-et-devis/" }}
       />

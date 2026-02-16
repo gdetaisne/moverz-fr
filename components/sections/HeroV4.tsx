@@ -1,4 +1,5 @@
 "use client";
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 
 /**
  * V4 TUNNEL FIRST — Hero avec Step 2 estimation intégré
@@ -95,7 +96,7 @@ function buildDevisLink(
     surfaceM2: String(surfaceM2),
     source: "homepage-hero",
   });
-  return `https://devis.moverz.fr/devis-gratuits-v3?${p.toString()}`;
+  return buildTunnelUrl({ from: "homepage-hero", extra: Object.fromEntries(p) });
 }
 
 /* ------------------------------------------------------------------ */

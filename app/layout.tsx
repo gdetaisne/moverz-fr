@@ -1,3 +1,4 @@
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 import type { Metadata, Viewport } from "next";
 import { Inter, Sora } from "next/font/google";
 import Image from "next/image";
@@ -262,7 +263,7 @@ export default function RootLayout({
                 Blog
               </a>
               <a
-                href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=header"
+                href={buildTunnelUrl({ from: "header" })}
                 rel="nofollow"
                 className="inline-flex items-center gap-1.5 rounded-[var(--radius-sm)] px-4 py-2 text-[13px] font-semibold text-white transition-all hover:opacity-90 active:scale-[0.98]"
                 style={{ background: "var(--color-text)" }}
