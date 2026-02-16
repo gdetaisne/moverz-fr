@@ -366,3 +366,57 @@ export function getPrixIndicatifsForContent(distanceKm: number) {
     }
   ];
 }
+
+// ============================================
+// Prix par palier logement (pages ville)
+// ============================================
+
+export interface CityPriceTier {
+  label: string;
+  surface: string;
+  volume: string;
+  price: string; // "min-max€"
+}
+
+/**
+ * Calcule les prix indicatifs pour 5 types de logement (déménagement local).
+ * 
+ * Usage : CityPricingTable + CityPricing (pages ville)
+ * Hypothèse : distance intra-ville 15 km (cohérent avec getLocalPricesForMeta)
+ * 
+ * @param _citySlug Slug ville (réservé future différenciation)
+ * @returns 5 paliers avec label, surface, volume, prix
+ */
+export function getCityPriceTiers(_citySlug: string): CityPriceTier[] {
+  const DISTANCE_LOCALE_KM = 15;
+
+  const tiers: Array<{
+    label: string;
+    surface: string;
+    volume: string;
+    surfaceM2: number;
+    coef: number;
+  }> = [
+    { label: "Studio (20-30m²)", surface: "20-30m²", volume: "15-20 m³", surfaceM2: 25, coef: 0.35 },
+    { label: "T2 (40-50m²)", surface: "40-50m²", volume: "25-35 m³", surfaceM2: 45, coef: 0.35 },
+    { label: "T3 (60-70m²)", surface: "60-70m²", volume: "40-50 m³", surfaceM2: 65, coef: 0.35 },
+    { label: "T4+ (80-100m²)", surface: "80-100m²", volume: "55-70 m³", surfaceM2: 90, coef: 0.38 },
+    { label: "Maison (100-150m²)", surface: "100-150m²", volume: "70-90 m³", surfaceM2: 125, coef: 0.40 },
+  ];
+
+  return tiers.map((tier) => {
+    const { min, max } = calculateCorridorPrice(
+      DISTANCE_LOCALE_KM,
+      tier.surfaceM2,
+      tier.coef,
+    );
+    const fmtMin = Math.round(min / 10) * 10;
+    const fmtMax = Math.round(max / 10) * 10;
+    return {
+      label: tier.label,
+      surface: tier.surface,
+      volume: tier.volume,
+      price: `${fmtMin}-${fmtMax}€`,
+    };
+  });
+}

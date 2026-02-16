@@ -22,7 +22,8 @@ import ProblemSolution from "@/components/ProblemSolution";
 import { WebPageSchema } from "@/components/schema/WebPageSchema";
 import { ServiceSchema } from "@/components/schema/ServiceSchema";
 import { FAQSchema } from "@/components/schema/FAQSchema";
-import { getLocalPricesForMeta } from "@/lib/pricing-corridors";
+import { BreadcrumbListSchema } from "@/components/schema/BreadcrumbListSchema";
+import { getLocalPricesForMeta, getCityPriceTiers } from "@/lib/pricing-corridors";
 
 type PageProps = {
   params: { slug: string };
@@ -336,6 +337,14 @@ export default function CityMovingPage({ params }: PageProps) {
       />
       {/* FAQ schema */}
       <FAQSchema faqs={cityFAQs} />
+      {/* BreadcrumbList schema (rich snippets SERP) */}
+      <BreadcrumbListSchema
+        items={[
+          { label: "Accueil", href: "/" },
+          { label: "Villes", href: "/villes/" },
+          { label: `Déménagement ${city.nameCapitalized}`, href: `/demenagement/${city.slug}/` },
+        ]}
+      />
 
       <div className="bg-[var(--color-bg-dark)]">
         <div className="container max-w-4xl pt-6">
@@ -355,8 +364,8 @@ export default function CityMovingPage({ params }: PageProps) {
       {/* Hero */}
       <CityHero city={city} quoteUrl={quoteUrl} />
 
-      {/* Tableau prix optimisé featured snippet */}
-      <CityPricingTable cityName={city.nameCapitalized} />
+      {/* Tableau prix optimisé featured snippet — prix calculés par ville */}
+      <CityPricingTable cityName={city.nameCapitalized} citySlug={city.slug} />
 
       {/* Stats locales */}
       <CityStats cityName={city.nameCapitalized} />
@@ -364,8 +373,18 @@ export default function CityMovingPage({ params }: PageProps) {
       {/* Comment ça marche - Process avec IA */}
       <FlowAndIA />
 
-      {/* Prix indicatifs */}
-      <CityPricing cityName={city.nameCapitalized} />
+      {/* Prix indicatifs — 3 paliers calculés par ville */}
+      <CityPricing
+        cityName={city.nameCapitalized}
+        priceTiers={(() => {
+          const tiers = getCityPriceTiers(city.slug);
+          return [
+            { label: "Studio", volume: tiers[0].volume, price: tiers[0].price },
+            { label: "T2/T3", volume: tiers[1].volume, price: tiers[2].price },
+            { label: "T4+/Maison", volume: tiers[4].volume, price: tiers[4].price },
+          ];
+        })()}
+      />
 
       {/* Bloc local unique + CTA */}
       <CityLocalInsights
