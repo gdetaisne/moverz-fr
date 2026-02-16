@@ -32,7 +32,13 @@ export function generateMetadata({ params }: PageProps): Metadata {
   const title = `Déménagement ${from.nameCapitalized} → ${to.nameCapitalized} : Devis & Prix ${year}`;
   const description = `Déménagement ${from.nameCapitalized} vers ${to.nameCapitalized} : devis gratuits, prix indicatifs, conseils d'experts. Déménageurs contrôlés · 0€ · Sans démarchage`;
 
-  return getFullMetadata(path, title, description);
+  // SEO (2026-02-16): noindex dynamic corridor pages — template content (city names swapped).
+  // The 34 hardcoded corridors (app/{from}-vers-{to}/page.tsx) are NOT affected.
+  // dynamicParams=true exposes ~90 000 city×city combos; noindex stops the index bloat.
+  return {
+    ...getFullMetadata(path, title, description),
+    robots: { index: false, follow: true },
+  };
 }
 
 export default function CorridorAutoPage({ params }: PageProps) {

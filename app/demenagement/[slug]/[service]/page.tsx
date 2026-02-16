@@ -18,7 +18,14 @@ export function generateMetadata({ params }: PageProps): Metadata {
   if (!city) return {};
   if (!SERVICE_SLUGS.includes(service)) return {};
 
-  return getCityServiceMetadata({ city, service });
+  // SEO (2026-02-16): noindex dynamic service pages — template content with city name swap.
+  // The 11 core cities (lyon, marseille, etc.) have their own hardcoded pages
+  // in app/demenagement/{city}/{service}/page.tsx which are NOT affected by this.
+  // follow=true keeps internal link equity flowing.
+  return {
+    ...getCityServiceMetadata({ city, service }),
+    robots: { index: false, follow: true },
+  };
 }
 
 export default function CityServiceDynamicPage({ params }: PageProps) {

@@ -40,12 +40,9 @@ export function GET() {
       changefreq: "monthly" as const,
       priority: 0.6,
     })),
-    // Corridor hub per city (exclude region slug)
-    ...CITIES.filter((c) => c.slug !== "ile-de-france").map((c) => ({
-      loc: absoluteUrl(baseUrl, `/corridor/${c.slug}`),
-      changefreq: "monthly" as const,
-      priority: 0.4,
-    })),
+    // SEO (2026-02-16): corridor hubs removed from sitemap.
+    // 300 hub pages were feeding Google 60 destinations each → ~18 000 crawlable corridors.
+    // Hubs are now noindex'd; the /corridor/ index page remains as the single entry point.
   ];
 
   const xml = buildUrlset(urls);
