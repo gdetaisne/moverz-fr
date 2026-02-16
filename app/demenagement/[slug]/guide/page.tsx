@@ -32,7 +32,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
   }
 
   const path = `demenagement/${city.slug}/guide`;
-  const title = `Guide déménagement ${city.nameCapitalized} (2000+ mots) : méthode, checklists, devis fiables | Moverz`;
+  const title = `Guide déménagement ${city.nameCapitalized} (2000+ mots) : méthode, checklists, devis fiables`;
   const description = `Guide long format (2000+ mots) pour déménager à ${city.nameCapitalized}: dossier pour des devis comparables, accès & stationnement, checklists, erreurs fréquentes, méthode jour J.`;
 
   return getFullMetadata(path, title, description);

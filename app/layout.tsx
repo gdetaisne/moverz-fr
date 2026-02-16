@@ -62,10 +62,10 @@ export const metadata: Metadata = {
       "Comparez jusqu'à 5 devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
     images: [
       {
-        url: "/logo.png",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Moverz - Comparateur Déménagement · Jusqu'à 5 devis · Contrôlés · Gratuit · Note 4.9/5",
+        alt: "Moverz - Comparateur Déménagement · Jusqu'à 5 devis · Contrôlés · Gratuit",
         type: "image/png",
       },
     ],
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     title: "Comparateur Déménagement | Jusqu'à 5 devis | Contrôlés · Gratuit",
     description:
       "Comparez jusqu'à 5 devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
-    images: ["/logo.png"],
+    images: ["/opengraph-image"],
   },
   robots: {
     index: true,

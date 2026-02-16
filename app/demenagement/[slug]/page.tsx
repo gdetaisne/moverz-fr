@@ -22,7 +22,6 @@ import ProblemSolution from "@/components/ProblemSolution";
 import { WebPageSchema } from "@/components/schema/WebPageSchema";
 import { ServiceSchema } from "@/components/schema/ServiceSchema";
 import { FAQSchema } from "@/components/schema/FAQSchema";
-import { BreadcrumbListSchema } from "@/components/schema/BreadcrumbListSchema";
 import { getLocalPricesForMeta, getCityPriceTiers } from "@/lib/pricing-corridors";
 
 type PageProps = {
@@ -337,14 +336,7 @@ export default function CityMovingPage({ params }: PageProps) {
       />
       {/* FAQ schema */}
       <FAQSchema faqs={cityFAQs} />
-      {/* BreadcrumbList schema (rich snippets SERP) */}
-      <BreadcrumbListSchema
-        items={[
-          { label: "Accueil", href: "/" },
-          { label: "Villes", href: "/villes/" },
-          { label: `Déménagement ${city.nameCapitalized}`, href: `/demenagement/${city.slug}/` },
-        ]}
-      />
+      {/* BreadcrumbList JSON-LD is injected by the <Breadcrumbs> component below */}
 
       <div className="bg-[var(--color-bg-dark)]">
         <div className="container max-w-4xl pt-6">

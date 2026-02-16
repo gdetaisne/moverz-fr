@@ -41,7 +41,7 @@ export function getOpenGraphMetadata(
     siteName: 'Moverz',
     images: [
       {
-        url: `${baseUrl}/logo.png`,
+        url: `${baseUrl}/opengraph-image`,
         width: 1200,
         height: 630,
         alt: 'Moverz - Comparateur de déménagement',
@@ -59,11 +59,13 @@ export function getFullMetadata(
   title: string,
   description: string
 ) {
+  // Strip trailing "| Moverz" to avoid duplication with layout.tsx title.template "%s | Moverz"
+  const normalizedTitle = title.replace(/\s*\|\s*Moverz\s*$/i, '').trim();
   return {
-    title,
+    title: normalizedTitle,
     description,
     alternates: getCanonicalAlternates(path),
-    openGraph: getOpenGraphMetadata(path, title, description),
+    openGraph: getOpenGraphMetadata(path, normalizedTitle, description),
   };
 }
 
