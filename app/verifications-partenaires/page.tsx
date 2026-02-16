@@ -1,13 +1,13 @@
-import { buildTunnelUrl } from "@/lib/tunnel-url";
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import { FAQ, type FAQItem } from "@/components/FAQ";
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 
 export const metadata: Metadata = getFullMetadata(
   "verifications-partenaires",
-  "Comment Moverz vérifie les déménageurs",
-  "Vérifications systématiques : Creditsafe, licences transport, assurances RC Pro. Ce que vous recevez concrètement."
+  "Comment Moverz vérifie les déménageurs | Creditsafe + Licences + Assurances",
+  "Découvrez comment Moverz vérifie systématiquement les déménageurs : santé financière (Creditsafe), licences de transport, assurances RC Pro. Ce que vous recevez concrètement."
 );
 
 export default function VerificationsPartenairesPage() {
@@ -62,25 +62,25 @@ export default function VerificationsPartenairesPage() {
         <div className="container max-w-4xl space-y-10">
           
           {/* Pourquoi c'est crucial */}
-          <div className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-8 space-y-3">
-            <h2 className="text-xl md:text-2xl font-bold text-[var(--color-text)]">Pourquoi ces vérifications sont cruciales</h2>
-            <p className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed">
-              <strong className="text-[var(--color-text)]">64% des déménageurs présentent des anomalies</strong> (DGCCRF 2023) : 
+          <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 space-y-3">
+            <h2 className="text-xl md:text-2xl font-bold text-[#0F172A]">Pourquoi ces vérifications sont cruciales</h2>
+            <p className="text-sm md:text-base text-[#6B7280] leading-relaxed">
+              <strong className="text-[#0F172A]">64% des déménageurs présentent des anomalies</strong> (DGCCRF 2023) : 
               absence d'assurance, licences non conformes, sous-traitance non déclarée, ou pratiques commerciales trompeuses.
             </p>
-            <p className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed">
-              Pire encore : <strong className="text-[var(--color-text)]">257 faillites de déménageurs ont été enregistrées en 2024</strong> (source Altares). 
+            <p className="text-sm md:text-base text-[#6B7280] leading-relaxed">
+              Pire encore : <strong className="text-[#0F172A]">257 faillites de déménageurs ont été enregistrées en 2024</strong> (source Altares). 
               Un déménageur en difficulté financière = risque élevé d'acompte perdu, de prestation non réalisée, ou de litige non résolu.
             </p>
-            <p className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed">
-              <strong className="text-[var(--color-text)]">C'est pour ça que Moverz vérifie systématiquement</strong> la santé financière 
+            <p className="text-sm md:text-base text-[#6B7280] leading-relaxed">
+              <strong className="text-[#0F172A]">C'est pour ça que Moverz vérifie systématiquement</strong> la santé financière 
               (Creditsafe), les licences, et les assurances de chaque déménageur <strong>avant</strong> de lui transmettre votre dossier.
             </p>
           </div>
 
           {/* Les vérifications actives */}
           <div className="space-y-4">
-            <h2 className="text-lg md:text-xl font-semibold text-[var(--color-text)]">Ce que nous vérifions systématiquement</h2>
+            <h2 className="text-lg md:text-xl font-semibold text-[#0F172A]">Ce que nous vérifions systématiquement</h2>
 
             <div className="grid gap-4">
               {[
@@ -126,18 +126,18 @@ export default function VerificationsPartenairesPage() {
                   ],
                 },
               ].map((c) => (
-                <div key={c.title} className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-7">
-                  <h3 className="text-base md:text-lg font-bold text-[var(--color-text)]">{c.title}</h3>
+                <div key={c.title} className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-7">
+                  <h3 className="text-base md:text-lg font-bold text-[#0F172A]">{c.title}</h3>
                   {c.highlight && (
-                    <p className="mt-2 text-xs md:text-sm font-semibold text-[var(--color-accent)] bg-[var(--color-accent)]/10 rounded-full px-3 py-1 inline-block">
-                      {c.highlight}
+                    <p className="mt-2 text-xs md:text-sm font-semibold text-[#6BCFCF] bg-[#6BCFCF]/10 rounded-full px-3 py-1 inline-block">
+                      ✨ {c.highlight}
                     </p>
                   )}
-                  <p className="mt-2 text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed">{c.desc}</p>
-                  <ul className="mt-4 grid gap-2 text-sm md:text-base text-[var(--color-text)]/90">
+                  <p className="mt-2 text-sm md:text-base text-[#6B7280] leading-relaxed">{c.desc}</p>
+                  <ul className="mt-4 grid gap-2 text-sm md:text-base text-[#0F172A]/90">
                     {c.bullets.map((b) => (
                       <li key={b} className="flex gap-2">
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--color-accent)] shrink-0" />
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#2B7A78] shrink-0" />
                         <span>{b}</span>
                       </li>
                     ))}
@@ -148,41 +148,41 @@ export default function VerificationsPartenairesPage() {
           </div>
 
           {/* Ce que vous recevez concrètement */}
-          <div className="rounded-2xl border border-[var(--color-accent)]/30 bg-gradient-to-br from-brand-turquoise/10 to-white p-6 md:p-8 space-y-4">
-            <h2 className="text-lg md:text-xl font-semibold text-[var(--color-text)]">Ce que vous recevez concrètement</h2>
-            <p className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed">
+          <div className="rounded-2xl border border-[#6BCFCF]/30 bg-gradient-to-br from-[#6BCFCF]/10 to-white p-6 md:p-8 space-y-4">
+            <h2 className="text-lg md:text-xl font-semibold text-[#0F172A]">Ce que vous recevez concrètement</h2>
+            <p className="text-sm md:text-base text-[#6B7280] leading-relaxed">
               Grâce à ces vérifications, vous recevez jusqu'à 5 devis de déménageurs qui ont passé nos filtres :
             </p>
-            <ul className="grid gap-3 text-sm md:text-base text-[var(--color-text)]/90">
+            <ul className="grid gap-3 text-sm md:text-base text-[#0F172A]/90">
               {[
                 {
-                  title: "Financièrement solides",
+                  title: "✅ Financièrement solides",
                   desc: "Score Creditsafe vérifié, risque de faillite faible, aucun incident de paiement grave. Vous évitez les entreprises en difficulté qui risquent de disparaître avec votre acompte.",
                 },
                 {
-                  title: "Légalement conformes",
+                  title: "✅ Légalement conformes",
                   desc: "SIREN actif, licence de transport valide, inscription au registre des transporteurs. Vous ne traitez qu'avec des pros habilités à exercer.",
                 },
                 {
-                  title: "Correctement assurés",
+                  title: "✅ Correctement assurés",
                   desc: "Assurance RC Pro valide, plafond de garantie ≥ 1,5M€, couverture marchandises ≥ 60€/m³. En cas de casse, vous êtes protégé.",
                 },
                 {
-                  title: "Bien notés par leurs clients",
+                  title: "✅ Bien notés par leurs clients",
                   desc: "Avis Google 4.0+/5, pas de pattern de litiges répétitifs (surcoûts, casse, retards). Vous choisissez parmi des pros qui ont fait leurs preuves.",
                 },
                 {
-                  title: "Engagés contractuellement",
+                  title: "✅ Engagés contractuellement",
                   desc: "En plus des vérifications, nos partenaires acceptent nos CGV (transparence des devis, traitement constructif des litiges, respect du RGPD). En cas de manquement, nous suspendons ou excluons le partenaire.",
                 },
               ].map((b) => (
                 <li key={b.title} className="flex gap-3 items-start">
                   <div className="shrink-0 mt-1">
-                    <span className="text-[var(--color-accent)] font-bold text-lg">{b.title.split(" ")[0]}</span>
+                    <span className="text-[#2B7A78] font-bold text-lg">{b.title.split(" ")[0]}</span>
                   </div>
                   <div>
-                    <p className="font-semibold text-[var(--color-text)]">{b.title.split(" ").slice(1).join(" ")}</p>
-                    <p className="text-[var(--color-text-secondary)] mt-1 text-sm">{b.desc}</p>
+                    <p className="font-semibold text-[#0F172A]">{b.title.split(" ").slice(1).join(" ")}</p>
+                    <p className="text-[#6B7280] mt-1 text-sm">{b.desc}</p>
                   </div>
                 </li>
               ))}
@@ -190,30 +190,30 @@ export default function VerificationsPartenairesPage() {
           </div>
 
           {/* CTA principal */}
-          <div className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-8 text-center">
-            <h3 className="text-lg font-bold text-[var(--color-text)] mb-3">
+          <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 text-center">
+            <h3 className="text-lg font-bold text-[#0F172A] mb-3">
               Prêt à comparer des devis de déménageurs vérifiés ?
             </h3>
-            <p className="text-sm md:text-base text-[var(--color-text-secondary)] mb-5 max-w-2xl mx-auto">
+            <p className="text-sm md:text-base text-[#6B7280] mb-5 max-w-2xl mx-auto">
               Obtenez jusqu'à 5 devis comparables de déménageurs vérifiés (Creditsafe + licences + assurances) sous 5-7 jours. 
               Dossier anonyme, zéro harcèlement, 100% gratuit.
             </p>
             <a
               href={buildTunnelUrl({ from: "verifications-partenaires" })}
-              className="inline-flex items-center justify-center rounded-full bg-[var(--color-bg-dark)] px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-[var(--color-bg-dark)] hover:shadow-xl transition-all"
+              className="inline-flex items-center justify-center rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-[#1E293B] hover:shadow-xl transition-all"
             >
               Obtenir mes devis →
             </a>
           </div>
 
           {/* CTA secondaire vers CGV-P */}
-          <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6 md:p-8 text-center">
-            <p className="text-sm md:text-base text-[var(--color-text-secondary)] mb-4 max-w-2xl mx-auto">
+          <div className="rounded-2xl border border-[#E5E7EB] bg-[#F8FAFC] p-6 md:p-8 text-center">
+            <p className="text-sm md:text-base text-[#6B7280] mb-4 max-w-2xl mx-auto">
               Pour connaître le détail des engagements contractuels des déménageurs du réseau Moverz :
             </p>
             <a
               href="/cgv-partenaires/"
-              className="inline-flex items-center justify-center rounded-full bg-white border border-[var(--color-border)] px-6 py-3 text-sm font-semibold text-[var(--color-text)] hover:bg-[var(--color-bg)] transition-colors"
+              className="inline-flex items-center justify-center rounded-full bg-white border border-[#E5E7EB] px-6 py-3 text-sm font-semibold text-[#0F172A] hover:bg-[#F8FAFC] transition-colors"
             >
               Consulter les CGV Partenaires →
             </a>
@@ -229,32 +229,32 @@ export default function VerificationsPartenairesPage() {
       {/* CTA discret */}
       <section className="section section-light pt-0">
         <div className="container max-w-4xl space-y-6">
-          <div className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div className="space-y-1">
-              <p className="text-sm font-semibold text-[var(--color-text)]">Envie d'une base d'estimation plus claire ?</p>
-              <p className="text-sm text-[var(--color-text-secondary)]">
+              <p className="text-sm font-semibold text-[#0F172A]">Envie d'une base d'estimation plus claire ?</p>
+              <p className="text-sm text-[#6B7280]">
                 Une visite ou une visio réduisent les ambiguïtés sur le volume et les accès.
               </p>
             </div>
             <a
               href="/comment-ca-marche/"
-              className="inline-flex items-center justify-center rounded-full bg-[var(--color-bg-dark)] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[var(--color-bg-dark)] transition-colors whitespace-nowrap"
+              className="inline-flex items-center justify-center rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#1E293B] transition-colors whitespace-nowrap"
             >
               Comprendre la méthode →
             </a>
           </div>
 
           {/* CTA Devenir partenaire */}
-          <div className="rounded-2xl border border-[var(--color-accent)]/30 bg-gradient-to-br from-brand-turquoise/5 to-white p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div className="rounded-2xl border border-[#6BCFCF]/30 bg-gradient-to-br from-[#6BCFCF]/5 to-white p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div className="space-y-1">
-              <p className="text-sm font-semibold text-[var(--color-text)]">Vous êtes déménageur ?</p>
-              <p className="text-sm text-[var(--color-text-secondary)]">
+              <p className="text-sm font-semibold text-[#0F172A]">Vous êtes déménageur ?</p>
+              <p className="text-sm text-[#6B7280]">
                 Rejoignez notre réseau et recevez des dossiers qualifiés. Paiement uniquement au succès.
               </p>
             </div>
             <a
               href="/partenaires/"
-              className="inline-flex items-center justify-center rounded-full bg-[var(--color-accent)] px-6 py-3 text-sm font-semibold text-[var(--color-text)] shadow-sm hover:bg-[var(--color-accent)] hover:text-white transition-all whitespace-nowrap"
+              className="inline-flex items-center justify-center rounded-full bg-[#6BCFCF] px-6 py-3 text-sm font-semibold text-[#0F172A] shadow-sm hover:bg-[#2B7A78] hover:text-white transition-all whitespace-nowrap"
             >
               Devenir partenaire →
             </a>

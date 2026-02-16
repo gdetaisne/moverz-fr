@@ -1,10 +1,10 @@
-import { buildTunnelUrl } from "@/lib/tunnel-url";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { CITIES } from "@/lib/cities";
 import { getHubMetadata } from "@/lib/seo/metadata";
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 
 const PER_PAGE = 60;
 
@@ -74,14 +74,14 @@ export default function VillesPaginatedPage({ params }: PageProps) {
               <a
                 key={city.slug}
                 href={`/demenagement/${city.slug}/`}
-                className="rounded-xl border border-[var(--color-border)] bg-white px-4 py-3 hover:border-[var(--color-accent)]/40 hover:shadow-sm transition-all"
+                className="rounded-xl border border-[#E3E5E8] bg-white px-4 py-3 hover:border-[#6BCFCF]/40 hover:shadow-sm transition-all"
               >
                 <div className="flex items-center justify-between gap-4">
                   <div>
-                    <p className="text-sm font-bold text-[var(--color-text)]">{city.nameCapitalized}</p>
-                    <p className="text-xs text-[var(--color-text-secondary)]">{city.region}</p>
+                    <p className="text-sm font-bold text-[#04163a]">{city.nameCapitalized}</p>
+                    <p className="text-xs text-[#6B7280]">{city.region}</p>
                   </div>
-                  <span className="text-xs font-semibold text-[var(--color-accent)]">→</span>
+                  <span className="text-xs font-semibold text-[#2B7A78]">→</span>
                 </div>
               </a>
             ))}
@@ -92,21 +92,21 @@ export default function VillesPaginatedPage({ params }: PageProps) {
               href={`/villes/page/${Math.max(1, pageNum - 1)}/`}
               aria-disabled={pageNum === 1}
               className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
-                pageNum === 1 ? "text-[#94A3B8] pointer-events-none" : "text-[var(--color-text)] hover:bg-[var(--color-bg)]"
+                pageNum === 1 ? "text-[#94A3B8] pointer-events-none" : "text-[#0F172A] hover:bg-[#F9FAFB]"
               }`}
             >
               ← Précédent
             </Link>
 
-            <span className="text-sm text-[var(--color-text-secondary)]">
-              Page <span className="font-semibold text-[var(--color-text)]">{pageNum}</span> / {totalPages}
+            <span className="text-sm text-[#6B7280]">
+              Page <span className="font-semibold text-[#0F172A]">{pageNum}</span> / {totalPages}
             </span>
 
             <Link
               href={`/villes/page/${Math.min(totalPages, pageNum + 1)}/`}
               aria-disabled={pageNum === totalPages}
               className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
-                pageNum === totalPages ? "text-[#94A3B8] pointer-events-none" : "text-[var(--color-text)] hover:bg-[var(--color-bg)]"
+                pageNum === totalPages ? "text-[#94A3B8] pointer-events-none" : "text-[#0F172A] hover:bg-[#F9FAFB]"
               }`}
             >
               Suivant →

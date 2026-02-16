@@ -1,10 +1,10 @@
 "use client";
-import { buildTunnelUrl } from "@/lib/tunnel-url";
 import { useEffect, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Clock, Shield, X } from "lucide-react";
 import { trackEvent, TRACKING_EVENTS } from "@/lib/tracking";
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 
 type ExitIntentReason = "mouse-leave-top" | "scroll-up";
 
@@ -151,8 +151,7 @@ export default function ExitIntentPopup() {
 
   const handleCTA = () => {
     trackEvent(TRACKING_EVENTS.EXIT_INTENT_WEB_CLICK, { pathname });
-    window.location.href =
-      buildTunnelUrl({ from: "exit-intent", devisRange: "3-5" });
+    window.location.href = buildTunnelUrl({ from: "exit-intent", devisRange: "3-5" });
   };
 
   if (!mounted) return null;
@@ -168,13 +167,13 @@ export default function ExitIntentPopup() {
           className="fixed z-[9999] bottom-4 right-4 left-4 md:left-auto md:w-[420px]"
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="relative overflow-hidden rounded-2xl border border-[var(--color-border)] bg-white shadow-2xl">
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-turquoise/10 via-transparent to-transparent pointer-events-none" />
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-turquoise via-[var(--color-accent)] to-brand-turquoise" />
+          <div className="relative overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white shadow-2xl">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#6BCFCF]/10 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#6BCFCF] via-[#2B7A78] to-[#6BCFCF]" />
 
             <button
               onClick={handleClose}
-              className="absolute top-3 right-3 text-[var(--color-text-secondary)] hover:text-[var(--color-text)] transition-colors bg-white/80 hover:bg-white rounded-full p-2"
+              className="absolute top-3 right-3 text-[#64748B] hover:text-[#0F172A] transition-colors bg-white/80 hover:bg-white rounded-full p-2"
               aria-label="Fermer"
             >
               <X className="w-4 h-4" />
@@ -182,21 +181,21 @@ export default function ExitIntentPopup() {
 
             <div className="relative p-5 md:p-6 space-y-4">
               <div className="flex items-center justify-between gap-3">
-                <div className="inline-flex items-center gap-2 rounded-full bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/20 px-3 py-1.5">
-                  <Clock className="w-3.5 h-3.5 text-[var(--color-accent)]" />
-                  <span className="text-xs font-semibold text-[var(--color-accent)]">3 minutes</span>
+                <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 border border-[#6BCFCF]/20 px-3 py-1.5">
+                  <Clock className="w-3.5 h-3.5 text-[#2B7A78]" />
+                  <span className="text-xs font-semibold text-[#2B7A78]">3 minutes</span>
                 </div>
-                <div className="inline-flex items-center gap-1.5 text-xs text-[var(--color-text-secondary)]">
-                  <Shield className="w-3.5 h-3.5 text-[var(--color-accent)]" />
+                <div className="inline-flex items-center gap-1.5 text-xs text-[#64748B]">
+                  <Shield className="w-3.5 h-3.5 text-[#6BCFCF]" />
                   <span>Sans démarchage • sécurisé</span>
                 </div>
               </div>
 
               <div className="space-y-1.5">
-                <p className="text-lg md:text-xl font-bold text-[var(--color-text)] leading-tight">
+                <p className="text-lg md:text-xl font-bold text-[#0F172A] leading-tight">
                   Avant de partir, on vous sort des devis comparables.
                 </p>
-                <p className="text-sm text-[var(--color-text-secondary)]">
+                <p className="text-sm text-[#64748B]">
                   Vous complétez un dossier guidé, on le standardise, et vous comparez sans surprises.
                 </p>
               </div>
@@ -204,7 +203,7 @@ export default function ExitIntentPopup() {
               <div>
                 <button
                   onClick={handleCTA}
-                  className="group w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[var(--color-bg-dark)] px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[var(--color-bg-dark)] transition-colors"
+                  className="group w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#0F172A] px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#1E293B] transition-colors"
                 >
                   <span>Comparer mes devis</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />

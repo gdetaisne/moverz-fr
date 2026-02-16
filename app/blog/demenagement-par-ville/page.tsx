@@ -1,10 +1,10 @@
-import { buildTunnelUrl } from "@/lib/tunnel-url";
 import type { Metadata } from "next";
 import { PUBLISHED_BLOG_POSTS } from "@/lib/blog";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import PageHero from "@/components/PageHero";
 import { getCityBySlug } from "@/lib/cities";
 import BlogFloatingCTA from "@/components/blog/BlogFloatingCTA";
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 
 const CATEGORY = "demenagement-par-ville";
 
@@ -72,13 +72,13 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
       <section className="section section-light">
         <div className="container max-w-5xl space-y-8">
           {/* Sélecteur ville */}
-          <div className="rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-8 space-y-4">
+          <div className="rounded-2xl border border-[#E3E5E8] bg-white p-6 md:p-8 space-y-4">
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
               <div className="space-y-1">
-                <h2 className="text-xl md:text-2xl font-semibold text-[var(--color-text)]">
+                <h2 className="text-xl md:text-2xl font-semibold text-[#04163a]">
                   Rechercher par ville
                 </h2>
-                <p className="text-sm text-[var(--color-text-secondary)]">
+                <p className="text-sm text-[#6B7280]">
                   Sélectionnez une ville pour afficher uniquement ses articles (plus lisible).
                 </p>
               </div>
@@ -86,7 +86,7 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
                 <select
                   name="city"
                   defaultValue={selectedCity || ""}
-                  className="h-11 rounded-xl border border-[var(--color-border)] bg-white px-4 text-sm text-[var(--color-text)] min-w-[240px]"
+                  className="h-11 rounded-xl border border-[#E3E5E8] bg-white px-4 text-sm text-[#04163a] min-w-[240px]"
                 >
                   <option value="">Toutes les villes</option>
                   {sortedCities
@@ -102,7 +102,7 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
                 </select>
                 <button
                   type="submit"
-                  className="h-11 rounded-xl bg-[var(--color-bg-dark)] px-5 text-sm font-semibold text-white hover:bg-[var(--color-bg-dark)] transition-colors"
+                  className="h-11 rounded-xl bg-[#0F172A] px-5 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
                 >
                   Voir
                 </button>
@@ -120,8 +120,8 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
                     href={`/blog/demenagement-par-ville/?city=${encodeURIComponent(city)}`}
                     className={`rounded-full border px-3 py-1.5 text-xs font-semibold transition-colors ${
                       selectedCity === city
-                        ? "border-[var(--color-accent)] bg-[#E6FFFA] text-[#205a5a]"
-                        : "border-[var(--color-border)] bg-white text-[var(--color-text)] hover:border-[var(--color-accent)]/60 hover:bg-[var(--color-bg)]"
+                        ? "border-[#6BCFCF] bg-[#E6FFFA] text-[#205a5a]"
+                        : "border-[#E3E5E8] bg-white text-[#04163a] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA]"
                     }`}
                   >
                     {formatCityLabel(city)} · {count}
@@ -130,7 +130,7 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
               {selectedCity && (
                 <a
                   href="/blog/demenagement-par-ville/"
-                  className="rounded-full border border-[var(--color-border)] bg-white px-3 py-1.5 text-xs font-semibold text-[var(--color-text-secondary)] hover:text-[var(--color-text)] hover:border-[var(--color-accent)]/60 transition-colors"
+                  className="rounded-full border border-[#E3E5E8] bg-white px-3 py-1.5 text-xs font-semibold text-[#6B7280] hover:text-[#04163a] hover:border-[#6BCFCF]/60 transition-colors"
                 >
                   Réinitialiser
                 </a>
@@ -142,7 +142,7 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
           {selectedPosts ? (
             <div className="space-y-4">
               <div className="flex items-center justify-between gap-4">
-                <h2 className="text-xl md:text-2xl font-semibold text-[var(--color-text)]">
+                <h2 className="text-xl md:text-2xl font-semibold text-[#04163a]">
                   {selectedCity === "autres"
                     ? "Autres villes"
                     : `Déménagement ${formatCityLabel(selectedCity)}`}
@@ -150,7 +150,7 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
                 {selectedCity !== "autres" && (
                   <a
                     href={`/demenagement/${selectedCity}/`}
-                    className="text-xs md:text-sm text-[var(--color-accent)] hover:text-[var(--color-text)] underline underline-offset-4"
+                    className="text-xs md:text-sm text-[#2B7A78] hover:text-[#04163a] underline underline-offset-4"
                   >
                     Voir la page déménagement {formatCityLabel(selectedCity)}
                   </a>
@@ -162,18 +162,18 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
                   <a
                     key={post.slug}
                     href={`/blog/${post.slug}/`}
-                    className="group flex flex-col gap-1 rounded-2xl border border-[var(--color-border)] bg-white px-5 py-4 hover:border-[var(--color-accent)]/50 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200"
+                    className="group flex flex-col gap-1 rounded-2xl border border-[#E3E5E8] bg-white px-5 py-4 hover:border-[#6BCFCF]/50 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200"
                   >
-                    <div className="flex flex-wrap items-center gap-2 text-xs text-[var(--color-text-secondary)]">
-                      <span className="rounded-full bg-[#F0F4F8] px-2 py-0.5 font-semibold text-[11px] text-[var(--color-accent)]">
+                    <div className="flex flex-wrap items-center gap-2 text-xs text-[#6B7280]">
+                      <span className="rounded-full bg-[#F0F4F8] px-2 py-0.5 font-semibold text-[11px] text-[#2B7A78]">
                         {selectedCity === "autres" ? "Ville" : formatCityLabel(selectedCity)}
                       </span>
                       {post.readingTimeMinutes && <span>{post.readingTimeMinutes} min de lecture</span>}
                     </div>
-                    <h3 className="text-sm md:text-base font-semibold text-[var(--color-text)] group-hover:text-[var(--color-accent)]">
+                    <h3 className="text-sm md:text-base font-semibold text-[#04163a] group-hover:text-[#2B7A78]">
                       {post.title}
                     </h3>
-                    <p className="text-sm text-[var(--color-text-secondary)] line-clamp-2">{post.description}</p>
+                    <p className="text-sm text-[#4b5c6b] line-clamp-2">{post.description}</p>
                   </a>
                 ))}
               </div>
@@ -181,10 +181,10 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
           ) : (
             <div className="space-y-4">
               <div className="text-center space-y-2">
-                <h2 className="text-xl md:text-2xl font-semibold text-[var(--color-text)]">
+                <h2 className="text-xl md:text-2xl font-semibold text-[#04163a]">
                   Toutes les villes
                 </h2>
-                <p className="text-sm text-[var(--color-text-secondary)]">
+                <p className="text-sm text-[#6B7280]">
                   Cliquez sur une ville pour afficher uniquement ses articles.
                 </p>
               </div>
@@ -196,25 +196,25 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
                     <a
                       key={city}
                       href={`/blog/demenagement-par-ville/?city=${encodeURIComponent(city)}`}
-                      className="group rounded-2xl border border-[var(--color-border)] bg-white p-5 hover:border-[var(--color-accent)]/60 hover:shadow-md transition-all"
+                      className="group rounded-2xl border border-[#E3E5E8] bg-white p-5 hover:border-[#6BCFCF]/60 hover:shadow-md transition-all"
                     >
-                      <p className="text-xs text-[var(--color-text-secondary)]">Ville</p>
-                      <h3 className="text-base md:text-lg font-semibold text-[var(--color-text)] group-hover:text-[var(--color-accent)] transition-colors">
+                      <p className="text-xs text-[#6B7280]">Ville</p>
+                      <h3 className="text-base md:text-lg font-semibold text-[#04163a] group-hover:text-[#2B7A78] transition-colors">
                         {formatCityLabel(city)}
                       </h3>
-                      <p className="mt-1 text-sm text-[var(--color-text-secondary)]">{count} article{count > 1 ? "s" : ""}</p>
+                      <p className="mt-1 text-sm text-[#4b5c6b]">{count} article{count > 1 ? "s" : ""}</p>
                     </a>
                   ))}
                 {postsByCity.autres?.length ? (
                   <a
                     href="/blog/demenagement-par-ville/?city=autres"
-                    className="group rounded-2xl border border-[var(--color-border)] bg-white p-5 hover:border-[var(--color-accent)]/60 hover:shadow-md transition-all"
+                    className="group rounded-2xl border border-[#E3E5E8] bg-white p-5 hover:border-[#6BCFCF]/60 hover:shadow-md transition-all"
                   >
-                    <p className="text-xs text-[var(--color-text-secondary)]">Ville</p>
-                    <h3 className="text-base md:text-lg font-semibold text-[var(--color-text)] group-hover:text-[var(--color-accent)] transition-colors">
+                    <p className="text-xs text-[#6B7280]">Ville</p>
+                    <h3 className="text-base md:text-lg font-semibold text-[#04163a] group-hover:text-[#2B7A78] transition-colors">
                       Autres
                     </h3>
-                    <p className="mt-1 text-sm text-[var(--color-text-secondary)]">
+                    <p className="mt-1 text-sm text-[#4b5c6b]">
                       {postsByCity.autres.length} article{postsByCity.autres.length > 1 ? "s" : ""}
                     </p>
                   </a>

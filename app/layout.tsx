@@ -1,35 +1,29 @@
-import { buildTunnelUrl } from "@/lib/tunnel-url";
 import type { Metadata, Viewport } from "next";
-import { Inter, Sora } from "next/font/google";
+import localFont from "next/font/local";
 import Image from "next/image";
 import "./globals.css";
 import { MOVERZ_REVIEWS, getAverageRating, getTotalReviews } from "@/lib/reviews";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import ContentSquare from "@/components/ContentSquare";
-import DeferredClientFeatures from "@/components/DeferredClientFeatures";
+import ExitIntentPopup from "@/components/ExitIntentPopup";
+import { ConversionIntentTracker } from "@/components/ConversionIntentTracker";
 import { JsonLd } from "@/components/schema/JsonLd";
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 
-// ===== Fonts V4 Radical =====
-const sora = Sora({
-  subsets: ["latin"],
-  variable: "--font-sora",
+const inter = localFont({
+  src: "../public/fonts/inter-latin.woff2",
   display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
   variable: "--font-inter",
-  display: "swap",
+  weight: "100 900",
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://moverz.fr"),
+  metadataBase: new URL('https://moverz.fr'),
   title: {
     default: "Comparateur Déménagement | Jusqu'à 5 devis | Contrôlés · Gratuit",
-    template: "%s | Moverz",
+    template: "%s | Moverz"
   },
-  description:
-    "Comparez jusqu'à 5 devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
+  description: "Comparez jusqu'à 5 devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
   keywords: [
     "devis déménagement gratuit",
     "comparateur déménageurs fiable",
@@ -42,6 +36,8 @@ export const metadata: Metadata = {
     "trouver déménageur vérifié",
     "devis déménagement rapide",
     "comparateur déménagement fiable",
+    "logiciel déménageur",
+    "SaaS déménagement"
   ],
   authors: [{ name: "Moverz", url: "https://moverz.fr" }],
   creator: "Moverz",
@@ -59,14 +55,13 @@ export const metadata: Metadata = {
     url: "https://moverz.fr/",
     siteName: "Moverz",
     title: "Comparateur Déménagement | Jusqu'à 5 devis | Contrôlés · Gratuit",
-    description:
-      "Comparez jusqu'à 5 devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
+    description: "Comparez jusqu'à 5 devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
     images: [
       {
-        url: "/opengraph-image",
+        url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Moverz - Comparateur Déménagement · Jusqu'à 5 devis · Contrôlés · Gratuit",
+        alt: "Moverz - Comparateur Déménagement · Jusqu'à 5 devis · Contrôlés · Gratuit · Note 4.9/5",
         type: "image/png",
       },
     ],
@@ -76,9 +71,8 @@ export const metadata: Metadata = {
     site: "@moverz",
     creator: "@moverz",
     title: "Comparateur Déménagement | Jusqu'à 5 devis | Contrôlés · Gratuit",
-    description:
-      "Comparez jusqu'à 5 devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
-    images: ["/opengraph-image"],
+    description: "Comparez jusqu'à 5 devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
+    images: ["/logo.png"],
   },
   robots: {
     index: true,
@@ -86,28 +80,28 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
     },
   },
   alternates: {
-    canonical: "https://moverz.fr/",
+    canonical: 'https://moverz.fr/',
     languages: {
-      "fr-FR": "https://moverz.fr/",
+      'fr-FR': 'https://moverz.fr/',
     },
   },
-  category: "déménagement",
+  category: 'déménagement',
 };
 
 export const viewport: Viewport = {
-  width: "device-width",
+  width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#FAFAFA" },
-    { media: "(prefers-color-scheme: dark)", color: "#0B0F14" },
+    { media: '(prefers-color-scheme: light)', color: '#0F172A' },
+    { media: '(prefers-color-scheme: dark)', color: '#0F172A' },
   ],
 };
 
@@ -117,12 +111,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${sora.variable} ${inter.variable}`}>
+    <html lang="fr">
       <head>
-        <link rel="icon" href="/logo-ui.png" />
-        <link rel="apple-touch-icon" href="/logo-ui.png" />
-        <link rel="preload" href="/logo-ui.png" as="image" type="image/png" />
-
+        {/* Favicons */}
+        <link rel="icon" href="/logo.png" />
+        <link rel="apple-touch-icon" href="/logo.png" />
+        
+        {/* Preconnect aux domaines externes pour performance */}
+        {/* (Unsplash retiré) */}
+        
+        {/* Preload du logo (ressource critique) */}
+        <link
+          rel="preload"
+          href="/logo.png"
+          as="image"
+          type="image/png"
+        />
+        
         <JsonLd
           id="organization-schema"
           data={{
@@ -179,11 +184,7 @@ export default function RootLayout({
               name: "France",
             },
             serviceType: ["Comparateur de déménagement", "Devis déménageurs"],
-            knowsAbout: [
-              "Déménagement",
-              "Comparaison de devis",
-              "Déménageurs professionnels",
-            ],
+            knowsAbout: ["Déménagement", "Comparaison de devis", "Déménageurs professionnels"],
           }}
         />
 
@@ -204,71 +205,47 @@ export default function RootLayout({
           }}
         />
 
+        {/* Analytics / session replay (prod only) */}
         <ContentSquare />
       </head>
       <body className={inter.className}>
         <GoogleAnalytics />
-        <DeferredClientFeatures />
-
-        {/* ===== HEADER V4 — Un seul, sticky, propre ===== */}
-        <header
-          className="sticky top-0 z-50 w-full border-b backdrop-blur-md transition-all"
-          style={{
-            background: "rgba(250, 250, 250, 0.8)",
-            borderColor: "var(--color-border)",
-          }}
-        >
-          <nav className="mx-auto flex h-14 max-w-[1200px] items-center justify-between px-5 md:px-6 lg:px-8">
-            <a href="/" className="flex items-center gap-2.5" title="Moverz">
-              <Image
-                src="/logo-ui.png"
-                alt="Logo Moverz"
-                width={32}
-                height={32}
+        <ConversionIntentTracker />
+        <ExitIntentPopup />
+        {/* Header */}
+        <header className="sticky top-0 z-40 w-full bg-white border-b border-[#E3E5E8] shadow-sm">
+          <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8">
+            <a href="/" className="flex items-center gap-3" title="Moverz - Comparateur de déménagement">
+              <Image 
+                src="/logo.png" 
+                alt="Logo Moverz" 
+                width={48}
+                height={48}
                 priority
-                className="h-8 w-8"
+                className="h-10 w-10 md:h-12 md:w-12"
               />
-              <span className="text-lg font-semibold" style={{ color: "var(--color-text)", fontFamily: "var(--font-sora)" }}>
-                Moverz
-              </span>
+              <span className="text-2xl md:text-3xl font-bold text-[#0F172A]">Moverz</span>
             </a>
-
-            <div className="flex items-center gap-5">
-              <a
-                href="/pourquoi-moverz/"
-                className="hidden md:block text-[13px] font-medium transition-colors hover:opacity-70"
-                style={{ color: "var(--color-text-secondary)" }}
-              >
+            <div className="flex items-center gap-6">
+              <a href="/pourquoi-moverz/" className="text-sm font-medium text-[#1E293B]/70 hover:text-[#0F172A] transition-colors hidden md:block">
                 Pourquoi Moverz
               </a>
-              <a
-                href="/comment-ca-marche/"
-                className="hidden md:block text-[13px] font-medium transition-colors hover:opacity-70"
-                style={{ color: "var(--color-text-secondary)" }}
-              >
+              <a href="/comment-ca-marche/" className="text-sm font-medium text-[#1E293B]/70 hover:text-[#0F172A] transition-colors hidden md:block">
                 Comment ça marche
               </a>
-              <a
-                href="/faq/"
-                className="hidden md:block text-[13px] font-medium transition-colors hover:opacity-70"
-                style={{ color: "var(--color-text-secondary)" }}
-              >
+              <a href="/faq/" className="text-sm font-medium text-[#1E293B]/70 hover:text-[#0F172A] transition-colors hidden md:block">
                 FAQ
               </a>
-              <a
-                href="/blog/"
-                className="hidden md:block text-[13px] font-medium transition-colors hover:opacity-70"
-                style={{ color: "var(--color-text-secondary)" }}
-              >
+              <a href="/blog/" className="text-sm font-medium text-[#1E293B]/70 hover:text-[#0F172A] transition-colors hidden md:block">
                 Blog
               </a>
               <a
                 href={buildTunnelUrl({ from: "header" })}
                 rel="nofollow"
-                className="inline-flex items-center gap-1.5 rounded-[var(--radius-sm)] px-4 py-2 text-[13px] font-semibold text-white transition-all hover:opacity-90 active:scale-[0.98]"
-                style={{ background: "var(--color-text)" }}
+                className="inline-flex items-center gap-1 rounded-full bg-[#0F172A] px-4 py-2 text-sm font-semibold text-white hover:scale-105 transition-all duration-200 shadow-sm"
               >
-                Obtenir des devis
+                <span>Obtenir des devis</span>
+                <span className="text-base">→</span>
               </a>
             </div>
           </nav>
@@ -276,88 +253,109 @@ export default function RootLayout({
 
         <main>{children}</main>
 
-        {/* ===== FOOTER V4 — Sobre, clair, pas de doublon dark ===== */}
-        <footer
-          className="border-t"
-          style={{ background: "var(--color-bg)", borderColor: "var(--color-border)" }}
-        >
-          <div className="mx-auto max-w-[1200px] px-5 md:px-6 lg:px-8 py-12 md:py-14">
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-6 mb-10">
-              {/* Col 1: Brand */}
-              <div className="col-span-2 md:col-span-1 space-y-3">
-                <a href="/" className="inline-flex items-center gap-2" title="Moverz">
-                  <Image src="/logo-ui.png" alt="Logo Moverz" width={28} height={28} className="h-7 w-7" />
-                  <span
-                    className="text-base font-semibold"
-                    style={{ color: "var(--color-text)", fontFamily: "var(--font-sora)" }}
-                  >
-                    Moverz
-                  </span>
+        {/* Footer */}
+        <footer className="bg-[#0F172A] border-t border-white/10 text-white">
+          <div className="mx-auto max-w-7xl px-4 md:px-8 py-12 md:py-16">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
+              {/* Colonne 1 : Marque */}
+              <div className="space-y-4">
+                <a href="/" className="flex items-center gap-3" title="Moverz - Comparateur de déménagement">
+                  <Image 
+                    src="/logo.png" 
+                    alt="Logo Moverz" 
+                    width={48}
+                    height={48}
+                    className="h-10 w-10 md:h-12 md:w-12"
+                  />
+                  <span className="text-2xl md:text-3xl font-bold text-white">Moverz</span>
                 </a>
-                <p className="text-[13px] leading-relaxed max-w-[200px]" style={{ color: "var(--color-text-muted)" }}>
-                  Le comparateur anti-arnaque.
-                  <br />
-                  Devis comparables, pros contrôlés.
+                <p className="text-sm text-white/70 leading-relaxed">
+                  Le comparateur anti-arnaque. Devis comparables, pros contrôlés, sans démarchage.
                 </p>
+                <form action="/search" method="get" className="mt-4 flex gap-2">
+                  <label className="sr-only" htmlFor="footer-search-q">
+                    Rechercher sur Moverz
+                  </label>
+                  <input
+                    id="footer-search-q"
+                    name="q"
+                    placeholder="Rechercher (blog, villes)…"
+                    className="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-2 text-sm text-white placeholder:text-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]"
+                  />
+                  <button
+                    type="submit"
+                    className="shrink-0 rounded-xl bg-[#6BCFCF] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:bg-[#5AB9B9] transition-colors"
+                  >
+                    OK
+                  </button>
+                </form>
               </div>
 
-              {/* Col 2: Liens utiles */}
+              {/* Colonne 2 : Liens utiles */}
               <div>
-                <h3 className="text-[13px] font-semibold mb-3" style={{ color: "var(--color-text)" }}>Liens utiles</h3>
-                <ul className="space-y-2 text-[13px]">
-                  <li><a href="/pourquoi-moverz/" className="transition-colors hover:opacity-70" style={{ color: "var(--color-text-secondary)" }}>Pourquoi Moverz</a></li>
-                  <li><a href="/comment-ca-marche/" className="transition-colors hover:opacity-70" style={{ color: "var(--color-text-secondary)" }}>Comment ça marche</a></li>
-                  <li><a href="/blog/" className="transition-colors hover:opacity-70" style={{ color: "var(--color-text-secondary)" }}>Blog</a></li>
-                  <li><a href="/villes/" className="transition-colors hover:opacity-70" style={{ color: "var(--color-text-secondary)" }}>Nos villes</a></li>
-                  <li><a href="/faq/" className="transition-colors hover:opacity-70" style={{ color: "var(--color-text-secondary)" }}>FAQ</a></li>
-                  <li><a href="/contact/" className="transition-colors hover:opacity-70" style={{ color: "var(--color-text-secondary)" }}>Contact</a></li>
+                <h3 className="font-semibold mb-4 text-white">Liens utiles</h3>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="/pourquoi-moverz/" className="text-white/70 hover:text-white transition-colors">Pourquoi Moverz</a></li>
+                  <li><a href="/comment-ca-marche/" className="text-white/70 hover:text-white transition-colors">Comment ça marche</a></li>
+                  <li><a href="/blog/eviter-arnaques-demenagement/" className="text-white/70 hover:text-white transition-colors">Éviter les arnaques</a></li>
+                  <li><a href="/blog/" className="text-white/70 hover:text-white transition-colors">Blog déménagement</a></li>
+                  <li><a href="/villes/" className="text-white/70 hover:text-white transition-colors">Nos villes</a></li>
+                  <li><a href="/faq/" className="text-white/70 hover:text-white transition-colors">FAQ</a></li>
+                  <li><a href="/contact/" className="text-white/70 hover:text-white transition-colors">Contact</a></li>
+                  <li><a href="/a-propos/" className="text-white/70 hover:text-white transition-colors">À propos</a></li>
                 </ul>
               </div>
 
-              {/* Col 3: Pros */}
+              {/* Colonne 3 : Professionnels */}
               <div>
-                <h3 className="text-[13px] font-semibold mb-3" style={{ color: "var(--color-text)" }}>Professionnels</h3>
-                <ul className="space-y-2 text-[13px]">
-                  <li><a href="/partenaires/" className="transition-colors hover:opacity-70" style={{ color: "var(--color-text-secondary)" }}>Devenir partenaire</a></li>
-                  <li><a href="/verifications-partenaires/" className="transition-colors hover:opacity-70" style={{ color: "var(--color-text-secondary)" }}>Critères de sélection</a></li>
-                  <li><a href="/cgv-partenaires/" className="transition-colors hover:opacity-70" style={{ color: "var(--color-text-secondary)" }}>CGV Partenaires</a></li>
+                <h3 className="font-semibold mb-4 text-white">Professionnels</h3>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="/partenaires/" className="text-white/70 hover:text-white transition-colors">Devenir partenaire</a></li>
+                  <li><a href="/verifications-partenaires/" className="text-white/70 hover:text-white transition-colors">Critères de sélection</a></li>
+                  <li><a href="/cgv-partenaires/" className="text-white/70 hover:text-white transition-colors">CGV Partenaires</a></li>
                 </ul>
               </div>
 
-              {/* Col 4: Villes */}
+              {/* Colonne 4 : Nos villes */}
               <div>
-                <h3 className="text-[13px] font-semibold mb-3" style={{ color: "var(--color-text)" }}>Nos villes</h3>
-                <ul className="space-y-2 text-[13px]">
-                  <li><a href="/demenagement/nice/" className="transition-colors hover:opacity-70" style={{ color: "var(--color-text-secondary)" }}>Nice</a></li>
-                  <li><a href="/demenagement/lyon/" className="transition-colors hover:opacity-70" style={{ color: "var(--color-text-secondary)" }}>Lyon</a></li>
-                  <li><a href="/demenagement/marseille/" className="transition-colors hover:opacity-70" style={{ color: "var(--color-text-secondary)" }}>Marseille</a></li>
-                  <li><a href="/demenagement/toulouse/" className="transition-colors hover:opacity-70" style={{ color: "var(--color-text-secondary)" }}>Toulouse</a></li>
-                  <li><a href="/villes/" className="font-medium transition-colors hover:opacity-70" style={{ color: "var(--color-text-secondary)" }}>Toutes les villes →</a></li>
+                <h3 className="font-semibold mb-4 text-white">Nos villes</h3>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="/demenagement/nice/" className="text-white/70 hover:text-white transition-colors">Nice</a></li>
+                  <li><a href="/demenagement/lyon/" className="text-white/70 hover:text-white transition-colors">Lyon</a></li>
+                  <li><a href="/demenagement/marseille/" className="text-white/70 hover:text-white transition-colors">Marseille</a></li>
+                  <li><a href="/demenagement/toulouse/" className="text-white/70 hover:text-white transition-colors">Toulouse</a></li>
+                  <li><a href="/villes/" className="text-[#6BCFCF] hover:text-white transition-colors">Voir toutes les villes →</a></li>
                 </ul>
               </div>
 
-              {/* Col 5: Légal */}
+              {/* Colonne 5 : Légal */}
               <div>
-                <h3 className="text-[13px] font-semibold mb-3" style={{ color: "var(--color-text)" }}>Légal</h3>
-                <ul className="space-y-2 text-[13px]">
-                  <li><a href="/mentions-legales/" className="transition-colors hover:opacity-70" style={{ color: "var(--color-text-secondary)" }}>Mentions légales</a></li>
-                  <li><a href="/politique-confidentialite/" className="transition-colors hover:opacity-70" style={{ color: "var(--color-text-secondary)" }}>Confidentialité</a></li>
-                  <li><a href="/cgu/" className="transition-colors hover:opacity-70" style={{ color: "var(--color-text-secondary)" }}>CGU</a></li>
-                  <li><a href="/cgv/" className="transition-colors hover:opacity-70" style={{ color: "var(--color-text-secondary)" }}>CGV Clients</a></li>
+                <h3 className="font-semibold mb-4 text-white">Informations légales</h3>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="/mentions-legales/" className="text-white/70 hover:text-white transition-colors">Mentions légales</a></li>
+                  <li><a href="/politique-confidentialite/" className="text-white/70 hover:text-white transition-colors">Confidentialité</a></li>
+                  <li><a href="/cgu/" className="text-white/70 hover:text-white transition-colors">CGU</a></li>
+                  <li><a href="/cgv/" className="text-white/70 hover:text-white transition-colors">CGV Clients</a></li>
                 </ul>
+                <div className="mt-4 text-xs text-white/60 leading-relaxed space-y-0.5">
+                  <p>Propriétaire du site :</p>
+                  <p>Entreprise : GSLV EURL</p>
+                  <p>SIREN : 914499876</p>
+                  <p>RCS : La Rochelle</p>
+                  <p>Adresse du siège : 5 Rue Jean Coyttar, 17290 Thairé, France</p>
+                  <p>Site web : https://moverz.fr</p>
+                  <p>Email : contact@moverz.fr</p>
+                </div>
               </div>
             </div>
 
-            {/* Bottom bar */}
-            <div
-              className="border-t pt-5 flex flex-col md:flex-row items-center justify-between gap-2"
-              style={{ borderColor: "var(--color-border)" }}
-            >
-              <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>
-                © {new Date().getFullYear()} Moverz – GSLV EURL · SIREN 914499876 · RCS La Rochelle
+            {/* Bas du footer */}
+            <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+              <p className="text-sm text-white/60">
+                © {new Date().getFullYear()} Moverz – GSLV EURL (SIREN 914499876). Tous droits réservés.
               </p>
-              <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>
-                contact@moverz.fr · Fait en France
+              <p className="text-sm text-white/60">
+                Fait en France
               </p>
             </div>
           </div>
@@ -366,3 +364,4 @@ export default function RootLayout({
     </html>
   );
 }
+

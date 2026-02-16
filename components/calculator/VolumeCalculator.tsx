@@ -1,6 +1,6 @@
 "use client";
-import { buildTunnelUrl } from "@/lib/tunnel-url";
 import { useState } from "react";
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 
 type HousingType = "studio" | "t2" | "t3" | "t4" | "maison";
 type Furniture = {
@@ -21,31 +21,31 @@ const housingBaseVolumes: Record<HousingType, number> = {
 
 const furnitureItems: Furniture[] = [
   // Living
-  { id: "canape-3", name: "Canapé 3 places", volume: 2.5, icon: "", category: "living" },
-  { id: "canape-2", name: "Canapé 2 places", volume: 1.5, icon: "", category: "living" },
-  { id: "fauteuil", name: "Fauteuil", volume: 0.8, icon: "", category: "living" },
-  { id: "table-basse", name: "Table basse", volume: 0.5, icon: "", category: "living" },
-  { id: "meuble-tv", name: "Meuble TV", volume: 1, icon: "", category: "living" },
-  { id: "bibliotheque", name: "Bibliothèque", volume: 2, icon: "", category: "living" },
+  { id: "canape-3", name: "Canapé 3 places", volume: 2.5, icon: "🛋️", category: "living" },
+  { id: "canape-2", name: "Canapé 2 places", volume: 1.5, icon: "🛋️", category: "living" },
+  { id: "fauteuil", name: "Fauteuil", volume: 0.8, icon: "🪑", category: "living" },
+  { id: "table-basse", name: "Table basse", volume: 0.5, icon: "📦", category: "living" },
+  { id: "meuble-tv", name: "Meuble TV", volume: 1, icon: "📺", category: "living" },
+  { id: "bibliotheque", name: "Bibliothèque", volume: 2, icon: "📚", category: "living" },
   
   // Bedroom
-  { id: "lit-double", name: "Lit double", volume: 2, icon: "", category: "bedroom" },
-  { id: "lit-simple", name: "Lit simple", volume: 1.2, icon: "", category: "bedroom" },
-  { id: "armoire", name: "Armoire", volume: 3, icon: "", category: "bedroom" },
-  { id: "commode", name: "Commode", volume: 1, icon: "", category: "bedroom" },
-  { id: "table-chevet", name: "Table de chevet", volume: 0.3, icon: "", category: "bedroom" },
+  { id: "lit-double", name: "Lit double", volume: 2, icon: "🛏️", category: "bedroom" },
+  { id: "lit-simple", name: "Lit simple", volume: 1.2, icon: "🛏️", category: "bedroom" },
+  { id: "armoire", name: "Armoire", volume: 3, icon: "👔", category: "bedroom" },
+  { id: "commode", name: "Commode", volume: 1, icon: "📦", category: "bedroom" },
+  { id: "table-chevet", name: "Table de chevet", volume: 0.3, icon: "🕯️", category: "bedroom" },
   
   // Kitchen
-  { id: "table-manger", name: "Table à manger", volume: 1.5, icon: "", category: "kitchen" },
-  { id: "chaises", name: "4 chaises", volume: 1, icon: "", category: "kitchen" },
-  { id: "frigo", name: "Réfrigérateur", volume: 1.5, icon: "", category: "kitchen" },
-  { id: "lave-linge", name: "Lave-linge", volume: 1, icon: "", category: "kitchen" },
-  { id: "lave-vaisselle", name: "Lave-vaisselle", volume: 0.8, icon: "", category: "kitchen" },
+  { id: "table-manger", name: "Table à manger", volume: 1.5, icon: "🍽️", category: "kitchen" },
+  { id: "chaises", name: "4 chaises", volume: 1, icon: "🪑", category: "kitchen" },
+  { id: "frigo", name: "Réfrigérateur", volume: 1.5, icon: "🧊", category: "kitchen" },
+  { id: "lave-linge", name: "Lave-linge", volume: 1, icon: "🧺", category: "kitchen" },
+  { id: "lave-vaisselle", name: "Lave-vaisselle", volume: 0.8, icon: "🍽️", category: "kitchen" },
   
   // Other
-  { id: "cartons-10", name: "10 cartons", volume: 1, icon: "", category: "other" },
-  { id: "velo", name: "Vélo", volume: 0.5, icon: "", category: "other" },
-  { id: "plantes", name: "Plantes", volume: 0.5, icon: "", category: "other" },
+  { id: "cartons-10", name: "10 cartons", volume: 1, icon: "📦", category: "other" },
+  { id: "velo", name: "Vélo", volume: 0.5, icon: "🚲", category: "other" },
+  { id: "plantes", name: "Plantes", volume: 0.5, icon: "🪴", category: "other" },
 ];
 
 export default function VolumeCalculator() {
@@ -87,14 +87,14 @@ export default function VolumeCalculator() {
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center space-y-4 mb-12">
-          <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-2 text-sm font-semibold text-[var(--color-text)]">
-            <span className="h-2 w-2 rounded-full bg-brand-turquoise" />
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-2 text-sm font-semibold text-[#0F172A]">
+            <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
             Outil gratuit
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-[var(--color-text)]">
+          <h1 className="text-4xl md:text-6xl font-bold text-[#0F172A]">
             Calculateur de Volume
           </h1>
-          <p className="text-lg text-[var(--color-text-secondary)]/70 max-w-3xl mx-auto">
+          <p className="text-lg text-[#1E293B]/70 max-w-3xl mx-auto">
             Estimez le volume de votre déménagement en m³ en quelques clics
           </p>
         </div>
@@ -104,7 +104,7 @@ export default function VolumeCalculator() {
           <div className="lg:col-span-2 space-y-8">
             {/* Housing Type */}
             <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
-              <h2 className="text-2xl font-bold text-[var(--color-text)] mb-6">
+              <h2 className="text-2xl font-bold text-[#0F172A] mb-6">
                 1. Type de logement
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
@@ -114,14 +114,14 @@ export default function VolumeCalculator() {
                     onClick={() => setHousingType(type)}
                     className={`p-4 rounded-xl border-2 transition-all ${
                       housingType === type
-                        ? "border-brand-turquoise bg-brand-turquoise/10"
-                        : "border-[var(--color-border)] hover:border-brand-turquoise/50"
+                        ? "border-[#6BCFCF] bg-[#6BCFCF]/10"
+                        : "border-[#E3E5E8] hover:border-[#6BCFCF]/50"
                     }`}
                   >
-                    <p className="text-sm font-semibold text-[var(--color-text)] capitalize">
+                    <p className="text-sm font-semibold text-[#0F172A] capitalize">
                       {type.replace("t", "T")}
                     </p>
-                    <p className="text-xs text-[var(--color-text-secondary)]/60 mt-1">
+                    <p className="text-xs text-[#1E293B]/60 mt-1">
                       ~{housingBaseVolumes[type]}m³
                     </p>
                   </button>
@@ -131,29 +131,29 @@ export default function VolumeCalculator() {
 
             {/* Furniture */}
             <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
-              <h2 className="text-2xl font-bold text-[var(--color-text)] mb-6">
+              <h2 className="text-2xl font-bold text-[#0F172A] mb-6">
                 2. Ajoutez vos meubles
               </h2>
 
               {/* Category filters */}
               <div className="flex flex-wrap gap-2 mb-6">
                 {[
-                  { id: "all", label: "Tous" },
-                  { id: "living", label: "Salon" },
-                  { id: "bedroom", label: "Chambre" },
-                  { id: "kitchen", label: "Cuisine" },
-                  { id: "other", label: "Autre" },
+                  { id: "all", label: "Tous", icon: "📦" },
+                  { id: "living", label: "Salon", icon: "🛋️" },
+                  { id: "bedroom", label: "Chambre", icon: "🛏️" },
+                  { id: "kitchen", label: "Cuisine", icon: "🍽️" },
+                  { id: "other", label: "Autre", icon: "📦" },
                 ].map((cat) => (
                   <button
                     key={cat.id}
                     onClick={() => setActiveCategory(cat.id)}
                     className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
                       activeCategory === cat.id
-                        ? "bg-[var(--color-bg-dark)] text-white"
-                        : "bg-[#F8F9FA] text-[var(--color-text-secondary)] hover:bg-[#E3E5E8]"
+                        ? "bg-[#0F172A] text-white"
+                        : "bg-[#F8F9FA] text-[#1E293B] hover:bg-[#E3E5E8]"
                     }`}
                   >
-                    {cat.label}
+                    {cat.icon} {cat.label}
                   </button>
                 ))}
               </div>
@@ -167,35 +167,36 @@ export default function VolumeCalculator() {
                       key={item.id}
                       className={`p-4 rounded-xl border-2 transition-all ${
                         qty > 0
-                          ? "border-brand-turquoise bg-brand-turquoise/5"
-                          : "border-[var(--color-border)]"
+                          ? "border-[#6BCFCF] bg-[#6BCFCF]/5"
+                          : "border-[#E3E5E8]"
                       }`}
                     >
                       <div className="flex items-start justify-between mb-2">
+                        <span className="text-2xl">{item.icon}</span>
                         {qty > 0 && (
-                          <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-brand-turquoise text-white text-xs font-bold">
+                          <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#6BCFCF] text-white text-xs font-bold">
                             {qty}
                           </span>
                         )}
                       </div>
-                      <p className="text-sm font-medium text-[var(--color-text)] mb-1">
+                      <p className="text-sm font-medium text-[#0F172A] mb-1">
                         {item.name}
                       </p>
-                      <p className="text-xs text-[var(--color-text-secondary)]/60 mb-3">
+                      <p className="text-xs text-[#1E293B]/60 mb-3">
                         {item.volume}m³
                       </p>
                       <div className="flex gap-2">
                         {qty > 0 && (
                           <button
                             onClick={() => decreaseFurniture(item.id)}
-                            className="flex-1 py-1.5 rounded-lg bg-[#E3E5E8] text-[var(--color-text)] text-sm font-medium hover:bg-[#D1D5DB] transition-colors"
+                            className="flex-1 py-1.5 rounded-lg bg-[#E3E5E8] text-[#0F172A] text-sm font-medium hover:bg-[#D1D5DB] transition-colors"
                           >
                             −
                           </button>
                         )}
                         <button
                           onClick={() => toggleFurniture(item.id)}
-                          className="flex-1 py-1.5 rounded-lg bg-[var(--color-bg-dark)] text-white text-sm font-medium hover:bg-[var(--color-bg-dark)] transition-colors"
+                          className="flex-1 py-1.5 rounded-lg bg-[#0F172A] text-white text-sm font-medium hover:bg-[#1E293B] transition-colors"
                         >
                           +
                         </button>
@@ -225,7 +226,7 @@ export default function VolumeCalculator() {
                   <div className="flex justify-between items-end">
                     <span className="text-sm text-white/70">Volume total</span>
                     <div className="text-right">
-                      <p className="text-4xl font-bold text-brand-turquoise">
+                      <p className="text-4xl font-bold text-[#6BCFCF]">
                         {totalVolume}
                       </p>
                       <p className="text-sm text-white/70">m³</p>
@@ -236,7 +237,7 @@ export default function VolumeCalculator() {
 
               {/* Truck recommendation */}
               <div className="bg-white/10 rounded-xl p-4 mb-6">
-                <p className="text-sm font-medium mb-2">Camion recommandé</p>
+                <p className="text-sm font-medium mb-2">🚚 Camion recommandé</p>
                 <p className="text-xs text-white/80">
                   {totalVolume < 15 && "Utilitaire 12-15m³"}
                   {totalVolume >= 15 && totalVolume < 25 && "Camion 20m³"}
@@ -248,7 +249,7 @@ export default function VolumeCalculator() {
               {/* CTA */}
               <a
                 href={buildTunnelUrl({ from: "/calculateur-volume-demenagement/", estimatedVolume: totalVolume })}
-                className="block w-full text-center py-4 rounded-xl bg-brand-turquoise text-[var(--color-text)] font-semibold hover:bg-[#A8E8E8] transition-colors"
+                className="block w-full text-center py-4 rounded-xl bg-[#6BCFCF] text-[#0F172A] font-semibold hover:bg-[#A8E8E8] transition-colors"
               >
                 Obtenir des devis →
               </a>

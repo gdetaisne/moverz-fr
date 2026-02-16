@@ -1,6 +1,6 @@
 "use client";
-import { buildTunnelUrl } from "@/lib/tunnel-url";
 import { useEffect, useRef, useState } from "react";
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 
 function useInView(ref: React.RefObject<HTMLDivElement | null>, threshold: number = 0.3) {
   const [isInView, setIsInView] = useState(false);
@@ -65,19 +65,18 @@ export default function HowItWorks() {
   return (
     <div 
       ref={sectionRef}
-      className="relative overflow-hidden space-y-10 rounded-3xl p-8 md:p-12 lg:p-16 shadow-sm"
-      style={{ background: "var(--color-surface)", color: "var(--color-text)", border: "1px solid var(--color-border)" }}
+      className="relative overflow-hidden space-y-10 rounded-3xl bg-white p-8 md:p-12 lg:p-16 text-[#04163a] shadow-sm border border-[#E3E5E8]"
     >
       
       {/* Header avec espacement généreux */}
       <div className="relative space-y-4 text-center">
-        <p className="text-xs font-bold uppercase tracking-[0.3em]" style={{ color: "var(--color-accent)" }}>
+        <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#2B7A78]">
           Processus en 3 étapes
         </p>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading leading-tight" style={{ color: "var(--color-text)" }}>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#04163a] leading-tight">
           Comment ça marche ?
         </h2>
-        <p className="text-base md:text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto font-light" style={{ color: "var(--color-text-secondary)" }}>
+        <p className="text-base md:text-lg lg:text-xl text-[#4b5c6b] leading-relaxed max-w-2xl mx-auto font-light">
           En 3 étapes simples, vous préparez votre déménagement sans prise de tête.
         </p>
       </div>
@@ -87,41 +86,34 @@ export default function HowItWorks() {
         {steps.map((step, index) => (
           <div
             key={step.number}
-            className="group relative flex flex-col gap-4 rounded-2xl p-6 md:p-8 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md"
-            style={{ 
-              animationDelay: `${index * 100 + 400}ms`,
-              border: "1px solid var(--color-border)",
-              background: "var(--color-surface)"
-            }}
+            className="group relative flex flex-col gap-4 rounded-2xl border border-[#E3E5E8] bg-white p-6 md:p-8 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md hover:border-[#6BCFCF]/40"
+            style={{ animationDelay: `${index * 100 + 400}ms` }}
           >
             
             <div className="relative flex flex-col items-center gap-4">
               {/* Numéro + Pictogramme combinés */}
               <div className="relative">
                 <div 
-                  className="flex h-16 w-16 items-center justify-center rounded-2xl transition-all duration-200 group-hover:scale-105"
+                  className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#6BCFCF]/15 border-2 border-[#6BCFCF]/30 text-[#2B7A78] transition-all duration-200 group-hover:scale-105"
                   style={{
                     opacity: isInView ? 1 : 0,
                     transform: isInView ? 'scale(1)' : 'scale(0.8)',
-                    transitionDelay: `${index * 150 + 600}ms`,
-                    background: "rgba(14,165,166,0.1)",
-                    border: "2px solid rgba(14,165,166,0.3)",
-                    color: "var(--color-accent)"
+                    transitionDelay: `${index * 150 + 600}ms`
                   }}
                 >
                   {step.icon}
                 </div>
                 {/* Badge numéro */}
-                <div className="absolute -top-2 -right-2 flex h-7 w-7 items-center justify-center rounded-full text-xs font-bold text-white shadow-sm" style={{ background: "var(--color-text)" }}>
+                <div className="absolute -top-2 -right-2 flex h-7 w-7 items-center justify-center rounded-full bg-[#0F172A] text-xs font-bold text-white shadow-sm">
                 {step.number}
                 </div>
               </div>
               
               <div className="space-y-2 text-center">
-                <h3 className="text-lg md:text-xl font-bold font-heading leading-tight" style={{ color: "var(--color-text)" }}>
+                <h3 className="text-lg md:text-xl font-bold text-[#04163a] leading-tight">
                   {step.title}
                 </h3>
-                <p className="text-sm md:text-base leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
+                <p className="text-sm md:text-base text-[#4b5c6b] leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -135,8 +127,7 @@ export default function HowItWorks() {
         <a
           href={buildTunnelUrl({ from: "/comment-ca-marche" })}
           rel="nofollow"
-          className="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-semibold text-white shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
-          style={{ background: "var(--color-text)" }}
+          className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
           aria-label="Recevez des devis comparables gratuitement"
         >
           <span>Comparez des devis gratuitement</span>

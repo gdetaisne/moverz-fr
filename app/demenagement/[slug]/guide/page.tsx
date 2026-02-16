@@ -1,4 +1,3 @@
-import { buildTunnelUrl } from "@/lib/tunnel-url";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -6,6 +5,7 @@ import { CITIES, getCityBySlug } from "@/lib/cities";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import { getCityGuideFromJson } from "@/lib/city-guides";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 
 type PageProps = {
   params: { slug: string };
@@ -15,26 +15,13 @@ export function generateStaticParams() {
   return CITIES.filter((c) => c.slug !== "ile-de-france").map((city) => ({ slug: city.slug }));
 }
 
-// SEO (2026-02-16): only core cities keep guide indexation.
-const CORE_CITY_SLUGS = new Set([
-  "bordeaux", "lille", "lyon", "marseille", "montpellier", "nantes",
-  "nice", "paris", "rennes", "rouen", "strasbourg", "toulouse",
-]);
-
 export function generateMetadata({ params }: PageProps): Metadata {
   const city = getCityBySlug(params.slug);
   if (!city) return {};
 
-  // noindex non-core guide pages (template thin content)
-  if (!CORE_CITY_SLUGS.has(city.slug)) {
-    return {
-      robots: { index: false, follow: true },
-    };
-  }
-
   const path = `demenagement/${city.slug}/guide`;
-  const title = `Guide déménagement ${city.nameCapitalized} : méthode & devis`;
-  const description = `Guide complet pour déménager à ${city.nameCapitalized} : checklists, accès, devis comparables, erreurs fréquentes. Méthode étape par étape.`;
+  const title = `Guide déménagement ${city.nameCapitalized} (2000+ mots) : méthode, checklists, devis fiables | Moverz`;
+  const description = `Guide long format (2000+ mots) pour déménager à ${city.nameCapitalized}: dossier pour des devis comparables, accès & stationnement, checklists, erreurs fréquentes, méthode jour J.`;
 
   return getFullMetadata(path, title, description);
 }
@@ -55,7 +42,7 @@ export default async function CityGuidePage({ params }: PageProps) {
 
   return (
     <main className="bg-white">
-      <div className="bg-[var(--color-bg-dark)]">
+      <div className="bg-[#0F172A]">
         <div className="container max-w-4xl pt-6">
           <Breadcrumbs
             items={[
@@ -70,24 +57,24 @@ export default async function CityGuidePage({ params }: PageProps) {
 
       <section className="section section-light">
         <div className="container max-w-4xl">
-          <div className="rounded-2xl border border-[var(--color-border)] bg-white p-8 md:p-10 space-y-8">
+          <div className="rounded-2xl border border-[#E5E7EB] bg-white p-8 md:p-10 space-y-8">
             <div className="space-y-3 text-center">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-accent)]">Guide local</p>
-              <h1 className="text-2xl md:text-3xl font-bold text-[var(--color-text)]">{guide.title}</h1>
-              <p className="text-sm md:text-base text-[var(--color-text-secondary)] max-w-2xl mx-auto">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">Guide local</p>
+              <h1 className="text-2xl md:text-3xl font-bold text-[#0F172A]">{guide.title}</h1>
+              <p className="text-sm md:text-base text-[#6B7280] max-w-2xl mx-auto">
                 {guide.subtitle}{" "}
-                <span className="text-[var(--color-text)]/70">≈ {guide.estimatedReadingMinutes} min • {guide.wordCount} mots</span>
+                <span className="text-[#0F172A]/70">≈ {guide.estimatedReadingMinutes} min • {guide.wordCount} mots</span>
               </p>
-              <p className="text-xs text-[var(--color-text-secondary)]">
+              <p className="text-xs text-[#6B7280]">
                 <Link className="underline hover:no-underline" href={`/demenagement/${city.slug}/`}>
                   Retour à la page ville
                 </Link>
               </p>
             </div>
 
-            <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6 md:p-7">
-              <p className="text-sm font-semibold text-[var(--color-text)] mb-3">Sommaire</p>
-              <ol className="grid gap-2 text-sm text-[var(--color-accent)]">
+            <div className="rounded-2xl border border-[#E5E7EB] bg-[#F8FAFC] p-6 md:p-7">
+              <p className="text-sm font-semibold text-[#0F172A] mb-3">Sommaire</p>
+              <ol className="grid gap-2 text-sm text-[#2B7A78]">
                 {guide.sections.map((s) => (
                   <li key={s.id}>
                     <a className="hover:underline" href={`#guide-${city.slug}-${s.id}`}>
@@ -101,33 +88,33 @@ export default async function CityGuidePage({ params }: PageProps) {
             <div className="space-y-10">
               {guide.sections.map((s) => (
                 <div key={s.id} id={`guide-${city.slug}-${s.id}`} className="scroll-mt-28">
-                  <h2 className="text-lg md:text-xl font-semibold text-[var(--color-text)]">{s.title}</h2>
+                  <h2 className="text-lg md:text-xl font-semibold text-[#0F172A]">{s.title}</h2>
                   <div className="mt-3 space-y-3">
                     {s.paragraphs.map((p, i) => (
-                      <p key={i} className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed">
+                      <p key={i} className="text-sm md:text-base text-[#6B7280] leading-relaxed">
                         {p}
                       </p>
                     ))}
                   </div>
 
                   {s.bullets?.length ? (
-                    <ul className="mt-4 grid gap-2 text-sm md:text-base text-[var(--color-text)]">
+                    <ul className="mt-4 grid gap-2 text-sm md:text-base text-[#0F172A]">
                       {s.bullets.map((b) => (
                         <li key={b} className="flex gap-2">
-                          <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--color-accent)] shrink-0" />
-                          <span className="text-[var(--color-text)]/90">{b}</span>
+                          <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#6BCFCF] shrink-0" />
+                          <span className="text-[#0F172A]/90">{b}</span>
                         </li>
                       ))}
                     </ul>
                   ) : null}
 
                   {s.checklist?.length ? (
-                    <div className="mt-5 rounded-2xl border border-[var(--color-border)] bg-white p-5">
-                      <p className="text-sm font-semibold text-[var(--color-text)]">Checklist</p>
-                      <ul className="mt-3 grid gap-2 text-sm text-[var(--color-text-secondary)]">
+                    <div className="mt-5 rounded-2xl border border-[#E5E7EB] bg-white p-5">
+                      <p className="text-sm font-semibold text-[#0F172A]">Checklist</p>
+                      <ul className="mt-3 grid gap-2 text-sm text-[#6B7280]">
                         {s.checklist.map((item) => (
                           <li key={item} className="flex gap-2">
-                            <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[var(--color-accent)] shrink-0" />
+                            <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#2B7A78] shrink-0" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -142,11 +129,11 @@ export default async function CityGuidePage({ params }: PageProps) {
               <a
                 href={quoteUrl}
                 rel="nofollow"
-                className="inline-flex items-center justify-center rounded-full border border-[#0F172A] bg-[var(--color-bg-dark)] px-7 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[var(--color-bg-dark)]"
+                className="inline-flex items-center justify-center rounded-full border border-[#0F172A] bg-[#0F172A] px-7 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[#1E293B]"
               >
                 Obtenir des devis comparables (gratuit)
               </a>
-              <p className="mt-2 text-xs text-[var(--color-text-secondary)]">Sans spam · Sans engagement · Dossier en 3 minutes</p>
+              <p className="mt-2 text-xs text-[#6B7280]">Sans spam · Sans engagement · Dossier en 3 minutes</p>
             </div>
           </div>
         </div>

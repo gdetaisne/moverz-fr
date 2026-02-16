@@ -70,7 +70,7 @@ L'IA volumétrie analyse votre logement et calcule automatiquement le volume en 
 - 🔄 **Ajustable** : Vous pouvez affiner si vous avez des spécificités
 
 > **Comparez intelligemment**  
-> Moverz calcule automatiquement votre volume avec l'IA (1 minute, précision 90-95%), puis transmet votre dossier à 5 déménageurs vérifiés (Creditsafe + licences + assurances). <a href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=blog-estimer-volume&utm_source=moverz_website&utm_medium=referral&utm_content=blog-estimer-volume" class="text-brand-turquoise hover:underline font-semibold">Estimer mon volume et comparer mes devis</a>.
+> Moverz calcule automatiquement votre volume avec l'IA (1 minute, précision 90-95%), puis transmet votre dossier à 5 déménageurs vérifiés (Creditsafe + licences + assurances). <a href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=blog-estimer-volume&utm_source=moverz_website&utm_medium=referral&utm_content=blog-estimer-volume" class="text-[#6BCFCF] hover:underline font-semibold">Estimer mon volume et comparer mes devis</a>.
 
 ### Quand utiliser l'IA ?
 
@@ -361,7 +361,7 @@ Vous contactez 5 déménageurs. Vous recevez 5 devis. Mais :
 [Moverz](/comment-ca-marche/) calcule automatiquement votre volume avec l'IA (précision 90-95%), puis transmet le **même dossier** à 5 déménageurs vérifiés. Résultat : tous les devis partent du même volume, donc ils sont directement comparables.
 
 > **Comparez intelligemment**  
-> Moverz standardise automatiquement votre dossier (volume IA, accès, contraintes, options) et le transmet à 5 déménageurs vérifiés (Creditsafe + licences + assurances). <a href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=blog-comparer-devis&utm_source=moverz_website&utm_medium=referral&utm_content=blog-comparer-devis" class="text-brand-turquoise hover:underline font-semibold">Obtenir des devis comparables</a>.
+> Moverz standardise automatiquement votre dossier (volume IA, accès, contraintes, options) et le transmet à 5 déménageurs vérifiés (Creditsafe + licences + assurances). <a href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=blog-comparer-devis&utm_source=moverz_website&utm_medium=referral&utm_content=blog-comparer-devis" class="text-[#6BCFCF] hover:underline font-semibold">Obtenir des devis comparables</a>.
 
 **Solution #2 : Exigez une visite technique de tous les déménageurs**
 
