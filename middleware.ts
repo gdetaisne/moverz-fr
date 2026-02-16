@@ -215,7 +215,7 @@ export async function middleware(req: NextRequest, event: NextFetchEvent) {
       "prix-et-devis", "checklists-et-guides", "cas-frequents",
       "conseils-demenagement", "demenagement-par-ville",
     ]);
-    if (!blogCategories.has(blogNested[1])) {
+    if (!blogCategories.has(child)) {
       const url = req.nextUrl.clone();
       url.pathname = `/blog/${child}/`;
       return track(NextResponse.redirect(url, 301));
