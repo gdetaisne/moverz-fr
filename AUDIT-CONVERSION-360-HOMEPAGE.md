@@ -952,7 +952,7 @@ R: "Oui, 100% gratuit pour vous..."
 **Amélioration avec personnalité:**
 ```
 Q: "C'est vraiment gratuit ? Y'a pas un truc caché ?"
-R: "Non, vraiment. Zéro euro. On est payé par les déménageurs uniquement si vous en choisissez un. Et franchement, on préfère ça plutôt que vous faire payer un service dont vous n'êtes pas sûr."
+R: "Non, vraiment. Zéro euro pour vous, et les déménageurs participent aussi gratuitement à la mise en concurrence. On préfère ça plutôt que vous faire payer un service dont vous n'êtes pas sûr."
 ```
 
 **6.4 Pas de Storytelling**

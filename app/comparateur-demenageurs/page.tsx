@@ -21,12 +21,12 @@ export default function ComparateurDemenageursPage() {
     {
       question: "Quelle est la différence entre Moverz et les autres comparateurs (ex: i-Demenager, DemenagerFacile) ?",
       answer:
-        "3 différences majeures : (1) Vérifications : Moverz vérifie activement Creditsafe + licences + assurances (257 faillites en 2024 !). Les autres comparateurs ne vérifient rien. (2) Devis comparables : Moverz utilise l'IA pour standardiser les volumes (précision 90-95%). Les autres comparateurs = volumes différents = impossible à comparer. (3) Anonymat : Moverz ne revend pas vos coordonnées (business model : commission déménageur). Les autres = revente de leads (5-10 appels/jour).",
+        "3 différences majeures : (1) Vérifications : Moverz vérifie activement Creditsafe + licences + assurances (257 faillites en 2024 !). Les autres comparateurs ne vérifient rien. (2) Devis comparables : Moverz utilise l'IA pour standardiser les volumes (précision 90-95%). Les autres comparateurs = volumes différents = impossible à comparer. (3) Anonymat : Moverz ne revend pas vos coordonnées, votre dossier reste anonyme. Les autres = revente de leads (5-10 appels/jour).",
     },
     {
       question: "Les comparateurs de déménagement sont-ils vraiment gratuits ?",
       answer:
-        "Oui, pour le particulier c'est 100% gratuit. Le business model : commission sur les déménageurs (10-20% du prix final). Moverz est gratuit ET ne revend pas vos coordonnées (vous restez anonyme). Certains comparateurs classiques revendent vos données à 10-20 déménageurs (d'où le spam). Méfiez-vous des 'comparateurs' qui demandent un paiement avant devis = arnaque.",
+        "Oui, pour le particulier c'est 100% gratuit, et les déménageurs participent gratuitement à la mise en concurrence. Moverz ne revend pas vos coordonnées (vous restez anonyme). Certains comparateurs classiques revendent vos données à de nombreux déménageurs (d'où le spam). Méfiez-vous des 'comparateurs' qui demandent un paiement avant devis = arnaque.",
     },
     {
       question: "Comment Moverz vérifie-t-il les déménageurs ?",
@@ -46,7 +46,7 @@ export default function ComparateurDemenageursPage() {
     {
       question: "Est-ce que Moverz revend mes coordonnées ?",
       answer:
-        "Non, jamais. Votre dossier reste anonyme jusqu'à ce que VOUS choisissiez un déménageur. Business model transparent : commission uniquement sur les déménageurs (si déménagement réalisé). Les comparateurs classiques revendent vos coordonnées à 10-20 déménageurs dès que vous validez le formulaire = 5-10 appels/jour pendant 2 semaines. C'est leur business model (revente de leads).",
+        "Non, jamais. Votre dossier reste anonyme jusqu'à ce que VOUS choisissiez un déménageur. Les comparateurs classiques revendent vos coordonnées à de nombreux déménageurs dès que vous validez le formulaire = 5-10 appels/jour pendant 2 semaines. C'est leur business model (revente de leads).",
     },
     {
       question: "Peut-on faire confiance aux avis sur les comparateurs ?",
@@ -82,10 +82,10 @@ export default function ComparateurDemenageursPage() {
               multiples appels (répéter 10 fois les mêmes infos), visites techniques chronophages, devis incomparables 
               (formats et volumes différents), et démarchage agressif une fois vos coordonnées partagées.
             </p>
-            <p className="text-sm md:text-base text-[#6B7280] leading-relaxed">
-              Un <strong className="text-[#0F172A]">bon comparateur</strong> vise à simplifier ce processus, 
-              <strong className="text-[#0F172A]"> mais tous ne se valent pas</strong>. Certains se contentent de revendre 
-              vos coordonnées à 10-20 déménageurs (d'où le spam), sans aucune vérification ni standardisation.
+            <p className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed">
+              Un <strong className="text-[var(--color-text)]">bon comparateur</strong> vise à simplifier ce processus, 
+              <strong className="text-[var(--color-text)]"> mais tous ne se valent pas</strong>. Certains se contentent de revendre 
+              vos coordonnées à de nombreux déménageurs (d'où le spam), sans aucune vérification ni standardisation.
             </p>
           </div>
 
@@ -129,7 +129,7 @@ export default function ComparateurDemenageursPage() {
                   points: [
                     "Une plateforme qui ne transmet pas vos coordonnées directes aux déménageurs sans votre accord",
                     "Le risque : être inondé d'appels et de mails non sollicités (5-10 appels/jour pendant 2 semaines)",
-                    "Certains comparateurs revendent vos données à 10-20 déménageurs dès validation du formulaire",
+                    "Certains comparateurs revendent vos données à de nombreux déménageurs dès validation du formulaire",
                   ],
                   highlight: "✨ Moverz : dossier anonyme, vous choisissez qui peut vous contacter",
                 },
@@ -150,10 +150,10 @@ export default function ComparateurDemenageursPage() {
                   desc: "Le service doit être clair et sans frais cachés pour le particulier.",
                   points: [
                     "Un service 100% gratuit pour le client, avec un modèle économique transparent",
-                    "Business model : commission sur les déménageurs (10-20% du prix final, payée par le pro)",
+                    "Les déménageurs participent gratuitement à la mise en concurrence",
                     "Le risque : des frais cachés ou un service qui n'est pas réellement gratuit",
                   ],
-                  highlight: "✨ Moverz : 100% gratuit, commission uniquement sur les déménageurs",
+                  highlight: "Moverz : 100% gratuit pour vous et pour les déménageurs",
                 },
               ].map((c) => (
                 <div 
@@ -213,11 +213,11 @@ export default function ComparateurDemenageursPage() {
                 },
                 {
                   title: "Dossier anonyme (0 démarchage)",
-                  desc: "Vous restez anonyme jusqu'à ce que vous choisissiez un déménageur. Les autres = revente de leads à 10-20 déménageurs = 5-10 appels/jour.",
+                  desc: "Vous restez anonyme jusqu'à ce que vous choisissiez un déménageur. Les autres = revente de leads à de nombreux déménageurs = 5-10 appels/jour.",
                 },
                 {
-                  title: "Commission transparente",
-                  desc: "Moverz est gratuit pour vous, commission uniquement sur les déménageurs (si déménagement réalisé). Les autres = même modèle mais avec revente de données.",
+                  title: "Modèle transparent",
+                  desc: "Moverz est gratuit pour vous comme pour les déménageurs qui participent à la mise en concurrence. Les autres revendent vos données sans votre accord.",
                 },
               ].map((item) => (
                 <div key={item.title} className="rounded-xl border border-[#E5E7EB] bg-white p-5">

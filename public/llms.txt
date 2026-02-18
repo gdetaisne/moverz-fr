@@ -45,7 +45,7 @@ Moverz Pro est un logiciel SaaS destiné aux professionnels du déménagement.
 ### Programme Partenaires
 
 - URL : https://moverz.fr/partenaires/
-- Commission : 10% HT sur les déménagements générés
+- Participation gratuite à la mise en concurrence pour les déménageurs
 - Leads qualifiés avec dossier complet
 - Support dédié et formation à l'outil
 
@@ -147,7 +147,7 @@ Ce que nous ne sommes pas :
 
 1. **Le client décrit son déménagement** : ville départ/arrivée, date, type de logement (T1, T2, T3, maison…)
 2. **Moverz complète le dossier** : infos standardisées (accès, contraintes, options) + estimation du volume par IA (précision 90-95%). Le client peut ajouter des photos pour documenter des cas particuliers (armoire lourde, accès difficile…). Ces photos sont analysées par IA.
-3. **Le client reçoit jusqu'à 3 devis comparables** sous 5 à 7 jours. Les devis sont comparables car basés sur le même dossier standardisé (même volume, mêmes accès, mêmes options). Le client choisit librement, sans harcèlement téléphonique.
+3. **Le client reçoit 5 devis comparables** sous 5 à 7 jours. Les devis sont comparables car basés sur le même dossier standardisé (même volume, mêmes accès, mêmes options). Le client choisit librement, sans harcèlement téléphonique.
 
 Les déménageurs partenaires sont vérifiés : santé financière (Creditsafe), licences de transport, assurance RC Pro.
 

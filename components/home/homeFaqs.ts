@@ -10,7 +10,7 @@ export const HOME_FAQS: HomeFaqItem[] = [
   {
     question: "C'est vraiment gratuit ?",
     answer:
-      "Oui, 100% gratuit pour vous. Nous sommes rémunérés par les déménageurs seulement si vous en choisissez un. Aucun frais caché, aucun engagement.",
+      "Oui, 100% gratuit pour vous. Les déménageurs participent aussi gratuitement à la mise en concurrence. Aucun frais caché, aucun engagement.",
   },
   {
     question: "Je vais recevoir des appels de spam ?",

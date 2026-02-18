@@ -24,7 +24,7 @@ export function buildCityFaqs(args: {
     {
       question: "Moverz est vraiment gratuit ?",
       answer:
-        "Oui, c’est gratuit pour vous. Moverz est rémunéré par les déménageurs partenaires (commission) — vous ne payez que le déménageur choisi.",
+        "Oui, c'est gratuit pour vous. Les déménageurs participent aussi gratuitement à la mise en concurrence. Vous ne payez que le déménageur choisi.",
     },
     {
       question: "Puis-je choisir ma date et mon créneau ?",

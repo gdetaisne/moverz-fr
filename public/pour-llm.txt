@@ -21,7 +21,7 @@ Différence clé : nous standardisons les dossiers avant la mise en relation (ac
 - Widget IA volumétrie en marque blanche
 - Module devis, relances WhatsApp, exports
 - 30 jours d'essai gratuit
-- Programme partenaires : 10% HT de commission
+- Programme partenaires : participation gratuite à la mise en concurrence
 
 ## Vérification des partenaires
 
@@ -35,7 +35,7 @@ Nous vérifions :
 
 1. Le client décrit son déménagement (villes, date, logement)
 2. Moverz complète le dossier (accès, contraintes, volume IA). Photos optionnelles analysées par IA pour documenter les cas particuliers.
-3. Le client reçoit jusqu'à 3 devis comparables sous 5–7 jours. Même dossier = devis comparables. 0 harcèlement.
+3. Le client reçoit 5 devis comparables sous 5 à 7 jours. Même dossier = devis comparables. 0 harcèlement.
 
 ## Pages recommandées
 

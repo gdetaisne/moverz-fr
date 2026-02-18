@@ -12,7 +12,7 @@ export default function HowItWorksFAQ() {
     {
       question: "Comment êtes-vous rémunérés ?",
       answer:
-        "Nous sommes rémunérés par les déménageurs partenaires uniquement si vous signez avec l’un d’eux. Pour vous, le service reste sans frais.",
+        "Les déménageurs participent gratuitement à la mise en concurrence. Pour vous, le service est 100% gratuit. Nous sommes rémunérés par un montant fixe par dossier, uniquement en cas de déménagement réalisé.",
     },
     {
       question: "Vais-je recevoir des appels de spam ?",
@@ -20,9 +20,9 @@ export default function HowItWorksFAQ() {
         "Non. L’objectif est d’éviter le démarchage agressif : vous recevez des devis écrits et comparables, puis vous décidez si/qui vous souhaitez contacter.",
     },
     {
-      question: "Et si je ne reçois pas 3 devis ?",
+      question: "Et si je ne reçois pas 5 devis ?",
       answer:
-        "Notre objectif est de vous obtenir au moins 3 devis rapidement (sous 5 jours, selon disponibilité locale). Si les retours sont insuffisants, nous vous recontactons pour proposer des alternatives (élargir le réseau, ajuster dates/contraintes, etc.).",
+        "Notre engagement est de vous présenter 5 devis comparables sous 5 à 7 jours. Si les retours sont insuffisants, nous vous recontactons pour proposer des alternatives (élargir le réseau, ajuster dates/contraintes, etc.).",
     },
     {
       question: "Puis-je annuler ?",

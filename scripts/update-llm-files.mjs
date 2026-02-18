@@ -165,7 +165,7 @@ Moverz Pro est un logiciel SaaS destiné aux professionnels du déménagement.
 ### Programme Partenaires
 
 - URL : https://moverz.fr/partenaires/
-- Commission : 10% HT sur les déménagements générés
+- Participation gratuite à la mise en concurrence pour les déménageurs
 - Leads qualifiés avec dossier complet
 - Support dédié et formation à l'outil
 
@@ -313,7 +313,7 @@ ${CORE_DIFFERENTIATOR}
 - Widget IA volumétrie en marque blanche
 - Module devis, relances WhatsApp, exports
 - 30 jours d'essai gratuit
-- Programme partenaires : 10% HT de commission
+- Programme partenaires : participation gratuite à la mise en concurrence
 
 ## Vérification des partenaires
 

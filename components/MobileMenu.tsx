@@ -36,8 +36,8 @@ export default function MobileMenu() {
     <div className="md:hidden">
       <button
         onClick={() => setOpen(!open)}
-        className="inline-flex h-9 w-9 items-center justify-center rounded-lg transition-colors"
-        style={{ color: "var(--color-text)" }}
+        className="inline-flex h-10 w-10 items-center justify-center rounded-lg border transition-colors"
+        style={{ color: "var(--color-text)", borderColor: "var(--color-border)" }}
         aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
         aria-expanded={open}
       >

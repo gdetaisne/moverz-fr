@@ -210,8 +210,31 @@ export default function CityMovingPage({ params }: PageProps) {
       
       {/* FAQ schema: featured answers ChatGPT/AI Overviews */}
       <FAQSchema faqs={cityFAQs} />
-      
-      <div className="bg-[#0F172A]">
+      {/* HowTo schema — rich snippet "étapes" pour le processus Moverz */}
+      <HowToSchema
+        title={`Comment obtenir des devis de déménagement à ${city.nameCapitalized}`}
+        description={`Comparez des devis comparables de déménageurs vérifiés à ${city.nameCapitalized} en 3 étapes simples. Gratuit, sans démarchage.`}
+        totalTime="PT3M"
+        estimatedCost={{ value: "0", currency: "EUR" }}
+        steps={[
+          {
+            name: "Décrivez votre déménagement",
+            text: `Renseignez votre ville de départ et d'arrivée (${city.nameCapitalized}), la date souhaitée et le type de logement (studio, T2, T3, maison…).`,
+            url: `https://moverz.fr/demenagement/${city.slug}/`,
+          },
+          {
+            name: "Complétez le dossier standardisé",
+            text: "Ajoutez les détails d'accès (étage, ascenseur, distance parking), les options souhaitées (emballage, monte-meuble) et éventuellement des photos. L'IA calcule le volume pour que tous les devis soient basés sur la même estimation.",
+          },
+          {
+            name: "Recevez et comparez vos devis",
+            text: "Recevez 5 devis comparables sous 5 à 7 jours, tous basés sur le même dossier. Comparez les prix, les services et choisissez le meilleur déménageur sans pression.",
+          },
+        ]}
+      />
+      {/* BreadcrumbList JSON-LD is injected by the <Breadcrumbs> component below */}
+
+      <div className="bg-[var(--color-bg-dark)]">
         <div className="container max-w-4xl pt-6">
           <Breadcrumbs
             items={[

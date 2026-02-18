@@ -709,10 +709,10 @@ Certaines plateformes affichent "gratuit" mais :
 #### Ce qu'un comparateur vraiment gratuit doit garantir :
 
 - 💯 **Aucun frais pour vous** : Ni inscription, ni abonnement, ni commission cachée
-- 🤝 **Modèle transparent** : Le comparateur est rémunéré par le déménageur choisi (commission sur prestation réalisée), pas par vous
+- 🤝 **Modèle transparent** : Les déménageurs participent gratuitement à la mise en concurrence, vous ne payez que le déménageur choisi
 - 🚫 **Pas de vente de données** : Vos coordonnées ne sont jamais revendues à des tiers
 
-[Moverz](/pourquoi-moverz/) est **100% gratuit** pour les particuliers. Nous sommes rémunérés par une commission de 10% HT sur le déménagement, uniquement si vous choisissez un de nos partenaires et que la prestation est réalisée.
+[Moverz](/pourquoi-moverz/) est **100% gratuit** pour les particuliers. Les déménageurs participent gratuitement à la mise en concurrence. Vous ne payez que le déménageur que vous choisissez, aux conditions indiquées dans son devis.
 
 ---
 

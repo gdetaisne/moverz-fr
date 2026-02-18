@@ -34,7 +34,7 @@ const faqs: FAQItem[] = [
   {
     question: "Le service est-il vraiment gratuit ?",
     answer:
-      "Oui, 100% gratuit pour vous. Aucun frais caché. Nous sommes rémunérés par les déménageurs partenaires uniquement si vous choisissez l'un d'eux.",
+      "Oui, 100% gratuit pour vous. Aucun frais caché. Les déménageurs participent aussi gratuitement à la mise en concurrence.",
   },
 ];
 

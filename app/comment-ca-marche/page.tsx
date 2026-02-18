@@ -38,7 +38,7 @@ export default function CommentCaMarchePage() {
           },
           {
             name: "Recevez et comparez vos devis",
-            text: "Recevez jusqu'à 5 devis comparables sous 5 jours. Tous les déménageurs ont reçu le même dossier : vous comparez sur une base claire, sans surprise. Vous choisissez librement, sans pression.",
+            text: "Recevez 5 devis comparables sous 5 à 7 jours. Tous les déménageurs ont reçu le même dossier : vous comparez sur une base claire, sans surprise. Vous choisissez librement, sans pression.",
           },
         ]}
       />

@@ -11,7 +11,7 @@ import { buildTunnelUrl } from "@/lib/tunnel-url";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { staggerContainer, staggerItem } from "@/components/motion";
-import { ArrowRight, CheckCircle2, Shield, Clock, Ban, Star, Calculator } from "lucide-react";
+import { ArrowRight, CheckCircle2, Shield, Clock, Ban } from "lucide-react";
 import { trackEvent } from "@/lib/tracking";
 
 /* ------------------------------------------------------------------ */
@@ -267,7 +267,6 @@ export function HeroV4() {
   const [loading, setLoading] = useState(false);
   const [redirecting, setRedirecting] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [socialProofCount, setSocialProofCount] = useState(8);
   const hasTrackedTypingStart = useRef(false);
 
   // Progress : 0% → 8% → 17% → 25%
@@ -347,10 +346,6 @@ export function HeroV4() {
     setError(null);
   }, [origin, destination, surface]);
 
-  // Keep hydration deterministic, then randomize after mount for social-proof micro-copy.
-  useEffect(() => {
-    setSocialProofCount(Math.floor(Math.random() * 5) + 6);
-  }, []);
   
   // Funnel tracking détaillé
   useEffect(() => {
@@ -392,7 +387,7 @@ export function HeroV4() {
       />
 
       <div className="container relative">
-        {/* Mobile: titre compact au-dessus du form */}
+        {/* Mobile: titre compact + social proof au-dessus du form */}
         <div className="md:hidden mb-4">
           <h1
             className="font-heading text-[28px] leading-[1.08] font-bold tracking-[-0.025em]"
@@ -402,11 +397,24 @@ export function HeroV4() {
             <span style={{ color: "var(--color-accent)" }}>On compare.</span>
           </h1>
           <p
-            className="text-[15px] mt-2 leading-relaxed"
+            className="text-[14px] mt-2 leading-relaxed"
             style={{ color: "var(--color-text-secondary)" }}
           >
-            Jusqu'à 5 devis comparables · 3 min · 100% gratuit
+            Jusqu'à 5 devis comparables · 100% gratuit
           </p>
+          {/* Social proof mobile */}
+          <div className="flex items-center gap-2 mt-3">
+            <div className="flex -space-x-1.5">
+              {["😊", "👍", "⭐"].map((emoji, i) => (
+                <span key={i} className="inline-flex h-6 w-6 items-center justify-center rounded-full border-2 border-white text-xs" style={{ background: "var(--color-border-light)" }}>
+                  {emoji}
+                </span>
+              ))}
+            </div>
+            <p className="text-[12px] font-medium" style={{ color: "var(--color-text-secondary)" }}>
+              <strong style={{ color: "var(--color-text)" }}>186 dossiers</strong> traités le mois dernier
+            </p>
+          </div>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-16 items-start">
@@ -428,25 +436,19 @@ export function HeroV4() {
                 Jusqu'à 5 devis comparables · Déménageurs vérifiés · 3 min · 100% gratuit
               </p>
               
-              {/* Scarcity Badge - Temps réel */}
-              <motion.div 
-                initial={{ opacity: 0, y: 4 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border"
-                style={{
-                  borderColor: "rgba(251, 191, 36, 0.3)",
-                  background: "rgba(254, 243, 199, 0.5)"
-                }}
-              >
-                <div className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+              {/* Social proof desktop */}
+              <div className="flex items-center gap-3">
+                <div className="flex -space-x-1.5">
+                  {["😊", "👍", "⭐"].map((emoji, i) => (
+                    <span key={i} className="inline-flex h-7 w-7 items-center justify-center rounded-full border-2 border-white text-sm" style={{ background: "var(--color-border-light)" }}>
+                      {emoji}
+                    </span>
+                  ))}
                 </div>
-                <span className="text-xs font-medium text-amber-900">
-                  <strong>{socialProofCount} personnes</strong> comparent en ce moment
-                </span>
-              </motion.div>
+                <p className="text-sm" style={{ color: "var(--color-text-secondary)" }}>
+                  <strong style={{ color: "var(--color-text)" }}>186 dossiers</strong> traités le mois dernier
+                </p>
+              </div>
             </div>
 
             {/* 3 garanties inline — desktop */}
@@ -648,8 +650,8 @@ export function HeroV4() {
                     <button
                       type="submit"
                       disabled={!allFieldsFilled || loading}
-                      className="group w-full inline-flex items-center justify-center gap-2 rounded-[var(--radius-sm)] px-6 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:opacity-90 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
-                      style={{ background: "var(--color-text)" }}
+                      className="group w-full inline-flex items-center justify-center gap-2 rounded-[var(--radius-sm)] px-6 py-3.5 text-[15px] font-semibold text-white transition-all duration-200 hover:opacity-90 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
+                      style={{ background: "var(--color-accent)" }}
                     >
                       {loading ? (
                         <span className="inline-flex items-center gap-2">
@@ -661,27 +663,15 @@ export function HeroV4() {
                         </span>
                       ) : (
                         <>
-                          Voir mon estimation
+                          Obtenir mon prix en 2 min
                           <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
                         </>
                       )}
                     </button>
 
-                    <p className="text-center text-xs" style={{ color: "var(--color-text-muted)" }}>
-                      Gratuit · Sans engagement · 2 minutes
+                    <p className="text-center text-[11px]" style={{ color: "var(--color-text-muted)" }}>
+                      Gratuit · Sans engagement · 100% anonyme
                     </p>
-                    
-                    {/* Micro-conversion link */}
-                    <div className="flex items-center justify-center text-xs pt-2 border-t" style={{ borderColor: "var(--color-border-light)" }}>
-                      <a 
-                        href="/blog/estimer-volume-demenagement-guide-complet/"
-                        className="inline-flex items-center gap-1 font-medium transition-colors hover:underline"
-                        style={{ color: "var(--color-text-secondary)" }}
-                      >
-                        <Calculator className="h-3 w-3" />
-                        Pas sûr de votre surface ?
-                      </a>
-                    </div>
                   </form>
                 </>
               )}

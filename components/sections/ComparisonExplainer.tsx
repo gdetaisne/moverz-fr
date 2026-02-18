@@ -60,69 +60,75 @@ export function ComparisonExplainer() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div
-              className="overflow-hidden rounded-[var(--radius-md)] border"
-              style={{ borderColor: "var(--color-border)", background: "var(--color-surface)" }}
-            >
-              {/* Header */}
+            {/* Scroll hint mobile */}
+            <p className="text-[11px] font-medium mb-2 md:hidden" style={{ color: "var(--color-text-muted)" }}>
+              ← Glissez pour comparer →
+            </p>
+            <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
               <div
-                className="grid grid-cols-4 text-[11px] font-medium uppercase tracking-wider"
-                style={{ color: "var(--color-text-muted)", background: "var(--color-border-light)" }}
+                className="overflow-hidden rounded-[var(--radius-md)] border min-w-[480px]"
+                style={{ borderColor: "var(--color-border)", background: "var(--color-surface)" }}
               >
-                <div className="px-4 py-3">Prestation</div>
-                {quotes.map((q) => (
-                  <div key={q.id} className="px-4 py-3 text-center">{q.providerName}</div>
-                ))}
-              </div>
-
-              {/* Rows */}
-              {["Main d'œuvre", "Transport", "Cartons", "Assurance"].map((label) => (
+                {/* Header */}
                 <div
-                  key={label}
-                  className="grid grid-cols-4 border-t text-sm"
-                  style={{ borderColor: "var(--color-border-light)" }}
+                  className="grid grid-cols-4 text-[11px] font-medium uppercase tracking-wider"
+                  style={{ color: "var(--color-text-muted)", background: "var(--color-border-light)" }}
                 >
-                  <div className="px-4 py-3" style={{ color: "var(--color-text-secondary)" }}>
-                    {label}
-                  </div>
-                  {quotes.map((q) => {
-                    const item = q.lineItems.find((i) =>
-                      i.label.toLowerCase().includes(label.toLowerCase().split(" ")[0])
-                    );
-                    const isInclus = item?.value === "Inclus";
-                    return (
-                      <div
-                        key={q.id}
-                        className="px-4 py-3 text-center tabular-nums"
-                        style={{
-                          color: isInclus ? "var(--color-accent)" : "var(--color-text)",
-                          fontWeight: isInclus ? 600 : 400,
-                        }}
-                      >
-                        {item?.value || "—"}
-                      </div>
-                    );
-                  })}
+                  <div className="px-4 py-3">Prestation</div>
+                  {quotes.map((q) => (
+                    <div key={q.id} className="px-4 py-3 text-center">{q.providerName}</div>
+                  ))}
                 </div>
-              ))}
 
-              {/* Total row */}
-              <div
-                className="grid grid-cols-4 border-t-2 text-sm font-semibold"
-                style={{ borderColor: "var(--color-border)" }}
-              >
-                <div className="px-4 py-3.5" style={{ color: "var(--color-text)" }}>
-                  Total estimé
-                </div>
-                {quotes.map((q, i) => (
+                {/* Rows */}
+                {["Main d'œuvre", "Transport", "Cartons", "Assurance"].map((label) => (
                   <div
-                    key={q.id}
-                    className="px-4 py-3.5 text-center tabular-nums"
-                    style={{ color: i === 0 ? "var(--color-accent)" : "var(--color-text)" }}
+                    key={label}
+                    className="grid grid-cols-4 border-t text-sm"
+                    style={{ borderColor: "var(--color-border-light)" }}
                   >
-                    {q.totalPrice.toLocaleString("fr-FR")} €
+                    <div className="px-4 py-3" style={{ color: "var(--color-text-secondary)" }}>
+                      {label}
+                    </div>
+                    {quotes.map((q) => {
+                      const item = q.lineItems.find((i) =>
+                        i.label.toLowerCase().includes(label.toLowerCase().split(" ")[0])
+                      );
+                      const isInclus = item?.value === "Inclus";
+                      return (
+                        <div
+                          key={q.id}
+                          className="px-4 py-3 text-center tabular-nums"
+                          style={{
+                            color: isInclus ? "var(--color-accent)" : "var(--color-text)",
+                            fontWeight: isInclus ? 600 : 400,
+                          }}
+                        >
+                          {item?.value || "—"}
+                        </div>
+                      );
+                    })}
                   </div>
                 ))}
+
+                {/* Total row */}
+                <div
+                  className="grid grid-cols-4 border-t-2 text-sm font-semibold"
+                  style={{ borderColor: "var(--color-border)" }}
+                >
+                  <div className="px-4 py-3.5" style={{ color: "var(--color-text)" }}>
+                    Total estimé
+                  </div>
+                  {quotes.map((q, i) => (
+                    <div
+                      key={q.id}
+                      className="px-4 py-3.5 text-center tabular-nums"
+                      style={{ color: i === 0 ? "var(--color-accent)" : "var(--color-text)" }}
+                    >
+                      {q.totalPrice.toLocaleString("fr-FR")} €
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </motion.div>

@@ -173,7 +173,7 @@ export function CityFinalCTA({ cityName, quoteUrl }: CityFinalCTAProps) {
                 {/* Footer */}
                 <div className="pt-4 border-t border-[var(--color-border)]">
                   <p className="text-xs text-center text-[var(--color-text-secondary)]">
-                    Gratuit pour vous · Payé par les déménageurs partenaires
+                    Gratuit pour vous · Gratuit pour les déménageurs
                   </p>
                 </div>
               </div>

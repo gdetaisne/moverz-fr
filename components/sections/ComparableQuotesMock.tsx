@@ -165,7 +165,7 @@ export function ComparableQuotesMock() {
                 className="absolute -top-3 -right-3 rounded-full px-3 py-1.5 text-[11px] font-semibold shadow-lg"
                 style={{ background: "white", color: "var(--color-text)" }}
               >
-                3 devis comparables
+                5 devis comparables
               </motion.div>
             </div>
           </motion.div>
@@ -245,11 +245,10 @@ export function ComparableQuotesMock() {
                 className="pt-3 border-t text-xs"
                 style={{ borderColor: "var(--color-border-light)", color: "var(--color-text-muted)" }}
               >
-                <strong>Objectif :</strong> au moins 3 devis{" "}
+                <strong>Objectif :</strong> 5 devis comparables{" "}
                 <span className="font-semibold" style={{ color: "var(--color-text)" }}>
-                  rapidement
-                </span>{" "}
-                (sous 5 jours, selon disponibilité).{" "}
+                  sous 5 à 7 jours
+                </span>.{" "}
                 <a href="/pourquoi-moverz/" className="underline hover:no-underline">
                   Voir nos critères de sélection →
                 </a>
