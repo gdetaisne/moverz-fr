@@ -83,7 +83,7 @@ export function ComparisonPreview({ data, className }: ComparisonPreviewProps) {
       fromCity: data.fromCity,
       toCity: data.toCity,
       areaM2: data.areaM2,
-    });
+    }).filter((q) => q.recommended);
   }, [data.fromCity, data.toCity, data.areaM2]);
 
   const hasData = data.fromCity || data.toCity || data.areaM2;

@@ -17,7 +17,7 @@
 import { HeroV4 } from "@/components/sections/HeroV4";
 import { TrustBadgeMinimal } from "@/components/sections/TrustBadgeMinimal";
 import { ComparableQuotesMock } from "@/components/sections/ComparableQuotesMock";
-import { ComparisonExplainer } from "@/components/sections/ComparisonExplainer";
+import { WhyMoverz } from "@/components/sections/WhyMoverz";
 import { CreditsafeChapter } from "@/components/sections/CreditsafeChapter";
 import { TestimonialV4 } from "@/components/sections/TestimonialV4";
 import { FAQV4 } from "@/components/sections/FAQV4";
@@ -33,7 +33,7 @@ export default function Home() {
       <HeroV4 />
       <TrustBadgeMinimal />
       <ComparableQuotesMock />
-      <ComparisonExplainer />
+      <WhyMoverz />
       <CreditsafeChapter />
       <TestimonialV4 />
       <FAQV4 />

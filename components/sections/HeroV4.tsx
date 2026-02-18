@@ -412,7 +412,7 @@ export function HeroV4() {
               ))}
             </div>
             <p className="text-[12px] font-medium" style={{ color: "var(--color-text-secondary)" }}>
-              <strong style={{ color: "var(--color-text)" }}>186 dossiers</strong> traités le mois dernier
+              <strong style={{ color: "var(--color-text)" }}>186 dossiers</strong> traités en {new Date(Date.now() - 30 * 86400000).toLocaleDateString("fr-FR", { month: "long", year: "numeric" })}
             </p>
           </div>
         </div>
@@ -446,7 +446,7 @@ export function HeroV4() {
                   ))}
                 </div>
                 <p className="text-sm" style={{ color: "var(--color-text-secondary)" }}>
-                  <strong style={{ color: "var(--color-text)" }}>186 dossiers</strong> traités le mois dernier
+                  <strong style={{ color: "var(--color-text)" }}>186 dossiers</strong> traités en {new Date(Date.now() - 30 * 86400000).toLocaleDateString("fr-FR", { month: "long", year: "numeric" })}
                 </p>
               </div>
             </div>

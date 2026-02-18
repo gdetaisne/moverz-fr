@@ -1,177 +1,160 @@
 "use client";
 
-/**
- * V4 — Section "Des devis détaillés et comparables"
- * Mockup device + liste devis + contenu structuré
- * Design premium inspiré de l'image fournie
- */
-
-import { motion } from "framer-motion";
-import { Star, CheckCircle2, Clock, Shield, FileText, Phone } from "lucide-react";
+import { useMemo, useState, useEffect, useCallback, useRef } from "react";
+import { motion, AnimatePresence, PanInfo, useInView } from "framer-motion";
+import { Phone, ChevronLeft, ChevronRight, Check } from "lucide-react";
 import { staggerContainer, staggerItem } from "@/components/motion";
+import { computeMockQuotes } from "@/lib/utils/mockQuotes";
+import { MoverCard } from "@/components/premium/MoverCard";
 
-const mockQuotes = [
-  {
-    name: "Déménagements Martin",
-    price: "1 850",
-    rating: 4.9,
-    reviews: 487,
-    features: ["Assurance tous risques incluse", "Disponible le 15 mars"],
-  },
-  {
-    name: "Express Déménagement",
-    price: "1 950",
-    rating: 4.5,
-    reviews: 312,
-    features: ["Protection standard incluse", "Disponible le 12 mars"],
-  },
-  {
-    name: "Lyon Trans Services",
-    price: "2 100",
-    rating: 4.8,
-    reviews: 653,
-    features: ["Assurance premium incluse", "Disponible le 10 mars"],
-  },
+const steps = [
+  "Nous analysons votre dossier",
+  "Nous mettons le marché en concurrence",
+  "Nous éliminons les offres à risque",
+  "Nous retenons les meilleures",
+  "Vous choisissez en toute confiance",
 ];
 
-const guarantees = [
-  {
-    icon: CheckCircle2,
-    title: "Même volume, même accès",
-    description: "Tous les déménageurs estiment sur la base des mêmes informations.",
-  },
-  {
-    icon: Shield,
-    title: "Pros évalués sur 3 risques /100",
-    description: "Analyse financière, juridique et avis clients. Alertes = exclusion automatique.",
-  },
-  {
-    icon: FileText,
-    title: "des devis comparables",
-    description: "Vous comparez prix, options et conditions sur un format standardisé.",
-  },
-];
+const AUTO_PLAY_MS = 4000;
+const STEP_DELAY_MS = 800;
 
-const selectedProviders = [
-  "3 scores /100 vérifiés : financier (Creditsafe + Pappers), juridique (Pappers Décisions), avis Google",
-  "Alertes cash ou juridiques = exclusion automatique",
-  "Licences, assurances RC Pro et marchandises à jour",
-  "Engagés contractuellement sur la transparence (devis clairs, délais respectés)",
-];
+function AnimatedStepper({ steps: stepTexts }: { steps: string[] }) {
+  const ref = useRef<HTMLOListElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.4 });
+  const [activeStep, setActiveStep] = useState(-1);
+
+  useEffect(() => {
+    if (!isInView) return;
+    const timers: ReturnType<typeof setTimeout>[] = [];
+    stepTexts.forEach((_, i) => {
+      timers.push(setTimeout(() => setActiveStep(i), (i + 1) * STEP_DELAY_MS));
+    });
+    return () => timers.forEach(clearTimeout);
+  }, [isInView, stepTexts]);
+
+  return (
+    <ol ref={ref} className="relative space-y-0">
+      {/* Vertical line */}
+      <div
+        className="absolute left-[11px] top-3 bottom-3 w-px"
+        style={{ background: "var(--color-border)" }}
+      >
+        <motion.div
+          className="w-full rounded-full"
+          style={{ backgroundColor: "var(--color-accent)", originY: 0 }}
+          initial={{ height: 0 }}
+          animate={{ height: isInView ? `${(activeStep / (stepTexts.length - 1)) * 100}%` : 0 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+        />
+      </div>
+
+      {stepTexts.map((text, i) => {
+        const done = i <= activeStep;
+        return (
+          <li key={i} className="relative flex items-start gap-3 pb-5 last:pb-0">
+            {/* Circle */}
+            <div
+              className="relative z-10 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 transition-all duration-300"
+              style={{
+                borderColor: done ? "var(--color-accent)" : "var(--color-border)",
+                background: done ? "var(--color-accent)" : "var(--color-surface)",
+              }}
+            >
+              <AnimatePresence mode="wait">
+                {done ? (
+                  <motion.div
+                    key="check"
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  >
+                    <Check className="h-3 w-3 text-white" strokeWidth={3} />
+                  </motion.div>
+                ) : (
+                  <motion.span
+                    key="num"
+                    className="text-[10px] font-bold tabular-nums"
+                    style={{ color: "var(--color-text-muted)" }}
+                  >
+                    {i + 1}
+                  </motion.span>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Text */}
+            <motion.span
+              className="text-sm leading-relaxed pt-0.5 transition-colors duration-300"
+              style={{
+                color: done ? "var(--color-text)" : "var(--color-text-muted)",
+                fontWeight: done ? 500 : 400,
+              }}
+            >
+              {text}
+            </motion.span>
+          </li>
+        );
+      })}
+    </ol>
+  );
+}
 
 export function ComparableQuotesMock() {
+  const quotes = useMemo(
+    () => computeMockQuotes({ fromCity: "Paris", toCity: "Lyon", areaM2: 60 }),
+    []
+  );
+
+  const recommended = quotes.filter((q) => q.recommended);
+  const [showAll, setShowAll] = useState(false);
+  const visibleQuotes = showAll ? quotes : recommended;
+  const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(1);
+  const [paused, setPaused] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const safeIndex = current >= visibleQuotes.length ? 0 : current;
+
+  const goTo = useCallback(
+    (next: number) => {
+      const target = ((next % visibleQuotes.length) + visibleQuotes.length) % visibleQuotes.length;
+      setDirection(next > current ? 1 : -1);
+      setCurrent(target);
+    },
+    [current, visibleQuotes.length]
+  );
+
+  const next = useCallback(() => goTo(current + 1), [current, goTo]);
+  const prev = useCallback(() => goTo(current - 1), [current, goTo]);
+
+  useEffect(() => {
+    if (paused) return;
+    timerRef.current = setTimeout(next, AUTO_PLAY_MS);
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, [safeIndex, paused, next]);
+
+  useEffect(() => {
+    setCurrent(0);
+  }, [showAll]);
+
+  const handleDragEnd = (_: unknown, info: PanInfo) => {
+    if (info.offset.x < -50) next();
+    else if (info.offset.x > 50) prev();
+  };
+
+  const slideVariants = {
+    enter: (d: number) => ({ x: d > 0 ? 280 : -280, opacity: 0 }),
+    center: { x: 0, opacity: 1 },
+    exit: (d: number) => ({ x: d > 0 ? -280 : 280, opacity: 0 }),
+  };
+
   return (
     <section className="py-12 md:py-28" style={{ background: "var(--color-surface)" }}>
       <div className="container">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-          {/* LEFT — Device mockup */}
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="flex justify-center lg:justify-start"
-          >
-            <div className="relative w-full max-w-[340px]">
-              {/* Device frame */}
-              <div
-                className="relative rounded-[32px] border-[8px] p-4 overflow-hidden"
-                style={{
-                  borderColor: "#1F2937",
-                  background: "linear-gradient(135deg, #1F2937 0%, #111827 100%)",
-                  boxShadow: "0 20px 60px rgba(0,0,0,0.3)",
-                }}
-              >
-                {/* Header */}
-                <div
-                  className="rounded-t-[20px] px-4 py-3 mb-3"
-                  style={{ background: "#0F172A" }}
-                >
-                  <p className="text-[10px] font-semibold text-white/40 mb-1">Vos devis</p>
-                  <div className="space-y-0.5">
-                    <p className="text-sm font-bold text-white">Paris → Lyon</p>
-                    <p className="text-[11px] text-white/50">
-                      T3 • 60m² • 3ᵉ étage avec ascenseur
-                    </p>
-                  </div>
-                </div>
-
-                {/* Quotes list */}
-                <div className="space-y-2.5">
-                  {mockQuotes.map((quote, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, y: 8 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: 0.1 + i * 0.08 }}
-                      className="rounded-xl border p-3.5"
-                      style={{
-                        borderColor: i === 0 ? "#0EA5A6" : "rgba(255,255,255,0.08)",
-                        background: i === 0 ? "rgba(14,165,166,0.05)" : "rgba(255,255,255,0.03)",
-                      }}
-                    >
-                      <div className="flex items-start justify-between mb-2">
-                        <div className="flex-1">
-                          <p className="text-sm font-semibold text-white mb-1">{quote.name}</p>
-                          <div className="flex items-center gap-1">
-                            {[...Array(5)].map((_, j) => (
-                              <Star
-                                key={j}
-                                className="h-2.5 w-2.5"
-                                fill={j < Math.floor(quote.rating) ? "#FCD34D" : "none"}
-                                stroke={j < Math.floor(quote.rating) ? "#FCD34D" : "#4B5563"}
-                                strokeWidth={2}
-                              />
-                            ))}
-                            <span className="text-[10px] text-white/40 ml-1">
-                              ({quote.reviews} avis)
-                            </span>
-                          </div>
-                        </div>
-                        <div className="text-right">
-                          <p
-                            className="text-lg font-bold tabular-nums"
-                            style={{ color: i === 0 ? "#0EA5A6" : "white" }}
-                          >
-                            {quote.price}€
-                          </p>
-                          <p className="text-[9px] text-white/30">TTC</p>
-                        </div>
-                      </div>
-                      <div className="space-y-1">
-                        {quote.features.map((feature, j) => (
-                          <div key={j} className="flex items-center gap-1.5">
-                            <CheckCircle2 className="h-2.5 w-2.5 text-emerald-400 shrink-0" />
-                            <span className="text-[10px] text-white/60">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-
-                {/* Footer */}
-                <p className="text-center text-[10px] text-white/30 mt-3">
-                  + 2 autres devis disponibles
-                </p>
-              </div>
-
-              {/* Floating badge */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.3 }}
-                className="absolute -top-3 -right-3 rounded-full px-3 py-1.5 text-[11px] font-semibold shadow-lg"
-                style={{ background: "white", color: "var(--color-text)" }}
-              >
-                5 devis comparables
-              </motion.div>
-            </div>
-          </motion.div>
-
-          {/* RIGHT — Contenu */}
+          {/* LEFT — Content (steps first) */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -191,107 +174,162 @@ export function ComparableQuotesMock() {
                 className="font-heading text-[clamp(28px,5vw,42px)] font-bold tracking-[-0.02em] leading-[1.1]"
                 style={{ color: "var(--color-text)" }}
               >
-                Des devis détaillés{" "}
-                <span style={{ color: "var(--color-accent)" }}>et comparables</span>
+                Nous avons mis le marché en concurrence{" "}
+                <span style={{ color: "var(--color-accent)" }}>pour votre dossier.</span>
               </h2>
               <p
                 className="text-base leading-relaxed max-w-lg"
                 style={{ color: "var(--color-text-secondary)" }}
               >
-                Grâce aux infos que vous partagez, chaque déménageur reçoit{" "}
-                <span className="font-semibold" style={{ color: "var(--color-text)" }}>
-                  exactement les mêmes informations
-                </span>
-                .
+                Seules les entreprises fiables, disponibles à vos dates et cohérentes en prix vous sont présentées.
               </p>
             </motion.div>
 
-            {/* Card "Déménageurs sélectionnés" */}
-            <motion.div
-              variants={staggerItem}
-              className="rounded-[var(--radius-md)] border p-5"
-              style={{
-                borderColor: "var(--color-border)",
-                background: "var(--color-bg)",
-                boxShadow: "var(--shadow-xs)",
-              }}
-            >
-              <div className="flex items-start gap-3 mb-3">
-                <div
-                  className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg"
-                  style={{ background: "rgba(14,165,166,0.08)" }}
-                >
-                  <Shield className="h-4 w-4" style={{ color: "var(--color-accent)" }} />
-                </div>
-                <div>
-                  <p className="text-sm font-semibold mb-1" style={{ color: "var(--color-text)" }}>
-                    Déménageurs sélectionnés
-                  </p>
-                  <ul className="space-y-1.5">
-                    {selectedProviders.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <span
-                          className="inline-block w-1 h-1 rounded-full mt-1.5 shrink-0"
-                          style={{ background: "var(--color-accent)" }}
-                        />
-                        <span className="text-xs leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
-                          {item}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <div
-                className="pt-3 border-t text-xs"
-                style={{ borderColor: "var(--color-border-light)", color: "var(--color-text-muted)" }}
+            {/* Steps — animated stepper */}
+            <motion.div variants={staggerItem}>
+              <h3
+                className="text-sm font-semibold uppercase tracking-wide mb-5"
+                style={{ color: "var(--color-text-muted)" }}
               >
-                <strong>Objectif :</strong> 5 devis comparables{" "}
-                <span className="font-semibold" style={{ color: "var(--color-text)" }}>
-                  sous 5 à 7 jours
-                </span>.{" "}
-                <a href="/pourquoi-moverz/" className="underline hover:no-underline">
-                  Voir nos critères de sélection →
-                </a>
+                Comment ça fonctionne
+              </h3>
+              <AnimatedStepper steps={steps} />
+            </motion.div>
+
+            {/* Toggle + phone callout */}
+            <motion.div variants={staggerItem} className="space-y-4">
+              <button
+                onClick={() => setShowAll(!showAll)}
+                className="text-sm font-medium transition-colors"
+                style={{ color: "var(--color-accent)" }}
+              >
+                {showAll
+                  ? "Voir uniquement les offres retenues"
+                  : `Voir toutes les offres reçues (${quotes.length})`}
+              </button>
+
+              <div className="flex items-center gap-2 text-sm" style={{ color: "var(--color-text-muted)" }}>
+                <Phone className="h-3.5 w-3.5 shrink-0" />
+                Votre téléphone reste masqué jusqu&apos;à ce que vous choisissiez un déménageur.
               </div>
             </motion.div>
+          </motion.div>
 
-            {/* Guarantees */}
-            <div className="space-y-4">
-              {guarantees.map(({ icon: Icon, title, description }, i) => (
-                <motion.div key={i} variants={staggerItem} className="flex items-start gap-3">
-                  <div
-                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg"
-                    style={{ background: "rgba(14,165,166,0.05)" }}
-                  >
-                    <Icon className="h-4 w-4" style={{ color: "var(--color-accent)" }} />
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold mb-1" style={{ color: "var(--color-text)" }}>
-                      {title}
-                    </p>
-                    <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
-                      {description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Phone masqué callout */}
-            <motion.div
-              variants={staggerItem}
-              className="flex items-start gap-3 rounded-[var(--radius-md)] border p-4"
-              style={{
-                borderColor: "var(--color-border-light)",
-                background: "var(--color-bg)",
-              }}
+          {/* RIGHT — Phone mockup with carousel */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            className="flex justify-center"
+          >
+            <div
+              className="relative w-full max-w-[320px]"
+              onMouseEnter={() => setPaused(true)}
+              onMouseLeave={() => setPaused(false)}
+              onTouchStart={() => setPaused(true)}
+              onTouchEnd={() => setPaused(false)}
             >
-              <Phone className="h-4 w-4 mt-0.5 shrink-0" style={{ color: "var(--color-text-muted)" }} />
-              <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-muted)" }}>
-                Votre téléphone reste masqué jusqu'à ce que vous choisissiez un déménageur.
-              </p>
-            </motion.div>
+              {/* Device frame */}
+              <div
+                className="relative rounded-[40px] border-[6px] px-3 pt-10 pb-5 overflow-hidden"
+                style={{
+                  borderColor: "#1F2937",
+                  background: "#F9FAFB",
+                  boxShadow: "0 20px 60px rgba(0,0,0,0.15)",
+                }}
+              >
+                {/* Notch */}
+                <div
+                  className="absolute top-0 left-1/2 -translate-x-1/2 h-6 w-28 rounded-b-2xl"
+                  style={{ background: "#1F2937" }}
+                />
+
+                {/* Header inside phone */}
+                <div className="mb-3 px-1">
+                  <p className="text-xs font-medium" style={{ color: "var(--color-text-secondary)" }}>
+                    Offres retenues pour votre dossier
+                  </p>
+                  <p className="text-[11px]" style={{ color: "var(--color-text-muted)" }}>
+                    {safeIndex + 1}/{visibleQuotes.length}
+                  </p>
+                </div>
+
+                {/* Carousel */}
+                <div className="relative h-[480px]">
+                  <AnimatePresence initial={false} custom={direction} mode="popLayout">
+                    <motion.div
+                      key={visibleQuotes[safeIndex]?.id}
+                      custom={direction}
+                      variants={slideVariants}
+                      initial="enter"
+                      animate="center"
+                      exit="exit"
+                      transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                      drag="x"
+                      dragConstraints={{ left: 0, right: 0 }}
+                      dragElastic={0.15}
+                      onDragEnd={handleDragEnd}
+                      className="absolute inset-0 flex items-start justify-center cursor-grab active:cursor-grabbing"
+                    >
+                      <MoverCard
+                        quote={visibleQuotes[safeIndex]}
+                        isFirst={visibleQuotes[safeIndex]?.recommended && safeIndex === 0 && !showAll}
+                      />
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
+
+                {/* Navigation arrows */}
+                <div className="flex items-center justify-between mt-3 px-1">
+                  <button
+                    onClick={prev}
+                    className="flex h-8 w-8 items-center justify-center rounded-full transition-colors"
+                    style={{ background: "var(--color-border-light)" }}
+                    aria-label="Précédent"
+                  >
+                    <ChevronLeft className="h-4 w-4" style={{ color: "var(--color-text-secondary)" }} />
+                  </button>
+
+                  {/* Dots */}
+                  <div className="flex gap-1.5">
+                    {visibleQuotes.map((_, i) => (
+                      <button
+                        key={i}
+                        onClick={() => goTo(i)}
+                        className="h-2 rounded-full transition-all"
+                        style={{
+                          width: i === safeIndex ? 16 : 8,
+                          backgroundColor: i === safeIndex ? "var(--color-accent)" : "var(--color-border)",
+                        }}
+                        aria-label={`Offre ${i + 1}`}
+                      />
+                    ))}
+                  </div>
+
+                  <button
+                    onClick={next}
+                    className="flex h-8 w-8 items-center justify-center rounded-full transition-colors"
+                    style={{ background: "var(--color-border-light)" }}
+                    aria-label="Suivant"
+                  >
+                    <ChevronRight className="h-4 w-4" style={{ color: "var(--color-text-secondary)" }} />
+                  </button>
+                </div>
+              </div>
+
+              {/* Floating badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.3 }}
+                className="absolute -top-3 -right-3 rounded-full px-3 py-1.5 text-[11px] font-semibold shadow-lg"
+                style={{ background: "white", color: "var(--color-text)" }}
+              >
+                {recommended.length} offres retenues sur 7 réponses reçues
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>
