@@ -286,7 +286,7 @@ export default function BlogPostPage({ params }: PageProps) {
 
   return (
     <main className="bg-hero min-h-screen">
-      <BlogFloatingCTA />
+      {/* BlogFloatingCTA retiré */}
       {faqItems?.length ? <FAQSchema faqs={faqItems} /> : null}
       {howToData ? (
         <HowToSchema

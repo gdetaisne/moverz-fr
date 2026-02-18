@@ -47,7 +47,7 @@ const footerSections = [
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-[#070A12] text-white">
+    <footer className="relative overflow-hidden border-t border-white/10 text-white" style={{ background: "#070A12" }}>
       {/* Subtle noise texture (CSS) */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.06]"

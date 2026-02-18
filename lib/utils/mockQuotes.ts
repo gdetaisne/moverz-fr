@@ -10,10 +10,11 @@ export interface QuoteLineItem {
 }
 
 export interface MoverScores {
-  financier: number;
-  juridique: number;
-  google: number;
-  reputation: number;
+  /** Solidité de l'entreprise (financier + juridique) */
+  solidite: number;
+  /** Expérience client vérifiée (Google + réputation) */
+  experience: number;
+  /** Vigilance & signaux d'alerte */
   vigilance: number;
 }
 
@@ -23,21 +24,13 @@ export interface MockQuote {
   totalPrice: number;
   badge?: "best" | "verified";
   lineItems: QuoteLineItem[];
-  /** Score global Moverz /100 */
   scoreMoverz: number;
-  /** Label du score ("Excellent", "Très bon", "Fragile") */
   scoreLabel: string;
-  /** Détail des scores par critère */
   scores: MoverScores;
-  /** Note Google étoiles (ex: 4.1) */
   starRating: number;
-  /** Nombre d'avis vérifiés */
   reviewCount: number;
-  /** Ancienneté en années */
   yearsInBusiness: number;
-  /** Site internet disponible */
   hasWebsite: boolean;
-  /** Recommandé par Moverz */
   recommended: boolean;
 }
 
@@ -55,13 +48,13 @@ function getScoreLabel(score: number, recommended: boolean): string {
 }
 
 /**
- * Génère 5 devis simulés classés par recommandation (gauche = meilleur).
+ * 5 devis simulés classés par recommandation (gauche = meilleur).
  *
- * 1. Déménageur A — 1 340 €, Excellent, meilleur score global
- * 2. Déménageur B — 1 540 €, Excellent, très bon aussi
- * 3. Déménageur C — 1 210 €, Moyen, scores moyens
- * 4. Déménageur D —   990 €, Non recommandé (Juridique 0/100)
- * 5. Déménageur E — 1 250 €, Non recommandé (Financier très bas)
+ * 1. Déménageur A — 1 340 €, Excellent
+ * 2. Déménageur B — 1 540 €, Excellent
+ * 3. Déménageur C — 1 210 €, Moyen (vigilance faible)
+ * 4. Déménageur D —   990 €, Non recommandé (solidité 0)
+ * 5. Déménageur E — 1 250 €, Non recommandé (solidité très basse)
  */
 export function computeMockQuotes(_input: ComputeMockQuotesInput): MockQuote[] {
   const providers: MockQuote[] = [
@@ -72,7 +65,7 @@ export function computeMockQuotes(_input: ComputeMockQuotesInput): MockQuote[] {
       badge: "best",
       scoreMoverz: 92,
       scoreLabel: "",
-      scores: { financier: 85, juridique: 100, google: 95, reputation: 90, vigilance: 92 },
+      scores: { solidite: 90, experience: 95, vigilance: 92 },
       starRating: 4.8,
       reviewCount: 234,
       yearsInBusiness: 12,
@@ -92,7 +85,7 @@ export function computeMockQuotes(_input: ComputeMockQuotesInput): MockQuote[] {
       badge: undefined,
       scoreMoverz: 88,
       scoreLabel: "",
-      scores: { financier: 80, juridique: 95, google: 90, reputation: 88, vigilance: 85 },
+      scores: { solidite: 85, experience: 90, vigilance: 88 },
       starRating: 4.7,
       reviewCount: 189,
       yearsInBusiness: 9,
@@ -112,7 +105,7 @@ export function computeMockQuotes(_input: ComputeMockQuotesInput): MockQuote[] {
       badge: undefined,
       scoreMoverz: 58,
       scoreLabel: "",
-      scores: { financier: 75, juridique: 80, google: 72, reputation: 70, vigilance: 35 },
+      scores: { solidite: 78, experience: 72, vigilance: 35 },
       starRating: 4.2,
       reviewCount: 45,
       yearsInBusiness: 5,
@@ -132,7 +125,7 @@ export function computeMockQuotes(_input: ComputeMockQuotesInput): MockQuote[] {
       badge: undefined,
       scoreMoverz: 35,
       scoreLabel: "",
-      scores: { financier: 60, juridique: 0, google: 70, reputation: 65, vigilance: 40 },
+      scores: { solidite: 0, experience: 70, vigilance: 40 },
       starRating: 4.1,
       reviewCount: 18,
       yearsInBusiness: 3,
@@ -152,7 +145,7 @@ export function computeMockQuotes(_input: ComputeMockQuotesInput): MockQuote[] {
       badge: undefined,
       scoreMoverz: 47,
       scoreLabel: "",
-      scores: { financier: 15, juridique: 95, google: 98, reputation: 92, vigilance: 30 },
+      scores: { solidite: 15, experience: 95, vigilance: 30 },
       starRating: 4.9,
       reviewCount: 156,
       yearsInBusiness: 8,

@@ -14,10 +14,8 @@ interface MoverCardProps {
 
 export function MoverCard({ quote, isFirst = false, selected = false, onSelect }: MoverCardProps) {
   const scoreEntries: { label: string; key: keyof typeof quote.scores }[] = [
-    { label: "Financier", key: "financier" },
-    { label: "Juridique", key: "juridique" },
-    { label: "Google", key: "google" },
-    { label: "Réputation", key: "reputation" },
+    { label: "Solidité", key: "solidite" },
+    { label: "Expérience", key: "experience" },
     { label: "Vigilance", key: "vigilance" },
   ];
 

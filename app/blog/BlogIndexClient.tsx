@@ -6,7 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { PUBLISHED_BLOG_POSTS } from "@/lib/blog";
 import { LONGTAIL_LINKS } from "@/lib/blog-longtail-links";
 import { BookOpen, Clock, TrendingUp, Filter, ArrowRight } from "lucide-react";
-import BlogFloatingCTA from "@/components/blog/BlogFloatingCTA";
+// import BlogFloatingCTA from "@/components/blog/BlogFloatingCTA";
 
 const ITEMS_PER_PAGE = 12;
 
@@ -112,7 +112,6 @@ export default function BlogIndexClient() {
 
   return (
     <main className="min-h-screen bg-white">
-      <BlogFloatingCTA />
       {/* Hero Premium */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white">
         {/* Animated background */}

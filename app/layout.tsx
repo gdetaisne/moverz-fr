@@ -256,10 +256,10 @@ export default function RootLayout({
 
         <main>{children}</main>
 
-        {/* ===== FOOTER V4 — Sobre, clair, pas de doublon dark ===== */}
+        {/* ===== FOOTER V4 ===== */}
         <footer
-          className="border-t"
-          style={{ background: "var(--color-bg)", borderColor: "var(--color-border)" }}
+          className="border-t border-white/10"
+          style={{ background: "#0B0F14" }}
         >
           <div className="mx-auto max-w-[1200px] px-5 md:px-6 lg:px-8 py-10 md:py-14">
             <div className="grid grid-cols-2 gap-6 md:grid-cols-5 md:gap-6 mb-10">

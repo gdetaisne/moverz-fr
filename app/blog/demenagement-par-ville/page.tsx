@@ -3,7 +3,7 @@ import { PUBLISHED_BLOG_POSTS } from "@/lib/blog";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import PageHero from "@/components/PageHero";
 import { getCityBySlug } from "@/lib/cities";
-import BlogFloatingCTA from "@/components/blog/BlogFloatingCTA";
+// import BlogFloatingCTA from "@/components/blog/BlogFloatingCTA";
 import { buildTunnelUrl } from "@/lib/tunnel-url";
 
 const CATEGORY = "demenagement-par-ville";
@@ -50,7 +50,6 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
 
   return (
     <main className="bg-hero min-h-screen">
-      <BlogFloatingCTA />
       <div className="halo" />
 
       <PageHero

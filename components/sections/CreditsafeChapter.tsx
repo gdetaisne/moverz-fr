@@ -1,23 +1,190 @@
 "use client";
 
-/**
- * V4 — Chapitre Dark unique : Vérification Creditsafe
- * Fond #0B0F14, élégant, pas galaxie.
- * Contient : titre + sous-texte + product card (explication + mockup Creditsafe)
- *            + 2 cards "Dossier standardisé" / "Suivi simple"
- * Design system V4 strict.
- */
-
-import { motion } from "framer-motion";
-import { Shield, FileCheck, Building2, Scale, ClipboardCheck, BarChart3, Star, Gavel } from "lucide-react";
+import { useRef, useState, useEffect } from "react";
+import { motion, useInView } from "framer-motion";
+import { Shield, Star, AlertTriangle, Building2, Gavel, MessageSquare, Eye, Lock } from "lucide-react";
 import { staggerContainer, staggerItem } from "@/components/motion";
 
-const checks = [
-  { icon: Star, label: "Expérience client : 20 derniers avis Google analysés" },
-  { icon: Building2, label: "Risque financier : Creditsafe + Pappers + ratio cash/dettes" },
-  { icon: Gavel, label: "Risque juridique : décisions de justice via Pappers" },
-  { icon: Shield, label: "Assurance RC Pro + licence de transport vérifiées" },
+interface Axis {
+  icon: typeof Shield;
+  title: string;
+  subtitle: string;
+  score: number;
+  sources: string[];
+  verdict: string;
+}
+
+const axes: Axis[] = [
+  {
+    icon: Building2,
+    title: "Solidité de l\u2019entreprise",
+    subtitle: "Cette entreprise est-elle fiable financièrement et juridiquement\u00a0?",
+    score: 78,
+    sources: ["Creditsafe", "Pappers", "Tribunaux de commerce"],
+    verdict: "Aucune alerte financière ou juridique détectée",
+  },
+  {
+    icon: MessageSquare,
+    title: "Expérience client vérifiée",
+    subtitle: "Que disent les vrais clients\u00a0?",
+    score: 91,
+    sources: ["Avis Google", "Analyse IA du contenu des avis"],
+    verdict: "Avis majoritairement positifs, service fiable",
+  },
+  {
+    icon: Eye,
+    title: "Vigilance & signaux d\u2019alerte",
+    subtitle: "Y a-t-il des raisons de s\u2019inquiéter\u00a0?",
+    score: 70,
+    sources: ["Avis négatifs analysés", "Patterns détectés"],
+    verdict: "Quelques réserves mineures, globalement fiable",
+  },
 ];
+
+const trustPoints = [
+  { icon: Lock, text: "Score automatique, impossible à modifier par le déménageur" },
+  { icon: Shield, text: "Multi-sources officielles : pas seulement les avis Google" },
+  { icon: AlertTriangle, text: "En dessous du seuil, le déménageur est exclu — pas juste mal noté" },
+];
+
+function getScoreColor(score: number): string {
+  if (score >= 80) return "#0EA5A6";
+  if (score >= 60) return "#F59E0B";
+  return "#EF4444";
+}
+
+function getScoreLabel(score: number): string {
+  if (score >= 80) return "Excellent";
+  if (score >= 60) return "Bon";
+  return "À risque";
+}
+
+function AnimatedScore({ score, delay = 0 }: { score: number; delay?: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const [displayed, setDisplayed] = useState(0);
+
+  useEffect(() => {
+    if (!isInView) return;
+    const timeout = setTimeout(() => {
+      let start = 0;
+      const duration = 800;
+      const startTime = performance.now();
+      const animate = (now: number) => {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        start = Math.round(eased * score);
+        setDisplayed(start);
+        if (progress < 1) requestAnimationFrame(animate);
+      };
+      requestAnimationFrame(animate);
+    }, delay);
+    return () => clearTimeout(timeout);
+  }, [isInView, score, delay]);
+
+  const color = getScoreColor(score);
+  const size = 80;
+  const strokeWidth = 6;
+  const radius = (size - strokeWidth) / 2;
+  const circumference = 2 * Math.PI * radius;
+  const progress = (displayed / 100) * circumference;
+
+  return (
+    <div ref={ref} className="relative" style={{ width: size, height: size }}>
+      <svg width={size} height={size} className="-rotate-90">
+        <circle
+          cx={size / 2}
+          cy={size / 2}
+          r={radius}
+          fill="none"
+          stroke="rgba(255,255,255,0.08)"
+          strokeWidth={strokeWidth}
+        />
+        <circle
+          cx={size / 2}
+          cy={size / 2}
+          r={radius}
+          fill="none"
+          stroke={color}
+          strokeWidth={strokeWidth}
+          strokeDasharray={circumference}
+          strokeDashoffset={circumference - progress}
+          strokeLinecap="round"
+          className="transition-all"
+        />
+      </svg>
+      <div className="absolute inset-0 flex flex-col items-center justify-center">
+        <span className="text-xl font-bold text-white tabular-nums">{displayed}</span>
+      </div>
+    </div>
+  );
+}
+
+function GlobalScore() {
+  const avg = Math.round(axes.reduce((s, a) => s + a.score, 0) / axes.length);
+  const color = getScoreColor(avg);
+  const label = getScoreLabel(avg);
+
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const [displayed, setDisplayed] = useState(0);
+
+  useEffect(() => {
+    if (!isInView) return;
+    const duration = 1000;
+    const startTime = performance.now();
+    const animate = (now: number) => {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setDisplayed(Math.round(eased * avg));
+      if (progress < 1) requestAnimationFrame(animate);
+    };
+    requestAnimationFrame(animate);
+  }, [isInView, avg]);
+
+  const size = 120;
+  const strokeWidth = 8;
+  const radius = (size - strokeWidth) / 2;
+  const circumference = 2 * Math.PI * radius;
+  const progress = (displayed / 100) * circumference;
+
+  return (
+    <div ref={ref} className="flex items-center gap-5">
+      <div className="relative" style={{ width: size, height: size }}>
+        <svg width={size} height={size} className="-rotate-90">
+          <circle
+            cx={size / 2}
+            cy={size / 2}
+            r={radius}
+            fill="none"
+            stroke="rgba(255,255,255,0.08)"
+            strokeWidth={strokeWidth}
+          />
+          <circle
+            cx={size / 2}
+            cy={size / 2}
+            r={radius}
+            fill="none"
+            stroke={color}
+            strokeWidth={strokeWidth}
+            strokeDasharray={circumference}
+            strokeDashoffset={circumference - progress}
+            strokeLinecap="round"
+          />
+        </svg>
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <span className="text-3xl font-bold text-white tabular-nums">{displayed}</span>
+          <span className="text-[10px] text-white/40">/100</span>
+        </div>
+      </div>
+      <div>
+        <p className="text-lg font-bold text-white">Score Global Moverz</p>
+        <p className="text-sm font-semibold" style={{ color }}>{label}</p>
+        <p className="text-xs text-white/40 mt-1">DéménagePro SAS — exemple</p>
+      </div>
+    </div>
+  );
+}
 
 export function CreditsafeChapter() {
   return (
@@ -25,7 +192,6 @@ export function CreditsafeChapter() {
       className="relative py-12 md:py-28 overflow-hidden"
       style={{ background: "#0B0F14" }}
     >
-      {/* Grain très léger */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.015]"
         style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")" }}
@@ -44,200 +210,133 @@ export function CreditsafeChapter() {
             variants={staggerItem}
             className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em] text-white leading-[1.1]"
           >
-            3 analyses de risque. Notées /100.{" "}
-            <span className="text-white/40">Alertes = exclusion.</span>
+            Chaque déménageur est analysé{" "}
+            <span className="text-white/40">avant de pouvoir vous répondre.</span>
           </motion.h2>
           <motion.p
             variants={staggerItem}
             className="mt-4 text-base md:text-lg text-white/50 max-w-lg leading-relaxed"
           >
-            Expérience client, risque financier, risque juridique :
-            chaque déménageur est évalué automatiquement avant de pouvoir vous envoyer un devis.
+            3 axes d&apos;analyse, notés /100, à partir de sources officielles.
+            Un signal grave = exclusion immédiate. Pas de compromis.
           </motion.p>
         </motion.div>
 
-        {/* Product card : explication gauche + mockup Creditsafe droite */}
+        {/* Global score */}
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.15 }}
-          transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="rounded-[var(--radius-md)] border p-6 md:p-8 mb-8"
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
+          className="mb-10"
+        >
+          <GlobalScore />
+        </motion.div>
+
+        {/* 3 Axes */}
+        <div className="grid gap-4 md:grid-cols-3 mb-10">
+          {axes.map((axis, i) => {
+            const Icon = axis.icon;
+            const color = getScoreColor(axis.score);
+            return (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                className="rounded-[var(--radius-md)] border p-5 md:p-6"
+                style={{
+                  borderColor: "rgba(255,255,255,0.06)",
+                  background: "rgba(255,255,255,0.02)",
+                }}
+              >
+                {/* Icon + title + score circle */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg"
+                      style={{ background: "rgba(14,165,166,0.12)" }}
+                    >
+                      <Icon className="h-4.5 w-4.5" style={{ color: "#0EA5A6" }} />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-white">{axis.title}</p>
+                      <p className="text-xs text-white/40 mt-0.5">{axis.subtitle}</p>
+                    </div>
+                  </div>
+                  <AnimatedScore score={axis.score} delay={i * 200} />
+                </div>
+
+                {/* Animated bar */}
+                <div className="mb-4">
+                  <div
+                    className="h-2 rounded-full overflow-hidden"
+                    style={{ background: "rgba(255,255,255,0.06)" }}
+                  >
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${axis.score}%` }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8, delay: 0.2 + i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                      className="h-full rounded-full"
+                      style={{ background: color }}
+                    />
+                  </div>
+                </div>
+
+                {/* Verdict */}
+                <p className="text-sm text-white/60 mb-4 flex items-center gap-2">
+                  <Star className="h-3.5 w-3.5 shrink-0" style={{ color }} />
+                  {axis.verdict}
+                </p>
+
+                {/* Sources */}
+                <div className="flex flex-wrap gap-1.5">
+                  {axis.sources.map((src, j) => (
+                    <span
+                      key={j}
+                      className="inline-block rounded-full px-2.5 py-0.5 text-[10px] font-medium text-white/40"
+                      style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.06)" }}
+                    >
+                      {src}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Trust line */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.3 }}
+          className="rounded-[var(--radius-md)] border p-5 md:p-6"
           style={{
             borderColor: "rgba(255,255,255,0.06)",
             background: "rgba(255,255,255,0.02)",
           }}
         >
-          <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
-            {/* Left — Explication + bullets */}
-            <div className="space-y-5">
-              <div className="flex items-center gap-2">
+          <div className="grid gap-4 sm:grid-cols-3">
+            {trustPoints.map(({ icon: TIcon, text }, i) => (
+              <div key={i} className="flex items-start gap-3">
                 <div
-                  className="flex h-7 w-7 shrink-0 items-center justify-center rounded-[6px]"
+                  className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg"
                   style={{ background: "rgba(14,165,166,0.12)" }}
                 >
-                  <Shield className="h-3.5 w-3.5" style={{ color: "#0EA5A6" }} />
+                  <TIcon className="h-3.5 w-3.5" style={{ color: "#0EA5A6" }} />
                 </div>
-                <p className="text-sm font-semibold text-white">
-                  3 analyses de risque /100
-                </p>
+                <p className="text-sm text-white/50 leading-snug">{text}</p>
               </div>
-
-              <p className="text-sm text-white/50 leading-relaxed">
-                Avis Google, scores Creditsafe + Pappers, décisions de justice :
-                chaque déménageur est évalué automatiquement sur 3 axes.
-                Les alertes financières ou juridiques entraînent une exclusion immédiate.
-              </p>
-
-              <div className="space-y-3">
-                {checks.map(({ icon: Icon, label }, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, x: -6 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: i * 0.06, ease: [0.16, 1, 0.3, 1] }}
-                    className="flex items-center gap-2.5"
-                  >
-                    <Icon className="h-3.5 w-3.5 shrink-0" style={{ color: "#0EA5A6" }} />
-                    <span className="text-sm text-white/60">{label}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            {/* Right — Creditsafe mockup card */}
-            <motion.div
-              initial={{ opacity: 0, y: 8 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            >
-              <div
-                className="rounded-[var(--radius-md)] border p-5 md:p-6"
-                style={{
-                  borderColor: "var(--color-border)",
-                  background: "var(--color-surface)",
-                  boxShadow: "0 4px 24px rgba(0,0,0,0.25)",
-                }}
-              >
-                {/* Card header */}
-                <div className="flex items-center justify-between mb-5">
-                  <div>
-                    <p className="text-[11px] font-medium uppercase tracking-wider" style={{ color: "var(--color-text-muted)" }}>
-                      Score financier consolidé
-                    </p>
-                    <p className="text-sm font-semibold mt-0.5" style={{ color: "var(--color-text)" }}>
-                      DéménagePro SAS
-                    </p>
-                  </div>
-                  <span
-                    className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[11px] font-semibold"
-                    style={{ background: "rgba(14,165,166,0.08)", color: "#0EA5A6" }}
-                  >
-                    <Shield className="h-3 w-3" />
-                    Vérifié
-                  </span>
-                </div>
-
-                {/* Score */}
-                <div className="flex items-baseline gap-2 mb-5">
-                  <span
-                    className="font-heading text-4xl md:text-5xl font-bold tabular-nums"
-                    style={{ color: "var(--color-text)" }}
-                  >
-                    85
-                  </span>
-                  <span className="text-lg" style={{ color: "var(--color-text-muted)" }}>/100</span>
-                </div>
-
-                {/* Score bar */}
-                <div className="mb-5">
-                  <div className="h-2 rounded-full overflow-hidden" style={{ background: "var(--color-border-light)" }}>
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: "85%" }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                      className="h-full rounded-full"
-                      style={{ background: "#0EA5A6" }}
-                    />
-                  </div>
-                  <div className="flex justify-between mt-1.5 text-[10px]" style={{ color: "var(--color-text-muted)" }}>
-                    <span>Risque élevé</span>
-                    <span>Risque faible</span>
-                  </div>
-                </div>
-
-                {/* Details grid */}
-                <div className="grid grid-cols-2 gap-3">
-                  {[
-                    { label: "Avis Google", value: "82/100", good: true },
-                    { label: "Financier", value: "85/100", good: true },
-                    { label: "Juridique", value: "91/100", good: true },
-                    { label: "Alertes", value: "Aucune", good: true },
-                  ].map((item, i) => (
-                    <div
-                      key={i}
-                      className="rounded-[var(--radius-sm)] border px-3 py-2"
-                      style={{ borderColor: "var(--color-border-light)" }}
-                    >
-                      <p className="text-[10px] uppercase tracking-wider" style={{ color: "var(--color-text-muted)" }}>
-                        {item.label}
-                      </p>
-                      <p
-                        className="text-sm font-semibold mt-0.5"
-                        style={{ color: item.good ? "#0EA5A6" : "var(--color-text)" }}
-                      >
-                        {item.value}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
+            ))}
           </div>
+          <p className="text-xs text-white/30 mt-4 pt-4" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+            Score calculé automatiquement à partir de sources officielles. Aucun déménageur ne peut modifier sa note.
+          </p>
         </motion.div>
-
-        {/* 2 cards : Dossier standardisé + Suivi simple */}
-        <div className="grid gap-4 md:grid-cols-2">
-          {[
-            {
-              icon: ClipboardCheck,
-              title: "Dossier standardisé",
-              description: "Un seul inventaire, envoyé à tous. Les devis partent de la même base — pas de mauvaise surprise.",
-            },
-            {
-              icon: BarChart3,
-              title: "Suivi simple",
-              description: "Suivez l'avancée de vos devis, comparez en un coup d'œil, choisissez quand vous êtes prêt.",
-            },
-          ].map(({ icon: Icon, title, description }, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 8 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.06, ease: [0.16, 1, 0.3, 1] }}
-              className="rounded-[var(--radius-md)] border p-5 md:p-6"
-              style={{
-                borderColor: "rgba(255,255,255,0.06)",
-                background: "rgba(255,255,255,0.02)",
-              }}
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <div
-                  className="flex h-8 w-8 shrink-0 items-center justify-center rounded-[6px]"
-                  style={{ background: "rgba(255,255,255,0.06)" }}
-                >
-                  <Icon className="h-4 w-4 text-white/60" />
-                </div>
-                <p className="text-sm font-semibold text-white">{title}</p>
-              </div>
-              <p className="text-sm text-white/40 leading-relaxed">{description}</p>
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   );
