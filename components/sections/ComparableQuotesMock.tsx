@@ -112,8 +112,22 @@ export function ComparableQuotesMock() {
   const [direction, setDirection] = useState(1);
   const [paused, setPaused] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const phoneRef = useRef<HTMLDivElement>(null);
+  const isPhoneInView = useInView(phoneRef, { once: false, amount: 0.3 });
+  const hasEnteredView = useRef(false);
 
   const safeIndex = current >= visibleQuotes.length ? 0 : current;
+
+  useEffect(() => {
+    if (isPhoneInView && !hasEnteredView.current) {
+      hasEnteredView.current = true;
+      setCurrent(0);
+      setDirection(1);
+    }
+    if (!isPhoneInView) {
+      hasEnteredView.current = false;
+    }
+  }, [isPhoneInView]);
 
   const goTo = useCallback(
     (next: number) => {
@@ -128,12 +142,12 @@ export function ComparableQuotesMock() {
   const prev = useCallback(() => goTo(current - 1), [current, goTo]);
 
   useEffect(() => {
-    if (paused) return;
+    if (paused || !isPhoneInView) return;
     timerRef.current = setTimeout(next, AUTO_PLAY_MS);
     return () => {
       if (timerRef.current) clearTimeout(timerRef.current);
     };
-  }, [safeIndex, paused, next]);
+  }, [safeIndex, paused, next, isPhoneInView]);
 
   useEffect(() => {
     setCurrent(0);
@@ -224,6 +238,7 @@ export function ComparableQuotesMock() {
             className="flex justify-center"
           >
             <div
+              ref={phoneRef}
               className="relative w-full max-w-[320px]"
               onMouseEnter={() => setPaused(true)}
               onMouseLeave={() => setPaused(false)}
@@ -274,7 +289,7 @@ export function ComparableQuotesMock() {
                     >
                       <MoverCard
                         quote={visibleQuotes[safeIndex]}
-                        isFirst={visibleQuotes[safeIndex]?.recommended && safeIndex === 0 && !showAll}
+                        isFirst={visibleQuotes[safeIndex]?.badge === "best"}
                       />
                     </motion.div>
                   </AnimatePresence>
