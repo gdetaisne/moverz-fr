@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { MOVERZ_REVIEWS, getAverageRating, getTotalReviews } from "@/lib/reviews";
+import { MOVERZ_REVIEWS, getAverageRating } from "@/lib/reviews";
 import { trackEvent } from "@/lib/tracking";
 import { buildTunnelUrl } from "@/lib/tunnel-url";
 
@@ -14,8 +14,8 @@ function Stars({ value }: { value: number }) {
         {"★".repeat(full)}
         <span className="text-[#CBD5E1]">{"★".repeat(5 - full)}</span>
       </span>
-      <span className="text-xs font-semibold text-[#0F172A]">
-        {value.toFixed(1).replace(".", ",")}/5 · {getTotalReviews()} avis
+      <span className="text-xs font-semibold text-[var(--color-text)]">
+        {value.toFixed(1).replace(".", ",")}/5 sur Google
       </span>
     </span>
   );

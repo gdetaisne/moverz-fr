@@ -201,7 +201,7 @@ function CityAutocomplete({
             setFocused(false);
           }}
           placeholder={placeholder}
-          className="w-full rounded-[var(--radius-sm)] border px-3.5 py-2.5 text-sm outline-none transition-all placeholder:text-[var(--color-text-muted)]"
+          className="w-full rounded-[var(--radius-sm)] border px-3.5 py-3 text-sm outline-none transition-all placeholder:text-[var(--color-text-muted)]"
           style={{
             borderColor: unrecognized
               ? "var(--color-danger)"
@@ -244,7 +244,7 @@ function CityAutocomplete({
             <li
               key={`${s.postcode}-${i}`}
               onMouseDown={(e) => { e.preventDefault(); pick(s); }}
-              className="cursor-pointer px-3.5 py-2.5 text-sm hover:bg-[rgba(14,165,166,0.05)] transition-colors"
+              className="cursor-pointer px-3.5 py-3 text-sm hover:bg-[rgba(14,165,166,0.05)] transition-colors"
               style={{ color: "var(--color-text)" }}
             >
               {s.label}

@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import Image from "next/image";
 import "./globals.css";
-import { MOVERZ_REVIEWS, getAverageRating, getTotalReviews } from "@/lib/reviews";
+import { MOVERZ_REVIEWS, getAverageRating } from "@/lib/reviews";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import ContentSquare from "@/components/ContentSquare";
 import ExitIntentPopup from "@/components/ExitIntentPopup";
@@ -155,7 +155,6 @@ export default function RootLayout({
             aggregateRating: {
               "@type": "AggregateRating",
               ratingValue: getAverageRating(MOVERZ_REVIEWS),
-              reviewCount: getTotalReviews(),
               bestRating: 5,
               worstRating: 1,
             },

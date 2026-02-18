@@ -9,8 +9,8 @@ export default function StickyCTA() {
 
   useEffect(() => {
     const onScroll = () => {
-      const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-      setVisible(scrolled > 0.4);
+      // Apparaît dès que le form hero quitte le viewport (~1 écran)
+      setVisible(window.scrollY > window.innerHeight * 0.7);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });

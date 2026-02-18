@@ -1,6 +1,7 @@
 /**
- * Avis clients génériques pour le hub Moverz
- * Ces avis sont affichés sur la homepage nationale
+ * Vrais avis Google Maps — Moverz
+ * Source : https://maps.app.goo.gl/KNDhXrjkhB55yJbr5
+ * ⚠️ Ne JAMAIS afficher le nombre d'avis côté front.
  */
 
 interface Review {
@@ -8,57 +9,44 @@ interface Review {
   rating: number;
   summary: string;
   body: string;
-  city: string;
+  date: string; // mois de visite
 }
 
 export const MOVERZ_REVIEWS: Review[] = [
   {
-    author: "Sophie — Lyon",
+    author: "Nicolas de Rosen",
     rating: 5,
-    summary: "Comparaison limpide des offres",
-    body: "Les 5 devis reçus étaient structurés exactement pareil. Impossible de me tromper sur les options ou les prix.",
-    city: "Lyon"
+    summary: "Service très efficace",
+    body: "Service très efficace. J'ai trouvé en 3 jours un déménageur de qualité à prix très concurrentiel. Je recommande.",
+    date: "février 2026",
   },
   {
-    author: "Thomas — Nice",
-    rating: 4.9,
-    summary: "Zéro démarchage téléphonique",
-    body: "Grâce au dossier anonyme, aucun déménageur ne m'a appelé en direct. Je garde le contrôle et je choisis quand je veux rappeler.",
-    city: "Nice"
-  },
-  {
-    author: "Marie — Marseille",
+    author: "Luigi Delo",
     rating: 5,
-    summary: "Estimation très précise",
-    body: "L'estimation fournie m'a donné un volume précis et chaque devis proposait la bonne taille de camion du premier coup.",
-    city: "Marseille"
+    summary: "Process smooth, bon boulot",
+    body: "Super content de la prestation, le process était smooth et la société sélectionnée a fait du bon boulot. Je recommande.",
+    date: "février 2026",
   },
   {
-    author: "Alexandre — Toulouse",
-    rating: 4.8,
-    summary: "Gain de temps considérable",
-    body: "Un seul dossier à remplir et 5 devis en quelques jours. Plus besoin de répéter 10 fois les mêmes infos à différentes personnes.",
-    city: "Toulouse"
-  },
-  {
-    author: "Julie — Bordeaux",
+    author: "Karl Stehelin",
     rating: 5,
-    summary: "Transparence totale",
-    body: "Enfin un comparateur où les devis sont vraiment comparables. Tous partent du même inventaire, aucune surprise.",
-    city: "Bordeaux"
+    summary: "Plateforme simple et transparente",
+    body: "Très bonne expérience avec Moverz. La plateforme est simple, claire et vraiment utile quand on prépare un déménagement. J'ai reçu plusieurs devis en quelques jours, sans avoir à relancer qui que ce soit. Le comparatif est transparent.",
+    date: "janvier 2026",
   },
   {
-    author: "Pierre — Lille",
-    rating: 4.9,
-    summary: "Service professionnel",
-    body: "Les déménageurs proposés étaient tous sérieux et bien notés. J'ai pu choisir en toute confiance.",
-    city: "Lille"
+    author: "Amela de Thomasson",
+    rating: 5,
+    summary: "Vérifications rassurantes",
+    body: "Vérifications des partenaires rassurante !",
+    date: "février 2026",
   },
 ];
 
+/**
+ * Retourne les N premiers avis (déterministe, pas de random).
+ */
 export function getRandomReviews(count: number = 3): Review[] {
-  // Important : pas d'aléatoire côté rendu pour éviter les erreurs d'hydratation.
-  // On retourne simplement les premiers avis comme "avis mis en avant".
   return MOVERZ_REVIEWS.slice(0, count);
 }
 
@@ -69,11 +57,3 @@ export function getAverageRating(reviews: Review[] = MOVERZ_REVIEWS): number {
   const sum = reviews.reduce((acc, review) => acc + review.rating, 0);
   return Math.round((sum / reviews.length) * 10) / 10;
 }
-
-/**
- * Retourne le nombre total d'avis
- */
-export function getTotalReviews(): number {
-  return MOVERZ_REVIEWS.length;
-}
-
