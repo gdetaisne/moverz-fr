@@ -603,8 +603,8 @@ Avec Moverz :
 
 Avec Moverz :
 - **Prix** : Vous voyez les fourchettes
-- **Qualité** : Assurances vérifiées, avis analysés
-- **Avis clients** : Historique de litiges vérifié
+- **3 scores /100** : financier (Creditsafe + Pappers), juridique (Pappers Décisions), avis Google
+- **Alertes** : déménageurs avec alerte cash ou juridique exclus automatiquement
 
 **→ Choisissez le meilleur rapport qualité/prix** (pas forcément le moins cher) ✅
 
@@ -631,7 +631,7 @@ Avec Moverz :
 ### 3. Déménageur non fiable ✅
 
 **Sans Moverz** : Vous trouvez sur Google, vous ne savez pas si fiable  
-**Avec Moverz** : Déménageurs contrôlés (assurances, avis, litiges)
+**Avec Moverz** : 3 analyses de risque /100 (financier, juridique, avis Google) + exclusion alertes
 
 ---
 
@@ -731,11 +731,11 @@ Avec Moverz :
 
 **Utilisez Moverz** ✅
 
-L'IA + les déménageurs contrôlés + la checklist complète éliminent automatiquement :
-- Erreur 1 : Volume sous-estimé
-- Erreur 2 : Devis non comparables
-- Erreur 3 : Réservation trop tard (vous voyez la disponibilité en temps réel)
-- Erreur 16 : Déménageur non fiable (tous contrôlés)
+L'IA + les 3 analyses de risque /100 + la checklist complète éliminent automatiquement :
+- Erreur 1 : Volume sous-estimé (IA volumétrie 90-95%)
+- Erreur 2 : Devis non comparables (même base volume)
+- Erreur 3 : Réservation trop tard (disponibilité visible)
+- Erreur 16 : Déménageur non fiable (scores financier + juridique + avis /100, alertes = exclusion)
 
 **+ Checklist fournie** : Vous avez un guide étape par étape pour éviter les autres erreurs.
 
@@ -762,7 +762,8 @@ L'IA + les déménageurs contrôlés + la checklist complète éliminent automat
 
 **Comment éviter tout ça** :
 ✅ IA Moverz pour volume précis  
-✅ Déménageurs contrôlés  
+✅ 3 analyses de risque /100 (financier, juridique, avis Google)  
+✅ Alertes cash ou juridiques = exclusion automatique  
 ✅ Checklist complète fournie  
 ✅ Support dédié si problème
 
@@ -770,7 +771,7 @@ L'IA + les déménageurs contrôlés + la checklist complète éliminent automat
 
 ## Déménagez sans erreur avec Moverz
 
-**Volume IA en 1 minute** · **des devis comparables** · **Déménageurs contrôlés** · **Checklist complète** · **100% gratuit**
+**Volume IA en 1 minute** · **des devis comparables** · **3 analyses de risque /100** · **Checklist complète** · **100% gratuit**
 
 [Comparer les devis maintenant →](https://devis.moverz.fr)
 

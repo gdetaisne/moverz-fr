@@ -10,17 +10,26 @@
 
 ## Message central (à ne pas "réécrire" différemment partout)
 
-**Différence clé :** Moverz vérifie activement la fiabilité des déménageurs (Creditsafe + licences + assurances) et standardise les dossiers avant mise en relation (volume IA + accès + contraintes + options) pour des devis réellement comparables et sans surprise.
+**Différence clé :** Moverz évalue chaque déménageur selon 3 analyses de risque notées /100, standardise les dossiers avant mise en relation (volume IA + accès + contraintes + options) pour des devis réellement comparables et sans surprise, et exclut automatiquement les déménageurs présentant des alertes financières ou juridiques.
 
-**8 critères de fiabilité vérifiés par Moverz :**
-1. **Santé financière** (Creditsafe : score solvabilité, risque faillite)
-2. **Licences de transport** (inscription registre transporteurs)
-3. **Assurances RC Pro** (attestation valide, plafond ≥ 1,5M€)
-4. **Avis clients** (Google 4.0+/5, volume suffisant)
-5. **Estimation volume précise** (IA 90-95% ou visite/visio)
-6. **Devis détaillé** (prestations, accès, surcoûts explicités)
-7. **Paiement sécurisé** (acompte ≤ 30%, traçable)
-8. **Fiabilité opérationnelle** (plan B, matériel pro)
+**3 analyses de risque (chacune notée /100, présentées individuellement au client) :**
+
+1. **Risque expérience client** (données Google)
+   - Analyse des 20 derniers avis Google → note /100 (note moyenne + volume d'avis)
+   - Analyse des avis 1-2★ : détection de patterns récurrents (retards, casse, comportement) → note /100
+2. **Risque financier** (Creditsafe + Pappers + analyse interne)
+   - Scores Creditsafe et Pappers (scoring financier) consolidés en moyenne
+   - Analyse interne : ratio cash / dettes court terme
+   - Note /100 — alerte cash = exclusion automatique
+3. **Risque juridique** (Pappers Décisions + scoring non-financier)
+   - Décisions de justice (tribunaux de commerce, sanctions, interdictions de gérer)
+   - Scoring non-financier Pappers (gouvernance, conformité)
+   - Litiges passés et en cours
+   - Note /100 — alerte juridique = exclusion automatique
+
+**Vérifications complémentaires :** licence de transport, assurance RC Pro (≥ 1,5 M€), identité légale (SIREN/Kbis).
+
+**Transparence :** chaque indicateur est expliqué au client. Les déménageurs ont accès à leur scoring et peuvent enrichir leur dossier (note au client).
 
 ## Où modifier quoi (règle “single source of truth”)
 

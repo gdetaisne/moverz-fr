@@ -24,7 +24,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 - Comment **optimiser votre budget** sans prendre de risques
 
 > **Calculer votre volume et comparer des devis**  
-> En 1 minute, l'IA Moverz estime votre volume en m³ et partage votre dossier avec jusqu'à 5 déménageurs vérifiés (Creditsafe + licences + assurances) via [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=blog-prix).
+> En 1 minute, l'IA Moverz estime votre volume en m³ et partage votre dossier avec jusqu'à 5 déménageurs évalués sur 3 risques /100 (financier Creditsafe + Pappers, juridique Pappers Décisions, avis Google) via [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=blog-prix).
 
 ---
 
@@ -384,7 +384,7 @@ Avec Moverz, vous recevez **des devis comparables** :
 - Vous identifiez les outliers (trop cher ou trop cheap = suspect)
 - **→ Vous négociez mieux** ✅
 
-**Moverz** : des devis automatiquement, déménageurs contrôlés.
+**Moverz** : des devis automatiquement, déménageurs évalués sur 3 risques /100 (financier, juridique, avis Google).
 
 ---
 
@@ -426,10 +426,11 @@ Avec Moverz, vous recevez **des devis comparables** :
 - Votre téléphone est masqué jusqu'à ce que VOUS choisissiez un déménageur
 - **→ 0 appel commercial non sollicité** ✅
 
-**3. Déménageurs contrôlés**
-- Assurances vérifiées
-- Avis clients analysés
-- Historique de litiges vérifié
+**3. Déménageurs évalués sur 3 risques /100**
+- Score financier (Creditsafe + Pappers + ratio cash/dettes interne)
+- Score juridique (Pappers Décisions — litiges passés et en cours)
+- Score avis clients (20 derniers avis Google + patterns mauvais avis)
+- Alertes cash ou juridiques = exclusion automatique
 - **→ Pros fiables uniquement** ✅
 
 **4. Devis comparables**
@@ -569,7 +570,7 @@ Avec Moverz, vous recevez **des devis comparables** :
 
 ## Calculez votre prix exact maintenant
 
-**Estimation IA en 1 minute** · **des devis comparables** · **Déménageurs contrôlés** · **100% gratuit**
+**Estimation IA en 1 minute** · **des devis comparables** · **3 analyses de risque /100** · **100% gratuit**
 
 [Comparer les devis maintenant →](https://devis.moverz.fr)
 

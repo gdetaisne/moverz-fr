@@ -29,7 +29,7 @@ const faqs: FAQItem[] = [
   {
     question: "Comment vérifiez-vous les déménageurs ?",
     answer:
-      "Chaque partenaire passe 3 contrôles : assurance RC Pro active, licence de transport valide, et solvabilité financière vérifiée via Creditsafe. Ces vérifications sont renouvelées tous les 3 mois.",
+      "Chaque partenaire est évalué selon 3 analyses de risque /100 : risque financier (Creditsafe + Pappers + ratio cash/dettes), risque juridique (Pappers Décisions — litiges passés et en cours), risque expérience client (20 derniers avis Google, patterns dans les mauvais avis). Nous vérifions aussi assurance RC Pro, licence de transport et conformité légale. Les déménageurs avec alertes financières ou juridiques sont exclus. Mises à jour tous les 3 mois.",
   },
   {
     question: "Le service est-il vraiment gratuit ?",

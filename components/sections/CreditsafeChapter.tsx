@@ -9,14 +9,14 @@
  */
 
 import { motion } from "framer-motion";
-import { Shield, FileCheck, Building2, Scale, ClipboardCheck, BarChart3 } from "lucide-react";
+import { Shield, FileCheck, Building2, Scale, ClipboardCheck, BarChart3, Star, Gavel } from "lucide-react";
 import { staggerContainer, staggerItem } from "@/components/motion";
 
 const checks = [
-  { icon: Shield, label: "Assurance responsabilité civile" },
-  { icon: FileCheck, label: "Licence de transport à jour" },
-  { icon: Building2, label: "Solvabilité financière vérifiée" },
-  { icon: Scale, label: "Historique de litiges contrôlé" },
+  { icon: Star, label: "Expérience client : 20 derniers avis Google analysés" },
+  { icon: Building2, label: "Risque financier : Creditsafe + Pappers + ratio cash/dettes" },
+  { icon: Gavel, label: "Risque juridique : décisions de justice via Pappers" },
+  { icon: Shield, label: "Assurance RC Pro + licence de transport vérifiées" },
 ];
 
 export function CreditsafeChapter() {
@@ -44,15 +44,15 @@ export function CreditsafeChapter() {
             variants={staggerItem}
             className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em] text-white leading-[1.1]"
           >
-            On vérifie la solidité des entreprises.{" "}
-            <span className="text-white/40">Point.</span>
+            3 analyses de risque. Notées /100.{" "}
+            <span className="text-white/40">Alertes = exclusion.</span>
           </motion.h2>
           <motion.p
             variants={staggerItem}
             className="mt-4 text-base md:text-lg text-white/50 max-w-lg leading-relaxed"
           >
-            Chaque déménageur partenaire passe un contrôle rigoureux
-            avant de pouvoir vous envoyer un devis.
+            Expérience client, risque financier, risque juridique :
+            chaque déménageur est évalué automatiquement avant de pouvoir vous envoyer un devis.
           </motion.p>
         </motion.div>
 
@@ -79,14 +79,14 @@ export function CreditsafeChapter() {
                   <Shield className="h-3.5 w-3.5" style={{ color: "#0EA5A6" }} />
                 </div>
                 <p className="text-sm font-semibold text-white">
-                  Analyse Creditsafe
+                  3 analyses de risque /100
                 </p>
               </div>
 
               <p className="text-sm text-white/50 leading-relaxed">
-                Nous utilisons les données Creditsafe pour évaluer la santé financière
-                de chaque entreprise. Score de solvabilité, ancienneté, litiges en cours
-                — tout est vérifié avant qu'un déménageur n'intègre notre réseau.
+                Avis Google, scores Creditsafe + Pappers, décisions de justice :
+                chaque déménageur est évalué automatiquement sur 3 axes.
+                Les alertes financières ou juridiques entraînent une exclusion immédiate.
               </p>
 
               <div className="space-y-3">
@@ -125,7 +125,7 @@ export function CreditsafeChapter() {
                 <div className="flex items-center justify-between mb-5">
                   <div>
                     <p className="text-[11px] font-medium uppercase tracking-wider" style={{ color: "var(--color-text-muted)" }}>
-                      Score Creditsafe
+                      Score financier consolidé
                     </p>
                     <p className="text-sm font-semibold mt-0.5" style={{ color: "var(--color-text)" }}>
                       DéménagePro SAS
@@ -172,10 +172,10 @@ export function CreditsafeChapter() {
                 {/* Details grid */}
                 <div className="grid grid-cols-2 gap-3">
                   {[
-                    { label: "Solvabilité", value: "Élevée", good: true },
-                    { label: "Ancienneté", value: "12 ans", good: true },
-                    { label: "Litiges", value: "0", good: true },
-                    { label: "Assurance RC", value: "Valide", good: true },
+                    { label: "Avis Google", value: "82/100", good: true },
+                    { label: "Financier", value: "85/100", good: true },
+                    { label: "Juridique", value: "91/100", good: true },
+                    { label: "Alertes", value: "Aucune", good: true },
                   ].map((item, i) => (
                     <div
                       key={i}

@@ -6,8 +6,8 @@ import { buildTunnelUrl } from "@/lib/tunnel-url";
 
 export const metadata: Metadata = getFullMetadata(
   "verifications-partenaires",
-  "Comment Moverz vérifie les déménageurs | Creditsafe + Licences + Assurances",
-  "Découvrez comment Moverz vérifie systématiquement les déménageurs : santé financière (Creditsafe), licences de transport, assurances RC Pro. Ce que vous recevez concrètement."
+  "Comment Moverz vérifie les déménageurs | 3 analyses de risque notées /100",
+  "Moverz évalue chaque déménageur selon 3 axes de risque notés /100 : expérience client (avis Google), risque financier (Creditsafe + Pappers + analyse interne), risque juridique (décisions de justice). Alertes = exclusion automatique."
 );
 
 export default function VerificationsPartenairesPage() {
@@ -15,32 +15,42 @@ export default function VerificationsPartenairesPage() {
     {
       question: "Quelles vérifications Moverz effectue-t-elle concrètement ?",
       answer:
-        "Nous vérifions systématiquement : (1) La santé financière via Creditsafe (score de solvabilité, risque de faillite, incidents de paiement), (2) La licence de transport et le SIREN actif, (3) L'assurance RC Pro valide. Ces vérifications sont effectuées avant qu'un déménageur ne puisse recevoir des dossiers.",
+        "Chaque déménageur est évalué automatiquement selon 3 analyses de risque notées /100 : (1) Risque expérience client — analyse des 20 derniers avis Google + détection de patterns récurrents dans les mauvais avis 1-2★ (retards, casse, comportement), (2) Risque financier — scores Creditsafe et Pappers consolidés + analyse interne du ratio cash/dettes court terme, (3) Risque juridique — décisions de justice et litiges passés/en cours via Pappers. En complément : licence de transport, assurance RC Pro (≥ 1,5 M€), identité légale. Les déménageurs avec alertes financières ou juridiques sont exclus automatiquement.",
     },
     {
-      question: "C'est quoi Creditsafe et pourquoi c'est important ?",
+      question: "Comment fonctionnent les 3 analyses de risque ?",
       answer:
-        "Creditsafe est la base de données professionnelle B2B qui note la santé financière des entreprises (score sur 100, risque de faillite, incidents de paiement, litiges). C'est crucial : 257 faillites de déménageurs ont été enregistrées en 2024 (source Altares). Creditsafe nous permet d'écarter les entreprises en difficulté avant qu'elles ne reçoivent votre dossier.",
+        "Chaque pilier produit une note /100 présentée individuellement au client. (1) Expérience client : nous analysons les 20 derniers avis Google pour calculer une note globale, puis nous analysons spécifiquement les avis 1-2★ pour détecter des patterns récurrents (retards, casse, comportement des équipes) — cela donne une seconde note /100. (2) Risque financier : nous consolidons les scores Creditsafe et Pappers (scoring financier) en une moyenne, enrichie par notre analyse interne du ratio cash/dettes court terme. (3) Risque juridique : nous exploitons les décisions de justice via Pappers (tribunaux de commerce, sanctions, interdictions de gérer) et le scoring non-financier Pappers (gouvernance, conformité).",
     },
     {
-      question: "Comment puis-je vérifier qu'un déménageur proposé est vraiment vérifié ?",
+      question: "Pourquoi utiliser Creditsafe ET Pappers pour le risque financier ?",
       answer:
-        "Tous les déménageurs qui reçoivent votre dossier ont passé nos filtres Creditsafe + licences + assurances. Vous pouvez demander à voir l'attestation d'assurance RC Pro et vérifier le SIREN sur annuaire-entreprises.data.gouv.fr. Moverz ne transmet jamais votre dossier à un déménageur qui n'a pas été vérifié.",
+        "Creditsafe et Pappers sont deux bases de données complémentaires qui évaluent la solvabilité des entreprises via des méthodologies différentes. En consolidant leurs scores, nous obtenons une évaluation plus fiable. Nous ajoutons notre propre analyse du ratio cash/dettes court terme pour détecter les entreprises en tension de trésorerie. 257 faillites de déménageurs ont été enregistrées en 2024 (source Altares) — un déménageur en difficulté financière = risque élevé d'acompte perdu.",
     },
     {
-      question: "Que se passe-t-il si un déménageur ne respecte pas ses engagements ?",
+      question: "Comment l'analyse des avis Google fonctionne-t-elle ?",
       answer:
-        "En plus des vérifications initiales, nos partenaires s'engagent contractuellement (CGV Partenaires) à maintenir leurs assurances, à respecter la transparence des devis, et à traiter les litiges de manière constructive. En cas de manquement répété, nous suspendons ou excluons le partenaire du réseau.",
+        "Nous analysons les 20 derniers avis Google de chaque déménageur. Première étape : nous calculons une note /100 basée sur la note moyenne et le volume d'avis. Deuxième étape : nous analysons spécifiquement tous les avis 1-2★ pour identifier des patterns récurrents (retards à répétition, casse non indemnisée, comportement problématique des équipes). Cette analyse produit une seconde note /100. Les deux notes sont présentées séparément au client.",
+    },
+    {
+      question: "Que vérifie l'analyse juridique ?",
+      answer:
+        "Nous accédons aux bases de données juridiques françaises via Pappers : décisions des tribunaux de commerce (liquidations, redressements, sanctions), interdictions de gérer, et litiges commerciaux passés ou en cours. Le scoring non-financier Pappers évalue aussi la gouvernance et la conformité de l'entreprise. Résultat : une note /100 estimant le risque de litiges. Les déménageurs avec alerte juridique sont exclus automatiquement de la présentation des devis.",
+    },
+    {
+      question: "Les déménageurs ont-ils accès à leur scoring ?",
+      answer:
+        "Oui. Chaque déménageur a accès à ses propres indicateurs (expérience client, financier, juridique) et peut enrichir son dossier en envoyant une note explicative au client. Par exemple, un déménageur ayant un avis négatif peut contextualiser la situation. Cette transparence bénéficie à tous : le client comprend mieux chaque indicateur, et le déménageur peut se défendre factuellement.",
+    },
+    {
+      question: "Que se passe-t-il si un déménageur a une alerte ?",
+      answer:
+        "Un déménageur présentant une alerte cash (ratio cash/dettes critique) ou une alerte juridique (litiges graves, sanctions) est exclu automatiquement de la présentation des devis — il n'est pas retenu par défaut. En plus, nos partenaires s'engagent contractuellement (CGV Partenaires) à maintenir leurs assurances et à traiter les litiges de manière constructive. En cas de manquement répété, nous suspendons ou excluons le partenaire du réseau.",
     },
     {
       question: "Les déménageurs low-cost sont-ils aussi vérifiés ?",
       answer:
-        "Oui. Même les déménageurs proposant des tarifs compétitifs passent les mêmes filtres Creditsafe + licences + assurances. Un tarif bas n'est pas un problème si l'entreprise est saine financièrement et correctement assurée. En revanche, un tarif anormalement bas (<30% du marché) est un signal d'alerte que Creditsafe détecte souvent (entreprise en difficulté cherchant de la trésorerie rapide).",
-    },
-    {
-      question: "Moverz vérifie-t-elle les avis clients des déménageurs ?",
-      answer:
-        "Oui, nous consultons les avis Google Maps (note globale, récence, patterns de litiges répétitifs). Nous croisons ces avis avec les données Creditsafe pour avoir une vision complète : santé financière + réputation terrain. Un déménageur peut avoir un bon score Creditsafe mais de mauvais avis (ou l'inverse) : nous prenons les deux en compte.",
+        "Oui. Même les déménageurs proposant des tarifs compétitifs passent les 3 analyses de risque. Un tarif bas n'est pas un problème si les notes /100 sont correctes. En revanche, un tarif anormalement bas combiné à une alerte financière (ratio cash/dettes dégradé) est un signal d'alerte classique : entreprise en difficulté cherchant de la trésorerie rapide.",
     },
   ];
 
@@ -53,7 +63,7 @@ export default function VerificationsPartenairesPage() {
         ]}
         eyebrow="Zéro arnaque"
         title="Comment Moverz vérifie les déménageurs"
-        subtitle="Nous vérifions systématiquement la santé financière (Creditsafe), les licences de transport, et les assurances RC Pro. Vous ne recevez des devis que de déménageurs vérifiés et financièrement solides."
+        subtitle="Chaque déménageur est évalué selon 3 analyses de risque notées /100 : expérience client (avis Google), risque financier (Creditsafe + Pappers + analyse interne), risque juridique (décisions de justice). Alertes financières ou juridiques = exclusion automatique."
         primaryCta={{ label: "Voir les vérifications", href: "#verifications" }}
         secondaryCta={{ label: "Voir la FAQ", href: "#faq" }}
       />
@@ -73,56 +83,58 @@ export default function VerificationsPartenairesPage() {
               Un déménageur en difficulté financière = risque élevé d'acompte perdu, de prestation non réalisée, ou de litige non résolu.
             </p>
             <p className="text-sm md:text-base text-[#6B7280] leading-relaxed">
-              <strong className="text-[#0F172A]">C'est pour ça que Moverz vérifie systématiquement</strong> la santé financière 
-              (Creditsafe), les licences, et les assurances de chaque déménageur <strong>avant</strong> de lui transmettre votre dossier.
+              <strong className="text-[#0F172A]">C'est pour ça que Moverz évalue chaque déménageur selon 3 analyses de risque notées /100</strong> (expérience client, financier, juridique) 
+              et exclut automatiquement ceux qui présentent des alertes financières ou juridiques <strong>avant</strong> de leur transmettre votre dossier.
             </p>
           </div>
 
           {/* Les vérifications actives */}
           <div className="space-y-4">
-            <h2 className="text-lg md:text-xl font-semibold text-[#0F172A]">Ce que nous vérifions systématiquement</h2>
+            <h2 className="text-lg md:text-xl font-semibold text-[#0F172A]">3 analyses de risque — chacune notée /100</h2>
 
             <div className="grid gap-4">
               {[
                 {
-                  title: "1) Santé financière (Creditsafe)",
-                  desc: "Nous vérifions la solidité financière de chaque déménageur via Creditsafe, la base de données B2B professionnelle.",
+                  title: "1) Risque expérience client (données Google)",
+                  desc: "Nous analysons les 20 derniers avis Google de chaque déménageur pour estimer le risque d'expérience client négative.",
                   bullets: [
-                    "Score de solvabilité sur 100 (entreprises < 40/100 écartées automatiquement)",
-                    "Risque de faillite à 12 mois (alerte si risque élevé)",
-                    "Incidents de paiement (retards, impayés, procédures en cours)",
-                    "Procédures collectives (liquidation, redressement, sauvegarde)",
+                    "Note /100 basée sur la note moyenne Google et le volume d'avis",
+                    "Analyse spécifique des avis 1-2★ : détection de patterns récurrents (retards, casse, comportement des équipes)",
+                    "Seconde note /100 sur l'analyse des mauvais avis",
+                    "Les deux notes sont présentées séparément au client",
                   ],
-                  highlight: "Exclusivité Moverz : seul comparateur à vérifier Creditsafe",
+                  highlight: "Moverz : seul comparateur à analyser les patterns des mauvais avis",
                 },
                 {
-                  title: "2) Licence de transport et SIREN",
-                  desc: "Nous vérifions que le déménageur est légalement habilité à exercer.",
+                  title: "2) Risque financier (Creditsafe + Pappers + analyse interne)",
+                  desc: "Nous consolidons les données de deux bases professionnelles et les enrichissons par notre propre analyse.",
                   bullets: [
-                    "SIREN actif et non radié (via annuaire-entreprises.data.gouv.fr)",
-                    "Inscription au registre des transporteurs (capacité professionnelle)",
-                    "Correspondance identité légale (SIREN / Kbis / dirigeants)",
-                    "Pas de radiation récente ou de changement de nom suspect (arnaques connues)",
+                    "Scores de solvabilité Creditsafe et Pappers (scoring financier), consolidés en moyenne",
+                    "Analyse interne complémentaire : ratio cash / dettes court terme",
+                    "Note /100 — alerte cash = déménageur exclu automatiquement",
+                    "257 faillites de déménageurs en 2024 (source Altares) : ce filtre est essentiel",
                   ],
+                  highlight: "Double source Creditsafe + Pappers + analyse interne",
                 },
                 {
-                  title: "3) Assurance RC Pro valide",
-                  desc: "Nous vérifions que le déménageur dispose d'une assurance responsabilité civile professionnelle à jour.",
+                  title: "3) Risque juridique (Pappers Décisions + scoring non-financier)",
+                  desc: "Nous accédons aux bases de données juridiques françaises pour analyser les litiges passés et en cours.",
                   bullets: [
-                    "Attestation d'assurance RC Pro datant de < 6 mois",
-                    "Plafond de garantie minimum 1,5M€ (recommandation DGCCRF)",
-                    "Assurance marchandises transportées (couverture standard 60€/m³ minimum)",
-                    "Possibilité de fournir l'attestation au client sur demande",
+                    "Décisions de justice via Pappers (tribunaux de commerce, sanctions, interdictions de gérer)",
+                    "Scoring non-financier Pappers (gouvernance, conformité)",
+                    "Analyse des litiges passés et en cours",
+                    "Note /100 — alerte juridique = déménageur exclu automatiquement",
                   ],
+                  highlight: "Analyse juridique automatisée via Pappers Décisions",
                 },
                 {
-                  title: "4) Avis Google Maps et réputation",
-                  desc: "Nous consultons les avis clients récents pour détecter des patterns de litiges répétitifs.",
+                  title: "Vérifications complémentaires",
+                  desc: "En plus des 3 analyses de risque, nous vérifions les fondamentaux réglementaires.",
                   bullets: [
-                    "Note globale Google Maps (4.0+/5 minimum, 4.5+/5 recommandé)",
-                    "Volume d'avis (minimum 20-30 avis pour fiabilité)",
-                    "Récence des avis (20+ avis < 6 mois = activité régulière)",
-                    "Patterns de litiges (surcoûts jour J, casse non indemnisée, retards répétés)",
+                    "Licence de transport et SIREN actif (registre des transporteurs, annuaire-entreprises.data.gouv.fr)",
+                    "Assurance RC Pro valide (attestation < 6 mois, plafond ≥ 1,5 M€)",
+                    "Assurance marchandises transportées (couverture ≥ 60 €/m³)",
+                    "Identité légale vérifiée (SIREN / Kbis / dirigeants — pas de radiation ou changement de nom suspect)",
                   ],
                 },
               ].map((c) => (
@@ -156,24 +168,24 @@ export default function VerificationsPartenairesPage() {
             <ul className="grid gap-3 text-sm md:text-base text-[#0F172A]/90">
               {[
                 {
+                  title: "✅ Expérience client vérifiée",
+                  desc: "Avis Google analysés (20 derniers avis + patterns des mauvais avis) — deux notes /100 distinctes. Vous savez exactement ce que les clients précédents ont vécu.",
+                },
+                {
                   title: "✅ Financièrement solides",
-                  desc: "Score Creditsafe vérifié, risque de faillite faible, aucun incident de paiement grave. Vous évitez les entreprises en difficulté qui risquent de disparaître avec votre acompte.",
+                  desc: "Scores Creditsafe + Pappers consolidés, enrichis par notre analyse du ratio cash/dettes. Alerte cash = exclusion automatique. Vous évitez les entreprises en difficulté.",
                 },
                 {
-                  title: "✅ Légalement conformes",
-                  desc: "SIREN actif, licence de transport valide, inscription au registre des transporteurs. Vous ne traitez qu'avec des pros habilités à exercer.",
+                  title: "✅ Juridiquement sains",
+                  desc: "Décisions de justice, sanctions et litiges analysés via Pappers. Alerte juridique = exclusion automatique. Vous ne traitez qu'avec des entreprises sans contentieux grave.",
                 },
                 {
-                  title: "✅ Correctement assurés",
-                  desc: "Assurance RC Pro valide, plafond de garantie ≥ 1,5M€, couverture marchandises ≥ 60€/m³. En cas de casse, vous êtes protégé.",
+                  title: "✅ Légalement conformes et assurés",
+                  desc: "Licence de transport, SIREN actif, assurance RC Pro valide (≥ 1,5 M€), couverture marchandises (≥ 60 €/m³). En cas de casse, vous êtes protégé.",
                 },
                 {
-                  title: "✅ Bien notés par leurs clients",
-                  desc: "Avis Google 4.0+/5, pas de pattern de litiges répétitifs (surcoûts, casse, retards). Vous choisissez parmi des pros qui ont fait leurs preuves.",
-                },
-                {
-                  title: "✅ Engagés contractuellement",
-                  desc: "En plus des vérifications, nos partenaires acceptent nos CGV (transparence des devis, traitement constructif des litiges, respect du RGPD). En cas de manquement, nous suspendons ou excluons le partenaire.",
+                  title: "✅ Transparence totale",
+                  desc: "Chaque indicateur est présenté et expliqué individuellement. Les déménageurs ont accès à leur scoring et peuvent enrichir leur dossier (note explicative au client).",
                 },
               ].map((b) => (
                 <li key={b.title} className="flex gap-3 items-start">
@@ -195,8 +207,8 @@ export default function VerificationsPartenairesPage() {
               Prêt à comparer des devis de déménageurs vérifiés ?
             </h3>
             <p className="text-sm md:text-base text-[#6B7280] mb-5 max-w-2xl mx-auto">
-              Obtenez jusqu'à 5 devis comparables de déménageurs vérifiés (Creditsafe + licences + assurances) sous 5-7 jours. 
-              Dossier anonyme, zéro harcèlement, 100% gratuit.
+              Obtenez jusqu'à 5 devis comparables de déménageurs évalués selon 3 analyses de risque /100 sous 5-7 jours. 
+              Alertes financières ou juridiques = exclusion automatique. Dossier anonyme, zéro harcèlement, 100% gratuit.
             </p>
             <a
               href={buildTunnelUrl({ from: "verifications-partenaires" })}

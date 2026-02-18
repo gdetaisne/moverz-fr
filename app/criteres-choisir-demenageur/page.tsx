@@ -6,21 +6,21 @@ import { buildTunnelUrl } from "@/lib/tunnel-url";
 
 export const metadata: Metadata = getFullMetadata(
   "criteres-choisir-demenageur",
-  "8 Critères pour choisir un déménageur fiable en 2026 (+ Creditsafe) | Moverz",
-  "Les 8 critères indispensables pour choisir un déménageur fiable : santé financière (Creditsafe), licence, assurance RC Pro, estimation volume, devis détaillé, paiement, avis clients, fiabilité. Checklist + FAQ anti-arnaques."
+  "Critères pour choisir un déménageur fiable en 2026 | 3 analyses de risque /100 | Moverz",
+  "Choisir un déménageur fiable : 3 analyses de risque notées /100 (avis Google, financier Creditsafe + Pappers, juridique Pappers Décisions) + licence, assurance RC Pro, estimation volume, devis détaillé. Checklist + FAQ."
 );
 
 export default function CriteresChoisirDemenageurPage() {
   const faqs: FAQItem[] = [
     {
-      question: "C'est quoi Creditsafe et pourquoi c'est le critère #1 ?",
+      question: "Comment Moverz évalue-t-elle la fiabilité d'un déménageur ?",
       answer:
-        "Creditsafe est la base de données professionnelle B2B qui note la santé financière des entreprises (score sur 100, risque de faillite, incidents de paiement, litiges). C'est le critère #1 car 257 faillites de déménageurs ont été enregistrées en 2024 (source Altares). Un déménageur en difficulté financière = risque majeur d'acompte perdu ou de prestation non réalisée. Moverz vérifie automatiquement le score Creditsafe de chaque déménageur.",
+        "Moverz évalue chaque déménageur selon 3 analyses de risque notées /100 : (1) Risque expérience client — analyse des 20 derniers avis Google + détection de patterns récurrents dans les mauvais avis 1-2★ (retards, casse, comportement), (2) Risque financier — scores Creditsafe et Pappers consolidés + analyse interne du ratio cash/dettes, (3) Risque juridique — décisions de justice et litiges via Pappers. Les déménageurs avec alertes financières ou juridiques sont exclus automatiquement. 257 faillites en 2024 (Altares) : ce filtre est essentiel.",
     },
     {
       question: "Comment vérifier la santé financière d'un déménageur moi-même ?",
       answer:
-        "Vous pouvez vérifier le SIREN sur annuaire-entreprises.data.gouv.fr (entreprise active, pas en liquidation). Pour aller plus loin, consultez societe.com ou infogreffe.fr (historique, chiffre d'affaires, procédures). Creditsafe (payant) est l'outil professionnel utilisé par Moverz pour un score précis de solvabilité. Ou laissez Moverz faire ces vérifications automatiquement (gratuit pour vous).",
+        "Vous pouvez vérifier le SIREN sur annuaire-entreprises.data.gouv.fr (entreprise active, pas en liquidation). Pour aller plus loin : societe.com ou infogreffe.fr (historique, procédures). Creditsafe et Pappers (payants) sont les outils professionnels utilisés par Moverz — nous consolidons leurs scores financiers et ajoutons une analyse interne du ratio cash/dettes. Moverz fait tout ça automatiquement (gratuit pour vous).",
     },
     {
       question: "Un déménageur peut-il facturer plus le jour J ?",
@@ -40,7 +40,7 @@ export default function CriteresChoisirDemenageurPage() {
     {
       question: "Comment éviter les faux déménageurs ?",
       answer:
-        "Vérifiez 4 éléments : (1) SIREN actif sur annuaire-entreprises.data.gouv.fr, (2) Cohérence raison sociale sur devis/RIB/assurance, (3) Attestation d'assurance RC Pro valide, (4) Avis Google 4.0+/5 avec minimum 20-30 avis. Méfiez-vous des prix anormalement bas (<30% du marché), des demandes de paiement cash, ou de l'absence de devis écrit. Moverz filtre automatiquement les entreprises non conformes (Creditsafe + licences + assurances).",
+        "Vérifiez 4 éléments : (1) SIREN actif sur annuaire-entreprises.data.gouv.fr, (2) Cohérence raison sociale sur devis/RIB/assurance, (3) Attestation d'assurance RC Pro valide, (4) Avis Google analysés (pas de patterns récurrents négatifs). Méfiez-vous des prix anormalement bas (<30% du marché), des demandes de paiement cash, ou de l'absence de devis écrit. Moverz filtre automatiquement via 3 analyses de risque /100 (expérience client, financier, juridique) — alertes = exclusion.",
     },
     {
       question: "Visite technique, visio, ou IA : que choisir ?",
@@ -72,8 +72,8 @@ export default function CriteresChoisirDemenageurPage() {
           { label: "Choisir un déménageur fiable", href: "/criteres-choisir-demenageur/" },
         ]}
         eyebrow="Guide anti-arnaques 2026"
-        title="8 Critères pour choisir un déménageur fiable (+ Creditsafe)"
-        subtitle="64% des déménageurs présentent des anomalies (DGCCRF 2023), 257 faillites en 2024. Ce guide vous explique les 8 critères vérifiables pour choisir en toute sécurité : santé financière (Creditsafe), licences, assurances, volume, devis, avis clients."
+        title="Critères pour choisir un déménageur fiable — 3 analyses de risque /100"
+        subtitle="64% des déménageurs présentent des anomalies (DGCCRF 2023), 257 faillites en 2024. Ce guide vous explique les 3 analyses de risque Moverz (avis Google, financier, juridique) + les critères complémentaires pour choisir en toute sécurité."
         primaryCta={{ label: "Voir les 8 critères", href: "#criteres" }}
         secondaryCta={{ label: "FAQ", href: "#faq" }}
       />
@@ -120,16 +120,16 @@ export default function CriteresChoisirDemenageurPage() {
             <div className="grid gap-4">
               {[
                 {
-                  title: "1) Santé financière (Creditsafe)",
+                  title: "1) Risque financier (Creditsafe + Pappers + analyse interne)",
                   emoji: "🏦",
                   bullets: [
-                    "Score de solvabilité sur 100 (entreprises < 40/100 à éviter)",
-                    "Risque de faillite à 12 mois (257 faillites en 2024 !)",
-                    "Incidents de paiement (retards, impayés, procédures collectives)",
-                    "Vérification SIREN actif (pas en liquidation ou radié)",
+                    "Scores Creditsafe et Pappers (scoring financier) consolidés en moyenne — note /100",
+                    "Analyse interne complémentaire : ratio cash / dettes court terme",
+                    "Alerte cash = déménageur exclu automatiquement des devis présentés",
+                    "257 faillites de déménageurs en 2024 (Altares) : ce filtre est essentiel",
                   ],
-                  note: "C'est le critère #1 car un déménageur en difficulté = risque majeur d'acompte perdu ou de prestation non réalisée.",
-                  highlight: "✨ Exclusivité Moverz : Creditsafe vérifié automatiquement",
+                  note: "Double source Creditsafe + Pappers + analyse interne du ratio cash/dettes. Les déménageurs en difficulté sont exclus avant de recevoir votre dossier.",
+                  highlight: "✨ Exclusivité Moverz : double scoring financier + analyse interne",
                 },
                 {
                   title: "2) Licence de transport et conformité légale",
@@ -154,15 +154,15 @@ export default function CriteresChoisirDemenageurPage() {
                   note: "Demandez TOUJOURS l'attestation d'assurance avant de signer. Si le déménageur refuse, c'est un red flag majeur.",
                 },
                 {
-                  title: "4) Avis clients récents et réputation",
+                  title: "4) Risque expérience client (analyse des avis Google)",
                   emoji: "⭐",
                   bullets: [
-                    "Note Google Maps 4.0+/5 minimum (idéalement 4.5+/5)",
-                    "Volume d'avis suffisant (minimum 20-30 avis pour fiabilité)",
-                    "Récence des avis (20+ avis < 6 mois = activité régulière)",
-                    "Pas de pattern de litiges répétitifs (surcoûts jour J, casse, retards systématiques)",
+                    "Analyse des 20 derniers avis Google → note /100 (note moyenne + volume d'avis)",
+                    "Analyse spécifique des avis 1-2★ : détection de patterns récurrents (retards, casse, comportement)",
+                    "Seconde note /100 sur l'analyse des mauvais avis",
+                    "Les deux notes sont présentées séparément au client",
                   ],
-                  note: "Lisez les avis négatifs récents : les vrais problèmes ressortent (volume sous-estimé, casse non indemnisée, etc.).",
+                  note: "Les avis 1-2★ sont les plus révélateurs : si plusieurs clients signalent les mêmes problèmes (retards, casse), c'est un pattern structurel.",
                 },
                 {
                   title: "5) Méthode d'estimation du volume (visite / visio / IA)",
@@ -256,24 +256,24 @@ export default function CriteresChoisirDemenageurPage() {
             <div className="grid gap-3 md:grid-cols-2">
               {[
                 {
-                  icon: "🏦",
-                  title: "Santé financière (Creditsafe)",
-                  desc: "Score de solvabilité, risque de faillite, incidents de paiement. Seules les entreprises financièrement solides passent nos filtres.",
+                  icon: "⭐",
+                  title: "Risque expérience client /100",
+                  desc: "20 derniers avis Google analysés + détection de patterns récurrents dans les avis 1-2★ (retards, casse, comportement). Deux notes /100 distinctes.",
                 },
                 {
-                  icon: "📋",
-                  title: "Licences et SIREN",
-                  desc: "Inscription au registre des transporteurs, SIREN actif, cohérence identité légale. Zéro déménageur non conforme.",
+                  icon: "🏦",
+                  title: "Risque financier /100",
+                  desc: "Scores Creditsafe + Pappers consolidés + ratio cash/dettes interne. Alerte cash = exclusion automatique.",
+                },
+                {
+                  icon: "⚖️",
+                  title: "Risque juridique /100",
+                  desc: "Décisions de justice + scoring non-financier Pappers. Alerte juridique = exclusion automatique.",
                 },
                 {
                   icon: "🛡️",
-                  title: "Assurances RC Pro",
-                  desc: "Attestation valide, plafond ≥ 1,5M€, couverture marchandises. Vous ne recevez des devis que de pros correctement assurés.",
-                },
-                {
-                  icon: "⭐",
-                  title: "Avis clients Google",
-                  desc: "Note 4.0+/5, volume suffisant (20+ avis), pas de pattern de litiges répétitifs (surcoûts, casse, retards).",
+                  title: "Vérifications complémentaires",
+                  desc: "Licence de transport, SIREN actif, assurance RC Pro (≥ 1,5 M€), identité légale. Le socle réglementaire.",
                 },
               ].map((item) => (
                 <div key={item.title} className="rounded-xl border border-[#E5E7EB] bg-white p-5 flex gap-3 items-start">
@@ -288,7 +288,7 @@ export default function CriteresChoisirDemenageurPage() {
 
             <div className="rounded-xl bg-white/60 border border-[#6BCFCF]/20 p-4 text-center">
               <p className="text-sm md:text-base text-[#0F172A]">
-                <strong>Résultat :</strong> Vous ne recevez des devis que de déménageurs vérifiés, assurés, et financièrement solides.
+                <strong>Résultat :</strong> Vous ne recevez des devis que de déménageurs évalués selon 3 analyses de risque /100. Alertes financières ou juridiques = exclusion automatique.
               </p>
               <a 
                 href="/verifications-partenaires/" 
@@ -356,7 +356,7 @@ export default function CriteresChoisirDemenageurPage() {
               
               <div className="mt-6 rounded-xl bg-[#6BCFCF]/10 border border-[#6BCFCF]/20 p-4 text-center">
                 <p className="text-sm md:text-base text-[#0F172A]">
-                  <strong>Trop long ?</strong> Moverz fait ces 8 vérifications automatiquement (Creditsafe + licences + assurances + avis).
+                  <strong>Trop long ?</strong> Moverz fait tout automatiquement : 3 analyses de risque /100 (expérience client, financier, juridique) + vérifications réglementaires.
                 </p>
                 <a 
                   href={buildTunnelUrl({ from: "criteres-checklist" })} 
@@ -410,10 +410,10 @@ export default function CriteresChoisirDemenageurPage() {
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5 space-y-2.5 text-sm md:text-base">
               {[
-                { text: "Score Creditsafe > 40/100 (ou SIREN actif + pas de procédure collective)", priority: "high" },
+                { text: "Risque financier /100 acceptable (Creditsafe + Pappers, pas d'alerte cash)", priority: "high" },
                 { text: "Licence de transport valide (inscription registre des transporteurs)", priority: "high" },
                 { text: "Attestation assurance RC Pro < 6 mois (plafond ≥ 1,5M€)", priority: "high" },
-                { text: "Avis Google 4.0+/5 (minimum 20 avis, récents)", priority: "medium" },
+                { text: "Risque expérience client /100 acceptable (avis Google analysés, pas de patterns négatifs)", priority: "medium" },
                 { text: "Méthode d'estimation précise : visite/visio/IA (pas téléphonique)", priority: "high" },
                 { text: "Devis écrit détaillé (volume, accès, prestations, options, surcoûts)", priority: "high" },
                 { text: "Accès explicités (étage, ascenseur, parking, portage)", priority: "medium" },
@@ -461,13 +461,13 @@ export default function CriteresChoisirDemenageurPage() {
                   href: "/verifications-partenaires/",
                   emoji: "✅",
                   title: "Vérifications Moverz",
-                  desc: "Ce que Moverz vérifie : Creditsafe, licences, assurances, avis.",
+                  desc: "3 analyses de risque /100 : avis Google, financier, juridique. Alertes = exclusion.",
                 },
                 {
                   href: "/blog/meilleur-comparateur-demenagement-2026/",
                   emoji: "🏆",
                   title: "Meilleur comparateur",
-                  desc: "5 critères pour choisir un comparateur fiable (Creditsafe, devis comparables).",
+                  desc: "5 critères pour choisir un comparateur fiable (analyses de risque, devis comparables).",
                 },
                 {
                   href: "/blog/estimer-volume-demenagement-guide-complet/",
@@ -521,8 +521,8 @@ export default function CriteresChoisirDemenageurPage() {
               </h3>
             </div>
             <p className="text-sm md:text-base text-[#6B7280] mb-5 max-w-2xl mx-auto">
-              Moverz vérifie automatiquement les 8 critères (Creditsafe, licences, assurances, avis) + standardise 
-              les volumes pour des devis réellement comparables. Économisez 5-10h de recherche.
+              Moverz évalue automatiquement chaque déménageur selon 3 analyses de risque /100 (expérience client, financier, juridique) 
+              + standardise les volumes pour des devis réellement comparables. Alertes = exclusion automatique.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
               <a

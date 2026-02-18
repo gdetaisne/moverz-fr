@@ -489,10 +489,10 @@ Une fois que vous avez des devis basés sur le **même volume**, vous pouvez com
 
 - ✅ **Sous-traitance** : Le déménageur réalise-t-il lui-même la prestation ? (Faites inscrire "Sans sous-traitance sauf accord écrit" dans le contrat)
 - ✅ **Avis Google** : Note globale 4.5+/5, volume minimum 50-100 avis, récence (20+ avis < 6 mois)
-- ✅ **Santé financière** : Le déménageur est-il solvable ? (257 faillites en 2024, vérifiez le score Creditsafe)
+- ✅ **Santé financière & juridique** : Le déménageur est-il solvable ? (257 faillites en 2024, vérifiez les scores financier + juridique — Creditsafe, Pappers, Pappers Décisions)
 - ✅ **Ancienneté** : Entreprise créée depuis > 3 ans (les arnaques changent régulièrement de nom)
 
-**Solution :** [Moverz](/pourquoi-moverz/) vérifie automatiquement la santé financière (Creditsafe), les licences, et les assurances de chaque déménageur. Vous ne recevez des devis que de pros vérifiés et financièrement solides.
+**Solution :** [Moverz](/pourquoi-moverz/) vérifie automatiquement chaque déménageur via 3 analyses de risque /100 (financier via Creditsafe + Pappers, juridique via Pappers Décisions, avis clients via Google Reviews), licences, et assurances. Déménageurs avec alertes cash ou juridiques exclus. Vous ne recevez des devis que de pros vérifiés.
 
 [En savoir plus sur nos vérifications →](/verifications-partenaires/)
 
@@ -509,7 +509,7 @@ Avant de choisir un déménageur, vérifiez que vous avez bien :
 - [ ] **Assurance valide** : RC Pro valide, couverture standard 60€/m³, assurance complémentaire si objets de valeur
 - [ ] **Conditions claires** : Acompte ≤ 30%, délai d'annulation ≥ 7 jours, modalités de paiement
 - [ ] **Pas de sous-traitance** : Clause "Sans sous-traitance sauf accord écrit"
-- [ ] **Réputation vérifiée** : Avis Google 4.5+/5, santé financière (Creditsafe), ancienneté > 3 ans
+- [ ] **Réputation vérifiée** : Score avis clients /100 (Google Reviews), score financier /100 (Creditsafe + Pappers), score juridique /100 (Pappers Décisions), ancienneté > 3 ans
 
 **Si vous avez coché toutes les cases**, vous pouvez choisir en toute confiance le devis le plus avantageux.
 
@@ -523,7 +523,7 @@ Avant de choisir un déménageur, vérifiez que vous avez bien :
 
 **Conséquence :** Risque élevé de litige, de casse, de supplément jour J, ou de faillite (257 en 2024).
 
-**Solution :** Vérifiez toujours les avis Google (4.5+/5), la santé financière (Creditsafe), et les assurances avant de choisir.
+**Solution :** Vérifiez toujours les 3 analyses de risque : avis Google (score /100, patterns mauvais avis), santé financière (Creditsafe + Pappers, score /100), litiges (Pappers Décisions, score /100), et les assurances avant de choisir.
 
 ### 2. Comparer des devis basés sur des volumes différents
 
@@ -585,7 +585,7 @@ Avant de choisir un déménageur, vérifiez que vous avez bien :
 
 **Solution :** Un bon comparateur de déménagement en 2026 doit vérifier systématiquement les professionnels (licences, assurances, santé financière), standardiser les dossiers pour des devis réellement comparables, et respecter votre anonymat (zéro harcèlement téléphonique).
 
-**Ce guide vous explique les 5 critères essentiels pour choisir le meilleur comparateur de déménagement**, et pourquoi [Moverz](/pourquoi-moverz/) se différencie par ses vérifications Creditsafe et son IA volumétrie.
+**Ce guide vous explique les 5 critères essentiels pour choisir le meilleur comparateur de déménagement**, et pourquoi [Moverz](/pourquoi-moverz/) se différencie par ses 3 analyses de risque /100 (financier, juridique, avis clients) et son IA volumétrie.
 
 ---
 
@@ -624,8 +624,8 @@ Un comparateur de qualité résout ces problèmes en :
 - ✅ **SIREN valide et actif** (pas d'entreprise radiée ou en liquidation)
 - ✅ **Licence de transport** (capacité professionnelle obligatoire)
 - ✅ **Assurance RC Pro valide** (minimum 1,5M€ de garantie)
-- ✅ **Santé financière** (score de solvabilité, risque de faillite, incidents de paiement)
-- ✅ **Absence de litiges graves** (procédures collectives, signalements DGCCRF)
+- ✅ **Santé financière** (scores Creditsafe + Pappers consolidés, ratio cash/dettes court terme, risque de faillite)
+- ✅ **Absence de litiges graves** (Pappers Décisions — procédures passées et en cours, signalements DGCCRF)
 
 **Pourquoi c'est essentiel ?**
 
@@ -635,14 +635,14 @@ Un comparateur de qualité résout ces problèmes en :
 
 #### Comment Moverz vérifie ses partenaires
 
-[Moverz](/pourquoi-moverz/) utilise **Creditsafe**, la base de données de solvabilité B2B, pour vérifier automatiquement :
+[Moverz](/pourquoi-moverz/) effectue **3 analyses de risque /100** par déménageur :
 
-- **Score sur 100** : Santé financière globale de l'entreprise
-- **Risque de défaillance** : Probabilité de faillite à 12 mois
-- **Incidents de paiement** : Retards, impayés, procédures en cours
-- **Identité légale** : Correspondance SIREN/Kbis/dirigeants
+1. **Risque financier /100** : Scores Creditsafe et Pappers consolidés + analyse interne du ratio cash/dettes court terme. Alerte cash = déménageur exclu.
+2. **Risque juridique /100** : Pappers Décisions — litiges passés et en cours, procédures collectives. Alerte juridique = déménageur exclu.
+3. **Risque expérience client /100** : Analyse des 20 derniers avis Google, patterns récurrents dans les mauvais avis (retards, casse, comportement).
+- **+ Conformité** : SIREN/Kbis, licence de transport, assurance RC Pro.
 
-**Résultat :** Vous ne recevez des devis que de déménageurs vérifiés, assurés, et financièrement solides.
+**Résultat :** Vous ne recevez des devis que de déménageurs vérifiés sur les 3 axes de risque, assurés, et conformes.
 
 [En savoir plus sur nos vérifications →](/verifications-partenaires/)
 
@@ -724,13 +724,13 @@ Certaines plateformes affichent "gratuit" mais :
 
 - 🤖 **IA volumétrie** : Estimation automatique du volume en 1 minute (vs 30 min d'inventaire manuel)
 - 📊 **Algorithme de matching** : Propose les 5 meilleurs déménageurs pour votre trajet et vos contraintes
-- 🔄 **Automatisation des vérifications** : Licences, assurances, Creditsafe vérifiés en temps réel
+- 🔄 **Automatisation des vérifications** : 3 analyses de risque /100 (financier, juridique, avis) + licences + assurances, vérifiés en temps réel
 - 📱 **Interface moderne** : Dossier mobile-first, notifications, espace client clair
 
 #### L'IA de Moverz
 
 - **Widget volumétrie** : 90-95% de précision, basé sur 50 000+ déménagements
-- **Score Creditsafe automatique** : Chaque partenaire est scanné en temps réel (santé financière, litiges, faillite)
+- **3 analyses de risque automatiques** : Chaque partenaire est scanné en temps réel (financier Creditsafe + Pappers, juridique Pappers Décisions, avis Google)
 - **Matching géographique** : Les 5 déménageurs proposés couvrent vraiment votre zone (pas de pros à 300km)
 
 ---
@@ -741,7 +741,7 @@ Certaines plateformes affichent "gratuit" mais :
 
 | Critère                          | Moverz ✅                                   | Comparateurs classiques ❌               |
 |----------------------------------|---------------------------------------------|------------------------------------------|
-| **Vérification des pros**        | Creditsafe + licences + assurances          | SIREN basique (ou aucune vérification)   |
+| **Vérification des pros**        | 3 analyses de risque /100 + licences + assurances | SIREN basique (ou aucune vérification)   |
 | **Devis comparables**            | Même volume (IA), mêmes options             | Chaque pro estime différemment           |
 | **Anonymat**                     | Dossier anonyme, vous choisissez            | Vos coordonnées vendues à 10-15 pros     |
 | **Démarchage**                   | Zéro appel non sollicité                    | 10-20 appels/SMS par jour pendant 1 sem. |
@@ -752,7 +752,7 @@ Certaines plateformes affichent "gratuit" mais :
 
 ### Les 3 différenciateurs de Moverz
 
-1. **Creditsafe** : Seul comparateur à vérifier la santé financière des déménageurs (score, risque de faillite, litiges). Vous évitez les entreprises en difficulté.
+1. **3 analyses de risque /100** : Seul comparateur à évaluer les déménageurs sur 3 axes (financier via Creditsafe + Pappers, juridique via Pappers Décisions, avis clients via Google). Déménageurs avec alertes cash ou juridiques exclus.
 
 2. **Dossier standardisé** : L'IA volumétrie + le questionnaire détaillé garantissent que tous les déménageurs partent du même cahier des charges. Résultat : devis réellement comparables.
 

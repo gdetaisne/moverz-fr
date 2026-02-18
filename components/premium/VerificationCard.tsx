@@ -3,9 +3,10 @@ import { Card } from "./Card";
 import { Badge } from "./Badge";
 
 const checks = [
-  { label: "Assurance RC Pro", verified: true },
-  { label: "Licence de transport", verified: true },
-  { label: "Solvabilité financière", verified: true },
+  { label: "Score financier (Creditsafe + Pappers)", verified: true },
+  { label: "Score juridique (Pappers Décisions)", verified: true },
+  { label: "Score avis clients (Google Reviews)", verified: true },
+  { label: "Licences & Assurances", verified: true },
 ];
 
 export function VerificationCard() {

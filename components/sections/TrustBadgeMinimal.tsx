@@ -42,8 +42,8 @@ export function TrustBadgeMinimal() {
           {/* Déménageurs vérifiés */}
           <div className="inline-flex items-center gap-2">
             <Shield className="w-3.5 h-3.5" style={{ color: "var(--color-accent)" }} />
-            <span className="font-semibold" style={{ color: "var(--color-text)" }}>2500+</span>
-            <span style={{ color: "var(--color-text-secondary)" }}>déménageurs vérifiés</span>
+            <span className="font-semibold" style={{ color: "var(--color-text)" }}>3 analyses /100</span>
+            <span style={{ color: "var(--color-text-secondary)" }}>par déménageur</span>
           </div>
         </div>
       </div>

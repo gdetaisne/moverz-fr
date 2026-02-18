@@ -10,10 +10,10 @@ import { Shield, FileCheck, Building2, Scale } from "lucide-react";
 import { StaggerContainer, StaggerItem, FadeUpSection } from "@/components/motion";
 
 const checks = [
-  { icon: Shield, label: "Assurance responsabilité civile" },
-  { icon: FileCheck, label: "Licence de transport à jour" },
-  { icon: Building2, label: "Solvabilité financière vérifiée" },
-  { icon: Scale, label: "Historique de litiges contrôlé" },
+  { icon: Building2, label: "Score financier /100 (Creditsafe + Pappers)" },
+  { icon: Scale, label: "Score juridique /100 (Pappers Décisions)" },
+  { icon: Shield, label: "Score avis clients /100 (Google Reviews)" },
+  { icon: FileCheck, label: "Conformité : licences + assurances" },
 ];
 
 export function VerificationV4() {
@@ -37,7 +37,7 @@ export function VerificationV4() {
 
             <StaggerItem>
               <p className="text-lg text-white/60 max-w-md leading-relaxed">
-                Chaque déménageur partenaire passe un contrôle rigoureux avant d'intégrer notre réseau.
+                Chaque déménageur est évalué sur 3 risques /100 : financier (Creditsafe + Pappers), juridique (Pappers Décisions) et expérience client (Google). Alertes = exclusion.
               </p>
             </StaggerItem>
           </StaggerContainer>

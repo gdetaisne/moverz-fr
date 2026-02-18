@@ -142,15 +142,15 @@ export default function BlogPostPage({ params }: PageProps) {
       description: "Guide complet pour identifier les signaux d'alerte et choisir un déménageur fiable (64% d'anomalies DGCCRF 2023).",
       totalTime: "PT30M", // 30 min de vérification
       supply: ["SIREN du déménageur", "Devis à comparer"],
-      tool: ["Creditsafe (via Moverz)", "Annuaire Entreprises (INSEE)", "Google Maps avis"],
+      tool: ["Creditsafe + Pappers (via Moverz)", "Annuaire Entreprises (INSEE)", "Google Maps avis", "Pappers Décisions (litiges)"],
       steps: [
         { name: "Vérifier le SIREN et l'inscription", text: "Utilisez annuaire-entreprises.data.gouv.fr. Le SIREN doit être actif et l'entreprise inscrite au registre des transporteurs." },
-        { name: "Consulter la santé financière", text: "Moverz utilise Creditsafe pour vérifier solvabilité, risque de faillite, incidents de paiement. 257 faillites en 2024." },
+        { name: "Consulter la santé financière", text: "Moverz croise Creditsafe et Pappers (scoring financier consolidé) + analyse interne du ratio cash/dettes court terme. 257 faillites en 2024 — les déménageurs avec alerte cash sont exclus automatiquement." },
         { name: "Lire les avis Google Maps", text: "Vérifiez les avis récents (6 derniers mois). Attention aux patterns : surcôts, objets cassés, litiges." },
         { name: "Vérifier l'assurance RC Pro", text: "Demandez une attestation d'assurance valide. Requis légalement mais souvent absent (DGCCRF)." },
         { name: "Comparer le devis aux standards", text: "Un devis conforme détaille : volume, accès, options, tarif au m³/horaire, conditions annulation, assurance." },
         { name: "Repérer les signaux d'alerte", text: "Prix 50% sous marché, paiement cash uniquement, pas de contrat écrit, urgence artificielle → FUYEZ." },
-        { name: "Utiliser Moverz pour automatiser", text: "Moverz vérifie automatiquement SIREN, santé financière, litiges avant de partager votre dossier. Vous ne recevez que des pros contrôlés." },
+        { name: "Utiliser Moverz pour automatiser", text: "Moverz vérifie automatiquement SIREN, santé financière (Creditsafe + Pappers), litiges (Pappers Décisions), et avis Google (patterns des mauvais avis) avant de partager votre dossier. Vous ne recevez que des pros contrôlés (3 analyses de risque /100)." },
       ],
     },
     "prix-demenagement-2025": {

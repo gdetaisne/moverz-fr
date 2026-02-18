@@ -29,7 +29,7 @@ const faqCategories = [
       },
       {
         q: "Quelle est la différence entre Moverz et les autres comparateurs ?",
-        a: "La plupart des comparateurs (45-50% du marché) se contentent de revendre vos coordonnées aux déménageurs. Moverz va beaucoup plus loin : nous standardisons votre dossier, et nous vérifions la santé financière de chaque entreprise (score Creditsafe), leur historique de litiges, et leur identité légale. Le prix ne fait pas tout : nous vous aidons à choisir un déménageur fiable, pas juste le moins cher. En savoir plus sur <a href='/pourquoi-moverz/' class='underline text-[#6BCFCF]'>notre approche unique</a>.",
+        a: "La plupart des comparateurs (45-50% du marché) se contentent de revendre vos coordonnées aux déménageurs. Moverz va beaucoup plus loin : nous standardisons votre dossier et nous évaluons chaque déménageur selon 3 analyses de risque notées /100 — expérience client (avis Google analysés), risque financier (Creditsafe + Pappers + ratio cash/dettes), et risque juridique (décisions de justice via Pappers). Les déménageurs avec alertes sont exclus automatiquement. En savoir plus sur <a href='/pourquoi-moverz/' class='underline text-[#6BCFCF]'>notre approche unique</a>.",
       },
       {
         q: "Combien de devis vais-je recevoir ?",
@@ -81,11 +81,11 @@ const faqCategories = [
       },
       {
         q: "Comment Moverz vérifie-t-il les déménageurs ?",
-        a: "Nous utilisons des outils professionnels (Creditsafe) pour analyser chaque entreprise : score de solvabilité sur 100, évolution de ce score dans le temps, historique des litiges et condamnations, situation financière (bénéficiaire ou en pertes), et vérification de l'identité légale (SIREN, assurances). Cette analyse, normalement réservée aux professionnels B2B, est mise à votre disposition pour vous aider à choisir en toute transparence.",
+        a: "Chaque déménageur est évalué selon 3 analyses de risque notées /100 : (1) Risque expérience client — analyse des 20 derniers avis Google + patterns récurrents dans les mauvais avis (retards, casse, comportement), (2) Risque financier — scores Creditsafe et Pappers consolidés + analyse interne du ratio cash/dettes, (3) Risque juridique — décisions de justice et litiges via Pappers. Chaque indicateur est présenté et expliqué individuellement au client. Les déménageurs ont accès à leur scoring et peuvent enrichir leur dossier. Alertes financières ou juridiques = exclusion automatique.",
       },
       {
         q: "Les déménageurs sont-ils fiables ?",
-        a: "Les déménageurs partenaires Moverz sont rigoureusement sélectionnés. Nous vérifions leur score Creditsafe (santé financière), leur historique de litiges, leurs assurances RC Pro, et leur identité légale. Seuls les professionnels avec un profil financier solide et sans litiges problématiques sont intégrés à notre réseau. Vous recevez ces informations pour chaque devis.",
+        a: "Les déménageurs partenaires Moverz sont évalués selon 3 analyses de risque notées /100 (expérience client, financier, juridique). Les déménageurs avec alertes cash (ratio cash/dettes critique) ou alertes juridiques (litiges graves) sont exclus automatiquement. En complément : licence de transport, assurance RC Pro (≥ 1,5 M€), identité légale vérifiée. Vous recevez le détail de chaque indicateur avec votre devis.",
       }
     ]
   },

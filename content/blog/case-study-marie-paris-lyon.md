@@ -74,7 +74,7 @@ Marie contacte aussi directement 2 déménageurs recommandés par des collègues
 **Devis 2 : TransportExpress**
 - Volume estimé : 35m³
 - Prix : 2 890€ TTC
-- Mais : entreprise en difficulté financière (score Creditsafe : 28/100)
+- Mais : entreprise en difficulté financière (score financier : 28/100 — Creditsafe + Pappers)
 
 **Bilan après 1 semaine :**
 - 15 appels reçus
@@ -112,26 +112,27 @@ Marie découvre Moverz via un article de blog sur les arnaques au déménagement
 
 Marie reçoit 5 devis en 48h. **Tous basés sur le même volume (34m³)**.
 
-| Déménageur | Prix TTC | Score santé | Avis | Délai |
-|------------|----------|-------------|------|-------|
-| **Lyon Déménagement** | **2 040€** | ✅ 82/100 | 4.7/5 (120 avis) | ✅ Disponible |
-| Rhône Déplacements | 2 180€ | ✅ 76/100 | 4.5/5 (85 avis) | ✅ Disponible |
-| TransMove | 2 350€ | ⚠️ 58/100 | 4.2/5 (45 avis) | ✅ Disponible |
-| Express Déménagement | 2 490€ | ✅ 71/100 | 4.6/5 (92 avis) | ⚠️ Attente 1 sem |
-| Pro Déménagement | 2 650€ | ✅ 88/100 | 4.8/5 (156 avis) | ✅ Disponible |
+| Déménageur | Prix TTC | Score financier | Score juridique | Score avis | Délai |
+|------------|----------|----------------|-----------------|------------|-------|
+| **Lyon Déménagement** | **2 040€** | ✅ 82/100 | ✅ 95/100 | ✅ 89/100 (4.7/5) | ✅ Disponible |
+| Rhône Déplacements | 2 180€ | ✅ 76/100 | ✅ 90/100 | ✅ 82/100 (4.5/5) | ✅ Disponible |
+| TransMove | 2 350€ | ⚠️ 58/100 | ✅ 85/100 | ⚠️ 68/100 (4.2/5) | ✅ Disponible |
+| Express Déménagement | 2 490€ | ✅ 71/100 | ✅ 92/100 | ✅ 84/100 (4.6/5) | ⚠️ Attente 1 sem |
+| Pro Déménagement | 2 650€ | ✅ 88/100 | ✅ 97/100 | ✅ 91/100 (4.8/5) | ✅ Disponible |
 
 **Différence avec avant :**
 - ✅ Même volume = vraiment comparable
-- ✅ Score financier visible (évite les faillites)
-- ✅ Historique litiges vérifié
+- ✅ 3 scores /100 visibles : financier (Creditsafe + Pappers), juridique (Pappers Décisions), avis Google
+- ✅ Alertes cash ou juridiques = exclusion automatique
 - ✅ Aucun appel intempestif
 
 ### Étape 3 : Choix et validation
 
 Marie choisit **Lyon Déménagement** :
 - Prix : 2 040€ TTC
-- Score santé : 82/100 (excellent)
-- Avis : 4.7/5 sur 120 avis
+- Score financier : 82/100 (Creditsafe + Pappers — excellent)
+- Score juridique : 95/100 (0 litige — Pappers Décisions)
+- Score avis clients : 89/100 (4.7/5 sur 120 avis — 0 pattern négatif récurrent)
 - Assurance RC Pro valide
 - Disponible le 1er avril
 
@@ -211,18 +212,18 @@ Le devis à 1 800€ (25m³) aurait coûté ~2 600€ avec les suppléments jour
 
 ### 3. La santé financière compte
 
-TransportExpress (score 28/100) a fait faillite 2 mois après. Les clients avec acompte ont tout perdu.
+TransportExpress (score financier 28/100 — Creditsafe + Pappers) a fait faillite 2 mois après. Les clients avec acompte ont tout perdu.
 
-**Marie a évité ce piège grâce au score Creditsafe.**
+**Marie a évité ce piège grâce aux 3 analyses de risque Moverz.**
 
 ### 4. Les avis Google ne suffisent pas
 
 Certains déménageurs avaient de bons avis mais :
-- Score financier faible
-- Historique de litiges
+- Score financier faible (ratio cash/dettes court terme critique)
+- Litiges en cours détectés via Pappers Décisions
 - Assurance non valide
 
-**Moverz vérifie tout automatiquement.**
+**Moverz analyse 3 risques /100 automatiquement : financier, juridique, expérience client.**
 
 ### 5. Le temps est précieux
 
@@ -239,11 +240,12 @@ Créez votre dossier en 3 minutes sur [devis.moverz.fr](https://devis.moverz.fr)
 **Ce que vous obtenez :**
 - ✅ Volume estimé par IA (détails)
 - ✅ des devis comparables
-- ✅ Déménageurs contrôlés (score + litiges)
+- ✅ 3 analyses de risque /100 : financier (Creditsafe + Pappers), juridique (Pappers Décisions), avis Google
+- ✅ Alertes cash ou juridiques = exclusion automatique
 - ✅ Sans démarchage, 0 appel intempestif
 - ✅ 100% gratuit
 
 ---
 
-*Cas client réel anonymisé. Données financières et dates modifiées pour confidentialité. Score Creditsafe et avis Google vérifiés au moment du déménagement.*
+*Cas client réel anonymisé. Données financières et dates modifiées pour confidentialité. Scores financier (Creditsafe + Pappers), juridique (Pappers Décisions) et avis Google vérifiés au moment du déménagement.*
 

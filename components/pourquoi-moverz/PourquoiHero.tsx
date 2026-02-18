@@ -73,7 +73,7 @@ export default function PourquoiHero() {
               </div>
               <div>
                 <p className="font-semibold text-white">Pros vérifiés</p>
-                <p className="text-sm text-white/60">Scores financiers + historique litiges</p>
+                <p className="text-sm text-white/60">3 analyses de risque /100 (financier, juridique, avis)</p>
               </div>
             </div>
 

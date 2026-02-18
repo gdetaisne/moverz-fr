@@ -8,7 +8,7 @@ import { buildTunnelUrl } from "@/lib/tunnel-url";
 export const metadata: Metadata = baseGenerateMetadata(
   "comparateur-demenageurs",
   `Comparateur de Déménagement : Guide Complet 2026 (Moverz vs Alternatives)`,
-  "Choisir le meilleur comparateur de déménagement en 2026 : 5 critères clés (Creditsafe, devis comparables, anonymat, IA volume, gratuité). Comparatif Moverz vs plateformes classiques vs contact direct."
+  "Choisir le meilleur comparateur de déménagement en 2026 : 3 analyses de risque /100 (avis Google, financier, juridique), devis comparables (IA volume), anonymat. Moverz vs plateformes classiques vs contact direct."
 );
 
 export default function ComparateurDemenageursPage() {
@@ -16,12 +16,12 @@ export default function ComparateurDemenageursPage() {
     {
       question: "Pourquoi utiliser un comparateur de déménagement plutôt que contacter directement ?",
       answer:
-        "Un comparateur vous fait gagner 5-10h de recherche en centralisant les devis. Avantages : (1) Gain de temps (1 formulaire vs 5-10 appels), (2) Devis comparables si le comparateur standardise le volume, (3) Anonymat et pas de démarchage (sur Moverz), (4) Vérifications automatiques (Creditsafe, licences, assurances sur Moverz). Contact direct = plus long, volumes différents, pas de vérification, démarchage.",
+        "Un comparateur vous fait gagner 5-10h de recherche en centralisant les devis. Avantages : (1) Gain de temps (1 formulaire vs 5-10 appels), (2) Devis comparables si le comparateur standardise le volume, (3) Anonymat et pas de démarchage (sur Moverz), (4) 3 analyses de risque /100 automatiques — avis Google, financier (Creditsafe + Pappers), juridique (Pappers Décisions) — alertes = exclusion. Contact direct = plus long, pas de vérification, démarchage.",
     },
     {
       question: "Quelle est la différence entre Moverz et les autres comparateurs (ex: i-Demenager, DemenagerFacile) ?",
       answer:
-        "3 différences majeures : (1) Vérifications : Moverz vérifie activement Creditsafe + licences + assurances (257 faillites en 2024 !). Les autres comparateurs ne vérifient rien. (2) Devis comparables : Moverz utilise l'IA pour standardiser les volumes (précision 90-95%). Les autres comparateurs = volumes différents = impossible à comparer. (3) Anonymat : Moverz ne revend pas vos coordonnées, votre dossier reste anonyme. Les autres = revente de leads (5-10 appels/jour).",
+        "3 différences majeures : (1) 3 analyses de risque /100 : Moverz évalue chaque déménageur (avis Google + financier Creditsafe/Pappers + juridique Pappers Décisions). Alertes = exclusion automatique. Les autres ne vérifient rien. (2) Devis comparables : Moverz standardise les volumes via IA (90-95%). Les autres = volumes différents = impossible à comparer. (3) Anonymat : Moverz ne revend pas vos coordonnées. Les autres = revente de leads.",
     },
     {
       question: "Les comparateurs de déménagement sont-ils vraiment gratuits ?",
@@ -31,7 +31,7 @@ export default function ComparateurDemenageursPage() {
     {
       question: "Comment Moverz vérifie-t-il les déménageurs ?",
       answer:
-        "4 vérifications automatiques : (1) Santé financière via Creditsafe (score solvabilité, risque faillite, incidents paiement) – seuls les déménageurs avec score >40/100 sont acceptés. (2) Licences de transport (inscription registre transporteurs, SIREN actif). (3) Assurances RC Pro valides (attestation <6 mois, plafond ≥1,5M€). (4) Avis clients Google 4.0+/5 avec minimum 20 avis. Les comparateurs classiques ne font AUCUNE vérification.",
+        "3 analyses de risque automatiques, chacune notée /100 : (1) Risque expérience client — 20 derniers avis Google analysés + patterns récurrents dans les mauvais avis 1-2★ (retards, casse, comportement). (2) Risque financier — scores Creditsafe et Pappers consolidés + ratio cash/dettes interne. Alerte cash = exclusion. (3) Risque juridique — décisions de justice et litiges via Pappers. Alerte juridique = exclusion. En complément : licence de transport, assurance RC Pro (≥ 1,5 M€). Les comparateurs classiques ne font AUCUNE vérification.",
     },
     {
       question: "Pourquoi les devis reçus via comparateurs sont souvent différents ?",
@@ -61,7 +61,7 @@ export default function ComparateurDemenageursPage() {
     {
       question: "Quel est le meilleur comparateur de déménagement en 2026 ?",
       answer:
-        "5 critères pour choisir : (1) Vérifications actives (Creditsafe + licences + assurances) = Moverz uniquement. (2) Devis comparables (même volume IA) = Moverz uniquement. (3) Anonymat (pas de revente de données) = Moverz uniquement. (4) Gratuité réelle (pas de frais cachés) = Moverz + autres. (5) Rapidité (délai raisonnable) = Tous. Conclusion : Moverz est le seul comparateur qui vérifie ET standardise ET protège votre anonymat. Les autres = simple revente de leads.",
+        "5 critères pour choisir : (1) 3 analyses de risque /100 (avis Google + financier + juridique) = Moverz uniquement. (2) Devis comparables (même volume IA) = Moverz uniquement. (3) Anonymat (pas de revente de données) = Moverz uniquement. (4) Gratuité réelle = Moverz + autres. (5) Rapidité = Tous. Conclusion : Moverz est le seul comparateur qui évalue 3 risques /100 ET standardise ET protège votre anonymat.",
     },
   ];
 
@@ -106,10 +106,10 @@ export default function ComparateurDemenageursPage() {
                   desc: "Un comparateur doit s'assurer de la fiabilité des professionnels qu'il vous propose.",
                   points: [
                     "Vérification du SIREN, des licences de transport, des assurances (RC Pro, marchandises)",
-                    "Vérification de la santé financière (Creditsafe : score solvabilité, risque faillite)",
+                    "3 analyses de risque /100 : avis Google, financier (Creditsafe + Pappers), juridique (Pappers Décisions)",
                     "Le risque : être mis en relation avec des entreprises peu scrupuleuses ou en difficulté (257 faillites en 2024 !)",
                   ],
-                  highlight: "✨ Moverz vérifie automatiquement Creditsafe + licences + assurances",
+                  highlight: "✨ Moverz : 3 analyses de risque /100 + exclusion automatique des alertes",
                 },
                 {
                   title: "2. Comparabilité des devis",
@@ -204,8 +204,8 @@ export default function ComparateurDemenageursPage() {
             <div className="grid gap-4 md:grid-cols-2">
               {[
                 {
-                  title: "Vérifications actives (Creditsafe)",
-                  desc: "Moverz est le seul comparateur à vérifier activement la santé financière via Creditsafe (257 faillites en 2024 !). Les autres comparateurs ne vérifient RIEN.",
+                  title: "3 analyses de risque /100",
+                  desc: "Moverz évalue chaque déménageur selon 3 axes (avis Google, financier, juridique). Alertes = exclusion automatique. Les autres comparateurs ne vérifient RIEN.",
                 },
                 {
                   title: "Devis réellement comparables",
@@ -262,13 +262,13 @@ export default function ComparateurDemenageursPage() {
                   href: "/blog/meilleur-comparateur-demenagement-2026/",
                   emoji: "🏆",
                   title: "Meilleur comparateur 2026",
-                  desc: "Comparatif détaillé : 5 critères pour choisir (Creditsafe, devis comparables, anonymat).",
+                  desc: "Comparatif détaillé : 5 critères pour choisir (3 analyses de risque, devis comparables, anonymat).",
                 },
                 {
                   href: "/criteres-choisir-demenageur/",
                   emoji: "✅",
                   title: "8 critères déménageur fiable",
-                  desc: "Santé financière, licences, assurances, avis, volume, devis, paiement, fiabilité.",
+                  desc: "3 analyses de risque /100 (financier, juridique, avis), licences, assurances, volume, devis, paiement.",
                 },
                 {
                   href: "/blog/eviter-arnaques-demenagement/",
@@ -322,7 +322,7 @@ export default function ComparateurDemenageursPage() {
               </h3>
             </div>
             <p className="text-sm md:text-base text-[#6B7280] mb-5 max-w-2xl mx-auto">
-              Créez votre dossier en 3 minutes. Moverz standardise vos infos (volume IA) et vérifie les déménageurs (Creditsafe + licences + assurances). 
+              Créez votre dossier en 3 minutes. Moverz standardise vos infos (volume IA) et évalue chaque déménageur selon 3 analyses de risque /100. Alertes = exclusion automatique. 
               Recevez jusqu'à 5 devis comparables sous 5-7 jours. Dossier anonyme, 0 démarchage.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">

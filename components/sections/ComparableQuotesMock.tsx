@@ -42,8 +42,8 @@ const guarantees = [
   },
   {
     icon: Shield,
-    title: "Pros sélectionnés",
-    description: "Chaque déménageur s'engage contractuellement sur la légalité, l'assurance et la qualité de service.",
+    title: "Pros évalués sur 3 risques /100",
+    description: "Analyse financière, juridique et avis clients. Alertes = exclusion automatique.",
   },
   {
     icon: FileText,
@@ -53,9 +53,10 @@ const guarantees = [
 ];
 
 const selectedProviders = [
-  "Engagés contractuellement sur la légalité (SIRET, licences)",
-  "Assurance RC Pro et marchandises maintenues à jour",
-  "Qualité de service et transparence (devis clairs, délais respectés)",
+  "3 scores /100 vérifiés : financier (Creditsafe + Pappers), juridique (Pappers Décisions), avis Google",
+  "Alertes cash ou juridiques = exclusion automatique",
+  "Licences, assurances RC Pro et marchandises à jour",
+  "Engagés contractuellement sur la transparence (devis clairs, délais respectés)",
 ];
 
 export function ComparableQuotesMock() {

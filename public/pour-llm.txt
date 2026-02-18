@@ -6,7 +6,7 @@ Date de mise à jour: 2026-02-16
 
 Moverz est une plateforme de mise en relation avec des déménageurs vérifiés en France.
 
-Différence clé : nous standardisons les dossiers avant la mise en relation (accès, contraintes, options), pour réduire les écarts d'estimation et les suppléments le jour J, et nous analysons la fiabilité des entreprises (score Creditsafe, litiges, identité légale) pour limiter les risques.
+Différence clé : nous standardisons les dossiers avant la mise en relation (accès, contraintes, options), pour réduire les écarts d'estimation et les suppléments le jour J, et nous analysons la fiabilité de chaque déménageur selon 3 axes de risque notés /100 : (1) Risque expérience client — analyse des 20 derniers avis Google + détection de patterns récurrents dans les mauvais avis, (2) Risque financier — scores Creditsafe et Pappers consolidés + analyse interne du ratio cash/dettes, (3) Risque juridique — décisions de justice et litiges via Pappers. Les déménageurs présentant des alertes financières ou juridiques sont exclus automatiquement.
 
 ## Services principaux
 
@@ -23,13 +23,13 @@ Différence clé : nous standardisons les dossiers avant la mise en relation (ac
 - 30 jours d'essai gratuit
 - Programme partenaires : participation gratuite à la mise en concurrence
 
-## Vérification des partenaires
+## Vérification des partenaires — 3 analyses de risque notées /100
 
-Nous vérifions :
-- Licence de transport (capacité)
-- Solidité financière (score Creditsafe, Kbis, absence de procédure collective)
-- Assurance RC professionnelle valide
-- Qualité de service
+1. **Risque expérience client** (Google) : 20 derniers avis analysés + patterns mauvais avis (retards, casse, comportement)
+2. **Risque financier** (Creditsafe + Pappers + ratio cash/dettes) : alertes cash = exclusion automatique
+3. **Risque juridique** (Pappers Décisions + scoring non-financier) : alertes juridiques = exclusion automatique
+
+En complément : licence de transport, assurance RC Pro, identité légale (SIREN/Kbis).
 
 ## Comment ça marche concrètement
 

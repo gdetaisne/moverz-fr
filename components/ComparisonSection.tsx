@@ -27,7 +27,7 @@ export default function ComparisonSection() {
         </svg>
       ),
       title: "0 risque d'arnaque",
-      description: "Pros contrôlés (assurances, avis) et support en cas de souci.",
+      description: "Pros contrôlés (3 analyses de risque /100 : financier, juridique, avis) et support en cas de souci.",
     },
     {
       icon: (

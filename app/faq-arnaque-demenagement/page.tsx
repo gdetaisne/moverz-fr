@@ -32,9 +32,9 @@ export default function FaqArnaqueDemenagementPage() {
         "Un devis écrit détaillé, un extrait Kbis récent (ou équivalent), une attestation d’assurance à jour (périmètre + franchise), et les coordonnées complètes de la société (raison sociale, SIREN/SIRET, adresse).",
     },
     {
-      question: "Comment vérifier que l’entreprise existe vraiment ?",
+      question: "Comment vérifier qu'un déménageur est fiable ?",
       answer:
-        "Vérifiez le SIREN/SIRET dans un annuaire officiel d’entreprises ou via l’extrait Kbis. Assurez-vous que la raison sociale et l’adresse correspondent à celles du devis et du RIB.",
+        "Vérifiez le SIREN/SIRET (annuaire officiel ou Kbis). Pour aller plus loin, Moverz évalue chaque déménageur selon 3 analyses de risque notées /100 : expérience client (avis Google analysés), risque financier (Creditsafe + Pappers + ratio cash/dettes), risque juridique (décisions de justice via Pappers). Les déménageurs avec alertes financières ou juridiques sont exclus automatiquement.",
     },
     {
       question: "Que doit contenir un devis de déménagement fiable ?",
