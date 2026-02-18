@@ -1,5 +1,3 @@
-import type { HowTo, WithContext } from "schema-dts";
-
 interface HowToStep {
   name: string;
   text: string;
@@ -42,7 +40,7 @@ export function HowToSchema({
   supply,
   tool,
 }: HowToSchemaProps) {
-  const howToData: WithContext<HowTo> = {
+  const howToData = {
     "@context": "https://schema.org",
     "@type": "HowTo",
     name: title,
