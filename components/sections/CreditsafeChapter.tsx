@@ -22,7 +22,7 @@ const checks = [
 export function CreditsafeChapter() {
   return (
     <section
-      className="relative py-20 md:py-28 overflow-hidden"
+      className="relative py-12 md:py-28 overflow-hidden"
       style={{ background: "#0B0F14" }}
     >
       {/* Grain très léger */}

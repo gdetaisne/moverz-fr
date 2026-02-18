@@ -384,7 +384,7 @@ export function HeroV4() {
   }, [estimate, origin, destination, surface]);
 
   return (
-    <section className="relative pt-16 pb-20 md:pt-20 md:pb-28" style={{ background: "var(--color-bg)" }}>
+    <section className="relative pt-5 pb-8 md:pt-20 md:pb-28" style={{ background: "var(--color-bg)" }}>
       {/* Glow subtil */}
       <div
         className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[500px] w-[800px] rounded-full blur-[120px] opacity-30"
@@ -392,9 +392,26 @@ export function HeroV4() {
       />
 
       <div className="container relative">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
-          {/* COLONNE GAUCHE — H1 + 3 garanties */}
-          <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="space-y-8">
+        {/* Mobile: titre compact au-dessus du form */}
+        <div className="md:hidden mb-4">
+          <h1
+            className="font-heading text-[28px] leading-[1.08] font-bold tracking-[-0.025em]"
+            style={{ color: "var(--color-text)" }}
+          >
+            Vous déménagez.{" "}
+            <span style={{ color: "var(--color-accent)" }}>On compare.</span>
+          </h1>
+          <p
+            className="text-[15px] mt-2 leading-relaxed"
+            style={{ color: "var(--color-text-secondary)" }}
+          >
+            Jusqu'à 5 devis comparables · 3 min · 100% gratuit
+          </p>
+        </div>
+
+        <div className="grid gap-6 lg:grid-cols-2 lg:gap-16 items-start">
+          {/* COLONNE GAUCHE — H1 + 3 garanties (desktop only) */}
+          <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="hidden md:block space-y-8 order-1">
             <div className="space-y-5">
               <h1
                 className="font-heading text-[clamp(36px,6vw,64px)] leading-[1.05] font-bold tracking-[-0.025em]"
@@ -405,7 +422,7 @@ export function HeroV4() {
                 <span style={{ color: "var(--color-accent)" }}>On compare.</span>
               </h1>
               <p
-                className="text-lg md:text-xl max-w-lg leading-relaxed"
+                className="text-xl max-w-lg leading-relaxed"
                 style={{ color: "var(--color-text-secondary)" }}
               >
                 Jusqu'à 5 devis comparables · Déménageurs vérifiés · 3 min · 100% gratuit
@@ -432,7 +449,7 @@ export function HeroV4() {
               </motion.div>
             </div>
 
-            {/* 3 garanties inline */}
+            {/* 3 garanties inline — desktop */}
             <motion.div variants={staggerItem} className="flex flex-wrap items-center gap-x-6 gap-y-3">
               {[
                 { icon: Shield, text: "Numéro masqué" },
@@ -449,19 +466,14 @@ export function HeroV4() {
             </motion.div>
           </motion.div>
 
-          {/* COLONNE DROITE — Tunnel card */}
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="relative"
-          >
+          {/* COLONNE DROITE — Tunnel card (pas d'animation opacity pour garantir visibilité immédiate) */}
+          <div className="relative">
             <div
-              className="rounded-[var(--radius-md)] border p-6 md:p-8 space-y-5 max-w-[520px] mx-auto lg:mx-0"
+              className="rounded-[var(--radius-md)] border p-5 md:p-8 space-y-4 md:space-y-5 max-w-[520px] mx-auto lg:mx-0"
               style={{
                 borderColor: "var(--color-border)",
                 background: "var(--color-surface)",
-                boxShadow: "var(--shadow-md)",
+                boxShadow: "0 4px 24px rgba(0,0,0,0.10)",
               }}
             >
               {/* ===== STEP 2 : ESTIMATION ===== */}
@@ -578,7 +590,7 @@ export function HeroV4() {
 
                     <div>
                       <label
-                        className="block text-[13px] md:text-[13px] text-[14px] font-medium mb-1.5"
+                        className="block text-[14px] md:text-[13px] font-medium mb-1.5"
                         style={{ color: "var(--color-text)" }}
                       >
                         Surface (m²)
@@ -592,7 +604,7 @@ export function HeroV4() {
                           value={surface}
                           onChange={(e) => setSurface(e.target.value)}
                           placeholder="Ex: 70"
-                          className="w-full rounded-[var(--radius-sm)] border px-3.5 py-2.5 md:py-2.5 py-3 text-sm outline-none transition-all placeholder:text-[var(--color-text-muted)]"
+                          className="w-full rounded-[var(--radius-sm)] border px-3.5 py-3 md:py-2.5 text-sm outline-none transition-all placeholder:text-[var(--color-text-muted)]"
                           style={{
                             borderColor: "var(--color-border)",
                             color: "var(--color-text)",
@@ -619,7 +631,7 @@ export function HeroV4() {
                         <motion.p
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: "auto" }}
-                          className="mt-1.5 text-[10px] md:text-[10px] text-[11px]"
+                          className="mt-1.5 text-[11px] md:text-[10px]"
                           style={{ color: "var(--color-text-muted)" }}
                         >
                           T2 ≈ 50m² · T3 ≈ 70m² · T4 ≈ 90m²
@@ -674,7 +686,23 @@ export function HeroV4() {
                 </>
               )}
               </div>
-          </motion.div>
+          </div>
+
+          {/* GARANTIES MOBILE — affichées sous le form */}
+          <div className="flex md:hidden flex-wrap items-center justify-center gap-x-5 gap-y-2 pt-2">
+            {[
+              { icon: Shield, text: "Numéro masqué" },
+              { icon: Clock, text: "Aucun appel" },
+              { icon: Ban, text: "Entreprises vérifiées" },
+            ].map(({ icon: Icon, text }, i) => (
+              <div key={i} className="flex items-center gap-1.5">
+                <Icon className="h-3.5 w-3.5 shrink-0" style={{ color: "var(--color-accent)" }} />
+                <span className="text-xs font-medium" style={{ color: "var(--color-text)" }}>
+                  {text}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

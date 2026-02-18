@@ -9,6 +9,7 @@ import ExitIntentPopup from "@/components/ExitIntentPopup";
 import { ConversionIntentTracker } from "@/components/ConversionIntentTracker";
 import { JsonLd } from "@/components/schema/JsonLd";
 import { buildTunnelUrl } from "@/lib/tunnel-url";
+import MobileMenu from "@/components/MobileMenu";
 
 const inter = localFont({
   src: "../public/fonts/inter-latin.woff2",
@@ -242,32 +243,37 @@ export default function RootLayout({
               <a
                 href={buildTunnelUrl({ from: "header" })}
                 rel="nofollow"
-                className="inline-flex items-center gap-1 rounded-full bg-[#0F172A] px-4 py-2 text-sm font-semibold text-white hover:scale-105 transition-all duration-200 shadow-sm"
+                className="hidden sm:inline-flex items-center gap-1.5 rounded-[var(--radius-sm)] px-4 py-2 text-[13px] font-semibold text-white transition-all hover:opacity-90 active:scale-[0.98]"
+                style={{ background: "var(--color-accent)" }}
               >
                 <span>Obtenir des devis</span>
                 <span className="text-base">→</span>
               </a>
+              {/* Mobile menu hamburger */}
+              <MobileMenu />
             </div>
           </nav>
         </header>
 
         <main>{children}</main>
 
-        {/* Footer */}
-        <footer className="bg-[#0F172A] border-t border-white/10 text-white">
-          <div className="mx-auto max-w-7xl px-4 md:px-8 py-12 md:py-16">
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
-              {/* Colonne 1 : Marque */}
-              <div className="space-y-4">
-                <a href="/" className="flex items-center gap-3" title="Moverz - Comparateur de déménagement">
-                  <Image 
-                    src="/logo.png" 
-                    alt="Logo Moverz" 
-                    width={48}
-                    height={48}
-                    className="h-10 w-10 md:h-12 md:w-12"
-                  />
-                  <span className="text-2xl md:text-3xl font-bold text-white">Moverz</span>
+        {/* ===== FOOTER V4 — Sobre, clair, pas de doublon dark ===== */}
+        <footer
+          className="border-t"
+          style={{ background: "var(--color-bg)", borderColor: "var(--color-border)" }}
+        >
+          <div className="mx-auto max-w-[1200px] px-5 md:px-6 lg:px-8 py-10 md:py-14">
+            <div className="grid grid-cols-2 gap-6 md:grid-cols-5 md:gap-6 mb-10">
+              {/* Col 1: Brand */}
+              <div className="col-span-2 md:col-span-1 space-y-3">
+                <a href="/" className="inline-flex items-center gap-2" title="Moverz">
+                  <Image src="/logo-ui.png" alt="Logo Moverz" width={28} height={28} className="h-7 w-7" />
+                  <span
+                    className="text-base font-semibold"
+                    style={{ color: "var(--color-text)", fontFamily: "var(--font-sora)" }}
+                  >
+                    Moverz
+                  </span>
                 </a>
                 <p className="text-sm text-white/70 leading-relaxed">
                   Le comparateur anti-arnaque. Devis comparables, pros contrôlés, sans démarchage.

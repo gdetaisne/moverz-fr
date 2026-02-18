@@ -20,7 +20,7 @@ export function ComparisonExplainer() {
   const quotes = computeMockQuotes({ fromCity: "Paris", toCity: "Lyon", areaM2: 60 });
 
   return (
-    <FadeUpSection className="py-20 md:py-28" style={{ background: "var(--color-bg)" }}>
+    <FadeUpSection className="py-12 md:py-28" style={{ background: "var(--color-bg)" }}>
       <div className="container">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-20 items-center">
           {/* LEFT — Text */}

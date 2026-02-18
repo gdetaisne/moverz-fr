@@ -37,7 +37,8 @@ export function computeMockQuotes({
   // Calcul de la distance
   const isDifferentCities =
     fromCity && toCity && fromCity.toLowerCase() !== toCity.toLowerCase();
-  const distanceFee = isDifferentCities ? 450 + Math.random() * 450 : 100; // 450-900€ ou 100€
+  // Deterministic — pas de Math.random() pour éviter les erreurs d'hydratation SSR/client
+  const distanceFee = isDifferentCities ? 675 : 100; // ~milieu de 450–900€
   const distanceKm = isDifferentCities ? 350 : 15;
 
   // Coefficients par m² pour chaque deviseur

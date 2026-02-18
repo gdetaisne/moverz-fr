@@ -60,7 +60,7 @@ const selectedProviders = [
 
 export function ComparableQuotesMock() {
   return (
-    <section className="py-20 md:py-28" style={{ background: "var(--color-surface)" }}>
+    <section className="py-12 md:py-28" style={{ background: "var(--color-surface)" }}>
       <div className="container">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           {/* LEFT — Device mockup */}
