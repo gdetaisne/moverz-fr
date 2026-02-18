@@ -2,23 +2,26 @@
 
 import { motion } from "framer-motion";
 import { staggerContainer, staggerItem } from "@/components/motion";
-import { Scale, ShieldCheck, Timer } from "lucide-react";
+import { Tag, Handshake, Clock } from "lucide-react";
 
 const arguments_ = [
   {
-    icon: Scale,
-    title: "Mise en concurrence réelle",
-    text: "Chaque déménageur répond au même dossier : vos dates, votre volume, vos contraintes. Les prix sont faits pour votre déménagement, pas pour un devis générique — et la concurrence pousse naturellement les offres à être cohérentes.",
+    icon: Tag,
+    title: "Déménagez au juste prix",
+    line1: "Appel d'offres réel sur votre dossier précis.",
+    line2: "Pas de devis d'appel. Pas d'estimation vague.",
   },
   {
-    icon: ShieldCheck,
-    title: "Filtrage des entreprises à risque",
-    text: "Assurance, situation juridique, fiabilité financière : chaque entreprise est vérifiée avant d'apparaître. Les offres incohérentes ou suspectes sont écartées pour réduire le risque d'arnaque ou de mauvaise surprise.",
+    icon: Handshake,
+    title: "Choisissez un partenaire de confiance",
+    line1: "Entreprises assurées, vérifiées, sélectionnées.",
+    line2: "Les offres à risque sont écartées.",
   },
   {
-    icon: Timer,
-    title: "Gain de temps, comparaison claire",
-    text: "Au lieu de contacter plusieurs entreprises et de jongler entre des formats différents, tout est centralisé et standardisé. Vous comparez sur les mêmes critères et vous décidez en quelques minutes.",
+    icon: Clock,
+    title: "Décidez en quelques minutes",
+    line1: "Un seul dossier. Des offres comparables.",
+    line2: "Une décision simple.",
   },
 ];
 
@@ -51,30 +54,42 @@ export function WhyMoverz() {
 
           {/* 3 arguments */}
           <div className="grid gap-8 md:grid-cols-3">
-            {arguments_.map(({ icon: Icon, title, text }, i) => (
+            {arguments_.map(({ icon: Icon, title, line1, line2 }, i) => (
               <motion.div
                 key={i}
                 variants={staggerItem}
-                className="space-y-3"
+                className="rounded-[var(--radius-md)] border p-6 space-y-3 transition-all hover:-translate-y-0.5 hover:shadow-md"
+                style={{
+                  borderColor: "var(--color-border)",
+                  background: "var(--color-surface)",
+                }}
               >
                 <div
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-[var(--radius-sm)]"
-                  style={{ background: "rgba(14,165,166,0.08)" }}
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full"
+                  style={{ background: "rgba(14,165,166,0.1)" }}
                 >
                   <Icon className="h-5 w-5" style={{ color: "var(--color-accent)" }} />
                 </div>
                 <h3
-                  className="text-base font-semibold"
+                  className="text-[15px] font-bold leading-snug"
                   style={{ color: "var(--color-text)" }}
                 >
                   {title}
                 </h3>
-                <p
-                  className="text-sm leading-relaxed"
-                  style={{ color: "var(--color-text-secondary)" }}
-                >
-                  {text}
-                </p>
+                <div className="space-y-1.5">
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ color: "var(--color-text-secondary)" }}
+                  >
+                    {line1}
+                  </p>
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ color: "var(--color-text-secondary)" }}
+                  >
+                    {line2}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -85,7 +100,7 @@ export function WhyMoverz() {
             className="text-center text-sm font-medium"
             style={{ color: "var(--color-text-muted)" }}
           >
-            Un seul dossier, plusieurs offres vérifiées, une décision simple.
+            Un dossier. Des offres vérifiées. Un choix serein.
           </motion.p>
         </motion.div>
       </div>
