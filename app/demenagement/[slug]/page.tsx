@@ -24,7 +24,7 @@ import { WebPageSchema } from "@/components/schema/WebPageSchema";
 import { ServiceSchema } from "@/components/schema/ServiceSchema";
 import { FAQSchema } from "@/components/schema/FAQSchema";
 import { HowToSchema } from "@/components/schema/HowToSchema";
-import { getLocalPricesForMeta } from "@/lib/pricing-corridors";
+import { getLocalPricesForMeta, getCityPriceTiers } from "@/lib/pricing-corridors";
 
 type PageProps = {
   params: {
@@ -250,7 +250,7 @@ export default function CityMovingPage({ params }: PageProps) {
       <CityHero city={city} quoteUrl={quoteUrl} />
 
       {/* Tableau prix optimisé featured snippet */}
-      <CityPricingTable cityName={city.nameCapitalized} />
+      <CityPricingTable cityName={city.nameCapitalized} citySlug={city.slug} />
 
       {/* Stats locales */}
       <CityStats cityName={city.nameCapitalized} />
@@ -259,7 +259,7 @@ export default function CityMovingPage({ params }: PageProps) {
       <FlowAndIA />
 
       {/* Prix indicatifs */}
-      <CityPricing cityName={city.nameCapitalized} />
+      <CityPricing cityName={city.nameCapitalized} priceTiers={getCityPriceTiers(city.slug).slice(0, 3).map(t => ({ label: t.label, volume: t.volume, price: t.price }))} />
 
       {/* Bloc local unique + CTA */}
       <CityLocalInsights citySlug={city.slug} cityName={city.nameCapitalized} quoteUrl={quoteUrl} />
