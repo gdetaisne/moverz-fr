@@ -23,6 +23,7 @@ import ProblemSolution from "@/components/ProblemSolution";
 import { WebPageSchema } from "@/components/schema/WebPageSchema";
 import { ServiceSchema } from "@/components/schema/ServiceSchema";
 import { FAQSchema } from "@/components/schema/FAQSchema";
+import { HowToSchema } from "@/components/schema/HowToSchema";
 import { getLocalPricesForMeta } from "@/lib/pricing-corridors";
 
 type PageProps = {
