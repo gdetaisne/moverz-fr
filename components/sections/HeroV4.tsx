@@ -48,6 +48,8 @@ async function fetchEstimate(
   originPostalCode: string,
   destinationPostalCode: string,
   surface: number,
+  originCity?: string,
+  destinationCity?: string,
 ): Promise<Estimate | null> {
   try {
     const controller = new AbortController();
@@ -58,6 +60,8 @@ async function fetchEstimate(
       destinationPostalCode,
       surface: String(surface),
     });
+    if (originCity) params.set("originCity", originCity);
+    if (destinationCity) params.set("destinationCity", destinationCity);
     const res = await fetch(`https://devis.moverz.fr/api/estimate?${params}`, {
       signal: controller.signal
     });
@@ -286,7 +290,7 @@ export function HeroV4() {
     });
     setLoading(true);
     setError(null);
-    const result = await fetchEstimate(origin.postcode, destination.postcode, Number(surface));
+    const result = await fetchEstimate(origin.postcode, destination.postcode, Number(surface), origin.city, destination.city);
     setLoading(false);
     if (result) {
       setEstimate(result);
