@@ -116,6 +116,22 @@ export default function BlogIndexClient() {
       <section className="relative overflow-hidden pt-12 pb-16 md:pt-20 md:pb-28" style={{ 
         background: "linear-gradient(to bottom, #F0FDFA 0%, #E0F2FE 50%, #F9FAFB 100%)"
       }}>
+        {/* Grain texture - Premium feel */}
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.015]"
+          style={{ 
+            backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")" 
+          }}
+        />
+
+        {/* Vignette sur les bords */}
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background: "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.03) 100%)",
+          }}
+        />
+        
         <div className="relative container mx-auto max-w-6xl px-4">
           {/* Breadcrumb */}
           <nav className="mb-8">

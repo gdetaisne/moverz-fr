@@ -254,7 +254,7 @@ Offrir des alternatives pour garder l'utilisateur dans l'écosystème même s'il
 // Exemple CTA contextuel dans CreditsafeChapter
 <div className="text-center pt-8">
   <a 
-    href="https://devis.moverz.fr/devis-gratuits-v3?source=homepage-creditsafe"
+    href="https://devis.moverz.fr/devis-gratuits?source=homepage-creditsafe"
     className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-white font-semibold"
     style={{ background: "var(--color-accent)" }}
   >

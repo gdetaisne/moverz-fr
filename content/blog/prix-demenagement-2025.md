@@ -24,7 +24,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 - Comment **optimiser votre budget** sans prendre de risques
 
 > **Calculer votre volume et comparer des devis**  
-> En 1 minute, l'IA Moverz estime votre volume en m³ et partage votre dossier avec jusqu'à 5 déménageurs évalués sur 3 risques /100 (financier Creditsafe + Pappers, juridique Pappers Décisions, avis Google) via [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=blog-prix).
+> En 1 minute, l'IA Moverz estime votre volume en m³ et partage votre dossier avec jusqu'à 5 déménageurs évalués sur 3 risques /100 (financier Creditsafe + Pappers, juridique Pappers Décisions, avis Google) via [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix).
 
 ---
 
@@ -40,7 +40,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 | **T4 (80-100 m²)** | 40-55 m³ | **1 500 – 2 700 €** | **2 700 – 4 800 €** |
 | **Maison 120 m²+** | 60-80 m³ | **2 200 – 3 800 €+** | **3 800 – 6 500 €+** |
 
-\*Volumes indicatifs basés sur des inventaires réels. L'IA Moverz peut affiner ce cubage à partir de votre configuration exacte. [Estimer mon volume →](https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=blog-prix-tableau)
+\*Volumes indicatifs basés sur des inventaires réels. L'IA Moverz peut affiner ce cubage à partir de votre configuration exacte. [Estimer mon volume →](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-tableau)
 
 ---
 
@@ -93,7 +93,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 - **→ Devis comparables + 0 surprise jour J** ✅
 
 > **Calculer votre volume précis avec l'IA**  
-> Inventaire guidé pièce par pièce, calcul automatique en m³, dossier partagé avec 3-5 déménageurs sur [devis.moverz.fr](https://devis.moverz.fr).
+> Inventaire guidé pièce par pièce, calcul automatique en m³, dossier partagé avec 3-5 déménageurs sur [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits).
 
 ---
 
@@ -442,7 +442,7 @@ Avec Moverz, vous recevez **des devis comparables** :
 - **→ Vous n'êtes pas seul** ✅
 
 > **Lancer votre comparaison**  
-> Créez votre dossier en 3 minutes, l'IA estime votre volume, recevez des devis comparables sur [devis.moverz.fr](https://devis.moverz.fr).
+> Créez votre dossier en 3 minutes, l'IA estime votre volume, recevez des devis comparables sur [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits).
 
 ---
 
@@ -572,7 +572,7 @@ Avec Moverz, vous recevez **des devis comparables** :
 
 **Estimation IA en 1 minute** · **des devis comparables** · **3 analyses de risque /100** · **100% gratuit**
 
-[Comparer les devis maintenant →](https://devis.moverz.fr)
+[Comparer les devis maintenant →](https://devis.moverz.fr/devis-gratuits)
 
 **Questions ?** [contact@moverz.fr](mailto:contact@moverz.fr) · Support dédié
 

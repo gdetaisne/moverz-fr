@@ -4,10 +4,10 @@
  *
  * Usage:
  *   buildTunnelUrl({ from: "/blog-article", citySlug: "marseille" })
- *   → https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=%2Fblog-article&city_slug=marseille&utm_source=moverz_website&utm_medium=referral&utm_content=%2Fblog-article
+ *   → https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=%2Fblog-article&city_slug=marseille&utm_source=moverz_website&utm_medium=referral&utm_content=%2Fblog-article
  */
 
-const TUNNEL_BASE = "https://devis.moverz.fr/devis-gratuits-v3";
+const TUNNEL_BASE = "https://devis.moverz.fr/devis-gratuits";
 
 interface TunnelUrlParams {
   /** Page d'origine (ex: "/blog-article", "header", "exit-intent") */

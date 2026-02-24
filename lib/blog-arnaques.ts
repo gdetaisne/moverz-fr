@@ -23,7 +23,7 @@ Dans ce guide, vous allez découvrir :
 - Une **checklist complète** avant de signer votre devis
 
 > **Comparez en toute sécurité**
-> Moverz évalue chaque déménageur selon 3 analyses de risque notées /100 (avis Google, financier, juridique). Alertes = exclusion automatique. Créez votre dossier gratuitement sur [devis.moverz.fr](https://devis.moverz.fr).
+> Moverz évalue chaque déménageur selon 3 analyses de risque notées /100 (avis Google, financier, juridique). Alertes = exclusion automatique. Créez votre dossier gratuitement sur [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits).
 
 ---
 
@@ -249,7 +249,7 @@ Pour chaque déménageur, vous voyez :
 - Les déménageurs ont accès à leur scoring et peuvent enrichir leur dossier (note au client)
 
 > **Essayez gratuitement**
-> Créez votre dossier en 3 minutes sur [devis.moverz.fr](https://devis.moverz.fr). Vous verrez la différence.
+> Créez votre dossier en 3 minutes sur [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits). Vous verrez la différence.
 
 ---
 
@@ -309,7 +309,7 @@ Oui, si le volume réel est supérieur au volume estimé. C'est pourquoi il est 
 Ces chiffres ne sont pas là pour vous faire peur. Ils sont là pour vous rappeler que **choisir le moins cher n'est pas toujours choisir le moins risqué**.
 
 > **Comparez intelligemment**
-> Moverz évalue chaque déménageur selon 3 analyses de risque /100 (avis Google, financier, juridique). Alertes = exclusion automatique. Créez votre dossier gratuitement sur [devis.moverz.fr](https://devis.moverz.fr).
+> Moverz évalue chaque déménageur selon 3 analyses de risque /100 (avis Google, financier, juridique). Alertes = exclusion automatique. Créez votre dossier gratuitement sur [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits).
 
 ---
 

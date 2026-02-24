@@ -18,7 +18,7 @@ import { trackEvent } from "@/lib/tracking";
 import Image from "next/image";
 
 const STEPS = [
-  { num: "1", text: "On sollicite les pros disponibles" },
+  { num: "1", text: "On sollicite les déménageurs disponibles" },
   { num: "2", text: "On contrôle prix et fiabilité" },
   { num: "3", text: "Vous choisissez sereinement", bold: true },
 ] as const;
@@ -84,42 +84,47 @@ export function HeroV4TwoColumn() {
             </span>
           </motion.h1>
 
-          {/* Steps compacts - Minimaliste avec animation */}
-          <motion.div variants={staggerItem} className="mt-7 mx-auto max-w-md space-y-2">
+          {/* Steps ultra-minimaliste - Style Ramp (mobile) */}
+          <motion.div variants={staggerItem} className="mt-7 mx-auto max-w-md space-y-3.5 relative">
+            {/* Ligne verticale avec progression */}
+            <div className="absolute left-[9px] top-2 bottom-2 w-[2px] bg-slate-200">
+              <motion.div
+                className="w-full bg-gradient-to-b from-orange-500 via-teal-500 to-teal-500 rounded-full"
+                initial={{ height: "0%" }}
+                animate={{ height: "100%" }}
+                transition={{ duration: 1.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                style={{ transformOrigin: "top" }}
+              />
+            </div>
+
             {STEPS.map(({ num, text, bold }, i) => (
               <motion.div
                 key={num}
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ 
                   duration: 0.4, 
-                  delay: 0.3 + i * 0.1,
+                  delay: 0.3 + i * 0.15,
                   ease: [0.16, 1, 0.3, 1]
                 }}
-                className="flex items-start gap-2.5 text-left"
+                className="flex items-start gap-4 pl-8 relative"
               >
-                <motion.span
-                  className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold mt-0.5"
+                {/* Numéro minimaliste */}
+                <div 
+                  className="absolute left-0 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[11px] font-bold"
                   style={{
-                    background: bold ? "var(--color-accent)" : "var(--color-border-light)",
-                    color: bold ? "#fff" : "var(--color-text-secondary)",
+                    background: i === 0 ? "#F59E0B" : bold ? "var(--color-accent)" : "var(--color-border-light)",
+                    color: i === 0 || bold ? "#fff" : "#9CA3AF",
                   }}
-                  animate={bold ? {
-                    scale: [1, 1.05, 1],
-                  } : {}}
-                  transition={bold ? {
-                    duration: 2,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                    ease: "easeInOut"
-                  } : {}}
                 >
                   {num}
-                </motion.span>
+                </div>
+                
+                {/* Texte */}
                 <p
-                  className={`text-sm leading-snug ${bold ? "font-semibold" : ""}`}
+                  className={`text-[15px] leading-[1.5] ${bold ? "font-semibold" : "font-normal"}`}
                   style={{
-                    color: bold ? "var(--color-text)" : "var(--color-text-secondary)",
+                    color: bold ? "var(--color-text)" : "#64748B",
                   }}
                 >
                   {text}
@@ -169,42 +174,47 @@ export function HeroV4TwoColumn() {
               </span>
             </h1>
 
-            {/* Steps ultra-compacts - Minimaliste Ramp avec animation */}
-            <div className="space-y-1.5 mb-8">
+            {/* Steps ultra-minimaliste - Style Ramp */}
+            <div className="space-y-4 mb-8 relative">
+              {/* Ligne verticale avec progression */}
+              <div className="absolute left-[9px] top-2 bottom-2 w-[2px] bg-slate-200">
+                <motion.div
+                  className="w-full bg-gradient-to-b from-orange-500 via-teal-500 to-teal-500 rounded-full"
+                  initial={{ height: "0%" }}
+                  animate={{ height: "100%" }}
+                  transition={{ duration: 1.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                  style={{ transformOrigin: "top" }}
+                />
+              </div>
+
               {STEPS.map(({ num, text, bold }, i) => (
                 <motion.div
                   key={num}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
                   transition={{ 
                     duration: 0.4, 
-                    delay: 0.3 + i * 0.1,
+                    delay: 0.3 + i * 0.15,
                     ease: [0.16, 1, 0.3, 1]
                   }}
-                  className="flex items-start gap-2.5 text-left"
+                  className="flex items-start gap-4 pl-8 relative"
                 >
-                  <motion.span
-                    className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold mt-0.5"
+                  {/* Numéro minimaliste */}
+                  <div 
+                    className="absolute left-0 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[11px] font-bold"
                     style={{
-                      background: bold ? "#0EA5A6" : "#E5E7EB",
-                      color: bold ? "#fff" : "#6B7280",
+                      background: i === 0 ? "#F59E0B" : bold ? "#0EA5A6" : "#E5E7EB",
+                      color: i === 0 || bold ? "#fff" : "#9CA3AF",
                     }}
-                    animate={bold ? {
-                      scale: [1, 1.05, 1],
-                    } : {}}
-                    transition={bold ? {
-                      duration: 2,
-                      repeat: Infinity,
-                      repeatType: "reverse",
-                      ease: "easeInOut"
-                    } : {}}
                   >
                     {num}
-                  </motion.span>
+                  </div>
+                  
+                  {/* Texte plus lisible */}
                   <p
-                    className={`text-[17px] leading-[1.45] ${bold ? "font-semibold" : ""}`}
+                    className={`text-[18px] leading-[1.5] ${bold ? "font-semibold" : "font-normal"}`}
                     style={{
-                      color: bold ? "#111827" : "#6B7280",
+                      color: bold ? "#111827" : "#64748B",
                     }}
                   >
                     {text}
@@ -238,10 +248,10 @@ export function HeroV4TwoColumn() {
             variants={staggerItem}
             className="lg:col-span-6 relative flex justify-center items-center"
           >
-            <div className="relative w-full max-w-[560px]" style={{ perspective: "1200px" }}>
-              {/* Halo dramatique 2x plus fort */}
+            <div className="relative w-full max-w-[420px]" style={{ perspective: "1200px" }}>
+              {/* Halo dramatique */}
               <div
-                className="absolute inset-0 rounded-[60px] blur-[120px] opacity-40"
+                className="absolute inset-0 rounded-[60px] blur-[100px] opacity-35"
                 style={{ 
                   background: "radial-gradient(ellipse, rgba(14,165,166,0.4) 0%, rgba(245,158,11,0.2) 50%, transparent 70%)"
                 }}
@@ -440,15 +450,15 @@ export function HeroV4TwoColumn() {
                 initial={{ opacity: 0, scale: 0.9, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.7 }}
-                className="absolute -bottom-8 -left-8 rounded-2xl px-6 py-3.5 text-base font-semibold shadow-2xl backdrop-blur-md border"
+                className="absolute -bottom-6 -left-5 rounded-xl px-4 py-2.5 text-sm font-semibold shadow-2xl backdrop-blur-md border"
                 style={{ 
                   background: "rgba(255,255,255,0.95)", 
                   borderColor: "rgba(245,158,11,0.2)",
                   color: "#111827" 
                 }}
               >
-                <div className="flex items-center gap-2.5">
-                  <div className="h-2.5 w-2.5 rounded-full animate-pulse" style={{ background: "#F59E0B" }} />
+                <div className="flex items-center gap-2">
+                  <div className="h-2 w-2 rounded-full animate-pulse" style={{ background: "#F59E0B" }} />
                   <span><strong style={{ color: "#F59E0B" }}>3</strong> offres retenues sur 7</span>
                 </div>
               </motion.div>

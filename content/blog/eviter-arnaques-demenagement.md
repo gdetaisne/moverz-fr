@@ -27,7 +27,7 @@ Dans ce guide, vous allez découvrir :
 - Une **checklist complète** avant de signer votre devis
 
 > **Comparez en toute sécurité**  
-> [Moverz](/pourquoi-moverz/) évalue chaque déménageur selon 3 analyses de risque notées /100 (avis Google, financier, juridique). Alertes = exclusion automatique. Créez votre dossier gratuitement sur [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=blog-arnaques).
+> [Moverz](/pourquoi-moverz/) évalue chaque déménageur selon 3 analyses de risque notées /100 (avis Google, financier, juridique). Alertes = exclusion automatique. Créez votre dossier gratuitement sur [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-arnaques).
 
 ---
 
@@ -273,7 +273,7 @@ Pour chaque déménageur, vous voyez :
 Pas de classement opaque. Vous comprenez pourquoi.
 
 > **Essayez gratuitement**  
-> Créez votre dossier en 3 minutes sur [devis.moverz.fr](https://devis.moverz.fr). Vous verrez la différence.
+> Créez votre dossier en 3 minutes sur [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits). Vous verrez la différence.
 
 ---
 
@@ -349,7 +349,7 @@ Ces chiffres ne sont pas là pour vous faire peur. Ils sont là pour vous rappel
 Prenez le temps de vérifier. Utilisez les outils disponibles. Et si vous voulez gagner du temps, laissez [Moverz](/pourquoi-moverz/) faire cette vérification pour vous.
 
 > **Comparez en toute sécurité**  
-> [Moverz](/verifications-partenaires/) vérifie systématiquement chaque déménageur : 3 analyses de risque /100 (financier via Creditsafe + Pappers, juridique via Pappers Décisions, avis clients via Google Reviews), licences de transport, assurances RC Pro. Déménageurs avec alertes cash ou juridiques exclus. Obtenez jusqu'à 5 devis de déménageurs vérifiés sous 5-7 jours. [Créer mon dossier gratuitement →](https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=blog-arnaques-cta)
+> [Moverz](/verifications-partenaires/) vérifie systématiquement chaque déménageur : 3 analyses de risque /100 (financier via Creditsafe + Pappers, juridique via Pappers Décisions, avis clients via Google Reviews), licences de transport, assurances RC Pro. Déménageurs avec alertes cash ou juridiques exclus. Obtenez jusqu'à 5 devis de déménageurs vérifiés sous 5-7 jours. [Créer mon dossier gratuitement →](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-arnaques-cta)
 
 ---
 

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Container } from "./Container";
 
 const footerSections = [
   {
@@ -47,93 +46,108 @@ const footerSections = [
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 text-white" style={{ background: "#070A12" }}>
-      {/* Subtle noise texture */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.06]"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-        }}
-      />
-
-      <Container className="relative z-10">
-        <div className="py-16 md:py-20">
-          <div className="grid grid-cols-1 gap-10 md:grid-cols-5 md:gap-12 mb-16">
-            {/* Colonne 1 : Marque */}
-            <div className="space-y-5">
-              <Link href="/" className="group inline-flex items-center gap-3">
-                <Image
-                  src="/logo.png"
-                  alt="Logo Moverz"
-                  width={48}
-                  height={48}
-                  className="h-12 w-12 transition-transform duration-300 group-hover:scale-105"
-                />
-                <span className="font-heading text-3xl font-bold text-white">Moverz</span>
-              </Link>
-              <p className="text-sm leading-relaxed text-white/70">
-                Le comparateur anti-arnaque. Devis comparables, pros contrôlés, sans démarchage.
+    <footer
+      className="border-t border-white/10"
+      style={{ background: "var(--color-bg-dark)" }}
+    >
+      <div className="mx-auto max-w-[1200px] px-5 md:px-6 lg:px-8 py-10 md:py-14">
+        <div className="grid grid-cols-2 gap-6 md:grid-cols-5 md:gap-6 mb-10">
+          {/* Col 1: Brand */}
+          <div className="col-span-2 md:col-span-1 space-y-4">
+            <a href="/" className="inline-flex items-center gap-2.5" title="Moverz">
+              <Image src="/logo.png" alt="Logo Moverz" width={32} height={32} className="h-8 w-8" />
+              <span className="font-heading text-xl font-bold text-white">
+                Moverz
+              </span>
+            </a>
+            {/* Tagline SEO */}
+            <div className="space-y-1.5">
+              <p className="text-sm font-semibold text-white leading-snug">
+                Le comparateur anti-arnaque du déménagement.
               </p>
-              <form action="/search" method="get" className="flex gap-2">
-                <label className="sr-only" htmlFor="footer-search-q">
-                  Rechercher dans le blog
-                </label>
-                <input
-                  id="footer-search-q"
-                  name="q"
-                  placeholder="Rechercher dans le blog..."
-                  className="flex-1 rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-white/50 backdrop-blur-sm focus:border-[#14B8A6] focus:outline-none focus:ring-2 focus:ring-[#14B8A6]/50 transition-all"
-                />
-                <button
-                  type="submit"
-                  className="shrink-0 rounded-lg bg-[#14B8A6] p-2.5 text-white transition-all hover:bg-[#0D9488] active:scale-95"
-                  aria-label="Rechercher dans le blog"
-                >
-                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                </button>
-              </form>
+              <p className="text-sm text-white/70 leading-snug">
+                Devis comparables, pros contrôlés, sans démarchage.
+              </p>
             </div>
+            {/* Search form - Blog */}
+            <form action="/search" method="get" className="mt-4 flex gap-2">
+              <label className="sr-only" htmlFor="footer-search-q">
+                Rechercher dans le blog
+              </label>
+              <input
+                id="footer-search-q"
+                name="q"
+                placeholder="Rechercher dans le blog..."
+                className="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-2 text-sm text-white placeholder:text-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/50 focus:border-[var(--color-accent)]"
+              />
+              <button
+                type="submit"
+                className="shrink-0 rounded-xl p-2.5 text-white transition-all hover:opacity-90 active:scale-95"
+                style={{ background: "var(--color-accent)" }}
+                aria-label="Rechercher dans le blog"
+              >
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </button>
+            </form>
+          </div>
 
-            {/* Colonnes 2-5 : Links */}
-            {footerSections.map((section) => (
-              <div key={section.title}>
-                <h3 className="mb-5 font-semibold text-white">{section.title}</h3>
-                <ul className="space-y-3 text-sm">
-                  {section.links.map((link) => (
-                    <li key={link.href}>
-                      <Link
-                        href={link.href}
-                        className="inline-block text-white/70 transition-colors hover:text-white"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+          {/* Colonnes 2-5 : Links */}
+          {footerSections.map((section) => (
+            <div key={section.title}>
+              <h3 className="font-semibold mb-4 text-white">{section.title}</h3>
+              <ul className="space-y-2 text-sm">
+                {section.links.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      className={
+                        link.label === "Voir toutes les villes"
+                          ? "hover:text-white transition-colors"
+                          : "text-white/70 hover:text-white transition-colors"
+                      }
+                      style={
+                        link.label === "Voir toutes les villes"
+                          ? { color: "var(--color-accent)" }
+                          : undefined
+                      }
+                    >
+                      {link.label}
+                      {link.label === "Voir toutes les villes" && " →"}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
+          {/* Section légale à droite */}
+          <div className="col-span-2 md:col-span-1">
+            <div className="md:mt-[52px]">
+              <div className="text-xs text-white/60 leading-relaxed space-y-0.5">
+                <p>Propriétaire du site :</p>
+                <p>Entreprise : GSLV EURL</p>
+                <p>SIREN : 914499876</p>
+                <p>RCS : La Rochelle</p>
+                <p>Adresse du siège : 5 Rue Jean Coyttar, 17290 Thairé, France</p>
+                <p>Site web : https://moverz.fr</p>
+                <p>Email : contact@moverz.fr</p>
               </div>
-            ))}
-          </div>
-
-          {/* Legal info card */}
-          <div className="mb-8 rounded-lg border border-white/10 bg-white/5 p-4 text-xs leading-relaxed text-white/60 backdrop-blur-sm">
-            <p className="mb-1 font-semibold text-white/80">Propriétaire du site :</p>
-            <p>GSLV EURL • SIREN : 914499876 • RCS : La Rochelle</p>
-            <p>5 Rue Jean Coyttar, 17290 Thairé, France • contact@moverz.fr</p>
-          </div>
-
-          {/* Bottom bar */}
-          <div className="flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-sm md:flex-row">
-            <p className="text-white/70">
-              © {new Date().getFullYear()} <span className="font-semibold text-white">Moverz</span> – GSLV EURL (SIREN 914499876). Tous droits réservés.
-            </p>
-            <div className="flex items-center gap-2 text-xs text-white/70">
-              <span>Fait en France</span>
             </div>
           </div>
         </div>
-      </Container>
+
+        {/* Bas du footer */}
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-white/60">
+            © {new Date().getFullYear()} Moverz – GSLV EURL (SIREN 914499876). Tous droits réservés.
+          </p>
+          <p className="text-sm text-white/60">
+            Fait en France
+          </p>
+        </div>
+      </div>
     </footer>
   );
 }

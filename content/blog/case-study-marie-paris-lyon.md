@@ -235,7 +235,7 @@ Certains déménageurs avaient de bons avis mais :
 
 ## 🚀 Vous déménagez bientôt ?
 
-Créez votre dossier en 3 minutes sur [devis.moverz.fr](https://devis.moverz.fr).
+Créez votre dossier en 3 minutes sur [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits).
 
 **Ce que vous obtenez :**
 - ✅ Volume estimé par IA (détails)

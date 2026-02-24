@@ -11,7 +11,7 @@ type QuoteWidgetShellProps = {
 };
 
 function buildQuoteUrl(source: string, from: string, citySlug?: string) {
-  const base = "https://devis.moverz.fr/";
+  const base = "https://devis.moverz.fr/devis-gratuits";
   const params = new URLSearchParams();
   params.set("source", source);
   params.set("from", from);

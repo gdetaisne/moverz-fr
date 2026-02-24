@@ -78,7 +78,7 @@ export default function MobileMenu() {
               ))}
               <div className="pt-3 border-t" style={{ borderColor: "var(--color-border)" }}>
                 <a
-                  href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=header-mobile"
+                  href="https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=header-mobile"
                   rel="nofollow"
                   className="block w-full text-center rounded-lg px-4 py-3 text-sm font-semibold text-white transition-all active:scale-[0.98]"
                   style={{ background: "var(--color-accent)" }}

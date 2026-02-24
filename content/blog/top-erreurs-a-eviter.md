@@ -19,7 +19,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 - Comment **l'IA Moverz élimine 5 erreurs majeures** automatiquement
 
 > **Éviter les erreurs dès le départ**  
-> L'IA Moverz calcule votre volume précis en 1 minute, vous compare des devis fiables, et vous guide étape par étape via [devis.moverz.fr](https://devis.moverz.fr).
+> L'IA Moverz calcule votre volume précis en 1 minute, vous compare des devis fiables, et vous guide étape par étape via [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits).
 
 ---
 
@@ -773,7 +773,7 @@ L'IA + les 3 analyses de risque /100 + la checklist complète éliminent automat
 
 **Volume IA en 1 minute** · **des devis comparables** · **3 analyses de risque /100** · **Checklist complète** · **100% gratuit**
 
-[Comparer les devis maintenant →](https://devis.moverz.fr)
+[Comparer les devis maintenant →](https://devis.moverz.fr/devis-gratuits)
 
 **Questions ?** [contact@moverz.fr](mailto:contact@moverz.fr) · Support dédié
 
