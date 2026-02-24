@@ -90,9 +90,12 @@ export function HeroV4TwoColumn() {
               {/* Ligne horizontale background */}
               <div className="absolute top-4 left-0 right-0 h-[2px] bg-slate-200" />
               
-              {/* Ligne animée (progression) */}
+              {/* Ligne animée (progression) avec touche orange subtile */}
               <motion.div 
-                className="absolute top-4 left-0 h-[2px] bg-gradient-to-r from-teal-500 to-teal-400"
+                className="absolute top-4 left-0 h-[2px]"
+                style={{
+                  background: "linear-gradient(to right, #CBD5E1 0%, #FB923C 45%, #14B8A6 100%)"
+                }}
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
                 transition={{ duration: 2, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
@@ -119,8 +122,8 @@ export function HeroV4TwoColumn() {
                       initial={{ scale: 0, backgroundColor: "#F3F4F6" }}
                       animate={{ 
                         scale: 1,
-                        backgroundColor: bold ? "#0EA5A6" : "#FFFFFF",
-                        borderColor: bold ? "#0EA5A6" : "#E5E7EB"
+                        backgroundColor: i === 0 ? "#FFF7ED" : (bold ? "#0EA5A6" : "#FFFFFF"),
+                        borderColor: i === 0 ? "#F59E0B" : (bold ? "#0EA5A6" : "#E5E7EB")
                       }}
                       transition={{ 
                         duration: 0.4, 
@@ -129,7 +132,7 @@ export function HeroV4TwoColumn() {
                       }}
                       style={{
                         border: "2px solid",
-                        color: bold ? "#fff" : "#6B7280",
+                        color: i === 0 ? "#F59E0B" : (bold ? "#fff" : "#6B7280"),
                       }}
                     >
                       {num}
@@ -179,9 +182,9 @@ export function HeroV4TwoColumn() {
         >
           {/* COLONNE GAUCHE : Texte + CTA (col-span-6) */}
           <motion.div variants={staggerItem} className="lg:col-span-6 max-w-[580px]">
-            {/* H1 - Specs Ramp exactes */}
+            {/* H1 - Size optimisé */}
             <h1
-              className="font-heading text-[68px] leading-[0.95] font-semibold tracking-[-0.03em] mb-8"
+              className="font-heading text-[56px] leading-[0.95] font-semibold tracking-[-0.03em] mb-8"
               style={{ color: "#111827" }}
             >
               Vous déménagez ?
@@ -197,9 +200,12 @@ export function HeroV4TwoColumn() {
                 {/* Ligne horizontale background */}
                 <div className="absolute top-5 left-0 right-0 h-[2px] bg-slate-200" />
                 
-                {/* Ligne animée (progression) */}
+                {/* Ligne animée (progression) avec touche orange subtile */}
                 <motion.div 
-                  className="absolute top-5 left-0 h-[2px] bg-gradient-to-r from-teal-500 to-teal-400"
+                  className="absolute top-5 left-0 h-[2px]"
+                  style={{
+                    background: "linear-gradient(to right, #CBD5E1 0%, #FB923C 45%, #14B8A6 100%)"
+                  }}
                   initial={{ width: "0%" }}
                   animate={{ width: "100%" }}
                   transition={{ duration: 2.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
@@ -226,8 +232,8 @@ export function HeroV4TwoColumn() {
                         initial={{ scale: 0, backgroundColor: "#F3F4F6" }}
                         animate={{ 
                           scale: 1,
-                          backgroundColor: bold ? "#0EA5A6" : "#FFFFFF",
-                          borderColor: bold ? "#0EA5A6" : "#E5E7EB"
+                          backgroundColor: i === 0 ? "#FFF7ED" : (bold ? "#0EA5A6" : "#FFFFFF"),
+                          borderColor: i === 0 ? "#F59E0B" : (bold ? "#0EA5A6" : "#E5E7EB")
                         }}
                         transition={{ 
                           duration: 0.4, 
@@ -236,8 +242,8 @@ export function HeroV4TwoColumn() {
                         }}
                         style={{
                           border: "3px solid",
-                          color: bold ? "#fff" : "#6B7280",
-                          boxShadow: bold ? "0 4px 12px rgba(14,165,166,0.2)" : "0 2px 4px rgba(0,0,0,0.05)"
+                          color: i === 0 ? "#F59E0B" : (bold ? "#fff" : "#6B7280"),
+                          boxShadow: i === 0 ? "0 4px 12px rgba(245,158,11,0.15)" : (bold ? "0 4px 12px rgba(14,165,166,0.2)" : "0 2px 4px rgba(0,0,0,0.05)")
                         }}
                       >
                         {num}
@@ -319,13 +325,43 @@ export function HeroV4TwoColumn() {
 
                   {/* Screen content */}
                   <div className="relative h-full w-full p-3 pt-9 pb-4 overflow-y-auto" style={{ background: "#F9FAFB" }}>
-                    {/* Contenu simplifié - 1 seule card visible */}
-                    <div
-                      className="rounded-xl border-2 p-4 shadow-sm space-y-2.5 bg-white"
-                      style={{
-                        borderColor: "#0EA5A6",
-                      }}
-                    >
+                    {/* Stack de 3 cards avec effet de profondeur */}
+                    <div className="relative">
+                      {/* Card C - Très en arrière (la plus floutée) */}
+                      <div 
+                        className="absolute inset-0 -translate-y-2 rounded-xl border bg-white opacity-20 blur-[3px] pointer-events-none"
+                        style={{
+                          borderColor: "#CBD5E1",
+                          height: "95%",
+                        }}
+                      >
+                        <div className="p-3 space-y-2">
+                          <div className="h-6 bg-slate-200 rounded" />
+                          <div className="h-4 bg-slate-100 rounded w-3/4" />
+                        </div>
+                      </div>
+                      
+                      {/* Card A - Moyennement en arrière */}
+                      <div 
+                        className="absolute inset-0 -translate-y-1 rounded-xl border bg-white opacity-40 blur-[1.5px] pointer-events-none"
+                        style={{
+                          borderColor: "#94A3B8",
+                          height: "97%",
+                        }}
+                      >
+                        <div className="p-3 space-y-2">
+                          <div className="h-6 bg-slate-200 rounded" />
+                          <div className="h-4 bg-slate-100 rounded w-2/3" />
+                        </div>
+                      </div>
+                      
+                      {/* Card B - Principale (Meilleure offre) - NETTE */}
+                      <div
+                        className="relative rounded-xl border-2 p-4 shadow-sm space-y-2.5 bg-white"
+                        style={{
+                          borderColor: "#E5E7EB",
+                        }}
+                      >
                       {/* Badge "Meilleure offre" */}
                       <div className="flex items-center justify-center py-1.5 rounded-lg" style={{ background: "#0EA5A6" }}>
                         <span className="text-xs font-semibold text-white">
@@ -357,7 +393,7 @@ export function HeroV4TwoColumn() {
                             <circle cx="28" cy="28" r="24" fill="none" stroke="#E5E7EB" strokeWidth="3" />
                             <circle 
                               cx="28" cy="28" r="24" fill="none" 
-                              stroke="#0EA5A6" 
+                              stroke="#10B981" 
                               strokeWidth="3"
                               strokeDasharray={`${24 * 2 * Math.PI * 0.84} ${24 * 2 * Math.PI}`}
                               strokeLinecap="round"
@@ -368,7 +404,7 @@ export function HeroV4TwoColumn() {
                           </div>
                         </div>
                         <div>
-                          <p className="text-sm font-semibold" style={{ color: "#0EA5A6" }}>Excellent</p>
+                          <p className="text-sm font-semibold" style={{ color: "#10B981" }}>Excellent</p>
                           <p className="text-xs text-slate-600">Score Moverz</p>
                         </div>
                       </div>
@@ -380,6 +416,7 @@ export function HeroV4TwoColumn() {
                       >
                         Je choisis cette offre →
                       </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -399,7 +436,7 @@ export function HeroV4TwoColumn() {
                 }}
               >
                 <div className="flex items-center gap-1.5">
-                  <div className="h-1.5 w-1.5 rounded-full" style={{ background: "#0EA5A6" }} />
+                  <div className="h-1.5 w-1.5 rounded-full" style={{ background: "#F59E0B" }} />
                   <span><strong style={{ color: "#0EA5A6" }}>3</strong> offres retenues</span>
                 </div>
               </motion.div>
