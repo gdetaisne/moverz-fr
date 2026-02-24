@@ -69,16 +69,16 @@ function MorphingUIAnimation() {
         animate={{ opacity: 1, y: 0 }}
         className="relative z-10 mb-6"
       >
-        {/* Logo Moverz subtle en haut */}
+        {/* Logo Moverz en haut */}
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-1.5">
-            <div 
-              className="w-5 h-5 rounded-md flex items-center justify-center"
-              style={{ background: "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)" }}
-            >
-              <span className="text-white text-[9px] font-bold">M</span>
-            </div>
-            <span className="text-[9px] font-semibold text-slate-400">Moverz</span>
+            <Image 
+              src="/logo-ui.png" 
+              alt="Moverz" 
+              width={60} 
+              height={20}
+              className="h-4 w-auto"
+            />
           </div>
           <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "#10B981" }} />
         </div>
