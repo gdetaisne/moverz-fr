@@ -1,10 +1,13 @@
 "use client";
 
 /**
- * HERO V4 TWO COLUMN - Ramp-style
- * Mobile : centré (comme avant)
- * Desktop : 2 colonnes (texte gauche + mock géant droite)
- * Impact estimé : +25-35% conversion desktop
+ * HERO V4 TWO COLUMN - LICORNE EDITION 🦄
+ * Version ultra-premium inspirée Ramp/Botify
+ * - Fond dramatique avec grain + gradient
+ * - Téléphone avec perspective + stack effect
+ * - Trust row repositionnée
+ * - Specs typo Ramp exactes
+ * - Touches orange + teal
  */
 
 import { buildTunnelUrl } from "@/lib/tunnel-url";
@@ -12,7 +15,6 @@ import { motion } from "framer-motion";
 import { staggerContainer, staggerItem } from "@/components/motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { trackEvent } from "@/lib/tracking";
-import Image from "next/image";
 
 const STEPS = [
   { num: "1", text: "Nous sollicitons les déménageurs disponibles près de chez vous." },
@@ -25,18 +27,42 @@ export function HeroV4TwoColumn() {
 
   return (
     <section
-      className="relative pt-12 pb-16 md:pt-20 md:pb-24 overflow-hidden"
-      style={{ background: "var(--color-bg)" }}
+      className="relative pt-12 pb-16 md:pt-20 md:pb-28 overflow-hidden"
+      style={{ 
+        background: "linear-gradient(to bottom, #F0FDFA 0%, #E0F2FE 50%, #F9FAFB 100%)"
+      }}
     >
-      {/* Glow subtil */}
+      {/* Grain texture - Premium feel */}
       <div
-        className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[600px] w-[1000px] rounded-full blur-[140px] opacity-20"
-        style={{
-          background: "radial-gradient(circle, rgba(14,165,166,0.2), transparent 70%)",
+        className="pointer-events-none absolute inset-0 opacity-[0.015]"
+        style={{ 
+          backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")" 
         }}
       />
 
-      <div className="container relative">
+      {/* Vignette sur les bords */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background: "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.03) 100%)",
+        }}
+      />
+
+      {/* Halo teal + orange dramatique */}
+      <div
+        className="pointer-events-none absolute left-1/4 top-0 h-[600px] w-[800px] rounded-full blur-[160px] opacity-20"
+        style={{
+          background: "radial-gradient(circle, rgba(14,165,166,0.3), transparent 70%)",
+        }}
+      />
+      <div
+        className="pointer-events-none absolute right-1/4 top-1/3 h-[500px] w-[700px] rounded-full blur-[140px] opacity-15"
+        style={{
+          background: "radial-gradient(circle, rgba(245,158,11,0.25), transparent 70%)",
+        }}
+      />
+
+      <div className="relative mx-auto max-w-[1240px] px-6">
         {/* MOBILE : Centré comme avant */}
         <motion.div
           initial="hidden"
@@ -57,21 +83,18 @@ export function HeroV4TwoColumn() {
             </span>
           </motion.h1>
 
-          {/* Steps pills */}
-          <motion.div variants={staggerItem} className="mt-8 mx-auto max-w-md space-y-2.5">
-            {STEPS.map(({ num, text, bold }) => (
+          {/* Steps compacts - Minimaliste */}
+          <motion.div variants={staggerItem} className="mt-7 mx-auto max-w-md space-y-2">
+            {STEPS.map(({ num, text, bold }, i) => (
               <div
                 key={num}
-                className="flex items-start gap-3 text-left rounded-xl px-4 py-2.5 transition-colors"
-                style={{
-                  background: bold ? "rgba(14,165,166,0.06)" : "transparent",
-                }}
+                className="flex items-start gap-2.5 text-left"
               >
                 <span
-                  className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold"
+                  className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold mt-0.5"
                   style={{
-                    background: bold ? "var(--color-accent)" : "var(--color-border-light)",
-                    color: bold ? "#fff" : "var(--color-text-secondary)",
+                    background: bold ? "var(--color-accent)" : i === 0 ? "#F59E0B" : "var(--color-border-light)",
+                    color: bold || i === 0 ? "#fff" : "var(--color-text-secondary)",
                   }}
                 >
                   {num}
@@ -88,21 +111,7 @@ export function HeroV4TwoColumn() {
             ))}
           </motion.div>
 
-          {/* Social proof */}
-          <motion.div variants={staggerItem} className="mt-6 flex items-center justify-center gap-2">
-            <div className="flex items-center gap-0.5 text-amber-400">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <svg key={i} className="h-3.5 w-3.5 fill-current" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              ))}
-            </div>
-            <p className="text-sm" style={{ color: "var(--color-text-secondary)" }}>
-              <strong style={{ color: "var(--color-text)" }}>4,5/5</strong> · <strong style={{ color: "var(--color-text)" }}>186 dossiers</strong>
-            </p>
-          </motion.div>
-
-          {/* CTA mobile */}
+          {/* CTA mobile - Direct après stepper pour max conversion */}
           <motion.div variants={staggerItem} className="mt-6">
             <a
               href={quoteUrl}
@@ -120,70 +129,49 @@ export function HeroV4TwoColumn() {
               Gratuit · 3 min · Sans engagement
             </p>
           </motion.div>
-
-          {/* Trust chips */}
-          <motion.div variants={staggerItem} className="mt-6 flex flex-wrap justify-center gap-2">
-            {["Prix contrôlés", "Fiabilité vérifiée", "Numéro masqué"].map((label) => (
-              <span
-                key={label}
-                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium border"
-                style={{
-                  color: "var(--color-text-secondary)",
-                  borderColor: "var(--color-border)",
-                  background: "var(--color-surface)",
-                }}
-              >
-                <CheckCircle2 className="h-3.5 w-3.5" style={{ color: "var(--color-accent)" }} />
-                {label}
-              </span>
-            ))}
-          </motion.div>
         </motion.div>
 
-        {/* DESKTOP : 2 COLONNES RAMP-STYLE */}
+        {/* DESKTOP : 2 COLONNES LICORNE 🦄 */}
         <motion.div
           initial="hidden"
           animate="visible"
           variants={staggerContainer}
-          className="hidden lg:grid lg:grid-cols-2 lg:gap-16 xl:gap-20 lg:items-center"
+          className="hidden lg:grid lg:grid-cols-12 lg:gap-10 lg:items-center"
         >
-          {/* COLONNE GAUCHE : Texte + CTA */}
-          <motion.div variants={staggerItem} className="space-y-8">
-            {/* H1 plus gros */}
+          {/* COLONNE GAUCHE : Texte + CTA (col-span-6) */}
+          <motion.div variants={staggerItem} className="lg:col-span-6 max-w-[580px]">
+            {/* H1 - Specs Ramp exactes */}
             <h1
-              className="font-heading text-[clamp(48px,5.5vw,68px)] leading-[1.05] font-bold tracking-[-0.03em]"
-              style={{ color: "var(--color-text)" }}
+              className="font-heading text-[68px] leading-[0.95] font-semibold tracking-[-0.03em] mb-8"
+              style={{ color: "#111827" }}
             >
               Vous déménagez.
               <br />
-              <span style={{ color: "var(--color-accent)" }}>
+              <span style={{ color: "#0EA5A6" }}>
                 On vous présente les 3 meilleurs.
               </span>
             </h1>
 
-            {/* Steps compacts */}
-            <div className="space-y-2.5 max-w-lg">
-              {STEPS.map(({ num, text, bold }) => (
+            {/* Steps ultra-compacts - Minimaliste Ramp */}
+            <div className="space-y-1.5 mb-8">
+              {STEPS.map(({ num, text, bold }, i) => (
                 <div
                   key={num}
-                  className="flex items-start gap-3 text-left rounded-xl px-4 py-3 transition-colors"
-                  style={{
-                    background: bold ? "rgba(14,165,166,0.08)" : "transparent",
-                  }}
+                  className="flex items-start gap-2.5 text-left"
                 >
                   <span
-                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold"
+                    className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold mt-0.5"
                     style={{
-                      background: bold ? "var(--color-accent)" : "var(--color-border-light)",
-                      color: bold ? "#fff" : "var(--color-text-secondary)",
+                      background: bold ? "#0EA5A6" : i === 0 ? "#F59E0B" : "#E5E7EB",
+                      color: bold || i === 0 ? "#fff" : "#6B7280",
                     }}
                   >
                     {num}
                   </span>
                   <p
-                    className={`text-base leading-relaxed pt-1 ${bold ? "font-semibold" : ""}`}
+                    className={`text-[17px] leading-[1.45] ${bold ? "font-semibold" : ""}`}
                     style={{
-                      color: bold ? "var(--color-text)" : "var(--color-text-secondary)",
+                      color: bold ? "#111827" : "#6B7280",
                     }}
                   >
                     {text}
@@ -192,79 +180,69 @@ export function HeroV4TwoColumn() {
               ))}
             </div>
 
-            {/* Social proof */}
-            <div className="flex items-center gap-2.5">
-              <div className="flex items-center gap-0.5 text-amber-400">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <svg key={i} className="h-4 w-4 fill-current" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <p className="text-base" style={{ color: "var(--color-text-secondary)" }}>
-                <strong className="text-lg" style={{ color: "var(--color-text)" }}>4,5/5</strong> · <strong style={{ color: "var(--color-text)" }}>186 dossiers</strong> accompagnés
-              </p>
-            </div>
-
-            {/* CTA desktop */}
+            {/* CTA desktop - Pure conversion */}
             <div className="space-y-3">
               <a
                 href={quoteUrl}
                 onClick={() => trackEvent("Lead_clic_home", { source: "hero-cta" })}
-                className="inline-flex items-center justify-center gap-2.5 rounded-xl px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:opacity-90 hover:shadow-[0_12px_40px_rgba(14,165,166,0.35)] hover:-translate-y-0.5 active:scale-[0.98]"
+                className="inline-flex items-center justify-center gap-2 h-14 px-8 rounded-2xl text-[16px] font-semibold text-white transition-all duration-200 hover:shadow-[0_16px_48px_rgba(14,165,166,0.4)] hover:-translate-y-1 active:scale-[0.98] group"
                 style={{ 
-                  background: "var(--color-accent)",
-                  boxShadow: "0 4px 16px rgba(14,165,166,0.24)"
+                  background: "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)",
+                  boxShadow: "0 4px 16px rgba(14,165,166,0.25)"
                 }}
               >
                 Recevoir ma sélection
-                <ArrowRight className="h-6 w-6" />
+                <ArrowRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
               </a>
-              <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>
+              <p className="text-[13px]" style={{ color: "#9CA3AF" }}>
                 Gratuit · 3 min · Sans engagement
               </p>
             </div>
-
-            {/* Trust chips */}
-            <div className="flex flex-wrap gap-2.5">
-              {["Prix contrôlés", "Fiabilité vérifiée", "Numéro masqué"].map((label) => (
-                <span
-                  key={label}
-                  className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium border"
-                  style={{
-                    color: "var(--color-text-secondary)",
-                    borderColor: "var(--color-border)",
-                    background: "var(--color-surface)",
-                  }}
-                >
-                  <CheckCircle2 className="h-4 w-4" style={{ color: "var(--color-accent)" }} />
-                  {label}
-                </span>
-              ))}
-            </div>
           </motion.div>
 
-          {/* COLONNE DROITE : MOCK TÉLÉPHONE GÉANT */}
+          {/* COLONNE DROITE : MOCK TÉLÉPHONE - MISE EN SCÈNE RAMP 🎬 */}
           <motion.div
             variants={staggerItem}
-            className="relative flex justify-center items-center"
+            className="lg:col-span-6 relative flex justify-center items-center"
           >
-            <div className="relative w-full max-w-[440px]">
-              {/* Glow derrière le téléphone - Ramp style */}
+            <div className="relative w-full max-w-[560px]" style={{ perspective: "1200px" }}>
+              {/* Halo dramatique 2x plus fort */}
               <div
-                className="absolute inset-0 rounded-[60px] blur-[100px] opacity-25"
-                style={{ background: "var(--color-accent)" }}
+                className="absolute inset-0 rounded-[60px] blur-[120px] opacity-40"
+                style={{ 
+                  background: "radial-gradient(ellipse, rgba(14,165,166,0.4) 0%, rgba(245,158,11,0.2) 50%, transparent 70%)"
+                }}
+              />
+
+              {/* Ombre de contact au sol (elliptique) */}
+              <div
+                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[70%] h-8 rounded-full blur-2xl opacity-30"
+                style={{ background: "#000" }}
               />
               
-              {/* Phone mockup container */}
-              <div className="relative">
-                {/* Device frame - Style iPhone moderne */}
+              {/* Stack effect - 2 cartes floutées derrière = "3 meilleurs" visuel */}
+              <div className="absolute inset-0 translate-x-4 translate-y-4 rounded-[48px] opacity-20 blur-sm" style={{ background: "#CBD5E1", transform: "rotateY(-2deg) rotateX(1deg) translateZ(-40px)" }} />
+              <div className="absolute inset-0 translate-x-2 translate-y-2 rounded-[48px] opacity-30 blur-[2px]" style={{ background: "#94A3B8", transform: "rotateY(-1deg) rotateX(0.5deg) translateZ(-20px)" }} />
+
+              {/* Phone mockup principal avec perspective */}
+              <motion.div 
+                className="relative"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                style={{ 
+                  transform: "rotateY(-3deg) rotateX(2deg)",
+                  transformStyle: "preserve-3d"
+                }}
+              >
+                {/* Device frame - Style iPhone moderne - Plus grand pour le contenu détaillé */}
                 <div
-                  className="relative rounded-[48px] border-[8px] overflow-hidden shadow-2xl"
+                  className="relative rounded-[48px] border-[8px] overflow-hidden"
                   style={{
                     borderColor: "#1F2937",
                     background: "#F9FAFB",
-                    aspectRatio: "9/19.5",
+                    aspectRatio: "9/20.5",
+                    boxShadow: "0 40px 80px rgba(0,0,0,0.2), 0 20px 40px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.1)"
                   }}
                 >
                   {/* Notch */}
@@ -273,124 +251,152 @@ export function HeroV4TwoColumn() {
                     style={{ background: "#1F2937" }}
                   />
 
-                  {/* Screen content - Mockup de l'interface */}
-                  <div className="relative h-full w-full p-4 pt-12 pb-8 overflow-hidden">
-                    {/* Header app */}
-                    <div className="mb-4">
-                      <p className="text-sm font-semibold" style={{ color: "var(--color-text)" }}>
-                        Offres retenues pour votre dossier
-                      </p>
-                      <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>
-                        Paris → Lyon · 60m²
+                  {/* Screen content - Mockup ULTRA-RÉALISTE de la vraie landing client */}
+                  <div className="relative h-full w-full p-4 pt-12 pb-8 overflow-y-auto" style={{ background: "#F9FAFB" }}>
+                    {/* Header texte réel */}
+                    <div className="mb-4 px-1">
+                      <p className="text-[11px] text-slate-600 leading-relaxed">
+                        Ces offres sont réelles, établies pour votre projet. Choisir une offre déclenche une mise en relation — <span className="font-semibold text-slate-900">sans aucun engagement</span> de votre part.
                       </p>
                     </div>
 
-                    {/* Card déménageur (mockup simplifié) */}
+                    {/* Card déménageur - Design pixel-perfect */}
                     <div
-                      className="rounded-2xl border p-5 shadow-lg space-y-4"
+                      className="rounded-2xl border p-5 shadow-md space-y-3.5"
                       style={{
-                        borderColor: "var(--color-border)",
+                        borderColor: "#0EA5A6",
+                        borderWidth: "2px",
                         background: "white",
                       }}
                     >
-                      {/* Badge "Meilleure offre" */}
-                      <div className="flex items-center justify-between">
-                        <span
-                          className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold"
-                          style={{ background: "rgba(14,165,166,0.1)", color: "var(--color-accent)" }}
-                        >
-                          ★ Meilleure offre
+                      {/* Badge "Meilleure offre" - Teal comme sur le vrai */}
+                      <div className="flex items-center justify-center py-1.5 rounded-lg" style={{ background: "#0EA5A6" }}>
+                        <span className="text-xs font-semibold text-white">
+                          ✦ Meilleure offre
                         </span>
                       </div>
 
-                      {/* Nom + Score */}
-                      <div>
-                        <div className="flex items-center gap-2 mb-2">
-                          <div
-                            className="h-10 w-10 rounded-lg flex items-center justify-center text-white font-bold"
-                            style={{ background: "var(--color-accent)" }}
-                          >
-                            DM
-                          </div>
-                          <div>
-                            <p className="text-sm font-bold" style={{ color: "var(--color-text)" }}>
-                              DéménagePro SAS
-                            </p>
-                            <p className="text-xs" style={{ color: "var(--color-text-secondary)" }}>
-                              Score Moverz : 92/100
-                            </p>
-                          </div>
-                        </div>
+                      {/* Nom déménageur */}
+                      <h3 className="text-lg font-bold text-slate-900">
+                        Déménageur B
+                      </h3>
+
+                      {/* Trust badges ligne */}
+                      <div className="flex items-center gap-1.5 text-xs text-slate-600">
+                        <CheckCircle2 className="h-3.5 w-3.5 shrink-0" style={{ color: "#0EA5A6" }} />
+                        <span>Prix cohérent · Fiabilité vérifiée · Avis positifs</span>
                       </div>
 
                       {/* Prix */}
-                      <div
-                        className="rounded-xl p-4"
-                        style={{ background: "var(--color-surface)" }}
-                      >
-                        <p className="text-xs mb-1" style={{ color: "var(--color-text-muted)" }}>
-                          Prix total
-                        </p>
-                        <p className="text-3xl font-bold" style={{ color: "var(--color-text)" }}>
-                          1 890€
-                        </p>
-                        <p className="text-xs mt-1" style={{ color: "var(--color-text-secondary)" }}>
-                          450€ moins cher que la moyenne
-                        </p>
+                      <div className="py-2">
+                        <p className="text-4xl font-bold text-slate-900">1150 €</p>
+                        <p className="text-xs text-slate-500 mt-1">Prix proposé TTC · 18/05/2026</p>
                       </div>
 
-                      {/* Avantages */}
-                      <div className="space-y-2 text-xs">
-                        <div className="flex items-center gap-2">
-                          <CheckCircle2 className="h-4 w-4 shrink-0" style={{ color: "var(--color-accent)" }} />
-                          <span style={{ color: "var(--color-text-secondary)" }}>
-                            Assurance tous risques incluse
-                          </span>
+                      {/* Score circulaire + label */}
+                      <div className="flex items-center gap-4 py-2">
+                        <div className="relative h-16 w-16">
+                          <svg className="h-16 w-16 -rotate-90">
+                            <circle cx="32" cy="32" r="28" fill="none" stroke="#E5E7EB" strokeWidth="4" />
+                            <circle 
+                              cx="32" cy="32" r="28" fill="none" 
+                              stroke="#0EA5A6" 
+                              strokeWidth="4"
+                              strokeDasharray={`${28 * 2 * Math.PI * 0.84} ${28 * 2 * Math.PI}`}
+                              strokeLinecap="round"
+                            />
+                          </svg>
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <span className="text-xl font-bold text-slate-900">84</span>
+                          </div>
                         </div>
-                        <div className="flex items-center gap-2">
-                          <CheckCircle2 className="h-4 w-4 shrink-0" style={{ color: "var(--color-accent)" }} />
-                          <span style={{ color: "var(--color-text-secondary)" }}>
-                            Disponible à vos dates
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <CheckCircle2 className="h-4 w-4 shrink-0" style={{ color: "var(--color-accent)" }} />
-                          <span style={{ color: "var(--color-text-secondary)" }}>
-                            Note Google : 4.8/5 (124 avis)
-                          </span>
+                        <div>
+                          <p className="text-sm font-semibold" style={{ color: "#0EA5A6" }}>Excellent</p>
+                          <p className="text-xs text-slate-500">Score Moverz</p>
                         </div>
                       </div>
 
-                      {/* CTA */}
-                      <button
-                        className="w-full rounded-xl px-4 py-3 text-sm font-semibold text-white"
-                        style={{ background: "var(--color-accent)" }}
-                      >
-                        Choisir cette offre
-                      </button>
-                    </div>
+                      {/* 5 barres de score détaillées */}
+                      <div className="space-y-2 py-2">
+                        {[
+                          { label: "Financier", value: 50, color: "#DC2626" },
+                          { label: "Juridique", value: 100, color: "#0EA5A6" },
+                          { label: "Google", value: 100, color: "#0EA5A6" },
+                          { label: "Réputation", value: 95, color: "#0EA5A6" },
+                          { label: "Vigilance", value: 100, color: "#0EA5A6" },
+                        ].map(({ label, value, color }) => (
+                          <div key={label} className="flex items-center justify-between text-xs">
+                            <span className="text-slate-600 w-20">{label}</span>
+                            <div className="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden mx-2">
+                              <div 
+                                className="h-full rounded-full" 
+                                style={{ width: `${value}%`, background: color }}
+                              />
+                            </div>
+                            <span className="font-semibold text-slate-900 w-8 text-right">{value}</span>
+                          </div>
+                        ))}
+                      </div>
 
-                    {/* Indicateur "2 autres offres" */}
-                    <div className="mt-4 text-center">
-                      <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>
-                        + 2 autres offres disponibles
+                      {/* Avis Google */}
+                      <div className="flex items-center gap-2 py-1.5">
+                        <div className="flex items-center gap-0.5">
+                          {Array.from({ length: 5 }).map((_, i) => (
+                            <svg key={i} className="h-3.5 w-3.5 fill-amber-400" viewBox="0 0 20 20">
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                          ))}
+                        </div>
+                        <span className="text-sm font-bold text-slate-900">5.0</span>
+                      </div>
+                      <p className="text-xs text-slate-500">65 avis vérifiés</p>
+
+                      {/* Ancienneté */}
+                      <div className="text-[11px] text-slate-600 space-y-0.5 py-1">
+                        <p className="font-semibold">5 ans</p>
+                        <p>Site internet</p>
+                      </div>
+
+                      {/* Boutons CTA */}
+                      <div className="space-y-2.5 pt-2">
+                        <button
+                          className="w-full rounded-lg px-4 py-2.5 text-xs font-semibold border-2 transition-all"
+                          style={{ borderColor: "#0EA5A6", color: "#0EA5A6", background: "white" }}
+                        >
+                          Voir le détail →
+                        </button>
+                        <button
+                          className="w-full rounded-lg px-4 py-3 text-xs font-semibold text-white transition-all"
+                          style={{ background: "#0EA5A6" }}
+                        >
+                          Je choisis cette offre →
+                        </button>
+                      </div>
+
+                      {/* Texte engagement */}
+                      <p className="text-xs text-slate-500 text-center pt-1.5">
+                        Mise en relation simple, sans engagement
                       </p>
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
               
-              {/* Badge flottant - Animation */}
+              {/* Badge flottant avec orange accent */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.9, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="absolute -bottom-4 -left-4 rounded-2xl px-5 py-3 text-sm font-semibold shadow-2xl backdrop-blur-sm"
-                style={{ background: "rgba(255,255,255,0.98)", color: "var(--color-text)" }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+                className="absolute -bottom-8 -left-8 rounded-2xl px-6 py-3.5 text-base font-semibold shadow-2xl backdrop-blur-md border"
+                style={{ 
+                  background: "rgba(255,255,255,0.95)", 
+                  borderColor: "rgba(245,158,11,0.2)",
+                  color: "#111827" 
+                }}
               >
-                <div className="flex items-center gap-2">
-                  <div className="h-2 w-2 rounded-full animate-pulse" style={{ background: "var(--color-accent)" }} />
-                  <span>3 offres retenues sur 7</span>
+                <div className="flex items-center gap-2.5">
+                  <div className="h-2.5 w-2.5 rounded-full animate-pulse" style={{ background: "#F59E0B" }} />
+                  <span><strong style={{ color: "#F59E0B" }}>3</strong> offres retenues sur 7</span>
                 </div>
               </motion.div>
             </div>

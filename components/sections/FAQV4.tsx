@@ -18,7 +18,7 @@ export function FAQV4() {
     <FadeUpSection className="py-12 md:py-28" style={{ background: "var(--color-bg)" }}>
       <div className="container max-w-2xl">
         <h2
-          className="font-heading text-[clamp(24px,5vw,44px)] font-bold tracking-[-0.02em] mb-6 md:mb-10 text-center"
+          className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em] mb-6 md:mb-10 text-center"
           style={{ color: "var(--color-text)" }}
         >
           Questions fréquentes

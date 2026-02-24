@@ -73,7 +73,7 @@ function AnimatedStepper({ steps: stepTexts }: { steps: string[] }) {
                 ) : (
                   <motion.span
                     key="num"
-                    className="text-[10px] font-bold tabular-nums"
+                    className="text-xs font-bold tabular-nums"
                     style={{ color: "var(--color-text-muted)" }}
                   >
                     {i + 1}
@@ -84,7 +84,7 @@ function AnimatedStepper({ steps: stepTexts }: { steps: string[] }) {
 
             {/* Text */}
             <motion.span
-              className="text-sm leading-relaxed pt-0.5 transition-colors duration-300"
+              className="text-base leading-relaxed pt-0.5 transition-colors duration-300"
               style={{
                 color: done ? "var(--color-text)" : "var(--color-text-muted)",
                 fontWeight: done ? 500 : 400,
@@ -178,21 +178,15 @@ export function ComparableQuotesMock() {
           >
             {/* Header */}
             <motion.div variants={staggerItem} className="space-y-4">
-              <span
-                className="inline-block text-xs font-medium px-3 py-1 rounded-full"
-                style={{ background: "rgba(14,165,166,0.08)", color: "var(--color-accent)" }}
-              >
-                Ce que vous recevez
-              </span>
               <h2
-                className="font-heading text-[clamp(28px,5vw,42px)] font-bold tracking-[-0.02em] leading-[1.1]"
+                className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em] leading-[1.1]"
                 style={{ color: "var(--color-text)" }}
               >
                 Nous avons mis le marché en concurrence{" "}
                 <span style={{ color: "var(--color-accent)" }}>pour votre dossier.</span>
               </h2>
               <p
-                className="text-base leading-relaxed max-w-lg"
+                className="text-base md:text-lg leading-relaxed max-w-lg"
                 style={{ color: "var(--color-text-secondary)" }}
               >
                 Seules les entreprises fiables, disponibles à vos dates et cohérentes en prix vous sont présentées.

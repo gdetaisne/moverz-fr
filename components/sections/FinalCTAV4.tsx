@@ -25,14 +25,14 @@ export function FinalCTAV4() {
 
         <a
           href={buildTunnelUrl({ from: "homepage-final-cta" })}
-          className="group inline-flex items-center justify-center gap-2 rounded-[var(--radius-sm)] px-8 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:opacity-90 active:scale-[0.98]"
+          className="group inline-flex items-center justify-center gap-2 rounded-[var(--radius-sm)] px-8 py-3.5 text-base font-semibold text-white transition-all duration-200 hover:opacity-90 active:scale-[0.98]"
           style={{ background: "var(--color-text)" }}
         >
           Obtenir mes devis
           <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
         </a>
 
-        <p className="text-[13px]" style={{ color: "var(--color-text-muted)" }}>
+        <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>
           Gratuit · Sans engagement · Sans appels
         </p>
       </div>

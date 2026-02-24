@@ -121,7 +121,7 @@ function ScrollStepper({
                 ) : (
                   <motion.span
                     key="num"
-                    className="text-[10px] font-bold tabular-nums"
+                    className="text-xs font-bold tabular-nums"
                     style={{ color: "var(--color-text-muted)" }}
                   >
                     {i + 1}
@@ -198,7 +198,7 @@ function PhoneContent({ state, quotes }: { state: string; quotes: any[] }) {
               </div>
               <div className="flex items-center gap-1">
                 <Star className="h-3 w-3 fill-amber-400 text-amber-400" />
-                <span className="text-[10px]" style={{ color: "var(--color-text-secondary)" }}>
+                <span className="text-xs" style={{ color: "var(--color-text-secondary)" }}>
                   {quote.googleRating}/5
                 </span>
               </div>
@@ -239,7 +239,7 @@ function PhoneContent({ state, quotes }: { state: string; quotes: any[] }) {
               </div>
               <div className="flex items-center gap-1 text-red-600">
                 <AlertCircle className="h-3 w-3" />
-                <span className="text-[10px]">Score trop faible</span>
+                <span className="text-xs">Score trop faible</span>
               </div>
             </motion.div>
           ))}
@@ -269,7 +269,7 @@ function PhoneContent({ state, quotes }: { state: string; quotes: any[] }) {
               {idx === 0 && (
                 <div className="mb-2">
                   <span
-                    className="inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-semibold"
+                    className="inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-semibold"
                     style={{ background: "rgba(14,165,166,0.1)", color: "var(--color-accent)" }}
                   >
                     ★ Meilleure offre
@@ -286,7 +286,7 @@ function PhoneContent({ state, quotes }: { state: string; quotes: any[] }) {
               </div>
               <div className="flex items-center gap-1">
                 <Star className="h-3 w-3 fill-amber-400 text-amber-400" />
-                <span className="text-[10px]" style={{ color: "var(--color-text-secondary)" }}>
+                <span className="text-xs" style={{ color: "var(--color-text-secondary)" }}>
                   {quote.googleRating}/5 · Score {quote.score}/100
                 </span>
               </div>
@@ -420,21 +420,15 @@ export function ComparableQuotesMockScrolly() {
           >
             {/* Header */}
             <motion.div variants={staggerItem} className="space-y-4">
-              <span
-                className="inline-block text-xs font-medium px-3 py-1 rounded-full"
-                style={{ background: "rgba(14,165,166,0.08)", color: "var(--color-accent)" }}
-              >
-                Ce que vous recevez
-              </span>
               <h2
-                className="font-heading text-[clamp(28px,5vw,42px)] font-bold tracking-[-0.02em] leading-[1.1]"
+                className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em] leading-[1.1]"
                 style={{ color: "var(--color-text)" }}
               >
                 Nous avons mis le marché en concurrence{" "}
                 <span style={{ color: "var(--color-accent)" }}>pour votre dossier.</span>
               </h2>
               <p
-                className="text-base leading-relaxed max-w-lg"
+                className="text-base md:text-lg leading-relaxed max-w-lg"
                 style={{ color: "var(--color-text-secondary)" }}
               >
                 Seules les entreprises fiables, disponibles à vos dates et cohérentes en prix vous sont présentées.
@@ -558,21 +552,15 @@ export function ComparableQuotesMockScrolly() {
           >
             {/* Header */}
             <motion.div variants={staggerItem} className="space-y-4">
-              <span
-                className="inline-block text-xs font-medium px-3 py-1 rounded-full"
-                style={{ background: "rgba(14,165,166,0.08)", color: "var(--color-accent)" }}
-              >
-                Ce que vous recevez
-              </span>
               <h2
-                className="font-heading text-[clamp(28px,5vw,42px)] font-bold tracking-[-0.02em] leading-[1.1]"
+                className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em] leading-[1.1]"
                 style={{ color: "var(--color-text)" }}
               >
                 Nous avons mis le marché en concurrence{" "}
                 <span style={{ color: "var(--color-accent)" }}>pour votre dossier.</span>
               </h2>
               <p
-                className="text-base leading-relaxed max-w-lg"
+                className="text-base md:text-lg leading-relaxed max-w-lg"
                 style={{ color: "var(--color-text-secondary)" }}
               >
                 Seules les entreprises fiables, disponibles à vos dates et cohérentes en prix vous sont présentées.

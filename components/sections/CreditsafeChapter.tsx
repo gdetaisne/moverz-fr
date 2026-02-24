@@ -174,7 +174,7 @@ function GlobalScore() {
         </svg>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <span className="text-3xl font-bold text-white tabular-nums">{displayed}</span>
-          <span className="text-[10px] text-white/40">/100</span>
+          <span className="text-xs text-white/40">/100</span>
         </div>
       </div>
       <div>
@@ -298,7 +298,7 @@ export function CreditsafeChapter() {
                   {axis.sources.map((src, j) => (
                     <span
                       key={j}
-                      className="inline-block rounded-full px-2.5 py-0.5 text-[10px] font-medium text-white/40"
+                      className="inline-block rounded-full px-2.5 py-0.5 text-xs font-medium text-white/40"
                       style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.06)" }}
                     >
                       {src}
