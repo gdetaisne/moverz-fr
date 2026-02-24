@@ -133,20 +133,25 @@ export function HeroV4TwoColumn() {
             className="lg:col-span-6 relative flex justify-center items-center"
           >
             <div className="relative w-full max-w-[300px]">
-              {/* Gradient doux derrière (très subtil) */}
+              {/* Premium glow effect turquoise */}
               <div
-                className="absolute inset-0 rounded-[44px] blur-3xl opacity-20"
+                className="absolute inset-0 blur-3xl opacity-40 animate-pulse"
                 style={{ 
-                  background: "radial-gradient(ellipse, rgba(14,165,166,0.3) 0%, transparent 70%)"
+                  background: "radial-gradient(circle, rgba(14,165,166,0.6) 0%, rgba(14,165,166,0.3) 40%, transparent 70%)",
+                  animation: "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite"
                 }}
               />
 
-              {/* Device frame minimal - Style Linear */}
+              {/* Device frame minimal - Style Linear avec animation premium */}
               <motion.div 
                 className="relative"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ 
+                  duration: 0.8, 
+                  delay: 0.2,
+                  ease: [0.16, 1, 0.3, 1]
+                }}
                 style={{ 
                   transform: "rotate(-2deg)",
                 }}

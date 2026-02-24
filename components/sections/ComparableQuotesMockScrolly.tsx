@@ -296,6 +296,24 @@ export function ComparableQuotesMockScrolly() {
             variants={staggerContainer}
             className="space-y-8"
           >
+            {/* Eyebrow badge */}
+            <motion.div variants={staggerItem}>
+              <div 
+                className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-6" 
+                style={{ 
+                  background: "rgba(14,165,166,0.1)", 
+                  border: "1px solid rgba(14,165,166,0.2)" 
+                }}>
+                <div 
+                  className="h-2 w-2 rounded-full animate-pulse" 
+                  style={{ background: "#0EA5A6" }} 
+                />
+                <span className="text-sm font-semibold" style={{ color: "#0EA5A6" }}>
+                  Ce que vous recevez
+                </span>
+              </div>
+            </motion.div>
+
             {/* Header */}
             <motion.div variants={staggerItem} className="space-y-4">
               <h2
@@ -311,6 +329,27 @@ export function ComparableQuotesMockScrolly() {
               >
                 Seules les entreprises fiables, disponibles à vos dates et cohérentes en prix vous sont présentées.
               </p>
+            </motion.div>
+
+            {/* Statistiques visuelles */}
+            <motion.div 
+              variants={staggerItem} 
+              className="grid grid-cols-3 gap-3">
+              <div className="text-center p-3 rounded-xl" 
+                style={{ background: "rgba(14,165,166,0.05)", border: "1px solid rgba(14,165,166,0.1)" }}>
+                <p className="text-2xl md:text-3xl font-bold" style={{ color: "#0EA5A6" }}>3</p>
+                <p className="text-[10px] md:text-xs text-slate-600 mt-1">Offres retenues</p>
+              </div>
+              <div className="text-center p-3 rounded-xl" 
+                style={{ background: "rgba(14,165,166,0.05)", border: "1px solid rgba(14,165,166,0.1)" }}>
+                <p className="text-2xl md:text-3xl font-bold" style={{ color: "#0EA5A6" }}>12</p>
+                <p className="text-[10px] md:text-xs text-slate-600 mt-1">Devis analysés</p>
+              </div>
+              <div className="text-center p-3 rounded-xl" 
+                style={{ background: "rgba(14,165,166,0.05)", border: "1px solid rgba(14,165,166,0.1)" }}>
+                <p className="text-2xl md:text-3xl font-bold" style={{ color: "#0EA5A6" }}>100%</p>
+                <p className="text-[10px] md:text-xs text-slate-600 mt-1">Vérifiés</p>
+              </div>
             </motion.div>
 
             {/* Comment ça fonctionne - Avec animation timeline */}
@@ -416,24 +455,57 @@ export function ComparableQuotesMockScrolly() {
                 ))}
               </div>
             </motion.div>
+
+            {/* CTA en fin de section */}
+            <motion.div 
+              variants={staggerItem}
+              className="mt-8 pt-8 border-t"
+              style={{ borderColor: "rgba(14,165,166,0.15)" }}>
+              <a
+                href="https://devis.moverz.fr/devis-gratuits"
+                className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-white transition-all hover:scale-105 hover:shadow-xl"
+                style={{ 
+                  background: "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)",
+                  boxShadow: "0 4px 16px rgba(14,165,166,0.25)"
+                }}>
+                Recevoir ma sélection
+                <svg 
+                  className="h-4 w-4 transition-transform group-hover:translate-x-1" 
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor"
+                  strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
+              <p className="text-xs text-slate-500 mt-2">
+                Gratuit · 3 min · Sans engagement
+              </p>
+            </motion.div>
           </motion.div>
 
           {/* RIGHT — iPhone Mockup with Carousel */}
           <div className="relative flex justify-center items-center">
             {/* iPhone Frame */}
             <div className="relative w-full max-w-[280px]">
-              {/* Subtle glow */}
+              {/* Premium glow effect turquoise */}
               <div
-                className="absolute inset-0 rounded-[38px] blur-3xl opacity-20"
-                style={{ background: "radial-gradient(ellipse, rgba(14,165,166,0.3) 0%, transparent 70%)" }}
+                className="absolute inset-0 blur-3xl opacity-40 animate-pulse"
+                style={{ 
+                  background: "radial-gradient(circle, rgba(14,165,166,0.6) 0%, rgba(14,165,166,0.3) 40%, transparent 70%)",
+                  animation: "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite"
+                }}
               />
 
-              {/* Device container */}
+              {/* Device container avec animation premium */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                transition={{ 
+                  duration: 0.8, 
+                  ease: [0.16, 1, 0.3, 1]
+                }}
                 className="relative"
                 style={{ transform: "rotate(-2deg)" }}
               >
@@ -518,6 +590,31 @@ export function ComparableQuotesMockScrolly() {
                         </motion.div>
                       </AnimatePresence>
                     </div>
+
+                    {/* Badge subtil en bas de l'écran */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: 0.7 }}
+                      className="absolute bottom-8 left-2 right-2 z-20"
+                    >
+                      <div 
+                        className="rounded-full px-3 py-1.5 text-[10px] font-medium backdrop-blur-xl"
+                        style={{ 
+                          background: "rgba(255,255,255,0.9)",
+                          border: "1px solid rgba(14,165,166,0.1)",
+                          boxShadow: "0 2px 8px rgba(0,0,0,0.05)"
+                        }}>
+                        <div className="flex items-center justify-center gap-1.5">
+                          <div className="h-1 w-1 rounded-full" 
+                            style={{ background: "#0EA5A6" }} />
+                          <span className="text-slate-700">
+                            <strong style={{ color: "#0EA5A6" }}>3</strong>/12 offres
+                          </span>
+                        </div>
+                      </div>
+                    </motion.div>
 
                     {/* Navigation dots - EN BAS DE L'ÉCRAN du téléphone */}
                     <motion.div 
