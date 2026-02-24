@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import FAQAccordion from "@/components/FAQAccordion";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import PageHero from "@/components/PageHero";
-import WidgetActionSection from "@/components/WidgetActionSection";
+import { FinalCTAV4 } from "@/components/sections/FinalCTAV4";
 import { JsonLd } from "@/components/schema/JsonLd";
 import { buildTunnelUrl } from "@/lib/tunnel-url";
 
@@ -140,11 +140,15 @@ export default function FAQPage() {
           { label: "FAQ", href: "/faq/" },
         ]}
         eyebrow="Toutes vos réponses ici"
-        title="Questions fréquentes"
-        subtitle="Découvrez comment l’IA Moverz estime votre volume, standardise votre dossier et vous aide à comparer des devis vraiment comparables, sans spam."
+        title={
+          <>
+            Questions <span style={{ color: "#0EA5A6" }}>fréquentes</span>
+          </>
+        }
+        subtitle="Découvrez comment l'IA Moverz estime votre volume, standardise votre dossier et vous aide à comparer des devis vraiment comparables, sans spam."
         primaryCta={{
           label: "Comparer des devis comparables gratuitement",
-          href: buildTunnelUrl({ from: "/faq/" }),
+          href: "https://devis.moverz.fr/devis-gratuits",
         }}
         secondaryCta={{ label: "Comment ça marche", href: "/comment-ca-marche/" }}
       />
@@ -323,12 +327,7 @@ export default function FAQPage() {
         </div>
       </section>
 
-      <WidgetActionSection
-        title="Comparez des devis comparables maintenant"
-        subtitle="Décrivez votre déménagement en quelques minutes. L'IA fiabilise le volume pour des devis vraiment comparables, sans spam."
-        source="moverz.fr"
-        from="/faq/"
-      />
+      <FinalCTAV4 />
     </main>
   );
 }

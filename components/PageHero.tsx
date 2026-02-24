@@ -39,15 +39,29 @@ export default function PageHero({
     href && href.startsWith("https://devis.moverz.fr") ? "nofollow" : undefined;
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-white via-brand-turquoise-50/30 to-brand-accent-50/20">
-      {/* Background glow effects */}
-      <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[var(--color-accent)]/10 rounded-full blur-[120px]" />
-      <div className="absolute bottom-0 left-1/3 w-[500px] h-[500px] bg-brand-accent/12 rounded-full blur-[120px]" />
-      
-      {/* Subtle grid pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(rgba(107,207,207,0.08)_1px,transparent_1px)] [background-size:24px_24px]" />
+    <section 
+      className="relative overflow-hidden pt-12 pb-16 md:pt-20 md:pb-28"
+      style={{ 
+        background: "linear-gradient(to bottom, #F0FDFA 0%, #E0F2FE 50%, #F9FAFB 100%)"
+      }}
+    >
+      {/* Grain texture - Premium feel */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.015]"
+        style={{ 
+          backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")" 
+        }}
+      />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      {/* Vignette sur les bords */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background: "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.03) 100%)",
+        }}
+      />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Breadcrumbs items={breadcrumbs} />
 
         <div className={`mt-12 space-y-8 max-w-4xl ${isCenter ? "mx-auto text-center" : ""}`}>
@@ -97,8 +111,9 @@ export default function PageHero({
               {primaryCta && (
                 <a
                   href={primaryCta.href}
-                  rel={relFor(primaryCta.href)}
-                  className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-bg-dark)] px-8 py-4 text-base font-semibold text-white shadow-[0_8px_30px_rgba(15,23,42,0.3)] hover:shadow-[0_12px_50px_rgba(15,23,42,0.4)] hover:scale-105 transition-all duration-300"
+                  rel={relFor(primaryCta.href}
+                  className="group inline-flex items-center gap-2 rounded-xl px-8 py-4 text-base font-semibold text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                  style={{ background: "#0EA5A6" }}
                 >
                   <span>{primaryCta.label}</span>
                   <span className="text-xl leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
@@ -108,7 +123,11 @@ export default function PageHero({
                 <a
                   href={secondaryCta.href}
                   rel={relFor(secondaryCta.href)}
-                  className="inline-flex items-center gap-2 rounded-full border-2 border-[#0F172A]/30 bg-white/60 px-8 py-4 text-base font-semibold text-[var(--color-text)] backdrop-blur-sm hover:bg-white/80 transition-all duration-300"
+                  className="inline-flex items-center gap-2 rounded-xl border-2 bg-white px-8 py-4 text-base font-semibold hover:bg-gray-50 transition-all duration-300"
+                  style={{ 
+                    borderColor: "rgba(0,0,0,0.1)",
+                    color: "#111827"
+                  }}
                 >
                   <span>{secondaryCta.label}</span>
                 </a>
