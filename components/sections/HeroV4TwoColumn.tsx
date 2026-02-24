@@ -72,65 +72,63 @@ function MorphingUIAnimation() {
     <div 
       className="relative h-full w-full overflow-hidden flex items-center justify-center p-6"
       style={{ 
-        background: "linear-gradient(180deg, #FAFBFC 0%, #F8FAFC 100%)"
+        background: "#FFFFFF"
       }}
     >
-      {/* Dynamic Ambient Glow */}
+      {/* Subtle Ambient Glow - Apple Style */}
       <motion.div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none opacity-40"
         animate={{
           background: [
-            "radial-gradient(circle at 50% 40%, rgba(14,165,166,0.08) 0%, transparent 60%)",
-            "radial-gradient(circle at 50% 40%, rgba(14,165,166,0.15) 0%, transparent 65%)",
-            "radial-gradient(circle at 50% 40%, rgba(14,165,166,0.08) 0%, transparent 60%)",
+            "radial-gradient(circle at 50% 40%, rgba(14,165,166,0.06) 0%, transparent 70%)",
+            "radial-gradient(circle at 50% 40%, rgba(14,165,166,0.10) 0%, transparent 70%)",
+            "radial-gradient(circle at 50% 40%, rgba(14,165,166,0.06) 0%, transparent 70%)",
           ]
         }}
-        transition={{ duration: 3, repeat: Infinity }}
+        transition={{ duration: 4, repeat: Infinity }}
       />
 
       {/* Main Morphing Container */}
       <div className="relative w-full max-w-sm">
-        {/* Logo Header */}
+        {/* Logo Header - Bigger */}
         <motion.div 
-          className="absolute -top-8 left-0 right-0 flex justify-center"
+          className="absolute -top-10 left-0 right-0 flex justify-center"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
         >
           <Image 
             src="/logo-ui.png" 
             alt="Moverz" 
-            width={80} 
-            height={28}
-            className="h-6 w-auto opacity-60"
+            width={100} 
+            height={34}
+            className="h-7 w-auto"
           />
         </motion.div>
 
-        {/* Morphing Card */}
+        {/* Morphing Card - Apple minimal */}
         <motion.div
-          className="relative rounded-3xl p-8 overflow-hidden"
+          className="relative rounded-[32px] p-10 overflow-hidden"
           style={{
-            background: "linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.92) 100%)",
-            backdropFilter: "blur(20px)",
-            border: "1px solid rgba(14,165,166,0.12)",
-            boxShadow: "0 20px 60px rgba(14,165,166,0.08), inset 0 1px 0 rgba(255,255,255,0.9)",
+            background: "#FFFFFF",
+            border: "1px solid rgba(14,165,166,0.08)",
+            boxShadow: "0 24px 48px rgba(14,165,166,0.06)",
           }}
         >
           {/* Metric - Giant Number that morphs */}
-          <div className="text-center mb-6">
+          <div className="text-center mb-8">
             <AnimatePresence mode="wait">
               <motion.div
                 key={stage}
-                initial={{ opacity: 0, scale: 0.5, rotateX: -90 }}
-                animate={{ opacity: 1, scale: 1, rotateX: 0 }}
-                exit={{ opacity: 0, scale: 1.2, rotateX: 90 }}
-                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                className="text-7xl font-black mb-2"
+                initial={{ opacity: 0, scale: 0.5, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 1.2, y: -20 }}
+                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                className="text-8xl font-black mb-3"
                 style={{
-                  background: "linear-gradient(135deg, #0EA5A6 0%, #14B8A6 50%, #0EA5A6 100%)",
+                  background: "linear-gradient(135deg, #0EA5A6 0%, #14B8A6 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
-                  backgroundSize: "200% 200%",
                 }}
               >
                 {current.metric}
@@ -144,8 +142,8 @@ function MorphingUIAnimation() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.3, delay: 0.2 }}
-                className="text-lg font-semibold text-slate-800"
+                transition={{ duration: 0.3, delay: 0.1 }}
+                className="text-xl font-semibold text-slate-900"
               >
                 {current.label}
               </motion.p>
@@ -158,42 +156,64 @@ function MorphingUIAnimation() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.3, delay: 0.3 }}
+                transition={{ duration: 0.3, delay: 0.2 }}
                 className="text-sm text-slate-500 mt-2"
               >
                 {current.detail}
               </motion.p>
             </AnimatePresence>
+
+            {/* Badge "Vérifié par Moverz" sur étape 4 */}
+            <AnimatePresence>
+              {stage === 3 && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8, y: 10 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.8, y: -10 }}
+                  transition={{ delay: 0.4, type: "spring", stiffness: 200, damping: 20 }}
+                  className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-full"
+                  style={{
+                    background: "linear-gradient(135deg, #0EA5A610 0%, #0EA5A605 100%)",
+                    border: "1px solid rgba(14,165,166,0.2)",
+                  }}
+                >
+                  <ShieldCheck className="w-4 h-4" style={{ color: "#0EA5A6" }} strokeWidth={2.5} />
+                  <span className="text-xs font-semibold" style={{ color: "#0EA5A6" }}>
+                    Vérifié par Moverz
+                  </span>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
 
-          {/* Visual Progress Ring - Morphing */}
-          <div className="flex justify-center mb-8">
-            <svg width="140" height="140" className="rotate-[-90deg]">
+          {/* Visual Progress Ring - Apple minimal */}
+          <div className="flex justify-center mb-10">
+            <svg width="160" height="160" className="rotate-[-90deg]">
               {/* Background circle */}
               <circle
-                cx="70"
-                cy="70"
-                r="60"
+                cx="80"
+                cy="80"
+                r="70"
                 fill="none"
                 stroke="#F1F5F9"
-                strokeWidth="8"
+                strokeWidth="6"
               />
               {/* Animated progress circle */}
               <motion.circle
-                cx="70"
-                cy="70"
-                r="60"
+                cx="80"
+                cy="80"
+                r="70"
                 fill="none"
                 stroke="url(#gradient)"
-                strokeWidth="8"
+                strokeWidth="6"
                 strokeLinecap="round"
-                initial={{ strokeDashoffset: 377 }}
+                initial={{ strokeDashoffset: 440 }}
                 animate={{ 
-                  strokeDashoffset: 377 - (377 * current.progress) / 100 
+                  strokeDashoffset: 440 - (440 * current.progress) / 100 
                 }}
-                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
                 style={{
-                  strokeDasharray: 377,
+                  strokeDasharray: 440,
                 }}
               />
               <defs>
@@ -205,10 +225,9 @@ function MorphingUIAnimation() {
             </svg>
           </div>
 
-          {/* Progress Bar - Linear fallback */}
-          <div className="space-y-2">
-            <div className="flex justify-between text-xs font-medium text-slate-600 mb-1">
-              <span>Progression</span>
+          {/* Progress Bar - Apple minimal, NO "Progression" text */}
+          <div className="space-y-3">
+            <div className="flex justify-end">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={stage}
@@ -216,14 +235,14 @@ function MorphingUIAnimation() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 1.2 }}
                   style={{ color: "#0EA5A6" }}
-                  className="font-bold"
+                  className="text-sm font-bold"
                 >
                   {current.progress}%
                 </motion.span>
               </AnimatePresence>
             </div>
             
-            <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
+            <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden">
               <motion.div
                 className="h-full rounded-full"
                 style={{
@@ -231,51 +250,28 @@ function MorphingUIAnimation() {
                 }}
                 initial={{ width: "0%" }}
                 animate={{ width: `${current.progress}%` }}
-                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
               />
             </div>
           </div>
-
-          {/* Floating particles effect */}
-          {[...Array(3)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1 h-1 rounded-full"
-              style={{ 
-                background: "#0EA5A6",
-                left: `${30 + i * 20}%`,
-                top: "20%"
-              }}
-              animate={{
-                y: [0, -30, 0],
-                opacity: [0, 0.6, 0],
-                scale: [0, 1, 0],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                delay: i * 0.4,
-              }}
-            />
-          ))}
         </motion.div>
 
-        {/* Stage Indicators */}
-        <div className="flex justify-center gap-2 mt-6">
+        {/* Stage Indicators - Apple minimal */}
+        <div className="flex justify-center gap-2 mt-8">
           {stages.map((s, i) => (
             <motion.div
               key={s.id}
               className="h-1 rounded-full"
               style={{
-                width: i === stage ? "24px" : "8px",
+                width: i === stage ? "28px" : "6px",
                 background: i === stage 
-                  ? "linear-gradient(90deg, #0EA5A6 0%, #14B8A6 100%)"
-                  : "#CBD5E1",
+                  ? "#0EA5A6"
+                  : "#E2E8F0",
               }}
               animate={{
-                opacity: i <= stage ? 1 : 0.3,
+                opacity: i <= stage ? 1 : 0.4,
               }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.4 }}
             />
           ))}
         </div>
