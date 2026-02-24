@@ -8,9 +8,12 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function OgImage() {
-  // Charger la fonte Inter
+  // Charger les fontes
   const interFont = await readFile(
     join(process.cwd(), "public/fonts/inter-latin.woff2")
+  );
+  const soraFont = await readFile(
+    join(process.cwd(), "public/fonts/sora-latin.woff2")
   );
 
   // Charger le logo
@@ -96,6 +99,7 @@ export default async function OgImage() {
                 fontWeight: 800,
                 color: "#0B0F19",
                 letterSpacing: -1,
+                fontFamily: "Sora",
               }}
             >
               MOVERZ
@@ -135,6 +139,7 @@ export default async function OgImage() {
               lineHeight: 1.1,
               marginBottom: 30,
               textAlign: "center",
+              fontFamily: "Sora",
             }}
           >
             <span style={{ color: "#0B0F19" }}>Comparez des devis</span>
@@ -198,14 +203,14 @@ export default async function OgImage() {
           weight: 600,
         },
         {
-          name: "Inter",
-          data: interFont,
+          name: "Sora",
+          data: soraFont,
           style: "normal",
           weight: 800,
         },
         {
-          name: "Inter",
-          data: interFont,
+          name: "Sora",
+          data: soraFont,
           style: "normal",
           weight: 900,
         },

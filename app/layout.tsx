@@ -18,6 +18,13 @@ const inter = localFont({
   weight: "100 900",
 });
 
+const sora = localFont({
+  src: "../public/fonts/sora-latin.woff2",
+  display: "swap",
+  variable: "--font-sora",
+  weight: "100 900",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://moverz.fr'),
   title: {
@@ -198,7 +205,7 @@ export default function RootLayout({
         {/* Analytics / session replay (prod only) */}
         <ContentSquare />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${sora.variable} ${inter.className}`}>
         <GoogleAnalytics />
         <ConversionIntentTracker />
         <ExitIntentPopup />
@@ -217,23 +224,26 @@ export default function RootLayout({
               <span className="font-heading text-xl md:text-2xl font-bold" style={{ color: "var(--color-text)" }}>Moverz</span>
             </a>
             <div className="flex items-center gap-6">
-              <a href="/pourquoi-moverz/" className="text-sm font-medium transition-colors hidden md:block" style={{ color: "var(--color-text-secondary)" }}>
+              <a href="/pourquoi-moverz/" className="text-sm font-medium transition-all duration-300 hover:opacity-80 hidden md:block" style={{ color: "var(--color-text-secondary)" }}>
                 Pourquoi Moverz
               </a>
-              <a href="/comment-ca-marche/" className="text-sm font-medium transition-colors hidden md:block" style={{ color: "var(--color-text-secondary)" }}>
+              <a href="/comment-ca-marche/" className="text-sm font-medium transition-all duration-300 hover:opacity-80 hidden md:block" style={{ color: "var(--color-text-secondary)" }}>
                 Comment ça marche
               </a>
-              <a href="/faq/" className="text-sm font-medium transition-colors hidden md:block" style={{ color: "var(--color-text-secondary)" }}>
+              <a href="/faq/" className="text-sm font-medium transition-all duration-300 hover:opacity-80 hidden md:block" style={{ color: "var(--color-text-secondary)" }}>
                 FAQ
               </a>
-              <a href="/blog/" className="text-sm font-medium transition-colors hidden md:block opacity-70" style={{ color: "var(--color-text-muted)" }}>
+              <a href="/blog/" className="text-sm font-medium transition-all duration-300 hover:opacity-60 hidden md:block opacity-70" style={{ color: "var(--color-text-muted)" }}>
                 Blog
               </a>
               <a
                 href={buildTunnelUrl({ from: "header" })}
                 rel="nofollow"
-                className="hidden sm:inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-semibold text-white transition-all hover:opacity-90 active:scale-[0.98] shadow-sm"
-                style={{ background: "var(--color-accent)" }}
+                className="hidden sm:inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-semibold text-white transition-all duration-300 hover:opacity-90 hover:shadow-[0_8px_24px_rgba(14,165,166,0.3)] hover:-translate-y-0.5 active:scale-[0.98]"
+                style={{ 
+                  background: "var(--color-accent)",
+                  boxShadow: "0 2px 8px rgba(14,165,166,0.2)"
+                }}
               >
                 <span>Recevoir ma sélection</span>
                 <span className="text-base">→</span>
@@ -254,19 +264,22 @@ export default function RootLayout({
           <div className="mx-auto max-w-[1200px] px-5 md:px-6 lg:px-8 py-10 md:py-14">
             <div className="grid grid-cols-2 gap-6 md:grid-cols-5 md:gap-6 mb-10">
               {/* Col 1: Brand */}
-              <div className="col-span-2 md:col-span-1 space-y-3">
-                <a href="/" className="inline-flex items-center gap-2" title="Moverz">
-                  <Image src="/logo-ui.png" alt="Logo Moverz" width={28} height={28} className="h-7 w-7" />
-                  <span
-                    className="text-base font-semibold"
-                    style={{ color: "var(--color-text)", fontFamily: "var(--font-sora)" }}
-                  >
+              <div className="col-span-2 md:col-span-1 space-y-4">
+                <a href="/" className="inline-flex items-center gap-2.5" title="Moverz">
+                  <Image src="/logo.png" alt="Logo Moverz" width={32} height={32} className="h-8 w-8" />
+                  <span className="font-heading text-xl font-bold text-white">
                     Moverz
                   </span>
                 </a>
-                <p className="text-sm text-white/70 leading-relaxed">
-                  Le comparateur anti-arnaque. Devis comparables, pros contrôlés, sans démarchage.
-                </p>
+                {/* Tagline SEO - Plus visible */}
+                <div className="space-y-1.5">
+                  <p className="text-sm font-semibold text-white leading-snug">
+                    Le comparateur anti-arnaque du déménagement.
+                  </p>
+                  <p className="text-sm text-white/70 leading-snug">
+                    Devis comparables, pros contrôlés, sans démarchage.
+                  </p>
+                </div>
                 <form action="/search" method="get" className="mt-4 flex gap-2">
                   <label className="sr-only" htmlFor="footer-search-q">
                     Rechercher sur Moverz
