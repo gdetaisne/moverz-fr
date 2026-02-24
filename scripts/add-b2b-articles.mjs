@@ -13,7 +13,7 @@ const articles = [
   'estimer-volume-demenagement-ia-vs-visite.md',
   'demenageur-reduire-litiges-volume.md',
   'roi-widget-volumetrie-demenageur.md',
-  'prix-demenagement-2025.md',
+  'prix-demenagement-2026.md',
   'top-erreurs-a-eviter.md'
 ];
 

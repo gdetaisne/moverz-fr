@@ -1,5 +1,5 @@
 ---
-slug: prix-demenagement-2025
+slug: prix-demenagement-2026
 title: "Prix d'un déménagement en 2026 : fourchettes réelles et guide complet"
 description: "Guide complet des prix de déménagement en 2026 : fourchettes par type de logement, facteurs qui font varier le prix, calcul du volume par IA, conseils pour optimiser votre budget."
 type: pilier
@@ -437,9 +437,9 @@ Avec Moverz, vous recevez **des devis comparables** :
 - Tous les déménageurs reçoivent exactement les mêmes infos
 - **→ Vous comparez vraiment les prix** ✅
 
-**5. Support dédié**
-- Un problème ? Notre équipe intervient
-- **→ Vous n'êtes pas seul** ✅
+**5. Contact disponible**
+- Une question ? Contactez-nous : contact@moverz.fr
+- **→ Nous sommes disponibles** ✅
 
 > **Lancer votre comparaison**  
 > Créez votre dossier en 3 minutes, l'IA estime votre volume, recevez des devis comparables sur [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits).
@@ -574,5 +574,5 @@ Avec Moverz, vous recevez **des devis comparables** :
 
 [Comparer les devis maintenant →](https://devis.moverz.fr/devis-gratuits)
 
-**Questions ?** [contact@moverz.fr](mailto:contact@moverz.fr) · Support dédié
+**Questions ?** [contact@moverz.fr](mailto:contact@moverz.fr)
 

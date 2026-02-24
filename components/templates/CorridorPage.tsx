@@ -128,7 +128,7 @@ export function CorridorPage({
     {
       question: "Comment éviter les mauvaises surprises le jour J ?",
       answer:
-        "La clé : un volume précis + des accès bien décrits. Avec Moverz, l'IA aide à estimer le volume et votre dossier est partagé à plusieurs déménageurs sur la même base, pour des devis comparables.",
+        "La clé : des infos précises (accès, contraintes, options). Avec Moverz, votre dossier est partagé à plusieurs déménageurs sur la même base, pour des devis comparables.",
     },
   ];
   

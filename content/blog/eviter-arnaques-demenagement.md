@@ -322,10 +322,10 @@ Vérifiez son existence légale (SIREN sur societe.com), lisez les avis Google (
 
 ### Que faire en cas de litige avec un déménageur ?
 
-1. **Documenter** : détails des dégâts, emails, devis signé
+1. **Documenter** : photos des dégâts, emails, devis signé
 2. **Réclamer par écrit** : Lettre recommandée avec AR
 3. **Signaler** : SignalConso.gouv.fr (remonte à la DGCCRF)
-4. **Médiation** : Saisir un médiateur de la consommation
+4. **Médiateur** : Saisir un médiateur de la consommation si nécessaire
 5. **Tribunal** : En dernier recours, tribunal de proximité (< 10 000€)
 
 ### Un déménageur peut-il augmenter le prix le jour J ?

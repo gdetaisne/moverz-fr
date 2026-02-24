@@ -153,7 +153,7 @@ export default function BlogPostPage({ params }: PageProps) {
         { name: "Utiliser Moverz pour automatiser", text: "Moverz vérifie automatiquement SIREN, santé financière (Creditsafe + Pappers), litiges (Pappers Décisions), et avis Google (patterns des mauvais avis) avant de partager votre dossier. Vous ne recevez que des pros contrôlés (3 analyses de risque /100)." },
       ],
     },
-    "prix-demenagement-2025": {
+    "prix-demenagement-2026": {
       title: "Comment calculer le prix réel de votre déménagement",
       description: "Méthodologie complète pour estimer votre budget déménagement 2025 et comparer des devis fiables.",
       totalTime: "PT15M", // 15 min calcul

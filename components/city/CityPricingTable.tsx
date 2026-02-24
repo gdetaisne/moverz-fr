@@ -39,7 +39,7 @@ export function CityPricingTable({ cityName, citySlug }: CityPricingTableProps) 
             <strong>{snippetMin} (studio)</strong> et{" "}
             <strong>{snippetMax} (maison)</strong>. Le prix dépend du volume
             (15-90&nbsp;m³), de l&apos;accès et des services. Pour un tarif précis,
-            comparez des devis basés sur le même volume calculé par IA.
+            comparez des devis basés sur le même dossier standardisé.
           </p>
 
           {/* Tableau HTML sémantique pour featured snippet */}
@@ -120,7 +120,7 @@ export function CityPricingTable({ cityName, citySlug }: CityPricingTableProps) 
             </ul>
             <p className="pt-2 text-sm text-[var(--color-text-secondary)]">
               <strong className="text-[var(--color-text)]">Astuce</strong>&nbsp;:
-              Recevez des devis comparables sous 5&nbsp;jours. Même volume IA = vous
+              Recevez des devis comparables sous 5&nbsp;jours. Même dossier = vous
               comparez vraiment pommes avec pommes, pas de bluff.
             </p>
           </div>

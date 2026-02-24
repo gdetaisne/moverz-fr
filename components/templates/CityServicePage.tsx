@@ -205,7 +205,7 @@ export function CityServicePage({
       <WidgetActionSection
         eyebrow={eyebrow}
         title={`Comparez des devis à ${cityName}`}
-        subtitle="Un seul dossier, des devis standardisés. L’IA fiabilise le volume pour des tarifs comparables, sans spam."
+        subtitle="Un seul dossier, des devis standardisés. Dossier détaillé pour des tarifs comparables, sans spam."
         source="moverz.fr"
         from={fromPath}
         citySlug={citySlug}

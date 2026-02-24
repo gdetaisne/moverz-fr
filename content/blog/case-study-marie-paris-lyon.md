@@ -14,7 +14,7 @@ image: "/blog/case-study-marie.jpg"
 
 **Problème :** Les premiers devis qu'elle reçoit varient de 1 800€ à 3 200€. Impossible de comparer : volumes différents, prestations floues, un déménageur ne répond plus après l'acompte demandé.
 
-**Solution Moverz :** 3 minutes pour créer son dossier, 5 devis comparables en 48h, économie de 850€ vs le premier devis "pas cher".
+**Solution Moverz :** 3 minutes pour créer son dossier, 5 devis comparables sous 5 jours, économie de 850€ vs le premier devis "pas cher".
 
 ---
 
@@ -108,9 +108,9 @@ Marie découvre Moverz via un article de blog sur les arnaques au déménagement
 - Volume estimé : **34m³**
 - Dossier complet et anonymisé envoyé à 5 déménageurs contrôlés
 
-### Étape 2 : Réception des devis (48h)
+### Étape 2 : Réception des devis (sous 5 jours)
 
-Marie reçoit 5 devis en 48h. **Tous basés sur le même volume (34m³)**.
+Marie reçoit 5 devis sous 5 jours. **Tous basés sur le même dossier standardisé**.
 
 | Déménageur | Prix TTC | Score financier | Score juridique | Score avis | Délai |
 |------------|----------|----------------|-----------------|------------|-------|
@@ -191,7 +191,7 @@ Marie choisit **Lyon Déménagement** :
 ### Temps gagné
 
 - Avant Moverz : 1 semaine de recherche, 15 appels, stress
-- Avec Moverz : 3 minutes de création, 0 appel, 5 devis en 48h
+- Avec Moverz : 3 minutes de création, 0 appel, 5 devis sous 5 jours
 
 ---
 
@@ -227,7 +227,7 @@ Certains déménageurs avaient de bons avis mais :
 
 ### 5. Le temps est précieux
 
-1 semaine de recherche vs 3 minutes + 48h d'attente.
+1 semaine de recherche vs 3 minutes + 5 jours d'attente.
 
 **ROI temps : ~10h économisées.**
 

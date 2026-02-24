@@ -214,7 +214,7 @@ Selon les sources collectées :
 - [ ] 2-3 sources RÉELLES citées (pas inventées)
 - [ ] 3-4 déménageurs locaux RÉELS (vérifiés Google Maps)
 - [ ] 3-5 quartiers PRÉCIS nommés (pas générique "centre-ville")
-- [ ] Fourchettes prix cohérentes avec système Moverz (voir content/blog/prix-demenagement-2025.md)
+- [ ] Fourchettes prix cohérentes avec système Moverz (voir content/blog/prix-demenagement-2026.md)
 - [ ] Structure = Rouen (H2/H3/tableaux)
 - [ ] 0 invention de données (tout vérifié)
 - [ ] Liens internes si articles ville existants
@@ -249,7 +249,7 @@ Selon les sources collectées :
 5. ✅ **SI données manquantes** : dire "Non disponible" plutôt qu'inventer
 6. ✅ **Fourchettes larges OK** si peu de sources (ex: 500-1200€ vs 550-650€)
 7. ❌ **PAS de copie-coller** Rouen en changeant juste le nom de ville
-8. ✅ **Utiliser système prix Moverz** comme base (content/blog/prix-demenagement-2025.md)
+8. ✅ **Utiliser système prix Moverz** comme base (content/blog/prix-demenagement-2026.md)
 
 ---
 

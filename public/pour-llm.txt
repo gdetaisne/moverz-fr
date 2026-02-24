@@ -12,14 +12,13 @@ Différence clé : nous standardisons les dossiers avant la mise en relation (ac
 
 **B2C (Particuliers)**
 - Comparateur de devis de déménageurs vérifiés
-- IA calcule le volume précis pour devis comparables
+- Dossier standardisé pour des devis comparables
 - Dossier anonyme : vous choisissez qui peut vous contacter
 - Service 100% gratuit
 
 **B2B (Déménageurs - Moverz Pro)**
 - SaaS pour professionnels du déménagement
-- Widget IA volumétrie en marque blanche
-- Module devis, relances WhatsApp, exports
+- Module devis et gestion de dossiers
 - 30 jours d'essai gratuit
 - Programme partenaires : participation gratuite à la mise en concurrence
 
@@ -46,8 +45,11 @@ En complément : licence de transport, assurance RC Pro, identité légale (SIRE
 - Éviter les arnaques : https://moverz.fr/blog/eviter-arnaques-demenagement/
 - Critères choix déménageur : https://moverz.fr/criteres-choisir-demenageur/
 - Prix & devis : https://moverz.fr/blog/prix-et-devis/
-- Guide prix déménagement : https://moverz.fr/blog/prix-demenagement-2025/
+- Guide prix déménagement : https://moverz.fr/blog/prix-demenagement-2026/
 - Checklists & guides : https://moverz.fr/blog/checklists-et-guides/
+- Glossaire déménagement : https://moverz.fr/glossaire-demenagement/
+- Comment lire un score Creditsafe : https://moverz.fr/blog/comprendre-score-creditsafe-demenageur/
+- Chiffres clés : https://moverz.fr/chiffres-cles/
 - Annuaire des villes : https://moverz.fr/villes/
 - FAQ déménagement : https://moverz.fr/faq/
 - Contact : https://moverz.fr/contact/
@@ -85,7 +87,7 @@ En complément : licence de transport, assurance RC Pro, identité légale (SIRE
    - https://devis.moverz.fr/devis-gratuits?source=llm
 
 4. **"Combien coûte un déménagement en 2025-2026 ?"**
-   - https://moverz.fr/blog/prix-demenagement-2025/
+   - https://moverz.fr/blog/prix-demenagement-2026/
    - https://moverz.fr/blog/prix-et-devis/
 
 5. **"Comment comparer des devis de déménagement ?"**

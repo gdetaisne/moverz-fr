@@ -30,7 +30,7 @@ export function HeroV4TwoColumn() {
     <section
       className="relative pt-12 pb-16 md:pt-20 md:pb-28 overflow-hidden"
       style={{ 
-        background: "linear-gradient(to bottom, #F0FDFA 0%, #E0F2FE 50%, #F9FAFB 100%)"
+        background: "#FAFBFC"
       }}
     >
       {/* Grain texture - Premium feel */}
@@ -41,25 +41,11 @@ export function HeroV4TwoColumn() {
         }}
       />
 
-      {/* Vignette sur les bords */}
+      {/* UN SEUL halo subtil derrière le téléphone */}
       <div
-        className="pointer-events-none absolute inset-0"
+        className="pointer-events-none absolute right-1/3 top-1/4 h-[500px] w-[500px] rounded-full blur-[120px] opacity-10"
         style={{
-          background: "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.03) 100%)",
-        }}
-      />
-
-      {/* Halo teal + orange dramatique */}
-      <div
-        className="pointer-events-none absolute left-1/4 top-0 h-[600px] w-[800px] rounded-full blur-[160px] opacity-20"
-        style={{
-          background: "radial-gradient(circle, rgba(14,165,166,0.3), transparent 70%)",
-        }}
-      />
-      <div
-        className="pointer-events-none absolute right-1/4 top-1/3 h-[500px] w-[700px] rounded-full blur-[140px] opacity-15"
-        style={{
-          background: "radial-gradient(circle, rgba(245,158,11,0.25), transparent 70%)",
+          background: "radial-gradient(circle, rgba(14,165,166,0.4), transparent 70%)",
         }}
       />
 
@@ -79,92 +65,21 @@ export function HeroV4TwoColumn() {
           >
             Vous déménagez&nbsp;?
             <br />
-            <span style={{ color: "var(--color-accent)" }}>
-              On sélectionne le top 3 pour vous.
-            </span>
+            On sélectionne <span style={{ color: "var(--color-accent)" }}>le top 3 des déménageurs</span> pour vous.
           </motion.h1>
 
-          {/* Steps Stripe - Style horizontal avec animation (mobile) */}
-          <motion.div variants={staggerItem} className="mt-8 mx-auto max-w-md">
-            <div className="relative">
-              {/* Ligne horizontale background */}
-              <div className="absolute top-4 left-0 right-0 h-[2px] bg-slate-200" />
-              
-              {/* Ligne animée (progression) */}
-              <motion.div 
-                className="absolute top-4 left-0 h-[2px]"
-                style={{
-                  background: "linear-gradient(to right, #94A3B8 0%, #64748B 50%, #14B8A6 100%)"
-                }}
-                initial={{ width: "0%" }}
-                animate={{ width: "100%" }}
-                transition={{ duration: 2, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              />
-              
-              {/* Steps */}
-              <div className="relative flex justify-between items-start">
-                {STEPS.map(({ num, text, bold }, i) => (
-                  <motion.div
-                    key={num}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ 
-                      duration: 0.5, 
-                      delay: 0.4 + i * 0.2,
-                      ease: [0.16, 1, 0.3, 1]
-                    }}
-                    className="flex flex-col items-center"
-                    style={{ width: '33.33%' }}
-                  >
-                    {/* Numéro dans cercle */}
-                    <motion.div
-                      className="relative z-10 flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold mb-3"
-                      initial={{ scale: 0, backgroundColor: "#F3F4F6" }}
-                      animate={{ 
-                        scale: 1,
-                        backgroundColor: i === 0 ? "#F9FAFB" : (bold ? "#0EA5A6" : "#FFFFFF"),
-                        borderColor: i === 0 ? "#1F2937" : (bold ? "#0EA5A6" : "#E5E7EB")
-                      }}
-                      transition={{ 
-                        duration: 0.4, 
-                        delay: 0.6 + i * 0.2,
-                        ease: [0.16, 1, 0.3, 1]
-                      }}
-                      style={{
-                        border: "2px solid",
-                        color: i === 0 ? "#1F2937" : (bold ? "#fff" : "#6B7280"),
-                      }}
-                    >
-                      {num}
-                    </motion.div>
-                    
-                    {/* Texte */}
-                    <p
-                      className={`text-xs leading-tight text-center ${bold ? "font-semibold" : "font-normal"}`}
-                      style={{
-                        color: bold ? "#111827" : "#6B7280",
-                      }}
-                    >
-                      {text}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-
-          {/* CTA mobile - Direct après stepper pour max conversion */}
-          <motion.div variants={staggerItem} className="mt-6">
+          {/* CTA mobile - Direct sous le H1 */}
+          <motion.div variants={staggerItem} className="mt-8">
             <a
               href={quoteUrl}
               onClick={() => trackEvent("Lead_clic_home", { source: "hero-cta" })}
-              className="inline-flex items-center justify-center gap-2 w-full rounded-xl px-6 py-4 text-base font-semibold text-white transition-all duration-300 hover:opacity-90 hover:shadow-[0_8px_30px_rgba(14,165,166,0.3)] active:scale-[0.98]"
+              className="inline-flex items-center justify-center gap-2 w-full max-w-md rounded-xl px-6 py-4 text-base font-semibold text-white transition-all duration-300 hover:opacity-90 hover:shadow-[0_8px_30px_rgba(14,165,166,0.3)] active:scale-[0.98]"
               style={{ 
                 background: "var(--color-accent)",
                 boxShadow: "0 4px 16px rgba(14,165,166,0.24)"
               }}
             >
-              Recevoir ma sélection
+              Voir mes 3 meilleurs devis
               <ArrowRight className="h-5 w-5" />
             </a>
             <p className="mt-2.5 text-xs" style={{ color: "var(--color-text-muted)" }}>
@@ -180,7 +95,7 @@ export function HeroV4TwoColumn() {
           variants={staggerContainer}
           className="hidden lg:grid lg:grid-cols-12 lg:gap-10 lg:items-center"
         >
-          {/* COLONNE GAUCHE : Texte + CTA (col-span-6) */}
+          {/* COLONNE GAUCHE : Texte + CTA */}
           <motion.div variants={staggerItem} className="lg:col-span-6 max-w-[580px]">
             {/* H1 - Size optimisé */}
             <h1
@@ -189,82 +104,10 @@ export function HeroV4TwoColumn() {
             >
               Vous déménagez&nbsp;?
               <br />
-              <span style={{ color: "#0EA5A6" }}>
-                On sélectionne le top 3 pour vous.
-              </span>
+              On sélectionne <span style={{ color: "#0EA5A6" }}>le top 3 des déménageurs</span> pour vous.
             </h1>
 
-            {/* Steps Stripe - Style horizontal avec animation (desktop) */}
-            <div className="mb-8">
-              <div className="relative max-w-2xl">
-                {/* Ligne horizontale background */}
-                <div className="absolute top-5 left-0 right-0 h-[2px] bg-slate-200" />
-                
-                {/* Ligne animée (progression) */}
-                <motion.div 
-                  className="absolute top-5 left-0 h-[2px]"
-                  style={{
-                    background: "linear-gradient(to right, #94A3B8 0%, #64748B 50%, #14B8A6 100%)"
-                  }}
-                  initial={{ width: "0%" }}
-                  animate={{ width: "100%" }}
-                  transition={{ duration: 2.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                />
-                
-                {/* Steps */}
-                <div className="relative flex justify-between items-start">
-                  {STEPS.map(({ num, text, bold }, i) => (
-                    <motion.div
-                      key={num}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ 
-                        duration: 0.5, 
-                        delay: 0.4 + i * 0.2,
-                        ease: [0.16, 1, 0.3, 1]
-                      }}
-                      className="flex flex-col items-center"
-                      style={{ width: '33.33%' }}
-                    >
-                      {/* Numéro dans cercle */}
-                      <motion.div
-                        className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full text-base font-bold mb-4"
-                        initial={{ scale: 0, backgroundColor: "#F3F4F6" }}
-                        animate={{ 
-                          scale: 1,
-                          backgroundColor: i === 0 ? "#F9FAFB" : (bold ? "#0EA5A6" : "#FFFFFF"),
-                          borderColor: i === 0 ? "#1F2937" : (bold ? "#0EA5A6" : "#E5E7EB")
-                        }}
-                        transition={{ 
-                          duration: 0.4, 
-                          delay: 0.6 + i * 0.2,
-                          ease: [0.16, 1, 0.3, 1]
-                        }}
-                        style={{
-                          border: "3px solid",
-                          color: i === 0 ? "#1F2937" : (bold ? "#fff" : "#6B7280"),
-                          boxShadow: i === 0 ? "0 4px 12px rgba(0,0,0,0.08)" : (bold ? "0 4px 12px rgba(14,165,166,0.2)" : "0 2px 4px rgba(0,0,0,0.05)")
-                        }}
-                      >
-                        {num}
-                      </motion.div>
-                      
-                      {/* Texte */}
-                      <p
-                        className={`text-[15px] leading-relaxed text-center ${bold ? "font-semibold" : "font-normal"}`}
-                        style={{
-                          color: bold ? "#111827" : "#6B7280",
-                        }}
-                      >
-                        {text}
-                      </p>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* CTA desktop - Pure conversion */}
+            {/* CTA desktop - Direct sous H1 */}
             <div className="space-y-3">
               <a
                 href={quoteUrl}
@@ -275,7 +118,7 @@ export function HeroV4TwoColumn() {
                   boxShadow: "0 4px 16px rgba(14,165,166,0.25)"
                 }}
               >
-                Recevoir ma sélection
+                Voir mes 3 meilleurs devis
                 <ArrowRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
               </a>
               <p className="text-[13px]" style={{ color: "#9CA3AF" }}>
@@ -325,6 +168,32 @@ export function HeroV4TwoColumn() {
 
                   {/* Screen content */}
                   <div className="relative h-full w-full p-3 pt-9 pb-4 overflow-y-auto" style={{ background: "#F9FAFB" }}>
+                    
+                    {/* STEPPER MINIATURE dans le phone */}
+                    <div className="mb-4 px-2">
+                      <div className="space-y-2">
+                        {STEPS.map(({ num, text }, i) => (
+                          <div key={num} className="flex items-center gap-2">
+                            <div 
+                              className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold"
+                              style={{
+                                background: i === 2 ? "#0EA5A6" : "#FFFFFF",
+                                color: i === 2 ? "#fff" : "#6B7280",
+                                border: "2px solid",
+                                borderColor: i === 2 ? "#0EA5A6" : "#E5E7EB"
+                              }}
+                            >
+                              {num}
+                            </div>
+                            <p className="text-[10px] leading-tight" style={{ color: i === 2 ? "#111827" : "#6B7280" }}>
+                              {text}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="h-px bg-slate-200 mt-3 mb-3" />
+                    </div>
+
                     {/* Stack de 3 cards avec effet de profondeur */}
                     <div className="relative">
                       {/* Card C - Très en arrière (la plus floutée) */}
@@ -368,7 +237,7 @@ export function HeroV4TwoColumn() {
                       {/* Badge "Meilleure offre" */}
                       <div className="flex items-center justify-center py-1.5 rounded-lg" style={{ background: "#0EA5A6" }}>
                         <span className="text-xs font-semibold text-white">
-                          ✦ Meilleure offre
+                          Meilleure offre
                         </span>
                       </div>
 

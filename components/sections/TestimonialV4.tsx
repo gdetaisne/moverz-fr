@@ -35,8 +35,8 @@ export function TestimonialV4() {
 
   return (
     <FadeUpSection className="py-12 md:py-28" style={{ background: "var(--color-surface)" }}>
-      {/* Titre aligné gauche comme les autres sections */}
       <div className="container">
+        {/* Titre aligné gauche comme les autres sections */}
         <div className="max-w-5xl mb-12">
           <h2
             className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em] text-left"
@@ -47,7 +47,6 @@ export function TestimonialV4() {
             {" "}grâce à Moverz
           </h2>
         </div>
-      </div>
 
         {/* Témoignage centré */}
         <div className="max-w-3xl mx-auto text-center">

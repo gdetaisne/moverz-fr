@@ -765,15 +765,15 @@ L'IA + les 3 analyses de risque /100 + la checklist complète éliminent automat
 ✅ 3 analyses de risque /100 (financier, juridique, avis Google)  
 ✅ Alertes cash ou juridiques = exclusion automatique  
 ✅ Checklist complète fournie  
-✅ Support dédié si problème
+✅ Contact disponible : contact@moverz.fr
 
 ---
 
 ## Déménagez sans erreur avec Moverz
 
-**Volume IA en 1 minute** · **des devis comparables** · **3 analyses de risque /100** · **Checklist complète** · **100% gratuit**
+**Dossier standardisé** · **Devis comparables** · **3 analyses de risque /100** · **Checklist complète** · **100% gratuit**
 
 [Comparer les devis maintenant →](https://devis.moverz.fr/devis-gratuits)
 
-**Questions ?** [contact@moverz.fr](mailto:contact@moverz.fr) · Support dédié
+**Questions ?** [contact@moverz.fr](mailto:contact@moverz.fr)
 

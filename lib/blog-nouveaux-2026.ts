@@ -294,7 +294,7 @@ Avant de valider votre estimation, vérifiez que vous avez bien pensé à :
 
 **Aller plus loin :**
 
-- [Combien coûte un déménagement en 2026 ? Guide complet des prix](/blog/prix-demenagement-2025/)
+- [Combien coûte un déménagement en 2026 ? Guide complet des prix](/blog/prix-demenagement-2026/)
 - [Comment comparer des devis de déménagement ?](/blog/comparer-devis-demenagement-guide/)
 - [Meilleur comparateur de déménagement 2026](/blog/meilleur-comparateur-demenagement-2026/)
 - [Comment éviter les arnaques au déménagement ?](/blog/eviter-arnaques-demenagement/)
