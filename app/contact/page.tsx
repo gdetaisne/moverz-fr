@@ -3,7 +3,7 @@ import { getFullMetadata } from "@/lib/canonical-helper";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ContactForm from "@/components/ContactForm";
 import Image from "next/image";
-import { Clock, Mail, ShieldCheck, Users, Linkedin, Truck } from "lucide-react";
+import { Mail, ShieldCheck, Users, Linkedin, Truck } from "lucide-react";
 
 export const metadata: Metadata = getFullMetadata(
   'contact',
@@ -48,11 +48,6 @@ export default function ContactPage() {
           <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:items-center">
             {/* Left Column - Text */}
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border bg-white/90 px-5 py-2 text-sm font-semibold shadow-md backdrop-blur-sm" style={{ borderColor: "#0EA5A6", color: "#111827" }}>
-                <Clock className="h-4 w-4" style={{ color: "#0EA5A6" }} />
-                <span>Réponse sous 24h ouvrées</span>
-              </div>
-
               <h1 
                 className="mt-6 font-heading text-[clamp(32px,5vw,52px)] font-bold tracking-[-0.02em] leading-[1.1]"
                 style={{ color: "#111827" }}
