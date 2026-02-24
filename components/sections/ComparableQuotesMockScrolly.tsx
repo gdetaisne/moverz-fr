@@ -352,17 +352,8 @@ export function ComparableQuotesMockScrolly() {
 
                   {/* Screen content with carousel */}
                   <div className="relative h-full w-full overflow-hidden" style={{ background: "#F9FAFB" }}>
-                    {/* Top badge (fixed) */}
-                    <div className="absolute top-8 left-0 right-0 z-20 px-4">
-                      <div className="text-center">
-                        <p className="text-xs font-semibold text-slate-900">
-                          3 offres retenues sur 7 réponses reçues
-                        </p>
-                      </div>
-                    </div>
-
                     {/* Navigation dots mobile (inside screen, top) */}
-                    <div className="absolute top-16 left-0 right-0 z-20 flex items-center justify-center gap-2 lg:hidden">
+                    <div className="absolute top-10 left-0 right-0 z-20 flex items-center justify-center gap-2 lg:hidden">
                       {MOVERS.map((_, i) => (
                         <button
                           key={i}
