@@ -245,10 +245,12 @@ export function CreditsafeChapter() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="rounded-[var(--radius-md)] border p-5 md:p-6"
+                whileHover={{ y: -2 }}
+                className="rounded-[var(--radius-md)] border p-5 md:p-6 transition-shadow duration-300"
                 style={{
                   borderColor: "rgba(255,255,255,0.06)",
                   background: "rgba(255,255,255,0.02)",
+                  boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
                 }}
               >
                 {/* Icon + title + score circle */}
@@ -318,6 +320,7 @@ export function CreditsafeChapter() {
           style={{
             borderColor: "rgba(255,255,255,0.06)",
             background: "rgba(255,255,255,0.02)",
+            boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
           }}
         >
           <div className="grid gap-4 sm:grid-cols-3">

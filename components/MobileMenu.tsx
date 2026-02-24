@@ -80,10 +80,10 @@ export default function MobileMenu() {
                 <a
                   href="https://devis.moverz.fr/devis-gratuits-v3?source=moverz.fr&from=header-mobile"
                   rel="nofollow"
-                  className="block w-full text-center rounded-[var(--radius-sm)] px-4 py-3 text-[14px] font-semibold text-white transition-all active:scale-[0.98]"
-                  style={{ background: "var(--color-text)" }}
+                  className="block w-full text-center rounded-lg px-4 py-3 text-sm font-semibold text-white transition-all active:scale-[0.98]"
+                  style={{ background: "var(--color-accent)" }}
                 >
-                  Obtenir des devis
+                  Recevoir ma sélection
                 </a>
               </div>
             </nav>

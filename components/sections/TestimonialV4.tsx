@@ -71,7 +71,7 @@ export function TestimonialV4() {
           <div className="mt-8 flex items-center justify-center gap-4">
             <button
               onClick={prev}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border transition-colors hover:bg-[rgba(14,165,166,0.05)]"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full border transition-all duration-300 hover:bg-[rgba(14,165,166,0.08)] hover:-translate-x-0.5 hover:shadow-sm"
               style={{ borderColor: "var(--color-border)", color: "var(--color-text-secondary)" }}
               aria-label="Avis précédent"
             >
@@ -96,7 +96,7 @@ export function TestimonialV4() {
 
             <button
               onClick={next}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border transition-colors hover:bg-[rgba(14,165,166,0.05)]"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full border transition-all duration-300 hover:bg-[rgba(14,165,166,0.08)] hover:translate-x-0.5 hover:shadow-sm"
               style={{ borderColor: "var(--color-border)", color: "var(--color-text-secondary)" }}
               aria-label="Avis suivant"
             >

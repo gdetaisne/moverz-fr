@@ -30,10 +30,11 @@ export function FAQV4() {
             return (
               <div
                 key={index}
-                className="rounded-[var(--radius-md)] border overflow-hidden transition-colors"
+                className="rounded-[var(--radius-md)] border overflow-hidden transition-all duration-300 hover:shadow-sm"
                 style={{
                   borderColor: isOpen ? "var(--color-accent)" : "var(--color-border)",
                   background: "var(--color-surface)",
+                  boxShadow: isOpen ? "0 2px 8px rgba(14,165,166,0.08)" : "none",
                 }}
               >
                 <button

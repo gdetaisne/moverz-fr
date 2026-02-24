@@ -35,30 +35,6 @@
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
   --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
 
-  /* Legacy — backward compat for other pages (mapped to V4 colors) */
-  --brand-navy: #0B0F19; /* mapped to --color-text */
-  --brand-teal: #0EA5A6; /* mapped to --color-accent */
-
-  /* Legacy RGB tokens */
-  --bg: 250 250 250;
-  --surface: 255 255 255;
-  --text: 11 15 25;
-  --text-2: 107 114 128;
-  --muted: 156 163 175;
-  --border: 229 231 235;
-  --border-2: 243 244 246;
-  --primary: 11 15 25;
-  --primary-contrast: 255 255 255;
-  --accent: 14 165 166;
-  --accent-2: 14 165 166;
-  --success: 22 163 74;
-  --danger: 220 38 38;
-  --warning: 245 158 11;
-  --focus: rgba(14, 165, 166, 0.3);
-  --radius-card: 12px;
-  --radius-btn: 8px;
-  --radius-input: 8px;
-  --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
 }
 
 @layer base {

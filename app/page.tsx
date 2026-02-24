@@ -14,9 +14,8 @@
  * Un seul chapitre dark (CreditsafeChapter)
  */
 
-import { HeroV4 } from "@/components/sections/HeroV4";
-import { TrustBadgeMinimal } from "@/components/sections/TrustBadgeMinimal";
-import { ComparableQuotesMock } from "@/components/sections/ComparableQuotesMock";
+import { HeroV4TwoColumn } from "@/components/sections/HeroV4TwoColumn";
+import { ComparableQuotesMockScrolly } from "@/components/sections/ComparableQuotesMockScrolly";
 import { WhyMoverz } from "@/components/sections/WhyMoverz";
 import { CreditsafeChapter } from "@/components/sections/CreditsafeChapter";
 import { TestimonialV4 } from "@/components/sections/TestimonialV4";
@@ -30,10 +29,9 @@ const StickyCTA = dynamic(() => import("@/components/StickyCTA"), {
 export default function Home() {
   return (
     <>
-      <HeroV4 />
-      <TrustBadgeMinimal />
-      <ComparableQuotesMock />
+      <HeroV4TwoColumn />
       <WhyMoverz />
+      <ComparableQuotesMockScrolly />
       <CreditsafeChapter />
       <TestimonialV4 />
       <FAQV4 />

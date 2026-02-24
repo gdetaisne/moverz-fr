@@ -1,107 +1,186 @@
 "use client";
 
+/**
+ * WhyMoverz - Version Premium avec stats
+ * Design impactant pour servir de buffer entre Hero et Scrollytelling
+ * Style cohérent avec CreditsafeChapter
+ */
+
 import { motion } from "framer-motion";
 import { staggerContainer, staggerItem } from "@/components/motion";
-import { Tag, Handshake, Clock } from "lucide-react";
+import { Tag, Shield, Clock, ArrowRight } from "lucide-react";
 
 const arguments_ = [
   {
     icon: Tag,
+    number: "01",
     title: "Déménagez au juste prix",
-    line1: "Appel d'offres réel sur votre dossier précis.",
-    line2: "Pas de devis d'appel. Pas d'estimation vague.",
+    description: "Appel d'offres réel sur votre dossier précis.",
+    highlight: "Pas de devis d'appel. Pas d'estimation vague.",
+    stat: "450€",
+    statLabel: "économisés en moyenne",
   },
   {
-    icon: Handshake,
+    icon: Shield,
+    number: "02",
     title: "Choisissez un partenaire de confiance",
-    line1: "Entreprises assurées, vérifiées, sélectionnées.",
-    line2: "Les offres à risque sont écartées.",
+    description: "Entreprises assurées, vérifiées, sélectionnées.",
+    highlight: "Les offres à risque sont écartées.",
+    stat: "3/7",
+    statLabel: "offres retenues en moyenne",
   },
   {
     icon: Clock,
+    number: "03",
     title: "Décidez en quelques minutes",
-    line1: "Un seul dossier. Des offres comparables.",
-    line2: "Une décision simple.",
+    description: "Un seul dossier. Des offres comparables.",
+    highlight: "Une décision simple.",
+    stat: "48h",
+    statLabel: "pour recevoir vos offres",
   },
 ];
 
 export function WhyMoverz() {
   return (
-    <section className="py-16 md:py-24" style={{ background: "var(--color-bg)" }}>
-      <div className="container max-w-4xl">
+    <section 
+      className="relative py-16 md:py-32 overflow-hidden"
+      style={{ 
+        background: "linear-gradient(180deg, var(--color-bg) 0%, var(--color-surface) 100%)"
+      }}
+    >
+      {/* Glow subtil en haut */}
+      <div
+        className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[400px] w-[800px] rounded-full blur-[120px] opacity-15"
+        style={{
+          background: "radial-gradient(circle, rgba(14,165,166,0.3), transparent 70%)",
+        }}
+      />
+
+      <div className="container relative max-w-6xl">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={staggerContainer}
-          className="space-y-12"
+          className="space-y-16"
         >
           {/* Header */}
-          <motion.div variants={staggerItem} className="text-center space-y-3">
+          <motion.div variants={staggerItem} className="text-center space-y-4 max-w-3xl mx-auto">
             <span
-              className="inline-block text-xs font-medium px-3 py-1 rounded-full"
-              style={{ background: "rgba(14,165,166,0.08)", color: "var(--color-accent)" }}
+              className="inline-block text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full"
+              style={{ 
+                background: "rgba(14,165,166,0.1)", 
+                color: "var(--color-accent)",
+                border: "1px solid rgba(14,165,166,0.2)"
+              }}
             >
               Notre approche
             </span>
             <h2
-              className="font-heading text-[clamp(28px,5vw,42px)] font-bold tracking-[-0.02em] leading-[1.1]"
+              className="font-heading text-[clamp(32px,5vw,52px)] font-bold tracking-[-0.02em] leading-[1.1]"
               style={{ color: "var(--color-text)" }}
             >
               Pourquoi passer par nous ?
             </h2>
+            <p 
+              className="text-lg leading-relaxed"
+              style={{ color: "var(--color-text-secondary)" }}
+            >
+              Un seul dossier. Des offres vérifiées. Un choix serein.
+            </p>
           </motion.div>
 
-          {/* 3 arguments */}
-          <div className="grid gap-8 md:grid-cols-3">
-            {arguments_.map(({ icon: Icon, title, line1, line2 }, i) => (
-              <motion.div
-                key={i}
-                variants={staggerItem}
-                className="rounded-[var(--radius-md)] border p-6 space-y-3 transition-all hover:-translate-y-0.5 hover:shadow-md"
-                style={{
-                  borderColor: "var(--color-border)",
-                  background: "var(--color-surface)",
-                }}
-              >
-                <div
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-full"
-                  style={{ background: "rgba(14,165,166,0.1)" }}
+          {/* 3 arguments - Premium cards */}
+          <div className="grid gap-6 md:grid-cols-3">
+            {arguments_.map((arg, i) => {
+              const Icon = arg.icon;
+              return (
+                <motion.div
+                  key={i}
+                  variants={staggerItem}
+                  whileHover={{ y: -4 }}
+                  className="group relative rounded-2xl border p-8 space-y-6 transition-all duration-300"
+                  style={{
+                    borderColor: "var(--color-border)",
+                    background: "white",
+                    boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
+                  }}
                 >
-                  <Icon className="h-5 w-5" style={{ color: "var(--color-accent)" }} />
-                </div>
-                <h3
-                  className="text-[15px] font-bold leading-snug"
-                  style={{ color: "var(--color-text)" }}
-                >
-                  {title}
-                </h3>
-                <div className="space-y-1.5">
-                  <p
-                    className="text-sm leading-relaxed"
-                    style={{ color: "var(--color-text-secondary)" }}
+                  {/* Number badge - top right */}
+                  <div 
+                    className="absolute top-6 right-6 text-6xl font-bold opacity-5 font-heading"
+                    style={{ color: "var(--color-accent)" }}
                   >
-                    {line1}
-                  </p>
-                  <p
-                    className="text-sm leading-relaxed"
-                    style={{ color: "var(--color-text-secondary)" }}
+                    {arg.number}
+                  </div>
+
+                  {/* Icon */}
+                  <div
+                    className="inline-flex h-14 w-14 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110"
+                    style={{ background: "rgba(14,165,166,0.1)" }}
                   >
-                    {line2}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+                    <Icon className="h-7 w-7" style={{ color: "var(--color-accent)" }} />
+                  </div>
+
+                  {/* Content */}
+                  <div className="space-y-3">
+                    <h3
+                      className="text-xl font-bold leading-tight"
+                      style={{ color: "var(--color-text)" }}
+                    >
+                      {arg.title}
+                    </h3>
+                    <p
+                      className="text-base leading-relaxed"
+                      style={{ color: "var(--color-text-secondary)" }}
+                    >
+                      {arg.description}
+                    </p>
+                    <p
+                      className="text-sm font-semibold"
+                      style={{ color: "var(--color-accent)" }}
+                    >
+                      {arg.highlight}
+                    </p>
+                  </div>
+
+                  {/* Stat au bas */}
+                  <div 
+                    className="pt-4 border-t"
+                    style={{ borderColor: "var(--color-border)" }}
+                  >
+                    <div className="flex items-baseline gap-2">
+                      <span 
+                        className="text-3xl font-bold tabular-nums"
+                        style={{ color: "var(--color-accent)" }}
+                      >
+                        {arg.stat}
+                      </span>
+                      <span 
+                        className="text-sm"
+                        style={{ color: "var(--color-text-muted)" }}
+                      >
+                        {arg.statLabel}
+                      </span>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
 
-          {/* Micro-phrase de synthèse */}
-          <motion.p
+          {/* Bottom tagline */}
+          <motion.div 
             variants={staggerItem}
-            className="text-center text-sm font-medium"
-            style={{ color: "var(--color-text-muted)" }}
+            className="text-center pt-8"
           >
-            Un dossier. Des offres vérifiées. Un choix serein.
-          </motion.p>
+            <p
+              className="text-base font-medium"
+              style={{ color: "var(--color-text-secondary)" }}
+            >
+              Découvrez comment nous filtrons les offres pour vous ↓
+            </p>
+          </motion.div>
         </motion.div>
       </div>
     </section>

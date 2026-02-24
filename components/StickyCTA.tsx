@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { buildTunnelUrl } from "@/lib/tunnel-url";
+import { ArrowRight } from "lucide-react";
 
 export default function StickyCTA() {
   const [visible, setVisible] = useState(false);
@@ -9,7 +9,8 @@ export default function StickyCTA() {
 
   useEffect(() => {
     const onScroll = () => {
-      setVisible(window.scrollY > window.innerHeight * 0.7);
+      // Apparition après 120% viewport height (après hero complet)
+      setVisible(window.scrollY > window.innerHeight * 1.2);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -26,72 +27,66 @@ export default function StickyCTA() {
 
   return (
     <div
-      className={`fixed bottom-0 left-0 right-0 z-50 transition-all duration-700 ease-out ${
+      className={`fixed bottom-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
         visible ? "opacity-100 translate-y-0" : "pointer-events-none translate-y-full opacity-0"
       }`}
-      style={{
-        willChange: visible ? "auto" : "transform, opacity",
-      }}
     >
-      {/* VERSION MOBILE : Plus discret */}
+      {/* VERSION MOBILE */}
       <div className="md:hidden">
-        <div className="relative bg-white/90 backdrop-blur-xl border-t border-[#E3E5E8]/50 px-3 py-2.5 shadow-[0_-8px_30px_rgba(0,0,0,0.06)]">
-          {/* Subtle gradient accent line at top */}
-          <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[#6BCFCF] to-transparent" />
+        <div className="relative bg-white/95 backdrop-blur-xl border-t px-4 py-3 shadow-[0_-8px_30px_rgba(0,0,0,0.08)]" style={{ borderColor: "var(--color-border)" }}>
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--color-accent)] to-transparent opacity-60" />
           
-          <div className="flex items-center gap-2">
-            <a
-              href={quoteUrl}
-              className="group flex-1 inline-flex items-center justify-center gap-1.5 rounded-lg bg-gradient-to-r from-[#0F172A] to-[#1E293B] px-3 py-2 text-sm font-semibold text-white shadow-sm hover:shadow-[0_6px_16px_rgba(15,23,42,0.3)] hover:scale-[1.01] active:scale-95 transition-all duration-300"
-              aria-label="Comparer mes devis"
-            >
-              <span>Comparer</span>
-              <span className="text-sm leading-none">→</span>
-            </a>
-          </div>
+          <a
+            href={quoteUrl}
+            className="flex items-center justify-center gap-2 w-full rounded-lg px-4 py-3 text-base font-semibold text-white transition-all duration-300 hover:opacity-90 hover:shadow-[0_8px_30px_rgba(14,165,166,0.35)] active:scale-[0.98]"
+            style={{ 
+              background: "var(--color-accent)",
+              boxShadow: "0 4px 16px rgba(14,165,166,0.24)"
+            }}
+          >
+            <span>Recevoir ma sélection</span>
+            <ArrowRight className="h-5 w-5" />
+          </a>
+          <p className="text-center text-xs mt-2" style={{ color: "var(--color-text-muted)" }}>
+            Gratuit · 3 min · Sans engagement
+          </p>
         </div>
       </div>
 
-      {/* VERSION DESKTOP : Plus discrète */}
+      {/* VERSION DESKTOP */}
       <div className="hidden md:block">
-        <div className="mx-auto max-w-5xl px-6 pb-5">
-          <div className="relative overflow-hidden rounded-xl bg-white/90 backdrop-blur-xl border border-[#E3E5E8]/50 shadow-[0_-8px_40px_rgba(0,0,0,0.08)]">
-            {/* Gradient accent line */}
-            <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[#6BCFCF] to-transparent" />
+        <div className="mx-auto max-w-5xl px-6 pb-6">
+          <div className="relative overflow-hidden rounded-xl bg-white/95 backdrop-blur-xl border shadow-[0_-8px_40px_rgba(0,0,0,0.1)]" style={{ borderColor: "var(--color-border)" }}>
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--color-accent)] to-transparent opacity-60" />
             
-            <div className="relative flex items-center justify-between gap-6 px-5 py-3">
-              {/* Icône + Texte structuré - Plus compact */}
+            <div className="flex items-center justify-between gap-6 px-6 py-4">
+              {/* Left: Mini proof */}
               <div className="flex items-center gap-3">
-                <div className="relative flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-[#0F172A] to-[#1E293B] shadow-sm">
-                  <Image
-                    src="/logo.png"
-                    alt="Moverz"
-                    width={24}
-                    height={24}
-                    className="relative"
-                  />
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg" style={{ background: "rgba(14,165,166,0.1)" }}>
+                  <span className="text-xl">✓</span>
                 </div>
-                <div className="space-y-1">
-                  <p className="text-sm font-semibold text-[#0F172A] leading-tight">
-                    3 min · devis comparables · 0 démarchage
+                <div>
+                  <p className="text-sm font-semibold" style={{ color: "var(--color-text)" }}>
+                    Déménageurs vérifiés · Offres comparables
                   </p>
-                  <p className="text-xs text-[#1E293B]/60">
-                    Numéro masqué · Entreprises vérifiées
+                  <p className="text-xs" style={{ color: "var(--color-text-secondary)" }}>
+                    3 min · Gratuit · Sans engagement
                   </p>
                 </div>
               </div>
 
-              {/* CTA Buttons - Plus compacts */}
-              <div className="flex items-center gap-2 flex-shrink-0">
-                <a
-                  href={quoteUrl}
-                  className="group inline-flex items-center gap-1.5 rounded-lg bg-gradient-to-r from-[#0F172A] to-[#1E293B] px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:shadow-[0_6px_16px_rgba(15,23,42,0.3)] hover:scale-[1.01] active:scale-[0.98] transition-all duration-300"
-                  aria-label="Lancer le comparateur"
-                >
-                  <span>Comparer</span>
-                  <span className="text-sm leading-none">→</span>
-                </a>
-              </div>
+              {/* Right: CTA */}
+              <a
+                href={quoteUrl}
+                className="inline-flex items-center gap-2 rounded-lg px-6 py-3 text-base font-semibold text-white transition-all duration-300 hover:opacity-90 hover:shadow-[0_12px_40px_rgba(14,165,166,0.4)] hover:-translate-y-0.5 active:scale-[0.98]"
+                style={{ 
+                  background: "var(--color-accent)",
+                  boxShadow: "0 4px 16px rgba(14,165,166,0.24)"
+                }}
+              >
+                <span>Recevoir ma sélection</span>
+                <ArrowRight className="h-5 w-5" />
+              </a>
             </div>
           </div>
         </div>
