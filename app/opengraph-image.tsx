@@ -26,45 +26,62 @@ export default async function OgImage() {
           flexDirection: "column",
           alignItems: "flex-start",
           justifyContent: "center",
-          background: "#FAFAFA",
+          background: "linear-gradient(to bottom, #F0FDFA 0%, #E0F2FE 50%, #F9FAFB 100%)",
           fontFamily: "Inter",
           position: "relative",
           overflow: "hidden",
           padding: "80px",
         }}
       >
-        {/* Gradient hero background - exact comme le site */}
+        {/* Grain texture - Premium feel comme le site */}
         <div
           style={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(180deg, #a8e8e8 0%, #eafafa 42%, #ffffff 100%)",
+            opacity: 0.015,
+            backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")",
             zIndex: 0,
           }}
         />
-        
-        {/* Radial gradient top-left */}
+
+        {/* Vignette sur les bords */}
         <div
           style={{
             position: "absolute",
-            top: "-10%",
-            left: "10%",
-            width: "750px",
-            height: "350px",
-            background: "radial-gradient(ellipse 750px 350px, rgba(107, 207, 207, 0.28) 0%, transparent 60%)",
+            inset: 0,
+            background: "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.03) 100%)",
             zIndex: 1,
           }}
         />
         
-        {/* Radial gradient top-right */}
+        {/* Halo teal gauche */}
         <div
           style={{
             position: "absolute",
-            top: "5%",
-            right: "5%",
-            width: "600px",
-            height: "300px",
-            background: "radial-gradient(ellipse 600px 300px, rgba(168, 232, 232, 0.65) 0%, transparent 62%)",
+            left: "25%",
+            top: 0,
+            width: "800px",
+            height: "600px",
+            borderRadius: "50%",
+            filter: "blur(160px)",
+            opacity: 0.2,
+            background: "radial-gradient(circle, rgba(14,165,166,0.3), transparent 70%)",
+            zIndex: 1,
+          }}
+        />
+        
+        {/* Halo orange droite */}
+        <div
+          style={{
+            position: "absolute",
+            right: "25%",
+            top: "33%",
+            width: "700px",
+            height: "500px",
+            borderRadius: "50%",
+            filter: "blur(140px)",
+            opacity: 0.15,
+            background: "radial-gradient(circle, rgba(245,158,11,0.25), transparent 70%)",
             zIndex: 1,
           }}
         />
@@ -76,39 +93,38 @@ export default async function OgImage() {
             flexDirection: "column",
             alignItems: "flex-start",
             zIndex: 10,
-            maxWidth: 1000,
+            maxWidth: 1040,
           }}
         >
-          {/* Logo stylisé en texte - pas d'image */}
+          {/* Logo + nom - style actuel du site */}
           <div
             style={{
               display: "flex",
               alignItems: "center",
-              gap: 0,
-              marginBottom: 48,
+              gap: 14,
+              marginBottom: 42,
             }}
           >
-            {/* Logo carré turquoise avec "S" stylisé */}
+            {/* Logo carré turquoise avec "S" stylisé - plus petit et moderne */}
             <div
               style={{
-                width: 64,
-                height: 64,
+                width: 56,
+                height: 56,
                 background: "#0EA5A6",
-                borderRadius: 14,
+                borderRadius: 12,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                marginRight: 16,
-                boxShadow: "0 4px 12px rgba(14, 165, 166, 0.25)",
+                boxShadow: "0 2px 8px rgba(14, 165, 166, 0.2), 0 4px 16px rgba(14, 165, 166, 0.12)",
               }}
             >
               <span
                 style={{
-                  fontSize: 42,
+                  fontSize: 36,
                   fontWeight: 900,
                   color: "white",
                   fontFamily: "Sora",
-                  letterSpacing: -2,
+                  letterSpacing: -1.5,
                 }}
               >
                 S
@@ -116,10 +132,10 @@ export default async function OgImage() {
             </div>
             <span
               style={{
-                fontSize: 52,
+                fontSize: 48,
                 fontWeight: 800,
                 color: "#0B0F19",
-                letterSpacing: -1.5,
+                letterSpacing: -1.2,
                 fontFamily: "Sora",
               }}
             >
@@ -127,23 +143,24 @@ export default async function OgImage() {
             </span>
           </div>
 
-          {/* Tagline compact */}
+          {/* Tagline compact - style badge moderne */}
           <div
             style={{
               display: "inline-flex",
               alignItems: "center",
-              background: "white",
-              padding: "8px 18px",
+              background: "rgba(255, 255, 255, 0.9)",
+              padding: "10px 20px",
               borderRadius: 50,
-              border: "1px solid rgba(14, 165, 166, 0.2)",
-              marginBottom: 40,
-              boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
+              border: "1px solid rgba(0, 0, 0, 0.06)",
+              marginBottom: 44,
+              boxShadow: "0 1px 2px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.02)",
+              backdropFilter: "blur(8px)",
             }}
           >
             <span
               style={{
-                color: "#0EA5A6",
-                fontSize: 15,
+                color: "#4B5563",
+                fontSize: 16,
                 fontWeight: 600,
                 fontFamily: "Inter",
               }}
@@ -152,21 +169,21 @@ export default async function OgImage() {
             </span>
           </div>
 
-          {/* Titre principal - aligné à gauche, moderne */}
+          {/* Titre principal - style hero actuel */}
           <div
             style={{
               display: "flex",
               flexDirection: "column",
-              fontSize: 72,
+              fontSize: 78,
               fontWeight: 900,
-              lineHeight: 1.05,
-              marginBottom: 48,
+              lineHeight: 0.98,
+              marginBottom: 52,
               fontFamily: "Sora",
-              letterSpacing: -2.5,
+              letterSpacing: -3,
             }}
           >
-            <span style={{ color: "#0B0F19" }}>
-              Comparez des devis
+            <span style={{ color: "#0B0F19", marginBottom: 8 }}>
+              Vous déménagez.
             </span>
             <span
               style={{
@@ -177,51 +194,36 @@ export default async function OgImage() {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              de déménageurs contrôlés
+              On vous présente les 3 meilleurs.
             </span>
           </div>
 
-          {/* Benefits en ligne */}
-          <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+          {/* Trust chips - style actuel avec touches couleurs */}
+          <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
             {[
-              { icon: "✓", label: "100% gratuit" },
-              { icon: "✓", label: "Sans démarchage" },
-              { icon: "✓", label: "Pros vérifiés" },
+              { icon: "💰", label: "Prix contrôlés", color: "#F59E0B" },
+              { icon: "🛡️", label: "Fiabilité vérifiée", color: "#0EA5A6" },
+              { icon: "⚡", label: "Numéro masqué", color: "#0EA5A6" },
             ].map((item) => (
               <div
                 key={item.label}
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  gap: 10,
-                  background: "white",
-                  padding: "12px 20px",
+                  gap: 8,
+                  background: "rgba(255, 255, 255, 0.8)",
+                  padding: "10px 18px",
                   borderRadius: 50,
-                  border: "1px solid #E5E7EB",
-                  boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
+                  border: "1px solid rgba(0, 0, 0, 0.08)",
+                  boxShadow: "0 1px 2px rgba(0,0,0,0.03)",
+                  backdropFilter: "blur(8px)",
                 }}
               >
-                <div
-                  style={{
-                    width: 24,
-                    height: 24,
-                    background: "#0EA5A6",
-                    borderRadius: "50%",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: "white",
-                    fontWeight: 700,
-                    fontSize: 14,
-                    fontFamily: "Inter",
-                  }}
-                >
-                  {item.icon}
-                </div>
+                <span style={{ fontSize: 18 }}>{item.icon}</span>
                 <span
                   style={{
-                    color: "#0B0F19",
-                    fontSize: 18,
+                    color: "#4B5563",
+                    fontSize: 16,
                     fontWeight: 600,
                     fontFamily: "Inter",
                   }}
