@@ -3,7 +3,7 @@
 /**
  * WhyMoverz - Version alignée sur CreditsafeChapter
  * Design compact avec animations de progression
- * Couleurs: Turquoise uniquement pour cohérence identité Moverz
+ * Couleurs: Turquoise uniquement (arguments positifs Moverz)
  */
 
 import { useRef, useState, useEffect } from "react";
