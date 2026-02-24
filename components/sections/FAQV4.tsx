@@ -27,16 +27,16 @@ export function FAQV4() {
       />
       
       <div className="container max-w-5xl relative z-10">
-        {/* Titre */}
+        {/* Titre à gauche avec effet deux tons */}
         <h2
           className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em] mb-12 text-left"
-          style={{ color: "#FFFFFF" }}
         >
-          On répond à vos questions
+          <span style={{ color: "#FFFFFF" }}>Zéro doute, </span>
+          <span style={{ color: "rgba(255,255,255,0.5)" }}>zéro stress</span>
         </h2>
 
-        {/* Accordéons */}
-        <div className="max-w-3xl space-y-3">
+        {/* Accordéons centrés */}
+        <div className="max-w-3xl mx-auto space-y-3">
           {HOME_FAQS.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
