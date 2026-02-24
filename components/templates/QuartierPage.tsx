@@ -107,7 +107,7 @@ export function QuartierPage({
 
             {/* Titre */}
             <h1 className="text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl">
-              Déménager à {quartierName} ?<br />
+              Déménager à {quartierName}&nbsp;?<br />
               <span className="text-v4-accent">3 min, des devis.</span>
             </h1>
 

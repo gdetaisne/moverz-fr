@@ -56,7 +56,7 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
             {/* Title */}
             <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6 leading-[1.1] text-[var(--color-text)]">
               Déménager à{" "}
-              <span style={{ color: "var(--color-accent)" }}>{city.nameCapitalized}</span> ?
+              <span style={{ color: "var(--color-accent)" }}>{city.nameCapitalized}</span>&nbsp;?
               <br />
               3 min, des devis.
             </h1>
