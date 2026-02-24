@@ -63,14 +63,49 @@ function MorphingUIAnimation() {
         transition={{ duration: 2, repeat: Infinity }}
       />
 
-      {/* Header compact */}
+      {/* Header premium avec logo Moverz */}
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         className="relative z-10 mb-6"
       >
-        <p className="text-[10px] font-medium text-slate-500">Votre déménagement</p>
-        <p className="text-xs font-semibold text-slate-900 mt-0.5">Paris → Lyon • 15 mars</p>
+        {/* Logo Moverz subtle en haut */}
+        <div className="flex items-center justify-between mb-3">
+          <div className="flex items-center gap-1.5">
+            <div 
+              className="w-5 h-5 rounded-md flex items-center justify-center"
+              style={{ background: "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)" }}
+            >
+              <span className="text-white text-[9px] font-bold">M</span>
+            </div>
+            <span className="text-[9px] font-semibold text-slate-400">Moverz</span>
+          </div>
+          <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "#10B981" }} />
+        </div>
+
+        {/* Info déménagement - Plus mis en valeur */}
+        <motion.div 
+          className="p-3 rounded-xl border"
+          style={{ 
+            background: "linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%)",
+            borderColor: "#E2E8F0"
+          }}
+          animate={{
+            boxShadow: [
+              "0 2px 8px rgba(15,23,42,0.06)",
+              "0 4px 12px rgba(15,23,42,0.08)",
+              "0 2px 8px rgba(15,23,42,0.06)",
+            ]
+          }}
+          transition={{ duration: 3, repeat: Infinity }}
+        >
+          <p className="text-[9px] font-medium text-slate-500 mb-1">Votre déménagement</p>
+          <div className="flex items-center gap-2">
+            <p className="text-sm font-bold text-slate-900">Paris → Lyon</p>
+            <div className="w-1 h-1 rounded-full bg-slate-300" />
+            <p className="text-xs font-semibold text-slate-600">15 mars</p>
+          </div>
+        </motion.div>
       </motion.div>
 
       {/* Carte principale qui morphe */}
