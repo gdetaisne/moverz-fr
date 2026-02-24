@@ -519,22 +519,46 @@ export function ComparableQuotesMockScrolly() {
                       </AnimatePresence>
                     </div>
 
-                    {/* Badge flottant EN BAS DE L'ÉCRAN */}
+                    {/* Badge flottant EN BAS DE L'ÉCRAN - Premium style */}
                     <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                      whileInView={{ opacity: 1, y: 0, scale: 1 }}
                       viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: 0.6 }}
-                      className="absolute bottom-3 left-3 right-3 z-30 rounded-xl px-3 py-2 text-[10px] font-semibold shadow-lg backdrop-blur-sm border"
+                      transition={{ 
+                        duration: 0.6, 
+                        delay: 0.6,
+                        ease: [0.16, 1, 0.3, 1]
+                      }}
+                      className="absolute bottom-4 left-4 right-4 z-30 rounded-2xl px-4 py-3 text-[11px] font-semibold backdrop-blur-xl"
                       style={{ 
-                        background: "rgba(255,255,255,0.95)", 
-                        borderColor: "rgba(14,165,166,0.15)",
+                        background: "linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(240,253,250,0.95) 100%)",
+                        border: "1px solid rgba(14,165,166,0.2)",
+                        boxShadow: "0 8px 24px rgba(14,165,166,0.12), 0 2px 8px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.8)",
                         color: "#111827" 
                       }}
                     >
-                      <div className="flex items-center justify-center gap-1.5">
-                        <div className="h-1.5 w-1.5 rounded-full" style={{ background: "#1F2937" }} />
-                        <span><strong style={{ color: "#0EA5A6" }}>3</strong> offres retenues sur <strong>12</strong> devis reçus</span>
+                      <div className="flex items-center justify-center gap-2">
+                        {/* Icône checkmark dans cercle turquoise */}
+                        <div 
+                          className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full"
+                          style={{ background: "rgba(14,165,166,0.15)" }}
+                        >
+                          <svg 
+                            className="h-2.5 w-2.5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={3}
+                            style={{ color: "#0EA5A6" }}
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <span className="leading-tight">
+                          <strong style={{ color: "#0EA5A6", fontWeight: 700 }}>3</strong> offres retenues{" "}
+                          <span style={{ color: "#9CA3AF" }}>sur</span>{" "}
+                          <strong style={{ fontWeight: 600 }}>12</strong> devis reçus
+                        </span>
                       </div>
                     </motion.div>
                   </div>
