@@ -74,19 +74,40 @@ function getBarColor(value: number): string {
 function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: number }) {
   return (
     <div
-      className="w-full rounded-xl border-2 p-3 bg-white shadow-sm"
+      className="w-full rounded-xl p-3 bg-white relative"
       style={{
-        borderColor: mover.recommended ? "#0EA5A6" : "#E5E7EB",
+        border: mover.recommended ? "2px solid #0EA5A6" : "2px solid #E5E7EB",
+        boxShadow: mover.recommended 
+          ? "0 4px 16px rgba(14,165,166,0.25), 0 0 0 1px rgba(14,165,166,0.1)" 
+          : "0 1px 3px rgba(0,0,0,0.1)"
       }}
     >
-      {/* Badge Recommandé */}
+      {/* Badge Recommandé - PREMIUM */}
       {mover.recommended && (
         <div
-          className="flex items-center justify-center gap-1 py-1 px-2 rounded-full mb-2 -mt-0.5"
-          style={{ background: "#0EA5A6" }}
+          className="flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-full mb-3 -mt-1 relative overflow-hidden"
+          style={{ 
+            background: "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)",
+            boxShadow: "0 4px 12px rgba(14,165,166,0.4), 0 0 0 1px rgba(14,165,166,0.2)"
+          }}
         >
-          <Image src="/logo.png" alt="Moverz" width={12} height={12} className="h-3 w-3" />
-          <span className="text-[10px] font-semibold text-white">Meilleure offre</span>
+          {/* Sparkle effect */}
+          <svg 
+            className="h-3.5 w-3.5 text-white animate-pulse" 
+            fill="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path d="M12 2L13.09 8.26L18 7L14.23 11.77L19.5 14L14.23 16.23L18 21L13.09 19.74L12 26L10.91 19.74L6 21L9.77 16.23L4.5 14L9.77 11.77L6 7L10.91 8.26L12 2Z" />
+          </svg>
+          <span className="text-[11px] font-bold text-white tracking-wide">MEILLEURE OFFRE</span>
+          
+          {/* Subtle shimmer effect */}
+          <div 
+            className="absolute inset-0 opacity-30"
+            style={{
+              background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%)"
+            }}
+          />
         </div>
       )}
 
