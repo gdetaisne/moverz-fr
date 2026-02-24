@@ -331,27 +331,6 @@ export function ComparableQuotesMockScrolly() {
               </p>
             </motion.div>
 
-            {/* Statistiques visuelles */}
-            <motion.div 
-              variants={staggerItem} 
-              className="grid grid-cols-3 gap-3">
-              <div className="text-center p-3 rounded-xl" 
-                style={{ background: "rgba(14,165,166,0.05)", border: "1px solid rgba(14,165,166,0.1)" }}>
-                <p className="text-2xl md:text-3xl font-bold" style={{ color: "#0EA5A6" }}>3</p>
-                <p className="text-[10px] md:text-xs text-slate-600 mt-1">Offres retenues</p>
-              </div>
-              <div className="text-center p-3 rounded-xl" 
-                style={{ background: "rgba(14,165,166,0.05)", border: "1px solid rgba(14,165,166,0.1)" }}>
-                <p className="text-2xl md:text-3xl font-bold" style={{ color: "#0EA5A6" }}>12</p>
-                <p className="text-[10px] md:text-xs text-slate-600 mt-1">Devis analysés</p>
-              </div>
-              <div className="text-center p-3 rounded-xl" 
-                style={{ background: "rgba(14,165,166,0.05)", border: "1px solid rgba(14,165,166,0.1)" }}>
-                <p className="text-2xl md:text-3xl font-bold" style={{ color: "#0EA5A6" }}>100%</p>
-                <p className="text-[10px] md:text-xs text-slate-600 mt-1">Vérifiés</p>
-              </div>
-            </motion.div>
-
             {/* Comment ça fonctionne - Avec animation timeline */}
             <motion.div variants={staggerItem} className="space-y-5">
               <h3
