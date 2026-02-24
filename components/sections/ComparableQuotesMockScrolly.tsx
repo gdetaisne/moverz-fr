@@ -5,11 +5,13 @@
  * Affiche 3 offres de déménageurs détaillées avec carousel swipable
  */
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, PanInfo } from "framer-motion";
-import { ChevronLeft, ChevronRight, Star, Globe } from "lucide-react";
+import { Star, Globe } from "lucide-react";
 import { staggerContainer, staggerItem } from "@/components/motion";
 import Image from "next/image";
+
+const AUTOPLAY_DURATION = 5000; // 5 secondes par card
 
 // 3 déménageurs avec données réalistes (5 barres de scoring)
 const MOVERS = [
@@ -230,15 +232,20 @@ function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: n
 export function ComparableQuotesMockScrolly() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [progress, setProgress] = useState(0);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const progressIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleNext = () => {
     setDirection(1);
     setCurrentIndex((prev) => (prev + 1) % MOVERS.length);
+    setProgress(0); // Reset progress
   };
 
   const handlePrev = () => {
     setDirection(-1);
     setCurrentIndex((prev) => (prev - 1 + MOVERS.length) % MOVERS.length);
+    setProgress(0); // Reset progress
   };
 
   const handleDragEnd = (_: any, info: PanInfo) => {
@@ -249,6 +256,35 @@ export function ComparableQuotesMockScrolly() {
       handleNext();
     }
   };
+
+  // Autoplay with progress bar
+  useEffect(() => {
+    // Clear existing intervals
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    if (progressIntervalRef.current) clearInterval(progressIntervalRef.current);
+
+    // Reset progress
+    setProgress(0);
+
+    // Progress bar animation (update every 50ms for smooth animation)
+    progressIntervalRef.current = setInterval(() => {
+      setProgress((prev) => {
+        const increment = (100 / AUTOPLAY_DURATION) * 50; // 50ms intervals
+        return Math.min(prev + increment, 100);
+      });
+    }, 50);
+
+    // Auto advance to next slide
+    intervalRef.current = setInterval(() => {
+      handleNext();
+    }, AUTOPLAY_DURATION);
+
+    // Cleanup
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+      if (progressIntervalRef.current) clearInterval(progressIntervalRef.current);
+    };
+  }, [currentIndex]); // Re-run when currentIndex changes
 
   const slideVariants = {
     enter: (direction: number) => ({
@@ -398,27 +434,40 @@ export function ComparableQuotesMockScrolly() {
                   </div>
                 </div>
               </motion.div>
-            </div>
 
-            {/* Navigation desktop (flèches latérales, OUTSIDE phone) */}
-            <div className="hidden lg:flex absolute inset-y-0 -left-20 items-center">
-              <button
-                onClick={handlePrev}
-                className="flex h-12 w-12 items-center justify-center rounded-full border bg-white shadow-lg hover:bg-slate-50 transition-all hover:scale-105"
-                style={{ borderColor: "#E5E7EB" }}
-              >
-                <ChevronLeft className="h-6 w-6 text-slate-600" />
-              </button>
-            </div>
-
-            <div className="hidden lg:flex absolute inset-y-0 -right-20 items-center">
-              <button
-                onClick={handleNext}
-                className="flex h-12 w-12 items-center justify-center rounded-full border bg-white shadow-lg hover:bg-slate-50 transition-all hover:scale-105"
-                style={{ borderColor: "#E5E7EB" }}
-              >
-                <ChevronRight className="h-6 w-6 text-slate-600" />
-              </button>
+              {/* Progress bar underneath phone */}
+              <div className="mt-8 w-full max-w-[320px] mx-auto">
+                <div className="flex items-center justify-center gap-2 mb-3">
+                  {MOVERS.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => {
+                        setDirection(i > currentIndex ? 1 : -1);
+                        setCurrentIndex(i);
+                      }}
+                      className="h-1.5 rounded-full transition-all"
+                      style={{
+                        width: i === currentIndex ? "24px" : "8px",
+                        background: i === currentIndex ? "#0EA5A6" : "#CBD5E1",
+                      }}
+                    />
+                  ))}
+                </div>
+                
+                {/* Progress bar for current slide */}
+                <div className="relative h-1 rounded-full overflow-hidden bg-slate-200">
+                  <motion.div
+                    className="absolute inset-y-0 left-0 rounded-full"
+                    style={{
+                      width: `${progress}%`,
+                      background: "linear-gradient(90deg, #0EA5A6 0%, #14B8A6 100%)",
+                    }}
+                    initial={{ width: "0%" }}
+                    animate={{ width: `${progress}%` }}
+                    transition={{ duration: 0.05, ease: "linear" }}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
