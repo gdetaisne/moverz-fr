@@ -13,60 +13,54 @@ import Image from "next/image";
 
 const AUTOPLAY_DURATION = 5000; // 5 secondes par card
 
-// 3 déménageurs avec données réalistes (5 barres de scoring)
+// 3 déménageurs avec scores variés (bon, moyen, mauvais)
 const MOVERS = [
   {
     id: 1,
     name: "Déménageur B",
-    price: 1150,
-    score: 84,
+    price: 1540,
+    score: 88,
     scoreLabel: "Excellent",
     scoreColor: "#0EA5A6",
     recommended: true,
-    financier: 50,
-    juridique: 100,
-    google: 100,
-    reputation: 95,
-    vigilance: 100,
-    googleRating: 5.0,
-    reviewCount: 65,
-    yearsInBusiness: 5,
+    solidite: 85,
+    experience: 90,
+    vigilance: 88,
+    googleRating: 4.7,
+    reviewCount: 189,
+    yearsInBusiness: 9,
     hasWebsite: true,
   },
   {
     id: 2,
-    name: "Déménageur D",
-    price: 1300,
-    score: 84,
+    name: "Déménageur A",
+    price: 1340,
+    score: 92,
     scoreLabel: "Excellent",
     scoreColor: "#0EA5A6",
     recommended: false,
-    financier: 50,
-    juridique: 100,
-    google: 100,
-    reputation: 95,
-    vigilance: 100,
-    googleRating: 4.5,
-    reviewCount: 639,
-    yearsInBusiness: 5,
+    solidite: 90,
+    experience: 95,
+    vigilance: 90,
+    googleRating: 4.8,
+    reviewCount: 234,
+    yearsInBusiness: 12,
     hasWebsite: true,
   },
   {
     id: 3,
     name: "Déménageur C",
-    price: 1320,
-    score: 76,
-    scoreLabel: "Bon",
-    scoreColor: "#0EA5A6",
+    price: 1210,
+    score: 58,
+    scoreLabel: "Moyen",
+    scoreColor: "#DC2626",
     recommended: false,
-    financier: 22,
-    juridique: 100,
-    google: 100,
-    reputation: 95,
-    vigilance: 100,
-    googleRating: 4.9,
-    reviewCount: 80,
-    yearsInBusiness: 6,
+    solidite: 78,
+    experience: 72,
+    vigilance: 35,
+    googleRating: 4.2,
+    reviewCount: 45,
+    yearsInBusiness: 5,
     hasWebsite: true,
   },
 ];
@@ -153,13 +147,11 @@ function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: n
         </div>
       </div>
 
-      {/* 5 barres de scoring détaillées */}
+      {/* 3 barres de scoring détaillées */}
       <div className="space-y-2 mb-4">
         {[
-          { label: "Financier", value: mover.financier },
-          { label: "Juridique", value: mover.juridique },
-          { label: "Google", value: mover.google },
-          { label: "Réputation", value: mover.reputation },
+          { label: "Solidité", value: mover.solidite },
+          { label: "Expérience", value: mover.experience },
           { label: "Vigilance", value: mover.vigilance },
         ].map((item) => (
           <div key={item.label} className="flex items-center justify-between gap-2">
@@ -312,6 +304,47 @@ export function ComparableQuotesMockScrolly() {
               >
                 Seules les entreprises fiables, disponibles à vos dates et cohérentes en prix vous sont présentées.
               </p>
+            </motion.div>
+
+            {/* Comment ça fonctionne */}
+            <motion.div variants={staggerItem} className="space-y-5">
+              <h3
+                className="font-heading text-sm font-semibold uppercase tracking-wide"
+                style={{ color: "var(--color-text-muted)" }}
+              >
+                Comment ça fonctionne
+              </h3>
+              
+              <div className="space-y-3">
+                {[
+                  "Nous analysons votre dossier",
+                  "Nous mettons le marché en concurrence",
+                  "Nous éliminons les offres à risque",
+                  "Nous retenons les meilleures",
+                  "Vous choisissez en toute confiance",
+                ].map((step, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <div
+                      className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full"
+                      style={{ background: "rgba(14,165,166,0.15)" }}
+                    >
+                      <svg
+                        className="h-3.5 w-3.5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={3}
+                        style={{ color: "#0EA5A6" }}
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p className="text-base font-medium pt-0.5" style={{ color: "var(--color-text)" }}>
+                      {step}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </motion.div>
           </motion.div>
 
