@@ -26,17 +26,17 @@ export function FAQV4() {
         style={{ background: "radial-gradient(circle, rgba(14,165,166,0.4), transparent 70%)" }}
       />
       
-      <div className="container max-w-2xl relative z-10">
+      <div className="container max-w-5xl relative z-10">
         {/* Titre */}
         <h2
-          className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em] mb-8 md:mb-12 text-center"
+          className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em] mb-12 text-left"
           style={{ color: "#FFFFFF" }}
         >
           On répond à vos questions
         </h2>
 
         {/* Accordéons */}
-        <div className="space-y-3">
+        <div className="max-w-3xl space-y-3">
           {HOME_FAQS.map((faq, index) => {
             const isOpen = openIndex === index;
             return (

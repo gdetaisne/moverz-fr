@@ -19,10 +19,10 @@ export function HowItWorksVideo() {
   return (
     <>
       <FadeUpSection className="py-20 md:py-28" style={{ background: "var(--color-surface)" }}>
-        <div className="container">
+        <div className="container max-w-5xl">
           {/* Title */}
           <h2
-            className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em] mb-12 text-center"
+            className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em] mb-12 text-left"
             style={{ color: "var(--color-text)" }}
           >
             Comment ça marche ?
@@ -31,7 +31,7 @@ export function HowItWorksVideo() {
           {/* Video thumbnail */}
           <button
             onClick={openModal}
-            className="group relative mx-auto block w-full max-w-3xl aspect-video rounded-[var(--radius-md)] overflow-hidden border transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2"
+            className="group relative block w-full max-w-3xl aspect-video rounded-[var(--radius-md)] overflow-hidden border transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2"
             style={{
               borderColor: "var(--color-border)",
               background: "var(--color-bg)",
