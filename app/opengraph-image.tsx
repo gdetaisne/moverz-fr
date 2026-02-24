@@ -166,23 +166,19 @@ export default async function OgImage() {
             </span>
             <span
               style={{
-                background: "linear-gradient(135deg, #0EA5A6 0%, #6BCFCF 100%)",
-                backgroundClip: "text",
-                color: "transparent",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
+                color: "#0EA5A6",
               }}
             >
               On sélectionne le top 3 pour vous.
             </span>
           </div>
 
-          {/* Trust chips comme le hero */}
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+          {/* Trust badges - sans emojis, avec icônes checkmark */}
+          <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
             {[
-              { icon: "💰", label: "Prix contrôlés" },
-              { icon: "🛡️", label: "Fiabilité vérifiée" },
-              { icon: "⚡", label: "Numéro masqué" },
+              { label: "Prix contrôlés", color: "#F59E0B" },
+              { label: "Fiabilité vérifiée", color: "#0EA5A6" },
+              { label: "Numéro masqué", color: "#0EA5A6" },
             ].map((item) => (
               <div
                 key={item.label}
@@ -190,17 +186,33 @@ export default async function OgImage() {
                   display: "flex",
                   alignItems: "center",
                   gap: 10,
-                  background: "rgba(255, 255, 255, 0.8)",
-                  padding: "12px 20px",
+                  background: "rgba(255, 255, 255, 0.85)",
+                  padding: "13px 22px",
                   borderRadius: 50,
                   border: "1px solid rgba(0, 0, 0, 0.08)",
-                  boxShadow: "0 1px 2px rgba(0,0,0,0.03)",
+                  boxShadow: "0 1px 3px rgba(0,0,0,0.05), 0 2px 6px rgba(0,0,0,0.03)",
                 }}
               >
-                <span style={{ fontSize: 20 }}>{item.icon}</span>
+                {/* Checkmark circle */}
+                <div
+                  style={{
+                    width: 22,
+                    height: 22,
+                    borderRadius: "50%",
+                    background: item.color,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    color: "white",
+                    fontSize: 14,
+                    fontWeight: 700,
+                  }}
+                >
+                  ✓
+                </div>
                 <span
                   style={{
-                    color: "#4B5563",
+                    color: "#1F2937",
                     fontSize: 17,
                     fontWeight: 600,
                     fontFamily: "system-ui, -apple-system, sans-serif",
