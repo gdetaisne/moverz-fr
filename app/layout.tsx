@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import localFont from "next/font/local";
+import { Inter, Sora } from "next/font/google";
 import Image from "next/image";
 import "./globals.css";
 import { MOVERZ_REVIEWS, getAverageRating } from "@/lib/reviews";
@@ -12,18 +12,18 @@ import { buildTunnelUrl } from "@/lib/tunnel-url";
 import MobileMenu from "@/components/MobileMenu";
 import { Footer } from "@/components/premium/Footer";
 
-const inter = localFont({
-  src: "../public/fonts/inter-latin.woff2",
+const inter = Inter({
+  subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
-  weight: "100 900",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-const sora = localFont({
-  src: "../public/fonts/sora-latin.woff2",
+const sora = Sora({
+  subsets: ["latin"],
   display: "swap",
   variable: "--font-sora",
-  weight: "100 900",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
