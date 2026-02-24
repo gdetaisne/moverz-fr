@@ -85,64 +85,91 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
             </p>
           </div>
 
-          {/* Right: Mockup WhatsApp simple */}
+          {/* Right: Mockup iPhone Premium (style ComparableQuotesMockScrolly) */}
           <div
             className="relative order-first lg:order-last"
             style={{
               animation: mounted ? 'fadeInUp 1s ease-out 0.2s both' : 'none',
             }}
           >
-            <div className="relative w-full max-w-[360px] mx-auto">
-              {/* iPhone mockup simple */}
-              <div className="relative bg-white rounded-[3rem] shadow-[0_30px_80px_rgba(0,0,0,0.4)] p-3 border-[12px] border-[#0F172A]">
-                {/* Notch */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-6 bg-[var(--color-bg-dark)] rounded-b-2xl z-10" />
-                
-                {/* Screen */}
-                <div className="relative bg-[#ECE5DD] rounded-[2.3rem] overflow-hidden" style={{ height: '600px' }}>
+            <div className="relative w-full max-w-[280px] mx-auto">
+              {/* Premium glow effect turquoise */}
+              <div
+                className="absolute inset-0 blur-3xl opacity-40 animate-pulse"
+                style={{ 
+                  background: "radial-gradient(circle, rgba(14,165,166,0.6) 0%, rgba(14,165,166,0.3) 40%, transparent 70%)",
+                  animation: "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite"
+                }}
+              />
+
+              {/* Phone frame - Compact & realistic proportions */}
+              <div
+                className="relative rounded-[38px] border-[2px] overflow-hidden bg-white"
+                style={{
+                  borderColor: "#1F2937",
+                  width: "280px",
+                  height: "600px",
+                  boxShadow: "0 25px 50px -12px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,0,0,0.08)",
+                }}
+              >
+                {/* Dynamic Island (iPhone 14 Pro style) */}
+                <div
+                  className="absolute top-2 left-1/2 -translate-x-1/2 h-[28px] w-[115px] rounded-full z-30"
+                  style={{ background: "#000000" }}
+                >
+                  {/* Speaker grill inside island */}
+                  <div
+                    className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[45px] h-[4px] rounded-full"
+                    style={{ background: "#1a1a1a" }}
+                  />
+                </div>
+
+                {/* Screen content */}
+                <div className="relative h-full w-full overflow-hidden pt-10" style={{ background: "#ECE5DD" }}>
                   {/* WhatsApp header */}
-                  <div className="bg-[#075E54] px-4 py-3 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
-                      <Image src="/logo.png" alt="Moverz" width={24} height={24} className="h-6 w-6" />
+                  <div className="bg-[#075E54] px-3 py-2.5 flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center shrink-0">
+                      <Image src="/logo.png" alt="Moverz" width={20} height={20} className="h-5 w-5" />
                     </div>
-                    <div>
-                      <p className="text-white font-semibold text-sm">Moverz</p>
-                      <p className="text-white/70 text-xs">en ligne</p>
+                    <div className="min-w-0">
+                      <p className="text-white font-semibold text-xs">Moverz</p>
+                      <p className="text-white/70 text-[10px]">en ligne</p>
                     </div>
                   </div>
 
                   {/* Conversation */}
-                  <div className="p-4 space-y-3">
+                  <div className="p-3 space-y-2">
                     {/* Message from Moverz */}
                     <div className="flex justify-start">
-                      <div className="bg-white rounded-2xl rounded-tl-sm p-3 max-w-[85%] shadow-sm">
-                        <p className="text-[var(--color-text)] text-sm leading-relaxed">
+                      <div className="bg-white rounded-xl rounded-tl-sm p-2.5 max-w-[90%] shadow-sm">
+                        <p className="text-[var(--color-text)] text-[11px] leading-relaxed">
                           Bonjour ! Pour votre déménagement à <strong>{city.nameCapitalized}</strong>, donnez-moi 4 infos (départ, arrivée, date, type de logement) et je lance la comparaison.
                         </p>
-                        <p className="text-[var(--color-text)]/50 text-xs mt-1">10:24</p>
+                        <p className="text-[var(--color-text)]/50 text-[9px] mt-1">10:24</p>
                       </div>
                     </div>
 
                     {/* User response (green bubble) */}
                     <div className="flex justify-end">
-                      <div className="bg-[#DCF8C6] rounded-2xl rounded-tr-sm p-3 max-w-[75%] shadow-sm">
-                        <p className="text-[var(--color-text)] text-sm">Paris → {city.nameCapitalized} • 15/03 • T2 (2e, sans ascenseur)</p>
-                        <p className="text-[var(--color-text)]/50 text-xs mt-1 text-right">10:26</p>
+                      <div className="bg-[#DCF8C6] rounded-xl rounded-tr-sm p-2.5 max-w-[85%] shadow-sm">
+                        <p className="text-[var(--color-text)] text-[11px]">Paris → {city.nameCapitalized} • 15/03 • T2 (2e, sans ascenseur)</p>
+                        <p className="text-[var(--color-text)]/50 text-[9px] mt-1 text-right">10:26</p>
                       </div>
                     </div>
 
                     {/* Response from Moverz */}
                     <div className="flex justify-start">
-                      <div className="bg-white rounded-2xl rounded-tl-sm p-3 max-w-[85%] shadow-sm">
-                        <p className="text-[var(--color-text)] text-sm leading-relaxed">
+                      <div className="bg-white rounded-xl rounded-tl-sm p-2.5 max-w-[90%] shadow-sm">
+                        <p className="text-[var(--color-text)] text-[11px] leading-relaxed">
                           Parfait ! Vous recevrez <strong>des devis</strong> de déménageurs locaux à {city.nameCapitalized} dans les prochains jours.
                         </p>
-                        <p className="text-[var(--color-text)]/50 text-xs mt-1">10:27</p>
+                        <p className="text-[var(--color-text)]/50 text-[9px] mt-1">10:27</p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
 
               {/* Floating badges */}
               <div className="absolute -right-4 top-20 rounded-xl shadow-xl px-3 py-2 rotate-6 bg-white border border-[var(--color-accent)]/30">
