@@ -74,7 +74,7 @@ function getBarColor(value: number): string {
 function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: number }) {
   return (
     <div
-      className="w-full rounded-2xl border-2 p-5 bg-white shadow-sm mx-2"
+      className="w-full rounded-xl border-2 p-3 bg-white shadow-sm"
       style={{
         borderColor: mover.recommended ? "#0EA5A6" : "#E5E7EB",
       }}
@@ -82,55 +82,55 @@ function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: n
       {/* Badge Recommandé */}
       {mover.recommended && (
         <div
-          className="flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-full mb-4 -mt-1"
+          className="flex items-center justify-center gap-1 py-1 px-2 rounded-full mb-2 -mt-0.5"
           style={{ background: "#0EA5A6" }}
         >
-          <Image src="/logo.png" alt="Moverz" width={14} height={14} className="h-3.5 w-3.5" />
-          <span className="text-xs font-semibold text-white">Meilleure offre</span>
+          <Image src="/logo.png" alt="Moverz" width={12} height={12} className="h-3 w-3" />
+          <span className="text-[10px] font-semibold text-white">Meilleure offre</span>
         </div>
       )}
 
       {/* Nom + Prix */}
-      <div className="mb-4">
-        <h3 className="text-xl font-bold text-slate-900 mb-1">{mover.name}</h3>
+      <div className="mb-2">
+        <h3 className="text-base font-bold text-slate-900 mb-0.5">{mover.name}</h3>
         <div>
-          <p className="text-3xl font-bold text-slate-900">{mover.price.toLocaleString()} €</p>
-          <p className="text-xs text-slate-500 mt-0.5">Prix proposé TTC · 18/05/2026</p>
+          <p className="text-2xl font-bold text-slate-900">{mover.price.toLocaleString()} €</p>
+          <p className="text-[10px] text-slate-500 mt-0.5">Prix proposé TTC · 18/05/2026</p>
         </div>
       </div>
 
       {/* Score circulaire + Logo Moverz */}
-      <div className="flex items-center gap-3 mb-4 pb-4 border-b border-slate-200">
-        <div className="relative h-16 w-16">
-          <svg className="h-16 w-16 -rotate-90">
-            <circle cx="32" cy="32" r="28" fill="none" stroke="#E5E7EB" strokeWidth="3" />
+      <div className="flex items-center gap-2 mb-3 pb-2 border-b border-slate-200">
+        <div className="relative h-12 w-12 shrink-0">
+          <svg className="h-12 w-12 -rotate-90">
+            <circle cx="24" cy="24" r="20" fill="none" stroke="#E5E7EB" strokeWidth="2.5" />
             <circle
-              cx="32"
-              cy="32"
-              r="28"
+              cx="24"
+              cy="24"
+              r="20"
               fill="none"
               stroke={mover.scoreColor}
-              strokeWidth="3"
-              strokeDasharray={`${28 * 2 * Math.PI * (mover.score / 100)} ${28 * 2 * Math.PI}`}
+              strokeWidth="2.5"
+              strokeDasharray={`${20 * 2 * Math.PI * (mover.score / 100)} ${20 * 2 * Math.PI}`}
               strokeLinecap="round"
             />
           </svg>
           <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-xl font-bold text-slate-900">{mover.score}</span>
+            <span className="text-base font-bold text-slate-900">{mover.score}</span>
           </div>
         </div>
-        <div className="flex-1">
-          <p className="text-base font-semibold" style={{ color: mover.scoreColor }}>
+        <div className="flex-1 min-w-0">
+          <p className="text-sm font-semibold" style={{ color: mover.scoreColor }}>
             {mover.scoreLabel}
           </p>
-          <div className="flex items-center gap-1.5 mt-0.5">
-            <div className="relative">
-              <Image src="/logo.png" alt="Moverz" width={20} height={20} className="h-5 w-5" />
+          <div className="flex items-center gap-1 mt-0.5">
+            <div className="relative shrink-0">
+              <Image src="/logo.png" alt="Moverz" width={16} height={16} className="h-4 w-4" />
               <div
-                className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full flex items-center justify-center"
+                className="absolute -bottom-0.5 -right-0.5 h-2 w-2 rounded-full flex items-center justify-center"
                 style={{ background: "#10B981" }}
               >
-                <svg className="h-1.5 w-1.5 text-white" fill="currentColor" viewBox="0 0 12 12">
+                <svg className="h-1 w-1 text-white" fill="currentColor" viewBox="0 0 12 12">
                   <path
                     d="M10 3L4.5 8.5L2 6"
                     stroke="currentColor"
@@ -142,21 +142,21 @@ function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: n
                 </svg>
               </div>
             </div>
-            <span className="text-sm font-bold text-slate-900">Moverz</span>
+            <span className="text-xs font-bold text-slate-900">Moverz</span>
           </div>
         </div>
       </div>
 
       {/* 3 barres de scoring détaillées */}
-      <div className="space-y-2 mb-4">
+      <div className="space-y-1.5 mb-3">
         {[
           { label: "Solidité", value: mover.solidite },
           { label: "Expérience", value: mover.experience },
           { label: "Vigilance", value: mover.vigilance },
         ].map((item) => (
-          <div key={item.label} className="flex items-center justify-between gap-2">
-            <span className="text-xs text-slate-600 w-20">{item.label}</span>
-            <div className="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden">
+          <div key={item.label} className="flex items-center justify-between gap-1.5">
+            <span className="text-[10px] text-slate-600 w-16">{item.label}</span>
+            <div className="flex-1 h-1.5 bg-slate-200 rounded-full overflow-hidden">
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: `${item.value}%` }}
@@ -165,35 +165,35 @@ function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: n
                 style={{ background: getBarColor(item.value) }}
               />
             </div>
-            <span className="text-xs font-semibold text-slate-900 w-8 text-right">{item.value}</span>
+            <span className="text-[10px] font-semibold text-slate-900 w-6 text-right">{item.value}</span>
           </div>
         ))}
       </div>
 
       {/* Étoiles Google */}
-      <div className="flex items-center gap-1.5 mb-1">
+      <div className="flex items-center gap-1 mb-0.5">
         <div className="flex items-center gap-0.5">
           {Array.from({ length: 5 }).map((_, i) => (
             <Star
               key={i}
-              className={`h-3.5 w-3.5 ${
+              className={`h-2.5 w-2.5 ${
                 i < Math.floor(mover.googleRating) ? "fill-amber-400 text-amber-400" : "fill-slate-200 text-slate-200"
               }`}
             />
           ))}
         </div>
-        <span className="text-sm font-semibold text-slate-900">{mover.googleRating}</span>
+        <span className="text-xs font-semibold text-slate-900">{mover.googleRating}</span>
       </div>
-      <p className="text-xs text-slate-500 mb-3">{mover.reviewCount} avis vérifiés</p>
+      <p className="text-[10px] text-slate-500 mb-2">{mover.reviewCount} avis vérifiés</p>
 
       {/* Ancienneté + Site */}
-      <div className="flex items-center gap-2 text-xs text-slate-600 mb-4 pb-4 border-b border-slate-200">
+      <div className="flex items-center gap-1.5 text-[10px] text-slate-600 mb-2 pb-2 border-b border-slate-200">
         <span className="font-semibold">{mover.yearsInBusiness} ans</span>
         {mover.hasWebsite && (
           <>
             <span>·</span>
-            <div className="flex items-center gap-1">
-              <Globe className="h-3 w-3" />
+            <div className="flex items-center gap-0.5">
+              <Globe className="h-2.5 w-2.5" />
               <span>Site internet</span>
             </div>
           </>
@@ -202,7 +202,7 @@ function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: n
 
       {/* CTA */}
       <button
-        className="w-full rounded-lg px-4 py-3 text-sm font-semibold border-2 transition-all hover:opacity-80"
+        className="w-full rounded-lg px-3 py-2 text-xs font-semibold border-2 transition-all hover:opacity-80"
         style={{
           borderColor: "#0EA5A6",
           color: "#0EA5A6",
@@ -213,8 +213,8 @@ function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: n
       </button>
 
       {/* Checkbox */}
-      <label className="flex items-center gap-2 mt-3 text-xs text-slate-600 cursor-pointer">
-        <input type="checkbox" className="h-3.5 w-3.5 rounded border-slate-300" />
+      <label className="flex items-center gap-1.5 mt-2 text-[10px] text-slate-600 cursor-pointer">
+        <input type="checkbox" className="h-3 w-3 rounded border-slate-300" />
         <span>Comparer dans le détail</span>
       </label>
     </div>
@@ -392,7 +392,7 @@ export function ComparableQuotesMockScrolly() {
                   {/* Screen content with carousel */}
                   <div className="relative h-full w-full overflow-hidden" style={{ background: "#F9FAFB" }}>
                     {/* Navigation dots mobile (inside screen, top) */}
-                    <div className="absolute top-10 left-0 right-0 z-20 flex items-center justify-center gap-2 lg:hidden">
+                    <div className="absolute top-8 left-0 right-0 z-20 flex items-center justify-center gap-2 lg:hidden">
                       {MOVERS.map((_, i) => (
                         <button
                           key={i}
@@ -410,12 +410,12 @@ export function ComparableQuotesMockScrolly() {
                     </div>
 
                     {/* Carousel container (inside phone) with enhanced stack effect */}
-                    <div className="relative h-full pt-24 pb-4 px-3 overflow-hidden">
+                    <div className="relative h-full pt-16 pb-3 px-2 overflow-hidden">
                       {/* Card #3 - Très en arrière (la plus floue) */}
                       {currentIndex < MOVERS.length - 2 && (
-                        <div className="absolute inset-0 pt-24 pb-4 px-3 pointer-events-none">
+                        <div className="absolute inset-0 pt-16 pb-3 px-2 pointer-events-none">
                           <div
-                            className="absolute inset-x-3 top-24 bottom-4"
+                            className="absolute inset-x-2 top-16 bottom-3"
                             style={{
                               transform: "translateX(16px) translateY(16px) scale(0.92) rotate(1deg)",
                               opacity: 0.25,
@@ -429,9 +429,9 @@ export function ComparableQuotesMockScrolly() {
 
                       {/* Card #2 - Moyennement en arrière */}
                       {currentIndex < MOVERS.length - 1 && (
-                        <div className="absolute inset-0 pt-24 pb-4 px-3 pointer-events-none">
+                        <div className="absolute inset-0 pt-16 pb-3 px-2 pointer-events-none">
                           <div
-                            className="absolute inset-x-3 top-24 bottom-4"
+                            className="absolute inset-x-2 top-16 bottom-3"
                             style={{
                               transform: "translateX(10px) translateY(10px) scale(0.96) rotate(0.5deg)",
                               opacity: 0.5,
