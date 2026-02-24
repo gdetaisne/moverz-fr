@@ -1,26 +1,19 @@
+"use client";
+
 import type { Metadata } from "next";
-import { getFullMetadata } from "@/lib/canonical-helper";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Image from "next/image";
 import { ShieldCheck, Users, Linkedin, Truck } from "lucide-react";
 
-export const metadata: Metadata = getFullMetadata(
-  'contact',
-  "Contact Moverz : Support Déménagement (24h)",
-  "Besoin d'aide ? Notre équipe répond sous 24h. Questions devis, pros, service. Email : contact@moverz.fr"
-);
-
 export default function ContactPage() {
   return (
     <main className="min-h-screen" style={{ background: "#F9FAFB" }}>
-      {/* Hero Section with Homepage Style */}
       <section 
         className="relative overflow-hidden pt-12 pb-16 md:pt-20 md:pb-28"
         style={{ 
           background: "linear-gradient(to bottom, #F0FDFA 0%, #E0F2FE 50%, #F9FAFB 100%)"
         }}
       >
-        {/* Grain texture - Premium feel */}
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.015]"
           style={{ 
@@ -28,7 +21,6 @@ export default function ContactPage() {
           }}
         />
 
-        {/* Vignette sur les bords */}
         <div
           className="pointer-events-none absolute inset-0"
           style={{
@@ -45,14 +37,13 @@ export default function ContactPage() {
           />
 
           <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:items-center">
-            {/* Left Column - Text */}
             <div>
               <h1 
                 className="mt-6 font-heading text-[clamp(32px,5vw,52px)] font-bold tracking-[-0.02em] leading-[1.1]"
                 style={{ color: "#111827" }}
               >
-                On répond <span style={{ color: "#0EA5A6" }}>vite</span>.<br />
-                Et on répond <span style={{ color: "#0EA5A6" }}>clair</span>.
+                On révolutionne le <span style={{ color: "#0EA5A6" }}>déménagement</span>,<br />
+                ensemble.
               </h1>
 
               <p 
@@ -78,9 +69,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Right Column - Cards */}
             <div className="space-y-4">
-              {/* Team Card */}
               <div className="rounded-3xl border bg-white/95 backdrop-blur-sm p-7 shadow-[0_8px_32px_rgba(0,0,0,0.08)]" style={{ borderColor: "rgba(0,0,0,0.08)" }}>
                 <div className="flex items-center gap-3">
                   <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl" style={{ background: "rgba(14,165,166,0.1)", color: "#0EA5A6" }}>
@@ -93,7 +82,6 @@ export default function ContactPage() {
                 </div>
 
                 <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                  {/* Lucie */}
                   <div className="rounded-2xl border bg-white p-4" style={{ borderColor: "rgba(0,0,0,0.08)" }}>
                     <div className="flex items-center gap-3">
                       <div className="relative h-10 w-10 overflow-hidden rounded-xl border bg-white" style={{ borderColor: "rgba(0,0,0,0.08)" }}>
@@ -124,7 +112,6 @@ export default function ContactPage() {
                     </a>
                   </div>
 
-                  {/* Guillaume */}
                   <div className="rounded-2xl border bg-white p-4" style={{ borderColor: "rgba(0,0,0,0.08)" }}>
                     <div className="flex items-center gap-3">
                       <div className="relative h-10 w-10 overflow-hidden rounded-xl border bg-white" style={{ borderColor: "rgba(0,0,0,0.08)" }}>
@@ -156,119 +143,133 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-
-              {/* Tip Card */}
-              <div className="rounded-3xl border bg-white/95 backdrop-blur-sm p-7 shadow-[0_4px_16px_rgba(0,0,0,0.04)]" style={{ borderColor: "rgba(0,0,0,0.08)" }}>
-                <p className="text-sm font-semibold" style={{ color: "#111827" }}>Astuce</p>
-                <p className="mt-2 text-sm" style={{ color: "#6B7280" }}>
-                  Si vous avez un devis "bizarre", envoyez une capture + quelques détails (accès / étage / cave). On vous dit tout de suite ce qui cloche.
-                </p>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Info Section */}
-      <section className="py-16 md:py-24">
+      <section 
+        className="relative py-16 md:py-24 overflow-hidden"
+        style={{ 
+          background: "linear-gradient(to bottom, #FFFFFF 0%, #F9FAFB 100%)"
+        }}
+      >
         <div className="container max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-6">
-            {/* Coordonnées */}
-            <div className="rounded-3xl border bg-white/95 backdrop-blur-sm p-8 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.08)]" style={{ borderColor: "rgba(0,0,0,0.08)" }}>
-              <h2 
-                className="text-2xl md:text-3xl font-heading font-bold mb-6"
-                style={{ color: "#111827" }}
-              >
-                <span style={{ color: "#0EA5A6" }}>Coordonnées</span>
-              </h2>
-              <div className="space-y-6 text-base" style={{ color: "#6B7280" }}>
-                <div>
-                  <p className="text-sm font-semibold uppercase tracking-wider mb-2" style={{ color: "#6B7280" }}>
-                    Email
-                  </p>
-                  <a
-                    href="mailto:contact@moverz.fr"
-                    className="text-lg font-semibold hover:opacity-80 transition-opacity"
-                    style={{ color: "#0EA5A6" }}
-                  >
-                    contact@moverz.fr
-                  </a>
-                </div>
+            <div className="group relative rounded-3xl border backdrop-blur-sm p-8 md:p-10 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-shadow duration-300" style={{ background: "rgba(255,255,255,0.98)", borderColor: "rgba(14,165,166,0.15)" }}>
+              {/* Subtle gradient overlay on hover */}
+              <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" style={{ background: "linear-gradient(135deg, rgba(240,253,250,0.5) 0%, rgba(224,242,254,0.5) 100%)" }} />
+              
+              <div className="relative">
+                <h2 
+                  className="text-2xl md:text-3xl font-heading font-bold mb-6"
+                  style={{ color: "#111827" }}
+                >
+                  <span style={{ color: "#0EA5A6" }}>Coordonnées</span>
+                </h2>
+                <div className="space-y-6 text-base" style={{ color: "#6B7280" }}>
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-wider mb-2" style={{ color: "#6B7280" }}>
+                      Email
+                    </p>
+                    <a
+                      href="mailto:contact@moverz.fr"
+                      className="text-lg font-semibold hover:opacity-80 transition-opacity"
+                      style={{ color: "#0EA5A6" }}
+                    >
+                      contact@moverz.fr
+                    </a>
+                  </div>
 
-                <div>
-                  <p className="text-sm font-semibold uppercase tracking-wider mb-2" style={{ color: "#6B7280" }}>
-                    Horaires
-                  </p>
-                  <p className="text-base">Lundi - Vendredi : 9h - 18h</p>
-                  <p className="text-sm mt-1" style={{ color: "#6B7280" }}>Réponse sous 24h ouvrées</p>
-                </div>
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-wider mb-2" style={{ color: "#6B7280" }}>
+                      Horaires
+                    </p>
+                    <p className="text-base">Lundi - Vendredi : 9h - 18h</p>
+                  </div>
 
-                <div>
-                  <p className="text-sm font-semibold uppercase tracking-wider mb-2" style={{ color: "#6B7280" }}>
-                    Adresse
-                  </p>
-                  <p className="text-base leading-relaxed">
-                    GSLV EURL - Moverz<br />
-                    5 Rue Jean Coyttar<br />
-                    17290 Thairé, France
-                  </p>
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-wider mb-2" style={{ color: "#6B7280" }}>
+                      Adresse
+                    </p>
+                    <p className="text-base leading-relaxed">
+                      GSLV EURL - Moverz<br />
+                      5 Rue Jean Coyttar<br />
+                      17290 Thairé, France
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Garanties */}
-            <div className="rounded-3xl border bg-white/95 backdrop-blur-sm p-8 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.08)]" style={{ borderColor: "rgba(0,0,0,0.08)" }}>
-              <h2 
-                className="text-2xl md:text-3xl font-heading font-bold mb-6"
-                style={{ color: "#111827" }}
-              >
-                Nos <span style={{ color: "#0EA5A6" }}>garanties</span>
-              </h2>
-              <ul className="space-y-4 text-base" style={{ color: "#6B7280" }}>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full" style={{ background: "rgba(14,165,166,0.15)", color: "#0EA5A6" }}>
-                      <ShieldCheck className="h-4 w-4" />
-                    </span>
-                    <span>
-                      <strong style={{ color: "#111827" }}>Dossier anonyme</strong> — coordonnées partagées après votre choix.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full" style={{ background: "rgba(14,165,166,0.15)", color: "#0EA5A6" }}>
-                      <ShieldCheck className="h-4 w-4" />
-                    </span>
-                    <span>
-                      <strong style={{ color: "#111827" }}>Déménageurs contrôlés</strong> — solvabilité + signaux faibles.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full" style={{ background: "rgba(14,165,166,0.15)", color: "#0EA5A6" }}>
-                      <ShieldCheck className="h-4 w-4" />
-                    </span>
-                    <span>
-                      <strong style={{ color: "#111827" }}>Devis comparables</strong> — même cahier des charges pour tous.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full" style={{ background: "rgba(14,165,166,0.15)", color: "#0EA5A6" }}>
-                      <ShieldCheck className="h-4 w-4" />
-                    </span>
-                    <span>
-                      <strong style={{ color: "#111827" }}>Sans démarchage</strong> — vous choisissez quand échanger.
-                    </span>
-                  </li>
-                </ul>
+            <div className="group relative rounded-3xl border backdrop-blur-sm p-8 md:p-10 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-shadow duration-300" style={{ background: "rgba(255,255,255,0.98)", borderColor: "rgba(14,165,166,0.15)" }}>
+              {/* Subtle gradient overlay on hover */}
+              <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" style={{ background: "linear-gradient(135deg, rgba(240,253,250,0.5) 0%, rgba(224,242,254,0.5) 100%)" }} />
+              
+              <div className="relative">
+                <h2 
+                  className="text-2xl md:text-3xl font-heading font-bold mb-6"
+                  style={{ color: "#111827" }}
+                >
+                  Nos <span style={{ color: "#0EA5A6" }}>garanties</span>
+                </h2>
+                <ul className="space-y-4 text-base" style={{ color: "#6B7280" }}>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full" style={{ background: "rgba(14,165,166,0.15)", color: "#0EA5A6" }}>
+                        <ShieldCheck className="h-4 w-4" />
+                      </span>
+                      <span>
+                        <strong style={{ color: "#111827" }}>Dossier anonyme</strong> — coordonnées partagées après votre choix.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full" style={{ background: "rgba(14,165,166,0.15)", color: "#0EA5A6" }}>
+                        <ShieldCheck className="h-4 w-4" />
+                      </span>
+                      <span>
+                        <strong style={{ color: "#111827" }}>Déménageurs contrôlés</strong> — solvabilité + signaux faibles.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full" style={{ background: "rgba(14,165,166,0.15)", color: "#0EA5A6" }}>
+                        <ShieldCheck className="h-4 w-4" />
+                      </span>
+                      <span>
+                        <strong style={{ color: "#111827" }}>Devis comparables</strong> — même cahier des charges pour tous.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full" style={{ background: "rgba(14,165,166,0.15)", color: "#0EA5A6" }}>
+                        <ShieldCheck className="h-4 w-4" />
+                      </span>
+                      <span>
+                        <strong style={{ color: "#111827" }}>Sans démarchage</strong> — vous choisissez quand échanger.
+                      </span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Pro Section */}
-      <section className="py-16 md:py-24" style={{ background: "#F9FAFB" }}>
-        <div className="container max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-3xl border bg-gradient-to-br from-white to-[#F8FAFB] p-8 md:p-10 flex flex-col md:flex-row items-center gap-6 md:gap-8 shadow-[0_4px_16px_rgba(0,0,0,0.04)]" style={{ borderColor: "rgba(0,0,0,0.08)" }}>
-            <div className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl" style={{ background: "rgba(14,165,166,0.1)", color: "#0EA5A6" }}>
+      <section 
+        className="relative py-16 md:py-24 overflow-hidden"
+        style={{ 
+          background: "linear-gradient(135deg, #F0FDFA 0%, #E0F2FE 50%, #F9FAFB 100%)"
+        }}
+      >
+        {/* Grain texture */}
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.015]"
+          style={{ 
+            backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")" 
+          }}
+        />
+        
+        <div className="container relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-3xl border backdrop-blur-xl p-8 md:p-10 flex flex-col md:flex-row items-center gap-6 md:gap-8 shadow-[0_8px_32px_rgba(0,0,0,0.08)]" style={{ background: "rgba(255,255,255,0.95)", borderColor: "rgba(14,165,166,0.2)" }}>
+            <div className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl" style={{ background: "rgba(14,165,166,0.15)", color: "#0EA5A6" }}>
               <Truck className="h-7 w-7" />
             </div>
             <div className="flex-1 text-center md:text-left">
@@ -280,34 +281,52 @@ export default function ContactPage() {
               </p>
             </div>
             <a
-              href="https://pro.moverz.fr/inscription"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group shrink-0 inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-sm font-semibold text-white shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+              href="/partenaires"
+              className="group shrink-0 inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-sm font-semibold text-white shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
               style={{ background: "#0EA5A6" }}
             >
-              S'inscrire
+              En savoir plus
               <span className="text-base leading-none group-hover:translate-x-0.5 transition-transform">→</span>
             </a>
           </div>
         </div>
       </section>
 
-      {/* FAQ CTA Section */}
-      <section className="py-20 md:py-28" style={{ background: "#111827" }}>
-        <div className="container max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <section 
+        className="relative py-20 md:py-28 overflow-hidden"
+        style={{ 
+          background: "linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #111827 100%)"
+        }}
+      >
+        {/* Grain texture */}
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.03]"
+          style={{ 
+            backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")" 
+          }}
+        />
+        
+        {/* Radial gradient overlay */}
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background: "radial-gradient(ellipse at center, rgba(14,165,166,0.08) 0%, transparent 60%)",
+          }}
+        />
+        
+        <div className="container relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <h2
             className="font-heading text-[clamp(28px,4vw,40px)] font-bold leading-tight"
             style={{ color: "#FFFFFF" }}
           >
             Besoin d'une <span style={{ color: "#0EA5A6" }}>réponse rapide</span> ?
           </h2>
-          <p className="text-lg max-w-2xl mx-auto" style={{ color: "rgba(255,255,255,0.75)" }}>
+          <p className="text-lg max-w-2xl mx-auto leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>
             Consultez notre FAQ pour trouver les réponses aux questions les plus fréquentes.
           </p>
           <a
             href="/faq/"
-            className="group inline-flex items-center gap-2 rounded-xl px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+            className="group inline-flex items-center gap-2 rounded-xl px-8 py-4 text-lg font-semibold shadow-[0_8px_24px_rgba(14,165,166,0.3)] hover:shadow-[0_12px_32px_rgba(14,165,166,0.4)] hover:-translate-y-0.5 transition-all duration-300"
             style={{ background: "#0EA5A6", color: "#FFFFFF" }}
           >
             <span>Accéder à la FAQ</span>
