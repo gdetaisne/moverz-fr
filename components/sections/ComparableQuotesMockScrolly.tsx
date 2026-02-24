@@ -372,8 +372,23 @@ export function ComparableQuotesMockScrolly() {
                       ))}
                     </div>
 
-                    {/* Carousel container (inside phone) */}
+                    {/* Carousel container (inside phone) with stack effect */}
                     <div className="relative h-full pt-24 pb-4 px-3 overflow-hidden">
+                      {/* Card C - En arrière (blurry) */}
+                      {currentIndex < MOVERS.length - 1 && (
+                        <div className="absolute inset-0 pt-24 pb-4 px-3">
+                          <div
+                            className="absolute inset-x-3 top-24 bottom-4 opacity-40 blur-[1.5px] pointer-events-none"
+                            style={{
+                              transform: "translateX(8px) translateY(8px) scale(0.95)",
+                            }}
+                          >
+                            <MoverCardDetailed mover={MOVERS[currentIndex + 1]} index={currentIndex + 1} />
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Card principale (nette) */}
                       <AnimatePresence initial={false} custom={direction} mode="wait">
                         <motion.div
                           key={currentIndex}
@@ -390,7 +405,7 @@ export function ComparableQuotesMockScrolly() {
                           dragConstraints={{ left: 0, right: 0 }}
                           dragElastic={0.2}
                           onDragEnd={handleDragEnd}
-                          className="touch-pan-y h-full overflow-y-auto"
+                          className="touch-pan-y h-full overflow-y-auto relative z-10"
                         >
                           <MoverCardDetailed mover={MOVERS[currentIndex]} index={currentIndex} />
                         </motion.div>
