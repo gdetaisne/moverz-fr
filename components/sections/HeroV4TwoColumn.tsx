@@ -77,7 +77,7 @@ export function HeroV4TwoColumn() {
             className="font-heading text-[clamp(32px,7vw,56px)] leading-[1.1] font-bold tracking-[-0.02em]"
             style={{ color: "var(--color-text)" }}
           >
-            Vous déménagez ?
+            Vous déménagez&nbsp;?
             <br />
             <span style={{ color: "var(--color-accent)" }}>
               On sélectionne le top 3 pour vous.
@@ -187,7 +187,7 @@ export function HeroV4TwoColumn() {
               className="font-heading text-[56px] leading-[0.95] font-semibold tracking-[-0.03em] mb-8"
               style={{ color: "#111827" }}
             >
-              Vous déménagez ?
+              Vous déménagez&nbsp;?
               <br />
               <span style={{ color: "#0EA5A6" }}>
                 On sélectionne le top 3 pour vous.
