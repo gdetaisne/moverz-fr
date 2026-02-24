@@ -13,7 +13,7 @@
 import { buildTunnelUrl } from "@/lib/tunnel-url";
 import { motion, AnimatePresence } from "framer-motion";
 import { staggerContainer, staggerItem } from "@/components/motion";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, MessageSquare, Users, Mail, ShieldCheck } from "lucide-react";
 import { trackEvent } from "@/lib/tracking";
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -26,293 +26,186 @@ const STEPS = [
 
 // Progressive Timeline Animation - Inspiré de Comment ça marche
 function MorphingUIAnimation() {
-  const [progress, setProgress] = useState(0);
+  const [stage, setStage] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setProgress((prev) => (prev + 1) % 6); // 0 → 1 → 2 → 3 → 4 → 5 → loop
-    }, 2200); // Change stage every 2.2s
-
+      setStage((prev) => (prev + 1) % 5);
+    }, 2800);
     return () => clearInterval(interval);
   }, []);
 
+  const stages = [
+    { id: 0, title: "Infos reçues", count: 1, color: "#94A3B8", icon: MessageSquare, subtitle: "Dossier créé" },
+    { id: 1, title: "Déménageurs contactés", count: 12, color: "#0EA5A6", icon: Users, subtitle: "Réseau activé" },
+    { id: 2, title: "Offres reçues", count: 7, color: "#0EA5A6", icon: Mail, subtitle: "En analyse" },
+    { id: 3, title: "Offres sélectionnées", count: 3, color: "#10B981", icon: ShieldCheck, subtitle: "Top 3 Moverz" },
+    { id: 4, title: "Vous choisissez", count: 1, color: "#0EA5A6", icon: CheckCircle2, subtitle: "Déménagez sereinement" },
+  ];
+
+  const currentStage = stages[stage];
+  const Icon = currentStage.icon;
+
   return (
     <div 
-      className="relative h-full w-full overflow-hidden p-4"
-      style={{ background: "linear-gradient(180deg, #F1F5F9 0%, #F8FAFC 100%)" }}
+      className="relative h-full w-full overflow-hidden p-4 flex flex-col"
+      style={{ background: "#FAFAFA" }}
     >
-      {/* Header */}
-      <motion.div 
+      {/* Spotlight effect animé */}
+      <motion.div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: `radial-gradient(circle at 50% 45%, ${currentStage.color}15 0%, transparent 70%)`,
+        }}
+        animate={{
+          opacity: [0.3, 0.6, 0.3],
+        }}
+        transition={{ duration: 2, repeat: Infinity }}
+      />
+
+      {/* Header compact */}
+      <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-gradient-to-br from-[#0EA5A6] to-[#0891A1] px-4 py-4 rounded-2xl text-white mb-6"
+        className="relative z-10 mb-6"
       >
-        <p className="text-xs font-semibold">Votre déménagement</p>
-        <p className="text-[10px] opacity-70 mt-1">Paris → Lyon • 15 mars 2026</p>
+        <p className="text-[10px] font-medium text-slate-500">Votre déménagement</p>
+        <p className="text-xs font-semibold text-slate-900 mt-0.5">Paris → Lyon • 15 mars</p>
       </motion.div>
 
-      {/* Timeline Steps */}
-      <div className="space-y-4 mb-6">
-        {/* Step 1 */}
-        <motion.div 
-          className="flex items-start gap-3"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <motion.div 
-            className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full"
-            style={{
-              background: progress >= 0 ? "#10B981" : "#F3F4F6"
-            }}
-            animate={{
-              background: progress >= 0 ? "#10B981" : "#F3F4F6",
-              scale: progress === 0 ? [1, 1.1, 1] : 1
-            }}
+      {/* Carte principale qui morphe */}
+      <div className="flex-1 flex items-center justify-center relative">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={stage}
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 1.05, y: -20 }}
             transition={{ 
-              scale: { duration: 0.6, ease: [0.16, 1, 0.3, 1] }
+              duration: 0.6, 
+              ease: [0.16, 1, 0.3, 1],
             }}
+            className="relative w-full"
           >
-            {progress >= 1 ? (
-              <CheckCircle2 className="w-4 h-4 text-white" strokeWidth={3} />
-            ) : (
-              <div className="w-2 h-2 rounded-full bg-white" />
-            )}
-          </motion.div>
-          <div className="flex-1 pt-1">
-            <p className="text-[11px] font-semibold text-slate-900">Infos envoyées</p>
-            <p className="text-[9px] text-slate-500 mt-0.5">T3 • 60m² • 3ᵉ étage</p>
-          </div>
-        </motion.div>
-
-        {/* Step 2 */}
-        <motion.div 
-          className="flex items-start gap-3"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        >
-          <motion.div 
-            className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full"
-            style={{
-              background: progress >= 1 ? "#10B981" : "#F3F4F6"
-            }}
-            animate={{
-              background: progress >= 1 ? "#10B981" : "#F3F4F6",
-              scale: progress === 1 ? [1, 1.1, 1] : 1
-            }}
-            transition={{ 
-              scale: { duration: 0.6, ease: [0.16, 1, 0.3, 1] }
-            }}
-          >
-            {progress >= 2 ? (
-              <CheckCircle2 className="w-4 h-4 text-white" strokeWidth={3} />
-            ) : (
-              <div className="w-2 h-2 rounded-full bg-white" />
-            )}
-          </motion.div>
-          <div className="flex-1 pt-1">
-            <p className="text-[11px] font-semibold text-slate-900">Dossier complété</p>
-            <p className="text-[9px] text-slate-500 mt-0.5">Base identique pour tous</p>
-          </div>
-        </motion.div>
-
-        {/* Step 3 */}
-        <motion.div 
-          className="flex items-start gap-3"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-        >
-          <motion.div 
-            className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full border-2"
-            style={{
-              background: progress >= 2 ? "#0EA5A6" : "#FFFFFF",
-              borderColor: progress >= 2 ? "#0EA5A6" : "#E5E7EB"
-            }}
-            animate={{
-              background: progress >= 2 ? "#0EA5A6" : "#FFFFFF",
-              scale: progress === 2 ? [1, 1.1, 1] : 1
-            }}
-            transition={{ 
-              scale: { duration: 0.6, ease: [0.16, 1, 0.3, 1] }
-            }}
-          >
-            {progress >= 3 ? (
-              <CheckCircle2 className="w-4 h-4 text-white" strokeWidth={3} />
-            ) : (
-              <motion.div 
-                className="w-2 h-2 rounded-full"
-                style={{ background: progress >= 2 ? "#FFFFFF" : "#CBD5E1" }}
-                animate={{ 
-                  opacity: progress === 2 ? [1, 0.3, 1] : 1
+            {/* Main Card */}
+            <motion.div
+              className="relative p-6 rounded-2xl border shadow-lg"
+              style={{
+                background: "white",
+                borderColor: `${currentStage.color}30`,
+              }}
+              animate={{
+                boxShadow: [
+                  `0 4px 20px ${currentStage.color}20`,
+                  `0 8px 30px ${currentStage.color}35`,
+                  `0 4px 20px ${currentStage.color}20`,
+                ],
+              }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              {/* Icône avec pulse */}
+              <motion.div
+                className="flex items-center justify-center w-12 h-12 rounded-2xl mx-auto mb-4"
+                style={{ background: `${currentStage.color}15` }}
+                animate={{
+                  scale: [1, 1.05, 1],
                 }}
-                transition={{ 
-                  duration: 1.5, 
-                  repeat: progress === 2 ? Infinity : 0
-                }}
-              />
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                <Icon className="w-6 h-6" style={{ color: currentStage.color }} strokeWidth={2} />
+              </motion.div>
+
+              {/* Compteur - Grand et bold */}
+              <motion.div
+                className="text-center mb-3"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+              >
+                <motion.p
+                  className="text-4xl font-bold"
+                  style={{ color: currentStage.color }}
+                  initial={{ y: 10 }}
+                  animate={{ y: 0 }}
+                >
+                  {currentStage.count}
+                </motion.p>
+              </motion.div>
+
+              {/* Titre */}
+              <motion.p
+                className="text-sm font-semibold text-slate-900 text-center"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+              >
+                {currentStage.title}
+              </motion.p>
+            </motion.div>
+
+            {/* Badge contextuel flottant */}
+            {stage === 2 && (
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 20 }}
+                transition={{ delay: 0.4 }}
+                className="absolute -top-2 -right-2 px-2.5 py-1.5 rounded-lg text-[9px] font-semibold bg-white border shadow-sm"
+                style={{ borderColor: "#0EA5A620" }}
+              >
+                <span style={{ color: "#0EA5A6" }}>Analyse</span>
+              </motion.div>
+            )}
+
+            {stage === 3 && (
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 20 }}
+                transition={{ delay: 0.4 }}
+                className="absolute -top-2 -right-2 px-2.5 py-1.5 rounded-lg text-[9px] font-semibold bg-white border shadow-sm"
+                style={{ borderColor: "#10B98120" }}
+              >
+                <span style={{ color: "#10B981" }}>✓ Fiables</span>
+              </motion.div>
             )}
           </motion.div>
-          <div className="flex-1 pt-1">
-            <p className="text-[11px] font-semibold text-slate-900">
-              {progress >= 2 ? "12 déménageurs contactés" : "Envoi en cours..."}
-            </p>
-            <p className="text-[9px] text-slate-500 mt-0.5">Dossier identique pour tous</p>
-          </div>
-        </motion.div>
-
-        {/* Step 4 - 7 offres reçues */}
-        <motion.div 
-          className="flex items-start gap-3"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
-        >
-          <motion.div 
-            className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full"
-            style={{
-              background: progress >= 3 ? "#10B981" : "#F3F4F6"
-            }}
-            animate={{
-              background: progress >= 3 ? "#10B981" : "#F3F4F6",
-              scale: progress === 3 ? [1, 1.1, 1] : 1
-            }}
-            transition={{ 
-              scale: { duration: 0.6, ease: [0.16, 1, 0.3, 1] }
-            }}
-          >
-            <CheckCircle2 
-              className="w-4 h-4" 
-              style={{ color: progress >= 3 ? "#FFFFFF" : "#CBD5E1" }}
-              strokeWidth={3} 
-            />
-          </motion.div>
-          <div className="flex-1 pt-1">
-            <p className="text-[11px] font-semibold text-slate-900">
-              {progress >= 3 ? "7 offres reçues !" : "En attente"}
-            </p>
-            <p className="text-[9px] text-slate-500 mt-0.5">Analyse en cours</p>
-          </div>
-        </motion.div>
-
-        {/* Step 5 - 3 sélectionnées */}
-        <motion.div 
-          className="flex items-start gap-3"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 1 }}
-        >
-          <motion.div 
-            className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full"
-            style={{
-              background: progress >= 4 ? "#10B981" : "#F3F4F6"
-            }}
-            animate={{
-              scale: progress === 4 ? [1, 1.1, 1] : 1
-            }}
-            transition={{ 
-              scale: { duration: 0.6, ease: [0.16, 1, 0.3, 1] }
-            }}
-          >
-            <CheckCircle2 
-              className="w-4 h-4" 
-              style={{ color: progress >= 4 ? "#FFFFFF" : "#CBD5E1" }}
-              strokeWidth={3} 
-            />
-          </motion.div>
-          <div className="flex-1 pt-1">
-            <p className="text-[11px] font-semibold text-slate-900">
-              {progress >= 4 ? "3 offres sélectionnées" : "Vérification"}
-            </p>
-            <p className="text-[9px] text-slate-500 mt-0.5">
-              {progress >= 4 ? "Par Moverz • Fiables" : "Analyse en cours"}
-            </p>
-          </div>
-        </motion.div>
-
-        {/* Step 6 - Vous choisissez & déménagez */}
-        <motion.div 
-          className="flex items-start gap-3"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 1.2 }}
-        >
-          <motion.div 
-            className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full"
-            style={{
-              background: progress >= 5 ? "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)" : "#F3F4F6",
-              boxShadow: progress >= 5 ? "0 0 16px rgba(14,165,166,0.5)" : "none"
-            }}
-            animate={{
-              scale: progress === 5 ? [1, 1.15, 1] : 1,
-              boxShadow: progress === 5 ? [
-                "0 0 16px rgba(14,165,166,0.5)",
-                "0 0 24px rgba(14,165,166,0.7)",
-                "0 0 16px rgba(14,165,166,0.5)"
-              ] : "none"
-            }}
-            transition={{ 
-              scale: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
-              boxShadow: { duration: 1.5, repeat: progress === 5 ? Infinity : 0 }
-            }}
-          >
-            <CheckCircle2 
-              className="w-4 h-4" 
-              style={{ color: progress >= 5 ? "#FFFFFF" : "#CBD5E1" }}
-              strokeWidth={3} 
-            />
-          </motion.div>
-          <div className="flex-1 pt-1">
-            <p className="text-[11px] font-semibold text-slate-900">
-              {progress >= 5 ? "Vous choisissez" : "À venir"}
-            </p>
-            <p className="text-[9px] text-slate-500 mt-0.5">
-              {progress >= 5 ? "Déménagez sereinement" : "Dernière étape"}
-            </p>
-          </div>
-        </motion.div>
+        </AnimatePresence>
       </div>
 
-      {/* Progress card */}
-      <motion.div 
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 1.4 }}
-        className="p-3 rounded-xl border"
-        style={{ 
-          background: progress >= 5 ? "rgba(14,165,166,0.1)" : "rgba(14,165,166,0.05)",
-          borderColor: progress >= 5 ? "rgba(14,165,166,0.3)" : "rgba(14,165,166,0.2)"
-        }}
+      {/* Indicateur de progression - Dots minimalistes */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+        className="flex items-center justify-center gap-1.5 mt-6"
       >
-        <div className="flex items-center justify-between mb-2">
-          <p className="text-[9px] font-semibold text-slate-900">
-            {progress >= 5 ? "✓ Terminé" : "Progression"}
-          </p>
-          <motion.p 
-            className="text-[9px] font-bold"
-            style={{ color: "#0EA5A6" }}
-            key={progress}
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-          >
-            {Math.round((progress / 5) * 100)}%
-          </motion.p>
-        </div>
-        <div className="w-full h-1.5 bg-white rounded-full overflow-hidden">
-          <motion.div 
-            className="h-full rounded-full"
-            style={{ 
-              background: progress >= 5 
-                ? "linear-gradient(to right, #0EA5A6, #10B981)"
-                : "linear-gradient(to right, #0EA5A6, #A8E8E8)"
+        {stages.map((s, i) => (
+          <motion.div
+            key={s.id}
+            className="rounded-full transition-all"
+            style={{
+              width: i === stage ? "20px" : "6px",
+              height: "6px",
+              background: i === stage ? currentStage.color : "#E2E8F0",
             }}
-            initial={{ width: "0%" }}
-            animate={{ width: `${(progress / 5) * 100}%` }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            animate={{
+              opacity: i <= stage ? 1 : 0.4,
+            }}
           />
-        </div>
+        ))}
       </motion.div>
+
+      {/* Sous-titre subtil */}
+      <motion.p
+        className="text-center text-[9px] text-slate-400 mt-3"
+        key={stage}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6 }}
+      >
+        {currentStage.subtitle}
+      </motion.p>
     </div>
   );
 }
