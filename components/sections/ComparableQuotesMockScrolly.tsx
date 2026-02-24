@@ -91,13 +91,15 @@ function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: n
             boxShadow: "0 4px 12px rgba(14,165,166,0.4), 0 0 0 1px rgba(14,165,166,0.2)"
           }}
         >
-          {/* Sparkle effect */}
+          {/* Checkmark */}
           <svg 
-            className="h-3.5 w-3.5 text-white animate-pulse" 
-            fill="currentColor" 
-            viewBox="0 0 24 24"
+            className="h-3.5 w-3.5 text-white" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor"
+            strokeWidth={3}
           >
-            <path d="M12 2L13.09 8.26L18 7L14.23 11.77L19.5 14L14.23 16.23L18 21L13.09 19.74L12 26L10.91 19.74L6 21L9.77 16.23L4.5 14L9.77 11.77L6 7L10.91 8.26L12 2Z" />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
           <span className="text-[11px] font-bold text-white tracking-wide">MEILLEURE OFFRE</span>
           
