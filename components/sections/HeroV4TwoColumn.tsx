@@ -90,11 +90,11 @@ export function HeroV4TwoColumn() {
               {/* Ligne horizontale background */}
               <div className="absolute top-4 left-0 right-0 h-[2px] bg-slate-200" />
               
-              {/* Ligne animée (progression) avec touche orange subtile */}
+              {/* Ligne animée (progression) */}
               <motion.div 
                 className="absolute top-4 left-0 h-[2px]"
                 style={{
-                  background: "linear-gradient(to right, #CBD5E1 0%, #FB923C 45%, #14B8A6 100%)"
+                  background: "linear-gradient(to right, #94A3B8 0%, #64748B 50%, #14B8A6 100%)"
                 }}
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
@@ -122,8 +122,8 @@ export function HeroV4TwoColumn() {
                       initial={{ scale: 0, backgroundColor: "#F3F4F6" }}
                       animate={{ 
                         scale: 1,
-                        backgroundColor: i === 0 ? "#FFF7ED" : (bold ? "#0EA5A6" : "#FFFFFF"),
-                        borderColor: i === 0 ? "#F59E0B" : (bold ? "#0EA5A6" : "#E5E7EB")
+                        backgroundColor: i === 0 ? "#F9FAFB" : (bold ? "#0EA5A6" : "#FFFFFF"),
+                        borderColor: i === 0 ? "#1F2937" : (bold ? "#0EA5A6" : "#E5E7EB")
                       }}
                       transition={{ 
                         duration: 0.4, 
@@ -132,7 +132,7 @@ export function HeroV4TwoColumn() {
                       }}
                       style={{
                         border: "2px solid",
-                        color: i === 0 ? "#F59E0B" : (bold ? "#fff" : "#6B7280"),
+                        color: i === 0 ? "#1F2937" : (bold ? "#fff" : "#6B7280"),
                       }}
                     >
                       {num}
@@ -200,11 +200,11 @@ export function HeroV4TwoColumn() {
                 {/* Ligne horizontale background */}
                 <div className="absolute top-5 left-0 right-0 h-[2px] bg-slate-200" />
                 
-                {/* Ligne animée (progression) avec touche orange subtile */}
+                {/* Ligne animée (progression) */}
                 <motion.div 
                   className="absolute top-5 left-0 h-[2px]"
                   style={{
-                    background: "linear-gradient(to right, #CBD5E1 0%, #FB923C 45%, #14B8A6 100%)"
+                    background: "linear-gradient(to right, #94A3B8 0%, #64748B 50%, #14B8A6 100%)"
                   }}
                   initial={{ width: "0%" }}
                   animate={{ width: "100%" }}
@@ -232,8 +232,8 @@ export function HeroV4TwoColumn() {
                         initial={{ scale: 0, backgroundColor: "#F3F4F6" }}
                         animate={{ 
                           scale: 1,
-                          backgroundColor: i === 0 ? "#FFF7ED" : (bold ? "#0EA5A6" : "#FFFFFF"),
-                          borderColor: i === 0 ? "#F59E0B" : (bold ? "#0EA5A6" : "#E5E7EB")
+                          backgroundColor: i === 0 ? "#F9FAFB" : (bold ? "#0EA5A6" : "#FFFFFF"),
+                          borderColor: i === 0 ? "#1F2937" : (bold ? "#0EA5A6" : "#E5E7EB")
                         }}
                         transition={{ 
                           duration: 0.4, 
@@ -242,8 +242,8 @@ export function HeroV4TwoColumn() {
                         }}
                         style={{
                           border: "3px solid",
-                          color: i === 0 ? "#F59E0B" : (bold ? "#fff" : "#6B7280"),
-                          boxShadow: i === 0 ? "0 4px 12px rgba(245,158,11,0.15)" : (bold ? "0 4px 12px rgba(14,165,166,0.2)" : "0 2px 4px rgba(0,0,0,0.05)")
+                          color: i === 0 ? "#1F2937" : (bold ? "#fff" : "#6B7280"),
+                          boxShadow: i === 0 ? "0 4px 12px rgba(0,0,0,0.08)" : (bold ? "0 4px 12px rgba(14,165,166,0.2)" : "0 2px 4px rgba(0,0,0,0.05)")
                         }}
                       >
                         {num}
@@ -446,7 +446,7 @@ export function HeroV4TwoColumn() {
                 }}
               >
                 <div className="flex items-center gap-1.5">
-                  <div className="h-1.5 w-1.5 rounded-full" style={{ background: "#F59E0B" }} />
+                  <div className="h-1.5 w-1.5 rounded-full" style={{ background: "#1F2937" }} />
                   <span><strong style={{ color: "#0EA5A6" }}>3</strong> offres retenues</span>
                 </div>
               </motion.div>
