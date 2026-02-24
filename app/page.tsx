@@ -20,6 +20,7 @@ import { WhyMoverz } from "@/components/sections/WhyMoverz";
 import { CreditsafeChapter } from "@/components/sections/CreditsafeChapter";
 import { TestimonialV4 } from "@/components/sections/TestimonialV4";
 import { FAQV4 } from "@/components/sections/FAQV4";
+import { FinalCTAV4 } from "@/components/sections/FinalCTAV4";
 import dynamic from "next/dynamic";
 
 const StickyCTA = dynamic(() => import("@/components/StickyCTA"), {
@@ -35,8 +36,9 @@ export default function Home() {
       <CreditsafeChapter />
       <TestimonialV4 />
       <FAQV4 />
+      <FinalCTAV4 />
       
-      {/* Sticky CTA - Desktop + Mobile */}
+      {/* Sticky CTA - Mobile uniquement */}
       <StickyCTA />
     </>
   );

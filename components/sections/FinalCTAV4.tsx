@@ -17,10 +17,12 @@ export function FinalCTAV4() {
     >
       <div className="container max-w-2xl text-center space-y-6">
         <h2
-          className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em]"
+          className="font-heading text-[clamp(32px,5vw,52px)] font-bold tracking-[-0.02em] leading-[1.1]"
           style={{ color: "var(--color-text)" }}
         >
-          Comparez en 3 minutes.
+          <span style={{ color: "var(--color-accent)" }}>3</span> minutes. <span style={{ color: "var(--color-accent)" }}>3</span> devis.
+          <br />
+          <span style={{ color: "var(--color-accent)" }}>1</span> seule décision.
         </h2>
 
         <a
@@ -28,7 +30,7 @@ export function FinalCTAV4() {
           className="group inline-flex items-center justify-center gap-2 rounded-[var(--radius-sm)] px-8 py-3.5 text-base font-semibold text-white transition-all duration-200 hover:opacity-90 active:scale-[0.98]"
           style={{ background: "var(--color-text)" }}
         >
-          Obtenir mes devis
+          Recevoir ma sélection
           <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
         </a>
 
