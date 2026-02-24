@@ -329,24 +329,27 @@ export function HeroV4TwoColumn() {
                     <div className="relative">
                       {/* Card C - Très en arrière (la plus floutée) */}
                       <div 
-                        className="absolute inset-0 -translate-y-2 rounded-xl border bg-white opacity-20 blur-[3px] pointer-events-none"
+                        className="absolute inset-0 translate-x-2 translate-y-2 rounded-xl border bg-white opacity-50 blur-[1.5px] pointer-events-none"
                         style={{
                           borderColor: "#CBD5E1",
-                          height: "95%",
+                          height: "96%",
+                          boxShadow: "0 4px 12px rgba(0,0,0,0.08)"
                         }}
                       >
                         <div className="p-3 space-y-2">
                           <div className="h-6 bg-slate-200 rounded" />
                           <div className="h-4 bg-slate-100 rounded w-3/4" />
+                          <div className="h-3 bg-slate-100 rounded w-1/2" />
                         </div>
                       </div>
                       
                       {/* Card A - Moyennement en arrière */}
                       <div 
-                        className="absolute inset-0 -translate-y-1 rounded-xl border bg-white opacity-40 blur-[1.5px] pointer-events-none"
+                        className="absolute inset-0 translate-x-1 translate-y-1 rounded-xl border bg-white opacity-70 blur-[0.8px] pointer-events-none"
                         style={{
                           borderColor: "#94A3B8",
-                          height: "97%",
+                          height: "98%",
+                          boxShadow: "0 2px 8px rgba(0,0,0,0.06)"
                         }}
                       >
                         <div className="p-3 space-y-2">
