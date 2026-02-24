@@ -18,8 +18,8 @@ import { trackEvent } from "@/lib/tracking";
 import Image from "next/image";
 
 const STEPS = [
-  { num: "1", text: "On sollicite les déménageurs disponibles" },
-  { num: "2", text: "On contrôle prix et fiabilité" },
+  { num: "1", text: "On sollicite les déménageurs disponibles", bold: false },
+  { num: "2", text: "On contrôle prix et fiabilité", bold: false },
   { num: "3", text: "Vous choisissez sereinement", bold: true },
 ] as const;
 
@@ -405,7 +405,17 @@ export function HeroV4TwoColumn() {
                         </div>
                         <div>
                           <p className="text-sm font-semibold" style={{ color: "#10B981" }}>Excellent</p>
-                          <p className="text-xs text-slate-600">Score Moverz</p>
+                          <div className="flex items-center gap-1 mt-0.5">
+                            <div className="relative">
+                              <Image src="/logo.png" alt="Moverz" width={16} height={16} className="h-4 w-4" />
+                              <div className="absolute -bottom-0.5 -right-0.5 h-2 w-2 rounded-full flex items-center justify-center" style={{ background: "#10B981" }}>
+                                <svg className="h-1.5 w-1.5 text-white" fill="currentColor" viewBox="0 0 12 12">
+                                  <path d="M10 3L4.5 8.5L2 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                                </svg>
+                              </div>
+                            </div>
+                            <span className="text-xs font-semibold text-slate-900">Moverz</span>
+                          </div>
                         </div>
                       </div>
 
