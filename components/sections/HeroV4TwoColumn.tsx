@@ -169,36 +169,66 @@ export function HeroV4TwoColumn() {
                   {/* Screen content */}
                   <div className="relative h-full w-full p-3 pt-9 pb-4 overflow-y-auto" style={{ background: "#F9FAFB" }}>
                     
-                    {/* STEPPER MINIATURE dans le phone */}
-                    <div className="mb-4 px-2">
-                      <div className="space-y-2">
+                    {/* STEPPER PREMIUM style Ramp dans le phone */}
+                    <div className="mb-5 px-3 pt-3">
+                      <div className="space-y-0">
                         {STEPS.map(({ num, text }, i) => (
-                          <div key={num} className="flex items-center gap-2">
-                            <div 
-                              className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold"
-                              style={{
-                                background: i === 2 ? "#0EA5A6" : "#FFFFFF",
-                                color: i === 2 ? "#fff" : "#6B7280",
-                                border: "2px solid",
-                                borderColor: i === 2 ? "#0EA5A6" : "#E5E7EB"
-                              }}
-                            >
-                              {num}
+                          <div key={num} className="relative">
+                            {/* Ligne verticale connectrice (sauf pour le dernier) */}
+                            {i < STEPS.length - 1 && (
+                              <div 
+                                className="absolute left-[11px] top-7 bottom-0 w-[1px]"
+                                style={{ 
+                                  background: i === 1 ? "linear-gradient(to bottom, #CBD5E1 0%, #0EA5A6 100%)" : "#E2E8F0"
+                                }}
+                              />
+                            )}
+                            
+                            <div className="flex items-start gap-3 pb-4 relative z-10">
+                              {/* Numéro dans cercle minimaliste */}
+                              <div 
+                                className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[11px] font-bold transition-all duration-300"
+                                style={{
+                                  background: i === 2 ? "#0EA5A6" : "#FFFFFF",
+                                  color: i === 2 ? "#FFFFFF" : "#94A3B8",
+                                  border: i === 2 ? "none" : "1.5px solid #E2E8F0",
+                                  boxShadow: i === 2 ? "0 2px 8px rgba(14,165,166,0.2)" : "none"
+                                }}
+                              >
+                                {num}
+                              </div>
+                              
+                              {/* Texte avec hiérarchie typographique */}
+                              <div className="flex-1 pt-0.5">
+                                <p 
+                                  className="text-[11px] leading-[1.4]" 
+                                  style={{ 
+                                    color: i === 2 ? "#111827" : "#64748B",
+                                    fontWeight: i === 2 ? 600 : 500,
+                                    letterSpacing: i === 2 ? "-0.01em" : "0"
+                                  }}
+                                >
+                                  {text}
+                                </p>
+                              </div>
                             </div>
-                            <p className="text-[10px] leading-tight" style={{ color: i === 2 ? "#111827" : "#6B7280" }}>
-                              {text}
-                            </p>
                           </div>
                         ))}
                       </div>
-                      <div className="h-px bg-slate-200 mt-3 mb-3" />
+                      
+                      {/* Divider ultra-subtil */}
+                      <div className="relative mt-2 mb-4">
+                        <div className="absolute inset-0 flex items-center">
+                          <div className="w-full" style={{ height: "1px", background: "linear-gradient(to right, transparent 0%, #E2E8F0 20%, #E2E8F0 80%, transparent 100%)" }} />
+                        </div>
+                      </div>
                     </div>
 
                     {/* Stack de 3 cards avec effet de profondeur */}
-                    <div className="relative">
+                    <div className="relative px-3">
                       {/* Card C - Très en arrière (la plus floutée) */}
                       <div 
-                        className="absolute inset-0 translate-x-2 translate-y-2 rounded-xl border bg-white opacity-50 blur-[1.5px] pointer-events-none"
+                        className="absolute inset-x-3 top-0 translate-x-2 translate-y-2 rounded-xl border bg-white opacity-50 blur-[1.5px] pointer-events-none"
                         style={{
                           borderColor: "#CBD5E1",
                           height: "96%",
@@ -214,7 +244,7 @@ export function HeroV4TwoColumn() {
                       
                       {/* Card A - Moyennement en arrière */}
                       <div 
-                        className="absolute inset-0 translate-x-1 translate-y-1 rounded-xl border bg-white opacity-70 blur-[0.8px] pointer-events-none"
+                        className="absolute inset-x-3 top-0 translate-x-1 translate-y-1 rounded-xl border bg-white opacity-70 blur-[0.8px] pointer-events-none"
                         style={{
                           borderColor: "#94A3B8",
                           height: "98%",

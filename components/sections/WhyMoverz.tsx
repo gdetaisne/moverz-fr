@@ -31,7 +31,7 @@ const arguments_ = [
   {
     icon: Clock,
     title: "Décision rapide",
-    subtitle: "Un dossier, des offres comparables",
+    subtitle: "Minimum 3 devis vérifiés sous 5 jours",
     score: 48,
     scoreLabel: "h max",
     color: "#0EA5A6", // Turquoise
