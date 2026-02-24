@@ -232,20 +232,16 @@ function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: n
 export function ComparableQuotesMockScrolly() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
-  const [progress, setProgress] = useState(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
-  const progressIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleNext = () => {
     setDirection(1);
     setCurrentIndex((prev) => (prev + 1) % MOVERS.length);
-    setProgress(0); // Reset progress
   };
 
   const handlePrev = () => {
     setDirection(-1);
     setCurrentIndex((prev) => (prev - 1 + MOVERS.length) % MOVERS.length);
-    setProgress(0); // Reset progress
   };
 
   const handleDragEnd = (_: any, info: PanInfo) => {
@@ -257,32 +253,20 @@ export function ComparableQuotesMockScrolly() {
     }
   };
 
-  // Autoplay with progress bar
+  // Autoplay (simple)
   useEffect(() => {
-    // Clear existing intervals
+    // Clear existing interval
     if (intervalRef.current) clearInterval(intervalRef.current);
-    if (progressIntervalRef.current) clearInterval(progressIntervalRef.current);
-
-    // Reset progress
-    setProgress(0);
-
-    // Progress bar animation (update every 50ms for smooth animation)
-    progressIntervalRef.current = setInterval(() => {
-      setProgress((prev) => {
-        const increment = (100 / AUTOPLAY_DURATION) * 50; // 50ms intervals
-        return Math.min(prev + increment, 100);
-      });
-    }, 50);
 
     // Auto advance to next slide
     intervalRef.current = setInterval(() => {
-      handleNext();
+      setDirection(1);
+      setCurrentIndex((prev) => (prev + 1) % MOVERS.length);
     }, AUTOPLAY_DURATION);
 
     // Cleanup
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
-      if (progressIntervalRef.current) clearInterval(progressIntervalRef.current);
     };
   }, [currentIndex]); // Re-run when currentIndex changes
 
@@ -452,40 +436,6 @@ export function ComparableQuotesMockScrolly() {
                   </div>
                 </div>
               </motion.div>
-
-              {/* Progress bar underneath phone */}
-              <div className="mt-8 w-full max-w-[280px] mx-auto">
-                <div className="flex items-center justify-center gap-2 mb-3">
-                  {MOVERS.map((_, i) => (
-                    <button
-                      key={i}
-                      onClick={() => {
-                        setDirection(i > currentIndex ? 1 : -1);
-                        setCurrentIndex(i);
-                      }}
-                      className="h-1.5 rounded-full transition-all"
-                      style={{
-                        width: i === currentIndex ? "24px" : "8px",
-                        background: i === currentIndex ? "#0EA5A6" : "#CBD5E1",
-                      }}
-                    />
-                  ))}
-                </div>
-                
-                {/* Progress bar for current slide */}
-                <div className="relative h-1 rounded-full overflow-hidden bg-slate-200">
-                  <motion.div
-                    className="absolute inset-y-0 left-0 rounded-full"
-                    style={{
-                      width: `${progress}%`,
-                      background: "linear-gradient(90deg, #0EA5A6 0%, #14B8A6 100%)",
-                    }}
-                    initial={{ width: "0%" }}
-                    animate={{ width: `${progress}%` }}
-                    transition={{ duration: 0.05, ease: "linear" }}
-                  />
-                </div>
-              </div>
             </div>
           </div>
         </div>
