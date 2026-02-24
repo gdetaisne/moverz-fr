@@ -74,14 +74,14 @@ export default function VillesPaginatedPage({ params }: PageProps) {
               <a
                 key={city.slug}
                 href={`/demenagement/${city.slug}/`}
-                className="rounded-xl border border-[#E3E5E8] bg-white px-4 py-3 hover:border-[#6BCFCF]/40 hover:shadow-sm transition-all"
+                className="rounded-xl border border-v4-border bg-white px-4 py-3 hover:border-v4-accent/40 hover:shadow-sm transition-all"
               >
                 <div className="flex items-center justify-between gap-4">
                   <div>
-                    <p className="text-sm font-bold text-[#04163a]">{city.nameCapitalized}</p>
-                    <p className="text-xs text-[#6B7280]">{city.region}</p>
+                    <p className="text-sm font-bold text-v4-text">{city.nameCapitalized}</p>
+                    <p className="text-xs text-v4-text-secondary">{city.region}</p>
                   </div>
-                  <span className="text-xs font-semibold text-[#2B7A78]">→</span>
+                  <span className="text-xs font-semibold text-v4-accent">→</span>
                 </div>
               </a>
             ))}
@@ -92,21 +92,21 @@ export default function VillesPaginatedPage({ params }: PageProps) {
               href={`/villes/page/${Math.max(1, pageNum - 1)}/`}
               aria-disabled={pageNum === 1}
               className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
-                pageNum === 1 ? "text-[#94A3B8] pointer-events-none" : "text-[#0F172A] hover:bg-[#F9FAFB]"
+                pageNum === 1 ? "text-[#94A3B8] pointer-events-none" : "text-v4-text hover:bg-[#F9FAFB]"
               }`}
             >
               ← Précédent
             </Link>
 
-            <span className="text-sm text-[#6B7280]">
-              Page <span className="font-semibold text-[#0F172A]">{pageNum}</span> / {totalPages}
+            <span className="text-sm text-v4-text-secondary">
+              Page <span className="font-semibold text-v4-text">{pageNum}</span> / {totalPages}
             </span>
 
             <Link
               href={`/villes/page/${Math.min(totalPages, pageNum + 1)}/`}
               aria-disabled={pageNum === totalPages}
               className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
-                pageNum === totalPages ? "text-[#94A3B8] pointer-events-none" : "text-[#0F172A] hover:bg-[#F9FAFB]"
+                pageNum === totalPages ? "text-[#94A3B8] pointer-events-none" : "text-v4-text hover:bg-[#F9FAFB]"
               }`}
             >
               Suivant →

@@ -29,7 +29,7 @@ const faqCategories = [
       },
       {
         q: "Quelle est la différence entre Moverz et les autres comparateurs ?",
-        a: "La plupart des comparateurs (45-50% du marché) se contentent de revendre vos coordonnées aux déménageurs. Moverz va beaucoup plus loin : nous standardisons votre dossier et nous évaluons chaque déménageur selon 3 analyses de risque notées /100 — expérience client (avis Google analysés), risque financier (Creditsafe + Pappers + ratio cash/dettes), et risque juridique (décisions de justice via Pappers). Les déménageurs avec alertes sont exclus automatiquement. En savoir plus sur <a href='/pourquoi-moverz/' class='underline text-[#6BCFCF]'>notre approche unique</a>.",
+        a: "La plupart des comparateurs (45-50% du marché) se contentent de revendre vos coordonnées aux déménageurs. Moverz va beaucoup plus loin : nous standardisons votre dossier et nous évaluons chaque déménageur selon 3 analyses de risque notées /100 — expérience client (avis Google analysés), risque financier (Creditsafe + Pappers + ratio cash/dettes), et risque juridique (décisions de justice via Pappers). Les déménageurs avec alertes sont exclus automatiquement. En savoir plus sur <a href='/pourquoi-moverz/' class='underline' style='color: var(--color-accent)'>notre approche unique</a>.",
       },
       {
         q: "Combien de devis vais-je recevoir ?",
@@ -77,7 +77,7 @@ const faqCategories = [
       },
       {
         q: "Le marché du déménagement est-il risqué ?",
-        a: "Oui, malheureusement. Selon une enquête DGCCRF de 2023, 64% des entreprises de déménagement contrôlées présentaient au moins une anomalie. En 2024, 257 entreprises du secteur ont fait faillite sur environ 1 300 établissements. Et 90% des sociétés ont moins de 20 salariés, ce qui rend l'évaluation de leur fiabilité très difficile sans outils spécialisés. Consultez notre guide complet : <a href='/blog/eviter-arnaques-demenagement/' class='underline text-[#6BCFCF]'>Comment éviter les arnaques au déménagement</a>.",
+        a: "Oui, malheureusement. Selon une enquête DGCCRF de 2023, 64% des entreprises de déménagement contrôlées présentaient au moins une anomalie. En 2024, 257 entreprises du secteur ont fait faillite sur environ 1 300 établissements. Et 90% des sociétés ont moins de 20 salariés, ce qui rend l'évaluation de leur fiabilité très difficile sans outils spécialisés. Consultez notre guide complet : <a href='/blog/eviter-arnaques-demenagement/' class='underline' style='color: var(--color-accent)'>Comment éviter les arnaques au déménagement</a>.",
       },
       {
         q: "Comment Moverz vérifie-t-il les déménageurs ?",
@@ -152,11 +152,11 @@ export default function FAQPage() {
       {/* Maillage interne (SEO) */}
       <section className="section section-light pt-8 pb-0">
         <div className="container max-w-5xl">
-          <div className="rounded-2xl border border-[#E3E5E8] bg-white p-6 md:p-8">
+          <div className="rounded-2xl border bg-white p-6 md:p-8" style={{ borderColor: "var(--color-border)" }}>
             <div className="text-center space-y-3 mb-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">À lire aussi</p>
-              <h2 className="text-xl md:text-2xl font-bold text-[#0F172A]">Guides utiles (sans blabla)</h2>
-              <p className="text-sm text-[#6B7280] max-w-2xl mx-auto">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em]" style={{ color: "var(--color-accent)" }}>À lire aussi</p>
+              <h2 className="text-xl md:text-2xl font-bold" style={{ color: "var(--color-text)" }}>Guides utiles (sans blabla)</h2>
+              <p className="text-sm max-w-2xl mx-auto" style={{ color: "var(--color-text-secondary)" }}>
                 Des pages courtes et actionnables pour vérifier un déménageur et éviter les zones floues.
               </p>
             </div>
@@ -182,10 +182,16 @@ export default function FAQPage() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="group rounded-2xl border border-[#E5E7EB] bg-white p-5 hover:border-[#6BCFCF]/50 hover:shadow-sm transition-all"
+                  className="group rounded-2xl border bg-white p-5 hover:shadow-sm transition-all"
+                  style={{ 
+                    borderColor: "var(--color-border)",
+                    "--hover-border": "var(--color-accent)" 
+                  } as React.CSSProperties}
+                  onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--color-accent)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--color-border)")}
                 >
-                  <p className="text-sm font-semibold text-[#0F172A] group-hover:text-[#2B7A78]">{item.title}</p>
-                  <p className="mt-1 text-xs text-[#6B7280] leading-relaxed">{item.desc}</p>
+                  <p className="text-sm font-semibold" style={{ color: "var(--color-text)" }}>{item.title}</p>
+                  <p className="mt-1 text-xs leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>{item.desc}</p>
                 </a>
               ))}
             </div>
@@ -225,16 +231,16 @@ export default function FAQPage() {
             ].map((item, i) => (
               <div 
                 key={i}
-                className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white/80 backdrop-blur-sm p-5 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-[#6BCFCF]/30 transition-all duration-300"
+                className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white/80 backdrop-blur-sm p-5 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-brand-turquoise-300 transition-all duration-300"
               >
                 {/* Gradient overlay on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
                 
                 <div className="relative text-center space-y-2.5">
-                  <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${item.gradient} bg-opacity-10 text-[#2B7A78] group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${item.gradient} bg-opacity-10 text-v4-accent group-hover:scale-110 transition-transform duration-300`}>
                     {item.icon}
                   </div>
-                  <div className="text-2xl md:text-3xl font-bold bg-gradient-to-br from-[#0F172A] to-[#2B7A78] bg-clip-text text-transparent">
+                  <div className="text-2xl md:text-3xl font-bold bg-gradient-to-br from-v4-text to-brand-turquoise bg-clip-text text-transparent">
                     {item.stat}
                   </div>
                   <div className="text-xs text-gray-600 font-medium leading-tight">{item.label}</div>
@@ -249,11 +255,11 @@ export default function FAQPage() {
       <section className="section section-light pt-4">
         <div className="container max-w-4xl">
           <div className="text-center mb-12 space-y-3">
-            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#6BCFCF]/10 to-[#2B7A78]/10 border border-[#6BCFCF]/20 px-4 py-2 text-sm font-semibold text-[#2B7A78]">
-              <span className="h-2 w-2 rounded-full bg-[#6BCFCF] animate-pulse" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-turquoise/10 to-brand-turquoise/10 border border-brand-turquoise-200 px-4 py-2 text-sm font-semibold text-v4-accent">
+              <span className="h-2 w-2 rounded-full bg-v4-accent animate-pulse" />
               Questions & Réponses
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
+            <h2 className="text-3xl md:text-4xl font-bold text-v4-text">
               Tout ce que vous voulez savoir
             </h2>
           </div>
@@ -264,14 +270,14 @@ export default function FAQPage() {
                 {/* Premium category header */}
                 <div className="mb-6 flex items-center gap-4 group">
                   <div className="relative">
-                    <div className={`flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${category.color} border ${category.borderColor} text-[#2B7A78] shadow-sm group-hover:shadow-md group-hover:scale-105 transition-all duration-300`}>
+                    <div className={`flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${category.color} border ${category.borderColor} text-v4-accent shadow-sm group-hover:shadow-md group-hover:scale-105 transition-all duration-300`}>
                       {category.icon}
                     </div>
                     {/* Glow effect */}
                     <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-50 blur-xl transition-opacity duration-300 -z-10`} />
                   </div>
                   <div>
-                    <h3 className="text-xl md:text-2xl font-bold text-[#0F172A] group-hover:text-[#2B7A78] transition-colors">
+                    <h3 className="text-xl md:text-2xl font-bold text-v4-text group-hover:text-v4-accent transition-colors">
                       {category.title}
                     </h3>
                     <p className="text-sm text-gray-500 font-medium">
@@ -291,16 +297,16 @@ export default function FAQPage() {
           {/* Encore une question ? - Premium Tech */}
           <div className="mt-16 relative overflow-hidden rounded-3xl border border-gray-200 bg-gradient-to-br from-white via-gray-50 to-white p-8 md:p-12 text-center shadow-xl">
             {/* Gradient overlays */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#6BCFCF]/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#2B7A78]/10 rounded-full blur-3xl" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-v4-accent/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-turquoise/10 rounded-full blur-3xl" />
             
             <div className="relative space-y-6">
-              <div className="inline-flex items-center justify-center h-20 w-20 rounded-2xl bg-gradient-to-br from-[#6BCFCF]/20 to-[#2B7A78]/20 border border-[#6BCFCF]/30 mx-auto text-[#2B7A78] shadow-lg hover:scale-110 transition-transform duration-300">
+              <div className="inline-flex items-center justify-center h-20 w-20 rounded-2xl bg-gradient-to-br from-brand-turquoise/20 to-brand-turquoise/20 border border-brand-turquoise-300 mx-auto text-v4-accent shadow-lg hover:scale-110 transition-transform duration-300">
                 <svg className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-[#0F172A]">
+              <h3 className="text-2xl md:text-3xl font-bold text-v4-text">
                 Encore une question ?
               </h3>
               <p className="text-base text-gray-600 max-w-xl mx-auto leading-relaxed">
@@ -308,7 +314,7 @@ export default function FAQPage() {
               </p>
               <a
                 href="/contact/"
-                className="inline-flex items-center gap-2 rounded-xl bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                className="inline-flex items-center gap-2 rounded-xl bg-v4-text px-8 py-4 text-base font-semibold text-white shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
               >
                 <span>Posez votre question</span>
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

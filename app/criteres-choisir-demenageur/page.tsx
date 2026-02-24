@@ -85,21 +85,21 @@ export default function CriteresChoisirDemenageurPage() {
             <div className="flex items-start gap-3">
               <span className="text-2xl">⚠️</span>
               <div className="space-y-3">
-                <h2 className="text-xl md:text-2xl font-bold text-[#0F172A]">
+                <h2 className="text-xl md:text-2xl font-bold text-v4-text">
                   Pourquoi ces critères sont cruciaux
                 </h2>
-                <div className="space-y-2 text-sm md:text-base text-[#6B7280] leading-relaxed">
+                <div className="space-y-2 text-sm md:text-base text-v4-text-secondary leading-relaxed">
                   <p>
-                    <strong className="text-[#0F172A]">64% des déménageurs présentent au moins une anomalie</strong> selon la DGCCRF (2023) : 
+                    <strong className="text-v4-text">64% des déménageurs présentent au moins une anomalie</strong> selon la DGCCRF (2023) : 
                     absence d'assurance, licences non conformes, sous-traitance non déclarée, devis trompeurs.
                   </p>
                   <p>
-                    <strong className="text-[#0F172A]">257 faillites de déménageurs en 2024</strong> (source Altares), 
+                    <strong className="text-v4-text">257 faillites de déménageurs en 2024</strong> (source Altares), 
                     soit 20% du parc. Un déménageur en difficulté financière = risque élevé d'acompte perdu, de prestation non réalisée, 
                     ou de litige non résolu.
                   </p>
                   <p>
-                    <strong className="text-[#0F172A]">Conclusion :</strong> Choisir uniquement sur le prix est dangereux. 
+                    <strong className="text-v4-text">Conclusion :</strong> Choisir uniquement sur le prix est dangereux. 
                     Vérifiez la santé financière, les licences, et les assurances <strong>avant</strong> de signer.
                   </p>
                 </div>
@@ -109,10 +109,10 @@ export default function CriteresChoisirDemenageurPage() {
 
           {/* 8 critères essentiels */}
           <div id="criteres" className="scroll-mt-28 space-y-4">
-            <h2 className="text-lg md:text-xl font-semibold text-[#0F172A]">
+            <h2 className="text-lg md:text-xl font-semibold text-v4-text">
               Les 8 critères essentiels pour choisir un déménageur fiable
             </h2>
-            <p className="text-sm md:text-base text-[#6B7280]">
+            <p className="text-sm md:text-base text-v4-text-secondary">
               Vérifiez ces 8 points <strong>avant</strong> de signer un devis. Un déménageur fiable accepte de fournir 
               toutes ces preuves et de documenter clairement le périmètre de sa prestation.
             </p>
@@ -211,27 +211,27 @@ export default function CriteresChoisirDemenageurPage() {
               ].map((c) => (
                 <div 
                   key={c.title} 
-                  className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-7 hover:border-[#6BCFCF]/50 hover:shadow-md transition-all"
+                  className="rounded-2xl border border-v4-border bg-white p-6 md:p-7 hover:border-brand-turquoise/50 hover:shadow-md transition-all"
                 >
                   <div className="flex items-start gap-3">
                     <span className="text-3xl shrink-0">{c.emoji}</span>
                     <div className="flex-1 space-y-3">
-                      <h3 className="text-base md:text-lg font-bold text-[#0F172A]">{c.title}</h3>
+                      <h3 className="text-base md:text-lg font-bold text-v4-text">{c.title}</h3>
                       {c.highlight && (
-                        <p className="text-xs md:text-sm font-semibold text-[#6BCFCF] bg-[#6BCFCF]/10 rounded-full px-3 py-1 inline-block">
+                        <p className="text-xs md:text-sm font-semibold text-v4-accent bg-v4-accent/10 rounded-full px-3 py-1 inline-block">
                           {c.highlight}
                         </p>
                       )}
-                      <ul className="grid gap-2 text-sm md:text-base text-[#0F172A]/90">
+                      <ul className="grid gap-2 text-sm md:text-base text-v4-text/90">
                         {c.bullets.map((b) => (
                           <li key={b} className="flex gap-2">
-                            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#2B7A78] shrink-0" />
+                            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-brand-turquoise shrink-0" />
                             <span>{b}</span>
                           </li>
                         ))}
                       </ul>
-                      <p className="text-sm text-[#6B7280] bg-[#F8FAFC] rounded-xl p-3 border border-[#E5E7EB]">
-                        <strong className="text-[#0F172A]">Pourquoi :</strong> {c.note}
+                      <p className="text-sm text-v4-text-secondary bg-[#F8FAFC] rounded-xl p-3 border border-v4-border">
+                        <strong className="text-v4-text">Pourquoi :</strong> {c.note}
                       </p>
                     </div>
                   </div>
@@ -241,16 +241,16 @@ export default function CriteresChoisirDemenageurPage() {
           </div>
 
           {/* Section Moverz vérifie automatiquement */}
-          <div className="rounded-2xl border border-[#6BCFCF]/30 bg-gradient-to-br from-[#6BCFCF]/10 to-white p-6 md:p-8 space-y-4">
+          <div className="rounded-2xl border border-brand-turquoise-300 bg-gradient-to-br from-brand-turquoise/10 to-white p-6 md:p-8 space-y-4">
             <div className="flex items-center gap-3">
               <span className="text-3xl">✨</span>
-              <h2 className="text-lg md:text-xl font-semibold text-[#0F172A]">
+              <h2 className="text-lg md:text-xl font-semibold text-v4-text">
                 Ce que Moverz vérifie automatiquement pour vous
               </h2>
             </div>
-            <p className="text-sm md:text-base text-[#6B7280] leading-relaxed">
+            <p className="text-sm md:text-base text-v4-text-secondary leading-relaxed">
               Plutôt que de vérifier manuellement 8 critères × 5 déménageurs (40 vérifications !), 
-              <strong className="text-[#0F172A]"> Moverz automatise ces vérifications</strong> avant de vous proposer des devis.
+              <strong className="text-v4-text"> Moverz automatise ces vérifications</strong> avant de vous proposer des devis.
             </p>
             
             <div className="grid gap-3 md:grid-cols-2">
@@ -276,23 +276,23 @@ export default function CriteresChoisirDemenageurPage() {
                   desc: "Licence de transport, SIREN actif, assurance RC Pro (≥ 1,5 M€), identité légale. Le socle réglementaire.",
                 },
               ].map((item) => (
-                <div key={item.title} className="rounded-xl border border-[#E5E7EB] bg-white p-5 flex gap-3 items-start">
+                <div key={item.title} className="rounded-xl border border-v4-border bg-white p-5 flex gap-3 items-start">
                   <span className="text-2xl shrink-0">{item.icon}</span>
                   <div>
-                    <p className="font-semibold text-[#0F172A] text-sm md:text-base">{item.title}</p>
-                    <p className="text-xs md:text-sm text-[#6B7280] mt-1 leading-relaxed">{item.desc}</p>
+                    <p className="font-semibold text-v4-text text-sm md:text-base">{item.title}</p>
+                    <p className="text-xs md:text-sm text-v4-text-secondary mt-1 leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="rounded-xl bg-white/60 border border-[#6BCFCF]/20 p-4 text-center">
-              <p className="text-sm md:text-base text-[#0F172A]">
+            <div className="rounded-xl bg-white/60 border border-brand-turquoise-200 p-4 text-center">
+              <p className="text-sm md:text-base text-v4-text">
                 <strong>Résultat :</strong> Vous ne recevez des devis que de déménageurs évalués selon 3 analyses de risque /100. Alertes financières ou juridiques = exclusion automatique.
               </p>
               <a 
                 href="/verifications-partenaires/" 
-                className="mt-3 inline-block text-sm font-semibold text-[#6BCFCF] hover:text-[#2B7A78] underline"
+                className="mt-3 inline-block text-sm font-semibold text-v4-accent hover:text-v4-accent underline"
               >
                 En savoir plus sur nos vérifications →
               </a>
@@ -301,13 +301,13 @@ export default function CriteresChoisirDemenageurPage() {
 
           {/* How to verify */}
           <div id="checklist" className="scroll-mt-28 space-y-4">
-            <h2 className="text-lg md:text-xl font-semibold text-[#0F172A]">
+            <h2 className="text-lg md:text-xl font-semibold text-v4-text">
               Comment vérifier un déménageur vous-même (checklist actionnable)
             </h2>
 
-            <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 space-y-4">
-              <h3 className="text-base md:text-lg font-bold text-[#0F172A]">8 étapes de vérification</h3>
-              <ol className="grid gap-3 text-sm md:text-base text-[#0F172A]/90">
+            <div className="rounded-2xl border border-v4-border bg-white p-6 md:p-8 space-y-4">
+              <h3 className="text-base md:text-lg font-bold text-v4-text">8 étapes de vérification</h3>
+              <ol className="grid gap-3 text-sm md:text-base text-v4-text/90">
                 {[
                   {
                     step: "Vérifiez le SIREN sur annuaire-entreprises.data.gouv.fr (entreprise active, pas en liquidation).",
@@ -343,24 +343,24 @@ export default function CriteresChoisirDemenageurPage() {
                   },
                 ].map((item, i) => (
                   <li key={item.step} className="flex gap-3 items-start">
-                    <span className="mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#6BCFCF]/15 text-[#0F172A] text-sm font-bold border border-[#6BCFCF]/30 shrink-0">
+                    <span className="mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded-full bg-v4-accent/15 text-v4-text text-sm font-bold border border-brand-turquoise-300 shrink-0">
                       {i + 1}
                     </span>
                     <div className="flex-1">
                       <p>{item.step}</p>
-                      <p className="text-xs text-[#6BCFCF] mt-1 font-medium">💡 {item.tool}</p>
+                      <p className="text-xs text-v4-accent mt-1 font-medium">💡 {item.tool}</p>
                     </div>
                   </li>
                 ))}
               </ol>
               
-              <div className="mt-6 rounded-xl bg-[#6BCFCF]/10 border border-[#6BCFCF]/20 p-4 text-center">
-                <p className="text-sm md:text-base text-[#0F172A]">
+              <div className="mt-6 rounded-xl bg-v4-accent/10 border border-brand-turquoise-200 p-4 text-center">
+                <p className="text-sm md:text-base text-v4-text">
                   <strong>Trop long ?</strong> Moverz fait tout automatiquement : 3 analyses de risque /100 (expérience client, financier, juridique) + vérifications réglementaires.
                 </p>
                 <a 
                   href={buildTunnelUrl({ from: "criteres-checklist" })} 
-                  className="mt-3 inline-block text-sm font-semibold text-[#6BCFCF] hover:text-[#2B7A78] underline"
+                  className="mt-3 inline-block text-sm font-semibold text-v4-accent hover:text-v4-accent underline"
                 >
                   Obtenir des devis de déménageurs vérifiés →
                 </a>
@@ -372,11 +372,11 @@ export default function CriteresChoisirDemenageurPage() {
           <div className="rounded-2xl border border-red-200 bg-gradient-to-br from-red-50 to-white p-6 md:p-8 space-y-4">
             <div className="flex items-center gap-3">
               <span className="text-3xl">🚨</span>
-              <h2 className="text-lg md:text-xl font-semibold text-[#0F172A]">
+              <h2 className="text-lg md:text-xl font-semibold text-v4-text">
                 8 Red flags à éviter absolument
               </h2>
             </div>
-            <ul className="grid gap-3 text-sm md:text-base text-[#0F172A]/90">
+            <ul className="grid gap-3 text-sm md:text-base text-v4-text/90">
               {[
                 "❌ Devis sans SIREN/SIRET, ou identité légale floue (risque : faux déménageur)",
                 "❌ Refus de fournir une attestation d'assurance RC Pro ou un Kbis récent (risque : pas d'assurance)",
@@ -393,17 +393,17 @@ export default function CriteresChoisirDemenageurPage() {
                 </li>
               ))}
             </ul>
-            <div className="rounded-xl bg-white border border-red-200 p-4 text-sm md:text-base text-[#6B7280]">
-              <strong className="text-[#0F172A]">Si vous constatez 2+ red flags :</strong> Fuyez. 
+            <div className="rounded-xl bg-white border border-red-200 p-4 text-sm md:text-base text-v4-text-secondary">
+              <strong className="text-v4-text">Si vous constatez 2+ red flags :</strong> Fuyez. 
               Ce sont des signaux objectifs d'arnaque ou de pratique douteuse. 
-              <a href="/blog/eviter-arnaques-demenagement/" className="text-[#6BCFCF] hover:text-[#2B7A78] font-semibold ml-1 underline">
+              <a href="/blog/eviter-arnaques-demenagement/" className="text-v4-accent hover:text-v4-accent font-semibold ml-1 underline">
                 Guide complet anti-arnaques →
               </a>
             </div>
           </div>
 
           {/* Printable mini checklist */}
-          <div className="rounded-2xl border border-[#E5E7EB] bg-[#0F172A] p-6 md:p-8 text-white">
+          <div className="rounded-2xl border border-v4-border bg-v4-text p-6 md:p-8 text-white">
             <div className="flex items-center gap-3 mb-4">
               <span className="text-3xl">✅</span>
               <h2 className="text-lg md:text-xl font-semibold">Checklist avant de signer (12 points)</h2>
@@ -427,7 +427,7 @@ export default function CriteresChoisirDemenageurPage() {
                   <span className="text-white/60 shrink-0 font-mono text-xs mt-0.5">☐</span>
                   <span className={item.priority === "high" ? "text-white font-medium" : "text-white/90"}>
                     {item.text}
-                    {item.priority === "high" && <span className="ml-2 text-[#6BCFCF] text-xs">●●●</span>}
+                    {item.priority === "high" && <span className="ml-2 text-v4-accent text-xs">●●●</span>}
                   </span>
                 </div>
               ))}
@@ -438,14 +438,14 @@ export default function CriteresChoisirDemenageurPage() {
           </div>
 
           {/* Maillage interne (SEO) */}
-          <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF] text-center">
+          <div className="rounded-2xl border border-v4-border bg-white p-6 md:p-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-v4-accent text-center">
               Guides complémentaires
             </p>
-            <h2 className="mt-3 text-xl md:text-2xl font-bold text-[#0F172A] text-center">
+            <h2 className="mt-3 text-xl md:text-2xl font-bold text-v4-text text-center">
               Pour aller plus loin
             </h2>
-            <p className="mt-2 text-sm text-[#6B7280] text-center max-w-2xl mx-auto">
+            <p className="mt-2 text-sm text-v4-text-secondary text-center max-w-2xl mx-auto">
               6 guides complémentaires pour maîtriser chaque aspect de votre déménagement.
             </p>
 
@@ -491,13 +491,13 @@ export default function CriteresChoisirDemenageurPage() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="group rounded-xl border border-[#E5E7EB] bg-white p-5 hover:border-[#6BCFCF]/50 hover:shadow-md transition-all"
+                  className="group rounded-xl border border-v4-border bg-white p-5 hover:border-brand-turquoise/50 hover:shadow-md transition-all"
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-2xl">{item.emoji}</span>
-                    <p className="text-sm font-bold text-[#0F172A] group-hover:text-[#2B7A78]">{item.title}</p>
+                    <p className="text-sm font-bold text-v4-text group-hover:text-v4-accent">{item.title}</p>
                   </div>
-                  <p className="text-xs text-[#6B7280] leading-relaxed">{item.desc}</p>
+                  <p className="text-xs text-v4-text-secondary leading-relaxed">{item.desc}</p>
                 </a>
               ))}
             </div>
@@ -513,21 +513,21 @@ export default function CriteresChoisirDemenageurPage() {
       <section className="section section-light pt-0">
         <div className="container max-w-4xl space-y-4">
           {/* CTA principal Moverz */}
-          <div className="rounded-2xl border border-[#6BCFCF]/30 bg-gradient-to-br from-[#6BCFCF]/10 to-white p-6 md:p-8 text-center">
+          <div className="rounded-2xl border border-brand-turquoise-300 bg-gradient-to-br from-brand-turquoise/10 to-white p-6 md:p-8 text-center">
             <div className="flex items-center justify-center gap-2 mb-3">
               <span className="text-2xl">✨</span>
-              <h3 className="text-lg font-bold text-[#0F172A]">
+              <h3 className="text-lg font-bold text-v4-text">
                 Recevez des devis de déménageurs déjà vérifiés
               </h3>
             </div>
-            <p className="text-sm md:text-base text-[#6B7280] mb-5 max-w-2xl mx-auto">
+            <p className="text-sm md:text-base text-v4-text-secondary mb-5 max-w-2xl mx-auto">
               Moverz évalue automatiquement chaque déménageur selon 3 analyses de risque /100 (expérience client, financier, juridique) 
               + standardise les volumes pour des devis réellement comparables. Alertes = exclusion automatique.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
               <a
                 href={buildTunnelUrl({ from: "criteres-choisir-demenageur-cta" })}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-[#1E293B] hover:shadow-xl transition-all"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-v4-text px-8 py-4 text-base font-semibold text-white shadow-lg hover:opacity-90 hover:shadow-xl transition-all"
               >
                 <span>Obtenir jusqu'à 5 devis vérifiés</span>
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -536,44 +536,44 @@ export default function CriteresChoisirDemenageurPage() {
               </a>
               <a
                 href="/pourquoi-moverz/"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-white border border-[#E5E7EB] px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/50 hover:shadow-sm transition-all"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-white border border-v4-border px-6 py-3 text-sm font-semibold text-v4-text hover:border-brand-turquoise/50 hover:shadow-sm transition-all"
               >
                 <span>Pourquoi Moverz ?</span>
               </a>
             </div>
-            <p className="text-xs text-[#6B7280] mt-4">
+            <p className="text-xs text-v4-text-secondary mt-4">
               100% gratuit · Dossier anonyme · Devis sous 5-7 jours · Note 4.9/5
             </p>
           </div>
 
           {/* CTA secondaire */}
           <div className="grid gap-4 md:grid-cols-2">
-            <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 flex flex-col justify-between">
+            <div className="rounded-2xl border border-v4-border bg-white p-6 flex flex-col justify-between">
               <div>
-                <p className="text-sm font-semibold text-[#0F172A]">Estimation de volume précise</p>
-                <p className="text-xs text-[#6B7280] mt-1">
+                <p className="text-sm font-semibold text-v4-text">Estimation de volume précise</p>
+                <p className="text-xs text-v4-text-secondary mt-1">
                   IA Moverz = 1 minute, précision 90-95%, évite les surcoûts jour J.
                 </p>
               </div>
               <a
                 href="/blog/estimer-volume-demenagement-guide-complet/"
-                className="mt-3 text-sm font-semibold text-[#6BCFCF] hover:text-[#2B7A78] underline inline-flex items-center gap-1"
+                className="mt-3 text-sm font-semibold text-v4-accent hover:text-v4-accent underline inline-flex items-center gap-1"
               >
                 <span>Voir le guide complet</span>
                 <span>→</span>
               </a>
             </div>
             
-            <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 flex flex-col justify-between">
+            <div className="rounded-2xl border border-v4-border bg-white p-6 flex flex-col justify-between">
               <div>
-                <p className="text-sm font-semibold text-[#0F172A]">Comparer efficacement les devis</p>
-                <p className="text-xs text-[#6B7280] mt-1">
+                <p className="text-sm font-semibold text-v4-text">Comparer efficacement les devis</p>
+                <p className="text-xs text-v4-text-secondary mt-1">
                   7 éléments à vérifier pour comparer des devis de déménagement.
                 </p>
               </div>
               <a
                 href="/blog/comparer-devis-demenagement-guide/"
-                className="mt-3 text-sm font-semibold text-[#6BCFCF] hover:text-[#2B7A78] underline inline-flex items-center gap-1"
+                className="mt-3 text-sm font-semibold text-v4-accent hover:text-v4-accent underline inline-flex items-center gap-1"
               >
                 <span>Voir le guide</span>
                 <span>→</span>

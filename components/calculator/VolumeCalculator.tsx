@@ -87,11 +87,11 @@ export default function VolumeCalculator() {
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center space-y-4 mb-12">
-          <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-2 text-sm font-semibold text-[#0F172A]">
-            <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
+          <div className="inline-flex items-center gap-2 rounded-full bg-v4-accent/10 px-4 py-2 text-sm font-semibold text-v4-text">
+            <span className="h-2 w-2 rounded-full bg-v4-accent" />
             Outil gratuit
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-[#0F172A]">
+          <h1 className="text-4xl md:text-6xl font-bold text-v4-text">
             Calculateur de Volume
           </h1>
           <p className="text-lg text-[#1E293B]/70 max-w-3xl mx-auto">
@@ -104,7 +104,7 @@ export default function VolumeCalculator() {
           <div className="lg:col-span-2 space-y-8">
             {/* Housing Type */}
             <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
-              <h2 className="text-2xl font-bold text-[#0F172A] mb-6">
+              <h2 className="text-2xl font-bold text-v4-text mb-6">
                 1. Type de logement
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
@@ -114,11 +114,11 @@ export default function VolumeCalculator() {
                     onClick={() => setHousingType(type)}
                     className={`p-4 rounded-xl border-2 transition-all ${
                       housingType === type
-                        ? "border-[#6BCFCF] bg-[#6BCFCF]/10"
-                        : "border-[#E3E5E8] hover:border-[#6BCFCF]/50"
+                        ? "border-v4-accent bg-v4-accent/10"
+                        : "border-v4-border hover:border-brand-turquoise/50"
                     }`}
                   >
-                    <p className="text-sm font-semibold text-[#0F172A] capitalize">
+                    <p className="text-sm font-semibold text-v4-text capitalize">
                       {type.replace("t", "T")}
                     </p>
                     <p className="text-xs text-[#1E293B]/60 mt-1">
@@ -131,7 +131,7 @@ export default function VolumeCalculator() {
 
             {/* Furniture */}
             <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
-              <h2 className="text-2xl font-bold text-[#0F172A] mb-6">
+              <h2 className="text-2xl font-bold text-v4-text mb-6">
                 2. Ajoutez vos meubles
               </h2>
 
@@ -149,7 +149,7 @@ export default function VolumeCalculator() {
                     onClick={() => setActiveCategory(cat.id)}
                     className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
                       activeCategory === cat.id
-                        ? "bg-[#0F172A] text-white"
+                        ? "bg-v4-text text-white"
                         : "bg-[#F8F9FA] text-[#1E293B] hover:bg-[#E3E5E8]"
                     }`}
                   >
@@ -167,19 +167,19 @@ export default function VolumeCalculator() {
                       key={item.id}
                       className={`p-4 rounded-xl border-2 transition-all ${
                         qty > 0
-                          ? "border-[#6BCFCF] bg-[#6BCFCF]/5"
-                          : "border-[#E3E5E8]"
+                          ? "border-v4-accent bg-v4-accent/5"
+                          : "border-v4-border"
                       }`}
                     >
                       <div className="flex items-start justify-between mb-2">
                         <span className="text-2xl">{item.icon}</span>
                         {qty > 0 && (
-                          <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#6BCFCF] text-white text-xs font-bold">
+                          <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-v4-accent text-white text-xs font-bold">
                             {qty}
                           </span>
                         )}
                       </div>
-                      <p className="text-sm font-medium text-[#0F172A] mb-1">
+                      <p className="text-sm font-medium text-v4-text mb-1">
                         {item.name}
                       </p>
                       <p className="text-xs text-[#1E293B]/60 mb-3">
@@ -189,14 +189,14 @@ export default function VolumeCalculator() {
                         {qty > 0 && (
                           <button
                             onClick={() => decreaseFurniture(item.id)}
-                            className="flex-1 py-1.5 rounded-lg bg-[#E3E5E8] text-[#0F172A] text-sm font-medium hover:bg-[#D1D5DB] transition-colors"
+                            className="flex-1 py-1.5 rounded-lg bg-[#E3E5E8] text-v4-text text-sm font-medium hover:bg-[#D1D5DB] transition-colors"
                           >
                             −
                           </button>
                         )}
                         <button
                           onClick={() => toggleFurniture(item.id)}
-                          className="flex-1 py-1.5 rounded-lg bg-[#0F172A] text-white text-sm font-medium hover:bg-[#1E293B] transition-colors"
+                          className="flex-1 py-1.5 rounded-lg bg-v4-text text-white text-sm font-medium hover:opacity-90 transition-colors"
                         >
                           +
                         </button>
@@ -210,7 +210,7 @@ export default function VolumeCalculator() {
 
           {/* Right: Result */}
           <div className="lg:col-span-1">
-            <div className="sticky top-24 bg-gradient-to-br from-[#0F172A] to-[#1E293B] rounded-2xl shadow-2xl p-8 text-white">
+            <div className="sticky top-24 bg-gradient-to-br from-v4-text to-[#1E293B] rounded-2xl shadow-2xl p-8 text-white">
               <h3 className="text-lg font-semibold mb-6">Estimation</h3>
               
               <div className="space-y-4 mb-8">
@@ -226,7 +226,7 @@ export default function VolumeCalculator() {
                   <div className="flex justify-between items-end">
                     <span className="text-sm text-white/70">Volume total</span>
                     <div className="text-right">
-                      <p className="text-4xl font-bold text-[#6BCFCF]">
+                      <p className="text-4xl font-bold text-v4-accent">
                         {totalVolume}
                       </p>
                       <p className="text-sm text-white/70">m³</p>
@@ -249,7 +249,7 @@ export default function VolumeCalculator() {
               {/* CTA */}
               <a
                 href={buildTunnelUrl({ from: "/calculateur-volume-demenagement/", estimatedVolume: totalVolume })}
-                className="block w-full text-center py-4 rounded-xl bg-[#6BCFCF] text-[#0F172A] font-semibold hover:bg-[#A8E8E8] transition-colors"
+                className="block w-full text-center py-4 rounded-xl bg-v4-accent text-v4-text font-semibold hover:bg-[#A8E8E8] transition-colors"
               >
                 Obtenir des devis →
               </a>

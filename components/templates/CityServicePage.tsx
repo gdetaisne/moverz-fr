@@ -65,7 +65,7 @@ export function CityServicePage({
 
   return (
     <main className="bg-white">
-      <div className="bg-[#0F172A]">
+      <div className="bg-v4-text">
         <div className="container max-w-7xl pt-6">
           <Breadcrumbs
             items={[
@@ -80,7 +80,7 @@ export function CityServicePage({
 
       {/* Hero */}
       <section className="relative overflow-hidden text-white">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-v4-text via-[#1E293B] to-v4-text" />
         <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-8 md:py-24">
           <div className="mb-6 max-w-4xl mx-auto">
             <a
@@ -94,7 +94,7 @@ export function CityServicePage({
 
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-v4-accent" />
               {badge}
             </div>
 
@@ -109,7 +109,7 @@ export function CityServicePage({
             <div className="pt-3">
               <a
                 href={buildTunnelUrl({ citySlug, from: fromPath })}
-                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#F3F4F6] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-v4-text shadow-lg hover:bg-[#F3F4F6] transition-colors"
               >
                 <span>Recevoir des devis comparables</span>
                 <span className="text-lg leading-none">→</span>
@@ -136,16 +136,16 @@ export function CityServicePage({
       <section className="py-12 md:py-20 bg-gradient-to-br from-[#fdfeff] via-[#f9fdff] to-[#f5fbfc]">
         <div className="container mx-auto max-w-5xl px-4 space-y-8">
           {/* Bloc local (anti-template) */}
-          <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 space-y-4">
+          <div className="rounded-2xl border border-v4-border bg-white p-6 md:p-8 space-y-4">
             <div className="text-center space-y-2">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">Local</p>
-              <h2 className="text-xl md:text-2xl font-bold text-[#0F172A]">{insights.title}</h2>
-              <p className="text-sm text-[#6B7280]">Quelques précisions suffisent pour fiabiliser le devis (et éviter les surprises).</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-v4-accent">Local</p>
+              <h2 className="text-xl md:text-2xl font-bold text-v4-text">{insights.title}</h2>
+              <p className="text-sm text-v4-text-secondary">Quelques précisions suffisent pour fiabiliser le devis (et éviter les surprises).</p>
             </div>
 
             <div className="space-y-3">
               {insights.paragraphs.map((p, i) => (
-                <p key={i} className="text-sm md:text-base text-[#6B7280] leading-relaxed">
+                <p key={i} className="text-sm md:text-base text-v4-text-secondary leading-relaxed">
                   {p}
                 </p>
               ))}
@@ -153,9 +153,9 @@ export function CityServicePage({
 
             <div className="grid gap-2">
               {insights.bullets.map((b, i) => (
-                <div key={i} className="flex gap-2 text-sm md:text-base text-[#0F172A]">
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#6BCFCF] shrink-0" />
-                  <span className="text-[#0F172A]/90">{b}</span>
+                <div key={i} className="flex gap-2 text-sm md:text-base text-v4-text">
+                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-v4-accent shrink-0" />
+                  <span className="text-v4-text/90">{b}</span>
                 </div>
               ))}
             </div>
@@ -165,30 +165,30 @@ export function CityServicePage({
             <div className="text-center">
               <a
                 href={buildTunnelUrl({ citySlug, from: fromPath })}
-                className="inline-flex items-center justify-center rounded-full border border-[#6BCFCF] bg-[#6BCFCF] px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[#2B7A78] hover:border-[#2B7A78]"
+                className="inline-flex items-center justify-center rounded-full border border-v4-accent bg-v4-accent px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-turquoise hover:border-[#2B7A78]"
               >
                 Comparer des devis (gratuit)
               </a>
-              <p className="mt-2 text-xs text-[#6B7280]">Sans spam · Sans engagement</p>
+              <p className="mt-2 text-xs text-v4-text-secondary">Sans spam · Sans engagement</p>
             </div>
           </div>
 
           {sections.map((s) => (
-            <div key={s.title} className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 space-y-4">
-              <h2 className="text-xl md:text-2xl font-bold text-[#0F172A]">{s.title}</h2>
+            <div key={s.title} className="rounded-2xl border border-v4-border bg-white p-6 md:p-8 space-y-4">
+              <h2 className="text-xl md:text-2xl font-bold text-v4-text">{s.title}</h2>
               <div className="space-y-3">
                 {s.paragraphs.map((p, i) => (
-                  <p key={i} className="text-sm md:text-base text-[#6B7280] leading-relaxed">
+                  <p key={i} className="text-sm md:text-base text-v4-text-secondary leading-relaxed">
                     {p}
                   </p>
                 ))}
               </div>
               {s.bullets && s.bullets.length > 0 && (
-                <ul className="grid gap-2 text-sm md:text-base text-[#0F172A]">
+                <ul className="grid gap-2 text-sm md:text-base text-v4-text">
                   {s.bullets.map((b, i) => (
                     <li key={i} className="flex gap-2">
-                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#6BCFCF] shrink-0" />
-                      <span className="text-[#0F172A]/90">{b}</span>
+                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-v4-accent shrink-0" />
+                      <span className="text-v4-text/90">{b}</span>
                     </li>
                   ))}
                 </ul>

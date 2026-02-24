@@ -151,7 +151,7 @@ export function CorridorPage({
         about={`Déménagement ${originCityName} vers ${destination}`}
       />
       
-      <div className="bg-[#0F172A]">
+      <div className="bg-v4-text">
         <div className="container max-w-7xl pt-6">
           <Breadcrumbs
             items={[
@@ -165,7 +165,7 @@ export function CorridorPage({
       </div>
       {/* Hero */}
       <section className="relative overflow-hidden text-white">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-v4-text via-[#1E293B] to-v4-text" />
 
         <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-8 md:py-28">
           {/* Breadcrumb / lien retour ville */}
@@ -196,28 +196,28 @@ export function CorridorPage({
           <div className="max-w-4xl mx-auto text-center space-y-6">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-v4-accent" />
               Longue distance
             </div>
 
             {/* Titre */}
             <h1 className="text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl">
               {originCityName} → {destination}<br />
-              <span className="text-[#6BCFCF]">Devis gratuits en 3 min</span>
+              <span className="text-v4-accent">Devis gratuits en 3 min</span>
             </h1>
 
             {/* Infos rapides */}
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm md:text-base text-white/80">
               <span className="flex items-center gap-2">
-                <span className="text-[#6BCFCF]">📍</span> {distance}
+                <span className="text-v4-accent">📍</span> {distance}
               </span>
               <span>·</span>
               <span className="flex items-center gap-2">
-                <span className="text-[#6BCFCF]">⏱</span> ~{tempsMoyen}
+                <span className="text-v4-accent">⏱</span> ~{tempsMoyen}
               </span>
               <span>·</span>
               <span className="flex items-center gap-2">
-                <span className="text-[#6BCFCF]">📅</span> Idéal {periodeConseillee}
+                <span className="text-v4-accent">📅</span> Idéal {periodeConseillee}
               </span>
             </div>
 
@@ -225,7 +225,7 @@ export function CorridorPage({
             <div className="pt-4">
               <a
                 href={quoteUrl}
-                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#F3F4F6] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-v4-text shadow-lg hover:bg-[#F3F4F6] transition-colors"
               >
                 <span>Comparer les déménageurs</span>
                 <span className="text-lg leading-none">→</span>
@@ -239,11 +239,11 @@ export function CorridorPage({
       <section className="py-12 md:py-20 bg-gradient-to-br from-[#fdfeff] via-[#f9fdff] to-[#f5fbfc]">
         <div className="container mx-auto max-w-6xl px-4 space-y-10">
           <div className="text-center space-y-4">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-v4-accent/10 px-4 py-1.5 text-xs font-medium text-v4-accent">
+              <span className="h-1.5 w-1.5 rounded-full bg-v4-accent" />
               Prix indicatifs
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
+            <h2 className="text-3xl md:text-4xl font-bold text-v4-text">
               Combien coûte un déménagement<br />{originCityName} → {destination} ?
             </h2>
           </div>
@@ -252,37 +252,37 @@ export function CorridorPage({
             {prixIndicatifs.map((prix, index) => (
               <div
                 key={index}
-                className="rounded-2xl border border-[#E5E7EB] bg-white p-6 space-y-3"
+                className="rounded-2xl border border-v4-border bg-white p-6 space-y-3"
               >
-                <div className="text-sm font-semibold text-[#6BCFCF] uppercase tracking-wider">
+                <div className="text-sm font-semibold text-v4-accent uppercase tracking-wider">
                   {prix.type}
                 </div>
-                <div className="text-3xl font-bold text-[#0F172A]">{prix.prix}</div>
-                <p className="text-sm text-[#6B7280]">{prix.description}</p>
+                <div className="text-3xl font-bold text-v4-text">{prix.prix}</div>
+                <p className="text-sm text-v4-text-secondary">{prix.description}</p>
               </div>
             ))}
           </div>
 
           <div className="text-center">
-            <p className="text-sm text-[#6B7280] max-w-2xl mx-auto">
+            <p className="text-sm text-v4-text-secondary max-w-2xl mx-auto">
               Prix indicatifs pour {distance} de trajet. Le prix final dépend du volume exact, des accès et de la période.
             </p>
           </div>
 
           {/* Maillage interne : guides prix liés */}
           {(originPricePost || destPricePost) && (
-            <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 text-center space-y-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+            <div className="rounded-2xl border border-v4-border bg-white p-6 md:p-8 text-center space-y-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-v4-accent">
                 Guides liés
               </p>
-              <p className="text-sm text-[#6B7280]">
+              <p className="text-sm text-v4-text-secondary">
                 Pour aller plus loin sur les tarifs et la lecture des devis.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                 {originPricePost && (
                   <a
                     href={`/blog/${originPricePost.slug}/`}
-                    className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+                    className="inline-flex items-center gap-2 rounded-full bg-v4-text px-6 py-3 text-sm font-semibold text-white hover:opacity-90 transition-colors"
                   >
                     <span>Prix à {originCityName}</span>
                     <span>→</span>
@@ -291,7 +291,7 @@ export function CorridorPage({
                 {destPricePost && (
                   <a
                     href={`/blog/${destPricePost.slug}/`}
-                    className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                    className="inline-flex items-center gap-2 rounded-full border border-v4-border bg-white px-6 py-3 text-sm font-semibold text-v4-text hover:border-v4-accent/60 hover:bg-[#FAFAFA] transition-colors"
                   >
                     <span>Prix à {destinationCity?.nameCapitalized}</span>
                     <span>→</span>
@@ -307,11 +307,11 @@ export function CorridorPage({
       <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto max-w-4xl px-4 space-y-8">
           <div className="text-center space-y-4">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-v4-accent/10 px-4 py-1.5 text-xs font-medium text-v4-accent">
+              <span className="h-1.5 w-1.5 rounded-full bg-v4-accent" />
               Accès & Contraintes
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
+            <h2 className="text-3xl md:text-4xl font-bold text-v4-text">
               Arriver à {destination}
             </h2>
           </div>
@@ -326,11 +326,11 @@ export function CorridorPage({
         <section className="py-12 md:py-20 bg-gradient-to-br from-[#fdfeff] via-[#f9fdff] to-[#f5fbfc]">
           <div className="container mx-auto max-w-4xl px-4 space-y-10">
             <div className="text-center space-y-4">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+              <div className="inline-flex items-center gap-2 rounded-full bg-v4-accent/10 px-4 py-1.5 text-xs font-medium text-v4-accent">
+                <span className="h-1.5 w-1.5 rounded-full bg-v4-accent" />
                 Conseils pratiques
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
+              <h2 className="text-3xl md:text-4xl font-bold text-v4-text">
                 Réussir votre déménagement
               </h2>
             </div>
@@ -339,9 +339,9 @@ export function CorridorPage({
               {conseils.map((conseil, index) => (
                 <div
                   key={index}
-                  className="flex gap-3 rounded-xl border border-[#E5E7EB] bg-white p-4"
+                  className="flex gap-3 rounded-xl border border-v4-border bg-white p-4"
                 >
-                  <span className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-[#6BCFCF]/10 text-[#6BCFCF] text-sm font-bold">
+                  <span className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-v4-accent/10 text-v4-accent text-sm font-bold">
                     ✓
                   </span>
                   <p className="text-sm text-[#4b5c6b]">{conseil}</p>
@@ -356,11 +356,11 @@ export function CorridorPage({
       <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto max-w-4xl px-4 space-y-10">
           <div className="text-center space-y-4">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-v4-accent/10 px-4 py-1.5 text-xs font-medium text-v4-accent">
+              <span className="h-1.5 w-1.5 rounded-full bg-v4-accent" />
               Questions fréquentes
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
+            <h2 className="text-3xl md:text-4xl font-bold text-v4-text">
               FAQ {originCityName} → {destination}
             </h2>
           </div>
@@ -368,10 +368,10 @@ export function CorridorPage({
           <div className="space-y-6">
             {faq.map((item, index) => (
               <div key={index} className="space-y-2">
-                <h3 className="text-base md:text-lg font-bold text-[#0F172A]">
+                <h3 className="text-base md:text-lg font-bold text-v4-text">
                   {item.question}
                 </h3>
-                <p className="text-sm md:text-base text-[#6B7280] leading-relaxed">
+                <p className="text-sm md:text-base text-v4-text-secondary leading-relaxed">
                   {item.answer}
                 </p>
               </div>
@@ -380,11 +380,11 @@ export function CorridorPage({
 
           {/* Maillage SEO : "à lire ensuite" (2 liens max) */}
           <div className="pt-2">
-            <div className="rounded-2xl border border-[#E5E7EB] bg-gradient-to-br from-white to-[#FAFAFA] p-6 md:p-8 text-center space-y-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+            <div className="rounded-2xl border border-v4-border bg-gradient-to-br from-white to-[#FAFAFA] p-6 md:p-8 text-center space-y-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-v4-accent">
                 À lire ensuite
               </p>
-              <p className="text-sm text-[#6B7280] max-w-2xl mx-auto">
+              <p className="text-sm text-v4-text-secondary max-w-2xl mx-auto">
                 Deux ressources clés pour comprendre les prix et préparer votre déménagement longue distance.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -394,7 +394,7 @@ export function CorridorPage({
                       ? `/blog/${longDistancePricePost.slug}/`
                       : "/blog/prix-et-devis/"
                   }
-                  className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full bg-v4-text px-6 py-3 text-sm font-semibold text-white hover:opacity-90 transition-colors"
                 >
                   <span>
                     {longDistancePricePost
@@ -405,7 +405,7 @@ export function CorridorPage({
                 </a>
                 <a
                   href="/blog/checklists-et-guides/"
-                  className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-white transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full border border-v4-border bg-white px-6 py-3 text-sm font-semibold text-v4-text hover:border-v4-accent/60 hover:bg-white transition-colors"
                 >
                   <span>Checklists & guides</span>
                   <span>→</span>
@@ -417,10 +417,10 @@ export function CorridorPage({
       </section>
 
       {/* CTA Final */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-v4-text via-[#1E293B] to-v4-text text-white">
         <div className="container mx-auto max-w-4xl px-4 text-center space-y-6">
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+            <span className="h-1.5 w-1.5 rounded-full bg-v4-accent" />
             Gratuit · Sans spam · Sans engagement
           </div>
 
@@ -435,7 +435,7 @@ export function CorridorPage({
           <div className="pt-4">
             <a
               href={quoteUrl}
-              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#F3F4F6] transition-colors"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-v4-text shadow-lg hover:bg-[#F3F4F6] transition-colors"
             >
               <span>Lancer mon comparateur</span>
               <span className="text-lg leading-none">→</span>

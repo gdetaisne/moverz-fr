@@ -113,7 +113,7 @@ export default function BlogIndexClient() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Premium */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white">
+      <section className="relative overflow-hidden bg-gradient-to-br from-v4-text via-[#1E293B] to-v4-text text-white">
         {/* Animated background */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-turquoise/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-turquoise/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }} />

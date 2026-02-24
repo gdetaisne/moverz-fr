@@ -37,7 +37,7 @@ export function HubQuartiersPage({
 
   return (
     <main className="bg-white">
-      <div className="bg-[#0F172A]">
+      <div className="bg-v4-text">
         <div className="container max-w-6xl pt-6">
           <Breadcrumbs
             items={[
@@ -51,20 +51,20 @@ export function HubQuartiersPage({
       </div>
       {/* Hero */}
       <section className="relative overflow-hidden text-white">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-v4-text via-[#1E293B] to-v4-text" />
 
         <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-8 md:py-28">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-v4-accent" />
               {cityName}
             </div>
 
             {/* Titre */}
             <h1 className="text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl">
               Quartiers & communes<br />
-              <span className="text-[#6BCFCF]">Déménagement à {cityName}</span>
+              <span className="text-v4-accent">Déménagement à {cityName}</span>
             </h1>
 
             {/* Sous-titre */}
@@ -76,7 +76,7 @@ export function HubQuartiersPage({
             <div className="pt-4">
               <a
                 href={quoteUrl}
-                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#F3F4F6] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-v4-text shadow-lg hover:bg-[#F3F4F6] transition-colors"
               >
                 <span>Comparer les déménageurs</span>
                 <span className="text-lg leading-none">→</span>
@@ -90,14 +90,14 @@ export function HubQuartiersPage({
       <section className="py-12 md:py-20 bg-gradient-to-br from-[#fdfeff] via-[#f9fdff] to-[#f5fbfc]">
         <div className="container mx-auto max-w-6xl px-4 space-y-10">
           <div className="text-center space-y-4">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-v4-accent/10 px-4 py-1.5 text-xs font-medium text-v4-accent">
+              <span className="h-1.5 w-1.5 rounded-full bg-v4-accent" />
               Zones couvertes
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
+            <h2 className="text-3xl md:text-4xl font-bold text-v4-text">
               Tous nos quartiers à {cityName}
             </h2>
-            <p className="text-sm md:text-base text-[#6B7280] max-w-2xl mx-auto">
+            <p className="text-sm md:text-base text-v4-text-secondary max-w-2xl mx-auto">
               {neighborhoods.length} quartiers couverts par nos déménageurs partenaires
             </p>
           </div>
@@ -107,20 +107,20 @@ export function HubQuartiersPage({
               <a
                 key={neighborhood.slug}
                 href={`/${citySlug}/${neighborhood.slug}/`}
-                className="group rounded-2xl border border-[#E5E7EB] bg-white p-6 hover:border-[#6BCFCF] hover:shadow-lg transition-all"
+                className="group rounded-2xl border border-v4-border bg-white p-6 hover:border-v4-accent hover:shadow-lg transition-all"
               >
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex-1">
-                    <h3 className="text-lg font-bold text-[#0F172A] group-hover:text-[#6BCFCF] transition-colors mb-2">
+                    <h3 className="text-lg font-bold text-v4-text group-hover:text-v4-accent transition-colors mb-2">
                       {neighborhood.name}
                     </h3>
                     {neighborhood.description && (
-                      <p className="text-sm text-[#6B7280]">
+                      <p className="text-sm text-v4-text-secondary">
                         {neighborhood.description}
                       </p>
                     )}
                   </div>
-                  <span className="text-[#6BCFCF] group-hover:translate-x-1 transition-transform">
+                  <span className="text-v4-accent group-hover:translate-x-1 transition-transform">
                     →
                   </span>
                 </div>
@@ -130,17 +130,17 @@ export function HubQuartiersPage({
 
           {/* Maillage interne : ressources utiles */}
           <div className="pt-6">
-            <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8 text-center space-y-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+            <div className="rounded-2xl border border-v4-border bg-white p-6 md:p-8 text-center space-y-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-v4-accent">
                 Ressources utiles
               </p>
-              <p className="text-sm text-[#6B7280] max-w-2xl mx-auto">
+              <p className="text-sm text-v4-text-secondary max-w-2xl mx-auto">
                 Avant de comparer vos devis, voici les pages les plus utiles pour préparer votre déménagement à {cityName}.
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3">
                 <a
                   href={`/demenagement/${citySlug}/`}
-                  className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1E293B] transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full bg-v4-text px-6 py-3 text-sm font-semibold text-white hover:opacity-90 transition-colors"
                 >
                   <span>Guide déménagement {cityName}</span>
                   <span>→</span>
@@ -148,7 +148,7 @@ export function HubQuartiersPage({
                 {pricePost ? (
                   <a
                     href={`/blog/${pricePost.slug}/`}
-                    className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                    className="inline-flex items-center gap-2 rounded-full border border-v4-border bg-white px-6 py-3 text-sm font-semibold text-v4-text hover:border-v4-accent/60 hover:bg-[#FAFAFA] transition-colors"
                   >
                     <span>Prix à {cityName}</span>
                     <span>→</span>
@@ -156,7 +156,7 @@ export function HubQuartiersPage({
                 ) : (
                   <a
                     href="/blog/prix-et-devis/"
-                    className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                    className="inline-flex items-center gap-2 rounded-full border border-v4-border bg-white px-6 py-3 text-sm font-semibold text-v4-text hover:border-v4-accent/60 hover:bg-[#FAFAFA] transition-colors"
                   >
                     <span>Guides prix & devis</span>
                     <span>→</span>
@@ -164,14 +164,14 @@ export function HubQuartiersPage({
                 )}
                 <a
                   href="/blog/checklists-et-guides/"
-                  className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full border border-v4-border bg-white px-6 py-3 text-sm font-semibold text-v4-text hover:border-v4-accent/60 hover:bg-[#FAFAFA] transition-colors"
                 >
                   <span>Checklists & guides</span>
                   <span>→</span>
                 </a>
                 <a
                   href="/blog/conseils-demenagement/"
-                  className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] hover:border-[#6BCFCF]/60 hover:bg-[#FAFAFA] transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full border border-v4-border bg-white px-6 py-3 text-sm font-semibold text-v4-text hover:border-v4-accent/60 hover:bg-[#FAFAFA] transition-colors"
                 >
                   <span>Conseils déménagement</span>
                   <span>→</span>
@@ -186,48 +186,48 @@ export function HubQuartiersPage({
       <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto max-w-4xl px-4 space-y-10">
           <div className="text-center space-y-4">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-v4-accent/10 px-4 py-1.5 text-xs font-medium text-v4-accent">
+              <span className="h-1.5 w-1.5 rounded-full bg-v4-accent" />
               Pourquoi Moverz
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
+            <h2 className="text-3xl md:text-4xl font-bold text-v4-text">
               Pourquoi comparer avec Moverz ?
             </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center space-y-3">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#6BCFCF]/10 text-[#6BCFCF] text-xl font-bold">
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-v4-accent/10 text-v4-accent text-xl font-bold">
                 ✓
               </div>
-              <h3 className="text-base font-bold text-[#0F172A]">
+              <h3 className="text-base font-bold text-v4-text">
                 Déménageurs contrôlés
               </h3>
-              <p className="text-sm text-[#6B7280]">
+              <p className="text-sm text-v4-text-secondary">
                 Assurances, solvabilité, historique vérifié
               </p>
             </div>
 
             <div className="text-center space-y-3">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#6BCFCF]/10 text-[#6BCFCF] text-xl font-bold">
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-v4-accent/10 text-v4-accent text-xl font-bold">
                 🤖
               </div>
-              <h3 className="text-base font-bold text-[#0F172A]">
+              <h3 className="text-base font-bold text-v4-text">
                 IA volume en 1 minute
               </h3>
-              <p className="text-sm text-[#6B7280]">
+              <p className="text-sm text-v4-text-secondary">
                 Estimation précise de votre cubage
               </p>
             </div>
 
             <div className="text-center space-y-3">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#6BCFCF]/10 text-[#6BCFCF] text-xl font-bold">
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-v4-accent/10 text-v4-accent text-xl font-bold">
                 📊
               </div>
-              <h3 className="text-base font-bold text-[#0F172A]">
+              <h3 className="text-base font-bold text-v4-text">
                 Devis comparables
               </h3>
-              <p className="text-sm text-[#6B7280]">
+              <p className="text-sm text-v4-text-secondary">
                 Même volume, même base pour tous
               </p>
             </div>
@@ -236,10 +236,10 @@ export function HubQuartiersPage({
       </section>
 
       {/* CTA Final */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-v4-text via-[#1E293B] to-v4-text text-white">
         <div className="container mx-auto max-w-4xl px-4 text-center space-y-6">
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+            <span className="h-1.5 w-1.5 rounded-full bg-v4-accent" />
             Gratuit · Sans spam · Sans engagement
           </div>
 
@@ -254,7 +254,7 @@ export function HubQuartiersPage({
           <div className="pt-4">
             <a
               href={quoteUrl}
-              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-[#0F172A] shadow-lg hover:bg-[#F3F4F6] transition-colors"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-v4-text shadow-lg hover:bg-[#F3F4F6] transition-colors"
             >
               <span>Lancer mon comparateur</span>
               <span className="text-lg leading-none">→</span>

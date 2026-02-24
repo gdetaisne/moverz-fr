@@ -163,7 +163,7 @@ function CityAutocomplete({
 
   return (
     <div ref={wrapperRef} className="relative">
-      <label className="block text-sm font-medium text-[#0F172A] mb-1">{label}</label>
+      <label className="block text-sm font-medium text-v4-text mb-1">{label}</label>
       <div className="relative">
         <input
           type="text"
@@ -172,12 +172,12 @@ function CityAutocomplete({
           onFocus={() => { setFocused(true); suggestions.length > 0 && setOpen(true); }}
           onBlur={() => setFocused(false)}
           placeholder={placeholder}
-          className={`w-full rounded-lg border bg-white px-3 py-2.5 pr-9 text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all ${
+          className={`w-full rounded-lg border bg-white px-3 py-2.5 pr-9 text-sm text-v4-text focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all ${
             unrecognized
               ? "border-amber-400 focus:border-amber-400 focus:ring-amber-200/50 shadow-[0_0_0_3px_rgba(251,191,36,0.1)]"
               : value
-                ? "border-emerald-400 focus:border-[#6BCFCF] focus:ring-[#6BCFCF]/40 shadow-[0_0_0_3px_rgba(16,185,129,0.1)]"
-                : "border-[#D1D5DB] focus:border-[#6BCFCF] focus:ring-[#6BCFCF]/40"
+                ? "border-emerald-400 focus:border-v4-accent focus:ring-[#6BCFCF]/40 shadow-[0_0_0_3px_rgba(16,185,129,0.1)]"
+                : "border-[#D1D5DB] focus:border-v4-accent focus:ring-[#6BCFCF]/40"
           }`}
         />
         {statusIcon}
@@ -186,7 +186,7 @@ function CityAutocomplete({
         <p className="mt-1 text-xs text-amber-600">Sélectionnez une ville dans la liste</p>
       )}
       {open && suggestions.length > 0 && (
-        <ul className="absolute z-50 mt-1 w-full rounded-lg border border-[#E5E7EB] bg-white shadow-lg max-h-48 overflow-y-auto">
+        <ul className="absolute z-50 mt-1 w-full rounded-lg border border-v4-border bg-white shadow-lg max-h-48 overflow-y-auto">
           {suggestions.map((s, i) => (
             <li
               key={`${s.postcode}-${i}`}
@@ -243,7 +243,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
   if (estimate) {
     return (
       <div className="rounded-3xl bg-white/90 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-white/40 p-8 space-y-5">
-        <p className="text-xs font-semibold uppercase tracking-widest text-[#6BCFCF]">
+        <p className="text-xs font-semibold uppercase tracking-widest text-v4-accent">
           Estimation indicative
         </p>
 
@@ -251,7 +251,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
           <p className="text-sm text-[#64748B]">
             {origin!.city} → {destination!.city} · {surface} m²
           </p>
-          <p className="text-4xl font-bold text-[#0F172A]">
+          <p className="text-4xl font-bold text-v4-text">
             {estimate.min.toLocaleString("fr-FR")} € – {estimate.max.toLocaleString("fr-FR")} €
           </p>
           <p className="text-xs text-[#94A3B8]">Formule standard · Estimation non contractuelle</p>
@@ -259,7 +259,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
 
         <a
           href={deepLink}
-          className="block w-full rounded-xl bg-gradient-to-r from-[#0F172A] to-[#1E293B] py-3.5 text-center text-sm font-semibold text-white shadow-[0_4px_16px_rgba(15,23,42,0.3)] hover:shadow-[0_8px_24px_rgba(15,23,42,0.4)] hover:scale-[1.02] transition-all duration-200"
+          className="block w-full rounded-xl bg-gradient-to-r from-v4-text to-[#1E293B] py-3.5 text-center text-sm font-semibold text-white shadow-[0_4px_16px_rgba(15,23,42,0.3)] hover:shadow-[0_8px_24px_rgba(15,23,42,0.4)] hover:scale-[1.02] transition-all duration-200"
         >
           Affiner mon budget →
         </a>
@@ -267,7 +267,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
         <button
           type="button"
           onClick={() => setEstimate(null)}
-          className="block w-full text-center text-xs font-medium text-[#64748B] hover:text-[#0F172A] transition-colors"
+          className="block w-full text-center text-xs font-medium text-[#64748B] hover:text-v4-text transition-colors"
         >
           ← Modifier mes infos
         </button>
@@ -278,7 +278,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
   /* ---------- FORM STATE ---------- */
   return (
     <div className="rounded-3xl bg-white/90 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-white/40 p-8 space-y-4">
-      <p className="text-xs font-semibold uppercase tracking-widest text-[#6BCFCF]">
+      <p className="text-xs font-semibold uppercase tracking-widest text-v4-accent">
         Estimez votre budget
       </p>
 
@@ -299,7 +299,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
       />
 
       <div>
-        <label className="block text-sm font-medium text-[#0F172A] mb-1">Surface (m²)</label>
+        <label className="block text-sm font-medium text-v4-text mb-1">Surface (m²)</label>
         <input
           type="number"
           inputMode="numeric"
@@ -308,7 +308,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
           value={surface}
           onChange={(e) => setSurface(e.target.value)}
           placeholder="Ex : 60"
-          className="w-full rounded-lg border border-[#D1D5DB] bg-white px-3 py-2.5 text-sm text-[#0F172A] focus:border-[#6BCFCF] focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]/40 focus:ring-offset-2 transition-all"
+          className="w-full rounded-lg border border-[#D1D5DB] bg-white px-3 py-2.5 text-sm text-v4-text focus:border-v4-accent focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]/40 focus:ring-offset-2 transition-all"
         />
       </div>
 
@@ -328,7 +328,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
         type="button"
         disabled={!canSubmit || loading}
         onClick={handleEstimate}
-        className="w-full rounded-xl bg-gradient-to-r from-[#0F172A] to-[#1E293B] py-3.5 text-sm font-semibold text-white disabled:opacity-40 shadow-[0_4px_16px_rgba(15,23,42,0.3)] hover:shadow-[0_8px_24px_rgba(15,23,42,0.4)] hover:scale-[1.02] transition-all duration-200 disabled:hover:scale-100 disabled:hover:shadow-[0_4px_16px_rgba(15,23,42,0.3)]"
+        className="w-full rounded-xl bg-gradient-to-r from-v4-text to-[#1E293B] py-3.5 text-sm font-semibold text-white disabled:opacity-40 shadow-[0_4px_16px_rgba(15,23,42,0.3)] hover:shadow-[0_8px_24px_rgba(15,23,42,0.4)] hover:scale-[1.02] transition-all duration-200 disabled:hover:scale-100 disabled:hover:shadow-[0_4px_16px_rgba(15,23,42,0.3)]"
       >
         {loading ? "Calcul en cours…" : "Voir mon estimation →"}
       </button>

@@ -21,11 +21,11 @@ export default function WidgetActionSection({
   citySlug,
 }: WidgetActionSectionProps) {
   return (
-    <section className="section relative overflow-hidden bg-gradient-to-br from-[#1E293B] via-[#0F172A] to-[#1E3A5F] text-white">
+    <section className="section relative overflow-hidden text-white" style={{ background: "linear-gradient(to bottom right, #1E293B, var(--color-text), #1E3A5F)" }}>
       {/* Subtle gradient overlays for depth */}
       <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#6BCFCF]/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#2B7A78]/20 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-v4-accent/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-turquoise/20 rounded-full blur-3xl" />
       </div>
       
       <div className="container max-w-5xl relative z-10">
@@ -43,7 +43,7 @@ export default function WidgetActionSection({
                       height={26}
                     />
                   </div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6BCFCF]">
+                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-v4-accent">
                     {eyebrow}
                   </p>
                 </div>
@@ -67,7 +67,7 @@ export default function WidgetActionSection({
                     key={i}
                     className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/90"
                   >
-                    <span className="text-[#6BCFCF]">{item.icon}</span>
+                    <span className="text-v4-accent">{item.icon}</span>
                     {item.label}
                   </span>
                 ))}
@@ -79,7 +79,7 @@ export default function WidgetActionSection({
               <div className="max-w-sm mx-auto text-center">
                 <a
                   href={buildTunnelUrl({ from, devisRange: "3-5", extra: citySlug ? { city: citySlug } : undefined })}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-base font-semibold text-[#0F172A] shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-base font-semibold text-v4-text shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />

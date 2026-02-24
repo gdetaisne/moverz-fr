@@ -65,15 +65,15 @@ export default function HowItWorks() {
   return (
     <div 
       ref={sectionRef}
-      className="relative overflow-hidden space-y-10 rounded-3xl bg-white p-8 md:p-12 lg:p-16 text-[#04163a] shadow-sm border border-[#E3E5E8]"
+      className="relative overflow-hidden space-y-10 rounded-3xl bg-white p-8 md:p-12 lg:p-16 text-v4-text shadow-sm border border-v4-border"
     >
       
       {/* Header avec espacement généreux */}
       <div className="relative space-y-4 text-center">
-        <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#2B7A78]">
+        <p className="text-xs font-bold uppercase tracking-[0.3em] text-v4-accent">
           Processus en 3 étapes
         </p>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#04163a] leading-tight">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-v4-text leading-tight">
           Comment ça marche ?
         </h2>
         <p className="text-base md:text-lg lg:text-xl text-[#4b5c6b] leading-relaxed max-w-2xl mx-auto font-light">
@@ -86,7 +86,7 @@ export default function HowItWorks() {
         {steps.map((step, index) => (
           <div
             key={step.number}
-            className="group relative flex flex-col gap-4 rounded-2xl border border-[#E3E5E8] bg-white p-6 md:p-8 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md hover:border-[#6BCFCF]/40"
+            className="group relative flex flex-col gap-4 rounded-2xl border border-v4-border bg-white p-6 md:p-8 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md hover:border-v4-accent/40"
             style={{ animationDelay: `${index * 100 + 400}ms` }}
           >
             
@@ -94,7 +94,7 @@ export default function HowItWorks() {
               {/* Numéro + Pictogramme combinés */}
               <div className="relative">
                 <div 
-                  className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#6BCFCF]/15 border-2 border-[#6BCFCF]/30 text-[#2B7A78] transition-all duration-200 group-hover:scale-105"
+                  className="flex h-16 w-16 items-center justify-center rounded-2xl bg-v4-accent/15 border-2 border-brand-turquoise-300 text-v4-accent transition-all duration-200 group-hover:scale-105"
                   style={{
                     opacity: isInView ? 1 : 0,
                     transform: isInView ? 'scale(1)' : 'scale(0.8)',
@@ -104,13 +104,13 @@ export default function HowItWorks() {
                   {step.icon}
                 </div>
                 {/* Badge numéro */}
-                <div className="absolute -top-2 -right-2 flex h-7 w-7 items-center justify-center rounded-full bg-[#0F172A] text-xs font-bold text-white shadow-sm">
+                <div className="absolute -top-2 -right-2 flex h-7 w-7 items-center justify-center rounded-full bg-v4-text text-xs font-bold text-white shadow-sm">
                 {step.number}
                 </div>
               </div>
               
               <div className="space-y-2 text-center">
-                <h3 className="text-lg md:text-xl font-bold text-[#04163a] leading-tight">
+                <h3 className="text-lg md:text-xl font-bold text-v4-text leading-tight">
                   {step.title}
                 </h3>
                 <p className="text-sm md:text-base text-[#4b5c6b] leading-relaxed">
@@ -127,7 +127,7 @@ export default function HowItWorks() {
         <a
           href={buildTunnelUrl({ from: "/comment-ca-marche" })}
           rel="nofollow"
-          className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-8 py-4 text-base font-semibold text-white shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+          className="inline-flex items-center gap-2 rounded-full bg-v4-text px-8 py-4 text-base font-semibold text-white shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
           aria-label="Recevez des devis comparables gratuitement"
         >
           <span>Comparez des devis gratuitement</span>

@@ -11,7 +11,7 @@ export default function HowItWorksHero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white py-20 md:py-32">
+    <section className="relative overflow-hidden bg-gradient-to-br from-v4-text via-[#1E293B] to-v4-text text-white py-20 md:py-32">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -39,7 +39,7 @@ export default function HowItWorksHero() {
           {/* Left: Content */}
           <div>
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold mb-8">
-              <span className="h-2 w-2 rounded-full bg-[#6BCFCF]" />
+              <span className="h-2 w-2 rounded-full bg-v4-accent" />
               Processus en 3 étapes
             </div>
 
@@ -54,7 +54,7 @@ export default function HowItWorksHero() {
             {/* CTA */}
             <a
               href={buildTunnelUrl({ from: "comment-ca-marche", devisRange: "3-5" })}
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-base font-semibold text-[#0F172A] shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-base font-semibold text-v4-text shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -66,8 +66,8 @@ export default function HowItWorksHero() {
           {/* Right: Quick steps icons */}
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-              <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[#6BCFCF]/10">
-                <MessageSquare className="w-6 h-6 text-[#6BCFCF]" />
+              <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-v4-accent/10">
+                <MessageSquare className="w-6 h-6 text-v4-accent" />
               </div>
               <div>
                 <p className="font-semibold text-white">1. Décrivez</p>
@@ -76,8 +76,8 @@ export default function HowItWorksHero() {
             </div>
 
             <div className="flex items-center gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-              <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[#6BCFCF]/10">
-                <ClipboardList className="w-6 h-6 text-[#6BCFCF]" />
+              <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-v4-accent/10">
+                <ClipboardList className="w-6 h-6 text-v4-accent" />
               </div>
               <div>
                 <p className="font-semibold text-white">2. Complétez le dossier</p>
@@ -86,8 +86,8 @@ export default function HowItWorksHero() {
             </div>
 
             <div className="flex items-center gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-              <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[#6BCFCF]/10">
-                <CheckCircle className="w-6 h-6 text-[#6BCFCF]" />
+              <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-v4-accent/10">
+                <CheckCircle className="w-6 h-6 text-v4-accent" />
               </div>
               <div>
                 <p className="font-semibold text-white">3. Comparez</p>

@@ -145,7 +145,7 @@ export default function QuartiersGenericPage({ params }: PageProps) {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white">
+      <section className="relative overflow-hidden bg-gradient-to-br from-v4-text via-[#1E293B] to-v4-text text-white">
         <div className="container max-w-5xl py-16 md:py-24">
           <div className="text-center space-y-6">
             <div className="flex items-center justify-center gap-2 text-sm text-white/60">
@@ -175,7 +175,7 @@ export default function QuartiersGenericPage({ params }: PageProps) {
             <div className="pt-4">
               <a
                 href={quoteUrl}
-                className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base md:text-lg font-semibold text-[#0F172A] shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base md:text-lg font-semibold text-v4-text shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
               >
                 <span>Comparer les déménageurs</span>
                 <span className="text-xl">→</span>
@@ -189,16 +189,16 @@ export default function QuartiersGenericPage({ params }: PageProps) {
         <section className="section section-light">
           <div className="container max-w-5xl">
             <div className="text-center mb-12 space-y-4">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+              <div className="inline-flex items-center gap-2 rounded-full bg-v4-accent/10 px-4 py-1.5 text-xs font-medium text-v4-accent">
+                <span className="h-1.5 w-1.5 rounded-full bg-v4-accent" />
                 {isParis ? "20 arrondissements" : `${cityNeighborhoods.length} zones principales`}
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
+              <h2 className="text-3xl md:text-4xl font-bold text-v4-text">
                 {isParis
                   ? "Les 20 arrondissements de Paris"
                   : `Principaux quartiers de ${city.nameCapitalized}`}
               </h2>
-              <p className="text-[#6B7280] max-w-2xl mx-auto">
+              <p className="text-v4-text-secondary max-w-2xl mx-auto">
                 Nos déménageurs connaissent parfaitement ces zones et adaptent leur intervention
                 selon les contraintes locales.
               </p>
@@ -208,21 +208,21 @@ export default function QuartiersGenericPage({ params }: PageProps) {
               {cityNeighborhoods.map((neighborhood) => (
                 <div
                   key={neighborhood}
-                  className="rounded-xl border border-[#E5E7EB] bg-white p-4 hover:border-[#6BCFCF]/50 hover:shadow-md transition-all duration-200"
+                  className="rounded-xl border border-v4-border bg-white p-4 hover:border-brand-turquoise/50 hover:shadow-md transition-all duration-200"
                 >
-                  <p className="font-medium text-[#0F172A]">{neighborhood}</p>
+                  <p className="font-medium text-v4-text">{neighborhood}</p>
                 </div>
               ))}
             </div>
 
-            <div className="mt-12 rounded-2xl border border-[#E5E7EB] bg-gradient-to-br from-white to-[#FAFAFA] p-8">
-              <h3 className="text-xl font-semibold text-[#0F172A] mb-4">
+            <div className="mt-12 rounded-2xl border border-v4-border bg-gradient-to-br from-white to-[#FAFAFA] p-8">
+              <h3 className="text-xl font-semibold text-v4-text mb-4">
                 Pourquoi les {isParis ? "arrondissements" : "quartiers"} importent pour un déménagement
                 ?
               </h3>
-              <div className="space-y-3 text-[#6B7280]">
+              <div className="space-y-3 text-v4-text-secondary">
                 <p>
-                  <strong className="text-[#0F172A]">Accès et stationnement :</strong>{" "}
+                  <strong className="text-v4-text">Accès et stationnement :</strong>{" "}
                   {isParis
                     ? "Les arrondissements centraux (1er-4e) ont souvent des ruelles étroites et peu de parkings."
                     : "Certains quartiers ont des rues piétonnes, des zones à stationnement limité ou des règles strictes."}{" "}
@@ -230,13 +230,13 @@ export default function QuartiersGenericPage({ params }: PageProps) {
                   (monte-meubles, diables).
                 </p>
                 <p>
-                  <strong className="text-[#0F172A]">Type d'immeubles :</strong>{" "}
+                  <strong className="text-v4-text">Type d'immeubles :</strong>{" "}
                   {isParis
                     ? "Immeubles haussmanniens sans ascenseur dans les arrondissements historiques vs résidences modernes avec parking dans le 13e-15e."
                     : "Immeubles anciens vs résidences récentes, avec ou sans ascenseur, impactent directement le temps et le coût du déménagement."}
                 </p>
                 <p>
-                  <strong className="text-[#0F172A]">Formalités locales :</strong> Autorisation de
+                  <strong className="text-v4-text">Formalités locales :</strong> Autorisation de
                   stationnement auprès de la mairie, règlement de copropriété, réservation
                   d'ascenseur, protection des parties communes. Un déménageur local connaît ces
                   démarches.
@@ -251,14 +251,14 @@ export default function QuartiersGenericPage({ params }: PageProps) {
         <section className="section section-white">
           <div className="container max-w-5xl">
             <div className="text-center mb-12 space-y-4">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#6BCFCF]/10 px-4 py-1.5 text-xs font-medium text-[#6BCFCF]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+              <div className="inline-flex items-center gap-2 rounded-full bg-v4-accent/10 px-4 py-1.5 text-xs font-medium text-v4-accent">
+                <span className="h-1.5 w-1.5 rounded-full bg-v4-accent" />
                 Métropole élargie
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
+              <h2 className="text-3xl md:text-4xl font-bold text-v4-text">
                 Communes limitrophes
               </h2>
-              <p className="text-[#6B7280] max-w-2xl mx-auto">
+              <p className="text-v4-text-secondary max-w-2xl mx-auto">
                 Nos déménageurs interviennent aussi dans toute la métropole de {city.nameCapitalized}
                 .
               </p>
@@ -268,9 +268,9 @@ export default function QuartiersGenericPage({ params }: PageProps) {
               {citySuburbs.map((suburb) => (
                 <div
                   key={suburb}
-                  className="rounded-xl border border-[#E5E7EB] bg-white p-4 hover:border-[#6BCFCF]/50 hover:shadow-md transition-all duration-200"
+                  className="rounded-xl border border-v4-border bg-white p-4 hover:border-brand-turquoise/50 hover:shadow-md transition-all duration-200"
                 >
-                  <p className="font-medium text-[#0F172A]">{suburb}</p>
+                  <p className="font-medium text-v4-text">{suburb}</p>
                 </div>
               ))}
             </div>
@@ -282,7 +282,7 @@ export default function QuartiersGenericPage({ params }: PageProps) {
         <div className="container max-w-3xl">
           <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 md:p-12 text-center space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-v4-accent" />
               Gratuit · Sans engagement
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white">
@@ -296,7 +296,7 @@ export default function QuartiersGenericPage({ params }: PageProps) {
             <div className="flex flex-col sm:flex-row justify-center gap-4 pt-2">
               <a
                 href={quoteUrl}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-base md:text-lg font-semibold text-[#0F172A] shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-base md:text-lg font-semibold text-v4-text shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
               >
                 <span>Comparer maintenant</span>
                 <span className="text-xl">→</span>
