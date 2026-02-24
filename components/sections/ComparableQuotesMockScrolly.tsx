@@ -122,9 +122,9 @@ function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: n
           <p className="text-lg font-semibold" style={{ color: mover.scoreColor }}>
             {mover.scoreLabel}
           </p>
-          <div className="flex items-center gap-1.5 mt-1">
+          <div className="flex items-center gap-2 mt-1">
             <div className="relative">
-              <Image src="/logo.png" alt="Moverz" width={18} height={18} className="h-4.5 w-4.5" />
+              <Image src="/logo.png" alt="Moverz" width={24} height={24} className="h-6 w-6" />
               <div
                 className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full flex items-center justify-center"
                 style={{ background: "#10B981" }}
@@ -141,7 +141,7 @@ function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: n
                 </svg>
               </div>
             </div>
-            <span className="text-sm font-semibold text-slate-900">Score Moverz</span>
+            <span className="text-sm font-bold text-slate-900">Moverz</span>
           </div>
         </div>
       </div>
