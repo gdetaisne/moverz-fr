@@ -51,16 +51,28 @@ export default function AProposPage() {
       />
       <div className="halo" />
       <section className="relative overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-v4-text via-[#1E293B] to-v4-text" />
-        <div className="absolute -top-20 left-1/4 h-72 w-72 rounded-full bg-v4-accent/15 blur-[90px]" />
-        <div className="absolute -bottom-20 right-1/4 h-72 w-72 rounded-full bg-v4-accent/15 blur-[90px]" />
+        {/* Background gradient */}
+        <div className="absolute inset-0" style={{ 
+          background: "linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #111827 100%)"
+        }} />
+        
+        {/* Radial gradients for depth */}
+        <div className="absolute -top-20 left-1/4 h-96 w-96 rounded-full bg-v4-accent/12 blur-[120px]" />
+        <div className="absolute -bottom-20 right-1/4 h-96 w-96 rounded-full bg-v4-accent/12 blur-[120px]" />
+        
+        {/* Grain texture */}
         <div
-          className="absolute inset-0 opacity-[0.06]"
+          className="pointer-events-none absolute inset-0 opacity-[0.03]"
+          style={{ 
+            backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")" 
+          }}
+        />
+        
+        {/* Subtle radial overlay */}
+        <div
+          className="pointer-events-none absolute inset-0"
           style={{
-            backgroundImage:
-              "radial-gradient(circle at 2px 2px, white 1px, transparent 0)",
-            backgroundSize: "32px 32px",
+            background: "radial-gradient(ellipse at center, rgba(14,165,166,0.08) 0%, transparent 60%)",
           }}
         />
 
@@ -126,41 +138,41 @@ export default function AProposPage() {
             </div>
 
             {/* Right: mini cards */}
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-                <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-v4-accent/15 text-v4-accent mb-4">
-                  <ShieldCheck className="h-5 w-5" />
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div className="group rounded-3xl border backdrop-blur-xl p-7 transition-all hover:border-white/25 hover:bg-white/10" style={{ borderColor: "rgba(255,255,255,0.12)", background: "rgba(255,255,255,0.06)" }}>
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-v4-accent/20 text-v4-accent mb-5 group-hover:bg-v4-accent/25 transition-colors">
+                  <ShieldCheck className="h-6 w-6" />
                 </div>
-                <p className="text-sm font-semibold">On déteste les surprises</p>
-                <p className="mt-2 text-sm text-white/70">
+                <p className="text-base font-bold text-white">On déteste les surprises</p>
+                <p className="mt-2.5 text-sm leading-relaxed text-white/75">
                   Volume, accès, étages… on met ça noir sur blanc, avant le jour J.
                 </p>
               </div>
-              <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-                <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-v4-accent/15 text-v4-accent mb-4">
-                  <Scale className="h-5 w-5" />
+              <div className="group rounded-3xl border backdrop-blur-xl p-7 transition-all hover:border-white/25 hover:bg-white/10" style={{ borderColor: "rgba(255,255,255,0.12)", background: "rgba(255,255,255,0.06)" }}>
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-v4-accent/20 text-v4-accent mb-5 group-hover:bg-v4-accent/25 transition-colors">
+                  <Scale className="h-6 w-6" />
                 </div>
-                <p className="text-sm font-semibold">On compare proprement</p>
-                <p className="mt-2 text-sm text-white/70">
+                <p className="text-base font-bold text-white">On compare proprement</p>
+                <p className="mt-2.5 text-sm leading-relaxed text-white/75">
                   Même cahier des charges = devis comparables = décision plus simple.
                 </p>
               </div>
-              <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-                <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-v4-accent/15 text-v4-accent mb-4">
-                  <Camera className="h-5 w-5" />
+              <div className="group rounded-3xl border backdrop-blur-xl p-7 transition-all hover:border-white/25 hover:bg-white/10" style={{ borderColor: "rgba(255,255,255,0.12)", background: "rgba(255,255,255,0.06)" }}>
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-v4-accent/20 text-v4-accent mb-5 group-hover:bg-v4-accent/25 transition-colors">
+                  <Camera className="h-6 w-6" />
                 </div>
-                <p className="text-sm font-semibold">Les détails, c’est la vérité</p>
-                <p className="mt-2 text-sm text-white/70">
-                  Ils évitent 90% des malentendus (“ah, il y avait une cave…”).
+                <p className="text-base font-bold text-white">Les détails, c'est la vérité</p>
+                <p className="mt-2.5 text-sm leading-relaxed text-white/75">
+                  Ils évitent 90% des malentendus ("ah, il y avait une cave…").
                 </p>
               </div>
-              <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-                <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-v4-accent/15 text-v4-accent mb-4">
-                  <MessageCircle className="h-5 w-5" />
+              <div className="group rounded-3xl border backdrop-blur-xl p-7 transition-all hover:border-white/25 hover:bg-white/10" style={{ borderColor: "rgba(255,255,255,0.12)", background: "rgba(255,255,255,0.06)" }}>
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-v4-accent/20 text-v4-accent mb-5 group-hover:bg-v4-accent/25 transition-colors">
+                  <BadgeCheck className="h-6 w-6" />
                 </div>
-                <p className="text-sm font-semibold">Humain quand il faut</p>
-                <p className="mt-2 text-sm text-white/70">
-                  WhatsApp pour débloquer, clarifier, et avancer vite.
+                <p className="text-base font-bold text-white">Pros contrôlés</p>
+                <p className="mt-2.5 text-sm leading-relaxed text-white/75">
+                  Solvabilité, signaux faibles : on filtre avant de vous présenter.
                 </p>
               </div>
             </div>
@@ -171,26 +183,35 @@ export default function AProposPage() {
       <section className="section section-light">
         <div className="container max-w-6xl">
           <div className="grid gap-6 lg:grid-cols-3">
-            <div className="rounded-3xl border border-v4-border bg-white p-7 md:p-8 shadow-sm">
-              <h2 className="text-2xl font-bold text-v4-text">Notre mission</h2>
-              <p className="mt-3 text-[#1E293B]/70 leading-relaxed">
-                Transformer un moment stressant en une décision simple: un dossier clair, des devis
-                comparables, et zéro zone grise.
-              </p>
+            <div className="group relative rounded-3xl border backdrop-blur-sm p-8 md:p-9 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all duration-300" style={{ background: "rgba(255,255,255,0.98)", borderColor: "rgba(14,165,166,0.15)" }}>
+              <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" style={{ background: "linear-gradient(135deg, rgba(240,253,250,0.5) 0%, rgba(224,242,254,0.5) 100%)" }} />
+              <div className="relative">
+                <h2 className="text-2xl font-bold text-v4-text">Notre mission</h2>
+                <p className="mt-4 text-[#1E293B]/75 leading-relaxed">
+                  Transformer un moment stressant en une décision simple: un dossier clair, des devis
+                  comparables, et zéro zone grise.
+                </p>
+              </div>
             </div>
-            <div className="rounded-3xl border border-v4-border bg-white p-7 md:p-8 shadow-sm">
-              <h2 className="text-2xl font-bold text-v4-text">Notre promesse</h2>
-              <p className="mt-3 text-[#1E293B]/70 leading-relaxed">
-                Vous aider à choisir un déménageur fiable — pas juste “le moins cher” — sans démarchage
-                ni surprise.
-              </p>
+            <div className="group relative rounded-3xl border backdrop-blur-sm p-8 md:p-9 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all duration-300" style={{ background: "rgba(255,255,255,0.98)", borderColor: "rgba(14,165,166,0.15)" }}>
+              <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" style={{ background: "linear-gradient(135deg, rgba(240,253,250,0.5) 0%, rgba(224,242,254,0.5) 100%)" }} />
+              <div className="relative">
+                <h2 className="text-2xl font-bold text-v4-text">Notre promesse</h2>
+                <p className="mt-4 text-[#1E293B]/75 leading-relaxed">
+                  Vous aider à choisir un déménageur fiable — pas juste "le moins cher" — sans démarchage
+                  ni surprise.
+                </p>
+              </div>
             </div>
-            <div className="rounded-3xl border border-v4-border bg-white p-7 md:p-8 shadow-sm">
-              <h2 className="text-2xl font-bold text-v4-text">Notre obsession</h2>
-              <p className="mt-3 text-[#1E293B]/70 leading-relaxed">
-                Les détails qui font exploser les prix (étages, accès, cave, objets lourds). On les
-                capture avant de comparer.
-              </p>
+            <div className="group relative rounded-3xl border backdrop-blur-sm p-8 md:p-9 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all duration-300" style={{ background: "rgba(255,255,255,0.98)", borderColor: "rgba(14,165,166,0.15)" }}>
+              <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" style={{ background: "linear-gradient(135deg, rgba(240,253,250,0.5) 0%, rgba(224,242,254,0.5) 100%)" }} />
+              <div className="relative">
+                <h2 className="text-2xl font-bold text-v4-text">Notre obsession</h2>
+                <p className="mt-4 text-[#1E293B]/75 leading-relaxed">
+                  Les détails qui font exploser les prix (étages, accès, cave, objets lourds). On les
+                  capture avant de comparer.
+                </p>
+              </div>
             </div>
           </div>
 
