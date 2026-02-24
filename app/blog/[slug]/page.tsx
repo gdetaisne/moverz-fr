@@ -310,59 +310,100 @@ export default function BlogPostPage({ params }: PageProps) {
       />
       <div className="halo" />
 
-      {/* Hero article */}
-      <section className="section section-contrast">
-        <div className="container max-w-3xl space-y-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-v4-accent">
-            Blog déménagement
-          </p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+      {/* Hero article - Style Homepage */}
+      <section className="relative overflow-hidden py-16 md:py-24" style={{ 
+        background: "linear-gradient(to bottom, #F0FDFA 0%, #E0F2FE 50%, #F9FAFB 100%)"
+      }}>
+        <div className="relative container max-w-3xl space-y-6 px-4">
+          {/* Breadcrumb */}
+          <nav className="mb-4">
+            <ol className="flex items-center gap-2 text-sm" style={{ color: "#6B7280" }}>
+              <li><a href="/" className="hover:text-[#0EA5A6] transition-colors">Accueil</a></li>
+              <li>/</li>
+              <li><a href="/blog/" className="hover:text-[#0EA5A6] transition-colors">Blog</a></li>
+              <li>/</li>
+              <li className="text-sm truncate max-w-[200px]" style={{ color: "#111827" }}>{post.title}</li>
+            </ol>
+          </nav>
+
+          <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold border" style={{
+            color: "#0EA5A6",
+            borderColor: "rgba(14,165,166,0.2)",
+            background: "rgba(14,165,166,0.05)"
+          }}>
+            <span>Blog déménagement</span>
+          </div>
+          
+          <h1 className="font-heading text-[clamp(28px,5vw,44px)] font-bold tracking-[-0.02em] leading-[1.1]" style={{ color: "#111827" }}>
             {post.title}
           </h1>
-          <div className="flex flex-wrap items-center gap-3 text-xs text-white/70">
+          
+          <div className="flex flex-wrap items-center gap-3 text-xs">
             {post.category && (
-              <span className="rounded-full bg-white/10 px-2 py-0.5 font-semibold text-xs text-v4-accent">
+              <span className="rounded-full border px-3 py-1.5 font-semibold" style={{
+                borderColor: "rgba(14,165,166,0.3)",
+                background: "rgba(14,165,166,0.1)",
+                color: "#0EA5A6"
+              }}>
                 {post.category}
               </span>
             )}
             {post.tags?.length ? (
-              <span className="rounded-full bg-white/10 px-2 py-0.5 font-semibold text-xs text-white/80">
+              <span className="rounded-full px-3 py-1.5 font-medium" style={{
+                background: "rgba(0,0,0,0.05)",
+                color: "#6B7280"
+              }}>
                 {post.tags.slice(0, 3).join(" · ")}
               </span>
             ) : null}
             {city && (
               <a
                 href={`/demenagement/${city.slug}/`}
-                className="rounded-full bg-white/10 px-3 py-0.5 text-xs text-v4-accent hover:bg-white/20 hover:text-white transition-colors"
+                className="rounded-full border px-3 py-1.5 font-medium hover:shadow-sm transition-all"
+                style={{
+                  borderColor: "rgba(14,165,166,0.3)",
+                  background: "white",
+                  color: "#0EA5A6"
+                }}
               >
-                Déménagement {city.nameCapitalized}
+                {city.nameCapitalized}
               </a>
             )}
             {publishedDate && (
-              <span>Publié le {publishedDate}</span>
+              <span style={{ color: "#6B7280" }}>{publishedDate}</span>
             )}
             {post.readingTimeMinutes && (
-              <span>· {post.readingTimeMinutes} min de lecture</span>
+              <span style={{ color: "#6B7280" }}>· {post.readingTimeMinutes} min</span>
             )}
           </div>
-          <p className="text-sm md:text-base text-white/80 max-w-2xl">
+          
+          <p className="text-base md:text-lg leading-relaxed max-w-2xl" style={{ color: "#6B7280" }}>
             {post.description}
           </p>
 
-          <form action="/search" method="get" className="pt-2">
+          <form action="/search" method="get" className="pt-2 max-w-xl">
             <label className="sr-only" htmlFor="blog-article-search-q">
               Rechercher sur Moverz
             </label>
-            <div className="flex gap-2 max-w-xl">
+            <div className="flex gap-2">
               <input
                 id="blog-article-search-q"
                 name="q"
                 placeholder="Rechercher (blog, villes)…"
-                className="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]"
+                className="w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0EA5A6]"
+                style={{
+                  borderColor: "rgba(0,0,0,0.1)",
+                  background: "white",
+                  color: "#111827"
+                }}
               />
               <button
                 type="submit"
-                className="shrink-0 rounded-xl bg-v4-accent px-5 py-3 text-sm font-semibold text-v4-text hover:bg-[#5AB9B9] transition-colors"
+                className="shrink-0 rounded-xl px-5 py-3 text-sm font-semibold transition-colors"
+                style={{
+                  background: "#0EA5A6",
+                  color: "white"
+                }}
               >
                 OK
               </button>
@@ -534,26 +575,33 @@ export default function BlogPostPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* CTA vers le comparateur */}
-      <section className="section section-contrast">
-        <div className="container max-w-3xl text-center space-y-5">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-v4-accent">
-            Passer à l&apos;action
-          </p>
-          <h2 className="text-2xl md:text-3xl font-semibold text-white">
-            Comparez des devis pour votre déménagement
-          </h2>
-          <p className="text-sm md:text-base text-white/80 max-w-2xl mx-auto">
-            3 minutes pour créer votre dossier, déménageurs contrôlés qui chiffrent le même
-            volume. Vous gardez la main sur le choix final.
-          </p>
-          <a
-            href={buildTunnelUrl({ from: "/blog-article" })}
-            rel="nofollow"
-            className="btn-primary"
+      {/* CTA Final - Même que homepage */}
+      <section className="py-20 md:py-28" style={{ background: "var(--color-bg)" }}>
+        <div className="container max-w-2xl text-center space-y-6">
+          <h2
+            className="font-heading text-[clamp(32px,5vw,52px)] font-bold tracking-[-0.02em] leading-[1.1]"
+            style={{ color: "var(--color-text)" }}
           >
-            Lancer mon comparateur de devis
+            <span style={{ color: "var(--color-accent)" }}>3</span> minutes. <span style={{ color: "var(--color-accent)" }}>3</span> devis.
+            <br />
+            <span style={{ color: "var(--color-accent)" }}>1</span> seule décision.
+          </h2>
+
+          <a
+            href="https://devis.moverz.fr/devis-gratuits"
+            rel="nofollow"
+            className="group inline-flex items-center justify-center gap-2 rounded-[var(--radius-sm)] px-8 py-3.5 text-base font-semibold text-white transition-all duration-200 hover:opacity-90 active:scale-[0.98]"
+            style={{ background: "var(--color-text)" }}
+          >
+            Recevoir ma sélection
+            <svg className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
           </a>
+
+          <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>
+            Gratuit · Sans engagement · Sans appels
+          </p>
         </div>
       </section>
     </main>

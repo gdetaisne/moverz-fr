@@ -282,21 +282,23 @@ export default function RootLayout({
                 </div>
                 <form action="/search" method="get" className="mt-4 flex gap-2">
                   <label className="sr-only" htmlFor="footer-search-q">
-                    Rechercher sur Moverz
+                    Rechercher dans le blog
                   </label>
                   <input
                     id="footer-search-q"
                     name="q"
-                    placeholder="Rechercher (blog, villes)…"
-                    className="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-2 text-sm text-white placeholder:text-white/60 backdrop-blur-sm focus:outline-none focus:ring-2"
-                    style={{ "--tw-ring-color": "var(--color-accent)" } as React.CSSProperties}
+                    placeholder="Rechercher dans le blog..."
+                    className="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-2 text-sm text-white placeholder:text-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:border-[#0EA5A6] focus:ring-[#0EA5A6]/50"
                   />
                   <button
                     type="submit"
-                    className="shrink-0 rounded-xl px-4 py-2 text-sm font-semibold transition-colors hover:opacity-90"
-                    style={{ background: "var(--color-accent)", color: "var(--color-text)" }}
+                    className="shrink-0 rounded-xl p-2.5 text-white transition-all hover:opacity-90 active:scale-95"
+                    style={{ background: "#0EA5A6" }}
+                    aria-label="Rechercher dans le blog"
                   >
-                    OK
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
                   </button>
                 </form>
               </div>

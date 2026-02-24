@@ -112,37 +112,48 @@ export default function BlogIndexClient() {
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Hero Premium */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-v4-text via-[#1E293B] to-v4-text text-white">
-        {/* Animated background */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-turquoise/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s' }} />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-turquoise/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }} />
-        
-        <div className="relative container mx-auto max-w-6xl px-4 py-20 md:py-32">
+      {/* Hero - Style Homepage */}
+      <section className="relative overflow-hidden pt-12 pb-16 md:pt-20 md:pb-28" style={{ 
+        background: "linear-gradient(to bottom, #F0FDFA 0%, #E0F2FE 50%, #F9FAFB 100%)"
+      }}>
+        <div className="relative container mx-auto max-w-6xl px-4">
+          {/* Breadcrumb */}
+          <nav className="mb-8">
+            <ol className="flex items-center gap-2 text-sm" style={{ color: "#6B7280" }}>
+              <li><a href="/" className="hover:text-[#0EA5A6] transition-colors">Accueil</a></li>
+              <li>/</li>
+              <li style={{ color: "#111827" }}>Blog</li>
+            </ol>
+          </nav>
+
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Content */}
-            <div className="space-y-8 animate-fade-in">
-              <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2 text-sm font-medium backdrop-blur-sm">
-                <BookOpen className="w-4 h-4 text-brand-turquoise" />
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold border" style={{
+                color: "#0EA5A6",
+                borderColor: "rgba(14,165,166,0.2)",
+                background: "rgba(14,165,166,0.05)"
+              }}>
+                <BookOpen className="w-4 h-4" />
                 <span>{isPro ? "Ressources déménageurs" : "Blog déménagement"}</span>
               </div>
 
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+              <h1 className="font-heading text-[clamp(36px,5vw,56px)] font-bold tracking-[-0.02em] leading-[1.1]" style={{ color: "#111827" }}>
                 {isPro ? (
                   <>
-                    {heroTitle}
+                    Guides pour déménageurs
                     <br />
-                    <span className="text-brand-turquoise">devis · litiges · relances</span>
+                    <span style={{ color: "#0EA5A6" }}>devis · litiges · relances</span>
                   </>
                 ) : (
                   <>
                     Guides, prix &<br />
-                    <span className="text-brand-turquoise">checklists</span>
+                    <span style={{ color: "#0EA5A6" }}>checklists</span>
                   </>
                 )}
               </h1>
               
-              <p className="text-lg md:text-xl text-white/80 leading-relaxed">
+              <p className="text-lg md:text-xl leading-relaxed" style={{ color: "#6B7280" }}>
                 {heroSubtitle}
               </p>
 
@@ -155,33 +166,51 @@ export default function BlogIndexClient() {
                     id="blog-search-q"
                     name="q"
                     placeholder="Rechercher (blog, villes)…"
-                    className="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-brand-turquoise"
+                    className="w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0EA5A6]"
+                    style={{
+                      borderColor: "rgba(0,0,0,0.1)",
+                      background: "white",
+                      color: "#111827"
+                    }}
                   />
                   <button
                     type="submit"
-                    className="shrink-0 rounded-xl bg-brand-turquoise px-5 py-3 text-sm font-semibold text-[var(--color-text)] hover:bg-[#5AB9B9] transition-colors"
+                    className="shrink-0 rounded-xl px-5 py-3 text-sm font-semibold transition-colors"
+                    style={{
+                      background: "#0EA5A6",
+                      color: "white"
+                    }}
                   >
                     OK
                   </button>
                 </div>
-                <p className="mt-2 text-xs text-white/60">
-                  Astuce: essayez “prix”, “volume”, “Nice”, “checklist”.
+                <p className="mt-2 text-xs" style={{ color: "#6B7280" }}>
+                  Astuce: essayez "prix", "volume", "Nice", "checklist".
                 </p>
               </form>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-3">
                 {isPro ? (
                   <>
                     <a
                       href="/partenaires/#contact"
-                      className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise px-6 py-3 text-base font-semibold text-[var(--color-text)] hover:scale-105 transition-transform duration-300"
+                      className="inline-flex items-center gap-2 rounded-xl px-6 py-3 text-base font-semibold transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
+                      style={{
+                        background: "#0EA5A6",
+                        color: "white"
+                      }}
                     >
                       <span>Demander une démo</span>
                       <ArrowRight className="w-4 h-4" />
                     </a>
                     <a
                       href="#featured"
-                      className="inline-flex items-center gap-2 rounded-full border-2 border-white/30 bg-white/10 px-6 py-3 text-base font-semibold backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
+                      className="inline-flex items-center gap-2 rounded-xl px-6 py-3 text-base font-semibold border-2 transition-all duration-200 hover:bg-gray-50"
+                      style={{
+                        borderColor: "rgba(0,0,0,0.1)",
+                        background: "white",
+                        color: "#111827"
+                      }}
                     >
                       <span>À lire en priorité</span>
                     </a>
@@ -190,14 +219,23 @@ export default function BlogIndexClient() {
                   <>
                     <a
                       href="#articles"
-                      className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise px-6 py-3 text-base font-semibold text-[var(--color-text)] hover:scale-105 transition-transform duration-300"
+                      className="inline-flex items-center gap-2 rounded-xl px-6 py-3 text-base font-semibold transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
+                      style={{
+                        background: "#0EA5A6",
+                        color: "white"
+                      }}
                     >
                       <span>Explorer les articles</span>
                       <ArrowRight className="w-4 h-4" />
                     </a>
                     <a
                       href="#featured"
-                      className="inline-flex items-center gap-2 rounded-full border-2 border-white/30 bg-white/10 px-6 py-3 text-base font-semibold backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
+                      className="inline-flex items-center gap-2 rounded-xl px-6 py-3 text-base font-semibold border-2 transition-all duration-200 hover:bg-gray-50"
+                      style={{
+                        borderColor: "rgba(0,0,0,0.1)",
+                        background: "white",
+                        color: "#111827"
+                      }}
                     >
                       <span>Meilleurs guides</span>
                     </a>
@@ -206,29 +244,34 @@ export default function BlogIndexClient() {
               </div>
             </div>
 
-            {/* Right: Stats Cards */}
-            <div className="space-y-4 animate-slide-in-right">
+            {/* Right: Stats Cards - Style Homepage */}
+            <div className="space-y-4">
               {[
                 {
                   icon: BookOpen,
                   label: isPro ? "Articles déménageurs" : "Articles publiés",
                   value: (isPro ? proPosts.length : PUBLISHED_BLOG_POSTS.length).toString(),
-                  color: "text-brand-turquoise",
                 },
-                { icon: TrendingUp, label: "Lectures/mois", value: "12 000+", color: "text-brand-turquoise" },
-                { icon: Clock, label: "Temps de lecture moyen", value: "5 min", color: "text-brand-turquoise" },
+                { icon: TrendingUp, label: "Lectures/mois", value: "12 000+" },
+                { icon: Clock, label: "Temps de lecture moyen", value: "5 min" },
               ].map((stat, i) => (
                 <div
                   key={i}
-                  className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-brand-turquoise/50 transition-all duration-300"
+                  className="group rounded-2xl p-6 border-2 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                  style={{
+                    background: "white",
+                    borderColor: i === 0 ? "#0EA5A6" : "rgba(0,0,0,0.08)"
+                  }}
                 >
                   <div className="flex items-center gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-brand-turquoise/10 flex items-center justify-center">
-                      <stat.icon className={`w-6 h-6 ${stat.color}`} />
+                    <div className="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-300" style={{
+                      background: "rgba(14,165,166,0.1)"
+                    }}>
+                      <stat.icon className="w-6 h-6" style={{ color: "#0EA5A6" }} />
                     </div>
                     <div>
-                      <p className="text-2xl font-bold">{stat.value}</p>
-                      <p className="text-sm text-white/70">{stat.label}</p>
+                      <p className="text-3xl font-bold" style={{ color: "#111827" }}>{stat.value}</p>
+                      <p className="text-sm" style={{ color: "#6B7280" }}>{stat.label}</p>
                     </div>
                   </div>
                 </div>
@@ -238,60 +281,69 @@ export default function BlogIndexClient() {
         </div>
       </section>
 
-      {/* Featured Articles */}
-      <section id="featured" className="py-20 md:py-32 bg-gradient-to-br from-gray-50 to-white">
-        <div className="container mx-auto max-w-6xl px-4">
+      {/* Featured Articles - Premium Design */}
+      <section id="featured" className="relative py-20 md:py-32 bg-gradient-to-br from-gray-50 via-white to-gray-50 overflow-hidden">
+        {/* Subtle gradient overlay */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-turquoise/5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-turquoise/5 rounded-full blur-[120px]" />
+        
+        <div className="container mx-auto max-w-6xl px-4 relative">
           <div className="mb-16 text-center space-y-4">
-            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-4 py-2 text-sm font-semibold text-brand-turquoise">
-              <span className="h-1.5 w-1.5 rounded-full bg-brand-turquoise animate-pulse" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 border border-brand-turquoise/20 px-5 py-2 text-sm font-semibold text-brand-turquoise">
+              <span className="h-2 w-2 rounded-full bg-brand-turquoise animate-pulse" />
               À lire en priorité
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text)]">
+            <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text)] tracking-tight">
               Nos meilleurs guides
             </h2>
-            <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl mx-auto">
+            <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl mx-auto leading-relaxed">
               Les articles les plus complets pour réussir votre déménagement
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {featured.map((post) => (
-              <div key={post.slug}>
+            {featured.map((post, idx) => (
+              <div key={post.slug} style={{ animationDelay: `${idx * 100}ms` }}>
                 <Link
                   href={`/blog/${post.slug}/`}
                   className="group block h-full"
                 >
-                  <article className="h-full rounded-2xl border-2 border-[var(--color-border)] bg-white p-8 hover:border-brand-turquoise hover:shadow-2xl transition-all duration-300">
-                    {/* Category badge */}
-                    {post.category && (
-                      <span className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 px-3 py-1.5 text-xs font-bold text-brand-turquoise mb-4">
-                        {CATEGORIES.find((c) => c.slug === post.category)?.icon}
-                        {CATEGORIES.find((c) => c.slug === post.category)?.label ?? post.category}
-                      </span>
-                    )}
-
-                    {/* Title */}
-                    <h3 className="text-xl font-bold text-[var(--color-text)] group-hover:text-brand-turquoise transition-colors line-clamp-2 mb-4">
-                      {post.title}
-                    </h3>
-
-                    {/* Description */}
-                    <p className="text-sm text-[var(--color-text-secondary)] line-clamp-3 mb-6 leading-relaxed">
-                      {post.description}
-                    </p>
-
-                    {/* Meta */}
-                    <div className="flex items-center gap-4 text-xs text-[var(--color-text-secondary)] pt-4 border-t border-[var(--color-border)]">
-                      {post.readingTimeMinutes && (
-                        <div className="flex items-center gap-1">
-                          <Clock className="w-3.5 h-3.5" />
-                          <span>{post.readingTimeMinutes} min</span>
-                        </div>
+                  <article className="relative h-full rounded-2xl border-2 border-[var(--color-border)] bg-white p-8 hover:border-brand-turquoise hover:shadow-[0_20px_60px_rgba(14,165,166,0.15)] hover:-translate-y-2 transition-all duration-300">
+                    {/* Gradient glow on hover */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-brand-turquoise/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    
+                    <div className="relative">
+                      {/* Category badge */}
+                      {post.category && (
+                        <span className="inline-flex items-center gap-2 rounded-full bg-brand-turquoise/10 group-hover:bg-brand-turquoise/20 px-3 py-1.5 text-xs font-bold text-brand-turquoise mb-4 transition-colors">
+                          {CATEGORIES.find((c) => c.slug === post.category)?.icon}
+                          {CATEGORIES.find((c) => c.slug === post.category)?.label ?? post.category}
+                        </span>
                       )}
-                      <span className="inline-flex items-center gap-1 text-brand-turquoise font-semibold group-hover:gap-2 transition-all">
-                        Lire l'article
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </span>
+
+                      {/* Title */}
+                      <h3 className="text-xl font-bold text-[var(--color-text)] group-hover:text-brand-turquoise transition-colors line-clamp-2 mb-4 leading-tight">
+                        {post.title}
+                      </h3>
+
+                      {/* Description */}
+                      <p className="text-sm text-[var(--color-text-secondary)] line-clamp-3 mb-6 leading-relaxed">
+                        {post.description}
+                      </p>
+
+                      {/* Meta */}
+                      <div className="flex items-center gap-4 text-xs text-[var(--color-text-secondary)] pt-4 border-t border-[var(--color-border)] group-hover:border-brand-turquoise/30 transition-colors">
+                        {post.readingTimeMinutes && (
+                          <div className="flex items-center gap-1.5">
+                            <Clock className="w-3.5 h-3.5" />
+                            <span>{post.readingTimeMinutes} min</span>
+                          </div>
+                        )}
+                        <span className="inline-flex items-center gap-1.5 text-brand-turquoise font-semibold group-hover:gap-2.5 transition-all ml-auto">
+                          Lire l'article
+                          <ArrowRight className="w-3.5 h-3.5" />
+                        </span>
+                      </div>
                     </div>
                   </article>
                 </Link>
@@ -314,11 +366,13 @@ export default function BlogIndexClient() {
             </p>
           </div>
 
-          {/* Filters */}
+          {/* Filters - Modernisés */}
           <div className="mb-12">
-            <div className="flex items-center justify-center gap-2 mb-6">
-              <Filter className="w-4 h-4 text-[var(--color-text-secondary)]" />
-              <p className="text-sm font-medium text-[var(--color-text-secondary)]">Filtrer par catégorie</p>
+            <div className="flex items-center justify-center gap-2 mb-8">
+              <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 border border-gray-200">
+                <Filter className="w-4 h-4 text-brand-turquoise" />
+                <p className="text-sm font-semibold text-[var(--color-text)]">Filtrer par catégorie</p>
+              </div>
             </div>
             <div className="flex flex-wrap justify-center gap-3">
               {CATEGORIES.map((cat) => (
@@ -326,31 +380,35 @@ export default function BlogIndexClient() {
                   <Link
                     key={cat.slug}
                     href="/blog/cas-frequents/"
-                    className="group inline-flex items-center gap-2 rounded-full bg-gray-100 px-5 py-2.5 text-sm font-semibold text-[var(--color-text-secondary)] hover:bg-gray-200 hover:scale-102 transition-all"
+                    className="group inline-flex items-center gap-2 rounded-full bg-white border-2 border-gray-200 px-5 py-3 text-sm font-semibold text-[var(--color-text)] hover:border-brand-turquoise hover:bg-brand-turquoise/5 hover:scale-105 transition-all duration-200 shadow-sm hover:shadow-md"
                   >
                     <span>{cat.icon}</span>
                     <span>{cat.label}</span>
-                    <span className="text-xs text-[var(--color-text-secondary)]">({getCategoryCount(cat.slug)})</span>
-                    <span className="text-xs text-brand-turquoise group-hover:text-[var(--color-text)] transition-colors">→</span>
+                    <span className="text-xs bg-gray-100 group-hover:bg-brand-turquoise/10 px-2 py-0.5 rounded-full transition-colors">
+                      {getCategoryCount(cat.slug)}
+                    </span>
+                    <ArrowRight className="w-3.5 h-3.5 text-brand-turquoise group-hover:translate-x-0.5 transition-transform" />
                   </Link>
                 ) : (
                   <button
                     key={cat.slug}
                     onClick={() => handleCategoryChange(cat.slug)}
-                    className={`group inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all ${
+                    className={`group inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-all duration-200 shadow-sm ${
                       activeCategory === cat.slug
-                        ? "bg-[var(--color-bg-dark)] text-white shadow-lg scale-105"
-                        : "bg-gray-100 text-[var(--color-text-secondary)] hover:bg-gray-200 hover:scale-102"
+                        ? "bg-[var(--color-bg-dark)] text-white border-2 border-[var(--color-bg-dark)] shadow-lg scale-105"
+                        : "bg-white text-[var(--color-text)] border-2 border-gray-200 hover:border-brand-turquoise hover:bg-brand-turquoise/5 hover:scale-105 hover:shadow-md"
                     }`}
                   >
                     <span>{cat.icon}</span>
                     <span>{cat.label}</span>
                     <span
-                      className={`text-xs ${
-                        activeCategory === cat.slug ? "text-white/70" : "text-[var(--color-text-secondary)]"
+                      className={`text-xs px-2 py-0.5 rounded-full transition-colors ${
+                        activeCategory === cat.slug 
+                          ? "bg-white/20 text-white" 
+                          : "bg-gray-100 group-hover:bg-brand-turquoise/10"
                       }`}
                     >
-                      ({getCategoryCount(cat.slug)})
+                      {getCategoryCount(cat.slug)}
                     </span>
                   </button>
                 )
@@ -398,7 +456,7 @@ export default function BlogIndexClient() {
             </p>
           </div>
 
-          {/* Articles Grid */}
+          {/* Articles Grid - Cards améliorées */}
           {currentPosts.length > 0 ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               {currentPosts.map((post, i) => (
@@ -407,44 +465,49 @@ export default function BlogIndexClient() {
                     href={`/blog/${post.slug}/`}
                     className="group block h-full"
                   >
-                    <article className="h-full rounded-xl border border-[var(--color-border)] bg-white p-6 hover:border-brand-turquoise hover:shadow-lg transition-all duration-300">
-                      {/* Meta tags */}
-                      <div className="flex flex-wrap items-center gap-2 mb-3">
-                        {post.category && (
-                          <span className="text-xs font-semibold text-brand-turquoise">
-                            {CATEGORIES.find(c => c.slug === post.category)?.icon}
+                    <article className="relative h-full rounded-xl border-2 border-[var(--color-border)] bg-white p-6 hover:border-brand-turquoise hover:shadow-[0_12px_40px_rgba(14,165,166,0.12)] hover:-translate-y-1 transition-all duration-300">
+                      {/* Subtle gradient overlay on hover */}
+                      <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-brand-turquoise/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      
+                      <div className="relative">
+                        {/* Meta tags */}
+                        <div className="flex flex-wrap items-center gap-2 mb-3">
+                          {post.category && (
+                            <span className="inline-flex items-center gap-1 text-xs font-bold text-brand-turquoise bg-brand-turquoise/10 group-hover:bg-brand-turquoise/20 px-2 py-1 rounded-full transition-colors">
+                              {CATEGORIES.find(c => c.slug === post.category)?.icon}
+                            </span>
+                          )}
+                          {post.citySlug && (
+                            <span className="text-xs font-medium text-[var(--color-text-secondary)] bg-gray-100 rounded-full px-2.5 py-1">
+                              {post.citySlug}
+                            </span>
+                          )}
+                        </div>
+
+                        {/* Title */}
+                        <h3 className="text-base font-bold text-[var(--color-text)] group-hover:text-brand-turquoise transition-colors line-clamp-2 mb-3 leading-tight">
+                          {post.title}
+                        </h3>
+
+                        {/* Description */}
+                        {post.description && (
+                          <p className="text-sm text-[var(--color-text-secondary)] line-clamp-2 mb-4 leading-relaxed">
+                            {post.description}
+                          </p>
+                        )}
+
+                        {/* Footer */}
+                        <div className="flex items-center justify-between pt-3 border-t border-gray-100 group-hover:border-brand-turquoise/30 transition-colors">
+                          {post.readingTimeMinutes && (
+                            <div className="flex items-center gap-1.5 text-xs text-[var(--color-text-secondary)]">
+                              <Clock className="w-3.5 h-3.5" />
+                              <span>{post.readingTimeMinutes} min</span>
+                            </div>
+                          )}
+                          <span className="text-xs font-bold text-brand-turquoise group-hover:gap-2 transition-all inline-flex items-center gap-1">
+                            Lire <ArrowRight className="w-3.5 h-3.5" />
                           </span>
-                        )}
-                        {post.citySlug && (
-                          <span className="text-xs text-[var(--color-text-secondary)] bg-gray-100 rounded-full px-2 py-0.5">
-                            {post.citySlug}
-                          </span>
-                        )}
-                      </div>
-
-                      {/* Title */}
-                      <h3 className="text-base font-bold text-[var(--color-text)] group-hover:text-brand-turquoise transition-colors line-clamp-2 mb-3">
-                        {post.title}
-                      </h3>
-
-                      {/* Description */}
-                      {post.description && (
-                        <p className="text-sm text-[var(--color-text-secondary)] line-clamp-2 mb-4">
-                          {post.description}
-                        </p>
-                      )}
-
-                      {/* Footer */}
-                      <div className="flex items-center justify-between pt-3 border-t border-gray-100">
-                        {post.readingTimeMinutes && (
-                          <div className="flex items-center gap-1 text-xs text-[var(--color-text-secondary)]">
-                            <Clock className="w-3 h-3" />
-                            <span>{post.readingTimeMinutes} min</span>
-                          </div>
-                        )}
-                        <span className="text-xs font-semibold text-brand-turquoise group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
-                          Lire <ArrowRight className="w-3 h-3" />
-                        </span>
+                        </div>
                       </div>
                     </article>
                   </Link>
@@ -452,23 +515,24 @@ export default function BlogIndexClient() {
               ))}
             </div>
           ) : (
-            <div className="text-center py-16">
-              <p className="text-[var(--color-text-secondary)] text-lg">Aucun article dans cette catégorie.</p>
+            <div className="text-center py-16 bg-gray-50 rounded-2xl border-2 border-dashed border-gray-200">
+              <BookOpen className="w-12 h-12 text-gray-300 mx-auto mb-4" />
+              <p className="text-[var(--color-text-secondary)] text-lg font-medium">Aucun article dans cette catégorie.</p>
             </div>
           )}
 
-          {/* Pagination */}
+          {/* Pagination - Modernisée */}
           {totalPages > 1 && (
-            <div className="flex items-center justify-center gap-2">
+            <div className="flex items-center justify-center gap-3">
               <button
                 onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
                 disabled={currentPage === 1}
-                className="rounded-lg px-4 py-2 text-sm font-semibold text-[var(--color-text-secondary)] hover:bg-gray-100 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                className="rounded-xl px-5 py-2.5 text-sm font-semibold text-[var(--color-text)] bg-white border-2 border-gray-200 hover:border-brand-turquoise hover:bg-brand-turquoise/5 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-gray-200 disabled:hover:bg-white transition-all shadow-sm"
               >
                 ← Précédent
               </button>
 
-              <div className="flex gap-1">
+              <div className="flex gap-2">
                 {Array.from({ length: Math.min(7, totalPages) }, (_, i) => {
                   let pageNum;
                   if (totalPages <= 7) {
@@ -485,10 +549,10 @@ export default function BlogIndexClient() {
                     <button
                       key={pageNum}
                       onClick={() => setCurrentPage(pageNum)}
-                      className={`h-10 w-10 rounded-lg text-sm font-bold transition-all ${
+                      className={`h-11 w-11 rounded-xl text-sm font-bold transition-all shadow-sm ${
                         currentPage === pageNum
-                          ? "bg-[var(--color-bg-dark)] text-white shadow-md scale-110"
-                          : "text-[var(--color-text-secondary)] hover:bg-gray-100"
+                          ? "bg-[var(--color-bg-dark)] text-white shadow-lg scale-110 border-2 border-[var(--color-bg-dark)]"
+                          : "bg-white text-[var(--color-text)] border-2 border-gray-200 hover:border-brand-turquoise hover:bg-brand-turquoise/5 hover:scale-105"
                       }`}
                     >
                       {pageNum}
@@ -500,12 +564,39 @@ export default function BlogIndexClient() {
               <button
                 onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
                 disabled={currentPage === totalPages}
-                className="rounded-lg px-4 py-2 text-sm font-semibold text-[var(--color-text-secondary)] hover:bg-gray-100 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                className="rounded-xl px-5 py-2.5 text-sm font-semibold text-[var(--color-text)] bg-white border-2 border-gray-200 hover:border-brand-turquoise hover:bg-brand-turquoise/5 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-gray-200 disabled:hover:bg-white transition-all shadow-sm"
               >
                 Suivant →
               </button>
             </div>
           )}
+        </div>
+      </section>
+
+      {/* CTA Final - Même que homepage */}
+      <section className="py-20 md:py-28" style={{ background: "var(--color-bg)" }}>
+        <div className="container max-w-2xl text-center space-y-6">
+          <h2
+            className="font-heading text-[clamp(32px,5vw,52px)] font-bold tracking-[-0.02em] leading-[1.1]"
+            style={{ color: "var(--color-text)" }}
+          >
+            <span style={{ color: "var(--color-accent)" }}>3</span> minutes. <span style={{ color: "var(--color-accent)" }}>3</span> devis.
+            <br />
+            <span style={{ color: "var(--color-accent)" }}>1</span> seule décision.
+          </h2>
+
+          <a
+            href="https://devis.moverz.fr/devis-gratuits"
+            className="group inline-flex items-center justify-center gap-2 rounded-[var(--radius-sm)] px-8 py-3.5 text-base font-semibold text-white transition-all duration-200 hover:opacity-90 active:scale-[0.98]"
+            style={{ background: "var(--color-text)" }}
+          >
+            Recevoir ma sélection
+            <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+          </a>
+
+          <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>
+            Gratuit · Sans engagement · Sans appels
+          </p>
         </div>
       </section>
     </main>
