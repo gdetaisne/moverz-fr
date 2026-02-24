@@ -268,13 +268,13 @@ export function HeroV4TwoColumn() {
                   transformStyle: "preserve-3d"
                 }}
               >
-                {/* Device frame - Style iPhone moderne - Plus grand pour le contenu détaillé */}
+                {/* Device frame - Style iPhone moderne - Ultra-compact */}
                 <div
                   className="relative rounded-[48px] border-[8px] overflow-hidden"
                   style={{
                     borderColor: "#1F2937",
                     background: "#F9FAFB",
-                    aspectRatio: "9/20.5",
+                    aspectRatio: "9/16.5",
                     boxShadow: "0 40px 80px rgba(0,0,0,0.2), 0 20px 40px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.1)"
                   }}
                 >
@@ -286,15 +286,37 @@ export function HeroV4TwoColumn() {
 
                   {/* Screen content - Mockup ULTRA-RÉALISTE de la vraie landing client */}
                   <div className="relative h-full w-full p-3 pt-11 pb-4 overflow-y-auto" style={{ background: "#F9FAFB" }}>
-                    {/* Card déménageur - Design pixel-perfect compact */}
-                    <div
-                      className="rounded-2xl border p-4 shadow-md space-y-2.5"
-                      style={{
-                        borderColor: "#0EA5A6",
-                        borderWidth: "2px",
-                        background: "white",
-                      }}
-                    >
+                    {/* Stack de 3 cards pour montrer "3 offres" */}
+                    <div className="relative">
+                      {/* Card 3 - Très en arrière (la plus floutée) */}
+                      <div 
+                        className="absolute inset-0 translate-y-2.5 translate-x-1.5 rounded-2xl border opacity-25 blur-[1.5px] pointer-events-none"
+                        style={{
+                          borderColor: "#CBD5E1",
+                          background: "white",
+                          height: "96%",
+                        }}
+                      />
+                      
+                      {/* Card 2 - Moyennement en arrière */}
+                      <div 
+                        className="absolute inset-0 translate-y-1.5 translate-x-1 rounded-2xl border opacity-40 blur-[0.8px] pointer-events-none"
+                        style={{
+                          borderColor: "#94A3B8",
+                          background: "white",
+                          height: "98%",
+                        }}
+                      />
+                      
+                      {/* Card 1 - Principale (top 1) */}
+                      <div
+                        className="relative rounded-2xl border p-4 shadow-md space-y-2.5"
+                        style={{
+                          borderColor: "#0EA5A6",
+                          borderWidth: "2px",
+                          background: "white",
+                        }}
+                      >
                       {/* Badge "Meilleure offre" - Teal comme sur le vrai */}
                       <div className="flex items-center justify-center py-1.5 rounded-lg" style={{ background: "#0EA5A6" }}>
                         <span className="text-xs font-semibold text-white">
@@ -338,10 +360,10 @@ export function HeroV4TwoColumn() {
                         </div>
                         <div>
                           <p className="text-sm font-semibold" style={{ color: "#0EA5A6" }}>Excellent</p>
-                          <div className="flex items-center gap-1">
-                            <p className="text-xs text-slate-500">Score</p>
-                            <Image src="/logo.png" alt="Moverz" width={12} height={12} className="h-3 w-3" />
-                            <p className="text-xs font-semibold text-slate-700">Moverz</p>
+                          <div className="flex items-center gap-1.5">
+                            <p className="text-sm text-slate-600">Score</p>
+                            <Image src="/logo.png" alt="Moverz" width={16} height={16} className="h-4 w-4" />
+                            <p className="text-sm font-bold" style={{ color: "#0EA5A6" }}>Moverz</p>
                           </div>
                         </div>
                       </div>
@@ -407,6 +429,7 @@ export function HeroV4TwoColumn() {
                        <p className="text-xs text-slate-500 text-center pt-1">
                          Mise en relation simple, sans engagement
                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>

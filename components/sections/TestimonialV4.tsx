@@ -41,7 +41,8 @@ export function TestimonialV4() {
           className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em] mb-8"
           style={{ color: "var(--color-text)" }}
         >
-          Ils ont testé Moverz
+          Ils ont déménagé sereinement grâce à{" "}
+          <span style={{ color: "var(--color-accent)" }}>Moverz</span>
         </h2>
 
         {/* Stars */}

@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 interface MoverScoreCircleProps {
   score: number;
   label: string;
@@ -54,9 +56,11 @@ export function MoverScoreCircle({ score, label, size = 72 }: MoverScoreCirclePr
         <p className="text-sm font-semibold" style={{ color }}>
           {label}
         </p>
-        <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>
-          Score Moverz
-        </p>
+        <div className="flex items-center gap-1.5">
+          <p className="text-xs text-slate-600">Score</p>
+          <Image src="/logo.png" alt="Moverz" width={14} height={14} className="h-3.5 w-3.5" />
+          <p className="text-xs font-bold" style={{ color: "var(--color-accent)" }}>Moverz</p>
+        </div>
       </div>
     </div>
   );

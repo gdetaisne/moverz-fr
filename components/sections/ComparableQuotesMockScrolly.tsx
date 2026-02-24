@@ -13,6 +13,7 @@ import { Phone, ChevronLeft, ChevronRight, Check, X, AlertCircle, Star, ShieldCh
 import { staggerContainer, staggerItem } from "@/components/motion";
 import { computeMockQuotes } from "@/lib/utils/mockQuotes";
 import { MoverCard } from "@/components/premium/MoverCard";
+import Image from "next/image";
 
 const steps = [
   {
@@ -287,11 +288,18 @@ function PhoneContent({ state, quotes }: { state: string; quotes: any[] }) {
                   {quote.price}€
                 </p>
               </div>
-              <div className="flex items-center gap-1">
-                <Star className="h-3 w-3 fill-amber-400 text-amber-400" />
-                <span className="text-xs" style={{ color: "var(--color-text-secondary)" }}>
-                  {quote.googleRating}/5 · Score {quote.score}/100
-                </span>
+              <div className="flex items-center gap-2">
+                <div className="flex items-center gap-0.5">
+                  <Star className="h-3 w-3 fill-amber-400 text-amber-400" />
+                  <span className="text-xs" style={{ color: "var(--color-text-secondary)" }}>
+                    {quote.googleRating}/5
+                  </span>
+                </div>
+                <span className="text-xs text-slate-300">·</span>
+                <div className="flex items-center gap-1">
+                  <Image src="/logo.png" alt="Moverz" width={12} height={12} className="h-3 w-3" />
+                  <span className="text-xs font-semibold" style={{ color: "var(--color-accent)" }}>{quote.score}</span>
+                </div>
               </div>
             </motion.div>
           ))}
@@ -322,9 +330,13 @@ function PhoneContent({ state, quotes }: { state: string; quotes: any[] }) {
               <p className="text-sm font-bold" style={{ color: "var(--color-text)" }}>
                 {best.name}
               </p>
-              <p className="text-xs" style={{ color: "var(--color-text-secondary)" }}>
-                Score Moverz : {best.score}/100
-              </p>
+              <div className="flex items-center gap-1.5 mt-0.5">
+                <p className="text-xs text-slate-600">Score</p>
+                <Image src="/logo.png" alt="Moverz" width={14} height={14} className="h-3.5 w-3.5" />
+                <p className="text-xs font-bold" style={{ color: "var(--color-accent)" }}>Moverz</p>
+                <span className="text-xs text-slate-600">:</span>
+                <p className="text-xs font-bold" style={{ color: "var(--color-text)" }}>{best.score}/100</p>
+              </div>
             </div>
           </div>
           <div
