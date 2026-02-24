@@ -518,26 +518,26 @@ export function ComparableQuotesMockScrolly() {
                         </motion.div>
                       </AnimatePresence>
                     </div>
-                  </div>
-                </div>
-              </motion.div>
 
-              {/* Badge flottant minimaliste */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.6 }}
-                className="absolute -bottom-4 -right-4 rounded-xl px-3 py-2 text-xs font-semibold shadow-lg backdrop-blur-sm border"
-                style={{ 
-                  background: "rgba(255,255,255,0.95)", 
-                  borderColor: "rgba(14,165,166,0.15)",
-                  color: "#111827" 
-                }}
-              >
-                <div className="flex items-center gap-1.5">
-                  <div className="h-1.5 w-1.5 rounded-full" style={{ background: "#1F2937" }} />
-                  <span><strong style={{ color: "#0EA5A6" }}>3</strong> offres retenues sur <strong>12</strong> devis reçus</span>
+                    {/* Badge flottant EN BAS DE L'ÉCRAN */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: 0.6 }}
+                      className="absolute bottom-3 left-3 right-3 z-30 rounded-xl px-3 py-2 text-[10px] font-semibold shadow-lg backdrop-blur-sm border"
+                      style={{ 
+                        background: "rgba(255,255,255,0.95)", 
+                        borderColor: "rgba(14,165,166,0.15)",
+                        color: "#111827" 
+                      }}
+                    >
+                      <div className="flex items-center justify-center gap-1.5">
+                        <div className="h-1.5 w-1.5 rounded-full" style={{ background: "#1F2937" }} />
+                        <span><strong style={{ color: "#0EA5A6" }}>3</strong> offres retenues sur <strong>12</strong> devis reçus</span>
+                      </div>
+                    </motion.div>
+                  </div>
                 </div>
               </motion.div>
             </div>
