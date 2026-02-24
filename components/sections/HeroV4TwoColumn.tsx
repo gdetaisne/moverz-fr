@@ -24,14 +24,14 @@ const STEPS = [
   { num: "3", text: "Vous choisissez sereinement", bold: true },
 ] as const;
 
-// CAROUSEL DE SCREENSHOTS - RAMP STYLE (Contenu concret Moverz)
+// CAROUSEL 2026 PREMIUM - Large, Spacious, Modern
 function MorphingUIAnimation() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % 4);
-    }, 3500);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
@@ -40,216 +40,256 @@ function MorphingUIAnimation() {
       id: 0,
       step: "1",
       title: "Votre dossier",
+      icon: MessageSquare,
       items: [
-        { label: "Départ", value: "Paris 75015" },
-        { label: "Arrivée", value: "Lyon 69001" },
-        { label: "Surface", value: "60m² • T3" },
-        { label: "Date", value: "15 mars 2026" }
+        { label: "Départ", value: "Paris 75015", icon: "📍" },
+        { label: "Arrivée", value: "Lyon 69001", icon: "🎯" },
+        { label: "Surface", value: "60m² • T3", icon: "🏠" },
+        { label: "Date", value: "15 mars", icon: "📅" }
       ]
     },
     {
       id: 1,
       step: "2",
-      title: "12 déménageurs contactés",
+      title: "12 déménageurs",
+      subtitle: "contactés",
+      icon: Users,
       items: [
-        { label: "Demeneco", value: "Contacté" },
-        { label: "Fast Move", value: "Contacté" },
-        { label: "TransExpress", value: "Contacté" },
-        { label: "+9 autres", value: "En attente" }
+        { label: "Demeneco", value: "Contacté", status: "active" },
+        { label: "Fast Move", value: "Contacté", status: "active" },
+        { label: "TransExpress", value: "Contacté", status: "active" },
+        { label: "+9 autres", value: "En attente", status: "pending" }
       ]
     },
     {
       id: 2,
       step: "3",
-      title: "7 offres reçues",
+      title: "7 offres",
+      subtitle: "reçues",
+      icon: Mail,
       items: [
-        { label: "Demeneco", value: "2 890 €" },
-        { label: "Fast Move", value: "3 150 €" },
-        { label: "TransExpress", value: "2 750 €" },
-        { label: "+4 autres offres", value: "À analyser" }
+        { label: "TransExpress", value: "2 750 €", status: "best" },
+        { label: "Demeneco", value: "2 890 €", status: "good" },
+        { label: "Fast Move", value: "3 150 €", status: "good" },
+        { label: "+4 autres", value: "À analyser", status: "pending" }
       ]
     },
     {
       id: 3,
       step: "4",
-      title: "Top 3 Moverz",
+      title: "Top 3",
+      subtitle: "validé par Moverz",
+      icon: ShieldCheck,
       items: [
-        { label: "TransExpress", value: "2 750 € ⭐" },
-        { label: "Demeneco", value: "2 890 €" },
-        { label: "DémParis", value: "2 990 €" },
-        { label: "Vérifiés & fiables", value: "Par Moverz" }
+        { label: "TransExpress", value: "2 750 €", status: "winner" },
+        { label: "Demeneco", value: "2 890 €", status: "selected" },
+        { label: "DémParis", value: "2 990 €", status: "selected" },
+        { label: "Vérifiés", value: "Fiables", status: "verified" }
       ]
     },
   ];
 
   const currentScreen = screenshots[activeIndex];
+  const Icon = currentScreen.icon;
 
   return (
     <div 
-      className="relative h-full w-full overflow-hidden flex flex-col"
-      style={{ background: "#FAFAFA" }}
+      className="relative h-full w-full overflow-hidden flex flex-col p-4"
+      style={{ 
+        background: "linear-gradient(135deg, #FAFBFC 0%, #F5F8FA 100%)"
+      }}
     >
-      {/* Header avec logo */}
-      <div className="p-4 pb-2">
-        <div className="flex items-center justify-between">
-          <Image 
-            src="/logo-ui.png" 
-            alt="Moverz" 
-            width={60} 
-            height={20}
-            className="h-4 w-auto"
-          />
-          <div className="text-[9px] font-medium" style={{ color: "#0EA5A6" }}>
-            En cours...
-          </div>
-        </div>
+      {/* Ambient Glow Background */}
+      <motion.div
+        className="absolute top-1/3 left-1/2 -translate-x-1/2 w-64 h-64 rounded-full pointer-events-none"
+        style={{
+          background: "radial-gradient(circle, rgba(14,165,166,0.15) 0%, transparent 70%)",
+          filter: "blur(40px)",
+        }}
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.3, 0.5, 0.3],
+        }}
+        transition={{ duration: 4, repeat: Infinity }}
+      />
+
+      {/* Header Premium */}
+      <div className="flex items-center justify-between mb-4 relative z-10">
+        <Image 
+          src="/logo-ui.png" 
+          alt="Moverz" 
+          width={70} 
+          height={24}
+          className="h-5 w-auto"
+        />
+        <motion.div 
+          className="flex items-center gap-1.5 px-2.5 py-1 rounded-full"
+          style={{ background: "#0EA5A610" }}
+          animate={{ opacity: [0.7, 1, 0.7] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <div className="w-1.5 h-1.5 rounded-full" style={{ background: "#0EA5A6" }} />
+          <span className="text-[10px] font-semibold" style={{ color: "#0EA5A6" }}>
+            En cours
+          </span>
+        </motion.div>
       </div>
 
-      {/* Carousel Container */}
-      <div className="flex-1 relative px-4 py-2">
-        <div className="relative h-full">
-          {/* Cards Stack Effect */}
-          {screenshots.map((screen, index) => {
-            const offset = index - activeIndex;
-            const isActive = index === activeIndex;
-            const isPrev = offset === -1 || offset === 3;
+      {/* Main Carousel - Big & Bold */}
+      <div className="flex-1 relative">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeIndex}
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 1.05, y: -20 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="h-full"
+          >
+            {/* Card Premium */}
+            <motion.div
+              className="relative h-full rounded-3xl p-6 border backdrop-blur-xl"
+              style={{
+                background: "linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 100%)",
+                borderColor: "#0EA5A620",
+                boxShadow: "0 20px 60px rgba(14,165,166,0.12), 0 0 0 1px rgba(255,255,255,0.8) inset",
+              }}
+              animate={{
+                boxShadow: [
+                  "0 20px 60px rgba(14,165,166,0.12), 0 0 0 1px rgba(255,255,255,0.8) inset",
+                  "0 30px 80px rgba(14,165,166,0.18), 0 0 0 1px rgba(255,255,255,0.9) inset",
+                  "0 20px 60px rgba(14,165,166,0.12), 0 0 0 1px rgba(255,255,255,0.8) inset",
+                ]
+              }}
+              transition={{ duration: 3, repeat: Infinity }}
+            >
+              {/* Top: Badge + Icon */}
+              <div className="flex items-center justify-between mb-6">
+                <motion.div
+                  className="px-4 py-2 rounded-xl font-bold text-sm backdrop-blur-sm"
+                  style={{
+                    background: "linear-gradient(135deg, #0EA5A615 0%, #0EA5A608 100%)",
+                    color: "#0EA5A6",
+                    border: "1px solid rgba(14,165,166,0.1)"
+                  }}
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                >
+                  Étape {currentScreen.step}/4
+                </motion.div>
+                
+                <motion.div
+                  className="w-12 h-12 rounded-2xl flex items-center justify-center"
+                  style={{ 
+                    background: "linear-gradient(135deg, #0EA5A6 0%, #14B8A6 100%)",
+                    boxShadow: "0 8px 24px rgba(14,165,166,0.3)"
+                  }}
+                  initial={{ scale: 0, rotate: -180 }}
+                  animate={{ scale: 1, rotate: 0 }}
+                  transition={{ type: "spring", stiffness: 200, damping: 15, delay: 0.3 }}
+                >
+                  <Icon className="w-6 h-6 text-white" strokeWidth={2} />
+                </motion.div>
+              </div>
 
-            return (
+              {/* Title - Big & Bold */}
               <motion.div
-                key={screen.id}
-                className="absolute inset-0 rounded-2xl border shadow-lg overflow-hidden"
-                style={{
-                  background: "white",
-                  borderColor: isActive ? "#0EA5A630" : "#E2E8F0",
-                }}
-                animate={{
-                  scale: isActive ? 1 : isPrev ? 0.94 : 0.88,
-                  opacity: isActive ? 1 : isPrev ? 0.5 : 0,
-                  x: isActive ? 0 : isPrev ? "-6%" : "6%",
-                  zIndex: isActive ? 10 : isPrev ? 5 : 0,
-                  rotateY: isActive ? 0 : isPrev ? 3 : -3,
-                }}
-                transition={{
-                  duration: 0.6,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
+                className="mb-8"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
               >
-                {/* Card Content */}
-                <div className="h-full flex flex-col p-5">
-                  {/* Header avec étape */}
-                  <div className="flex items-center justify-between mb-4">
-                    <motion.div
-                      className="px-3 py-1.5 rounded-full text-[10px] font-bold"
-                      style={{
-                        background: "#0EA5A615",
-                        color: "#0EA5A6",
-                      }}
-                      animate={{
-                        scale: isActive ? [1, 1.05, 1] : 1,
-                      }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                    >
-                      Étape {screen.step}/4
-                    </motion.div>
-                    
-                    {isActive && (
-                      <motion.div
-                        initial={{ scale: 0, rotate: -90 }}
-                        animate={{ scale: 1, rotate: 0 }}
-                        className="w-7 h-7 rounded-lg flex items-center justify-center"
-                        style={{ background: "#0EA5A610" }}
-                      >
-                        <CheckCircle2 
-                          className="w-4 h-4" 
-                          style={{ color: "#0EA5A6" }}
-                          strokeWidth={2.5}
-                        />
-                      </motion.div>
-                    )}
-                  </div>
-
-                  {/* Title */}
-                  <AnimatePresence mode="wait">
-                    {isActive && (
-                      <motion.h3
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0 }}
-                        className="text-xl font-bold mb-4"
-                        style={{ color: "#0EA5A6" }}
-                      >
-                        {screen.title}
-                      </motion.h3>
-                    )}
-                  </AnimatePresence>
-
-                  {/* Liste d'items concrets */}
-                  <div className="space-y-3 mt-2">
-                    {screen.items.map((item, i) => (
-                      <motion.div
-                        key={i}
-                        className="flex items-center justify-between py-2 border-b border-slate-100 last:border-0"
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ 
-                          opacity: isActive ? 1 : 0.3,
-                          x: 0 
-                        }}
-                        transition={{ delay: isActive ? 0.1 + i * 0.08 : 0 }}
-                      >
-                        <span className="text-xs text-slate-600 font-medium">
-                          {item.label}
-                        </span>
-                        <span className="text-xs font-semibold text-slate-900">
-                          {item.value}
-                        </span>
-                      </motion.div>
-                    ))}
-                  </div>
-
-                  {/* Glow effect on active card */}
-                  {isActive && (
-                    <motion.div
-                      className="absolute inset-0 rounded-2xl pointer-events-none"
-                      style={{
-                        boxShadow: "0 0 30px rgba(14,165,166,0.15), inset 0 1px 0 rgba(255,255,255,0.8)"
-                      }}
-                      animate={{
-                        opacity: [0.5, 1, 0.5]
-                      }}
-                      transition={{ duration: 3, repeat: Infinity }}
-                    />
-                  )}
-                </div>
+                <h3 
+                  className="text-3xl font-bold leading-tight mb-1"
+                  style={{ 
+                    background: "linear-gradient(135deg, #0EA5A6 0%, #14B8A6 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text"
+                  }}
+                >
+                  {currentScreen.title}
+                </h3>
+                {currentScreen.subtitle && (
+                  <p className="text-lg font-medium text-slate-600">
+                    {currentScreen.subtitle}
+                  </p>
+                )}
               </motion.div>
-            );
-          })}
-        </div>
+
+              {/* Items List - Large & Spacious */}
+              <div className="space-y-4">
+                {currentScreen.items.map((item, i) => (
+                  <motion.div
+                    key={i}
+                    className="flex items-center justify-between p-3 rounded-xl"
+                    style={{
+                      background: item.status === "winner" || item.status === "best" 
+                        ? "linear-gradient(90deg, rgba(14,165,166,0.08) 0%, rgba(14,165,166,0.02) 100%)"
+                        : "rgba(248,250,252,0.5)",
+                      border: item.status === "winner" ? "1px solid rgba(14,165,166,0.2)" : "1px solid transparent"
+                    }}
+                    initial={{ opacity: 0, x: -30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.4 + i * 0.1, type: "spring", stiffness: 100 }}
+                  >
+                    <div className="flex items-center gap-3">
+                      {item.icon && (
+                        <span className="text-xl">{item.icon}</span>
+                      )}
+                      <span className="text-sm font-semibold text-slate-700">
+                        {item.label}
+                      </span>
+                    </div>
+                    <span 
+                      className="text-sm font-bold"
+                      style={{ 
+                        color: item.status === "winner" || item.status === "best" ? "#0EA5A6" : "#1E293B"
+                      }}
+                    >
+                      {item.value}
+                    </span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </motion.div>
+        </AnimatePresence>
       </div>
 
-      {/* Navigation Dots */}
-      <div className="p-4 pt-2">
-        <div className="flex items-center justify-center gap-2 mb-2">
+      {/* Navigation - Modern & Large */}
+      <div className="mt-6 relative z-10">
+        <div className="flex items-center justify-center gap-3 mb-3">
           {screenshots.map((screen, i) => (
             <motion.button
               key={screen.id}
-              className="rounded-full transition-all"
+              className="relative rounded-full"
               style={{
-                width: i === activeIndex ? "24px" : "6px",
-                height: "6px",
-                background: i === activeIndex ? "#0EA5A6" : "#CBD5E1",
+                width: i === activeIndex ? "32px" : "8px",
+                height: "8px",
+                background: i === activeIndex 
+                  ? "linear-gradient(90deg, #0EA5A6 0%, #14B8A6 100%)" 
+                  : "#CBD5E1",
               }}
               animate={{
                 opacity: i === activeIndex ? 1 : 0.4,
               }}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.95 }}
               onClick={() => setActiveIndex(i)}
             />
           ))}
         </div>
         
-        {/* Info contexte */}
-        <p className="text-center text-[9px] text-slate-400">
-          Paris → Lyon • 15 mars
-        </p>
+        <motion.p
+          key={activeIndex}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="text-center text-xs font-medium text-slate-500"
+        >
+          Paris → Lyon • 15 mars 2026
+        </motion.p>
       </div>
     </div>
   );
