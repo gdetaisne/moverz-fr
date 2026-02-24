@@ -11,17 +11,247 @@
  */
 
 import { buildTunnelUrl } from "@/lib/tunnel-url";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { staggerContainer, staggerItem } from "@/components/motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { trackEvent } from "@/lib/tracking";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 const STEPS = [
   { num: "1", text: "On sollicite les déménageurs disponibles", bold: false },
   { num: "2", text: "On contrôle prix et fiabilité", bold: false },
   { num: "3", text: "Vous choisissez sereinement", bold: true },
 ] as const;
+
+// Morphing UI Animation Component - ULTRA 2026
+function MorphingUIAnimation() {
+  const [stage, setStage] = useState(0);
+
+  useEffect(() => {
+    const stages = [0, 1, 2, 3, 4];
+    let currentIndex = 0;
+    
+    const interval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % stages.length;
+      setStage(stages[currentIndex]);
+    }, 2500); // Change stage every 2.5s
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div 
+      className="relative h-full w-full overflow-hidden flex items-center justify-center"
+      style={{ 
+        background: "linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%)"
+      }}
+    >
+      {/* Gradient mesh background */}
+      <div 
+        className="absolute inset-0 opacity-30"
+        style={{
+          background: "radial-gradient(circle at 20% 50%, rgba(14,165,166,0.2) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(245,158,11,0.15) 0%, transparent 50%)",
+        }}
+      />
+
+      {/* Animated grid */}
+      <motion.div
+        className="absolute inset-0 opacity-10"
+        style={{
+          backgroundImage: "linear-gradient(rgba(14,165,166,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(14,165,166,0.3) 1px, transparent 1px)",
+          backgroundSize: "50px 50px",
+        }}
+        animate={{ 
+          backgroundPosition: ["0% 0%", "100% 100%"]
+        }}
+        transition={{ 
+          duration: 20, 
+          repeat: Infinity, 
+          ease: "linear" 
+        }}
+      />
+
+      {/* Main morphing container */}
+      <div className="relative z-10 w-full max-w-[200px]">
+        <AnimatePresence mode="wait">
+          {/* Stage 0: Circle */}
+          {stage === 0 && (
+            <motion.div
+              key="circle"
+              initial={{ scale: 0, rotate: -180 }}
+              animate={{ scale: 1, rotate: 0 }}
+              exit={{ scale: 0, rotate: 180 }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              className="flex flex-col items-center"
+            >
+              <motion.div
+                className="w-24 h-24 rounded-full flex items-center justify-center"
+                style={{
+                  background: "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)",
+                  boxShadow: "0 0 40px rgba(14,165,166,0.4)"
+                }}
+                animate={{ 
+                  boxShadow: ["0 0 40px rgba(14,165,166,0.4)", "0 0 60px rgba(14,165,166,0.6)", "0 0 40px rgba(14,165,166,0.4)"]
+                }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                <span className="text-3xl font-bold text-white">3</span>
+              </motion.div>
+              <p className="text-xs text-white/60 mt-3 text-center">Formulaire en 3 min</p>
+            </motion.div>
+          )}
+
+          {/* Stage 1: Form inputs */}
+          {stage === 1 && (
+            <motion.div
+              key="form"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+              className="space-y-3 p-4"
+            >
+              {[1, 2, 3].map((i) => (
+                <motion.div
+                  key={i}
+                  initial={{ width: 0 }}
+                  animate={{ width: "100%" }}
+                  transition={{ duration: 0.4, delay: i * 0.1 }}
+                  className="h-8 rounded-lg backdrop-blur-sm"
+                  style={{ 
+                    background: "rgba(255,255,255,0.1)",
+                    border: "1px solid rgba(14,165,166,0.3)"
+                  }}
+                />
+              ))}
+              <p className="text-xs text-white/60 text-center mt-4">Détails du déménagement</p>
+            </motion.div>
+          )}
+
+          {/* Stage 2: Grid of cards (devis) */}
+          {stage === 2 && (
+            <motion.div
+              key="grid"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.5 }}
+              className="grid grid-cols-3 gap-2 p-4"
+            >
+              {[...Array(9)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3, delay: i * 0.05 }}
+                  className="aspect-square rounded-lg backdrop-blur-sm"
+                  style={{ 
+                    background: i < 3 ? "rgba(14,165,166,0.3)" : "rgba(255,255,255,0.1)",
+                    border: i < 3 ? "1px solid rgba(14,165,166,0.5)" : "1px solid rgba(255,255,255,0.2)"
+                  }}
+                />
+              ))}
+              <p className="col-span-3 text-xs text-white/60 text-center mt-2">12 devis → 3 retenus</p>
+            </motion.div>
+          )}
+
+          {/* Stage 3: Score circle */}
+          {stage === 3 && (
+            <motion.div
+              key="score"
+              initial={{ scale: 0, rotate: -90 }}
+              animate={{ scale: 1, rotate: 0 }}
+              exit={{ scale: 0, rotate: 90 }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              className="flex flex-col items-center p-4"
+            >
+              <div className="relative w-28 h-28">
+                <svg className="w-28 h-28 -rotate-90">
+                  <circle 
+                    cx="56" 
+                    cy="56" 
+                    r="50" 
+                    fill="none" 
+                    stroke="rgba(255,255,255,0.1)" 
+                    strokeWidth="4" 
+                  />
+                  <motion.circle 
+                    cx="56" 
+                    cy="56" 
+                    r="50" 
+                    fill="none" 
+                    stroke="#0EA5A6" 
+                    strokeWidth="4"
+                    strokeLinecap="round"
+                    initial={{ strokeDasharray: "0 314" }}
+                    animate={{ strokeDasharray: "264 314" }} // 84% of 314
+                    transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                  />
+                </svg>
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  <motion.span 
+                    className="text-4xl font-bold text-white"
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.4, delay: 0.5 }}
+                  >
+                    84
+                  </motion.span>
+                  <span className="text-xs text-white/60">/100</span>
+                </div>
+              </div>
+              <p className="text-xs text-white/60 mt-3 text-center">Score Moverz</p>
+            </motion.div>
+          )}
+
+          {/* Stage 4: Big checkmark */}
+          {stage === 4 && (
+            <motion.div
+              key="check"
+              initial={{ scale: 0, rotate: -180 }}
+              animate={{ scale: 1, rotate: 0 }}
+              exit={{ scale: 0, rotate: 180 }}
+              transition={{ duration: 0.6, type: "spring", stiffness: 200 }}
+              className="flex flex-col items-center p-4"
+            >
+              <motion.div
+                className="w-28 h-28 rounded-full flex items-center justify-center"
+                style={{
+                  background: "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)",
+                  boxShadow: "0 0 60px rgba(14,165,166,0.6)"
+                }}
+                animate={{ 
+                  scale: [1, 1.05, 1]
+                }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              >
+                <CheckCircle2 className="w-16 h-16 text-white" strokeWidth={2.5} />
+              </motion.div>
+              <p className="text-xs text-white/60 mt-3 text-center font-semibold">Prêt à comparer</p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+
+      {/* Bottom indicator dots */}
+      <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-1.5">
+        {[0, 1, 2, 3, 4].map((i) => (
+          <motion.div
+            key={i}
+            className="h-1 rounded-full"
+            style={{
+              width: stage === i ? "16px" : "4px",
+              background: stage === i ? "#0EA5A6" : "rgba(255,255,255,0.3)"
+            }}
+            animate={{ width: stage === i ? "16px" : "4px" }}
+            transition={{ duration: 0.3 }}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export function HeroV4TwoColumn() {
   const quoteUrl = buildTunnelUrl({ from: "homepage-hero" });
@@ -171,147 +401,8 @@ export function HeroV4TwoColumn() {
                     style={{ background: "#1F2937" }}
                   />
 
-                  {/* Screen content - FULL SCREEN STEPPER ANIMÉ */}
-                  <div className="relative h-full w-full overflow-hidden" style={{ background: "linear-gradient(180deg, #F0FDFA 0%, #F9FAFB 100%)" }}>
-                    {/* Subtle pattern background */}
-                    <div 
-                      className="absolute inset-0 opacity-[0.02]"
-                      style={{ 
-                        backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230EA5A6' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
-                        backgroundSize: "30px 30px"
-                      }}
-                    />
-
-                    {/* Container centré verticalement */}
-                    <div className="relative h-full flex flex-col justify-center px-6 py-12">
-                      {/* Logo Moverz en haut */}
-                      <motion.div 
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                        className="mb-8 flex justify-center"
-                      >
-                        <Image src="/logo.png" alt="Moverz" width={32} height={32} className="h-8 w-8" />
-                      </motion.div>
-
-                      {/* Steps animés - GRANDE TAILLE */}
-                      <div className="space-y-8">
-                        {STEPS.map(({ num, text }, i) => (
-                          <motion.div
-                            key={num}
-                            initial={{ opacity: 0, x: -20, scale: 0.95 }}
-                            animate={{ opacity: 1, x: 0, scale: 1 }}
-                            transition={{ 
-                              duration: 0.6, 
-                              delay: 0.2 + i * 0.3,
-                              ease: [0.16, 1, 0.3, 1]
-                            }}
-                            className="relative"
-                          >
-                            {/* Ligne connectrice animée */}
-                            {i < STEPS.length - 1 && (
-                              <motion.div 
-                                className="absolute left-[19px] top-12 w-[2px] h-8"
-                                style={{ 
-                                  background: i === 1 
-                                    ? "linear-gradient(to bottom, #CBD5E1 0%, #0EA5A6 100%)" 
-                                    : "rgba(226,232,240,0.5)"
-                                }}
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={{ height: "32px", opacity: 1 }}
-                                transition={{ 
-                                  duration: 0.4, 
-                                  delay: 0.6 + i * 0.3,
-                                  ease: [0.16, 1, 0.3, 1]
-                                }}
-                              />
-                            )}
-
-                            <div className="flex items-start gap-4">
-                              {/* Gros cercle avec numéro */}
-                              <motion.div
-                                className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-base font-bold"
-                                style={{
-                                  background: i === 2 
-                                    ? "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)" 
-                                    : "#FFFFFF",
-                                  color: i === 2 ? "#FFFFFF" : "#94A3B8",
-                                  border: i === 2 ? "none" : "2px solid #E2E8F0",
-                                  boxShadow: i === 2 
-                                    ? "0 4px 16px rgba(14,165,166,0.3)" 
-                                    : "0 2px 4px rgba(0,0,0,0.04)"
-                                }}
-                                initial={{ scale: 0, rotate: -180 }}
-                                animate={{ scale: 1, rotate: 0 }}
-                                transition={{ 
-                                  duration: 0.5, 
-                                  delay: 0.3 + i * 0.3,
-                                  type: "spring",
-                                  stiffness: 200,
-                                  damping: 15
-                                }}
-                              >
-                                {num}
-                                
-                                {/* Pulse ring pour l'étape active */}
-                                {i === 2 && (
-                                  <motion.div
-                                    className="absolute inset-0 rounded-full"
-                                    style={{ border: "2px solid #0EA5A6" }}
-                                    initial={{ scale: 1, opacity: 0.6 }}
-                                    animate={{ scale: 1.5, opacity: 0 }}
-                                    transition={{ 
-                                      duration: 1.5, 
-                                      repeat: Infinity,
-                                      ease: "easeOut"
-                                    }}
-                                  />
-                                )}
-                              </motion.div>
-
-                              {/* Texte */}
-                              <div className="flex-1 pt-1">
-                                <motion.p
-                                  className="text-[13px] leading-[1.5] font-medium"
-                                  style={{ 
-                                    color: i === 2 ? "#111827" : "#64748B",
-                                    fontWeight: i === 2 ? 600 : 500
-                                  }}
-                                  initial={{ opacity: 0 }}
-                                  animate={{ opacity: 1 }}
-                                  transition={{ 
-                                    duration: 0.4, 
-                                    delay: 0.5 + i * 0.3
-                                  }}
-                                >
-                                  {text}
-                                </motion.p>
-                              </div>
-                            </div>
-                          </motion.div>
-                        ))}
-                      </div>
-
-                      {/* Message de fin avec icône */}
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ 
-                          duration: 0.6, 
-                          delay: 1.8,
-                          ease: [0.16, 1, 0.3, 1]
-                        }}
-                        className="mt-8 text-center"
-                      >
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full" style={{ background: "rgba(14,165,166,0.1)" }}>
-                          <CheckCircle2 className="h-4 w-4" style={{ color: "#0EA5A6" }} />
-                          <span className="text-xs font-semibold" style={{ color: "#0EA5A6" }}>
-                            Prêt à comparer
-                          </span>
-                        </div>
-                      </motion.div>
-                    </div>
-                  </div>
+                  {/* Screen content - MORPHING UI ANIMATION ULTRA 2026 */}
+                  <MorphingUIAnimation />
                 </div>
               </motion.div>
 

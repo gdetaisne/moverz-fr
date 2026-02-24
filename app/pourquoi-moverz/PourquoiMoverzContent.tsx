@@ -5,7 +5,7 @@ import MarketRisks from "@/components/pourquoi-moverz/MarketRisks";
 import CreditsafeScoring from "@/components/pourquoi-moverz/CreditsafeScoring";
 import ComparatorsProblems from "@/components/pourquoi-moverz/ComparatorsProblems";
 import MoverzVsOthers from "@/components/pourquoi-moverz/MoverzVsOthers";
-import FinalCTA from "@/components/FinalCTA";
+import { FinalCTAV4 } from "@/components/sections/FinalCTAV4";
 
 export default function PourquoiMoverzContent() {
   return (
@@ -46,7 +46,7 @@ export default function PourquoiMoverzContent() {
       </section>
 
       {/* CTA Final */}
-      <FinalCTA source="pourquoi-moverz" />
+      <FinalCTAV4 />
     </main>
   );
 }

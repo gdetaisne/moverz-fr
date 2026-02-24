@@ -1,0 +1,51 @@
+# Dependencies
+node_modules
+npm-debug.log
+
+# Next.js
+.next
+out
+
+# Testing
+coverage
+.nyc_output
+
+# Environment
+.env*.local
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# Documentation
+*.md
+!README.md
+
+# Terminals (Cursor)
+terminals
+
+# Tests
+tests
+vitest.config.ts
+vitest.setup.ts
+
+# Scripts non essentiels pour build
+scripts/gsc-monitor.mjs
+scripts/seo-healthcheck.ts
+scripts/seo-inventory.ts
+scripts/seo-city-guides-wordcount.ts
+scripts/update-llm-files.mjs
+scripts/audit-*.ts
+scripts/test-*.ts
+scripts/analyze-*.mjs
+scripts/find-*.mjs

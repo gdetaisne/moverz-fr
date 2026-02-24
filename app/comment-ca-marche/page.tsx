@@ -9,7 +9,7 @@ import HowItWorksNoSurprises from "@/components/comment-ca-marche/HowItWorksNoSu
 import HowItWorksTransparency from "@/components/comment-ca-marche/HowItWorksTransparency";
 import HowItWorksWhyDifferent from "@/components/comment-ca-marche/HowItWorksWhyDifferent";
 import HowItWorksFAQ from "@/components/comment-ca-marche/HowItWorksFAQ";
-import WidgetActionSection from "@/components/WidgetActionSection";
+import { FinalCTAV4 } from "@/components/sections/FinalCTAV4";
 
 export const metadata: Metadata = getFullMetadata(
   'comment-ca-marche',
@@ -67,12 +67,7 @@ export default function CommentCaMarchePage() {
       <HowItWorksFAQ />
 
       {/* Widget CTA final */}
-      <WidgetActionSection
-        title="Prêt à comparer vos devis ?"
-        subtitle="Démarrez en 3 minutes. On standardise votre dossier pour obtenir des devis comparables, sans spam."
-        source="moverz.fr"
-        from="/comment-ca-marche/"
-      />
+      <FinalCTAV4 />
     </main>
   );
 }

@@ -9,8 +9,8 @@ ENV SITE_URL=${SITE_URL}
 
 # Install dependencies
 FROM base AS deps
-COPY package.json ./
-RUN npm install --production=false
+COPY package.json package-lock.json ./
+RUN npm ci
 
 # Build application
 FROM base AS builder
@@ -19,6 +19,13 @@ COPY . .
 ARG SITE_URL=https://moverz.fr
 ENV SITE_URL=${SITE_URL}
 ENV NEXT_TELEMETRY_DISABLED=1
+
+# Debug: vérifier que les fichiers essentiels sont présents
+RUN ls -la && \
+    ls -la scripts/ && \
+    ls -la lib/ || true
+
+# Build avec logs détaillés
 RUN npm run build
 
 # Production runtime
