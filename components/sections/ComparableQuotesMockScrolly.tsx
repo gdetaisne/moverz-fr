@@ -293,20 +293,6 @@ export function ComparableQuotesMockScrolly() {
                 Seules les entreprises fiables, disponibles à vos dates et cohérentes en prix vous sont présentées.
               </p>
             </motion.div>
-
-            {/* Stats badge */}
-            <motion.div
-              variants={staggerItem}
-              className="inline-flex items-center gap-2 rounded-full px-4 py-2 border"
-              style={{
-                background: "rgba(14,165,166,0.05)",
-                borderColor: "rgba(14,165,166,0.2)",
-              }}
-            >
-              <span className="text-sm font-semibold" style={{ color: "var(--color-accent)" }}>
-                <strong>{MOVERS.length}</strong> offres retenues sur 7 réponses reçues
-              </span>
-            </motion.div>
           </motion.div>
 
           {/* RIGHT — iPhone Mockup with Carousel */}
