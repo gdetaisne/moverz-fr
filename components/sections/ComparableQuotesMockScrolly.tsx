@@ -312,10 +312,10 @@ export function ComparableQuotesMockScrolly() {
           {/* RIGHT — iPhone Mockup with Carousel */}
           <div className="relative flex justify-center items-center">
             {/* iPhone Frame */}
-            <div className="relative w-full max-w-[360px]">
+            <div className="relative w-full max-w-[320px]">
               {/* Subtle glow */}
               <div
-                className="absolute inset-0 rounded-[48px] blur-3xl opacity-20"
+                className="absolute inset-0 rounded-[42px] blur-3xl opacity-20"
                 style={{ background: "radial-gradient(ellipse, rgba(14,165,166,0.3) 0%, transparent 70%)" }}
               />
 
@@ -328,20 +328,27 @@ export function ComparableQuotesMockScrolly() {
                 className="relative"
                 style={{ transform: "rotate(-2deg)" }}
               >
-                {/* Phone frame */}
+                {/* Phone frame - iPhone 14 Pro realistic proportions */}
                 <div
-                  className="relative rounded-[48px] border-[3px] overflow-hidden bg-white"
+                  className="relative rounded-[42px] border-[8px] overflow-hidden bg-white"
                   style={{
                     borderColor: "#1F2937",
-                    aspectRatio: "9/19.5",
-                    boxShadow: "0 12px 32px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.1)",
+                    width: "320px",
+                    height: "680px",
+                    boxShadow: "0 25px 50px -12px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.1)",
                   }}
                 >
-                  {/* Notch */}
+                  {/* Dynamic Island (iPhone 14 Pro style) */}
                   <div
-                    className="absolute top-0 left-1/2 -translate-x-1/2 h-6 w-32 rounded-b-3xl z-30"
-                    style={{ background: "#1F2937" }}
-                  />
+                    className="absolute top-2 left-1/2 -translate-x-1/2 h-[28px] w-[115px] rounded-full z-30"
+                    style={{ background: "#000000" }}
+                  >
+                    {/* Speaker grill inside island */}
+                    <div
+                      className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[45px] h-[4px] rounded-full"
+                      style={{ background: "#1a1a1a" }}
+                    />
+                  </div>
 
                   {/* Screen content with carousel */}
                   <div className="relative h-full w-full overflow-hidden" style={{ background: "#F9FAFB" }}>
