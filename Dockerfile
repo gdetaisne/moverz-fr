@@ -1,4 +1,4 @@
-# Rebuild 1765358153
+# Rebuild 1740402000
 # Dockerfile multi-sites Moverz - Hub National
 # Version: 2025-11-20
 FROM node:20-alpine AS base
@@ -48,5 +48,3 @@ EXPOSE 3000
 
 # Use standalone server
 CMD ["dumb-init", "node", "server.js"]
-
-# Force rebuild Tue Feb 24 13:38:12 +07 2026
