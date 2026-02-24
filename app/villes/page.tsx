@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getHubMetadata } from "@/lib/seo/metadata";
 import PageHero from "@/components/PageHero";
 import { CITIES, getCitiesByRegion } from "@/lib/cities";
-import { buildTunnelUrl } from "@/lib/tunnel-url";
+import { FinalCTAV4 } from "@/components/sections/FinalCTAV4";
 
 export const metadata: Metadata = getHubMetadata({
   path: "villes",
@@ -26,10 +26,10 @@ export default function VillesPage() {
         ]}
         eyebrow="Couverture nationale"
         title="Déménagement partout en France"
-        subtitle="Moverz fonctionne dans toute la France. Explorez nos villes principales (guides dédiés) et lancez le comparateur, même si votre ville n’est pas listée."
+        subtitle="Moverz fonctionne dans toute la France. Explorez nos villes principales (guides dédiés) et lancez le comparateur, même si votre ville n'est pas listée."
         primaryCta={{
-          label: "Comparer des devis comparables gratuitement",
-          href: buildTunnelUrl({ from: "/villes" }),
+          label: "Voir mes 3 meilleurs devis",
+          href: "https://devis.moverz.fr/devis-gratuits",
         }}
         secondaryCta={{ label: "Annuaire complet (paginé)", href: "/villes/page/1/" }}
       />
@@ -165,29 +165,7 @@ export default function VillesPage() {
       </section>
 
       {/* CTA Final */}
-      <section className="section section-contrast">
-        <div className="container max-w-3xl text-center space-y-6">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs text-white/80 backdrop-blur-sm">
-            <span className="h-1.5 w-1.5 rounded-full bg-v4-accent animate-pulse" />
-            des devis comparables · Sans démarchage · 100% gratuit
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
-            Prêt à comparer vos devis ?
-          </h2>
-          <p className="text-lg text-white/75 max-w-2xl mx-auto">
-            Choisissez votre ville et lancez votre comparateur en quelques clics.
-          </p>
-          <a
-            href={buildTunnelUrl({ from: "/villes" })}
-            rel="nofollow"
-            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-brand-turquoise via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-lg font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
-          >
-            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
-            <span className="relative">Comparez des devis comparables gratuitement</span>
-            <span className="relative text-xl leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
-          </a>
-        </div>
-      </section>
+      <FinalCTAV4 />
     </main>
   );
 }
