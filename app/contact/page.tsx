@@ -1,6 +1,3 @@
-"use client";
-
-import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Image from "next/image";
 import { ShieldCheck, Users, Linkedin, Truck } from "lucide-react";
