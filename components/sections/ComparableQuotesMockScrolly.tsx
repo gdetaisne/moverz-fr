@@ -542,13 +542,13 @@ export function ComparableQuotesMockScrolly() {
               </motion.div>
             </div>
 
-            {/* Navigation dots - En dessous du mockup */}
+            {/* Navigation dots - En dessous du mockup (ultra discrets) */}
             <motion.div 
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.8 }}
-              className="mt-6 flex items-center justify-center gap-2"
+              className="mt-4 flex items-center justify-center gap-1.5"
             >
               {MOVERS.map((_, i) => (
                 <button
@@ -557,9 +557,9 @@ export function ComparableQuotesMockScrolly() {
                     setDirection(i > currentIndex ? 1 : -1);
                     setCurrentIndex(i);
                   }}
-                  className="h-2 rounded-full transition-all duration-300"
+                  className="h-1 rounded-full transition-all duration-300"
                   style={{
-                    width: i === currentIndex ? "24px" : "8px",
+                    width: i === currentIndex ? "16px" : "4px",
                     background: i === currentIndex ? "#0EA5A6" : "#CBD5E1",
                   }}
                   aria-label={`Voir offre ${i + 1}`}
