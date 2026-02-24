@@ -26,7 +26,7 @@ export default async function OgImage() {
           alignItems: "flex-start",
           justifyContent: "center",
           background: "linear-gradient(to bottom, #F0FDFA 0%, #E0F2FE 50%, #F9FAFB 100%)",
-          fontFamily: "Inter, sans-serif",
+          fontFamily: "Inter",
           position: "relative",
           overflow: "hidden",
           padding: "80px",
@@ -119,7 +119,7 @@ export default async function OgImage() {
                 fontWeight: 800,
                 color: "#0B0F19",
                 letterSpacing: -1.2,
-                fontFamily: "Inter, sans-serif",
+                fontFamily: "Inter",
               }}
             >
               Moverz
