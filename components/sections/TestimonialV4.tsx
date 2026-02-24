@@ -36,19 +36,20 @@ export function TestimonialV4() {
   return (
     <FadeUpSection className="py-12 md:py-28" style={{ background: "var(--color-surface)" }}>
       {/* Titre aligné gauche comme les autres sections */}
-      <div className="container max-w-7xl mb-12">
-        <h2
-          className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em] text-left"
-          style={{ color: "var(--color-text)" }}
-        >
-          Ils ont déménagé{" "}
-          <span style={{ color: "var(--color-accent)" }}>sereinement</span>
-          {" "}grâce à Moverz
-        </h2>
+      <div className="container">
+        <div className="max-w-5xl mb-12">
+          <h2
+            className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em] text-left"
+            style={{ color: "var(--color-text)" }}
+          >
+            Ils ont déménagé{" "}
+            <span style={{ color: "var(--color-accent)" }}>sereinement</span>
+            {" "}grâce à Moverz
+          </h2>
+        </div>
       </div>
 
-      {/* Témoignage centré dans son propre container */}
-      <div className="container max-w-5xl">
+        {/* Témoignage centré */}
         <div className="max-w-3xl mx-auto text-center">
           {/* Stars */}
           <div className="mb-6 flex items-center justify-center gap-1">
@@ -118,7 +119,7 @@ export function TestimonialV4() {
             </button>
           </div>
         )}
-      </div>
+        </div>
       </div>
     </FadeUpSection>
   );
