@@ -57,15 +57,6 @@ export const metadata: Metadata = {
     siteName: "Moverz",
     title: "Comparateur Déménagement | Jusqu'à 5 devis | Contrôlés · Gratuit",
     description: "Comparez jusqu'à 5 devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Moverz - Comparateur Déménagement · Jusqu'à 5 devis · Contrôlés · Gratuit · Note 4.9/5",
-        type: "image/png",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -73,7 +64,6 @@ export const metadata: Metadata = {
     creator: "@moverz",
     title: "Comparateur Déménagement | Jusqu'à 5 devis | Contrôlés · Gratuit",
     description: "Comparez jusqu'à 5 devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
-    images: ["/logo.png"],
   },
   robots: {
     index: true,
@@ -213,39 +203,39 @@ export default function RootLayout({
         <ConversionIntentTracker />
         <ExitIntentPopup />
         {/* Header */}
-        <header className="sticky top-0 z-40 w-full bg-white border-b border-[#E3E5E8] shadow-sm">
-          <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8">
-            <a href="/" className="flex items-center gap-3" title="Moverz - Comparateur de déménagement">
+        <header className="sticky top-0 z-40 w-full backdrop-blur-xl bg-white/90 border-b border-[#E3E5E8]/60 shadow-sm transition-all">
+          <nav className="mx-auto flex h-14 md:h-16 max-w-7xl items-center justify-between px-4 md:px-8">
+            <a href="/" className="flex items-center gap-2.5" title="Moverz - Comparateur de déménagement">
               <Image 
                 src="/logo.png" 
                 alt="Logo Moverz" 
-                width={48}
-                height={48}
+                width={36}
+                height={36}
                 priority
-                className="h-10 w-10 md:h-12 md:w-12"
+                className="h-8 w-8 md:h-9 md:w-9"
               />
-              <span className="text-2xl md:text-3xl font-bold text-[#0F172A]">Moverz</span>
+              <span className="font-heading text-xl md:text-2xl font-bold" style={{ color: "var(--color-text)" }}>Moverz</span>
             </a>
             <div className="flex items-center gap-6">
-              <a href="/pourquoi-moverz/" className="text-sm font-medium text-[#1E293B]/70 hover:text-[#0F172A] transition-colors hidden md:block">
+              <a href="/pourquoi-moverz/" className="text-sm font-medium transition-colors hidden md:block" style={{ color: "var(--color-text-secondary)" }}>
                 Pourquoi Moverz
               </a>
-              <a href="/comment-ca-marche/" className="text-sm font-medium text-[#1E293B]/70 hover:text-[#0F172A] transition-colors hidden md:block">
+              <a href="/comment-ca-marche/" className="text-sm font-medium transition-colors hidden md:block" style={{ color: "var(--color-text-secondary)" }}>
                 Comment ça marche
               </a>
-              <a href="/faq/" className="text-sm font-medium text-[#1E293B]/70 hover:text-[#0F172A] transition-colors hidden md:block">
+              <a href="/faq/" className="text-sm font-medium transition-colors hidden md:block" style={{ color: "var(--color-text-secondary)" }}>
                 FAQ
               </a>
-              <a href="/blog/" className="text-sm font-medium text-[#1E293B]/70 hover:text-[#0F172A] transition-colors hidden md:block">
+              <a href="/blog/" className="text-sm font-medium transition-colors hidden md:block opacity-70" style={{ color: "var(--color-text-muted)" }}>
                 Blog
               </a>
               <a
                 href={buildTunnelUrl({ from: "header" })}
                 rel="nofollow"
-                className="hidden sm:inline-flex items-center gap-1.5 rounded-[var(--radius-sm)] px-4 py-2 text-[13px] font-semibold text-white transition-all hover:opacity-90 active:scale-[0.98]"
+                className="hidden sm:inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-semibold text-white transition-all hover:opacity-90 active:scale-[0.98] shadow-sm"
                 style={{ background: "var(--color-accent)" }}
               >
-                <span>Obtenir des devis</span>
+                <span>Recevoir ma sélection</span>
                 <span className="text-base">→</span>
               </a>
               {/* Mobile menu hamburger */}
