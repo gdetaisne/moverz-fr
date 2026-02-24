@@ -170,18 +170,6 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
                 </div>
               </div>
             </div>
-
-              {/* Floating badges */}
-              <div className="absolute -right-4 top-20 rounded-xl shadow-xl px-3 py-2 rotate-6 bg-white border border-[var(--color-accent)]/30">
-                <p className="text-xs font-bold text-[var(--color-text)]">Locaux</p>
-                <p className="text-xs text-[var(--color-text-secondary)]">Vérifiés</p>
-              </div>
-
-              <div className="absolute -left-4 bottom-32 rounded-xl shadow-xl px-3 py-2 -rotate-6 bg-white border border-[var(--color-accent)]/30">
-                <p className="text-xs font-bold text-[var(--color-text)]">Sans démarchage</p>
-                <p className="text-xs text-[var(--color-text-secondary)]">Gratuit</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
