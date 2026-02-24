@@ -70,8 +70,7 @@ const MOVERS = [
 ];
 
 function getBarColor(value: number): string {
-  if (value >= 90) return "#10B981"; // vert
-  if (value >= 80) return "#0EA5A6"; // teal
+  if (value >= 80) return "#0EA5A6"; // turquoise Moverz
   if (value >= 70) return "#FB923C"; // orange
   return "#DC2626"; // rouge
 }
