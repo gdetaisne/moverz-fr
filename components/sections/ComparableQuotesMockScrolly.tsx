@@ -120,19 +120,16 @@ function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: n
           </div>
         </div>
         <div className="flex-1 min-w-0">
-          <p className="text-sm font-semibold" style={{ color: mover.scoreColor }}>
-            {mover.scoreLabel}
-          </p>
-          {/* Logo Moverz approved UNIQUEMENT pour les bons scores (>= 80) */}
-          {mover.score >= 80 && (
-            <div className="flex items-center gap-1 mt-0.5">
-              <div className="relative shrink-0">
-                <Image src="/logo.png" alt="Moverz" width={16} height={16} className="h-4 w-4" />
+          {/* Logo Moverz avec checkmark pour tous les scores */}
+          <div className="flex items-center gap-1.5">
+            <div className="relative shrink-0">
+              <Image src="/logo.png" alt="Moverz" width={20} height={20} className="h-5 w-5" />
+              {mover.score >= 80 && (
                 <div
-                  className="absolute -bottom-0.5 -right-0.5 h-2 w-2 rounded-full flex items-center justify-center"
+                  className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full flex items-center justify-center"
                   style={{ background: "#10B981" }}
                 >
-                  <svg className="h-1 w-1 text-white" fill="currentColor" viewBox="0 0 12 12">
+                  <svg className="h-1.5 w-1.5 text-white" fill="currentColor" viewBox="0 0 12 12">
                     <path
                       d="M10 3L4.5 8.5L2 6"
                       stroke="currentColor"
@@ -143,14 +140,15 @@ function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: n
                     />
                   </svg>
                 </div>
-              </div>
-              <span className="text-xs font-bold text-slate-900">Moverz</span>
+              )}
             </div>
-          )}
-          {/* Message pour les scores moyens/faibles */}
-          {mover.score < 80 && (
-            <p className="text-[10px] text-slate-500 mt-0.5">Score Moverz</p>
-          )}
+            <div>
+              <p className="text-xs font-bold text-slate-900">Moverz</p>
+              <p className="text-[10px] font-medium" style={{ color: mover.scoreColor }}>
+                {mover.scoreLabel}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
