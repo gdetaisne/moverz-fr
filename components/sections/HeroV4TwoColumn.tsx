@@ -24,231 +24,295 @@ const STEPS = [
   { num: "3", text: "Vous choisissez sereinement", bold: true },
 ] as const;
 
-// Morphing UI Animation Component - ULTRA 2026
+// Progressive Timeline Animation - Inspiré de Comment ça marche
 function MorphingUIAnimation() {
-  const [stage, setStage] = useState(0);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const stages = [0, 1, 2, 3, 4];
-    let currentIndex = 0;
-    
     const interval = setInterval(() => {
-      currentIndex = (currentIndex + 1) % stages.length;
-      setStage(stages[currentIndex]);
-    }, 2500); // Change stage every 2.5s
+      setProgress((prev) => (prev + 1) % 6); // 0 → 1 → 2 → 3 → 4 → 5 → loop
+    }, 2200); // Change stage every 2.2s
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div 
-      className="relative h-full w-full overflow-hidden flex items-center justify-center"
-      style={{ 
-        background: "linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%)"
-      }}
+      className="relative h-full w-full overflow-hidden p-4"
+      style={{ background: "linear-gradient(180deg, #F1F5F9 0%, #F8FAFC 100%)" }}
     >
-      {/* Gradient mesh background */}
-      <div 
-        className="absolute inset-0 opacity-30"
-        style={{
-          background: "radial-gradient(circle at 20% 50%, rgba(14,165,166,0.2) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(245,158,11,0.15) 0%, transparent 50%)",
-        }}
-      />
+      {/* Header */}
+      <motion.div 
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="bg-gradient-to-br from-[#0EA5A6] to-[#0891A1] px-4 py-4 rounded-2xl text-white mb-6"
+      >
+        <p className="text-xs font-semibold">Votre déménagement</p>
+        <p className="text-[10px] opacity-70 mt-1">Paris → Lyon • 15 mars 2026</p>
+      </motion.div>
 
-      {/* Animated grid */}
-      <motion.div
-        className="absolute inset-0 opacity-10"
-        style={{
-          backgroundImage: "linear-gradient(rgba(14,165,166,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(14,165,166,0.3) 1px, transparent 1px)",
-          backgroundSize: "50px 50px",
-        }}
-        animate={{ 
-          backgroundPosition: ["0% 0%", "100% 100%"]
-        }}
-        transition={{ 
-          duration: 20, 
-          repeat: Infinity, 
-          ease: "linear" 
-        }}
-      />
-
-      {/* Main morphing container */}
-      <div className="relative z-10 w-full max-w-[200px]">
-        <AnimatePresence mode="wait">
-          {/* Stage 0: Circle */}
-          {stage === 0 && (
-            <motion.div
-              key="circle"
-              initial={{ scale: 0, rotate: -180 }}
-              animate={{ scale: 1, rotate: 0 }}
-              exit={{ scale: 0, rotate: 180 }}
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col items-center"
-            >
-              <motion.div
-                className="w-24 h-24 rounded-full flex items-center justify-center"
-                style={{
-                  background: "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)",
-                  boxShadow: "0 0 40px rgba(14,165,166,0.4)"
-                }}
-                animate={{ 
-                  boxShadow: ["0 0 40px rgba(14,165,166,0.4)", "0 0 60px rgba(14,165,166,0.6)", "0 0 40px rgba(14,165,166,0.4)"]
-                }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                <span className="text-3xl font-bold text-white">3</span>
-              </motion.div>
-              <p className="text-xs text-white/60 mt-3 text-center">Formulaire en 3 min</p>
-            </motion.div>
-          )}
-
-          {/* Stage 1: Form inputs */}
-          {stage === 1 && (
-            <motion.div
-              key="form"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="space-y-3 p-4"
-            >
-              {[1, 2, 3].map((i) => (
-                <motion.div
-                  key={i}
-                  initial={{ width: 0 }}
-                  animate={{ width: "100%" }}
-                  transition={{ duration: 0.4, delay: i * 0.1 }}
-                  className="h-8 rounded-lg backdrop-blur-sm"
-                  style={{ 
-                    background: "rgba(255,255,255,0.1)",
-                    border: "1px solid rgba(14,165,166,0.3)"
-                  }}
-                />
-              ))}
-              <p className="text-xs text-white/60 text-center mt-4">Détails du déménagement</p>
-            </motion.div>
-          )}
-
-          {/* Stage 2: Grid of cards (devis) */}
-          {stage === 2 && (
-            <motion.div
-              key="grid"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              transition={{ duration: 0.5 }}
-              className="grid grid-cols-3 gap-2 p-4"
-            >
-              {[...Array(9)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3, delay: i * 0.05 }}
-                  className="aspect-square rounded-lg backdrop-blur-sm"
-                  style={{ 
-                    background: i < 3 ? "rgba(14,165,166,0.3)" : "rgba(255,255,255,0.1)",
-                    border: i < 3 ? "1px solid rgba(14,165,166,0.5)" : "1px solid rgba(255,255,255,0.2)"
-                  }}
-                />
-              ))}
-              <p className="col-span-3 text-xs text-white/60 text-center mt-2">12 devis → 3 retenus</p>
-            </motion.div>
-          )}
-
-          {/* Stage 3: Score circle */}
-          {stage === 3 && (
-            <motion.div
-              key="score"
-              initial={{ scale: 0, rotate: -90 }}
-              animate={{ scale: 1, rotate: 0 }}
-              exit={{ scale: 0, rotate: 90 }}
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col items-center p-4"
-            >
-              <div className="relative w-28 h-28">
-                <svg className="w-28 h-28 -rotate-90">
-                  <circle 
-                    cx="56" 
-                    cy="56" 
-                    r="50" 
-                    fill="none" 
-                    stroke="rgba(255,255,255,0.1)" 
-                    strokeWidth="4" 
-                  />
-                  <motion.circle 
-                    cx="56" 
-                    cy="56" 
-                    r="50" 
-                    fill="none" 
-                    stroke="#0EA5A6" 
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                    initial={{ strokeDasharray: "0 314" }}
-                    animate={{ strokeDasharray: "264 314" }} // 84% of 314
-                    transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                  />
-                </svg>
-                <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <motion.span 
-                    className="text-4xl font-bold text-white"
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.4, delay: 0.5 }}
-                  >
-                    84
-                  </motion.span>
-                  <span className="text-xs text-white/60">/100</span>
-                </div>
-              </div>
-              <p className="text-xs text-white/60 mt-3 text-center">Score Moverz</p>
-            </motion.div>
-          )}
-
-          {/* Stage 4: Big checkmark */}
-          {stage === 4 && (
-            <motion.div
-              key="check"
-              initial={{ scale: 0, rotate: -180 }}
-              animate={{ scale: 1, rotate: 0 }}
-              exit={{ scale: 0, rotate: 180 }}
-              transition={{ duration: 0.6, type: "spring", stiffness: 200 }}
-              className="flex flex-col items-center p-4"
-            >
-              <motion.div
-                className="w-28 h-28 rounded-full flex items-center justify-center"
-                style={{
-                  background: "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)",
-                  boxShadow: "0 0 60px rgba(14,165,166,0.6)"
-                }}
-                animate={{ 
-                  scale: [1, 1.05, 1]
-                }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              >
-                <CheckCircle2 className="w-16 h-16 text-white" strokeWidth={2.5} />
-              </motion.div>
-              <p className="text-xs text-white/60 mt-3 text-center font-semibold">Prêt à comparer</p>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-
-      {/* Bottom indicator dots */}
-      <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-1.5">
-        {[0, 1, 2, 3, 4].map((i) => (
-          <motion.div
-            key={i}
-            className="h-1 rounded-full"
+      {/* Timeline Steps */}
+      <div className="space-y-4 mb-6">
+        {/* Step 1 */}
+        <motion.div 
+          className="flex items-start gap-3"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <motion.div 
+            className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full"
             style={{
-              width: stage === i ? "16px" : "4px",
-              background: stage === i ? "#0EA5A6" : "rgba(255,255,255,0.3)"
+              background: progress >= 0 ? "#10B981" : "#F3F4F6"
             }}
-            animate={{ width: stage === i ? "16px" : "4px" }}
-            transition={{ duration: 0.3 }}
-          />
-        ))}
+            animate={{
+              background: progress >= 0 ? "#10B981" : "#F3F4F6",
+              scale: progress === 0 ? [1, 1.1, 1] : 1
+            }}
+            transition={{ 
+              scale: { duration: 0.6, ease: [0.16, 1, 0.3, 1] }
+            }}
+          >
+            {progress >= 1 ? (
+              <CheckCircle2 className="w-4 h-4 text-white" strokeWidth={3} />
+            ) : (
+              <div className="w-2 h-2 rounded-full bg-white" />
+            )}
+          </motion.div>
+          <div className="flex-1 pt-1">
+            <p className="text-[11px] font-semibold text-slate-900">Infos envoyées</p>
+            <p className="text-[9px] text-slate-500 mt-0.5">T3 • 60m² • 3ᵉ étage</p>
+          </div>
+        </motion.div>
+
+        {/* Step 2 */}
+        <motion.div 
+          className="flex items-start gap-3"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          <motion.div 
+            className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full"
+            style={{
+              background: progress >= 1 ? "#10B981" : "#F3F4F6"
+            }}
+            animate={{
+              background: progress >= 1 ? "#10B981" : "#F3F4F6",
+              scale: progress === 1 ? [1, 1.1, 1] : 1
+            }}
+            transition={{ 
+              scale: { duration: 0.6, ease: [0.16, 1, 0.3, 1] }
+            }}
+          >
+            {progress >= 2 ? (
+              <CheckCircle2 className="w-4 h-4 text-white" strokeWidth={3} />
+            ) : (
+              <div className="w-2 h-2 rounded-full bg-white" />
+            )}
+          </motion.div>
+          <div className="flex-1 pt-1">
+            <p className="text-[11px] font-semibold text-slate-900">Dossier complété</p>
+            <p className="text-[9px] text-slate-500 mt-0.5">Base identique pour tous</p>
+          </div>
+        </motion.div>
+
+        {/* Step 3 */}
+        <motion.div 
+          className="flex items-start gap-3"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
+          <motion.div 
+            className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full border-2"
+            style={{
+              background: progress >= 2 ? "#0EA5A6" : "#FFFFFF",
+              borderColor: progress >= 2 ? "#0EA5A6" : "#E5E7EB"
+            }}
+            animate={{
+              background: progress >= 2 ? "#0EA5A6" : "#FFFFFF",
+              scale: progress === 2 ? [1, 1.1, 1] : 1
+            }}
+            transition={{ 
+              scale: { duration: 0.6, ease: [0.16, 1, 0.3, 1] }
+            }}
+          >
+            {progress >= 3 ? (
+              <CheckCircle2 className="w-4 h-4 text-white" strokeWidth={3} />
+            ) : (
+              <motion.div 
+                className="w-2 h-2 rounded-full"
+                style={{ background: progress >= 2 ? "#FFFFFF" : "#CBD5E1" }}
+                animate={{ 
+                  opacity: progress === 2 ? [1, 0.3, 1] : 1
+                }}
+                transition={{ 
+                  duration: 1.5, 
+                  repeat: progress === 2 ? Infinity : 0
+                }}
+              />
+            )}
+          </motion.div>
+          <div className="flex-1 pt-1">
+            <p className="text-[11px] font-semibold text-slate-900">
+              {progress >= 2 ? "12 déménageurs contactés" : "Envoi en cours..."}
+            </p>
+            <p className="text-[9px] text-slate-500 mt-0.5">Dossier identique pour tous</p>
+          </div>
+        </motion.div>
+
+        {/* Step 4 - 7 offres reçues */}
+        <motion.div 
+          className="flex items-start gap-3"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+        >
+          <motion.div 
+            className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full"
+            style={{
+              background: progress >= 3 ? "#10B981" : "#F3F4F6"
+            }}
+            animate={{
+              background: progress >= 3 ? "#10B981" : "#F3F4F6",
+              scale: progress === 3 ? [1, 1.1, 1] : 1
+            }}
+            transition={{ 
+              scale: { duration: 0.6, ease: [0.16, 1, 0.3, 1] }
+            }}
+          >
+            <CheckCircle2 
+              className="w-4 h-4" 
+              style={{ color: progress >= 3 ? "#FFFFFF" : "#CBD5E1" }}
+              strokeWidth={3} 
+            />
+          </motion.div>
+          <div className="flex-1 pt-1">
+            <p className="text-[11px] font-semibold text-slate-900">
+              {progress >= 3 ? "7 offres reçues !" : "En attente"}
+            </p>
+            <p className="text-[9px] text-slate-500 mt-0.5">Analyse en cours</p>
+          </div>
+        </motion.div>
+
+        {/* Step 5 - 3 sélectionnées */}
+        <motion.div 
+          className="flex items-start gap-3"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 1 }}
+        >
+          <motion.div 
+            className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full"
+            style={{
+              background: progress >= 4 ? "#10B981" : "#F3F4F6"
+            }}
+            animate={{
+              scale: progress === 4 ? [1, 1.1, 1] : 1
+            }}
+            transition={{ 
+              scale: { duration: 0.6, ease: [0.16, 1, 0.3, 1] }
+            }}
+          >
+            <CheckCircle2 
+              className="w-4 h-4" 
+              style={{ color: progress >= 4 ? "#FFFFFF" : "#CBD5E1" }}
+              strokeWidth={3} 
+            />
+          </motion.div>
+          <div className="flex-1 pt-1">
+            <p className="text-[11px] font-semibold text-slate-900">
+              {progress >= 4 ? "3 offres sélectionnées" : "Vérification"}
+            </p>
+            <p className="text-[9px] text-slate-500 mt-0.5">
+              {progress >= 4 ? "Par Moverz • Fiables" : "Analyse en cours"}
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Step 6 - Vous choisissez & déménagez */}
+        <motion.div 
+          className="flex items-start gap-3"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 1.2 }}
+        >
+          <motion.div 
+            className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full"
+            style={{
+              background: progress >= 5 ? "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)" : "#F3F4F6",
+              boxShadow: progress >= 5 ? "0 0 16px rgba(14,165,166,0.5)" : "none"
+            }}
+            animate={{
+              scale: progress === 5 ? [1, 1.15, 1] : 1,
+              boxShadow: progress === 5 ? [
+                "0 0 16px rgba(14,165,166,0.5)",
+                "0 0 24px rgba(14,165,166,0.7)",
+                "0 0 16px rgba(14,165,166,0.5)"
+              ] : "none"
+            }}
+            transition={{ 
+              scale: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+              boxShadow: { duration: 1.5, repeat: progress === 5 ? Infinity : 0 }
+            }}
+          >
+            <CheckCircle2 
+              className="w-4 h-4" 
+              style={{ color: progress >= 5 ? "#FFFFFF" : "#CBD5E1" }}
+              strokeWidth={3} 
+            />
+          </motion.div>
+          <div className="flex-1 pt-1">
+            <p className="text-[11px] font-semibold text-slate-900">
+              {progress >= 5 ? "Vous choisissez" : "À venir"}
+            </p>
+            <p className="text-[9px] text-slate-500 mt-0.5">
+              {progress >= 5 ? "Déménagez sereinement" : "Dernière étape"}
+            </p>
+          </div>
+        </motion.div>
       </div>
+
+      {/* Progress card */}
+      <motion.div 
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 1.4 }}
+        className="p-3 rounded-xl border"
+        style={{ 
+          background: progress >= 5 ? "rgba(14,165,166,0.1)" : "rgba(14,165,166,0.05)",
+          borderColor: progress >= 5 ? "rgba(14,165,166,0.3)" : "rgba(14,165,166,0.2)"
+        }}
+      >
+        <div className="flex items-center justify-between mb-2">
+          <p className="text-[9px] font-semibold text-slate-900">
+            {progress >= 5 ? "✓ Terminé" : "Progression"}
+          </p>
+          <motion.p 
+            className="text-[9px] font-bold"
+            style={{ color: "#0EA5A6" }}
+            key={progress}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+          >
+            {Math.round((progress / 5) * 100)}%
+          </motion.p>
+        </div>
+        <div className="w-full h-1.5 bg-white rounded-full overflow-hidden">
+          <motion.div 
+            className="h-full rounded-full"
+            style={{ 
+              background: progress >= 5 
+                ? "linear-gradient(to right, #0EA5A6, #10B981)"
+                : "linear-gradient(to right, #0EA5A6, #A8E8E8)"
+            }}
+            initial={{ width: "0%" }}
+            animate={{ width: `${(progress / 5) * 100}%` }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          />
+        </div>
+      </motion.div>
     </div>
   );
 }

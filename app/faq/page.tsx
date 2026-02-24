@@ -12,14 +12,11 @@ export const metadata: Metadata = getFullMetadata(
   "Toutes vos questions sur le déménagement : Combien ça coûte ? Comment éviter les arnaques ? Les pros sont-ils assurés ? C'est vraiment gratuit ? → Réponses claires"
 );
 
+// Définir les icônes comme des chaînes de caractères path SVG plutôt que JSX
 const faqCategories = [
   {
     title: "Démarrage",
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
+    iconPath: "M13 10V3L4 14h7v7l9-11h-7z",
     color: "from-blue-500/10 to-cyan-500/20",
     borderColor: "border-blue-500/30",
     items: [
@@ -43,11 +40,7 @@ const faqCategories = [
   },
   {
     title: "Tarifs & Transparence",
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
+    iconPath: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
     color: "from-emerald-500/10 to-teal-500/20",
     borderColor: "border-emerald-500/30",
     items: [
@@ -63,11 +56,7 @@ const faqCategories = [
   },
   {
     title: "Sécurité & Confidentialité",
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    ),
+    iconPath: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
     color: "from-purple-500/10 to-pink-500/20",
     borderColor: "border-purple-500/30",
     items: [
@@ -91,11 +80,7 @@ const faqCategories = [
   },
   {
     title: "Couverture géographique",
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
+    iconPath: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
     color: "from-orange-500/10 to-red-500/20",
     borderColor: "border-orange-500/30",
     items: [
@@ -206,25 +191,25 @@ export default function FAQPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             {[
               { 
-                icon: <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>,
+                iconPath: "M13 10V3L4 14h7v7l9-11h-7z",
                 stat: "< 3 min", 
                 label: "Pour créer son dossier complet",
                 gradient: "from-blue-500 to-cyan-500"
               },
               { 
-                icon: <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" /></svg>,
+                iconPath: "M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7",
                 stat: "100%", 
                 label: "Gratuit & sans engagement",
                 gradient: "from-emerald-500 to-teal-500"
               },
               { 
-                icon: <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>,
+                iconPath: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
                 stat: "Sans démarchage", 
                 label: "Aucun appel intempestif",
                 gradient: "from-purple-500 to-pink-500"
               },
               { 
-                icon: <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>,
+                iconPath: "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z",
                 stat: "5+", 
                 label: "Devis comparables",
                 gradient: "from-orange-500 to-red-500"
@@ -239,7 +224,9 @@ export default function FAQPage() {
                 
                 <div className="relative text-center space-y-2.5">
                   <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${item.gradient} bg-opacity-10 text-v4-accent group-hover:scale-110 transition-transform duration-300`}>
-                    {item.icon}
+                    <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.iconPath} />
+                    </svg>
                   </div>
                   <div className="text-2xl md:text-3xl font-bold bg-gradient-to-br from-v4-text to-brand-turquoise bg-clip-text text-transparent">
                     {item.stat}
@@ -272,7 +259,9 @@ export default function FAQPage() {
                 <div className="mb-6 flex items-center gap-4 group">
                   <div className="relative">
                     <div className={`flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${category.color} border ${category.borderColor} text-v4-accent shadow-sm group-hover:shadow-md group-hover:scale-105 transition-all duration-300`}>
-                      {category.icon}
+                      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={category.iconPath} />
+                      </svg>
                     </div>
                     {/* Glow effect */}
                     <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-50 blur-xl transition-opacity duration-300 -z-10`} />

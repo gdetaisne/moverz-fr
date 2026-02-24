@@ -17,14 +17,27 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
   }, []);
 
   return (
-    <section className="relative overflow-hidden text-white py-16 md:py-24" style={{ background: "var(--color-bg-dark)" }}>
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-          backgroundSize: '32px 32px'
-        }} />
-      </div>
+    <section 
+      className="relative overflow-hidden py-16 md:py-24" 
+      style={{ 
+        background: "linear-gradient(to bottom, #F0FDFA 0%, #E0F2FE 50%, #F9FAFB 100%)" 
+      }}
+    >
+      {/* Grain texture */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.025]"
+        style={{ 
+          backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")" 
+        }}
+      />
+
+      {/* Vignette effect */}
+      <div 
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background: "radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.05) 100%)"
+        }}
+      />
 
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -35,37 +48,39 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
             }}
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold mb-8 backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[var(--color-accent)]/20 bg-[var(--color-accent)]/5 px-4 py-2 text-sm font-semibold text-[var(--color-text)] mb-8">
               <span className="h-2 w-2 rounded-full animate-pulse" style={{ background: "var(--color-accent)" }} />
               <span>{city.nameCapitalized}</span>
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6 leading-[1.1]">
+            <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6 leading-[1.1] text-[var(--color-text)]">
               Déménager à{" "}
               <span style={{ color: "var(--color-accent)" }}>{city.nameCapitalized}</span> ?
               <br />
-              <span className="text-white">3 min, des devis.</span>
+              3 min, des devis.
             </h1>
 
             {/* Subtitle */}
-            <p className="text-xl text-white/70 mb-10 leading-relaxed">
-              Des déménageurs locaux contrôlés. Des devis comparables. Sans démarchage.
+            <p className="text-xl text-[var(--color-text-secondary)] mb-10 leading-relaxed">
+              Des déménageurs locaux vérifiés. Des devis comparables. Sans démarchage.
             </p>
 
             {/* CTA */}
             <a
               href={quoteUrl}
-              className="inline-flex items-center justify-center gap-2 rounded-xl px-8 py-4 text-base font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
-              style={{ background: "var(--color-surface)", color: "var(--color-text)" }}
+              className="inline-flex items-center justify-center gap-2 rounded-xl px-8 py-4 text-base font-semibold text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+              style={{ 
+                background: "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)"
+              }}
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-              <span>Comparer mes devis</span>
+              <span>Voir mes 3 meilleurs devis</span>
             </a>
 
-            <p className="text-sm text-white/50 mt-6">
+            <p className="text-sm text-[var(--color-text-secondary)] mt-6">
               Conseil : précisez le type de logement et les contraintes d'accès pour des devis plus justes.
             </p>
           </div>
@@ -130,14 +145,14 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
               </div>
 
               {/* Floating badges */}
-              <div className="absolute -right-4 top-20 rounded-xl shadow-xl px-3 py-2 rotate-6" style={{ background: "var(--color-surface)", border: "1px solid rgba(14,165,166,0.3)" }}>
-                <p className="text-xs font-bold" style={{ color: "var(--color-text)" }}>Locaux</p>
-                <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>Contrôlés</p>
+              <div className="absolute -right-4 top-20 rounded-xl shadow-xl px-3 py-2 rotate-6 bg-white border border-[var(--color-accent)]/30">
+                <p className="text-xs font-bold text-[var(--color-text)]">Locaux</p>
+                <p className="text-xs text-[var(--color-text-secondary)]">Vérifiés</p>
               </div>
 
-              <div className="absolute -left-4 bottom-32 rounded-xl shadow-xl px-3 py-2 -rotate-6" style={{ background: "var(--color-surface)", border: "1px solid rgba(14,165,166,0.3)" }}>
-                <p className="text-xs font-bold" style={{ color: "var(--color-text)" }}>Sans démarchage</p>
-                <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>Gratuit</p>
+              <div className="absolute -left-4 bottom-32 rounded-xl shadow-xl px-3 py-2 -rotate-6 bg-white border border-[var(--color-accent)]/30">
+                <p className="text-xs font-bold text-[var(--color-text)]">Sans démarchage</p>
+                <p className="text-xs text-[var(--color-text-secondary)]">Gratuit</p>
               </div>
             </div>
           </div>

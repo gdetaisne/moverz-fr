@@ -50,7 +50,7 @@ export function CityFinalCTA({ cityName, quoteUrl }: CityFinalCTAProps) {
             </h2>
 
             <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed">
-              Comparez des devis de déménageurs contrôlés à {cityName}. Dossier anonyme,
+              Comparez des devis de déménageurs vérifiés à {cityName}. Dossier anonyme,
               réponse rapide, zéro surprise le jour&nbsp;J.
             </p>
 
@@ -90,7 +90,7 @@ export function CityFinalCTA({ cityName, quoteUrl }: CityFinalCTAProps) {
                 href={quoteUrl}
                 className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-accent)] px-8 py-4 text-base font-semibold text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
               >
-                <span>Comparer maintenant</span>
+                <span>Voir mes 3 meilleurs devis</span>
                 <span className="text-lg leading-none group-hover:translate-x-1 transition-transform">
                   →
                 </span>

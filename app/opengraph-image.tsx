@@ -12,6 +12,9 @@ export default async function OgImage() {
   const logoData = await readFile(join(process.cwd(), "public/logo.png"));
   const logoBase64 = `data:image/png;base64,${logoData.toString("base64")}`;
 
+  // Charger Inter Bold (format TTF supporté par ImageResponse)
+  const fontData = await readFile(join(process.cwd(), "public/fonts/inter.ttf"));
+
   return new ImageResponse(
     (
       <div
@@ -23,7 +26,7 @@ export default async function OgImage() {
           alignItems: "flex-start",
           justifyContent: "center",
           background: "linear-gradient(to bottom, #F0FDFA 0%, #E0F2FE 50%, #F9FAFB 100%)",
-          fontFamily: "system-ui, -apple-system, sans-serif",
+          fontFamily: "Inter, sans-serif",
           position: "relative",
           overflow: "hidden",
           padding: "80px",
@@ -116,7 +119,7 @@ export default async function OgImage() {
                 fontWeight: 800,
                 color: "#0B0F19",
                 letterSpacing: -1.2,
-                fontFamily: "system-ui, -apple-system, sans-serif",
+                fontFamily: "Inter, sans-serif",
               }}
             >
               Moverz
@@ -141,7 +144,7 @@ export default async function OgImage() {
                 color: "#4B5563",
                 fontSize: 17,
                 fontWeight: 600,
-                fontFamily: "system-ui, -apple-system, sans-serif",
+                fontFamily: "Inter, sans-serif",
               }}
             >
               Comparateur de déménagement · Gratuit · Sans démarchage
@@ -153,12 +156,12 @@ export default async function OgImage() {
             style={{
               display: "flex",
               flexDirection: "column",
-              fontSize: 80,
-              fontWeight: 700,
-              lineHeight: 0.95,
-              marginBottom: 56,
-              fontFamily: "system-ui, -apple-system, sans-serif",
-              letterSpacing: -3,
+            fontSize: 80,
+            fontWeight: 700,
+            lineHeight: 0.95,
+            marginBottom: 56,
+            fontFamily: "Inter, sans-serif",
+            letterSpacing: -3,
             }}
           >
             <span style={{ color: "#111827", marginBottom: 8 }}>
@@ -215,7 +218,7 @@ export default async function OgImage() {
                     color: "#1F2937",
                     fontSize: 17,
                     fontWeight: 600,
-                    fontFamily: "system-ui, -apple-system, sans-serif",
+                    fontFamily: "Inter, sans-serif",
                   }}
                 >
                   {item.label}
@@ -228,6 +231,15 @@ export default async function OgImage() {
     ),
     {
       ...size,
+      // Charger Inter pour un rendu propre
+      fonts: [
+        {
+          name: 'Inter',
+          data: fontData,
+          style: 'normal',
+          weight: 700,
+        },
+      ],
     }
   );
 }

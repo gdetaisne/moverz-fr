@@ -5,14 +5,14 @@ import { JsonLd } from "@/components/schema/JsonLd";
 import { TrendingUp, AlertTriangle, Shield, BarChart3, ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = getFullMetadata(
-  'chiffres-cles',
+  "chiffres-cles",
   "Chiffres clés du déménagement en France (2026) : marché, prix, arnaques",
   "Statistiques officielles sur le marché du déménagement en France : 3M de déménagements/an, prix moyens, taux d'arnaques, entreprises en difficulté. Sources : INSEE, Creditsafe, DGCCRF."
 );
 
 export default function ChiffresClesPage() {
   return (
-    <main className="bg-hero min-h-screen">
+    <div className="bg-hero min-h-screen">
       <JsonLd
         id="chiffres-cles"
         data={{
@@ -129,13 +129,13 @@ export default function ChiffresClesPage() {
                   <p className="text-sm font-semibold text-v4-text-secondary uppercase tracking-wider">Prix moyen T2/T3 local</p>
                   <p className="mt-3 text-4xl font-bold text-v4-text">800-1500€</p>
                   <p className="mt-2 text-sm text-[#1E293B]/75">
-                    Prix moyen pour un déménagement T2/T3 local (< 30 km), formule standard
+                    Prix moyen pour un déménagement T2/T3 local (moins 30 km), formule standard
                   </p>
                   <a 
                     href="/blog/prix-demenagement-2026/" 
                     className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-v4-accent hover:underline"
                   >
-                    Voir le guide complet →
+                    Voir le guide complet
                   </a>
                 </div>
               </div>
@@ -152,7 +152,7 @@ export default function ChiffresClesPage() {
                     href="/blog/prix-demenagement-2026/" 
                     className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-v4-accent hover:underline"
                   >
-                    Voir le guide complet →
+                    Voir le guide complet
                   </a>
                 </div>
               </div>
@@ -183,7 +183,7 @@ export default function ChiffresClesPage() {
                     href="/blog/estimer-volume-demenagement-guide-complet/" 
                     className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-v4-accent hover:underline"
                   >
-                    Calculer votre volume →
+                    Calculer votre volume
                   </a>
                 </div>
               </div>
@@ -246,10 +246,10 @@ export default function ChiffresClesPage() {
               </div>
 
               <div className="mt-8 rounded-2xl border border-orange-300 bg-white p-6">
-                <p className="text-sm font-semibold text-v4-text mb-2">💡 Comment se protéger</p>
+                <p className="text-sm font-semibold text-v4-text mb-2">Comment se protéger</p>
                 <p className="text-sm text-[#1E293B]/75">
                   Vérifiez toujours la solvabilité (score Creditsafe), les procédures en cours (BODACC), et exigez un dossier précis 
-                  pour éviter les suppléments. <a href="/blog/comprendre-score-creditsafe-demenageur/" className="font-semibold text-v4-accent hover:underline">Guide complet →</a>
+                  pour éviter les suppléments. <a href="/blog/comprendre-score-creditsafe-demenageur/" className="font-semibold text-v4-accent hover:underline">Guide complet</a>
                 </p>
               </div>
             </div>
@@ -306,10 +306,10 @@ export default function ChiffresClesPage() {
               </div>
 
               <div className="mt-8 rounded-2xl border border-red-300 bg-white p-6">
-                <p className="text-sm font-semibold text-v4-text mb-2">🛡️ Comment éviter les arnaques</p>
+                <p className="text-sm font-semibold text-v4-text mb-2">Comment éviter les arnaques</p>
                 <p className="text-sm text-[#1E293B]/75">
                   Vérifiez la capacité de transport, l'assurance RC Pro, la solvabilité (Creditsafe), les avis Google, 
-                  et exigez un devis détaillé avec volume précis. <a href="/blog/eviter-arnaques-demenagement/" className="font-semibold text-v4-accent hover:underline">Guide complet →</a>
+                  et exigez un devis détaillé avec volume précis. <a href="/blog/eviter-arnaques-demenagement/" className="font-semibold text-v4-accent hover:underline">Guide complet</a>
                 </p>
               </div>
             </div>
@@ -344,7 +344,7 @@ export default function ChiffresClesPage() {
                     href="/verifications-partenaires/" 
                     className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-v4-accent hover:underline"
                   >
-                    Voir nos vérifications →
+                    Voir nos vérifications
                   </a>
                 </div>
 
@@ -358,7 +358,7 @@ export default function ChiffresClesPage() {
                     href="/villes/" 
                     className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-v4-accent hover:underline"
                   >
-                    Voir les villes →
+                    Voir les villes
                   </a>
                 </div>
               </div>
@@ -374,7 +374,7 @@ export default function ChiffresClesPage() {
                   href="/pourquoi-moverz/" 
                   className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-v4-accent hover:underline"
                 >
-                  En savoir plus →
+                  En savoir plus
                 </a>
               </div>
             </div>
@@ -385,7 +385,7 @@ export default function ChiffresClesPage() {
             <h3 className="text-xl font-bold text-v4-text mb-6">Sources et méthodologie</h3>
             <div className="space-y-4 text-sm text-[#1E293B]/75">
               <div>
-                <p className="font-semibold text-v4-text">📊 Marché du déménagement</p>
+                <p className="font-semibold text-v4-text">Marché du déménagement</p>
                 <ul className="mt-2 ml-4 space-y-1 list-disc">
                   <li>Volume annuel : INSEE (Enquête Logement, données mobilité résidentielle)</li>
                   <li>Nombre d'entreprises : Data.gouv.fr (Registre des entreprises de transport)</li>
@@ -394,7 +394,7 @@ export default function ChiffresClesPage() {
               </div>
 
               <div>
-                <p className="font-semibold text-v4-text">⚠️ Difficultés financières</p>
+                <p className="font-semibold text-v4-text">Difficultés financières</p>
                 <ul className="mt-2 ml-4 space-y-1 list-disc">
                   <li>Taux de fragilité : Creditsafe (scores de solvabilité secteur déménagement)</li>
                   <li>Procédures collectives : BODACC (Bulletin Officiel des Annonces Civiles et Commerciales)</li>
@@ -403,7 +403,7 @@ export default function ChiffresClesPage() {
               </div>
 
               <div>
-                <p className="font-semibold text-v4-text">🛡️ Arnaques et litiges</p>
+                <p className="font-semibold text-v4-text">Arnaques et litiges</p>
                 <ul className="mt-2 ml-4 space-y-1 list-disc">
                   <li>Plaintes DGCCRF : Rapports annuels Direction Générale de la Concurrence et de la Répression des Fraudes</li>
                   <li>Taux de litiges : Études UFC-Que Choisir, médiateurs de la consommation, tribunaux</li>
@@ -446,6 +446,6 @@ export default function ChiffresClesPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
