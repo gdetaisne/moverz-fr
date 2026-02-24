@@ -119,6 +119,7 @@ export function MoverCard({ quote, isFirst = false, selected = false, onSelect }
           type="checkbox"
           checked={selected}
           onChange={onSelect}
+          readOnly={!onSelect}
           className="h-4 w-4 rounded border-gray-300 accent-[#0EA5A6]"
         />
         {selected ? (
