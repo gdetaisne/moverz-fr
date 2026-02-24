@@ -16,33 +16,32 @@ export default function OgImage() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          background: "linear-gradient(135deg, #04163a 0%, #2b7a78 50%, #04163a 100%)",
+          background: "linear-gradient(180deg, #a8e8e8 0%, #eafafa 42%, #ffffff 100%)",
           fontFamily: "sans-serif",
           position: "relative",
           overflow: "hidden",
         }}
       >
-        {/* Halo top-right */}
+        {/* Halos turquoise clairs - style site */}
         <div
           style={{
             position: "absolute",
-            top: -150,
-            right: -150,
-            width: 500,
-            height: 500,
-            background: "radial-gradient(circle, rgba(107,207,207,0.3) 0%, transparent 70%)",
+            top: -100,
+            right: 100,
+            width: 600,
+            height: 400,
+            background: "radial-gradient(circle, rgba(168, 232, 232, 0.6) 0%, transparent 70%)",
             filter: "blur(80px)",
           }}
         />
-        {/* Halo bottom-left */}
         <div
           style={{
             position: "absolute",
-            bottom: -100,
+            bottom: -80,
             left: -100,
-            width: 400,
-            height: 400,
-            background: "radial-gradient(circle, rgba(79,184,184,0.2) 0%, transparent 70%)",
+            width: 500,
+            height: 350,
+            background: "radial-gradient(circle, rgba(107, 207, 207, 0.4) 0%, transparent 70%)",
             filter: "blur(60px)",
           }}
         />
@@ -78,7 +77,8 @@ export default function OgImage() {
                 justifyContent: "center",
                 fontSize: 50,
                 fontWeight: 800,
-                color: "#04163a",
+                color: "#0EA5A6",
+                boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
               }}
             >
               M
@@ -87,7 +87,7 @@ export default function OgImage() {
               style={{
                 fontSize: 64,
                 fontWeight: 800,
-                color: "white",
+                color: "#0B0F19",
                 letterSpacing: -1,
               }}
             >
@@ -101,17 +101,18 @@ export default function OgImage() {
               display: "flex",
               alignItems: "center",
               gap: 12,
-              background: "rgba(255,255,255,0.1)",
+              background: "white",
               padding: "12px 24px",
               borderRadius: 50,
-              border: "1px solid rgba(255,255,255,0.2)",
+              border: "1px solid #E5E7EB",
               marginBottom: 30,
+              boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
             }}
           >
-            <span style={{ color: "white", fontSize: 20, fontWeight: 600 }}>
+            <span style={{ color: "#6B7280", fontSize: 20, fontWeight: 600 }}>
               Comparateur de déménagement
             </span>
-            <span style={{ color: "rgba(255,255,255,0.8)", fontSize: 18 }}>
+            <span style={{ color: "#9CA3AF", fontSize: 18 }}>
               · Gratuit · Sans démarchage
             </span>
           </div>
@@ -129,12 +130,12 @@ export default function OgImage() {
               textAlign: "center",
             }}
           >
-            <span style={{ color: "white" }}>Comparez des devis</span>
-            <span style={{ color: "#6BCFCF" }}>de déménageurs contrôlés</span>
+            <span style={{ color: "#0B0F19" }}>Comparez des devis</span>
+            <span style={{ color: "#0EA5A6" }}>de déménageurs contrôlés</span>
           </div>
 
           {/* Benefits */}
-          <div style={{ display: "flex", gap: 40 }}>
+          <div style={{ display: "flex", gap: 24 }}>
             {["0 €", "Sans démarchage", "Pros vérifiés"].map((label) => (
               <div
                 key={label}
@@ -142,29 +143,30 @@ export default function OgImage() {
                   display: "flex",
                   alignItems: "center",
                   gap: 12,
-                  background: "rgba(255,255,255,0.08)",
-                  padding: "16px 28px",
-                  borderRadius: 16,
-                  border: "1px solid rgba(107,207,207,0.2)",
+                  background: "white",
+                  padding: "16px 24px",
+                  borderRadius: 12,
+                  border: "1px solid #E5E7EB",
+                  boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
                 }}
               >
                 <div
                   style={{
                     width: 32,
                     height: 32,
-                    background: "linear-gradient(135deg, #6BCFCF 0%, #4FB8B8 100%)",
+                    background: "#0EA5A6",
                     borderRadius: "50%",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    color: "#04163a",
+                    color: "white",
                     fontWeight: 700,
                     fontSize: 20,
                   }}
                 >
                   ✓
                 </div>
-                <span style={{ color: "white", fontSize: 22, fontWeight: 600 }}>
+                <span style={{ color: "#0B0F19", fontSize: 22, fontWeight: 600 }}>
                   {label}
                 </span>
               </div>
