@@ -89,17 +89,24 @@ export default function PartenairesHero() {
             >
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                 <a
-                  href="/contact"
+                  href="https://pro.moverz.fr/inscription"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group inline-flex items-center gap-2 rounded-xl bg-[var(--color-accent)] px-8 py-4 text-base font-semibold text-[var(--color-text)] shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
                 >
-                  <span>Nous contacter</span>
+                  <span>S'inscrire gratuitement</span>
                   <span className="text-lg leading-none group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+                <a
+                  href="/contact"
+                  className="inline-flex items-center gap-2 text-base font-medium text-white/90 hover:text-white underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors"
+                >
+                  Nous contacter
                 </a>
               </div>
               
-              {/* Micro-texte sous CTA */}
               <p className="text-sm text-white/60 text-center lg:text-left">
-                Réponse rapide. Zéro engagement.
+                Inscription en 1 min. Zéro engagement.
               </p>
             </motion.div>
           </div>

@@ -1,3 +1,55 @@
 "use client";
-import { motion } from "framer-motion"; export default function PartenairesFinalCTA() { return ( <section className="relative py-20 md:py-28 bg-gradient-to-br from-[var(--color-bg-dark)] via-[var(--color-bg-dark)] to-[var(--color-bg-dark)] text-white overflow-hidden"> {/* Background effects */} <div className="absolute top-0 right-1/4 w-96 h-96 bg-[var(--color-accent)]/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '6s' }} /> <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"> <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} > <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8"> Prêt à recevoir des dossiers qualifiés ? </h2> <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6"> <a href="#demo" className="group inline-flex items-center gap-2 rounded-xl bg-[var(--color-accent)] px-8 py-4 text-base font-semibold text-[var(--color-text)] shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300" > <span>Voir la démo (1 min)</span> <span className="text-lg leading-none group-hover:translate-x-1 transition-transform">→</span> </a> <a href="/contact" className="inline-flex items-center gap-2 text-base font-medium text-white/90 hover:text-white underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors" > <span>Nous contacter</span> </a> </div> <p className="text-sm text-white/60 mt-6"> En rejoignant notre réseau, vous acceptez nos{" "} <a href="/cgv-partenaires/" className="text-[var(--color-accent)] hover:underline font-medium"> Conditions Générales de Vente Partenaires </a> </p> </motion.div> </div> </section> );
+import { motion } from "framer-motion";
+
+export default function PartenairesFinalCTA() {
+  return (
+    <section className="relative py-20 md:py-28 bg-gradient-to-br from-[var(--color-bg-dark)] via-[var(--color-bg-dark)] to-[var(--color-bg-dark)] text-white overflow-hidden">
+      <div
+        className="absolute top-0 right-1/4 w-96 h-96 bg-[var(--color-accent)]/10 rounded-full blur-[120px] animate-pulse"
+        style={{ animationDuration: "6s" }}
+      />
+
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8">
+            Prêt à recevoir des dossiers qualifiés ?
+          </h2>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+            <a
+              href="https://pro.moverz.fr/inscription"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 rounded-xl bg-[var(--color-accent)] px-8 py-4 text-base font-semibold text-[var(--color-text)] shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+            >
+              <span>S'inscrire gratuitement</span>
+              <span className="text-lg leading-none group-hover:translate-x-1 transition-transform">
+                →
+              </span>
+            </a>
+            <a
+              href="/contact"
+              className="inline-flex items-center gap-2 text-base font-medium text-white/90 hover:text-white underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors"
+            >
+              Nous contacter
+            </a>
+          </div>
+
+          <p className="text-sm text-white/60 mt-6">
+            En rejoignant notre réseau, vous acceptez nos{" "}
+            <a
+              href="/cgv-partenaires/"
+              className="text-[var(--color-accent)] hover:underline font-medium"
+            >
+              Conditions Générales de Vente Partenaires
+            </a>
+          </p>
+        </motion.div>
+      </div>
+    </section>
+  );
 }

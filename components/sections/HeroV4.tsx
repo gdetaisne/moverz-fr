@@ -3,22 +3,41 @@
 import { buildTunnelUrl } from "@/lib/tunnel-url";
 import { motion } from "framer-motion";
 import { staggerContainer, staggerItem } from "@/components/motion";
-import { ArrowRight, ShieldCheck, BarChart3, EyeOff } from "lucide-react";
+import { ArrowRight, Search, Scale, CheckCircle2 } from "lucide-react";
 import { trackEvent } from "@/lib/tracking";
+
+const STEPS = [
+  {
+    num: "1",
+    icon: Search,
+    text: "Nous sollicitons les déménageurs disponibles près de chez vous.",
+  },
+  {
+    num: "2",
+    icon: Scale,
+    text: "Nous organisons la mise en concurrence, contrôlons les prix et la fiabilité.",
+  },
+  {
+    num: "3",
+    icon: CheckCircle2,
+    text: "Vous choisissez sereinement.",
+    bold: true,
+  },
+] as const;
 
 export function HeroV4() {
   const quoteUrl = buildTunnelUrl({ from: "homepage-hero" });
 
   return (
     <section
-      className="relative pt-16 pb-12 md:pt-28 md:pb-24"
+      className="relative pt-14 pb-12 md:pt-24 md:pb-20"
       style={{ background: "var(--color-bg)" }}
     >
       <div
-        className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[500px] w-[800px] rounded-full blur-[120px] opacity-30"
+        className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[500px] w-[800px] rounded-full blur-[120px] opacity-25"
         style={{
           background:
-            "radial-gradient(circle, rgba(14,165,166,0.2), transparent 70%)",
+            "radial-gradient(circle, rgba(14,165,166,0.18), transparent 70%)",
         }}
       />
 
@@ -27,58 +46,81 @@ export function HeroV4() {
           initial="hidden"
           animate="visible"
           variants={staggerContainer}
-          className="mx-auto max-w-2xl text-center space-y-7"
+          className="mx-auto max-w-2xl text-center"
         >
           {/* Headline */}
           <motion.h1
             variants={staggerItem}
-            className="font-heading text-[clamp(30px,6.5vw,58px)] leading-[1.08] font-bold tracking-[-0.025em]"
+            className="font-heading text-[clamp(28px,6vw,54px)] leading-[1.1] font-bold tracking-[-0.02em]"
             style={{ color: "var(--color-text)" }}
           >
             Vous déménagez.
             <br />
             <span style={{ color: "var(--color-accent)" }}>
-              Nous vous présentons les 3&nbsp;meilleurs pour votre projet.
+              On vous présente les&nbsp;3&nbsp;meilleurs.
             </span>
           </motion.h1>
 
-          {/* Subheadline — 3 étapes claires */}
+          {/* 3 étapes — cards visuelles */}
           <motion.div
             variants={staggerItem}
-            className="mx-auto max-w-lg space-y-1.5 text-base md:text-lg leading-relaxed"
-            style={{ color: "var(--color-text-secondary)" }}
+            className="mt-8 md:mt-10 mx-auto max-w-md space-y-3"
           >
-            <p>Nous sollicitons les déménageurs disponibles près de chez vous.</p>
-            <p>Nous organisons la mise en concurrence, contrôlons les prix et la fiabilité.</p>
-            <p style={{ color: "var(--color-text)" }} className="font-medium">
-              Vous choisissez sereinement.
-            </p>
+            {STEPS.map(({ num, icon: Icon, text, bold }) => (
+              <div
+                key={num}
+                className="flex items-start gap-3.5 text-left rounded-xl px-4 py-3 transition-colors"
+                style={{
+                  background: bold
+                    ? "rgba(14,165,166,0.06)"
+                    : "transparent",
+                }}
+              >
+                <span
+                  className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold"
+                  style={{
+                    background: bold
+                      ? "var(--color-accent)"
+                      : "var(--color-border-light)",
+                    color: bold ? "#fff" : "var(--color-text-secondary)",
+                  }}
+                >
+                  {num}
+                </span>
+                <p
+                  className={`text-[15px] leading-snug ${bold ? "font-semibold" : ""}`}
+                  style={{
+                    color: bold
+                      ? "var(--color-text)"
+                      : "var(--color-text-secondary)",
+                  }}
+                >
+                  {text}
+                </p>
+              </div>
+            ))}
           </motion.div>
 
-          {/* Social proof */}
+          {/* Social proof — ancré juste avant le CTA */}
           <motion.div
             variants={staggerItem}
-            className="flex items-center justify-center gap-3"
+            className="mt-8 flex items-center justify-center gap-2"
           >
-            <div className="flex -space-x-1.5">
-              {["😊", "👍", "⭐"].map((emoji, i) => (
-                <span
-                  key={i}
-                  className="inline-flex h-7 w-7 items-center justify-center rounded-full border-2 border-white text-sm"
-                  style={{ background: "var(--color-border-light)" }}
-                >
-                  {emoji}
-                </span>
+            <div className="flex items-center gap-0.5 text-amber-400">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <svg key={i} className="h-3.5 w-3.5 fill-current" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
               ))}
             </div>
             <p
               className="text-sm"
               style={{ color: "var(--color-text-secondary)" }}
             >
-              <strong style={{ color: "var(--color-text)" }}>
-                186 dossiers
-              </strong>{" "}
-              accompagnés en{" "}
+              <strong style={{ color: "var(--color-text)" }}>4,5/5</strong>
+              {" · "}
+              <strong style={{ color: "var(--color-text)" }}>186 dossiers</strong>
+              {" "}accompagnés en{" "}
               {new Date(Date.now() - 30 * 86400000).toLocaleDateString(
                 "fr-FR",
                 { month: "long", year: "numeric" },
@@ -87,7 +129,7 @@ export function HeroV4() {
           </motion.div>
 
           {/* CTA */}
-          <motion.div variants={staggerItem}>
+          <motion.div variants={staggerItem} className="mt-6">
             <a
               href={quoteUrl}
               onClick={() =>
@@ -100,35 +142,38 @@ export function HeroV4() {
               <ArrowRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-0.5" />
             </a>
             <p
-              className="mt-3 text-xs"
+              className="mt-2.5 text-xs"
               style={{ color: "var(--color-text-muted)" }}
             >
               Gratuit · 3 min · Sans engagement
             </p>
           </motion.div>
 
-          {/* 3 garanties */}
+          {/* Trust badges — pills lisibles */}
           <motion.div
             variants={staggerItem}
-            className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 pt-2"
+            className="mt-7 flex flex-wrap items-center justify-center gap-2.5"
           >
             {[
-              { icon: ShieldCheck, text: "Chaque prix est contrôlé et justifié" },
-              { icon: BarChart3, text: "Fiabilité scorée sur 100 points" },
-              { icon: EyeOff, text: "Numéro masqué, zéro démarchage" },
-            ].map(({ icon: Icon, text }, i) => (
-              <div key={i} className="flex items-center gap-2">
-                <Icon
-                  className="h-4 w-4 shrink-0"
+              "Prix contrôlés",
+              "Fiabilité vérifiée",
+              "Numéro masqué",
+            ].map((label) => (
+              <span
+                key={label}
+                className="inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-medium border"
+                style={{
+                  color: "var(--color-text-secondary)",
+                  borderColor: "var(--color-border)",
+                  background: "var(--color-surface)",
+                }}
+              >
+                <CheckCircle2
+                  className="h-3.5 w-3.5"
                   style={{ color: "var(--color-accent)" }}
                 />
-                <span
-                  className="text-sm font-medium"
-                  style={{ color: "var(--color-text-secondary)" }}
-                >
-                  {text}
-                </span>
-              </div>
+                {label}
+              </span>
             ))}
           </motion.div>
         </motion.div>
