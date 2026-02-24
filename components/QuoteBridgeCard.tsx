@@ -69,7 +69,7 @@ export default function QuoteBridgeCard({ quoteUrl }: QuoteBridgeCardProps) {
                 <p className="text-xs text-[var(--color-text-secondary)]">Votre lien en 1 clic (pour continuer sur mobile)</p>
               </div>
             </div>
-            <span className="rounded-full bg-[var(--color-accent)]/12 border border-[var(--color-accent)]/25 px-2.5 py-1 text-[11px] font-bold text-[var(--color-text)]">
+            <span className="rounded-full bg-[var(--color-accent)]/12 border border-[var(--color-accent)]/25 px-2.5 py-1 text-xs font-bold text-[var(--color-text)]">
               Recommandé
             </span>
           </div>

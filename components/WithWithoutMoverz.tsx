@@ -80,7 +80,7 @@ export default function WithWithoutMoverz() {
             Comparez des devis gratuitement
             <span className="text-lg leading-none">→</span>
           </a>
-          <p className="text-[11px] md:text-xs text-white/70">
+          <p className="text-xs md:text-xs text-white/70">
             Gratuit · rapide · vous gardez le contrôle.
           </p>
         </div>

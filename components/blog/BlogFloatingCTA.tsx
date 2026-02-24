@@ -233,7 +233,7 @@ export default function BlogFloatingCTA() {
               Obtenir des devis <span aria-hidden="true">→</span>
             </a>
 
-            <p className="text-[11px] text-[#64748B] leading-snug">
+            <p className="text-xs text-[#64748B] leading-snug">
               Promesse client : devis comparables sous 5 à 7 jours (selon dossier).
             </p>
           </div>

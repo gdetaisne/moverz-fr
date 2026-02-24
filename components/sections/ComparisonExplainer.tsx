@@ -61,7 +61,7 @@ export function ComparisonExplainer() {
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
           >
             {/* Scroll hint mobile */}
-            <p className="text-[11px] font-medium mb-2 md:hidden" style={{ color: "var(--color-text-muted)" }}>
+            <p className="text-xs font-medium mb-2 md:hidden" style={{ color: "var(--color-text-muted)" }}>
               ← Glissez pour comparer →
             </p>
             <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
@@ -71,7 +71,7 @@ export function ComparisonExplainer() {
               >
                 {/* Header */}
                 <div
-                  className="grid grid-cols-4 text-[11px] font-medium uppercase tracking-wider"
+                  className="grid grid-cols-4 text-xs font-medium uppercase tracking-wider"
                   style={{ color: "var(--color-text-muted)", background: "var(--color-border-light)" }}
                 >
                   <div className="px-4 py-3">Prestation</div>

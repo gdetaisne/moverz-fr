@@ -9,7 +9,7 @@
 
 import { useMemo, useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence, PanInfo, useInView, useScroll, useTransform } from "framer-motion";
-import { Phone, ChevronLeft, ChevronRight, Check, X, AlertCircle, Star } from "lucide-react";
+import { Phone, ChevronLeft, ChevronRight, Check, X, AlertCircle, Star, ShieldCheck } from "lucide-react";
 import { staggerContainer, staggerItem } from "@/components/motion";
 import { computeMockQuotes } from "@/lib/utils/mockQuotes";
 import { MoverCard } from "@/components/premium/MoverCard";
@@ -250,9 +250,12 @@ function PhoneContent({ state, quotes }: { state: string; quotes: any[] }) {
       return (
         <div className="space-y-3 px-3 overflow-y-auto max-h-full">
           <div className="sticky top-0 bg-[#F9FAFB] pb-2 pt-1 z-10">
-            <p className="text-xs font-medium" style={{ color: "var(--color-text)" }}>
-              ✓ {recommended.length} offres retenues
-            </p>
+            <div className="inline-flex items-center gap-1.5">
+              <ShieldCheck className="h-3.5 w-3.5" style={{ color: "var(--color-accent)" }} />
+              <p className="text-xs font-semibold" style={{ color: "var(--color-text)" }}>
+                Vérifié par Moverz
+              </p>
+            </div>
           </div>
           {recommended.slice(0, 3).map((quote, idx) => (
             <motion.div
@@ -458,7 +461,7 @@ export function ComparableQuotesMockScrolly() {
                     <p className="text-xs font-medium" style={{ color: "var(--color-text-secondary)" }}>
                       Offres retenues pour votre dossier
                     </p>
-                    <p className="text-[11px]" style={{ color: "var(--color-text-muted)" }}>
+                    <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>
                       {currentMobile + 1}/{visibleQuotes.length}
                     </p>
                   </div>
@@ -517,7 +520,7 @@ export function ComparableQuotesMockScrolly() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.3 }}
-                  className="absolute -top-3 -right-3 rounded-full px-3 py-1.5 text-[11px] font-semibold shadow-lg"
+                  className="absolute -top-3 -right-3 rounded-full px-3 py-1.5 text-xs font-semibold shadow-lg"
                   style={{ background: "white", color: "var(--color-text)" }}
                 >
                   {recommended.length} offres retenues sur {quotes.length}
@@ -570,7 +573,7 @@ export function ComparableQuotesMockScrolly() {
             {/* Stepper avec scroll detection */}
             <motion.div variants={staggerItem} className="py-8">
               <h3
-                className="text-sm font-semibold uppercase tracking-wide mb-6"
+                className="font-heading text-sm font-semibold uppercase tracking-wide mb-6"
                 style={{ color: "var(--color-text-muted)" }}
               >
                 Comment ça fonctionne
@@ -615,7 +618,7 @@ export function ComparableQuotesMockScrolly() {
                     <p className="text-xs font-medium" style={{ color: "var(--color-text-secondary)" }}>
                       Votre sélection personnalisée
                     </p>
-                    <p className="text-[11px]" style={{ color: "var(--color-text-muted)" }}>
+                    <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>
                       Paris → Lyon · 60m²
                     </p>
                   </div>
@@ -642,7 +645,7 @@ export function ComparableQuotesMockScrolly() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, delay: 0.5 }}
-                  className="absolute -top-3 -right-3 rounded-full px-3 py-1.5 text-[11px] font-semibold shadow-lg"
+                  className="absolute -top-3 -right-3 rounded-full px-3 py-1.5 text-xs font-semibold shadow-lg"
                   style={{ background: "white", color: "var(--color-text)" }}
                 >
                   {recommended.length} offres retenues sur {quotes.length}

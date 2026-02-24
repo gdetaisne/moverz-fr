@@ -164,7 +164,7 @@ export default function BlogVillesPage({ searchParams }: PageProps) {
                     className="group flex flex-col gap-1 rounded-2xl border border-v4-border bg-white px-5 py-4 hover:border-brand-turquoise/50 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200"
                   >
                     <div className="flex flex-wrap items-center gap-2 text-xs text-v4-text-secondary">
-                      <span className="rounded-full bg-[#F0F4F8] px-2 py-0.5 font-semibold text-[11px] text-v4-accent">
+                      <span className="rounded-full bg-[#F0F4F8] px-2 py-0.5 font-semibold text-xs text-v4-accent">
                         {selectedCity === "autres" ? "Ville" : formatCityLabel(selectedCity)}
                       </span>
                       {post.readingTimeMinutes && <span>{post.readingTimeMinutes} min de lecture</span>}

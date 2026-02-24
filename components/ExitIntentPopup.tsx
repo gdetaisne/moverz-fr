@@ -210,7 +210,7 @@ export default function ExitIntentPopup() {
                 </button>
               </div>
 
-              <p className="text-[11px] text-[#94A3B8] text-center">
+              <p className="text-xs text-[#94A3B8] text-center">
                 Astuce : plus le dossier est précis (accès, étages, options), plus les devis sont fiables.
               </p>
             </div>

@@ -321,19 +321,19 @@ export default function BlogPostPage({ params }: PageProps) {
           </h1>
           <div className="flex flex-wrap items-center gap-3 text-xs text-white/70">
             {post.category && (
-              <span className="rounded-full bg-white/10 px-2 py-0.5 font-semibold text-[11px] text-v4-accent">
+              <span className="rounded-full bg-white/10 px-2 py-0.5 font-semibold text-xs text-v4-accent">
                 {post.category}
               </span>
             )}
             {post.tags?.length ? (
-              <span className="rounded-full bg-white/10 px-2 py-0.5 font-semibold text-[11px] text-white/80">
+              <span className="rounded-full bg-white/10 px-2 py-0.5 font-semibold text-xs text-white/80">
                 {post.tags.slice(0, 3).join(" · ")}
               </span>
             ) : null}
             {city && (
               <a
                 href={`/demenagement/${city.slug}/`}
-                className="rounded-full bg-white/10 px-3 py-0.5 text-[11px] text-v4-accent hover:bg-white/20 hover:text-white transition-colors"
+                className="rounded-full bg-white/10 px-3 py-0.5 text-xs text-v4-accent hover:bg-white/20 hover:text-white transition-colors"
               >
                 Déménagement {city.nameCapitalized}
               </a>
@@ -447,7 +447,7 @@ export default function BlogPostPage({ params }: PageProps) {
                 >
                   <div className="flex flex-wrap items-center gap-2 text-xs text-v4-text-secondary">
                     {item.category && (
-                      <span className="rounded-full bg-[#F0F4F8] px-2 py-0.5 font-semibold text-[11px] text-v4-accent">
+                      <span className="rounded-full bg-[#F0F4F8] px-2 py-0.5 font-semibold text-xs text-v4-accent">
                         {item.category}
                       </span>
                     )}

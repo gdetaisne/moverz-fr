@@ -333,7 +333,7 @@ export default function HeroBudgetCard({ ab = "A" }: { ab?: "A" | "B" }) {
         {loading ? "Calcul en cours…" : "Voir mon estimation →"}
       </button>
 
-      <p className="text-[11px] text-center text-[#94A3B8]">
+      <p className="text-xs text-center text-[#94A3B8]">
         Gratuit · Sans engagement · Sans appel
       </p>
 

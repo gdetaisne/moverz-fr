@@ -15,11 +15,12 @@ import { motion } from "framer-motion";
 import { staggerContainer, staggerItem } from "@/components/motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { trackEvent } from "@/lib/tracking";
+import Image from "next/image";
 
 const STEPS = [
-  { num: "1", text: "Nous sollicitons les déménageurs disponibles près de chez vous." },
-  { num: "2", text: "Nous organisons la mise en concurrence, contrôlons les prix et la fiabilité." },
-  { num: "3", text: "Vous choisissez sereinement.", bold: true },
+  { num: "1", text: "On sollicite les pros disponibles" },
+  { num: "2", text: "On contrôle prix et fiabilité" },
+  { num: "3", text: "Vous choisissez sereinement", bold: true },
 ] as const;
 
 export function HeroV4TwoColumn() {
@@ -76,29 +77,45 @@ export function HeroV4TwoColumn() {
             className="font-heading text-[clamp(32px,7vw,56px)] leading-[1.1] font-bold tracking-[-0.02em]"
             style={{ color: "var(--color-text)" }}
           >
-            Vous déménagez.
+            Vous déménagez ?
             <br />
             <span style={{ color: "var(--color-accent)" }}>
-              On vous présente les 3 meilleurs.
+              On sélectionne le top 3 pour vous.
             </span>
           </motion.h1>
 
-          {/* Steps compacts - Minimaliste */}
+          {/* Steps compacts - Minimaliste avec animation */}
           <motion.div variants={staggerItem} className="mt-7 mx-auto max-w-md space-y-2">
             {STEPS.map(({ num, text, bold }, i) => (
-              <div
+              <motion.div
                 key={num}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ 
+                  duration: 0.4, 
+                  delay: 0.3 + i * 0.1,
+                  ease: [0.16, 1, 0.3, 1]
+                }}
                 className="flex items-start gap-2.5 text-left"
               >
-                <span
+                <motion.span
                   className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold mt-0.5"
                   style={{
-                    background: bold ? "var(--color-accent)" : i === 0 ? "#F59E0B" : "var(--color-border-light)",
-                    color: bold || i === 0 ? "#fff" : "var(--color-text-secondary)",
+                    background: bold ? "var(--color-accent)" : "var(--color-border-light)",
+                    color: bold ? "#fff" : "var(--color-text-secondary)",
                   }}
+                  animate={bold ? {
+                    scale: [1, 1.05, 1],
+                  } : {}}
+                  transition={bold ? {
+                    duration: 2,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                    ease: "easeInOut"
+                  } : {}}
                 >
                   {num}
-                </span>
+                </motion.span>
                 <p
                   className={`text-sm leading-snug ${bold ? "font-semibold" : ""}`}
                   style={{
@@ -107,7 +124,7 @@ export function HeroV4TwoColumn() {
                 >
                   {text}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </motion.div>
 
@@ -145,29 +162,45 @@ export function HeroV4TwoColumn() {
               className="font-heading text-[68px] leading-[0.95] font-semibold tracking-[-0.03em] mb-8"
               style={{ color: "#111827" }}
             >
-              Vous déménagez.
+              Vous déménagez ?
               <br />
               <span style={{ color: "#0EA5A6" }}>
-                On vous présente les 3 meilleurs.
+                On sélectionne le top 3 pour vous.
               </span>
             </h1>
 
-            {/* Steps ultra-compacts - Minimaliste Ramp */}
+            {/* Steps ultra-compacts - Minimaliste Ramp avec animation */}
             <div className="space-y-1.5 mb-8">
               {STEPS.map(({ num, text, bold }, i) => (
-                <div
+                <motion.div
                   key={num}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ 
+                    duration: 0.4, 
+                    delay: 0.3 + i * 0.1,
+                    ease: [0.16, 1, 0.3, 1]
+                  }}
                   className="flex items-start gap-2.5 text-left"
                 >
-                  <span
+                  <motion.span
                     className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold mt-0.5"
                     style={{
-                      background: bold ? "#0EA5A6" : i === 0 ? "#F59E0B" : "#E5E7EB",
-                      color: bold || i === 0 ? "#fff" : "#6B7280",
+                      background: bold ? "#0EA5A6" : "#E5E7EB",
+                      color: bold ? "#fff" : "#6B7280",
                     }}
+                    animate={bold ? {
+                      scale: [1, 1.05, 1],
+                    } : {}}
+                    transition={bold ? {
+                      duration: 2,
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                      ease: "easeInOut"
+                    } : {}}
                   >
                     {num}
-                  </span>
+                  </motion.span>
                   <p
                     className={`text-[17px] leading-[1.45] ${bold ? "font-semibold" : ""}`}
                     style={{
@@ -176,7 +209,7 @@ export function HeroV4TwoColumn() {
                   >
                     {text}
                   </p>
-                </div>
+                </motion.div>
               ))}
             </div>
 
@@ -252,17 +285,10 @@ export function HeroV4TwoColumn() {
                   />
 
                   {/* Screen content - Mockup ULTRA-RÉALISTE de la vraie landing client */}
-                  <div className="relative h-full w-full p-4 pt-12 pb-8 overflow-y-auto" style={{ background: "#F9FAFB" }}>
-                    {/* Header texte réel */}
-                    <div className="mb-4 px-1">
-                      <p className="text-[11px] text-slate-600 leading-relaxed">
-                        Ces offres sont réelles, établies pour votre projet. Choisir une offre déclenche une mise en relation — <span className="font-semibold text-slate-900">sans aucun engagement</span> de votre part.
-                      </p>
-                    </div>
-
-                    {/* Card déménageur - Design pixel-perfect */}
+                  <div className="relative h-full w-full p-3 pt-11 pb-4 overflow-y-auto" style={{ background: "#F9FAFB" }}>
+                    {/* Card déménageur - Design pixel-perfect compact */}
                     <div
-                      className="rounded-2xl border p-5 shadow-md space-y-3.5"
+                      className="rounded-2xl border p-4 shadow-md space-y-2.5"
                       style={{
                         borderColor: "#0EA5A6",
                         borderWidth: "2px",
@@ -288,13 +314,13 @@ export function HeroV4TwoColumn() {
                       </div>
 
                       {/* Prix */}
-                      <div className="py-2">
+                      <div className="py-1.5">
                         <p className="text-4xl font-bold text-slate-900">1150 €</p>
                         <p className="text-xs text-slate-500 mt-1">Prix proposé TTC · 18/05/2026</p>
                       </div>
 
                       {/* Score circulaire + label */}
-                      <div className="flex items-center gap-4 py-2">
+                      <div className="flex items-center gap-4 py-1.5">
                         <div className="relative h-16 w-16">
                           <svg className="h-16 w-16 -rotate-90">
                             <circle cx="32" cy="32" r="28" fill="none" stroke="#E5E7EB" strokeWidth="4" />
@@ -312,12 +338,16 @@ export function HeroV4TwoColumn() {
                         </div>
                         <div>
                           <p className="text-sm font-semibold" style={{ color: "#0EA5A6" }}>Excellent</p>
-                          <p className="text-xs text-slate-500">Score Moverz</p>
+                          <div className="flex items-center gap-1">
+                            <p className="text-xs text-slate-500">Score</p>
+                            <Image src="/logo.png" alt="Moverz" width={12} height={12} className="h-3 w-3" />
+                            <p className="text-xs font-semibold text-slate-700">Moverz</p>
+                          </div>
                         </div>
                       </div>
 
                       {/* 5 barres de score détaillées */}
-                      <div className="space-y-2 py-2">
+                      <div className="space-y-1.5 py-1.5">
                         {[
                           { label: "Financier", value: 50, color: "#DC2626" },
                           { label: "Juridique", value: 100, color: "#0EA5A6" },
@@ -339,7 +369,7 @@ export function HeroV4TwoColumn() {
                       </div>
 
                       {/* Avis Google */}
-                      <div className="flex items-center gap-2 py-1.5">
+                      <div className="flex items-center gap-2 py-1">
                         <div className="flex items-center gap-0.5">
                           {Array.from({ length: 5 }).map((_, i) => (
                             <svg key={i} className="h-3.5 w-3.5 fill-amber-400" viewBox="0 0 20 20">
@@ -352,13 +382,13 @@ export function HeroV4TwoColumn() {
                       <p className="text-xs text-slate-500">65 avis vérifiés</p>
 
                       {/* Ancienneté */}
-                      <div className="text-[11px] text-slate-600 space-y-0.5 py-1">
+                      <div className="text-xs text-slate-600 space-y-0.5">
                         <p className="font-semibold">5 ans</p>
                         <p>Site internet</p>
                       </div>
 
                       {/* Boutons CTA */}
-                      <div className="space-y-2.5 pt-2">
+                      <div className="space-y-2 pt-1">
                         <button
                           className="w-full rounded-lg px-4 py-2.5 text-xs font-semibold border-2 transition-all"
                           style={{ borderColor: "#0EA5A6", color: "#0EA5A6", background: "white" }}
@@ -374,9 +404,9 @@ export function HeroV4TwoColumn() {
                       </div>
 
                       {/* Texte engagement */}
-                      <p className="text-xs text-slate-500 text-center pt-1.5">
-                        Mise en relation simple, sans engagement
-                      </p>
+                       <p className="text-xs text-slate-500 text-center pt-1">
+                         Mise en relation simple, sans engagement
+                       </p>
                     </div>
                   </div>
                 </div>

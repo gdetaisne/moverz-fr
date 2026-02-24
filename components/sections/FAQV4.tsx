@@ -21,7 +21,7 @@ export function FAQV4() {
           className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em] mb-6 md:mb-10 text-center"
           style={{ color: "var(--color-text)" }}
         >
-          Questions fréquentes
+          On répond à vos questions
         </h2>
 
         <div className="space-y-2">

@@ -196,7 +196,7 @@ export function ComparableQuotesMock() {
             {/* Steps — animated stepper */}
             <motion.div variants={staggerItem}>
               <h3
-                className="text-sm font-semibold uppercase tracking-wide mb-5"
+                className="font-heading text-sm font-semibold uppercase tracking-wide mb-5"
                 style={{ color: "var(--color-text-muted)" }}
               >
                 Comment ça fonctionne
@@ -259,7 +259,7 @@ export function ComparableQuotesMock() {
                   <p className="text-xs font-medium" style={{ color: "var(--color-text-secondary)" }}>
                     Offres retenues pour votre dossier
                   </p>
-                  <p className="text-[11px]" style={{ color: "var(--color-text-muted)" }}>
+                  <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>
                     {safeIndex + 1}/{visibleQuotes.length}
                   </p>
                 </div>
@@ -333,7 +333,7 @@ export function ComparableQuotesMock() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.3 }}
-                className="absolute -top-3 -right-3 rounded-full px-3 py-1.5 text-[11px] font-semibold shadow-lg"
+                className="absolute -top-3 -right-3 rounded-full px-3 py-1.5 text-xs font-semibold shadow-lg"
                 style={{ background: "white", color: "var(--color-text)" }}
               >
                 {recommended.length} offres retenues sur 7 réponses reçues

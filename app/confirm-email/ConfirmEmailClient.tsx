@@ -134,7 +134,7 @@ export default function ConfirmEmailClient() {
                 </div>
               )}
 
-              <p className="text-[11px] text-[#94A3B8] pt-2">
+              <p className="text-xs text-[#94A3B8] pt-2">
                 Si le problème persiste, copiez/collez le lien de confirmation complet depuis votre email.
               </p>
             </div>
