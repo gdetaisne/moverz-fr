@@ -123,27 +123,34 @@ function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: n
           <p className="text-sm font-semibold" style={{ color: mover.scoreColor }}>
             {mover.scoreLabel}
           </p>
-          <div className="flex items-center gap-1 mt-0.5">
-            <div className="relative shrink-0">
-              <Image src="/logo.png" alt="Moverz" width={16} height={16} className="h-4 w-4" />
-              <div
-                className="absolute -bottom-0.5 -right-0.5 h-2 w-2 rounded-full flex items-center justify-center"
-                style={{ background: "#10B981" }}
-              >
-                <svg className="h-1 w-1 text-white" fill="currentColor" viewBox="0 0 12 12">
-                  <path
-                    d="M10 3L4.5 8.5L2 6"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                  />
-                </svg>
+          {/* Logo Moverz approved UNIQUEMENT pour les bons scores (>= 80) */}
+          {mover.score >= 80 && (
+            <div className="flex items-center gap-1 mt-0.5">
+              <div className="relative shrink-0">
+                <Image src="/logo.png" alt="Moverz" width={16} height={16} className="h-4 w-4" />
+                <div
+                  className="absolute -bottom-0.5 -right-0.5 h-2 w-2 rounded-full flex items-center justify-center"
+                  style={{ background: "#10B981" }}
+                >
+                  <svg className="h-1 w-1 text-white" fill="currentColor" viewBox="0 0 12 12">
+                    <path
+                      d="M10 3L4.5 8.5L2 6"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                </div>
               </div>
+              <span className="text-xs font-bold text-slate-900">Moverz</span>
             </div>
-            <span className="text-xs font-bold text-slate-900">Moverz</span>
-          </div>
+          )}
+          {/* Message pour les scores moyens/faibles */}
+          {mover.score < 80 && (
+            <p className="text-[10px] text-slate-500 mt-0.5">Score Moverz</p>
+          )}
         </div>
       </div>
 
