@@ -24,272 +24,261 @@ const STEPS = [
   { num: "3", text: "Vous choisissez sereinement", bold: true },
 ] as const;
 
-// CAROUSEL 2026 PREMIUM - Large, Spacious, Modern
+// MORPHING UI ULTRA 2026 - Pure Premium, No Cheap Stuff
 function MorphingUIAnimation() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [stage, setStage] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % 4);
-    }, 4000);
+      setStage((prev) => (prev + 1) % 4);
+    }, 3500);
     return () => clearInterval(interval);
   }, []);
 
-  const screenshots = [
+  const stages = [
     {
       id: 0,
-      step: "1",
-      title: "Votre dossier",
-      icon: MessageSquare,
-      items: [
-        { label: "Départ", value: "Paris 75015", icon: "📍" },
-        { label: "Arrivée", value: "Lyon 69001", icon: "🎯" },
-        { label: "Surface", value: "60m² • T3", icon: "🏠" },
-        { label: "Date", value: "15 mars", icon: "📅" }
-      ]
+      metric: "1",
+      label: "dossier créé",
+      detail: "Paris → Lyon • 60m²",
+      progress: 25,
     },
     {
       id: 1,
-      step: "2",
-      title: "12 déménageurs",
-      subtitle: "contactés",
-      icon: Users,
-      items: [
-        { label: "Demeneco", value: "Contacté", status: "active" },
-        { label: "Fast Move", value: "Contacté", status: "active" },
-        { label: "TransExpress", value: "Contacté", status: "active" },
-        { label: "+9 autres", value: "En attente", status: "pending" }
-      ]
+      metric: "12",
+      label: "déménageurs contactés",
+      detail: "Mise en concurrence",
+      progress: 50,
     },
     {
       id: 2,
-      step: "3",
-      title: "7 offres",
-      subtitle: "reçues",
-      icon: Mail,
-      items: [
-        { label: "TransExpress", value: "2 750 €", status: "best" },
-        { label: "Demeneco", value: "2 890 €", status: "good" },
-        { label: "Fast Move", value: "3 150 €", status: "good" },
-        { label: "+4 autres", value: "À analyser", status: "pending" }
-      ]
+      metric: "7",
+      label: "offres reçues",
+      detail: "Analyse en cours",
+      progress: 75,
     },
     {
       id: 3,
-      step: "4",
-      title: "Top 3",
-      subtitle: "validé par Moverz",
-      icon: ShieldCheck,
-      items: [
-        { label: "TransExpress", value: "2 750 €", status: "winner" },
-        { label: "Demeneco", value: "2 890 €", status: "selected" },
-        { label: "DémParis", value: "2 990 €", status: "selected" },
-        { label: "Vérifiés", value: "Fiables", status: "verified" }
-      ]
+      metric: "3",
+      label: "offres sélectionnées",
+      detail: "Vérifiées par Moverz",
+      progress: 100,
     },
   ];
 
-  const currentScreen = screenshots[activeIndex];
-  const Icon = currentScreen.icon;
+  const current = stages[stage];
 
   return (
     <div 
-      className="relative h-full w-full overflow-hidden flex flex-col p-4"
+      className="relative h-full w-full overflow-hidden flex items-center justify-center p-6"
       style={{ 
-        background: "linear-gradient(135deg, #FAFBFC 0%, #F5F8FA 100%)"
+        background: "linear-gradient(180deg, #FAFBFC 0%, #F8FAFC 100%)"
       }}
     >
-      {/* Ambient Glow Background */}
+      {/* Dynamic Ambient Glow */}
       <motion.div
-        className="absolute top-1/3 left-1/2 -translate-x-1/2 w-64 h-64 rounded-full pointer-events-none"
-        style={{
-          background: "radial-gradient(circle, rgba(14,165,166,0.15) 0%, transparent 70%)",
-          filter: "blur(40px)",
-        }}
+        className="absolute inset-0 pointer-events-none"
         animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3],
+          background: [
+            "radial-gradient(circle at 50% 40%, rgba(14,165,166,0.08) 0%, transparent 60%)",
+            "radial-gradient(circle at 50% 40%, rgba(14,165,166,0.15) 0%, transparent 65%)",
+            "radial-gradient(circle at 50% 40%, rgba(14,165,166,0.08) 0%, transparent 60%)",
+          ]
         }}
-        transition={{ duration: 4, repeat: Infinity }}
+        transition={{ duration: 3, repeat: Infinity }}
       />
 
-      {/* Header Premium */}
-      <div className="flex items-center justify-between mb-4 relative z-10">
-        <Image 
-          src="/logo-ui.png" 
-          alt="Moverz" 
-          width={70} 
-          height={24}
-          className="h-5 w-auto"
-        />
+      {/* Main Morphing Container */}
+      <div className="relative w-full max-w-sm">
+        {/* Logo Header */}
         <motion.div 
-          className="flex items-center gap-1.5 px-2.5 py-1 rounded-full"
-          style={{ background: "#0EA5A610" }}
-          animate={{ opacity: [0.7, 1, 0.7] }}
-          transition={{ duration: 2, repeat: Infinity }}
+          className="absolute -top-8 left-0 right-0 flex justify-center"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
         >
-          <div className="w-1.5 h-1.5 rounded-full" style={{ background: "#0EA5A6" }} />
-          <span className="text-[10px] font-semibold" style={{ color: "#0EA5A6" }}>
-            En cours
-          </span>
+          <Image 
+            src="/logo-ui.png" 
+            alt="Moverz" 
+            width={80} 
+            height={28}
+            className="h-6 w-auto opacity-60"
+          />
         </motion.div>
-      </div>
 
-      {/* Main Carousel - Big & Bold */}
-      <div className="flex-1 relative">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeIndex}
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 1.05, y: -20 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="h-full"
-          >
-            {/* Card Premium */}
+        {/* Morphing Card */}
+        <motion.div
+          className="relative rounded-3xl p-8 overflow-hidden"
+          style={{
+            background: "linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.92) 100%)",
+            backdropFilter: "blur(20px)",
+            border: "1px solid rgba(14,165,166,0.12)",
+            boxShadow: "0 20px 60px rgba(14,165,166,0.08), inset 0 1px 0 rgba(255,255,255,0.9)",
+          }}
+        >
+          {/* Metric - Giant Number that morphs */}
+          <div className="text-center mb-6">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={stage}
+                initial={{ opacity: 0, scale: 0.5, rotateX: -90 }}
+                animate={{ opacity: 1, scale: 1, rotateX: 0 }}
+                exit={{ opacity: 0, scale: 1.2, rotateX: 90 }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                className="text-7xl font-black mb-2"
+                style={{
+                  background: "linear-gradient(135deg, #0EA5A6 0%, #14B8A6 50%, #0EA5A6 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                  backgroundSize: "200% 200%",
+                }}
+              >
+                {current.metric}
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Label that morphs */}
+            <AnimatePresence mode="wait">
+              <motion.p
+                key={`label-${stage}`}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.3, delay: 0.2 }}
+                className="text-lg font-semibold text-slate-800"
+              >
+                {current.label}
+              </motion.p>
+            </AnimatePresence>
+
+            {/* Detail subtitle */}
+            <AnimatePresence mode="wait">
+              <motion.p
+                key={`detail-${stage}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3, delay: 0.3 }}
+                className="text-sm text-slate-500 mt-2"
+              >
+                {current.detail}
+              </motion.p>
+            </AnimatePresence>
+          </div>
+
+          {/* Visual Progress Ring - Morphing */}
+          <div className="flex justify-center mb-8">
+            <svg width="140" height="140" className="rotate-[-90deg]">
+              {/* Background circle */}
+              <circle
+                cx="70"
+                cy="70"
+                r="60"
+                fill="none"
+                stroke="#F1F5F9"
+                strokeWidth="8"
+              />
+              {/* Animated progress circle */}
+              <motion.circle
+                cx="70"
+                cy="70"
+                r="60"
+                fill="none"
+                stroke="url(#gradient)"
+                strokeWidth="8"
+                strokeLinecap="round"
+                initial={{ strokeDashoffset: 377 }}
+                animate={{ 
+                  strokeDashoffset: 377 - (377 * current.progress) / 100 
+                }}
+                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                style={{
+                  strokeDasharray: 377,
+                }}
+              />
+              <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#0EA5A6" />
+                  <stop offset="100%" stopColor="#14B8A6" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          {/* Progress Bar - Linear fallback */}
+          <div className="space-y-2">
+            <div className="flex justify-between text-xs font-medium text-slate-600 mb-1">
+              <span>Progression</span>
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={stage}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 1.2 }}
+                  style={{ color: "#0EA5A6" }}
+                  className="font-bold"
+                >
+                  {current.progress}%
+                </motion.span>
+              </AnimatePresence>
+            </div>
+            
+            <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
+              <motion.div
+                className="h-full rounded-full"
+                style={{
+                  background: "linear-gradient(90deg, #0EA5A6 0%, #14B8A6 100%)",
+                }}
+                initial={{ width: "0%" }}
+                animate={{ width: `${current.progress}%` }}
+                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+              />
+            </div>
+          </div>
+
+          {/* Floating particles effect */}
+          {[...Array(3)].map((_, i) => (
             <motion.div
-              className="relative h-full rounded-3xl p-6 border backdrop-blur-xl"
-              style={{
-                background: "linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 100%)",
-                borderColor: "#0EA5A620",
-                boxShadow: "0 20px 60px rgba(14,165,166,0.12), 0 0 0 1px rgba(255,255,255,0.8) inset",
+              key={i}
+              className="absolute w-1 h-1 rounded-full"
+              style={{ 
+                background: "#0EA5A6",
+                left: `${30 + i * 20}%`,
+                top: "20%"
               }}
               animate={{
-                boxShadow: [
-                  "0 20px 60px rgba(14,165,166,0.12), 0 0 0 1px rgba(255,255,255,0.8) inset",
-                  "0 30px 80px rgba(14,165,166,0.18), 0 0 0 1px rgba(255,255,255,0.9) inset",
-                  "0 20px 60px rgba(14,165,166,0.12), 0 0 0 1px rgba(255,255,255,0.8) inset",
-                ]
+                y: [0, -30, 0],
+                opacity: [0, 0.6, 0],
+                scale: [0, 1, 0],
               }}
-              transition={{ duration: 3, repeat: Infinity }}
-            >
-              {/* Top: Badge + Icon */}
-              <div className="flex items-center justify-between mb-6">
-                <motion.div
-                  className="px-4 py-2 rounded-xl font-bold text-sm backdrop-blur-sm"
-                  style={{
-                    background: "linear-gradient(135deg, #0EA5A615 0%, #0EA5A608 100%)",
-                    color: "#0EA5A6",
-                    border: "1px solid rgba(14,165,166,0.1)"
-                  }}
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ delay: 0.2 }}
-                >
-                  Étape {currentScreen.step}/4
-                </motion.div>
-                
-                <motion.div
-                  className="w-12 h-12 rounded-2xl flex items-center justify-center"
-                  style={{ 
-                    background: "linear-gradient(135deg, #0EA5A6 0%, #14B8A6 100%)",
-                    boxShadow: "0 8px 24px rgba(14,165,166,0.3)"
-                  }}
-                  initial={{ scale: 0, rotate: -180 }}
-                  animate={{ scale: 1, rotate: 0 }}
-                  transition={{ type: "spring", stiffness: 200, damping: 15, delay: 0.3 }}
-                >
-                  <Icon className="w-6 h-6 text-white" strokeWidth={2} />
-                </motion.div>
-              </div>
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                delay: i * 0.4,
+              }}
+            />
+          ))}
+        </motion.div>
 
-              {/* Title - Big & Bold */}
-              <motion.div
-                className="mb-8"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-              >
-                <h3 
-                  className="text-3xl font-bold leading-tight mb-1"
-                  style={{ 
-                    background: "linear-gradient(135deg, #0EA5A6 0%, #14B8A6 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundClip: "text"
-                  }}
-                >
-                  {currentScreen.title}
-                </h3>
-                {currentScreen.subtitle && (
-                  <p className="text-lg font-medium text-slate-600">
-                    {currentScreen.subtitle}
-                  </p>
-                )}
-              </motion.div>
-
-              {/* Items List - Large & Spacious */}
-              <div className="space-y-4">
-                {currentScreen.items.map((item, i) => (
-                  <motion.div
-                    key={i}
-                    className="flex items-center justify-between p-3 rounded-xl"
-                    style={{
-                      background: item.status === "winner" || item.status === "best" 
-                        ? "linear-gradient(90deg, rgba(14,165,166,0.08) 0%, rgba(14,165,166,0.02) 100%)"
-                        : "rgba(248,250,252,0.5)",
-                      border: item.status === "winner" ? "1px solid rgba(14,165,166,0.2)" : "1px solid transparent"
-                    }}
-                    initial={{ opacity: 0, x: -30 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.4 + i * 0.1, type: "spring", stiffness: 100 }}
-                  >
-                    <div className="flex items-center gap-3">
-                      {item.icon && (
-                        <span className="text-xl">{item.icon}</span>
-                      )}
-                      <span className="text-sm font-semibold text-slate-700">
-                        {item.label}
-                      </span>
-                    </div>
-                    <span 
-                      className="text-sm font-bold"
-                      style={{ 
-                        color: item.status === "winner" || item.status === "best" ? "#0EA5A6" : "#1E293B"
-                      }}
-                    >
-                      {item.value}
-                    </span>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </motion.div>
-        </AnimatePresence>
-      </div>
-
-      {/* Navigation - Modern & Large */}
-      <div className="mt-6 relative z-10">
-        <div className="flex items-center justify-center gap-3 mb-3">
-          {screenshots.map((screen, i) => (
-            <motion.button
-              key={screen.id}
-              className="relative rounded-full"
+        {/* Stage Indicators */}
+        <div className="flex justify-center gap-2 mt-6">
+          {stages.map((s, i) => (
+            <motion.div
+              key={s.id}
+              className="h-1 rounded-full"
               style={{
-                width: i === activeIndex ? "32px" : "8px",
-                height: "8px",
-                background: i === activeIndex 
-                  ? "linear-gradient(90deg, #0EA5A6 0%, #14B8A6 100%)" 
+                width: i === stage ? "24px" : "8px",
+                background: i === stage 
+                  ? "linear-gradient(90deg, #0EA5A6 0%, #14B8A6 100%)"
                   : "#CBD5E1",
               }}
               animate={{
-                opacity: i === activeIndex ? 1 : 0.4,
+                opacity: i <= stage ? 1 : 0.3,
               }}
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setActiveIndex(i)}
+              transition={{ duration: 0.3 }}
             />
           ))}
         </div>
-        
-        <motion.p
-          key={activeIndex}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="text-center text-xs font-medium text-slate-500"
-        >
-          Paris → Lyon • 15 mars 2026
-        </motion.p>
       </div>
     </div>
   );
