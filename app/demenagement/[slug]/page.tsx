@@ -8,7 +8,6 @@ import { getCityReviewsBySlug } from "@/lib/city-reviews";
 import { buildCityFaqs } from "@/lib/seo-faq";
 import { getCityPageMetadata } from "@/lib/seo/metadata";
 import { CityHero } from "@/components/city/CityHero";
-import { buildTunnelUrl } from "@/lib/tunnel-url";
 import { CityLocalInsights } from "@/components/city/CityLocalInsights";
 // import { CityLongFormGuide } from "@/components/city/CityLongFormGuide"; // Temporarily disabled - causes build timeout
 import { CityStats } from "@/components/city/CityStats";
@@ -55,7 +54,7 @@ export default function CityMovingPage({ params }: PageProps) {
 
   const isParis = city.slug === "paris";
 
-  const quoteUrl = buildTunnelUrl({ citySlug: city.slug, from: `/demenagement/${city.slug}/` });
+  const quoteUrl = "https://devis.moverz.fr/devis-gratuits";
   const pricePost = getPricePostForCity(city.slug);
   const cityGuides = PUBLISHED_BLOG_POSTS
     .filter((post) => post.citySlug === city.slug && post.slug !== pricePost?.slug)
