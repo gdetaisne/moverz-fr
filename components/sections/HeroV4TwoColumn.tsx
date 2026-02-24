@@ -84,51 +84,46 @@ export function HeroV4TwoColumn() {
             </span>
           </motion.h1>
 
-          {/* Steps ultra-minimaliste - Style Ramp (mobile) */}
-          <motion.div variants={staggerItem} className="mt-7 mx-auto max-w-md space-y-3.5 relative">
-            {/* Ligne verticale avec progression */}
-            <div className="absolute left-[9px] top-2 bottom-2 w-[2px] bg-slate-200">
-              <motion.div
-                className="w-full bg-gradient-to-b from-orange-500 via-teal-500 to-teal-500 rounded-full"
-                initial={{ height: "0%" }}
-                animate={{ height: "100%" }}
-                transition={{ duration: 1.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                style={{ transformOrigin: "top" }}
-              />
-            </div>
-
+          {/* Steps Apple-like - Style Cards (mobile) */}
+          <motion.div variants={staggerItem} className="mt-8 space-y-3 mx-auto max-w-md">
             {STEPS.map(({ num, text, bold }, i) => (
               <motion.div
                 key={num}
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ 
-                  duration: 0.4, 
-                  delay: 0.3 + i * 0.15,
+                  duration: 0.5, 
+                  delay: 0.3 + i * 0.1,
                   ease: [0.16, 1, 0.3, 1]
                 }}
-                className="flex items-start gap-4 pl-8 relative"
+                className="relative rounded-2xl border bg-white p-5 transition-all duration-200"
+                style={{
+                  borderColor: "#E5E7EB",
+                  boxShadow: "0 1px 2px rgba(0,0,0,0.04)",
+                }}
               >
-                {/* Numéro minimaliste */}
+                {/* Numéro discret en haut à gauche */}
                 <div 
-                  className="absolute left-0 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[11px] font-bold"
+                  className="absolute top-4 left-4 flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold"
                   style={{
-                    background: i === 0 ? "#F59E0B" : bold ? "var(--color-accent)" : "var(--color-border-light)",
-                    color: i === 0 || bold ? "#fff" : "#9CA3AF",
+                    background: bold ? "#0EA5A6" : "#F3F4F6",
+                    color: bold ? "#fff" : "#9CA3AF",
                   }}
                 >
                   {num}
                 </div>
-                
+
                 {/* Texte */}
-                <p
-                  className={`text-[15px] leading-[1.5] ${bold ? "font-semibold" : "font-normal"}`}
-                  style={{
-                    color: bold ? "var(--color-text)" : "#64748B",
-                  }}
-                >
-                  {text}
-                </p>
+                <div className="pl-10">
+                  <p
+                    className={`text-[15px] leading-relaxed ${bold ? "font-semibold" : "font-normal"}`}
+                    style={{
+                      color: bold ? "#111827" : "#6B7280",
+                    }}
+                  >
+                    {text}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -174,51 +169,47 @@ export function HeroV4TwoColumn() {
               </span>
             </h1>
 
-            {/* Steps ultra-minimaliste - Style Ramp */}
-            <div className="space-y-4 mb-8 relative">
-              {/* Ligne verticale avec progression */}
-              <div className="absolute left-[9px] top-2 bottom-2 w-[2px] bg-slate-200">
-                <motion.div
-                  className="w-full bg-gradient-to-b from-orange-500 via-teal-500 to-teal-500 rounded-full"
-                  initial={{ height: "0%" }}
-                  animate={{ height: "100%" }}
-                  transition={{ duration: 1.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                  style={{ transformOrigin: "top" }}
-                />
-              </div>
-
+            {/* Steps Apple-like - Style Cards (desktop) */}
+            <div className="grid grid-cols-3 gap-4 mb-8">
               {STEPS.map(({ num, text, bold }, i) => (
                 <motion.div
                   key={num}
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ 
-                    duration: 0.4, 
-                    delay: 0.3 + i * 0.15,
+                    duration: 0.5, 
+                    delay: 0.3 + i * 0.1,
                     ease: [0.16, 1, 0.3, 1]
                   }}
-                  className="flex items-start gap-4 pl-8 relative"
+                  whileHover={{ y: -2, transition: { duration: 0.2 } }}
+                  className="relative rounded-2xl border bg-white p-6 transition-all duration-200"
+                  style={{
+                    borderColor: "#E5E7EB",
+                    boxShadow: "0 1px 2px rgba(0,0,0,0.04)",
+                  }}
                 >
-                  {/* Numéro minimaliste */}
+                  {/* Numéro discret en haut à gauche */}
                   <div 
-                    className="absolute left-0 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[11px] font-bold"
+                    className="absolute top-4 left-4 flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold"
                     style={{
-                      background: i === 0 ? "#F59E0B" : bold ? "#0EA5A6" : "#E5E7EB",
-                      color: i === 0 || bold ? "#fff" : "#9CA3AF",
+                      background: bold ? "#0EA5A6" : "#F3F4F6",
+                      color: bold ? "#fff" : "#9CA3AF",
                     }}
                   >
                     {num}
                   </div>
-                  
-                  {/* Texte plus lisible */}
-                  <p
-                    className={`text-[18px] leading-[1.5] ${bold ? "font-semibold" : "font-normal"}`}
-                    style={{
-                      color: bold ? "#111827" : "#64748B",
-                    }}
-                  >
-                    {text}
-                  </p>
+
+                  {/* Texte centré verticalement */}
+                  <div className="pt-8">
+                    <p
+                      className={`text-[15px] leading-relaxed ${bold ? "font-semibold" : "font-normal"}`}
+                      style={{
+                        color: bold ? "#111827" : "#6B7280",
+                      }}
+                    >
+                      {text}
+                    </p>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -248,86 +239,50 @@ export function HeroV4TwoColumn() {
             variants={staggerItem}
             className="lg:col-span-6 relative flex justify-center items-center"
           >
-            <div className="relative w-full max-w-[420px]" style={{ perspective: "1200px" }}>
-              {/* Halo dramatique */}
+            <div className="relative w-full max-w-[300px]">
+              {/* Gradient doux derrière (très subtil) */}
               <div
-                className="absolute inset-0 rounded-[60px] blur-[100px] opacity-35"
+                className="absolute inset-0 rounded-[44px] blur-3xl opacity-20"
                 style={{ 
-                  background: "radial-gradient(ellipse, rgba(14,165,166,0.4) 0%, rgba(245,158,11,0.2) 50%, transparent 70%)"
+                  background: "radial-gradient(ellipse, rgba(14,165,166,0.3) 0%, transparent 70%)"
                 }}
               />
 
-              {/* Ombre de contact au sol (elliptique) */}
-              <div
-                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[70%] h-8 rounded-full blur-2xl opacity-30"
-                style={{ background: "#000" }}
-              />
-              
-              {/* Stack effect - 2 cartes floutées derrière = "3 meilleurs" visuel */}
-              <div className="absolute inset-0 translate-x-4 translate-y-4 rounded-[48px] opacity-20 blur-sm" style={{ background: "#CBD5E1", transform: "rotateY(-2deg) rotateX(1deg) translateZ(-40px)" }} />
-              <div className="absolute inset-0 translate-x-2 translate-y-2 rounded-[48px] opacity-30 blur-[2px]" style={{ background: "#94A3B8", transform: "rotateY(-1deg) rotateX(0.5deg) translateZ(-20px)" }} />
-
-              {/* Phone mockup principal avec perspective */}
+              {/* Device frame minimal - Style Linear */}
               <motion.div 
                 className="relative"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 style={{ 
-                  transform: "rotateY(-3deg) rotateX(2deg)",
-                  transformStyle: "preserve-3d"
+                  transform: "rotate(-2deg)",
                 }}
               >
-                {/* Device frame - Style iPhone moderne - Ultra-compact */}
+                {/* Phone container */}
                 <div
-                  className="relative rounded-[48px] border-[8px] overflow-hidden"
+                  className="relative rounded-[40px] border-[2px] overflow-hidden bg-white"
                   style={{
                     borderColor: "#1F2937",
-                    background: "#F9FAFB",
-                    aspectRatio: "9/16.5",
-                    boxShadow: "0 40px 80px rgba(0,0,0,0.2), 0 20px 40px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.1)"
+                    aspectRatio: "9/19",
+                    boxShadow: "0 8px 24px rgba(0,0,0,0.12), 0 0 1px rgba(0,0,0,0.1)"
                   }}
                 >
-                  {/* Notch */}
+                  {/* Notch discret */}
                   <div
-                    className="absolute top-0 left-1/2 -translate-x-1/2 h-7 w-32 rounded-b-3xl z-20"
+                    className="absolute top-0 left-1/2 -translate-x-1/2 h-5 w-24 rounded-b-2xl z-20"
                     style={{ background: "#1F2937" }}
                   />
 
-                  {/* Screen content - Mockup ULTRA-RÉALISTE de la vraie landing client */}
-                  <div className="relative h-full w-full p-3 pt-11 pb-4 overflow-y-auto" style={{ background: "#F9FAFB" }}>
-                    {/* Stack de 3 cards pour montrer "3 offres" */}
-                    <div className="relative">
-                      {/* Card 3 - Très en arrière (la plus floutée) */}
-                      <div 
-                        className="absolute inset-0 translate-y-2.5 translate-x-1.5 rounded-2xl border opacity-25 blur-[1.5px] pointer-events-none"
-                        style={{
-                          borderColor: "#CBD5E1",
-                          background: "white",
-                          height: "96%",
-                        }}
-                      />
-                      
-                      {/* Card 2 - Moyennement en arrière */}
-                      <div 
-                        className="absolute inset-0 translate-y-1.5 translate-x-1 rounded-2xl border opacity-40 blur-[0.8px] pointer-events-none"
-                        style={{
-                          borderColor: "#94A3B8",
-                          background: "white",
-                          height: "98%",
-                        }}
-                      />
-                      
-                      {/* Card 1 - Principale (top 1) */}
-                      <div
-                        className="relative rounded-2xl border p-4 shadow-md space-y-2.5"
-                        style={{
-                          borderColor: "#0EA5A6",
-                          borderWidth: "2px",
-                          background: "white",
-                        }}
-                      >
-                      {/* Badge "Meilleure offre" - Teal comme sur le vrai */}
+                  {/* Screen content */}
+                  <div className="relative h-full w-full p-3 pt-9 pb-4 overflow-y-auto" style={{ background: "#F9FAFB" }}>
+                    {/* Contenu simplifié - 1 seule card visible */}
+                    <div
+                      className="rounded-xl border-2 p-4 shadow-sm space-y-2.5 bg-white"
+                      style={{
+                        borderColor: "#0EA5A6",
+                      }}
+                    >
+                      {/* Badge "Meilleure offre" */}
                       <div className="flex items-center justify-center py-1.5 rounded-lg" style={{ background: "#0EA5A6" }}>
                         <span className="text-xs font-semibold text-white">
                           ✦ Meilleure offre
@@ -335,131 +290,74 @@ export function HeroV4TwoColumn() {
                       </div>
 
                       {/* Nom déménageur */}
-                      <h3 className="text-lg font-bold text-slate-900">
+                      <h3 className="text-base font-bold text-slate-900">
                         Déménageur B
                       </h3>
 
-                      {/* Trust badges ligne */}
+                      {/* Trust badges */}
                       <div className="flex items-center gap-1.5 text-xs text-slate-600">
                         <CheckCircle2 className="h-3.5 w-3.5 shrink-0" style={{ color: "#0EA5A6" }} />
-                        <span>Prix cohérent · Fiabilité vérifiée · Avis positifs</span>
+                        <span>Vérifié · Avis positifs</span>
                       </div>
 
                       {/* Prix */}
-                      <div className="py-1.5">
-                        <p className="text-4xl font-bold text-slate-900">1150 €</p>
-                        <p className="text-xs text-slate-500 mt-1">Prix proposé TTC · 18/05/2026</p>
+                      <div className="py-1">
+                        <p className="text-3xl font-bold text-slate-900">1150 €</p>
+                        <p className="text-xs text-slate-500 mt-0.5">TTC · 18/05/2026</p>
                       </div>
 
-                      {/* Score circulaire + label */}
-                      <div className="flex items-center gap-4 py-1.5">
-                        <div className="relative h-16 w-16">
-                          <svg className="h-16 w-16 -rotate-90">
-                            <circle cx="32" cy="32" r="28" fill="none" stroke="#E5E7EB" strokeWidth="4" />
+                      {/* Score */}
+                      <div className="flex items-center gap-3 py-1">
+                        <div className="relative h-14 w-14">
+                          <svg className="h-14 w-14 -rotate-90">
+                            <circle cx="28" cy="28" r="24" fill="none" stroke="#E5E7EB" strokeWidth="3" />
                             <circle 
-                              cx="32" cy="32" r="28" fill="none" 
+                              cx="28" cy="28" r="24" fill="none" 
                               stroke="#0EA5A6" 
-                              strokeWidth="4"
-                              strokeDasharray={`${28 * 2 * Math.PI * 0.84} ${28 * 2 * Math.PI}`}
+                              strokeWidth="3"
+                              strokeDasharray={`${24 * 2 * Math.PI * 0.84} ${24 * 2 * Math.PI}`}
                               strokeLinecap="round"
                             />
                           </svg>
                           <div className="absolute inset-0 flex items-center justify-center">
-                            <span className="text-xl font-bold text-slate-900">84</span>
+                            <span className="text-lg font-bold text-slate-900">84</span>
                           </div>
                         </div>
                         <div>
                           <p className="text-sm font-semibold" style={{ color: "#0EA5A6" }}>Excellent</p>
-                          <div className="flex items-center gap-1.5">
-                            <p className="text-sm text-slate-600">Score</p>
-                            <Image src="/logo.png" alt="Moverz" width={16} height={16} className="h-4 w-4" />
-                            <p className="text-sm font-bold" style={{ color: "#0EA5A6" }}>Moverz</p>
-                          </div>
+                          <p className="text-xs text-slate-600">Score Moverz</p>
                         </div>
                       </div>
 
-                      {/* 5 barres de score détaillées */}
-                      <div className="space-y-1.5 py-1.5">
-                        {[
-                          { label: "Financier", value: 50, color: "#DC2626" },
-                          { label: "Juridique", value: 100, color: "#0EA5A6" },
-                          { label: "Google", value: 100, color: "#0EA5A6" },
-                          { label: "Réputation", value: 95, color: "#0EA5A6" },
-                          { label: "Vigilance", value: 100, color: "#0EA5A6" },
-                        ].map(({ label, value, color }) => (
-                          <div key={label} className="flex items-center justify-between text-xs">
-                            <span className="text-slate-600 w-20">{label}</span>
-                            <div className="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden mx-2">
-                              <div 
-                                className="h-full rounded-full" 
-                                style={{ width: `${value}%`, background: color }}
-                              />
-                            </div>
-                            <span className="font-semibold text-slate-900 w-8 text-right">{value}</span>
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* Avis Google */}
-                      <div className="flex items-center gap-2 py-1">
-                        <div className="flex items-center gap-0.5">
-                          {Array.from({ length: 5 }).map((_, i) => (
-                            <svg key={i} className="h-3.5 w-3.5 fill-amber-400" viewBox="0 0 20 20">
-                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                            </svg>
-                          ))}
-                        </div>
-                        <span className="text-sm font-bold text-slate-900">5.0</span>
-                      </div>
-                      <p className="text-xs text-slate-500">65 avis vérifiés</p>
-
-                      {/* Ancienneté */}
-                      <div className="text-xs text-slate-600 space-y-0.5">
-                        <p className="font-semibold">5 ans</p>
-                        <p>Site internet</p>
-                      </div>
-
-                      {/* Boutons CTA */}
-                      <div className="space-y-2 pt-1">
-                        <button
-                          className="w-full rounded-lg px-4 py-2.5 text-xs font-semibold border-2 transition-all"
-                          style={{ borderColor: "#0EA5A6", color: "#0EA5A6", background: "white" }}
-                        >
-                          Voir le détail →
-                        </button>
-                        <button
-                          className="w-full rounded-lg px-4 py-3 text-xs font-semibold text-white transition-all"
-                          style={{ background: "#0EA5A6" }}
-                        >
-                          Je choisis cette offre →
-                        </button>
-                      </div>
-
-                      {/* Texte engagement */}
-                       <p className="text-xs text-slate-500 text-center pt-1">
-                         Mise en relation simple, sans engagement
-                       </p>
-                      </div>
+                      {/* CTA */}
+                      <button
+                        className="w-full rounded-lg px-4 py-2.5 text-sm font-semibold text-white transition-all"
+                        style={{ background: "#0EA5A6" }}
+                      >
+                        Je choisis cette offre →
+                      </button>
+                    </div>
                     </div>
                   </div>
                 </div>
               </motion.div>
+
               
-              {/* Badge flottant avec orange accent */}
+              {/* Badge flottant minimaliste */}
               <motion.div
-                initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.7 }}
-                className="absolute -bottom-6 -left-5 rounded-xl px-4 py-2.5 text-sm font-semibold shadow-2xl backdrop-blur-md border"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: 0.6 }}
+                className="absolute -bottom-4 -right-4 rounded-xl px-3 py-2 text-xs font-semibold shadow-lg backdrop-blur-sm border"
                 style={{ 
                   background: "rgba(255,255,255,0.95)", 
-                  borderColor: "rgba(245,158,11,0.2)",
+                  borderColor: "rgba(14,165,166,0.15)",
                   color: "#111827" 
                 }}
               >
-                <div className="flex items-center gap-2">
-                  <div className="h-2 w-2 rounded-full animate-pulse" style={{ background: "#F59E0B" }} />
-                  <span><strong style={{ color: "#F59E0B" }}>3</strong> offres retenues sur 7</span>
+                <div className="flex items-center gap-1.5">
+                  <div className="h-1.5 w-1.5 rounded-full" style={{ background: "#0EA5A6" }} />
+                  <span><strong style={{ color: "#0EA5A6" }}>3</strong> offres retenues</span>
                 </div>
               </motion.div>
             </div>
