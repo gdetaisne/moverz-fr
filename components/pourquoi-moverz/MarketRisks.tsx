@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
+
+import { motion } from "framer-motion";
 import {
   AlertTriangle,
   TrendingDown,
@@ -8,23 +9,31 @@ import {
   Star,
   Gavel,
 } from "lucide-react";
+import { staggerContainer, staggerItem } from "@/components/motion";
 
 export default function MarketRisks() {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-white to-[var(--color-bg)]">
-      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      className="relative py-12 md:py-24 overflow-hidden"
+      style={{ background: "linear-gradient(to bottom, #FFFFFF 0%, #FAFBFC 100%)" }}
+    >
+      {/* Grain texture */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.015]"
+        style={{ 
+          backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")" 
+        }}
+      />
+
+      <div className="container relative max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Mockup dashboard alertes */}
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6 }}
             className="relative order-2 lg:order-1"
-            style={{
-              animation: mounted ? "fadeInUp 1s ease-out" : "none",
-            }}
           >
             <div className="relative w-full max-w-[420px] mx-auto">
               <div className="bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.15)] p-6 border border-[var(--color-border)]">
@@ -99,33 +108,41 @@ export default function MarketRisks() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right: Explications */}
-          <div
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerContainer}
             className="order-1 lg:order-2"
-            style={{
-              animation: mounted
-                ? "fadeInUp 1s ease-out 0.2s both"
-                : "none",
-            }}
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-[var(--color-accent)]/10 px-4 py-1.5 text-sm font-semibold text-[var(--color-text)] mb-6">
+            <motion.div
+              variants={staggerItem}
+              className="inline-flex items-center gap-2 rounded-full bg-[var(--color-accent)]/10 px-4 py-1.5 text-sm font-semibold text-[var(--color-text)] mb-6"
+            >
               <span className="h-2 w-2 rounded-full bg-[var(--color-accent)]" />
               Les chiffres du secteur
-            </div>
+            </motion.div>
 
-            <h2 className="text-3xl md:text-5xl font-heading font-bold text-[var(--color-text)] mb-6 leading-tight">
+            <motion.h2
+              variants={staggerItem}
+              className="font-heading text-3xl md:text-5xl font-bold text-[var(--color-text)] mb-6 leading-tight tracking-[-0.02em]"
+            >
               Un marché <span className="text-red-500">à risque</span>
-            </h2>
+            </motion.h2>
 
-            <p className="text-lg text-[var(--color-text-secondary)]/70 leading-relaxed mb-8">
+            <motion.p
+              variants={staggerItem}
+              className="text-lg text-[var(--color-text-secondary)]/70 leading-relaxed mb-8"
+            >
               Le déménagement est l'un des secteurs les plus problématiques pour
               les consommateurs. Voici pourquoi.
-            </p>
+            </motion.p>
 
             <div className="space-y-6 mb-10">
-              <div className="flex items-start gap-4">
+              <motion.div variants={staggerItem} className="flex items-start gap-4">
                 <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-red-100">
                   <AlertTriangle
                     className="w-5 h-5 text-red-600"
@@ -141,9 +158,9 @@ export default function MarketRisks() {
                     présentent des problèmes.
                   </p>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="flex items-start gap-4">
+              <motion.div variants={staggerItem} className="flex items-start gap-4">
                 <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-orange-100">
                   <TrendingDown
                     className="w-5 h-5 text-orange-600"
@@ -158,9 +175,9 @@ export default function MarketRisks() {
                     Comment savoir si votre déménageur sera encore là le jour J ?
                   </p>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="flex items-start gap-4">
+              <motion.div variants={staggerItem} className="flex items-start gap-4">
                 <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-[var(--color-border-light)]">
                   <Building2
                     className="w-5 h-5 text-[var(--color-text-secondary)]"
@@ -175,11 +192,14 @@ export default function MarketRisks() {
                     Moins de 20 salariés, difficile d'évaluer leur fiabilité.
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             {/* Protection card */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-brand-turquoise/10 to-[var(--color-accent)]/10 border border-[var(--color-accent)]/30">
+            <motion.div
+              variants={staggerItem}
+              className="p-6 rounded-2xl bg-gradient-to-br from-[var(--color-accent)]/10 to-[var(--color-accent)]/5 border border-[var(--color-accent)]/30"
+            >
               <div className="flex items-center gap-2 mb-3">
                 <Shield className="w-5 h-5 text-[var(--color-text)]" />
                 <p className="font-bold text-[var(--color-text)]">
@@ -204,21 +224,10 @@ export default function MarketRisks() {
                   Décisions de justice
                 </span>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
-
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-          @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-          }
-        `,
-        }}
-      />
     </section>
   );
 }

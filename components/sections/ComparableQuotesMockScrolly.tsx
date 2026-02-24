@@ -447,7 +447,7 @@ export function ComparableQuotesMockScrolly() {
                   background: "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)",
                   boxShadow: "0 4px 16px rgba(14,165,166,0.25)"
                 }}>
-                Recevoir ma sélection
+                Voir mes 3 meilleurs devis
                 <svg 
                   className="h-4 w-4 transition-transform group-hover:translate-x-1" 
                   fill="none" 

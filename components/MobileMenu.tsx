@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 
 const navLinks = [
   { href: "/pourquoi-moverz/", label: "Pourquoi Moverz" },
@@ -78,12 +79,12 @@ export default function MobileMenu() {
               ))}
               <div className="pt-3 border-t" style={{ borderColor: "var(--color-border)" }}>
                 <a
-                  href="https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=header-mobile"
+                  href={buildTunnelUrl({ from: "header-mobile", devisRange: "3" })}
                   rel="nofollow"
                   className="block w-full text-center rounded-lg px-4 py-3 text-sm font-semibold text-white transition-all active:scale-[0.98]"
                   style={{ background: "var(--color-accent)" }}
                 >
-                  Recevoir ma sélection
+                  Voir mes 3 meilleurs devis
                 </a>
               </div>
             </nav>

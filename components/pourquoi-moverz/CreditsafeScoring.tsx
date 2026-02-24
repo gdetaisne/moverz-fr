@@ -1,52 +1,72 @@
 "use client";
-import { useEffect, useState } from "react";
+
+import { motion } from "framer-motion";
 import {
   TrendingUp,
   TrendingDown,
-  Minus,
   AlertCircle,
   CheckCircle,
   XCircle,
 } from "lucide-react";
+import { staggerContainer, staggerItem } from "@/components/motion";
 
 export default function CreditsafeScoring() {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
-    <section className="py-20 md:py-28 bg-white">
-      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      className="relative py-12 md:py-24 overflow-hidden"
+      style={{ background: "#FFFFFF" }}
+    >
+      {/* Grain texture */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.015]"
+        style={{ 
+          backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")" 
+        }}
+      />
+
+      <div className="container relative max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Explications */}
-          <div
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerContainer}
             className="order-2 lg:order-1"
-            style={{
-              animation: mounted ? "fadeInUp 1s ease-out" : "none",
-            }}
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-[var(--color-accent)]/10 px-4 py-1.5 text-sm font-semibold text-[var(--color-text)] mb-6">
+            <motion.div
+              variants={staggerItem}
+              className="inline-flex items-center gap-2 rounded-full bg-[var(--color-accent)]/10 px-4 py-1.5 text-sm font-semibold text-[var(--color-text)] mb-6"
+            >
               <span className="h-2 w-2 rounded-full bg-[var(--color-accent)]" />
               Exclusivité Moverz
-            </div>
+            </motion.div>
 
-            <h2 className="text-3xl md:text-5xl font-heading font-bold text-[var(--color-text)] mb-6 leading-tight">
+            <motion.h2
+              variants={staggerItem}
+              className="font-heading text-3xl md:text-5xl font-bold text-[var(--color-text)] mb-6 leading-tight tracking-[-0.02em]"
+            >
               3 analyses de risque. Notées /100.
-            </h2>
+            </motion.h2>
 
-            <p className="text-lg text-[var(--color-text-secondary)]/70 leading-relaxed mb-8">
+            <motion.p
+              variants={staggerItem}
+              className="text-lg text-[var(--color-text-secondary)]/70 leading-relaxed mb-8"
+            >
               Le prix ne fait pas tout. Nous évaluons chaque déménageur selon{" "}
               <strong className="text-[var(--color-text)]">
                 3 axes de risque
               </strong>{" "}
               (expérience client, financier, juridique) via Creditsafe, Pappers
               et l'analyse des avis Google.
-            </p>
+            </motion.p>
 
             <div className="space-y-5">
               {/* Reco A */}
-              <div className="flex items-start gap-4 p-4 rounded-xl bg-green-50 border border-green-200">
+              <motion.div
+                variants={staggerItem}
+                className="flex items-start gap-4 p-4 rounded-xl bg-green-50 border border-green-200"
+              >
                 <CheckCircle
                   className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"
                   strokeWidth={2.5}
@@ -60,10 +80,13 @@ export default function CreditsafeScoring() {
                     alerte → Le plus fiable
                   </p>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Attention B */}
-              <div className="flex items-start gap-4 p-4 rounded-xl bg-orange-50 border border-orange-200">
+              <motion.div
+                variants={staggerItem}
+                className="flex items-start gap-4 p-4 rounded-xl bg-orange-50 border border-orange-200"
+              >
                 <AlertCircle
                   className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5"
                   strokeWidth={2.5}
@@ -77,10 +100,13 @@ export default function CreditsafeScoring() {
                     cash/dettes) → Fragile, négociez les conditions
                   </p>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Exclu C */}
-              <div className="flex items-start gap-4 p-4 rounded-xl bg-red-50 border border-red-200">
+              <motion.div
+                variants={staggerItem}
+                className="flex items-start gap-4 p-4 rounded-xl bg-red-50 border border-red-200"
+              >
                 <XCircle
                   className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"
                   strokeWidth={2.5}
@@ -94,23 +120,25 @@ export default function CreditsafeScoring() {
                     (condamnation 2023) → Non présenté dans vos devis
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </div>
 
-            <p className="text-sm text-[var(--color-text-secondary)]/60 mt-6 text-center lg:text-left">
+            <motion.p
+              variants={staggerItem}
+              className="text-sm text-[var(--color-text-secondary)]/60 mt-6 text-center lg:text-left"
+            >
               Sources : Google, Creditsafe, Pappers • Analyses automatiques •
               Exemple illustratif
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
 
           {/* Right: Mockup scoring app */}
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="relative order-1 lg:order-2"
-            style={{
-              animation: mounted
-                ? "fadeInUp 1s ease-out 0.2s both"
-                : "none",
-            }}
           >
             <div className="relative w-full max-w-[420px] mx-auto">
               <div className="bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.15)] overflow-hidden border border-[var(--color-border)]">
@@ -216,11 +244,17 @@ export default function CreditsafeScoring() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Bottom explanation */}
-        <div className="max-w-3xl mx-auto text-center mt-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-3xl mx-auto text-center mt-16"
+        >
           <div className="bg-white rounded-2xl p-8 shadow-[0_10px_40px_rgba(0,0,0,0.06)] border border-[var(--color-border)]">
             <p className="text-sm font-semibold text-[var(--color-text)] mb-2">
               Pourquoi personne d'autre ne le fait ?
@@ -237,19 +271,8 @@ export default function CreditsafeScoring() {
               → Voir le détail de nos 3 analyses de risque
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
-
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-          @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-          }
-        `,
-        }}
-      />
     </section>
   );
 }
