@@ -1,6 +1,4 @@
 import { ImageResponse } from "next/og";
-import { readFile } from "fs/promises";
-import { join } from "path";
 
 export const runtime = "nodejs";
 export const alt = "Moverz – Comparateur de déménagement gratuit";
@@ -8,14 +6,6 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function OgImage() {
-  // Charger les fontes
-  const interFont = await readFile(
-    join(process.cwd(), "public/fonts/inter-latin.woff2")
-  );
-  const soraFont = await readFile(
-    join(process.cwd(), "public/fonts/sora-latin.woff2")
-  );
-
   return new ImageResponse(
     (
       <div
@@ -27,7 +17,7 @@ export default async function OgImage() {
           alignItems: "flex-start",
           justifyContent: "center",
           background: "linear-gradient(to bottom, #F0FDFA 0%, #E0F2FE 50%, #F9FAFB 100%)",
-          fontFamily: "Inter",
+          fontFamily: "system-ui, -apple-system, sans-serif",
           position: "relative",
           overflow: "hidden",
           padding: "80px",
@@ -123,7 +113,7 @@ export default async function OgImage() {
                   fontSize: 36,
                   fontWeight: 900,
                   color: "white",
-                  fontFamily: "Sora",
+                  fontFamily: "system-ui, -apple-system, sans-serif",
                   letterSpacing: -1.5,
                 }}
               >
@@ -136,7 +126,7 @@ export default async function OgImage() {
                 fontWeight: 800,
                 color: "#0B0F19",
                 letterSpacing: -1.2,
-                fontFamily: "Sora",
+                fontFamily: "system-ui, -apple-system, sans-serif",
               }}
             >
               Moverz
@@ -146,7 +136,7 @@ export default async function OgImage() {
           {/* Tagline compact - style badge moderne */}
           <div
             style={{
-              display: "inline-flex",
+              display: "flex",
               alignItems: "center",
               background: "rgba(255, 255, 255, 0.9)",
               padding: "10px 20px",
@@ -154,7 +144,6 @@ export default async function OgImage() {
               border: "1px solid rgba(0, 0, 0, 0.06)",
               marginBottom: 44,
               boxShadow: "0 1px 2px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.02)",
-              backdropFilter: "blur(8px)",
             }}
           >
             <span
@@ -162,7 +151,7 @@ export default async function OgImage() {
                 color: "#4B5563",
                 fontSize: 16,
                 fontWeight: 600,
-                fontFamily: "Inter",
+                fontFamily: "system-ui, -apple-system, sans-serif",
               }}
             >
               Comparateur de déménagement · Gratuit · Sans démarchage
@@ -178,7 +167,7 @@ export default async function OgImage() {
               fontWeight: 900,
               lineHeight: 0.98,
               marginBottom: 52,
-              fontFamily: "Sora",
+              fontFamily: "system-ui, -apple-system, sans-serif",
               letterSpacing: -3,
             }}
           >
@@ -216,7 +205,6 @@ export default async function OgImage() {
                   borderRadius: 50,
                   border: "1px solid rgba(0, 0, 0, 0.08)",
                   boxShadow: "0 1px 2px rgba(0,0,0,0.03)",
-                  backdropFilter: "blur(8px)",
                 }}
               >
                 <span style={{ fontSize: 18 }}>{item.icon}</span>
@@ -225,7 +213,7 @@ export default async function OgImage() {
                     color: "#4B5563",
                     fontSize: 16,
                     fontWeight: 600,
-                    fontFamily: "Inter",
+                    fontFamily: "system-ui, -apple-system, sans-serif",
                   }}
                 >
                   {item.label}
@@ -238,26 +226,6 @@ export default async function OgImage() {
     ),
     {
       ...size,
-      fonts: [
-        {
-          name: "Inter",
-          data: interFont,
-          style: "normal",
-          weight: 600,
-        },
-        {
-          name: "Sora",
-          data: soraFont,
-          style: "normal",
-          weight: 800,
-        },
-        {
-          name: "Sora",
-          data: soraFont,
-          style: "normal",
-          weight: 900,
-        },
-      ],
     }
   );
 }
