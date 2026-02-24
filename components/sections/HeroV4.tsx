@@ -35,23 +35,25 @@ export function HeroV4() {
             className="font-heading text-[clamp(30px,6.5vw,58px)] leading-[1.08] font-bold tracking-[-0.025em]"
             style={{ color: "var(--color-text)" }}
           >
-            3&nbsp;000 déménageurs partenaires.
+            Vous déménagez.
             <br />
             <span style={{ color: "var(--color-accent)" }}>
-              On vous recommande les 3&nbsp;meilleurs.
+              Nous vous présentons les 3&nbsp;meilleurs pour votre projet.
             </span>
           </motion.h1>
 
-          {/* Subheadline */}
-          <motion.p
+          {/* Subheadline — 3 étapes claires */}
+          <motion.div
             variants={staggerItem}
-            className="text-base md:text-lg leading-relaxed mx-auto max-w-xl"
+            className="mx-auto max-w-lg space-y-1.5 text-base md:text-lg leading-relaxed"
             style={{ color: "var(--color-text-secondary)" }}
           >
-            Moverz organise la mise en concurrence de votre déménagement&nbsp;:
-            prix contrôlés, fiabilité scorée, entreprises vérifiées une par une.
-            Vous recevez une sélection ultra qualifiée&nbsp;— pas une simple liste.
-          </motion.p>
+            <p>Nous sollicitons les déménageurs disponibles près de chez vous.</p>
+            <p>Nous organisons la mise en concurrence, contrôlons les prix et la fiabilité.</p>
+            <p style={{ color: "var(--color-text)" }} className="font-medium">
+              Vous choisissez sereinement.
+            </p>
+          </motion.div>
 
           {/* Social proof */}
           <motion.div
