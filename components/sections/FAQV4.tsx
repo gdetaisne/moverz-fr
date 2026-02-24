@@ -27,27 +27,9 @@ export function FAQV4() {
       />
       
       <div className="container max-w-2xl relative z-10">
-        {/* Badge "Questions fréquentes" */}
-        <div className="flex justify-center mb-4">
-          <span 
-            className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold"
-            style={{ 
-              background: "rgba(14,165,166,0.15)", 
-              border: "1px solid rgba(14,165,166,0.3)",
-              color: "var(--color-accent)" 
-            }}
-          >
-            <span 
-              className="h-2 w-2 rounded-full animate-pulse" 
-              style={{ background: "var(--color-accent)" }}
-            />
-            Questions fréquentes
-          </span>
-        </div>
-
         {/* Titre */}
         <h2
-          className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em] mb-6 md:mb-10 text-center"
+          className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em] mb-8 md:mb-12 text-center"
           style={{ color: "#FFFFFF" }}
         >
           On répond à vos questions

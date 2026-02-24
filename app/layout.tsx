@@ -210,16 +210,16 @@ export default function RootLayout({
         <ConversionIntentTracker />
         <ExitIntentPopup />
         {/* Header */}
-        <header className="sticky top-0 z-40 w-full backdrop-blur-xl bg-white/90 border-b shadow-sm transition-all" style={{ borderColor: "var(--color-border)" }}>
+        <header className="sticky top-0 z-40 w-full backdrop-blur-xl bg-white/85 border-b shadow-sm transition-all" style={{ borderColor: "var(--color-border)" }}>
           <nav className="mx-auto flex h-14 md:h-16 max-w-7xl items-center justify-between px-4 md:px-8">
             <a href="/" className="flex items-center gap-2.5" title="Moverz - Comparateur de déménagement">
               <Image 
                 src="/logo.png" 
                 alt="Logo Moverz" 
-                width={36}
-                height={36}
+                width={40}
+                height={40}
                 priority
-                className="h-8 w-8 md:h-9 md:w-9"
+                className="h-9 w-9 md:h-10 md:w-10"
               />
               <span className="font-heading text-xl md:text-2xl font-bold" style={{ color: "var(--color-text)" }}>Moverz</span>
             </a>
