@@ -1,14 +1,14 @@
 "use client";
 
 /**
- * WhyMoverz - Version Premium avec stats
- * Design impactant pour servir de buffer entre Hero et Scrollytelling
+ * WhyMoverz - Version DARK Premium
  * Style cohérent avec CreditsafeChapter
+ * Alternance visuelle light/dark sur la homepage
  */
 
 import { motion } from "framer-motion";
 import { staggerContainer, staggerItem } from "@/components/motion";
-import { Tag, Shield, Clock, ArrowRight } from "lucide-react";
+import { Tag, Shield, Clock } from "lucide-react";
 
 const arguments_ = [
   {
@@ -44,15 +44,19 @@ export function WhyMoverz() {
   return (
     <section 
       className="relative py-16 md:py-32 overflow-hidden"
-      style={{ 
-        background: "linear-gradient(180deg, var(--color-bg) 0%, var(--color-surface) 100%)"
-      }}
+      style={{ background: "#0B0F14" }}
     >
-      {/* Glow subtil en haut */}
+      {/* Texture grain subtile (comme CreditsafeChapter) */}
       <div
-        className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[400px] w-[800px] rounded-full blur-[120px] opacity-15"
+        className="pointer-events-none absolute inset-0 opacity-[0.015]"
+        style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")" }}
+      />
+
+      {/* Glow accent en haut */}
+      <div
+        className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[300px] w-[600px] rounded-full blur-[100px] opacity-20"
         style={{
-          background: "radial-gradient(circle, rgba(14,165,166,0.3), transparent 70%)",
+          background: "radial-gradient(circle, rgba(14,165,166,0.4), transparent 70%)",
         }}
       />
 
@@ -69,28 +73,26 @@ export function WhyMoverz() {
             <span
               className="inline-block text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full"
               style={{ 
-                background: "rgba(14,165,166,0.1)", 
-                color: "var(--color-accent)",
-                border: "1px solid rgba(14,165,166,0.2)"
+                background: "rgba(14,165,166,0.15)", 
+                color: "#0EA5A6",
+                border: "1px solid rgba(14,165,166,0.3)"
               }}
             >
               Notre approche
             </span>
             <h2
-              className="font-heading text-[clamp(32px,5vw,52px)] font-bold tracking-[-0.02em] leading-[1.1]"
-              style={{ color: "var(--color-text)" }}
+              className="font-heading text-[clamp(32px,5vw,52px)] font-bold tracking-[-0.02em] leading-[1.1] text-white"
             >
               Pourquoi passer par nous ?
             </h2>
             <p 
-              className="text-lg leading-relaxed"
-              style={{ color: "var(--color-text-secondary)" }}
+              className="text-lg leading-relaxed text-white/60"
             >
               Un seul dossier. Des offres vérifiées. Un choix serein.
             </p>
           </motion.div>
 
-          {/* 3 arguments - Premium cards */}
+          {/* 3 arguments - Dark cards */}
           <div className="grid gap-6 md:grid-cols-3">
             {arguments_.map((arg, i) => {
               const Icon = arg.icon;
@@ -98,18 +100,21 @@ export function WhyMoverz() {
                 <motion.div
                   key={i}
                   variants={staggerItem}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: i * 0.1 }}
                   whileHover={{ y: -4 }}
                   className="group relative rounded-2xl border p-8 space-y-6 transition-all duration-300"
                   style={{
-                    borderColor: "var(--color-border)",
-                    background: "white",
-                    boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
+                    borderColor: "rgba(255,255,255,0.06)",
+                    background: "rgba(255,255,255,0.02)",
+                    boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
                   }}
                 >
                   {/* Number badge - top right */}
                   <div 
-                    className="absolute top-6 right-6 text-6xl font-bold opacity-5 font-heading"
-                    style={{ color: "var(--color-accent)" }}
+                    className="absolute top-6 right-6 text-6xl font-bold opacity-[0.03] font-heading text-white"
                   >
                     {arg.number}
                   </div>
@@ -117,48 +122,49 @@ export function WhyMoverz() {
                   {/* Icon */}
                   <div
                     className="inline-flex h-14 w-14 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110"
-                    style={{ background: "rgba(14,165,166,0.1)" }}
+                    style={{ background: "rgba(14,165,166,0.15)" }}
                   >
-                    <Icon className="h-7 w-7" style={{ color: "var(--color-accent)" }} />
+                    <Icon className="h-7 w-7" style={{ color: "#0EA5A6" }} />
                   </div>
 
                   {/* Content */}
                   <div className="space-y-3">
                     <h3
-                      className="text-xl font-bold leading-tight"
-                      style={{ color: "var(--color-text)" }}
+                      className="text-xl font-bold leading-tight text-white"
                     >
                       {arg.title}
                     </h3>
                     <p
-                      className="text-base leading-relaxed"
-                      style={{ color: "var(--color-text-secondary)" }}
+                      className="text-base leading-relaxed text-white/60"
                     >
                       {arg.description}
                     </p>
                     <p
                       className="text-sm font-semibold"
-                      style={{ color: "var(--color-accent)" }}
+                      style={{ color: "#0EA5A6" }}
                     >
                       {arg.highlight}
                     </p>
                   </div>
 
-                  {/* Stat au bas */}
+                  {/* Stat au bas avec animation */}
                   <div 
                     className="pt-4 border-t"
-                    style={{ borderColor: "var(--color-border)" }}
+                    style={{ borderColor: "rgba(255,255,255,0.06)" }}
                   >
                     <div className="flex items-baseline gap-2">
-                      <span 
+                      <motion.span 
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
                         className="text-3xl font-bold tabular-nums"
-                        style={{ color: "var(--color-accent)" }}
+                        style={{ color: "#0EA5A6" }}
                       >
                         {arg.stat}
-                      </span>
+                      </motion.span>
                       <span 
-                        className="text-sm"
-                        style={{ color: "var(--color-text-muted)" }}
+                        className="text-sm text-white/40"
                       >
                         {arg.statLabel}
                       </span>
@@ -175,8 +181,7 @@ export function WhyMoverz() {
             className="text-center pt-8"
           >
             <p
-              className="text-base font-medium"
-              style={{ color: "var(--color-text-secondary)" }}
+              className="text-base font-medium text-white/50"
             >
               Découvrez comment nous filtrons les offres pour vous ↓
             </p>

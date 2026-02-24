@@ -63,7 +63,11 @@ export default function StickyCTA() {
               {/* Left: Mini proof */}
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg" style={{ background: "rgba(14,165,166,0.1)" }}>
-                  <span className="text-xl">✓</span>
+                  <img 
+                    src="/logo-ui.png" 
+                    alt="Moverz" 
+                    className="h-6 w-6 object-contain"
+                  />
                 </div>
                 <div>
                   <p className="text-sm font-semibold" style={{ color: "var(--color-text)" }}>

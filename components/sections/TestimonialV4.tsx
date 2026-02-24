@@ -42,8 +42,8 @@ export function TestimonialV4() {
             <Star
               key={i}
               className="h-4 w-4"
-              fill={i < Math.floor(review.rating) ? "#0EA5A6" : "none"}
-              stroke={i < Math.floor(review.rating) ? "#0EA5A6" : "var(--color-border)"}
+              fill={i < Math.floor(review.rating) ? "var(--color-accent)" : "none"}
+              stroke={i < Math.floor(review.rating) ? "var(--color-accent)" : "var(--color-border)"}
             />
           ))}
         </div>

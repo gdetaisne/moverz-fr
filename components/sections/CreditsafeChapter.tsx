@@ -48,9 +48,9 @@ const trustPoints = [
 ];
 
 function getScoreColor(score: number): string {
-  if (score >= 80) return "#0EA5A6";
-  if (score >= 60) return "#F59E0B";
-  return "#EF4444";
+  if (score >= 80) return "var(--color-accent)";
+  if (score >= 60) return "#F59E0B"; // Warning color (keep as is)
+  return "#EF4444"; // Danger color (keep as is)
 }
 
 function getScoreLabel(score: number): string {
@@ -190,7 +190,7 @@ export function CreditsafeChapter() {
   return (
     <section
       className="relative py-12 md:py-28 overflow-hidden"
-      style={{ background: "#0B0F14" }}
+      style={{ background: "var(--color-bg-dark)" }}
     >
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.015]"
@@ -260,7 +260,7 @@ export function CreditsafeChapter() {
                       className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg"
                       style={{ background: "rgba(14,165,166,0.12)" }}
                     >
-                      <Icon className="h-4.5 w-4.5" style={{ color: "#0EA5A6" }} />
+                      <Icon className="h-4.5 w-4.5" style={{ color: "var(--color-accent)" }} />
                     </div>
                     <div>
                       <p className="text-sm font-semibold text-white">{axis.title}</p>
@@ -330,7 +330,7 @@ export function CreditsafeChapter() {
                   className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg"
                   style={{ background: "rgba(14,165,166,0.12)" }}
                 >
-                  <TIcon className="h-3.5 w-3.5" style={{ color: "#0EA5A6" }} />
+                  <TIcon className="h-3.5 w-3.5" style={{ color: "var(--color-accent)" }} />
                 </div>
                 <p className="text-sm text-white/50 leading-snug">{text}</p>
               </div>

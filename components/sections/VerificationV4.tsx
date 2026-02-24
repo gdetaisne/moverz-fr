@@ -20,7 +20,7 @@ export function VerificationV4() {
   return (
     <section
       className="py-20 md:py-28 relative overflow-hidden"
-      style={{ background: "#0B0F14" }}
+      style={{ background: "var(--color-bg-dark)" }}
     >
       <div className="container relative">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-20 items-center">
@@ -65,7 +65,7 @@ export function VerificationV4() {
                 <span className="text-lg text-white/40">/100</span>
                 <span
                   className="ml-auto inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold"
-                  style={{ background: "rgba(14,165,166,0.15)", color: "#0EA5A6" }}
+                  style={{ background: "rgba(14,165,166,0.15)", color: "var(--color-accent)" }}
                 >
                   <Shield className="h-3 w-3" />
                   Vérifié
@@ -86,7 +86,7 @@ export function VerificationV4() {
                     transition={{ duration: 0.3, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
                     className="flex items-center gap-3"
                   >
-                    <Icon className="h-4 w-4 shrink-0" style={{ color: "#0EA5A6" }} />
+                    <Icon className="h-4 w-4 shrink-0" style={{ color: "var(--color-accent)" }} />
                     <span className="text-sm text-white/70">{label}</span>
                   </motion.div>
                 ))}

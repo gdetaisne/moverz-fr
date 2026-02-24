@@ -41,7 +41,7 @@ export function HowItWorksVideo() {
             aria-label="Lire la vidéo explicative"
           >
             {/* Placeholder gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#0B0F14] to-[#1a2332] opacity-90" />
+            <div className="absolute inset-0 opacity-90" style={{ background: "linear-gradient(to bottom right, var(--color-bg-dark), #1a2332)" }} />
 
             {/* Play button */}
             <div className="absolute inset-0 flex items-center justify-center">

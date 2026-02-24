@@ -210,7 +210,7 @@ export default function RootLayout({
         <ConversionIntentTracker />
         <ExitIntentPopup />
         {/* Header */}
-        <header className="sticky top-0 z-40 w-full backdrop-blur-xl bg-white/90 border-b border-[#E3E5E8]/60 shadow-sm transition-all">
+        <header className="sticky top-0 z-40 w-full backdrop-blur-xl bg-white/90 border-b shadow-sm transition-all" style={{ borderColor: "var(--color-border)" }}>
           <nav className="mx-auto flex h-14 md:h-16 max-w-7xl items-center justify-between px-4 md:px-8">
             <a href="/" className="flex items-center gap-2.5" title="Moverz - Comparateur de déménagement">
               <Image 
@@ -259,7 +259,7 @@ export default function RootLayout({
         {/* ===== FOOTER V4 ===== */}
         <footer
           className="border-t border-white/10"
-          style={{ background: "#0B0F14" }}
+          style={{ background: "var(--color-bg-dark)" }}
         >
           <div className="mx-auto max-w-[1200px] px-5 md:px-6 lg:px-8 py-10 md:py-14">
             <div className="grid grid-cols-2 gap-6 md:grid-cols-5 md:gap-6 mb-10">
@@ -288,11 +288,13 @@ export default function RootLayout({
                     id="footer-search-q"
                     name="q"
                     placeholder="Rechercher (blog, villes)…"
-                    className="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-2 text-sm text-white placeholder:text-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-[#6BCFCF]"
+                    className="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-2 text-sm text-white placeholder:text-white/60 backdrop-blur-sm focus:outline-none focus:ring-2"
+                    style={{ "--tw-ring-color": "var(--color-accent)" } as React.CSSProperties}
                   />
                   <button
                     type="submit"
-                    className="shrink-0 rounded-xl bg-[#6BCFCF] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:bg-[#5AB9B9] transition-colors"
+                    className="shrink-0 rounded-xl px-4 py-2 text-sm font-semibold transition-colors hover:opacity-90"
+                    style={{ background: "var(--color-accent)", color: "var(--color-text)" }}
                   >
                     OK
                   </button>
@@ -332,7 +334,7 @@ export default function RootLayout({
                   <li><a href="/demenagement/lyon/" className="text-white/70 hover:text-white transition-colors">Lyon</a></li>
                   <li><a href="/demenagement/marseille/" className="text-white/70 hover:text-white transition-colors">Marseille</a></li>
                   <li><a href="/demenagement/toulouse/" className="text-white/70 hover:text-white transition-colors">Toulouse</a></li>
-                  <li><a href="/villes/" className="text-[#6BCFCF] hover:text-white transition-colors">Voir toutes les villes →</a></li>
+                  <li><a href="/villes/" className="hover:text-white transition-colors" style={{ color: "var(--color-accent)" }}>Voir toutes les villes →</a></li>
                 </ul>
               </div>
 
