@@ -313,7 +313,7 @@ export function ComparableQuotesMockScrolly() {
               </p>
             </motion.div>
 
-            {/* Comment ça fonctionne */}
+            {/* Comment ça fonctionne - Avec animation timeline */}
             <motion.div variants={staggerItem} className="space-y-5">
               <h3
                 className="font-heading text-sm font-semibold uppercase tracking-wide"
@@ -322,7 +322,23 @@ export function ComparableQuotesMockScrolly() {
                 Comment ça fonctionne
               </h3>
               
-              <div className="space-y-3">
+              <div className="relative space-y-0">
+                {/* Ligne verticale background (grise) */}
+                <div 
+                  className="absolute left-3 top-3 bottom-3 w-[2px]"
+                  style={{ background: "rgba(14,165,166,0.15)" }}
+                />
+                
+                {/* Ligne verticale animée (turquoise) qui se remplit */}
+                <motion.div 
+                  className="absolute left-3 top-3 w-[2px]"
+                  style={{ background: "#0EA5A6" }}
+                  initial={{ height: 0 }}
+                  whileInView={{ height: "calc(100% - 24px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 4, ease: [0.16, 1, 0.3, 1] }}
+                />
+                
                 {[
                   "Nous analysons votre dossier",
                   "Nous mettons le marché en concurrence",
@@ -330,26 +346,73 @@ export function ComparableQuotesMockScrolly() {
                   "Nous retenons les meilleures",
                   "Vous choisissez en toute confiance",
                 ].map((step, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <div
-                      className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full"
-                      style={{ background: "rgba(14,165,166,0.15)" }}
+                  <motion.div 
+                    key={i} 
+                    className="flex items-start gap-4 pb-6 last:pb-0 relative"
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.8 }}
+                    transition={{ duration: 0.6, delay: i * 0.3, ease: [0.16, 1, 0.3, 1] }}
+                  >
+                    {/* Cercle avec numéro qui devient checkmark */}
+                    <motion.div
+                      className="relative flex h-6 w-6 shrink-0 items-center justify-center rounded-full z-10"
+                      style={{ background: "white", border: "2px solid #0EA5A6" }}
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true, amount: 0.8 }}
+                      transition={{ 
+                        duration: 0.5, 
+                        delay: i * 0.3,
+                        type: "spring",
+                        stiffness: 200,
+                        damping: 15
+                      }}
                     >
-                      <svg
-                        className="h-3.5 w-3.5"
+                      {/* Numéro */}
+                      <motion.span
+                        className="text-xs font-bold absolute"
+                        style={{ color: "#0EA5A6" }}
+                        initial={{ opacity: 1, scale: 1 }}
+                        whileInView={{ opacity: 0, scale: 0 }}
+                        viewport={{ once: true, amount: 0.8 }}
+                        transition={{ 
+                          duration: 0.3, 
+                          delay: 1.2 + i * 0.3,
+                          ease: [0.16, 1, 0.3, 1]
+                        }}
+                      >
+                        {i + 1}
+                      </motion.span>
+                      
+                      {/* Checkmark qui apparaît */}
+                      <motion.svg
+                        className="h-3.5 w-3.5 absolute"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                         strokeWidth={3}
                         style={{ color: "#0EA5A6" }}
+                        initial={{ opacity: 0, scale: 0, rotate: -90 }}
+                        whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                        viewport={{ once: true, amount: 0.8 }}
+                        transition={{ 
+                          duration: 0.6, 
+                          delay: 1.5 + i * 0.3,
+                          type: "spring",
+                          stiffness: 200,
+                          damping: 15
+                        }}
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
+                      </motion.svg>
+                    </motion.div>
+                    
+                    {/* Texte */}
                     <p className="text-base font-medium pt-0.5" style={{ color: "var(--color-text)" }}>
                       {step}
                     </p>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
@@ -376,12 +439,12 @@ export function ComparableQuotesMockScrolly() {
               >
                 {/* Phone frame - Compact & realistic proportions */}
                 <div
-                  className="relative rounded-[38px] border-[7px] overflow-hidden bg-white"
+                  className="relative rounded-[38px] border-[2px] overflow-hidden bg-white"
                   style={{
                     borderColor: "#1F2937",
                     width: "280px",
                     height: "600px",
-                    boxShadow: "0 25px 50px -12px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.1)",
+                    boxShadow: "0 25px 50px -12px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,0,0,0.08)",
                   }}
                 >
                   {/* Dynamic Island (iPhone 14 Pro style) */}
@@ -398,24 +461,6 @@ export function ComparableQuotesMockScrolly() {
 
                   {/* Screen content with carousel */}
                   <div className="relative h-full w-full overflow-hidden" style={{ background: "#F9FAFB" }}>
-                    {/* Navigation dots mobile (inside screen, top) */}
-                    <div className="absolute top-8 left-0 right-0 z-20 flex items-center justify-center gap-2 lg:hidden">
-                      {MOVERS.map((_, i) => (
-                        <button
-                          key={i}
-                          onClick={() => {
-                            setDirection(i > currentIndex ? 1 : -1);
-                            setCurrentIndex(i);
-                          }}
-                          className="h-1.5 rounded-full transition-all"
-                          style={{
-                            width: i === currentIndex ? "16px" : "6px",
-                            background: i === currentIndex ? "#0EA5A6" : "#CBD5E1",
-                          }}
-                        />
-                      ))}
-                    </div>
-
                     {/* Carousel container (inside phone) with enhanced stack effect */}
                     <div className="relative h-full pt-16 pb-3 px-2 overflow-hidden">
                       {/* Card #3 - Très en arrière (la plus floue) */}
@@ -476,7 +521,51 @@ export function ComparableQuotesMockScrolly() {
                   </div>
                 </div>
               </motion.div>
+
+              {/* Badge flottant minimaliste */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.6 }}
+                className="absolute -bottom-4 -right-4 rounded-xl px-3 py-2 text-xs font-semibold shadow-lg backdrop-blur-sm border"
+                style={{ 
+                  background: "rgba(255,255,255,0.95)", 
+                  borderColor: "rgba(14,165,166,0.15)",
+                  color: "#111827" 
+                }}
+              >
+                <div className="flex items-center gap-1.5">
+                  <div className="h-1.5 w-1.5 rounded-full" style={{ background: "#1F2937" }} />
+                  <span><strong style={{ color: "#0EA5A6" }}>3</strong> offres retenues sur <strong>12</strong> devis reçus</span>
+                </div>
+              </motion.div>
             </div>
+
+            {/* Navigation dots - En dessous du mockup */}
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.8 }}
+              className="mt-6 flex items-center justify-center gap-2"
+            >
+              {MOVERS.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => {
+                    setDirection(i > currentIndex ? 1 : -1);
+                    setCurrentIndex(i);
+                  }}
+                  className="h-2 rounded-full transition-all duration-300"
+                  style={{
+                    width: i === currentIndex ? "24px" : "8px",
+                    background: i === currentIndex ? "#0EA5A6" : "#CBD5E1",
+                  }}
+                  aria-label={`Voir offre ${i + 1}`}
+                />
+              ))}
+            </motion.div>
           </div>
         </div>
       </div>

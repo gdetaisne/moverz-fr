@@ -3,7 +3,7 @@
 /**
  * WhyMoverz - Version alignée sur CreditsafeChapter
  * Design compact avec animations de progression
- * Couleurs: Turquoise + Orange pour diversité
+ * Couleurs: Turquoise uniquement pour cohérence identité Moverz
  */
 
 import { useRef, useState, useEffect } from "react";
@@ -18,7 +18,7 @@ const arguments_ = [
     subtitle: "Appel d'offres réel, pas d'estimation vague",
     score: 450,
     scoreLabel: "€ économisés",
-    color: "#F59E0B", // Orange
+    color: "#0EA5A6", // Turquoise
   },
   {
     icon: Shield,
@@ -34,7 +34,7 @@ const arguments_ = [
     subtitle: "Un dossier, des offres comparables",
     score: 48,
     scoreLabel: "h max",
-    color: "#F59E0B", // Orange
+    color: "#0EA5A6", // Turquoise
   },
 ];
 
