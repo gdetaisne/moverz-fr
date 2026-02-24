@@ -337,7 +337,6 @@ export function HeroV4TwoColumn() {
                         Je choisis cette offre →
                       </button>
                     </div>
-                    </div>
                   </div>
                 </div>
               </motion.div>
