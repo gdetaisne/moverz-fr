@@ -32,33 +32,44 @@ export default async function OgImage() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          background: "linear-gradient(180deg, #a8e8e8 0%, #eafafa 42%, #ffffff 100%)",
+          background: "#FAFAFA",
           fontFamily: "Inter",
           position: "relative",
           overflow: "hidden",
         }}
       >
-        {/* Halos turquoise clairs - style site */}
+        {/* Gradient hero multi-couches comme sur le site */}
         <div
           style={{
             position: "absolute",
-            top: -100,
-            right: 100,
-            width: 600,
-            height: 400,
-            background: "radial-gradient(circle, rgba(168, 232, 232, 0.6) 0%, transparent 70%)",
-            filter: "blur(80px)",
+            inset: 0,
+            background: "linear-gradient(180deg, #a8e8e8 0%, #eafafa 42%, #ffffff 100%)",
           }}
         />
+        
+        {/* Radial gradient top-left */}
         <div
           style={{
             position: "absolute",
-            bottom: -80,
-            left: -100,
-            width: 500,
-            height: 350,
-            background: "radial-gradient(circle, rgba(107, 207, 207, 0.4) 0%, transparent 70%)",
-            filter: "blur(60px)",
+            top: "-20%",
+            left: "-5%",
+            width: "900px",
+            height: "420px",
+            background: "radial-gradient(ellipse 900px 420px, rgba(107, 207, 207, 0.26) 0%, transparent 60%)",
+            pointerEvents: "none",
+          }}
+        />
+        
+        {/* Radial gradient top-right */}
+        <div
+          style={{
+            position: "absolute",
+            top: "-10%",
+            right: "-10%",
+            width: "700px",
+            height: "380px",
+            background: "radial-gradient(ellipse 700px 380px, rgba(168, 232, 232, 0.60) 0%, transparent 62%)",
+            pointerEvents: "none",
           }}
         />
 
@@ -84,21 +95,21 @@ export default async function OgImage() {
           >
             <img
               src={logoBase64}
-              width={80}
-              height={80}
+              width={72}
+              height={72}
               style={{
                 borderRadius: 16,
                 background: "white",
-                padding: 8,
-                boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
+                padding: 6,
+                boxShadow: "0 2px 8px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04)",
               }}
             />
             <span
               style={{
-                fontSize: 64,
+                fontSize: 56,
                 fontWeight: 800,
                 color: "#0B0F19",
-                letterSpacing: -1,
+                letterSpacing: -1.5,
                 fontFamily: "Sora",
               }}
             >
@@ -111,19 +122,19 @@ export default async function OgImage() {
             style={{
               display: "flex",
               alignItems: "center",
-              gap: 12,
+              gap: 10,
               background: "white",
-              padding: "12px 24px",
+              padding: "10px 22px",
               borderRadius: 50,
               border: "1px solid #E5E7EB",
-              marginBottom: 30,
-              boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
+              marginBottom: 36,
+              boxShadow: "0 1px 3px rgba(0,0,0,0.04), 0 2px 6px rgba(0,0,0,0.03)",
             }}
           >
-            <span style={{ color: "#6B7280", fontSize: 20, fontWeight: 600 }}>
+            <span style={{ color: "#6B7280", fontSize: 18, fontWeight: 600, fontFamily: "Inter" }}>
               Comparateur de déménagement
             </span>
-            <span style={{ color: "#9CA3AF", fontSize: 18 }}>
+            <span style={{ color: "#9CA3AF", fontSize: 16, fontFamily: "Inter" }}>
               · Gratuit · Sans démarchage
             </span>
           </div>
@@ -134,12 +145,13 @@ export default async function OgImage() {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              fontSize: 68,
+              fontSize: 62,
               fontWeight: 900,
-              lineHeight: 1.1,
-              marginBottom: 30,
+              lineHeight: 1.08,
+              marginBottom: 36,
               textAlign: "center",
               fontFamily: "Sora",
+              letterSpacing: -1.8,
             }}
           >
             <span style={{ color: "#0B0F19" }}>Comparez des devis</span>
@@ -147,25 +159,25 @@ export default async function OgImage() {
           </div>
 
           {/* Benefits */}
-          <div style={{ display: "flex", gap: 24 }}>
+          <div style={{ display: "flex", gap: 20 }}>
             {["0 €", "Sans démarchage", "Pros vérifiés"].map((label) => (
               <div
                 key={label}
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  gap: 12,
+                  gap: 11,
                   background: "white",
-                  padding: "16px 24px",
+                  padding: "14px 22px",
                   borderRadius: 12,
                   border: "1px solid #E5E7EB",
-                  boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
+                  boxShadow: "0 1px 3px rgba(0,0,0,0.04), 0 2px 6px rgba(0,0,0,0.03)",
                 }}
               >
                 <div
                   style={{
-                    width: 32,
-                    height: 32,
+                    width: 30,
+                    height: 30,
                     background: "#0EA5A6",
                     borderRadius: "50%",
                     display: "flex",
@@ -173,12 +185,13 @@ export default async function OgImage() {
                     justifyContent: "center",
                     color: "white",
                     fontWeight: 700,
-                    fontSize: 20,
+                    fontSize: 18,
+                    fontFamily: "Inter",
                   }}
                 >
                   ✓
                 </div>
-                <span style={{ color: "#0B0F19", fontSize: 22, fontWeight: 600 }}>
+                <span style={{ color: "#0B0F19", fontSize: 20, fontWeight: 600, fontFamily: "Inter" }}>
                   {label}
                 </span>
               </div>
