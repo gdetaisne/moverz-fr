@@ -13,7 +13,7 @@ import { CityLocalInsights } from "@/components/city/CityLocalInsights";
 import { CityStats } from "@/components/city/CityStats";
 import { CityPricing } from "@/components/city/CityPricing";
 import { CityPricingTable } from "@/components/city/CityPricingTable";
-import { CityFinalCTA } from "@/components/city/CityFinalCTA";
+import { FinalCTAV4 } from "@/components/sections/FinalCTAV4";
 import { FAQ } from "@/components/FAQ";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FlowAndIA from "@/components/FlowAndIA";
@@ -672,7 +672,7 @@ export default function CityMovingPage({ params }: PageProps) {
       </section>
 
       {/* CTA final */}
-      <CityFinalCTA cityName={city.nameCapitalized} quoteUrl={quoteUrl} />
+      <FinalCTAV4 />
     </main>
   );
 }
