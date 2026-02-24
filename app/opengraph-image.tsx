@@ -1,11 +1,24 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "fs/promises";
+import { join } from "path";
 
 export const runtime = "nodejs";
 export const alt = "Moverz – Comparateur de déménagement gratuit";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function OgImage() {
+export default async function OgImage() {
+  // Charger la fonte Inter
+  const interFont = await readFile(
+    join(process.cwd(), "public/fonts/inter-latin.woff2")
+  );
+
+  // Charger le logo
+  const logoData = await readFile(
+    join(process.cwd(), "public/logo.png")
+  );
+  const logoBase64 = `data:image/png;base64,${logoData.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -17,7 +30,7 @@ export default function OgImage() {
           alignItems: "center",
           justifyContent: "center",
           background: "linear-gradient(180deg, #a8e8e8 0%, #eafafa 42%, #ffffff 100%)",
-          fontFamily: "sans-serif",
+          fontFamily: "Inter",
           position: "relative",
           overflow: "hidden",
         }}
@@ -66,23 +79,17 @@ export default function OgImage() {
               marginBottom: 32,
             }}
           >
-            <div
+            <img
+              src={logoBase64}
+              width={80}
+              height={80}
               style={{
-                width: 80,
-                height: 80,
+                borderRadius: 16,
                 background: "white",
-                borderRadius: 20,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: 50,
-                fontWeight: 800,
-                color: "#0EA5A6",
+                padding: 8,
                 boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
               }}
-            >
-              M
-            </div>
+            />
             <span
               style={{
                 fontSize: 64,
@@ -175,6 +182,34 @@ export default function OgImage() {
         </div>
       </div>
     ),
-    { ...size }
+    {
+      ...size,
+      fonts: [
+        {
+          name: "Inter",
+          data: interFont,
+          style: "normal",
+          weight: 400,
+        },
+        {
+          name: "Inter",
+          data: interFont,
+          style: "normal",
+          weight: 600,
+        },
+        {
+          name: "Inter",
+          data: interFont,
+          style: "normal",
+          weight: 800,
+        },
+        {
+          name: "Inter",
+          data: interFont,
+          style: "normal",
+          weight: 900,
+        },
+      ],
+    }
   );
 }
