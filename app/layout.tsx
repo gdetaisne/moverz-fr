@@ -117,7 +117,8 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/logo.png" />
         
         {/* Preconnect aux domaines externes pour performance */}
-        {/* (Unsplash retiré) */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* Preload du logo (ressource critique) */}
         <link
@@ -220,6 +221,7 @@ export default function RootLayout({
                 width={40}
                 height={40}
                 priority
+                quality={95}
                 className="h-9 w-9 md:h-10 md:w-10"
               />
               <span className="font-heading text-xl md:text-2xl font-bold" style={{ color: "var(--color-text)" }}>Moverz</span>

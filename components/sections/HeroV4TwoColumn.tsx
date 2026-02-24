@@ -24,7 +24,7 @@ const STEPS = [
   { num: "3", text: "Vous choisissez sereinement", bold: true },
 ] as const;
 
-// CAROUSEL DE SCREENSHOTS - RAMP STYLE (Smooth & Premium)
+// CAROUSEL DE SCREENSHOTS - RAMP STYLE (Contenu concret Moverz)
 function MorphingUIAnimation() {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -38,42 +38,56 @@ function MorphingUIAnimation() {
   const screenshots = [
     {
       id: 0,
-      title: "Dossier complété",
-      subtitle: "Informations envoyées",
-      badge: "Étape 1",
-      color: "#6366F1",
-      accentColor: "#818CF8"
+      step: "1",
+      title: "Votre dossier",
+      items: [
+        { label: "Départ", value: "Paris 75015" },
+        { label: "Arrivée", value: "Lyon 69001" },
+        { label: "Surface", value: "60m² • T3" },
+        { label: "Date", value: "15 mars 2026" }
+      ]
     },
     {
       id: 1,
-      title: "12 déménageurs",
-      subtitle: "Mise en concurrence",
-      badge: "Étape 2",
-      color: "#0EA5A6",
-      accentColor: "#14B8A6"
+      step: "2",
+      title: "12 déménageurs contactés",
+      items: [
+        { label: "Demeneco", value: "Contacté" },
+        { label: "Fast Move", value: "Contacté" },
+        { label: "TransExpress", value: "Contacté" },
+        { label: "+9 autres", value: "En attente" }
+      ]
     },
     {
       id: 2,
+      step: "3",
       title: "7 offres reçues",
-      subtitle: "Analyse en cours",
-      badge: "Étape 3",
-      color: "#F59E0B",
-      accentColor: "#FBBF24"
+      items: [
+        { label: "Demeneco", value: "2 890 €" },
+        { label: "Fast Move", value: "3 150 €" },
+        { label: "TransExpress", value: "2 750 €" },
+        { label: "+4 autres offres", value: "À analyser" }
+      ]
     },
     {
       id: 3,
-      title: "3 offres validées",
-      subtitle: "Top 3 par Moverz",
-      badge: "Étape 4",
-      color: "#10B981",
-      accentColor: "#34D399"
+      step: "4",
+      title: "Top 3 Moverz",
+      items: [
+        { label: "TransExpress", value: "2 750 € ⭐" },
+        { label: "Demeneco", value: "2 890 €" },
+        { label: "DémParis", value: "2 990 €" },
+        { label: "Vérifiés & fiables", value: "Par Moverz" }
+      ]
     },
   ];
+
+  const currentScreen = screenshots[activeIndex];
 
   return (
     <div 
       className="relative h-full w-full overflow-hidden flex flex-col"
-      style={{ background: "linear-gradient(180deg, #FAFBFC 0%, #F8FAFC 100%)" }}
+      style={{ background: "#FAFAFA" }}
     >
       {/* Header avec logo */}
       <div className="p-4 pb-2">
@@ -83,23 +97,22 @@ function MorphingUIAnimation() {
             alt="Moverz" 
             width={60} 
             height={20}
-            className="h-4 w-auto opacity-50"
+            className="h-4 w-auto"
           />
-          <div className="text-[9px] font-medium text-slate-400">
-            Paris → Lyon
+          <div className="text-[9px] font-medium" style={{ color: "#0EA5A6" }}>
+            En cours...
           </div>
         </div>
       </div>
 
-      {/* Carousel Container - Style Ramp */}
-      <div className="flex-1 relative px-4 py-4">
+      {/* Carousel Container */}
+      <div className="flex-1 relative px-4 py-2">
         <div className="relative h-full">
           {/* Cards Stack Effect */}
           {screenshots.map((screen, index) => {
             const offset = index - activeIndex;
             const isActive = index === activeIndex;
             const isPrev = offset === -1 || offset === 3;
-            const isNext = offset === 1 || offset === -3;
 
             return (
               <motion.div
@@ -107,105 +120,88 @@ function MorphingUIAnimation() {
                 className="absolute inset-0 rounded-2xl border shadow-lg overflow-hidden"
                 style={{
                   background: "white",
-                  borderColor: isActive ? screen.color + "30" : "#E2E8F0",
+                  borderColor: isActive ? "#0EA5A630" : "#E2E8F0",
                 }}
                 animate={{
-                  scale: isActive ? 1 : isPrev ? 0.92 : 0.88,
-                  opacity: isActive ? 1 : isPrev ? 0.6 : 0,
-                  x: isActive ? 0 : isPrev ? "-8%" : isNext ? "8%" : 0,
+                  scale: isActive ? 1 : isPrev ? 0.94 : 0.88,
+                  opacity: isActive ? 1 : isPrev ? 0.5 : 0,
+                  x: isActive ? 0 : isPrev ? "-6%" : "6%",
                   zIndex: isActive ? 10 : isPrev ? 5 : 0,
-                  rotateY: isActive ? 0 : isPrev ? 4 : isNext ? -4 : 0,
+                  rotateY: isActive ? 0 : isPrev ? 3 : -3,
                 }}
                 transition={{
-                  duration: 0.7,
+                  duration: 0.6,
                   ease: [0.16, 1, 0.3, 1],
                 }}
               >
                 {/* Card Content */}
                 <div className="h-full flex flex-col p-5">
-                  {/* Badge + Icon */}
+                  {/* Header avec étape */}
                   <div className="flex items-center justify-between mb-4">
                     <motion.div
-                      className="px-2.5 py-1 rounded-full text-[9px] font-bold"
+                      className="px-3 py-1.5 rounded-full text-[10px] font-bold"
                       style={{
-                        background: screen.color + "15",
-                        color: screen.color,
+                        background: "#0EA5A615",
+                        color: "#0EA5A6",
                       }}
                       animate={{
                         scale: isActive ? [1, 1.05, 1] : 1,
                       }}
                       transition={{ duration: 2, repeat: Infinity }}
                     >
-                      {screen.badge}
+                      Étape {screen.step}/4
                     </motion.div>
                     
-                    <motion.div
-                      className="w-8 h-8 rounded-lg flex items-center justify-center"
-                      style={{ background: screen.color + "10" }}
-                      animate={{
-                        rotate: isActive ? [0, 5, 0] : 0,
-                      }}
-                      transition={{ duration: 3, repeat: Infinity }}
-                    >
-                      <CheckCircle2 
-                        className="w-4 h-4" 
-                        style={{ color: screen.color }}
-                        strokeWidth={2.5}
-                      />
-                    </motion.div>
+                    {isActive && (
+                      <motion.div
+                        initial={{ scale: 0, rotate: -90 }}
+                        animate={{ scale: 1, rotate: 0 }}
+                        className="w-7 h-7 rounded-lg flex items-center justify-center"
+                        style={{ background: "#0EA5A610" }}
+                      >
+                        <CheckCircle2 
+                          className="w-4 h-4" 
+                          style={{ color: "#0EA5A6" }}
+                          strokeWidth={2.5}
+                        />
+                      </motion.div>
+                    )}
                   </div>
 
                   {/* Title */}
                   <AnimatePresence mode="wait">
                     {isActive && (
-                      <motion.div
+                      <motion.h3
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        transition={{ duration: 0.4, delay: 0.1 }}
+                        exit={{ opacity: 0 }}
+                        className="text-xl font-bold mb-4"
+                        style={{ color: "#0EA5A6" }}
                       >
-                        <h3 
-                          className="text-2xl font-bold mb-1"
-                          style={{ color: screen.color }}
-                        >
-                          {screen.title}
-                        </h3>
-                        <p className="text-sm text-slate-600">
-                          {screen.subtitle}
-                        </p>
-                      </motion.div>
+                        {screen.title}
+                      </motion.h3>
                     )}
                   </AnimatePresence>
 
-                  {/* Visual bars - Ramp style */}
-                  <div className="mt-auto space-y-2">
-                    {[...Array(4)].map((_, i) => (
+                  {/* Liste d'items concrets */}
+                  <div className="space-y-3 mt-2">
+                    {screen.items.map((item, i) => (
                       <motion.div
                         key={i}
-                        className="h-2 rounded-full overflow-hidden"
-                        style={{ background: "#F1F5F9" }}
+                        className="flex items-center justify-between py-2 border-b border-slate-100 last:border-0"
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ 
                           opacity: isActive ? 1 : 0.3,
                           x: 0 
                         }}
-                        transition={{ delay: isActive ? 0.2 + i * 0.08 : 0 }}
+                        transition={{ delay: isActive ? 0.1 + i * 0.08 : 0 }}
                       >
-                        <motion.div
-                          className="h-full rounded-full"
-                          style={{
-                            background: `linear-gradient(90deg, ${screen.color} 0%, ${screen.accentColor} 100%)`,
-                          }}
-                          initial={{ width: "0%" }}
-                          animate={{ 
-                            width: isActive ? `${70 - i * 15}%` : "0%" 
-                          }}
-                          transition={{ 
-                            duration: 1.2, 
-                            delay: isActive ? 0.3 + i * 0.08 : 0,
-                            ease: [0.16, 1, 0.3, 1]
-                          }}
-                        />
+                        <span className="text-xs text-slate-600 font-medium">
+                          {item.label}
+                        </span>
+                        <span className="text-xs font-semibold text-slate-900">
+                          {item.value}
+                        </span>
                       </motion.div>
                     ))}
                   </div>
@@ -215,10 +211,10 @@ function MorphingUIAnimation() {
                     <motion.div
                       className="absolute inset-0 rounded-2xl pointer-events-none"
                       style={{
-                        boxShadow: `0 0 40px ${screen.color}20, inset 0 1px 0 rgba(255,255,255,0.5)`
+                        boxShadow: "0 0 30px rgba(14,165,166,0.15), inset 0 1px 0 rgba(255,255,255,0.8)"
                       }}
                       animate={{
-                        opacity: [0.3, 0.6, 0.3]
+                        opacity: [0.5, 1, 0.5]
                       }}
                       transition={{ duration: 3, repeat: Infinity }}
                     />
@@ -230,47 +226,30 @@ function MorphingUIAnimation() {
         </div>
       </div>
 
-      {/* Navigation Dots - Ramp style */}
+      {/* Navigation Dots */}
       <div className="p-4 pt-2">
-        <div className="flex items-center justify-center gap-2">
+        <div className="flex items-center justify-center gap-2 mb-2">
           {screenshots.map((screen, i) => (
             <motion.button
               key={screen.id}
-              className="relative rounded-full transition-all"
+              className="rounded-full transition-all"
               style={{
-                width: i === activeIndex ? "28px" : "6px",
+                width: i === activeIndex ? "24px" : "6px",
                 height: "6px",
-                background: i === activeIndex ? screen.color : "#CBD5E1",
+                background: i === activeIndex ? "#0EA5A6" : "#CBD5E1",
               }}
               animate={{
                 opacity: i === activeIndex ? 1 : 0.4,
               }}
               onClick={() => setActiveIndex(i)}
-            >
-              {i === activeIndex && (
-                <motion.div
-                  className="absolute inset-0 rounded-full"
-                  style={{ background: screen.color }}
-                  layoutId="activeDot"
-                  transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                />
-              )}
-            </motion.button>
+            />
           ))}
         </div>
         
-        {/* Subtitle minimal */}
-        <AnimatePresence mode="wait">
-          <motion.p
-            key={activeIndex}
-            initial={{ opacity: 0, y: 5 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -5 }}
-            className="text-center text-[10px] text-slate-400 mt-2"
-          >
-            {screenshots[activeIndex].subtitle}
-          </motion.p>
-        </AnimatePresence>
+        {/* Info contexte */}
+        <p className="text-center text-[9px] text-slate-400">
+          Paris → Lyon • 15 mars
+        </p>
       </div>
     </div>
   );

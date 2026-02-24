@@ -18,11 +18,11 @@ const nextConfig = {
   
   // Optimisation images pour Core Web Vitals
   images: {
-    // IMPORTANT (stability): disable Next.js image optimizer in production.
-    // Under crawl/bot traffic, `/_next/image` can become CPU-heavy and cause upstream timeouts (504).
-    unoptimized: true,
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    // OPTIMISATION RÉACTIVÉE (2026-02-24) : Images optimisées manuellement en amont
+    // Pour éviter la charge serveur, on limite les tailles générées
+    unoptimized: false,
+    deviceSizes: [640, 750, 1080, 1920],
+    imageSizes: [16, 32, 64, 128, 256],
     remotePatterns: [
       {
         protocol: 'https',
@@ -32,6 +32,8 @@ const nextConfig = {
     ],
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 31536000, // Cache 1 an
+    // Limite la qualité pour réduire la taille (80 est un bon compromis)
+    dangerouslyAllowSVG: false,
   },
 
   // Optimisation compilation
