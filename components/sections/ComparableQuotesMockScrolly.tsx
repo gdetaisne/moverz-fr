@@ -11,54 +11,60 @@ import { ChevronLeft, ChevronRight, Star, Globe, Sparkles } from "lucide-react";
 import { staggerContainer, staggerItem } from "@/components/motion";
 import Image from "next/image";
 
-// 3 déménageurs avec données réalistes
+// 3 déménageurs avec données réalistes (5 barres de scoring)
 const MOVERS = [
   {
     id: 1,
-    name: "Déménageur A",
-    price: 1340,
-    score: 92,
+    name: "Déménageur B",
+    price: 1150,
+    score: 84,
     scoreLabel: "Excellent",
-    scoreColor: "#10B981",
+    scoreColor: "#0EA5A6",
     recommended: true,
-    solidite: 90,
-    experience: 95,
-    vigilance: 92,
-    googleRating: 4.8,
-    reviewCount: 234,
-    yearsInBusiness: 12,
+    financier: 50,
+    juridique: 100,
+    google: 100,
+    reputation: 95,
+    vigilance: 100,
+    googleRating: 5.0,
+    reviewCount: 65,
+    yearsInBusiness: 5,
     hasWebsite: true,
   },
   {
     id: 2,
-    name: "Déménageur B",
-    price: 1540,
-    score: 88,
+    name: "Déménageur D",
+    price: 1300,
+    score: 84,
     scoreLabel: "Excellent",
     scoreColor: "#0EA5A6",
     recommended: false,
-    solidite: 85,
-    experience: 90,
-    vigilance: 88,
-    googleRating: 4.7,
-    reviewCount: 189,
-    yearsInBusiness: 9,
+    financier: 50,
+    juridique: 100,
+    google: 100,
+    reputation: 95,
+    vigilance: 100,
+    googleRating: 4.5,
+    reviewCount: 639,
+    yearsInBusiness: 5,
     hasWebsite: true,
   },
   {
     id: 3,
     name: "Déménageur C",
-    price: 1210,
-    score: 58,
-    scoreLabel: "Moyen",
-    scoreColor: "#DC2626",
+    price: 1320,
+    score: 76,
+    scoreLabel: "Bon",
+    scoreColor: "#0EA5A6",
     recommended: false,
-    solidite: 78,
-    experience: 72,
-    vigilance: 35,
-    googleRating: 4.2,
-    reviewCount: 45,
-    yearsInBusiness: 5,
+    financier: 22,
+    juridique: 100,
+    google: 100,
+    reputation: 95,
+    vigilance: 100,
+    googleRating: 4.9,
+    reviewCount: 80,
+    yearsInBusiness: 6,
     hasWebsite: true,
   },
 ];
@@ -73,7 +79,7 @@ function getBarColor(value: number): string {
 function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: number }) {
   return (
     <div
-      className="w-full max-w-md mx-auto rounded-3xl border-2 p-6 md:p-8 bg-white shadow-xl"
+      className="w-full rounded-2xl border-2 p-5 bg-white shadow-sm mx-2"
       style={{
         borderColor: mover.recommended ? "#0EA5A6" : "#E5E7EB",
       }}
@@ -81,50 +87,50 @@ function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: n
       {/* Badge Recommandé */}
       {mover.recommended && (
         <div
-          className="flex items-center justify-center gap-2 py-2 px-4 rounded-full mb-6 -mt-2"
+          className="flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-full mb-4 -mt-1"
           style={{ background: "#0EA5A6" }}
         >
-          <Sparkles className="h-4 w-4 text-white" />
-          <span className="text-sm font-semibold text-white">Recommandé par Moverz</span>
+          <Sparkles className="h-3 w-3 text-white" />
+          <span className="text-xs font-semibold text-white">✦ Meilleure offre</span>
         </div>
       )}
 
       {/* Nom + Prix */}
-      <div className="mb-6">
-        <h3 className="text-2xl font-bold text-slate-900 mb-2">{mover.name}</h3>
+      <div className="mb-4">
+        <h3 className="text-xl font-bold text-slate-900 mb-1">{mover.name}</h3>
         <div>
-          <p className="text-4xl font-bold text-slate-900">{mover.price.toLocaleString()} €</p>
-          <p className="text-sm text-slate-500 mt-1">Prix proposé TTC</p>
+          <p className="text-3xl font-bold text-slate-900">{mover.price.toLocaleString()} €</p>
+          <p className="text-xs text-slate-500 mt-0.5">Prix proposé TTC · 18/05/2026</p>
         </div>
       </div>
 
       {/* Score circulaire + Logo Moverz */}
-      <div className="flex items-center gap-4 mb-6 pb-6 border-b border-slate-200">
-        <div className="relative h-20 w-20">
-          <svg className="h-20 w-20 -rotate-90">
-            <circle cx="40" cy="40" r="36" fill="none" stroke="#E5E7EB" strokeWidth="4" />
+      <div className="flex items-center gap-3 mb-4 pb-4 border-b border-slate-200">
+        <div className="relative h-16 w-16">
+          <svg className="h-16 w-16 -rotate-90">
+            <circle cx="32" cy="32" r="28" fill="none" stroke="#E5E7EB" strokeWidth="3" />
             <circle
-              cx="40"
-              cy="40"
-              r="36"
+              cx="32"
+              cy="32"
+              r="28"
               fill="none"
               stroke={mover.scoreColor}
-              strokeWidth="4"
-              strokeDasharray={`${36 * 2 * Math.PI * (mover.score / 100)} ${36 * 2 * Math.PI}`}
+              strokeWidth="3"
+              strokeDasharray={`${28 * 2 * Math.PI * (mover.score / 100)} ${28 * 2 * Math.PI}`}
               strokeLinecap="round"
             />
           </svg>
           <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-2xl font-bold text-slate-900">{mover.score}</span>
+            <span className="text-xl font-bold text-slate-900">{mover.score}</span>
           </div>
         </div>
         <div className="flex-1">
-          <p className="text-lg font-semibold" style={{ color: mover.scoreColor }}>
+          <p className="text-base font-semibold" style={{ color: mover.scoreColor }}>
             {mover.scoreLabel}
           </p>
-          <div className="flex items-center gap-2 mt-1">
+          <div className="flex items-center gap-1.5 mt-0.5">
             <div className="relative">
-              <Image src="/logo.png" alt="Moverz" width={24} height={24} className="h-6 w-6" />
+              <Image src="/logo.png" alt="Moverz" width={20} height={20} className="h-5 w-5" />
               <div
                 className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full flex items-center justify-center"
                 style={{ background: "#10B981" }}
@@ -146,16 +152,18 @@ function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: n
         </div>
       </div>
 
-      {/* 3 barres de scoring */}
-      <div className="space-y-3 mb-6">
+      {/* 5 barres de scoring détaillées */}
+      <div className="space-y-2 mb-4">
         {[
-          { label: "Solidité", value: mover.solidite },
-          { label: "Expérience", value: mover.experience },
+          { label: "Financier", value: mover.financier },
+          { label: "Juridique", value: mover.juridique },
+          { label: "Google", value: mover.google },
+          { label: "Réputation", value: mover.reputation },
           { label: "Vigilance", value: mover.vigilance },
         ].map((item) => (
-          <div key={item.label} className="flex items-center justify-between gap-3">
-            <span className="text-sm text-slate-600 w-24">{item.label}</span>
-            <div className="flex-1 h-2.5 bg-slate-200 rounded-full overflow-hidden">
+          <div key={item.label} className="flex items-center justify-between gap-2">
+            <span className="text-xs text-slate-600 w-20">{item.label}</span>
+            <div className="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden">
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: `${item.value}%` }}
@@ -164,18 +172,18 @@ function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: n
                 style={{ background: getBarColor(item.value) }}
               />
             </div>
-            <span className="text-sm font-semibold text-slate-900 w-10 text-right">{item.value}</span>
+            <span className="text-xs font-semibold text-slate-900 w-8 text-right">{item.value}</span>
           </div>
         ))}
       </div>
 
       {/* Étoiles Google */}
-      <div className="flex items-center gap-2 mb-2">
+      <div className="flex items-center gap-1.5 mb-1">
         <div className="flex items-center gap-0.5">
           {Array.from({ length: 5 }).map((_, i) => (
             <Star
               key={i}
-              className={`h-4 w-4 ${
+              className={`h-3.5 w-3.5 ${
                 i < Math.floor(mover.googleRating) ? "fill-amber-400 text-amber-400" : "fill-slate-200 text-slate-200"
               }`}
             />
@@ -183,16 +191,16 @@ function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: n
         </div>
         <span className="text-sm font-semibold text-slate-900">{mover.googleRating}</span>
       </div>
-      <p className="text-xs text-slate-500 mb-4">{mover.reviewCount} avis vérifiés</p>
+      <p className="text-xs text-slate-500 mb-3">{mover.reviewCount} avis vérifiés</p>
 
       {/* Ancienneté + Site */}
-      <div className="flex items-center gap-3 text-sm text-slate-600 mb-6 pb-6 border-b border-slate-200">
+      <div className="flex items-center gap-2 text-xs text-slate-600 mb-4 pb-4 border-b border-slate-200">
         <span className="font-semibold">{mover.yearsInBusiness} ans</span>
         {mover.hasWebsite && (
           <>
             <span>·</span>
             <div className="flex items-center gap-1">
-              <Globe className="h-3.5 w-3.5" />
+              <Globe className="h-3 w-3" />
               <span>Site internet</span>
             </div>
           </>
@@ -201,7 +209,7 @@ function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: n
 
       {/* CTA */}
       <button
-        className="w-full rounded-xl px-6 py-3.5 text-base font-semibold border-2 transition-all hover:opacity-80"
+        className="w-full rounded-lg px-4 py-3 text-sm font-semibold border-2 transition-all hover:opacity-80"
         style={{
           borderColor: "#0EA5A6",
           color: "#0EA5A6",
@@ -212,8 +220,8 @@ function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: n
       </button>
 
       {/* Checkbox */}
-      <label className="flex items-center gap-2 mt-4 text-sm text-slate-600 cursor-pointer">
-        <input type="checkbox" className="h-4 w-4 rounded border-slate-300" />
+      <label className="flex items-center gap-2 mt-3 text-xs text-slate-600 cursor-pointer">
+        <input type="checkbox" className="h-3.5 w-3.5 rounded border-slate-300" />
         <span>Comparer dans le détail</span>
       </label>
     </div>
@@ -302,71 +310,100 @@ export function ComparableQuotesMockScrolly() {
             </motion.div>
           </motion.div>
 
-          {/* RIGHT — Carousel */}
-          <div className="relative">
-            {/* Navigation mobile */}
-            <div className="flex items-center justify-center gap-4 mb-6 lg:hidden">
-              <button
-                onClick={handlePrev}
-                className="flex h-10 w-10 items-center justify-center rounded-full border bg-white shadow-sm hover:bg-slate-50 transition-colors"
-                style={{ borderColor: "#E5E7EB" }}
+          {/* RIGHT — iPhone Mockup with Carousel */}
+          <div className="relative flex justify-center items-center">
+            {/* iPhone Frame */}
+            <div className="relative w-full max-w-[360px]">
+              {/* Subtle glow */}
+              <div
+                className="absolute inset-0 rounded-[48px] blur-3xl opacity-20"
+                style={{ background: "radial-gradient(ellipse, rgba(14,165,166,0.3) 0%, transparent 70%)" }}
+              />
+
+              {/* Device container */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="relative"
+                style={{ transform: "rotate(-2deg)" }}
               >
-                <ChevronLeft className="h-5 w-5 text-slate-600" />
-              </button>
-
-              <div className="flex items-center gap-2">
-                {MOVERS.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => {
-                      setDirection(i > currentIndex ? 1 : -1);
-                      setCurrentIndex(i);
-                    }}
-                    className="h-2 rounded-full transition-all"
-                    style={{
-                      width: i === currentIndex ? "24px" : "8px",
-                      background: i === currentIndex ? "#0EA5A6" : "#CBD5E1",
-                    }}
-                  />
-                ))}
-              </div>
-
-              <button
-                onClick={handleNext}
-                className="flex h-10 w-10 items-center justify-center rounded-full border bg-white shadow-sm hover:bg-slate-50 transition-colors"
-                style={{ borderColor: "#E5E7EB" }}
-              >
-                <ChevronRight className="h-5 w-5 text-slate-600" />
-              </button>
-            </div>
-
-            {/* Carousel container */}
-            <div className="relative overflow-hidden">
-              <AnimatePresence initial={false} custom={direction} mode="wait">
-                <motion.div
-                  key={currentIndex}
-                  custom={direction}
-                  variants={slideVariants}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  transition={{
-                    x: { type: "spring", stiffness: 300, damping: 30 },
-                    opacity: { duration: 0.2 },
+                {/* Phone frame */}
+                <div
+                  className="relative rounded-[48px] border-[3px] overflow-hidden bg-white"
+                  style={{
+                    borderColor: "#1F2937",
+                    aspectRatio: "9/19.5",
+                    boxShadow: "0 12px 32px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.1)",
                   }}
-                  drag="x"
-                  dragConstraints={{ left: 0, right: 0 }}
-                  dragElastic={0.2}
-                  onDragEnd={handleDragEnd}
-                  className="touch-pan-y"
                 >
-                  <MoverCardDetailed mover={MOVERS[currentIndex]} index={currentIndex} />
-                </motion.div>
-              </AnimatePresence>
+                  {/* Notch */}
+                  <div
+                    className="absolute top-0 left-1/2 -translate-x-1/2 h-6 w-32 rounded-b-3xl z-30"
+                    style={{ background: "#1F2937" }}
+                  />
+
+                  {/* Screen content with carousel */}
+                  <div className="relative h-full w-full overflow-hidden" style={{ background: "#F9FAFB" }}>
+                    {/* Top badge (fixed) */}
+                    <div className="absolute top-8 left-0 right-0 z-20 px-4">
+                      <div className="text-center">
+                        <p className="text-xs font-semibold text-slate-900">
+                          3 offres retenues sur 7 réponses reçues
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Navigation dots mobile (inside screen, top) */}
+                    <div className="absolute top-16 left-0 right-0 z-20 flex items-center justify-center gap-2 lg:hidden">
+                      {MOVERS.map((_, i) => (
+                        <button
+                          key={i}
+                          onClick={() => {
+                            setDirection(i > currentIndex ? 1 : -1);
+                            setCurrentIndex(i);
+                          }}
+                          className="h-1.5 rounded-full transition-all"
+                          style={{
+                            width: i === currentIndex ? "16px" : "6px",
+                            background: i === currentIndex ? "#0EA5A6" : "#CBD5E1",
+                          }}
+                        />
+                      ))}
+                    </div>
+
+                    {/* Carousel container (inside phone) */}
+                    <div className="relative h-full pt-24 pb-4 px-3 overflow-hidden">
+                      <AnimatePresence initial={false} custom={direction} mode="wait">
+                        <motion.div
+                          key={currentIndex}
+                          custom={direction}
+                          variants={slideVariants}
+                          initial="enter"
+                          animate="center"
+                          exit="exit"
+                          transition={{
+                            x: { type: "spring", stiffness: 300, damping: 30 },
+                            opacity: { duration: 0.2 },
+                          }}
+                          drag="x"
+                          dragConstraints={{ left: 0, right: 0 }}
+                          dragElastic={0.2}
+                          onDragEnd={handleDragEnd}
+                          className="touch-pan-y h-full overflow-y-auto"
+                        >
+                          <MoverCardDetailed mover={MOVERS[currentIndex]} index={currentIndex} />
+                        </motion.div>
+                      </AnimatePresence>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
             </div>
 
-            {/* Navigation desktop (flèches latérales) */}
-            <div className="hidden lg:flex absolute inset-y-0 -left-16 items-center">
+            {/* Navigation desktop (flèches latérales, OUTSIDE phone) */}
+            <div className="hidden lg:flex absolute inset-y-0 -left-20 items-center">
               <button
                 onClick={handlePrev}
                 className="flex h-12 w-12 items-center justify-center rounded-full border bg-white shadow-lg hover:bg-slate-50 transition-all hover:scale-105"
@@ -376,7 +413,7 @@ export function ComparableQuotesMockScrolly() {
               </button>
             </div>
 
-            <div className="hidden lg:flex absolute inset-y-0 -right-16 items-center">
+            <div className="hidden lg:flex absolute inset-y-0 -right-20 items-center">
               <button
                 onClick={handleNext}
                 className="flex h-12 w-12 items-center justify-center rounded-full border bg-white shadow-lg hover:bg-slate-50 transition-all hover:scale-105"
@@ -384,24 +421,6 @@ export function ComparableQuotesMockScrolly() {
               >
                 <ChevronRight className="h-6 w-6 text-slate-600" />
               </button>
-            </div>
-
-            {/* Dots desktop */}
-            <div className="hidden lg:flex items-center justify-center gap-2 mt-8">
-              {MOVERS.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => {
-                    setDirection(i > currentIndex ? 1 : -1);
-                    setCurrentIndex(i);
-                  }}
-                  className="h-2 rounded-full transition-all"
-                  style={{
-                    width: i === currentIndex ? "32px" : "8px",
-                    background: i === currentIndex ? "#0EA5A6" : "#CBD5E1",
-                  }}
-                />
-              ))}
             </div>
           </div>
         </div>
