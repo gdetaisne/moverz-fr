@@ -84,48 +84,70 @@ export function HeroV4TwoColumn() {
             </span>
           </motion.h1>
 
-          {/* Steps Apple-like - Style Cards (mobile) */}
-          <motion.div variants={staggerItem} className="mt-8 space-y-3 mx-auto max-w-md">
-            {STEPS.map(({ num, text, bold }, i) => (
-              <motion.div
-                key={num}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ 
-                  duration: 0.5, 
-                  delay: 0.3 + i * 0.1,
-                  ease: [0.16, 1, 0.3, 1]
-                }}
-                className="relative rounded-2xl border bg-white p-5 transition-all duration-200"
-                style={{
-                  borderColor: "#E5E7EB",
-                  boxShadow: "0 1px 2px rgba(0,0,0,0.04)",
-                }}
-              >
-                {/* Numéro discret en haut à gauche */}
-                <div 
-                  className="absolute top-4 left-4 flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold"
-                  style={{
-                    background: bold ? "#0EA5A6" : "#F3F4F6",
-                    color: bold ? "#fff" : "#9CA3AF",
-                  }}
-                >
-                  {num}
-                </div>
-
-                {/* Texte */}
-                <div className="pl-10">
-                  <p
-                    className={`text-[15px] leading-relaxed ${bold ? "font-semibold" : "font-normal"}`}
-                    style={{
-                      color: bold ? "#111827" : "#6B7280",
+          {/* Steps Stripe - Style horizontal avec animation (mobile) */}
+          <motion.div variants={staggerItem} className="mt-8 mx-auto max-w-md">
+            <div className="relative">
+              {/* Ligne horizontale background */}
+              <div className="absolute top-4 left-0 right-0 h-[2px] bg-slate-200" />
+              
+              {/* Ligne animée (progression) */}
+              <motion.div 
+                className="absolute top-4 left-0 h-[2px] bg-gradient-to-r from-teal-500 to-teal-400"
+                initial={{ width: "0%" }}
+                animate={{ width: "100%" }}
+                transition={{ duration: 2, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              />
+              
+              {/* Steps */}
+              <div className="relative flex justify-between items-start">
+                {STEPS.map(({ num, text, bold }, i) => (
+                  <motion.div
+                    key={num}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ 
+                      duration: 0.5, 
+                      delay: 0.4 + i * 0.2,
+                      ease: [0.16, 1, 0.3, 1]
                     }}
+                    className="flex flex-col items-center"
+                    style={{ width: '33.33%' }}
                   >
-                    {text}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+                    {/* Numéro dans cercle */}
+                    <motion.div
+                      className="relative z-10 flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold mb-3"
+                      initial={{ scale: 0, backgroundColor: "#F3F4F6" }}
+                      animate={{ 
+                        scale: 1,
+                        backgroundColor: bold ? "#0EA5A6" : "#FFFFFF",
+                        borderColor: bold ? "#0EA5A6" : "#E5E7EB"
+                      }}
+                      transition={{ 
+                        duration: 0.4, 
+                        delay: 0.6 + i * 0.2,
+                        ease: [0.16, 1, 0.3, 1]
+                      }}
+                      style={{
+                        border: "2px solid",
+                        color: bold ? "#fff" : "#6B7280",
+                      }}
+                    >
+                      {num}
+                    </motion.div>
+                    
+                    {/* Texte */}
+                    <p
+                      className={`text-xs leading-tight text-center ${bold ? "font-semibold" : "font-normal"}`}
+                      style={{
+                        color: bold ? "#111827" : "#6B7280",
+                      }}
+                    >
+                      {text}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </motion.div>
 
           {/* CTA mobile - Direct après stepper pour max conversion */}
@@ -169,49 +191,71 @@ export function HeroV4TwoColumn() {
               </span>
             </h1>
 
-            {/* Steps Apple-like - Style Cards (desktop) */}
-            <div className="grid grid-cols-3 gap-4 mb-8">
-              {STEPS.map(({ num, text, bold }, i) => (
-                <motion.div
-                  key={num}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ 
-                    duration: 0.5, 
-                    delay: 0.3 + i * 0.1,
-                    ease: [0.16, 1, 0.3, 1]
-                  }}
-                  whileHover={{ y: -2, transition: { duration: 0.2 } }}
-                  className="relative rounded-2xl border bg-white p-6 transition-all duration-200"
-                  style={{
-                    borderColor: "#E5E7EB",
-                    boxShadow: "0 1px 2px rgba(0,0,0,0.04)",
-                  }}
-                >
-                  {/* Numéro discret en haut à gauche */}
-                  <div 
-                    className="absolute top-4 left-4 flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold"
-                    style={{
-                      background: bold ? "#0EA5A6" : "#F3F4F6",
-                      color: bold ? "#fff" : "#9CA3AF",
-                    }}
-                  >
-                    {num}
-                  </div>
-
-                  {/* Texte centré verticalement */}
-                  <div className="pt-8">
-                    <p
-                      className={`text-[15px] leading-relaxed ${bold ? "font-semibold" : "font-normal"}`}
-                      style={{
-                        color: bold ? "#111827" : "#6B7280",
+            {/* Steps Stripe - Style horizontal avec animation (desktop) */}
+            <div className="mb-8">
+              <div className="relative max-w-2xl">
+                {/* Ligne horizontale background */}
+                <div className="absolute top-5 left-0 right-0 h-[2px] bg-slate-200" />
+                
+                {/* Ligne animée (progression) */}
+                <motion.div 
+                  className="absolute top-5 left-0 h-[2px] bg-gradient-to-r from-teal-500 to-teal-400"
+                  initial={{ width: "0%" }}
+                  animate={{ width: "100%" }}
+                  transition={{ duration: 2.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                />
+                
+                {/* Steps */}
+                <div className="relative flex justify-between items-start">
+                  {STEPS.map(({ num, text, bold }, i) => (
+                    <motion.div
+                      key={num}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ 
+                        duration: 0.5, 
+                        delay: 0.4 + i * 0.2,
+                        ease: [0.16, 1, 0.3, 1]
                       }}
+                      className="flex flex-col items-center"
+                      style={{ width: '33.33%' }}
                     >
-                      {text}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
+                      {/* Numéro dans cercle */}
+                      <motion.div
+                        className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full text-base font-bold mb-4"
+                        initial={{ scale: 0, backgroundColor: "#F3F4F6" }}
+                        animate={{ 
+                          scale: 1,
+                          backgroundColor: bold ? "#0EA5A6" : "#FFFFFF",
+                          borderColor: bold ? "#0EA5A6" : "#E5E7EB"
+                        }}
+                        transition={{ 
+                          duration: 0.4, 
+                          delay: 0.6 + i * 0.2,
+                          ease: [0.16, 1, 0.3, 1]
+                        }}
+                        style={{
+                          border: "3px solid",
+                          color: bold ? "#fff" : "#6B7280",
+                          boxShadow: bold ? "0 4px 12px rgba(14,165,166,0.2)" : "0 2px 4px rgba(0,0,0,0.05)"
+                        }}
+                      >
+                        {num}
+                      </motion.div>
+                      
+                      {/* Texte */}
+                      <p
+                        className={`text-[15px] leading-relaxed text-center ${bold ? "font-semibold" : "font-normal"}`}
+                        style={{
+                          color: bold ? "#111827" : "#6B7280",
+                        }}
+                      >
+                        {text}
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
             </div>
 
             {/* CTA desktop - Pure conversion */}
