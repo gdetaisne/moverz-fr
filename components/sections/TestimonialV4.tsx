@@ -37,9 +37,9 @@ export function TestimonialV4() {
     <FadeUpSection className="py-12 md:py-28" style={{ background: "var(--color-surface)" }}>
       <div className="container">
         {/* Titre aligné gauche comme les autres sections */}
-        <div className="max-w-5xl mb-12">
+        <div className="max-w-2xl mb-12">
           <h2
-            className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em] text-left"
+            className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em]"
             style={{ color: "var(--color-text)" }}
           >
             Ils ont déménagé{" "}
