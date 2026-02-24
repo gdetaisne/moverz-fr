@@ -63,11 +63,11 @@ function AnimatedScore({ score, delay = 0, suffix = "", color }: { score: number
   }, [isInView, score, delay]);
 
   return (
-    <div ref={ref} className="flex items-baseline gap-1">
-      <span className="text-4xl font-bold tabular-nums" style={{ color }}>
+    <div ref={ref} className="flex items-baseline gap-1.5">
+      <span className="text-3xl md:text-4xl font-bold tabular-nums" style={{ color }}>
         {displayed}
       </span>
-      <span className="text-sm text-white/40">
+      <span className="text-xs md:text-sm text-white/40">
         {suffix}
       </span>
     </div>
@@ -95,20 +95,20 @@ export function WhyMoverz() {
           className="max-w-5xl mx-auto"
         >
           {/* Header - Style CreditsafeChapter (aligné gauche) */}
-          <motion.div variants={staggerItem} className="mb-10 md:mb-14 max-w-2xl">
+          <motion.div variants={staggerItem} className="mb-8 md:mb-14 max-w-2xl">
             <h2
-              className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em] leading-[1.1]"
+              className="font-heading text-[clamp(26px,5vw,48px)] font-bold tracking-[-0.02em] leading-[1.1]"
             >
               <span className="text-white">On révolutionne le déménagement</span>
               <span className="text-white/40">, ensemble.</span>
             </h2>
-            <p className="mt-3 md:mt-4 text-base md:text-lg text-white/50 max-w-lg leading-relaxed">
+            <p className="mt-3 md:mt-4 text-sm md:text-lg text-white/50 max-w-lg leading-relaxed">
               3 garanties concrètes. Des offres vérifiées. Un choix serein.
             </p>
           </motion.div>
 
-          {/* 3 cards - Style CreditsafeChapter - Horizontal sur mobile */}
-          <div className="grid grid-cols-3 gap-3 md:gap-4">
+          {/* 3 cards - Style CreditsafeChapter - Empilé sur mobile */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
             {arguments_.map((arg, i) => {
               const Icon = arg.icon;
               return (
@@ -119,7 +119,7 @@ export function WhyMoverz() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.1 }}
                   whileHover={{ y: -2 }}
-                  className="rounded-xl border p-5 md:p-6 transition-all duration-300"
+                  className="rounded-xl border p-4 md:p-6 transition-all duration-300"
                   style={{
                     borderColor: "rgba(255,255,255,0.06)",
                     background: "rgba(255,255,255,0.02)",
@@ -127,17 +127,17 @@ export function WhyMoverz() {
                   }}
                 >
                   {/* Icon + Title */}
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-start gap-3">
+                  <div className="flex items-start mb-4">
+                    <div className="flex items-start gap-2.5 md:gap-3 w-full">
                       <div
-                        className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg"
+                        className="flex h-10 w-10 md:h-9 md:w-9 shrink-0 items-center justify-center rounded-lg"
                         style={{ background: `${arg.color}15` }}
                       >
-                        <Icon className="h-4.5 w-4.5" style={{ color: arg.color }} />
+                        <Icon className="h-5 w-5 md:h-4.5 md:w-4.5" style={{ color: arg.color }} />
                       </div>
-                      <div>
-                        <p className="text-sm font-semibold text-white">{arg.title}</p>
-                        <p className="text-xs text-white/40 mt-0.5">{arg.subtitle}</p>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm md:text-sm font-semibold text-white">{arg.title}</p>
+                        <p className="text-xs md:text-xs text-white/40 mt-1 leading-relaxed">{arg.subtitle}</p>
                       </div>
                     </div>
                   </div>
