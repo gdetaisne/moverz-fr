@@ -171,62 +171,145 @@ export function HeroV4TwoColumn() {
                     style={{ background: "#1F2937" }}
                   />
 
-                  {/* Screen content */}
-                  <div className="relative h-full w-full p-3 pt-9 pb-4 overflow-y-auto" style={{ background: "#F9FAFB" }}>
-                    
-                    {/* STEPPER PREMIUM style Ramp dans le phone */}
-                    <div className="mb-5 px-3 pt-3">
-                      <div className="space-y-0">
+                  {/* Screen content - FULL SCREEN STEPPER ANIMÉ */}
+                  <div className="relative h-full w-full overflow-hidden" style={{ background: "linear-gradient(180deg, #F0FDFA 0%, #F9FAFB 100%)" }}>
+                    {/* Subtle pattern background */}
+                    <div 
+                      className="absolute inset-0 opacity-[0.02]"
+                      style={{ 
+                        backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230EA5A6' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+                        backgroundSize: "30px 30px"
+                      }}
+                    />
+
+                    {/* Container centré verticalement */}
+                    <div className="relative h-full flex flex-col justify-center px-6 py-12">
+                      {/* Logo Moverz en haut */}
+                      <motion.div 
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                        className="mb-8 flex justify-center"
+                      >
+                        <Image src="/logo.png" alt="Moverz" width={32} height={32} className="h-8 w-8" />
+                      </motion.div>
+
+                      {/* Steps animés - GRANDE TAILLE */}
+                      <div className="space-y-8">
                         {STEPS.map(({ num, text }, i) => (
-                          <div key={num} className="relative">
-                            {/* Ligne verticale connectrice (sauf pour le dernier) */}
+                          <motion.div
+                            key={num}
+                            initial={{ opacity: 0, x: -20, scale: 0.95 }}
+                            animate={{ opacity: 1, x: 0, scale: 1 }}
+                            transition={{ 
+                              duration: 0.6, 
+                              delay: 0.2 + i * 0.3,
+                              ease: [0.16, 1, 0.3, 1]
+                            }}
+                            className="relative"
+                          >
+                            {/* Ligne connectrice animée */}
                             {i < STEPS.length - 1 && (
-                              <div 
-                                className="absolute left-[11px] top-7 bottom-0 w-[1px]"
+                              <motion.div 
+                                className="absolute left-[19px] top-12 w-[2px] h-8"
                                 style={{ 
-                                  background: i === 1 ? "linear-gradient(to bottom, #CBD5E1 0%, #0EA5A6 100%)" : "#E2E8F0"
+                                  background: i === 1 
+                                    ? "linear-gradient(to bottom, #CBD5E1 0%, #0EA5A6 100%)" 
+                                    : "rgba(226,232,240,0.5)"
+                                }}
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: "32px", opacity: 1 }}
+                                transition={{ 
+                                  duration: 0.4, 
+                                  delay: 0.6 + i * 0.3,
+                                  ease: [0.16, 1, 0.3, 1]
                                 }}
                               />
                             )}
-                            
-                            <div className="flex items-start gap-3 pb-4 relative z-10">
-                              {/* Numéro dans cercle minimaliste */}
-                              <div 
-                                className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[11px] font-bold transition-all duration-300"
+
+                            <div className="flex items-start gap-4">
+                              {/* Gros cercle avec numéro */}
+                              <motion.div
+                                className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-base font-bold"
                                 style={{
-                                  background: i === 2 ? "#0EA5A6" : "#FFFFFF",
+                                  background: i === 2 
+                                    ? "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)" 
+                                    : "#FFFFFF",
                                   color: i === 2 ? "#FFFFFF" : "#94A3B8",
-                                  border: i === 2 ? "none" : "1.5px solid #E2E8F0",
-                                  boxShadow: i === 2 ? "0 2px 8px rgba(14,165,166,0.2)" : "none"
+                                  border: i === 2 ? "none" : "2px solid #E2E8F0",
+                                  boxShadow: i === 2 
+                                    ? "0 4px 16px rgba(14,165,166,0.3)" 
+                                    : "0 2px 4px rgba(0,0,0,0.04)"
+                                }}
+                                initial={{ scale: 0, rotate: -180 }}
+                                animate={{ scale: 1, rotate: 0 }}
+                                transition={{ 
+                                  duration: 0.5, 
+                                  delay: 0.3 + i * 0.3,
+                                  type: "spring",
+                                  stiffness: 200,
+                                  damping: 15
                                 }}
                               >
                                 {num}
-                              </div>
-                              
-                              {/* Texte avec hiérarchie typographique */}
-                              <div className="flex-1 pt-0.5">
-                                <p 
-                                  className="text-[11px] leading-[1.4]" 
+                                
+                                {/* Pulse ring pour l'étape active */}
+                                {i === 2 && (
+                                  <motion.div
+                                    className="absolute inset-0 rounded-full"
+                                    style={{ border: "2px solid #0EA5A6" }}
+                                    initial={{ scale: 1, opacity: 0.6 }}
+                                    animate={{ scale: 1.5, opacity: 0 }}
+                                    transition={{ 
+                                      duration: 1.5, 
+                                      repeat: Infinity,
+                                      ease: "easeOut"
+                                    }}
+                                  />
+                                )}
+                              </motion.div>
+
+                              {/* Texte */}
+                              <div className="flex-1 pt-1">
+                                <motion.p
+                                  className="text-[13px] leading-[1.5] font-medium"
                                   style={{ 
                                     color: i === 2 ? "#111827" : "#64748B",
-                                    fontWeight: i === 2 ? 600 : 500,
-                                    letterSpacing: i === 2 ? "-0.01em" : "0"
+                                    fontWeight: i === 2 ? 600 : 500
+                                  }}
+                                  initial={{ opacity: 0 }}
+                                  animate={{ opacity: 1 }}
+                                  transition={{ 
+                                    duration: 0.4, 
+                                    delay: 0.5 + i * 0.3
                                   }}
                                 >
                                   {text}
-                                </p>
+                                </motion.p>
                               </div>
                             </div>
-                          </div>
+                          </motion.div>
                         ))}
                       </div>
-                      
-                      {/* Divider ultra-subtil */}
-                      <div className="relative mt-2 mb-4">
-                        <div className="absolute inset-0 flex items-center">
-                          <div className="w-full" style={{ height: "1px", background: "linear-gradient(to right, transparent 0%, #E2E8F0 20%, #E2E8F0 80%, transparent 100%)" }} />
+
+                      {/* Message de fin avec icône */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ 
+                          duration: 0.6, 
+                          delay: 1.8,
+                          ease: [0.16, 1, 0.3, 1]
+                        }}
+                        className="mt-8 text-center"
+                      >
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full" style={{ background: "rgba(14,165,166,0.1)" }}>
+                          <CheckCircle2 className="h-4 w-4" style={{ color: "#0EA5A6" }} />
+                          <span className="text-xs font-semibold" style={{ color: "#0EA5A6" }}>
+                            Prêt à comparer
+                          </span>
                         </div>
-                      </div>
+                      </motion.div>
                     </div>
                   </div>
                 </div>
