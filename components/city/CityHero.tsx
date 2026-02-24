@@ -116,7 +116,7 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="relative w-full max-w-[280px] mx-auto">
+            <div className="relative w-full max-w-[240px] md:max-w-[280px] mx-auto">
               {/* Premium glow effect turquoise */}
               <div
                 className="absolute inset-0 blur-3xl opacity-40"
@@ -126,13 +126,13 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
                 }}
               />
 
-              {/* Phone frame */}
+              {/* Phone frame - Responsive */}
               <div
-                className="relative rounded-[38px] border-[2px] overflow-hidden bg-white"
+                className="relative rounded-[32px] md:rounded-[38px] border-[2px] overflow-hidden bg-white w-full"
                 style={{
                   borderColor: "#1F2937",
-                  width: "280px",
-                  height: "600px",
+                  aspectRatio: "280/600",
+                  maxWidth: "280px",
                   boxShadow: "0 25px 50px -12px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,0,0,0.08)",
                 }}
               >
@@ -302,12 +302,12 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
                 </div>
               </div>
 
-              {/* Stats badges modernes - Glassmorphism */}
+              {/* Stats badges modernes - Glassmorphism - MASQUÉS SUR MOBILE */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
-                className="absolute -right-6 top-20 rounded-xl px-3 py-2.5 backdrop-blur-xl"
+                className="hidden lg:block absolute -right-6 top-20 rounded-xl px-3 py-2.5 backdrop-blur-xl"
                 style={{
                   background: "rgba(255,255,255,0.9)",
                   border: "1px solid rgba(14,165,166,0.2)",
@@ -327,7 +327,7 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 1 }}
-                className="absolute -left-6 top-1/2 rounded-xl px-3 py-2.5 backdrop-blur-xl"
+                className="hidden lg:block absolute -left-6 top-1/2 rounded-xl px-3 py-2.5 backdrop-blur-xl"
                 style={{
                   background: "rgba(255,255,255,0.9)",
                   border: "1px solid rgba(14,165,166,0.2)",
@@ -347,7 +347,7 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 1.2 }}
-                className="absolute -right-6 bottom-32 rounded-xl px-3 py-2.5 backdrop-blur-xl"
+                className="hidden lg:block absolute -right-6 bottom-32 rounded-xl px-3 py-2.5 backdrop-blur-xl"
                 style={{
                   background: "rgba(255,255,255,0.9)",
                   border: "1px solid rgba(14,165,166,0.2)",
