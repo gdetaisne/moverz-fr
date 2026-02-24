@@ -7,7 +7,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence, PanInfo } from "framer-motion";
-import { ChevronLeft, ChevronRight, Star, Globe, Sparkles } from "lucide-react";
+import { ChevronLeft, ChevronRight, Star, Globe } from "lucide-react";
 import { staggerContainer, staggerItem } from "@/components/motion";
 import Image from "next/image";
 
@@ -90,8 +90,8 @@ function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: n
           className="flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-full mb-4 -mt-1"
           style={{ background: "#0EA5A6" }}
         >
-          <Sparkles className="h-3 w-3 text-white" />
-          <span className="text-xs font-semibold text-white">✦ Meilleure offre</span>
+          <Image src="/logo.png" alt="Moverz" width={14} height={14} className="h-3.5 w-3.5" />
+          <span className="text-xs font-semibold text-white">Meilleure offre</span>
         </div>
       )}
 
