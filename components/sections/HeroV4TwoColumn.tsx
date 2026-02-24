@@ -24,223 +24,239 @@ const STEPS = [
   { num: "3", text: "Vous choisissez sereinement", bold: true },
 ] as const;
 
-// Progressive Timeline Animation - Inspiré de Comment ça marche
+// ULTRA APPLE MORPHING ANIMATION - Liquid Blobs + Logo Formation
 function MorphingUIAnimation() {
   const [stage, setStage] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setStage((prev) => (prev + 1) % 5);
-    }, 2800);
+    }, 3200);
     return () => clearInterval(interval);
   }, []);
 
   const stages = [
-    { id: 0, title: "Infos reçues", count: 1, color: "#94A3B8", icon: MessageSquare, subtitle: "Dossier créé" },
-    { id: 1, title: "Déménageurs contactés", count: 12, color: "#0EA5A6", icon: Users, subtitle: "Réseau activé" },
-    { id: 2, title: "Offres reçues", count: 7, color: "#0EA5A6", icon: Mail, subtitle: "En analyse" },
-    { id: 3, title: "Offres sélectionnées", count: 3, color: "#10B981", icon: ShieldCheck, subtitle: "Top 3 Moverz" },
-    { id: 4, title: "Vous choisissez", count: 1, color: "#0EA5A6", icon: CheckCircle2, subtitle: "Déménagez sereinement" },
+    { id: 0, label: "Envoi", count: "1", color: "#6366F1", gradient: "linear-gradient(135deg, #818CF8 0%, #6366F1 100%)" },
+    { id: 1, label: "Contact", count: "12", color: "#0EA5A6", gradient: "linear-gradient(135deg, #14B8A6 0%, #0EA5A6 100%)" },
+    { id: 2, label: "Réception", count: "7", color: "#F59E0B", gradient: "linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%)" },
+    { id: 3, label: "Sélection", count: "3", color: "#10B981", gradient: "linear-gradient(135deg, #34D399 0%, #10B981 100%)" },
+    { id: 4, label: "Validation", count: "✓", color: "#0EA5A6", gradient: "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)" },
   ];
 
   const currentStage = stages[stage];
-  const Icon = currentStage.icon;
 
   return (
     <div 
-      className="relative h-full w-full overflow-hidden p-4 flex flex-col"
-      style={{ background: "#FAFAFA" }}
+      className="relative h-full w-full overflow-hidden flex items-center justify-center"
+      style={{ 
+        background: "linear-gradient(180deg, #000000 0%, #0F172A 100%)"
+      }}
     >
-      {/* Spotlight effect animé */}
+      {/* Animated Blobs Background - Apple Style */}
       <motion.div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: `radial-gradient(circle at 50% 45%, ${currentStage.color}15 0%, transparent 70%)`,
-        }}
-        animate={{
-          opacity: [0.3, 0.6, 0.3],
-        }}
-        transition={{ duration: 2, repeat: Infinity }}
-      />
-
-      {/* Header premium avec logo Moverz */}
-      <motion.div
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="relative z-10 mb-6"
+        className="absolute inset-0 opacity-40"
+        style={{ filter: "blur(60px)" }}
       >
-        {/* Logo Moverz en haut */}
-        <div className="flex items-center justify-between mb-3">
-          <div className="flex items-center gap-1.5">
+        <motion.div
+          className="absolute w-48 h-48 rounded-full"
+          style={{ background: currentStage.gradient }}
+          animate={{
+            x: ["-10%", "110%", "-10%"],
+            y: ["0%", "80%", "0%"],
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
+        <motion.div
+          className="absolute w-64 h-64 rounded-full"
+          style={{ background: currentStage.gradient }}
+          animate={{
+            x: ["100%", "-10%", "100%"],
+            y: ["70%", "10%", "70%"],
+            scale: [1.2, 1, 1.2],
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
+      </motion.div>
+
+      {/* Main Content Container */}
+      <div className="relative z-10 w-full h-full flex flex-col p-4">
+        {/* Logo Moverz qui se forme progressivement */}
+        <motion.div 
+          className="flex items-center justify-between mb-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          <motion.div
+            animate={{
+              filter: [
+                "blur(0px) brightness(1)",
+                "blur(2px) brightness(1.2)",
+                "blur(0px) brightness(1)",
+              ]
+            }}
+            transition={{ duration: 4, repeat: Infinity }}
+          >
             <Image 
               src="/logo-ui.png" 
               alt="Moverz" 
-              width={60} 
-              height={20}
-              className="h-4 w-auto"
+              width={70} 
+              height={24}
+              className="h-5 w-auto brightness-0 invert"
+              style={{ filter: "drop-shadow(0 0 8px rgba(255,255,255,0.3))" }}
             />
-          </div>
-          <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "#10B981" }} />
+          </motion.div>
+        </motion.div>
+
+        {/* Center Morphing Area - Liquid Glass Effect */}
+        <div className="flex-1 flex items-center justify-center">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={stage}
+              initial={{ opacity: 0, scale: 0.8, rotateX: -15 }}
+              animate={{ opacity: 1, scale: 1, rotateX: 0 }}
+              exit={{ opacity: 0, scale: 1.1, rotateX: 15 }}
+              transition={{ 
+                duration: 0.8,
+                ease: [0.16, 1, 0.3, 1]
+              }}
+              className="relative"
+              style={{ perspective: "1000px" }}
+            >
+              {/* Glassmorphism Card */}
+              <motion.div
+                className="relative rounded-3xl p-8 backdrop-blur-xl border"
+                style={{
+                  background: "rgba(255, 255, 255, 0.05)",
+                  borderColor: "rgba(255, 255, 255, 0.1)",
+                  boxShadow: `0 20px 60px ${currentStage.color}40, inset 0 1px 0 rgba(255,255,255,0.2)`,
+                }}
+                animate={{
+                  boxShadow: [
+                    `0 20px 60px ${currentStage.color}40, inset 0 1px 0 rgba(255,255,255,0.2)`,
+                    `0 30px 80px ${currentStage.color}60, inset 0 1px 0 rgba(255,255,255,0.3)`,
+                    `0 20px 60px ${currentStage.color}40, inset 0 1px 0 rgba(255,255,255,0.2)`,
+                  ]
+                }}
+                transition={{ duration: 3, repeat: Infinity }}
+              >
+                {/* Animated Ring/Orbit */}
+                <motion.div 
+                  className="absolute inset-0 rounded-3xl border-2"
+                  style={{ borderColor: currentStage.color }}
+                  animate={{
+                    rotate: 360,
+                    scale: [1, 1.05, 1],
+                    opacity: [0.3, 0.6, 0.3]
+                  }}
+                  transition={{
+                    rotate: { duration: 8, repeat: Infinity, ease: "linear" },
+                    scale: { duration: 2, repeat: Infinity },
+                    opacity: { duration: 2, repeat: Infinity }
+                  }}
+                />
+
+                {/* Central Number/Icon - Morphing */}
+                <motion.div
+                  className="relative z-10 text-center"
+                  initial={{ scale: 0, rotate: -180 }}
+                  animate={{ scale: 1, rotate: 0 }}
+                  transition={{ 
+                    type: "spring",
+                    stiffness: 200,
+                    damping: 20,
+                    delay: 0.2
+                  }}
+                >
+                  <motion.div
+                    className="text-7xl font-bold mb-2"
+                    style={{
+                      background: currentStage.gradient,
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      backgroundClip: "text",
+                    }}
+                    animate={{
+                      scale: [1, 1.1, 1],
+                    }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    {currentStage.count}
+                  </motion.div>
+                  
+                  <motion.p
+                    className="text-sm font-semibold tracking-wide uppercase"
+                    style={{ color: "rgba(255,255,255,0.9)" }}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                  >
+                    {currentStage.label}
+                  </motion.p>
+                </motion.div>
+
+                {/* Particles/Dots Effect */}
+                {[...Array(3)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="absolute w-2 h-2 rounded-full"
+                    style={{ background: currentStage.color }}
+                    animate={{
+                      x: [0, Math.random() * 100 - 50],
+                      y: [0, Math.random() * 100 - 50],
+                      opacity: [0, 1, 0],
+                      scale: [0, 1, 0]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      delay: i * 0.5,
+                      ease: "easeOut"
+                    }}
+                  />
+                ))}
+              </motion.div>
+            </motion.div>
+          </AnimatePresence>
         </div>
 
-        {/* Info déménagement - Plus mis en valeur */}
-        <motion.div 
-          className="p-3 rounded-xl border"
-          style={{ 
-            background: "linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%)",
-            borderColor: "#E2E8F0"
-          }}
-          animate={{
-            boxShadow: [
-              "0 2px 8px rgba(15,23,42,0.06)",
-              "0 4px 12px rgba(15,23,42,0.08)",
-              "0 2px 8px rgba(15,23,42,0.06)",
-            ]
-          }}
-          transition={{ duration: 3, repeat: Infinity }}
-        >
-          <p className="text-[9px] font-medium text-slate-500 mb-1">Votre déménagement</p>
-          <div className="flex items-center gap-2">
-            <p className="text-sm font-bold text-slate-900">Paris → Lyon</p>
-            <div className="w-1 h-1 rounded-full bg-slate-300" />
-            <p className="text-xs font-semibold text-slate-600">15 mars</p>
-          </div>
-        </motion.div>
-      </motion.div>
-
-      {/* Carte principale qui morphe */}
-      <div className="flex-1 flex items-center justify-center relative">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={stage}
-            initial={{ opacity: 0, scale: 0.9, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 1.05, y: -20 }}
-            transition={{ 
-              duration: 0.6, 
-              ease: [0.16, 1, 0.3, 1],
-            }}
-            className="relative w-full"
-          >
-            {/* Main Card */}
-            <motion.div
-              className="relative p-6 rounded-2xl border shadow-lg"
-              style={{
-                background: "white",
-                borderColor: `${currentStage.color}30`,
-              }}
-              animate={{
-                boxShadow: [
-                  `0 4px 20px ${currentStage.color}20`,
-                  `0 8px 30px ${currentStage.color}35`,
-                  `0 4px 20px ${currentStage.color}20`,
-                ],
-              }}
-              transition={{ duration: 2, repeat: Infinity }}
-            >
-              {/* Icône avec pulse */}
+        {/* Bottom Progress - Liquid Bar */}
+        <motion.div className="mt-6">
+          <div className="flex justify-center gap-2 mb-3">
+            {stages.map((s, i) => (
               <motion.div
-                className="flex items-center justify-center w-12 h-12 rounded-2xl mx-auto mb-4"
-                style={{ background: `${currentStage.color}15` }}
-                animate={{
-                  scale: [1, 1.05, 1],
+                key={s.id}
+                className="h-1 rounded-full"
+                style={{
+                  width: i === stage ? "32px" : "8px",
+                  background: i === stage ? currentStage.gradient : "rgba(255,255,255,0.2)",
                 }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                <Icon className="w-6 h-6" style={{ color: currentStage.color }} strokeWidth={2} />
-              </motion.div>
-
-              {/* Compteur - Grand et bold */}
-              <motion.div
-                className="text-center mb-3"
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.4, delay: 0.2 }}
-              >
-                <motion.p
-                  className="text-4xl font-bold"
-                  style={{ color: currentStage.color }}
-                  initial={{ y: 10 }}
-                  animate={{ y: 0 }}
-                >
-                  {currentStage.count}
-                </motion.p>
-              </motion.div>
-
-              {/* Titre */}
-              <motion.p
-                className="text-sm font-semibold text-slate-900 text-center"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3 }}
-              >
-                {currentStage.title}
-              </motion.p>
-            </motion.div>
-
-            {/* Badge contextuel flottant */}
-            {stage === 2 && (
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                transition={{ delay: 0.4 }}
-                className="absolute -top-2 -right-2 px-2.5 py-1.5 rounded-lg text-[9px] font-semibold bg-white border shadow-sm"
-                style={{ borderColor: "#0EA5A620" }}
-              >
-                <span style={{ color: "#0EA5A6" }}>Analyse</span>
-              </motion.div>
-            )}
-
-            {stage === 3 && (
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                transition={{ delay: 0.4 }}
-                className="absolute -top-2 -right-2 px-2.5 py-1.5 rounded-lg text-[9px] font-semibold bg-white border shadow-sm"
-                style={{ borderColor: "#10B98120" }}
-              >
-                <span style={{ color: "#10B981" }}>✓ Fiables</span>
-              </motion.div>
-            )}
-          </motion.div>
-        </AnimatePresence>
+                animate={{
+                  opacity: i <= stage ? 1 : 0.3,
+                }}
+                transition={{ duration: 0.3 }}
+              />
+            ))}
+          </div>
+          <motion.p
+            key={stage}
+            initial={{ opacity: 0, y: 5 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center text-[10px] font-medium"
+            style={{ color: "rgba(255,255,255,0.5)" }}
+          >
+            Paris → Lyon • 15 mars 2026
+          </motion.p>
+        </motion.div>
       </div>
-
-      {/* Indicateur de progression - Dots minimalistes */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-        className="flex items-center justify-center gap-1.5 mt-6"
-      >
-        {stages.map((s, i) => (
-          <motion.div
-            key={s.id}
-            className="rounded-full transition-all"
-            style={{
-              width: i === stage ? "20px" : "6px",
-              height: "6px",
-              background: i === stage ? currentStage.color : "#E2E8F0",
-            }}
-            animate={{
-              opacity: i <= stage ? 1 : 0.4,
-            }}
-          />
-        ))}
-      </motion.div>
-
-      {/* Sous-titre subtil */}
-      <motion.p
-        className="text-center text-[9px] text-slate-400 mt-3"
-        key={stage}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.6 }}
-      >
-        {currentStage.subtitle}
-      </motion.p>
     </div>
   );
 }
