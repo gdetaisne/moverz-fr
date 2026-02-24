@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import ContactForm from "@/components/ContactForm";
 import Image from "next/image";
-import { Mail, ShieldCheck, Users, Linkedin, Truck } from "lucide-react";
+import { ShieldCheck, Users, Linkedin, Truck } from "lucide-react";
 
 export const metadata: Metadata = getFullMetadata(
   'contact',
@@ -60,20 +59,8 @@ export default function ContactPage() {
                 className="mt-5 text-base md:text-lg leading-relaxed max-w-xl"
                 style={{ color: "#6B7280" }}
               >
-                Besoin d'aide sur un devis, une arnaque, ou votre dossier ? Le plus simple : envoyez un message via le formulaire (avec un maximum de contexte).
+                Besoin d'aide sur un devis, une arnaque, ou votre dossier ? Vous trouverez toutes nos coordonnées ci-dessous.
               </p>
-
-              <div className="mt-7">
-                <a
-                  href="#form"
-                  className="group inline-flex items-center justify-center gap-2 rounded-xl px-8 py-4 text-base font-semibold text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
-                  style={{ background: "#0EA5A6" }}
-                >
-                  <Mail className="h-4 w-4" />
-                  <span>Envoyer un message</span>
-                  <span className="text-xl leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
-                </a>
-              </div>
 
               <div className="mt-6 flex flex-wrap items-center gap-2 text-xs" style={{ color: "#6B7280" }}>
                 <span className="inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1 backdrop-blur-sm border border-white/60">
@@ -182,79 +169,62 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Form + Contact Info Section */}
+      {/* Contact Info Section */}
       <section className="py-16 md:py-24">
-        <div className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-6 lg:grid-cols-2 lg:items-start">
-            {/* Form */}
-            <div
-              id="form"
-              className="relative overflow-hidden rounded-3xl border bg-gradient-to-b from-white to-[#FAFBFC] p-8 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
-              style={{ borderColor: "rgba(0,0,0,0.08)" }}
-            >
-              <div
-                className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#0EA5A6] to-transparent"
-              />
+        <div className="container max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-6">
+            {/* Coordonnées */}
+            <div className="rounded-3xl border bg-white/95 backdrop-blur-sm p-8 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.08)]" style={{ borderColor: "rgba(0,0,0,0.08)" }}>
+              <h2 
+                className="text-2xl md:text-3xl font-heading font-bold mb-6"
+                style={{ color: "#111827" }}
+              >
+                <span style={{ color: "#0EA5A6" }}>Coordonnées</span>
+              </h2>
+              <div className="space-y-6 text-base" style={{ color: "#6B7280" }}>
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-wider mb-2" style={{ color: "#6B7280" }}>
+                    Email
+                  </p>
+                  <a
+                    href="mailto:contact@moverz.fr"
+                    className="text-lg font-semibold hover:opacity-80 transition-opacity"
+                    style={{ color: "#0EA5A6" }}
+                  >
+                    contact@moverz.fr
+                  </a>
+                </div>
 
-              <div className="mb-6">
-                <h2
-                  className="text-2xl md:text-3xl font-heading font-bold"
-                  style={{ color: "#111827" }}
-                >
-                  Envoyer un <span style={{ color: "#0EA5A6" }}>message</span>
-                </h2>
-                <p className="mt-2 text-sm md:text-base" style={{ color: "#6B7280" }}>
-                  Donnez un peu de contexte (dates, villes, volume, contraintes). On vous répond sous 24h ouvrées.
-                </p>
-              </div>
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-wider mb-2" style={{ color: "#6B7280" }}>
+                    Horaires
+                  </p>
+                  <p className="text-base">Lundi - Vendredi : 9h - 18h</p>
+                  <p className="text-sm mt-1" style={{ color: "#6B7280" }}>Réponse sous 24h ouvrées</p>
+                </div>
 
-              <ContactForm />
-            </div>
-
-            {/* Contact Info */}
-            <div className="space-y-6">
-              {/* Coordonnées */}
-              <div className="rounded-3xl border bg-white/95 backdrop-blur-sm p-7 md:p-8 shadow-[0_4px_16px_rgba(0,0,0,0.04)]" style={{ borderColor: "rgba(0,0,0,0.08)" }}>
-                <p className="text-sm font-semibold" style={{ color: "#111827" }}>Coordonnées</p>
-                <div className="mt-4 space-y-4 text-sm" style={{ color: "#6B7280" }}>
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: "#6B7280" }}>
-                      Email
-                    </p>
-                    <a
-                      href="mailto:contact@moverz.fr"
-                      className="font-semibold hover:opacity-80 transition-opacity"
-                      style={{ color: "#0EA5A6" }}
-                    >
-                      contact@moverz.fr
-                    </a>
-                  </div>
-
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: "#6B7280" }}>
-                      Horaires
-                    </p>
-                    <p>Lundi - Vendredi : 9h - 18h</p>
-                    <p className="text-xs mt-0.5" style={{ color: "#6B7280" }}>Réponse sous 24h ouvrées</p>
-                  </div>
-
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: "#6B7280" }}>
-                      Adresse
-                    </p>
-                    <p className="leading-relaxed">
-                      GSLV EURL - Moverz<br />
-                      5 Rue Jean Coyttar<br />
-                      17290 Thairé, France
-                    </p>
-                  </div>
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-wider mb-2" style={{ color: "#6B7280" }}>
+                    Adresse
+                  </p>
+                  <p className="text-base leading-relaxed">
+                    GSLV EURL - Moverz<br />
+                    5 Rue Jean Coyttar<br />
+                    17290 Thairé, France
+                  </p>
                 </div>
               </div>
+            </div>
 
-              {/* Garanties */}
-              <div className="rounded-3xl border bg-white/95 backdrop-blur-sm p-7 md:p-8 shadow-[0_4px_16px_rgba(0,0,0,0.04)]" style={{ borderColor: "rgba(0,0,0,0.08)" }}>
-                <p className="text-sm font-semibold" style={{ color: "#111827" }}>Nos garanties</p>
-                <ul className="mt-4 space-y-3 text-sm" style={{ color: "#6B7280" }}>
+            {/* Garanties */}
+            <div className="rounded-3xl border bg-white/95 backdrop-blur-sm p-8 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.08)]" style={{ borderColor: "rgba(0,0,0,0.08)" }}>
+              <h2 
+                className="text-2xl md:text-3xl font-heading font-bold mb-6"
+                style={{ color: "#111827" }}
+              >
+                Nos <span style={{ color: "#0EA5A6" }}>garanties</span>
+              </h2>
+              <ul className="space-y-4 text-base" style={{ color: "#6B7280" }}>
                   <li className="flex items-start gap-3">
                     <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full" style={{ background: "rgba(14,165,166,0.15)", color: "#0EA5A6" }}>
                       <ShieldCheck className="h-4 w-4" />
