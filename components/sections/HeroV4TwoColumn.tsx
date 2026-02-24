@@ -24,239 +24,243 @@ const STEPS = [
   { num: "3", text: "Vous choisissez sereinement", bold: true },
 ] as const;
 
-// ULTRA APPLE MORPHING ANIMATION - Liquid Blobs + Logo Formation
+// FAKE BROWSER ANIMATION - LINEAR STYLE (Clean & Minimal)
 function MorphingUIAnimation() {
   const [stage, setStage] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setStage((prev) => (prev + 1) % 5);
-    }, 3200);
+      setStage((prev) => (prev + 1) % 4);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
   const stages = [
-    { id: 0, label: "Envoi", count: "1", color: "#6366F1", gradient: "linear-gradient(135deg, #818CF8 0%, #6366F1 100%)" },
-    { id: 1, label: "Contact", count: "12", color: "#0EA5A6", gradient: "linear-gradient(135deg, #14B8A6 0%, #0EA5A6 100%)" },
-    { id: 2, label: "Réception", count: "7", color: "#F59E0B", gradient: "linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%)" },
-    { id: 3, label: "Sélection", count: "3", color: "#10B981", gradient: "linear-gradient(135deg, #34D399 0%, #10B981 100%)" },
-    { id: 4, label: "Validation", count: "✓", color: "#0EA5A6", gradient: "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)" },
+    { 
+      id: 0, 
+      url: "moverz.fr/dossier",
+      title: "Dossier créé",
+      content: "Paris → Lyon • 60m² • T3",
+      metric: "1 dossier",
+      color: "#64748B"
+    },
+    { 
+      id: 1, 
+      url: "moverz.fr/matching",
+      title: "Mise en concurrence",
+      content: "12 déménageurs contactés",
+      metric: "12 contacts",
+      color: "#0EA5A6"
+    },
+    { 
+      id: 2, 
+      url: "moverz.fr/analyse",
+      title: "Analyse des offres",
+      content: "7 offres reçues • Analyse en cours",
+      metric: "7 offres",
+      color: "#F59E0B"
+    },
+    { 
+      id: 3, 
+      url: "moverz.fr/selection",
+      title: "Top 3 Moverz",
+      content: "3 offres fiables sélectionnées",
+      metric: "3 offres",
+      color: "#10B981"
+    },
   ];
 
   const currentStage = stages[stage];
 
   return (
     <div 
-      className="relative h-full w-full overflow-hidden flex items-center justify-center"
-      style={{ 
-        background: "linear-gradient(180deg, #000000 0%, #0F172A 100%)"
-      }}
+      className="relative h-full w-full overflow-hidden p-3 flex items-center justify-center"
+      style={{ background: "#FAFAFA" }}
     >
-      {/* Animated Blobs Background - Apple Style */}
+      {/* Fake Browser Window - Linear Style */}
       <motion.div
-        className="absolute inset-0 opacity-40"
-        style={{ filter: "blur(60px)" }}
+        className="relative w-full max-w-sm mx-auto"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
       >
-        <motion.div
-          className="absolute w-48 h-48 rounded-full"
-          style={{ background: currentStage.gradient }}
-          animate={{
-            x: ["-10%", "110%", "-10%"],
-            y: ["0%", "80%", "0%"],
-            scale: [1, 1.2, 1],
+        {/* Browser Chrome */}
+        <div 
+          className="rounded-t-2xl border border-b-0 p-3"
+          style={{ 
+            background: "white",
+            borderColor: "#E2E8F0"
           }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-        <motion.div
-          className="absolute w-64 h-64 rounded-full"
-          style={{ background: currentStage.gradient }}
-          animate={{
-            x: ["100%", "-10%", "100%"],
-            y: ["70%", "10%", "70%"],
-            scale: [1.2, 1, 1.2],
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-      </motion.div>
-
-      {/* Main Content Container */}
-      <div className="relative z-10 w-full h-full flex flex-col p-4">
-        {/* Logo Moverz qui se forme progressivement */}
-        <motion.div 
-          className="flex items-center justify-between mb-6"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
         >
-          <motion.div
-            animate={{
-              filter: [
-                "blur(0px) brightness(1)",
-                "blur(2px) brightness(1.2)",
-                "blur(0px) brightness(1)",
-              ]
-            }}
-            transition={{ duration: 4, repeat: Infinity }}
-          >
+          {/* Traffic lights + Logo */}
+          <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center gap-1.5">
+              <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
+              <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
+              <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
+            </div>
             <Image 
               src="/logo-ui.png" 
               alt="Moverz" 
-              width={70} 
-              height={24}
-              className="h-5 w-auto brightness-0 invert"
-              style={{ filter: "drop-shadow(0 0 8px rgba(255,255,255,0.3))" }}
+              width={50} 
+              height={16}
+              className="h-3.5 w-auto opacity-40"
             />
-          </motion.div>
-        </motion.div>
+          </div>
 
-        {/* Center Morphing Area - Liquid Glass Effect */}
-        <div className="flex-1 flex items-center justify-center">
+          {/* Address Bar - Animated */}
+          <motion.div 
+            className="flex items-center gap-2 px-3 py-2 rounded-lg border"
+            style={{ 
+              background: "#F8FAFC",
+              borderColor: "#E2E8F0"
+            }}
+            animate={{
+              borderColor: [currentStage.color + "00", currentStage.color + "40", currentStage.color + "00"]
+            }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <div className="w-3 h-3 rounded-full" style={{ background: currentStage.color }} />
+            <AnimatePresence mode="wait">
+              <motion.p
+                key={stage}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 10 }}
+                className="text-[10px] font-medium text-slate-600 flex-1"
+              >
+                {currentStage.url}
+              </motion.p>
+            </AnimatePresence>
+          </motion.div>
+        </div>
+
+        {/* Browser Content - Morphing Area */}
+        <div 
+          className="relative rounded-b-2xl border overflow-hidden"
+          style={{ 
+            background: "white",
+            borderColor: "#E2E8F0",
+            minHeight: "280px"
+          }}
+        >
           <AnimatePresence mode="wait">
             <motion.div
               key={stage}
-              initial={{ opacity: 0, scale: 0.8, rotateX: -15 }}
-              animate={{ opacity: 1, scale: 1, rotateX: 0 }}
-              exit={{ opacity: 0, scale: 1.1, rotateX: 15 }}
-              transition={{ 
-                duration: 0.8,
-                ease: [0.16, 1, 0.3, 1]
-              }}
-              className="relative"
-              style={{ perspective: "1000px" }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="p-6"
             >
-              {/* Glassmorphism Card */}
-              <motion.div
-                className="relative rounded-3xl p-8 backdrop-blur-xl border"
-                style={{
-                  background: "rgba(255, 255, 255, 0.05)",
-                  borderColor: "rgba(255, 255, 255, 0.1)",
-                  boxShadow: `0 20px 60px ${currentStage.color}40, inset 0 1px 0 rgba(255,255,255,0.2)`,
-                }}
-                animate={{
-                  boxShadow: [
-                    `0 20px 60px ${currentStage.color}40, inset 0 1px 0 rgba(255,255,255,0.2)`,
-                    `0 30px 80px ${currentStage.color}60, inset 0 1px 0 rgba(255,255,255,0.3)`,
-                    `0 20px 60px ${currentStage.color}40, inset 0 1px 0 rgba(255,255,255,0.2)`,
-                  ]
-                }}
-                transition={{ duration: 3, repeat: Infinity }}
-              >
-                {/* Animated Ring/Orbit */}
-                <motion.div 
-                  className="absolute inset-0 rounded-3xl border-2"
-                  style={{ borderColor: currentStage.color }}
-                  animate={{
-                    rotate: 360,
-                    scale: [1, 1.05, 1],
-                    opacity: [0.3, 0.6, 0.3]
-                  }}
-                  transition={{
-                    rotate: { duration: 8, repeat: Infinity, ease: "linear" },
-                    scale: { duration: 2, repeat: Infinity },
-                    opacity: { duration: 2, repeat: Infinity }
-                  }}
-                />
-
-                {/* Central Number/Icon - Morphing */}
+              {/* Header with pill */}
+              <div className="flex items-center justify-between mb-4">
                 <motion.div
-                  className="relative z-10 text-center"
-                  initial={{ scale: 0, rotate: -180 }}
-                  animate={{ scale: 1, rotate: 0 }}
-                  transition={{ 
-                    type: "spring",
-                    stiffness: 200,
-                    damping: 20,
-                    delay: 0.2
+                  className="px-3 py-1.5 rounded-full text-[9px] font-semibold"
+                  style={{ 
+                    background: currentStage.color + "15",
+                    color: currentStage.color
                   }}
+                  initial={{ scale: 0.8 }}
+                  animate={{ scale: 1 }}
                 >
-                  <motion.div
-                    className="text-7xl font-bold mb-2"
-                    style={{
-                      background: currentStage.gradient,
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      backgroundClip: "text",
-                    }}
-                    animate={{
-                      scale: [1, 1.1, 1],
-                    }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  >
-                    {currentStage.count}
-                  </motion.div>
-                  
-                  <motion.p
-                    className="text-sm font-semibold tracking-wide uppercase"
-                    style={{ color: "rgba(255,255,255,0.9)" }}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4 }}
-                  >
-                    {currentStage.label}
-                  </motion.p>
+                  {currentStage.metric}
                 </motion.div>
+                <motion.div
+                  initial={{ rotate: -90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                >
+                  <CheckCircle2 className="w-4 h-4" style={{ color: currentStage.color }} />
+                </motion.div>
+              </div>
 
-                {/* Particles/Dots Effect */}
+              {/* Title */}
+              <motion.h3
+                className="text-lg font-bold text-slate-900 mb-2"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+              >
+                {currentStage.title}
+              </motion.h3>
+
+              {/* Content */}
+              <motion.p
+                className="text-sm text-slate-600 mb-6"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+              >
+                {currentStage.content}
+              </motion.p>
+
+              {/* Progress Visual - Linear style bars */}
+              <motion.div 
+                className="space-y-2"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+              >
                 {[...Array(3)].map((_, i) => (
                   <motion.div
                     key={i}
-                    className="absolute w-2 h-2 rounded-full"
-                    style={{ background: currentStage.color }}
-                    animate={{
-                      x: [0, Math.random() * 100 - 50],
-                      y: [0, Math.random() * 100 - 50],
-                      opacity: [0, 1, 0],
-                      scale: [0, 1, 0]
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      delay: i * 0.5,
-                      ease: "easeOut"
-                    }}
-                  />
+                    className="h-1.5 rounded-full overflow-hidden"
+                    style={{ background: "#F1F5F9" }}
+                    initial={{ width: 0 }}
+                    animate={{ width: "100%" }}
+                    transition={{ duration: 0.6, delay: 0.4 + i * 0.1 }}
+                  >
+                    <motion.div
+                      className="h-full rounded-full"
+                      style={{ background: currentStage.color }}
+                      initial={{ width: "0%" }}
+                      animate={{ width: `${60 + i * 15}%` }}
+                      transition={{ duration: 1, delay: 0.5 + i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                    />
+                  </motion.div>
                 ))}
+              </motion.div>
+
+              {/* Fake Button */}
+              <motion.div
+                className="mt-6 px-4 py-2.5 rounded-lg text-center text-sm font-semibold text-white"
+                style={{ background: currentStage.color }}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+                whileHover={{ scale: 1.02 }}
+              >
+                Continuer
               </motion.div>
             </motion.div>
           </AnimatePresence>
+
+          {/* Subtle grid pattern background */}
+          <div 
+            className="absolute inset-0 opacity-[0.02] pointer-events-none"
+            style={{
+              backgroundImage: "linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)",
+              backgroundSize: "20px 20px"
+            }}
+          />
         </div>
 
-        {/* Bottom Progress - Liquid Bar */}
-        <motion.div className="mt-6">
-          <div className="flex justify-center gap-2 mb-3">
-            {stages.map((s, i) => (
-              <motion.div
-                key={s.id}
-                className="h-1 rounded-full"
-                style={{
-                  width: i === stage ? "32px" : "8px",
-                  background: i === stage ? currentStage.gradient : "rgba(255,255,255,0.2)",
-                }}
-                animate={{
-                  opacity: i <= stage ? 1 : 0.3,
-                }}
-                transition={{ duration: 0.3 }}
-              />
-            ))}
-          </div>
-          <motion.p
-            key={stage}
-            initial={{ opacity: 0, y: 5 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center text-[10px] font-medium"
-            style={{ color: "rgba(255,255,255,0.5)" }}
-          >
-            Paris → Lyon • 15 mars 2026
-          </motion.p>
-        </motion.div>
-      </div>
+        {/* Stage indicator - Minimal dots */}
+        <div className="flex justify-center gap-1.5 mt-4">
+          {stages.map((s, i) => (
+            <motion.div
+              key={s.id}
+              className="h-1 rounded-full"
+              style={{
+                width: i === stage ? "24px" : "6px",
+                background: i === stage ? currentStage.color : "#CBD5E1"
+              }}
+              animate={{ opacity: i <= stage ? 1 : 0.3 }}
+            />
+          ))}
+        </div>
+      </motion.div>
     </div>
   );
 }
