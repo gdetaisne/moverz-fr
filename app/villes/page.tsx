@@ -6,9 +6,9 @@ import { FinalCTAV4 } from "@/components/sections/FinalCTAV4";
 
 export const metadata: Metadata = getHubMetadata({
   path: "villes",
-  title: "Déménagement partout en France — des devis comparables",
+  title: "Déménagement partout en France — Trouvez votre ville",
   description:
-    "Annuaire des villes couvertes par Moverz. Trouvez votre guide local et Comparez des devis comparables (dossier anonyme, sans harcèlement).",
+    "Annuaire des villes couvertes par Moverz. Trouvez votre guide local et recevez vos 3 meilleurs devis (dossier anonyme, sans démarchage).",
 });
 
 export default function VillesPage() {
@@ -16,9 +16,7 @@ export default function VillesPage() {
   const totalPages = Math.max(1, Math.ceil(CITIES.length / 60));
 
   return (
-    <main className="bg-hero min-h-screen">
-      <div className="halo" />
-
+    <main className="min-h-screen" style={{ background: "#FFFFFF" }}>
       <PageHero
         breadcrumbs={[
           { label: "Accueil", href: "/" },
@@ -26,7 +24,7 @@ export default function VillesPage() {
         ]}
         eyebrow="Couverture nationale"
         title="Déménagement partout en France"
-        subtitle="Moverz fonctionne dans toute la France. Explorez nos villes principales (guides dédiés) et lancez le comparateur, même si votre ville n'est pas listée."
+        subtitle="Moverz fonctionne dans toute la France. Trouvez votre ville ci-dessous pour accéder au guide dédié avec des déménageurs vérifiés."
         primaryCta={{
           label: "Voir mes 3 meilleurs devis",
           href: "https://devis.moverz.fr/devis-gratuits",
@@ -42,10 +40,10 @@ export default function VillesPage() {
               Notre couverture nationale
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-v4-text mb-4">
-              Comparez dans toute la France
+              Trouvez votre <span style={{ color: "#0EA5A6" }}>ville</span>
             </h2>
             <p className="text-base md:text-lg text-[#4b5c6b] max-w-2xl mx-auto">
-              Moverz est disponible partout en France. Ces villes ont un comparateur local dédié avec des déménageurs contrôlés.
+              Moverz est disponible partout en France. Chaque ville a un guide dédié avec des déménageurs vérifiés.
             </p>
           </div>
 
@@ -95,7 +93,7 @@ export default function VillesPage() {
                           </p>
                           
                           <div className="flex items-center gap-2 text-sm font-semibold text-v4-accent">
-                            <span>Accéder au comparateur</span>
+                            <span>Voir les devis</span>
                             <svg className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                             </svg>
@@ -121,13 +119,16 @@ export default function VillesPage() {
                 <h3 className="text-lg font-bold text-v4-text">Votre ville n'est pas dans la liste ?</h3>
               </div>
               <p className="text-sm text-[#4b5c6b] mb-6 max-w-xl">
-                Nous ajoutons régulièrement de nouvelles villes. Contactez-nous pour manifester votre intérêt.
+                Nous ajoutons régulièrement de nouvelles villes. Le comparateur fonctionne partout, même si votre ville n'est pas listée.
               </p>
               <a
-                href="/contact/"
-                className="inline-flex items-center gap-2 rounded-xl border-2 border-v4-accent/40 bg-white px-6 py-3 text-sm font-semibold text-v4-text hover:bg-[#F8F9FA] hover:border-v4-accent/60 transition-all duration-300"
+                href="https://devis.moverz.fr/devis-gratuits"
+                className="inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                style={{
+                  background: "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)"
+                }}
               >
-                <span>Nous contacter</span>
+                <span>Lancer le comparateur</span>
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
