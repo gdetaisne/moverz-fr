@@ -182,13 +182,10 @@ export default function FAQPage() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="group rounded-2xl border bg-white p-5 hover:shadow-sm transition-all"
+                  className="group rounded-2xl border bg-white p-5 hover:shadow-sm transition-all hover:border-[var(--color-accent)]"
                   style={{ 
-                    borderColor: "var(--color-border)",
-                    "--hover-border": "var(--color-accent)" 
-                  } as React.CSSProperties}
-                  onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--color-accent)")}
-                  onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--color-border)")}
+                    borderColor: "var(--color-border)"
+                  }}
                 >
                   <p className="text-sm font-semibold" style={{ color: "var(--color-text)" }}>{item.title}</p>
                   <p className="mt-1 text-xs leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>{item.desc}</p>
