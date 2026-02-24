@@ -334,10 +334,10 @@ export function ComparableQuotesMockScrolly() {
           {/* RIGHT — iPhone Mockup with Carousel */}
           <div className="relative flex justify-center items-center">
             {/* iPhone Frame */}
-            <div className="relative w-full max-w-[320px]">
+            <div className="relative w-full max-w-[280px]">
               {/* Subtle glow */}
               <div
-                className="absolute inset-0 rounded-[42px] blur-3xl opacity-20"
+                className="absolute inset-0 rounded-[38px] blur-3xl opacity-20"
                 style={{ background: "radial-gradient(ellipse, rgba(14,165,166,0.3) 0%, transparent 70%)" }}
               />
 
@@ -350,13 +350,13 @@ export function ComparableQuotesMockScrolly() {
                 className="relative"
                 style={{ transform: "rotate(-2deg)" }}
               >
-                {/* Phone frame - iPhone 14 Pro realistic proportions */}
+                {/* Phone frame - Compact & realistic proportions */}
                 <div
-                  className="relative rounded-[42px] border-[8px] overflow-hidden bg-white"
+                  className="relative rounded-[38px] border-[7px] overflow-hidden bg-white"
                   style={{
                     borderColor: "#1F2937",
-                    width: "320px",
-                    height: "680px",
+                    width: "280px",
+                    height: "600px",
                     boxShadow: "0 25px 50px -12px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.1)",
                   }}
                 >
@@ -392,15 +392,33 @@ export function ComparableQuotesMockScrolly() {
                       ))}
                     </div>
 
-                    {/* Carousel container (inside phone) with stack effect */}
+                    {/* Carousel container (inside phone) with enhanced stack effect */}
                     <div className="relative h-full pt-24 pb-4 px-3 overflow-hidden">
-                      {/* Card C - En arrière (blurry) */}
-                      {currentIndex < MOVERS.length - 1 && (
-                        <div className="absolute inset-0 pt-24 pb-4 px-3">
+                      {/* Card #3 - Très en arrière (la plus floue) */}
+                      {currentIndex < MOVERS.length - 2 && (
+                        <div className="absolute inset-0 pt-24 pb-4 px-3 pointer-events-none">
                           <div
-                            className="absolute inset-x-3 top-24 bottom-4 opacity-40 blur-[1.5px] pointer-events-none"
+                            className="absolute inset-x-3 top-24 bottom-4"
                             style={{
-                              transform: "translateX(8px) translateY(8px) scale(0.95)",
+                              transform: "translateX(16px) translateY(16px) scale(0.92) rotate(1deg)",
+                              opacity: 0.25,
+                              filter: "blur(2.5px)",
+                            }}
+                          >
+                            <MoverCardDetailed mover={MOVERS[currentIndex + 2]} index={currentIndex + 2} />
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Card #2 - Moyennement en arrière */}
+                      {currentIndex < MOVERS.length - 1 && (
+                        <div className="absolute inset-0 pt-24 pb-4 px-3 pointer-events-none">
+                          <div
+                            className="absolute inset-x-3 top-24 bottom-4"
+                            style={{
+                              transform: "translateX(10px) translateY(10px) scale(0.96) rotate(0.5deg)",
+                              opacity: 0.5,
+                              filter: "blur(1.2px)",
                             }}
                           >
                             <MoverCardDetailed mover={MOVERS[currentIndex + 1]} index={currentIndex + 1} />
@@ -408,7 +426,7 @@ export function ComparableQuotesMockScrolly() {
                         </div>
                       )}
 
-                      {/* Card principale (nette) */}
+                      {/* Card #1 - Principale (nette) */}
                       <AnimatePresence initial={false} custom={direction} mode="wait">
                         <motion.div
                           key={currentIndex}
@@ -436,7 +454,7 @@ export function ComparableQuotesMockScrolly() {
               </motion.div>
 
               {/* Progress bar underneath phone */}
-              <div className="mt-8 w-full max-w-[320px] mx-auto">
+              <div className="mt-8 w-full max-w-[280px] mx-auto">
                 <div className="flex items-center justify-center gap-2 mb-3">
                   {MOVERS.map((_, i) => (
                     <button
