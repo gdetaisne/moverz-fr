@@ -547,17 +547,17 @@ export function ComparableQuotesMockScrolly() {
                 </div>
               </motion.div>
 
-              {/* Badge flottant EN DEHORS du téléphone (en bas à droite) */}
+              {/* Badge flottant sur le CÔTÉ DROIT du téléphone */}
               <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ 
                   duration: 0.6, 
                   delay: 0.6,
                   ease: [0.16, 1, 0.3, 1]
                 }}
-                className="absolute -bottom-4 -right-4 rounded-2xl px-4 py-3 text-[11px] font-semibold backdrop-blur-xl"
+                className="absolute top-1/2 -translate-y-1/2 -right-4 rounded-2xl px-4 py-3 text-[11px] font-semibold backdrop-blur-xl"
                 style={{ 
                   background: "linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(240,253,250,0.95) 100%)",
                   border: "1px solid rgba(14,165,166,0.2)",
