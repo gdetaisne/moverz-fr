@@ -1,4 +1,6 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "fs/promises";
+import { join } from "path";
 
 export const runtime = "nodejs";
 export const alt = "Moverz – Comparateur de déménagement gratuit";
@@ -6,6 +8,10 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function OgImage() {
+  // Charger le VRAI logo
+  const logoData = await readFile(join(process.cwd(), "public/logo.png"));
+  const logoBase64 = `data:image/png;base64,${logoData.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -86,43 +92,27 @@ export default async function OgImage() {
             maxWidth: 1040,
           }}
         >
-          {/* Logo + nom - style actuel du site */}
+          {/* Logo VRAI + nom comme sur le site */}
           <div
             style={{
               display: "flex",
               alignItems: "center",
-              gap: 14,
-              marginBottom: 42,
+              gap: 16,
+              marginBottom: 48,
             }}
           >
-            {/* Logo carré turquoise avec "S" stylisé - plus petit et moderne */}
-            <div
+            {/* VRAI Logo du site */}
+            <img
+              src={logoBase64}
+              width={64}
+              height={64}
               style={{
-                width: 56,
-                height: 56,
-                background: "#0EA5A6",
-                borderRadius: 12,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                boxShadow: "0 2px 8px rgba(14, 165, 166, 0.2), 0 4px 16px rgba(14, 165, 166, 0.12)",
+                borderRadius: 0,
               }}
-            >
-              <span
-                style={{
-                  fontSize: 36,
-                  fontWeight: 900,
-                  color: "white",
-                  fontFamily: "system-ui, -apple-system, sans-serif",
-                  letterSpacing: -1.5,
-                }}
-              >
-                S
-              </span>
-            </div>
+            />
             <span
               style={{
-                fontSize: 48,
+                fontSize: 52,
                 fontWeight: 800,
                 color: "#0B0F19",
                 letterSpacing: -1.2,
@@ -133,23 +123,23 @@ export default async function OgImage() {
             </span>
           </div>
 
-          {/* Tagline compact - style badge moderne */}
+          {/* Tagline badge */}
           <div
             style={{
               display: "flex",
               alignItems: "center",
               background: "rgba(255, 255, 255, 0.9)",
-              padding: "10px 20px",
+              padding: "10px 22px",
               borderRadius: 50,
               border: "1px solid rgba(0, 0, 0, 0.06)",
-              marginBottom: 44,
+              marginBottom: 48,
               boxShadow: "0 1px 2px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.02)",
             }}
           >
             <span
               style={{
                 color: "#4B5563",
-                fontSize: 16,
+                fontSize: 17,
                 fontWeight: 600,
                 fontFamily: "system-ui, -apple-system, sans-serif",
               }}
@@ -158,21 +148,21 @@ export default async function OgImage() {
             </span>
           </div>
 
-          {/* Titre principal - style hero actuel */}
+          {/* Titre EXACT du hero desktop */}
           <div
             style={{
               display: "flex",
               flexDirection: "column",
-              fontSize: 78,
-              fontWeight: 900,
-              lineHeight: 0.98,
-              marginBottom: 52,
+              fontSize: 80,
+              fontWeight: 700,
+              lineHeight: 0.95,
+              marginBottom: 56,
               fontFamily: "system-ui, -apple-system, sans-serif",
               letterSpacing: -3,
             }}
           >
-            <span style={{ color: "#0B0F19", marginBottom: 8 }}>
-              Vous déménagez.
+            <span style={{ color: "#111827", marginBottom: 8 }}>
+              Vous déménagez ?
             </span>
             <span
               style={{
@@ -183,35 +173,35 @@ export default async function OgImage() {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              On vous présente les 3 meilleurs.
+              On sélectionne le top 3 pour vous.
             </span>
           </div>
 
-          {/* Trust chips - style actuel avec touches couleurs */}
+          {/* Trust chips comme le hero */}
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
             {[
-              { icon: "💰", label: "Prix contrôlés", color: "#F59E0B" },
-              { icon: "🛡️", label: "Fiabilité vérifiée", color: "#0EA5A6" },
-              { icon: "⚡", label: "Numéro masqué", color: "#0EA5A6" },
+              { icon: "💰", label: "Prix contrôlés" },
+              { icon: "🛡️", label: "Fiabilité vérifiée" },
+              { icon: "⚡", label: "Numéro masqué" },
             ].map((item) => (
               <div
                 key={item.label}
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  gap: 8,
+                  gap: 10,
                   background: "rgba(255, 255, 255, 0.8)",
-                  padding: "10px 18px",
+                  padding: "12px 20px",
                   borderRadius: 50,
                   border: "1px solid rgba(0, 0, 0, 0.08)",
                   boxShadow: "0 1px 2px rgba(0,0,0,0.03)",
                 }}
               >
-                <span style={{ fontSize: 18 }}>{item.icon}</span>
+                <span style={{ fontSize: 20 }}>{item.icon}</span>
                 <span
                   style={{
                     color: "#4B5563",
-                    fontSize: 16,
+                    fontSize: 17,
                     fontWeight: 600,
                     fontFamily: "system-ui, -apple-system, sans-serif",
                   }}
