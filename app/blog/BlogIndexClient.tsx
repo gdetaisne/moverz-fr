@@ -28,29 +28,34 @@ export default function BlogIndexClient() {
 
   const isPro = activeCategory === "pro";
 
-  const proPosts = useMemo(
-    () => PUBLISHED_BLOG_POSTS.filter((p) => p.category === "pro"),
+  const validPosts = useMemo(
+    () => PUBLISHED_BLOG_POSTS.filter((p) => p && p.slug),
     []
+  );
+
+  const proPosts = useMemo(
+    () => validPosts.filter((p) => p.category === "pro"),
+    [validPosts]
   );
 
   const heroTitle = isPro ? "Guides pour déménageurs" : "Guides, prix & checklists";
   const heroSubtitle = isPro
     ? "Devis plus fiables, moins de litiges, relances efficaces : des articles concrets, orientés ROI."
-    : `${PUBLISHED_BLOG_POSTS.length} articles pour préparer votre déménagement sereinement. Conseils d'experts, prix réels, et guides pratiques.`;
+    : `${validPosts.length} articles pour préparer votre déménagement sereinement. Conseils d'experts, prix réels, et guides pratiques.`;
 
   const featured = useMemo(() => {
     if (isPro) return proPosts.slice(0, 3);
-    // Évite de pousser du B2B en “featured” sur le blog grand public.
-    return PUBLISHED_BLOG_POSTS.filter((p) => p.category !== "pro").slice(0, 3);
-  }, [isPro, proPosts]);
+    // Évite de pousser du B2B en "featured" sur le blog grand public.
+    return validPosts.filter((p) => p.category !== "pro").slice(0, 3);
+  }, [isPro, proPosts, validPosts]);
 
   const featuredSlugs = useMemo(() => new Set(featured.map((p) => p.slug)), [featured]);
 
   const basePosts = useMemo(() => {
     // Tous les posts hors featured.
     // En mode Pro, on liste aussi les Pro hors featured.
-    return (isPro ? proPosts : PUBLISHED_BLOG_POSTS).filter((p) => !featuredSlugs.has(p.slug));
-  }, [featuredSlugs, isPro, proPosts]);
+    return (isPro ? proPosts : validPosts).filter((p) => !featuredSlugs.has(p.slug));
+  }, [featuredSlugs, isPro, proPosts, validPosts]);
 
   // Filtrer les articles (hors featured)
   const filteredPosts = useMemo(() => {
@@ -84,18 +89,18 @@ export default function BlogIndexClient() {
 
   // Count articles per category
   const getCategoryCount = (slug: string) => {
-    if (slug === "all") return PUBLISHED_BLOG_POSTS.length;
+    if (slug === "all") return validPosts.length;
     if (slug === "cas-frequents") return LONGTAIL_LINKS.length;
-    return PUBLISHED_BLOG_POSTS.filter((p) => p.category === slug).length;
+    return validPosts.filter((p) => p.category === slug).length;
   };
 
   const availableTags = useMemo(() => {
     const tags = new Set<string>();
-    PUBLISHED_BLOG_POSTS.filter((p) => p.category === "pro").forEach((p) => {
+    validPosts.filter((p) => p.category === "pro").forEach((p) => {
       (p.tags ?? []).forEach((t) => tags.add(t));
     });
     return Array.from(tags).sort((a, b) => a.localeCompare(b, "fr"));
-  }, []);
+  }, [validPosts]);
 
   useEffect(() => {
     const cat = searchParams.get("cat");
@@ -266,7 +271,7 @@ export default function BlogIndexClient() {
                 {
                   icon: BookOpen,
                   label: isPro ? "Articles déménageurs" : "Articles publiés",
-                  value: (isPro ? proPosts.length : PUBLISHED_BLOG_POSTS.length).toString(),
+                  value: (isPro ? proPosts.length : validPosts.length).toString(),
                 },
                 { icon: TrendingUp, label: "Lectures/mois", value: "12 000+" },
                 { icon: Clock, label: "Temps de lecture moyen", value: "5 min" },

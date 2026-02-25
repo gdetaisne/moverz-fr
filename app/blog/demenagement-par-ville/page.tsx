@@ -29,7 +29,7 @@ function formatCityLabel(citySlug: string): string {
 }
 
 export default function BlogVillesPage({ searchParams }: PageProps) {
-  const posts = PUBLISHED_BLOG_POSTS.filter((post) => post.category === CATEGORY);
+  const posts = PUBLISHED_BLOG_POSTS.filter((post) => post && post.slug && post.category === CATEGORY);
 
   const postsByCity = posts.reduce<Record<string, typeof posts>>((acc, post) => {
     const key = post.citySlug || "autres";
