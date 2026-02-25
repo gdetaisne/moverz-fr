@@ -32,7 +32,7 @@ type PageProps = {
 };
 
 export function generateStaticParams() {
-  return CITIES.map((city) => ({ slug: city.slug }));
+  return CITIES.filter((city) => city && city.slug).map((city) => ({ slug: city.slug }));
 }
 
 export function generateMetadata({ params }: PageProps): Metadata {

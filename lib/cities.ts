@@ -196,7 +196,7 @@ const CORE_CITIES: CityInfo[] = [
 ];
 
 function buildExtraCities(): CityInfo[] {
-  return EXTRA_CITIES.map(({ nameCapitalized, region }) => {
+  return EXTRA_CITIES.filter((city) => city && city.nameCapitalized && city.region).map(({ nameCapitalized, region }) => {
     const slug = slugifyCityName(nameCapitalized);
     return {
       slug,
@@ -232,18 +232,18 @@ export const CITIES: CityInfo[] = (() => {
 })();
 
 export function getCityBySlug(slug: string): CityInfo | undefined {
-  return CITIES.find(city => city.slug === slug);
+  return CITIES.find(city => city && city.slug === slug);
 }
 
 export function getUniqueRegions(): string[] {
-  const regions = CITIES.map(city => city.region);
+  const regions = CITIES.filter(city => city && city.region).map(city => city.region);
   return Array.from(new Set(regions)).sort();
 }
 
 export function getCitiesByRegion(): Record<string, CityInfo[]> {
   const result: Record<string, CityInfo[]> = {};
   
-  CITIES.forEach(city => {
+  CITIES.filter(city => city && city.region).forEach(city => {
     if (!result[city.region]) {
       result[city.region] = [];
     }

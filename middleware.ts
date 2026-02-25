@@ -5,7 +5,7 @@ import { CITIES } from "@/lib/cities";
 import { QUARTIER_HUB_SLUGS } from "@/lib/quartiers";
 
 // NOTE: exclude "ile-de-france" from corridors because it's a region, not a city-to-city route.
-const CITY_SLUGS = new Set(CITIES.map((c) => c.slug).filter((s) => s !== "ile-de-france"));
+const CITY_SLUGS = new Set(CITIES.filter((c) => c && c.slug).map((c) => c.slug).filter((s) => s !== "ile-de-france"));
 const QUARTIERS_SLUGS = new Set<string>(QUARTIER_HUB_SLUGS as unknown as string[]);
 
 // Pages quartiers "riches" (liées aux pages /{ville}/{quartier}/) déjà implémentées en dur.

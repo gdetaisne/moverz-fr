@@ -169,6 +169,7 @@ const RAW_BLOG_POSTS: BlogPostMeta[] = mergeBlogData(
     ...CANONICAL_PRO_BLOG_POSTS,
   ]
 )
+  .filter((post) => post && post.slug && post.title) // Filtrer les posts invalides d'abord
   .map(sanitizePost)
   .filter((post) => {
     // Filtrer les articles avec des titres de dev/interne
@@ -197,15 +198,15 @@ const CANONICAL_SLUG_SET = new Set(ALL_CANONICAL_POSTS.map((p) => p.slug));
 
 // Liste des articles réellement publiés (évite d'exposer des placeholders "en cours de réécriture")
 export const PUBLISHED_BLOG_POSTS: BlogPostMeta[] = BLOG_POSTS.filter((post) =>
-  CANONICAL_SLUG_SET.has(post.slug) && !post.slug.includes("$") && !isExcludedFromPublication(post.slug)
+  post && post.slug && CANONICAL_SLUG_SET.has(post.slug) && !post.slug.includes("$") && !isExcludedFromPublication(post.slug)
 );
 
 export function getPostBySlug(slug: string): BlogPostMeta | undefined {
-  return BLOG_POSTS.find((post) => post.slug === slug);
+  return BLOG_POSTS.find((post) => post && post.slug === slug);
 }
 
 export function getPublishedPostBySlug(slug: string): BlogPostMeta | undefined {
-  return PUBLISHED_BLOG_POSTS.find((post) => post.slug === slug);
+  return PUBLISHED_BLOG_POSTS.find((post) => post && post.slug === slug);
 }
 
 // Récupérer le body markdown canonique pour un slug donné (si disponible)
@@ -219,6 +220,8 @@ export function getCanonicalBodyBySlug(slug: string): string | undefined {
 export function getPricePostForCity(citySlug: string): BlogPostMeta | undefined {
   return PUBLISHED_BLOG_POSTS.find(
     (post) =>
+      post &&
+      post.slug &&
       post.category === "prix-et-devis" &&
       post.citySlug === citySlug &&
       post.slug.startsWith("prix-demenagement")

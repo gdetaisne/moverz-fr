@@ -12,7 +12,7 @@ type PageProps = {
 };
 
 export function generateStaticParams() {
-  return CITIES.filter((c) => c.slug !== "ile-de-france").map((city) => ({ slug: city.slug }));
+  return CITIES.filter((c) => c && c.slug && c.slug !== "ile-de-france").map((city) => ({ slug: city.slug }));
 }
 
 export function generateMetadata({ params }: PageProps): Metadata {
