@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getCityBySlug } from "@/lib/cities";
+import { getCityBySlug, CITIES } from "@/lib/cities";
 import { CityServicePage } from "@/components/templates/CityServicePage";
 import { SERVICE_DEFINITIONS, SERVICE_SLUGS, type ServiceSlug } from "@/lib/service-pages";
 import { getCityServiceMetadata } from "@/lib/seo/metadata";
@@ -11,6 +11,18 @@ type PageProps = {
     service: string;
   };
 };
+
+export function generateStaticParams() {
+  const params: { slug: string; service: string }[] = [];
+  
+  for (const city of CITIES) {
+    for (const service of SERVICE_SLUGS) {
+      params.push({ slug: city.slug, service });
+    }
+  }
+  
+  return params;
+}
 
 export function generateMetadata({ params }: PageProps): Metadata {
   const city = getCityBySlug(params.slug);

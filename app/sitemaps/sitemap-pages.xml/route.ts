@@ -39,7 +39,7 @@ export function GET() {
       priority: p === "/" ? 1.0 : 0.8,
     })),
     // Hubs quartiers (only supported)
-    ...CITIES.filter((c) => supportedQuartiers.has(c.slug)).map((c) => ({
+    ...CITIES.filter((c) => c && c.slug && supportedQuartiers.has(c.slug)).map((c) => ({
       loc: absoluteUrl(baseUrl, `/quartiers-${c.slug}`),
       lastmod,
       changefreq: "monthly" as const,

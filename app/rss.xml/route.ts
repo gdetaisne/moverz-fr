@@ -26,19 +26,21 @@ export function GET() {
   const siteLink = absoluteUrl(baseUrl, "/blog");
   const siteDescription = "Guides et ressources Moverz (particuliers + déménageurs).";
 
-  const items = PUBLISHED_BLOG_POSTS.slice(0, 50).map((post) => {
-    const link = absoluteUrl(baseUrl, `/blog/${post.slug}`);
-    const pubDate = toRfc822Date(post.updatedAt) || toRfc822Date(post.publishedAt);
-    return `
+  const items = PUBLISHED_BLOG_POSTS.filter((post) => post && post.slug && post.title)
+    .slice(0, 50)
+    .map((post) => {
+      const link = absoluteUrl(baseUrl, `/blog/${post.slug}`);
+      const pubDate = toRfc822Date(post.updatedAt) || toRfc822Date(post.publishedAt);
+      return `
       <item>
         <title>${escapeXml(post.title)}</title>
         <link>${escapeXml(link)}</link>
         <guid isPermaLink="true">${escapeXml(link)}</guid>
         ${pubDate ? `<pubDate>${escapeXml(pubDate)}</pubDate>` : ""}
-        <description>${escapeXml(post.description)}</description>
+        <description>${escapeXml(post.description || "")}</description>
       </item>
     `.trim();
-  });
+    });
 
   const lastBuildDate = toRfc822Date(new Date().toISOString()) ?? new Date().toUTCString();
 

@@ -15,7 +15,7 @@ export function GET() {
     "nice", "paris", "rennes", "rouen", "strasbourg", "toulouse",
   ]);
 
-  const urls = CITIES.filter(c => CORE_CITY_SLUGS.has(c.slug)).flatMap((city) => {
+  const urls = CITIES.filter(c => c && c.slug && CORE_CITY_SLUGS.has(c.slug)).flatMap((city) => {
     const cityUrl = {
       loc: absoluteUrl(baseUrl, `/demenagement/${city.slug}`),
       lastmod,

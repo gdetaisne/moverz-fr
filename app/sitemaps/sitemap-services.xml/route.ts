@@ -23,7 +23,7 @@ export function GET() {
   const lastmod = new Date().toISOString().split("T")[0];
 
   const urls = CITIES
-    .filter((city) => CORE_SERVICE_CITIES.has(city.slug))
+    .filter((city) => city && city.slug && CORE_SERVICE_CITIES.has(city.slug))
     .flatMap((city) =>
       SERVICE_SLUGS.map((service) => ({
         loc: absoluteUrl(baseUrl, `/demenagement/${city.slug}/${service}`),

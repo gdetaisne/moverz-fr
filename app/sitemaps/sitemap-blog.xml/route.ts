@@ -24,6 +24,7 @@ export function GET() {
   const baseUrl = env.SITE_URL;
 
   const qualityPosts = PUBLISHED_BLOG_POSTS.filter((post) => {
+    if (!post || !post.slug) return false;
     const body = getCanonicalBodyBySlug(post.slug);
     const wordCount = body ? body.split(/\s+/).length : 0;
     return wordCount >= THIN_CONTENT_THRESHOLD;
