@@ -27,6 +27,8 @@ export function GET() {
     "/politique-confidentialite",
     "/cgu",
     "/cgv",
+    "/glossaire-demenagement",
+    "/chiffres-cles",
   ];
 
   const urls = [
