@@ -186,6 +186,7 @@ export default function RootLayout({
             aggregateRating: {
               "@type": "AggregateRating",
               ratingValue: getAverageRating(MOVERZ_REVIEWS),
+              reviewCount: MOVERZ_REVIEWS.length,
               bestRating: 5,
               worstRating: 1,
             },

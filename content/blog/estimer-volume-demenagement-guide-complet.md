@@ -1,6 +1,6 @@
 ---
 slug: estimer-volume-demenagement-guide-complet
-title: "Comment estimer le volume de son déménagement : Guide complet 2026"
+title: "Estimer le volume de son déménagement (2026)"
 description: "Guide complet pour estimer précisément le volume de votre déménagement. 3 méthodes détaillées, tableaux m³ par pièce, pièges à éviter. Évitez les suppléments jour J (+200-800€)."
 type: pilier
 category: conseils-demenagement
@@ -9,8 +9,6 @@ updatedAt: "2026-02-24"
 readingTime: 14
 featured: true
 ---
-
-# Comment estimer le volume de son déménagement : Guide complet 2026
 
 L'estimation du volume est **LE point de départ** de tout devis de déménagement. Une erreur de 10-20% = litige quasi-garanti le jour J.
 
