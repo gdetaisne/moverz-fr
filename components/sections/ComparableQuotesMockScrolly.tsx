@@ -352,7 +352,7 @@ export function ComparableQuotesMockScrolly() {
               </p>
             </motion.div>
 
-            {/* Comment ça fonctionne - Avec animation timeline */}
+            {/* Comment ça fonctionne - Timeline simplifiée */}
             <motion.div variants={staggerItem} className="space-y-5">
               <h3
                 className="font-heading text-sm font-semibold uppercase tracking-wide"
@@ -362,20 +362,20 @@ export function ComparableQuotesMockScrolly() {
               </h3>
               
               <div className="relative space-y-0">
-                {/* Ligne verticale background (grise) */}
+                {/* Ligne verticale background */}
                 <div 
                   className="absolute left-3 top-3 bottom-3 w-[2px]"
                   style={{ background: "rgba(14,165,166,0.15)" }}
                 />
                 
-                {/* Ligne verticale animée (turquoise) qui se remplit */}
+                {/* Ligne verticale animée */}
                 <motion.div 
                   className="absolute left-3 top-3 w-[2px]"
                   style={{ background: "#0EA5A6" }}
                   initial={{ height: 0 }}
                   whileInView={{ height: "calc(100% - 24px)" }}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 4, ease: [0.16, 1, 0.3, 1] }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 2, ease: "easeOut", delay: 0.3 }}
                 />
                 
                 {[
@@ -388,59 +388,41 @@ export function ComparableQuotesMockScrolly() {
                   <motion.div 
                     key={i} 
                     className="flex items-start gap-4 pb-6 last:pb-0 relative"
-                    initial={{ opacity: 0, x: -10 }}
+                    initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, amount: 0.8 }}
-                    transition={{ duration: 0.6, delay: i * 0.3, ease: [0.16, 1, 0.3, 1] }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.4, delay: i * 0.1, ease: "easeOut" }}
                   >
-                    {/* Cercle avec numéro qui devient checkmark */}
+                    {/* Cercle avec checkmark permanent */}
                     <motion.div
                       className="relative flex h-6 w-6 shrink-0 items-center justify-center rounded-full z-10"
                       style={{ background: "white", border: "2px solid #0EA5A6" }}
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
-                      viewport={{ once: true, amount: 0.8 }}
+                      viewport={{ once: true, amount: 0.5 }}
                       transition={{ 
-                        duration: 0.5, 
-                        delay: i * 0.3,
+                        duration: 0.3, 
+                        delay: i * 0.1,
                         type: "spring",
-                        stiffness: 200,
-                        damping: 15
+                        stiffness: 300,
+                        damping: 20
                       }}
                     >
-                      {/* Numéro */}
-                      <motion.span
-                        className="text-xs font-bold absolute"
-                        style={{ color: "#0EA5A6" }}
-                        initial={{ opacity: 1, scale: 1 }}
-                        whileInView={{ opacity: 0, scale: 0 }}
-                        viewport={{ once: true, amount: 0.8 }}
-                        transition={{ 
-                          duration: 0.3, 
-                          delay: 1.2 + i * 0.3,
-                          ease: [0.16, 1, 0.3, 1]
-                        }}
-                      >
-                        {i + 1}
-                      </motion.span>
-                      
-                      {/* Checkmark qui apparaît */}
+                      {/* Checkmark directement visible */}
                       <motion.svg
-                        className="h-3.5 w-3.5 absolute"
+                        className="h-3.5 w-3.5"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                         strokeWidth={3}
                         style={{ color: "#0EA5A6" }}
-                        initial={{ opacity: 0, scale: 0, rotate: -90 }}
-                        whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-                        viewport={{ once: true, amount: 0.8 }}
+                        initial={{ opacity: 0, pathLength: 0 }}
+                        whileInView={{ opacity: 1, pathLength: 1 }}
+                        viewport={{ once: true, amount: 0.5 }}
                         transition={{ 
-                          duration: 0.6, 
-                          delay: 1.5 + i * 0.3,
-                          type: "spring",
-                          stiffness: 200,
-                          damping: 15
+                          duration: 0.4, 
+                          delay: 0.2 + i * 0.1,
+                          ease: "easeOut"
                         }}
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
