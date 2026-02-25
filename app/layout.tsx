@@ -5,8 +5,15 @@ import "./globals.css";
 import { MOVERZ_REVIEWS, getAverageRating } from "@/lib/reviews";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import ContentSquare from "@/components/ContentSquare";
-import ExitIntentPopup from "@/components/ExitIntentPopup";
-import { ConversionIntentTracker } from "@/components/ConversionIntentTracker";
+import dynamic from "next/dynamic";
+
+// Lazy load des composants non-critiques pour le rendu initial
+const ExitIntentPopup = dynamic(() => import("@/components/ExitIntentPopup"), {
+  ssr: false,
+});
+const ConversionIntentTracker = dynamic(() => import("@/components/ConversionIntentTracker").then(mod => ({ default: mod.ConversionIntentTracker })), {
+  ssr: false,
+});
 import { JsonLd } from "@/components/schema/JsonLd";
 import { buildTunnelUrl } from "@/lib/tunnel-url";
 import MobileMenu from "@/components/MobileMenu";
@@ -126,6 +133,16 @@ export default function RootLayout({
           href="/logo.png"
           as="image"
           type="image/png"
+          fetchPriority="high"
+        />
+        
+        {/* Preload de la font Inter (critique pour FCP) */}
+        <link
+          rel="preload"
+          href="https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
         />
         
         <JsonLd

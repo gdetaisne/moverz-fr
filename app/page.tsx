@@ -23,6 +23,7 @@ import { FAQV4 } from "@/components/sections/FAQV4";
 import { FinalCTAV4 } from "@/components/sections/FinalCTAV4";
 import dynamic from "next/dynamic";
 
+// Lazy load uniquement StickyCTA (non-critique, client-only)
 const StickyCTA = dynamic(() => import("@/components/StickyCTA"), {
   ssr: false,
 });

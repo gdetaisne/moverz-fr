@@ -1,0 +1,19 @@
+# Browsers supportés - Modern browsers uniquement (réduit le JS généré)
+# Réduit les polyfills et améliore les performances
+
+# Desktop
+> 0.5%
+last 2 versions
+Firefox ESR
+not dead
+
+# Mobile
+not IE 11
+not op_mini all
+
+# Modern browsers avec support ES2020
+Chrome >= 90
+Edge >= 90
+Firefox >= 88
+Safari >= 14
+iOS >= 14
