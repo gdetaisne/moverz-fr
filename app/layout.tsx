@@ -39,14 +39,16 @@ const sora = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://moverz.fr'),
   title: {
-    default: "Comparateur Déménagement | Jusqu'à 5 devis | Contrôlés · Gratuit",
+    default: "Comparateur Déménagement | Zéro Harcèlement | Devis Vérifiés",
     template: "%s | Moverz"
   },
-  description: "Comparez jusqu'à 5 devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
+  description: "Comparez 5 devis de déménageurs vérifiés sans harcèlement. Dossier 100% anonyme, vous choisissez qui contacter. 3 analyses de risque /100. Gratuit.",
   keywords: [
-    "devis déménagement gratuit",
-    "comparateur déménageurs fiable",
+    "devis déménagement sans harcèlement",
+    "comparateur déménagement anonyme",
     "devis déménagement sans appel",
+    "déménagement protection vie privée",
+    "comparateur déménageurs fiable",
     "anti-arnaque déménagement",
     "déménageurs vérifiés assurés",
     "devis comparables déménagement",

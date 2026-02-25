@@ -13,8 +13,8 @@ import { FinalCTAV4 } from "@/components/sections/FinalCTAV4";
 
 export const metadata: Metadata = getFullMetadata(
   'comment-ca-marche',
-  "Comment ça marche ? Devis comparables en 3 étapes",
-  "Décrivez votre déménagement, l'IA calibre le volume, recevez des devis comparables sous 5–7j. Anonyme, gratuit, sans démarchage."
+  "Comment ça marche ? Dossier anonyme, zéro harcèlement",
+  "Décrivez votre déménagement, l'IA calibre le volume, recevez 5 devis comparables sous 5–7j. Dossier 100% anonyme, vous choisissez qui contacter. Zéro appel non sollicité."
 );
 
 export default function CommentCaMarchePage() {

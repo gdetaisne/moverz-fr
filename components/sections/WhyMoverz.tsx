@@ -8,7 +8,7 @@
 
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
-import { Tag, Shield, Clock } from "lucide-react";
+import { Tag, Shield, Lock } from "lucide-react";
 import { staggerContainer, staggerItem } from "@/components/motion";
 
 const arguments_ = [
@@ -29,11 +29,11 @@ const arguments_ = [
     color: "#0EA5A6", // Turquoise
   },
   {
-    icon: Clock,
-    title: "Décision rapide",
-    subtitle: "Minimum 3 devis vérifiés sous 5 jours",
-    score: 5,
-    scoreLabel: "jours max",
+    icon: Lock,
+    title: "Zéro harcèlement",
+    subtitle: "Nous centralisons les échanges, anonymat garanti",
+    score: 0,
+    scoreLabel: "appel non sollicité",
     color: "#0EA5A6", // Turquoise
   },
 ];
