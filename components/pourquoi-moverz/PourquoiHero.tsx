@@ -132,7 +132,9 @@ export default function PourquoiHero() {
               </div>
               <div>
                 <p className="font-semibold text-[var(--color-text)]">Sans démarchage</p>
-                <p className="text-sm text-[var(--color-text-secondary)]">Téléphone masqué jusqu'à votre choix</p>
+                <p className="text-sm text-[var(--color-text-secondary)]">
+                  Téléphone masqué jusqu'à votre choix. <a href="/blog/demenagement-sans-harcelement-protection-vie-privee" className="text-[var(--color-accent)] hover:underline">En savoir plus</a>
+                </p>
               </div>
             </motion.div>
           </motion.div>

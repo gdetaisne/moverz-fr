@@ -153,9 +153,9 @@ export default function MoverzVsOthers() {
                   <div className="flex items-center justify-between p-3 rounded-xl bg-[var(--color-bg)]">
                     <div className="flex items-center gap-3">
                       <Smartphone className="w-5 h-5 text-[var(--color-accent)]" />
-                      <span className="text-sm font-medium text-[var(--color-text)]">
+                      <a href="/blog/demenagement-sans-harcelement-protection-vie-privee" className="text-sm font-medium text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors">
                         Multi-canal & dossier anonyme
-                      </span>
+                      </a>
                     </div>
                     <Check
                       className="w-5 h-5 text-green-600"

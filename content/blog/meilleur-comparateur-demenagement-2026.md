@@ -142,6 +142,8 @@ Dans ce guide ultra-complet, vous allez découvrir :
 
 **Moverz** : Dossier 100% anonyme. Votre téléphone n'est jamais partagé tant que vous ne choisissez pas un déménageur. **Zéro appel non sollicité** ✅
 
+[→ Guide complet : Comment obtenir des devis sans harcèlement](/blog/demenagement-sans-harcelement-protection-vie-privee/)
+
 ---
 
 ### 4. Transparence sur le modèle économique

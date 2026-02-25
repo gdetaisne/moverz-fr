@@ -15,7 +15,7 @@ export const HOME_FAQS: HomeFaqItem[] = [
   {
     question: "Je vais recevoir des appels de spam ?",
     answer:
-      "Non. Votre dossier reste anonyme. Les déménageurs vous envoient leurs devis par email via notre plateforme. Vous choisissez qui contacter.",
+      "Non, zéro harcèlement garanti. Votre dossier reste 100% anonyme. Nous centralisons tous les échanges avec les déménageurs. Votre téléphone n'est jamais partagé. Vous choisissez qui peut vous contacter.",
   },
   {
     question: "L'IA est vraiment précise ?",
