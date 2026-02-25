@@ -75,7 +75,7 @@ function sortByPriority(data: BlogPostMeta[]): BlogPostMeta[] {
     priorityIndex.set(slug, index);
   });
 
-  return [...data].sort((a, b) => {
+  return [...data].filter((post) => post && post.slug).sort((a, b) => {
     const pa = priorityIndex.has(a.slug) ? priorityIndex.get(a.slug)! : Number.POSITIVE_INFINITY;
     const pb = priorityIndex.has(b.slug) ? priorityIndex.get(b.slug)! : Number.POSITIVE_INFINITY;
 
@@ -99,16 +99,22 @@ function mergeBlogData(
 
   // 1) Base : données issues du CSV auto-généré
   base.forEach((post) => {
-    map.set(post.slug, post);
+    if (post && post.slug) {
+      map.set(post.slug, post);
+    }
   });
 
   // 2) Overrides manuels : BLOG_EXTRA écrase BLOG_DATA
   extra.forEach((post) => {
-    map.set(post.slug, post);
+    if (post && post.slug) {
+      map.set(post.slug, post);
+    }
   });
 
   // 3) Canoniques : contenus validés dans moverz_main écrasent tout le reste
   canonicals.forEach((canonical) => {
+    if (!canonical || !canonical.slug) return;
+    
     const existing = map.get(canonical.slug);
     const canonicalMeta: BlogPostMeta = {
       slug: canonical.slug,
@@ -193,8 +199,8 @@ const ALL_CANONICAL_POSTS = [
   ...LONGTAIL_BLOG_POSTS,
   ...LONGTAIL_PACK2_POSTS,
   ...CANONICAL_PRO_BLOG_POSTS,
-].filter((p) => !isExcludedFromPublication(p.slug));
-const CANONICAL_SLUG_SET = new Set(ALL_CANONICAL_POSTS.map((p) => p.slug));
+].filter((p) => p && p.slug && !isExcludedFromPublication(p.slug));
+const CANONICAL_SLUG_SET = new Set(ALL_CANONICAL_POSTS.filter((p) => p && p.slug).map((p) => p.slug));
 
 // Liste des articles réellement publiés (évite d'exposer des placeholders "en cours de réécriture")
 export const PUBLISHED_BLOG_POSTS: BlogPostMeta[] = BLOG_POSTS.filter((post) =>
