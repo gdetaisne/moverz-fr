@@ -1,7 +1,7 @@
 ---
 slug: comparer-devis-demenagement-guide
 title: "Comment comparer des devis de déménagement (2026)"
-description: "Guide complet pour comparer efficacement des devis de déménagement. 7 éléments à vérifier, pièges à éviter, checklist complète. Des devis avec volumes différents ne sont PAS comparables."
+description: "Comparer des devis de déménagement : 7 éléments à vérifier, pièges à éviter, checklist. Volumes différents = non comparables."
 type: pilier
 category: conseils-demenagement
 publishedAt: "2026-02-24"

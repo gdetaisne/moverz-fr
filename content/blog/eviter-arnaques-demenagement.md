@@ -1,7 +1,7 @@
 ---
 slug: eviter-arnaques-demenagement
-title: "Comment éviter les arnaques au déménagement en 2026 : Guide complet"
-description: "64% des déménageurs présentent des anomalies (DGCCRF 2023). Découvrez les 3 analyses de risque Moverz notées /100 (avis Google, financier, juridique), les signaux d'alerte, et les outils pour choisir en toute sécurité."
+title: "Éviter les arnaques au déménagement (2026)"
+description: "Comment éviter les arnaques au déménagement : 3 analyses de risque /100, signaux d'alerte, outils de vérification. Guide 2026."
 type: pilier
 category: conseils-demenagement
 publishedAt: "2025-01-20"
@@ -9,8 +9,6 @@ updatedAt: "2026-02-10"
 readingTime: 15
 featured: true
 ---
-
-# Comment éviter les arnaques au déménagement en 2026 : Guide complet
 
 En 2023, la DGCCRF (Direction générale de la concurrence, de la consommation et de la répression des fraudes) a contrôlé 75 entreprises de déménagement.
 

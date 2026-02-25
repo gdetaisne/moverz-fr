@@ -1,7 +1,7 @@
 ---
 slug: comprendre-score-creditsafe-demenageur
 title: "Lire un score Creditsafe pour choisir son déménageur"
-description: "Guide complet pour comprendre et interpréter un score Creditsafe avant de choisir votre déménageur. Solvabilité, litiges, signaux d'alerte : tout ce qu'il faut savoir pour éviter les mauvaises surprises."
+description: "Comment lire un score Creditsafe pour choisir son déménageur : solvabilité, litiges, signaux d'alerte à vérifier. Guide 2026."
 type: guide
 category: conseils-demenagement
 publishedAt: "2026-02-24"

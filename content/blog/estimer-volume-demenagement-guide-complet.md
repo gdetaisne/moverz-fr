@@ -1,7 +1,7 @@
 ---
 slug: estimer-volume-demenagement-guide-complet
 title: "Estimer le volume de son déménagement (2026)"
-description: "Guide complet pour estimer précisément le volume de votre déménagement. 3 méthodes détaillées, tableaux m³ par pièce, pièges à éviter. Évitez les suppléments jour J (+200-800€)."
+description: "Estimer le volume de son déménagement : 3 méthodes, tableaux m³, pièges à éviter. Évitez les suppléments jour J (+200-800€)."
 type: pilier
 category: conseils-demenagement
 publishedAt: "2026-02-24"

@@ -1,14 +1,12 @@
 ---
-title: "Comment Marie a économisé 850€ sur son déménagement Paris-Lyon"
-description: "Cas réel : Marie déménage un T3 de Paris vers Lyon. Découvrez comment Moverz lui a permis de comparer 5 devis vraiment comparables et d'éviter les pièges classiques."
+title: "Marie a économisé 850€ sur son déménagement Paris-Lyon"
+description: "Marie économise 850€ sur son déménagement Paris-Lyon : devis comparables, 3 analyses de risque /100, dossier standardisé Moverz."
 date: "2025-01-08"
 author: "Équipe Moverz"
 category: "Cas clients"
 tags: ["cas client", "paris", "lyon", "économies", "t3"]
 image: "/blog/case-study-marie.jpg"
 ---
-
-# Comment Marie a économisé 850€ sur son déménagement Paris-Lyon
 
 **Situation initiale :** Marie, 32 ans, doit déménager son T3 (60m²) de Paris 15ème vers Lyon 3ème pour raisons professionnelles. Budget serré, délai court (3 semaines), première expérience de déménagement longue distance.
 

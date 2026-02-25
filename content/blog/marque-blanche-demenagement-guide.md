@@ -1,13 +1,11 @@
 ---
-title: "Marque blanche déménagement : comment garder votre identité en 2025 ?"
+title: "Marque blanche déménagement : guide complet (2025)"
 slug: "marque-blanche-demenagement-guide"
-description: "Guide complet marque blanche pour déménageurs : définition, avantages, checklist avant de choisir un outil. Comment intégrer un widget tiers sans perdre votre crédibilité ?"
+description: "Marque blanche déménagement : créez votre comparateur en 48h. White-label Moverz avec vérifications, IA volumétrie. Prix 2025."
 category: "conseils-demenagement"
 publishedAt: "2025-12-11"
 updatedAt: "2025-12-11"
 ---
-
-# Marque blanche déménagement : comment garder votre identité ?
 
 Vous êtes déménageur et vous voulez intégrer un outil tiers sur votre site (calculateur de volume, devis en ligne, chatbot) sans perdre votre identité de marque ?
 
