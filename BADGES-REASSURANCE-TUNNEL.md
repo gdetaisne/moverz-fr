@@ -44,13 +44,13 @@ Objectif : Maximiser la conversion en rassurant à chaque étape
 **Les 4 badges de réassurance post-validation** :
 - [x] Votre dossier est sécurisé
 - [x] Vous choisissez qui contacter
-- [x] Support WhatsApp 7j/7
+- [x] Support email disponible
 - [x] 4.5/5 sur Google (1200+ avis)
 
 **Pourquoi ces 4** :
 - "Dossier sécurisé" = Rassure post-validation
 - "Vous choisissez" = Rappelle le contrôle (zéro harcèlement)
-- "Support WhatsApp" = Aide disponible (réduit l'anxiété)
+- "Support email" = Aide disponible (réduit l'anxiété)
 - "4.5/5 sur Google" = Preuve sociale forte
 
 ---
@@ -269,7 +269,7 @@ import { Lock, Shield, FileCheck } from "lucide-react";
 ### Page de confirmation (merci)
 
 ```tsx
-import { CheckCircle, Lock, MessageCircle, Star } from "lucide-react";
+import { CheckCircle, Lock, Mail, Star } from "lucide-react";
 
 <div className="max-w-2xl mx-auto text-center space-y-6">
   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-50 mb-4">
@@ -290,7 +290,7 @@ import { CheckCircle, Lock, MessageCircle, Star } from "lucide-react";
     </div>
     
     <div className="flex items-start gap-3">
-      <MessageCircle className="w-5 h-5 text-green-600 mt-0.5" />
+      <Mail className="w-5 h-5 text-green-600 mt-0.5" />
       <div>
         <p className="font-semibold text-gray-900">Vous recevrez vos devis par email sous 5-7 jours</p>
         <p className="text-sm text-gray-600">Chaque devis sera détaillé et comparable</p>
@@ -298,10 +298,10 @@ import { CheckCircle, Lock, MessageCircle, Star } from "lucide-react";
     </div>
     
     <div className="flex items-start gap-3">
-      <MessageCircle className="w-5 h-5 text-purple-600 mt-0.5" />
+      <Mail className="w-5 h-5 text-purple-600 mt-0.5" />
       <div>
-        <p className="font-semibold text-gray-900">Besoin d'aide ? WhatsApp 7j/7</p>
-        <p className="text-sm text-gray-600">+66 9 52 82 40 35</p>
+        <p className="font-semibold text-gray-900">Besoin d'aide ?</p>
+        <p className="text-sm text-gray-600">contact@moverz.fr</p>
       </div>
     </div>
   </div>
@@ -342,7 +342,7 @@ import {
   Clock,          // Rapidité, 3 minutes
   Shield,         // Sans engagement, protection, vérification
   Star,           // Avis Google, rating
-  MessageCircle,  // Support, WhatsApp
+  Mail,           // Email, contact, support
   FileCheck,      // Devis comparables
   Users,          // Pros vérifiés
   Award,          // Qualité, certification
