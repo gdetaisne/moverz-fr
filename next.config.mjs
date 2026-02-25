@@ -2,7 +2,6 @@
 import { BLOG_MISSING_301_REDIRECTS } from './redirects/blog-missing-301.mjs';
 
 const nextConfig = {
-  reactStrictMode: true,
   poweredByHeader: false,
   output: 'standalone',
   trailingSlash: true,
@@ -15,6 +14,16 @@ const nextConfig = {
   },
 
   compress: true,
+  
+  // Optimisations bundle
+  modularizeImports: {
+    'framer-motion': {
+      transform: 'framer-motion/dist/es/{{member}}',
+    },
+    'lucide-react': {
+      transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
+    },
+  },
   
   // Optimisation images pour Core Web Vitals
   images: {
@@ -42,7 +51,15 @@ const nextConfig = {
   // Experimental features pour performance
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
+    // Optimisation server-side plus agressive
+    serverComponentsExternalPackages: [],
   },
+  
+  // Optimisation production build
+  productionBrowserSourceMaps: false,
+  
+  // Strict mode pour optimisations React 18+
+  reactStrictMode: true,
 
   async rewrites() {
     // Fallback for "/quartiers-<slug>/" hubs: serve them via the dynamic route "/quartiers/<slug>/".

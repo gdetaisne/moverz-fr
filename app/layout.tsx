@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Sora } from "next/font/google";
+import localFont from "next/font/local";
 import Image from "next/image";
 import "./globals.css";
 import { MOVERZ_REVIEWS, getAverageRating } from "@/lib/reviews";
@@ -19,18 +19,21 @@ import { buildTunnelUrl } from "@/lib/tunnel-url";
 import MobileMenu from "@/components/MobileMenu";
 import { Footer } from "@/components/premium/Footer";
 
-const inter = Inter({
-  subsets: ["latin"],
+// Self-hosted fonts pour performance maximale (pas de requête externe)
+const inter = localFont({
+  src: "../public/fonts/inter-latin.woff2",
   display: "swap",
   variable: "--font-inter",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  preload: true,
+  weight: "100 900",
 });
 
-const sora = Sora({
-  subsets: ["latin"],
+const sora = localFont({
+  src: "../public/fonts/sora-latin.woff2",
   display: "swap",
   variable: "--font-sora",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  preload: true,
+  weight: "100 800",
 });
 
 export const metadata: Metadata = {
@@ -123,11 +126,14 @@ export default function RootLayout({
         <link rel="icon" href="/logo.png" />
         <link rel="apple-touch-icon" href="/logo.png" />
         
-        {/* Preconnect aux domaines externes pour performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* DNS Prefetch pour ressources externes essentielles */}
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://t.contentsquare.net" />
         
-        {/* Preload du logo (ressource critique) */}
+        {/* Preconnect pour analytics (non-bloquant) */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        
+        {/* Preload ressources critiques pour LCP/FCP optimal */}
         <link
           rel="preload"
           href="/logo.png"
@@ -135,15 +141,24 @@ export default function RootLayout({
           type="image/png"
           fetchPriority="high"
         />
-        
-        {/* Preload de la font Inter (critique pour FCP) */}
         <link
           rel="preload"
-          href="https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2"
+          href="/fonts/inter-latin.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
+          fetchPriority="high"
         />
+        <link
+          rel="preload"
+          href="/logo-ui.png"
+          as="image"
+          type="image/png"
+        />
+        
+        {/* Prefetch pages importantes pour navigation rapide */}
+        <link rel="prefetch" href="/villes/" />
+        <link rel="prefetch" href="/blog/" />
         
         <JsonLd
           id="organization-schema"
