@@ -31,7 +31,6 @@ export function FinalCTAV4() {
           style={{ background: "var(--color-text)" }}
         >
           Obtenir mes devis
-          <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
         </a>
 
         <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>

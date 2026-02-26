@@ -43,7 +43,6 @@ export default function StickyCTA() {
           }}
         >
           <span>Obtenir mes devis</span>
-          <ArrowRight className="h-5 w-5" />
         </a>
         <p className="text-center text-xs mt-2" style={{ color: "var(--color-text-muted)" }}>
           Gratuit · 3 min · Sans engagement

@@ -206,7 +206,6 @@ export default function ExitIntentPopup() {
                   className="group w-full inline-flex items-center justify-center gap-2 rounded-xl bg-v4-text px-5 py-3 text-sm font-semibold text-white shadow-sm hover:opacity-90 transition-colors"
                 >
                   <span>Obtenir mes devis</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                 </button>
               </div>
 

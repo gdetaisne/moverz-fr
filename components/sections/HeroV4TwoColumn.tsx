@@ -11,144 +11,201 @@
  */
 
 import { buildTunnelUrl } from "@/lib/tunnel-url";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, PanInfo } from "framer-motion";
 import { staggerContainer, staggerItem } from "@/components/motion";
-import { ArrowRight, CheckCircle2, MessageSquare, Users, Mail, ShieldCheck, Star } from "lucide-react";
+import { ArrowRight, CheckCircle2, MessageSquare, Users, Mail, ShieldCheck, Star, PhoneOff, BadgeCheck, Globe } from "lucide-react";
 import { trackEvent } from "@/lib/tracking";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-const STEPS = [
-  { num: "1", text: "On sollicite les déménageurs disponibles", bold: false },
-  { num: "2", text: "On contrôle prix et fiabilité", bold: false },
-  { num: "3", text: "Vous choisissez sereinement", bold: true },
-] as const;
+const AUTOPLAY_DURATION = 5000; // 5 secondes par card
 
-// MOCKUP LISTE DEVIS - Version qui cartonnait (20 janvier)
-function QuoteListMockup() {
-  const quotes = [
-    {
-      name: "Déménagements Martin",
-      stars: 5,
-      reviews: 487,
-      price: 1850,
-      details: ["Assurance tous risques incluse", "Disponible le 15 mars"],
-    },
-    {
-      name: "Express Déménagement",
-      stars: 4,
-      reviews: 312,
-      price: 1950,
-      details: ["Protection standard", "Disponible le 12 mars"],
-    },
-    {
-      name: "Lyon Trans Services",
-      stars: 5,
-      reviews: 653,
-      price: 2100,
-      details: ["Assurance premium incluse", "Disponible le 10 mars"],
-    },
-  ];
+// 3 déménageurs avec scores variés (bon, moyen, mauvais)
+const MOVERS = [
+  {
+    id: 1,
+    name: "Déménageur A",
+    price: 1340,
+    score: 92,
+    scoreLabel: "Excellent",
+    scoreColor: "#0EA5A6",
+    recommended: true, // ✅ MEILLEUR SCORE (92) + MOINS CHER (1340€)
+    solidite: 90,
+    experience: 95,
+    vigilance: 90,
+    googleRating: 4.8,
+    reviewCount: 234,
+    yearsInBusiness: 12,
+    hasWebsite: true,
+  },
+  {
+    id: 2,
+    name: "Déménageur B",
+    price: 1540,
+    score: 88,
+    scoreLabel: "Excellent",
+    scoreColor: "#0EA5A6",
+    recommended: false,
+    solidite: 85,
+    experience: 90,
+    vigilance: 88,
+    googleRating: 4.7,
+    reviewCount: 189,
+    yearsInBusiness: 9,
+    hasWebsite: true,
+  },
+  {
+    id: 3,
+    name: "Déménageur C",
+    price: 1210,
+    score: 58,
+    scoreLabel: "Moyen",
+    scoreColor: "#DC2626",
+    recommended: false,
+    solidite: 78,
+    experience: 72,
+    vigilance: 35,
+    googleRating: 4.2,
+    reviewCount: 45,
+    yearsInBusiness: 5,
+    hasWebsite: true,
+  },
+];
 
+function getBarColor(value: number): string {
+  if (value >= 80) return "#0EA5A6"; // turquoise Moverz
+  if (value >= 70) return "#FB923C"; // orange
+  return "#DC2626"; // rouge
+}
+
+function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: number }) {
   return (
-    <div 
-      className="relative h-full w-full overflow-hidden flex flex-col p-4"
-      style={{ 
-        background: "linear-gradient(180deg, #1e293b 0%, #0f172a 100%)"
+    <div
+      className="w-full rounded-xl p-3 relative"
+      style={{
+        background: "rgba(255,255,255,0.95)",
+        border: mover.recommended ? "2px solid #0EA5A6" : "1px solid rgba(255,255,255,0.3)",
+        boxShadow: mover.recommended 
+          ? "0 4px 16px rgba(14,165,166,0.3)" 
+          : "0 2px 8px rgba(0,0,0,0.1)"
       }}
     >
-      {/* Header */}
-      <div className="mb-4">
-        <div className="flex items-center justify-between mb-2">
-          <Image 
-            src="/logo-ui.png" 
-            alt="Moverz" 
-            width={80} 
-            height={27}
-            className="h-6 w-auto brightness-0 invert"
-          />
-          <div 
-            className="px-3 py-1 rounded-full text-[10px] font-bold"
-            style={{ background: "rgba(14,165,166,0.2)", color: "#2EE9C6" }}
+      {/* Badge Recommandé - PREMIUM */}
+      {mover.recommended && (
+        <div
+          className="flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-full mb-3 -mt-1 relative overflow-hidden"
+          style={{ 
+            background: "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)",
+            boxShadow: "0 4px 12px rgba(14,165,166,0.4), 0 0 0 1px rgba(14,165,166,0.2)"
+          }}
+        >
+          {/* Checkmark */}
+          <svg 
+            className="h-3.5 w-3.5 text-white" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor"
+            strokeWidth={3}
           >
-            5 devis
-          </div>
-        </div>
-        <p className="text-white text-xs font-medium mb-0.5">Vos devis</p>
-        <p className="text-slate-400 text-[10px]">
-          Paris → Lyon • T3 • 60m² • 3e étage avec ascenseur
-        </p>
-      </div>
-
-      {/* Liste des 3 devis */}
-      <div className="space-y-2.5 overflow-y-auto flex-1 pb-2">
-        {quotes.map((quote, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.15, duration: 0.4 }}
-            className="rounded-xl p-3 relative"
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+          <span className="text-[11px] font-bold text-white tracking-wide">MEILLEURE OFFRE</span>
+          {/* Subtle shimmer effect */}
+          <div
+            className="absolute inset-0 opacity-30"
             style={{
-              background: "rgba(255,255,255,0.95)",
-              border: i === 0 ? "2px solid #0EA5A6" : "1px solid rgba(255,255,255,0.2)",
-              boxShadow: i === 0 
-                ? "0 4px 12px rgba(14,165,166,0.3)" 
-                : "0 2px 8px rgba(0,0,0,0.08)"
+              background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%)"
             }}
-          >
-            {/* Badge "Recommandé" sur le premier */}
-            {i === 0 && (
-              <div
-                className="absolute -top-2 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full text-[9px] font-bold text-white"
-                style={{ background: "#0EA5A6", boxShadow: "0 2px 8px rgba(14,165,166,0.4)" }}
-              >
-                Recommandé
-              </div>
-            )}
+          />
+        </div>
+      )}
 
-            {/* Nom déménageur */}
-            <h3 className="text-sm font-bold text-slate-900 mb-1">{quote.name}</h3>
-            
-            {/* Étoiles */}
-            <div className="flex items-center gap-1 mb-2">
-              <div className="flex gap-0.5">
-                {Array.from({ length: 5 }).map((_, idx) => (
-                  <Star
-                    key={idx}
-                    className={`h-2.5 w-2.5 ${
-                      idx < quote.stars ? "fill-amber-400 text-amber-400" : "fill-slate-300 text-slate-300"
-                    }`}
-                  />
-                ))}
-              </div>
-              <span className="text-[10px] text-slate-500">({quote.reviews} avis)</span>
-            </div>
-
-            {/* Prix */}
-            <div className="mb-2">
-              <p className="text-2xl font-bold text-slate-900">{quote.price}€</p>
-              <p className="text-[9px] text-slate-500">TTC</p>
-            </div>
-
-            {/* Détails avec icônes */}
-            <div className="space-y-1">
-              {quote.details.map((detail, idx) => (
-                <div key={idx} className="flex items-start gap-1.5">
-                  <svg className="h-3 w-3 text-emerald-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-[10px] text-slate-700 leading-tight">{detail}</span>
-                </div>
+      {/* Header card: Name + Price */}
+      <div className="flex items-start justify-between mb-2.5">
+        <div className="flex-1">
+          <h3 className="text-sm font-bold text-slate-900 mb-0.5">{mover.name}</h3>
+          {/* Google rating + review count */}
+          <div className="flex items-center gap-1.5">
+            <div className="flex gap-0.5">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star
+                  key={i}
+                  className={`h-2.5 w-2.5 ${
+                    i < Math.floor(mover.googleRating) ? "fill-amber-400 text-amber-400" : "fill-slate-300 text-slate-300"
+                  }`}
+                />
               ))}
             </div>
-          </motion.div>
-        ))}
+            <span className="text-[10px] font-medium text-slate-600">
+              {mover.googleRating} ({mover.reviewCount})
+            </span>
+          </div>
+        </div>
+        {/* Prix à droite */}
+        <div className="text-right">
+          <div className="text-2xl font-bold text-slate-900">{mover.price}€</div>
+          <div className="text-[9px] text-slate-500">TTC</div>
+        </div>
+      </div>
 
-        {/* Note "+ 2 autres devis disponibles" */}
-        <p className="text-center text-[10px] text-slate-400 pt-2">
-          + 2 autres devis disponibles
-        </p>
+      {/* Score Moverz - Gros score en badge turquoise */}
+      <div className="mb-3">
+        <div 
+          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full"
+          style={{ 
+            background: mover.scoreColor === "#DC2626" ? "rgba(220, 38, 38, 0.1)" : "rgba(14,165,166,0.1)",
+            border: `1px solid ${mover.scoreColor}40`
+          }}
+        >
+          <span className="text-xs font-bold" style={{ color: mover.scoreColor }}>
+            {mover.score}/100
+          </span>
+          <span className="text-[10px] font-medium text-slate-600">{mover.scoreLabel}</span>
+        </div>
+      </div>
+
+      {/* Critères Moverz avec barres horizontales */}
+      <div className="space-y-2 mb-3">
+        {[
+          { label: "Solidité financière", value: mover.solidite },
+          { label: "Expérience", value: mover.experience },
+          { label: "Vigilance", value: mover.vigilance },
+        ].map((crit, i) => (
+          <div key={i}>
+            <div className="flex items-center justify-between mb-0.5">
+              <span className="text-[10px] font-medium text-slate-700">{crit.label}</span>
+              <span className="text-[10px] font-bold text-slate-900">{crit.value}/100</span>
+            </div>
+            <div className="h-1.5 w-full rounded-full overflow-hidden" style={{ background: "#E5E7EB" }}>
+              <div 
+                className="h-full rounded-full transition-all duration-500"
+                style={{ 
+                  width: `${crit.value}%`,
+                  background: getBarColor(crit.value)
+                }}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Tags entreprise (années, website) */}
+      <div className="flex flex-wrap gap-1.5">
+        <div 
+          className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[9px] font-medium"
+          style={{ background: "rgba(14,165,166,0.08)", color: "#0EA5A6" }}
+        >
+          <span>{mover.yearsInBusiness} ans d'expérience</span>
+        </div>
+        {mover.hasWebsite && (
+          <div 
+            className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[9px] font-medium"
+            style={{ background: "rgba(14,165,166,0.08)", color: "#0EA5A6" }}
+          >
+            <Globe className="h-2.5 w-2.5" />
+            <span>Site web</span>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -156,12 +213,55 @@ function QuoteListMockup() {
 
 export function HeroV4TwoColumn() {
   const quoteUrl = buildTunnelUrl({ from: "homepage-hero" });
+  
+  // Carousel state
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
+
+  // Auto-rotation
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setDirection(1);
+      setCurrentIndex((prev) => (prev + 1) % MOVERS.length);
+    }, AUTOPLAY_DURATION);
+    return () => clearInterval(timer);
+  }, []);
+
+  // Swipe handlers
+  const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
+    const swipeThreshold = 50;
+    if (info.offset.x > swipeThreshold && currentIndex > 0) {
+      setDirection(-1);
+      setCurrentIndex((prev) => prev - 1);
+    } else if (info.offset.x < -swipeThreshold && currentIndex < MOVERS.length - 1) {
+      setDirection(1);
+      setCurrentIndex((prev) => prev + 1);
+    }
+  };
+
+  // Slide animations
+  const slideVariants = {
+    enter: (direction: number) => ({
+      x: direction > 0 ? 300 : -300,
+      opacity: 0,
+    }),
+    center: {
+      zIndex: 1,
+      x: 0,
+      opacity: 1,
+    },
+    exit: (direction: number) => ({
+      zIndex: 0,
+      x: direction < 0 ? 300 : -300,
+      opacity: 0,
+    }),
+  };
 
   return (
     <section
       className="relative pt-12 pb-16 md:pt-20 md:pb-28 overflow-hidden"
       style={{ 
-        background: "linear-gradient(135deg, #E0F7F7 0%, #F0FDFD 50%, #FFFFFF 100%)"
+        background: "linear-gradient(135deg, rgba(14,165,166,0.12) 0%, rgba(14,165,166,0.06) 50%, #FFFFFF 100%)"
       }}
     >
       {/* Grain texture - Premium feel */}
@@ -188,6 +288,19 @@ export function HeroV4TwoColumn() {
           variants={staggerContainer}
           className="mx-auto max-w-2xl text-center lg:hidden"
         >
+          {/* Badges au-dessus du H1 */}
+          <motion.div variants={staggerItem} className="flex flex-wrap justify-center gap-3 mb-8">
+            <div className="group flex items-center gap-2.5 px-4 py-2.5 rounded-full backdrop-blur-xl transition-all duration-300" style={{ background: "rgba(255,255,255,0.7)", border: "1px solid rgba(14,165,166,0.15)", boxShadow: "0 4px 16px rgba(0,0,0,0.04)" }}>
+              <PhoneOff className="w-4 h-4" style={{ color: "#0EA5A6" }} />
+              <span className="text-xs font-semibold text-slate-800">Aucun appel</span>
+            </div>
+            
+            <div className="group flex items-center gap-2.5 px-4 py-2.5 rounded-full backdrop-blur-xl transition-all duration-300" style={{ background: "rgba(255,255,255,0.7)", border: "1px solid rgba(14,165,166,0.15)", boxShadow: "0 4px 16px rgba(0,0,0,0.04)" }}>
+              <BadgeCheck className="w-4 h-4" style={{ color: "#0EA5A6" }} />
+              <span className="text-xs font-semibold text-slate-800">Entreprises vérifiées</span>
+            </div>
+          </motion.div>
+
           {/* H1 */}
           <motion.h1
             variants={staggerItem}
@@ -199,23 +312,28 @@ export function HeroV4TwoColumn() {
             <span style={{ color: "var(--color-accent)" }}>On compare.</span>
           </motion.h1>
 
-          {/* CTA mobile - Direct sous le H1 */}
+          {/* Subtitle principal */}
+          <motion.p 
+            variants={staggerItem}
+            className="mt-6 text-base font-medium"
+            style={{ color: "var(--color-text-secondary)" }}
+          >
+            Zéro harcèlement · 3+ devis fiables sous 5 jours · 100% gratuit
+          </motion.p>
+
+          {/* CTA mobile */}
           <motion.div variants={staggerItem} className="mt-8">
             <a
               href={quoteUrl}
               onClick={() => trackEvent("Lead_clic_home", { source: "hero-cta" })}
-              className="inline-flex items-center justify-center gap-2 w-full max-w-md rounded-xl px-6 py-4 text-base font-semibold text-white transition-all duration-300 hover:opacity-90 hover:shadow-[0_8px_30px_rgba(14,165,166,0.3)] active:scale-[0.98]"
+              className="inline-flex items-center justify-center gap-2 w-full max-w-md rounded-2xl px-6 py-4 text-base font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_20px_60px_rgba(245,158,11,0.4)] active:scale-[0.98]"
               style={{ 
-                background: "var(--color-accent)",
-                boxShadow: "0 4px 16px rgba(14,165,166,0.24)"
+                background: "#F59E0B",
+                boxShadow: "0 8px 32px rgba(245,158,11,0.25), 0 0 0 1px rgba(245,158,11,0.1)"
               }}
             >
               Obtenir mes devis
-              <ArrowRight className="h-5 w-5" />
             </a>
-            <p className="mt-2.5 text-xs" style={{ color: "var(--color-text-muted)" }}>
-              Gratuit · 3 min · Sans engagement
-            </p>
           </motion.div>
         </motion.div>
 
@@ -228,9 +346,22 @@ export function HeroV4TwoColumn() {
         >
           {/* COLONNE GAUCHE : Texte + CTA */}
           <motion.div variants={staggerItem} className="lg:col-span-6 max-w-[580px]">
-            {/* H1 - Size optimisé */}
+            {/* Badges au-dessus du H1 */}
+            <div className="flex flex-wrap gap-3 mb-6">
+              <div className="group flex items-center gap-2.5 px-4 py-2.5 rounded-full backdrop-blur-xl transition-all duration-300" style={{ background: "rgba(255,255,255,0.7)", border: "1px solid rgba(14,165,166,0.15)", boxShadow: "0 4px 16px rgba(0,0,0,0.04)" }}>
+                <PhoneOff className="w-4 h-4" style={{ color: "#0EA5A6" }} />
+                <span className="text-xs font-semibold text-slate-800">Aucun appel</span>
+              </div>
+              
+              <div className="group flex items-center gap-2.5 px-4 py-2.5 rounded-full backdrop-blur-xl transition-all duration-300" style={{ background: "rgba(255,255,255,0.7)", border: "1px solid rgba(14,165,166,0.15)", boxShadow: "0 4px 16px rgba(0,0,0,0.04)" }}>
+                <BadgeCheck className="w-4 h-4" style={{ color: "#0EA5A6" }} />
+                <span className="text-xs font-semibold text-slate-800">Entreprises vérifiées</span>
+              </div>
+            </div>
+
+            {/* H1 */}
             <h1
-              className="font-heading text-[56px] leading-[0.95] font-semibold tracking-[-0.03em] mb-8"
+              className="font-heading text-[56px] leading-[0.95] font-semibold tracking-[-0.03em] mb-6"
               style={{ color: "#111827" }}
             >
               Vous déménagez.
@@ -238,23 +369,43 @@ export function HeroV4TwoColumn() {
               <span style={{ color: "#0EA5A6" }}>On compare.</span>
             </h1>
 
-            {/* CTA desktop - Direct sous H1 */}
-            <div className="space-y-3">
+            {/* Subtitle principal */}
+            <p className="text-lg font-medium mb-8" style={{ color: "#475569" }}>
+              Zéro harcèlement · 3+ devis fiables sous 5 jours · 100% gratuit
+            </p>
+
+            {/* CTA desktop */}
+            <div className="space-y-6">
               <a
                 href={quoteUrl}
                 onClick={() => trackEvent("Lead_clic_home", { source: "hero-cta" })}
-                className="inline-flex items-center justify-center gap-2 h-14 px-8 rounded-2xl text-[16px] font-semibold text-white transition-all duration-200 hover:shadow-[0_16px_48px_rgba(14,165,166,0.4)] hover:-translate-y-1 active:scale-[0.98] group"
+                className="inline-flex items-center justify-center gap-2 h-14 px-8 rounded-2xl text-[16px] font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_20px_60px_rgba(245,158,11,0.4)] active:scale-[0.98]"
                 style={{ 
-                  background: "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)",
-                  boxShadow: "0 4px 16px rgba(14,165,166,0.25)"
+                  background: "#F59E0B",
+                  boxShadow: "0 8px 32px rgba(245,158,11,0.25), 0 0 0 1px rgba(245,158,11,0.1)"
                 }}
               >
                 Obtenir mes devis
-                <ArrowRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
               </a>
-              <p className="text-[13px]" style={{ color: "#9CA3AF" }}>
-                Gratuit · 3 min · Sans engagement
-              </p>
+
+              {/* Note Google - Plus discrète */}
+              <div className="flex flex-col gap-2">
+                <a
+                  href="https://www.google.com/maps/place/Moverz/@46.881154,3.0417412,6z/data=!3m1!4b1!4m6!3m5!1s0x65777ea3ad50b1c1:0xdcc12b2e04254f4!8m2!3d46.881154!4d3.0417412!16s%2Fg%2F11ylmz4jk6?entry=ttu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2 transition-opacity duration-200 hover:opacity-80"
+                >
+                  <div className="flex gap-0.5">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                    ))}
+                  </div>
+                  <span className="text-sm font-semibold text-slate-900">4,5+</span>
+                  <span className="text-xs text-slate-500">sur Google</span>
+                </a>
+                <p className="text-xs text-slate-500">1000+ déménageurs contrôlés</p>
+              </div>
             </div>
           </motion.div>
 
@@ -289,40 +440,127 @@ export function HeroV4TwoColumn() {
               >
                 {/* Phone container */}
                 <div
-                  className="relative rounded-[40px] border-[5px] overflow-hidden bg-white"
+                  className="relative rounded-[38px] border-[5px] overflow-hidden bg-white"
                   style={{
                     borderColor: "#1F2937",
-                    aspectRatio: "9/19",
-                    boxShadow: "0 8px 24px rgba(0,0,0,0.12), 0 0 1px rgba(0,0,0,0.1)"
+                    width: "280px",
+                    height: "600px",
+                    boxShadow: "0 25px 50px -12px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,0,0,0.08)",
                   }}
                 >
-                  {/* Notch discret */}
+                  {/* Dynamic Island (iPhone 14 Pro style) */}
                   <div
-                    className="absolute top-0 left-1/2 -translate-x-1/2 h-5 w-24 rounded-b-2xl z-20"
-                    style={{ background: "#1F2937" }}
-                  />
+                    className="absolute top-2 left-1/2 -translate-x-1/2 h-[28px] w-[115px] rounded-full z-30"
+                    style={{ background: "#000000" }}
+                  >
+                    {/* Speaker grill inside island */}
+                    <div
+                      className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[45px] h-[4px] rounded-full"
+                      style={{ background: "#1a1a1a" }}
+                    />
+                  </div>
 
-                  {/* Screen content - LISTE DEVIS RÉALISTE */}
-                  <QuoteListMockup />
-                </div>
-              </motion.div>
+                  {/* Screen content with carousel - Fond clair */}
+                  <div className="relative h-full w-full overflow-hidden" style={{ background: "linear-gradient(180deg, #F9FAFB 0%, #F3F4F6 100%)" }}>
+                    {/* Header du téléphone avec infos dossier */}
+                    <div className="absolute top-10 left-0 right-0 px-4 py-3 z-40" style={{ background: "linear-gradient(180deg, #F9FAFB 100%, transparent 100%)" }}>
+                      <div className="flex items-center justify-between mb-2">
+                        <Image 
+                          src="/logo-ui.png" 
+                          alt="Moverz" 
+                          width={70} 
+                          height={24}
+                          className="h-5 w-auto"
+                        />
+                        <div 
+                          className="px-2.5 py-0.5 rounded-full text-[9px] font-bold"
+                          style={{ background: "rgba(14,165,166,0.1)", color: "#0EA5A6" }}
+                        >
+                          5 devis comparés
+                        </div>
+                      </div>
+                      <p className="text-slate-900 text-[11px] font-medium mb-0.5">Votre déménagement</p>
+                      <p className="text-slate-500 text-[9px]">
+                        Paris → Lyon • 60m² • 3e étage
+                      </p>
+                    </div>
 
-              
-              {/* Badge flottant minimaliste */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: 0.6 }}
-                className="absolute -bottom-4 -right-4 rounded-xl px-3 py-2 text-xs font-semibold shadow-lg backdrop-blur-sm border"
-                style={{ 
-                  background: "rgba(255,255,255,0.95)", 
-                  borderColor: "rgba(14,165,166,0.15)",
-                  color: "#111827" 
-                }}
-              >
-                <div className="flex items-center gap-1.5">
-                  <div className="h-1.5 w-1.5 rounded-full" style={{ background: "#1F2937" }} />
-                  <span><strong style={{ color: "#0EA5A6" }}>3</strong> offres retenues</span>
+                    {/* Carousel container (inside phone) - Simplified: one card only */}
+                    <div className="relative h-full pt-32 pb-3 px-2 overflow-hidden">
+                      {/* Card principale (nette) - Pas de cartes floues en arrière-plan */}
+                      <AnimatePresence initial={false} custom={direction} mode="wait">
+                        <motion.div
+                          key={currentIndex}
+                          custom={direction}
+                          variants={slideVariants}
+                          initial="enter"
+                          animate="center"
+                          exit="exit"
+                          transition={{
+                            x: { type: "spring", stiffness: 300, damping: 30 },
+                            opacity: { duration: 0.2 },
+                          }}
+                          drag="x"
+                          dragConstraints={{ left: 0, right: 0 }}
+                          dragElastic={0.2}
+                          onDragEnd={handleDragEnd}
+                          className="touch-pan-y h-full overflow-y-auto relative z-10"
+                        >
+                          <MoverCardDetailed mover={MOVERS[currentIndex]} index={currentIndex} />
+                        </motion.div>
+                      </AnimatePresence>
+                    </div>
+
+                    {/* Badge subtil en bas de l'écran */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: 0.7 }}
+                      className="absolute bottom-8 left-2 right-2 z-20"
+                    >
+                      <div 
+                        className="rounded-full px-3 py-1.5 text-[10px] font-medium backdrop-blur-xl"
+                        style={{ 
+                          background: "rgba(255,255,255,0.9)",
+                          border: "1px solid rgba(14,165,166,0.1)",
+                          boxShadow: "0 2px 8px rgba(0,0,0,0.05)"
+                        }}>
+                        <div className="flex items-center justify-center gap-1.5">
+                          <div className="h-1 w-1 rounded-full" 
+                            style={{ background: "#0EA5A6" }} />
+                          <span className="text-slate-700">
+                            <strong style={{ color: "#0EA5A6" }}>3</strong>/12 offres
+                          </span>
+                        </div>
+                      </div>
+                    </motion.div>
+
+                    {/* Navigation dots - EN BAS DE L'ÉCRAN du téléphone */}
+                    <motion.div 
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: 0.8 }}
+                      className="absolute bottom-4 left-0 right-0 z-30 flex items-center justify-center gap-1.5"
+                    >
+                      {MOVERS.map((_, i) => (
+                        <button
+                          key={i}
+                          onClick={() => {
+                            setDirection(i > currentIndex ? 1 : -1);
+                            setCurrentIndex(i);
+                          }}
+                          className="h-1 rounded-full transition-all duration-300"
+                          style={{
+                            width: i === currentIndex ? "16px" : "4px",
+                            background: i === currentIndex ? "#0EA5A6" : "#CBD5E1",
+                          }}
+                          aria-label={`Voir offre ${i + 1}`}
+                        />
+                      ))}
+                    </motion.div>
+                  </div>
                 </div>
               </motion.div>
             </div>

@@ -452,14 +452,6 @@ export function ComparableQuotesMockScrolly() {
                   boxShadow: "0 4px 16px rgba(14,165,166,0.25)"
                 }}>
                 Obtenir mes devis
-                <svg 
-                  className="h-4 w-4 transition-transform group-hover:translate-x-1" 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
-                  stroke="currentColor"
-                  strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
               </a>
               <p className="text-xs text-slate-500 mt-2">
                 Gratuit · 3 min · Sans engagement
@@ -515,65 +507,33 @@ export function ComparableQuotesMockScrolly() {
                   </div>
 
                   {/* Screen content with carousel - Fond marine comme l'ancienne version */}
-                  <div className="relative h-full w-full overflow-hidden" style={{ background: "linear-gradient(180deg, #1e293b 0%, #0f172a 100%)" }}>
+                  <div className="relative h-full w-full overflow-hidden" style={{ background: "linear-gradient(180deg, #F9FAFB 0%, #F3F4F6 100%)" }}>
                     {/* Header du téléphone avec infos dossier */}
-                    <div className="absolute top-10 left-0 right-0 px-4 py-3 z-40" style={{ background: "linear-gradient(180deg, #1e293b 100%, transparent 100%)" }}>
+                    <div className="absolute top-10 left-0 right-0 px-4 py-3 z-40" style={{ background: "linear-gradient(180deg, #F9FAFB 100%, transparent 100%)" }}>
                       <div className="flex items-center justify-between mb-2">
                         <Image 
                           src="/logo-ui.png" 
                           alt="Moverz" 
                           width={70} 
                           height={24}
-                          className="h-5 w-auto brightness-0 invert"
+                          className="h-5 w-auto"
                         />
                         <div 
                           className="px-2.5 py-0.5 rounded-full text-[9px] font-bold"
-                          style={{ background: "rgba(14,165,166,0.2)", color: "#2EE9C6" }}
+                          style={{ background: "rgba(14,165,166,0.1)", color: "#0EA5A6" }}
                         >
                           5 devis comparés
                         </div>
                       </div>
-                      <p className="text-white text-[11px] font-medium mb-0.5">Votre déménagement</p>
-                      <p className="text-slate-400 text-[9px]">
+                      <p className="text-slate-900 text-[11px] font-medium mb-0.5">Votre déménagement</p>
+                      <p className="text-slate-500 text-[9px]">
                         Paris → Lyon • 60m² • 3e étage
                       </p>
                     </div>
 
-                    {/* Carousel container (inside phone) with enhanced stack effect */}
+                    {/* Carousel container (inside phone) - Simplified: one card only */}
                     <div className="relative h-full pt-32 pb-3 px-2 overflow-hidden">
-                      {/* Card #3 - Très en arrière (la plus floue) */}
-                      {currentIndex < MOVERS.length - 2 && (
-                        <div className="absolute inset-0 pt-16 pb-3 px-2 pointer-events-none">
-                          <div
-                            className="absolute inset-x-2 top-16 bottom-3"
-                            style={{
-                              transform: "translateX(16px) translateY(16px) scale(0.92) rotate(1deg)",
-                              opacity: 0.25,
-                              filter: "blur(2.5px)",
-                            }}
-                          >
-                            <MoverCardDetailed mover={MOVERS[currentIndex + 2]} index={currentIndex + 2} />
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Card #2 - Moyennement en arrière */}
-                      {currentIndex < MOVERS.length - 1 && (
-                        <div className="absolute inset-0 pt-16 pb-3 px-2 pointer-events-none">
-                          <div
-                            className="absolute inset-x-2 top-16 bottom-3"
-                            style={{
-                              transform: "translateX(10px) translateY(10px) scale(0.96) rotate(0.5deg)",
-                              opacity: 0.5,
-                              filter: "blur(1.2px)",
-                            }}
-                          >
-                            <MoverCardDetailed mover={MOVERS[currentIndex + 1]} index={currentIndex + 1} />
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Card #1 - Principale (nette) */}
+                      {/* Card principale (nette) - Pas de cartes floues en arrière-plan */}
                       <AnimatePresence initial={false} custom={direction} mode="wait">
                         <motion.div
                           key={currentIndex}
