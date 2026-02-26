@@ -27,7 +27,7 @@ const URLS_TO_SUBMIT = [
 
 const INDEXNOW_ENDPOINT = 'https://www.bing.com/indexnow';
 const HOST = 'moverz.fr';
-const KEY = '9f8c5e4d3b2a1f7e6d5c4b3a2f1e0d9c'; // Clé fictive, tu devras la remplacer
+const KEY = 'a2612212c86796e04e9e20e676fbafea'; // Clé IndexNow Moverz
 
 async function submitToIndexNow(urls) {
   const body = JSON.stringify({
