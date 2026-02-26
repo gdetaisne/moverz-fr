@@ -73,7 +73,7 @@ export default function Hero({ abVariant }: HeroProps) {
 
             {/* Titre émotionnel avec gradient */}
             <h1 
-              className="mt-8 text-4xl font-bold tracking-tight leading-[1.15] sm:text-5xl md:text-6xl lg:text-7xl font-heading"
+              className="mt-8 text-5xl font-bold tracking-tight leading-[1.1] sm:text-6xl md:text-7xl lg:text-8xl font-heading"
               style={{
                 animation: mounted ? 'fadeInUp 0.8s ease-out 0.1s both' : 'none',
               }}

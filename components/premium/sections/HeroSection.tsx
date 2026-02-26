@@ -30,7 +30,7 @@ export function HeroSection() {
             <motion.div variants={staggerItem} className="space-y-5">
               <Badge variant="verified">Déménageurs vérifiés</Badge>
               
-              <h1 className="font-heading text-[34px] leading-[1.05] font-bold text-[rgb(var(--text))] tracking-tighter-hero sm:text-[42px] md:text-[60px] lg:text-[72px]">
+              <h1 className="font-heading text-[42px] leading-[1.05] font-bold text-[rgb(var(--text))] tracking-tighter-hero sm:text-[52px] md:text-[72px] lg:text-[88px]">
                 Vous déménagez.{" "}
                 <span className="text-[rgb(var(--accent-2))]">On compare.</span>
               </h1>

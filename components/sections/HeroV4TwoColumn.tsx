@@ -261,7 +261,7 @@ export function HeroV4TwoColumn() {
     <section
       className="relative pt-12 pb-16 md:pt-20 md:pb-28 overflow-hidden"
       style={{ 
-        background: "linear-gradient(135deg, rgba(14,165,166,0.12) 0%, rgba(14,165,166,0.06) 50%, #FFFFFF 100%)"
+        background: "linear-gradient(to bottom, rgba(14,165,166,0.35) 0%, rgba(14,165,166,0.18) 40%, rgba(14,165,166,0.08) 70%, #FFFFFF 100%)"
       }}
     >
       {/* Grain texture - Premium feel */}
@@ -292,7 +292,7 @@ export function HeroV4TwoColumn() {
           <motion.div variants={staggerItem} className="flex flex-wrap justify-center gap-3 mb-8">
             <div className="group flex items-center gap-2.5 px-4 py-2.5 rounded-full backdrop-blur-xl transition-all duration-300" style={{ background: "rgba(255,255,255,0.7)", border: "1px solid rgba(14,165,166,0.15)", boxShadow: "0 4px 16px rgba(0,0,0,0.04)" }}>
               <PhoneOff className="w-4 h-4" style={{ color: "#0EA5A6" }} />
-              <span className="text-xs font-semibold text-slate-800">Aucun appel</span>
+              <span className="text-xs font-semibold text-slate-800">zéro harcèlement</span>
             </div>
             
             <div className="group flex items-center gap-2.5 px-4 py-2.5 rounded-full backdrop-blur-xl transition-all duration-300" style={{ background: "rgba(255,255,255,0.7)", border: "1px solid rgba(14,165,166,0.15)", boxShadow: "0 4px 16px rgba(0,0,0,0.04)" }}>
@@ -304,7 +304,7 @@ export function HeroV4TwoColumn() {
           {/* H1 */}
           <motion.h1
             variants={staggerItem}
-            className="font-heading text-[clamp(32px,7vw,56px)] leading-[1.1] font-bold tracking-[-0.02em]"
+            className="font-heading text-[clamp(40px,8vw,72px)] leading-[1.05] font-bold tracking-[-0.02em]"
             style={{ color: "var(--color-text)" }}
           >
             Vous déménagez.
@@ -318,7 +318,7 @@ export function HeroV4TwoColumn() {
             className="mt-6 text-base font-medium"
             style={{ color: "var(--color-text-secondary)" }}
           >
-            Zéro harcèlement · 3+ devis fiables sous 5 jours · 100% gratuit
+            3+ devis fiables sous 5 jours · 100% gratuit · 1 seul interlocuteur unique
           </motion.p>
 
           {/* CTA mobile */}
@@ -326,10 +326,10 @@ export function HeroV4TwoColumn() {
             <a
               href={quoteUrl}
               onClick={() => trackEvent("Lead_clic_home", { source: "hero-cta" })}
-              className="inline-flex items-center justify-center gap-2 w-full max-w-md rounded-2xl px-6 py-4 text-base font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_20px_60px_rgba(245,158,11,0.4)] active:scale-[0.98]"
+              className="inline-flex items-center justify-center gap-2 w-full max-w-md rounded-2xl px-6 py-4 text-base font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]"
               style={{ 
                 background: "#F59E0B",
-                boxShadow: "0 8px 32px rgba(245,158,11,0.25), 0 0 0 1px rgba(245,158,11,0.1)"
+                boxShadow: "0 4px 12px rgba(245,158,11,0.2)"
               }}
             >
               Obtenir mes devis
@@ -350,7 +350,7 @@ export function HeroV4TwoColumn() {
             <div className="flex flex-wrap gap-3 mb-6">
               <div className="group flex items-center gap-2.5 px-4 py-2.5 rounded-full backdrop-blur-xl transition-all duration-300" style={{ background: "rgba(255,255,255,0.7)", border: "1px solid rgba(14,165,166,0.15)", boxShadow: "0 4px 16px rgba(0,0,0,0.04)" }}>
                 <PhoneOff className="w-4 h-4" style={{ color: "#0EA5A6" }} />
-                <span className="text-xs font-semibold text-slate-800">Aucun appel</span>
+                <span className="text-xs font-semibold text-slate-800">zéro harcèlement</span>
               </div>
               
               <div className="group flex items-center gap-2.5 px-4 py-2.5 rounded-full backdrop-blur-xl transition-all duration-300" style={{ background: "rgba(255,255,255,0.7)", border: "1px solid rgba(14,165,166,0.15)", boxShadow: "0 4px 16px rgba(0,0,0,0.04)" }}>
@@ -361,7 +361,7 @@ export function HeroV4TwoColumn() {
 
             {/* H1 */}
             <h1
-              className="font-heading text-[56px] leading-[0.95] font-semibold tracking-[-0.03em] mb-6"
+              className="font-heading text-[72px] leading-[0.95] font-semibold tracking-[-0.03em] mb-6"
               style={{ color: "#111827" }}
             >
               Vous déménagez.
@@ -371,7 +371,7 @@ export function HeroV4TwoColumn() {
 
             {/* Subtitle principal */}
             <p className="text-lg font-medium mb-8" style={{ color: "#475569" }}>
-              Zéro harcèlement · 3+ devis fiables sous 5 jours · 100% gratuit
+              3+ devis fiables sous 5 jours · 100% gratuit · 1 seul interlocuteur unique
             </p>
 
             {/* CTA desktop */}
@@ -379,10 +379,10 @@ export function HeroV4TwoColumn() {
               <a
                 href={quoteUrl}
                 onClick={() => trackEvent("Lead_clic_home", { source: "hero-cta" })}
-                className="inline-flex items-center justify-center gap-2 h-14 px-8 rounded-2xl text-[16px] font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_20px_60px_rgba(245,158,11,0.4)] active:scale-[0.98]"
+                className="inline-flex items-center justify-center gap-2 h-14 px-8 rounded-2xl text-[16px] font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]"
                 style={{ 
                   background: "#F59E0B",
-                  boxShadow: "0 8px 32px rgba(245,158,11,0.25), 0 0 0 1px rgba(245,158,11,0.1)"
+                  boxShadow: "0 4px 12px rgba(245,158,11,0.2)"
                 }}
               >
                 Obtenir mes devis
@@ -530,7 +530,7 @@ export function HeroV4TwoColumn() {
                           <div className="h-1 w-1 rounded-full" 
                             style={{ background: "#0EA5A6" }} />
                           <span className="text-slate-700">
-                            <strong style={{ color: "#0EA5A6" }}>3</strong>/12 offres
+                            <strong style={{ color: "#0EA5A6" }}>3</strong>/5 offres
                           </span>
                         </div>
                       </div>

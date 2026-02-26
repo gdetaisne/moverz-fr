@@ -44,8 +44,8 @@ export function Header() {
     <header
       className={`sticky top-0 z-50 w-full border-b backdrop-blur-md transition-all duration-200 ${
         isScrolled
-          ? "border-black/10 bg-white/70 shadow-sm"
-          : "border-black/5 bg-white/70"
+          ? "border-black/10 bg-white/85 shadow-sm"
+          : "border-black/5 bg-white/50"
       }`}
     >
       <div className="mx-auto flex h-14 md:h-16 max-w-[1200px] items-center justify-between px-4 md:px-6">
@@ -113,7 +113,7 @@ export function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="overflow-hidden border-t border-black/5 bg-white/95 backdrop-blur-md md:hidden"
+            className="overflow-hidden border-t border-black/5 bg-white/90 backdrop-blur-md md:hidden"
           >
             <nav className="mx-auto max-w-[1200px] space-y-1 px-5 py-4">
               {navLinks.map((link) => (
