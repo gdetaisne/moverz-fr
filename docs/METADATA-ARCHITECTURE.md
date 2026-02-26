@@ -137,14 +137,16 @@ Déménagement {Ville A} → {Ville B} ({Distance}km) | Devis 5–7j · {Année}
 
 #### Format Description
 ```
-{A}→{B} ({X}km) : devis comparables sous 5–7j. Tarifs : T1 {prix}€ · T2 {prix}€ · Maison {prix}€. Pros contrôlés, 0€.
+✓ 1 contact ✓ 0 harcèlement · {A}→{B} ({X}km) : T1 {prix}€, T2 {prix}€, Maison {prix}€ · Note 4.9/5 · Gratuit
 ```
 
 #### Exemple Concret (Paris → Lyon)
 ```typescript
 Title: "Déménagement Paris → Lyon (465km) | Devis 5–7j · 2026 | Moverz"
-Description: "Paris→Lyon (465km) : devis comparables sous 5–7j. Tarifs : T1 950€ · T2 1350€ · Maison 2200€. Pros contrôlés, 0€."
+Description: "✓ 1 contact ✓ 0 harcèlement · Paris→Lyon (465km) : T1 950€, T2 1350€, Maison 2200€ · Note 4.9/5 · Gratuit"
 ```
+
+**USP présents** : Correspondant unique, 0 harcèlement, Distance, Prix détaillés, Social proof (4.9/5)
 
 #### Calcul automatique
 - Distance : `estimateRoadDistanceKm(originCitySlug, destSlug)`
@@ -432,6 +434,13 @@ Title: "Déménagement {Ville} dès {PrixMin}€ · Devis 5–7j | Moverz"
 Description: "✓ 1 contact ✓ 0 harcèlement · {Ville} : T1 dès {prix}, T2 {prix}, Maison {prix} · Pros certifiés · Note 4.9/5 · Gratuit ({année})"
 ```
 **Objectif** : Aligner les 209 pages villes sur les USP homepage pour maximiser CTR (actuellement 0% sur top villes)
+
+### v3.2 (27 février 2026) - PAGES CORRIDORS ✅ **ACTUEL**
+```
+Title: "Déménagement {Ville A} → {Ville B} ({Distance}km) | Devis 5–7j · {Année} | Moverz"
+Description: "✓ 1 contact ✓ 0 harcèlement · {A}→{B} ({X}km) : T1 {prix}€, T2 {prix}€, Maison {prix}€ · Note 4.9/5 · Gratuit"
+```
+**Objectif** : Aligner les ~50 pages corridors sur les USP homepage + villes pour cohérence totale et maximiser CTR
 
 ---
 

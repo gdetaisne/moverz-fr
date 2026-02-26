@@ -42,13 +42,15 @@ function slugify(input: string): string {
 /**
  * Génère metadata optimisée pour pages corridors
  * 
- * Optimisations SEO (2026-01-30):
+ * Optimisations SEO (2026-02-27):
+ * - USP homepage alignés : "1 contact" + "0 harcèlement" + "Note 4.9/5" + checkmarks ✓
  * - Distance dans title → pertinence immédiate SERP
  * - Fourchettes prix T1/T2/Maison dans description → forte différenciation
  * - Calcul prix basé sur formules officielles tunnel (pricing-corridors.ts)
+ * - Format compact cohérent avec pages villes (v3.1)
  * 
  * Format title: "Déménagement {Ville A} → {Ville B} ({Distance}km) | Devis 5–7j · {Année}"
- * Format desc: "{A}→{B} ({Xkm}) : devis comparables sous 5–7j. Tarifs : T1 X€ · T2 Y€ · Maison Z€. Pros contrôlés, 0€."
+ * Format desc: "✓ 1 contact ✓ 0 harcèlement · {A}→{B} ({X}km) : T1 X€, T2 Y€, Maison Z€ · Note 4.9/5 · Gratuit"
  */
 export function generateCorridorMetadata(
   originCitySlug: string,
@@ -64,17 +66,18 @@ export function generateCorridorMetadata(
   const priceData = getCorridorPricesForMeta(originCitySlug, destSlug);
   
   if (priceData) {
-    // ✅ Version optimisée (distance + prix)
+    // ✅ Version optimisée (USP homepage + distance + prix)
     const title = `Déménagement ${originCityName} → ${destination} (${priceData.distanceKm}km) | Devis 5–7j · ${year}`;
     
-    const description = `${originCityName}→${destination} (${priceData.distanceKm}km) : devis comparables sous 5–7j. Tarifs : T1 ${priceData.t1} · T2 ${priceData.t2} · Maison ${priceData.house}. Pros contrôlés, 0€.`;
+    // Description alignée villes v3.1 : checkmarks ✓ + USP stack + prix + social proof
+    const description = `✓ 1 contact ✓ 0 harcèlement · ${originCityName}→${destination} (${priceData.distanceKm}km) : T1 ${priceData.t1}, T2 ${priceData.t2}, Maison ${priceData.house} · Note 4.9/5 · Gratuit`;
     
     return getFullMetadata(path, title, description);
   }
   
-  // Fallback (si calcul prix impossible)
+  // Fallback (si calcul prix impossible) - aligné sur USP homepage
   const title = `Déménagement ${originCityName} → ${destination} : Devis & Prix ${year}`;
-  const description = `Déménagement ${originCityName} vers ${destination} : devis gratuits, prix indicatifs, conseils d'experts. Déménageurs contrôlés · 0€ · Sans démarchage`;
+  const description = `✓ 1 contact ✓ 0 harcèlement · ${originCityName}→${destination} : devis gratuits, pros contrôlés · Note 4.9/5 · Sans démarchage`;
 
   return getFullMetadata(path, title, description);
 }
