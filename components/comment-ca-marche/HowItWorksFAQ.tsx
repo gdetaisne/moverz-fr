@@ -12,7 +12,7 @@ export default function HowItWorksFAQ() {
     {
       question: "Comment choisissez-vous les déménageurs que vous me présentez ?",
       answer:
-        "Nous ne transmettons votre dossier qu'à 3-5 déménageurs maximum, sélectionnés selon 3 critères : (1) <strong>Disponibles à vos dates exactes</strong>, (2) <strong>Vérifiés financièrement et juridiquement</strong> (pas d'alertes), (3) <strong>Expérience sur votre trajet</strong> (Paris-Lyon, T3, etc.). Vous ne perdez pas de temps avec des offres non pertinentes ou des sociétés en difficulté. Voir nos <a href='/verifications-partenaires/' class='text-v4-accent hover:underline'>critères de vérification</a>.",
+        "Nous ne transmettons votre dossier qu'à des déménageurs sélectionnés selon 3 critères : (1) <strong>Disponibles à vos dates exactes</strong>, (2) <strong>Vérifiés financièrement et juridiquement</strong> (pas d'alertes), (3) <strong>Expérience sur votre trajet</strong> (Paris-Lyon, T3, etc.). Vous ne perdez pas de temps avec des offres non pertinentes ou des sociétés en difficulté. Voir nos <a href='/verifications-partenaires/' class='text-v4-accent hover:underline'>critères de vérification</a>.",
     },
     {
       question: "Comment êtes-vous rémunérés ?",

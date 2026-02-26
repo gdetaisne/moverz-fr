@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Mail, Phone } from "lucide-react";
 
 const footerSections = [
   {
@@ -31,6 +32,13 @@ const footerSections = [
       { href: "/demenagement/marseille/", label: "Marseille" },
       { href: "/demenagement/toulouse/", label: "Toulouse" },
       { href: "/villes/", label: "Voir toutes les villes" },
+    ],
+  },
+  {
+    title: "Contact",
+    links: [
+      { href: "mailto:guillaume@moverz.fr", label: "guillaume@moverz.fr", icon: "mail" },
+      { href: "tel:+33664779434", label: "06 64 77 94 34", icon: "phone" },
     ],
   },
   {
@@ -114,18 +122,20 @@ export function Footer() {
             </a>
           </div>
 
-          {/* Colonnes 2-5 : Links */}
+          {/* Colonnes 2-6 : Links */}
           {footerSections.map((section) => (
             <div key={section.title} className="md:col-span-1">
               <h3 className="font-semibold mb-3 md:mb-4 text-sm md:text-base text-white">{section.title}</h3>
               <ul className="space-y-2 text-sm">
-                {section.links.map((link) => (
+                {section.links.map((link: any) => (
                   <li key={link.href}>
                     <a
                       href={link.href}
                       className={
                         link.label === "Voir toutes les villes"
-                          ? "hover:text-white transition-colors"
+                          ? "hover:text-white transition-colors inline-flex items-center gap-2"
+                          : link.icon
+                          ? "text-white/70 hover:text-white transition-colors inline-flex items-center gap-2"
                           : "text-white/70 hover:text-white transition-colors"
                       }
                       style={
@@ -134,6 +144,8 @@ export function Footer() {
                           : undefined
                       }
                     >
+                      {link.icon === "mail" && <Mail className="h-4 w-4" />}
+                      {link.icon === "phone" && <Phone className="h-4 w-4" />}
                       {link.label}
                       {link.label === "Voir toutes les villes" && " →"}
                     </a>
@@ -175,7 +187,7 @@ export function Footer() {
             <p className="mb-1">
               <span className="font-medium text-white/80">Propriétaire :</span> GSLV EURL · SIREN 914499876 · RCS La Rochelle
             </p>
-            <p>5 Rue Jean Coyttar, 17290 Thairé, France · contact@moverz.fr</p>
+            <p>5 Rue Jean Coyttar, 17290 Thairé, France · guillaume@moverz.fr</p>
           </div>
         </div>
 
