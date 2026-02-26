@@ -12,7 +12,10 @@ export function GET() {
 
   const staticPaths = [
     "/",
+    "/pourquoi-moverz",
     "/comment-ca-marche",
+    "/label-moverz",
+    "/comparateur-demenageurs",
     "/criteres-choisir-demenageur",
     "/faq-arnaque-demenagement",
     "/verifications-partenaires",
@@ -27,6 +30,7 @@ export function GET() {
     "/politique-confidentialite",
     "/cgu",
     "/cgv",
+    "/cgv-partenaires",
     "/glossaire-demenagement",
     "/chiffres-cles",
   ];
