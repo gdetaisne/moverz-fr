@@ -13,7 +13,7 @@
 import { buildTunnelUrl } from "@/lib/tunnel-url";
 import { motion, AnimatePresence, PanInfo } from "framer-motion";
 import { staggerContainer, staggerItem } from "@/components/motion";
-import { ArrowRight, CheckCircle2, MessageSquare, Users, Mail, ShieldCheck, Star, PhoneOff, BadgeCheck } from "lucide-react";
+import { ArrowRight, CheckCircle2, MessageSquare, Users, Mail, ShieldCheck, Star, PhoneOff, BadgeCheck, Globe } from "lucide-react";
 import { trackEvent } from "@/lib/tracking";
 import Image from "next/image";
 import { useState, useEffect } from "react";
