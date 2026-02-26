@@ -67,17 +67,28 @@ export function Header() {
 
         {/* CTA + Phone + Mobile Menu */}
         <div className="flex items-center gap-2 md:gap-3">
+          {/* Mobile: Phone with number */}
+          <a
+            href="tel:+33664779434"
+            className="inline-flex md:hidden items-center gap-1.5 rounded-lg border border-[rgb(var(--accent))] px-2 py-1.5 text-xs font-medium text-[rgb(var(--accent))] transition-all hover:bg-[rgb(var(--accent))]/5 active:scale-95"
+            aria-label="Appeler Moverz"
+            title="06 64 77 94 34"
+          >
+            <Phone className="h-4 w-4" />
+            <span className="whitespace-nowrap">06 64 77 94 34</span>
+          </a>
+          
+          {/* Desktop: CTA Devis */}
           <a
             href="https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=header&utm_source=moverz_website&utm_medium=referral&utm_content=header"
             rel="nofollow"
-            className="inline-flex items-center justify-center gap-1.5 rounded-lg px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-semibold text-white transition-all hover:opacity-90 active:scale-95"
+            className="hidden md:inline-flex items-center justify-center gap-1.5 rounded-lg px-4 py-2 text-sm font-semibold text-white transition-all hover:opacity-90 active:scale-95"
             style={{ 
               background: "var(--color-accent)",
               boxShadow: "0 2px 8px rgba(14,165,166,0.2)"
             }}
           >
-            <span className="hidden sm:inline">Obtenir mes devis</span>
-            <span className="inline sm:hidden">Devis</span>
+            <span>Obtenir mes devis</span>
           </a>
           
           {/* Phone button - Desktop */}
