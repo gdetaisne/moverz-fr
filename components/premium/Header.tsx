@@ -6,7 +6,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { buildTunnelUrl } from "@/lib/tunnel-url";
 
 const navLinks = [
   { href: "/pourquoi-moverz/", label: "Pourquoi" },
@@ -69,7 +68,7 @@ export function Header() {
         {/* CTA + Phone + Mobile Menu */}
         <div className="flex items-center gap-2 md:gap-3">
           <a
-            href={buildTunnelUrl({ from: "header" })}
+            href="https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=header&utm_source=moverz_website&utm_medium=referral&utm_content=header"
             rel="nofollow"
             className="inline-flex items-center justify-center gap-1.5 rounded-lg px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-semibold text-white transition-all hover:opacity-90 active:scale-95"
             style={{ 
@@ -129,7 +128,7 @@ export function Header() {
               ))}
               <div className="pt-2 space-y-2">
                 <a
-                  href={buildTunnelUrl({ from: "header-mobile" })}
+                  href="https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=header-mobile&utm_source=moverz_website&utm_medium=referral&utm_content=header-mobile"
                   rel="nofollow"
                   className="flex items-center justify-center gap-1.5 w-full rounded-lg px-4 py-3 text-sm font-semibold text-white transition-all hover:opacity-90 active:scale-95"
                   style={{ 

@@ -83,25 +83,25 @@ function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: n
     <div
       className="w-full rounded-xl p-3 relative"
       style={{
-        background: "rgba(255,255,255,0.95)",
-        border: mover.recommended ? "2px solid #0EA5A6" : "1px solid rgba(255,255,255,0.3)",
+        background: "rgba(255,255,255,0.98)",
+        border: mover.recommended ? "2.5px solid #0EA5A6" : "1px solid rgba(0,0,0,0.08)",
         boxShadow: mover.recommended 
-          ? "0 4px 16px rgba(14,165,166,0.3)" 
-          : "0 2px 8px rgba(0,0,0,0.1)"
+          ? "0 6px 20px rgba(14,165,166,0.35)" 
+          : "0 2px 8px rgba(0,0,0,0.08)"
       }}
     >
       {/* Badge Recommandé - PREMIUM */}
       {mover.recommended && (
         <div
-          className="flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-full mb-3 -mt-1 relative overflow-hidden"
+          className="flex items-center justify-center gap-1.5 py-2 px-3.5 rounded-full mb-3 -mt-1 relative overflow-hidden"
           style={{ 
             background: "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)",
-            boxShadow: "0 4px 12px rgba(14,165,166,0.4), 0 0 0 1px rgba(14,165,166,0.2)"
+            boxShadow: "0 4px 14px rgba(14,165,166,0.45), 0 0 0 1px rgba(14,165,166,0.3)"
           }}
         >
           {/* Checkmark */}
           <svg 
-            className="h-3.5 w-3.5 text-white" 
+            className="h-4 w-4 text-white" 
             fill="none" 
             viewBox="0 0 24 24" 
             stroke="currentColor"
@@ -109,7 +109,7 @@ function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: n
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
-          <span className="text-[11px] font-bold text-white tracking-wide">MEILLEURE OFFRE</span>
+          <span className="text-[12px] font-bold text-white tracking-wide">MEILLEURE OFFRE</span>
           {/* Subtle shimmer effect */}
           <div
             className="absolute inset-0 opacity-30"
@@ -292,7 +292,7 @@ export function HeroV4TwoColumn() {
           <motion.div variants={staggerItem} className="flex flex-wrap justify-center gap-3 mb-8">
             <div className="group flex items-center gap-2.5 px-4 py-2.5 rounded-full backdrop-blur-xl transition-all duration-300" style={{ background: "rgba(255,255,255,0.7)", border: "1px solid rgba(14,165,166,0.15)", boxShadow: "0 4px 16px rgba(0,0,0,0.04)" }}>
               <PhoneOff className="w-4 h-4" style={{ color: "#0EA5A6" }} />
-              <span className="text-xs font-semibold text-slate-800">zéro harcèlement</span>
+              <span className="text-xs font-semibold text-slate-800">Zéro harcèlement</span>
             </div>
             
             <div className="group flex items-center gap-2.5 px-4 py-2.5 rounded-full backdrop-blur-xl transition-all duration-300" style={{ background: "rgba(255,255,255,0.7)", border: "1px solid rgba(14,165,166,0.15)", boxShadow: "0 4px 16px rgba(0,0,0,0.04)" }}>
@@ -318,7 +318,7 @@ export function HeroV4TwoColumn() {
             className="mt-6 text-base font-medium"
             style={{ color: "var(--color-text-secondary)" }}
           >
-            3+ devis fiables sous 5 jours · 100% gratuit · 1 seul interlocuteur unique
+            3+ devis fiables sous 5 jours · 100% gratuit
           </motion.p>
 
           {/* CTA mobile */}
@@ -326,7 +326,7 @@ export function HeroV4TwoColumn() {
             <a
               href={quoteUrl}
               onClick={() => trackEvent("Lead_clic_home", { source: "hero-cta" })}
-              className="inline-flex items-center justify-center gap-2 w-full max-w-md rounded-2xl px-6 py-4 text-base font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]"
+              className="inline-flex items-center justify-center gap-2 w-full max-w-md rounded-2xl px-6 py-4 text-base font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] hover:animate-pulse-subtle"
               style={{ 
                 background: "#F59E0B",
                 boxShadow: "0 4px 12px rgba(245,158,11,0.2)"
@@ -334,6 +334,7 @@ export function HeroV4TwoColumn() {
             >
               Obtenir mes devis
             </a>
+            <p className="text-xs text-slate-500 mt-3 font-medium">1000+ déménageurs contrôlés</p>
           </motion.div>
         </motion.div>
 
@@ -371,7 +372,7 @@ export function HeroV4TwoColumn() {
 
             {/* Subtitle principal */}
             <p className="text-lg font-medium mb-8" style={{ color: "#475569" }}>
-              3+ devis fiables sous 5 jours · 100% gratuit · 1 seul interlocuteur unique
+              3+ devis fiables sous 5 jours · 100% gratuit
             </p>
 
             {/* CTA desktop */}
@@ -379,7 +380,7 @@ export function HeroV4TwoColumn() {
               <a
                 href={quoteUrl}
                 onClick={() => trackEvent("Lead_clic_home", { source: "hero-cta" })}
-                className="inline-flex items-center justify-center gap-2 h-14 px-8 rounded-2xl text-[16px] font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]"
+                className="inline-flex items-center justify-center gap-2 h-14 px-8 rounded-2xl text-[16px] font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] hover:animate-pulse-subtle"
                 style={{ 
                   background: "#F59E0B",
                   boxShadow: "0 4px 12px rgba(245,158,11,0.2)"
