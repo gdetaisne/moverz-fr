@@ -4,6 +4,7 @@
  * V4 — FAQ section
  * Accordion propre, design system V4, données existantes (homeFaqs)
  * MODE DARK avec accents teal
+ * + FAQPage JSON-LD Schema pour Google Rich Snippets
  */
 
 import { useState } from "react";
@@ -11,8 +12,22 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { HOME_FAQS } from "@/components/home/homeFaqs";
 import { FadeUpSection } from "@/components/motion";
+import { JsonLd } from "@/components/schema/JsonLd";
 
 export function FAQV4() {
+  // FAQPage Schema pour Google Rich Snippets
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: HOME_FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
@@ -20,6 +35,9 @@ export function FAQV4() {
       className="py-12 md:py-28 relative overflow-hidden" 
       style={{ background: "var(--color-bg-dark)" }}
     >
+      {/* FAQPage Schema pour Google Rich Snippets */}
+      <JsonLd id="faq-schema-home" data={faqSchema} />
+      
       {/* Glow effect teal subtil */}
       <div 
         className="absolute left-1/2 top-0 -translate-x-1/2 h-[400px] w-[600px] rounded-full blur-[100px] opacity-20 pointer-events-none"
