@@ -259,7 +259,7 @@ export function HeroV4TwoColumn() {
 
   return (
     <section
-      className="relative pt-12 pb-16 md:pt-20 md:pb-28 overflow-hidden"
+      className="relative pt-8 pb-16 md:pt-16 md:pb-28 overflow-hidden"
       style={{ 
         background: "linear-gradient(to bottom, rgba(14,165,166,0.35) 0%, rgba(14,165,166,0.18) 40%, rgba(14,165,166,0.08) 70%, #FFFFFF 100%)"
       }}
@@ -315,14 +315,14 @@ export function HeroV4TwoColumn() {
           {/* Subtitle principal */}
           <motion.p 
             variants={staggerItem}
-            className="mt-6 text-base font-medium"
+            className="mt-5 text-base font-medium"
             style={{ color: "var(--color-text-secondary)" }}
           >
             3+ devis fiables sous 5 jours · 100% gratuit
           </motion.p>
 
           {/* CTA mobile */}
-          <motion.div variants={staggerItem} className="mt-8">
+          <motion.div variants={staggerItem} className="mt-7">
             <a
               href={quoteUrl}
               onClick={() => trackEvent("Lead_clic_home", { source: "hero-cta" })}
@@ -334,7 +334,25 @@ export function HeroV4TwoColumn() {
             >
               Obtenir mes devis
             </a>
-            <p className="text-xs text-slate-500 mt-3 font-medium">1000+ déménageurs contrôlés</p>
+          </motion.div>
+
+          {/* Social proof - Note Google + Déménageurs */}
+          <motion.div variants={staggerItem} className="mt-5 flex flex-col items-center gap-2">
+            <a
+              href="https://www.google.com/maps/place/Moverz/@46.881154,3.0417412,6z/data=!3m1!4b1!4m6!3m5!1s0x65777ea3ad50b1c1:0xdcc12b2e04254f4!8m2!3d46.881154!4d3.0417412!16s%2Fg%2F11ylmz4jk6?entry=ttu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 transition-opacity duration-200 hover:opacity-80"
+            >
+              <div className="flex gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                ))}
+              </div>
+              <span className="text-sm font-semibold text-slate-900">4,5+</span>
+              <span className="text-xs text-slate-500">sur Google</span>
+            </a>
+            <p className="text-xs text-slate-500 font-medium">1000+ déménageurs contrôlés</p>
           </motion.div>
         </motion.div>
 
