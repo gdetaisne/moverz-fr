@@ -48,25 +48,24 @@ export function Header() {
           <span className="font-heading text-xl md:text-2xl font-bold text-[rgb(var(--text))]">Moverz</span>
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden items-center gap-6 md:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`text-sm font-medium transition-colors ${
-                pathname === link.href
-                  ? "text-[rgb(var(--text))]"
-                  : "text-[rgb(var(--text-2))] hover:text-[rgb(var(--text))]"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-
-        {/* CTA + Phone + Mobile Menu */}
-        <div className="flex items-center gap-2 md:gap-3">
+        {/* Desktop Nav + CTA + Phone + Mobile Menu */}
+        <div className="flex items-center gap-2 md:gap-6">
+          {/* Desktop Nav */}
+          <nav className="hidden items-center gap-6 md:flex">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`text-sm font-medium transition-colors ${
+                  pathname === link.href
+                    ? "text-[rgb(var(--text))]"
+                    : "text-[rgb(var(--text-2))] hover:text-[rgb(var(--text))]"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
           {/* Mobile: Phone with number */}
           <a
             href="tel:+33664779434"
