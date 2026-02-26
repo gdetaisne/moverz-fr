@@ -19,15 +19,15 @@ function cityHint(citySlug: string, cityName: string): string {
 /**
  * Génère metadata optimisée pour pages villes
  * 
- * Optimisations SEO (2026-01-30):
+ * Optimisations SEO (2026-02-27):
  * - Prix MIN dans title → Visibilité SERP maximale (+20-30% CTR estimé)
+ * - USP homepage alignés : "1 contact" + "Note 4.9/5" + checkmarks ✓
  * - "Déménagement {Ville}" vs "Comparateur" → Action-oriented, meilleur intent match
  * - Prix indicatifs T1/T2/Maison → Forte différenciation
- * - "comparés par IA" → USP majeure (devis standardisés et comparables)
  * - Année en fin → Fraîcheur SEO sans alourdir début
  * 
- * Format title: "Déménagement {Ville} dès {PrixMin}€ | Devis 5-7j | Contrôlés"
- * Format desc: "Déménager à {Ville} : devis comparables sous 5-7j. T1 dès X€, T2 dès Y€, Maison dès Z€. Dossier anonyme, 0 harcèlement. Pros contrôlés. Gratuit. ({Année})"
+ * Format title: "Déménagement {Ville} dès {PrixMin}€ · Devis 5-7j | Moverz"
+ * Format desc: "✓ 1 contact ✓ 0 harcèlement · {Ville} : T1 dès X€, T2 Y€, Maison Z€ · Pros certifiés · Note 4.9/5 · Gratuit ({Année})"
  */
 export function getCityPageMetadata(city: CityInfo): Metadata {
   const path = `demenagement/${city.slug}`;
@@ -39,9 +39,9 @@ export function getCityPageMetadata(city: CityInfo): Metadata {
   // Title optimisé: ≤ 51 chars avant "| Moverz" (ajouté par layout.tsx template)
   const title = `Déménagement ${city.nameCapitalized} dès ${prices.t1} · Devis 5–7j`;
   
-  // Description optimisée (USP "comparés par IA" + prix détaillés + année en fin)
-  // Format compact pour tenir en 160 car max
-  const description = `Déménager à ${city.nameCapitalized} : devis comparables (5–7j). T1 dès ${prices.t1}, T2 dès ${prices.t2}, Maison dès ${prices.house}. 0 harcèlement. Pros contrôlés. Gratuit (${year}).`;
+  // Description optimisée : USP homepage (1 contact, 0 harcèlement, Note 4.9/5) + prix détaillés
+  // Format compact avec checkmarks ✓ pour impact visuel maximal en SERP
+  const description = `✓ 1 contact ✓ 0 harcèlement · ${city.nameCapitalized} : T1 dès ${prices.t1}, T2 ${prices.t2}, Maison ${prices.house} · Pros certifiés · Note 4.9/5 · Gratuit (${year})`;
   
   return getFullMetadata(path, title, description);
 }
