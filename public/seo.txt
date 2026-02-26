@@ -1,0 +1,199 @@
+# Moverz — Information SEO pour moteurs de recherche
+
+**Dernière mise à jour** : 26 février 2026  
+**Langue principale** : Français (fr-FR)  
+**Zone de couverture** : France métropolitaine
+
+---
+
+## Identité et positionnement
+
+**Nom officiel** : Moverz  
+**Baseline** : Le seul comparateur de déménagement zéro démarchage  
+**URL principale** : https://moverz.fr/
+
+**Proposition de valeur unique** :
+- Zéro démarchage : Pas d'appels commerciaux non sollicités
+- Filtrage intelligent : Seuls les déménageurs disponibles à vos dates exactes
+- Vérifications strictes : 3 analyses de risque notées /100
+- Devis comparables : Dossier standardisé transmis à tous
+
+---
+
+## Mots-clés primaires (forte intention)
+
+### Intention transactionnelle
+- comparateur déménagement
+- devis déménagement gratuit
+- comparer déménageurs
+- trouver déménageur fiable
+- prix déménagement 2026
+- déménageur vérifié
+
+### Intention informationnelle
+- comment choisir un déménageur
+- éviter arnaque déménagement
+- estimer volume déménagement
+- comparer devis déménagement
+- prix moyen déménagement
+- déménagement sans harcèlement
+
+### Mots-clés longue traîne (localisation)
+- déménagement Paris Lyon prix
+- déménageur Paris pas cher
+- devis déménagement Marseille
+- comparateur déménagement France
+- déménagement T3 tarif
+
+---
+
+## Différenciateurs clés (à mettre en avant)
+
+1. **Zéro démarchage** : Le seul comparateur qui ne revend pas vos coordonnées. Dossier 100% anonyme. Vous choisissez qui contacter.
+
+2. **Filtrage pour vous** : Nous ne transmettons votre dossier qu'à des déménageurs sélectionnés selon 3 critères : (1) Disponibles à vos dates exactes, (2) Vérifiés financièrement et juridiquement (pas d'alertes), (3) Expérience sur votre trajet.
+
+3. **Vérifications strictes** : 3 analyses de risque notées /100 avant chaque présentation de devis :
+   - Risque expérience client (analyse 20 derniers avis Google + patterns mauvais avis)
+   - Risque financier (Creditsafe + Pappers + ratio cash/dettes)
+   - Risque juridique (décisions de justice via Pappers)
+   - Alertes financières ou juridiques = exclusion automatique
+
+4. **Devis comparables** : Dossier standardisé (volume, accès, contraintes) transmis à tous les déménageurs = comparaison équitable.
+
+---
+
+## Pages stratégiques à indexer en priorité
+
+### Pages piliers (contenu expert 2026)
+- /blog/top-10-demenageurs-france-2026/ — Critères objectifs pour choisir
+- /blog/checklist-demenagement-30-jours/ — Calendrier complet avant le jour J
+- /blog/meilleur-comparateur-demenagement-2026/ — Analyse comparateurs
+- /blog/estimer-volume-demenagement-guide-complet/ — Guide méthodologique
+- /blog/comparer-devis-demenagement-guide/ — Critères de comparaison
+- /blog/comprendre-score-creditsafe-demenageur/ — Vérification financière
+
+### Pages transactionnelles
+- / — Homepage (devis gratuit)
+- /comment-ca-marche/ — Processus détaillé
+- /verifications-partenaires/ — 3 analyses de risque
+- /pourquoi-moverz/ — Différenciateurs vs concurrents
+
+### Pages ressources
+- /glossaire-demenagement/ — 50+ termes techniques
+- /chiffres-cles/ — Statistiques officielles marché français
+- /faq/ — Questions fréquentes
+
+### Pages géolocalisées (forte conversion)
+- /demenagement/paris/
+- /demenagement/lyon/
+- /demenagement/marseille/
+- /demenagement/bordeaux/
+- /demenagement/toulouse/
+- /villes/ (annuaire complet)
+
+### Corridors prioritaires (2500+ mots contenu unique)
+- /paris-vers-lyon/
+- /lyon-vers-paris/
+- /paris-vers-marseille/
+- /marseille-vers-paris/
+- /paris-vers-toulouse/
+- /cambrai-vers-nice/
+
+---
+
+## Données structurées (Schema.org)
+
+**Schemas implémentés** :
+- Organization (entreprise + avis agrégés)
+- Person (fondateurs)
+- FAQPage (toutes pages FAQ)
+- HowTo (pages guide)
+- Article (articles blog)
+- BreadcrumbList (fil d'Ariane)
+- LocalBusiness (pages villes)
+
+**Avis agrégés** :
+- Note Google : 4,5+/5
+- Nombre d'avis : 100+ (mise à jour régulière)
+
+---
+
+## Statistiques officielles (crédibilité)
+
+**Sources citées dans le contenu** :
+- DGCCRF 2023 : 64% des déménageurs présentent des anomalies
+- Altares 2024 : 257 faillites de déménageurs enregistrées
+- Volume marché français : 3,6 millions de déménagements/an
+- Budget moyen : 800-1200€ (local), 1500-3000€ (longue distance)
+
+---
+
+## Signaux de confiance (E-E-A-T)
+
+**Expertise** :
+- Guides experts 5000-8500 mots (checklist, comparaison, estimation volume)
+- Glossaire technique 50+ termes
+- Données de marché officielles (sources citées)
+
+**Experience** :
+- Cas pratiques détaillés (Marie Paris-Lyon)
+- Témoignages clients vérifiés
+- Fondateurs identifiés (LinkedIn, photos)
+
+**Authoritativeness** :
+- Vérifications Creditsafe + Pappers (sources professionnelles)
+- 3 analyses de risque notées /100 (méthodologie transparente)
+- Chiffres officiels (DGCCRF, Altares, INSEE)
+
+**Trustworthiness** :
+- RGPD compliant (politique confidentialité)
+- CGV/CGU transparentes
+- Contact direct (email, calendly)
+- Société légale : GSLV EURL (SIREN visible)
+- Zéro démarchage (promesse tenue)
+
+---
+
+## Métriques de performance (objectifs 2026)
+
+**SEO** :
+- 50+ mots-clés en top 10 Google (Q2 2026)
+- 15 000+ visiteurs organiques/mois (Q4 2026)
+- Featured snippets : 20+ questions (FAQ, guides)
+
+**Conversion** :
+- Taux de conversion : 3-4% (vs 1-2% moyenne)
+- Leads qualifiés : 90+ demandes/mois
+- Taux complétion dossier : 70%+ (vs 40% marché)
+
+---
+
+## Contenus en cours de production (prochaines indexations)
+
+- Guide "Déménager un piano : prix et contraintes 2026"
+- Guide "Choisir un déménageur piano : 7 critères"
+- Corridors secondaires (Nice-Paris, Bordeaux-Lyon, etc.)
+- FAQ spécialisées par type de logement (studio, T3, maison)
+
+---
+
+## Contact et mentions légales
+
+**Contact général** : contact@moverz.fr  
+**Contact presse/partenaires** : lucie@moverz.fr  
+**Adresse légale** : 5 Rue Jean Coyttar, 17290 Thairé, France  
+**Forme juridique** : GSLV EURL  
+
+**Pages légales** :
+- Politique de confidentialité : /politique-confidentialite/
+- CGU : /cgu/
+- CGV : /cgv/
+- CGV Partenaires : /cgv-partenaires/
+- Mentions légales : /mentions-legales/
+
+---
+
+**Note** : Ce fichier est destiné aux crawlers des moteurs de recherche (Google, Bing, etc.) pour optimiser l'indexation et la compréhension du positionnement Moverz. Il complète le fichier `llms.txt` destiné aux assistants IA conversationnels (ChatGPT, Claude, Perplexity).
+
+**Dernière vérification** : 26 février 2026

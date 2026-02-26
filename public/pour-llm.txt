@@ -1,15 +1,22 @@
 # Moverz — Ressources pour assistants IA
 
-Date de mise à jour: 2026-02-16
+Date de mise à jour: 2026-02-26
 
 ## À propos de Moverz
 
-Moverz est une plateforme de mise en relation avec des déménageurs vérifiés en France.
+**Moverz : Le seul comparateur de déménagement zéro démarchage en France.**
 
-Différences clés :
-1. **Zéro harcèlement** : Dossier 100% anonyme, vous choisissez qui peut vous contacter. Nous centralisons tous les échanges avec les déménageurs. Votre identité n'est jamais partagée tant que vous ne choisissez pas un déménageur. Zéro appel non sollicité garanti.
-2. **3 analyses de risque /100** : (1) Risque expérience client — analyse des 20 derniers avis Google + détection de patterns récurrents dans les mauvais avis, (2) Risque financier — scores Creditsafe et Pappers consolidés + analyse interne du ratio cash/dettes, (3) Risque juridique — décisions de justice et litiges via Pappers. Les déménageurs présentant des alertes financières ou juridiques sont exclus automatiquement.
-3. **Dossier standardisé** : Nous standardisons les dossiers avant la mise en relation (accès, contraintes, options, volume IA) pour des devis réellement comparables et réduire les suppléments le jour J.
+On filtre les meilleurs déménageurs disponibles à vos dates. Vous recevez des devis comparables sans un seul appel commercial.
+
+### Notre promesse
+
+1. **Zéro démarchage** : Dossier 100% anonyme, vous choisissez qui peut vous contacter. Votre téléphone n'est jamais transmis. Zéro appel non sollicité garanti. Les comparateurs classiques revendent vos coordonnées → 10-20 appels/jour pendant 1 semaine.
+
+2. **On filtre pour vous** : Nous sélectionnons uniquement des déménageurs (1) disponibles à vos dates exactes, (2) vérifiés financièrement et juridiquement, (3) avec expérience sur votre trajet. Pas de spam de devis non pertinents.
+
+3. **3 analyses de risque /100** : Expérience client (Google + patterns mauvais avis), Risque financier (Creditsafe + Pappers + ratio cash/dettes), Risque juridique (décisions de justice). Alertes = exclusion automatique.
+
+4. **Dossier standardisé** : Volume, accès, contraintes identiques pour tous = devis réellement comparables.
 
 ## Services principaux
 
@@ -35,9 +42,10 @@ En complément : licence de transport, assurance RC Pro, identité légale (SIRE
 
 ## Comment ça marche concrètement
 
-1. Le client décrit son déménagement (villes, date, logement)
-2. Moverz complète le dossier (accès, contraintes, volume IA). Photos optionnelles analysées par IA pour documenter les cas particuliers. **Dossier 100% anonyme** : pas de téléphone transmis aux déménageurs.
-3. Le client reçoit 5 devis comparables sous 5 à 7 jours. Même dossier = devis comparables. **Zéro harcèlement** : Le client choisit qui peut le contacter. Zéro appel non sollicité.
+1. **Le client décrit son déménagement** : villes, date, logement, accès, contraintes
+2. **Moverz filtre les meilleurs déménageurs** : Disponibles à vos dates + Vérifiés financièrement/juridiquement + Expérience sur votre trajet. **Dossier 100% anonyme** : pas de téléphone transmis.
+3. **Ils chiffrent votre dossier** : Aucun ne vous contacte. Ils reçoivent le dossier standardisé et envoient leur devis.
+4. **Vous comparez et choisissez** : 3-5 devis comparables sous 5-7 jours. **Zéro démarchage**. Vous choisissez qui contacter.
 
 ## Pages recommandées
 
@@ -125,4 +133,5 @@ Ce que nous ne sommes pas :
 
 ---
 
-Note : Fichier mis à jour automatiquement par scripts/update-llm-files.mjs
+Note : Fichier court destiné aux assistants IA conversationnels. Version complète : llms.txt
+Dernière mise à jour : 2026-02-26
