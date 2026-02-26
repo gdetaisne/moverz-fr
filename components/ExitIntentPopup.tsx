@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, Clock, Shield, X } from "lucide-react";
+import { ArrowRight, Clock, Shield, X, Check } from "lucide-react";
 import { trackEvent, TRACKING_EVENTS } from "@/lib/tracking";
 import { buildTunnelUrl } from "@/lib/tunnel-url";
 
@@ -159,62 +159,125 @@ export default function ExitIntentPopup() {
   return (
     <AnimatePresence>
       {show && (
-        <motion.div
-          initial={{ opacity: 0, y: 18, scale: 0.98 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 18, scale: 0.98 }}
-          transition={{ type: "spring", damping: 28, stiffness: 320 }}
-          className="fixed z-[9999] bottom-4 right-4 left-4 md:left-auto md:w-[420px]"
-          onClick={(e) => e.stopPropagation()}
-        >
-          <div className="relative overflow-hidden rounded-2xl border border-v4-border bg-white shadow-2xl">
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-turquoise/10 via-transparent to-transparent pointer-events-none" />
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-turquoise via-[#2B7A78] to-brand-turquoise" />
+        <>
+          {/* Overlay doux derrière */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 bg-black/30 backdrop-blur-[2px] z-[9998]"
+            onClick={handleClose}
+          />
 
-            <button
-              onClick={handleClose}
-              className="absolute top-3 right-3 text-[#64748B] hover:text-v4-text transition-colors bg-white/80 hover:bg-white rounded-full p-2"
-              aria-label="Fermer"
-            >
-              <X className="w-4 h-4" />
-            </button>
+          {/* Popup au centre */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+            transition={{ type: "spring", damping: 25, stiffness: 300 }}
+            className="fixed z-[9999] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[440px]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="relative overflow-hidden rounded-2xl border border-v4-border bg-white shadow-2xl">
+              {/* Gradient de fond subtil */}
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-turquoise/5 via-transparent to-brand-turquoise/5 pointer-events-none" />
+              
+              {/* Barre supérieure colorée */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-turquoise via-[#2B7A78] to-brand-turquoise" />
 
-            <div className="relative p-5 md:p-6 space-y-4">
-              <div className="flex items-center justify-between gap-3">
-                <div className="inline-flex items-center gap-2 rounded-full bg-v4-accent/10 border border-brand-turquoise-200 px-3 py-1.5">
-                  <Clock className="w-3.5 h-3.5 text-v4-accent" />
-                  <span className="text-xs font-semibold text-v4-accent">3 minutes</span>
+              {/* Bouton fermer */}
+              <button
+                onClick={handleClose}
+                className="absolute top-3 right-3 text-[#64748B] hover:text-v4-text transition-colors bg-white/80 hover:bg-white rounded-full p-2 z-10"
+                aria-label="Fermer"
+              >
+                <X className="w-4 h-4" />
+              </button>
+
+              <div className="relative p-5 md:p-6 space-y-4">
+                {/* Badge + Titre */}
+                <div className="space-y-3">
+                  {/* Badge certifié */}
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-v4-accent/10 border border-v4-accent/30">
+                    <Shield className="w-4 h-4 text-v4-accent" />
+                    <span className="text-xs font-bold text-v4-accent">1000+ déménageurs certifiés</span>
+                  </div>
+                  
+                  {/* Titre principal */}
+                  <h3 className="text-xl md:text-2xl font-bold text-v4-text leading-tight">
+                    Comparez et économisez jusqu'à 40%
+                  </h3>
+                  <p className="text-sm text-[#64748B]">
+                    Le plus grand réseau de déménageurs vérifiés en France
+                  </p>
                 </div>
-                <div className="inline-flex items-center gap-1.5 text-xs text-[#64748B]">
-                  <Shield className="w-3.5 h-3.5 text-v4-accent" />
-                  <span>Sans démarchage • sécurisé</span>
+
+                {/* Stats rapides */}
+                <div className="flex items-center gap-3 p-3 rounded-xl bg-gradient-to-r from-v4-accent/5 to-transparent border border-v4-accent/10">
+                  <div className="flex items-center gap-2">
+                    <Clock className="w-4 h-4 text-v4-accent" />
+                    <span className="text-xs font-semibold text-v4-text">3 minutes</span>
+                  </div>
+                  <div className="w-px h-4 bg-v4-border" />
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs text-[#64748B]">Économie moyenne :</span>
+                    <span className="text-sm font-bold text-v4-accent">430€</span>
+                  </div>
+                </div>
+
+                {/* Bénéfices avec checkmarks */}
+                <div className="space-y-2.5">
+                  <div className="flex items-start gap-2.5">
+                    <div className="mt-0.5 w-5 h-5 rounded-full bg-v4-accent/15 flex items-center justify-center flex-shrink-0">
+                      <Check className="w-3 h-3 text-v4-accent stroke-[3]" />
+                    </div>
+                    <p className="text-sm text-v4-text font-medium">3 à 5 devis comparables en 3 minutes</p>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <div className="mt-0.5 w-5 h-5 rounded-full bg-v4-accent/15 flex items-center justify-center flex-shrink-0">
+                      <Check className="w-3 h-3 text-v4-accent stroke-[3]" />
+                    </div>
+                    <p className="text-sm text-v4-text font-medium">Déménageurs vérifiés et notés par nos soins</p>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <div className="mt-0.5 w-5 h-5 rounded-full bg-v4-accent/15 flex items-center justify-center flex-shrink-0">
+                      <Check className="w-3 h-3 text-v4-accent stroke-[3]" />
+                    </div>
+                    <p className="text-sm text-v4-text font-medium">Comparaison standardisée sans surprises</p>
+                  </div>
+                </div>
+
+                {/* CTA principal */}
+                <div className="pt-1">
+                  <button
+                    onClick={handleCTA}
+                    className="group w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-v4-accent to-[#2B7A78] px-5 py-3.5 text-base font-bold text-white shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-200"
+                  >
+                    <span>Comparer gratuitement</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </div>
+
+                {/* Réassurance finale */}
+                <div className="flex items-center justify-center gap-2 text-xs text-[#94A3B8]">
+                  <div className="flex items-center gap-1">
+                    <div className="w-1 h-1 rounded-full bg-v4-accent" />
+                    <span>Sans engagement</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <div className="w-1 h-1 rounded-full bg-v4-accent" />
+                    <span>Réponse en 24h</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <div className="w-1 h-1 rounded-full bg-v4-accent" />
+                    <span>100% gratuit</span>
+                  </div>
                 </div>
               </div>
-
-              <div className="space-y-1.5">
-                <p className="text-lg md:text-xl font-bold text-v4-text leading-tight">
-                  Avant de partir, on vous sort des devis comparables.
-                </p>
-                <p className="text-sm text-[#64748B]">
-                  Vous complétez un dossier guidé, on le standardise, et vous comparez sans surprises.
-                </p>
-              </div>
-
-              <div>
-                <button
-                  onClick={handleCTA}
-                  className="group w-full inline-flex items-center justify-center gap-2 rounded-xl bg-v4-text px-5 py-3 text-sm font-semibold text-white shadow-sm hover:opacity-90 transition-colors"
-                >
-                  <span>Obtenir mes devis</span>
-                </button>
-              </div>
-
-              <p className="text-xs text-[#94A3B8] text-center">
-                Astuce : plus le dossier est précis (accès, étages, options), plus les devis sont fiables.
-              </p>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </>
       )}
     </AnimatePresence>
   );
