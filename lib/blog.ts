@@ -14,6 +14,7 @@ import { BLOG_DATA } from "./blog-data";
 import { BLOG_EXTRA } from "./blog-extra";
 import { CANONICAL_BLOG_POSTS, type CanonicalBlogPost } from "./blog-canonique";
 import { BLOG_NOUVEAUX_2026 } from "./blog-nouveaux-2026";
+import { BLOG_MARKDOWN_POSTS } from "./blog-markdown-posts";
 import { ARNAQUES_ARTICLE } from "./blog-arnaques";
 import { LONGTAIL_BLOG_POSTS } from "./blog-longtail";
 import { LONGTAIL_PACK2_POSTS } from "./blog-longtail-pack2";
@@ -169,6 +170,7 @@ const RAW_BLOG_POSTS: BlogPostMeta[] = mergeBlogData(
   [
     ARNAQUES_ARTICLE,
     ...BLOG_NOUVEAUX_2026,
+    ...BLOG_MARKDOWN_POSTS,
     ...CANONICAL_BLOG_POSTS,
     ...LONGTAIL_BLOG_POSTS,
     ...LONGTAIL_PACK2_POSTS,
@@ -195,6 +197,7 @@ export const BLOG_POSTS: BlogPostMeta[] = sortByPriority(RAW_BLOG_POSTS);
 const ALL_CANONICAL_POSTS = [
   ARNAQUES_ARTICLE,
   ...BLOG_NOUVEAUX_2026,
+  ...BLOG_MARKDOWN_POSTS,
   ...CANONICAL_BLOG_POSTS,
   ...LONGTAIL_BLOG_POSTS,
   ...LONGTAIL_PACK2_POSTS,

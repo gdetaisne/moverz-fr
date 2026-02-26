@@ -1,7 +1,9 @@
 ---
+slug: case-study-marie-paris-lyon
 title: "Marie a économisé 850€ sur son déménagement Paris-Lyon"
 description: "Marie économise 850€ sur son déménagement Paris-Lyon : devis comparables, 3 analyses de risque /100, dossier standardisé Moverz."
 date: "2025-01-08"
+publishedAt: "2025-01-08"
 author: "Équipe Moverz"
 category: "Cas clients"
 tags: ["cas client", "paris", "lyon", "économies", "t3"]
