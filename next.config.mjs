@@ -16,14 +16,15 @@ const nextConfig = {
   compress: true,
   
   // Optimisations bundle
-  modularizeImports: {
-    'framer-motion': {
-      transform: 'framer-motion/dist/es/{{member}}',
-    },
-    'lucide-react': {
-      transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
-    },
-  },
+  // TEMPORAIREMENT DÉSACTIVÉ pour debug webpack
+  // modularizeImports: {
+  //   'framer-motion': {
+  //     transform: 'framer-motion/dist/es/{{member}}',
+  //   },
+  //   'lucide-react': {
+  //     transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
+  //   },
+  // },
   
   // Optimisation images pour Core Web Vitals
   images: {
@@ -49,8 +50,9 @@ const nextConfig = {
   swcMinify: true,
   
   // Experimental features pour performance
+  // TEMPORAIREMENT DÉSACTIVÉ pour debug webpack
   experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
+    // optimizePackageImports: ['lucide-react', 'framer-motion'],
     // Optimisation server-side plus agressive
     serverComponentsExternalPackages: [],
   },
