@@ -13,7 +13,7 @@
 import { buildTunnelUrl } from "@/lib/tunnel-url";
 import { motion, AnimatePresence } from "framer-motion";
 import { staggerContainer, staggerItem } from "@/components/motion";
-import { ArrowRight, CheckCircle2, MessageSquare, Users, Mail, ShieldCheck } from "lucide-react";
+import { ArrowRight, CheckCircle2, MessageSquare, Users, Mail, ShieldCheck, Star } from "lucide-react";
 import { trackEvent } from "@/lib/tracking";
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -24,257 +24,131 @@ const STEPS = [
   { num: "3", text: "Vous choisissez sereinement", bold: true },
 ] as const;
 
-// MORPHING UI ULTRA 2026 - Pure Premium, No Cheap Stuff
-function MorphingUIAnimation() {
-  const [stage, setStage] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setStage((prev) => (prev + 1) % 4);
-    }, 3500);
-    return () => clearInterval(interval);
-  }, []);
-
-  const stages = [
+// MOCKUP LISTE DEVIS - Version qui cartonnait (20 janvier)
+function QuoteListMockup() {
+  const quotes = [
     {
-      id: 0,
-      metric: "1",
-      label: "dossier créé",
-      detail: "Paris → Lyon • 60m²",
-      progress: 25,
+      name: "Déménagements Martin",
+      stars: 5,
+      reviews: 487,
+      price: 1850,
+      details: ["Assurance tous risques incluse", "Disponible le 15 mars"],
     },
     {
-      id: 1,
-      metric: "12",
-      label: "déménageurs contactés",
-      detail: "Mise en concurrence",
-      progress: 50,
+      name: "Express Déménagement",
+      stars: 4,
+      reviews: 312,
+      price: 1950,
+      details: ["Protection standard", "Disponible le 12 mars"],
     },
     {
-      id: 2,
-      metric: "7",
-      label: "offres reçues",
-      detail: "Analyse en cours",
-      progress: 75,
-    },
-    {
-      id: 3,
-      metric: "3",
-      label: "offres sélectionnées",
-      detail: "Vérifiées par Moverz",
-      progress: 100,
+      name: "Lyon Trans Services",
+      stars: 5,
+      reviews: 653,
+      price: 2100,
+      details: ["Assurance premium incluse", "Disponible le 10 mars"],
     },
   ];
 
-  const current = stages[stage];
-
   return (
     <div 
-      className="relative h-full w-full overflow-hidden flex items-center justify-center p-6"
+      className="relative h-full w-full overflow-hidden flex flex-col p-4"
       style={{ 
-        background: "#FFFFFF"
+        background: "linear-gradient(180deg, #1e293b 0%, #0f172a 100%)"
       }}
     >
-      {/* Subtle Ambient Glow - Apple Style */}
-      <motion.div
-        className="absolute inset-0 pointer-events-none opacity-40"
-        animate={{
-          background: [
-            "radial-gradient(circle at 50% 40%, rgba(14,165,166,0.06) 0%, transparent 70%)",
-            "radial-gradient(circle at 50% 40%, rgba(14,165,166,0.10) 0%, transparent 70%)",
-            "radial-gradient(circle at 50% 40%, rgba(14,165,166,0.06) 0%, transparent 70%)",
-          ]
-        }}
-        transition={{ duration: 4, repeat: Infinity }}
-      />
-
-      {/* Main Morphing Container */}
-      <div className="relative w-full max-w-sm">
-        {/* Logo Header - Bigger */}
-        <motion.div 
-          className="absolute -top-10 left-0 right-0 flex justify-center"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
+      {/* Header */}
+      <div className="mb-4">
+        <div className="flex items-center justify-between mb-2">
           <Image 
             src="/logo-ui.png" 
             alt="Moverz" 
-            width={100} 
-            height={34}
-            className="h-7 w-auto"
+            width={80} 
+            height={27}
+            className="h-6 w-auto brightness-0 invert"
           />
-        </motion.div>
-
-        {/* Morphing Card - Apple minimal */}
-        <motion.div
-          className="relative rounded-[32px] p-10 overflow-hidden"
-          style={{
-            background: "#FFFFFF",
-            border: "1px solid rgba(14,165,166,0.08)",
-            boxShadow: "0 24px 48px rgba(14,165,166,0.06)",
-          }}
-        >
-          {/* Metric - Giant Number that morphs */}
-          <div className="text-center mb-8">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={stage}
-                initial={{ opacity: 0, scale: 0.5, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 1.2, y: -20 }}
-                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                className="text-8xl font-black mb-3"
-                style={{
-                  background: "linear-gradient(135deg, #0EA5A6 0%, #14B8A6 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
-              >
-                {current.metric}
-              </motion.div>
-            </AnimatePresence>
-
-            {/* Label that morphs */}
-            <AnimatePresence mode="wait">
-              <motion.p
-                key={`label-${stage}`}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.3, delay: 0.1 }}
-                className="text-xl font-semibold text-slate-900"
-              >
-                {current.label}
-              </motion.p>
-            </AnimatePresence>
-
-            {/* Detail subtitle */}
-            <AnimatePresence mode="wait">
-              <motion.p
-                key={`detail-${stage}`}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3, delay: 0.2 }}
-                className="text-sm text-slate-500 mt-2"
-              >
-                {current.detail}
-              </motion.p>
-            </AnimatePresence>
-
-            {/* Badge "Vérifié par Moverz" sur étape 4 */}
-            <AnimatePresence>
-              {stage === 3 && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8, y: 10 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  exit={{ opacity: 0, scale: 0.8, y: -10 }}
-                  transition={{ delay: 0.4, type: "spring", stiffness: 200, damping: 20 }}
-                  className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-full"
-                  style={{
-                    background: "linear-gradient(135deg, #0EA5A610 0%, #0EA5A605 100%)",
-                    border: "1px solid rgba(14,165,166,0.2)",
-                  }}
-                >
-                  <ShieldCheck className="w-4 h-4" style={{ color: "#0EA5A6" }} strokeWidth={2.5} />
-                  <span className="text-xs font-semibold" style={{ color: "#0EA5A6" }}>
-                    Vérifié par Moverz
-                  </span>
-                </motion.div>
-              )}
-            </AnimatePresence>
+          <div 
+            className="px-3 py-1 rounded-full text-[10px] font-bold"
+            style={{ background: "rgba(14,165,166,0.2)", color: "#2EE9C6" }}
+          >
+            5 devis
           </div>
-
-          {/* Visual Progress Ring - Apple minimal */}
-          <div className="flex justify-center mb-10">
-            <svg width="160" height="160" className="rotate-[-90deg]">
-              {/* Background circle */}
-              <circle
-                cx="80"
-                cy="80"
-                r="70"
-                fill="none"
-                stroke="#F1F5F9"
-                strokeWidth="6"
-              />
-              {/* Animated progress circle */}
-              <motion.circle
-                cx="80"
-                cy="80"
-                r="70"
-                fill="none"
-                stroke="url(#gradient)"
-                strokeWidth="6"
-                strokeLinecap="round"
-                initial={{ strokeDashoffset: 440 }}
-                animate={{ 
-                  strokeDashoffset: 440 - (440 * current.progress) / 100 
-                }}
-                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-                style={{
-                  strokeDasharray: 440,
-                }}
-              />
-              <defs>
-                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#0EA5A6" />
-                  <stop offset="100%" stopColor="#14B8A6" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-
-          {/* Progress Bar - Apple minimal, NO "Progression" text */}
-          <div className="space-y-3">
-            <div className="flex justify-end">
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={stage}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 1.2 }}
-                  style={{ color: "#0EA5A6" }}
-                  className="text-sm font-bold"
-                >
-                  {current.progress}%
-                </motion.span>
-              </AnimatePresence>
-            </div>
-            
-            <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden">
-              <motion.div
-                className="h-full rounded-full"
-                style={{
-                  background: "linear-gradient(90deg, #0EA5A6 0%, #14B8A6 100%)",
-                }}
-                initial={{ width: "0%" }}
-                animate={{ width: `${current.progress}%` }}
-                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              />
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Stage Indicators - Apple minimal */}
-        <div className="flex justify-center gap-2 mt-8">
-          {stages.map((s, i) => (
-            <motion.div
-              key={s.id}
-              className="h-1 rounded-full"
-              style={{
-                width: i === stage ? "28px" : "6px",
-                background: i === stage 
-                  ? "#0EA5A6"
-                  : "#E2E8F0",
-              }}
-              animate={{
-                opacity: i <= stage ? 1 : 0.4,
-              }}
-              transition={{ duration: 0.4 }}
-            />
-          ))}
         </div>
+        <p className="text-white text-xs font-medium mb-0.5">Vos devis</p>
+        <p className="text-slate-400 text-[10px]">
+          Paris → Lyon • T3 • 60m² • 3e étage avec ascenseur
+        </p>
+      </div>
+
+      {/* Liste des 3 devis */}
+      <div className="space-y-2.5 overflow-y-auto flex-1 pb-2">
+        {quotes.map((quote, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: i * 0.15, duration: 0.4 }}
+            className="rounded-xl p-3 relative"
+            style={{
+              background: "rgba(255,255,255,0.95)",
+              border: i === 0 ? "2px solid #0EA5A6" : "1px solid rgba(255,255,255,0.2)",
+              boxShadow: i === 0 
+                ? "0 4px 12px rgba(14,165,166,0.3)" 
+                : "0 2px 8px rgba(0,0,0,0.08)"
+            }}
+          >
+            {/* Badge "Recommandé" sur le premier */}
+            {i === 0 && (
+              <div
+                className="absolute -top-2 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full text-[9px] font-bold text-white"
+                style={{ background: "#0EA5A6", boxShadow: "0 2px 8px rgba(14,165,166,0.4)" }}
+              >
+                Recommandé
+              </div>
+            )}
+
+            {/* Nom déménageur */}
+            <h3 className="text-sm font-bold text-slate-900 mb-1">{quote.name}</h3>
+            
+            {/* Étoiles */}
+            <div className="flex items-center gap-1 mb-2">
+              <div className="flex gap-0.5">
+                {Array.from({ length: 5 }).map((_, idx) => (
+                  <Star
+                    key={idx}
+                    className={`h-2.5 w-2.5 ${
+                      idx < quote.stars ? "fill-amber-400 text-amber-400" : "fill-slate-300 text-slate-300"
+                    }`}
+                  />
+                ))}
+              </div>
+              <span className="text-[10px] text-slate-500">({quote.reviews} avis)</span>
+            </div>
+
+            {/* Prix */}
+            <div className="mb-2">
+              <p className="text-2xl font-bold text-slate-900">{quote.price}€</p>
+              <p className="text-[9px] text-slate-500">TTC</p>
+            </div>
+
+            {/* Détails avec icônes */}
+            <div className="space-y-1">
+              {quote.details.map((detail, idx) => (
+                <div key={idx} className="flex items-start gap-1.5">
+                  <svg className="h-3 w-3 text-emerald-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-[10px] text-slate-700 leading-tight">{detail}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        ))}
+
+        {/* Note "+ 2 autres devis disponibles" */}
+        <p className="text-center text-[10px] text-slate-400 pt-2">
+          + 2 autres devis disponibles
+        </p>
       </div>
     </div>
   );
@@ -287,7 +161,7 @@ export function HeroV4TwoColumn() {
     <section
       className="relative pt-12 pb-16 md:pt-20 md:pb-28 overflow-hidden"
       style={{ 
-        background: "#FAFBFC"
+        background: "linear-gradient(135deg, #E0F7F7 0%, #F0FDFD 50%, #FFFFFF 100%)"
       }}
     >
       {/* Grain texture - Premium feel */}
@@ -320,9 +194,9 @@ export function HeroV4TwoColumn() {
             className="font-heading text-[clamp(32px,7vw,56px)] leading-[1.1] font-bold tracking-[-0.02em]"
             style={{ color: "var(--color-text)" }}
           >
-            Vous déménagez&nbsp;?
+            Vous déménagez.
             <br />
-            On sélectionne <span style={{ color: "var(--color-accent)" }}>le top 3 des déménageurs</span> pour vous.
+            <span style={{ color: "var(--color-accent)" }}>On compare.</span>
           </motion.h1>
 
           {/* CTA mobile - Direct sous le H1 */}
@@ -336,7 +210,7 @@ export function HeroV4TwoColumn() {
                 boxShadow: "0 4px 16px rgba(14,165,166,0.24)"
               }}
             >
-              Voir mes 3 meilleurs devis
+              Obtenir mes devis
               <ArrowRight className="h-5 w-5" />
             </a>
             <p className="mt-2.5 text-xs" style={{ color: "var(--color-text-muted)" }}>
@@ -359,9 +233,9 @@ export function HeroV4TwoColumn() {
               className="font-heading text-[56px] leading-[0.95] font-semibold tracking-[-0.03em] mb-8"
               style={{ color: "#111827" }}
             >
-              Vous déménagez&nbsp;?
+              Vous déménagez.
               <br />
-              On sélectionne <span style={{ color: "#0EA5A6" }}>le top 3 des déménageurs</span> pour vous.
+              <span style={{ color: "#0EA5A6" }}>On compare.</span>
             </h1>
 
             {/* CTA desktop - Direct sous H1 */}
@@ -375,7 +249,7 @@ export function HeroV4TwoColumn() {
                   boxShadow: "0 4px 16px rgba(14,165,166,0.25)"
                 }}
               >
-                Voir mes 3 meilleurs devis
+                Obtenir mes devis
                 <ArrowRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
               </a>
               <p className="text-[13px]" style={{ color: "#9CA3AF" }}>
@@ -415,7 +289,7 @@ export function HeroV4TwoColumn() {
               >
                 {/* Phone container */}
                 <div
-                  className="relative rounded-[40px] border-[2px] overflow-hidden bg-white"
+                  className="relative rounded-[40px] border-[5px] overflow-hidden bg-white"
                   style={{
                     borderColor: "#1F2937",
                     aspectRatio: "9/19",
@@ -428,8 +302,8 @@ export function HeroV4TwoColumn() {
                     style={{ background: "#1F2937" }}
                   />
 
-                  {/* Screen content - MORPHING UI ANIMATION ULTRA 2026 */}
-                  <MorphingUIAnimation />
+                  {/* Screen content - LISTE DEVIS RÉALISTE */}
+                  <QuoteListMockup />
                 </div>
               </motion.div>
 

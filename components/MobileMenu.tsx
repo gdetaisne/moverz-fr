@@ -84,7 +84,7 @@ export default function MobileMenu() {
                   className="block w-full text-center rounded-lg px-4 py-3 text-sm font-semibold text-white transition-all active:scale-[0.98]"
                   style={{ background: "var(--color-accent)" }}
                 >
-                  Voir mes 3 meilleurs devis
+                  Obtenir mes devis
                 </a>
               </div>
             </nav>

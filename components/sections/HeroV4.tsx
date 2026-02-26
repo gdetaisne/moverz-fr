@@ -138,7 +138,7 @@ export function HeroV4() {
               className="group inline-flex items-center justify-center gap-2.5 rounded-[var(--radius-sm)] px-8 py-4 text-[16px] md:text-[17px] font-semibold text-white transition-all duration-200 hover:opacity-90 active:scale-[0.98] shadow-lg hover:shadow-xl"
               style={{ background: "var(--color-accent)" }}
             >
-              Voir mes 3 meilleurs devis
+              Obtenir mes devis
               <ArrowRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-0.5" />
             </a>
             <p

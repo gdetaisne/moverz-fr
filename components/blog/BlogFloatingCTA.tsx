@@ -230,7 +230,7 @@ export default function BlogFloatingCTA() {
               onClick={onCtaClick}
               className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-v4-text px-4 py-3 text-sm font-semibold text-white shadow-sm hover:opacity-90 transition-colors"
             >
-              Obtenir des devis <span aria-hidden="true">→</span>
+              Obtenir mes devis <span aria-hidden="true">→</span>
             </a>
 
             <p className="text-xs text-[#64748B] leading-snug">

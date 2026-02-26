@@ -362,7 +362,7 @@ export default function CriteresChoisirDemenageurPage() {
                   href={buildTunnelUrl({ from: "criteres-checklist" })} 
                   className="mt-3 inline-block text-sm font-semibold text-v4-accent hover:text-v4-accent underline"
                 >
-                  Obtenir des devis de déménageurs vérifiés →
+                  Obtenir mes devis →
                 </a>
               </div>
             </div>
@@ -529,7 +529,7 @@ export default function CriteresChoisirDemenageurPage() {
                 href={buildTunnelUrl({ from: "criteres-choisir-demenageur-cta" })}
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-v4-text px-8 py-4 text-base font-semibold text-white shadow-lg hover:opacity-90 hover:shadow-xl transition-all"
               >
-                <span>Obtenir jusqu'à 5 devis vérifiés</span>
+                <span>Obtenir mes devis</span>
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>

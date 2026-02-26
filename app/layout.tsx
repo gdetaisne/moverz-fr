@@ -283,7 +283,7 @@ export default function RootLayout({
                   boxShadow: "0 2px 8px rgba(14,165,166,0.2)"
                 }}
               >
-                <span>Voir mes 3 meilleurs devis</span>
+                <span>Obtenir mes devis</span>
                 <span className="text-base">→</span>
               </a>
               {/* Mobile menu hamburger */}

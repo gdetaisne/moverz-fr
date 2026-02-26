@@ -74,12 +74,13 @@ function getBarColor(value: number): string {
 function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: number }) {
   return (
     <div
-      className="w-full rounded-xl p-3 bg-white relative"
+      className="w-full rounded-xl p-3 relative"
       style={{
-        border: mover.recommended ? "2px solid #0EA5A6" : "2px solid #E5E7EB",
+        background: "rgba(255,255,255,0.95)",
+        border: mover.recommended ? "2px solid #0EA5A6" : "1px solid rgba(255,255,255,0.3)",
         boxShadow: mover.recommended 
-          ? "0 4px 16px rgba(14,165,166,0.25), 0 0 0 1px rgba(14,165,166,0.1)" 
-          : "0 1px 3px rgba(0,0,0,0.1)"
+          ? "0 4px 16px rgba(14,165,166,0.3)" 
+          : "0 2px 8px rgba(0,0,0,0.1)"
       }}
     >
       {/* Badge Recommandé - PREMIUM */}
@@ -450,7 +451,7 @@ export function ComparableQuotesMockScrolly() {
                   background: "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)",
                   boxShadow: "0 4px 16px rgba(14,165,166,0.25)"
                 }}>
-                Voir mes 3 meilleurs devis
+                Obtenir mes devis
                 <svg 
                   className="h-4 w-4 transition-transform group-hover:translate-x-1" 
                   fill="none" 
@@ -493,7 +494,7 @@ export function ComparableQuotesMockScrolly() {
               >
                 {/* Phone frame - Compact & realistic proportions */}
                 <div
-                  className="relative rounded-[38px] border-[2px] overflow-hidden bg-white"
+                  className="relative rounded-[38px] border-[5px] overflow-hidden bg-white"
                   style={{
                     borderColor: "#1F2937",
                     width: "280px",
@@ -513,10 +514,33 @@ export function ComparableQuotesMockScrolly() {
                     />
                   </div>
 
-                  {/* Screen content with carousel */}
-                  <div className="relative h-full w-full overflow-hidden" style={{ background: "#F9FAFB" }}>
+                  {/* Screen content with carousel - Fond marine comme l'ancienne version */}
+                  <div className="relative h-full w-full overflow-hidden" style={{ background: "linear-gradient(180deg, #1e293b 0%, #0f172a 100%)" }}>
+                    {/* Header du téléphone avec infos dossier */}
+                    <div className="absolute top-10 left-0 right-0 px-4 py-3 z-40" style={{ background: "linear-gradient(180deg, #1e293b 100%, transparent 100%)" }}>
+                      <div className="flex items-center justify-between mb-2">
+                        <Image 
+                          src="/logo-ui.png" 
+                          alt="Moverz" 
+                          width={70} 
+                          height={24}
+                          className="h-5 w-auto brightness-0 invert"
+                        />
+                        <div 
+                          className="px-2.5 py-0.5 rounded-full text-[9px] font-bold"
+                          style={{ background: "rgba(14,165,166,0.2)", color: "#2EE9C6" }}
+                        >
+                          5 devis comparés
+                        </div>
+                      </div>
+                      <p className="text-white text-[11px] font-medium mb-0.5">Votre déménagement</p>
+                      <p className="text-slate-400 text-[9px]">
+                        Paris → Lyon • 60m² • 3e étage
+                      </p>
+                    </div>
+
                     {/* Carousel container (inside phone) with enhanced stack effect */}
-                    <div className="relative h-full pt-16 pb-3 px-2 overflow-hidden">
+                    <div className="relative h-full pt-32 pb-3 px-2 overflow-hidden">
                       {/* Card #3 - Très en arrière (la plus floue) */}
                       {currentIndex < MOVERS.length - 2 && (
                         <div className="absolute inset-0 pt-16 pb-3 px-2 pointer-events-none">

@@ -434,7 +434,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 
 ---
 
-## 📞 Obtenir des devis déménagement piano
+## 📞 Obtenir mes devis déménagement piano
 
 ### Informations à fournir
 
@@ -478,7 +478,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 ✅ **Assurance ad valorem** : Jusqu'à 50 000€ de couverture  
 ✅ **Devis comparables** : Même base de calcul (volume, accès, options)
 
-**Créez votre dossier en 3 minutes** → [Obtenir des devis piano](https://devis.moverz.fr/devis-gratuits?source=blog-piano-bottom)
+**Créez votre dossier en 3 minutes** → [Obtenir mes devis](https://devis.moverz.fr/devis-gratuits?source=blog-piano-bottom)
 
 ---
 

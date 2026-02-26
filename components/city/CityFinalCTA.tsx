@@ -90,7 +90,7 @@ export function CityFinalCTA({ cityName, quoteUrl }: CityFinalCTAProps) {
                 href={quoteUrl}
                 className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-accent)] px-8 py-4 text-base font-semibold text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
               >
-                <span>Voir mes 3 meilleurs devis</span>
+                <span>Obtenir mes devis</span>
                 <span className="text-lg leading-none group-hover:translate-x-1 transition-transform">
                   →
                 </span>

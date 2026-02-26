@@ -433,7 +433,7 @@ export default function ChiffresClesPage() {
                 rel="nofollow"
                 className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-v4-text px-8 py-4 text-sm font-semibold text-white shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.99] transition-all"
               >
-                Comparer mes devis{" "}
+                Obtenir mes devis{" "}
                 <span className="text-xl leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
               </a>
               <a

@@ -42,7 +42,7 @@ export default function StickyCTA() {
             boxShadow: "0 4px 16px rgba(14,165,166,0.24)"
           }}
         >
-          <span>Voir mes 3 meilleurs devis</span>
+          <span>Obtenir mes devis</span>
           <ArrowRight className="h-5 w-5" />
         </a>
         <p className="text-center text-xs mt-2" style={{ color: "var(--color-text-muted)" }}>

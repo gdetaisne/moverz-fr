@@ -26,7 +26,7 @@ export default function VillesPage() {
         title="Déménagement partout en France"
         subtitle="Moverz fonctionne dans toute la France. Trouvez votre ville ci-dessous pour accéder au guide dédié avec des déménageurs vérifiés."
         primaryCta={{
-          label: "Voir mes 3 meilleurs devis",
+          label: "Obtenir mes devis",
           href: "https://devis.moverz.fr/devis-gratuits",
         }}
         secondaryCta={{ label: "Annuaire complet (paginé)", href: "/villes/page/1/" }}

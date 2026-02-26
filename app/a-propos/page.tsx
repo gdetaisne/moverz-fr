@@ -110,7 +110,7 @@ export default function AProposPage() {
                   rel="nofollow"
                   className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-6 py-4 text-sm font-semibold text-v4-text shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.99] transition-all"
                 >
-                  Comparer mes devis{" "}
+                  Obtenir mes devis{" "}
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
                 </a>
                 <a
@@ -388,18 +388,18 @@ export default function AProposPage() {
                 <p className="text-xs font-semibold text-v4-text-secondary uppercase tracking-wider">Constat</p>
                 <p className="mt-2 font-semibold text-v4-text">Devis incomparables</p>
                 <p className="mt-2 text-sm text-[#1E293B]/70">
-                  Trop de “détails” oubliés, et des surprises qui tombent à la fin.
+                  Trop de "détails" oubliés, et des surprises qui tombent à la fin.
                 </p>
               </div>
               <div className="rounded-2xl border border-v4-border bg-[#FAFBFC] p-6">
                 <p className="text-xs font-semibold text-v4-text-secondary uppercase tracking-wider">Solution</p>
                 <p className="mt-2 font-semibold text-v4-text">Dossier standardisé</p>
                 <p className="mt-2 text-sm text-[#1E293B]/70">
-                  Infos + contraintes + règles de comparaison : on compare “à cahier des charges égal”.
+                  Infos + contraintes + règles de comparaison : on compare "à cahier des charges égal".
                 </p>
               </div>
               <div className="rounded-2xl border border-v4-border bg-[#FAFBFC] p-6">
-                <p className="text-xs font-semibold text-v4-text-secondary uppercase tracking-wider">Aujourd’hui</p>
+                <p className="text-xs font-semibold text-v4-text-secondary uppercase tracking-wider">Aujourd'hui</p>
                 <p className="mt-2 font-semibold text-v4-text">Anti-arnaque + Pro</p>
                 <p className="mt-2 text-sm text-[#1E293B]/70">
                   On aide les particuliers à choisir mieux, et les pros à chiffrer plus vite.
@@ -408,6 +408,127 @@ export default function AProposPage() {
             </div>
             <div className="mt-6 text-xs text-v4-text-secondary">
               Société: <span className="text-v4-text font-medium">GSLV EURL</span> · 5 Rue Jean Coyttar · 17290 Thairé (FR)
+            </div>
+          </div>
+
+          {/* Section Ressources & Guides */}
+          <div className="mt-10 rounded-3xl border border-v4-border bg-gradient-to-br from-white via-[#FAFBFC] to-white p-7 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-v4-accent/15 text-v4-accent">
+                <Sparkles className="h-5 w-5" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-v4-text">Nos guides gratuits</h3>
+            </div>
+            <p className="text-[#1E293B]/75 mb-6">
+              Moverz, c'est aussi une base de connaissances pour préparer votre déménagement sereinement. 
+              Voici nos guides les plus consultés en 2026 :
+            </p>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <a 
+                href="/blog/top-10-demenageurs-france-2026/"
+                className="group rounded-2xl border border-v4-border bg-white p-5 hover:shadow-lg hover:border-v4-accent/40 transition-all"
+              >
+                <p className="text-xs font-semibold text-v4-accent uppercase tracking-wider mb-2">Guide Expert</p>
+                <p className="font-semibold text-v4-text group-hover:text-v4-accent transition-colors">
+                  Top 10 déménageurs France 2026
+                </p>
+                <p className="mt-2 text-sm text-[#1E293B]/70">
+                  Critères objectifs pour choisir un professionnel fiable
+                </p>
+                <span className="inline-flex items-center gap-1 mt-3 text-xs font-semibold text-v4-accent">
+                  Lire le guide <ArrowRight className="h-3 w-3" />
+                </span>
+              </a>
+              
+              <a 
+                href="/blog/checklist-demenagement-30-jours/"
+                className="group rounded-2xl border border-v4-border bg-white p-5 hover:shadow-lg hover:border-v4-accent/40 transition-all"
+              >
+                <p className="text-xs font-semibold text-v4-accent uppercase tracking-wider mb-2">Checklist</p>
+                <p className="font-semibold text-v4-text group-hover:text-v4-accent transition-colors">
+                  Checklist 30 jours avant le jour J
+                </p>
+                <p className="mt-2 text-sm text-[#1E293B]/70">
+                  Le calendrier complet pour ne rien oublier
+                </p>
+                <span className="inline-flex items-center gap-1 mt-3 text-xs font-semibold text-v4-accent">
+                  Télécharger <ArrowRight className="h-3 w-3" />
+                </span>
+              </a>
+
+              <a 
+                href="/blog/comparer-devis-demenagement-guide/"
+                className="group rounded-2xl border border-v4-border bg-white p-5 hover:shadow-lg hover:border-v4-accent/40 transition-all"
+              >
+                <p className="text-xs font-semibold text-v4-accent uppercase tracking-wider mb-2">Méthodologie</p>
+                <p className="font-semibold text-v4-text group-hover:text-v4-accent transition-colors">
+                  Comment comparer des devis
+                </p>
+                <p className="mt-2 text-sm text-[#1E293B]/70">
+                  Les critères au-delà du prix
+                </p>
+                <span className="inline-flex items-center gap-1 mt-3 text-xs font-semibold text-v4-accent">
+                  Découvrir <ArrowRight className="h-3 w-3" />
+                </span>
+              </a>
+
+              <a 
+                href="/blog/comprendre-score-creditsafe-demenageur/"
+                className="group rounded-2xl border border-v4-border bg-white p-5 hover:shadow-lg hover:border-v4-accent/40 transition-all"
+              >
+                <p className="text-xs font-semibold text-v4-accent uppercase tracking-wider mb-2">Sécurité</p>
+                <p className="font-semibold text-v4-text group-hover:text-v4-accent transition-colors">
+                  Lire un score Creditsafe
+                </p>
+                <p className="mt-2 text-sm text-[#1E293B]/70">
+                  Vérifier la santé financière d'un déménageur
+                </p>
+                <span className="inline-flex items-center gap-1 mt-3 text-xs font-semibold text-v4-accent">
+                  Comprendre <ArrowRight className="h-3 w-3" />
+                </span>
+              </a>
+
+              <a 
+                href="/glossaire-demenagement/"
+                className="group rounded-2xl border border-v4-border bg-white p-5 hover:shadow-lg hover:border-v4-accent/40 transition-all"
+              >
+                <p className="text-xs font-semibold text-v4-accent uppercase tracking-wider mb-2">Référence</p>
+                <p className="font-semibold text-v4-text group-hover:text-v4-accent transition-colors">
+                  Glossaire déménagement
+                </p>
+                <p className="mt-2 text-sm text-[#1E293B]/70">
+                  50+ termes techniques décryptés
+                </p>
+                <span className="inline-flex items-center gap-1 mt-3 text-xs font-semibold text-v4-accent">
+                  Explorer <ArrowRight className="h-3 w-3" />
+                </span>
+              </a>
+
+              <a 
+                href="/chiffres-cles/"
+                className="group rounded-2xl border border-v4-border bg-white p-5 hover:shadow-lg hover:border-v4-accent/40 transition-all"
+              >
+                <p className="text-xs font-semibold text-v4-accent uppercase tracking-wider mb-2">Données</p>
+                <p className="font-semibold text-v4-text group-hover:text-v4-accent transition-colors">
+                  Chiffres clés du déménagement
+                </p>
+                <p className="mt-2 text-sm text-[#1E293B]/70">
+                  Statistiques officielles du marché français
+                </p>
+                <span className="inline-flex items-center gap-1 mt-3 text-xs font-semibold text-v4-accent">
+                  Consulter <ArrowRight className="h-3 w-3" />
+                </span>
+              </a>
+            </div>
+            
+            <div className="mt-6 p-5 rounded-2xl bg-v4-accent/5 border border-v4-accent/20">
+              <p className="text-sm text-v4-text">
+                <strong>Vous déménagez prochainement ?</strong> Commencez par notre{" "}
+                <a href="/blog/estimer-volume-demenagement-guide-complet/" className="text-v4-accent hover:underline font-semibold">
+                  guide d'estimation de volume
+                </a>{" "}
+                pour préparer vos demandes de devis.
+              </p>
             </div>
           </div>
         </div>

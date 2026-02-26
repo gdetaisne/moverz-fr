@@ -7,7 +7,7 @@ interface StickyCTAMobileProps {
   text?: string
 }
 
-export function StickyCTAMobile({ quoteUrl, text = 'Comparer maintenant' }: StickyCTAMobileProps) {
+export function StickyCTAMobile({ quoteUrl, text = 'Obtenir mes devis' }: StickyCTAMobileProps) {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {

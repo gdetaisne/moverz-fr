@@ -75,7 +75,7 @@ export function Header() {
         {/* CTA + Mobile Menu */}
         <div className="flex items-center gap-4">
           <Button size="md" onClick={handleCTAClick} className="hidden sm:inline-flex">
-            Obtenir des devis
+            Obtenir mes devis
           </Button>
           
           {/* Mobile menu button */}
@@ -115,7 +115,7 @@ export function Header() {
               ))}
               <div className="pt-2">
                 <Button size="md" onClick={handleCTAClick} className="w-full">
-                  Obtenir des devis
+                  Obtenir mes devis
                 </Button>
               </div>
             </nav>

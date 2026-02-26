@@ -298,7 +298,7 @@ export default function QuartiersGenericPage({ params }: PageProps) {
                 href={quoteUrl}
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-base md:text-lg font-semibold text-v4-text shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
               >
-                <span>Comparer maintenant</span>
+                <span>Obtenir mes devis</span>
                 <span className="text-xl">→</span>
               </a>
               <a

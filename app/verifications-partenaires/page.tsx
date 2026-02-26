@@ -218,6 +218,76 @@ export default function VerificationsPartenairesPage() {
             </a>
           </div>
 
+          {/* Section "Pour aller plus loin" avec internal linking */}
+          <div className="rounded-2xl border border-v4-border bg-gradient-to-br from-white via-[#FAFBFC] to-white p-6 md:p-8">
+            <h3 className="text-lg md:text-xl font-semibold text-v4-text mb-4">Pour aller plus loin</h3>
+            <p className="text-sm md:text-base text-v4-text-secondary mb-6">
+              Comprendre les vérifications, c'est bien. Savoir comment choisir un déménageur et préparer votre projet, c'est mieux. 
+              Consultez nos guides experts :
+            </p>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <a 
+                href="/blog/comprendre-score-creditsafe-demenageur/" 
+                className="flex items-start gap-3 p-4 rounded-xl border border-v4-border bg-white hover:shadow-md hover:border-v4-accent/40 transition-all group"
+              >
+                <span className="text-2xl">🔍</span>
+                <div>
+                  <p className="font-semibold text-v4-text group-hover:text-v4-accent transition-colors">
+                    Comment lire un score Creditsafe
+                  </p>
+                  <p className="text-xs text-v4-text-secondary mt-1">
+                    Décryptez la santé financière d'un déménageur
+                  </p>
+                </div>
+              </a>
+              
+              <a 
+                href="/blog/top-10-demenageurs-france-2026/" 
+                className="flex items-start gap-3 p-4 rounded-xl border border-v4-border bg-white hover:shadow-md hover:border-v4-accent/40 transition-all group"
+              >
+                <span className="text-2xl">🏆</span>
+                <div>
+                  <p className="font-semibold text-v4-text group-hover:text-v4-accent transition-colors">
+                    Top 10 déménageurs France 2026
+                  </p>
+                  <p className="text-xs text-v4-text-secondary mt-1">
+                    Critères objectifs pour choisir un professionnel
+                  </p>
+                </div>
+              </a>
+
+              <a 
+                href="/blog/comparer-devis-demenagement-guide/" 
+                className="flex items-start gap-3 p-4 rounded-xl border border-v4-border bg-white hover:shadow-md hover:border-v4-accent/40 transition-all group"
+              >
+                <span className="text-2xl">⚖️</span>
+                <div>
+                  <p className="font-semibold text-v4-text group-hover:text-v4-accent transition-colors">
+                    Comparer des devis : guide complet
+                  </p>
+                  <p className="text-xs text-v4-text-secondary mt-1">
+                    Les critères au-delà du prix
+                  </p>
+                </div>
+              </a>
+
+              <a 
+                href="/chiffres-cles/" 
+                className="flex items-start gap-3 p-4 rounded-xl border border-v4-border bg-white hover:shadow-md hover:border-v4-accent/40 transition-all group"
+              >
+                <span className="text-2xl">📊</span>
+                <div>
+                  <p className="font-semibold text-v4-text group-hover:text-v4-accent transition-colors">
+                    Chiffres clés du marché
+                  </p>
+                  <p className="text-xs text-v4-text-secondary mt-1">
+                    Statistiques officielles du déménagement en France
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+
           {/* CTA secondaire vers CGV-P */}
           <div className="rounded-2xl border border-v4-border bg-[#F8FAFC] p-6 md:p-8 text-center">
             <p className="text-sm md:text-base text-v4-text-secondary mb-4 max-w-2xl mx-auto">
