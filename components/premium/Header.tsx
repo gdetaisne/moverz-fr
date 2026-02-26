@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "./Button";
 
@@ -48,11 +48,11 @@ export function Header() {
           : "border-black/5 bg-white/70"
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-5 md:px-6">
+      <div className="mx-auto flex h-14 md:h-16 max-w-[1200px] items-center justify-between px-4 md:px-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 transition-opacity hover:opacity-80">
-          <Image src="/logo.png" alt="Moverz" width={40} height={40} className="h-10 w-10" priority />
-          <span className="font-heading text-2xl font-bold text-[rgb(var(--text))]">Moverz</span>
+        <Link href="/" className="flex items-center gap-2.5 md:gap-3 transition-opacity hover:opacity-80">
+          <Image src="/logo.png" alt="Moverz" width={40} height={40} className="h-8 w-8 md:h-10 md:w-10" priority />
+          <span className="font-heading text-xl md:text-2xl font-bold text-[rgb(var(--text))]">Moverz</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -72,16 +72,32 @@ export function Header() {
           ))}
         </nav>
 
-        {/* CTA + Mobile Menu */}
-        <div className="flex items-center gap-4">
-          <Button size="md" onClick={handleCTAClick} className="hidden sm:inline-flex">
-            Obtenir mes devis
+        {/* CTA + Phone + Mobile Menu */}
+        <div className="flex items-center gap-2 md:gap-3">
+          <Button 
+            size="md" 
+            onClick={handleCTAClick} 
+            className="text-xs sm:text-sm px-3 py-1.5 sm:px-4 sm:py-2"
+          >
+            <span className="hidden sm:inline">Obtenir mes devis</span>
+            <span className="inline sm:hidden">Devis</span>
           </Button>
+          
+          {/* Phone button - Desktop */}
+          <a
+            href="tel:+33664779434"
+            className="hidden md:inline-flex h-10 items-center gap-2 rounded-lg border border-[rgb(var(--border))] px-3 text-[rgb(var(--text))] transition-all hover:bg-[rgb(var(--accent))]/5 hover:border-[rgb(var(--accent))]/30 hover:text-[rgb(var(--accent))]"
+            aria-label="Appeler Moverz"
+            title="Appeler : 06 64 77 94 34"
+          >
+            <Phone className="h-4 w-4" />
+            <span className="text-sm font-medium">06 64 77 94 34</span>
+          </a>
           
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-[rgb(var(--border))] text-[rgb(var(--text))] transition-colors hover:bg-[rgb(var(--bg))] md:hidden"
+            className="inline-flex h-9 w-9 md:h-10 md:w-10 items-center justify-center rounded-lg border border-[rgb(var(--border))] text-[rgb(var(--text))] transition-colors hover:bg-[rgb(var(--bg))] md:hidden"
             aria-label="Menu"
             aria-expanded={isMobileMenuOpen}
           >
@@ -113,10 +129,17 @@ export function Header() {
                   {link.label}
                 </Link>
               ))}
-              <div className="pt-2">
+              <div className="pt-2 space-y-2">
                 <Button size="md" onClick={handleCTAClick} className="w-full">
                   Obtenir mes devis
                 </Button>
+                <a
+                  href="tel:+33664779434"
+                  className="flex items-center justify-center gap-2 w-full rounded-lg border border-[rgb(var(--border))] px-4 py-3 text-sm font-medium text-[rgb(var(--text))] transition-all hover:bg-[rgb(var(--accent))]/5 hover:border-[rgb(var(--accent))]/30 hover:text-[rgb(var(--accent))]"
+                >
+                  <Phone className="h-4 w-4" />
+                  <span>Appeler : 06 64 77 94 34</span>
+                </a>
               </div>
             </nav>
           </motion.div>

@@ -10,6 +10,11 @@ export default function HowItWorksFAQ() {
         "Le service Moverz est gratuit pour vous. Vous ne payez que le déménageur que vous choisissez, aux conditions indiquées dans son devis. Pour comprendre les prix moyens, consultez notre guide complet des <a href='/blog/prix-demenagement-2026/' class='text-v4-accent hover:underline'>prix déménagement 2026</a>.",
     },
     {
+      question: "Comment choisissez-vous les déménageurs que vous me présentez ?",
+      answer:
+        "Nous ne transmettons votre dossier qu'à 3-5 déménageurs maximum, sélectionnés selon 3 critères : (1) <strong>Disponibles à vos dates exactes</strong>, (2) <strong>Vérifiés financièrement et juridiquement</strong> (pas d'alertes), (3) <strong>Expérience sur votre trajet</strong> (Paris-Lyon, T3, etc.). Vous ne perdez pas de temps avec des offres non pertinentes ou des sociétés en difficulté. Voir nos <a href='/verifications-partenaires/' class='text-v4-accent hover:underline'>critères de vérification</a>.",
+    },
+    {
       question: "Comment êtes-vous rémunérés ?",
       answer:
         "Les déménageurs participent gratuitement à la mise en concurrence. Pour vous, le service est 100% gratuit. Nous sommes rémunérés par un montant fixe par dossier, uniquement en cas de déménagement réalisé.",
