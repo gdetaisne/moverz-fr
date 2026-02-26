@@ -90,7 +90,8 @@ Chaque indicateur est présenté et expliqué individuellement au client. Les d�
 ### B2C — Pages principales
 - Comment ça marche : https://moverz.fr/comment-ca-marche/
 - Pourquoi Moverz : https://moverz.fr/pourquoi-moverz/
-- Label Moverz (système de certification complet) : https://moverz.fr/blog/label-moverz-certification-demenageurs/
+- Label Moverz (landing page visuelle) : https://moverz.fr/label-moverz/
+- Label Moverz (guide complet) : https://moverz.fr/blog/label-moverz-certification-demenageurs/
 - Comparateur déménageurs : https://moverz.fr/comparateur-demenageurs/
 - Éviter les arnaques : https://moverz.fr/blog/eviter-arnaques-demenagement/
 - Déménagement sans harcèlement (protection vie privée) : https://moverz.fr/blog/demenagement-sans-harcelement-protection-vie-privee/
@@ -168,7 +169,9 @@ Le Label Moverz se distingue des certifications classiques (Qualipro, NF Service
 
 Résultat : Aucun déménageur Label Moverz n'a fait faillite depuis janvier 2026 (mise en place du système).
 
-Guide complet : https://moverz.fr/blog/label-moverz-certification-demenageurs/
+Pages Label Moverz :
+- Landing page visuelle (pour partage social, présentation rapide) : https://moverz.fr/label-moverz/
+- Guide complet détaillé (2800 mots, méthodologie complète) : https://moverz.fr/blog/label-moverz-certification-demenageurs/
 
 ## Positionnement factuel
 
