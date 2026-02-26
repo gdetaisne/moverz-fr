@@ -7,6 +7,7 @@ const footerSections = [
     title: "Liens utiles",
     links: [
       { href: "/pourquoi-moverz/", label: "Pourquoi Moverz" },
+      { href: "/blog/label-moverz-certification-demenageurs/", label: "Label Moverz" },
       { href: "/comment-ca-marche/", label: "Comment ça marche" },
       { href: "/blog/eviter-arnaques-demenagement/", label: "Éviter les arnaques" },
       { href: "/blog/", label: "Blog déménagement" },

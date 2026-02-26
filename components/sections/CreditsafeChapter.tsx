@@ -336,9 +336,18 @@ export function CreditsafeChapter() {
               </div>
             ))}
           </div>
-          <p className="text-xs text-white/30 mt-4 pt-4" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
-            Score calculé automatiquement à partir de sources officielles. Aucun déménageur ne peut modifier sa note.
-          </p>
+          <div className="mt-4 pt-4" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+            <p className="text-xs text-white/30">
+              Score calculé automatiquement à partir de sources officielles. Aucun déménageur ne peut modifier sa note.
+            </p>
+            <a 
+              href="/blog/label-moverz-certification-demenageurs/" 
+              className="inline-flex items-center gap-1 mt-2 text-xs font-medium transition-colors hover:underline"
+              style={{ color: "var(--color-accent)" }}
+            >
+              En savoir plus sur le Label Moverz <span aria-hidden="true">→</span>
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>

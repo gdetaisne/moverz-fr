@@ -70,7 +70,7 @@ const faqCategories = [
       },
       {
         q: "Comment Moverz vérifie-t-il les déménageurs ?",
-        a: "Chaque déménageur est évalué selon 3 analyses de risque notées /100 : (1) Risque expérience client — analyse des 20 derniers avis Google + patterns récurrents dans les mauvais avis (retards, casse, comportement), (2) Risque financier — scores Creditsafe et Pappers consolidés + analyse interne du ratio cash/dettes, (3) Risque juridique — décisions de justice et litiges via Pappers. Chaque indicateur est présenté et expliqué individuellement au client. Les déménageurs ont accès à leur scoring et peuvent enrichir leur dossier. Alertes financières ou juridiques = exclusion automatique.",
+        a: "Chaque déménageur est évalué selon 3 analyses de risque notées /100 : (1) Risque expérience client — analyse des 20 derniers avis Google + patterns récurrents dans les mauvais avis (retards, casse, comportement), (2) Risque financier — scores Creditsafe et Pappers consolidés + analyse interne du ratio cash/dettes, (3) Risque juridique — décisions de justice et litiges via Pappers. Chaque indicateur est présenté et expliqué individuellement au client. Les déménageurs ont accès à leur scoring et peuvent enrichir leur dossier. Alertes financières ou juridiques = exclusion automatique. En savoir plus sur <a href='/blog/label-moverz-certification-demenageurs/' class='underline' style='color: var(--color-accent)'>le Label Moverz et notre système de certification</a>.",
       },
       {
         q: "Les déménageurs sont-ils fiables ?",
@@ -150,8 +150,13 @@ export default function FAQPage() {
               </p>
             </div>
 
-            <div className="grid gap-3 md:grid-cols-3">
+            <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
               {[
+                {
+                  href: "/blog/label-moverz-certification-demenageurs/",
+                  title: "Label Moverz : Comment nous certifions",
+                  desc: "3 analyses de risque /100 : financier, juridique, expérience client. Guide complet.",
+                },
                 {
                   href: "/faq-arnaque-demenagement/",
                   title: "FAQ arnaques déménagement",
