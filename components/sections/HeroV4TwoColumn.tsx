@@ -18,7 +18,7 @@ import { trackEvent } from "@/lib/tracking";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-const AUTOPLAY_DURATION = 5000; // 5 secondes par card
+const AUTOPLAY_DURATION = 3000; // 3 secondes par card
 
 // 3 déménageurs avec scores variés (bon, moyen, mauvais)
 const MOVERS = [
