@@ -6,12 +6,10 @@ import type { CanonicalBlogPost } from './blog-canonique';
 export const BLOG_NOUVEAUX_2026: CanonicalBlogPost[] = [
   {
     slug: "label-moverz-certification-demenageurs",
-    title: "Label Moverz : Comment nous certifions chaque déménageur (Guide complet 2026)",
-    description: "Label Moverz : 3 analyses de risque notées /100 (financier Creditsafe, juridique Pappers, expérience client Google). Monitoring continu, exclusion automatique des alertes. Guide complet de notre système de certification.",
+    title: "Label Moverz : 3 analyses /100 · Guide complet 2026",
+    description: "Label Moverz : 3 analyses de risque /100 (financier, juridique, client). Monitoring continu 48h, exclusion automatique. 0 faillite depuis janvier 2026.",
     type: "pilier",
-    body: `# Label Moverz : Comment nous certifions chaque déménageur (Guide complet 2026)
-
-**3 millions de déménagements par an en France.**  
+    body: `**3 millions de déménagements par an en France.**  
 **64% des entreprises présentent des anomalies (DGCCRF 2023).**  
 **257 faillites en 2024 (BODACC).**
 

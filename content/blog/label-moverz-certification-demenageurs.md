@@ -1,7 +1,7 @@
 ---
 slug: label-moverz-certification-demenageurs
-title: "Label Moverz : Comment nous certifions chaque déménageur (Guide complet 2026)"
-description: "Label Moverz : 3 analyses de risque notées /100 (financier Creditsafe, juridique Pappers, expérience client Google). Monitoring continu, exclusion automatique des alertes. Guide complet de notre système de certification."
+title: "Label Moverz : 3 analyses /100 · Guide complet 2026"
+description: "Label Moverz : 3 analyses de risque /100 (financier, juridique, client). Monitoring continu 48h, exclusion automatique. 0 faillite depuis janvier 2026."
 type: pilier
 category: moverz
 publishedAt: "2026-02-26"
