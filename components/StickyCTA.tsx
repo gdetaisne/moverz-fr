@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { buildTunnelUrl } from "@/lib/tunnel-url";
-import { ArrowRight } from "lucide-react";
+import { ShieldCheck, Clock } from "lucide-react";
 
 export default function StickyCTA() {
   const [visible, setVisible] = useState(false);
@@ -31,22 +31,33 @@ export default function StickyCTA() {
         visible ? "opacity-100 translate-y-0" : "pointer-events-none translate-y-full opacity-0"
       }`}
     >
-      <div className="relative bg-white/95 backdrop-blur-xl border-t px-4 py-3 shadow-[0_-8px_30px_rgba(0,0,0,0.08)]" style={{ borderColor: "var(--color-border)" }}>
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--color-accent)] to-transparent opacity-60" />
+      <div className="relative bg-white/95 backdrop-blur-xl border-t px-4 py-3 shadow-[0_-8px_30px_rgba(0,0,0,0.12)]" style={{ borderColor: "rgba(245,158,11,0.2)" }}>
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F59E0B] to-transparent opacity-80" />
         
         <a
           href={quoteUrl}
-          className="flex items-center justify-center gap-2 w-full rounded-lg px-4 py-3 text-base font-semibold text-white transition-all duration-300 hover:opacity-90 hover:shadow-[0_8px_30px_rgba(14,165,166,0.35)] active:scale-[0.98]"
+          className="flex items-center justify-center gap-2 w-full rounded-xl px-4 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:opacity-90 hover:shadow-[0_12px_40px_rgba(245,158,11,0.4)] active:scale-[0.98]"
           style={{ 
-            background: "var(--color-accent)",
-            boxShadow: "0 4px 16px rgba(14,165,166,0.24)"
+            background: "#F59E0B",
+            boxShadow: "0 4px 16px rgba(245,158,11,0.3)"
           }}
         >
           <span>Obtenir mes devis</span>
         </a>
-        <p className="text-center text-xs mt-2" style={{ color: "var(--color-text-muted)" }}>
-          Gratuit · 3 min · Sans engagement
-        </p>
+        
+        <div className="flex items-center justify-center gap-4 mt-2.5 text-xs text-slate-600">
+          <div className="flex items-center gap-1">
+            <Clock className="w-3 h-3 text-slate-400" />
+            <span>3 min</span>
+          </div>
+          <span className="text-slate-300">·</span>
+          <div className="flex items-center gap-1">
+            <ShieldCheck className="w-3 h-3 text-slate-400" />
+            <span>0 appel</span>
+          </div>
+          <span className="text-slate-300">·</span>
+          <span className="font-medium">100% gratuit</span>
+        </div>
       </div>
     </div>
   );

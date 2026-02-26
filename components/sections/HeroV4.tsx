@@ -139,7 +139,6 @@ export function HeroV4() {
               style={{ background: "var(--color-accent)" }}
             >
               Obtenir mes devis
-              <ArrowRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-0.5" />
             </a>
             <p
               className="mt-2.5 text-xs"

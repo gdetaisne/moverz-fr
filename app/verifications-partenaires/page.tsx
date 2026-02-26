@@ -214,7 +214,7 @@ export default function VerificationsPartenairesPage() {
               href={buildTunnelUrl({ from: "verifications-partenaires" })}
               className="inline-flex items-center justify-center rounded-full bg-v4-text px-8 py-4 text-base font-semibold text-white shadow-lg hover:opacity-90 hover:shadow-xl transition-all"
             >
-              Obtenir mes devis →
+              Obtenir mes devis
             </a>
           </div>
 

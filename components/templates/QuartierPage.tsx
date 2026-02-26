@@ -123,7 +123,6 @@ export function QuartierPage({
                 className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-v4-text shadow-lg hover:bg-[#F3F4F6] transition-colors"
               >
                 <span>Comparer les déménageurs</span>
-                <span className="text-lg leading-none">→</span>
               </a>
             </div>
           </div>
@@ -319,7 +318,6 @@ export function QuartierPage({
               className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-v4-text shadow-lg hover:bg-[#F3F4F6] transition-colors"
             >
               <span>Lancer mon comparateur</span>
-              <span className="text-lg leading-none">→</span>
             </a>
           </div>
         </div>

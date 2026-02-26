@@ -112,7 +112,6 @@ export function CityServicePage({
                 className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm md:text-base font-semibold text-v4-text shadow-lg hover:bg-[#F3F4F6] transition-colors"
               >
                 <span>Recevoir des devis comparables</span>
-                <span className="text-lg leading-none">→</span>
               </a>
             </div>
 

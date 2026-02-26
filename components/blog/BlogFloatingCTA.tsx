@@ -290,7 +290,7 @@ export default function BlogFloatingCTA() {
                 onClick={onCtaClick}
                 className="shrink-0 inline-flex items-center justify-center rounded-xl bg-v4-text px-4 py-2.5 text-xs font-semibold text-white hover:opacity-90 transition-colors"
               >
-                Obtenir →
+                Obtenir
               </a>
             </div>
 

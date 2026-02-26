@@ -110,8 +110,7 @@ export default function AProposPage() {
                   rel="nofollow"
                   className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-6 py-4 text-sm font-semibold text-v4-text shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.99] transition-all"
                 >
-                  Obtenir mes devis{" "}
-                  <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
+                  Obtenir mes devis
                 </a>
                 <a
                   href="/contact/"

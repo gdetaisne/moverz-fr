@@ -26,7 +26,6 @@ export function FinalCTASection() {
               }}
             >
               Obtenir mes devis
-              <ArrowRight className="h-5 w-5" />
             </Button>
           </div>
           <div className="flex items-center justify-center gap-4 text-sm text-[rgb(var(--primary-contrast))]/60">
