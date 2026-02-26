@@ -13,7 +13,7 @@
 import { buildTunnelUrl } from "@/lib/tunnel-url";
 import { motion, AnimatePresence, PanInfo } from "framer-motion";
 import { staggerContainer, staggerItem } from "@/components/motion";
-import { ArrowRight, CheckCircle2, MessageSquare, Users, Mail, ShieldCheck, Star, PhoneOff, BadgeCheck, Globe } from "lucide-react";
+import { ArrowRight, CheckCircle2, MessageSquare, Users, Mail, ShieldCheck, Star, PhoneOff, BadgeCheck } from "lucide-react";
 import { trackEvent } from "@/lib/tracking";
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -292,12 +292,12 @@ export function HeroV4TwoColumn() {
           <motion.div variants={staggerItem} className="flex flex-wrap justify-center gap-3 mb-8">
             <div className="group flex items-center gap-2.5 px-4 py-2.5 rounded-full backdrop-blur-xl transition-all duration-300" style={{ background: "rgba(255,255,255,0.7)", border: "1px solid rgba(14,165,166,0.15)", boxShadow: "0 4px 16px rgba(0,0,0,0.04)" }}>
               <PhoneOff className="w-4 h-4" style={{ color: "#0EA5A6" }} />
-              <span className="text-xs font-semibold text-slate-800">Zéro démarchage</span>
+              <span className="text-xs font-semibold text-slate-800">Aucun appel</span>
             </div>
             
             <div className="group flex items-center gap-2.5 px-4 py-2.5 rounded-full backdrop-blur-xl transition-all duration-300" style={{ background: "rgba(255,255,255,0.7)", border: "1px solid rgba(14,165,166,0.15)", boxShadow: "0 4px 16px rgba(0,0,0,0.04)" }}>
               <BadgeCheck className="w-4 h-4" style={{ color: "#0EA5A6" }} />
-              <span className="text-xs font-semibold text-slate-800">On filtre pour vous</span>
+              <span className="text-xs font-semibold text-slate-800">Entreprises vérifiées</span>
             </div>
           </motion.div>
 
@@ -307,9 +307,9 @@ export function HeroV4TwoColumn() {
             className="font-heading text-[clamp(32px,7vw,56px)] leading-[1.1] font-bold tracking-[-0.02em]"
             style={{ color: "var(--color-text)" }}
           >
-            Des devis fiables,
+            Vous déménagez.
             <br />
-            <span style={{ color: "var(--color-accent)" }}>sans harcèlement.</span>
+            <span style={{ color: "var(--color-accent)" }}>On compare.</span>
           </motion.h1>
 
           {/* Subtitle principal */}
@@ -318,7 +318,7 @@ export function HeroV4TwoColumn() {
             className="mt-6 text-base font-medium"
             style={{ color: "var(--color-text-secondary)" }}
           >
-            On filtre les meilleurs déménageurs pour vous · Disponibles à vos dates · Vous choisissez qui contacter
+            Zéro harcèlement · 3+ devis fiables sous 5 jours · 100% gratuit
           </motion.p>
 
           {/* CTA mobile */}
@@ -350,17 +350,12 @@ export function HeroV4TwoColumn() {
             <div className="flex flex-wrap gap-3 mb-6">
               <div className="group flex items-center gap-2.5 px-4 py-2.5 rounded-full backdrop-blur-xl transition-all duration-300" style={{ background: "rgba(255,255,255,0.7)", border: "1px solid rgba(14,165,166,0.15)", boxShadow: "0 4px 16px rgba(0,0,0,0.04)" }}>
                 <PhoneOff className="w-4 h-4" style={{ color: "#0EA5A6" }} />
-                <span className="text-xs font-semibold text-slate-800">Zéro démarchage</span>
+                <span className="text-xs font-semibold text-slate-800">Aucun appel</span>
               </div>
               
               <div className="group flex items-center gap-2.5 px-4 py-2.5 rounded-full backdrop-blur-xl transition-all duration-300" style={{ background: "rgba(255,255,255,0.7)", border: "1px solid rgba(14,165,166,0.15)", boxShadow: "0 4px 16px rgba(0,0,0,0.04)" }}>
                 <BadgeCheck className="w-4 h-4" style={{ color: "#0EA5A6" }} />
-                <span className="text-xs font-semibold text-slate-800">On filtre pour vous</span>
-              </div>
-              
-              <div className="group flex items-center gap-2.5 px-4 py-2.5 rounded-full backdrop-blur-xl transition-all duration-300" style={{ background: "rgba(255,255,255,0.7)", border: "1px solid rgba(14,165,166,0.15)", boxShadow: "0 4px 16px rgba(0,0,0,0.04)" }}>
-                <Globe className="w-4 h-4" style={{ color: "#0EA5A6" }} />
-                <span className="text-xs font-semibold text-slate-800">Disponibles à vos dates</span>
+                <span className="text-xs font-semibold text-slate-800">Entreprises vérifiées</span>
               </div>
             </div>
 
@@ -369,14 +364,14 @@ export function HeroV4TwoColumn() {
               className="font-heading text-[56px] leading-[0.95] font-semibold tracking-[-0.03em] mb-6"
               style={{ color: "#111827" }}
             >
-              Des devis fiables,
+              Vous déménagez.
               <br />
-              <span style={{ color: "#0EA5A6" }}>sans harcèlement.</span>
+              <span style={{ color: "#0EA5A6" }}>On compare.</span>
             </h1>
 
             {/* Subtitle principal */}
             <p className="text-lg font-medium mb-8" style={{ color: "#475569" }}>
-              On filtre 3-5 déménageurs disponibles à vos dates · Ils vous envoient leurs devis · Vous choisissez qui contacter
+              Zéro harcèlement · 3+ devis fiables sous 5 jours · 100% gratuit
             </p>
 
             {/* CTA desktop */}
