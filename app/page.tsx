@@ -14,6 +14,7 @@
  * Un seul chapitre dark (CreditsafeChapter)
  */
 
+import type { Metadata } from "next";
 import { HeroV4TwoColumn } from "@/components/sections/HeroV4TwoColumn";
 import { ComparableQuotesMockScrolly } from "@/components/sections/ComparableQuotesMockScrolly";
 import { WhyMoverz } from "@/components/sections/WhyMoverz";
@@ -27,6 +28,23 @@ import dynamic from "next/dynamic";
 const StickyCTA = dynamic(() => import("@/components/StickyCTA"), {
   ssr: false,
 });
+
+export const metadata: Metadata = {
+  title: "Vous déménagez, on compare : 3-5 Devis Sans Stress | Moverz",
+  description:
+    "✓ On centralise tout (1 seul contact) ✓ 0 harcèlement ✓ Pros certifiés finances/assurance contrôlées · 3-5 devis comparables · Note 4.9/5 · 3 min · Gratuit",
+  alternates: {
+    canonical: 'https://moverz.fr/',
+  },
+  openGraph: {
+    title: "Vous déménagez, on compare : 3-5 Devis Sans Stress",
+    description: "✓ On centralise tout (1 seul contact) ✓ 0 harcèlement ✓ Pros certifiés finances/assurance contrôlées · 3-5 devis comparables · Note 4.9/5 · 3 min · Gratuit",
+    url: 'https://moverz.fr/',
+    siteName: 'Moverz',
+    images: [{ url: '/logo.png', width: 1200, height: 630, alt: 'Moverz - Comparateur de déménagement anti-arnaque · Note 4.9/5' }],
+    type: 'website',
+  },
+};
 
 export default function Home() {
   return (

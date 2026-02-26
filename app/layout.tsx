@@ -39,10 +39,10 @@ const sora = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://moverz.fr'),
   title: {
-    default: "Comparateur Déménagement | Zéro Harcèlement | Devis Vérifiés",
+    default: "Vous déménagez, on compare : 3-5 Devis Sans Stress | Moverz",
     template: "%s | Moverz"
   },
-  description: "Comparez 5 devis de déménageurs vérifiés sans harcèlement. Dossier 100% anonyme, vous choisissez qui contacter. 3 analyses de risque /100. Gratuit.",
+  description: "✓ On centralise tout (1 seul contact) ✓ 0 harcèlement ✓ Pros certifiés finances/assurance contrôlées · 3-5 devis comparables · Note 4.9/5 · 3 min · Gratuit",
   keywords: [
     "devis déménagement sans harcèlement",
     "comparateur déménagement anonyme",
@@ -75,15 +75,25 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "https://moverz.fr/",
     siteName: "Moverz",
-    title: "Comparateur Déménagement | Jusqu'à 5 devis | Contrôlés · Gratuit",
-    description: "Comparez jusqu'à 5 devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
+    title: "Vous déménagez, on compare : 3-5 Devis Sans Stress",
+    description: "✓ On centralise tout (1 seul contact) ✓ 0 harcèlement ✓ Pros certifiés finances/assurance contrôlées · 3-5 devis comparables · Note 4.9/5 · 3 min · Gratuit",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Moverz - Comparateur de déménagement anti-arnaque · Note 4.9/5",
+        type: "image/png",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     site: "@moverz",
     creator: "@moverz",
-    title: "Comparateur Déménagement | Jusqu'à 5 devis | Contrôlés · Gratuit",
-    description: "Comparez jusqu'à 5 devis comparables de déménageurs vérifiés sous 5 à 7 jours. Dossier anonyme, 0 harcèlement. 100% gratuit.",
+    title: "Vous déménagez, on compare : 3-5 Devis Sans Stress",
+    description: "✓ On centralise tout (1 contact) ✓ 0 harcèlement ✓ Pros certifiés · 3-5 devis comparables · Note 4.9/5 · 3 min · Gratuit",
+    images: ["/logo.png"],
   },
   robots: {
     index: true,
