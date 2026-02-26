@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
-import Image from "next/image";
 import "./globals.css";
 import { MOVERZ_REVIEWS, getAverageRating } from "@/lib/reviews";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
@@ -15,9 +14,8 @@ const ConversionIntentTracker = dynamic(() => import("@/components/ConversionInt
   ssr: false,
 });
 import { JsonLd } from "@/components/schema/JsonLd";
-import { buildTunnelUrl } from "@/lib/tunnel-url";
-import MobileMenu from "@/components/MobileMenu";
 import { Footer } from "@/components/premium/Footer";
+import { Header } from "@/components/premium/Header";
 
 // Self-hosted fonts pour performance maximale (pas de requête externe)
 const inter = localFont({
@@ -248,51 +246,7 @@ export default function RootLayout({
         <GoogleAnalytics />
         <ConversionIntentTracker />
         <ExitIntentPopup />
-        {/* Header */}
-        <header className="sticky top-0 z-40 w-full backdrop-blur-xl bg-white/60 border-b shadow-sm transition-all" style={{ borderColor: "var(--color-border)" }}>
-          <nav className="mx-auto flex h-14 md:h-16 max-w-7xl items-center justify-between px-4 md:px-8">
-            <a href="/" className="flex items-center gap-2.5" title="Moverz - Comparateur de déménagement">
-              <Image 
-                src="/logo.png" 
-                alt="Logo Moverz" 
-                width={40}
-                height={40}
-                priority
-                quality={95}
-                className="h-9 w-9 md:h-10 md:w-10"
-              />
-              <span className="font-heading text-xl md:text-2xl font-bold" style={{ color: "var(--color-text)" }}>Moverz</span>
-            </a>
-            <div className="flex items-center gap-6">
-              <a href="/pourquoi-moverz/" className="text-sm font-medium transition-all duration-300 hover:opacity-80 hidden md:block" style={{ color: "var(--color-text-secondary)" }}>
-                Pourquoi Moverz
-              </a>
-              <a href="/comment-ca-marche/" className="text-sm font-medium transition-all duration-300 hover:opacity-80 hidden md:block" style={{ color: "var(--color-text-secondary)" }}>
-                Comment ça marche
-              </a>
-              <a href="/faq/" className="text-sm font-medium transition-all duration-300 hover:opacity-80 hidden md:block" style={{ color: "var(--color-text-secondary)" }}>
-                FAQ
-              </a>
-              <a href="/blog/" className="text-sm font-medium transition-all duration-300 hover:opacity-60 hidden md:block opacity-70" style={{ color: "var(--color-text-muted)" }}>
-                Blog
-              </a>
-              <a
-                href={buildTunnelUrl({ from: "header" })}
-                rel="nofollow"
-                className="hidden sm:inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-semibold text-white transition-all duration-300 hover:opacity-90 hover:shadow-[0_8px_24px_rgba(14,165,166,0.3)] hover:-translate-y-0.5 active:scale-[0.98]"
-                style={{ 
-                  background: "var(--color-accent)",
-                  boxShadow: "0 2px 8px rgba(14,165,166,0.2)"
-                }}
-              >
-                <span>Obtenir mes devis</span>
-                <span className="text-base">→</span>
-              </a>
-              {/* Mobile menu hamburger */}
-              <MobileMenu />
-            </div>
-          </nav>
-        </header>
+        <Header />
 
         <main>{children}</main>
 

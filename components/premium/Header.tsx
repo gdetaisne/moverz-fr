@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Button } from "./Button";
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 
 const navLinks = [
   { href: "/pourquoi-moverz/", label: "Pourquoi" },
@@ -33,12 +33,6 @@ export function Header() {
     setIsMobileMenuOpen(false);
   }, [pathname]);
 
-  const handleCTAClick = () => {
-    const form = document.getElementById("tunnel-entry-form");
-    if (form) {
-      form.scrollIntoView({ behavior: "smooth", block: "center" });
-    }
-  };
 
   return (
     <header
@@ -74,14 +68,18 @@ export function Header() {
 
         {/* CTA + Phone + Mobile Menu */}
         <div className="flex items-center gap-2 md:gap-3">
-          <Button 
-            size="md" 
-            onClick={handleCTAClick} 
-            className="text-xs sm:text-sm px-3 py-1.5 sm:px-4 sm:py-2"
+          <a
+            href={buildTunnelUrl({ from: "header" })}
+            rel="nofollow"
+            className="inline-flex items-center justify-center gap-1.5 rounded-lg px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-semibold text-white transition-all hover:opacity-90 active:scale-95"
+            style={{ 
+              background: "var(--color-accent)",
+              boxShadow: "0 2px 8px rgba(14,165,166,0.2)"
+            }}
           >
             <span className="hidden sm:inline">Obtenir mes devis</span>
             <span className="inline sm:hidden">Devis</span>
-          </Button>
+          </a>
           
           {/* Phone button - Desktop */}
           <a
@@ -130,9 +128,17 @@ export function Header() {
                 </Link>
               ))}
               <div className="pt-2 space-y-2">
-                <Button size="md" onClick={handleCTAClick} className="w-full">
+                <a
+                  href={buildTunnelUrl({ from: "header-mobile" })}
+                  rel="nofollow"
+                  className="flex items-center justify-center gap-1.5 w-full rounded-lg px-4 py-3 text-sm font-semibold text-white transition-all hover:opacity-90 active:scale-95"
+                  style={{ 
+                    background: "var(--color-accent)",
+                    boxShadow: "0 2px 8px rgba(14,165,166,0.2)"
+                  }}
+                >
                   Obtenir mes devis
-                </Button>
+                </a>
                 <a
                   href="tel:+33664779434"
                   className="flex items-center justify-center gap-2 w-full rounded-lg border border-[rgb(var(--border))] px-4 py-3 text-sm font-medium text-[rgb(var(--text))] transition-all hover:bg-[rgb(var(--accent))]/5 hover:border-[rgb(var(--accent))]/30 hover:text-[rgb(var(--accent))]"
