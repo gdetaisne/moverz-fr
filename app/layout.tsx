@@ -26,6 +26,7 @@ const inter = localFont({
   variable: "--font-inter",
   preload: true,
   weight: "100 900",
+  fallback: ['system-ui', 'sans-serif'],
 });
 
 const sora = localFont({
@@ -34,6 +35,7 @@ const sora = localFont({
   variable: "--font-sora",
   preload: true,
   weight: "100 800",
+  fallback: ['system-ui', 'sans-serif'],
 });
 
 export const metadata: Metadata = {
