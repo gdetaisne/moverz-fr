@@ -15,7 +15,7 @@ const arguments_ = [
   {
     icon: Tag,
     title: "Prix justes",
-    subtitle: "Appel d'offres réel, pas d'estimation vague",
+    subtitle: "Appel d'offres réel",
     score: 450,
     scoreLabel: "€ économisés",
     color: "#0EA5A6", // Turquoise
