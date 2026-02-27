@@ -84,39 +84,32 @@ function MoverCardDetailed({ mover, index }: { mover: typeof MOVERS[0]; index: n
       className="w-full rounded-xl p-3 relative"
       style={{
         background: "rgba(255,255,255,0.98)",
-        border: mover.recommended ? "2.5px solid #0EA5A6" : "1px solid rgba(0,0,0,0.08)",
-        boxShadow: mover.recommended 
-          ? "0 6px 20px rgba(14,165,166,0.35)" 
-          : "0 2px 8px rgba(0,0,0,0.08)"
+        border: mover.recommended ? "1px solid rgba(14,165,166,0.22)" : "1px solid rgba(2,6,23,0.08)",
+        boxShadow: mover.recommended
+          ? "0 0 0 1px rgba(14,165,166,0.10), 0 10px 30px rgba(2,6,23,0.10), 0 10px 22px rgba(14,165,166,0.16)"
+          : "0 10px 24px rgba(2,6,23,0.08)"
       }}
     >
       {/* Badge Recommandé - PREMIUM */}
       {mover.recommended && (
         <div
-          className="flex items-center justify-center gap-1.5 py-2 px-3.5 rounded-full mb-3 -mt-1 relative overflow-hidden"
+          className="flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-full mb-2.5 -mt-0.5 relative overflow-hidden"
           style={{ 
-            background: "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)",
-            boxShadow: "0 4px 14px rgba(14,165,166,0.45), 0 0 0 1px rgba(14,165,166,0.3)"
+            background: "#0EA5A6",
+            boxShadow: "inset 0 1px 0 rgba(255,255,255,0.25), 0 8px 18px rgba(14,165,166,0.22), 0 0 0 1px rgba(14,165,166,0.12)"
           }}
         >
           {/* Checkmark */}
           <svg 
-            className="h-4 w-4 text-white" 
+            className="h-3 w-3 text-white" 
             fill="none" 
             viewBox="0 0 24 24" 
             stroke="currentColor"
-            strokeWidth={3}
+            strokeWidth={2.5}
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
-          <span className="text-[12px] font-bold text-white tracking-wide">MEILLEURE OFFRE</span>
-          {/* Subtle shimmer effect */}
-          <div
-            className="absolute inset-0 opacity-30"
-            style={{
-              background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%)"
-            }}
-          />
+          <span className="text-[10px] font-semibold text-white tracking-[0.14em]">MEILLEURE OFFRE</span>
         </div>
       )}
 
@@ -326,7 +319,7 @@ export function HeroV4TwoColumn() {
             <a
               href={quoteUrl}
               onClick={() => trackEvent("Lead_clic_home", { source: "hero-cta" })}
-              className="inline-flex items-center justify-center gap-2 w-full max-w-md rounded-2xl px-6 py-4 text-base font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] hover:animate-pulse-subtle"
+              className="inline-flex items-center justify-center gap-2 w-full max-w-xs rounded-xl px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] hover:animate-pulse-subtle"
               style={{ 
                 background: "#F59E0B",
                 boxShadow: "0 4px 12px rgba(245,158,11,0.2)"
@@ -398,7 +391,7 @@ export function HeroV4TwoColumn() {
               <a
                 href={quoteUrl}
                 onClick={() => trackEvent("Lead_clic_home", { source: "hero-cta" })}
-                className="inline-flex items-center justify-center gap-2 h-14 px-8 rounded-2xl text-[16px] font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] hover:animate-pulse-subtle"
+                className="inline-flex items-center justify-center gap-2 h-11 px-7 rounded-xl text-sm font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] hover:animate-pulse-subtle"
                 style={{ 
                   background: "#F59E0B",
                   boxShadow: "0 4px 12px rgba(245,158,11,0.2)"
