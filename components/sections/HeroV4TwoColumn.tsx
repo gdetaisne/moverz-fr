@@ -347,6 +347,136 @@ export function HeroV4TwoColumn() {
             </a>
             <p className="text-xs text-slate-500 font-medium">1000+ déménageurs contrôlés</p>
           </motion.div>
+
+          {/* Mockup téléphone - Mobile uniquement */}
+          <motion.div
+            variants={staggerItem}
+            className="mt-10 flex justify-center"
+          >
+            <div className="relative">
+              {/* Glow statique */}
+              <div
+                className="absolute inset-0 blur-3xl opacity-25"
+                style={{
+                  background: "radial-gradient(circle, rgba(14,165,166,0.5) 0%, transparent 70%)",
+                }}
+              />
+              <motion.div
+                initial={{ opacity: 0, y: 20, scale: 0.97 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                className="relative"
+              >
+                <div
+                  className="relative rounded-[34px] border-[4px] overflow-hidden bg-white"
+                  style={{
+                    borderColor: "#1F2937",
+                    width: "240px",
+                    height: "500px",
+                    boxShadow: "0 20px 40px -10px rgba(0,0,0,0.22), 0 0 0 1px rgba(0,0,0,0.07)",
+                  }}
+                >
+                  {/* Dynamic Island */}
+                  <div
+                    className="absolute top-2 left-1/2 -translate-x-1/2 h-[24px] w-[100px] rounded-full z-30"
+                    style={{ background: "#000000" }}
+                  >
+                    <div
+                      className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[40px] h-[3px] rounded-full"
+                      style={{ background: "#1a1a1a" }}
+                    />
+                  </div>
+
+                  {/* Screen */}
+                  <div className="relative h-full w-full overflow-hidden" style={{ background: "linear-gradient(180deg, #F9FAFB 0%, #F3F4F6 100%)" }}>
+                    {/* Header */}
+                    <div className="absolute top-9 left-0 right-0 px-3 py-2.5 z-40">
+                      <div className="flex items-center justify-between mb-1.5">
+                        <Image
+                          src="/logo-ui.png"
+                          alt="Moverz"
+                          width={60}
+                          height={20}
+                          className="h-4 w-auto"
+                        />
+                        <div
+                          className="px-2 py-0.5 rounded-full text-[9px] font-bold"
+                          style={{ background: "rgba(14,165,166,0.1)", color: "#0EA5A6" }}
+                        >
+                          3 devis reçus
+                        </div>
+                      </div>
+                      <p className="text-slate-900 text-[10px] font-medium mb-0.5">Votre déménagement</p>
+                      <p className="text-slate-500 text-[9px]">Paris → Lyon • 60m² • 3e étage</p>
+                    </div>
+
+                    {/* Carousel */}
+                    <div className="relative h-full pt-28 pb-3 px-2 overflow-hidden">
+                      <AnimatePresence initial={false} custom={direction} mode="wait">
+                        <motion.div
+                          key={currentIndex}
+                          custom={direction}
+                          variants={slideVariants}
+                          initial="enter"
+                          animate="center"
+                          exit="exit"
+                          transition={{
+                            x: { type: "spring", stiffness: 300, damping: 30 },
+                            opacity: { duration: 0.2 },
+                          }}
+                          drag="x"
+                          dragConstraints={{ left: 0, right: 0 }}
+                          dragElastic={0.2}
+                          onDragEnd={handleDragEnd}
+                          className="touch-pan-y h-full overflow-y-auto relative z-10"
+                        >
+                          <MoverCardDetailed mover={MOVERS[currentIndex]} index={currentIndex} />
+                        </motion.div>
+                      </AnimatePresence>
+                    </div>
+
+                    {/* Badge bas */}
+                    <div className="absolute bottom-8 left-2 right-2 z-20">
+                      <div
+                        className="rounded-full px-3 py-1.5 text-[10px] font-medium backdrop-blur-xl"
+                        style={{
+                          background: "rgba(255,255,255,0.9)",
+                          border: "1px solid rgba(14,165,166,0.1)",
+                          boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+                        }}
+                      >
+                        <div className="flex items-center justify-center gap-1.5">
+                          <div className="h-1 w-1 rounded-full" style={{ background: "#0EA5A6" }} />
+                          <span className="text-slate-700">
+                            <strong style={{ color: "#0EA5A6" }}>3</strong> devis comparés
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Dots navigation */}
+                    <div className="absolute bottom-4 left-0 right-0 z-30 flex items-center justify-center gap-1.5">
+                      {MOVERS.map((_, i) => (
+                        <button
+                          key={i}
+                          onClick={() => {
+                            setDirection(i > currentIndex ? 1 : -1);
+                            setCurrentIndex(i);
+                          }}
+                          className="h-1 rounded-full transition-all duration-300"
+                          style={{
+                            width: i === currentIndex ? "16px" : "4px",
+                            background: i === currentIndex ? "#0EA5A6" : "#CBD5E1",
+                          }}
+                          aria-label={`Voir offre ${i + 1}`}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
         </motion.div>
 
         {/* DESKTOP : 2 COLONNES LICORNE 🦄 */}
