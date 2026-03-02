@@ -13,24 +13,28 @@ export const HOME_FAQS: HomeFaqItem[] = [
       "Oui, 100% gratuit pour vous. Les déménageurs participent aussi gratuitement à la mise en concurrence. Aucun frais caché, aucun engagement.",
   },
   {
-    question: "Je vais recevoir des appels de spam ?",
+    question: "En combien de temps vais-je recevoir mes devis ?",
     answer:
-      "Non, zéro harcèlement garanti. Votre dossier reste 100% anonyme. Nous centralisons tous les échanges avec les déménageurs. Votre téléphone n'est jamais partagé. Vous choisissez qui peut vous contacter.",
+      "Sous 3 à 5 jours ouvrés. Une fois votre dossier soumis, nous contactons les déménageurs disponibles à vos dates. Vous recevez 3 devis comparables directement dans votre espace Moverz. Pas de relance de votre part nécessaire.",
   },
   {
-    question: "L'IA est vraiment précise ?",
+    question: "Je vais recevoir des appels de spam ?",
     answer:
-      "Oui. L’IA aide à estimer et à standardiser votre dossier pour comparer des devis cohérents. Si besoin, les déménageurs peuvent affiner lors d’une visite technique.",
+      "Non, zéro harcèlement garanti. Votre dossier reste 100% anonyme. Nous centralisons tous les échanges avec les déménageurs. Votre numéro n'est jamais partagé. Vous choisissez qui peut vous contacter, pas l'inverse.",
+  },
+  {
+    question: "Quelle est la différence avec les autres comparateurs de déménagement ?",
+    answer:
+      "Les comparateurs classiques (type i-Déménager, DéménagerFacile) revendent vos coordonnées à 10 à 15 déménageurs simultanément — sans vérification. Vous subissez ensuite des appels non stop. Moverz fonctionne à l'inverse : votre dossier est anonyme, les déménageurs sont vérifiés avant d'entrer sur la plateforme, et vous recevez des devis vraiment comparables car standardisés. Zéro démarchage, zéro arnaque.",
   },
   {
     question: "Comment les déménageurs sont-ils vérifiés ?",
     answer:
-      "Chaque déménageur est évalué selon 3 analyses de risque notées /100 : expérience client (analyse des avis Google), risque financier (Creditsafe + Pappers + ratio cash/dettes), et risque juridique (décisions de justice via Pappers). Les déménageurs avec alertes financières ou juridiques sont exclus automatiquement.",
+      "Chaque déménageur est évalué selon 3 analyses notées /100 : expérience client (avis Google analysés), solidité financière (Creditsafe + Pappers), et signaux d'alerte (litiges, décisions de justice). Les déménageurs qui passent les 3 analyses obtiennent le Label Moverz. 57% des candidats sont refusés chaque année.",
   },
   {
     question: "Et si je n'aime aucun devis ?",
     answer:
-      "Aucun problème, vous n'êtes pas obligé d'en choisir un. Le service est sans engagement. Vous pouvez aussi nous contacter pour voir d'autres options.",
+      "Aucun problème, vous n'êtes pas obligé d'en choisir un. Le service est sans engagement. Vous pouvez aussi nous contacter pour explorer d'autres options.",
   },
 ];
-
