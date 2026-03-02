@@ -1,199 +1,85 @@
 "use client";
 
+/**
+ * CreditsafeChapter — "Pourquoi Moverz" (USP) + Label Moverz avec scores
+ * Fond LIGHT — 3 piliers USP fun + scores animés Label Moverz
+ */
+
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
-import { Shield, Star, AlertTriangle, Building2, Gavel, MessageSquare, Eye, Lock } from "lucide-react";
+import { Shield, PhoneOff, UserCheck, ArrowRight } from "lucide-react";
 import { staggerContainer, staggerItem } from "@/components/motion";
+import Image from "next/image";
+import { buildTunnelUrl } from "@/lib/tunnel-url";
 
-interface Axis {
-  icon: typeof Shield;
-  title: string;
-  subtitle: string;
-  score: number;
-  sources: string[];
-  verdict: string;
-}
-
-const axes: Axis[] = [
+const USP_PILLARS = [
   {
-    icon: Building2,
-    title: "Solidité de l\u2019entreprise",
-    subtitle: "Cette entreprise est-elle fiable financièrement et juridiquement\u00a0?",
-    score: 78,
-    sources: ["Creditsafe", "Pappers", "Tribunaux de commerce"],
-    verdict: "Aucune alerte financière ou juridique détectée",
+    num: "01",
+    icon: PhoneOff,
+    title: "Zéro arnaque,\nzéro démarchage",
+    body: "Votre anonymat est préservé. Aucun déménageur ne vous contacte directement.",
+    accent: "#0EA5A6",
   },
   {
-    icon: MessageSquare,
-    title: "Expérience client vérifiée",
-    subtitle: "Que disent les vrais clients\u00a0?",
-    score: 91,
-    sources: ["Avis Google", "Analyse IA du contenu des avis"],
-    verdict: "Avis majoritairement positifs, service fiable",
+    num: "02",
+    icon: UserCheck,
+    title: "Un agent dédié\njusqu'à votre décision",
+    body: "Un seul interlocuteur de A à Z. Pas de transfert, pas de répétition.",
+    accent: "#0EA5A6",
   },
   {
-    icon: Eye,
-    title: "Vigilance & signaux d\u2019alerte",
-    subtitle: "Y a-t-il des raisons de s\u2019inquiéter\u00a0?",
-    score: 70,
-    sources: ["Avis négatifs analysés", "Patterns détectés"],
-    verdict: "Quelques réserves mineures, globalement fiable",
+    num: "03",
+    icon: Shield,
+    title: "1 000+ déménageurs\nvraiment vérifiés",
+    body: "Solidité financière, assurance, avis analysés. Seuls les meilleurs vous sont présentés.",
+    accent: "#0EA5A6",
   },
 ];
 
-const trustPoints = [
-  { icon: Lock, text: "Score automatique, impossible à modifier par le déménageur" },
-  { icon: Shield, text: "Multi-sources officielles : pas seulement les avis Google" },
-  { icon: AlertTriangle, text: "En dessous du seuil, le déménageur est exclu — pas juste mal noté" },
+const LABEL_CRITERIA = [
+  { label: "Solidité financière", score: 98, color: "#0EA5A6" },
+  { label: "Expérience client", score: 80, color: "#0EA5A6" },
+  { label: "Vigilance & signaux", score: 72, color: "#F59E0B" },
 ];
 
-function getScoreColor(score: number): string {
-  if (score >= 80) return "var(--color-accent)";
-  if (score >= 60) return "#F59E0B"; // Warning color (keep as is)
-  return "#EF4444"; // Danger color (keep as is)
-}
-
-function getScoreLabel(score: number): string {
-  if (score >= 80) return "Excellent";
-  if (score >= 60) return "Bon";
-  return "À risque";
-}
-
-function AnimatedScore({ score, delay = 0 }: { score: number; delay?: number }) {
+function AnimatedBar({ score, color, delay = 0 }: { score: number; color: string; delay?: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
-  const [displayed, setDisplayed] = useState(0);
+  const [width, setWidth] = useState(0);
 
   useEffect(() => {
     if (!isInView) return;
     const timeout = setTimeout(() => {
-      let start = 0;
-      const duration = 800;
-      const startTime = performance.now();
-      const animate = (now: number) => {
-        const progress = Math.min((now - startTime) / duration, 1);
-        const eased = 1 - Math.pow(1 - progress, 3);
-        start = Math.round(eased * score);
-        setDisplayed(start);
-        if (progress < 1) requestAnimationFrame(animate);
-      };
-      requestAnimationFrame(animate);
+      setWidth(score);
     }, delay);
     return () => clearTimeout(timeout);
   }, [isInView, score, delay]);
 
-  const color = getScoreColor(score);
-  const size = 80;
-  const strokeWidth = 6;
-  const radius = (size - strokeWidth) / 2;
-  const circumference = 2 * Math.PI * radius;
-  const progress = (displayed / 100) * circumference;
-
   return (
-    <div ref={ref} className="relative" style={{ width: size, height: size }}>
-      <svg width={size} height={size} className="-rotate-90">
-        <circle
-          cx={size / 2}
-          cy={size / 2}
-          r={radius}
-          fill="none"
-          stroke="rgba(255,255,255,0.08)"
-          strokeWidth={strokeWidth}
-        />
-        <circle
-          cx={size / 2}
-          cy={size / 2}
-          r={radius}
-          fill="none"
-          stroke={color}
-          strokeWidth={strokeWidth}
-          strokeDasharray={circumference}
-          strokeDashoffset={circumference - progress}
-          strokeLinecap="round"
-          className="transition-all"
-        />
-      </svg>
-      <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <span className="text-xl font-bold text-white tabular-nums">{displayed}</span>
-      </div>
-    </div>
-  );
-}
-
-function GlobalScore() {
-  const avg = Math.round(axes.reduce((s, a) => s + a.score, 0) / axes.length);
-  const color = getScoreColor(avg);
-  const label = getScoreLabel(avg);
-
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
-  const [displayed, setDisplayed] = useState(0);
-
-  useEffect(() => {
-    if (!isInView) return;
-    const duration = 1000;
-    const startTime = performance.now();
-    const animate = (now: number) => {
-      const progress = Math.min((now - startTime) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      setDisplayed(Math.round(eased * avg));
-      if (progress < 1) requestAnimationFrame(animate);
-    };
-    requestAnimationFrame(animate);
-  }, [isInView, avg]);
-
-  const size = 120;
-  const strokeWidth = 8;
-  const radius = (size - strokeWidth) / 2;
-  const circumference = 2 * Math.PI * radius;
-  const progress = (displayed / 100) * circumference;
-
-  return (
-    <div ref={ref} className="flex items-center gap-5">
-      <div className="relative" style={{ width: size, height: size }}>
-        <svg width={size} height={size} className="-rotate-90">
-          <circle
-            cx={size / 2}
-            cy={size / 2}
-            r={radius}
-            fill="none"
-            stroke="rgba(255,255,255,0.08)"
-            strokeWidth={strokeWidth}
-          />
-          <circle
-            cx={size / 2}
-            cy={size / 2}
-            r={radius}
-            fill="none"
-            stroke={color}
-            strokeWidth={strokeWidth}
-            strokeDasharray={circumference}
-            strokeDashoffset={circumference - progress}
-            strokeLinecap="round"
-          />
-        </svg>
-        <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <span className="text-3xl font-bold text-white tabular-nums">{displayed}</span>
-          <span className="text-xs text-white/40">/100</span>
-        </div>
-      </div>
-      <div>
-        <p className="text-lg font-bold text-white">Score Global Moverz</p>
-        <p className="text-sm font-semibold" style={{ color }}>{label}</p>
-        <p className="text-xs text-white/40 mt-1">DéménagePro SAS — exemple</p>
-      </div>
+    <div ref={ref} className="h-2 w-full rounded-full overflow-hidden" style={{ background: "rgba(0,0,0,0.07)" }}>
+      <div
+        className="h-full rounded-full"
+        style={{
+          width: `${width}%`,
+          background: color,
+          transition: "width 0.9s cubic-bezier(0.16, 1, 0.3, 1)",
+        }}
+      />
     </div>
   );
 }
 
 export function CreditsafeChapter() {
+  const quoteUrl = buildTunnelUrl({ from: "why-moverz" });
+
   return (
     <section
       className="relative py-12 md:py-28 overflow-hidden"
-      style={{ background: "var(--color-bg-dark)" }}
+      style={{ background: "var(--color-surface)" }}
     >
+      {/* Grain léger */}
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.015]"
+        className="pointer-events-none absolute inset-0 opacity-[0.018]"
         style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")" }}
       />
 
@@ -206,148 +92,180 @@ export function CreditsafeChapter() {
           variants={staggerContainer}
           className="max-w-2xl mb-14"
         >
+          <motion.div variants={staggerItem}>
+            <div
+              className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-6"
+              style={{ background: "rgba(14,165,166,0.08)", border: "1px solid rgba(14,165,166,0.18)" }}
+            >
+              <div className="h-2 w-2 rounded-full" style={{ background: "#0EA5A6" }} />
+              <span className="text-sm font-semibold" style={{ color: "#0EA5A6" }}>Pourquoi Moverz</span>
+            </div>
+          </motion.div>
           <motion.h2
             variants={staggerItem}
-            className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em] text-white leading-[1.1]"
+            className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em] leading-[1.1]"
+            style={{ color: "var(--color-text)" }}
           >
-            Chaque déménageur est analysé{" "}
-            <span className="text-white/40">avant de pouvoir vous répondre.</span>
+            On révolutionne le marché du déménagement,{" "}
+            <span style={{ color: "#0EA5A6" }}>ensemble.</span>
           </motion.h2>
           <motion.p
             variants={staggerItem}
-            className="mt-4 text-base md:text-lg text-white/50 max-w-lg leading-relaxed"
+            className="mt-4 text-base md:text-lg max-w-lg leading-relaxed"
+            style={{ color: "var(--color-text-secondary)" }}
           >
-            3 axes d&apos;analyse, notés /100, à partir de sources officielles.
-            Un signal grave = exclusion immédiate. Pas de compromis.
+            Zéro arnaque. Zéro démarchage. Un seul interlocuteur. Et des déménageurs vraiment vérifiés.
           </motion.p>
         </motion.div>
 
-        {/* Global score */}
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
-          className="mb-10"
-        >
-          <GlobalScore />
-        </motion.div>
-
-        {/* 3 Axes */}
-        <div className="grid gap-4 md:grid-cols-3 mb-10">
-          {axes.map((axis, i) => {
-            const Icon = axis.icon;
-            const color = getScoreColor(axis.score);
+        {/* 3 piliers USP — cartes fun avec numéros */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-20">
+          {USP_PILLARS.map((pillar, i) => {
+            const Icon = pillar.icon;
             return (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                whileHover={{ y: -2 }}
-                className="rounded-[var(--radius-md)] border p-5 md:p-6 transition-shadow duration-300"
+                className="group relative rounded-2xl p-6 overflow-hidden"
                 style={{
-                  borderColor: "rgba(255,255,255,0.06)",
-                  background: "rgba(255,255,255,0.02)",
-                  boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
+                  background: "white",
+                  border: "1px solid rgba(14,165,166,0.12)",
+                  boxShadow: "0 2px 8px rgba(0,0,0,0.04), 0 8px 24px rgba(14,165,166,0.06)",
                 }}
               >
-                {/* Icon + title + score circle */}
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-start gap-3">
-                    <div
-                      className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg"
-                      style={{ background: "rgba(14,165,166,0.12)" }}
-                    >
-                      <Icon className="h-4.5 w-4.5" style={{ color: "var(--color-accent)" }} />
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-white">{axis.title}</p>
-                      <p className="text-xs text-white/40 mt-0.5">{axis.subtitle}</p>
-                    </div>
-                  </div>
-                  <AnimatedScore score={axis.score} delay={i * 200} />
+                {/* Numéro en fond décoratif */}
+                <span
+                  className="absolute top-3 right-4 font-heading font-bold select-none pointer-events-none"
+                  style={{ fontSize: "72px", lineHeight: 1, color: "rgba(14,165,166,0.06)" }}
+                >
+                  {pillar.num}
+                </span>
+
+                {/* Barre accent en haut */}
+                <div
+                  className="absolute top-0 left-6 h-[3px] w-10 rounded-b-full"
+                  style={{ background: pillar.accent }}
+                />
+
+                {/* Icon */}
+                <div
+                  className="flex h-11 w-11 items-center justify-center rounded-xl mb-5"
+                  style={{ background: "rgba(14,165,166,0.08)" }}
+                >
+                  <Icon className="h-5 w-5" style={{ color: "#0EA5A6" }} />
                 </div>
 
-                {/* Animated bar */}
-                <div className="mb-4">
-                  <div
-                    className="h-2 rounded-full overflow-hidden"
-                    style={{ background: "rgba(255,255,255,0.06)" }}
-                  >
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${axis.score}%` }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.8, delay: 0.2 + i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                      className="h-full rounded-full"
-                      style={{ background: color }}
-                    />
-                  </div>
-                </div>
-
-                {/* Verdict */}
-                <p className="text-sm text-white/60 mb-4 flex items-center gap-2">
-                  <Star className="h-3.5 w-3.5 shrink-0" style={{ color }} />
-                  {axis.verdict}
+                {/* Titre sur 2 lignes avec retour à la ligne intentionnel */}
+                <p className="text-base font-bold mb-2 leading-snug whitespace-pre-line" style={{ color: "var(--color-text)" }}>
+                  {pillar.title}
                 </p>
-
-                {/* Sources */}
-                <div className="flex flex-wrap gap-1.5">
-                  {axis.sources.map((src, j) => (
-                    <span
-                      key={j}
-                      className="inline-block rounded-full px-2.5 py-0.5 text-xs font-medium text-white/40"
-                      style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.06)" }}
-                    >
-                      {src}
-                    </span>
-                  ))}
-                </div>
+                <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
+                  {pillar.body}
+                </p>
               </motion.div>
             );
           })}
         </div>
 
-        {/* Trust line */}
+        {/* Label Moverz — 2 colonnes */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.3 }}
-          className="rounded-[var(--radius-md)] border p-5 md:p-6"
-          style={{
-            borderColor: "rgba(255,255,255,0.06)",
-            background: "rgba(255,255,255,0.02)",
-            boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
-          }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={staggerContainer}
+          className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center"
         >
-          <div className="grid gap-4 sm:grid-cols-3">
-            {trustPoints.map(({ icon: TIcon, text }, i) => (
-              <div key={i} className="flex items-start gap-3">
-                <div
-                  className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg"
-                  style={{ background: "rgba(14,165,166,0.12)" }}
-                >
-                  <TIcon className="h-3.5 w-3.5" style={{ color: "var(--color-accent)" }} />
-                </div>
-                <p className="text-sm text-white/50 leading-snug">{text}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-4 pt-4" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
-            <p className="text-xs text-white/30">
-              Score calculé automatiquement à partir de sources officielles. Aucun déménageur ne peut modifier sa note.
-            </p>
-            <a 
-              href="/blog/label-moverz-certification-demenageurs/" 
-              className="inline-flex items-center gap-1 mt-2 text-xs font-medium transition-colors hover:underline"
-              style={{ color: "var(--color-accent)" }}
+          {/* LEFT */}
+          <motion.div variants={staggerItem} className="space-y-5">
+            <div
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold"
+              style={{
+                background: "rgba(14,165,166,0.08)",
+                border: "1px solid rgba(14,165,166,0.18)",
+                color: "#0EA5A6",
+              }}
             >
-              En savoir plus sur le Label Moverz <span aria-hidden="true">→</span>
-            </a>
-          </div>
+              <Image src="/logo.png" alt="Moverz" width={14} height={14} className="h-3.5 w-3.5" />
+              <Shield className="h-3 w-3" />
+              <span>Label Moverz</span>
+            </div>
+
+            <h3 className="font-heading text-[clamp(22px,3.5vw,36px)] font-bold tracking-[-0.02em] leading-[1.1]" style={{ color: "var(--color-text)" }}>
+              Chaque déménageur est noté sur{" "}
+              <span style={{ color: "#0EA5A6" }}>3 critères indépendants.</span>
+            </h3>
+
+            <p className="text-base leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
+              57% des candidats sont écartés. Seuls ceux qui passent nos 3 analyses peuvent vous faire une offre.
+            </p>
+
+            <div className="flex items-center gap-4">
+              <a
+                href={quoteUrl}
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white transition-all hover:scale-[1.02]"
+                style={{ background: "#0EA5A6", boxShadow: "0 4px 16px rgba(14,165,166,0.25)" }}
+              >
+                Obtenir mes devis
+              </a>
+              <a
+                href="/blog/label-moverz-certification-demenageurs/"
+                className="group inline-flex items-center gap-1.5 text-sm font-medium transition-colors"
+                style={{ color: "#0EA5A6" }}
+              >
+                En savoir plus
+                <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+              </a>
+            </div>
+          </motion.div>
+
+          {/* RIGHT — scores animés */}
+          <motion.div variants={staggerItem}>
+            <div
+              className="rounded-2xl p-6 space-y-5"
+              style={{
+                background: "white",
+                border: "1px solid rgba(14,165,166,0.12)",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.04), 0 8px 24px rgba(14,165,166,0.06)",
+              }}
+            >
+              {/* Titre de la carte */}
+              <div className="flex items-center justify-between mb-1">
+                <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: "rgba(14,165,166,0.7)" }}>
+                  Exemple d&apos;analyse Moverz
+                </p>
+              </div>
+
+              {LABEL_CRITERIA.map((criterion, i) => (
+                <div key={i} className="space-y-1.5">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium" style={{ color: "var(--color-text)" }}>{criterion.label}</span>
+                    <span className="text-sm font-bold tabular-nums" style={{ color: criterion.color }}>
+                      {criterion.score}/100
+                    </span>
+                  </div>
+                  <AnimatedBar score={criterion.score} color={criterion.color} delay={i * 150} />
+                </div>
+              ))}
+
+              {/* Score global */}
+              <div
+                className="flex items-center justify-between rounded-xl px-4 py-3 mt-2"
+                style={{ background: "rgba(14,165,166,0.06)", border: "1px solid rgba(14,165,166,0.12)" }}
+              >
+                <span className="text-sm font-semibold" style={{ color: "var(--color-text)" }}>Score global Moverz</span>
+                <span className="text-xl font-bold tabular-nums" style={{ color: "#0EA5A6" }}>
+                  {Math.round((98 + 80 + 72) / 3)}/100
+                </span>
+              </div>
+
+              <p className="text-xs text-center" style={{ color: "var(--color-text-muted)" }}>
+                Score calculé automatiquement · 57% des dossiers refusés
+              </p>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

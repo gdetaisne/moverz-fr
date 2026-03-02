@@ -319,10 +319,10 @@ export function HeroV4TwoColumn() {
             <a
               href={quoteUrl}
               onClick={() => trackEvent("Lead_clic_home", { source: "hero-cta" })}
-              className="inline-flex items-center justify-center gap-2 w-full max-w-xs rounded-xl px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] hover:animate-pulse-subtle"
+              className="inline-flex items-center justify-center gap-2 w-full max-w-sm rounded-2xl px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]"
               style={{ 
                 background: "#F59E0B",
-                boxShadow: "0 4px 12px rgba(245,158,11,0.2)"
+                boxShadow: "0 4px 12px rgba(245,158,11,0.3)"
               }}
             >
               Obtenir mes devis
@@ -342,7 +342,7 @@ export function HeroV4TwoColumn() {
                   <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                 ))}
               </div>
-              <span className="text-sm font-semibold text-slate-900">4,5+</span>
+              <span className="text-sm font-semibold text-slate-900">4.5+</span>
               <span className="text-xs text-slate-500">sur Google</span>
             </a>
             <p className="text-xs text-slate-500 font-medium">1000+ déménageurs contrôlés</p>
@@ -391,10 +391,10 @@ export function HeroV4TwoColumn() {
               <a
                 href={quoteUrl}
                 onClick={() => trackEvent("Lead_clic_home", { source: "hero-cta" })}
-                className="inline-flex items-center justify-center gap-2 h-11 px-7 rounded-xl text-sm font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] hover:animate-pulse-subtle"
+                className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-2xl text-[15px] font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]"
                 style={{ 
                   background: "#F59E0B",
-                  boxShadow: "0 4px 12px rgba(245,158,11,0.2)"
+                  boxShadow: "0 4px 12px rgba(245,158,11,0.3)"
                 }}
               >
                 Obtenir mes devis
@@ -413,7 +413,7 @@ export function HeroV4TwoColumn() {
                       <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                     ))}
                   </div>
-                  <span className="text-sm font-semibold text-slate-900">4,5+</span>
+                  <span className="text-sm font-semibold text-slate-900">4.5+</span>
                   <span className="text-xs text-slate-500">sur Google</span>
                 </a>
                 <p className="text-xs text-slate-500">1000+ déménageurs contrôlés</p>
@@ -427,12 +427,11 @@ export function HeroV4TwoColumn() {
             className="lg:col-span-6 relative flex justify-center items-center"
           >
             <div className="relative w-full max-w-[300px]">
-              {/* Premium glow effect turquoise */}
+              {/* Glow statique turquoise */}
               <div
-                className="absolute inset-0 blur-3xl opacity-40 animate-pulse"
+                className="absolute inset-0 blur-3xl opacity-30"
                 style={{ 
-                  background: "radial-gradient(circle, rgba(14,165,166,0.6) 0%, rgba(14,165,166,0.3) 40%, transparent 70%)",
-                  animation: "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite"
+                  background: "radial-gradient(circle, rgba(14,165,166,0.5) 0%, rgba(14,165,166,0.2) 40%, transparent 70%)"
                 }}
               />
 
@@ -488,7 +487,7 @@ export function HeroV4TwoColumn() {
                           className="px-2.5 py-0.5 rounded-full text-[9px] font-bold"
                           style={{ background: "rgba(14,165,166,0.1)", color: "#0EA5A6" }}
                         >
-                          5 devis comparés
+                          3 devis reçus
                         </div>
                       </div>
                       <p className="text-slate-900 text-[11px] font-medium mb-0.5">Votre déménagement</p>
@@ -542,7 +541,7 @@ export function HeroV4TwoColumn() {
                           <div className="h-1 w-1 rounded-full" 
                             style={{ background: "#0EA5A6" }} />
                           <span className="text-slate-700">
-                            <strong style={{ color: "#0EA5A6" }}>3</strong>/5 offres
+                            <strong style={{ color: "#0EA5A6" }}>3</strong> devis comparés
                           </span>
                         </div>
                       </div>

@@ -147,29 +147,6 @@ export default function RootLayout({
         {/* Preconnect pour analytics (non-bloquant) */}
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         
-        {/* Preload ressources critiques pour LCP/FCP optimal */}
-        <link
-          rel="preload"
-          href="/logo.png"
-          as="image"
-          type="image/png"
-          fetchPriority="high"
-        />
-        <link
-          rel="preload"
-          href="/fonts/inter-latin.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-          fetchPriority="high"
-        />
-        <link
-          rel="preload"
-          href="/logo-ui.png"
-          as="image"
-          type="image/png"
-        />
-        
         {/* Prefetch pages importantes pour navigation rapide */}
         <link rel="prefetch" href="/villes/" />
         <link rel="prefetch" href="/blog/" />

@@ -13,27 +13,26 @@ export function FinalCTAV4() {
   return (
     <FadeUpSection
       className="py-20 md:py-28"
-      style={{ background: "var(--color-bg)" }}
+      style={{ background: "#0B0F14" }}
     >
       <div className="container max-w-2xl text-center space-y-6">
         <h2
-          className="font-heading text-[clamp(32px,5vw,52px)] font-bold tracking-[-0.02em] leading-[1.1]"
-          style={{ color: "var(--color-text)" }}
+          className="font-heading text-[clamp(32px,5vw,52px)] font-bold tracking-[-0.02em] leading-[1.1] text-white"
         >
-          <span style={{ color: "var(--color-accent)" }}>3</span> minutes. <span style={{ color: "var(--color-accent)" }}>3</span> devis.
+          <span style={{ color: "#0EA5A6" }}>3</span> minutes. <span style={{ color: "#0EA5A6" }}>3</span> devis.
           <br />
-          <span style={{ color: "var(--color-accent)" }}>1</span> seule décision.
+          <span style={{ color: "#0EA5A6" }}>1</span> seule décision.
         </h2>
 
         <a
           href={buildTunnelUrl({ from: "final-cta-v4", devisRange: "3" })}
-          className="group inline-flex items-center justify-center gap-2 rounded-[var(--radius-sm)] px-8 py-3.5 text-base font-semibold text-white transition-all duration-200 hover:opacity-90 active:scale-[0.98]"
-          style={{ background: "var(--color-text)" }}
+          className="group inline-flex items-center justify-center gap-2 rounded-xl px-8 py-3.5 text-base font-semibold text-white transition-all duration-200 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]"
+          style={{ background: "#0EA5A6", boxShadow: "0 4px 20px rgba(14,165,166,0.3)" }}
         >
           Obtenir mes devis
         </a>
 
-        <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>
+        <p className="text-xs text-white/30">
           Gratuit · Sans engagement · Sans appels
         </p>
       </div>

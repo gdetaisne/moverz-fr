@@ -34,16 +34,15 @@ export function TestimonialV4() {
   const review = reviews[current];
 
   return (
-    <FadeUpSection className="py-12 md:py-28" style={{ background: "var(--color-surface)" }}>
+    <FadeUpSection className="py-12 md:py-28" style={{ background: "#0B0F14" }}>
       <div className="container">
-        {/* Titre aligné gauche comme les autres sections */}
+        {/* Titre */}
         <div className="max-w-2xl mb-12">
           <h2
-            className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em]"
-            style={{ color: "var(--color-text)" }}
+            className="font-heading text-[clamp(28px,5vw,48px)] font-bold tracking-[-0.02em] text-white"
           >
             Ils ont déménagé{" "}
-            <span style={{ color: "var(--color-accent)" }}>sereinement</span>
+            <span style={{ color: "#0EA5A6" }}>sereinement</span>
             {" "}grâce à Moverz
           </h2>
         </div>
@@ -52,72 +51,71 @@ export function TestimonialV4() {
         <div className="max-w-3xl mx-auto text-center">
           {/* Stars */}
           <div className="mb-6 flex items-center justify-center gap-1">
-          {[...Array(5)].map((_, i) => (
-            <Star
-              key={i}
-              className="h-4 w-4"
-              fill={i < Math.floor(review.rating) ? "var(--color-accent)" : "none"}
-              stroke={i < Math.floor(review.rating) ? "var(--color-accent)" : "var(--color-border)"}
-            />
-          ))}
-        </div>
-
-        {/* Quote */}
-        <blockquote className="space-y-6">
-          <p
-            className="font-heading text-[clamp(18px,3.5vw,28px)] font-medium leading-[1.4] tracking-[-0.01em]"
-            style={{ color: "var(--color-text)" }}
-          >
-            &ldquo;{review.body}&rdquo;
-          </p>
-          <footer>
-            <p className="text-sm font-semibold" style={{ color: "var(--color-text)" }}>
-              {review.author}
-            </p>
-            <p className="text-xs mt-0.5" style={{ color: "var(--color-text-muted)" }}>
-              Avis Google · {review.date}
-            </p>
-          </footer>
-        </blockquote>
-
-        {/* Navigation */}
-        {reviews.length > 1 && (
-          <div className="mt-8 flex items-center justify-center gap-4">
-            <button
-              onClick={prev}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border transition-all duration-300 hover:bg-[rgba(14,165,166,0.08)] hover:-translate-x-0.5 hover:shadow-sm"
-              style={{ borderColor: "var(--color-border)", color: "var(--color-text-secondary)" }}
-              aria-label="Avis précédent"
-            >
-              <ChevronLeft className="h-4 w-4" />
-            </button>
-
-            {/* Dots */}
-            <div className="flex items-center gap-2">
-              {reviews.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrent(i)}
-                  className="h-2 rounded-full transition-all duration-300"
-                  style={{
-                    width: i === current ? 20 : 8,
-                    background: i === current ? "var(--color-accent)" : "var(--color-border)",
-                  }}
-                  aria-label={`Avis ${i + 1}`}
-                />
-              ))}
-            </div>
-
-            <button
-              onClick={next}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border transition-all duration-300 hover:bg-[rgba(14,165,166,0.08)] hover:translate-x-0.5 hover:shadow-sm"
-              style={{ borderColor: "var(--color-border)", color: "var(--color-text-secondary)" }}
-              aria-label="Avis suivant"
-            >
-              <ChevronRight className="h-4 w-4" />
-            </button>
+            {[...Array(5)].map((_, i) => (
+              <Star
+                key={i}
+                className="h-4 w-4"
+                fill={i < Math.floor(review.rating) ? "#0EA5A6" : "none"}
+                stroke={i < Math.floor(review.rating) ? "#0EA5A6" : "rgba(255,255,255,0.2)"}
+              />
+            ))}
           </div>
-        )}
+
+          {/* Quote */}
+          <blockquote className="space-y-6">
+            <p
+              className="font-heading text-[clamp(18px,3.5vw,28px)] font-medium leading-[1.4] tracking-[-0.01em] text-white"
+            >
+              &ldquo;{review.body}&rdquo;
+            </p>
+            <footer>
+              <p className="text-sm font-semibold text-white">
+                {review.author}
+              </p>
+              <p className="text-xs mt-0.5 text-white/40">
+                Avis Google · {review.date}
+              </p>
+            </footer>
+          </blockquote>
+
+          {/* Navigation */}
+          {reviews.length > 1 && (
+            <div className="mt-8 flex items-center justify-center gap-4">
+              <button
+                onClick={prev}
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border transition-all duration-300 hover:bg-white/10 hover:-translate-x-0.5"
+                style={{ borderColor: "rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.6)" }}
+                aria-label="Avis précédent"
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </button>
+
+              {/* Dots */}
+              <div className="flex items-center gap-2">
+                {reviews.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setCurrent(i)}
+                    className="h-2 rounded-full transition-all duration-300"
+                    style={{
+                      width: i === current ? 20 : 8,
+                      background: i === current ? "#0EA5A6" : "rgba(255,255,255,0.2)",
+                    }}
+                    aria-label={`Avis ${i + 1}`}
+                  />
+                ))}
+              </div>
+
+              <button
+                onClick={next}
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border transition-all duration-300 hover:bg-white/10 hover:translate-x-0.5"
+                style={{ borderColor: "rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.6)" }}
+                aria-label="Avis suivant"
+              >
+                <ChevronRight className="h-4 w-4" />
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </FadeUpSection>

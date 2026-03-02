@@ -154,28 +154,29 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
                       transition={{ duration: 0.6, delay: 0.4 }}
                       className="w-full rounded-xl p-3 bg-white relative"
                       style={{
-                        border: "2px solid #0EA5A6",
-                        boxShadow: "0 4px 16px rgba(14,165,166,0.25), 0 0 0 1px rgba(14,165,166,0.1)"
+                        border: "1px solid rgba(14,165,166,0.22)",
+                        boxShadow:
+                          "0 0 0 1px rgba(14,165,166,0.10), 0 10px 30px rgba(2,6,23,0.10), 0 10px 22px rgba(14,165,166,0.16)",
                       }}
                     >
                       {/* Badge Meilleure offre */}
                       <div
-                        className="flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-full mb-3 -mt-1 relative overflow-hidden"
+                        className="flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-full mb-2.5 -mt-0.5 relative overflow-hidden"
                         style={{ 
-                          background: "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)",
-                          boxShadow: "0 4px 12px rgba(14,165,166,0.4)"
+                          background: "#0EA5A6",
+                          boxShadow: "inset 0 1px 0 rgba(255,255,255,0.25), 0 8px 18px rgba(14,165,166,0.22), 0 0 0 1px rgba(14,165,166,0.12)"
                         }}
                       >
                         <svg 
-                          className="h-3.5 w-3.5 text-white" 
+                          className="h-3 w-3 text-white" 
                           fill="none" 
                           viewBox="0 0 24 24" 
                           stroke="currentColor"
-                          strokeWidth={3}
+                          strokeWidth={2.5}
                         >
                           <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span className="text-[11px] font-bold text-white tracking-wide">MEILLEURE OFFRE</span>
+                        <span className="text-[10px] font-semibold text-white tracking-[0.14em]">MEILLEURE OFFRE</span>
                       </div>
 
                       {/* Nom + Prix */}

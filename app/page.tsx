@@ -17,7 +17,6 @@
 import type { Metadata } from "next";
 import { HeroV4TwoColumn } from "@/components/sections/HeroV4TwoColumn";
 import { ComparableQuotesMockScrolly } from "@/components/sections/ComparableQuotesMockScrolly";
-import { WhyMoverz } from "@/components/sections/WhyMoverz";
 import { CreditsafeChapter } from "@/components/sections/CreditsafeChapter";
 import { TestimonialV4 } from "@/components/sections/TestimonialV4";
 import { FAQV4 } from "@/components/sections/FAQV4";
@@ -50,7 +49,6 @@ export default function Home() {
   return (
     <>
       <HeroV4TwoColumn />
-      <WhyMoverz />
       <ComparableQuotesMockScrolly />
       <CreditsafeChapter />
       <TestimonialV4 />
