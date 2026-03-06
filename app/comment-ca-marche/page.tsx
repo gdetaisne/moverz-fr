@@ -13,8 +13,8 @@ import { FinalCTAV4 } from "@/components/sections/FinalCTAV4";
 
 export const metadata: Metadata = getFullMetadata(
   'comment-ca-marche',
-  "Comment ça marche ? Dossier anonyme, zéro harcèlement",
-  "Décrivez votre déménagement, l'IA calibre le volume, recevez 5 devis comparables sous 5–7j. Dossier 100% anonyme, vous choisissez qui contacter. Zéro appel non sollicité."
+  "Comment ça marche ? Comparer des devis de déménagement en 3 étapes | Moverz",
+  "En 3 minutes, remplissez un dossier guidé et recevez 3 à 5 devis comparables de déménageurs vérifiés sous 5 jours. Dossier anonyme, zéro appel non sollicité, 100% gratuit."
 );
 
 export default function CommentCaMarchePage() {
@@ -38,7 +38,7 @@ export default function CommentCaMarchePage() {
           },
           {
             name: "Recevez et comparez vos devis",
-            text: "Recevez 5 devis comparables sous 5 à 7 jours. Tous les déménageurs ont reçu le même dossier : vous comparez sur une base claire, sans surprise. Vous choisissez librement, sans pression.",
+            text: "Recevez 3 à 5 devis comparables sous 5 à 7 jours. Tous les déménageurs ont reçu le même dossier : vous comparez sur une base claire, sans surprise. Vous choisissez librement, sans pression.",
           },
         ]}
       />

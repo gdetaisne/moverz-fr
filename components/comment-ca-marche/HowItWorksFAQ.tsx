@@ -42,7 +42,7 @@ export default function HowItWorksFAQ() {
     {
       question: "Et si je ne reçois pas 5 devis ?",
       answer:
-        "Notre engagement est de vous présenter 5 devis comparables sous 5 à 7 jours. Si les retours sont insuffisants, nous vous recontactons pour proposer des alternatives (élargir le réseau, ajuster dates/contraintes, etc.).",
+        "Notre engagement est de vous présenter 3 à 5 devis comparables sous 5 à 7 jours. Si les retours sont insuffisants, nous vous recontactons pour proposer des alternatives (élargir le réseau, ajuster dates/contraintes, etc.).",
     },
     {
       question: "Puis-je annuler ?",

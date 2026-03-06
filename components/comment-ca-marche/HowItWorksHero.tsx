@@ -56,11 +56,12 @@ export default function HowItWorksHero() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-[1.1] text-[var(--color-text)]">
-              Comment ça marche ?
+              Comparer des devis de<br />
+              <span style={{ color: "#0EA5A6" }}>déménagement</span> en 3 étapes
             </h1>
 
             <p className="text-xl text-[var(--color-text-secondary)] mb-10 leading-relaxed">
-              En 3 minutes, vous complétez un dossier guidé et recevez des devis comparables. Simple, rapide, sans démarchage.
+              Remplissez un dossier guidé (3 min), recevez <strong>3 à 5 devis comparables</strong> de déménageurs vérifiés. Dossier anonyme, zéro appel non sollicité.
             </p>
 
             {/* CTA */}
@@ -106,8 +107,8 @@ export default function HowItWorksHero() {
                 <CheckCircle className="w-6 h-6 text-[var(--color-accent)]" />
               </div>
               <div>
-                <p className="font-semibold text-[var(--color-text)]">3. Comparez</p>
-                <p className="text-sm text-[var(--color-text-secondary)]">des devis comparables</p>
+                <p className="font-semibold text-[var(--color-text)]">3. Comparez et choisissez</p>
+                <p className="text-sm text-[var(--color-text-secondary)]">3 à 5 devis comparables sous 5 jours</p>
               </div>
             </div>
           </div>
