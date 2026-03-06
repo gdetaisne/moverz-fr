@@ -1,9 +1,7 @@
 "use client";
-import WhatYouReceive from "../WhatYouReceive";
+import { ComparableQuotesMockScrolly } from "@/components/sections/ComparableQuotesMockScrolly";
 
 export default function HowItWorksDevis() {
-  return (
-    <WhatYouReceive />
-  );
+  return <ComparableQuotesMockScrolly />;
 }
 

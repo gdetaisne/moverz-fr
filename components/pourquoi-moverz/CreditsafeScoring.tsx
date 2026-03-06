@@ -1,31 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  TrendingUp,
-  TrendingDown,
-  AlertCircle,
-  CheckCircle,
-  XCircle,
-} from "lucide-react";
+import { TrendingUp, TrendingDown, AlertCircle, CheckCircle, XCircle } from "lucide-react";
 import { staggerContainer, staggerItem } from "@/components/motion";
+
+const GRAIN = "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")";
 
 export default function CreditsafeScoring() {
   return (
     <section
       className="relative py-12 md:py-24 overflow-hidden"
-      style={{ background: "#FFFFFF" }}
+      style={{ background: "#0B0F14" }}
     >
-      {/* Grain texture */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.015]"
-        style={{ 
-          backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")" 
-        }}
-      />
+      <div className="pointer-events-none absolute inset-0 opacity-[0.015]" style={{ backgroundImage: GRAIN }} />
+      <div className="pointer-events-none absolute right-1/4 top-1/3 h-[400px] w-[400px] rounded-full blur-[120px] opacity-10"
+        style={{ background: "radial-gradient(circle, rgba(14,165,166,0.4), transparent 70%)" }} />
 
       <div className="container relative max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
           {/* Left: Explications */}
           <motion.div
             initial="hidden"
@@ -34,105 +27,68 @@ export default function CreditsafeScoring() {
             variants={staggerContainer}
             className="order-2 lg:order-1"
           >
-            <motion.div
-              variants={staggerItem}
-              className="inline-flex items-center gap-2 rounded-full bg-[var(--color-accent)]/10 px-4 py-1.5 text-sm font-semibold text-[var(--color-text)] mb-6"
+            <motion.div variants={staggerItem}
+              className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold mb-6"
+              style={{ background: "rgba(14,165,166,0.12)", border: "1px solid rgba(14,165,166,0.2)", color: "#0EA5A6" }}
             >
-              <span className="h-2 w-2 rounded-full bg-[var(--color-accent)]" />
+              <span className="h-2 w-2 rounded-full" style={{ background: "#0EA5A6" }} />
               Exclusivité Moverz
             </motion.div>
 
-            <motion.h2
-              variants={staggerItem}
-              className="font-heading text-3xl md:text-5xl font-bold text-[var(--color-text)] mb-6 leading-tight tracking-[-0.02em]"
+            <motion.h2 variants={staggerItem}
+              className="font-heading text-3xl md:text-5xl font-bold text-white mb-6 leading-tight tracking-[-0.02em]"
             >
-              3 analyses de risque. Notées /100.
+              3 analyses de risque.{" "}
+              <span className="text-white/40">Notées /100.</span>
             </motion.h2>
 
-            <motion.p
-              variants={staggerItem}
-              className="text-lg text-[var(--color-text-secondary)]/70 leading-relaxed mb-8"
-            >
+            <motion.p variants={staggerItem} className="text-lg text-white/50 leading-relaxed mb-8">
               Le prix ne fait pas tout. Nous évaluons chaque déménageur selon{" "}
-              <strong className="text-[var(--color-text)]">
-                3 axes de risque
-              </strong>{" "}
-              (expérience client, financier, juridique) via Creditsafe, Pappers
-              et l'analyse des avis Google.
+              <strong className="text-white">3 axes de risque</strong>{" "}
+              (expérience client, financier, juridique) via Creditsafe, Pappers et l'analyse des avis Google.
             </motion.p>
 
-            <div className="space-y-5">
-              {/* Reco A */}
-              <motion.div
-                variants={staggerItem}
-                className="flex items-start gap-4 p-4 rounded-xl bg-green-50 border border-green-200"
+            <div className="space-y-4">
+              {/* A */}
+              <motion.div variants={staggerItem}
+                className="flex items-start gap-4 p-4 rounded-xl border border-white/10 bg-white/5"
               >
-                <CheckCircle
-                  className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"
-                  strokeWidth={2.5}
-                />
+                <CheckCircle className="w-5 h-5 text-[#0EA5A6] flex-shrink-0 mt-0.5" strokeWidth={2} />
                 <div>
-                  <h3 className="font-semibold text-[var(--color-text)] mb-1">
-                    ✓ Déménageur A
-                  </h3>
-                  <p className="text-[var(--color-text-secondary)]/70 text-sm">
-                    Google 82/100 · Financier 85/100 · Juridique 91/100 · Aucune
-                    alerte → Le plus fiable
-                  </p>
+                  <h3 className="font-semibold text-white mb-1">✓ Déménageur A</h3>
+                  <p className="text-white/50 text-sm">Google 82/100 · Financier 85/100 · Juridique 91/100 · Aucune alerte → Le plus fiable</p>
                 </div>
               </motion.div>
 
-              {/* Attention B */}
-              <motion.div
-                variants={staggerItem}
-                className="flex items-start gap-4 p-4 rounded-xl bg-orange-50 border border-orange-200"
+              {/* B */}
+              <motion.div variants={staggerItem}
+                className="flex items-start gap-4 p-4 rounded-xl border border-white/10 bg-white/5"
               >
-                <AlertCircle
-                  className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5"
-                  strokeWidth={2.5}
-                />
+                <AlertCircle className="w-5 h-5 text-white/40 flex-shrink-0 mt-0.5" strokeWidth={2} />
                 <div>
-                  <h3 className="font-semibold text-[var(--color-text)] mb-1">
-                    ⚠ Déménageur B
-                  </h3>
-                  <p className="text-[var(--color-text-secondary)]/70 text-sm">
-                    Google 61/100 (patterns retards) · Financier 52/100 (↓ ratio
-                    cash/dettes) → Fragile, négociez les conditions
-                  </p>
+                  <h3 className="font-semibold text-white mb-1">⚠ Déménageur B</h3>
+                  <p className="text-white/50 text-sm">Google 61/100 (patterns retards) · Financier 52/100 (↓ ratio cash/dettes) → Fragile, négociez les conditions</p>
                 </div>
               </motion.div>
 
-              {/* Exclu C */}
-              <motion.div
-                variants={staggerItem}
-                className="flex items-start gap-4 p-4 rounded-xl bg-red-50 border border-red-200"
+              {/* C */}
+              <motion.div variants={staggerItem}
+                className="flex items-start gap-4 p-4 rounded-xl border border-white/10 bg-white/5"
               >
-                <XCircle
-                  className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"
-                  strokeWidth={2.5}
-                />
+                <XCircle className="w-5 h-5 text-white/30 flex-shrink-0 mt-0.5" strokeWidth={2} />
                 <div>
-                  <h3 className="font-semibold text-[var(--color-text)] mb-1">
-                    ✕ Déménageur C — Exclu automatiquement
-                  </h3>
-                  <p className="text-[var(--color-text-secondary)]/70 text-sm">
-                    Alerte cash (ratio cash/dettes critique) + alerte juridique
-                    (condamnation 2023) → Non présenté dans vos devis
-                  </p>
+                  <h3 className="font-semibold text-white/50 mb-1">✕ Déménageur C — Exclu automatiquement</h3>
+                  <p className="text-white/40 text-sm">Alerte cash + alerte juridique → Non présenté dans vos devis</p>
                 </div>
               </motion.div>
             </div>
 
-            <motion.p
-              variants={staggerItem}
-              className="text-sm text-[var(--color-text-secondary)]/60 mt-6 text-center lg:text-left"
-            >
-              Sources : Google, Creditsafe, Pappers • Analyses automatiques •
-              Exemple illustratif
+            <motion.p variants={staggerItem} className="text-xs text-white/25 mt-6 text-center lg:text-left">
+              Sources : Google, Creditsafe, Pappers • Analyses automatiques • Exemple illustratif
             </motion.p>
           </motion.div>
 
-          {/* Right: Mockup scoring app */}
+          {/* Right: Mockup scoring */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -141,104 +97,65 @@ export default function CreditsafeScoring() {
             className="relative order-1 lg:order-2"
           >
             <div className="relative w-full max-w-[420px] mx-auto">
-              <div className="bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.15)] overflow-hidden border border-[var(--color-border)]">
+              <div className="rounded-3xl overflow-hidden border border-white/10" style={{ background: "#111820" }}>
                 {/* Header */}
-                <div className="bg-gradient-to-br from-[var(--color-bg-dark)] to-[var(--color-bg-dark)] px-6 py-5 text-white">
-                  <p className="text-xs font-semibold opacity-70 mb-1">
-                    3 analyses de risque /100
-                  </p>
-                  <p className="text-lg font-bold">3 déménageurs évalués</p>
+                <div className="px-6 py-5 border-b border-white/10">
+                  <p className="text-xs font-semibold text-white/40 mb-1">3 analyses de risque /100</p>
+                  <p className="text-lg font-bold text-white">3 déménageurs évalués</p>
                 </div>
 
-                {/* Scores */}
                 <div className="p-6 space-y-4">
-                  {/* A - Green */}
-                  <div className="p-4 rounded-xl bg-green-50 border-2 border-green-200">
+                  {/* A - accepted */}
+                  <div className="p-4 rounded-xl border border-white/10 bg-white/5">
                     <div className="flex items-center justify-between mb-3">
-                      <p className="font-bold text-[var(--color-text)]">
-                        Déménageur A
-                      </p>
-                      <TrendingUp className="w-5 h-5 text-green-600" />
+                      <p className="font-bold text-white">Déménageur A</p>
+                      <TrendingUp className="w-5 h-5" style={{ color: "#0EA5A6" }} />
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="text-3xl font-bold text-green-600">
-                        85
-                      </div>
+                      <div className="text-3xl font-bold" style={{ color: "#0EA5A6" }}>85</div>
                       <div className="flex-1">
-                        <div className="w-full h-2 bg-white rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-gradient-to-r from-green-500 to-emerald-500 rounded-full"
-                            style={{ width: "85%" }}
-                          />
+                        <div className="w-full h-2 rounded-full overflow-hidden bg-white/10">
+                          <div className="h-full rounded-full" style={{ width: "85%", background: "#0EA5A6" }} />
                         </div>
-                        <p className="text-xs text-green-900 mt-1">
-                          Financier 85 · Google 82 · Juridique 91
-                        </p>
+                        <p className="text-xs text-white/40 mt-1">Financier 85 · Google 82 · Juridique 91</p>
                       </div>
                     </div>
                     <div className="mt-3 flex gap-2">
-                      <span className="text-xs font-medium bg-green-100 text-green-900 px-2 py-1 rounded">
-                        0 alerte
-                      </span>
-                      <span className="text-xs font-medium bg-green-100 text-green-900 px-2 py-1 rounded">
-                        Présenté
-                      </span>
+                      <span className="text-xs font-medium text-white/60 bg-white/10 px-2 py-1 rounded">0 alerte</span>
+                      <span className="text-xs font-medium px-2 py-1 rounded" style={{ background: "rgba(14,165,166,0.15)", color: "#0EA5A6" }}>Présenté</span>
                     </div>
                   </div>
 
-                  {/* B - Orange */}
-                  <div className="p-4 rounded-xl bg-orange-50 border-2 border-orange-200">
+                  {/* B - warning */}
+                  <div className="p-4 rounded-xl border border-white/10 bg-white/5">
                     <div className="flex items-center justify-between mb-3">
-                      <p className="font-bold text-[var(--color-text)]">
-                        Déménageur B
-                      </p>
-                      <TrendingDown className="w-5 h-5 text-orange-600" />
+                      <p className="font-bold text-white">Déménageur B</p>
+                      <TrendingDown className="w-5 h-5 text-white/30" />
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="text-3xl font-bold text-orange-600">
-                        52
-                      </div>
+                      <div className="text-3xl font-bold text-white/60">52</div>
                       <div className="flex-1">
-                        <div className="w-full h-2 bg-white rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-orange-500 rounded-full"
-                            style={{ width: "52%" }}
-                          />
+                        <div className="w-full h-2 rounded-full overflow-hidden bg-white/10">
+                          <div className="h-full rounded-full bg-white/30" style={{ width: "52%" }} />
                         </div>
-                        <p className="text-xs text-orange-900 mt-1">
-                          Financier 52 (↓) · Google 61 · Juridique 74
-                        </p>
+                        <p className="text-xs text-white/40 mt-1">Financier 52 (↓) · Google 61 · Juridique 74</p>
                       </div>
                     </div>
-                    <div className="mt-3 flex gap-2">
-                      <span className="text-xs font-medium bg-orange-100 text-orange-900 px-2 py-1 rounded">
-                        Ratio cash/dettes faible
-                      </span>
+                    <div className="mt-3">
+                      <span className="text-xs font-medium text-white/40 bg-white/10 px-2 py-1 rounded">Ratio cash/dettes faible</span>
                     </div>
                   </div>
 
-                  {/* C - Red / Exclu */}
-                  <div className="p-4 rounded-xl bg-red-50 border-2 border-red-200">
+                  {/* C - excluded */}
+                  <div className="p-4 rounded-xl border border-white/10 bg-white/[0.03] opacity-60">
                     <div className="flex items-center justify-between mb-3">
-                      <p className="font-bold text-[var(--color-text)]">
-                        Déménageur C
-                      </p>
-                      <XCircle className="w-5 h-5 text-red-600" />
+                      <p className="font-bold text-white/50">Déménageur C</p>
+                      <XCircle className="w-5 h-5 text-white/20" />
                     </div>
-                    <div className="flex items-center gap-3">
-                      <div className="text-3xl font-bold text-red-600">
-                        Exclu
-                      </div>
-                      <div className="flex-1">
-                        <p className="text-xs text-red-900 mt-1">
-                          Alerte cash + alerte juridique
-                        </p>
-                      </div>
-                    </div>
-                    <div className="mt-3 flex gap-2">
-                      <span className="text-xs font-medium bg-red-100 text-red-900 px-2 py-1 rounded">
-                        Non présenté
-                      </span>
+                    <p className="text-sm font-bold text-white/30">Exclu</p>
+                    <p className="text-xs text-white/30 mt-1">Alerte cash + alerte juridique</p>
+                    <div className="mt-3">
+                      <span className="text-xs font-medium text-white/30 bg-white/5 px-2 py-1 rounded">Non présenté</span>
                     </div>
                   </div>
                 </div>
@@ -247,7 +164,7 @@ export default function CreditsafeScoring() {
           </motion.div>
         </div>
 
-        {/* Bottom explanation */}
+        {/* Bottom */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -255,19 +172,12 @@ export default function CreditsafeScoring() {
           transition={{ duration: 0.6 }}
           className="max-w-3xl mx-auto text-center mt-16"
         >
-          <div className="bg-white rounded-2xl p-8 shadow-[0_10px_40px_rgba(0,0,0,0.06)] border border-[var(--color-border)]">
-            <p className="text-sm font-semibold text-[var(--color-text)] mb-2">
-              Pourquoi personne d'autre ne le fait ?
+          <div className="rounded-2xl p-8 border border-white/10 bg-white/5">
+            <p className="text-sm font-semibold text-white mb-2">Pourquoi personne d'autre ne le fait ?</p>
+            <p className="text-white/40 text-sm">
+              Coût élevé (Creditsafe + Pappers + accès juridique), complexité d'analyse, et conflit d'intérêt : difficile de noter financièrement un client qui vous paie.
             </p>
-            <p className="text-[var(--color-text-secondary)]/70 text-sm">
-              Coût élevé (Creditsafe + Pappers + accès juridique), complexité
-              d'analyse, et conflit d'intérêt : difficile de noter
-              financièrement un client qui vous paie.
-            </p>
-            <a
-              href="/verifications-partenaires/"
-              className="inline-block mt-4 text-[var(--color-accent)] text-sm font-medium hover:text-[var(--color-text)] transition-colors"
-            >
+            <a href="/verifications-partenaires/" className="inline-block mt-4 text-sm font-medium hover:text-white transition-colors" style={{ color: "#0EA5A6" }}>
               → Voir le détail de nos 3 analyses de risque
             </a>
           </div>

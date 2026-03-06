@@ -67,43 +67,41 @@ export default function MoverzVsOthers() {
             className="relative order-2 lg:order-1"
           >
             <div className="relative w-full max-w-[480px] mx-auto">
-              <div className="bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.25)] overflow-hidden">
+              <div className="rounded-3xl overflow-hidden border border-white/10" style={{ background: "#111820" }}>
                 {/* Header */}
-                <div className="bg-gradient-to-r from-[var(--color-accent)] to-[#0D9B9B] px-6 py-5 text-[var(--color-text)]">
-                  <p className="text-xs font-semibold opacity-70 mb-1">
-                    Comparaison complète
-                  </p>
-                  <p className="text-lg font-bold">Moverz vs Comparateurs</p>
+                <div className="px-6 py-5 border-b border-white/10">
+                  <p className="text-xs font-semibold text-white/40 mb-1">Comparaison complète</p>
+                  <p className="text-lg font-bold text-white">Moverz vs Comparateurs</p>
                 </div>
 
                 {/* Comparison table */}
                 <div className="p-4">
                   {/* Column headers */}
                   <div className="grid grid-cols-3 gap-2 mb-3 text-center">
-                    <div className="text-xs text-[var(--color-text-secondary)] font-medium col-span-1 text-left pl-1">Critère</div>
-                    <div className="text-xs font-bold text-[var(--color-accent)] bg-[var(--color-accent)]/10 rounded-lg py-1.5 px-2">Moverz</div>
-                    <div className="text-xs font-medium text-[#94A3B8] bg-[#F1F5F9] rounded-lg py-1.5 px-2">Autres</div>
+                    <div className="text-xs text-white/30 font-medium col-span-1 text-left pl-1">Critère</div>
+                    <div className="text-xs font-bold rounded-lg py-1.5 px-2" style={{ background: "rgba(14,165,166,0.15)", color: "#0EA5A6" }}>Moverz</div>
+                    <div className="text-xs font-medium text-white/30 bg-white/5 rounded-lg py-1.5 px-2">Autres</div>
                   </div>
 
                   <div className="space-y-2">
                     {[
-                      { label: "Vérification financière", moverz: true, others: false },
-                      { label: "Analyse avis Google /100", moverz: true, others: false },
-                      { label: "Risque juridique vérifié", moverz: true, others: false },
-                      { label: "Exclusion automatique", moverz: true, others: false },
-                      { label: "Dossier standardisé", moverz: true, others: false },
-                      { label: "Dossier anonyme", moverz: true, others: false },
-                    ].map((row) => (
-                      <div key={row.label} className="grid grid-cols-3 gap-2 items-center">
-                        <p className="text-xs text-[var(--color-text)] font-medium col-span-1">{row.label}</p>
+                      "Vérification financière",
+                      "Analyse avis Google /100",
+                      "Risque juridique vérifié",
+                      "Exclusion automatique",
+                      "Dossier standardisé",
+                      "Dossier anonyme",
+                    ].map((label) => (
+                      <div key={label} className="grid grid-cols-3 gap-2 items-center">
+                        <p className="text-xs text-white/60 font-medium col-span-1">{label}</p>
                         <div className="flex justify-center">
-                          <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
-                            <Check className="w-3.5 h-3.5 text-green-600" strokeWidth={3} />
+                          <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ background: "rgba(14,165,166,0.15)" }}>
+                            <Check className="w-3.5 h-3.5" style={{ color: "#0EA5A6" }} strokeWidth={3} />
                           </div>
                         </div>
                         <div className="flex justify-center">
-                          <div className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center">
-                            <X className="w-3.5 h-3.5 text-red-500" strokeWidth={3} />
+                          <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
+                            <X className="w-3.5 h-3.5 text-white/30" strokeWidth={3} />
                           </div>
                         </div>
                       </div>
@@ -113,9 +111,9 @@ export default function MoverzVsOthers() {
 
                 {/* Footer */}
                 <div className="px-4 pb-4">
-                  <div className="p-3 rounded-xl bg-green-50 border border-green-200 text-center">
-                    <p className="text-xs font-bold text-green-900">
-                      ✓ Moverz = 3 analyses de risque /100 + devis comparables
+                  <div className="p-3 rounded-xl text-center border" style={{ background: "rgba(14,165,166,0.08)", borderColor: "rgba(14,165,166,0.2)" }}>
+                    <p className="text-xs font-bold" style={{ color: "#0EA5A6" }}>
+                      Moverz = 3 analyses de risque /100 + devis comparables
                     </p>
                   </div>
                 </div>
