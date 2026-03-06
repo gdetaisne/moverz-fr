@@ -190,53 +190,32 @@ export default function FAQPage() {
         </div>
       </section>
 
-      {/* Stats rapides - Premium Tech */}
+      {/* Stats rapides */}
       <section className="section section-light pt-8 pb-4">
         <div className="container max-w-5xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-12">
             {[
-              { 
-                iconPath: "M13 10V3L4 14h7v7l9-11h-7z",
-                stat: "< 3 min", 
-                label: "Pour créer son dossier complet",
-                gradient: "from-blue-500 to-cyan-500"
-              },
-              { 
-                iconPath: "M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7",
-                stat: "100%", 
-                label: "Gratuit & sans engagement",
-                gradient: "from-emerald-500 to-teal-500"
-              },
-              { 
-                iconPath: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
-                stat: "Sans démarchage", 
-                label: "Aucun appel intempestif",
-                gradient: "from-purple-500 to-pink-500"
-              },
-              { 
-                iconPath: "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z",
-                stat: "3 à 5", 
-                label: "Devis comparables",
-                gradient: "from-orange-500 to-red-500"
-              }
+              { stat: "< 3 min",        label: "Pour créer son dossier" },
+              { stat: "100%",           label: "Gratuit & sans engagement" },
+              { stat: "0 appel",        label: "Non sollicité garanti" },
+              { stat: "3 à 5 devis",    label: "Comparables sur même base" },
             ].map((item, i) => (
-              <div 
+              <div
                 key={i}
-                className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white/80 backdrop-blur-sm p-5 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-brand-turquoise-300 transition-all duration-300"
+                className="rounded-2xl border p-5 text-center"
+                style={{
+                  background: "var(--color-bg)",
+                  borderColor: "rgba(107,207,207,0.2)",
+                }}
               >
-                {/* Gradient overlay on hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
-                
-                <div className="relative text-center space-y-2.5">
-                  <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${item.gradient} bg-opacity-10 text-v4-accent group-hover:scale-110 transition-transform duration-300`}>
-                    <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.iconPath} />
-                    </svg>
-                  </div>
-                  <div className="text-2xl md:text-3xl font-bold bg-gradient-to-br from-v4-text to-brand-turquoise bg-clip-text text-transparent">
-                    {item.stat}
-                  </div>
-                  <div className="text-xs text-gray-600 font-medium leading-tight">{item.label}</div>
+                <div
+                  className="text-2xl md:text-3xl font-bold font-heading mb-1"
+                  style={{ color: "var(--color-accent)" }}
+                >
+                  {item.stat}
+                </div>
+                <div className="text-xs font-medium leading-tight" style={{ color: "var(--color-text-secondary)" }}>
+                  {item.label}
                 </div>
               </div>
             ))}
