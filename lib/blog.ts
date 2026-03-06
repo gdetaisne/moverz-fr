@@ -119,7 +119,8 @@ function mergeBlogData(
     const existing = map.get(canonical.slug);
     const canonicalMeta: BlogPostMeta = {
       slug: canonical.slug,
-      title: canonical.title,
+      // Si le canonical n'a pas de title, on conserve celui de l'existing (évite d'écraser avec undefined)
+      title: canonical.title || existing?.title || "",
       // Description : on privilégie la description canonique, puis la data existante, puis fallback dans sanitizePost.
       description: (canonical as any).description || existing?.description || "",
       publishedAt: existing?.publishedAt ?? "",
