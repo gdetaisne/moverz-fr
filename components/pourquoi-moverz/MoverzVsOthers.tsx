@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import {
   Check,
   X,
-  Smartphone,
   Shield,
   TrendingUp,
   Star,
@@ -77,97 +76,45 @@ export default function MoverzVsOthers() {
                   <p className="text-lg font-bold">Moverz vs Comparateurs</p>
                 </div>
 
-                {/* Comparison items */}
-                <div className="p-6 space-y-3">
-                  {/* Analyse avis Google */}
-                  <div className="flex items-center justify-between p-3 rounded-xl bg-[var(--color-accent)]/10 border-2 border-[var(--color-accent)]">
-                    <div className="flex items-center gap-3">
-                      <Star className="w-5 h-5 text-[var(--color-text)]" />
-                      <span className="text-sm font-bold text-[var(--color-text)]">
-                        Analyse avis Google /100
-                      </span>
-                    </div>
-                    <Check
-                      className="w-5 h-5 text-green-600"
-                      strokeWidth={3}
-                    />
+                {/* Comparison table */}
+                <div className="p-4">
+                  {/* Column headers */}
+                  <div className="grid grid-cols-3 gap-2 mb-3 text-center">
+                    <div className="text-xs text-[var(--color-text-secondary)] font-medium col-span-1 text-left pl-1">Critère</div>
+                    <div className="text-xs font-bold text-[var(--color-accent)] bg-[var(--color-accent)]/10 rounded-lg py-1.5 px-2">Moverz</div>
+                    <div className="text-xs font-medium text-[#94A3B8] bg-[#F1F5F9] rounded-lg py-1.5 px-2">Autres</div>
                   </div>
 
-                  {/* Risque financier */}
-                  <div className="flex items-center justify-between p-3 rounded-xl bg-[var(--color-accent)]/10 border-2 border-[var(--color-accent)]">
-                    <div className="flex items-center gap-3">
-                      <Shield className="w-5 h-5 text-[var(--color-text)]" />
-                      <span className="text-sm font-bold text-[var(--color-text)]">
-                        Risque financier /100 (Creditsafe + Pappers)
-                      </span>
-                    </div>
-                    <Check
-                      className="w-5 h-5 text-green-600"
-                      strokeWidth={3}
-                    />
-                  </div>
-
-                  {/* Risque juridique */}
-                  <div className="flex items-center justify-between p-3 rounded-xl bg-[var(--color-accent)]/10 border-2 border-[var(--color-accent)]">
-                    <div className="flex items-center gap-3">
-                      <Gavel className="w-5 h-5 text-[var(--color-text)]" />
-                      <span className="text-sm font-bold text-[var(--color-text)]">
-                        Risque juridique /100 (Pappers Décisions)
-                      </span>
-                    </div>
-                    <Check
-                      className="w-5 h-5 text-green-600"
-                      strokeWidth={3}
-                    />
-                  </div>
-
-                  {/* Exclusion alertes */}
-                  <div className="flex items-center justify-between p-3 rounded-xl bg-[var(--color-accent)]/10 border-2 border-[var(--color-accent)]">
-                    <div className="flex items-center gap-3">
-                      <X className="w-5 h-5 text-[var(--color-text)]" />
-                      <span className="text-sm font-bold text-[var(--color-text)]">
-                        Exclusion automatique (alertes)
-                      </span>
-                    </div>
-                    <Check
-                      className="w-5 h-5 text-green-600"
-                      strokeWidth={3}
-                    />
-                  </div>
-
-                  {/* Dossier standardisé */}
-                  <div className="flex items-center justify-between p-3 rounded-xl bg-[var(--color-bg)]">
-                    <div className="flex items-center gap-3">
-                      <TrendingUp className="w-5 h-5 text-[var(--color-accent)]" />
-                      <span className="text-sm font-medium text-[var(--color-text)]">
-                        Dossier standardisé (volume IA)
-                      </span>
-                    </div>
-                    <Check
-                      className="w-5 h-5 text-green-600"
-                      strokeWidth={3}
-                    />
-                  </div>
-
-                  {/* Multi-canal */}
-                  <div className="flex items-center justify-between p-3 rounded-xl bg-[var(--color-bg)]">
-                    <div className="flex items-center gap-3">
-                      <Smartphone className="w-5 h-5 text-[var(--color-accent)]" />
-                      <a href="/blog/demenagement-sans-harcelement-protection-vie-privee" className="text-sm font-medium text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors">
-                        Multi-canal & dossier anonyme
-                      </a>
-                    </div>
-                    <Check
-                      className="w-5 h-5 text-green-600"
-                      strokeWidth={3}
-                    />
+                  <div className="space-y-2">
+                    {[
+                      { label: "Vérification financière", moverz: true, others: false },
+                      { label: "Analyse avis Google /100", moverz: true, others: false },
+                      { label: "Risque juridique vérifié", moverz: true, others: false },
+                      { label: "Exclusion automatique", moverz: true, others: false },
+                      { label: "Dossier standardisé", moverz: true, others: false },
+                      { label: "Dossier anonyme", moverz: true, others: false },
+                    ].map((row) => (
+                      <div key={row.label} className="grid grid-cols-3 gap-2 items-center">
+                        <p className="text-xs text-[var(--color-text)] font-medium col-span-1">{row.label}</p>
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
+                            <Check className="w-3.5 h-3.5 text-green-600" strokeWidth={3} />
+                          </div>
+                        </div>
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center">
+                            <X className="w-3.5 h-3.5 text-red-500" strokeWidth={3} />
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
                 {/* Footer */}
-                <div className="px-6 pb-6">
-                  <div className="p-4 rounded-xl bg-green-50 border border-green-200 text-center">
-                    <p className="text-sm font-bold text-green-900">
+                <div className="px-4 pb-4">
+                  <div className="p-3 rounded-xl bg-green-50 border border-green-200 text-center">
+                    <p className="text-xs font-bold text-green-900">
                       ✓ Moverz = 3 analyses de risque /100 + devis comparables
                     </p>
                   </div>

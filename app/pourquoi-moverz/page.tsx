@@ -4,8 +4,8 @@ import PourquoiMoverzContent from "./PourquoiMoverzContent";
 
 export const metadata: Metadata = getFullMetadata(
   'pourquoi-moverz',
-  "Pourquoi Moverz ? Zéro harcèlement, pros vérifiés",
-  "Dossier 100% anonyme, vous choisissez qui contacter. 3 analyses de risque /100 (avis Google, financier Creditsafe, juridique Pappers). Zéro harcèlement garanti. Gratuit."
+  "Pourquoi Moverz ? Comparateur de déménagement vérifiés, zéro harcèlement",
+  "Moverz vérifie chaque déménageur (solidité financière, juridique, avis Google) avant de vous présenter des devis comparables. Dossier anonyme, zéro appel non sollicité. Gratuit."
 );
 
 export default function PourquoiMoverzPage() {

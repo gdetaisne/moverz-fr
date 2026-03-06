@@ -62,8 +62,9 @@ export default function PourquoiHero() {
               variants={staggerItem}
               className="font-heading text-4xl md:text-[56px] font-bold leading-[1.1] tracking-[-0.02em] mb-6 text-[var(--color-text)]"
             >
-              Pourquoi choisir{" "}
-              <span style={{ color: "#0EA5A6" }}>Moverz</span> ?
+              Le seul{" "}
+              <span style={{ color: "#0EA5A6" }}>comparateur de déménagement</span>{" "}
+              qui vérifie la fiabilité des pros
             </motion.h1>
 
             <motion.p
@@ -71,7 +72,7 @@ export default function PourquoiHero() {
               className="text-xl text-[var(--color-text-secondary)] mb-10 leading-relaxed"
             >
               Moverz ne compare pas seulement des devis.{" "}
-              <strong className="text-[var(--color-text)]">Moverz compare des entreprises, leur fiabilité et le risque associé.</strong>
+              <strong className="text-[var(--color-text)]">Moverz compare des entreprises, leur fiabilité financière, juridique et leur réputation client.</strong>
             </motion.p>
 
             {/* CTA */}
