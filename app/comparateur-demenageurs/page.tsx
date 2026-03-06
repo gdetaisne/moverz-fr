@@ -4,6 +4,7 @@ import ComparisonTable from "@/components/comparison/ComparisonTable";
 import ComparisonHero from "@/components/comparison/ComparisonHero";
 import { FAQ, type FAQItem } from "@/components/FAQ";
 import { buildTunnelUrl } from "@/lib/tunnel-url";
+import { ShieldCheck, BarChart2, EyeOff, FileText, BadgeCheck, Trophy, CheckSquare, AlertTriangle, Package, ClipboardList, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = baseGenerateMetadata(
   "comparateur-demenageurs",
@@ -102,51 +103,61 @@ export default function ComparateurDemenageursPage() {
               {[
                 {
                   title: "1. Qualité des vérifications des déménageurs",
-                  emoji: "🏦",
+                  Icon: ShieldCheck,
+                  iconColor: "text-blue-600",
+                  iconBg: "bg-blue-50 border-blue-100",
                   desc: "Un comparateur doit s'assurer de la fiabilité des professionnels qu'il vous propose.",
                   points: [
                     "Vérification du SIREN, des licences de transport, des assurances (RC Pro, marchandises)",
                     "3 analyses de risque /100 : avis Google, financier (Creditsafe + Pappers), juridique (Pappers Décisions)",
-                    "Le risque : être mis en relation avec des entreprises peu scrupuleuses ou en difficulté (257 faillites en 2024 !)",
+                    "Le risque : être mis en relation avec des entreprises peu scrupuleuses ou en difficulté (257 faillites en 2024)",
                   ],
-                  highlight: "✨ Moverz : 3 analyses de risque /100 + exclusion automatique des alertes",
+                  highlight: "Moverz : 3 analyses de risque /100 + exclusion automatique des alertes",
                 },
                 {
                   title: "2. Comparabilité des devis",
-                  emoji: "📊",
-                  desc: "Recevoir 5 devis, c'est bien. Recevoir 5 devis que vous pouvez réellement comparer, c'est mieux.",
+                  Icon: BarChart2,
+                  iconColor: "text-teal-600",
+                  iconBg: "bg-teal-50 border-teal-100",
+                  desc: "Recevoir 3 à 5 devis, c'est bien. Recevoir des devis que vous pouvez réellement comparer, c'est mieux.",
                   points: [
                     "Une base commune (volume, accès, prestations) pour tous les devis",
                     "Le risque : des devis avec des volumes différents (20m³ vs 32m³), des options floues, rendant la comparaison impossible",
-                    "Résultat : risque de surcoût le jour J (+200-800€)",
+                    "Résultat : risque de surcoût le jour J (+200–800€)",
                   ],
-                  highlight: "✨ Moverz utilise l'IA pour standardiser le volume (précision 90-95%)",
+                  highlight: "Moverz : dossier standardisé, volume calculé automatiquement (précision 90–95%)",
                 },
                 {
                   title: "3. Anonymat et protection contre le démarchage",
-                  emoji: "🛡️",
+                  Icon: EyeOff,
+                  iconColor: "text-purple-600",
+                  iconBg: "bg-purple-50 border-purple-100",
                   desc: "Votre tranquillité est primordiale.",
                   points: [
                     "Une plateforme qui ne transmet pas vos coordonnées directes aux déménageurs sans votre accord",
-                    "Le risque : être inondé d'appels et de mails non sollicités (5-10 appels/jour pendant 2 semaines)",
+                    "Le risque : être inondé d'appels et de mails non sollicités (5–10 appels/jour pendant 2 semaines)",
                     "Certains comparateurs revendent vos données à de nombreux déménageurs dès validation du formulaire",
                   ],
-                  highlight: "✨ Moverz : dossier anonyme, vous choisissez qui peut vous contacter",
+                  highlight: "Moverz : dossier anonyme, vous choisissez qui peut vous contacter",
                 },
                 {
-                  title: "4. Utilisation de l'IA pour l'estimation du volume",
-                  emoji: "📦",
+                  title: "4. Estimation précise du volume",
+                  Icon: Package,
+                  iconColor: "text-orange-600",
+                  iconBg: "bg-orange-50 border-orange-100",
                   desc: "L'estimation du volume est la clé d'un devis précis.",
                   points: [
-                    "Un outil d'estimation précis, idéalement basé sur l'IA, pour éviter les sous-estimations",
+                    "Un outil d'estimation précis basé sur votre logement réel pour éviter les sous-estimations",
                     "Le risque : un volume mal estimé entraîne des suppléments coûteux le jour du déménagement",
-                    "40-50% des déménagements subissent des surcoûts à cause d'une mauvaise estimation",
+                    "40–50% des déménagements subissent des surcoûts à cause d'une mauvaise estimation",
                   ],
-                  highlight: "✨ Moverz : IA volumétrie 1 minute, précision 90-95%",
+                  highlight: "Moverz : volume calculé en 1 minute, précision 90–95%",
                 },
                 {
                   title: "5. Gratuité et transparence",
-                  emoji: "💰",
+                  Icon: BadgeCheck,
+                  iconColor: "text-emerald-600",
+                  iconBg: "bg-emerald-50 border-emerald-100",
                   desc: "Le service doit être clair et sans frais cachés pour le particulier.",
                   points: [
                     "Un service 100% gratuit pour le client, avec un modèle économique transparent",
@@ -160,8 +171,10 @@ export default function ComparateurDemenageursPage() {
                   key={c.title} 
                   className="rounded-2xl border border-v4-border bg-white p-6 md:p-7 hover:border-brand-turquoise/50 hover:shadow-md transition-all"
                 >
-                  <div className="flex items-start gap-3">
-                    <span className="text-3xl shrink-0">{c.emoji}</span>
+                  <div className="flex items-start gap-4">
+                    <div className={`flex-shrink-0 flex items-center justify-center w-11 h-11 rounded-xl border ${c.iconBg}`}>
+                      <c.Icon className={`w-5 h-5 ${c.iconColor}`} strokeWidth={2} />
+                    </div>
                     <div className="flex-1 space-y-3">
                       <h3 className="text-base md:text-lg font-bold text-v4-text">{c.title}</h3>
                       <p className="text-sm md:text-base text-v4-text-secondary">{c.desc}</p>
@@ -195,7 +208,9 @@ export default function ComparateurDemenageursPage() {
         <div className="container max-w-4xl">
           <div className="rounded-2xl border border-brand-turquoise-300 bg-gradient-to-br from-brand-turquoise/10 to-white p-6 md:p-8 space-y-6">
             <div className="flex items-center gap-3">
-              <span className="text-3xl">✨</span>
+              <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/20">
+                <ShieldCheck className="w-5 h-5 text-[var(--color-accent)]" strokeWidth={2} />
+              </div>
               <h2 className="text-lg md:text-xl font-semibold text-v4-text">
                 Ce qui fait la différence Moverz (vs autres comparateurs)
               </h2>
@@ -209,11 +224,11 @@ export default function ComparateurDemenageursPage() {
                 },
                 {
                   title: "Devis réellement comparables",
-                  desc: "L'IA Moverz calcule le volume précis (90-95% précision), tous les déménageurs partent du même volume. Les autres = volumes différents = impossible à comparer.",
+                  desc: "Le volume est calculé automatiquement (précision 90–95%), tous les déménageurs partent du même dossier. Les autres = volumes différents = impossible à comparer.",
                 },
                 {
                   title: "Dossier anonyme (0 démarchage)",
-                  desc: "Vous restez anonyme jusqu'à ce que vous choisissiez un déménageur. Les autres = revente de leads à de nombreux déménageurs = 5-10 appels/jour.",
+                  desc: "Vous restez anonyme jusqu'à ce que vous choisissiez un déménageur. Les autres = revente de leads = 5–10 appels/jour.",
                 },
                 {
                   title: "Modèle transparent",
@@ -260,31 +275,41 @@ export default function ComparateurDemenageursPage() {
               {[
                 {
                   href: "/blog/meilleur-comparateur-demenagement-2026/",
-                  emoji: "🏆",
+                  Icon: Trophy,
+                  iconColor: "text-amber-600",
+                  iconBg: "bg-amber-50",
                   title: "Meilleur comparateur 2026",
                   desc: "Comparatif détaillé : 5 critères pour choisir (3 analyses de risque, devis comparables, anonymat).",
                 },
                 {
                   href: "/criteres-choisir-demenageur/",
-                  emoji: "✅",
+                  Icon: CheckSquare,
+                  iconColor: "text-teal-600",
+                  iconBg: "bg-teal-50",
                   title: "8 critères déménageur fiable",
                   desc: "3 analyses de risque /100 (financier, juridique, avis), licences, assurances, volume, devis, paiement.",
                 },
                 {
                   href: "/blog/eviter-arnaques-demenagement/",
-                  emoji: "🛡️",
+                  Icon: AlertTriangle,
+                  iconColor: "text-red-600",
+                  iconBg: "bg-red-50",
                   title: "Éviter les arnaques",
                   desc: "64% anomalies (DGCCRF), 257 faillites 2024, outils de vérification gratuits.",
                 },
                 {
                   href: "/blog/estimer-volume-demenagement-guide-complet/",
-                  emoji: "📦",
+                  Icon: Package,
+                  iconColor: "text-orange-600",
+                  iconBg: "bg-orange-50",
                   title: "Estimer son volume",
-                  desc: "3 méthodes (IA 1 min, inventaire, visite) pour éviter les surcoûts jour J.",
+                  desc: "3 méthodes (calcul auto, inventaire, visite) pour éviter les surcoûts jour J.",
                 },
                 {
                   href: "/blog/comparer-devis-demenagement-guide/",
-                  emoji: "📊",
+                  Icon: ClipboardList,
+                  iconColor: "text-blue-600",
+                  iconBg: "bg-blue-50",
                   title: "Comparer des devis",
                   desc: "7 éléments à vérifier (volume, accès, tarif, assurance, conditions).",
                 },
@@ -295,7 +320,9 @@ export default function ComparateurDemenageursPage() {
                   className="group rounded-xl border border-v4-border bg-white p-5 hover:border-brand-turquoise/50 hover:shadow-md transition-all"
                 >
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-2xl">{item.emoji}</span>
+                    <div className={`flex items-center justify-center w-8 h-8 rounded-lg ${item.iconBg}`}>
+                      <item.Icon className={`w-4 h-4 ${item.iconColor}`} strokeWidth={2} />
+                    </div>
                     <p className="text-sm font-bold text-v4-text group-hover:text-v4-accent">{item.title}</p>
                   </div>
                   <p className="text-xs text-v4-text-secondary leading-relaxed">{item.desc}</p>
@@ -315,25 +342,26 @@ export default function ComparateurDemenageursPage() {
       <section className="section section-light pt-0">
         <div className="container max-w-4xl">
           <div className="rounded-2xl border border-brand-turquoise-300 bg-gradient-to-br from-brand-turquoise/10 to-white p-6 md:p-8 text-center">
-            <div className="flex items-center justify-center gap-2 mb-3">
-              <span className="text-2xl">✨</span>
+            <div className="flex items-center justify-center gap-3 mb-3">
+              <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/20">
+                <FileText className="w-5 h-5 text-[var(--color-accent)]" strokeWidth={2} />
+              </div>
               <h3 className="text-lg font-bold text-v4-text">
                 Prêt à comparer intelligemment ?
               </h3>
             </div>
             <p className="text-sm md:text-base text-v4-text-secondary mb-5 max-w-2xl mx-auto">
-              Créez votre dossier en 3 minutes. Moverz standardise vos infos (volume IA) et évalue chaque déménageur selon 3 analyses de risque /100. Alertes = exclusion automatique. 
-              Recevez jusqu'à 5 devis comparables sous 5-7 jours. Dossier anonyme, 0 démarchage.
+              Créez votre dossier en 3 minutes. Moverz évalue chaque déménageur selon 3 analyses de risque /100.
+              Alertes = exclusion automatique. Recevez 3 à 5 devis comparables sous 5–7 jours. Dossier anonyme, 0 démarchage.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
               <a
                 href={buildTunnelUrl({ from: "comparateur-demenageurs-cta" })}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-v4-text px-8 py-4 text-base font-semibold text-white shadow-lg hover:opacity-90 hover:shadow-xl transition-all"
+                className="inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-base font-semibold text-white shadow-lg hover:opacity-90 hover:shadow-xl transition-all"
+                style={{ background: "#F59E0B", boxShadow: "0 4px 16px rgba(245,158,11,0.3)" }}
               >
                 <span>Obtenir mes devis</span>
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
+                <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href="/pourquoi-moverz/"
@@ -343,7 +371,7 @@ export default function ComparateurDemenageursPage() {
               </a>
             </div>
             <p className="text-xs text-v4-text-secondary mt-4">
-              ●3 min ●IA volumétrie ●Sans démarchage ●Jusqu'à 5 devis comparables ●100% gratuit ●Note 4.9/5
+              3 min · Dossier standardisé · Sans démarchage · 3 à 5 devis comparables · 100% gratuit · Note 4.9/5
             </p>
           </div>
         </div>
