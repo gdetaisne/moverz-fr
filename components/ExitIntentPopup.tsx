@@ -172,11 +172,12 @@ export default function ExitIntentPopup() {
 
           {/* Popup au centre */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="fixed z-[9999] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[440px]"
+            className="fixed z-[9999] w-[90vw] max-w-[440px]"
+            style={{ left: "50%", top: "50%", translateX: "-50%", translateY: "-50%" }}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative overflow-hidden rounded-2xl border border-v4-border bg-white shadow-2xl">
