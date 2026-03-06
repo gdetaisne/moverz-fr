@@ -228,7 +228,8 @@ export default function BlogFloatingCTA() {
               rel="nofollow"
               data-ga-tracked="1"
               onClick={onCtaClick}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-v4-text px-4 py-3 text-sm font-semibold text-white shadow-sm hover:opacity-90 transition-colors"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold text-white shadow-sm hover:opacity-90 transition-colors"
+              style={{ background: "#F59E0B", boxShadow: "0 4px 12px rgba(245,158,11,0.3)" }}
             >
               Obtenir mes devis
             </a>
@@ -288,7 +289,8 @@ export default function BlogFloatingCTA() {
                 rel="nofollow"
                 data-ga-tracked="1"
                 onClick={onCtaClick}
-                className="shrink-0 inline-flex items-center justify-center rounded-xl bg-v4-text px-4 py-2.5 text-xs font-semibold text-white hover:opacity-90 transition-colors"
+                className="shrink-0 inline-flex items-center justify-center rounded-xl px-4 py-2.5 text-xs font-semibold text-white hover:opacity-90 transition-colors"
+                style={{ background: "#F59E0B", boxShadow: "0 4px 8px rgba(245,158,11,0.3)" }}
               >
                 Obtenir
               </a>

@@ -39,7 +39,8 @@ export default function FinalCTA() {
         <div className="max-w-md mx-auto">
           <a
             href={buildTunnelUrl({ from: "final-cta", devisRange: "3-5" })}
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-v4-text px-8 py-4 text-base font-semibold text-white shadow-[0_10px_40px_rgba(15,23,42,0.25)] hover:shadow-[0_14px_60px_rgba(15,23,42,0.35)] hover:-translate-y-0.5 transition-all duration-300"
+            className="inline-flex items-center justify-center gap-2 rounded-xl px-8 py-4 text-base font-semibold text-white hover:-translate-y-0.5 transition-all duration-300"
+            style={{ background: "#F59E0B", boxShadow: "0 10px 40px rgba(245,158,11,0.3)" }}
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />

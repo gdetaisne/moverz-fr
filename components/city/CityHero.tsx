@@ -95,7 +95,8 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
               href={quoteUrl}
               className="inline-flex items-center justify-center gap-2 rounded-xl px-8 py-4 text-base font-semibold text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
               style={{ 
-                background: "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)"
+                background: "#F59E0B",
+                boxShadow: "0 4px 12px rgba(245,158,11,0.3)"
               }}
             >
               Obtenir mes devis

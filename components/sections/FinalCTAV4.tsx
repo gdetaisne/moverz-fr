@@ -27,7 +27,7 @@ export function FinalCTAV4() {
         <a
           href={buildTunnelUrl({ from: "final-cta-v4", devisRange: "3" })}
           className="group inline-flex items-center justify-center gap-2 rounded-xl px-8 py-3.5 text-base font-semibold text-white transition-all duration-200 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]"
-          style={{ background: "#0EA5A6", boxShadow: "0 4px 20px rgba(14,165,166,0.3)" }}
+          style={{ background: "#F59E0B", boxShadow: "0 4px 20px rgba(245,158,11,0.3)" }}
         >
           Obtenir mes devis
         </a>
