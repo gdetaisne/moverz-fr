@@ -3,6 +3,8 @@ import PageHero from "@/components/PageHero";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import { FAQ, type FAQItem } from "@/components/FAQ";
 import { buildTunnelUrl } from "@/lib/tunnel-url";
+import { FAQSchema } from "@/components/schema/FAQSchema";
+import { JsonLd } from "@/components/schema/JsonLd";
 import {
   AlertTriangle, TrendingDown, FileCheck, ShieldCheck, Star, Package,
   FileText, CreditCard, Truck, ShieldAlert, CheckSquare, AlertOctagon,
@@ -257,6 +259,27 @@ export default function CriteresChoisirDemenageurPage() {
 
   return (
     <main className="bg-white min-h-screen">
+      <FAQSchema faqs={faqs} />
+      <JsonLd
+        id="criteres-webpage-schema"
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://moverz.fr/criteres-choisir-demenageur/",
+          name: "Critères pour choisir un déménageur fiable en 2026",
+          description: "Choisir un déménageur fiable : 3 analyses de risque notées /100 + licence, assurance RC Pro, estimation volume, devis détaillé. Checklist + FAQ.",
+          url: "https://moverz.fr/criteres-choisir-demenageur/",
+          inLanguage: "fr-FR",
+          isPartOf: { "@id": "https://moverz.fr/#website" },
+          breadcrumb: {
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Accueil", item: "https://moverz.fr/" },
+              { "@type": "ListItem", position: 2, name: "Critères pour choisir un déménageur", item: "https://moverz.fr/criteres-choisir-demenageur/" },
+            ],
+          },
+        }}
+      />
       <PageHero
         breadcrumbs={[
           { label: "Accueil", href: "/" },

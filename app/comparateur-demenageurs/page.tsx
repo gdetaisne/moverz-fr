@@ -5,12 +5,46 @@ import ComparisonHero from "@/components/comparison/ComparisonHero";
 import { FAQ, type FAQItem } from "@/components/FAQ";
 import { buildTunnelUrl } from "@/lib/tunnel-url";
 import { ShieldCheck, BarChart2, EyeOff, FileText, BadgeCheck, Trophy, CheckSquare, AlertTriangle, Package, ClipboardList, ArrowRight } from "lucide-react";
+import { FAQSchema } from "@/components/schema/FAQSchema";
+import { JsonLd } from "@/components/schema/JsonLd";
 
 export const metadata: Metadata = baseGenerateMetadata(
   "comparateur-demenageurs",
   `Comparateur de Déménagement : Guide Complet 2026 (Moverz vs Alternatives)`,
   "Choisir le meilleur comparateur de déménagement en 2026 : 3 analyses de risque /100 (avis Google, financier, juridique), devis comparables (IA volume), anonymat. Moverz vs plateformes classiques vs contact direct."
 );
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://moverz.fr/comparateur-demenageurs/",
+  name: "Comparateur de Déménagement : Guide Complet 2026",
+  description: "Choisir le meilleur comparateur de déménagement en 2026 : 3 analyses de risque /100, devis comparables, anonymat. Moverz vs alternatives.",
+  url: "https://moverz.fr/comparateur-demenageurs/",
+  inLanguage: "fr-FR",
+  isPartOf: { "@id": "https://moverz.fr/#website" },
+  about: { "@id": "https://moverz.fr/#organization" },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Accueil", item: "https://moverz.fr/" },
+      { "@type": "ListItem", position: 2, name: "Comparateur de déménagement", item: "https://moverz.fr/comparateur-demenageurs/" },
+    ],
+  },
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://moverz.fr/comparateur-demenageurs/#service",
+  name: "Comparateur de déménagement Moverz",
+  description: "Comparez jusqu'à 5 devis comparables de déménageurs vérifiés (3 analyses de risque /100). Dossier anonyme, zéro harcèlement, 100% gratuit.",
+  provider: { "@id": "https://moverz.fr/#organization" },
+  areaServed: { "@type": "Country", name: "France" },
+  serviceType: "Comparateur de déménagement",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "EUR", availability: "https://schema.org/InStock" },
+  termsOfService: "https://moverz.fr/cgu/",
+};
 
 export default function ComparateurDemenageursPage() {
   const faqs: FAQItem[] = [
@@ -68,6 +102,9 @@ export default function ComparateurDemenageursPage() {
 
   return (
     <main className="bg-white min-h-screen">
+      <JsonLd id="comparateur-webpage-schema" data={webPageSchema} />
+      <JsonLd id="comparateur-service-schema" data={serviceSchema} />
+      <FAQSchema faqs={faqs} />
       {/* Hero */}
       <ComparisonHero />
 

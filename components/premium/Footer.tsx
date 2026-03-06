@@ -9,6 +9,7 @@ const footerSections = [
       { href: "/pourquoi-moverz/", label: "Pourquoi Moverz" },
       { href: "/label-moverz/", label: "Label Moverz" },
       { href: "/comment-ca-marche/", label: "Comment ça marche" },
+      { href: "/chiffres-cles/", label: "Chiffres clés du marché" },
       { href: "/blog/eviter-arnaques-demenagement/", label: "Éviter les arnaques" },
       { href: "/blog/", label: "Blog déménagement" },
       { href: "/villes/", label: "Nos villes" },

@@ -193,16 +193,16 @@ export default function ChiffresClesPage() {
           {/* Financial difficulties */}
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-6">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 text-white shadow-lg">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl text-white shadow-lg" style={{ background: "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)" }}>
                 <AlertTriangle className="h-6 w-6" />
               </div>
               <h2 className="text-3xl font-bold text-v4-text">Entreprises en difficulté</h2>
             </div>
 
-            <div className="rounded-3xl border border-orange-200 bg-gradient-to-b from-orange-50 to-white p-8 md:p-10">
+            <div className="rounded-3xl border border-v4-border bg-gradient-to-b from-[#F8FFFE] to-white p-8 md:p-10">
               <div className="grid gap-8 md:grid-cols-3">
                 <div>
-                  <p className="text-5xl font-bold text-orange-600">15-20%</p>
+                  <p className="text-5xl font-bold" style={{ color: "#0EA5A6" }}>15-20%</p>
                   <p className="mt-2 font-semibold text-v4-text">En difficulté financière</p>
                   <p className="mt-2 text-sm text-[#1E293B]/75">
                     Des entreprises de déménagement présentent des signaux de fragilité (dettes, trésorerie tendue, retards de paiement)
@@ -211,14 +211,14 @@ export default function ChiffresClesPage() {
                     href="https://www.creditsafe.com" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-orange-600 hover:underline"
+                    className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-v4-accent hover:underline"
                   >
                     Source : Creditsafe <ExternalLink className="h-3 w-3" />
                   </a>
                 </div>
 
                 <div>
-                  <p className="text-5xl font-bold text-orange-600">5-8%</p>
+                  <p className="text-5xl font-bold" style={{ color: "#0EA5A6" }}>5-8%</p>
                   <p className="mt-2 font-semibold text-v4-text">En procédure collective</p>
                   <p className="mt-2 text-sm text-[#1E293B]/75">
                     Chaque année, 5 à 8% des entreprises entrent en redressement ou liquidation judiciaire (BODACC)
@@ -227,14 +227,14 @@ export default function ChiffresClesPage() {
                     href="https://www.bodacc.fr" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-orange-600 hover:underline"
+                    className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-v4-accent hover:underline"
                   >
                     Source : BODACC <ExternalLink className="h-3 w-3" />
                   </a>
                 </div>
 
                 <div>
-                  <p className="text-5xl font-bold text-orange-600">40-50%</p>
+                  <p className="text-5xl font-bold" style={{ color: "#0EA5A6" }}>40-50%</p>
                   <p className="mt-2 font-semibold text-v4-text">Avec suppléments jour J</p>
                   <p className="mt-2 text-sm text-[#1E293B]/75">
                     Des déménagements subissent des ajustements de prix le jour J (+200-800€ en moyenne) dus à une mauvaise estimation du volume
@@ -245,7 +245,7 @@ export default function ChiffresClesPage() {
                 </div>
               </div>
 
-              <div className="mt-8 rounded-2xl border border-orange-300 bg-white p-6">
+              <div className="mt-8 rounded-2xl border border-v4-accent/20 bg-white p-6">
                 <p className="text-sm font-semibold text-v4-text mb-2">Comment se protéger</p>
                 <p className="text-sm text-[#1E293B]/75">
                   Vérifiez toujours la solvabilité (score Creditsafe), les procédures en cours (BODACC), et exigez un dossier précis 
@@ -258,16 +258,16 @@ export default function ChiffresClesPage() {
           {/* Scams */}
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-6">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-red-500 to-red-600 text-white shadow-lg">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl text-white shadow-lg" style={{ background: "linear-gradient(135deg, #0EA5A6 0%, #0891A1 100%)" }}>
                 <Shield className="h-6 w-6" />
               </div>
               <h2 className="text-3xl font-bold text-v4-text">Arnaques et litiges</h2>
             </div>
 
-            <div className="rounded-3xl border border-red-200 bg-gradient-to-b from-red-50 to-white p-8 md:p-10">
+            <div className="rounded-3xl border border-v4-border bg-gradient-to-b from-[#F8FFFE] to-white p-8 md:p-10">
               <div className="grid gap-8 md:grid-cols-3">
                 <div>
-                  <p className="text-5xl font-bold text-red-600">500-800</p>
+                  <p className="text-5xl font-bold" style={{ color: "#0EA5A6" }}>500-800</p>
                   <p className="mt-2 font-semibold text-v4-text">Plaintes DGCCRF/an</p>
                   <p className="mt-2 text-sm text-[#1E293B]/75">
                     Plaintes déposées chaque année auprès de la Direction Générale de la Concurrence, de la Consommation et de la Répression des Fraudes
@@ -276,14 +276,14 @@ export default function ChiffresClesPage() {
                     href="https://www.economie.gouv.fr/dgccrf" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-red-600 hover:underline"
+                    className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-v4-accent hover:underline"
                   >
                     Source : DGCCRF <ExternalLink className="h-3 w-3" />
                   </a>
                 </div>
 
                 <div>
-                  <p className="text-5xl font-bold text-red-600">8-12%</p>
+                  <p className="text-5xl font-bold" style={{ color: "#0EA5A6" }}>8-12%</p>
                   <p className="mt-2 font-semibold text-v4-text">Taux de litiges</p>
                   <p className="mt-2 text-sm text-[#1E293B]/75">
                     Des déménagements donnent lieu à un litige (casse non indemnisée, supplément abusif, retard de livraison, affaires en otage)
@@ -294,7 +294,7 @@ export default function ChiffresClesPage() {
                 </div>
 
                 <div>
-                  <p className="text-5xl font-bold text-red-600">1500-3000€</p>
+                  <p className="text-5xl font-bold" style={{ color: "#0EA5A6" }}>1500-3000€</p>
                   <p className="mt-2 font-semibold text-v4-text">Préjudice moyen</p>
                   <p className="mt-2 text-sm text-[#1E293B]/75">
                     Montant moyen du préjudice subi en cas d'arnaque ou de litige grave (biens endommagés, supplément abusif, affaires perdues)
@@ -305,7 +305,7 @@ export default function ChiffresClesPage() {
                 </div>
               </div>
 
-              <div className="mt-8 rounded-2xl border border-red-300 bg-white p-6">
+              <div className="mt-8 rounded-2xl border border-v4-accent/20 bg-white p-6">
                 <p className="text-sm font-semibold text-v4-text mb-2">Comment éviter les arnaques</p>
                 <p className="text-sm text-[#1E293B]/75">
                   Vérifiez la capacité de transport, l'assurance RC Pro, la solvabilité (Creditsafe), les avis Google, 

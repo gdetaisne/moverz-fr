@@ -3,6 +3,9 @@ import PageHero from "@/components/PageHero";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import { FAQ, type FAQItem } from "@/components/FAQ";
 import { buildTunnelUrl } from "@/lib/tunnel-url";
+import { FAQSchema } from "@/components/schema/FAQSchema";
+import { JsonLd } from "@/components/schema/JsonLd";
+import { Check, Star, ShieldCheck, Scale, Sparkles, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = getFullMetadata(
   "verifications-partenaires",
@@ -56,6 +59,27 @@ export default function VerificationsPartenairesPage() {
 
   return (
     <main className="bg-white min-h-screen">
+      <FAQSchema faqs={faqs} />
+      <JsonLd
+        id="verifications-webpage-schema"
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://moverz.fr/verifications-partenaires/",
+          name: "Comment Moverz vérifie les déménageurs | 3 analyses de risque notées /100",
+          description: "Moverz évalue chaque déménageur selon 3 axes de risque notés /100 : expérience client (avis Google), risque financier (Creditsafe + Pappers), risque juridique (décisions de justice). Alertes = exclusion automatique.",
+          url: "https://moverz.fr/verifications-partenaires/",
+          inLanguage: "fr-FR",
+          isPartOf: { "@id": "https://moverz.fr/#website" },
+          breadcrumb: {
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Accueil", item: "https://moverz.fr/" },
+              { "@type": "ListItem", position: 2, name: "Vérifications partenaires", item: "https://moverz.fr/verifications-partenaires/" },
+            ],
+          },
+        }}
+      />
       <PageHero
         breadcrumbs={[
           { label: "Accueil", href: "/" },
@@ -141,8 +165,8 @@ export default function VerificationsPartenairesPage() {
                 <div key={c.title} className="rounded-2xl border border-v4-border bg-white p-6 md:p-7">
                   <h3 className="text-base md:text-lg font-bold text-v4-text">{c.title}</h3>
                   {c.highlight && (
-                    <p className="mt-2 text-xs md:text-sm font-semibold text-v4-accent bg-v4-accent/10 rounded-full px-3 py-1 inline-block">
-                      ✨ {c.highlight}
+                    <p className="mt-2 text-xs md:text-sm font-semibold text-v4-accent bg-v4-accent/10 rounded-full px-3 py-1 inline-flex items-center gap-1.5">
+                      <Sparkles className="w-3.5 h-3.5" /> {c.highlight}
                     </p>
                   )}
                   <p className="mt-2 text-sm md:text-base text-v4-text-secondary leading-relaxed">{c.desc}</p>
@@ -168,32 +192,37 @@ export default function VerificationsPartenairesPage() {
             <ul className="grid gap-3 text-sm md:text-base text-v4-text/90">
               {[
                 {
-                  title: "✅ Expérience client vérifiée",
+                  icon: <Star className="w-4 h-4" style={{ color: "#0EA5A6" }} />,
+                  title: "Expérience client vérifiée",
                   desc: "Avis Google analysés (20 derniers avis + patterns des mauvais avis) — deux notes /100 distinctes. Vous savez exactement ce que les clients précédents ont vécu.",
                 },
                 {
-                  title: "✅ Financièrement solides",
+                  icon: <ShieldCheck className="w-4 h-4" style={{ color: "#0EA5A6" }} />,
+                  title: "Financièrement solides",
                   desc: "Scores Creditsafe + Pappers consolidés, enrichis par notre analyse du ratio cash/dettes. Alerte cash = exclusion automatique. Vous évitez les entreprises en difficulté.",
                 },
                 {
-                  title: "✅ Juridiquement sains",
+                  icon: <Scale className="w-4 h-4" style={{ color: "#0EA5A6" }} />,
+                  title: "Juridiquement sains",
                   desc: "Décisions de justice, sanctions et litiges analysés via Pappers. Alerte juridique = exclusion automatique. Vous ne traitez qu'avec des entreprises sans contentieux grave.",
                 },
                 {
-                  title: "✅ Légalement conformes et assurés",
+                  icon: <Check className="w-4 h-4" style={{ color: "#0EA5A6" }} />,
+                  title: "Légalement conformes et assurés",
                   desc: "Licence de transport, SIREN actif, assurance RC Pro valide (≥ 1,5 M€), couverture marchandises (≥ 60 €/m³). En cas de casse, vous êtes protégé.",
                 },
                 {
-                  title: "✅ Transparence totale",
+                  icon: <Sparkles className="w-4 h-4" style={{ color: "#0EA5A6" }} />,
+                  title: "Transparence totale",
                   desc: "Chaque indicateur est présenté et expliqué individuellement. Les déménageurs ont accès à leur scoring et peuvent enrichir leur dossier (note explicative au client).",
                 },
               ].map((b) => (
                 <li key={b.title} className="flex gap-3 items-start">
-                  <div className="shrink-0 mt-1">
-                    <span className="text-v4-accent font-bold text-lg">{b.title.split(" ")[0]}</span>
+                  <div className="shrink-0 mt-1 w-6 h-6 rounded-full flex items-center justify-center" style={{ background: "rgba(14,165,166,0.1)" }}>
+                    {b.icon}
                   </div>
                   <div>
-                    <p className="font-semibold text-v4-text">{b.title.split(" ").slice(1).join(" ")}</p>
+                    <p className="font-semibold text-v4-text">{b.title}</p>
                     <p className="text-v4-text-secondary mt-1 text-sm">{b.desc}</p>
                   </div>
                 </li>
@@ -212,8 +241,10 @@ export default function VerificationsPartenairesPage() {
             </p>
             <a
               href={buildTunnelUrl({ from: "verifications-partenaires" })}
-              className="inline-flex items-center justify-center rounded-full bg-v4-text px-8 py-4 text-base font-semibold text-white shadow-lg hover:opacity-90 hover:shadow-xl transition-all"
+              className="inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-base font-semibold text-white shadow-lg hover:opacity-90 hover:shadow-xl transition-all"
+              style={{ background: "#F59E0B", boxShadow: "0 4px 16px rgba(245,158,11,0.3)" }}
             >
+              <ArrowRight className="w-5 h-5" />
               Obtenir mes devis
             </a>
           </div>
