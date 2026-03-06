@@ -8,8 +8,8 @@ import { buildTunnelUrl } from "@/lib/tunnel-url";
 
 export const metadata: Metadata = getFullMetadata(
   'faq',
-  `FAQ Déménagement : Tarifs, Arnaques, Assurances [Réponses ${new Date().getFullYear()}]`,
-  "Toutes vos questions sur le déménagement : Combien ça coûte ? Comment éviter les arnaques ? Les pros sont-ils assurés ? C'est vraiment gratuit ? → Réponses claires"
+  `FAQ Déménagement 2026 : Tarifs, Arnaques, Vérification des pros | Moverz`,
+  "Toutes vos questions sur le déménagement : prix, arnaques, vérification des déménageurs, dossier anonyme, devis comparables. Réponses claires, sans jargon. 100% gratuit."
 );
 
 // Définir les icônes comme des chaînes de caractères path SVG plutôt que JSX
@@ -22,7 +22,7 @@ const faqCategories = [
     items: [
       {
         q: "Qu'est-ce que Moverz ?",
-        a: "Moverz est un comparateur de devis de déménageurs qui s'appuie sur l'IA pour préparer un dossier ultra précis à partir de quelques questions. L'IA Moverz aide à estimer la volumétrie de votre déménagement et structure un inventaire unique, envoyé à des déménageurs contrôlés. Résultat : des devis enfin comparables, 100% gratuits et sans harcèlement téléphonique.",
+        a: "Moverz est un comparateur de devis de déménageurs. Vous remplissez un dossier standardisé en ligne (3 minutes), transmis anonymement à 3 à 5 déménageurs vérifiés. Résultat : des devis comparables sur la même base, 100% gratuits et sans harcèlement téléphonique.",
       },
       {
         q: "Quelle est la différence entre Moverz et les autres comparateurs ?",
@@ -30,7 +30,7 @@ const faqCategories = [
       },
       {
         q: "Combien de devis vais-je recevoir ?",
-        a: "Vous recevrez un minimum de 5 devis de déménageurs contrôlés. Ce nombre peut varier en fonction de votre localisation et de la disponibilité des partenaires, mais nous nous engageons à vous fournir plusieurs options comparables.",
+        a: "Vous recevrez entre 3 et 5 devis de déménageurs vérifiés. Ce nombre peut varier en fonction de votre localisation et de la disponibilité des partenaires, mais nous nous engageons à vous fournir plusieurs options comparables sur la même base.",
       },
       {
         q: "Que se passe-t-il si ma ville n'est pas couverte ?",
@@ -50,7 +50,7 @@ const faqCategories = [
       },
       {
         q: "Comment Moverz garantit-il des devis comparables ?",
-        a: "Vous décrivez votre déménagement et l’IA Moverz aide à cadrer un dossier standardisé (même volumétrie, mêmes informations) envoyé à tous les déménageurs partenaires. Ils chiffrent ainsi la même base, ce qui rend les devis directement comparables et limite les mauvaises surprises.",
+        a: "Vous décrivez votre déménagement et notre outil cadre un dossier standardisé (même volumétrie, mêmes informations) envoyé à tous les déménageurs partenaires. Ils chiffrent ainsi la même base, ce qui rend les devis directement comparables et limite les mauvaises surprises le jour J.",
       }
     ]
   },
@@ -127,12 +127,12 @@ export default function FAQPage() {
         eyebrow="Toutes vos réponses ici"
         title={
           <>
-            Questions <span style={{ color: "#0EA5A6" }}>fréquentes</span>
+            FAQ <span style={{ color: "#0EA5A6" }}>déménagement</span> 2026
           </>
         }
-        subtitle="Découvrez comment l'IA Moverz estime votre volume, standardise votre dossier et vous aide à comparer des devis vraiment comparables, sans spam."
+        subtitle="Prix, arnaques, vérification des déménageurs, dossier anonyme, devis comparables : toutes vos questions avec des réponses claires et factuelles."
         primaryCta={{
-          label: "Comparer des devis comparables gratuitement",
+          label: "Comparer des devis gratuitement",
           href: "https://devis.moverz.fr/devis-gratuits",
         }}
         secondaryCta={{ label: "Comment ça marche", href: "/comment-ca-marche/" }}
@@ -215,7 +215,7 @@ export default function FAQPage() {
               },
               { 
                 iconPath: "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z",
-                stat: "5+", 
+                stat: "3 à 5", 
                 label: "Devis comparables",
                 gradient: "from-orange-500 to-red-500"
               }

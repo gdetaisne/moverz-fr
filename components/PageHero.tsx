@@ -113,7 +113,7 @@ export default function PageHero({
                   href={primaryCta.href}
                   rel={relFor(primaryCta.href)}
                   className="group inline-flex items-center gap-2 rounded-xl px-8 py-4 text-base font-semibold text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
-                  style={{ background: "#0EA5A6" }}
+                  style={{ background: "#F59E0B", boxShadow: "0 4px 16px rgba(245,158,11,0.3)" }}
                 >
                   <span>{primaryCta.label}</span>
                   <span className="text-xl leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
