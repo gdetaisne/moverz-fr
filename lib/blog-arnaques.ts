@@ -3,10 +3,10 @@ import type { CanonicalBlogPost } from "./blog-canonique";
 
 export const ARNAQUES_ARTICLE: CanonicalBlogPost = {
   slug: "eviter-arnaques-demenagement",
-  title: "Comment éviter les arnaques au déménagement en 2025 : Guide complet",
+  title: "Comment éviter les arnaques au déménagement en 2026 : Guide complet",
   description: "64% des déménageurs présentent des anomalies (DGCCRF 2023). Découvrez comment vérifier un déménageur, les signaux d'alerte, et les outils pour choisir en toute sécurité.",
   type: "pilier",
-  body: `# Comment éviter les arnaques au déménagement en 2025 : Guide complet
+  body: `# Comment éviter les arnaques au déménagement en 2026 : Guide complet
 
 En 2023, la DGCCRF (Direction générale de la concurrence, de la consommation et de la répression des fraudes) a contrôlé 75 entreprises de déménagement.
 
@@ -236,8 +236,8 @@ Avant de vous présenter un déménageur, nous évaluons :
 ### 2. Dossier standardisé = devis comparables
 
 **Avec Moverz** :
-- Vous envoyez vos détails via WhatsApp
-- L'IA calcule un volume unique
+- Vous remplissez un dossier en ligne en 3 minutes
+- Le volume est calculé automatiquement avec précision
 - Tous les déménageurs reçoivent le même dossier
 - → Les devis sont enfin comparables
 
@@ -313,6 +313,6 @@ Ces chiffres ne sont pas là pour vous faire peur. Ils sont là pour vous rappel
 
 ---
 
-*Article mis à jour en février 2026. Sources : DGCCRF (2023), Chambre Syndicale du Déménagement (2024), Creditsafe, Pappers, Infogreffe.*`,
+*Article mis à jour en mars 2026. Sources : DGCCRF (2023), Chambre Syndicale du Déménagement (2024), Creditsafe, Pappers, Infogreffe.*`,
 };
 

@@ -4,7 +4,7 @@ import type { BlogPostMeta } from "./blog";
 export const BLOG_EXTRA: BlogPostMeta[] = [
   {
     slug: "eviter-arnaques-demenagement",
-    title: "Comment éviter les arnaques au déménagement en 2025 : Guide complet",
+    title: "Comment éviter les arnaques au déménagement en 2026 : Guide complet",
     description:
       "64% des déménageurs présentent des anomalies (DGCCRF 2023). Découvrez comment vérifier un déménageur, les signaux d'alerte, et les outils pour choisir en toute sécurité.",
     publishedAt: "2025-12-24T00:00:00.000Z",
