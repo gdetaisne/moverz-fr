@@ -302,6 +302,42 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     category: "conseils-demenagement",
     readingTimeMinutes: 7,
   },
+  {
+    slug: "estimer-volume-demenagement-guide-complet",
+    title: "Estimer le volume de son déménagement : guide complet 2026",
+    description: "Comment calculer précisément le volume de votre déménagement en m³ pour obtenir des devis fiables. Tableaux par pièce, erreurs à éviter, méthodes pratiques.",
+    publishedAt: "2026-03-06T00:00:00.000Z",
+    category: "conseils-demenagement",
+    readingTimeMinutes: 9,
+    tags: ["volume déménagement", "estimation", "devis"],
+  },
+  {
+    slug: "comprendre-score-creditsafe-demenageur",
+    title: "Score Creditsafe d'un déménageur : comment le lire et pourquoi ça compte",
+    description: "Comprendre le score Creditsafe d'une entreprise de déménagement : ce qu'il mesure, comment l'interpréter, et pourquoi 257 faillites en 2024 rendent cette vérification indispensable.",
+    publishedAt: "2026-03-06T00:00:00.000Z",
+    category: "conseils-demenagement",
+    readingTimeMinutes: 8,
+    tags: ["Creditsafe", "déménageur fiable", "vérification"],
+  },
+  {
+    slug: "meilleur-comparateur-demenagement-2026",
+    title: "Meilleur comparateur de déménagement 2026 : comparatif honnête",
+    description: "Quel est le meilleur comparateur de déménagement en 2026 ? Comparatif des plateformes : vérifications, anonymat, qualité des devis. Ce que la plupart ne vous disent pas.",
+    publishedAt: "2026-03-06T00:00:00.000Z",
+    category: "conseils-demenagement",
+    readingTimeMinutes: 8,
+    tags: ["comparateur déménagement", "devis déménagement", "choisir"],
+  },
+  {
+    slug: "comparer-devis-demenagement-guide",
+    title: "Comment comparer des devis de déménagement : guide pratique 2026",
+    description: "Les 7 points à vérifier pour comparer efficacement des devis de déménagement. Ce que doit contenir un devis conforme, les pièges à éviter, et comment obtenir des offres vraiment comparables.",
+    publishedAt: "2026-03-06T00:00:00.000Z",
+    category: "conseils-demenagement",
+    readingTimeMinutes: 7,
+    tags: ["devis déménagement", "comparer devis", "prix déménagement"],
+  },
 ];
 
 
