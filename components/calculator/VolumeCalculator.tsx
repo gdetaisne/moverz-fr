@@ -255,7 +255,7 @@ export default function VolumeCalculator() {
               </a>
               
               <p className="text-xs text-white/60 text-center mt-4">
-                L'IA peut affiner cette estimation à partir de votre dossier
+                Estimation affinée à partir de votre dossier complet
               </p>
             </div>
           </div>

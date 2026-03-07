@@ -59,7 +59,7 @@ export default function WidgetActionSection({
               <div className="flex flex-wrap gap-2">
                 {[
                   { icon: "●", label: "3 min" },
-                  { icon: "●", label: "IA" },
+                  { icon: "●", label: "Volume auto" },
                   { icon: "●", label: "Sans démarchage" },
                   { icon: "●", label: "Jusqu'à 5 devis" },
                 ].map((item, i) => (

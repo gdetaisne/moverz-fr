@@ -59,7 +59,7 @@ export default function Page() {
           title: "Devis : quelles infos donner",
           paragraphs: [
             "Pour obtenir un prix juste, il faut un volume réaliste et une description des accès.",
-            "Moverz standardise votre dossier et l’IA aide à estimer le volume pour des devis comparables.",
+            "Moverz standardise votre dossier et calcule le volume automatiquement pour des devis comparables.",
           ],
           bullets: [
             "Nombre de pièces + liste des meubles principaux (salon/chambre).",

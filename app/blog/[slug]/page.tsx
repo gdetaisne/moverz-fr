@@ -121,9 +121,9 @@ export default function BlogPostPage({ params }: PageProps) {
       totalTime: "PT8W", // 8 semaines préparation
       estimatedCost: { value: "400-3000", currency: "EUR" },
       supply: ["Cartons déménagement", "Papier bulle", "Ruban adhésif", "Marqueurs"],
-      tool: ["IA volumétrie Moverz", "Comparateur devis", "WhatsApp suivi"],
+      tool: ["Calcul de volume Moverz", "Comparateur devis", "Suivi dossier"],
       steps: [
-        { name: "Calculer votre volume précis (Erreur #1)", text: "Utilisez l'IA Moverz pour estimer votre volume réel en 1 minute. Inclut cave, garage, extérieurs. Évite les surcoûts jour J." },
+        { name: "Calculer votre volume précis (Erreur #1)", text: "Utilisez le calcul standardisé Moverz pour estimer votre volume réel en 1 minute. Inclut cave, garage, extérieurs. Évite les surcoûts jour J." },
         { name: "Choisir la bonne période (Erreur #2)", text: "Évitez juillet-août et week-ends (surcoût +30-50%). Privilégiez octobre-mars et jours de semaine." },
         { name: "Comparer des devis comparables (Erreur #3)", text: "Même volume, mêmes options. Évitez les devis 'low-cost' sans assurance. Utilisez Moverz pour standardiser." },
         { name: "Vérifier le déménageur (Erreur #4)", text: "Checklist : SIREN valide, assurance RC Pro, pas de signaux faibles (faillite, litiges). Moverz automatise ces vérifications." },
@@ -159,9 +159,9 @@ export default function BlogPostPage({ params }: PageProps) {
       totalTime: "PT15M", // 15 min calcul
       estimatedCost: { value: "400-6000", currency: "EUR" },
       supply: ["Inventaire pièce par pièce"],
-      tool: ["IA volumétrie Moverz", "Calculateur distance", "Comparateur devis"],
+      tool: ["Calcul de volume Moverz", "Calculateur distance", "Comparateur devis"],
       steps: [
-        { name: "Calculer votre volume en m³", text: "Utilisez l'IA Moverz (1 minute) ou inventaire manuel pièce par pièce. Incluez cave, garage, extérieurs. Volume précis = devis fiables." },
+        { name: "Calculer votre volume en m³", text: "Utilisez le calcul standardisé Moverz (1 minute) ou inventaire manuel pièce par pièce. Incluez cave, garage, extérieurs. Volume précis = devis fiables." },
         { name: "Mesurer la distance exacte", text: "Distance routière (Google Maps), pas vol d'oiseau. Impacte fortement le prix : 10km vs 500km = x3-x5 le tarif." },
         { name: "Identifier vos contraintes d'accès", text: "Étage sans ascenseur (+15-30€/étage), rue étroite, parking éloigné → surcoûts potentiels. Notez précisément les accès." },
         { name: "Choisir votre formule", text: "Éco (vous emballez) vs Standard (déménageur emballe). Différence 30-40% sur le tarif total." },
@@ -230,7 +230,7 @@ export default function BlogPostPage({ params }: PageProps) {
         const title = lines[0] || "Voir Moverz en action";
         const description =
           lines.slice(1).join(" ") ||
-          "Démo rapide : dossier digital opposable, inventaire IA, déclaration de valeur, relances et exports.";
+          "Démo rapide : dossier digital opposable, calcul de volume, déclaration de valeur, relances et exports.";
 
         return (
           <div className="my-8 rounded-2xl border-2 border-v4-accent bg-gradient-to-br from-v4-text to-[#1E293B] p-6 md:p-8 text-center shadow-md">

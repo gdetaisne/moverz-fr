@@ -67,7 +67,7 @@ export default function ProHero() {
             >
               {[
                 "Dossier opposable",
-                "Inventaire IA",
+                "Inventaire structuré",
                 "Relances auto",
                 "Exports PDF/CSV",
                 "Déclaration valeur"

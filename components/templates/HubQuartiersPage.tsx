@@ -3,6 +3,7 @@ import { getFullMetadata } from "@/lib/canonical-helper";
 import { getPricePostForCity } from "@/lib/blog";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { buildTunnelUrl } from "@/lib/tunnel-url";
+import { Calculator } from "lucide-react";
 
 export type Neighborhood = {
   slug: string;
@@ -209,11 +210,11 @@ export function HubQuartiersPage({
             </div>
 
             <div className="text-center space-y-3">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-v4-accent/10 text-v4-accent text-xl font-bold">
-                🤖
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-v4-accent/10 text-v4-accent">
+                <Calculator className="w-5 h-5" />
               </div>
               <h3 className="text-base font-bold text-v4-text">
-                IA volume en 1 minute
+                Calcul de volume en 1 minute
               </h3>
               <p className="text-sm text-v4-text-secondary">
                 Estimation précise de votre cubage

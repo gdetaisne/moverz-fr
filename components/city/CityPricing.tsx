@@ -16,7 +16,7 @@ type CityPricingProps = {
 };
 
 /**
- * Section prix indicatifs avec mockup calcul IA.
+ * Section prix indicatifs avec mockup calcul standardisé.
  *
  * SEO (2026-02-16): accepte désormais des prix calculés par ville
  * (passés depuis le Server Component via props).
@@ -61,7 +61,7 @@ export function CityPricing({ cityName, priceTiers }: CityPricingProps) {
                 {/* Volume detected */}
                 <div className="p-4 rounded-2xl bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/30 mb-4">
                   <p className="text-xs text-[var(--color-text-secondary)] mb-1">
-                    Volume détecté (IA)
+                    Volume estimé
                   </p>
                   <p className="text-3xl font-bold text-[var(--color-text)]">42 m³</p>
                   <p className="text-xs text-[var(--color-text-muted)] mt-1">
@@ -106,7 +106,7 @@ export function CityPricing({ cityName, priceTiers }: CityPricingProps) {
                 </div>
 
                 <p className="text-xs text-[var(--color-text-muted)] text-center mt-4">
-                  Estimation IA • Prix réel dans vos devis
+                  Estimation standardisée • Prix réel dans vos devis
                 </p>
               </div>
             </div>
@@ -199,7 +199,7 @@ export function CityPricing({ cityName, priceTiers }: CityPricingProps) {
                 </li>
               </ul>
               <p className="text-xs text-white/50 mt-4">
-                Tarifs indicatifs. Le prix réel dépend de votre dossier complet (volume IA +
+                Tarifs indicatifs. Le prix réel dépend de votre dossier complet (volume standardisé +
                 accès + période).
               </p>
             </div>

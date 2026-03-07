@@ -59,7 +59,7 @@ export default function Page() {
           title: "Devis fiable : les infos qui changent tout",
           paragraphs: [
             "Un devis utile précise : volume, durée, accès, assurance, modalités d’accès et responsabilités (vous vs prestataire).",
-            "Avec Moverz, un seul dossier : l’IA aide à fiabiliser le volume pour comparer sur une base identique.",
+            "Avec Moverz, un seul dossier : le volume est calculé automatiquement pour comparer sur une base identique.",
           ],
           bullets: [
             "Décrivez les pièces principales pour estimer le volume.",

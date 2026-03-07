@@ -46,7 +46,7 @@ export default function Page() {
           title: "Comparer des devis (sans piège) pour économiser",
           paragraphs: [
             "Comparer 2 devis “incomparables” ne sert à rien. Il faut que tout le monde parte des mêmes infos (volume, accès, date).",
-            "Moverz standardise le dossier et l’IA aide à fiabiliser le volume pour des devis comparables, sans spam.",
+            "Moverz standardise le dossier et calcule le volume automatiquement pour des devis comparables, sans spam.",
           ],
           bullets: [
             "Même volume + mêmes accès = comparaison objective.",

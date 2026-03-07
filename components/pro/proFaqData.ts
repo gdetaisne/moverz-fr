@@ -20,9 +20,9 @@ export const PRO_FAQS = [
       "Dans la majorité des cas, oui. Le dossier est standardisé et complété par des documents (inventaire, déclaration de valeur). En cas de doute (accès critique / cas hors norme), vous gardez une voie de secours (appel court, ou visite).",
   },
   {
-    question: "Et si l'IA se trompe / n'arrive pas à analyser ?",
+    question: "Et si le calcul se trompe / n'arrive pas à analyser ?",
     answer:
-      "Best effort : si l'IA est en erreur ou incertaine, le dossier reste exploitable et vous gardez la main dans le backoffice. Nous prévoyons toujours une voie de secours (forçage / correction).",
+      "Best effort : si le calcul est en erreur ou incertain, le dossier reste exploitable et vous gardez la main dans le backoffice. Nous prévoyons toujours une voie de secours (forçage / correction).",
   },
   {
     question: "Qu'est-ce que j'exporte concrètement ?",

@@ -224,7 +224,7 @@ export default function CityMovingPage({ params }: PageProps) {
           },
           {
             name: "Complétez le dossier standardisé",
-            text: "Ajoutez les détails d'accès (étage, ascenseur, distance parking), les options souhaitées (emballage, monte-meuble) et éventuellement des photos. L'IA calcule le volume pour que tous les devis soient basés sur la même estimation.",
+            text: "Ajoutez les détails d'accès (étage, ascenseur, distance parking), les options souhaitées (emballage, monte-meuble) et éventuellement des photos. Le volume est calculé automatiquement pour que tous les devis soient basés sur la même estimation.",
           },
           {
             name: "Recevez et comparez vos devis",

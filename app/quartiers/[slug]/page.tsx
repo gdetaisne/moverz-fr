@@ -290,7 +290,7 @@ export default function QuartiersGenericPage({ params }: PageProps) {
               <br />à {city.nameCapitalized}
             </h2>
             <p className="text-lg text-white/80 max-w-xl mx-auto">
-              En 3 minutes, l'IA Moverz estime votre volume et partage votre dossier avec 3 à 5
+              En 3 minutes, votre volume est estimé automatiquement et votre dossier est partagé avec 3 à 5
               déménageurs locaux adaptés à votre {isParis ? "arrondissement" : "quartier"}.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 pt-2">

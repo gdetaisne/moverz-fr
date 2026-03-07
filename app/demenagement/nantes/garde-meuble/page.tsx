@@ -59,7 +59,7 @@ export default function Page() {
           title: "Obtenir un devis fiable (sans surprises)",
           paragraphs: [
             "Un devis utile précise : volume, durée, accès, assurance, modalités d’accès et responsabilités (vous vs prestataire).",
-            "Moverz standardise votre dossier et l’IA aide à fiabiliser le volume pour comparer sur une base identique.",
+            "Moverz standardise votre dossier et calcule le volume automatiquement pour comparer sur une base identique.",
           ],
           bullets: [
             "Décrivez les pièces principales pour estimer le volume.",

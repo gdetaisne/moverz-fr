@@ -12,7 +12,7 @@ import { staggerContainer, staggerItem } from "@/components/motion";
 
 const CHECKS = [
   "Solidité financière vérifiée (Creditsafe + Pappers)",
-  "Avis clients analysés par notre IA",
+  "Avis clients analysés et vérifiés",
   "Zéro signal d'alerte détecté",
 ];
 

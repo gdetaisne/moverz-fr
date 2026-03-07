@@ -243,8 +243,8 @@ const glossaryTerms = [
         definition: "Visite sur place par le déménageur pour estimer le volume et les contraintes. Gratuite généralement. Permet d'obtenir un devis précis. Alternative : dossier standardisé Moverz (gain de temps)."
       },
       {
-        term: "Volumétrie IA",
-        definition: "Calcul du volume par intelligence artificielle à partir d'un inventaire détaillé guidé. Précision 90-95%. Permet d'obtenir des devis comparables sans visite technique. Technologie utilisée par Moverz."
+        term: "Volumétrie standardisée",
+        definition: "Calcul automatique du volume à partir d'un inventaire détaillé guidé. Précision 90-95%. Permet d'obtenir des devis comparables sans visite technique. Méthode utilisée par Moverz."
       },
     ]
   },

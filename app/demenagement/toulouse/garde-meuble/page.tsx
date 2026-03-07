@@ -59,7 +59,7 @@ export default function Page() {
           title: "Comment obtenir un devis fiable (sans surprises)",
           paragraphs: [
             "Un devis utile doit préciser : volume estimé, durée de stockage, modalités d’accès, assurance, et surtout qui fait quoi (vous vs le prestataire).",
-            "Avec Moverz, vous remplissez un seul dossier : l’IA aide à fiabiliser le volume pour comparer des devis sur une base identique.",
+            "Avec Moverz, vous remplissez un seul dossier : le volume est calculé automatiquement pour comparer des devis sur une base identique.",
           ],
           bullets: [
             "Décrivez le volume et listez les pièces principales : salon, chambre, cave/garage.",

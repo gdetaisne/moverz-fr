@@ -34,7 +34,7 @@ export default function CommentCaMarchePage() {
           },
           {
             name: "Complétez le dossier standardisé",
-            text: "Ajoutez les détails d'accès (étage, ascenseur, distance parking-entrée), les options (emballage, monte-meuble) et éventuellement des photos. L'IA estime le volume pour que chaque devis soit basé sur les mêmes données.",
+            text: "Ajoutez les détails d'accès (étage, ascenseur, distance parking-entrée), les options (emballage, monte-meuble) et éventuellement des photos. Le volume est calculé automatiquement pour que chaque devis soit basé sur les mêmes données.",
           },
           {
             name: "Recevez et comparez vos devis",

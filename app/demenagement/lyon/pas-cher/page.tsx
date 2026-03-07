@@ -46,7 +46,7 @@ export default function Page() {
           title: "Comparer des devis (vraiment) pour payer moins",
           paragraphs: [
             "Comparer 2 devis “incomparables” ne sert à rien. Pour bien choisir, il faut que les déménageurs reçoivent exactement les mêmes infos (volume, accès, distance, date).",
-            "Moverz standardise le dossier et l’IA aide à fiabiliser le volume pour des devis comparables, sans spam.",
+            "Moverz standardise le dossier et calcule le volume automatiquement pour des devis comparables, sans spam.",
           ],
           bullets: [
             "Même volume + mêmes accès = comparaison objective.",
