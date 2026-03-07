@@ -1709,4 +1709,1313 @@ Vous n'avez plus à faire le tableau manuellement — c'est inclus dans le servi
 - [Comment éviter les arnaques au déménagement](/blog/eviter-arnaques-demenagement/)
 `
   },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // ARTICLE : checklist-demenagement-complet
+  // ─────────────────────────────────────────────────────────────────────────────
+  {
+    slug: "checklist-demenagement-complet",
+    title: "Checklist déménagement 2026 : 70 points pour ne rien oublier",
+    description: "La checklist déménagement complète : 8 semaines avant, J-30, J-7, jour J, après. 70 points vérifiés pour déménager sans stress, sans oubli, sans surprise.",
+    type: "guide",
+    body: `**3 millions de déménagements par an en France.**  
+**Et chaque année, les mêmes erreurs : oubli de résiliation, mauvaise estimation du volume, surprise sur le prix le jour J.**
+
+Une bonne checklist évite 80 % des problèmes. Voici la nôtre — 70 points, classés par étape.
+
+> **Comparez des devis avant de bouger**  
+> [Moverz](/) centralise vos devis de déménageurs vérifiés en un seul dossier. Gratuit, anonyme, sans engagement. [Démarrer maintenant](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-checklist).
+
+---
+
+## 8 semaines avant le déménagement
+
+### Organisationnel
+
+- [ ] Fixer la date de déménagement (en évitant fin de mois, juillet-août)
+- [ ] Évaluer le volume de vos affaires (m³ estimé)
+- [ ] Décider entre déménageur professionnel, location de camion ou amis
+- [ ] Demander des devis à au moins 3 déménageurs (via [Moverz](/))
+- [ ] Vérifier la solidité financière de chaque déménageur ([guide vérification](/blog/verifier-demenageur-creditsafe-siren/))
+- [ ] Vérifier les assurances : RC Pro + marchandises transportées
+- [ ] Prévenir le propriétaire (préavis légal : 3 mois en zone tendue, 1 mois sinon)
+- [ ] Commencer l'inventaire pièce par pièce
+
+### Administratif
+
+- [ ] Contacter la CAF, CPAM, impôts, Pôle Emploi → changement d'adresse
+- [ ] Prévenir votre employeur (adresse pour fiches de paie)
+- [ ] Vérifier les délais de résiliation internet/électricité/gaz
+- [ ] Planifier le raccordement dans le nouveau logement
+
+---
+
+## 1 mois avant (J-30)
+
+### Logistique
+
+- [ ] Signer le bon de commande du déménageur (écrit, avec volume, prix TTC, date)
+- [ ] Vérifier l'acompte : maximum 30 % selon DGCCRF
+- [ ] Commander ou récupérer les cartons (épiceries, plateformes gratuites, déchetteries)
+- [ ] Acheter : ruban adhésif, papier bulle, marqueurs, étiquettes
+- [ ] Lister les objets de valeur à déclarer (piano, art, hi-fi, bijoux > 1 500 €)
+- [ ] Réserver une place de parking le jour J (camion de 12 à 20 m de longueur)
+- [ ] Vérifier les contraintes d'accès : hauteur, largeur de rue, ascenseur
+
+### Résiliations & abonnements
+
+- [ ] Électricité (EDF, Engie, ou autre) : résiliation + ouverture nouveau logement
+- [ ] Gaz (si applicable)
+- [ ] Internet / box (délai 10 à 30 jours selon opérateur)
+- [ ] Assurance habitation (résilier l'ancienne, souscrire la nouvelle)
+- [ ] Assurance voiture (changement d'adresse obligatoire)
+- [ ] Abonnements livraison, magazines, streaming (Amazon, Netflix, etc.)
+- [ ] Médecin, dentiste, pharmacie : changement d'adresse / médecin traitant
+
+---
+
+## 2 semaines avant (J-14)
+
+### Emballage
+
+- [ ] Commencer par les pièces peu utilisées (cave, grenier, bureau)
+- [ ] Chaque carton : contenu lisible + pièce de destination écrit dessus
+- [ ] Cartons livres : max 15 kg (format petit)
+- [ ] Vaisselle : debout, jamais à plat, papier journal ou bulle entre chaque
+- [ ] Vêtements : penderie directe dans housses ou valises
+- [ ] Électronique : idéalement cartons d'origine, sinon mousse/bulles
+
+### Pratique
+
+- [ ] Prévenir les voisins des deux côtés
+- [ ] Faire les démarches de changement d'adresse (La Poste, banque, administration)
+- [ ] Vérifier l'état des lieux de sortie (date fixée avec propriétaire actuel)
+- [ ] Préparer l'état des lieux d'entrée (grille, stylo, photos)
+
+---
+
+## 1 semaine avant (J-7)
+
+### Confirmation déménageur
+
+- [ ] Reconfirmer l'heure et le lieu avec le déménageur
+- [ ] Reconfirmer le volume estimé (évite les suppléments jour J)
+- [ ] Vérifier les conditions météo (plan B si pluie intense)
+- [ ] Préparer l'accès au parking et à l'immeuble (badges, codes, clés)
+- [ ] Préparer un "sac du lendemain" : draps, serviettes, trousse de toilette, vêtements J+1, chargeurs, médicaments, documents importants
+- [ ] Démonter les meubles complexes (armoire, lit, bureau)
+- [ ] Nettoyer le frigo (le vider 24h avant pour dégivrer)
+
+### Enfants & animaux
+
+- [ ] Organiser garde d'enfants pendant le chargement
+- [ ] Préparer la caisse de transport de l'animal, médicaments si nécessaire
+- [ ] Prévoir eau et nourriture pour les animaux dans le camion
+
+---
+
+## La veille (J-1)
+
+- [ ] Finir l'emballage des derniers cartons
+- [ ] Vider entièrement le frigo et le congélateur
+- [ ] Débrancher tous les appareils électroménagers
+- [ ] Protéger les sols et les murs des deux logements (demandez au déménageur)
+- [ ] Préparer un accès dégagé pour le chargement
+- [ ] Préparer le paiement final (chèque, virement, CB selon accord)
+- [ ] Relire le bon de commande pour vérifier le prix TTC total
+
+---
+
+## Le jour J
+
+### Chargement
+
+- [ ] Être présent pendant tout le chargement
+- [ ] Vérifier que chaque meuble est protégé (couvertures, film)
+- [ ] Faire signer l'inventaire de chargement (lettre de voiture)
+- [ ] Noter tout objet déjà abîmé AVANT le chargement
+- [ ] Ne rien laisser derrière sans le signaler
+- [ ] Relever les compteurs (électricité, gaz, eau) dans l'ancien logement
+
+### Déchargement
+
+- [ ] Indiquer au déménageur la pièce de destination de chaque carton
+- [ ] Inspecter chaque meuble à l'arrivée
+- [ ] Signaler immédiatement toute casse ou rayure sur le bordereau de livraison
+- [ ] **Ne jamais signer un bordereau "bon pour accord" avant d'avoir tout vérifié**
+- [ ] Relever les compteurs dans le nouveau logement
+- [ ] Récupérer les clés, badges, télécommandes
+
+---
+
+## Après le déménagement (J+7 à J+30)
+
+### Administratif (à ne pas oublier)
+
+- [ ] Changer d'adresse sur la carte grise (délai : 1 mois, obligatoire)
+- [ ] Mettre à jour la carte électorale (mairie)
+- [ ] Prévenir la CAF, CPAM, Pôle Emploi si pas encore fait
+- [ ] Déclarer le changement d'adresse aux impôts (impots.gouv.fr)
+- [ ] Mettre à jour votre carte Vitale
+- [ ] Mise à jour abonnements / fidélités (SNCF, enseignes, etc.)
+
+### Logement
+
+- [ ] Réaliser l'état des lieux de sortie si pas encore fait
+- [ ] Demander la restitution du dépôt de garantie dans les délais légaux (1 ou 2 mois)
+- [ ] Vérifier le bon fonctionnement : chaudière, électricité, plomberie
+- [ ] Faire connaissance avec les voisins
+
+---
+
+## Les 5 erreurs les plus fréquentes (et comment les éviter)
+
+### 1. Sous-estimer le volume
+
+**Erreur** : vous estimez 20 m³, le camion déborde → supplément 200-500 € le jour J.  
+**Solution** : faire une estimation précise pièce par pièce avant de demander des devis.
+
+### 2. Ne pas comparer les devis sur une base identique
+
+**Erreur** : devis A à 800 €, devis B à 1 200 € → vous prenez le A qui sous-estime le volume.  
+**Solution** : imposer le même volume à tous les déménageurs. [Moverz standardise automatiquement](/comment-ca-marche/).
+
+### 3. Payer un acompte > 30 %
+
+**Erreur** : déménageur demande 50 % d'avance → disparaît le jour J (257 faillites en 2024).  
+**Solution** : maximum 30 % d'acompte. Préférer les paiements traçables (virement, CB).
+
+### 4. Ne pas lire le bordereau de livraison avant de signer
+
+**Erreur** : vous signez "bon pour accord" sans vérifier → aucun recours pour la casse.  
+**Solution** : inspecter chaque meuble, noter les réserves AVANT de signer.
+
+### 5. Oublier l'état des lieux de sortie
+
+**Erreur** : pas d'état des lieux = propriétaire garde la totalité du dépôt de garantie.  
+**Solution** : fixer la date de l'état des lieux de sortie 3-4 semaines avant avec le propriétaire.
+
+---
+
+## Checklist complémentaire : ce que Moverz vérifie pour vous
+
+Quand vous utilisez Moverz, on s'occupe de la partie "vérification déménageur" :
+
+- ✓ Solidité financière (Creditsafe + Pappers) — note /100
+- ✓ Analyse des 20 derniers avis Google
+- ✓ Vérification juridique (litiges, sanctions via Pappers Décisions)
+- ✓ Licence de transport valide
+- ✓ Assurance RC Pro (≥ 1,5 M€) et marchandises transportées
+- ✓ Volume standardisé = devis vraiment comparables
+
+Vous gardez la main sur tout le reste.
+
+> **[CTA]**  
+> Lancer votre dossier de déménagement (3 min)  
+> Dossier standardisé transmis à 3-5 déménageurs vérifiés. Gratuit, anonyme, sans engagement.
+
+---
+
+**Aller plus loin :**
+
+- [Estimer le volume de son déménagement](/blog/estimer-volume-demenagement-guide-complet/)
+- [Comment éviter les arnaques au déménagement](/blog/eviter-arnaques-demenagement/)
+- [Comparer des devis de déménagement](/blog/comparer-devis-demenagement-guide/)
+- [Critères pour choisir un déménageur fiable](/criteres-choisir-demenageur/)
+- [Prix d'un déménagement à Paris](/blog/prix-demenagement-paris-guide/)
+`
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // ARTICLE : prix-demenagement-paris-guide
+  // ─────────────────────────────────────────────────────────────────────────────
+  {
+    slug: "prix-demenagement-paris-guide",
+    title: "Prix déménagement Paris 2026 : fourchettes réalistes, exemples & conseils",
+    description: "Prix d'un déménagement à Paris en 2026 : fourchettes par surface (studio, T2, T3, T4), exemples chiffrés, facteurs qui font varier le prix, et comment obtenir des devis comparables.",
+    type: "guide",
+    body: `**Paris, c'est le marché du déménagement le plus complexe de France.**
+
+Accès difficiles, stationnement impossible, ascenseurs étroits, rues à sens unique, parkings interdits aux camions : tout complique — et renchérit — un déménagement dans la capitale.
+
+Voici les fourchettes de prix réalistes pour 2026, avec les facteurs qui font vraiment varier le tarif.
+
+> **Obtenez des devis comparables pour votre déménagement à Paris**  
+> [Moverz](/) centralise les devis de déménageurs vérifiés. Dossier standardisé, anonyme, 3-5 devis sous 3 à 5 jours. [Démarrer gratuitement](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-paris).
+
+---
+
+## Prix moyens d'un déménagement à Paris en 2026
+
+### Tableau récapitulatif par surface
+
+| Logement | Volume estimé | Paris → Paris | Paris → banlieue/province |
+|---|---|---|---|
+| Studio / T1 (20-30 m²) | 10-20 m³ | 400–800 € | 600–1 200 € |
+| T2 (40-55 m²) | 20-35 m³ | 700–1 400 € | 1 000–2 000 € |
+| T3 (60-80 m²) | 35-55 m³ | 1 200–2 200 € | 1 600–3 000 € |
+| T4 / grande maison (90-120 m²) | 55-80 m³ | 1 800–3 500 € | 2 500–5 000 € |
+
+*Prix TTC pour une prestation standard (chargement, transport, déchargement). Sans emballage professionnel.*
+
+---
+
+## Les 7 facteurs qui font vraiment varier le prix à Paris
+
+### 1. L'arrondissement et l'accès rue
+
+Paris intra-muros ≠ Paris banlieue sur ce point. Les rues du 1er, 4e, 6e, 7e arrondissement sont souvent étroites, sans stationnement camion possible. Le déménageur doit parfois :
+- Demander une autorisation de stationnement à la mairie (50-150 €, à anticiper 2-3 semaines avant)
+- Faire un portage long (> 20 m entre le camion et l'entrée)
+- Utiliser un monte-meuble (location : 200-400 € supplémentaires)
+
+**Impact sur le prix : +10 à +30 % vs une ville standard.**
+
+### 2. L'étage et l'ascenseur
+
+- Rez-de-chaussée ou ascenseur adapté : tarif de base
+- Sans ascenseur : +10-20 € par étage et par palette de 10 m³
+- Ascenseur trop petit pour les meubles : portage à la main étage par étage → surcoût significatif
+
+**Important** : indiquez précisément les dimensions de l'ascenseur dans votre dossier.
+
+### 3. Le portage long
+
+Si le camion ne peut pas stationner devant l'entrée :
+- 0-20 m : inclus dans le tarif standard
+- 20-50 m : +50-150 €
+- > 50 m : surcoût au temps passé
+
+### 4. La période
+
+| Période | Indice prix |
+|---|---|
+| Juillet-août | +30 à +50 % |
+| Fin de mois (28-31) | +15 à +25 % |
+| Vendredi-samedi | +10 à +20 % |
+| Octobre-mars, milieu de mois, jours de semaine | Tarif de base |
+
+**Paris est encore plus tendu que la province en haute saison** : les déménageurs professionnels sont bookés 4-8 semaines à l'avance en juillet.
+
+### 5. La formule choisie
+
+- **Économique** (vous emballez, vous démontez) : tarif de base
+- **Standard** (déménageur emballe les objets fragiles) : +20-35 %
+- **Premium** (déménageur emballe tout, démonte et remonte) : +40-70 %
+
+### 6. Les objets particuliers
+
+| Objet | Surcoût estimé |
+|---|---|
+| Piano droit | 150-400 € |
+| Piano à queue | 400-900 € |
+| Coffre-fort > 100 kg | 150-350 € |
+| Frigo américain (très large) | 80-200 € |
+| Œuvres d'art / tableaux | Spécifique sur devis |
+
+### 7. L'assurance complémentaire
+
+L'assurance standard couvre 60 €/m³ (déménageur responsable). Pour une couverture réelle :
+- Déclaration de valeur : +0,5-1,5 % de la valeur déclarée
+- Assurance tous risques : varie selon la valeur totale
+
+---
+
+## Exemples concrets : combien ça coûte vraiment ?
+
+### Exemple 1 : Studio Paris 11e → Paris 15e
+
+- Surface : 28 m², 15 m³
+- 3e étage sans ascenseur (départ) → 2e étage avec ascenseur (arrivée)
+- Formule économique, milieu de semaine, octobre
+- **Prix constaté : 650-900 €**
+
+### Exemple 2 : T3 Paris 18e → Boulogne-Billancourt
+
+- Surface : 65 m², 45 m³
+- 5e étage avec ascenseur (départ) → maison avec jardin (arrivée)
+- Formule standard (emballage fragiles inclus), fin avril
+- **Prix constaté : 1 800-2 500 €**
+
+### Exemple 3 : T4 Paris 7e → Lyon
+
+- Surface : 100 m², 65 m³
+- Rue étroite, autorisation mairie requise, monte-meuble
+- Formule premium, mars
+- **Prix constaté : 3 500-5 000 €**
+
+---
+
+## Comment économiser sur un déménagement à Paris
+
+### 1. Choisir la bonne période
+
+Éviter juillet-août et les fins de mois. Un T3 en plein été peut coûter 800 € de plus que le même déménagement en octobre.
+
+### 2. Anticiper l'autorisation de stationnement
+
+La demande se fait en mairie (ou via une application dédiée) 2-3 semaines à l'avance. Coût : 50-150 €. Sans autorisation, le déménageur est en stationnement illégal et peut être verbalisé — vous en supportez les conséquences.
+
+### 3. Vider et trier avant
+
+Chaque m³ en moins = économie directe. Un T3 de 65 m³ qui descend à 55 m³ après tri, c'est en moyenne 150-300 € d'économie.
+
+### 4. Obtenir des devis sur une base identique
+
+Le problème classique : chaque déménageur estime un volume différent. Résultat = des prix non comparables. Moverz standardise le volume pour que tous les devis soient basés sur les mêmes données.
+
+### 5. Vérifier la fiabilité avant de choisir
+
+**257 déménageurs ont fait faillite en 2024 en France.** À Paris, la pression financière est plus forte encore. Vérifiez systématiquement : score Creditsafe, procédures en cours (Pappers), avis Google récents.
+
+---
+
+## Questions fréquentes sur le prix d'un déménagement à Paris
+
+### Faut-il toujours une autorisation de stationnement à Paris ?
+
+Non, pas systématiquement. Si le camion peut stationner en double file légalement (zones autorisées, brève durée), ce n'est pas obligatoire. Mais dans la plupart des arrondissements denses, c'est fortement recommandé pour éviter une amende ou un remorquage du camion en plein déménagement.
+
+### Un déménageur peut-il garer son camion dans un parking souterrain à Paris ?
+
+Rarement. Les hauteurs de passage (souvent 1,90-2,10 m) sont incompatibles avec les camions de déménagement (3-4 m de hauteur). Vérifiez la hauteur avant de prévoir cette option.
+
+### C'est quoi la différence entre un devis Paris → Paris et Paris → province ?
+
+Le kilométrage est marginal pour Paris → Paris. Le prix est surtout lié aux accès, au portage, et à la formule. Pour Paris → province, le kilométrage devient un facteur majeur : compter environ 1,5-2,5 €/km pour un volume de 30-40 m³.
+
+### Peut-on déménager en camion loué soi-même à Paris ?
+
+Techniquement oui, mais :
+- Trouver un parking pour le camion est très difficile
+- La conduite en ville est stressante avec un grand véhicule
+- Le risque de casse est plus élevé sans équipement professionnel
+- Pour un T2+, l'économie réelle est souvent inférieure à ce qu'on imagine (location + essence + aide + temps)
+
+---
+
+> **[CTA]**  
+> Comparer des devis pour votre déménagement à Paris  
+> Dossier standardisé, 3-5 déménageurs vérifiés, comparatif complet sous 3 à 5 jours. Gratuit, anonyme, sans engagement.
+
+---
+
+**Aller plus loin :**
+
+- [Checklist déménagement complète (70 points)](/blog/checklist-demenagement-complet/)
+- [Comment éviter les arnaques au déménagement](/blog/eviter-arnaques-demenagement/)
+- [Estimer le volume de son déménagement](/blog/estimer-volume-demenagement-guide-complet/)
+- [Déménagement Paris](/demenagement/paris/)
+`
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // ARTICLE : devis-demenagement-gratuit-sans-engagement
+  // ─────────────────────────────────────────────────────────────────────────────
+  {
+    slug: "devis-demenagement-gratuit-sans-engagement",
+    title: "Devis déménagement gratuit sans engagement : comment ça marche vraiment ?",
+    description: "Comment obtenir des devis de déménagement gratuits et sans engagement en 2026 ? Ce que couvre un devis, les pièges à éviter, et comment comparer des devis réellement comparables.",
+    type: "guide",
+    body: `**"Devis gratuit sans engagement"** — c'est promis partout. Mais derrière cette promesse, les pratiques varient considérablement.
+
+Voici ce qu'il faut savoir pour obtenir de vrais devis comparables, sans tomber dans les pièges habituels.
+
+> **Obtenez des devis comparables en 3 minutes**  
+> [Moverz](/) transmet votre dossier standardisé à 3-5 déménageurs vérifiés. Anonyme, sans engagement, 100 % gratuit. [Démarrer maintenant](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-devis-gratuit).
+
+---
+
+## Un devis déménagement est-il vraiment gratuit ?
+
+**Oui, légalement, un devis de déménagement doit être gratuit** en France pour le particulier. La réglementation (décret n°90-653 du 18 juillet 1990) impose cette gratuité aux déménageurs professionnels.
+
+Ce qui peut être facturé en revanche :
+- Une **visite technique sur site** dans certains cas (rare, à vérifier en amont)
+- Des frais de dossier abusifs (= pratique illégale, signalable à la DGCCRF)
+
+**Méfiez-vous** des plateformes qui demandent un paiement ou un abonnement avant de vous mettre en relation avec des déménageurs. C'est illégal ou au minimum trompeur.
+
+---
+
+## Ce que "sans engagement" signifie vraiment
+
+Un devis "sans engagement" signifie que :
+
+1. **Vous n'êtes pas obligé d'accepter** — vous pouvez recevoir 5 devis et ne retenir aucun
+2. **Aucune pénalité** en cas de refus
+3. **Aucun acompte** n'est exigible avant signature du bon de commande
+
+Ce que cela ne signifie pas :
+- Que le déménageur ne vous rappellera pas (sur les comparateurs classiques, vos coordonnées sont revendues à 10-15 entreprises)
+- Que le devis est précis (sans visite ou dossier standardisé, c'est une estimation)
+- Que le prix sera tenu le jour J (sans volume précis, les suppléments sont fréquents)
+
+---
+
+## Pourquoi les devis "gratuits" ne sont pas toujours comparables
+
+C'est le problème #1 du marché du déménagement en France.
+
+**Scénario classique :**
+- Vous demandez des devis à 4 déménageurs
+- Déménageur A estime votre volume à 20 m³ → devis à 900 €
+- Déménageur B estime à 28 m³ → devis à 1 300 €
+- Déménageur C estime à 35 m³ → devis à 1 650 €
+- Déménageur D estime à 24 m³ → devis à 1 050 €
+
+**Vous prenez le moins cher (A, 900 €).**  
+**Le jour J, le déménageur constate 28 m³ → supplément de 400 €.**
+
+Résultat : vous payez 1 300 € au lieu des 900 € annoncés, et la journée est stressante.
+
+**Solution : imposer le même volume à tous les déménageurs avant d'envoyer les demandes.** C'est exactement ce que fait Moverz : un seul dossier standardisé, un volume calculé une fois, transmis à tous les déménageurs de manière identique.
+
+---
+
+## Les 3 types de devis déménagement
+
+### 1. Le devis téléphonique
+
+Le déménageur vous pose quelques questions par téléphone et estime à la louche. C'est le moins fiable.
+
+**Risques :**
+- Volume sous-estimé → surprises le jour J
+- Prix non contractuel (le déménageur peut modifier le jour J)
+- Vous ne pouvez pas comparer avec un autre devis basé sur d'autres hypothèses
+
+**À éviter pour tout déménagement > studio.**
+
+### 2. La visite technique
+
+Le déménageur vient chez vous, mesure, liste vos meubles. C'est le plus précis.
+
+**Avantages :** volume très précis, devis contractuel, peu de surprises.  
+**Inconvénients :** 1-2 semaines de délai, pas toujours possible, chronophage (3-5 visites = 3-5 demi-journées).
+
+**Recommandé pour :** T4+, longue distance, objets particuliers (piano, art).
+
+### 3. Le dossier standardisé (méthode Moverz)
+
+Vous remplissez un formulaire guidé (3 minutes) avec photos optionnelles. Le volume est calculé à partir de données standardisées. Tous les déménageurs reçoivent exactement le même cahier des charges.
+
+**Avantages :** rapide, devis vraiment comparables, pas de démarchage intempestif.  
+**Précision :** 90-95 % selon retours terrain.
+
+**Recommandé pour :** la grande majorité des déménagements résidentiels.
+
+---
+
+## Comment comparer des devis de déménagement efficacement
+
+### Ce que doit contenir un bon devis
+
+Un devis légalement valide en France doit mentionner :
+
+- Le volume en m³ (méthode d'estimation)
+- Les adresses de départ et d'arrivée
+- La date et la durée estimée
+- Les prestations incluses (chargement, transport, déchargement, emballage ?)
+- Les options et surcoûts possibles (monte-meuble, portage long, étages)
+- Le prix TTC total
+- L'assurance incluse (plafond en €/m³)
+- Les conditions d'acompte et de paiement
+- Les conditions d'annulation
+
+**Tout devis qui ne mentionne pas le volume en m³ n'est pas comparable.**
+
+### Le tableau de comparaison à construire
+
+| Critère | Déménageur A | Déménageur B | Déménageur C |
+|---|---|---|---|
+| Volume retenu (m³) | ? | ? | ? |
+| Prix TTC | ? | ? | ? |
+| Prix au m³ | ? | ? | ? |
+| Assurance (€/m³) | ? | ? | ? |
+| Acompte demandé | ? | ? | ? |
+| Score financier | ? | ? | ? |
+| Note Google | ? | ? | ? |
+
+Moverz produit ce tableau automatiquement pour vous.
+
+### Les 5 pièges à éviter
+
+**1. Choisir uniquement sur le prix**  
+Un tarif 30 % sous la moyenne = sous-estimation du volume ou déménageur en difficulté financière. Les deux entraînent des problèmes le jour J.
+
+**2. Accepter un acompte > 30 %**  
+Au-delà, c'est contraire aux recommandations de la DGCCRF. En cas de faillite du déménageur, vous perdez l'acompte.
+
+**3. Ne pas vérifier l'assurance**  
+60 €/m³ = assurance légale minimale. Pour 40 m³ = 2 400 € de couverture maximum. Si vous avez du mobilier de valeur, c'est insuffisant.
+
+**4. Ne pas lire les conditions d'annulation**  
+Certains déménageurs facturent 50 % en cas d'annulation à moins de 7 jours. Vérifiez avant de signer.
+
+**5. Ignorer les avis négatifs récents**  
+Cherchez spécifiquement les avis des 3-6 derniers mois. Les arnaques récentes sont les plus révélatrices.
+
+---
+
+## Utiliser Moverz pour obtenir des devis gratuits et comparables
+
+### Comment ça fonctionne
+
+1. **Vous remplissez un dossier** (3 minutes) : adresses, dates, type de logement, contraintes
+2. **Le volume est calculé automatiquement** (précision 90-95 %)
+3. **Le dossier est transmis** à 3-5 déménageurs vérifiés de votre secteur
+4. **Vous recevez un comparatif** sous 3 à 5 jours : prix TTC, note Google, score financier, ancienneté
+5. **Vous choisissez** qui peut vous contacter (dossier anonyme jusqu'à ce moment)
+
+### Ce que vous ne vivrez pas
+
+- Aucun appel non sollicité avant votre choix
+- Aucune revente de vos coordonnées
+- Aucun frais ni engagement
+
+### Les vérifications incluses
+
+Avant de transmettre votre dossier à un déménageur, Moverz vérifie :
+
+- **Score financier** (Creditsafe + Pappers) — entreprise solide ou en difficulté ?
+- **20 derniers avis Google** — analyse des patterns dans les mauvais avis
+- **Décisions de justice** (Pappers Décisions) — litiges, sanctions, interdictions de gérer
+- **Licence de transport** — active et valide
+- **Assurance RC Pro** ≥ 1,5 M€
+
+---
+
+> **[CTA]**  
+> Obtenir vos devis gratuits et comparables  
+> 3 min · Dossier standardisé · 3-5 devis vérifiés · Anonyme · Sans engagement · Gratuit
+
+---
+
+**Aller plus loin :**
+
+- [Checklist déménagement complète](/blog/checklist-demenagement-complet/)
+- [Comment éviter les arnaques au déménagement](/blog/eviter-arnaques-demenagement/)
+- [Comparer des devis de déménagement](/blog/comparer-devis-demenagement-guide/)
+- [Critères pour choisir un déménageur fiable](/criteres-choisir-demenageur/)
+`
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // ARTICLE : demenagement-juillet-aout-prix
+  // ─────────────────────────────────────────────────────────────────────────────
+  {
+    slug: "demenagement-juillet-aout-prix",
+    title: "Déménagement en juillet-août 2026 : prix, disponibilités et comment s'organiser",
+    description: "Déménager en juillet ou août coûte 30 à 50 % plus cher. Pourquoi, combien, et comment s'organiser (ou décaler) pour la haute saison du déménagement en France.",
+    type: "guide",
+    body: `**Juillet et août, c'est la haute saison du déménagement en France.**
+
+Changements scolaires, fin de bail au 1er juillet ou 1er août, mutations professionnelles : la demande explose. Et avec elle, les prix.
+
+Voici ce qu'il faut savoir si vous n'avez pas le choix — ou comment faire des économies si vous pouvez décaler.
+
+> **Comparez des devis pour votre déménagement estival**  
+> [Moverz](/) centralise les devis de déménageurs vérifiés. Réservez tôt — les meilleures créneaux partent vite en été. [Démarrer gratuitement](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-juillet-aout).
+
+---
+
+## Combien coûte un déménagement en juillet-août ?
+
+### Surcoût moyen en haute saison
+
+| Type de logement | Basse saison (oct-mars) | Haute saison (juil-août) | Surcoût |
+|---|---|---|---|
+| Studio (15 m³) | 400–600 € | 550–850 € | +30-40 % |
+| T2 (25 m³) | 700–1 100 € | 950–1 600 € | +35-45 % |
+| T3 (40 m³) | 1 200–1 800 € | 1 700–2 800 € | +40-55 % |
+| T4 (60 m³) | 1 800–2 800 € | 2 600–4 200 € | +40-50 % |
+
+*Tarifs indicatifs pour un déménagement intra-régional. Variables selon la ville et les contraintes d'accès.*
+
+---
+
+## Pourquoi les prix explosent en été ?
+
+### 1. La demande double (ou triple) en juillet-août
+
+En France, **40 % des déménagements annuels se concentrent sur les 3 mois d'été**. Les déménageurs professionnels sont complets 4 à 8 semaines à l'avance. C'est une simple loi de l'offre et de la demande.
+
+### 2. Les coûts opérationnels augmentent
+
+- **Personnel saisonnier** moins expérimenté → temps de déménagement plus long
+- **Intérimaires** à former → productivité réduite
+- **Heures supplémentaires** pour répondre à la demande
+
+### 3. La chaleur et les risques
+
+- Meubles plus sensibles à la chaleur (colle, bois, plastique)
+- Personnel plus fatigué → risque de casse accru
+- Certains déménageurs facturent une prime risque chaleur
+
+---
+
+## Si vous devez déménager en juillet-août : comment limiter la facture
+
+### 1. Réserver le plus tôt possible
+
+La règle d'or : **réservez 6-10 semaines à l'avance en haute saison**. Les créneaux de qualité partent dès mai-juin pour les déménagements de juillet-août.
+
+Un déménageur qui a encore de la disponibilité 2 semaines avant votre date en plein été = soit très cher, soit de mauvaise qualité.
+
+### 2. Éviter les dates les plus chères
+
+| Dates | Prix relatif |
+|---|---|
+| 14 juillet, 15 août (veille/lendemain) | Très cher, souvent refusé |
+| Dernier week-end de juillet / premier d'août | Maximum |
+| Week-ends en général en juillet-août | +15-20 % vs semaine |
+| Mardi, mercredi, jeudi (semaine de milieu de mois) | Le moins cher de l'été |
+
+**Astuce** : si votre bail se termine le 31 juillet, négociez avec votre propriétaire pour rester jusqu'au 5 août. Ce délai peut représenter 200-500 € d'économies.
+
+### 3. Choisir une formule allégée
+
+En été, la formule "économique" (vous emballez vous-même) représente une vraie économie :
+- Standard → Économique : -20 à -30 %
+- Pour un T3, c'est 300-600 € d'économie
+
+**Prérequis :** commencer à emballer 3-4 semaines avant, avoir les bons cartons, et protéger correctement les meubles.
+
+### 4. Être flexible sur l'heure
+
+Certains déménageurs proposent des créneaux en début de matinée (départ 6h-7h) ou en fin d'après-midi pour un déménagement sur 2 jours. Ces créneaux sont moins demandés.
+
+### 5. Réduire le volume avant de déménager
+
+Chaque m³ en moins = économie directe et proportionnelle. Avant un déménagement d'été, profitez du printemps pour :
+- Vider cave et grenier
+- Vendre ou donner les meubles dont vous n'avez pas besoin
+- Organiser un vide-maison ou déposer en déchetterie
+
+---
+
+## Si vous pouvez décaler : les meilleures périodes
+
+### Classement des périodes les plus avantageuses
+
+| Période | Disponibilité | Prix | Note |
+|---|---|---|---|
+| Octobre | Excellente | -30-40 % vs été | ⭐⭐⭐⭐⭐ |
+| Novembre-février | Maximum | -35-50 % vs été | ⭐⭐⭐⭐⭐ |
+| Mars | Très bonne | -25-35 % vs été | ⭐⭐⭐⭐ |
+| Avril-mai | Bonne | -15-25 % vs été | ⭐⭐⭐ |
+| Juin | Moyenne | -10-20 % vs été | ⭐⭐ |
+| Juillet-août | Limitée | Référence | ⭐ |
+| Septembre | Bonne | -10-15 % vs été | ⭐⭐ |
+
+### Comment négocier un départ décalé avec votre bailleur
+
+Si votre bail se termine le 31 juillet ou 31 août, il est possible de :
+- **Sous-louer** pendant 2-3 semaines le temps de déménager (avec accord du propriétaire)
+- **Négocier un maintien** moyennant une indemnité de retard (souvent inférieure au surcoût de déménagement)
+- **Donner un préavis plus long** de votre côté pour aligner les dates
+
+---
+
+## Les risques spécifiques d'un déménagement en été
+
+### 1. Le déménageur peu scrupuleux opportuniste
+
+En haute saison, certains déménageurs profitent de la pression pour :
+- Sous-estimer le volume dans le devis → supplément le jour J
+- Sous-traiter à des équipes non habituées → risque de casse
+- Disparaître si problème (encore plus risqué avec des entreprises fragiles)
+
+**257 déménageurs ont fait faillite en 2024.** L'été amplifie les tensions de trésorerie.
+
+→ Vérifiez systématiquement le score Creditsafe et les avis récents avant de signer.
+
+### 2. La canicule et la casse
+
+- **Écrans** (TV, moniteurs) : sensibles aux fortes chaleurs dans un camion
+- **Instruments de musique** (piano, guitare) : le bois se dilate, les cordes se détendent
+- **Vinyles, CD** : risquent de se déformer
+- **Bouteilles de vin** : idéalement déménager en cave réfrigérée ou prévoir
+
+**Demandez** au déménageur comment il gère les objets sensibles à la chaleur.
+
+### 3. Le stationnement estival
+
+À Paris et dans les grandes villes, les autorisations de stationnement pour camions prennent 2-3 semaines à obtenir. En été, les délais peuvent s'allonger. Anticipez au maximum.
+
+---
+
+## Checklist spéciale déménagement d'été
+
+- [ ] Réserver le déménageur 6-10 semaines à l'avance
+- [ ] Vérifier la solidité financière du déménageur (Creditsafe, Pappers)
+- [ ] Demander une autorisation de stationnement si nécessaire (2-3 semaines avant)
+- [ ] Prévoir de l'eau et des boissons fraîches pour l'équipe (obligatoire par fortes chaleurs)
+- [ ] Protéger les objets sensibles à la chaleur (emballer dans du papier bulle blanc plutôt que sombre)
+- [ ] Débrancher et vider le réfrigérateur 24h avant (attention au dégivrage)
+- [ ] Prévoir un ventilateur ou climatiseur mobile pour le nouveau logement
+- [ ] Confirmer le créneau 1 semaine avant (les no-shows sont plus fréquents en été)
+- [ ] Ne rien signer sans avoir vérifié le volume TTC et les conditions d'annulation
+
+---
+
+> **[CTA]**  
+> Comparer des devis pour votre déménagement estival  
+> Déménageurs vérifiés, devis comparables, dossier anonyme. Réservez tôt pour avoir le choix.
+
+---
+
+**Aller plus loin :**
+
+- [Prix d'un déménagement à Paris](/blog/prix-demenagement-paris-guide/)
+- [Checklist déménagement complète](/blog/checklist-demenagement-complet/)
+- [Comment éviter les arnaques au déménagement](/blog/eviter-arnaques-demenagement/)
+- [Critères pour choisir un déménageur fiable](/criteres-choisir-demenageur/)
+`
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // ARTICLE : verifier-demenageur-creditsafe-siren
+  // ─────────────────────────────────────────────────────────────────────────────
+  {
+    slug: "verifier-demenageur-creditsafe-siren",
+    title: "Comment vérifier un déménageur avant de signer : SIREN, Creditsafe, assurance (guide 2026)",
+    description: "Guide complet pour vérifier la fiabilité d'un déménageur avant de signer : SIREN, score Creditsafe, assurance RC Pro, avis Google, procédures judiciaires. Checklist et outils gratuits.",
+    type: "guide",
+    body: `**257 déménageurs ont fait faillite en 2024 en France (source : BODACC/Altares).**  
+**64 % des entreprises de déménagement présentent des anomalies lors des contrôles DGCCRF.**
+
+Avant de confier vos affaires (et souvent votre acompte) à un déménageur, quelques vérifications de base peuvent vous éviter une catastrophe.
+
+Voici comment faire, avec les outils gratuits disponibles.
+
+> **Moverz vérifie tout ça automatiquement**  
+> 3 analyses de risque /100 (financier, juridique, avis clients) pour chaque déménageur de notre réseau. Alertes = exclusion automatique. [Voir comment ça marche](/verifications-partenaires/).
+
+---
+
+## Pourquoi vérifier un déménageur est indispensable
+
+### Les risques réels
+
+**Faillite avec acompte non remboursé**  
+Si le déménageur dépose le bilan avant votre déménagement, vous perdez votre acompte (souvent 30 % du total = plusieurs centaines d'euros). En liquidation judiciaire, les particuliers sont des créanciers de dernier rang — récupérer son argent est quasi impossible.
+
+**Sous-traitance non déclarée**  
+Vous signez avec une entreprise, le jour J c'est une équipe d'une autre société qui arrive. Si problème, la responsabilité est floue et les recours complexes.
+
+**Absence d'assurance**  
+Un déménageur sans assurance RC Pro valide (ou avec une assurance insuffisante) vous laisse sans recours en cas de casse. C'est illégal, mais ça existe.
+
+**Arnaques à l'otage**  
+Le déménageur charge vos affaires, puis exige un paiement supplémentaire pour livrer. Sans devis écrit précis, vous êtes piégé.
+
+---
+
+## Les 5 vérifications essentielles
+
+### 1. Vérifier le SIREN / SIRET et l'activité
+
+**Où :** [annuaire-entreprises.data.gouv.fr](https://annuaire-entreprises.data.gouv.fr) (gratuit)
+
+**Ce que vous cherchez :**
+- L'entreprise est bien active (pas radiée, pas en liquidation)
+- Le code NAF correspond au déménagement (49.42Z = transports de déménagement)
+- L'adresse correspond à ce qui est indiqué sur le devis
+- L'ancienneté de l'entreprise (méfiez-vous des sociétés créées il y a moins de 6 mois)
+
+**Signal d'alerte :** entreprise créée il y a moins de 1 an avec peu d'avis → profil risqué.
+
+### 2. Vérifier la solidité financière (Creditsafe / Pappers)
+
+**Option gratuite :** [pappers.fr](https://www.pappers.fr) → bilans, procédures, dirigeants
+
+**Ce que vous cherchez :**
+- Pas de procédure collective en cours (redressement, liquidation)
+- Pas de changement de gérant récent et suspect
+- Résultat net positif sur les derniers bilans disponibles
+
+**Option payante mais complète :** Creditsafe — score de solvabilité /100, risque de défaillance sur 12 mois, incidents de paiement.
+
+**Moverz accède aux deux** et produit une note consolidée /100 pour chaque déménageur de son réseau.
+
+**Signaux d'alerte :**
+- Procédure collective ouverte (redressement judiciaire)
+- Changement de gérant dans les 6 derniers mois
+- Bilans non déposés (souvent signe de difficultés)
+- Ratio cash/dettes très dégradé
+
+### 3. Vérifier la licence de transport
+
+**Où :** [registre-transporteurs.fr](https://www.registre-transporteurs.fr) ou demander directement au déménageur
+
+**Ce que vous cherchez :**
+- Licence de transport de déménagement (ou licences intérieure/communautaire)
+- Licence en cours de validité
+- Cohérence avec l'entreprise (même nom, même SIRET)
+
+**Pourquoi c'est important :** un déménageur sans licence opère illégalement. En cas de sinistre, son assurance peut refuser de couvrir.
+
+### 4. Vérifier l'assurance RC Pro
+
+**Ce que vous devez demander :** une attestation d'assurance de moins de 6 mois avec :
+- Responsabilité Civile Professionnelle (RC Pro)
+- Garantie Marchandises Transportées
+- Plafond de garantie (minimum légal : 60 €/m³ de marchandises transportées)
+- Date de validité
+
+**Ce que recommande Moverz :** minimum 1,5 M€ en RC Pro, minimum 60 €/m³ en couverture marchandises (pour un déménagement de 40 m³ = 2 400 € couverts par défaut — insuffisant si vous avez des meubles de valeur → déclarez-les).
+
+**Signal d'alerte :** refus de fournir l'attestation, ou attestation expirée.
+
+### 5. Vérifier les avis Google (vraiment)
+
+**Ne regardez pas seulement la note globale.** Une note 4,2/5 peut cacher des problèmes réels.
+
+**Ce que vous cherchez :**
+- Les avis des **3-6 derniers mois** (la qualité peut avoir changé)
+- Les avis **1 et 2 étoiles** en détail : cherchez des patterns (retards à répétition, casse non indemnisée, supplément abusif, comportement problématique)
+- Les **réponses du professionnel** aux mauvais avis (signe de sérieux ou d'agressivité)
+- La **répartition** : 200 avis à 4,7/5 est plus fiable que 15 avis à 4,9/5
+
+**Moverz analyse automatiquement les 20 derniers avis** et produit deux notes distinctes : note globale /100 + analyse des patterns dans les mauvais avis.
+
+---
+
+## Outils gratuits pour vérifier un déménageur
+
+| Outil | Ce qu'il permet | Gratuit ? |
+|---|---|---|
+| [annuaire-entreprises.data.gouv.fr](https://annuaire-entreprises.data.gouv.fr) | SIREN, activité, dirigeants | Oui |
+| [pappers.fr](https://www.pappers.fr) | Bilans, procédures, actes | Oui (partiel) |
+| [bodacc.fr](https://www.bodacc.fr) | Annonces légales, faillites, cessions | Oui |
+| [registre-transporteurs.fr](https://www.registre-transporteurs.fr) | Licences de transport | Oui |
+| Google Maps / Avis | Avis clients | Oui |
+| Creditsafe | Score de solvabilité complet | Non (B2B payant) |
+
+---
+
+## La checklist de vérification en 10 points
+
+- [ ] SIREN actif et code NAF déménagement (49.42Z)
+- [ ] Pas de procédure collective sur Pappers ou BODACC
+- [ ] Licence de transport valide
+- [ ] Attestation assurance RC Pro < 6 mois, plafond ≥ 1,5 M€
+- [ ] Couverture marchandises transportées mentionnée
+- [ ] Note Google ≥ 4/5, volume d'avis significatif (> 20)
+- [ ] Pas de patterns récurrents dans les mauvais avis
+- [ ] Ancienneté > 2 ans
+- [ ] Devis écrit avec volume en m³, prix TTC, conditions d'annulation
+- [ ] Acompte ≤ 30 % du total
+
+---
+
+## Ce que fait Moverz à votre place
+
+Effectuer ces vérifications pour 3-5 déménageurs prend entre 2h et 4h.
+
+Moverz automatise l'ensemble :
+
+**3 analyses de risque /100 par déménageur :**
+1. **Risque expérience client** — 20 derniers avis Google, note globale + analyse patterns mauvais avis
+2. **Risque financier** — Creditsafe + Pappers consolidés + ratio cash/dettes interne
+3. **Risque juridique** — Pappers Décisions (tribunaux de commerce, sanctions, interdictions de gérer)
+
+**En complément :** licence de transport, assurance RC Pro, SIREN actif.
+
+**Alertes financières ou juridiques = exclusion automatique** du déménageur avant transmission de votre dossier.
+
+---
+
+> **[CTA]**  
+> Comparer des déménageurs vérifiés  
+> 3 analyses de risque /100 par déménageur. Dossier anonyme, 3-5 devis comparables, gratuit.
+
+---
+
+**Aller plus loin :**
+
+- [Comprendre le score Creditsafe d'un déménageur](/blog/comprendre-score-creditsafe-demenageur/)
+- [Comment Moverz vérifie les déménageurs](/verifications-partenaires/)
+- [Comment éviter les arnaques au déménagement](/blog/eviter-arnaques-demenagement/)
+- [Critères pour choisir un déménageur fiable](/criteres-choisir-demenageur/)
+`
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // ARTICLE : supplement-prix-jour-j-comment-eviter
+  // ─────────────────────────────────────────────────────────────────────────────
+  {
+    slug: "supplement-prix-jour-j-comment-eviter",
+    title: "Supplément de prix le jour du déménagement : causes, montants, et comment l'éviter",
+    description: "40-50 % des déménagements subissent un supplément le jour J. Causes, montants typiques, et méthode concrète pour éviter les mauvaises surprises sur le prix de votre déménagement.",
+    type: "guide",
+    body: `**40 à 50 % des déménagements** subissent un ajustement de prix le jour J selon les études sectorielles (UFC-Que Choisir, retours terrain).
+
+Ce n'est pas une fatalité. Dans la majorité des cas, les suppléments viennent de causes précises — et prévisibles.
+
+> **Évitez les surprises avec des devis standardisés**  
+> [Moverz](/) impose le même volume à tous les déménageurs. Devis comparables, prix tenu le jour J. [Démarrer gratuitement](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-supplement).
+
+---
+
+## Pourquoi les suppléments le jour J sont si fréquents
+
+### Cause principale : le volume sous-estimé
+
+C'est l'origine de 70 % des suppléments.
+
+**Scénario classique :**
+- Le devis était basé sur 20 m³ (estimation téléphonique rapide)
+- Le jour J, l'équipe constate 28 m³ de mobilier réel
+- Supplément : 8 m³ × prix au m³ = 200-400 €
+
+**Pourquoi ça arrive :**
+- Estimation téléphonique imprécise
+- Client qui "oublie" la cave, le grenier, le local vélos
+- Achats réalisés depuis le devis
+- Cartons supplémentaires non comptés
+
+### Cause secondaire : les contraintes d'accès non mentionnées
+
+| Contrainte | Surcoût typique |
+|---|---|
+| Sans ascenseur (par étage) | 15-30 € |
+| Portage long > 20 m | 50-150 € |
+| Monte-meuble nécessaire | 150-400 € |
+| Autorisation stationnement non obtenue | 50-200 € |
+| Rue étroite (manœuvres supplémentaires) | 50-150 € |
+| Escalier en colimaçon | 50-150 € |
+
+### Autres causes fréquentes
+
+- **Emballage supplémentaire** : le client n'a pas emballé comme prévu
+- **Démontage/remontage non prévu** : meubles trop grands pour passer les portes
+- **Trajets supplémentaires** : tout ne rentre pas en un voyage
+- **Temps supplémentaire** : déménagement qui dure plus longtemps qu'estimé (tarif horaire)
+
+---
+
+## Les montants : combien coûte un supplément ?
+
+### Barème typique des surcoûts
+
+| Cause | Montant typique |
+|---|---|
+| Volume sous-estimé (+ 5 m³) | 100-300 € |
+| Volume sous-estimé (+ 10 m³) | 200-600 € |
+| Étage sans ascenseur (non déclaré) | 60-150 € |
+| Monte-meuble en urgence | 200-400 € |
+| Emballage supplémentaire (non prévu) | 100-300 € |
+| Temps supplémentaire (> estimation) | 50-120 €/h |
+| Manutention objets lourds non déclarés | 80-200 € |
+
+### Le scénario du pire
+
+Pour un T3 :
+- Volume sous-estimé de 10 m³ : +300 €
+- Monte-meuble non prévu : +250 €
+- Temps supplémentaire 2h : +160 €
+- **Total supplément : +710 €**
+
+---
+
+## Comment éviter les suppléments le jour J
+
+### 1. Imposer une estimation précise du volume
+
+**Ne jamais accepter un devis basé sur une estimation téléphonique pour un déménagement > studio.**
+
+Les méthodes fiables :
+- **Visite technique** sur site (le déménageur vient mesurer)
+- **Dossier standardisé** avec inventaire guidé pièce par pièce (méthode Moverz)
+
+**Règle absolue :** tous vos devis doivent être basés sur le même volume en m³. Si un déménageur ne mentionne pas le volume dans son devis, refusez-le.
+
+### 2. Être exhaustif sur les contraintes d'accès
+
+Dans votre dossier ou lors de la visite, indiquez :
+- Étage exact + présence/absence d'ascenseur
+- Dimensions de l'ascenseur (hauteur, largeur, profondeur)
+- Distance entre le stationnement camion et l'entrée de l'immeuble
+- Type de rue (large, étroite, sens unique, zone piétonne)
+- Présence d'un portail ou d'une cour à traverser
+- **Au départ ET à l'arrivée** — les deux adresses importent
+
+### 3. Inventorier cave, grenier, remise, local vélos
+
+Les oublis les plus fréquents :
+- Cave ou box de stockage
+- Grenier ou combles
+- Local vélos (vélos, poussettes, trottinettes)
+- Balcon ou terrasse (barbecue, salon de jardin, pots de plantes)
+- Garage (outils, établi, matériel de sport)
+
+**Conseil :** faites votre inventaire avec votre téléphone, pièce par pièce, en filmant.
+
+### 4. Vérifier la clause de révision de prix dans le contrat
+
+Le contrat de déménagement doit mentionner :
+- Les cas de révision de prix autorisés (et leurs montants)
+- La procédure en cas de constat de différence le jour J (accord écrit obligatoire avant d'accepter)
+
+**Légalement :** un déménageur ne peut pas exiger un supplément non prévu contractuellement. Si vous avez un devis écrit précis et que le volume était bien indiqué, vous êtes protégé.
+
+### 5. Confirmer le volume 48h avant
+
+Appelez votre déménageur 48h avant et confirmez :
+- Le volume estimé
+- Les contraintes d'accès
+- L'heure et le nombre de personnes
+
+Cela vous protège et oblige le déménageur à lever le flag avant le jour J s'il anticipe un problème.
+
+---
+
+## Que faire si un supplément est demandé le jour J ?
+
+### Votre droit
+
+**Vous n'êtes pas obligé d'accepter un supplément non prévu contractuellement.**
+
+Si le devis stipule 40 m³ et que le déménageur annonce le jour J "finalement c'est 48 m³" sans raison objective :
+1. Demandez à voir le constat écrit de la différence
+2. Refusez de signer tout avenant sans avoir vérifié vous-même
+3. Notez tout par écrit
+
+### Si le supplément est justifié
+
+Si vous avez effectivement un volume supérieur à celui estimé, le supplément est en principe contractuellement valide. Dans ce cas :
+- Vérifiez le prix au m³ de l'avenant (doit correspondre au tarif initial, pas majoré)
+- Obtenez un avenant écrit avant de donner votre accord oral
+- Ne payez que le jour J (pas d'acompte supplémentaire exigible avant)
+
+### Si le déménageur refuse de livrer sans paiement
+
+C'est une arnaque classique ("prise d'affaires en otage"). C'est illégal.
+- Appelez la police ou la gendarmerie (constat)
+- Contactez la DGCCRF
+- Documentez tout (photos, messages, témoins)
+
+---
+
+## Pourquoi la standardisation du volume change tout
+
+La racine du problème, c'est que chaque déménageur estime le volume différemment. Sans base commune, les devis ne sont pas comparables et les suppléments sont prévisibles.
+
+**Méthode Moverz :**
+- Un seul dossier avec inventaire guidé (pièce par pièce, options, contraintes)
+- Volume calculé une fois, de façon standardisée
+- Tous les déménageurs reçoivent exactement le même cahier des charges
+- Résultat : devis vraiment comparables, surprises réduites le jour J
+
+---
+
+> **[CTA]**  
+> Évitez les suppléments avec des devis standardisés  
+> Volume calculé une fois. Tous les déménageurs sur la même base. Gratuit, anonyme, sans engagement.
+
+---
+
+**Aller plus loin :**
+
+- [Checklist déménagement complète](/blog/checklist-demenagement-complet/)
+- [Comment comparer des devis de déménagement](/blog/comparer-devis-demenagement-guide/)
+- [Estimer le volume de son déménagement](/blog/estimer-volume-demenagement-guide-complet/)
+- [Comment éviter les arnaques au déménagement](/blog/eviter-arnaques-demenagement/)
+`
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // ARTICLE : assurance-demenagement-que-couvre
+  // ─────────────────────────────────────────────────────────────────────────────
+  {
+    slug: "assurance-demenagement-que-couvre",
+    title: "Assurance déménagement : ce qui est couvert, ce qui ne l'est pas, et comment se protéger",
+    description: "Assurance déménagement en 2026 : RC Pro du déménageur, assurance marchandises, déclaration de valeur, franchise. Ce que couvre vraiment l'assurance et comment éviter les mauvaises surprises en cas de casse.",
+    type: "guide",
+    body: `**Un déménagement sur 10 donne lieu à un litige.** La casse est la première cause.
+
+Et pourtant, la majorité des clients découvrent les limites de l'assurance déménagement… le jour où ils en ont besoin.
+
+Voici ce que couvre vraiment l'assurance, ce qu'elle ne couvre pas, et comment se protéger réellement.
+
+> **Comparez des déménageurs avec assurance vérifiée**  
+> [Moverz](/) vérifie l'assurance RC Pro et marchandises de chaque déménageur. Plafond ≥ 1,5 M€. [Voir les vérifications](/verifications-partenaires/).
+
+---
+
+## Les 2 assurances d'un déménageur professionnel
+
+### 1. La Responsabilité Civile Professionnelle (RC Pro)
+
+**Obligatoire légalement** pour tout déménageur professionnel.
+
+**Ce qu'elle couvre :**
+- Les dommages causés à des tiers pendant le déménagement (voisin, immeuble, véhicule)
+- Les dégâts dans les parties communes (ascenseur, escalier, murs)
+
+**Ce qu'elle ne couvre pas :**
+- Vos affaires personnelles directement (c'est l'objet de la garantie marchandises)
+
+### 2. La garantie Marchandises Transportées
+
+**Obligatoire légalement**, mais le plafond légal est faible.
+
+**Le plafond légal minimum : 60 €/m³**
+
+Pour un déménagement de 40 m³ = **2 400 € de couverture maximum** par défaut.
+
+Si votre mobilier vaut 20 000 €, vous êtes couvert à hauteur de 2 400 € en cas de perte totale.
+
+**C'est pourquoi la déclaration de valeur est cruciale** (voir plus bas).
+
+---
+
+## Ce qui est couvert par défaut
+
+| Événement | Couvert ? | Plafond |
+|---|---|---|
+| Casse pendant le transport | Oui | 60 €/m³ |
+| Rayures sur meubles | Oui (si signalé à la livraison) | 60 €/m³ |
+| Perte d'un objet | Oui | 60 €/m³ |
+| Dégât pendant le chargement | Oui | 60 €/m³ |
+| Dégât pendant le déchargement | Oui | 60 €/m³ |
+| Vol (rare, par le déménageur) | Oui (RC Pro) | Variable |
+
+---
+
+## Ce qui n'est PAS couvert par défaut
+
+| Événement | Couvert ? | Pourquoi |
+|---|---|---|
+| Objets de valeur > 60 €/m³ (bijoux, art, hi-fi haut de gamme) | Non (sans déclaration) | Plafond légal insuffisant |
+| Piano, œuvres d'art (si non déclarés) | Partiel | Valeur souvent > plafond |
+| Casse due à votre emballage (carton trop lourd, mauvaise protection) | Non | Faute du client |
+| Dégâts constatés après signature du bordereau "bon pour accord" | Non | Accord tacite à la livraison |
+| Dommages indirects (réfrigérateur en panne = perte alimentaire) | Non | Préjudice indirect |
+| Objets fragiles non emballés professionnellement | Partiel | Responsabilité partagée |
+| Meubles déjà abîmés avant le déménagement | Non | Préexistant |
+
+---
+
+## La déclaration de valeur : indispensable si vous avez du mobilier de valeur
+
+### C'est quoi ?
+
+La déclaration de valeur (ou convention spéciale) permet de porter le plafond de garantie au-delà des 60 €/m³ légaux pour les objets de valeur spécifiques.
+
+**Exemples typiques :**
+- Piano (valeur 5 000 €) → déclarez 5 000 €
+- Tableau ou œuvre d'art → déclarez la valeur estimée
+- Matériel hi-fi haut de gamme → déclarez la valeur d'achat
+- Bijoux (peu recommandé de faire voyager dans le camion)
+
+### Comment ça fonctionne
+
+1. Vous listez les objets concernés avec leur valeur estimée
+2. Le déménageur l'intègre dans le contrat
+3. Vous payez une prime complémentaire (en général 0,5 à 1,5 % de la valeur déclarée)
+4. En cas de sinistre, vous êtes indemnisé jusqu'à la valeur déclarée
+
+### Ce qu'il faut faire avant
+
+- **Photographies** de chaque objet de valeur avant le déménagement (preuve de l'état)
+- **Factures ou estimations** pour les objets dont la valeur peut être contestée
+- Liste écrite avec description et valeur, signée des deux parties
+
+---
+
+## Comment fonctionne un recours en cas de casse ?
+
+### La procédure légale
+
+1. **Le jour J :** noter toutes les réserves sur le bordereau de livraison AVANT de signer
+2. **Dans les 10 jours :** envoyer une réclamation écrite au déménageur (recommandé avec AR)
+3. **Si pas de réponse :** saisir le médiateur de la consommation ou le tribunal de proximité
+4. **Délai de prescription :** 1 an à partir de la livraison
+
+### Ce que vous devez faire le jour de la livraison
+
+**C'est le moment le plus important.** Ce que vous signez à la livraison engage vos droits.
+
+- ✓ Vérifiez chaque meuble et carton AVANT de signer
+- ✓ Notez chaque dommage sur le bordereau ("rayure sur table basse", "pied de lampe cassé")
+- ✓ Prenez des photos immédiatement
+- ✗ Ne signez jamais "bon pour accord" ou "reçu sans réserve" si vous n'avez pas tout vérifié
+- ✗ Ne vous laissez pas presser par l'équipe ("on a d'autres déménagements")
+
+**Si vous signez sans réserves = vous acceptez que tout est en ordre = aucun recours possible.**
+
+### En cas de refus d'indemnisation
+
+Si le déménageur refuse de vous indemniser après réclamation :
+1. **Médiation** : [mediation-conso.fr](https://www.mediation-conso.fr) (gratuit, obligatoire avant tribunal)
+2. **DGCCRF** : si pratique commerciale déloyale
+3. **Tribunal de proximité** : pour les litiges < 10 000 €
+
+---
+
+## L'assurance habitation peut-elle couvrir un déménagement ?
+
+**Parfois, oui.** Vérifiez votre contrat d'assurance habitation — certains contrats couvrent les biens lors d'un déménagement (garantie "tous risques" ou "biens en transit").
+
+Conditions habituelles :
+- Déménagement réalisé par un professionnel (pas soi-même)
+- Déclaration préalable à l'assureur
+- Franchise souvent élevée
+
+**À vérifier absolument avant le déménagement** : appelez votre assureur pour connaître exactement ce qui est couvert pendant le transit.
+
+---
+
+## Questions fréquentes sur l'assurance déménagement
+
+### Un déménageur peut-il refuser de prendre en charge un objet cassé ?
+
+Oui, dans certains cas :
+- Si l'objet était déjà abîmé (d'où l'importance des photos avant)
+- Si la casse résulte de votre propre emballage (carton mal préparé)
+- Si vous avez signé le bordereau sans réserves
+
+### Faut-il une assurance complémentaire si on fait appel à Moverz ?
+
+Moverz vérifie que chaque déménageur dispose d'une assurance RC Pro (plafond ≥ 1,5 M€) et d'une garantie marchandises. Pour les objets de valeur (> 60 €/m³), la déclaration de valeur reste recommandée.
+
+### Et si je déménage moi-même avec un camion loué ?
+
+Dans ce cas, vous êtes responsable. Votre assurance habitation peut couvrir certains dommages pendant le transit, mais vérifiez votre contrat. Beaucoup de contrats ne couvrent pas le "déménagement DIY".
+
+### Le déménageur peut-il imposer sa propre assurance ?
+
+Oui, c'est courant. Mais vous avez le droit de refuser et de vous couvrir via votre propre assurance habitation si elle est plus avantageuse. Mentionnez-le dans le devis.
+
+---
+
+## La checklist assurance avant de signer
+
+- [ ] Le devis mentionne le plafond de garantie marchandises (€/m³)
+- [ ] Vous avez demandé et reçu une attestation d'assurance RC Pro (< 6 mois)
+- [ ] Vous avez listé les objets de valeur à déclarer
+- [ ] Vous avez souscrit une déclaration de valeur si nécessaire
+- [ ] Vous avez vérifié votre assurance habitation (couverture pendant transit ?)
+- [ ] Vous avez photographié vos meubles de valeur avant le chargement
+
+---
+
+> **[CTA]**  
+> Comparer des déménageurs avec assurance vérifiée  
+> Moverz vérifie l'attestation RC Pro et la couverture marchandises. Dossier anonyme, 3-5 devis comparables, gratuit.
+
+---
+
+**Aller plus loin :**
+
+- [Comment vérifier un déménageur (SIREN, Creditsafe, assurance)](/blog/verifier-demenageur-creditsafe-siren/)
+- [Comment éviter les arnaques au déménagement](/blog/eviter-arnaques-demenagement/)
+- [Supplément de prix le jour J : comment l'éviter](/blog/supplement-prix-jour-j-comment-eviter/)
+- [Checklist déménagement complète](/blog/checklist-demenagement-complet/)
+`
+  },
 ];
+
