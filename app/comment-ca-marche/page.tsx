@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import { HowToSchema } from "@/components/schema/HowToSchema";
+import { FAQSchema } from "@/components/schema/FAQSchema";
+import { WebPageSchema } from "@/components/schema/WebPageSchema";
 import HowItWorksHero from "@/components/comment-ca-marche/HowItWorksHero";
 import HowItWorksSteps from "@/components/comment-ca-marche/HowItWorksSteps";
 import HowItWorksIA from "@/components/comment-ca-marche/HowItWorksIA";
@@ -18,8 +20,23 @@ export const metadata: Metadata = getFullMetadata(
 );
 
 export default function CommentCaMarchePage() {
+  const faqItems = [
+    { question: "Combien ça coûte ?", answer: "Le service Moverz est 100% gratuit pour les particuliers. Vous ne payez que le déménageur que vous choisissez." },
+    { question: "Comment choisissez-vous les déménageurs ?", answer: "Nous sélectionnons uniquement des déménageurs disponibles à vos dates exactes, vérifiés financièrement et juridiquement (Creditsafe + Pappers), avec expérience sur votre trajet." },
+    { question: "Vais-je recevoir des appels de spam ?", answer: "Non. Votre dossier est 100% anonyme. Vous recevez des devis écrits et comparables, puis vous décidez si et qui vous souhaitez contacter." },
+    { question: "Combien de devis vais-je recevoir ?", answer: "Nous nous engageons à vous présenter 3 à 5 devis comparables sous 5 jours ouvrés." },
+    { question: "Mes données sont-elles protégées ?", answer: "Oui. Nous appliquons le RGPD et ne transmettons votre dossier qu'aux déménageurs sollicités pour établir un devis, dans le cadre de votre demande." },
+  ];
+
   return (
     <main className="bg-white min-h-screen">
+      <WebPageSchema
+        name="Comment ça marche ? Comparer des devis de déménagement en 3 étapes | Moverz"
+        description="En 3 minutes, remplissez un dossier guidé et recevez 3 à 5 devis comparables de déménageurs vérifiés sous 5 jours. Dossier anonyme, zéro appel non sollicité, 100% gratuit."
+        url="https://moverz.fr/comment-ca-marche/"
+        about="Comparateur de déménagement"
+      />
+      <FAQSchema faqs={faqItems} />
       {/* HowTo schema — rich snippet Google "étapes" */}
       <HowToSchema
         title="Comment comparer des devis de déménagement avec Moverz"

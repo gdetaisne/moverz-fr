@@ -305,7 +305,7 @@ export default function ComparateurDemenageursPage() {
               Pour aller plus loin
             </h2>
             <p className="mt-2 text-sm text-v4-text-secondary text-center max-w-2xl mx-auto">
-              5 guides pour maîtriser chaque aspect de votre déménagement.
+              7 guides pour maîtriser chaque aspect de votre déménagement.
             </p>
 
             <div className="mt-6 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
@@ -349,6 +349,22 @@ export default function ComparateurDemenageursPage() {
                   iconBg: "bg-blue-50",
                   title: "Comparer des devis",
                   desc: "7 éléments à vérifier (volume, accès, tarif, assurance, conditions).",
+                },
+                {
+                  href: "/blog/assurance-demenagement-que-couvre/",
+                  Icon: ShieldCheck,
+                  iconColor: "text-green-600",
+                  iconBg: "bg-green-50",
+                  title: "Assurance déménagement",
+                  desc: "Garantie légale 60€/m³, déclaration de valeur, RC Pro — ce qui est vraiment couvert.",
+                },
+                {
+                  href: "/blog/supplement-prix-jour-j-comment-eviter/",
+                  Icon: FileText,
+                  iconColor: "text-purple-600",
+                  iconBg: "bg-purple-50",
+                  title: "Éviter les suppléments jour J",
+                  desc: "+200 à 800€ de surcoût pour 40-50% des déménagements — comment les anticiper.",
                 },
               ].map((item) => (
                 <a

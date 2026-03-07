@@ -9,7 +9,7 @@ import {
   AlertTriangle, TrendingDown, FileCheck, ShieldCheck, Star, Package,
   FileText, CreditCard, Truck, ShieldAlert, CheckSquare, AlertOctagon,
   ClipboardList, Trophy, BarChart2, HelpCircle, ArrowRight, Lightbulb,
-  X,
+  X, Scale,
 } from "lucide-react";
 
 export const metadata: Metadata = getFullMetadata(
@@ -215,9 +215,11 @@ export default function CriteresChoisirDemenageurPage() {
     { href: "/blog/eviter-arnaques-demenagement/", Icon: AlertTriangle, iconColor: "text-red-600", iconBg: "bg-red-50", title: "Éviter les arnaques", desc: "Guide complet : 64% anomalies, 257 faillites, outils de vérification." },
     { href: "/verifications-partenaires/", Icon: CheckSquare, iconColor: "text-teal-600", iconBg: "bg-teal-50", title: "Vérifications Moverz", desc: "3 analyses de risque /100 : avis Google, financier, juridique. Alertes = exclusion." },
     { href: "/blog/meilleur-comparateur-demenagement-2026/", Icon: Trophy, iconColor: "text-amber-600", iconBg: "bg-amber-50", title: "Meilleur comparateur", desc: "5 critères pour choisir un comparateur fiable (analyses de risque, devis comparables)." },
+    { href: "/blog/verifier-demenageur-creditsafe-siren/", Icon: ShieldCheck, iconColor: "text-blue-600", iconBg: "bg-blue-50", title: "Vérifier un déménageur", desc: "SIREN, Creditsafe, assurance RC Pro — le guide complet pour ne pas se faire avoir." },
     { href: "/blog/estimer-volume-demenagement-guide-complet/", Icon: Package, iconColor: "text-orange-600", iconBg: "bg-orange-50", title: "Estimer son volume", desc: "3 méthodes (calcul auto, inventaire, visite) pour éviter les surcoûts jour J." },
-    { href: "/blog/comparer-devis-demenagement-guide/", Icon: BarChart2, iconColor: "text-indigo-600", iconBg: "bg-indigo-50", title: "Comparer des devis", desc: "7 éléments à vérifier pour comparer efficacement (volume, tarif, accès)." },
-    { href: "/faq-arnaque-demenagement/", Icon: HelpCircle, iconColor: "text-slate-600", iconBg: "bg-slate-50", title: "FAQ arnaques", desc: "10 Q/R rapides (suppléments, acompte, assurance, sous-traitance)." },
+    { href: "/blog/assurance-demenagement-que-couvre/", Icon: Scale, iconColor: "text-purple-600", iconBg: "bg-purple-50", title: "Assurance déménagement", desc: "Garantie légale 60€/m³, déclaration de valeur, RC Pro — ce qui est vraiment couvert." },
+    { href: "/blog/supplement-prix-jour-j-comment-eviter/", Icon: BarChart2, iconColor: "text-indigo-600", iconBg: "bg-indigo-50", title: "Éviter les suppléments jour J", desc: "+200 à 800€ de surcoût pour 40-50% des déménagements — comment les anticiper." },
+    { href: "/blog/comparer-devis-demenagement-guide/", Icon: ClipboardList, iconColor: "text-slate-600", iconBg: "bg-slate-50", title: "Comparer des devis", desc: "7 éléments à vérifier pour comparer efficacement (volume, tarif, accès)." },
   ];
 
   const redFlags = [
@@ -511,7 +513,7 @@ export default function CriteresChoisirDemenageurPage() {
               Pour aller plus loin
             </h2>
             <p className="mt-2 text-sm text-v4-text-secondary text-center max-w-2xl mx-auto">
-              6 guides complémentaires pour maîtriser chaque aspect de votre déménagement.
+              8 guides complémentaires pour maîtriser chaque aspect de votre déménagement.
             </p>
 
             <div className="mt-6 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
