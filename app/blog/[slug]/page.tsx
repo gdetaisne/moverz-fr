@@ -22,6 +22,7 @@ import { HowToSchema } from "@/components/schema/HowToSchema";
 import { JsonLd } from "@/components/schema/JsonLd";
 import { formatDateFR } from "@/lib/date/fr";
 import BlogFloatingCTA from "@/components/blog/BlogFloatingCTA";
+import { BlogFAQItem } from "@/components/blog/BlogFAQItem";
 import { AuthorCard } from "@/components/blog/AuthorCard";
 import { buildTunnelUrl } from "@/lib/tunnel-url";
 
@@ -848,6 +849,14 @@ export default function BlogPostPage({ params }: PageProps) {
                 className="inline-flex items-center gap-2 rounded-full border border-v4-border bg-white px-6 py-3 text-sm font-semibold text-v4-text hover:border-v4-accent/60 hover:bg-[#FAFAFA] transition-colors"
               >
                 <span>Checklists & guides</span>
+                <span>→</span>
+              </a>
+
+              <a
+                href="/faq/"
+                className="inline-flex items-center gap-2 rounded-full border border-v4-border bg-white px-6 py-3 text-sm font-semibold text-v4-text hover:border-v4-accent/60 hover:bg-[#FAFAFA] transition-colors"
+              >
+                <span>FAQ déménagement</span>
                 <span>→</span>
               </a>
             </div>

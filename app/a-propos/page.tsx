@@ -3,6 +3,7 @@ import Image from "next/image";
 import { JsonLd } from "@/components/schema/JsonLd";
 import { buildTunnelUrl } from "@/lib/tunnel-url";
 import { AUTHORS } from "@/lib/authors";
+import { BlogFAQItem as AProposFAQItem } from "@/components/blog/BlogFAQItem";
 import {
   ShieldCheck,
   EyeOff,
@@ -455,6 +456,43 @@ export default function AProposPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── FAQ RAPIDE ─── */}
+      <section className="section" style={{ background: "var(--color-bg-page)" }}>
+        <div className="container max-w-3xl">
+          <div className="text-center mb-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] mb-3" style={{ color: "#0EA5A6" }}>
+              Questions fréquentes
+            </p>
+            <h2 className="text-2xl md:text-3xl font-bold" style={{ color: "var(--color-text)" }}>
+              Ce que vous vous demandez sûrement
+            </h2>
+          </div>
+          <div className="space-y-3">
+            {[
+              {
+                q: "Est-ce vraiment gratuit pour les particuliers ?",
+                a: "Oui, 100% gratuit et sans engagement. Moverz est rémunéré par les déménageurs partenaires uniquement lorsque vous choisissez l'un d'eux. Aucun frais caché, aucune inscription requise.",
+              },
+              {
+                q: "Comment Moverz évite-t-il le harcèlement téléphonique ?",
+                a: "Votre dossier reste anonyme jusqu'à ce que vous décidiez de contacter un déménageur. Les professionnels vous envoient leurs devis par email via la plateforme — vous choisissez qui peut vous contacter, pas l'inverse.",
+              },
+              {
+                q: "Pourquoi les devis Moverz sont-ils comparables entre eux ?",
+                a: "Parce qu'ils reposent tous sur la même base : même volume calculé, mêmes contraintes d'accès, mêmes options. Les comparateurs classiques laissent chaque déménageur chiffrer ses propres hypothèses — ce qui rend les devis impossibles à comparer.",
+              },
+            ].map((item, i) => (
+              <AProposFAQItem key={i} question={item.q} answer={item.a} />
+            ))}
+          </div>
+          <div className="mt-6 text-center">
+            <a href="/faq/" className="text-sm font-semibold hover:underline" style={{ color: "#0EA5A6" }}>
+              Voir toutes les questions →
+            </a>
           </div>
         </div>
       </section>
