@@ -1,6 +1,7 @@
 import { JsonLd } from "@/components/schema/JsonLd";
 import { env } from "@/lib/env";
 import { getCanonicalUrl } from "@/lib/canonical-helper";
+import { getAuthor } from "@/lib/authors";
 
 interface ArticleSchemaProps {
   title: string
@@ -13,6 +14,7 @@ interface ArticleSchemaProps {
   imageUrl?: string
   imageWidth?: number
   imageHeight?: number
+  authorSlug?: string
 }
 
 export function buildArticleSchema({
@@ -26,10 +28,23 @@ export function buildArticleSchema({
   imageUrl,
   imageWidth,
   imageHeight,
+  authorSlug,
 }: ArticleSchemaProps) {
   const baseUrl = env.SITE_URL.replace(/\/$/, "");
   const canonicalUrl = getCanonicalUrl(`blog/${slug}`);
   const organizationId = `${baseUrl}/#organization`;
+
+  const author = authorSlug ? getAuthor(authorSlug) : undefined;
+  const authorValue = author
+    ? {
+        "@type": "Person",
+        "@id": `${baseUrl}/auteurs/${author.slug}/`,
+        name: author.name,
+        jobTitle: author.role,
+        url: `${baseUrl}/auteurs/${author.slug}/`,
+        sameAs: author.linkedin,
+      }
+    : { "@id": organizationId };
 
   return {
     "@context": "https://schema.org",
@@ -39,7 +54,7 @@ export function buildArticleSchema({
     url: canonicalUrl,
     datePublished: publishedAt,
     dateModified: updatedAt || publishedAt,
-    author: { "@id": organizationId },
+    author: authorValue,
     publisher: { "@id": organizationId },
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -78,6 +93,7 @@ export function ArticleSchema({
   imageUrl,
   imageWidth,
   imageHeight,
+  authorSlug,
 }: ArticleSchemaProps) {
   const schema = buildArticleSchema({
     title,
@@ -90,10 +106,10 @@ export function ArticleSchema({
     imageUrl,
     imageWidth,
     imageHeight,
+    authorSlug,
   });
 
   return (
     <JsonLd id="article-schema" data={schema} />
-  )
+  );
 }
-

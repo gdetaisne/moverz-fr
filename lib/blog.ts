@@ -8,6 +8,7 @@ export interface BlogPostMeta {
   citySlug?: string;
   readingTimeMinutes?: number;
   tags?: string[];
+  authorSlug?: "lucie" | "guillaume";
 }
 
 import { BLOG_DATA } from "./blog-data";
@@ -224,6 +225,24 @@ export function getCanonicalBodyBySlug(slug: string): string | undefined {
   if (isExcludedFromPublication(slug)) return undefined;
   const canonical = ALL_CANONICAL_POSTS.find((post) => post.slug === slug);
   return canonical?.body;
+}
+
+/**
+ * SEO (2026-03-07): Filtre de qualité automatique pour l'indexation Google.
+ * Un article est "de qualité" s'il satisfait les 3 critères :
+ *   1. body présent (pas un placeholder)
+ *   2. ≥ 1000 mots (contenu substantiel)
+ *   3. type = "pilier" (article principal de sa thématique)
+ *
+ * Utilisé dans generateMetadata (noindex si false) et sitemap-blog.xml.
+ */
+export function isQualityPost(slug: string): boolean {
+  const canonical = ALL_CANONICAL_POSTS.find((post) => post.slug === slug);
+  if (!canonical?.body) return false;
+  const wordCount = canonical.body.split(/\s+/).length;
+  if (wordCount < 1000) return false;
+  if (canonical.type !== "pilier") return false;
+  return true;
 }
 
 // Trouver l'article Prix associé à une ville donnée

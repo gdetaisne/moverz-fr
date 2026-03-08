@@ -10,6 +10,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2025-12-24T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 15,
+    authorSlug: "lucie",
   },
   {
     slug: "prix-demenagement-longue-distance-france",
@@ -21,6 +22,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     category: "prix-et-devis",
     readingTimeMinutes: 12,
     tags: ["prix déménagement", "longue distance", "déménagement France", "devis déménagement"],
+    authorSlug: "guillaume",
   },
   {
     slug: "demenagement-international-juste-prix-experience",
@@ -30,6 +32,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2025-01-02T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 9,
+    authorSlug: "guillaume",
   },
   {
     slug: "prix-demenagement-lyon-guide-complet",
@@ -42,6 +45,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     citySlug: "lyon",
     readingTimeMinutes: 12,
     tags: ["prix déménagement Lyon", "déménagement Lyon", "devis déménagement Lyon"],
+    authorSlug: "guillaume",
   },
   {
     slug: "demenagement-sans-ascenseur-5e-etage",
@@ -53,6 +57,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     category: "checklists-et-guides",
     readingTimeMinutes: 10,
     tags: ["déménagement sans ascenseur", "surcoût escalier", "monte-meuble", "5e étage"],
+    authorSlug: "guillaume",
   },
   {
     slug: "portage-long-camion-loin-entree",
@@ -62,6 +67,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 10,
+    authorSlug: "guillaume",
   },
   {
     slug: "monte-meuble-quand-indispensable",
@@ -72,6 +78,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     category: "checklists-et-guides",
     readingTimeMinutes: 10,
     tags: ["monte-meuble", "lift déménagement", "accès difficile", "surcôût déménagement"],
+    authorSlug: "guillaume",
   },
   {
     slug: "demenagement-parking-souterrain",
@@ -81,6 +88,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 9,
+    authorSlug: "guillaume",
   },
   {
     slug: "demenagement-rue-etroite-impasse",
@@ -90,6 +98,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 9,
+    authorSlug: "guillaume",
   },
   {
     slug: "petit-demenagement-10-15-cartons",
@@ -99,6 +108,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 11,
+    authorSlug: "guillaume",
   },
   {
     slug: "demenagement-colocation-etudiant",
@@ -108,6 +118,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 10,
+    authorSlug: "guillaume",
   },
   {
     slug: "demenagement-objets-lourds-frigo-piano-coffre",
@@ -117,6 +128,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 12,
+    authorSlug: "guillaume",
   },
   {
     slug: "demenagement-fin-de-mois-vs-milieu",
@@ -126,6 +138,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 8,
+    authorSlug: "guillaume",
   },
   {
     slug: "garde-meuble-2-semaines-avant-demenagement",
@@ -136,6 +149,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     category: "checklists-et-guides",
     readingTimeMinutes: 10,
     tags: ["garde-meuble", "stockage déménagement", "box stockage", "décalage bail"],
+    authorSlug: "guillaume",
   },
   {
     slug: "autorisation-stationnement-demenagement-demande-modele",
@@ -145,6 +159,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 10,
+    authorSlug: "lucie",
   },
   {
     slug: "cartons-gratuits-ou-trouver",
@@ -154,6 +169,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 9,
+    authorSlug: "lucie",
   },
   {
     slug: "assurance-demenagement-dommages-que-couvre",
@@ -163,6 +179,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 10,
+    authorSlug: "lucie",
   },
   {
     slug: "emballer-vaisselle-rapide-sans-casse",
@@ -172,6 +189,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 8,
+    authorSlug: "lucie",
   },
   {
     slug: "emballer-ecran-tv-ordinateur",
@@ -181,6 +199,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 8,
+    authorSlug: "lucie",
   },
   {
     slug: "demenager-avec-enfants-bas-age-checklist",
@@ -190,6 +209,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 10,
+    authorSlug: "lucie",
   },
   {
     slug: "demenager-avec-chat-chien-stress",
@@ -199,6 +219,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 9,
+    authorSlug: "lucie",
   },
   {
     slug: "demenager-plantes-sans-les-tuer",
@@ -208,6 +229,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 8,
+    authorSlug: "lucie",
   },
   {
     slug: "demenager-frigo-americain",
@@ -217,6 +239,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 9,
+    authorSlug: "lucie",
   },
   {
     slug: "demenager-machine-a-laver-lave-vaisselle",
@@ -226,6 +249,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 8,
+    authorSlug: "lucie",
   },
   {
     slug: "inventaire-demenagement-modele-simple",
@@ -235,6 +259,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 8,
+    authorSlug: "lucie",
   },
   {
     slug: "demenagement-sous-la-pluie-proteger",
@@ -244,6 +269,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 8,
+    authorSlug: "lucie",
   },
   {
     slug: "demenagement-canicule-ete",
@@ -253,6 +279,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 8,
+    authorSlug: "lucie",
   },
   {
     slug: "demonter-remonter-canape-porte-etroite",
@@ -262,6 +289,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 9,
+    authorSlug: "lucie",
   },
   {
     slug: "emballer-livres-sans-carton-trop-lourd",
@@ -271,6 +299,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 7,
+    authorSlug: "lucie",
   },
   {
     slug: "etat-des-lieux-jour-demenagement-checklist",
@@ -280,6 +309,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 8,
+    authorSlug: "lucie",
   },
   {
     slug: "demenager-objets-fragiles-vitrine-miroir-table",
@@ -289,6 +319,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 8,
+    authorSlug: "lucie",
   },
   {
     slug: "hauteur-camion-demenagement-gabarit",
@@ -298,6 +329,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 7,
+    authorSlug: "guillaume",
   },
   {
     slug: "demenagement-weekend-comment-eviter-surcout",
@@ -307,6 +339,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     publishedAt: "2026-01-09T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 7,
+    authorSlug: "guillaume",
   },
   {
     slug: "estimer-volume-demenagement-guide-complet",
@@ -316,6 +349,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     category: "conseils-demenagement",
     readingTimeMinutes: 9,
     tags: ["volume déménagement", "estimation", "devis"],
+    authorSlug: "guillaume",
   },
   {
     slug: "comprendre-score-creditsafe-demenageur",
@@ -325,6 +359,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     category: "conseils-demenagement",
     readingTimeMinutes: 8,
     tags: ["Creditsafe", "déménageur fiable", "vérification"],
+    authorSlug: "lucie",
   },
   {
     slug: "meilleur-comparateur-demenagement-2026",
@@ -334,6 +369,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     category: "conseils-demenagement",
     readingTimeMinutes: 8,
     tags: ["comparateur déménagement", "devis déménagement", "choisir"],
+    authorSlug: "guillaume",
   },
   {
     slug: "comparer-devis-demenagement-guide",
@@ -343,6 +379,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     category: "conseils-demenagement",
     readingTimeMinutes: 7,
     tags: ["devis déménagement", "comparer devis", "prix déménagement"],
+    authorSlug: "guillaume",
   },
   {
     slug: "checklist-demenagement-complet",
@@ -352,6 +389,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     category: "Organisation",
     readingTimeMinutes: 8,
     tags: ["checklist déménagement", "organisation déménagement", "préparer déménagement"],
+    authorSlug: "lucie",
   },
   {
     slug: "prix-demenagement-paris-guide",
@@ -361,6 +399,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     category: "Prix & Devis",
     readingTimeMinutes: 7,
     tags: ["prix déménagement Paris", "déménagement Paris", "tarif déménagement Paris"],
+    authorSlug: "guillaume",
   },
   {
     slug: "devis-demenagement-gratuit-sans-engagement",
@@ -370,6 +409,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     category: "Prix & Devis",
     readingTimeMinutes: 7,
     tags: ["devis déménagement gratuit", "devis sans engagement", "comparer devis déménagement"],
+    authorSlug: "guillaume",
   },
   {
     slug: "demenagement-juillet-aout-prix",
@@ -379,6 +419,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     category: "Prix & Devis",
     readingTimeMinutes: 7,
     tags: ["déménagement été", "déménagement juillet août", "prix déménagement haute saison"],
+    authorSlug: "guillaume",
   },
   {
     slug: "verifier-demenageur-creditsafe-siren",
@@ -388,6 +429,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     category: "Vérification & Fiabilité",
     readingTimeMinutes: 8,
     tags: ["vérifier déménageur", "Creditsafe déménageur", "fiabilité déménageur", "SIREN déménageur"],
+    authorSlug: "lucie",
   },
   {
     slug: "supplement-prix-jour-j-comment-eviter",
@@ -397,6 +439,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     category: "Prix & Devis",
     readingTimeMinutes: 7,
     tags: ["supplément déménagement", "prix déménagement jour J", "surprise prix déménagement"],
+    authorSlug: "guillaume",
   },
   {
     slug: "assurance-demenagement-que-couvre",
@@ -406,6 +449,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     category: "Vérification & Fiabilité",
     readingTimeMinutes: 8,
     tags: ["assurance déménagement", "RC Pro déménageur", "casse déménagement", "déclaration de valeur"],
+    authorSlug: "lucie",
   },
 ];
 

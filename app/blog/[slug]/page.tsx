@@ -9,6 +9,7 @@ import {
   getCanonicalBodyBySlug,
   getPricePostForCity,
   getPublishedPostBySlug,
+  isQualityPost,
 } from "@/lib/blog";
 import { LONGTAIL_FAQS } from "@/lib/blog-longtail";
 import { LONGTAIL_PACK2_FAQS } from "@/lib/blog-longtail-pack2";
@@ -19,6 +20,7 @@ import { FAQSchema } from "@/components/schema/FAQSchema";
 import { HowToSchema } from "@/components/schema/HowToSchema";
 import { formatDateFR } from "@/lib/date/fr";
 import BlogFloatingCTA from "@/components/blog/BlogFloatingCTA";
+import { AuthorCard } from "@/components/blog/AuthorCard";
 import { buildTunnelUrl } from "@/lib/tunnel-url";
 
 type PageProps = {
@@ -31,6 +33,50 @@ type PageProps = {
 // Generate on-demand and cache (ISR) to avoid Next.js worker 60s timeouts.
 export const revalidate = 60 * 60 * 24; // 24h
 export const dynamicParams = true;
+
+// SEO (2026-03-07): articles avec trafic GA prouvé — toujours indexés indépendamment du filtre qualité.
+const GA_TRAFFIC_SLUGS = new Set([
+  "demenagement-centre-ville-rennes-autorisations",
+  "cartons-gratuits-rennes",
+  "prix-garde-meuble-montpellier-2025",
+  "demenagement-piano-nantes-prix",
+  "location-camion-demenagement-lyon-pas-cher",
+  "autorisation-stationnement-demenagement-strasbourg",
+  "demenagement-solidaire-montpellier",
+  "demenageur-pas-cher-rouen-economique",
+  "location-camion-aller-simple-lille-paris",
+  "prix-demenageur-rouen-2025",
+  "prix-demenageur-strasbourg-2025",
+  "prix-location-camion-20m3-lille",
+  "aides-financieres-demenagement-montpellier",
+  "cartons-gratuits-nice-ou-trouver",
+  "prix-demenagement-nice-guide",
+  "location-camion-demenagement-montpellier",
+  "prix-demenagement-bordeaux-guide",
+  "prix-demenagement-marseille",
+  "transport-quelques-meubles-lyon",
+  "aide-financiere-demenagement-etudiant",
+  "cartons-demenagement-gratuits-montpellier",
+  "petit-demenagement-nantes-guide",
+  "prix-demenagement-lyon-guide-complet",
+  "prix-location-camion-20m3-rennes",
+  "checklist-demenagement-complete-2025",
+  "prix-moyen-demenagement-2025",
+  "widget-ia-volumetrie-demenagement-comparatif",
+  "comparer-plateformes-devis-demenagement-2026",
+  "demenagement-par-ville",
+  "cas-frequents",
+  "prix-demenagement-2025",
+]);
+
+/**
+ * SEO (2026-03-07): Un article est indexable si :
+ *  1. Il a du trafic GA prouvé (liste GA_TRAFFIC_SLUGS), OU
+ *  2. Il passe le filtre qualité automatique : pilier + ≥ 1000 mots + body présent (isQualityPost)
+ */
+function isIndexableBlogPost(slug: string): boolean {
+  return GA_TRAFFIC_SLUGS.has(slug) || isQualityPost(slug);
+}
 
 export function generateMetadata({ params }: PageProps): Metadata {
   const post = getPublishedPostBySlug(params.slug);
@@ -46,7 +92,13 @@ export function generateMetadata({ params }: PageProps): Metadata {
       : `${post.title} | Blog déménagement`;
   const description = post.description;
 
-  return getFullMetadata(path, title, description);
+  const base = getFullMetadata(path, title, description);
+
+  if (!isIndexableBlogPost(post.slug)) {
+    return { ...base, robots: { index: false, follow: true } };
+  }
+
+  return base;
 }
 
 export default function BlogPostPage({ params }: PageProps) {
@@ -307,6 +359,7 @@ export default function BlogPostPage({ params }: PageProps) {
         updatedAt={post.updatedAt}
         category={post.category}
         readingTimeMinutes={post.readingTimeMinutes}
+        authorSlug={post.authorSlug}
       />
       <div className="halo" />
 
@@ -392,6 +445,13 @@ export default function BlogPostPage({ params }: PageProps) {
               <span style={{ color: "#6B7280" }}>· {post.readingTimeMinutes} min</span>
             )}
           </div>
+
+          {/* Byline auteur */}
+          {post.authorSlug && (
+            <div className="mt-4">
+              <AuthorCard authorSlug={post.authorSlug} variant="compact" />
+            </div>
+          )}
           
           <p className="text-base md:text-lg leading-relaxed max-w-2xl" style={{ color: "#6B7280" }}>
             {post.description}
