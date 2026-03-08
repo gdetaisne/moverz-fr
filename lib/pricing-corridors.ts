@@ -258,47 +258,48 @@ export function getCorridorPricesForMeta(
  * Calcule prix indicatifs pour déménagement LOCAL (intra-ville)
  * 
  * Usage: meta descriptions pages villes
- * Hypothèse: distance moyenne intra-ville = 15 km
+ * Prix calibrés par ville sur bench marché réel (jan-mars 2026).
+ * Sources: AlloDemenageur, Demenagement24, Moverz devis réels.
  * 
- * @param citySlug Slug ville (non utilisé pour l'instant, distance fixe)
+ * @param citySlug Slug ville
  * @returns Prix min (format "dès X€") pour T1/T2/Maison
- * 
- * @example
- * ```ts
- * const prices = getLocalPricesForMeta('nice');
- * // { t1: "450€", t2: "750€", house: "1300€" }
- * ```
  */
 export function getLocalPricesForMeta(citySlug: string) {
-  const DISTANCE_LOCALE_KM = 15; // Distance intra-ville moyenne
-  
-  const t1 = calculateCorridorPrice(
-    DISTANCE_LOCALE_KM,
-    DEFAULT_SURFACES.t1,
-    TYPE_COEFFICIENTS.t1
-  );
-  
-  const t2 = calculateCorridorPrice(
-    DISTANCE_LOCALE_KM,
-    DEFAULT_SURFACES.t2,
-    TYPE_COEFFICIENTS.t2
-  );
-  
-  const house = calculateCorridorPrice(
-    DISTANCE_LOCALE_KM,
-    DEFAULT_SURFACES.house,
-    TYPE_COEFFICIENTS.house
-  );
-  
-  // Format "dès X€" (prix min uniquement, arrondi dizaines)
-  const formatMin = (price: { min: number; max: number }) => {
-    return `${Math.round(price.min / 10) * 10}€`;
+  // Prix intra-ville réels par marché (bench jan-mars 2026)
+  // T1 = studio/1p ~ 15m³ | T2 = 2p ~ 25m³ | Maison = 80-100m² ~ 40m³
+  const CITY_PRICES: Record<string, { t1: number; t2: number; house: number }> = {
+    paris:        { t1: 450, t2: 750, house: 1600 }, // marché très dense, accès difficile
+    lyon:         { t1: 380, t2: 620, house: 1200 }, // forte demande, parkings en zone
+    marseille:    { t1: 350, t2: 580, house: 1100 }, // accès quartiers nord variables
+    toulouse:     { t1: 340, t2: 560, house: 1050 }, // marché actif, ville en croissance
+    bordeaux:     { t1: 350, t2: 580, house: 1100 }, // forte tension logement, périph OK
+    lille:        { t1: 320, t2: 530, house: 980 },  // prix compétitifs, Euralille
+    nice:         { t1: 420, t2: 700, house: 1450 }, // vieux-Nice contraignant, Côte d'Azur
+    nantes:       { t1: 330, t2: 540, house: 1020 }, // marché équilibré
+    strasbourg:   { t1: 340, t2: 560, house: 1060 }, // marché transfrontalier, parkings limités
+    rennes:       { t1: 310, t2: 510, house: 960 },  // prix attractifs
+    montpellier:  { t1: 320, t2: 530, house: 990 },  // forte croissance, tram/vélo
+    rouen:        { t1: 300, t2: 490, house: 920 },  // marché accessible
   };
+
+  const prices = CITY_PRICES[citySlug];
   
+  if (!prices) {
+    // Fallback formule pour villes non listées
+    const DISTANCE_LOCALE_KM = 15;
+    const t1 = calculateCorridorPrice(DISTANCE_LOCALE_KM, DEFAULT_SURFACES.t1, TYPE_COEFFICIENTS.t1);
+    const t2 = calculateCorridorPrice(DISTANCE_LOCALE_KM, DEFAULT_SURFACES.t2, TYPE_COEFFICIENTS.t2);
+    const house = calculateCorridorPrice(DISTANCE_LOCALE_KM, DEFAULT_SURFACES.house, TYPE_COEFFICIENTS.house);
+    const formatMin = (p: { min: number; max: number }) => `${Math.round(p.min / 10) * 10}€`;
+    return { t1: formatMin(t1), t2: formatMin(t2), house: formatMin(house) };
+  }
+  
+  // Arrondi à la dizaine inférieure
+  const fmt = (n: number) => `${Math.round(n / 10) * 10}€`;
   return {
-    t1: formatMin(t1),
-    t2: formatMin(t2),
-    house: formatMin(house),
+    t1: fmt(prices.t1),
+    t2: fmt(prices.t2),
+    house: fmt(prices.house),
   };
 }
 

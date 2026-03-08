@@ -1,49 +1,55 @@
 import type { Metadata } from "next";
 import type { CityInfo } from "@/lib/cities";
 import { getFullMetadata } from "@/lib/canonical-helper";
-import { getCitySeoVars } from "@/lib/seo/city-variables";
 import { SERVICE_DEFINITIONS, type ServiceSlug } from "@/lib/service-pages";
 import { getLocalPricesForMeta } from "@/lib/pricing-corridors";
 
-function cityHint(citySlug: string, cityName: string): string {
-  const vars = getCitySeoVars(citySlug);
-  if (vars.frictionAcces === "élevée") {
-    return `Accès & parking ${cityName} inclus.`;
-  }
-  if (vars.profilUrbain === "pavillonnaire") {
-    return `Maisons & garages ${cityName}.`;
-  }
-  return `Pros contrôlés ${cityName}.`;
-}
+/**
+ * Angles SEO uniques par ville — différenciation SERP
+ * Chaque ville a un "hook" spécifique (contrainte terrain, marché, positionnement)
+ * qui différencie le snippet dans les résultats de recherche.
+ */
+const CITY_ANGLES: Record<string, { titleSuffix: string; descHook: string }> = {
+  paris:       { titleSuffix: "· Parking & accès gérés",     descHook: "Accès difficile, monte-meubles, autorisations : les pros Moverz connaissent Paris." },
+  lyon:        { titleSuffix: "· 3 devis comparables",        descHook: "Presqu'île, Confluence, Croix-Rousse : pros vérifiés qui connaissent le terrain." },
+  marseille:   { titleSuffix: "· Quartiers & accès",          descHook: "Noailles, Panier, 13e arr. : pros locaux, accès quartiers Nord et Sud gérés." },
+  nice:        { titleSuffix: "· Vieux-Nice & Cimiez OK",     descHook: "Vieux-Nice (rues étroites), Cimiez, Mont Boron : pros habitués aux contraintes locales." },
+  toulouse:    { titleSuffix: "· Devis sans engagement",      descHook: "Capitole, Minimes, Tournefeuille : comparez jusqu'à 3 pros certifiés, sans appels." },
+  bordeaux:    { titleSuffix: "· Chartrons & périph",         descHook: "Chartrons, Bacalan, Mérignac : pros vérifiés, devis réels sans surprise." },
+  lille:       { titleSuffix: "· Vieux-Lille & Euralille",    descHook: "Vieux-Lille, Wazemmes, Euralille : comparez les pros sans démarrage commercial." },
+  nantes:      { titleSuffix: "· Île de Nantes & quartiers",  descHook: "Île de Nantes, Chantenay, Rezé : comparateur 0 harcèlement, pros assurés." },
+  strasbourg:  { titleSuffix: "· Grande Île & frontal.",      descHook: "Grande Île (patrimoine), Neudorf, Hautepierre : accès gérés, devis clairs." },
+  montpellier: { titleSuffix: "· Écusson & tramway OK",       descHook: "Écusson, Port Marianne, Castelnau : pros qui connaissent les axes tram et zones piétonnes." },
+  rennes:      { titleSuffix: "· Centre & Rennes métropole",  descHook: "Thabor, Villejean, Cesson-Sévigné : 3 devis comparables, pros certifiés." },
+  rouen:       { titleSuffix: "· Rive gauche & plateau",      descHook: "Saint-Sever, Sotteville, plateau Est : comparez les pros locaux sans engagement." },
+};
 
 /**
- * Génère metadata optimisée pour pages villes
+ * Génère metadata optimisée et différenciée pour pages villes
  * 
- * Optimisations SEO (2026-02-27):
- * - Prix MIN dans title → Visibilité SERP maximale (+20-30% CTR estimé)
- * - USP homepage alignés : "1 contact" + "Note 4.9/5" + checkmarks ✓
- * - "Déménagement {Ville}" vs "Comparateur" → Action-oriented, meilleur intent match
- * - Prix indicatifs T1/T2/Maison → Forte différenciation
- * - Année en fin → Fraîcheur SEO sans alourdir début
- * 
- * Format title: "Déménagement {Ville} dès {PrixMin}€ · Devis 5-7j | Moverz"
- * Format desc: "✓ 1 contact ✓ 0 harcèlement · {Ville} : T1 dès X€, T2 Y€, Maison Z€ · Pros certifiés · Note 4.9/5 · Gratuit ({Année})"
+ * Différenciation par ville (mars 2026) :
+ * - Prix réels par marché local (pas une distance fixe)
+ * - Angle unique par ville (contrainte terrain, quartier emblématique)
+ * - USP Moverz : "1 contact", "0 harcèlement", "Note 4.9/5"
  */
 export function getCityPageMetadata(city: CityInfo): Metadata {
   const path = `demenagement/${city.slug}`;
   const year = new Date().getFullYear();
   
-  // Calcul prix locaux (déménagement intra-ville)
   const prices = getLocalPricesForMeta(city.slug);
+  const angle = CITY_ANGLES[city.slug];
   
-  // Title optimisé: ≤ 51 chars avant "| Moverz" (ajouté par layout.tsx template)
-  const title = `Déménagement ${city.nameCapitalized} dès ${prices.t1} · Devis 5–7j`;
+  // Title : ≤ 55 chars avant "| Moverz" (ajouté par layout.tsx template)
+  const title = angle
+    ? `Déménagement ${city.nameCapitalized} dès ${prices.t1} ${angle.titleSuffix}`
+    : `Déménagement ${city.nameCapitalized} dès ${prices.t1} · Devis comparés`;
   
-  // Description optimisée : USP homepage (1 contact, 0 harcèlement, Note 4.9/5) + prix détaillés
-  // Format compact avec checkmarks ✓ pour impact visuel maximal en SERP
-  const description = `✓ 1 contact ✓ 0 harcèlement · ${city.nameCapitalized} : T1 dès ${prices.t1}, T2 ${prices.t2}, Maison ${prices.house} · Pros certifiés · Note 4.9/5 · Gratuit (${year})`;
+  // Description : hook local + USP + prix + année
+  const descBase = angle
+    ? `${angle.descHook} T1 dès ${prices.t1}, T2 ${prices.t2}, Maison ${prices.house}. Gratuit, 0 harcèlement (${year}).`
+    : `✓ 1 contact ✓ 0 harcèlement · ${city.nameCapitalized} : T1 dès ${prices.t1}, T2 ${prices.t2}, Maison ${prices.house} · Pros certifiés · Note 4.9/5 · Gratuit (${year})`;
   
-  return getFullMetadata(path, title, description);
+  return getFullMetadata(path, title, descBase);
 }
 
 export function getCityServiceMetadata(args: { city: CityInfo; service: ServiceSlug }): Metadata {
