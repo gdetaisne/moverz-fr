@@ -167,7 +167,7 @@ export default function RootLayout({
             },
             description:
               "Comparateur de déménagement anti-arnaque. Comparez jusqu'à 5 devis comparables de déménageurs vérifiés sous 5 à 7 jours, sans harcèlement.",
-            foundingDate: "2022",
+            foundingDate: "2025",
             address: {
               "@type": "PostalAddress",
               addressCountry: "FR",

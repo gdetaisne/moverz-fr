@@ -38,7 +38,7 @@ const organizationSchema = {
   logo: "https://moverz.fr/logo.png",
   description:
     "Moverz est le seul comparateur de déménagement zéro démarchage en France. Dossier standardisé, déménageurs vérifiés (Creditsafe + Pappers + avis Google), 3-5 devis comparables.",
-  foundingDate: "2022",
+  foundingDate: "2025",
   founders: [
     { "@id": "https://moverz.fr/#person-guillaume-stehelin" },
     { "@id": "https://moverz.fr/#person-lucie-veltz" },
@@ -159,7 +159,7 @@ export default function AProposPage() {
               </h2>
               <div className="space-y-4 text-sm leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
                 <p>
-                  En 2021, Guillaume déménage de Paris à La Rochelle. Il remplit 4 formulaires
+                  En 2024, Guillaume déménage de Paris à La Rochelle. Il remplit 4 formulaires
                   en ligne. Résultat : 5 devis avec des volumes si différents qu'ils sont
                   impossibles à comparer — l'un estime 18 m³, un autre 32 m³ pour le même
                   appartement. Et dans les 48 heures qui suivent, son téléphone ne s'arrête
