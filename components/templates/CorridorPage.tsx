@@ -52,6 +52,61 @@ function slugify(input: string): string {
  * Format title: "Déménagement {Ville A} → {Ville B} ({Distance}km) | Devis 5–7j · {Année}"
  * Format desc: "✓ 1 contact ✓ 0 harcèlement · {A}→{B} ({X}km) : T1 X€, T2 Y€, Maison Z€ · Note 4.9/5 · Gratuit"
  */
+/**
+ * Overrides SEO pour les corridors les plus cités par Bing AI
+ * Angles différenciants par trajet : durée, péages, spécificité terrain
+ */
+const CORRIDOR_META_OVERRIDES: Record<string, { title: string; description: string }> = {
+  "paris-vers-marseille": {
+    title: "Déménagement Paris → Marseille 2026 : T2 1 890–2 840€",
+    description: "Paris–Marseille 830 km, 2 jours. T1 1 510–2 260€, T2 1 890–2 840€, Maison 3 010–4 520€. A6/A7, péages ~120€. Pros vérifiés Moverz, 3 devis comparables.",
+  },
+  "paris-vers-nice": {
+    title: "Déménagement Paris → Nice 2026 : T2 2 050–3 070€",
+    description: "Paris–Nice 860 km, 2 jours. T1 1 620–2 430€, T2 2 050–3 070€, Maison 3 300–4 940€. Accès Nice possible (Vieux-Nice, Cimiez) — précisez dans votre dossier.",
+  },
+  "strasbourg-vers-marseille": {
+    title: "Déménagement Strasbourg → Marseille 2026 : 770 km",
+    description: "Strasbourg–Marseille 770 km. T2 1 830–2 750€. Grande Île au départ, quartiers Marseille à l'arrivée : pros habitués aux deux contraintes terrain.",
+  },
+  "paris-vers-toulouse": {
+    title: "Déménagement Paris → Toulouse 2026 : T2 1 810–2 710€",
+    description: "Paris–Toulouse 740 km, A10/A20, péages ~100€. T1 1 420–2 130€, T2 1 810–2 710€. 1–2 jours selon volume. Pros vérifiés Moverz, devis en 5–7j.",
+  },
+  "marseille-vers-lyon": {
+    title: "Déménagement Marseille → Lyon 2026 : T2 1 110–1 660€",
+    description: "Marseille–Lyon 350 km, A7, ~2h30. T1 840–1 250€, T2 1 110–1 660€, Maison 1 900–2 840€. Trajet fréquent — pros disponibles rapidement.",
+  },
+  "rouen-vers-paris": {
+    title: "Déménagement Rouen → Paris 2026 : T2 dès 910€",
+    description: "Rouen–Paris 140 km, A13, 1h30. T1 640–950€, T2 910–1 360€, Maison 1 690–2 540€. Courte distance = bonne disponibilité pros, délai 3–5 jours.",
+  },
+  "paris-vers-lyon": {
+    title: "Déménagement Paris → Lyon 2026 : T2 1 310–1 960€",
+    description: "Paris–Lyon 490 km, A6, 4h. T1 1 010–1 520€, T2 1 310–1 960€, Maison 2 160–3 240€. Corridor le plus fréquent — comparez 3 pros sur Moverz.",
+  },
+  "paris-vers-rennes": {
+    title: "Déménagement Paris → Rennes 2026 : T2 1 210–1 820€",
+    description: "Paris–Rennes 390 km, A11, 3h30. T1 920–1 380€, T2 1 210–1 820€, Maison 2 060–3 100€. TGV en 1h25 pour les petits volumes — camion pour le reste.",
+  },
+  "grenoble-vers-paris": {
+    title: "Déménagement Grenoble → Paris 2026 : T2 1 540–2 310€",
+    description: "Grenoble–Paris 600 km, A48/A6, 5h. T1 1 200–1 800€, T2 1 540–2 310€, Maison 2 530–3 790€. Alpes au départ : prévoir escaliers, accès montagne.",
+  },
+  "lyon-vers-paris": {
+    title: "Déménagement Lyon → Paris 2026 : T2 1 310–1 960€",
+    description: "Lyon–Paris 490 km, A6, 4h. T1 1 010–1 520€, T2 1 310–1 960€. Corridor majeur — pros disponibles toute l'année. Obtenez 3 devis sur Moverz.",
+  },
+  "marseille-vers-paris": {
+    title: "Déménagement Marseille → Paris 2026 : T2 1 890–2 840€",
+    description: "Marseille–Paris 830 km, 2 jours. T1 1 510–2 260€, T2 1 890–2 840€, Maison 3 010–4 520€. Quartiers Marseille au départ : accès variable selon arrondissement.",
+  },
+  "reims-vers-paris": {
+    title: "Déménagement Reims → Paris 2026 : T2 dès 930€",
+    description: "Reims–Paris 160 km, A4, 1h30. T1 650–980€, T2 930–1 390€, Maison 1 710–2 570€. Courte distance = pros disponibles rapidement, délai 3–5 jours.",
+  },
+};
+
 export function generateCorridorMetadata(
   originCitySlug: string,
   originCityName: string,
@@ -61,20 +116,26 @@ export function generateCorridorMetadata(
   const year = new Date().getFullYear();
   const destSlug = destinationSlug ?? slugify(destination);
   const path = `${originCitySlug}-vers-${destSlug}`;
-  
+
+  // Override SEO pour les corridors prioritaires (Bing AI citations)
+  const override = CORRIDOR_META_OVERRIDES[path];
+  if (override) {
+    return getFullMetadata(path, override.title, override.description);
+  }
+
   // Calcul distance + prix réels (formules officielles)
   const priceData = getCorridorPricesForMeta(originCitySlug, destSlug);
-  
+
   if (priceData) {
     // ✅ Version optimisée (USP homepage + distance + prix)
     const title = `Déménagement ${originCityName} → ${destination} (${priceData.distanceKm}km) | Devis 5–7j · ${year}`;
-    
+
     // Description alignée villes v3.1 : checkmarks ✓ + USP stack + prix + social proof
     const description = `✓ 1 contact ✓ 0 harcèlement · ${originCityName}→${destination} (${priceData.distanceKm}km) : T1 ${priceData.t1}, T2 ${priceData.t2}, Maison ${priceData.house} · Note 4.9/5 · Gratuit`;
-    
+
     return getFullMetadata(path, title, description);
   }
-  
+
   // Fallback (si calcul prix impossible) - aligné sur USP homepage
   const title = `Déménagement ${originCityName} → ${destination} : Devis & Prix ${year}`;
   const description = `✓ 1 contact ✓ 0 harcèlement · ${originCityName}→${destination} : devis gratuits, pros contrôlés · Note 4.9/5 · Sans démarchage`;
