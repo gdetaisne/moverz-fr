@@ -65,13 +65,13 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
   },
   {
     slug: "monte-meuble-quand-indispensable",
-    title:
-      "Monte‑meuble (lift) : quand c’est indispensable, quelles infos donner, et comment éviter une décision “au hasard”",
-    description:
-      "Guide lift/monte‑meuble : cas où c’est nécessaire, détails à fournir, checklists accès/fenêtre, et comment cadrer l’option dans un devis sans surprises.",
-    publishedAt: "2026-01-09T00:00:00.000Z",
+    title: "Monte-meuble : quand c'est vraiment nécessaire (et quand ça ne l'est pas)",
+    description: "Monte-meuble ou portage à la main ? Comment ça se décide, ce que ça coûte, ce qu'il faut préciser dans le devis — et pourquoi la moitié des erreurs viennent d'une fenêtre mal mesurée.",
+    publishedAt: "2026-03-08T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "checklists-et-guides",
-    readingTimeMinutes: 12,
+    readingTimeMinutes: 10,
+    tags: ["monte-meuble", "lift déménagement", "accès difficile", "surcôût déménagement"],
   },
   {
     slug: "demenagement-parking-souterrain",
@@ -129,13 +129,13 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
   },
   {
     slug: "garde-meuble-2-semaines-avant-demenagement",
-    title:
-      "Garde‑meuble 2 semaines : le plan simple pour éviter un déménagement “en urgence” (et mieux comparer les devis)",
-    description:
-      "Stockage court 2 semaines : quand c’est utile, comment organiser enlèvement→stockage→livraison, checklists, et erreurs fréquentes.",
-    publishedAt: "2026-01-09T00:00:00.000Z",
+    title: "Garde-meuble avant déménagement : quand c'est utile, comment l'organiser, combien ça coûte",
+    description: "Décalage entre sortie et entrée ? Garde-meuble 2 semaines : ce que ça coûte vraiment, comment choisir, ce qu'on met dedans (et ce qu'on évite), et comment l'intégrer dans le devis déménagement.",
+    publishedAt: "2026-03-08T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "checklists-et-guides",
-    readingTimeMinutes: 11,
+    readingTimeMinutes: 10,
+    tags: ["garde-meuble", "stockage déménagement", "box stockage", "décalage bail"],
   },
   {
     slug: "autorisation-stationnement-demenagement-demande-modele",

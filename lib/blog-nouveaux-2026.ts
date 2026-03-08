@@ -3032,7 +3032,339 @@ Oui, c'est courant. Mais vous avez le droit de refuser et de vous couvrir via vo
 `
   },
   {
-    slug: "prix-demenagement-longue-distance-france",
+    slug: "monte-meuble-quand-indispensable",
+    title: "Monte-meuble : quand c'est vraiment nécessaire (et quand ça ne l'est pas)",
+    description: "Monte-meuble ou portage à la main ? Comment ça se décide, ce que ça coûte, ce qu'il faut préciser dans le devis — et pourquoi la moitié des erreurs viennent d'une fenêtre mal mesurée.",
+    type: "guide",
+    body: `On vous a peut-être dit "pour un 4e étage sans ascenseur, prenez un monte-meuble". C'est parfois vrai. Pas toujours.
+
+Un monte-meuble mal dimensionné ou mal anticipé peut coûter 150 à 400 € de plus sur la facture — pour un service qui n'était pas forcément utile, ou au contraire pour une urgence le jour J parce que personne n'avait vérifié les dimensions de la fenêtre.
+
+Voici ce qui détermine vraiment si vous en avez besoin, et comment l'intégrer proprement dans un devis.
+
+> **Besoin d'un devis avec monte-meuble bien cadré ?**  
+> [Moverz](/) inclut les accès (étage, ascenseur, dimensions fenêtre) dans chaque dossier standardisé. Les déménageurs chiffrent en sachant exactement ce qui les attend. [Démarrer gratuitement](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-monte-meuble).
+
+---
+
+## Ce qu'est (vraiment) un monte-meuble
+
+Un monte-meuble — ou lift dans le jargon professionnel — c'est une nacelle motorisée fixée à l'extérieur du bâtiment, qui monte les meubles par la fenêtre ou le balcon. L'équipe charge en bas, la nacelle monte, une personne en haut guide l'entrée.
+
+Il en existe deux types :
+
+**Le monte-meuble embarqué** : fixé sur le camion du déménageur, il se déplie et s'étend jusqu'à votre étage. Capacité standard : jusqu'au 5e-6e étage, plateau 80×120 cm environ.
+
+**Le monte-meuble externe (location)** : équipement indépendant, loué séparément ou fourni par un prestataire spécialisé. Portée plus grande (jusqu'au 8e-10e), plateau parfois plus large. Utile pour les immeubles sans parking camion accessible ou les étages très hauts.
+
+---
+
+## Les 4 situations où c'est vraiment nécessaire
+
+### 1. L'escalier ne passe pas
+
+C'est la raison principale. Pas l'étage, pas l'effort — le gabarit.
+
+Un canapé d'angle de 2,5 m, une armoire normande, un lit double avec cadre fixe : ces objets ne passent simplement pas dans certains escaliers. La règle empirique des déménageurs : si la diagonale du meuble dépasse la largeur de l'escalier au carré (calcul du "virage"), il ne passe pas.
+
+**Mesurez avant de décider :**
+- Largeur de l'escalier au point le plus étroit (souvent le palier, pas la volée droite)
+- Hauteur sous plafond dans les virages
+- Diamètre si escalier en colimaçon (rarement praticable pour les grands meubles)
+
+Si vous doutez, appelez votre déménageur avant — pas le jour J.
+
+### 2. Plus de 4 étages sans ascenseur
+
+Le portage à la main au-delà du 4e est physiquement très dur pour une équipe. Certains déménageurs l'acceptent sans surcoût majeur jusqu'au 5e, mais ralentissent, s'épuisent, et le risque de casse augmente. À partir du 5e-6e sans ascenseur adapté, le monte-meuble devient la norme dans le secteur.
+
+### 3. L'ascenseur existe mais est trop petit
+
+Beaucoup d'immeubles haussmanniens ou d'immeubles d'avant 1970 ont des ascenseurs de 60×80 cm, parfois moins. Un frigidaire standard (60×70 cm) entre tout juste. Un canapé, jamais.
+
+**Le bon réflexe** : mesurez l'intérieur de la cabine (pas l'ouverture de porte) et la hauteur utile. Communiquez ces dimensions dans le dossier.
+
+### 4. Le client le demande pour les objets fragiles en hauteur
+
+Dans certains cas, même si l'escalier passe, un client préfère utiliser le monte-meuble pour les objets lourds ou fragiles (piano, armoire ancienne, miroirs). Moins de manipulation dans l'escalier = moins de risque. C'est un choix valide — mais à décider à l'avance, pas le matin du déménagement.
+
+---
+
+## Quand le monte-meuble est une fausse bonne idée
+
+### "On prend le monte-meuble pour aller plus vite"
+
+Faux, souvent. Monter un monte-meuble, le caller, le sécuriser, installer la nacelle : ça prend 30 à 45 minutes. Si vous avez 15 m³ et un escalier praticable, le portage direct est souvent plus rapide.
+
+Un monte-meuble fait gagner du temps à partir de ~25-30 m³ ou à partir du 4e étage sans ascenseur.
+
+### "Le monte-meuble coûte moins cher que le surcoût escalier"
+
+Pas nécessairement. Sur un T2 (25 m³) au 3e étage, le surcoût escalier sera de 80 à 150 €. Louer un monte-meuble coûtera 180 à 350 €. Le portage revient moins cher.
+
+### "L'immeuble a un parking devant, c'est facile"
+
+Le monte-meuble nécessite un espace horizontal au sol pour déployer le bras (souvent 3 à 6 m). Un parking souterrain avec hayon bas, une rue en pente, ou des câbles électriques en façade peuvent rendre l'installation impossible. À vérifier avant.
+
+---
+
+## Ce qu'il faut communiquer dans le devis pour ne pas avoir de surprise
+
+C'est là que se jouent 80 % des mauvaises surprises. Un devis bien cadré évite le surcoût le jour J.
+
+**Informations indispensables côté accès :**
+
+| Information | Pourquoi c'est important |
+|---|---|
+| Étage exact (départ ET arrivée) | Calcul du surcoût ou de la nécessité monte-meuble |
+| Ascenseur oui/non + dimensions cabine | Détermine si les grands meubles passent |
+| Largeur escalier au plus étroit | Détermine si les gros meubles passent à la main |
+| Type de façade (balcon, fenêtre, velux) | Détermine la faisabilité du monte-meuble |
+| Dimensions de la plus grande fenêtre praticable | Détermine si la nacelle entre |
+| Distance camion → entrée | Détermine si le bras du monte-meuble atteint |
+| Câbles électriques, arbres, obstacles en façade | Peut bloquer le monte-meuble même si tout le reste est OK |
+
+**Ce que le devis doit mentionner explicitement :**
+- Monte-meuble inclus ou en option (et qui le fournit)
+- Jusqu'à quel étage il est dimensionné
+- Autorisation de voirie incluse ou à charge du client
+
+### La clause "selon accès réel"
+
+Méfiez-vous des devis qui mentionnent "supplément monte-meuble selon accès réel le jour de la prestation". C'est une porte ouverte sur un surcoût non chiffré. Exigez une réponse précise avant de signer.
+
+---
+
+## Combien ça coûte réellement
+
+| Option | Coût estimé | Adapté à |
+|---|---|---|
+| Monte-meuble embarqué (sur camion) | Souvent inclus ou +100-250 € | Volume standard, jusqu'au 5e-6e |
+| Location monte-meuble externe | 200-450 € la demi-journée | Étages élevés, grands volumes |
+| Monte-meuble manuel (chèvre) | 80-150 € | Meubles isolés, petits volumes |
+
+Ces prix ne comprennent pas l'autorisation de voirie si nécessaire : compter 50-150 € selon la commune, délai 2-3 semaines.
+
+Selon les dossiers traités via Moverz.fr, **le surcoût moyen lié à un monte-meuble non anticipé le jour J est de 180 à 300 €** — contre 120 à 200 € si réservé à l'avance. L'anticipation seule économise souvent 100 €.
+
+---
+
+## Ce que font les bons déménageurs (et ce que font les autres)
+
+**Un bon déménageur** vous demande les dimensions de vos meubles les plus grands et les dimensions de l'escalier avant de chiffrer. Il mentionne explicitement si le monte-meuble est inclus ou non.
+
+**Un déménageur qui sous-estime** répond "pas de problème" sans avoir mesuré quoi que ce soit. Le jour J, le canapé ne passe pas, l'équipe s'improvise — et vous payez.
+
+C'est l'une des raisons pour lesquelles Moverz.fr vérifie chaque déménageur partenaire selon 3 analyses de risque. Un déménageur avec un taux de litiges élevé sur les mentions "supplément jour J non anticipé" voit son score baisser automatiquement.
+
+---
+
+## Checklist avant de valider un devis avec monte-meuble
+
+- [ ] J'ai mesuré la largeur de mon escalier (au point le plus étroit)
+- [ ] J'ai mesuré les dimensions de la plus grande fenêtre accessible par l'extérieur
+- [ ] J'ai vérifié qu'il n'y a pas de câbles, arbres ou obstacles en façade
+- [ ] J'ai vérifié que le camion peut stationner à < 6 m de la façade
+- [ ] Le devis mentionne explicitement "monte-meuble inclus" avec jusqu'à quel étage
+- [ ] Si autorisation de voirie nécessaire : demandée au moins 2 semaines avant
+- [ ] Le coût monte-meuble est chiffré séparément (pas "selon accès")
+
+---
+
+> **Votre déménagement implique un accès difficile ?**  
+> Précisez-le dans votre dossier Moverz : étage, ascenseur, dimensions. Les déménageurs du réseau reçoivent l'information complète avant de chiffrer — pas de mauvaise surprise le jour J. [Créer mon dossier](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-monte-meuble-fin).
+
+---
+
+*Sources : données Moverz.fr 2025-2026 | pratiques tarifaires du secteur déménagement France*
+
+**À lire aussi :**
+- [Déménagement sans ascenseur au 5e étage](/blog/demenagement-sans-ascenseur-5e-etage/)
+- [Éviter les suppléments prix jour J](/blog/supplement-prix-jour-j-comment-eviter/)
+- [Comment comparer des devis de déménagement](/blog/comparer-devis-demenagement-guide/)
+`,
+  },
+  {
+    slug: "garde-meuble-2-semaines-avant-demenagement",
+    title: "Garde-meuble avant déménagement : quand c'est utile, comment l'organiser, combien ça coûte",
+    description: "Vous avez un décalage entre votre sortie et votre entrée ? Garde-meuble 2 semaines : ce que ça coûte vraiment, comment choisir, ce qu'on met dedans (et ce qu'on évite), et comment l'intégrer dans le devis déménagement.",
+    type: "guide",
+    body: `Le garde-meuble avant un déménagement, c'est souvent une décision de dernière minute, prise sous pression. Et c'est exactement là que ça coûte le plus cher.
+
+Deux semaines de stockage pour un T3 peuvent aller de 150 € (bien anticipé, prestataire local) à 600 € (box self-stockage urbain prix rack, pris en urgence). Pour le même service.
+
+Voici comment éviter ça.
+
+> **Déménagement avec décalage ? Expliquez-le dans votre dossier**  
+> [Moverz](/) transmet votre situation complète aux déménageurs — y compris si vous avez besoin d'un stockage intermédiaire. Certains proposent le service en direct. [Démarrer gratuitement](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-garde-meuble).
+
+---
+
+## Pourquoi un garde-meuble avant un déménagement ?
+
+La situation la plus courante : vous sortez de votre logement actuel à une date fixe (fin de bail, vente actée) mais votre nouveau logement n'est pas disponible immédiatement. Le décalage dure quelques jours à quelques semaines.
+
+**Les 4 situations typiques :**
+
+**1. Décalage entre sortie et entrée (1-4 semaines)**  
+Fin de bail le 31, remise de clés le 15 du mois suivant. Vous n'avez nulle part où mettre vos affaires entre-temps. C'est le cas le plus fréquent.
+
+**2. Travaux dans le nouveau logement**  
+La cuisine est en cours d'installation, les parquets sont en train de sécher. Vous ne pouvez pas meubler immédiatement.
+
+**3. Vente avec acheteur qui reprend le logement vide**  
+Vous partez avant de trouver votre prochain logement. Solution temporaire nécessaire.
+
+**4. Déménagement en deux temps (ex. : période d'essai à l'étranger)**  
+Vous partez 3 mois d'abord, vous emmenez l'essentiel, le reste reste en France.
+
+---
+
+## Les 3 options de stockage — et leurs vraies différences
+
+### Option 1 : Le garde-meuble chez le déménageur
+
+Beaucoup de déménageurs professionnels disposent de leur propre entrepôt. Ils chargent vos affaires, les stockent dans leur dépôt, et les livrent à la nouvelle adresse quand vous êtes prêt.
+
+**Avantages :**
+- Un seul prestataire gère tout (chargement, stockage, livraison)
+- Pas de double manipulation (moins de risque de casse)
+- Prix souvent négociable quand c'est inclus dans le contrat global
+
+**Inconvénients :**
+- Vous n'avez pas accès à vos affaires pendant le stockage (en général)
+- La tarification est souvent au m³/semaine — moins transparente que les box
+
+**Prix indicatif :** 8-15 €/m³/semaine. Pour 40 m³ pendant 2 semaines = 640 à 1 200 €.
+
+### Option 2 : Le self-stockage (box individuel)
+
+Vous louez un box fermé à votre nom. Vous y accédez quand vous voulez avec votre badge. Vous transportez vous-même (ou faites transporter) vos affaires.
+
+**Avantages :**
+- Accès libre à vos affaires
+- Prix au m² très lisible
+- Réseau dense (Shurgard, Box+, Homebox, prestataires locaux)
+
+**Inconvénients :**
+- Vous gérez deux opérations distinctes : déménagement → box, puis box → nouveau logement
+- Deux fois les frais de main-d'œuvre si vous passez par un déménageur pour chaque étape
+- Le box en centre-ville peut être plus cher que chez le déménageur
+
+**Prix indicatif :** 25-60 €/m²/mois selon la ville et le prestataire. Pour 15 m² pendant 2 semaines (équivalent T3) = 190 à 450 €. Mais attention : le premier mois est souvent le minimum facturable.
+
+### Option 3 : Le stockage chez un particulier (Costockage, Jestocke…)
+
+Des particuliers louent leur cave, box de parking, ou pièce vide à des personnes qui ont besoin de stocker.
+
+**Avantages :**
+- Souvent moins cher (20-40 % de moins que le self-stockage commercial)
+- Flexible sur les durées courtes
+
+**Inconvénients :**
+- Assurance à vérifier (le particulier n'est pas nécessairement couvert pour votre mobilier)
+- Accès dépend de la disponibilité du propriétaire
+- Adapté aux petits volumes, moins aux déménagements complets
+
+---
+
+## Ce que ça coûte réellement (sans se faire avoir)
+
+Selon les données Moverz.fr, **les clients qui anticipent leur garde-meuble 3+ semaines avant paient en moyenne 35 % moins cher** que ceux qui s'y prennent en urgence dans les 72h précédant le déménagement.
+
+### Simulateur rapide
+
+| Volume | Garde-meuble chez déménageur (2 semaines) | Self-stockage box (2 semaines) |
+|---|---|---|
+| 15 m³ (T1-T2) | 240 – 450 € | 130 – 300 € |
+| 30 m³ (T2-T3) | 480 – 900 € | 200 – 500 € |
+| 50 m³ (T3-T4) | 800 – 1 500 € | 320 – 700 € |
+
+**Important :** ces fourchettes n'incluent pas les frais de transport entre le garde-meuble et le nouveau logement si vous passez par un self-stockage. Si vous avez besoin d'un déménageur pour les deux trajets (départ→box, box→arrivée), doublez les frais de main-d'œuvre.
+
+### Ce que les prestataires ne disent pas toujours
+
+- La plupart des contrats de self-stockage facturent **au minimum un mois entier**, même pour 2 semaines.
+- Des **frais d'assurance obligatoires** (5-15 €/mois) s'ajoutent souvent.
+- Un **dépôt de garantie** est parfois demandé (remboursé à la sortie, mais immobilisé).
+- Certains déménageurs facturent des **frais de "mise en dépôt" et de "sortie de dépôt"** indépendants du tarif de stockage.
+
+Demandez systématiquement le coût total pour votre durée exacte, pas juste le tarif mensuel.
+
+---
+
+## Ce qu'on met (et ce qu'on ne met pas) dans un garde-meuble
+
+### Ce qui supporte bien le stockage court terme
+
+- Meubles en bois massif emballés
+- Électroménager hors congélateur/frigo (qu'il faut vider et sécher)
+- Cartons de livres, vêtements hors saison, linge
+- Matériel de sport, vélos (si emballés)
+
+### Ce qui pose problème
+
+**Le réfrigérateur et le congélateur** : à vider 24h avant, défrosted, portes ouvertes pendant le transport. En garde-meuble, la porte doit rester entrouverte (coin de carton) pour éviter les moisissures. Un frigo stocké porte fermée pendant 2 semaines = odeur garantie à l'ouverture.
+
+**Les plantes** : ne supportent pas le stockage en espace fermé et sombre. Confiez-les à quelqu'un.
+
+**Les produits inflammables** (bonbonnes de gaz, peintures, solvants) : interdits dans la quasi-totalité des contrats de stockage. À éliminer avant.
+
+**Les objets de valeur** (bijoux, documents officiels, argent) : ne mettez jamais ça dans un garde-meuble. Sur vous ou dans un coffre bancaire.
+
+---
+
+## Comment intégrer le garde-meuble dans le devis déménagement
+
+C'est là que beaucoup de gens se compliquent la vie. La bonne approche : **évoquez le besoin de stockage dès le premier contact avec le déménageur**, pas après avoir signé.
+
+Pourquoi ? Parce qu'un déménageur qui sait qu'il y a un stockage intermédiaire peut :
+- Vous proposer un tarif groupé (déménagement + stockage)
+- Adapter le camion (taille, destination en entrepôt directement)
+- Planifier la livraison finale dans son agenda
+
+Si vous le dites le jour J, c'est la panique — et le surcoût.
+
+**Ce que doit mentionner le devis si stockage inclus :**
+- Durée de stockage garantie (et tarif si dépassement)
+- Conditions d'accès pendant le stockage
+- Date de livraison finale (ou fenêtre de dates)
+- Assurance couvrant le mobilier pendant le stockage (qui paie en cas de sinistre ?)
+
+---
+
+## 5 erreurs classiques à éviter
+
+**1. Prendre un box trop petit**  
+Les estimations en ligne donnent souvent 15-20 m² pour un T3. C'est optimiste si vous n'avez pas d'expérience à empiler des meubles. Prenez 10-20 % de marge.
+
+**2. Ne pas vérifier l'assurance**  
+La plupart des contrats de self-stockage couvrent au minimum légal (souvent 100 €/m²). Pour un T3 à 40 m³, c'est 4 000 € de couverture. Si votre mobilier vaut plus, souscrivez une option.
+
+**3. Oublier les objets qui ne rentrent pas**  
+Un canapé d'angle ou un lit XXL peut ne pas passer dans l'entrée d'un box. Vérifiez les dimensions de l'accès (largeur couloir, hauteur de plafond dans la zone de stockage).
+
+**4. Signer sans lire la durée minimale**  
+Deux semaines chez vous = un mois minimum chez eux. Lisez les CGV avant de signer.
+
+**5. Organiser deux déménagements distincts sans les coordonner**  
+Si vous faites appel à deux déménageurs différents (un pour le premier trajet, un pour le second), les plannings peuvent ne pas s'aligner. Vous vous retrouvez à devoir libérer le box en urgence — ou à payer un mois de plus.
+
+---
+
+> **Vous avez un décalage entre sortie et entrée ?**  
+> Précisez-le dans votre dossier [Moverz](/) : certains déménageurs du réseau proposent le stockage intermédiaire en direct, avec un seul interlocuteur et un tarif global. [Créer mon dossier](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-garde-meuble-fin).
+
+---
+
+*Sources : données Moverz.fr 2025-2026 | tarifs Shurgard, Box+, Homebox (consultés mars 2026)*
+
+**À lire aussi :**
+- [Éviter les suppléments prix jour J](/blog/supplement-prix-jour-j-comment-eviter/)
+- [Comment comparer des devis de déménagement](/blog/comparer-devis-demenagement-guide/)
+- [Checklist déménagement complète](/blog/checklist-demenagement-complet/)
+`,
+  },
     title: "Prix déménagement longue distance France 2026 : fourchettes réalistes & conseils",
     description: "Combien coûte un déménagement longue distance en France en 2026 ? Fourchettes par volume, exemples chiffrés (Paris-Marseille, Lyon-Bordeaux, Lille-Lyon), facteurs de variation et conseils pour comparer.",
     type: "guide",
