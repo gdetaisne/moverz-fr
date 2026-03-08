@@ -4,7 +4,8 @@ import ComparisonTable from "@/components/comparison/ComparisonTable";
 import ComparisonHero from "@/components/comparison/ComparisonHero";
 import { FAQ, type FAQItem } from "@/components/FAQ";
 import { buildTunnelUrl } from "@/lib/tunnel-url";
-import { ShieldCheck, BarChart2, EyeOff, FileText, BadgeCheck, Trophy, CheckSquare, AlertTriangle, Package, ClipboardList, ArrowRight } from "lucide-react";
+import { ShieldCheck, BarChart2, EyeOff, FileText, BadgeCheck, Trophy, CheckSquare, AlertTriangle, Package, ClipboardList } from "lucide-react";
+import { FinalCTAV4 } from "@/components/sections/FinalCTAV4";
 import { FAQSchema } from "@/components/schema/FAQSchema";
 import { JsonLd } from "@/components/schema/JsonLd";
 
@@ -391,44 +392,7 @@ export default function ComparateurDemenageursPage() {
         <FAQ title="FAQ : Choisir un comparateur de déménagement" faqs={faqs} limit={10} id="faq" />
       </div>
 
-      {/* CTA Final */}
-      <section className="section section-light pt-0">
-        <div className="container max-w-4xl">
-          <div className="rounded-2xl border border-brand-turquoise-300 bg-gradient-to-br from-brand-turquoise/10 to-white p-6 md:p-8 text-center">
-            <div className="flex items-center justify-center gap-3 mb-3">
-              <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/20">
-                <FileText className="w-5 h-5 text-[var(--color-accent)]" strokeWidth={2} />
-              </div>
-              <h3 className="text-lg font-bold text-v4-text">
-                Prêt à comparer intelligemment ?
-              </h3>
-            </div>
-            <p className="text-sm md:text-base text-v4-text-secondary mb-5 max-w-2xl mx-auto">
-              Créez votre dossier en 3 minutes. Moverz évalue chaque déménageur selon 3 analyses de risque /100.
-              Alertes = exclusion automatique. Recevez 3 à 5 devis comparables sous 5–7 jours. Dossier anonyme, 0 démarchage.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-              <a
-                href={buildTunnelUrl({ from: "comparateur-demenageurs-cta" })}
-                className="inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-base font-semibold text-white shadow-lg hover:opacity-90 hover:shadow-xl transition-all"
-                style={{ background: "#F59E0B", boxShadow: "0 4px 16px rgba(245,158,11,0.3)" }}
-              >
-                <span>Obtenir mes devis</span>
-                <ArrowRight className="w-5 h-5" />
-              </a>
-              <a
-                href="/pourquoi-moverz/"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-white border border-v4-border px-6 py-3 text-sm font-semibold text-v4-text hover:border-brand-turquoise/50 hover:shadow-sm transition-all"
-              >
-                <span>Pourquoi Moverz ?</span>
-              </a>
-            </div>
-            <p className="text-xs text-v4-text-secondary mt-4">
-              3 min · Dossier standardisé · Sans démarchage · 3 à 5 devis comparables · 100% gratuit · Note 4.9/5
-            </p>
-          </div>
-        </div>
-      </section>
+      <FinalCTAV4 />
     </main>
   );
 }
