@@ -12,7 +12,7 @@ export const runtime = "nodejs";
  * After:  articles piliers qualité + liste GA trafic (~100-150 URLs estimées)
  */
 
-// Articles avec trafic GA prouvé — inclus même s'ils ne sont pas "pilier"
+// Articles avec trafic GSC prouvé — inclus même s'ils ne sont pas "pilier"
 const GA_TRAFFIC_SLUGS = new Set([
   "demenagement-centre-ville-rennes-autorisations",
   "cartons-gratuits-rennes",
@@ -49,6 +49,44 @@ const GA_TRAFFIC_SLUGS = new Set([
   "demenagement-par-ville",
   "cas-frequents",
   "prix-demenagement-2025",
+  // Groupe A — ≥1000 mots, impressions GSC >200
+  "shurgard-lyon-sites-tarifs",
+  "comparaison-prix-demenageurs-lyon",
+  "demenageur-rennes",
+  "tarif-horaire-porteur-demenagement-nantes",
+  "monte-meuble-marseille-quand-necessaire",
+  "prix-demenagement-montpellier",
+  "monte-meuble-demenagement-nantes",
+  "demenagement-objets-fragiles-nice",
+  "meilleurs-demenageurs-lyon",
+  "comparatif-formules-economiques-demenagement-nantes",
+  "transport-maritime-container-lyon",
+  "garde-meuble-longue-duree-nice",
+  "faq-garde-meuble-strasbourg",
+  "prix-demenagement-international-lyon",
+  "demenagement-pas-cher-toulouse",
+  "demenageur-strasbourg",
+  "demenagement-international-nice-monaco",
+  "prix-demenagement-longue-distance-lille-paris",
+  "devis-demenagement-lille-obtenir-comparer",
+  "plateformes-aide-demenagement-nantes",
+  "transport-conteneur-demenagement-international",
+  // Groupe B — enrichis 750-1000 mots
+  "assurance-demenagement-international",
+  "demenageur-monte-meuble-strasbourg",
+  "autorisation-stationnement-demenagement-nice",
+  // Groupe C — réécritures complètes
+  "demenagement-piano-longue-distance",
+  "tarif-horaire-demenageur-rennes",
+  "comparatif-prix-demenageurs-rennes",
+  "accord-piano-apres-demenagement-rennes",
+  "autorisation-stationnement-demenagement-marseille",
+  "prix-demenagement-piano-rennes-2025",
+  "prix-demenagement-longue-distance-montpellier-paris",
+  "meilleur-demenageur-rennes-2025",
+  "demenagement-strasbourg-paris",
+  "prix-demenagement-par-m3-montpellier",
+  "prix-demenageur-rennes-t2-t3-2025",
 ]);
 
 function toIsoDate(value?: string): string | undefined {

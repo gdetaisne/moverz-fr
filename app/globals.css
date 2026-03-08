@@ -35,6 +35,10 @@
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
   --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
 
+  /* Brand */
+  --brand-navy: #0B0F14;
+  --color-bg-page: #F0F4F5;
+
 }
 
 @layer base {

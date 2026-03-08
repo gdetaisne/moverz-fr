@@ -70,7 +70,7 @@ const lucieSchema = {
   "@type": "Person",
   "@id": "https://moverz.fr/#person-lucie-veltz",
   name: "Lucie Veltz",
-  jobTitle: "Marketing & Relocation Expert",
+  jobTitle: "Co-fondatrice & Relocation Specialist",
   url: "https://moverz.fr/auteurs/lucie/",
   worksFor: { "@id": "https://moverz.fr/#organization" },
   sameAs: ["https://www.linkedin.com/in/lucieveltz/"],
@@ -142,7 +142,7 @@ export default function AProposPage() {
       </section>
 
       {/* ─── LE PROBLÈME QU'ON A DÉCIDÉ DE RÉSOUDRE ─── */}
-      <section className="section section-light">
+      <section className="section" style={{ background: "var(--color-bg-page)" }}>
         <div className="container max-w-4xl">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
@@ -168,10 +168,10 @@ export default function AProposPage() {
                   Injoignable. Acompte perdu.
                 </p>
                 <p>
-                  Lucie, de son côté, accompagnait des cadres en relocation depuis plusieurs
-                  années. Elle voyait les mêmes dégâts se répéter : des clients bien informés
-                  s'en sortaient, les autres non. Le problème n'était pas le marché — c'était
-                  l'accès à l'information.
+                  Lucie, elle, enchaîne les déménagements internationaux avec deux enfants.
+                  Berlin, Bangkok, Bordeaux — à chaque fois, le même sport de haut niveau :
+                  trouver un prestataire fiable dans un marché opaque. Elle construit son
+                  propre réseau à la dure.
                 </p>
                 <p className="font-semibold" style={{ color: "var(--color-text)" }}>
                   L'idée : standardiser le dossier <em>avant</em> de le transmettre aux
@@ -241,10 +241,7 @@ export default function AProposPage() {
       </section>
 
       {/* ─── MISSION ─── */}
-      <section
-        className="section"
-        style={{ background: "#F8FFFE", borderTop: "1px solid rgba(14,165,166,0.1)" }}
-      >
+      <section className="section section-light">
         <div className="container max-w-4xl">
           <div className="text-center mb-10">
             <p
@@ -310,14 +307,21 @@ export default function AProposPage() {
             <p className="text-sm font-semibold" style={{ color: "var(--color-text)" }}>
               <span className="text-2xl font-bold" style={{ color: "#0EA5A6" }}>0 faillite</span>{" "}
               chez les déménageurs du réseau Moverz depuis janvier 2026.
-              Contre 257 faillites sur le marché général en 2024.
+              Contre{" "}
+              <a
+                href="/label-moverz/"
+                className="underline hover:opacity-80"
+                style={{ color: "var(--color-text)" }}
+              >
+                257 faillites sur le marché général en 2024
+              </a>.
             </p>
           </div>
         </div>
       </section>
 
       {/* ─── L'ÉQUIPE ─── */}
-      <section className="section section-light">
+      <section className="section" style={{ background: "var(--color-bg-page)" }}>
         <div className="container max-w-4xl">
           <div className="text-center mb-10">
             <p
@@ -402,10 +406,7 @@ export default function AProposPage() {
       </section>
 
       {/* ─── CE QU'ON N'EST PAS ─── */}
-      <section
-        className="section"
-        style={{ background: "#F8FFFE", borderTop: "1px solid rgba(14,165,166,0.1)" }}
-      >
+      <section className="section section-light">
         <div className="container max-w-3xl">
           <div className="text-center mb-8">
             <h2 className="text-2xl md:text-3xl font-bold" style={{ color: "var(--color-text)" }}>
@@ -457,7 +458,7 @@ export default function AProposPage() {
       </section>
 
       {/* ─── CHIFFRES ─── */}
-      <section className="section section-light">
+      <section className="py-12 md:py-16 relative w-full overflow-hidden" style={{ background: "var(--color-bg-page)" }}>
         <div className="container max-w-3xl">
           <div className="text-center mb-8">
             <h2 className="text-2xl md:text-3xl font-bold" style={{ color: "var(--color-text)" }}>
@@ -473,11 +474,11 @@ export default function AProposPage() {
             ].map((s) => (
               <div
                 key={s.label}
-                className="rounded-2xl border p-5 text-center"
+                className="rounded-2xl border p-6 text-center"
                 style={{ background: "white", borderColor: "rgba(14,165,166,0.2)" }}
               >
                 <div
-                  className="text-2xl md:text-3xl font-bold font-heading mb-1"
+                  className="text-2xl md:text-3xl font-bold font-heading mb-2 whitespace-nowrap"
                   style={{ color: "#0EA5A6" }}
                 >
                   {s.value}
