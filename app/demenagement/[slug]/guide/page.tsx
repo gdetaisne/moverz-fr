@@ -5,6 +5,7 @@ import { CITIES, getCityBySlug } from "@/lib/cities";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import { getCityGuideFromJson } from "@/lib/city-guides";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { WebPageSchema } from "@/components/schema/WebPageSchema";
 import { buildTunnelUrl } from "@/lib/tunnel-url";
 
 type PageProps = {
@@ -42,6 +43,12 @@ export default async function CityGuidePage({ params }: PageProps) {
 
   return (
     <main className="bg-white">
+      <WebPageSchema
+        name={`Guide déménagement ${city.nameCapitalized} — Méthode, checklists, devis fiables`}
+        description={`Guide long format (2000+ mots) pour déménager à ${city.nameCapitalized} : dossier pour des devis comparables, accès & stationnement, checklists, erreurs fréquentes, méthode jour J.`}
+        url={`https://moverz.fr/demenagement/${city.slug}/guide/`}
+        about={`Déménagement à ${city.nameCapitalized}`}
+      />
       <div className="bg-v4-text">
         <div className="container max-w-4xl pt-6">
           <Breadcrumbs

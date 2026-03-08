@@ -1,15 +1,17 @@
 ---
 slug: prix-demenagement-2026
-title: "Prix déménagement 2026 : fourchettes réelles"
-description: "Prix déménagement 2026 : fourchettes par m³ et type (studio à maison). Coût Paris, Lyon, Marseille. Suppléments, périodes, économies."
+title: "Prix déménagement 2026 : fourchettes réelles par type de logement"
+description: "Combien coûte un déménagement en 2026 ? Fourchettes par type (studio à maison), 5 facteurs clés, tarifs Paris/Lyon/Marseille, suppléments à anticiper et conseils pour réduire la facture."
 type: pilier
 publishedAt: "2025-01-15"
 updatedAt: "2026-02-10"
 category: "guides"
-tags: ["prix", "budget", "devis", "volume", "2026"]
+tags: ["prix déménagement 2026", "budget déménagement", "devis déménagement", "tarif déménageur", "coût déménagement"]
 readingTime: 12
 featured: true
 ---
+
+# Prix d'un déménagement en 2026 : fourchettes réelles et guide complet
 
 Combien coûte un déménagement en 2026 ? Entre les formules, les distances, les accès et les périodes, difficile d'y voir clair.
 

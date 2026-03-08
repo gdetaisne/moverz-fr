@@ -15,7 +15,7 @@ import { FinalCTAV4 } from "@/components/sections/FinalCTAV4";
 
 export const metadata: Metadata = getFullMetadata(
   'comment-ca-marche',
-  "Comment ça marche ? Comparer des devis de déménagement en 3 étapes | Moverz",
+  "Comment ça marche ? Comparer des devis de déménagement en 3 étapes",
   "En 3 minutes, remplissez un dossier guidé et recevez 3 à 5 devis comparables de déménageurs vérifiés sous 5 jours. Dossier anonyme, zéro appel non sollicité, 100% gratuit."
 );
 
@@ -31,7 +31,7 @@ export default function CommentCaMarchePage() {
   return (
     <main className="bg-white min-h-screen">
       <WebPageSchema
-        name="Comment ça marche ? Comparer des devis de déménagement en 3 étapes | Moverz"
+        name="Comment ça marche ? Comparer des devis de déménagement en 3 étapes"
         description="En 3 minutes, remplissez un dossier guidé et recevez 3 à 5 devis comparables de déménageurs vérifiés sous 5 jours. Dossier anonyme, zéro appel non sollicité, 100% gratuit."
         url="https://moverz.fr/comment-ca-marche/"
         about="Comparateur de déménagement"

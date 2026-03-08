@@ -74,18 +74,19 @@ export default function AuthorPage({ params }: Props) {
             className="relative inline-block w-24 h-24 rounded-full overflow-hidden border-2 mx-auto mb-5"
             style={{ borderColor: "rgba(14,165,166,0.4)" }}
           >
+            <span
+              className="absolute inset-0 flex items-center justify-center text-2xl font-bold"
+              style={{ background: "rgba(14,165,166,0.15)", color: "#0EA5A6", zIndex: 0 }}
+            >
+              {author.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
+            </span>
             <Image
               src={author.photoUrl}
               alt={author.name}
               fill
               className="object-cover"
+              style={{ zIndex: 1 }}
             />
-            <span
-              className="absolute inset-0 flex items-center justify-center text-2xl font-bold"
-              style={{ background: "rgba(14,165,166,0.15)", color: "#0EA5A6" }}
-            >
-              {author.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
-            </span>
           </div>
 
           {/* Badge rôle */}

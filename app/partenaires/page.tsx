@@ -10,11 +10,13 @@ import PartenairesCommission from "@/components/partenaires/PartenairesCommissio
 import PartenairesFAQ from "@/components/partenaires/PartenairesFAQ";
 import PartenairesFinalCTA from "@/components/partenaires/PartenairesFinalCTA";
 import { FAQSchema } from "@/components/schema/FAQSchema";
+import { WebPageSchema } from "@/components/schema/WebPageSchema";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = getFullMetadata(
   "partenaires",
-  "Devenir partenaire Moverz : dossiers qualifiés",
-  "Rejoignez le réseau Moverz : dossiers complets et standardisés. Paiement au succès, pas d'abonnement."
+  "Devenir partenaire Moverz : dossiers qualifiés de déménagement",
+  "Rejoignez le réseau Moverz : recevez des dossiers complets et standardisés de particuliers vérifiés. Paiement au succès uniquement (10% HT), pas d'abonnement, pas de lead non qualifié."
 );
 
 const FAQ_DATA = [
@@ -71,6 +73,18 @@ const FAQ_DATA = [
 export default function PartenairesPage() {
   return (
     <main className="min-h-screen bg-white">
+      <WebPageSchema
+        name="Devenir partenaire Moverz : dossiers qualifiés de déménagement"
+        description="Rejoignez le réseau Moverz : recevez des dossiers complets et standardisés de particuliers vérifiés. Paiement au succès uniquement (10% HT), pas d'abonnement."
+        url="https://moverz.fr/partenaires/"
+        about="Programme partenaires déménageurs Moverz"
+      />
+      <Breadcrumbs
+        items={[
+          { label: "Accueil", href: "/" },
+          { label: "Partenaires", href: "/partenaires/" },
+        ]}
+      />
       <FAQSchema faqs={FAQ_DATA} />
       <PartenairesHero />
       <PartenairesHowItWorks />

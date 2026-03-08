@@ -20,23 +20,20 @@ export function AuthorCard({ authorSlug, variant = "compact" }: AuthorCardProps)
           style={{ borderColor: "rgba(14,165,166,0.3)" }}
           aria-label={`Voir le profil de ${author.name}`}
         >
+          {/* Fallback initiales en arrière-plan */}
+          <span
+            className="absolute inset-0 flex items-center justify-center text-xs font-bold"
+            style={{ background: "rgba(14,165,166,0.15)", color: "#0EA5A6", zIndex: 0 }}
+          >
+            {author.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
+          </span>
           <Image
             src={author.photoUrl}
             alt={author.name}
             fill
             className="object-cover"
-            onError={(e) => {
-              // Fallback : initiales si photo absente
-              (e.target as HTMLImageElement).style.display = "none";
-            }}
+            style={{ zIndex: 1 }}
           />
-          {/* Fallback initiales */}
-          <span
-            className="absolute inset-0 flex items-center justify-center text-xs font-bold"
-            style={{ background: "rgba(14,165,166,0.15)", color: "#0EA5A6" }}
-          >
-            {author.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
-          </span>
         </a>
         <div className="flex flex-col">
           <a
@@ -68,18 +65,20 @@ export function AuthorCard({ authorSlug, variant = "compact" }: AuthorCardProps)
         className="relative flex-shrink-0 w-16 h-16 rounded-full overflow-hidden border-2"
         style={{ borderColor: "rgba(14,165,166,0.4)" }}
       >
+        {/* Fallback initiales en arrière-plan */}
+        <span
+          className="absolute inset-0 flex items-center justify-center text-lg font-bold"
+          style={{ background: "rgba(14,165,166,0.12)", color: "#0EA5A6", zIndex: 0 }}
+        >
+          {author.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
+        </span>
         <Image
           src={author.photoUrl}
           alt={author.name}
           fill
           className="object-cover"
+          style={{ zIndex: 1 }}
         />
-        <span
-          className="absolute inset-0 flex items-center justify-center text-lg font-bold"
-          style={{ background: "rgba(14,165,166,0.12)", color: "#0EA5A6" }}
-        >
-          {author.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
-        </span>
       </a>
       <div className="flex-1 min-w-0">
         <div className="flex flex-wrap items-center gap-2 mb-1">

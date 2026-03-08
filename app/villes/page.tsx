@@ -3,6 +3,7 @@ import { getHubMetadata } from "@/lib/seo/metadata";
 import PageHero from "@/components/PageHero";
 import { CITIES, getCitiesByRegion } from "@/lib/cities";
 import { FinalCTAV4 } from "@/components/sections/FinalCTAV4";
+import { WebPageSchema } from "@/components/schema/WebPageSchema";
 
 export const metadata: Metadata = getHubMetadata({
   path: "villes",
@@ -17,6 +18,12 @@ export default function VillesPage() {
 
   return (
     <main className="min-h-screen" style={{ background: "#FFFFFF" }}>
+      <WebPageSchema
+        name="Déménagement partout en France — Annuaire des villes"
+        description="Annuaire des villes couvertes par Moverz. Trouvez votre guide local et recevez vos 3 meilleurs devis (dossier anonyme, sans démarchage)."
+        url="https://moverz.fr/villes/"
+        about="Annuaire des villes pour le déménagement en France"
+      />
       <PageHero
         breadcrumbs={[
           { label: "Accueil", href: "/" },

@@ -21,6 +21,8 @@ import { CreditsafeChapter } from "@/components/sections/CreditsafeChapter";
 import { TestimonialV4 } from "@/components/sections/TestimonialV4";
 import { FAQV4 } from "@/components/sections/FAQV4";
 import { FinalCTAV4 } from "@/components/sections/FinalCTAV4";
+import { WebPageSchema } from "@/components/schema/WebPageSchema";
+import { JsonLd } from "@/components/schema/JsonLd";
 import dynamic from "next/dynamic";
 
 // Lazy load uniquement StickyCTA (non-critique, client-only)
@@ -48,6 +50,32 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      <WebPageSchema
+        name="Comparateur de déménagement sans démarchage — Devis gratuits"
+        description="Comparez 3 à 5 devis de déménageurs vérifiés (finances + juridique + avis). Dossier 100% anonyme, zéro appel non sollicité, 100% gratuit."
+        url="https://moverz.fr/"
+        about="Comparateur de déménagement"
+      />
+      <JsonLd
+        id="service-schema-homepage"
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          serviceType: "Comparateur de déménagement",
+          name: "Moverz — Comparateur de déménagement sans démarchage",
+          description: "Comparez 3 à 5 devis de déménageurs vérifiés (finances + juridique + avis Google). Dossier 100% anonyme, zéro appel non sollicité, gratuit.",
+          provider: { "@id": "https://moverz.fr/#organization" },
+          areaServed: { "@type": "Country", name: "France" },
+          audience: { "@type": "Audience", audienceType: "Particuliers" },
+          termsOfService: "https://moverz.fr/cgu/",
+          offers: {
+            "@type": "Offer",
+            price: "0",
+            priceCurrency: "EUR",
+            description: "Service 100% gratuit pour les particuliers",
+          },
+        }}
+      />
       <HeroV4TwoColumn />
       <ComparableQuotesMockScrolly />
       <CreditsafeChapter />
