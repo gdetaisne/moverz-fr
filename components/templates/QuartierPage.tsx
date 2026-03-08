@@ -36,8 +36,8 @@ export type QuartierPageProps = {
  * - Suppression "3 min" (promesse peu différenciante vs. compétition)
  * - Ajout "Dossier anonyme" (différenciant Moverz)
  * 
- * Format title: "Déménagement {Quartier} ({Ville}) | Devis 5–7j · Pros locaux"
- * Format desc: "{Quartier}, {Ville} : devis comparables sous 5–7j. Dossier anonyme, pros locaux contrôlés, 0€."
+ * Format title: "Déménagement {Quartier} ({Ville}) · 3–5 devis, pros contrôlés Creditsafe"
+ * Format desc: "{Quartier}, {Ville} : 3–5 devis comparables, pros contrôlés Creditsafe + Pappers. Dossier anonyme, 0€."
  */
 export function generateQuartierMetadata(
   citySlug: string,
@@ -46,8 +46,8 @@ export function generateQuartierMetadata(
   quartierName: string
 ): Metadata {
   const path = `${citySlug}/${quartierSlug}`;
-  const title = `Déménagement ${quartierName} (${cityName}) | Devis 5–7j · Pros locaux`;
-  const description = `${quartierName}, ${cityName} : devis comparables sous 5–7j. Dossier anonyme, pros locaux contrôlés, 0€.`;
+  const title = `Déménagement ${quartierName} (${cityName}) · 3–5 devis, pros Creditsafe`;
+  const description = `${quartierName}, ${cityName} : 3–5 devis comparables, pros contrôlés Creditsafe + Pappers. Dossier anonyme, 0€.`;
 
   return getFullMetadata(path, title, description);
 }

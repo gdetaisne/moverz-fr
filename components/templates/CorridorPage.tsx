@@ -49,8 +49,8 @@ function slugify(input: string): string {
  * - Calcul prix basé sur formules officielles tunnel (pricing-corridors.ts)
  * - Format compact cohérent avec pages villes (v3.1)
  * 
- * Format title: "Déménagement {Ville A} → {Ville B} ({Distance}km) | Devis 5–7j · {Année}"
- * Format desc: "✓ 1 contact ✓ 0 harcèlement · {A}→{B} ({X}km) : T1 X€, T2 Y€, Maison Z€ · Note 4.9/5 · Gratuit"
+ * Format title: "Déménagement {Ville A} → {Ville B} ({Distance}km) · 3–5 devis, pros contrôlés Creditsafe"
+ * Format desc: "✓ 1 contact ✓ 0 harcèlement · {A}→{B} ({X}km) : T1 X€, T2 Y€, Maison Z€ · Pros contrôlés Creditsafe · Gratuit"
  */
 /**
  * Overrides SEO pour les corridors les plus cités par Bing AI
@@ -59,7 +59,7 @@ function slugify(input: string): string {
 const CORRIDOR_META_OVERRIDES: Record<string, { title: string; description: string }> = {
   "paris-vers-marseille": {
     title: "Déménagement Paris → Marseille 2026 : T2 1 890–2 840€",
-    description: "Paris–Marseille 830 km, 2 jours. T1 1 510–2 260€, T2 1 890–2 840€, Maison 3 010–4 520€. A6/A7, péages ~120€. Pros vérifiés Moverz, 3 devis comparables.",
+    description: "Paris–Marseille 830 km, 2 jours. T1 1 510–2 260€, T2 1 890–2 840€, Maison 3 010–4 520€. A6/A7, péages ~120€. Pros contrôlés Creditsafe, 3–5 devis comparables.",
   },
   "paris-vers-nice": {
     title: "Déménagement Paris → Nice 2026 : T2 2 050–3 070€",
@@ -71,7 +71,7 @@ const CORRIDOR_META_OVERRIDES: Record<string, { title: string; description: stri
   },
   "paris-vers-toulouse": {
     title: "Déménagement Paris → Toulouse 2026 : T2 1 810–2 710€",
-    description: "Paris–Toulouse 740 km, A10/A20, péages ~100€. T1 1 420–2 130€, T2 1 810–2 710€. 1–2 jours selon volume. Pros vérifiés Moverz, devis en 5–7j.",
+    description: "Paris–Toulouse 740 km, A10/A20, péages ~100€. T1 1 420–2 130€, T2 1 810–2 710€. 3–5 devis comparables, pros contrôlés Creditsafe.",
   },
   "marseille-vers-lyon": {
     title: "Déménagement Marseille → Lyon 2026 : T2 1 110–1 660€",
@@ -83,7 +83,7 @@ const CORRIDOR_META_OVERRIDES: Record<string, { title: string; description: stri
   },
   "paris-vers-lyon": {
     title: "Déménagement Paris → Lyon 2026 : T2 1 310–1 960€",
-    description: "Paris–Lyon 490 km, A6, 4h. T1 1 010–1 520€, T2 1 310–1 960€, Maison 2 160–3 240€. Corridor le plus fréquent — comparez 3 pros sur Moverz.",
+    description: "Paris–Lyon 490 km, A6, 4h. T1 1 010–1 520€, T2 1 310–1 960€, Maison 2 160–3 240€. Corridor le plus fréquent — 3–5 devis, pros contrôlés Creditsafe.",
   },
   "paris-vers-rennes": {
     title: "Déménagement Paris → Rennes 2026 : T2 1 210–1 820€",
@@ -95,7 +95,7 @@ const CORRIDOR_META_OVERRIDES: Record<string, { title: string; description: stri
   },
   "lyon-vers-paris": {
     title: "Déménagement Lyon → Paris 2026 : T2 1 310–1 960€",
-    description: "Lyon–Paris 490 km, A6, 4h. T1 1 010–1 520€, T2 1 310–1 960€. Corridor majeur — pros disponibles toute l'année. Obtenez 3 devis sur Moverz.",
+    description: "Lyon–Paris 490 km, A6, 4h. T1 1 010–1 520€, T2 1 310–1 960€. Corridor majeur — 3–5 devis, pros contrôlés Creditsafe.",
   },
   "marseille-vers-paris": {
     title: "Déménagement Marseille → Paris 2026 : T2 1 890–2 840€",
@@ -128,17 +128,17 @@ export function generateCorridorMetadata(
 
   if (priceData) {
     // ✅ Version optimisée (USP homepage + distance + prix)
-    const title = `Déménagement ${originCityName} → ${destination} (${priceData.distanceKm}km) | Devis 5–7j · ${year}`;
+    const title = `Déménagement ${originCityName} → ${destination} (${priceData.distanceKm}km) · 3–5 devis, pros Creditsafe`;
 
     // Description alignée villes v3.1 : checkmarks ✓ + USP stack + prix + social proof
-    const description = `✓ 1 contact ✓ 0 harcèlement · ${originCityName}→${destination} (${priceData.distanceKm}km) : T1 ${priceData.t1}, T2 ${priceData.t2}, Maison ${priceData.house} · Note 4.9/5 · Gratuit`;
+    const description = `${originCityName}→${destination} (${priceData.distanceKm}km) : T1 ${priceData.t1}, T2 ${priceData.t2}, Maison ${priceData.house}. 3–5 devis comparables, pros contrôlés Creditsafe. Gratuit.`;
 
     return getFullMetadata(path, title, description);
   }
 
   // Fallback (si calcul prix impossible) - aligné sur USP homepage
   const title = `Déménagement ${originCityName} → ${destination} : Devis & Prix ${year}`;
-  const description = `✓ 1 contact ✓ 0 harcèlement · ${originCityName}→${destination} : devis gratuits, pros contrôlés · Note 4.9/5 · Sans démarchage`;
+  const description = `${originCityName}→${destination} : 3–5 devis gratuits, pros contrôlés Creditsafe. Sans démarchage.`;
 
   return getFullMetadata(path, title, description);
 }

@@ -57,7 +57,7 @@ export function getCityServiceMetadata(args: { city: CityInfo; service: ServiceS
   const def = SERVICE_DEFINITIONS[service];
   const path = `demenagement/${city.slug}/${service}`;
   const title = def.title(city.nameCapitalized);
-  const description = `Comparez des devis comparables sous 5 à 7 jours pour votre projet depuis ${city.nameCapitalized}. Dossier anonyme, 0 harcèlement. Déménageurs contrôlés et assurés. 100% gratuit.`;
+  const description = `Comparez 3–5 devis de pros contrôlés Creditsafe depuis ${city.nameCapitalized}. Dossier anonyme, 0 harcèlement. Déménageurs assurés. 100% gratuit.`;
   return getFullMetadata(path, title, description);
 }
 
