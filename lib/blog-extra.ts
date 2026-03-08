@@ -13,12 +13,14 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
   },
   {
     slug: "prix-demenagement-longue-distance-france",
-    title: "Prix déménagement longue distance France → France : fourchettes & exemples 2025",
+    title: "Prix déménagement longue distance France 2026 : fourchettes réalistes & conseils",
     description:
-      "Comprenez enfin combien coûte un déménagement longue distance France → France : fourchettes de prix réalistes, exemples Paris ↔ Marseille / Lyon ↔ Bordeaux, et méthode simple pour estimer votre budget.",
-    publishedAt: "2025-01-01T00:00:00.000Z",
+      "Combien coûte un déménagement longue distance en France en 2026 ? Fourchettes par volume, exemples chiffrés (Paris-Marseille, Lyon-Bordeaux, Lille-Lyon), facteurs de variation et conseils pour comparer.",
+    publishedAt: "2026-03-07T00:00:00.000Z",
+    updatedAt: "2026-03-07T00:00:00.000Z",
     category: "prix-et-devis",
-    readingTimeMinutes: 10,
+    readingTimeMinutes: 12,
+    tags: ["prix déménagement", "longue distance", "déménagement France", "devis déménagement"],
   },
   {
     slug: "demenagement-international-juste-prix-experience",
@@ -31,22 +33,26 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
   },
   {
     slug: "prix-demenagement-lyon-guide-complet",
-    title: "Prix déménagement Lyon 2025 : fourchettes, exemples & conseils pour payer le juste prix",
+    title: "Prix déménagement Lyon 2026 : fourchettes, exemples & conseils",
     description:
-      "Découvrez combien coûte un déménagement à Lyon en 2025 : prix par type de logement, exemples concrets selon les quartiers et conseils pour obtenir des devis comparables sans mauvaises surprises.",
-    publishedAt: "2025-01-03T00:00:00.000Z",
+      "Combien coûte un déménagement à Lyon en 2026 ? Fourchettes par surface, exemples par quartier, facteurs de variation et conseils pour obtenir des devis comparables sans mauvaises surprises.",
+    publishedAt: "2026-03-07T00:00:00.000Z",
+    updatedAt: "2026-03-07T00:00:00.000Z",
     category: "prix-et-devis",
     citySlug: "lyon",
-    readingTimeMinutes: 19,
+    readingTimeMinutes: 12,
+    tags: ["prix déménagement Lyon", "déménagement Lyon", "devis déménagement Lyon"],
   },
   {
     slug: "demenagement-sans-ascenseur-5e-etage",
-    title: "Déménagement sans ascenseur (5e étage) : méthode, devis fiable, checklist anti‑surprise",
+    title: "Déménagement sans ascenseur au 5e étage : méthode, devis fiable & checklist",
     description:
-      "Guide ultra pratique pour déménager au 5e sans ascenseur : ce qui fait varier un devis, comment éviter les suppléments, checklists et erreurs fréquentes.",
-    publishedAt: "2026-01-09T00:00:00.000Z",
+      "Surcoût escalier, monte-meuble ou portage, checklist anti-surprise : tout ce qu'il faut savoir pour déménager sans ascenseur au 5e étage sans mauvaise surprise.",
+    publishedAt: "2026-03-07T00:00:00.000Z",
+    updatedAt: "2026-03-07T00:00:00.000Z",
     category: "checklists-et-guides",
-    readingTimeMinutes: 14,
+    readingTimeMinutes: 10,
+    tags: ["déménagement sans ascenseur", "surcoût escalier", "monte-meuble", "5e étage"],
   },
   {
     slug: "portage-long-camion-loin-entree",

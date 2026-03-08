@@ -1084,7 +1084,9 @@ Certaines plateformes affichent "gratuit" mais :
     readingTimeMinutes: 9,
     category: "guide",
     tags: ["volume déménagement", "estimation", "devis"],
-    body: `**40 à 50 % des déménagements subissent des suppléments le jour J.**  
+    body: `# Estimer le volume de son déménagement : guide complet 2026
+
+**40 à 50 % des déménagements subissent des suppléments le jour J.**  
 **La cause numéro un : un volume mal estimé.**
 
 Vous recevez un devis à 1 200 €. Le jour du déménagement, le camion est trop petit. Résultat : un second voyage facturé, ou des affaires laissées sur place. La surprise peut atteindre 300 à 800 € de plus.
@@ -1425,7 +1427,9 @@ Le score Creditsafe est l'un des outils les plus fiables pour évaluer ce risque
     readingTimeMinutes: 8,
     category: "guide",
     tags: ["comparateur déménagement", "devis déménagement", "choisir"],
-    body: `Vous tapez "comparateur déménagement" sur Google. Vous trouvez une dizaine de plateformes qui promettent toutes "les meilleurs devis en 5 minutes".
+    body: `# Meilleur comparateur de déménagement 2026 : comparatif honnête
+
+Vous tapez "comparateur déménagement" sur Google. Vous trouvez une dizaine de plateformes qui promettent toutes "les meilleurs devis en 5 minutes".
 
 Vous entrez vos coordonnées. Et vous recevez **12 appels en 24 heures**.
 
@@ -1550,7 +1554,9 @@ Moverz a été conçu pour répondre à chacune de ces questions dans votre int�
     readingTimeMinutes: 7,
     category: "guide",
     tags: ["devis déménagement", "comparer devis", "prix déménagement"],
-    body: `Vous avez reçu 3 devis pour votre déménagement : 900 €, 1 350 € et 1 800 €. Lequel choisir ?
+    body: `# Comment comparer des devis de déménagement : guide pratique 2026
+
+Vous avez reçu 3 devis pour votre déménagement : 900 €, 1 350 € et 1 800 €. Lequel choisir ?
 
 La réponse n'est pas "le moins cher". Elle est : **est-ce que ces devis sont vraiment comparables ?**
 
@@ -1718,7 +1724,9 @@ Vous n'avez plus à faire le tableau manuellement — c'est inclus dans le servi
     title: "Checklist déménagement 2026 : 70 points pour ne rien oublier",
     description: "La checklist déménagement complète : 8 semaines avant, J-30, J-7, jour J, après. 70 points vérifiés pour déménager sans stress, sans oubli, sans surprise.",
     type: "guide",
-    body: `**3 millions de déménagements par an en France.**  
+    body: `# Checklist déménagement 2026 : 70 points pour ne rien oublier
+
+**3 millions de déménagements par an en France.**  
 **Et chaque année, les mêmes erreurs : oubli de résiliation, mauvaise estimation du volume, surprise sur le prix le jour J.**
 
 Une bonne checklist évite 80 % des problèmes. Voici la nôtre — 70 points, classés par étape.
@@ -2117,7 +2125,9 @@ Techniquement oui, mais :
     title: "Devis déménagement gratuit sans engagement : comment ça marche vraiment ?",
     description: "Comment obtenir des devis de déménagement gratuits et sans engagement en 2026 ? Ce que couvre un devis, les pièges à éviter, et comment comparer des devis réellement comparables.",
     type: "guide",
-    body: `**"Devis gratuit sans engagement"** — c'est promis partout. Mais derrière cette promesse, les pratiques varient considérablement.
+    body: `# Devis déménagement gratuit sans engagement : ce qu'il faut savoir
+
+**"Devis gratuit sans engagement"** — c'est promis partout. Mais derrière cette promesse, les pratiques varient considérablement.
 
 Voici ce qu'il faut savoir pour obtenir de vrais devis comparables, sans tomber dans les pièges habituels.
 
@@ -2650,7 +2660,9 @@ Moverz automatise l'ensemble :
     title: "Supplément de prix le jour du déménagement : causes, montants, et comment l'éviter",
     description: "40-50 % des déménagements subissent un supplément le jour J. Causes, montants typiques, et méthode concrète pour éviter les mauvaises surprises sur le prix de votre déménagement.",
     type: "guide",
-    body: `**40 à 50 % des déménagements** subissent un ajustement de prix le jour J selon les études sectorielles (UFC-Que Choisir, retours terrain).
+    body: `# Supplément de prix le jour du déménagement : causes et comment l'éviter
+
+**40 à 50 % des déménagements** subissent un ajustement de prix le jour J selon les études sectorielles (UFC-Que Choisir, retours terrain).
 
 Ce n'est pas une fatalité. Dans la majorité des cas, les suppléments viennent de causes précises — et prévisibles.
 
@@ -2834,7 +2846,9 @@ La racine du problème, c'est que chaque déménageur estime le volume différem
     title: "Assurance déménagement : ce qui est couvert, ce qui ne l'est pas, et comment se protéger",
     description: "Assurance déménagement en 2026 : RC Pro du déménageur, assurance marchandises, déclaration de valeur, franchise. Ce que couvre vraiment l'assurance et comment éviter les mauvaises surprises en cas de casse.",
     type: "guide",
-    body: `**Un déménagement sur 10 donne lieu à un litige.** La casse est la première cause.
+    body: `# Assurance déménagement : ce qui est couvert et comment se protéger
+
+**Un déménagement sur 10 donne lieu à un litige.** La casse est la première cause.
 
 Et pourtant, la majorité des clients découvrent les limites de l'assurance déménagement… le jour où ils en ont besoin.
 
@@ -3016,6 +3030,634 @@ Oui, c'est courant. Mais vous avez le droit de refuser et de vous couvrir via vo
 - [Supplément de prix le jour J : comment l'éviter](/blog/supplement-prix-jour-j-comment-eviter/)
 - [Checklist déménagement complète](/blog/checklist-demenagement-complet/)
 `
+  },
+  {
+    slug: "prix-demenagement-longue-distance-france",
+    title: "Prix déménagement longue distance France 2026 : fourchettes réalistes & conseils",
+    description: "Combien coûte un déménagement longue distance en France en 2026 ? Fourchettes par volume, exemples chiffrés (Paris-Marseille, Lyon-Bordeaux, Lille-Lyon), facteurs de variation et conseils pour comparer.",
+    type: "guide",
+    body: `**En France, un déménagement sur trois est une longue distance — plus de 300 km.**
+
+Le problème : c'est précisément là où les devis varient le plus. Deux devis pour le même appartement, le même trajet, peuvent afficher des écarts de 30 à 50 %. Pas parce que l'un est meilleur, mais parce que les volumes sont estimés différemment et les conditions d'accès mal précisées.
+
+Selon les données collectées par Moverz.fr sur les dossiers traités en 2025-2026, voici les fourchettes réalistes — sans les biais marketing habituels.
+
+> **Comparez des devis longue distance en toute transparence**  
+> [Moverz](/) standardise votre dossier (volume, accès, options) avant de le transmettre à des déménageurs vérifiés. 3-5 devis comparables, dossier anonyme. [Démarrer gratuitement](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-longue-distance).
+
+---
+
+## Ce qu'on entend par "longue distance"
+
+Il n'existe pas de définition légale, mais dans les usages du secteur :
+
+- **< 100 km** : local ou régional — tarif généralement horaire
+- **100-300 km** : inter-régional — tarif mixte (forfait ou au m³)
+- **> 300 km** : longue distance — tarif quasi exclusivement au m³
+- **> 500 km** : grand trajet — les mêmes règles, mais le coût du carburant et du chauffeur pèse davantage
+
+Pour cet article, on s'intéresse aux **trajets > 300 km**.
+
+---
+
+## Prix moyens d'un déménagement longue distance en 2026
+
+### Tableau récapitulatif par volume
+
+| Volume | Logement type | Fourchette longue distance (300-700 km) |
+|---|---|---|
+| 10-20 m³ | Studio / T1 | 800 – 1 600 € |
+| 20-35 m³ | T2 / T3 | 1 400 – 2 800 € |
+| 35-55 m³ | T3 / T4 | 2 200 – 4 000 € |
+| 55-80 m³ | T4 / T5 | 3 200 – 6 000 € |
+| 80-120 m³ | Grande maison | 4 500 – 8 500 € |
+
+*Prix TTC pour une prestation standard (chargement, transport, déchargement). Sans emballage professionnel.*
+
+> **Note Moverz** : ces fourchettes correspondent à des devis de déménageurs vérifiés et actifs. Les plateformes d'enchères inversées affichent souvent des prix plus bas en haut de page — mais il s'agit rarement du prix final après suppléments.
+
+---
+
+## Exemples concrets par trajet
+
+### Paris → Marseille (~775 km)
+
+C'est l'un des corridors les plus empruntés de France. La distance est longue, la demande forte en été.
+
+| Logement | Volume | Prix constaté |
+|---|---|---|
+| Studio | 15 m³ | 1 000 – 1 500 € |
+| T2 | 28 m³ | 1 800 – 2 800 € |
+| T3 | 45 m³ | 2 800 – 4 200 € |
+| T4 | 65 m³ | 3 800 – 6 000 € |
+
+**Spécificité Marseille** : l'accès en centre-ville peut être compliqué (rues étroites, stationnement). Prévoyez une demande d'autorisation de voirie si nécessaire.
+
+---
+
+### Lyon → Bordeaux (~550 km)
+
+Trajet fréquent, bonne disponibilité de déménageurs compétents des deux côtés.
+
+| Logement | Volume | Prix constaté |
+|---|---|---|
+| Studio | 15 m³ | 900 – 1 400 € |
+| T2 | 28 m³ | 1 600 – 2 400 € |
+| T3 | 45 m³ | 2 400 – 3 800 € |
+| T4 | 65 m³ | 3 400 – 5 200 € |
+
+---
+
+### Lille → Lyon (~650 km)
+
+Trajet Nord-Sud, moins couvert que Paris-Province. Prévoyez un délai plus long pour les devis.
+
+| Logement | Volume | Prix constaté |
+|---|---|---|
+| T2 | 28 m³ | 1 700 – 2 600 € |
+| T3 | 45 m³ | 2 500 – 4 000 € |
+| T4 | 65 m³ | 3 500 – 5 500 € |
+
+---
+
+### Paris → Nice (~930 km)
+
+Parmi les plus longs trajets hexagonaux. La route des Alpes peut impliquer un surcoût carburant en hiver.
+
+| Logement | Volume | Prix constaté |
+|---|---|---|
+| Studio | 15 m³ | 1 200 – 1 800 € |
+| T3 | 45 m³ | 3 200 – 4 800 € |
+| T4 | 65 m³ | 4 500 – 7 000 € |
+
+---
+
+## Les 6 facteurs qui font vraiment varier le prix longue distance
+
+### 1. Le volume (le plus déterminant)
+
+Sur une longue distance, le tarif est presque toujours calculé au m³. Un écart de 5 m³ sur un trajet Paris-Marseille peut représenter 400 à 600 € d'écart.
+
+**Erreur classique** : sous-estimer son volume, recevoir des devis bas, puis payer des suppléments le jour J quand le camion est trop petit.
+
+Selon les données Moverz.fr, **42% des déménagements longue distance présentent un écart entre le volume estimé initialement et le volume réel**. La solution : un dossier complet avec inventaire précis.
+
+### 2. La distance réelle (pas à vol d'oiseau)
+
+Paris → Marseille, c'est 775 km par l'A7 — pas 660 km à vol d'oiseau. Certains devis en ligne calculent des distances erronées. Vérifiez toujours la distance réelle sur le devis.
+
+### 3. Les conditions d'accès aux deux adresses
+
+Un T3 standard Paris → Marseille = 2 800-3 500 €  
+Ce même T3 avec monte-meuble à Paris + accès difficile à Marseille = 3 500-5 000 €
+
+**Les accès comptent autant que la distance.** Précisez systématiquement : étage, ascenseur, parking camion, portage long.
+
+### 4. La période de déménagement
+
+| Période | Impact sur le prix |
+|---|---|
+| Juillet-août | +30 à +50 % |
+| Fin de mois (28-31) | +15 à +25 % |
+| Vendredi-samedi | +10 à +20 % |
+| Octobre-mars, milieu de semaine | Tarif de base |
+
+En longue distance, l'effet haute saison est encore plus marqué qu'en local : les déménageurs doivent immobiliser un camion et une équipe sur 2 jours minimum.
+
+### 5. La formule (économique, standard, premium)
+
+- **Économique** : vous faites les cartons, vous démontez. Tarif de base.
+- **Standard** : déménageur emballe les objets fragiles. +20-35 %
+- **Premium** : déménageur emballe tout, démonte et remonte. +40-70 %
+
+En longue distance, la formule standard est souvent recommandée : si un objet casse en route, la responsabilité du déménageur est beaucoup plus claire si c'est lui qui a emballé.
+
+### 6. Le délai de livraison
+
+Sur les longues distances, certains déménageurs proposent deux options :
+- **Livraison directe** : le camion va directement de A à B. Plus rapide, plus cher.
+- **Groupage** : votre mobilier partage le camion avec d'autres clients. Moins cher (souvent -20 à -35 %), mais délai de livraison de 3 à 10 jours.
+
+**Précisez vos contraintes de date** dans le dossier. Un déménagement en groupage mal compris est l'une des sources de litige les plus fréquentes.
+
+---
+
+## Comment ne pas se faire avoir sur un devis longue distance
+
+### Le piège du devis sans volume précis
+
+Un devis formulé "au forfait" sans m³ explicite est un signal d'alerte. Si le volume réel dépasse l'estimation, le déménageur ajoutera des suppléments le jour J — parfois plusieurs centaines d'euros.
+
+**Exigez un devis avec le volume m³ explicitement indiqué.**
+
+### Le piège de l'acompte excessif
+
+En longue distance, certains déménageurs demandent 30 à 50 % d'acompte à la réservation. C'est légal, mais :
+- Ne versez jamais plus de 30 % avant la prestation
+- Payez uniquement par virement ou chèque (traçabilité)
+- Évitez le cash à 100 % avant départ
+
+### Le piège du sous-traitant non déclaré
+
+Sur les longues distances, il est courant que le déménageur sous-traite le transport à un autre prestataire. Ce n'est pas illégal, mais vous devez être informé et le contrat doit le mentionner.
+
+**Posez la question directement : "Est-ce que vous réalisez vous-même la prestation ou sous-traitez-vous ?"**
+
+Selon les données Moverz.fr, les déménageurs qui sous-traitent sans le déclarer présentent un taux de litiges 3x plus élevé sur les trajets longue distance.
+
+---
+
+## Le dossier standardisé : pourquoi c'est encore plus crucial en longue distance
+
+Sur un déménagement local, un professionnel peut revenir pour constater une erreur. Sur Paris-Marseille, c'est impossible.
+
+**Un dossier incomplet = risque maximal de suppléments.**
+
+Moverz.fr standardise chaque dossier avant de le transmettre aux déménageurs. Cela inclut :
+- Volume précis (m³) calculé selon le type de logement et l'inventaire
+- Accès complets (étage, ascenseur, distances, parkings) pour les deux adresses
+- Contraintes spécifiques (piano, coffre-fort, objets fragiles)
+- Options souhaitées (emballage, montage/démontage)
+- Dates et délais de livraison acceptés
+
+Résultat : les devis reçus sont tous calculés sur la même base. Comparer devient simple.
+
+---
+
+## Questions fréquentes sur le déménagement longue distance
+
+**Le déménageur peut-il refuser de livrer si je ne paye pas le complément ?**  
+Techniquement non — la rétention de meubles est illégale. Mais certains déménageurs peu scrupuleux utilisent cette menace. Si le devis signé est respecté, vous n'avez rien à payer en plus. Gardez toujours le devis signé avec vous le jour J.
+
+**Faut-il une assurance spéciale pour une longue distance ?**  
+La garantie légale standard couvre 60 €/m³ (responsabilité du déménageur). Pour un T3 à 40 m³, c'est 2 400 € de couverture maximum — insuffisant si vous avez des meubles de valeur. Une déclaration de valeur est recommandée, surtout sur les longues distances où le risque de casse transport est plus élevé.
+
+**Comment gérer si je n'ai pas encore mon adresse d'arrivée ?**  
+Certains déménageurs proposent un service de garde-meuble intermédiaire. À préciser dans le dossier : livraison en 2 temps possible ? Coût additionnel : +10 à +20 % en général.
+
+---
+
+## Résumé : ce qu'il faut retenir
+
+1. **Budget de base** : comptez 40-70 €/m³ pour un déménagement longue distance
+2. **Volume précis** : l'erreur n°1 est de sous-estimer — soyez exhaustif dans l'inventaire
+3. **Accès des deux côtés** : détailler étage, ascenseur, parking, distances
+4. **Évitez juillet-août et fin de mois** : économisez 30-50 % en choisissant la bonne date
+5. **Comparez sur une base identique** : des devis sans volume m³ explicite ne sont pas comparables
+
+> **Prêt à comparer ?**  
+> [Moverz](/) transmet votre dossier standardisé à des déménageurs vérifiés (Creditsafe + Pappers + avis Google). 3-5 devis comparables, anonyme, sans démarchage. [Obtenir mes devis](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-longue-distance-fin).
+
+---
+
+*Sources : données Moverz.fr 2025-2026 | BODACC (faillites 2024) | DGCCRF (contrôles secteur déménagement 2023)*
+
+**À lire aussi :**
+- [Éviter les suppléments prix jour J](/blog/supplement-prix-jour-j-comment-eviter/)
+- [Comment comparer des devis de déménagement](/blog/comparer-devis-demenagement-guide/)
+- [Déménagement juillet-août : prix et organisation](/blog/demenagement-juillet-aout-prix/)
+`,
+  },
+  {
+    slug: "prix-demenagement-lyon-guide-complet",
+    title: "Prix déménagement Lyon 2026 : fourchettes, exemples & conseils",
+    description: "Combien coûte un déménagement à Lyon en 2026 ? Fourchettes par surface, exemples par quartier, facteurs de variation et conseils pour obtenir des devis comparables sans mauvaises surprises.",
+    type: "guide",
+    body: `**Lyon est la 2e métropole française pour le déménagement.**
+
+Chaque année, plus de 80 000 déménagements ont lieu dans la métropole lyonnaise. La demande est forte, le marché est concurrentiel — mais les écarts de prix entre déménageurs restent importants.
+
+Voici les fourchettes réalistes pour 2026, basées sur les dossiers traités via Moverz.fr.
+
+> **Comparez des devis à Lyon en toute transparence**  
+> [Moverz](/) transmet votre dossier à des déménageurs vérifiés de la région lyonnaise. 3-5 devis comparables, dossier anonyme. [Démarrer gratuitement](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-lyon).
+
+---
+
+## Prix moyens d'un déménagement à Lyon en 2026
+
+### Tableau récapitulatif par surface
+
+| Logement | Volume estimé | Lyon → Lyon (local) | Lyon → banlieue/province |
+|---|---|---|---|
+| Studio / T1 (20-35 m²) | 10-20 m³ | 400–800 € | 700–1 400 € |
+| T2 (40-55 m²) | 20-35 m³ | 700–1 400 € | 1 100–2 200 € |
+| T3 (60-80 m²) | 35-55 m³ | 1 100–2 200 € | 1 700–3 200 € |
+| T4 / grande maison (90-120 m²) | 55-80 m³ | 1 700–3 200 € | 2 500–5 000 € |
+
+*Prix TTC, prestation standard. Sans emballage professionnel.*
+
+---
+
+## Spécificités lyonnaises qui font varier le prix
+
+Lyon n'est pas une ville simple à déménager. Plusieurs caractéristiques urbaines impactent directement les devis.
+
+### Le relief de la Presqu'île et des pentes
+
+Les 1er et 5e arrondissements (Vieux-Lyon, Croix-Rousse, Fourvière) cumulent les contraintes :
+- Rues pavées et étroites
+- Ascenseurs souvent anciens ou absents dans les immeubles haussmanniens
+- Stationnement camion très compliqué, voire impossible sans autorisation
+
+**Impact estimé selon Moverz.fr : +15 à +35 % vs un appartement standard avec bon accès.**
+
+### La Confluence et le Part-Dieu
+
+Ces quartiers récents ont l'avantage contraire : larges voies, parkings adaptés, ascenseurs dimensionnés. Les déménagements y sont souvent moins chers et plus rapides.
+
+### Villeurbanne, Vénissieux, Bron
+
+Communes limitrophes très demandées. Les déménageurs lyonnais les couvrent sans surcoût trajet, mais l'accès (parkings, voiries) varie fortement selon les quartiers.
+
+---
+
+## Les 6 facteurs qui font vraiment varier le prix à Lyon
+
+### 1. L'accès rue et le stationnement
+
+Lyon centre (1er, 2e, 4e, 5e) : stationnement camion difficile. Le déménageur doit souvent demander une autorisation de voirie à la mairie de Lyon — coût : 50-150 €, délai : 2-3 semaines.
+
+Sans cette démarche, le camion stationne en double file ou à distance, ce qui crée un portage long (surcoût).
+
+### 2. L'étage et l'ascenseur
+
+À Lyon, beaucoup d'immeubles anciens ont des ascenseurs non adaptés au déménagement (trop petits, portes trop étroites). Le déménageur doit alors tout porter à la main.
+
+- Rez-de-chaussée ou ascenseur adapté : tarif de base
+- 3e étage sans ascenseur : +15-25 %
+- 5e étage sans ascenseur : +25-40 %
+- Croix-Rousse (montée piétonne, escaliers en pente) : cas particulier, demandez un devis adapté
+
+### 3. La période
+
+| Période | Impact |
+|---|---|
+| Juillet-août | +30 à +50 % |
+| Fin de mois (28-31) | +15 à +25 % |
+| Vendredi-samedi | +10 à +20 % |
+| Octobre-mars, milieu de semaine | Tarif de base |
+
+Lyon connaît un pic de demande particulièrement fort en juillet-août et à chaque rentrée universitaire (septembre) — la ville accueille plus de 160 000 étudiants.
+
+### 4. La formule
+
+- **Économique** : vous emballez, vous démontez. Tarif de base.
+- **Standard** : déménageur emballe les fragiles. +20-35 %
+- **Premium** : déménageur emballe tout, démonte et remonte. +40-70 %
+
+### 5. Les objets particuliers
+
+| Objet | Surcoût estimé |
+|---|---|
+| Piano droit | 150-400 € |
+| Piano à queue | 400-900 € |
+| Coffre-fort > 100 kg | 150-350 € |
+| Montée d'escalier externe (Croix-Rousse) | +50-150 € |
+
+### 6. Le monte-meuble
+
+Indispensable pour les étages élevés sans ascenseur adapté. Location incluse ou en option selon les devis.
+
+- Monte-meuble électrique (jusqu'au 5e) : 150-350 €
+- Monte-meuble sur camion (standard) : 180-400 €
+
+---
+
+## Exemples concrets à Lyon
+
+### Exemple 1 : Studio Croix-Rousse → T2 Part-Dieu
+
+- Studio 30 m², 15 m³, 4e étage sans ascenseur (départ)
+- T2 55 m², 28 m³, 2e étage avec ascenseur (arrivée)
+- Formule économique, milieu de semaine, novembre
+- **Prix constaté : 750-1 100 €**
+
+### Exemple 2 : T3 Vénissieux → T3 Villeurbanne
+
+- 70 m², 42 m³, rez-de-chaussée (départ), 1er étage (arrivée)
+- Bons accès, camion devant l'entrée possible
+- Formule standard (emballage fragiles), septembre
+- **Prix constaté : 1 200-1 800 €**
+
+### Exemple 3 : T4 Lyon 6e → Bordeaux (550 km)
+
+- 95 m², 60 m³, 3e étage avec ascenseur (départ), accès facile (arrivée)
+- Formule standard, mars
+- **Prix constaté : 2 800-4 200 €**
+
+---
+
+## Comment obtenir des devis comparables à Lyon
+
+### Le problème des devis non comparables
+
+Selon les données Moverz.fr, **38% des devis obtenus de façon classique (appels directs, formulaires généralistes) ne sont pas comparables** : volumes différents, accès non précisés, formules floues.
+
+Résultat : le client choisit le moins cher... et découvre les suppléments le jour J.
+
+### La méthode Moverz
+
+Moverz.fr standardise le dossier avant de le transmettre :
+1. Volume estimé selon votre logement et inventaire
+2. Accès complets (étages, ascenseurs, parkings) pour départ ET arrivée
+3. Contraintes spécifiques décrites précisément
+4. Même dossier reçu par tous les déménageurs → devis réellement comparables
+
+Les déménageurs du réseau Moverz couvrant Lyon sont vérifiés selon 3 critères : solidité financière (Creditsafe + Pappers), avis clients (Google), et ancienneté sur le marché lyonnais.
+
+---
+
+## Déménagement depuis ou vers Lyon : quelle différence ?
+
+### Lyon → Paris (~465 km)
+
+Corridor très couvert, bonne disponibilité de déménageurs dans les deux sens.
+
+| Volume | Prix estimé |
+|---|---|
+| 20 m³ (T2) | 1 200 – 1 900 € |
+| 40 m³ (T3) | 2 000 – 3 200 € |
+| 60 m³ (T4) | 2 800 – 4 500 € |
+
+### Lyon → Bordeaux (~550 km)
+
+Trajet courant, bonne offre disponible.
+
+| Volume | Prix estimé |
+|---|---|
+| 20 m³ (T2) | 1 300 – 2 100 € |
+| 40 m³ (T3) | 2 200 – 3 500 € |
+
+### Lyon → Marseille (~315 km)
+
+Trajet court longue distance, souvent en groupage possible.
+
+| Volume | Prix estimé |
+|---|---|
+| 20 m³ (T2) | 900 – 1 500 € |
+| 40 m³ (T3) | 1 500 – 2 500 € |
+
+---
+
+## Questions fréquentes sur le déménagement à Lyon
+
+**Faut-il une autorisation de stationnement pour un déménagement à Lyon ?**  
+Pour stationner un camion de déménagement sur la voie publique à Lyon, une autorisation de voirie est nécessaire (arrêté de circulation temporaire). La demande s'effectue auprès de la Mairie de Lyon ou de la Métropole, 2 à 3 semaines avant la date. Coût : 50-150 € selon la durée et le lieu. Un déménageur sérieux vous guidera dans cette démarche.
+
+**Les déménageurs lyonnais sont-ils moins chers qu'à Paris ?**  
+En moyenne, les tarifs lyonnais sont 10-20 % inférieurs aux tarifs parisiens pour un déménagement local équivalent. La main-d'œuvre et le foncier (stockage) coûtent moins cher. En revanche, pour les longues distances depuis Lyon, les prix sont comparables.
+
+**Comment trouver un déménageur fiable à Lyon ?**  
+Vérifiez systématiquement : numéro de licence de transport (obligatoire), attestation d'assurance RC Pro valide, score Creditsafe > 60/100. Moverz.fr effectue ces vérifications automatiquement pour chaque déménageur du réseau lyonnais.
+
+---
+
+## Résumé
+
+1. **Budget de base à Lyon** : comptez 40-65 €/m³ pour un déménagement local
+2. **Pentes et accès** : Croix-Rousse, Vieux-Lyon et Presqu'île = surcoût à anticiper
+3. **Haute saison** : juillet-août et rentrée septembre = +30-50 %, réservez tôt
+4. **Comparez sur une base identique** : volume m³ précis, accès complets, mêmes options
+
+> **Déménagez à Lyon sans mauvaises surprises**  
+> [Moverz](/) vérifie chaque déménageur lyonnais (Creditsafe, avis, ancienneté) et standardise votre dossier. 3-5 devis comparables, anonyme, sans démarchage. [Obtenir mes devis](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-lyon-fin).
+
+---
+
+*Sources : données Moverz.fr 2025-2026 | Métropole de Lyon | DGCCRF (contrôles secteur déménagement 2023)*
+
+**À lire aussi :**
+- [Prix déménagement longue distance France](/blog/prix-demenagement-longue-distance-france/)
+- [Prix déménagement Paris](/blog/prix-demenagement-paris-guide/)
+- [Comment comparer des devis de déménagement](/blog/comparer-devis-demenagement-guide/)
+`,
+  },
+  {
+    slug: "demenagement-sans-ascenseur-5e-etage",
+    title: "Déménagement sans ascenseur au 5e étage : méthode, devis fiable & checklist",
+    description: "Tout ce qu'il faut savoir pour déménager sans ascenseur au 5e étage : comment est calculé le surcoût, comment éviter les suppléments, quand utiliser un monte-meuble, et la checklist anti-surprise.",
+    type: "guide",
+    body: `**Le 5e étage sans ascenseur : la configuration la plus redoutée des déménageurs.**
+
+Et pour cause : chaque palette de 10 m³ portée à la main jusqu'au 5e représente environ 1h30 de travail supplémentaire pour une équipe de deux. Multiplié par 4 palettes pour un T3, c'est 6 heures de portage que vous ne payez pas au même prix qu'un rez-de-chaussée.
+
+Voici comment ça se calcule, comment le négocier, et comment éviter les mauvaises surprises.
+
+> **Obtenez des devis précis pour votre 5e étage sans ascenseur**  
+> [Moverz](/) inclut systématiquement l'étage et l'accès dans le dossier standardisé. Les déménageurs reçoivent l'information complète avant de chiffrer — pas de surcoût caché. [Démarrer gratuitement](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-sans-ascenseur).
+
+---
+
+## Combien coûte le surcoût "sans ascenseur au 5e" ?
+
+### La règle générale du secteur
+
+La plupart des déménageurs appliquent un supplément "portage escalier" calculé de deux façons :
+
+**Méthode 1 : forfait par étage et par m³**
+- Entre 8 et 15 € par étage et par tranche de 10 m³
+- Pour un T2 (25 m³) au 5e : 5 étages × 2,5 palettes × 10-15 € = **125 à 190 € de supplément**
+- Pour un T3 (40 m³) au 5e : 5 étages × 4 palettes × 10-15 € = **200 à 300 € de supplément**
+
+**Méthode 2 : temps additionnel au taux horaire**
+- Certains devis sont au taux horaire
+- Le portage escalier rallonge le temps de 1 à 3 heures selon le volume
+- À 80-120 €/h pour une équipe de 2 : **80 à 360 € de supplément**
+
+> **Conseil Moverz** : exigez que le supplément escalier soit **explicitement chiffré sur le devis**. "Tarif selon accès" est une formulation qui ouvre la porte aux mauvaises surprises le jour J.
+
+---
+
+## Monte-meuble ou portage à la main : quand choisir quoi ?
+
+### Le monte-meuble : indispensable à partir de quand ?
+
+Le monte-meuble est une nacelle motorisée fixée à l'extérieur de l'immeuble, qui hisse les meubles par la fenêtre ou le balcon. Il est indispensable dans plusieurs cas :
+
+**Cas où le monte-meuble est nécessaire :**
+- Canapé d'angle, lit double avec sommier fixe, ou armoire > 2 m qui ne passe pas dans l'escalier
+- Étage > 4 sans ascenseur (le portage manual devient physiquement épuisant et ralentit beaucoup)
+- Escalier trop étroit (< 80 cm) pour les gros meubles
+- Escalier en colimaçon (impossible pour certains meubles)
+
+**Cas où le portage suffit :**
+- Volume < 20 m³ avec des meubles de taille standard
+- Escalier large et en bon état
+- Étage 3-4 avec une bonne équipe
+
+### Coût d'un monte-meuble
+
+| Type | Coût estimé |
+|---|---|
+| Monte-meuble sur camion (embarqué) | 150-300 € (souvent inclus dans certains devis) |
+| Location monte-meuble autonome (externe) | 200-450 € la demi-journée |
+| Monte-meuble manuel (chèvre) | 80-150 € |
+
+**Important** : le monte-meuble nécessite souvent une autorisation de voirie pour stationner le camion en face de la fenêtre. Prévoyez 2-3 semaines et 50-100 € selon la commune.
+
+---
+
+## Les 5 erreurs à éviter au 5e sans ascenseur
+
+### Erreur 1 : Ne pas préciser l'étage dans le dossier de devis
+
+C'est l'erreur numéro 1 selon les données Moverz.fr. Si le dossier ne mentionne pas "5e étage sans ascenseur", le déménageur chiffre un accès standard — et ajoute le supplément le jour J.
+
+**La règle** : précisez toujours étage + ascenseur (oui/non + dimensions si possible) + largeur de l'escalier.
+
+### Erreur 2 : Ne pas vérifier si l'escalier est praticable pour les gros meubles
+
+Avant le déménagement, mesurez :
+- La largeur de l'escalier (au plus étroit)
+- La hauteur des plafonds dans les paliers
+- Le diamètre si c'est un escalier en colimaçon
+
+Un canapé qui ne passe pas dans l'escalier le jour J = surcoût d'urgence (monte-meuble en express = +50-80 % vs réservation à l'avance).
+
+### Erreur 3 : Accepter un devis sans détail des suppléments escalier
+
+Un devis valide doit mentionner explicitement :
+- Le nombre d'étages (départ ET arrivée)
+- Le supplément escalier calculé
+- Présence ou absence de monte-meuble (et qui le fournit)
+
+### Erreur 4 : Oublier que l'arrivée compte autant que le départ
+
+Vous habitez au 5e sans ascenseur (départ), mais votre nouvelle adresse est aussi un 4e sans ascenseur (arrivée). Les deux sont facturés.
+
+**Calculez toujours le supplément sur les DEUX adresses.**
+
+### Erreur 5 : Choisir uniquement sur le prix sans vérifier la solidité du déménageur
+
+Un déménageur qui sous-estime son devis pour décrocher le contrat, c'est un déménageur qui ajoutera des suppléments le jour J — ou qui risque de ne pas se présenter si une mission plus rentable se présente.
+
+Selon les données Moverz.fr, les litiges sur les déménagements en étage élevé sans ascenseur sont 40% plus fréquents que sur les déménagements avec accès standard. La raison principale : devis incomplets et sous-estimés.
+
+---
+
+## Comment calculer le surcoût exact pour votre situation
+
+### Formule simplifiée
+
+```
+Surcoût total = (Volume en m³ / 10) × Nombre d'étages × 10 à 15 €
+```
+
+**Exemples :**
+
+| Logement | Volume | Étage | Surcoût estimé |
+|---|---|---|---|
+| Studio | 15 m³ | 5e sans ascenseur | 75 – 112 € |
+| T2 | 25 m³ | 5e sans ascenseur | 125 – 187 € |
+| T3 | 40 m³ | 5e sans ascenseur | 200 – 300 € |
+| T4 | 60 m³ | 5e sans ascenseur | 300 – 450 € |
+
+*Ces surcoûts s'ajoutent au tarif de base du déménagement.*
+
+---
+
+## Checklist anti-surprise pour un déménagement au 5e sans ascenseur
+
+**À faire 3-4 semaines avant :**
+- [ ] Mesurer la largeur de l'escalier (au plus étroit)
+- [ ] Mesurer les dimensions du palier (virage possible ?)
+- [ ] Identifier les meubles qui ne passent pas (canapé, armoire XXL)
+- [ ] Demander une autorisation de voirie si monte-meuble nécessaire
+- [ ] Préciser étage + accès dans TOUS les formulaires de devis
+
+**Sur le devis reçu, vérifier :**
+- [ ] Étage départ et arrivée mentionnés explicitement
+- [ ] Supplément escalier chiffré séparément (pas "selon accès")
+- [ ] Présence monte-meuble mentionnée si gros meubles
+- [ ] Pas de clause "supplément possible selon accès réel"
+
+**Le jour J :**
+- [ ] Avoir le devis signé sur soi
+- [ ] Vérifier que l'équipe est bien au complet dès le début
+- [ ] Ne pas signer le bordereau de livraison avant d'avoir inspecté chaque meuble
+
+---
+
+## Le 5e sans ascenseur rend-il un déménagement impossible ?
+
+Non. Des milliers de déménagements en 5e étage sans ascenseur se passent très bien chaque année en France. Les deux conditions pour que ça se passe bien :
+
+1. **Un dossier complet et précis** : l'équipe sait ce qui l'attend, elle est dimensionnée en conséquence
+2. **Un déménageur expérimenté et financièrement solide** : pas un débutant qui sous-traite ou une société en difficulté qui prendra des raccourcis
+
+Sur Moverz.fr, les déménageurs du réseau sont vérifiés selon 3 analyses de risque /100 (financier via Creditsafe, juridique via Pappers, avis clients via Google). Les déménageurs avec des alertes sont exclus automatiquement — y compris ceux qui présentent un taux de litiges élevé sur les configurations difficiles.
+
+---
+
+## Questions fréquentes
+
+**Un déménageur peut-il refuser de monter au 5e sans ascenseur ?**  
+Oui. Un déménageur a le droit de refuser une prestation s'il estime que les conditions sont trop difficiles ou dangereuses (escalier trop étroit, état dégradé). Dans ce cas, demandez un monte-meuble externe ou un spécialiste des accès difficiles.
+
+**Le supplément escalier est-il négociable ?**  
+Rarement sur le tarif brut, mais parfois sur la formule. Choisir une formule économique (vous emballez et préparez tout) peut compenser le surcoût escalier.
+
+**Et si le monte-meuble ne peut pas accéder à ma fenêtre ?**  
+Certaines configurations (balcons trop petits, fenêtres trop étroites, câbles électriques) empêchent le monte-meuble. Dans ce cas, le portage main est la seule option — demandez un devis avec équipe renforcée (3 personnes au lieu de 2).
+
+**Faut-il prévenir les voisins ?**  
+Oui, par courtoisie, mais surtout par pragmatisme : un escalier encombré de déménageurs pendant 4-6 heures peut gêner. Prévenez la veille. Certains immeubles demandent aussi à bloquer l'ascenseur si présent (même petit) — vérifiez avec le gardien.
+
+---
+
+> **Déménagez au 5e sans ascenseur sans mauvaise surprise**  
+> Créez votre dossier sur [Moverz](/) : étage, escalier, volume, accès — tout est précisé. Les déménageurs chiffrent en connaissance de cause. Pas de supplément surprise. [Démarrer gratuitement](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-sans-ascenseur-fin).
+
+---
+
+*Sources : données Moverz.fr 2025-2026 | pratiques tarifaires du secteur déménagement France*
+
+**À lire aussi :**
+- [Éviter les suppléments prix jour J](/blog/supplement-prix-jour-j-comment-eviter/)
+- [Comment comparer des devis de déménagement](/blog/comparer-devis-demenagement-guide/)
+- [Estimer le volume de son déménagement](/blog/estimer-volume-demenagement-guide-complet/)
+`,
   },
 ];
 
