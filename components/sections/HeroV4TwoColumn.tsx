@@ -294,8 +294,8 @@ export function HeroV4TwoColumn() {
             </div>
           </motion.div>
 
-          {/* H1 */}
-          <motion.h1
+          {/* Titre mobile — rendu en p pour éviter double H1 avec version desktop */}
+          <motion.p
             variants={staggerItem}
             className="font-heading text-[clamp(40px,8vw,72px)] leading-[1.05] font-bold tracking-[-0.02em]"
             style={{ color: "var(--color-text)" }}
@@ -303,7 +303,7 @@ export function HeroV4TwoColumn() {
             Vous déménagez.
             <br />
             <span style={{ color: "var(--color-accent)" }}>On compare.</span>
-          </motion.h1>
+          </motion.p>
 
           {/* Subtitle principal */}
           <motion.p 
