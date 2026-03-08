@@ -23,6 +23,7 @@ import { WebPageSchema } from "@/components/schema/WebPageSchema";
 import { ServiceSchema } from "@/components/schema/ServiceSchema";
 import { FAQSchema } from "@/components/schema/FAQSchema";
 import { HowToSchema } from "@/components/schema/HowToSchema";
+import { JsonLd } from "@/components/schema/JsonLd";
 import { getLocalPricesForMeta, getCityPriceTiers } from "@/lib/pricing-corridors";
 
 type PageProps = {
@@ -210,6 +211,32 @@ export default function CityMovingPage({ params }: PageProps) {
       
       {/* FAQ schema: featured answers ChatGPT/AI Overviews */}
       <FAQSchema faqs={cityFAQs} />
+      {/* LocalBusiness schema — local SEO signal fort pour les pages villes */}
+      <JsonLd
+        id={`localbusiness-${city.slug}`}
+        data={{
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": `https://moverz.fr/demenagement/${city.slug}/#localbusiness`,
+          name: `Moverz — Déménagement ${city.nameCapitalized}`,
+          description: `Comparez des devis de déménageurs vérifiés à ${city.nameCapitalized}. Service 100% gratuit, zéro démarchage, déménageurs contrôlés.`,
+          url: `https://moverz.fr/demenagement/${city.slug}/`,
+          telephone: "+33664779434",
+          email: "contact@moverz.fr",
+          priceRange: "Gratuit pour les particuliers",
+          image: "https://moverz.fr/logo.png",
+          logo: "https://moverz.fr/logo.png",
+          areaServed: {
+            "@type": "City",
+            name: city.nameCapitalized,
+          },
+          parentOrganization: { "@id": "https://moverz.fr/#organization" },
+          sameAs: ["https://moverz.fr/"],
+          serviceType: "Comparateur de déménagement",
+          currenciesAccepted: "EUR",
+          paymentAccepted: "Gratuit",
+        }}
+      />
       {/* HowTo schema — rich snippet "étapes" pour le processus Moverz */}
       <HowToSchema
         title={`Comment obtenir des devis de déménagement à ${city.nameCapitalized}`}

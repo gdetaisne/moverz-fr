@@ -8,6 +8,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "64% des déménageurs présentent des anomalies (DGCCRF 2023). Découvrez comment vérifier un déménageur, les signaux d'alerte, et les outils pour choisir en toute sécurité.",
     publishedAt: "2025-12-24T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 15,
     authorSlug: "lucie",
@@ -30,6 +31,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Vous partez ou revenez de l’étranger ? Découvrez dans quels cas Moverz peut vous accompagner pour un déménagement international, comment éviter les mauvaises surprises et trouver le juste prix pour votre projet.",
     publishedAt: "2025-01-02T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 9,
     authorSlug: "guillaume",
@@ -65,6 +67,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Portage long = temps de manutention. Comment l’estimer (en pas + détails), standardiser les infos, et comparer des devis sans hypothèses.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 10,
     authorSlug: "guillaume",
@@ -86,6 +89,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Parking souterrain = contraintes d’accès. Quelles infos donner (détails + distance), comment éviter les surprises, et checklist jour J.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 9,
     authorSlug: "guillaume",
@@ -96,6 +100,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Accès compliqué : comment cadrer la logistique (camion/portage), obtenir un devis fiable, et éviter l’improvisation le jour J.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 9,
     authorSlug: "guillaume",
@@ -106,6 +111,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Petit volume ne veut pas dire petit risque : options, dossier devis propre, checklists et astuces budget.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 11,
     authorSlug: "guillaume",
@@ -116,6 +122,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Méthode simple pour déménager en colocation : inventaire par personne, étiquetage, timing et checklists pour un jour J fluide.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 10,
     authorSlug: "guillaume",
@@ -126,6 +133,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Guide pratique : détails/informations à fournir, méthode, et comment cadrer objets lourds dans un devis sans surprises.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 12,
     authorSlug: "guillaume",
@@ -136,6 +144,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Pourquoi la fin de mois est plus tendue, comment obtenir un meilleur prix avec de la flexibilité, et checklists pour sécuriser votre déménagement.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 8,
     authorSlug: "guillaume",
@@ -157,6 +166,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Réserver une place, éviter l’improvisation : checklist et modèle de demande pour stationnement le jour J.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 10,
     authorSlug: "lucie",
@@ -167,6 +177,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Cartons gratuits oui, mais solides : où chercher, quels cartons éviter, et plan rapide pour s’organiser.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 9,
     authorSlug: "lucie",
@@ -177,6 +188,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Méthode simple : objets sensibles, détails, déclaration cohérente, et vérifs post‑déménagement pour éviter les disputes.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 10,
     authorSlug: "lucie",
@@ -187,6 +199,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Caler, intercaler, éviter le carton trop lourd : une méthode rapide pour emballer la vaisselle sans casse.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 8,
     authorSlug: "lucie",
@@ -197,6 +210,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Rigidifier, protéger les angles, transporter sans pression : la méthode qui évite la casse des écrans.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 8,
     authorSlug: "lucie",
@@ -207,6 +221,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Routines, zones, kit 48h : un plan concret pour un déménagement avec enfants sans chaos.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 10,
     authorSlug: "lucie",
@@ -217,6 +232,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Zone safe + référent + arrivée organisée : checklists anti‑fuite et anti‑stress pour animaux.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 9,
     authorSlug: "lucie",
@@ -227,6 +243,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Stabiliser les pots, limiter l’exposition, installer tôt : une méthode simple pour sauver vos plantes.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 8,
     authorSlug: "lucie",
@@ -237,6 +254,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Objet lourd : accès, protection, manutention. Comment cadrer le frigo américain dans un devis sans surprises.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 9,
     authorSlug: "lucie",
@@ -247,6 +265,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Éviter les fuites et les chocs : préparation simple, calage, et organisation pour un transport propre.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 8,
     authorSlug: "lucie",
@@ -257,6 +276,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "3 listes + 4 détails : le format minimal qui rend les devis comparables (sans y passer la journée).",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 8,
     authorSlug: "lucie",
@@ -267,6 +287,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Zones tampon, protection minimale utile, et organisation anti‑improvisation quand il pleut.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 8,
     authorSlug: "lucie",
@@ -277,6 +298,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Organisation, pauses/eau, et réduction des allers‑retours : le plan simple pour un déménagement en forte chaleur.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 8,
     authorSlug: "lucie",
@@ -287,6 +309,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Passage étroit + rotation palier : méthode pour décider vite (démontage, manœuvre, lift) sans improviser.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 9,
     authorSlug: "lucie",
@@ -297,6 +320,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Petits cartons, fond renforcé, étiquette “lourd” : la méthode qui évite les cartons ingérables.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 7,
     authorSlug: "lucie",
@@ -307,6 +331,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Placards, cave, balcon, mini tour détail : checklist “dernier passage” pour éviter les galères après.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "checklists-et-guides",
     readingTimeMinutes: 8,
     authorSlug: "lucie",
@@ -317,6 +342,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Angles protégés, rigidité, calage : les règles simples pour transporter des fragiles sans casse.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 8,
     authorSlug: "lucie",
@@ -327,6 +353,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Identifier les points critiques (portail, rampe, parking) et prévoir un plan B pour stabiliser le devis.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 7,
     authorSlug: "guillaume",
@@ -337,6 +364,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     description:
       "Flexibilité intelligente + accès clair : les leviers simples pour limiter le surcoût week‑end.",
     publishedAt: "2026-01-09T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 7,
     authorSlug: "guillaume",
@@ -346,6 +374,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     title: "Estimer le volume de son déménagement : guide complet 2026",
     description: "Comment calculer précisément le volume de votre déménagement en m³ pour obtenir des devis fiables. Tableaux par pièce, erreurs à éviter, méthodes pratiques.",
     publishedAt: "2026-03-06T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 9,
     tags: ["volume déménagement", "estimation", "devis"],
@@ -356,6 +385,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     title: "Score Creditsafe d'un déménageur : comment le lire et pourquoi ça compte",
     description: "Comprendre le score Creditsafe d'une entreprise de déménagement : ce qu'il mesure, comment l'interpréter, et pourquoi 257 faillites en 2024 rendent cette vérification indispensable.",
     publishedAt: "2026-03-06T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 8,
     tags: ["Creditsafe", "déménageur fiable", "vérification"],
@@ -366,6 +396,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     title: "Meilleur comparateur de déménagement 2026 : comparatif honnête",
     description: "Quel est le meilleur comparateur de déménagement en 2026 ? Comparatif des plateformes : vérifications, anonymat, qualité des devis. Ce que la plupart ne vous disent pas.",
     publishedAt: "2026-03-06T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 8,
     tags: ["comparateur déménagement", "devis déménagement", "choisir"],
@@ -376,6 +407,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     title: "Comment comparer des devis de déménagement : guide pratique 2026",
     description: "Les 7 points à vérifier pour comparer efficacement des devis de déménagement. Ce que doit contenir un devis conforme, les pièges à éviter, et comment obtenir des offres vraiment comparables.",
     publishedAt: "2026-03-06T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 7,
     tags: ["devis déménagement", "comparer devis", "prix déménagement"],
@@ -386,6 +418,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     title: "Checklist déménagement 2026 : 70 points pour ne rien oublier",
     description: "La checklist déménagement complète : 8 semaines avant, J-30, J-7, jour J, après. 70 points vérifiés pour déménager sans stress, sans oubli, sans surprise.",
     publishedAt: "2026-03-07T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "Organisation",
     readingTimeMinutes: 8,
     tags: ["checklist déménagement", "organisation déménagement", "préparer déménagement"],
@@ -396,6 +429,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     title: "Prix déménagement Paris 2026 : fourchettes réalistes, exemples & conseils",
     description: "Prix d'un déménagement à Paris en 2026 : fourchettes par surface (studio, T2, T3, T4), exemples chiffrés, facteurs qui font varier le prix, et comment obtenir des devis comparables.",
     publishedAt: "2026-03-07T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "Prix & Devis",
     readingTimeMinutes: 7,
     tags: ["prix déménagement Paris", "déménagement Paris", "tarif déménagement Paris"],
@@ -406,6 +440,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     title: "Devis déménagement gratuit sans engagement : comment ça marche vraiment ?",
     description: "Comment obtenir des devis de déménagement gratuits et sans engagement en 2026 ? Ce que couvre un devis, les pièges à éviter, et comment comparer des devis réellement comparables.",
     publishedAt: "2026-03-07T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "Prix & Devis",
     readingTimeMinutes: 7,
     tags: ["devis déménagement gratuit", "devis sans engagement", "comparer devis déménagement"],
@@ -416,6 +451,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     title: "Déménagement en juillet-août 2026 : prix, disponibilités et comment s'organiser",
     description: "Déménager en juillet ou août coûte 30 à 50 % plus cher. Pourquoi, combien, et comment s'organiser (ou décaler) pour la haute saison du déménagement en France.",
     publishedAt: "2026-03-07T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "Prix & Devis",
     readingTimeMinutes: 7,
     tags: ["déménagement été", "déménagement juillet août", "prix déménagement haute saison"],
@@ -426,6 +462,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     title: "Comment vérifier un déménageur avant de signer : SIREN, Creditsafe, assurance (guide 2026)",
     description: "Guide complet pour vérifier la fiabilité d'un déménageur avant de signer : SIREN, score Creditsafe, assurance RC Pro, avis Google, procédures judiciaires. Checklist et outils gratuits.",
     publishedAt: "2026-03-07T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "Vérification & Fiabilité",
     readingTimeMinutes: 8,
     tags: ["vérifier déménageur", "Creditsafe déménageur", "fiabilité déménageur", "SIREN déménageur"],
@@ -436,6 +473,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     title: "Supplément de prix le jour du déménagement : causes, montants, et comment l'éviter",
     description: "40-50 % des déménagements subissent un supplément le jour J. Causes, montants typiques, et méthode concrète pour éviter les mauvaises surprises sur le prix de votre déménagement.",
     publishedAt: "2026-03-07T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "Prix & Devis",
     readingTimeMinutes: 7,
     tags: ["supplément déménagement", "prix déménagement jour J", "surprise prix déménagement"],
@@ -446,6 +484,7 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     title: "Assurance déménagement : ce qui est couvert, ce qui ne l'est pas, et comment se protéger",
     description: "Assurance déménagement en 2026 : RC Pro du déménageur, assurance marchandises, déclaration de valeur, franchise. Ce que couvre vraiment l'assurance et comment éviter les mauvaises surprises en cas de casse.",
     publishedAt: "2026-03-07T00:00:00.000Z",
+    updatedAt: "2026-03-08T00:00:00.000Z",
     category: "Vérification & Fiabilité",
     readingTimeMinutes: 8,
     tags: ["assurance déménagement", "RC Pro déménageur", "casse déménagement", "déclaration de valeur"],

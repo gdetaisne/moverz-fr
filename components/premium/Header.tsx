@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/comment-ca-marche/", label: "Comment ça marche" },
   { href: "/faq/", label: "FAQ" },
   { href: "/blog/", label: "Blog" },
+  { href: "/a-propos/", label: "À propos" },
 ];
 
 export function Header() {

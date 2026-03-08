@@ -46,6 +46,7 @@ export default function AuthorPage({ params }: Props) {
     name: author.name,
     jobTitle: author.role,
     url: `https://moverz.fr/auteurs/${author.slug}/`,
+    image: `https://moverz.fr/images/authors/${author.slug}.jpg`,
     worksFor: { "@id": "https://moverz.fr/#organization" },
     sameAs: [author.linkedin],
     knowsAbout: author.expertise,

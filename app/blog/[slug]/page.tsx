@@ -18,6 +18,7 @@ import { getCityBySlug } from "@/lib/cities";
 import { ArticleSchema } from "@/components/schema/ArticleSchema";
 import { FAQSchema } from "@/components/schema/FAQSchema";
 import { HowToSchema } from "@/components/schema/HowToSchema";
+import { JsonLd } from "@/components/schema/JsonLd";
 import { formatDateFR } from "@/lib/date/fr";
 import BlogFloatingCTA from "@/components/blog/BlogFloatingCTA";
 import { AuthorCard } from "@/components/blog/AuthorCard";
@@ -402,6 +403,33 @@ export default function BlogPostPage({ params }: PageProps) {
         category={post.category}
         readingTimeMinutes={post.readingTimeMinutes}
         authorSlug={post.authorSlug}
+      />
+      <JsonLd
+        id={`breadcrumb-${post.slug}`}
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Accueil",
+              item: "https://moverz.fr/",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Blog",
+              item: "https://moverz.fr/blog/",
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: post.title,
+              item: `https://moverz.fr/blog/${post.slug}/`,
+            },
+          ],
+        }}
       />
       <div className="halo" />
 

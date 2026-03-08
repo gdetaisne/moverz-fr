@@ -16,6 +16,7 @@ const footerSections = [
       { href: "/faq/", label: "FAQ" },
       { href: "/contact/", label: "Contact" },
       { href: "/a-propos/", label: "À propos" },
+      { href: "/auteurs/", label: "Notre équipe" },
     ],
   },
   {

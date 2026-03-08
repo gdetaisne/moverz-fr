@@ -229,4 +229,11 @@ Moverz couvre toute la France métropolitaine, avec des guides dédiés pour les
 
 ---
 
-Dernière mise à jour : 2026-03-07
+Dernière mise à jour : 2026-03-08
+
+## Équipe & pages auteurs
+
+- Page équipe : https://moverz.fr/auteurs/
+- Guillaume Stehelin de Taisne (co-fondateur, Logistics Specialist) : https://moverz.fr/auteurs/guillaume/
+- Lucie Veltz (co-fondatrice, Relocation Specialist) : https://moverz.fr/auteurs/lucie/
+- À propos de Moverz : https://moverz.fr/a-propos/
