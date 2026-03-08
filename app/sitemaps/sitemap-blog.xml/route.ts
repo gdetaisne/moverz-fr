@@ -12,7 +12,8 @@ export const runtime = "nodejs";
  * After:  articles piliers qualité + liste GA trafic (~100-150 URLs estimées)
  */
 
-// Articles avec trafic GSC prouvé — inclus même s'ils ne sont pas "pilier"
+// Articles avec trafic GSC prouvé + citations Bing AI — inclus même s'ils ne sont pas "pilier"
+// Sync avec app/blog/[slug]/page.tsx GA_TRAFFIC_SLUGS
 const GA_TRAFFIC_SLUGS = new Set([
   "demenagement-centre-ville-rennes-autorisations",
   "cartons-gratuits-rennes",
@@ -49,7 +50,7 @@ const GA_TRAFFIC_SLUGS = new Set([
   "demenagement-par-ville",
   "cas-frequents",
   "prix-demenagement-2025",
-  // Groupe A — ≥1000 mots, impressions GSC >200
+  // GSC mars 2026
   "shurgard-lyon-sites-tarifs",
   "comparaison-prix-demenageurs-lyon",
   "demenageur-rennes",
@@ -71,11 +72,9 @@ const GA_TRAFFIC_SLUGS = new Set([
   "devis-demenagement-lille-obtenir-comparer",
   "plateformes-aide-demenagement-nantes",
   "transport-conteneur-demenagement-international",
-  // Groupe B — enrichis 750-1000 mots
   "assurance-demenagement-international",
   "demenageur-monte-meuble-strasbourg",
   "autorisation-stationnement-demenagement-nice",
-  // Groupe C — réécritures complètes
   "demenagement-piano-longue-distance",
   "tarif-horaire-demenageur-rennes",
   "comparatif-prix-demenageurs-rennes",
@@ -87,6 +86,52 @@ const GA_TRAFFIC_SLUGS = new Set([
   "demenagement-strasbourg-paris",
   "prix-demenagement-par-m3-montpellier",
   "prix-demenageur-rennes-t2-t3-2025",
+  // Bing AI citations (AIPageStatsReport 2026-03-08)
+  "prix-demenageur-marseille-tarifs-2025",
+  "prix-garde-meuble-marseille-2025",
+  "prix-demenageur-nice-2025",
+  "prix-demenagement-lille-guide",
+  "combien-coute-garde-meuble-marseille",
+  "demenagement-m3-calcul-tarif-lille",
+  "aide-financiere-demenagement-nice",
+  "aides-financieres-demenagement-lille",
+  "top-erreurs-a-eviter",
+  "tarifs-box-stockage-rennes-taille-duree",
+  "location-utilitaire-demenagement-rennes",
+  "prix-demenagement-rouen-guide-complet",
+  "comparatif-demenageurs-nice",
+  "assurance-garde-meuble-obligatoire",
+  "aide-financiere-demenagement-lyon",
+  "prix-location-camion-20m3-montpellier-2025",
+  "prix-garde-meuble-rouen-2025",
+  "assurance-piano-demenagement-lille",
+  "prix-demenagement-studio-lille-2025",
+  "demenagement-etudiant-rouen-solutions",
+  "demenagement-international-espagne-depuis-bordeaux",
+  "materiel-demenagement-piano",
+  "prix-garde-meuble-bordeaux-reperes-2025",
+  "demenagement-formule-economique-montpellier",
+  "cartons-demenagement-gratuits-lyon",
+  "tarifs-demenageur-lyon",
+  "demenagement-longue-distance-depuis-nice",
+  "prix-demenagement-nantes-guide",
+  "aide-demenagement-rouen-guide-complet",
+  "demenagement-rue-etroite-impasse",
+  "aide-demenagement-nantes-guide",
+  "assurance-demenagement-piano",
+  "aide-pole-emploi-demenagement-nice",
+  "changement-adresse-demarches-demenagement-lille",
+  "location-camion-demenagement-rennes-guide",
+  "prix-garde-meuble-bordeaux-solutions-tarifs",
+  "prix-demenagement-piano-bordeaux-2025",
+  "comparatif-prix-demenageurs-economiques-montpellier",
+  "prix-demenagement-strasbourg",
+  "demenagement-international-nice-guide",
+  "formule-economique-vs-cle-en-main-nice",
+  "eviter-arnaques-demenagement",
+  "prix-demenagement-toulouse",
+  "duree-minimum-location-box-lyon",
+  "prix-garde-meuble-nice-2025",
 ]);
 
 function toIsoDate(value?: string): string | undefined {

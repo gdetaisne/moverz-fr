@@ -37,6 +37,7 @@ export const revalidate = 60 * 60 * 24; // 24h
 export const dynamicParams = true;
 
 // SEO (2026-03-08): articles avec trafic GSC prouvé — toujours indexés indépendamment du filtre qualité.
+// SEO (2026-03-08 v2): +45 articles cités par Bing AI (AIPageStatsReport) — signal fiabilité contenu.
 const GA_TRAFFIC_SLUGS = new Set([
   "demenagement-centre-ville-rennes-autorisations",
   "cartons-gratuits-rennes",
@@ -50,6 +51,113 @@ const GA_TRAFFIC_SLUGS = new Set([
   "prix-demenageur-rouen-2025",
   "prix-demenageur-strasbourg-2025",
   "prix-location-camion-20m3-lille",
+  // Groupe initial GSC mars 2026
+  "shurgard-lyon-sites-tarifs",
+  "comparaison-prix-demenageurs-lyon",
+  "demenageur-rennes",
+  "tarif-horaire-porteur-demenagement-nantes",
+  "monte-meuble-marseille-quand-necessaire",
+  "prix-demenagement-montpellier",
+  "monte-meuble-demenagement-nantes",
+  "demenagement-objets-fragiles-nice",
+  "meilleurs-demenageurs-lyon",
+  "comparatif-formules-economiques-demenagement-nantes",
+  "transport-maritime-container-lyon",
+  "garde-meuble-longue-duree-nice",
+  "faq-garde-meuble-strasbourg",
+  "prix-demenagement-international-lyon",
+  "demenagement-pas-cher-toulouse",
+  "demenageur-strasbourg",
+  "demenagement-international-nice-monaco",
+  "prix-demenagement-longue-distance-lille-paris",
+  "devis-demenagement-lille-obtenir-comparer",
+  "plateformes-aide-demenagement-nantes",
+  "transport-conteneur-demenagement-international",
+  "assurance-demenagement-international",
+  "demenageur-monte-meuble-strasbourg",
+  "autorisation-stationnement-demenagement-nice",
+  "demenagement-piano-longue-distance",
+  "tarif-horaire-demenageur-rennes",
+  "comparatif-prix-demenageurs-rennes",
+  "accord-piano-apres-demenagement-rennes",
+  "autorisation-stationnement-demenagement-marseille",
+  "prix-demenagement-piano-rennes-2025",
+  "prix-demenagement-longue-distance-montpellier-paris",
+  "meilleur-demenageur-rennes-2025",
+  "demenagement-strasbourg-paris",
+  "prix-demenagement-par-m3-montpellier",
+  "prix-demenageur-rennes-t2-t3-2025",
+  // Nice GSC impressions
+  "aides-financieres-demenagement-montpellier",
+  "cartons-gratuits-nice-ou-trouver",
+  "prix-demenagement-nice-guide",
+  "demenagement-nantes-usa-canada",
+  "demenageur-nice-guide-complet",
+  "demenagement-entreprise-nice-guide",
+  "aide-demenagement-nice-guide",
+  // Piliers déjà indexés
+  "location-camion-demenagement-montpellier",
+  "prix-demenagement-bordeaux-guide",
+  "prix-demenagement-marseille",
+  "transport-quelques-meubles-lyon",
+  "aide-financiere-demenagement-etudiant",
+  "cartons-demenagement-gratuits-montpellier",
+  "petit-demenagement-nantes-guide",
+  "prix-demenagement-lyon-guide-complet",
+  "prix-location-camion-20m3-rennes",
+  "checklist-demenagement-complete-2025",
+  "prix-moyen-demenagement-2025",
+  "widget-ia-volumetrie-demenagement-comparatif",
+  "comparer-plateformes-devis-demenagement-2026",
+  "demenagement-par-ville",
+  "cas-frequents",
+  "prix-demenagement-2025",
+  // Bing AI citations (AIPageStatsReport 2026-03-08) — ≥1 citation
+  "prix-demenageur-marseille-tarifs-2025",       // 13 citations
+  "prix-garde-meuble-marseille-2025",             // 11
+  "prix-demenageur-nice-2025",                    // 8
+  "prix-demenagement-lille-guide",                // 8
+  "combien-coute-garde-meuble-marseille",         // 6
+  "demenagement-m3-calcul-tarif-lille",           // 6
+  "aide-financiere-demenagement-nice",            // 5
+  "aides-financieres-demenagement-lille",         // 5
+  "top-erreurs-a-eviter",                         // 5
+  "tarifs-box-stockage-rennes-taille-duree",      // 4
+  "location-utilitaire-demenagement-rennes",      // 4 (TRES_COURT — enrichissement prévu)
+  "prix-demenagement-rouen-guide-complet",        // 4
+  "comparatif-demenageurs-nice",                  // 4 (COURT — enrichissement prévu)
+  "assurance-garde-meuble-obligatoire",           // 4 (TRES_COURT — enrichissement prévu)
+  "aide-financiere-demenagement-lyon",            // 3
+  "prix-location-camion-20m3-montpellier-2025",   // 3 (TRES_COURT — enrichissement prévu)
+  "prix-garde-meuble-rouen-2025",                 // 3
+  "assurance-piano-demenagement-lille",           // 3
+  "prix-demenagement-studio-lille-2025",          // 3
+  "demenagement-etudiant-rouen-solutions",        // 2
+  "demenagement-international-espagne-depuis-bordeaux", // 2
+  "materiel-demenagement-piano",                  // 2 (TRES_COURT — enrichissement prévu)
+  "prix-garde-meuble-bordeaux-reperes-2025",      // 2
+  "demenagement-formule-economique-montpellier",  // 2
+  "cartons-demenagement-gratuits-lyon",           // 2
+  "tarifs-demenageur-lyon",                       // 2
+  "demenagement-longue-distance-depuis-nice",     // 2 (COURT — enrichissement prévu)
+  "prix-demenagement-nantes-guide",               // 2
+  "aide-demenagement-rouen-guide-complet",        // 2
+  "demenagement-rue-etroite-impasse",             // 2 (COURT — enrichissement prévu)
+  "aide-demenagement-nantes-guide",               // 1
+  "assurance-demenagement-piano",                 // 1 (COURT — enrichissement prévu)
+  "aide-pole-emploi-demenagement-nice",           // 1
+  "changement-adresse-demarches-demenagement-lille", // 1
+  "location-camion-demenagement-rennes-guide",    // 1 (COURT — enrichissement prévu)
+  "prix-garde-meuble-bordeaux-solutions-tarifs",  // 1
+  "prix-demenagement-piano-bordeaux-2025",        // 1
+  "comparatif-prix-demenageurs-economiques-montpellier", // 1
+  "prix-demenagement-strasbourg",                 // 1
+  "demenagement-international-nice-guide",        // 1
+  "formule-economique-vs-cle-en-main-nice",       // 1 (TRES_COURT — enrichissement prévu)
+  "eviter-arnaques-demenagement",                 // 1
+  "prix-demenagement-toulouse",                   // 1
+  "duree-minimum-location-box-lyon",              // 1
+  "prix-garde-meuble-nice-2025",                  // 1
   // Groupe A — ≥1000 mots, impressions GSC >200
   "shurgard-lyon-sites-tarifs",
   "comparaison-prix-demenageurs-lyon",
@@ -620,6 +728,29 @@ export default function BlogPostPage({ params }: PageProps) {
           </div>
         </section>
       )}
+
+      {/* FAQ */}
+      {faqItems?.length ? (
+        <section className="section section-light">
+          <div className="container max-w-3xl text-v4-text">
+            <div className="rounded-3xl bg-white px-4 py-6 md:px-10 md:py-10 shadow-sm border border-v4-border">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-v4-accent/10 text-v4-accent flex-shrink-0">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h2 className="text-xl md:text-2xl font-semibold">Questions fréquentes</h2>
+              </div>
+              <div className="space-y-3">
+                {faqItems.map((item, i) => (
+                  <BlogFAQItem key={i} question={item.question} answer={item.answer} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       {/* Articles liés */}
       {related.length > 0 && (
