@@ -15,6 +15,7 @@ import { LONGTAIL_FAQS } from "@/lib/blog-longtail";
 import { LONGTAIL_PACK2_FAQS } from "@/lib/blog-longtail-pack2";
 import { getFullMetadata } from "@/lib/canonical-helper";
 import { getCityBySlug } from "@/lib/cities";
+import { BLOG_META_OVERRIDES } from "@/lib/seo/blog-meta-overrides";
 import { ArticleSchema } from "@/components/schema/ArticleSchema";
 import { FAQSchema } from "@/components/schema/FAQSchema";
 import { HowToSchema } from "@/components/schema/HowToSchema";
@@ -129,11 +130,13 @@ export function generateMetadata({ params }: PageProps): Metadata {
   }
 
   const path = `blog/${post.slug}`;
-  const title =
-    post.category === "pro"
+  const override = BLOG_META_OVERRIDES[post.slug];
+  const title = override?.title
+    ? override.title  // override déjà complet, layout ajoute "| Moverz"
+    : post.category === "pro"
       ? `${post.title} | Blog déménageurs`
       : `${post.title} | Blog déménagement`;
-  const description = post.description;
+  const description = override?.description ?? post.description;
 
   const base = getFullMetadata(path, title, description);
 

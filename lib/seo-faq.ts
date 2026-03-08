@@ -17,9 +17,9 @@ export function buildCityFaqs(args: {
         "Idéalement 4–8 semaines avant, surtout en haute saison (juin–septembre). Si vous êtes flexible sur 2–3 dates, vous augmentez vos chances d’obtenir un bon prix.",
     },
     {
-      question: "Les déménageurs font une visite technique ?",
+      question: "Comment comparer des devis de déménageurs ?",
       answer:
-        "Pas nécessaire dans la majorité des cas : un dossier bien rempli (volume + accès + date) suffit pour obtenir des devis comparables, sans pression commerciale.",
+        "Sur Moverz, vous déposez un dossier unique (volume, accès, date) et recevez jusqu'à 3 devis sur des critères identiques. Pas de visite commerciale, pas d'appels répétés.",
     },
     {
       question: "Moverz est vraiment gratuit ?",
