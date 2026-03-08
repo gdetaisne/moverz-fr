@@ -86,7 +86,7 @@ const faqCategories = [
     items: [
       {
         q: "Puis-je utiliser Moverz pour un déménagement international ?",
-        a: "Notre cœur de métier est le déménagement France → France, mais nous pouvons étudier certains projets internationaux au cas par cas (Europe proche, retour en France, etc.). Indiquez simplement votre situation dans le formulaire ou contactez-nous : nous vous dirons clairement si nous pouvons vous accompagner directement ou vous orienter vers la bonne solution.",
+        a: "Moverz est centré sur le déménagement France → France, mais certains déménageurs partenaires proposent des prestations internationales (Europe proche, DOM-TOM, retour en France). Indiquez votre situation dans le formulaire — nous vous mettons en relation avec les partenaires qui couvrent votre trajet, ou vous orientons vers la bonne solution.",
       }
     ]
   }

@@ -9,14 +9,14 @@ export default function Page() {
       cityName="Rouen"
       quartierSlug="centre-historique"
       quartierName="Centre Historique"
-      description="Service professionnel de déménagement dans le quartier Centre Historique"
+      description="Comparer des déménageurs vérifiés pour le quartier centre-historique Historique"
       stats={{
         dossiers: "+45",
         demenageurs: "15",
         delai: "3-5"
       }}
-      pourquoiMoverz="Centre Historique est un quartier prisé de Rouen. Nos déménageurs spécialisés connaissent parfaitement les contraintes d'accès et s'adaptent aux particularités du quartier."
-      accesStationnement="Centre Historique présente des contraintes d'accès spécifiques. Nos partenaires déménageurs maîtrisent les créneaux autorisés, les zones de déchargement et optimisent les horaires."
+      pourquoiMoverz="Centre Historique est un quartier prisé de Rouen. Les déménageurs partenaires Moverz connaissent les contraintes d'accès de ce quartier et s'y adaptent."
+      accesStationnement="Centre Historique présente des contraintes d'accès spécifiques. Les déménageurs partenaires sélectionnés par Moverz maîtrisent les créneaux autorisés et les zones de déchargement de ce quartier."
       destinationsFrequentes={[
         {
           href: "/rouen-vers-paris",
@@ -27,7 +27,7 @@ export default function Page() {
       faq={[
         {
           question: "Comment gérer le stationnement à Centre Historique ?",
-          answer: "Nos déménageurs connaissent les créneaux autorisés et les zones de déchargement temporaire."
+          answer: "Les déménageurs partenaires Moverz connaissent les créneaux autorisés et les zones de déchargement temporaire."
         },
         {
           question: "Quels sont les tarifs pour Centre Historique ?",

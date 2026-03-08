@@ -9,14 +9,14 @@ export default function Page() {
       cityName="Nice"
       quartierSlug="port"
       quartierName="Port"
-      description="Service professionnel de déménagement dans le quartier Port"
+      description="Comparer des déménageurs vérifiés pour le quartier port"
       stats={{
         dossiers: "+45",
         demenageurs: "15",
         delai: "3-5"
       }}
-      pourquoiMoverz="Port est un quartier prisé de Nice. Nos déménageurs spécialisés connaissent parfaitement les contraintes d'accès et s'adaptent aux particularités du quartier."
-      accesStationnement="Port présente des contraintes d'accès spécifiques. Nos partenaires déménageurs maîtrisent les créneaux autorisés, les zones de déchargement et optimisent les horaires."
+      pourquoiMoverz="Port est un quartier prisé de Nice. Les déménageurs partenaires Moverz connaissent les contraintes d'accès de ce quartier et s'y adaptent."
+      accesStationnement="Port présente des contraintes d'accès spécifiques. Les déménageurs partenaires sélectionnés par Moverz maîtrisent les créneaux autorisés et les zones de déchargement de ce quartier."
       destinationsFrequentes={[
         {
           href: "/nice-vers-paris",
@@ -27,7 +27,7 @@ export default function Page() {
       faq={[
         {
           question: "Comment gérer le stationnement à Port ?",
-          answer: "Nos déménageurs connaissent les créneaux autorisés et les zones de déchargement temporaire."
+          answer: "Les déménageurs partenaires Moverz connaissent les créneaux autorisés et les zones de déchargement temporaire."
         },
         {
           question: "Quels sont les tarifs pour Port ?",

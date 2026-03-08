@@ -9,14 +9,14 @@ export default function Page() {
       cityName="Montpellier"
       quartierSlug="beaux-arts"
       quartierName="Beaux-Arts"
-      description="Service professionnel de déménagement dans le quartier Beaux-Arts"
+      description="Comparer des déménageurs vérifiés pour le quartier beaux-arts"
       stats={{
         dossiers: "+45",
         demenageurs: "15",
         delai: "3-5"
       }}
-      pourquoiMoverz="Beaux-Arts est un quartier prisé de Montpellier. Nos déménageurs spécialisés connaissent parfaitement les contraintes d'accès et s'adaptent aux particularités du quartier."
-      accesStationnement="Beaux-Arts présente des contraintes d'accès spécifiques. Nos partenaires déménageurs maîtrisent les créneaux autorisés, les zones de déchargement et optimisent les horaires."
+      pourquoiMoverz="Beaux-Arts est un quartier prisé de Montpellier. Les déménageurs partenaires Moverz connaissent les contraintes d'accès de ce quartier et s'y adaptent."
+      accesStationnement="Beaux-Arts présente des contraintes d'accès spécifiques. Les déménageurs partenaires sélectionnés par Moverz maîtrisent les créneaux autorisés et les zones de déchargement de ce quartier."
       destinationsFrequentes={[
         {
           href: "/montpellier-vers-paris",
@@ -27,7 +27,7 @@ export default function Page() {
       faq={[
         {
           question: "Comment gérer le stationnement à Beaux-Arts ?",
-          answer: "Nos déménageurs connaissent les créneaux autorisés et les zones de déchargement temporaire."
+          answer: "Les déménageurs partenaires Moverz connaissent les créneaux autorisés et les zones de déchargement temporaire."
         },
         {
           question: "Quels sont les tarifs pour Beaux-Arts ?",

@@ -9,14 +9,14 @@ export default function Page() {
       cityName="Rennes"
       quartierSlug="thabor"
       quartierName="Thabor"
-      description="Service professionnel de déménagement dans le quartier Thabor"
+      description="Comparer des déménageurs vérifiés pour le quartier thabor"
       stats={{
         dossiers: "+45",
         demenageurs: "15",
         delai: "3-5"
       }}
-      pourquoiMoverz="Thabor est un quartier prisé de Rennes. Nos déménageurs spécialisés connaissent parfaitement les contraintes d'accès et s'adaptent aux particularités du quartier."
-      accesStationnement="Thabor présente des contraintes d'accès spécifiques. Nos partenaires déménageurs maîtrisent les créneaux autorisés, les zones de déchargement et optimisent les horaires."
+      pourquoiMoverz="Thabor est un quartier prisé de Rennes. Les déménageurs partenaires Moverz connaissent les contraintes d'accès de ce quartier et s'y adaptent."
+      accesStationnement="Thabor présente des contraintes d'accès spécifiques. Les déménageurs partenaires sélectionnés par Moverz maîtrisent les créneaux autorisés et les zones de déchargement de ce quartier."
       destinationsFrequentes={[
         {
           href: "/rennes-vers-paris",
@@ -27,7 +27,7 @@ export default function Page() {
       faq={[
         {
           question: "Comment gérer le stationnement à Thabor ?",
-          answer: "Nos déménageurs connaissent les créneaux autorisés et les zones de déchargement temporaire."
+          answer: "Les déménageurs partenaires Moverz connaissent les créneaux autorisés et les zones de déchargement temporaire."
         },
         {
           question: "Quels sont les tarifs pour Thabor ?",
