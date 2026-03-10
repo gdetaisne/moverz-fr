@@ -13,8 +13,8 @@ import {
   buildQuotaCookie,
   setQuotaCookieOnResponse,
   QUOTA_MAX,
-} from '../quota.js';
-import { checkRateLimit, getClientIp } from '../rate-limit.js';
+} from '../quota';
+import { checkRateLimit, getClientIp } from '../rate-limit';
 
 const BACKOFFICE_URL = process.env.NEXT_PUBLIC_BACKOFFICE_URL?.replace(/\/$/, '') ?? '';
 const SCORING_KEY = process.env.SCORING_API_KEY_PUBLIC ?? '';
