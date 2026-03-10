@@ -99,10 +99,26 @@ export async function middleware(req: NextRequest, event: NextFetchEvent) {
   // 🔐 ADMIN PROTECTION: Protect /admin/* routes (except /admin/login and /admin/login/)
   if (pathname.startsWith('/admin/') && !pathname.startsWith('/admin/login')) {
     const sessionCookie = req.cookies.get('admin_session')?.value;
-    if (!sessionCookie || !verifySession(sessionCookie)) {
+    console.log('[MIDDLEWARE] Admin route accessed:', pathname);
+    console.log('[MIDDLEWARE] Session cookie present:', !!sessionCookie);
+    console.log('[MIDDLEWARE] Session cookie value:', sessionCookie?.substring(0, 30) + '...');
+    
+    if (!sessionCookie) {
+      console.log('[MIDDLEWARE] ❌ No cookie, redirecting to login');
       const loginUrl = new URL('/admin/login/', req.url);
       return NextResponse.redirect(loginUrl);
     }
+    
+    const isValid = verifySession(sessionCookie);
+    console.log('[MIDDLEWARE] Session valid:', isValid);
+    
+    if (!isValid) {
+      console.log('[MIDDLEWARE] ❌ Invalid session, redirecting to login');
+      const loginUrl = new URL('/admin/login/', req.url);
+      return NextResponse.redirect(loginUrl);
+    }
+    
+    console.log('[MIDDLEWARE] ✅ Access granted to:', pathname);
   }
 
   // 🚫 ADMIN NOINDEX: Add noindex headers to ALL /admin/* pages (including login)
