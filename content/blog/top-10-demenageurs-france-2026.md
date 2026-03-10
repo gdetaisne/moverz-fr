@@ -506,7 +506,7 @@ Aucune réponse > 5 jours : Mauvais ❌
 
 ---
 
-### 3. Volume IA standardisé = devis comparables
+### 3. Volume standardisé = devis comparables
 
 **Le problème des estimations "à l'œil"** :
 - Déménageur 1 estime : 25 m³ → 1 000€
@@ -514,7 +514,7 @@ Aucune réponse > 5 jours : Mauvais ❌
 - **→ Devis NON comparables**
 
 **Solution Moverz** :
-- L'IA calcule votre volume précis (inventaire guidé)
+- Le système calcule votre volume via un inventaire guidé
 - **Tous les déménageurs reçoivent le même volume** (ex: 30 m³)
 - **→ Devis VRAIMENT comparables** ✅
 
@@ -797,13 +797,13 @@ Cordialement"
 - ✅ Mêmes services (formule Standard, Éco, Confort)
 - ✅ Même assurance
 
-**→ Avec Moverz, les devis sont automatiquement comparables** (même volume IA)
+**→ Avec Moverz, les devis sont automatiquement comparables** (même volume calculé)
 
 ---
 
 ## Comparez des déménageurs vérifiés maintenant
 
-**3 analyses de risque /100** · **Volume IA précis** · **Devis comparables** · **0 harcèlement** · **100% gratuit**
+**3 analyses de risque /100** · **Volume précis** · **Devis comparables** · **0 harcèlement** · **100% gratuit**
 
 [Obtenir mes devis vérifiés →](https://devis.moverz.fr/devis-gratuits)
 

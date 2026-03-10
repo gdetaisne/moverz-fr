@@ -132,13 +132,13 @@ C'est le modèle classique des plateformes de "comparaison" de déménagement : 
 #### Étape 1 : Vous créez un dossier complet (3 minutes)
 
 - Ville de départ/arrivée, date, type de logement
-- **L'IA calcule le volume** (précision 90-95%)
+- **Le système calcule le volume** à partir d'un inventaire guidé
 - Vous renseignez les accès (étage, ascenseur, parking)
 - **Aucun numéro de téléphone** n'est transmis aux déménageurs
 
 #### Étape 2 : Le dossier est transmis **anonymisé** à 5 déménageurs vérifiés
 
-- Chaque déménageur reçoit **exactement le même dossier** (volume IA, accès, options)
+- Chaque déménageur reçoit **exactement le même dossier** (volume calculé, accès, options)
 - Ils voient votre demande, mais **pas votre téléphone** ni votre nom complet
 - Ils déposent leur devis dans votre **espace personnel** sur Moverz
 

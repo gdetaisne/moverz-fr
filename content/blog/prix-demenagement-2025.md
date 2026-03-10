@@ -17,12 +17,12 @@ Dans ce guide ultra-complet, vous allez découvrir :
 
 - Les **fourchettes de prix réelles 2026** par type de logement (studio, T2, T3, maison)
 - Les **5 facteurs critiques** qui font varier le prix (volume, accès, distance, formule, période)
-- Comment **l'IA Moverz calcule votre volume précis en 1 minute** pour des devis comparables
+- Comment **obtenir une estimation précise de votre volume** pour des devis comparables
 - Les **pièges à éviter** (volume sous-estimé, devis non comparables)
 - Comment **optimiser votre budget** sans prendre de risques
 
 > **Calculer votre volume et comparer des devis**  
-> En 1 minute, l'IA Moverz estime votre volume en m³ et partage votre dossier avec jusqu'à 5 déménageurs évalués sur 3 risques /100 (financier Creditsafe + Pappers, juridique Pappers Décisions, avis Google) via [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix).
+> En 5-10 minutes, Moverz estime votre volume en m³ via un inventaire guidé et partage votre dossier avec jusqu'à 5 déménageurs évalués sur 3 risques /100 (financier Creditsafe + Pappers, juridique Pappers Décisions, avis Google) via [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix).
 
 ---
 

@@ -76,10 +76,10 @@ Cette fragmentation rend l'évaluation de la fiabilité très difficile pour un 
 **Conséquence** : Supplément de 300-500€ que vous êtes forcé de payer sur le moment.
 
 **Comment l'éviter** :
-- Exigez une visite technique ou utilisez une [estimation IA précise](/blog/estimer-volume-demenagement-guide-complet/)
+- Exigez une visite technique ou utilisez une [estimation précise via inventaire guidé](/blog/estimer-volume-demenagement-ia-vs-visite/)
 - Comparez les volumes estimés entre plusieurs devis (tous basés sur le même volume)
 - Méfiez-vous du devis le moins cher si le volume est différent des autres
-- Sur [Moverz](/comment-ca-marche/), l'IA calcule automatiquement votre volume (précision 90-95%), donc tous les devis partent du même cahier des charges
+- Sur [Moverz](/comment-ca-marche/), le système calcule votre volume à partir d'un inventaire détaillé, donc tous les devis partent du même cahier des charges
 
 ### 2. L'entreprise en difficulté financière
 
@@ -256,8 +256,8 @@ Chaque indicateur est présenté individuellement au client. Les déménageurs o
 → Impossible de comparer les prix !
 
 **Avec Moverz** :
-- Vous envoyez vos détails via WhatsApp
-- L'IA calcule un volume unique : 29 m³
+- Vous remplissez un inventaire guidé en ligne
+- Le système calcule un volume unique : 29 m³
 - Tous les déménageurs reçoivent le même dossier
 - → Les devis sont enfin comparables
 
@@ -328,7 +328,7 @@ Vérifiez son existence légale (SIREN sur societe.com), lisez les avis Google (
 
 ### Un déménageur peut-il augmenter le prix le jour J ?
 
-Oui, si le volume réel est supérieur au volume estimé. C'est pourquoi il est crucial d'avoir une [estimation précise dès le départ](/blog/estimer-volume-demenagement-guide-complet/). L'IA [Moverz](/comment-ca-marche/) calcule automatiquement un volume réaliste (précision 90-95%) pour éviter cette situation.
+Oui, si le volume réel est supérieur au volume estimé. C'est pourquoi il est crucial d'avoir une [estimation précise dès le départ](/blog/estimer-volume-demenagement-ia-vs-visite/). [Moverz](/comment-ca-marche/) calcule un volume à partir d'un inventaire détaillé pour éviter cette situation.
 
 ### Comment éviter les appels commerciaux après une demande de devis ?
 

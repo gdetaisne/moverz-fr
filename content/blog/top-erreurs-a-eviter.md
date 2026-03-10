@@ -16,10 +16,10 @@ Dans ce guide ultra-complet, vous allez découvrir :
 - Les **12 erreurs les plus fréquentes** (et les plus coûteuses)
 - Comment **les éviter concrètement**
 - Les **checklists pratiques** pour chaque phase
-- Comment **l'IA Moverz élimine 5 erreurs majeures** automatiquement
+- Comment **Moverz élimine 5 erreurs majeures** automatiquement
 
 > **Éviter les erreurs dès le départ**  
-> L'IA Moverz calcule votre volume précis en 1 minute, vous compare des devis fiables, et vous guide étape par étape via [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits).
+> Moverz calcule votre volume via un inventaire guidé (5-10 min), vous compare des devis fiables, et vous guide étape par étape via [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits).
 
 ---
 
@@ -47,10 +47,10 @@ Dans ce guide ultra-complet, vous allez découvrir :
 
 ### Comment l'éviter
 
-**Solution 1 : IA Moverz (1 minute)** ✅
-- L'app vous guide pièce par pièce
-- "Avez-vous une cave ?" → Si oui : "Prenez 3 détails"
-- L'IA calcule automatiquement : **38 m³**
+**Solution 1 : Inventaire guidé Moverz (5-10 min)** ✅
+- Le formulaire vous guide pièce par pièce
+- "Avez-vous une cave ?" → Si oui : décrivez le contenu
+- Le système calcule automatiquement : **38 m³**
 - **→ Volume précis dès le départ** ✅
 
 **Solution 2 : Inventaire manuel détaillé**
@@ -85,7 +85,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 **Comparez sur la même base de volume** ✅
 
 Avec Moverz :
-- L'IA calcule : 30 m³
+- Le système calcule : 30 m³
 - **Tous les déménageurs reçoivent 30 m³**
 - Devis A : 1 100€ (30 m³)
 - Devis B : 1 150€ (30 m³)
@@ -617,14 +617,14 @@ Avec Moverz :
 ### 1. Volume sous-estimé ✅
 
 **Sans Moverz** : Vous estimez à l'œil → Erreur 30-40%  
-**Avec Moverz** : IA calcule précis en 1 minute → Erreur < 5%
+**Avec Moverz** : Inventaire guidé en 5-10 min → Erreur < 10%
 
 ---
 
 ### 2. Devis non comparables ✅
 
 **Sans Moverz** : Chaque déménageur estime un volume différent  
-**Avec Moverz** : Tous reçoivent le même volume IA
+**Avec Moverz** : Tous reçoivent le même volume calculé
 
 ---
 
@@ -707,7 +707,7 @@ Avec Moverz :
 
 **Conséquence** : Supplément jour J + litige + client mécontent.
 
-**Solution** : IA Moverz calcule le volume précis en 1 minute.
+**Solution** : Inventaire guidé Moverz (5-10 min) pour un volume précis.
 
 ---
 

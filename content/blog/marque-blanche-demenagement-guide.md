@@ -1,7 +1,7 @@
 ---
 title: "Marque blanche déménagement : guide complet (2025)"
 slug: "marque-blanche-demenagement-guide"
-description: "Marque blanche déménagement : créez votre comparateur en 48h. White-label Moverz avec vérifications, IA volumétrie. Prix 2025."
+description: "Marque blanche déménagement : créez votre comparateur en 48h. White-label Moverz avec vérifications, calcul volumétrie. Prix 2025."
 category: "conseils-demenagement"
 publishedAt: "2025-12-11"
 updatedAt: "2025-12-11"
@@ -28,8 +28,8 @@ Dans ce guide, vous allez découvrir :
 
 ### Exemple concret
 
-**Vous** : Déménagements Dupont  
-**Outil** : Widget IA volumétrie de Moverz
+**Vous** : Déménagements Dupont
+**Outil** : Widget volumétrie de Moverz
 
 **Sans marque blanche** :
 ```
@@ -89,12 +89,12 @@ Votre client navigue sur votre site → Il clique sur "Calculer mon volume" → 
 
 **Sans marque blanche**, le client mémorise **deux marques** :
 1. La vôtre (Déménagements Dupont)
-2. Celle du tiers (VolumetrieIA)
+2. Celle du tiers (VolumeEstim)
 
 **Risque** :
-- Le client se souvient de "VolumetrieIA"
-- Il fait une recherche Google : "VolumetrieIA"
-- Il découvre que VolumetrieIA recommande d'autres déménageurs
+- Le client se souvient de "VolumeEstim"
+- Il fait une recherche Google : "VolumeEstim"
+- Il découvre que VolumeEstim recommande d'autres déménageurs
 - **→ Vous perdez le client** ❌
 
 ---
@@ -534,7 +534,7 @@ Moverz Pro propose **1 configuration par clé API**. Si vous avez 3 enseignes, v
 
 **Techniquement oui** (s'il inspecte le code source du site), mais :
 1. 99,9% des clients ne regardent pas le code source
-2. Même s'ils le voient, ça ne pose pas de problème ("Ah, ils utilisent une IA développée par Moverz, c'est bien")
+2. Même s'ils le voient, ça ne pose pas de problème ("Ah, ils utilisent un outil développé par Moverz, c'est bien")
 
 **En pratique : 0 client ne découvrira jamais** que vous utilisez Moverz.
 
@@ -565,7 +565,7 @@ Moverz Pro propose **1 configuration par clé API**. Si vous avez 3 enseignes, v
 - Moverz n'utilise pas vos données à des fins commerciales
 - Moverz ne revend pas vos données
 
-**Seul usage** : Amélioration de l'IA (anonymisation totale, aucune donnée personnelle).
+**Seul usage** : Amélioration du service (anonymisation totale, aucune donnée personnelle).
 
 **Conformité** : RGPD, hébergement France (OVH).
 
