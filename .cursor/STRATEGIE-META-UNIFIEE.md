@@ -85,7 +85,7 @@ Déménagement France dès 450€ | des devis 48h | Contrôlés
 
 **Description** (160 car) :
 ```
-450€ minimum. Recevez des devis comparables en 48h. IA calcule volume = 0 écart prix jour J. 
+450€ minimum. Recevez des devis comparables en 48h. Volume calculé = 0 écart prix jour J.
 Dossier anonyme, 0 harcèlement. 1200+ déménagements ⭐4.9/5. Gratuit.
 ```
 
@@ -151,7 +151,7 @@ const prices = getLocalPricesForMeta(city.slug);
 |--------|-------------------|-------------|---------|
 | **Prix title** | ✅ "dès 450€" | ✅ "dès 330€" (réel calculé) | **V3** (prix vrai) |
 | **Délai** | ❌ "48h" (faux) | ✅ "5-7j" (vrai) | **V3** (honnête) |
-| **USP IA** | "IA calcule volume" | **"comparés par IA"** | **V3** (plus fort) |
+| **USP volume** | "Volume calculé" | **"Volume comparé précis"** | **V3** (plus fort) |
 | **Cohérence** | ⚠️ Meta ≠ contenu | ✅ Meta = contenu | **V3** (trust) |
 
 **Conclusion** : V3 sacrifie peut-être 5-10% CTR immédiat mais **gagne 30-50% conversion** (zéro déception)
@@ -269,7 +269,7 @@ Déménageurs locaux contrôlés, dossier anonyme, 0€.
 
 **Description** :
 ```
-Déménager à {Ville} dès 450€. des devis comparables en 48h. IA calcule volume = 0 écart jour J. 
+Déménager à {Ville} dès 450€. des devis comparables en 48h. Volume calculé = 0 écart jour J. 
 Dossier anonyme, 0 spam. {cityHint}. Gratuit.
 ```
 

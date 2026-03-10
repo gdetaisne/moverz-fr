@@ -161,7 +161,7 @@
 2. Combien de devis vais-je recevoir ?
 3. En combien de temps je reçois les devis ?
 4. C'est vraiment gratuit ?
-5. Comment l'IA calcule-t-elle le volume ?
+5. Comment le volume est-il calculé ?
 
 **Impact** : Déjà déployé (Étape 2) → Rich snippets FAQ
 

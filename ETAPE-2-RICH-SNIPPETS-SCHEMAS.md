@@ -29,7 +29,7 @@
 2. Combien de devis vais-je recevoir ?
 3. En combien de temps je reçois les devis ?
 4. C'est vraiment gratuit ?
-5. Comment l'IA calcule-t-elle le volume ?
+5. Comment le volume est-il calculé ?
 
 **Impact attendu** : +20-30% CTR sur homepage  
 **Raison** : Rich snippets FAQ visibles dans SERP = plus de visibilité
@@ -201,7 +201,7 @@ const faqSchema = {
       "name": "Combien coûte un déménagement avec Moverz ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Dès 450€ minimum. Recevez des devis comparables en 48h pour comparer les prix. L'IA calcule votre volume précis pour éviter tout écart prix le jour J."
+        "text": "Dès 450€ minimum. Recevez des devis comparables en 48h pour comparer les prix. Le système calcule votre volume via un inventaire guidé pour éviter tout écart prix le jour J."
       }
     },
     // ... 4 autres questions

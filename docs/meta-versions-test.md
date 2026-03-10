@@ -110,7 +110,7 @@ Ces éléments DOIVENT être présents dans toutes les versions :
 
 **Ancienne version (19 janvier - 27 février 2026) :**
 - Title : "3 Devis Déménagement Gratuits · 0 Appel · Pros Vérifiés | Moverz"
-- Description : "Note 4.9/5 ⭐ · 3 devis comparables garantis (IA calcule volume précis)..."
-- **Problème identifié :** Trop technique, manque d'accroche émotionnelle, "IA" peu compris
+- Description : "Note 4.9/5 ⭐ · 3 devis comparables garantis (volume calculé précis)..."
+- **Problème identifié :** Trop technique, manque d'accroche émotionnelle
 
 **Changement clé :** Passage de features techniques → promesses émotionnelles + différenciateurs clairs

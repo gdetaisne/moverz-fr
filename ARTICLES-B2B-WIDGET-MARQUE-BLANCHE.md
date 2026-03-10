@@ -143,8 +143,8 @@
 
 1. **Intégration** : Copier-coller 1 script sur votre site (5 min)
 2. **Personnalisation** : Vos couleurs, votre logo via dashboard
-3. **Utilisation** : Client prend détails, IA calcule volume (1 min)
-4. **Réception** : Vous recevez dossier complet (volume + détails + accès)
+3. **Utilisation** : Client remplit inventaire guidé, système calcule volume (5-10 min)
+4. **Réception** : Vous recevez dossier complet (volume + inventaire + accès)
 
 ### Tarifs
 

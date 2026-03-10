@@ -39,7 +39,7 @@ Tu as dit : *"J'ai vu que les FAQ que tu préparais c'était n'importe quoi"*
 ### Options proposées :
 
 **Option A (technique):**
-> "Seul comparateur avec qualification détail IA (précision 90-95%)"
+> "Seul comparateur avec qualification par inventaire guidé détaillé"
 
 **Option B (UX):**
 > "Seul comparateur anti-harcèlement avec dossier anonyme"

@@ -41,12 +41,12 @@ Les anciennes metas des sites locaux (devis-demenageur-marseille.fr, etc.) avaie
 ### **Template DESCRIPTION (150-160 caractères)**
 
 ```
-{Prix détail}. des devis comparables en 48h. IA calcule volume = {bénéfice concret}. Dossier anonyme, 0 {pain point}. {Social proof}. {Trust local}. Gratuit.
+{Prix détail}. des devis comparables en 48h. Volume calculé précis = {bénéfice concret}. Dossier anonyme, 0 {pain point}. {Social proof}. {Trust local}. Gratuit.
 ```
 
 **Exemples déployés** :
-- Homepage : `450€ minimum. Recevez des devis comparables en 48h. IA calcule volume = 0 écart prix jour J. Dossier anonyme, 0 harcèlement. 1200+ déménagements ⭐4.9/5. Gratuit.`
-- Nice : `Déménager à Nice dès 450€. des devis comparables en 48h. IA calcule volume = 0 écart jour J. Dossier anonyme, 0 spam. Pros contrôlés Nice. Gratuit.`
+- Homepage : `450€ minimum. Recevez des devis comparables en 48h. Volume calculé = 0 écart prix jour J. Dossier anonyme, 0 harcèlement. 1200+ déménagements ⭐4.9/5. Gratuit.`
+- Nice : `Déménager à Nice dès 450€. des devis comparables en 48h. Volume calculé = 0 écart jour J. Dossier anonyme, 0 spam. Pros contrôlés Nice. Gratuit.`
 
 ---
 
@@ -63,7 +63,7 @@ description: "⚡ 1 min · IA estime volume → devis comparables..."
 **Après (V2)** :
 ```typescript
 title: "Déménagement France dès 450€ | des devis 48h | Contrôlés"
-description: "450€ minimum. Recevez des devis comparables en 48h. IA calcule volume = 0 écart prix jour J. Dossier anonyme, 0 harcèlement. 1200+ déménagements ⭐4.9/5. Gratuit."
+description: "450€ minimum. Recevez des devis comparables en 48h. Volume calculé = 0 écart prix jour J. Dossier anonyme, 0 harcèlement. 1200+ déménagements ⭐4.9/5. Gratuit."
 ```
 
 **Gains attendus** :
@@ -86,14 +86,14 @@ Idem homepage (metadata par défaut pour toutes les pages sans override).
 
 **Avant (V1)** :
 ```typescript
-title: `Déménagement ${city.nameCapitalized} en 1 Min ⚡ IA + 0 Appel | 3 Devis`
-description: `⚡ 1 min · IA calcule volume à ${city.nameCapitalized}...`
+title: `Déménagement ${city.nameCapitalized} en 1 Min ⚡ Volume + 0 Appel | 3 Devis`
+description: `⚡ 5-10 min · Volume calculé à ${city.nameCapitalized}...`
 ```
 
 **Après (V2)** :
 ```typescript
 title: `Déménagement ${city.nameCapitalized} dès 450€ | des devis 48h | Contrôlés`
-description: `Déménager à ${city.nameCapitalized} dès 450€. des devis comparables en 48h. IA calcule volume = 0 écart jour J. Dossier anonyme, 0 spam. ${cityHint(city.slug, city.nameCapitalized)} Gratuit.`
+description: `Déménager à ${city.nameCapitalized} dès 450€. des devis comparables en 48h. Volume calculé = 0 écart jour J. Dossier anonyme, 0 spam. ${cityHint(city.slug, city.nameCapitalized)} Gratuit.`
 ```
 
 **cityHint() adapté** :
@@ -112,9 +112,9 @@ function cityHint(citySlug: string, cityName: string): string {
 
 **Exemples concrets** :
 - Nice : `Déménagement Nice dès 450€ | des devis 48h | Contrôlés`
-  - Description : "Déménager à Nice dès 450€. des devis comparables en 48h. IA calcule volume = 0 écart jour J. Dossier anonyme, 0 spam. Pros contrôlés Nice. Gratuit."
+  - Description : "Déménager à Nice dès 450€. des devis comparables en 48h. Volume calculé = 0 écart jour J. Dossier anonyme, 0 spam. Pros contrôlés Nice. Gratuit."
 - Paris (friction élevée) : `Déménagement Paris dès 450€ | des devis 48h | Contrôlés`
-  - Description : "Déménager à Paris dès 450€. des devis comparables en 48h. IA calcule volume = 0 écart jour J. Dossier anonyme, 0 spam. Accès & parking Paris inclus. Gratuit."
+  - Description : "Déménager à Paris dès 450€. des devis comparables en 48h. Volume calculé = 0 écart jour J. Dossier anonyme, 0 spam. Accès & parking Paris inclus. Gratuit."
 
 ---
 
@@ -144,7 +144,7 @@ description: `${def.description(city.nameCapitalized)} des devis comparables en 
 | **Délai** | ⚠️ "7j" | ✅ "48h" | +20-30% CTR |
 | **Volume devis** | ✅ "des devis" | ✅ "des devis" | Stable (réaliste) |
 | **"Comparables"** | ⚠️ Peu présent | ✅ Très présent | +15-20% CTR |
-| **Bénéfice IA** | ⚠️ "IA calcule" | ✅ "IA = 0 écart jour J" | +20-25% CTR |
+| **Bénéfice volume** | ⚠️ "Volume calculé" | ✅ "Volume = 0 écart jour J" | +20-25% CTR |
 | **Social proof** | ⚠️ "500+ avis" | ✅ "1200+ déménagements ⭐4.9/5" | +10-15% CTR |
 | **Anti-spam** | ✅ "0 appel" | ✅ "0 harcèlement" | Stable (fort) |
 | **Emojis** | ❌ Trop (⚡🔒✅💰) | ✅ Juste (⭐) | +5-10% CTR |
@@ -209,10 +209,10 @@ description: `${def.description(city.nameCapitalized)} des devis comparables en 
 
 ---
 
-### 4. **Bénéfice IA concret**
+### 4. **Bénéfice volume concret**
 
-**V1** : "IA calcule volume" (feature)  
-**V2** : "IA calcule volume = 0 écart jour J" (bénéfice)
+**V1** : "Volume calculé" (feature)  
+**V2** : "Volume calculé = 0 écart jour J" (bénéfice)
 
 **Psychologie** :
 - Feature (V1) = "c'est bien mais pourquoi ?"
@@ -325,7 +325,7 @@ Devis Déménagement en 1 Min ⚡ IA Volume + 0 Appel | Note 4.9★
 **Après (V2)** :
 ```
 Déménagement France dès 450€ | des devis 48h | Contrôlés
-450€ minimum. Recevez des devis comparables en 48h. IA calcule volume = 0 écart prix...
+450€ minimum. Recevez des devis comparables en 48h. Volume calculé = 0 écart prix...
 ```
 
 **Pourquoi V2 est plus cliquable** :
@@ -341,14 +341,14 @@ Déménagement France dès 450€ | des devis 48h | Contrôlés
 
 **Avant (V1)** :
 ```
-Déménagement Nice en 1 Min ⚡ IA + 0 Appel | 3 Devis
-⚡ 1 min · IA calcule volume à Nice → devis précis · 3+ pros contrôlés · 🔒 0 appel...
+Déménagement Nice en 5-10 Min ⚡ Volume + 0 Appel | 3 Devis
+⚡ 5-10 min · Volume calculé à Nice → devis précis · 3+ pros contrôlés · 🔒 0 appel...
 ```
 
 **Après (V2)** :
 ```
 Déménagement Nice dès 450€ | des devis 48h | Contrôlés
-Déménager à Nice dès 450€. des devis comparables en 48h. IA calcule volume = 0 écart...
+Déménager à Nice dès 450€. des devis comparables en 48h. Volume calculé = 0 écart...
 ```
 
 **Gains** :
