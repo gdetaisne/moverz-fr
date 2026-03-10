@@ -5,11 +5,6 @@ import { CITIES } from "@/lib/cities";
 import { QUARTIER_HUB_SLUGS } from "@/lib/quartiers";
 import { verifySession } from "@/lib/admin/auth";
 
-// Force Node.js runtime instead of Edge runtime for crypto support
-export const config = {
-  runtime: 'nodejs',
-};
-
 // NOTE: exclude "ile-de-france" from corridors because it's a region, not a city-to-city route.
 const CITY_SLUGS = new Set(CITIES.filter((c) => c && c.slug).map((c) => c.slug).filter((s) => s !== "ile-de-france"));
 const QUARTIERS_SLUGS = new Set<string>(QUARTIER_HUB_SLUGS as unknown as string[]);
@@ -313,6 +308,7 @@ export async function middleware(req: NextRequest, event: NextFetchEvent) {
 
 export const config = {
   matcher: ["/:path*"],
+  runtime: 'nodejs',
 };
 
 
