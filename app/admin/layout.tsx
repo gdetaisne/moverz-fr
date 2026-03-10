@@ -40,18 +40,21 @@ export default function AdminLayout({
                 </span>
               </Link>
               <div className="hidden md:flex items-center space-x-1">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="px-4 py-2 font-sans text-sm font-500 text-v4-text-secondary 
-                             hover:text-accent hover:bg-accent/5 rounded-xl
-                             transition-all duration-300"
-                  >
-                    <span className="mr-1.5">{item.icon}</span>
-                    {item.label}
-                  </Link>
-                ))}
+                {navItems.map((item) => {
+                  const Icon = item.Icon;
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="flex items-center gap-2 px-4 py-2 font-sans text-sm font-500 text-v4-text-secondary 
+                               hover:text-accent hover:bg-accent/5 rounded-xl
+                               transition-all duration-300"
+                    >
+                      <Icon className="w-4 h-4" />
+                      {item.label}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
             <div className="flex items-center space-x-4">
