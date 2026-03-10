@@ -1,18 +1,26 @@
 import { createHash, randomBytes } from 'crypto';
 
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || '';
 const SESSION_SECRET = process.env.SESSION_SECRET || 'fallback-secret-key';
 const SESSION_DURATION = 7 * 24 * 60 * 60 * 1000;
 
-export function hashPassword(password: string): string {
+export function hashPassword(password: string, secret: string = SESSION_SECRET): string {
   return createHash('sha256')
-    .update(password + SESSION_SECRET)
+    .update(password + secret)
     .digest('hex');
 }
 
 export function verifyPassword(inputPassword: string): boolean {
-  const hashedInput = hashPassword(inputPassword);
-  const hashedAdmin = hashPassword(ADMIN_PASSWORD);
+  // ⚠️ IMPORTANT: Lire depuis process.env à chaque vérification (pas de cache)
+  const adminPassword = process.env.ADMIN_PASSWORD || '';
+  const sessionSecret = process.env.SESSION_SECRET || 'fallback-secret-key';
+  
+  if (!adminPassword) {
+    console.error('[AUTH ERROR] ADMIN_PASSWORD not set in environment!');
+    return false;
+  }
+  
+  const hashedInput = hashPassword(inputPassword, sessionSecret);
+  const hashedAdmin = hashPassword(adminPassword, sessionSecret);
   return hashedInput === hashedAdmin;
 }
 
