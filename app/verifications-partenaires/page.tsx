@@ -10,7 +10,7 @@ import { Check, Star, ShieldCheck, Scale, Sparkles, ArrowRight } from "lucide-re
 export const metadata: Metadata = getFullMetadata(
   "verifications-partenaires",
   "Comment Moverz vérifie les déménageurs | Score /100 (3 dimensions)",
-  "Moverz attribue à chaque déménageur un Score /100 calculé à partir de 5 sous-scores indépendants regroupés en 3 dimensions : fiabilité légale 25% (Pappers financier + juridique), satisfaction clients 40% (Google + réputation IA), alertes 35% (vigilance IA). Score < 50/100 = exclusion automatique."
+  "Moverz attribue à chaque déménageur un Score /100 calculé à partir de 5 sous-scores indépendants regroupés en 3 dimensions : fiabilité légale 25% (Pappers financier + juridique), satisfaction clients 40% (Google + analyse réputation), alertes 35% (analyse vigilance). Score < 50/100 = exclusion automatique."
 );
 
 export default function VerificationsPartenairesPage() {
@@ -18,17 +18,17 @@ export default function VerificationsPartenairesPage() {
     {
       question: "Comment est calculé le Score Moverz ?",
       answer:
-        "Le Score Moverz est un score de 0 à 100 calculé automatiquement à partir de 5 sous-scores indépendants : (1) Score Financier 12,5% (Pappers : résultat net, fonds propres, trésorerie, endettement, tendance), (2) Score Juridique 12,5% (BODACC + Pappers Décisions : procédures, litiges, malus selon gravité/récence), (3) Score Google 20% (note pondérée par volume d'avis), (4) Score Réputation 20% (ratio positifs/négatifs sur tous les avis authentiques 12 mois), (5) Score Vigilance 35% (analyse IA de 6 catégories d'alertes). Ces 5 sous-scores sont regroupés en 3 dimensions client : Fiabilité légale, Satisfaction clients, Alertes.",
+        "Le Score Moverz est un score de 0 à 100 calculé automatiquement à partir de 5 sous-scores indépendants : (1) Score Financier 12,5% (Pappers : résultat net, fonds propres, trésorerie, endettement, tendance), (2) Score Juridique 12,5% (BODACC + Pappers Décisions : procédures, litiges, malus selon gravité/récence), (3) Score Google 20% (note pondérée par volume d'avis), (4) Score Réputation 20% (ratio positifs/négatifs sur tous les avis authentiques 12 mois), (5) Score Vigilance 35% (analyse automatisée de 6 catégories d'alertes). Ces 5 sous-scores sont regroupés en 3 dimensions client : Fiabilité légale, Satisfaction clients, Alertes.",
     },
     {
       question: "Que signifient les 3 dimensions du scoring ?",
       answer:
-        "Les 3 dimensions regroupent les 5 sous-scores pour une présentation claire : (1) Fiabilité légale 25% = Score Financier + Score Juridique (santé financière + casier juridique), (2) Satisfaction clients 40% = Score Google + Score Réputation (note pondérée + analyse de tous les avis 12 mois), (3) Alertes 35% = Score Vigilance (détection IA de 6 catégories de problèmes récurrents : casses 30%, vols 30%, retards 10%, prix modifiés 10%, personnel 10%, autres 10%). Le score d'une dimension est la moyenne pondérée de ses sous-scores.",
+        "Les 3 dimensions regroupent les 5 sous-scores pour une présentation claire : (1) Fiabilité légale 25% = Score Financier + Score Juridique (santé financière + casier juridique), (2) Satisfaction clients 40% = Score Google + Score Réputation (note pondérée + analyse de tous les avis 12 mois), (3) Alertes 35% = Score Vigilance (détection automatisée de 6 catégories de problèmes récurrents : casses 30%, vols 30%, retards 10%, prix modifiés 10%, personnel 10%, autres 10%). Le score d'une dimension est la moyenne pondérée de ses sous-scores.",
     },
     {
       question: "Comment fonctionne la détection des faux avis ?",
       answer:
-        "Notre système détecte automatiquement les avis suspects via 4 heuristiques : (1) Texte <10 mots ou vide, (2) Auteur en doublon dans la liste, (3) Rafale : ≥3 avis 5★ la même semaine, (4) Avis 5★ sans texte. Un avis est considéré suspect si ≥2 critères sont remplis. Ces avis sont exclus du calcul des scores Réputation et Vigilance. Seuls les avis authentiques sont utilisés pour les ratios et l'analyse IA.",
+        "Notre système détecte automatiquement les avis suspects via 4 heuristiques : (1) Texte <10 mots ou vide, (2) Auteur en doublon dans la liste, (3) Rafale : ≥3 avis 5★ la même semaine, (4) Avis 5★ sans texte. Un avis est considéré suspect si ≥2 critères sont remplis. Ces avis sont exclus du calcul des scores Réputation et Vigilance. Seuls les avis authentiques sont utilisés pour les ratios et l'analyse.",
     },
     {
       question: "Que se passe-t-il si un déménageur a un score < 50/100 ?",
@@ -141,18 +141,18 @@ export default function VerificationsPartenairesPage() {
                     "Cache 7 jours pour données Google",
                     "Seuls les avis authentiques sont comptabilisés (exclusion des suspects : texte <10 mots, doublons, rafales 5★)",
                   ],
-                  highlight: "Sources : Google Places API + SearchAPI.io + Analyse IA (GPT-4o-mini)",
+                  highlight: "Sources : Google Places API + SearchAPI.io + Analyse automatisée",
                 },
                 {
                   title: "3) Alertes (35% du score global)",
                   desc: "Cette dimension analyse automatiquement les avis négatifs (≤4★) des 12 derniers mois pour détecter 6 catégories de problèmes récurrents.",
                   bullets: [
-                    "Score Vigilance 35% : analyse IA de 6 catégories (Casse 30%, Vol 30%, Calendrier 10%, Prix 10%, Personnel 10%, Autres 10%)",
+                    "Score Vigilance 35% : analyse automatisée de 6 catégories (Casse 30%, Vol 30%, Calendrier 10%, Prix 10%, Personnel 10%, Autres 10%)",
                     "Chaque catégorie notée selon ratio signalements/avis authentiques : <1% → 100pts, 1-3% → 50pts, >3% → 0pts (alerte rouge)",
-                    "0 avis négatifs authentiques sur 12 mois = vigilance automatique 100/100 (sans appel IA)",
-                    "Le déménageur peut prendre des engagements validés par IA → catégorie passe à 100pts si approuvé",
+                    "0 avis négatifs authentiques sur 12 mois = vigilance automatique 100/100",
+                    "Le déménageur peut prendre des engagements validés automatiquement → catégorie passe à 100pts si approuvé",
                   ],
-                  highlight: "Analyse IA structurée de 6 catégories de risques comportementaux",
+                  highlight: "Analyse automatisée structurée de 6 catégories de risques comportementaux",
                 },
                 {
                   title: "Vérifications complémentaires",
@@ -202,12 +202,12 @@ export default function VerificationsPartenairesPage() {
                 {
                   icon: <Star className="w-4 h-4" style={{ color: "#0EA5A6" }} />,
                   title: "Satisfaction clients (40%)",
-                  desc: "Score Google + Score Réputation. Note Google pondérée par volume + analyse IA de TOUS les avis des 12 derniers mois (jusqu'à 500 avis). Détection automatique des faux avis.",
+                  desc: "Score Google + Score Réputation. Note Google pondérée par volume + analyse automatisée de TOUS les avis des 12 derniers mois (jusqu'à 500 avis). Détection automatique des faux avis.",
                 },
                 {
                   icon: <Scale className="w-4 h-4" style={{ color: "#0EA5A6" }} />,
                   title: "Alertes (35%)",
-                  desc: "Score Vigilance. Analyse IA de 6 catégories d'alertes dans les avis négatifs : casses (30%), vols (30%), retards (10%), prix modifiés (10%), personnel (10%), autres (10%). Ratio >3% = alerte rouge.",
+                  desc: "Score Vigilance. Analyse automatisée de 6 catégories d'alertes dans les avis négatifs : casses (30%), vols (30%), retards (10%), prix modifiés (10%), personnel (10%), autres (10%). Ratio >3% = alerte rouge.",
                 },
                 {
                   icon: <Check className="w-4 h-4" style={{ color: "#0EA5A6" }} />,

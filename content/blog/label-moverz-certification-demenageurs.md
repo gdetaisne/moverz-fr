@@ -28,7 +28,7 @@ Un particulier ne peut pas :
 - Analyser les bilans financiers sur Pappers Pro
 - Consulter les décisions de justice (BODACC)
 - Analyser systématiquement tous les avis Google des 12 derniers mois
-- Détecter les patterns d'alertes récurrents par IA
+- Détecter les patterns d'alertes récurrents automatiquement
 - Décrypter les signaux d'une faillite imminente
 
 **C'est pour ça qu'existe le Score Moverz.**
@@ -81,7 +81,7 @@ Ces 5 sous-scores sont regroupés en **3 dimensions** pour une présentation cla
 | Dimension | Poids | Sous-scores inclus | Ce qu'on mesure |
 |-----------|-------|-------------------|-----------------|
 | **🔒 Fiabilité légale** | 25% | Financier (12,5%) + Juridique (12,5%) | Santé financière (bilans, trésorerie) + absence de procédures judiciaires |
-| **⭐ Satisfaction clients** | 40% | Google (20%) + Réputation (20%) | Note Google pondérée + analyse IA de tous les avis 12 mois |
+| **⭐ Satisfaction clients** | 40% | Google (20%) + Réputation (20%) | Note Google pondérée + analyse automatisée de tous les avis 12 mois |
 | **🚨 Alertes** | 35% | Vigilance (35%) | Détection de 6 catégories de problèmes récurrents (casses, vols, retards…) |
 
 ---
@@ -91,7 +91,7 @@ Ces 5 sous-scores sont regroupés en **3 dimensions** pour une présentation cla
 ### 1. Score Financier (12,5%)
 
 **Source :** Pappers (registre du commerce)  
-**Méthode :** Rule-based (pas d'IA)  
+**Méthode :** Rule-based  
 **Cache :** 30 jours
 
 #### Critères évalués
@@ -185,7 +185,7 @@ Score Google: 84 + 10 = 94/100 ✓
 
 ### 4. Score Réputation (20%)
 
-**Source :** SearchAPI.io (tous les avis Google sur 12 mois, max 500) + IA (GPT-4o-mini)  
+**Source :** SearchAPI.io (tous les avis Google sur 12 mois, max 500) + analyse automatisée  
 **Méthode :** Rule-based sur avis authentiques uniquement  
 **Cache :** 7 jours
 
@@ -235,8 +235,8 @@ Score Réputation: (1 - 0.17) × 100 = 83/100 ✓
 
 ### 5. Score Vigilance (35%)
 
-**Source :** SearchAPI.io (avis ≤ 4★, 12 mois) + IA (GPT-4o-mini)  
-**Méthode :** 6 catégories fixes analysées par IA  
+**Source :** SearchAPI.io (avis ≤ 4★, 12 mois) + analyse automatisée
+**Méthode :** 6 catégories fixes analysées automatiquement
 **Cache :** 7 jours
 
 #### Les 6 catégories d'alertes
@@ -248,7 +248,7 @@ Score Réputation: (1 - 0.17) × 100 = 83/100 ✓
 | **Calendrier non respecté** | 10% | retard, délai non tenu, pas livré à temps |
 | **Prix modifié** | 10% | surfacturation, supplément surprise, arnaque prix |
 | **Personnel désagréable** | 10% | impoli, agressif, grossier, irrespectueux |
-| **Autres problèmes** | 10% | (classification résiduelle IA) |
+| **Autres problèmes** | 10% | (classification résiduelle) |
 
 #### Score par catégorie
 
@@ -299,7 +299,7 @@ Catégorie Calendrier:
 Score Vigilance final: 0+30+5+10+8+10 = 63/100 ✓
 ```
 
-**Cas spécial :** 0 avis négatifs authentiques sur 12 mois → Vigilance automatiquement 100/100 (sans appel IA)
+**Cas spécial :** 0 avis négatifs authentiques sur 12 mois → Vigilance automatiquement 100/100
 
 ---
 
@@ -310,7 +310,7 @@ Le déménageur peut **répondre à chaque catégorie** via sa fiche publique.
 Exemple d'engagement validé :
 > "Suite aux 2 signalements de casse, nous avons mis en place un double emballage systématique pour tous les objets fragiles et une formation renforcée de nos équipes sur la manipulation. Nous prenons désormais des photos avant/après chaque chargement."
 
-Une IA valide si l'engagement est **concret et actionnable**.  
+Notre système valide automatiquement si l'engagement est **concret et actionnable**.  
 Si approuvé → **la catégorie passe à 100/100** (dismissed).
 
 ---
@@ -486,13 +486,13 @@ Sur 3000+ déménageurs analysés :
 Un déménageur peut améliorer son score :
 1. **Maintenir une bonne santé financière** (bilans positifs, trésorerie saine)
 2. **Répondre aux avis négatifs** de façon constructive
-3. **Prendre des engagements concrets** sur les catégories d'alertes (validés par IA)
+3. **Prendre des engagements concrets** sur les catégories d'alertes (validés automatiquement)
 4. **Éviter les nouveaux signalements** sur les catégories à problème
 
 **Exemple :**
 ```
 Déménageur avec Score Vigilance 40/100 (2% avis signalent casses):
-→ Prend engagement validé par IA (double emballage, photos avant/après)
+→ Prend engagement validé automatiquement (double emballage, photos avant/après)
 → 0 nouveau signalement casse sur 3 mois
 → Score Vigilance passe à 85/100 (catégorie casse dismissed)
 → Score Global monte de 58 → 72/100
@@ -502,14 +502,14 @@ Déménageur avec Score Vigilance 40/100 (2% avis signalent casses):
 
 ## Comparaison avec d'autres labels/certifications
 
-| Label/Certification | Qui attribue ? | Vérifie finances ? | Analyse avis IA ? | Monitoring ? | Coût ? |
+| Label/Certification | Qui attribue ? | Vérifie finances ? | Analyse avis auto ? | Monitoring ? | Coût ? |
 |---------------------|----------------|-------------------|------------------|--------------|--------|
-| **Score Moverz** | Automatique (IA + data) | ✓ Oui (Pappers) | ✓ Oui (GPT-4o) | ✓ 7 jours | Gratuit |
+| **Score Moverz** | Automatique (algorithmes + data) | ✓ Oui (Pappers) | ✓ Oui | ✓ 7 jours | Gratuit |
 | **Qualipro Déménagement** | Organisme pro | ✗ Non | ✗ Non | ✗ Annuel | ~500€/an |
 | **NF Service Déménagement** | AFNOR | ✗ Non | ✗ Non | ✗ 18 mois | ~2000€/an |
 | **Certification ISO 9001** | Bureau contrôle | ✗ Non (process) | ✗ Non | ✗ 3 ans | ~5000€/an |
 
-**Différence majeure : Moverz est le seul à vérifier la solvabilité financière ET analyser systématiquement les avis par IA en continu.**
+**Différence majeure : Moverz est le seul à vérifier la solvabilité financière ET analyser systématiquement les avis en continu.**
 
 ---
 
@@ -520,7 +520,7 @@ Déménageur avec Score Vigilance 40/100 (2% avis signalent casses):
 Le score Moverz agrège automatiquement des données issues de **4 sources indépendantes** :
 - Les bilans comptables publiés au registre du commerce (via Pappers)
 - Les décisions de justice (BODACC)
-- Les avis Google (analysés par IA sur les 12 derniers mois via SearchAPI.io)
+- Les avis Google (analysés automatiquement sur les 12 derniers mois via SearchAPI.io)
 - Une détection de signaux d'alerte récurrents dans les avis clients (6 catégories)
 
 **5 sous-scores → 3 dimensions → 1 score global /100**

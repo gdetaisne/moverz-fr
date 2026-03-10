@@ -24,7 +24,7 @@ const scores = [
     score: 76,
     color: "#16A34A",
     weight: "40%",
-    sources: ["Google Places API", "SearchAPI.io", "Analyse IA"],
+    sources: ["Google Places API", "SearchAPI.io", "Analyse automatisée"],
     checks: [
       "Note Google pondérée par le volume",
       "Tous les avis analysés sur 12 mois",
@@ -37,7 +37,7 @@ const scores = [
     score: 72,
     color: "#16A34A",
     weight: "35%",
-    sources: ["Avis négatifs 12 mois", "Analyse IA GPT-4o", "6 catégories"],
+    sources: ["Avis négatifs 12 mois", "Analyse automatisée", "6 catégories"],
     checks: [
       "Détection casses et dégradations",
       "Détection vols et disparitions",

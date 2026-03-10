@@ -23,12 +23,27 @@ export async function POST() {
   try {
     console.log('[SCRAPING] Starting competitor scraping...');
     
+    // Initialiser le fichier depuis le seed si nécessaire
     const competitorsPath = join(process.cwd(), 'data', 'competitor-blogs.json');
+    const seedPath = join(process.cwd(), 'data', 'competitor-blogs.seed.json');
+    
     if (!existsSync(competitorsPath)) {
-      return NextResponse.json(
-        { error: 'Fichier competitor-blogs.json introuvable' },
-        { status: 500 }
-      );
+      console.log('[SCRAPING] Initializing competitor-blogs.json from seed...');
+      const dataDir = join(process.cwd(), 'data');
+      if (!existsSync(dataDir)) {
+        mkdirSync(dataDir, { recursive: true });
+      }
+      
+      if (existsSync(seedPath)) {
+        const seedData = readFileSync(seedPath, 'utf-8');
+        writeFileSync(competitorsPath, seedData, 'utf-8');
+        console.log('[SCRAPING] ✅ competitor-blogs.json initialized from seed');
+      } else {
+        return NextResponse.json(
+          { error: 'Fichier seed competitor-blogs.seed.json introuvable' },
+          { status: 500 }
+        );
+      }
     }
     
     const competitors: CompetitorBlog[] = JSON.parse(readFileSync(competitorsPath, 'utf-8'));

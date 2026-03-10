@@ -45,7 +45,7 @@ export default function CreditsafeScoring() {
             <motion.p variants={staggerItem} className="text-lg text-white/50 leading-relaxed mb-8">
               Chaque déménageur reçoit un score de 0 à 100 basé sur{" "}
               <strong className="text-white">3 dimensions</strong>{" "}
-              (fiabilité légale 25%, satisfaction clients 40%, alertes 35%) calculées à partir de 5 sous-scores indépendants via Pappers, Google Places et analyse IA.
+              (fiabilité légale 25%, satisfaction clients 40%, alertes 35%) calculées à partir de 5 sous-scores indépendants via Pappers, Google Places et analyse automatisée.
             </motion.p>
 
             <div className="space-y-4">
@@ -175,7 +175,7 @@ export default function CreditsafeScoring() {
           <div className="rounded-2xl p-8 border border-white/10 bg-white/5">
             <p className="text-sm font-semibold text-white mb-2">Pourquoi personne d'autre ne le fait ?</p>
             <p className="text-white/40 text-sm">
-              Coût élevé (Pappers Pro + SearchAPI + analyse IA + Google Places API), complexité technique (agrégation de 5 sous-scores), et conflit d'intérêt : difficile de noter financièrement un client qui vous paie.
+              Coût élevé (Pappers Pro + SearchAPI + Google Places API), complexité technique (agrégation de 5 sous-scores + analyse automatisée), et conflit d'intérêt : difficile de noter financièrement un client qui vous paie.
             </p>
             <a href="/verifications-partenaires/" className="inline-block mt-4 text-sm font-medium hover:text-white transition-colors" style={{ color: "#0EA5A6" }}>
               → Voir le détail de nos 3 dimensions de scoring

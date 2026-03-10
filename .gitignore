@@ -14,6 +14,7 @@ tsconfig.tsbuildinfo
 # Admin Dashboard Data (contient données scrapées)
 data/
 !data/.gitkeep
+!data/*.seed.json
 gsc-credentials.json
 *.db
 *.db-journal

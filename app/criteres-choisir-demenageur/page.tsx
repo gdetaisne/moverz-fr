@@ -15,7 +15,7 @@ import {
 export const metadata: Metadata = getFullMetadata(
   "criteres-choisir-demenageur",
   "Critères pour choisir un déménageur fiable en 2026 | Score Moverz /100 | Moverz",
-  "Choisir un déménageur fiable : Score /100 (3 dimensions : fiabilité légale 25%, satisfaction clients 40%, alertes 35%) calculé à partir de 5 sous-scores indépendants via Pappers + Google + IA + licence, assurance RC Pro, estimation volume, devis détaillé. Checklist + FAQ."
+  "Choisir un déménageur fiable : Score /100 (3 dimensions : fiabilité légale 25%, satisfaction clients 40%, alertes 35%) calculé à partir de 5 sous-scores indépendants via Pappers + Google + analyse automatisée + licence, assurance RC Pro, estimation volume, devis détaillé. Checklist + FAQ."
 );
 
 export default function CriteresChoisirDemenageurPage() {
@@ -23,7 +23,7 @@ export default function CriteresChoisirDemenageurPage() {
     {
       question: "Comment Moverz évalue-t-elle la fiabilité d'un déménageur ?",
       answer:
-        "Moverz attribue à chaque déménageur un Score /100 calculé automatiquement à partir de 5 sous-scores indépendants regroupés en 3 dimensions : (1) Fiabilité légale 25% — Score Financier (Pappers : bilans, trésorerie, dettes) + Score Juridique (BODACC, décisions de justice), (2) Satisfaction clients 40% — Score Google (note pondérée volume) + Score Réputation (tous les avis 12 mois analysés par IA), (3) Alertes 35% — Score Vigilance (6 catégories : casses, vols, retards, prix modifiés, personnel, autres). Score < 50/100 = exclusion automatique. Monitoring continu 7 jours. 257 faillites en 2024 (Altares) : ce filtre est essentiel.",
+        "Moverz attribue à chaque déménageur un Score /100 calculé automatiquement à partir de 5 sous-scores indépendants regroupés en 3 dimensions : (1) Fiabilité légale 25% — Score Financier (Pappers : bilans, trésorerie, dettes) + Score Juridique (BODACC, décisions de justice), (2) Satisfaction clients 40% — Score Google (note pondérée volume) + Score Réputation (tous les avis 12 mois analysés automatiquement), (3) Alertes 35% — Score Vigilance (6 catégories : casses, vols, retards, prix modifiés, personnel, autres). Score < 50/100 = exclusion automatique. Monitoring continu 7 jours. 257 faillites en 2024 (Altares) : ce filtre est essentiel.",
     },
     {
       question: "Comment vérifier la santé financière d'un déménageur moi-même ?",
@@ -121,7 +121,7 @@ export default function CriteresChoisirDemenageurPage() {
       bullets: [
         "Score Google 20% : note pondérée par volume d'avis (bonus jusqu'à +10pts si >30 avis)",
         "Score Réputation 20% : ratio positifs/négatifs sur TOUS les avis 12 mois (jusqu'à 500), détection automatique faux avis",
-        "Score Vigilance 35% : analyse IA de 6 catégories (casses 30%, vols 30%, retards 10%, prix 10%, personnel 10%, autres 10%)",
+        "Score Vigilance 35% : analyse automatisée de 6 catégories (casses 30%, vols 30%, retards 10%, prix 10%, personnel 10%, autres 10%)",
         "Ratio >3% sur une catégorie critique (casses/vols) = alerte rouge",
       ],
       note: "Les 2 dimensions (Satisfaction clients 40% + Alertes 35%) représentent 75% du score global. Les avis négatifs sont les plus révélateurs : si >3% signalent le même problème (casses, vols), c'est un pattern structurel.",
@@ -193,14 +193,14 @@ export default function CriteresChoisirDemenageurPage() {
       iconColor: "text-amber-600",
       iconBg: "bg-amber-50 border-amber-100",
       title: "Satisfaction clients /100 (40%)",
-      desc: "Score Google (note pondérée volume) + Score Réputation (tous les avis 12 mois analysés par IA, détection faux avis). Dimension = moyenne pondérée des 2 sous-scores.",
+      desc: "Score Google (note pondérée volume) + Score Réputation (tous les avis 12 mois analysés automatiquement, détection faux avis). Dimension = moyenne pondérée des 2 sous-scores.",
     },
     {
       Icon: ShieldAlert,
       iconColor: "text-red-600",
       iconBg: "bg-red-50 border-red-100",
       title: "Alertes /100 (35%)",
-      desc: "Score Vigilance : 6 catégories analysées par IA (casses 30%, vols 30%, retards 10%, prix 10%, personnel 10%, autres 10%). Ratio >3% = alerte rouge.",
+      desc: "Score Vigilance : 6 catégories analysées automatiquement (casses 30%, vols 30%, retards 10%, prix 10%, personnel 10%, autres 10%). Ratio >3% = alerte rouge.",
     },
     {
       Icon: ShieldCheck,
@@ -289,7 +289,7 @@ export default function CriteresChoisirDemenageurPage() {
         ]}
         eyebrow="Guide anti-arnaques 2026"
         title="Critères pour choisir un déménageur fiable — Score Moverz /100"
-        subtitle="64% des déménageurs présentent des anomalies (DGCCRF 2023), 257 faillites en 2024. Ce guide vous explique le Score Moverz /100 (3 dimensions, 5 sous-scores indépendants via Pappers + Google + IA) + les critères complémentaires pour choisir en toute sécurité."
+        subtitle="64% des déménageurs présentent des anomalies (DGCCRF 2023), 257 faillites en 2024. Ce guide vous explique le Score Moverz /100 (3 dimensions, 5 sous-scores indépendants via Pappers + Google + analyse automatisée) + les critères complémentaires pour choisir en toute sécurité."
         primaryCta={{ label: "Voir les 8 critères", href: "#criteres" }}
         secondaryCta={{ label: "FAQ", href: "#faq" }}
       />

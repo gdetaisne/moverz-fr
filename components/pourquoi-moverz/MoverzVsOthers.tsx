@@ -143,7 +143,7 @@ export default function MoverzVsOthers() {
                     Satisfaction clients (40%)
                   </h3>
                   <p className="text-white/70 text-sm">
-                    <strong className="text-white">Tous les avis Google 12 mois</strong> analysés par IA (jusqu'à 500 avis).
+                    <strong className="text-white">Tous les avis Google 12 mois</strong> analysés automatiquement (jusqu'à 500 avis).
                     Score Google (note pondérée) + Score Réputation (ratio positifs/négatifs authentiques).
                     Détection automatique des faux avis.
                   </p>
@@ -184,7 +184,7 @@ export default function MoverzVsOthers() {
                   </h3>
                   <p className="text-white/70 text-sm">
                     <strong className="text-white">
-                      Analyse IA de 6 catégories
+                      Analyse automatisée de 6 catégories
                     </strong>
                     : casses (30%), vols (30%), retards (10%), prix modifiés (10%), personnel (10%), autres (10%).
                     Ratio &gt;3% = alerte rouge sur la catégorie.
