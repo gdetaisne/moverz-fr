@@ -213,7 +213,7 @@ export default function CriteresChoisirDemenageurPage() {
 
   const guides = [
     { href: "/blog/eviter-arnaques-demenagement/", Icon: AlertTriangle, iconColor: "text-red-600", iconBg: "bg-red-50", title: "Éviter les arnaques", desc: "Guide complet : 64% anomalies, 257 faillites, outils de vérification." },
-    { href: "/verifications-partenaires/", Icon: CheckSquare, iconColor: "text-teal-600", iconBg: "bg-teal-50", title: "Vérifications Moverz", desc: "3 analyses de risque /100 : avis Google, financier, juridique. Alertes = exclusion." },
+    { href: "/verifications-partenaires/", Icon: CheckSquare, iconColor: "text-teal-600", iconBg: "bg-teal-50", title: "Vérifications Moverz", desc: "Score /100 (3 dimensions : fiabilité légale, satisfaction clients, alertes). Score < 50/100 = exclusion." },
     { href: "/blog/meilleur-comparateur-demenagement-2026/", Icon: Trophy, iconColor: "text-amber-600", iconBg: "bg-amber-50", title: "Meilleur comparateur", desc: "5 critères pour choisir un comparateur fiable (analyses de risque, devis comparables)." },
     { href: "/blog/verifier-demenageur-creditsafe-siren/", Icon: ShieldCheck, iconColor: "text-blue-600", iconBg: "bg-blue-50", title: "Vérifier un déménageur", desc: "SIREN, Creditsafe, assurance RC Pro — le guide complet pour ne pas se faire avoir." },
     { href: "/blog/estimer-volume-demenagement-guide-complet/", Icon: Package, iconColor: "text-orange-600", iconBg: "bg-orange-50", title: "Estimer son volume", desc: "3 méthodes (calcul auto, inventaire, visite) pour éviter les surcoûts jour J." },

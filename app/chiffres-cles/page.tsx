@@ -7,7 +7,7 @@ import { TrendingUp, AlertTriangle, Shield, BarChart3, ExternalLink } from "luci
 export const metadata: Metadata = getFullMetadata(
   "chiffres-cles",
   "Chiffres clés du déménagement en France (2026) : marché, prix, arnaques",
-  "Statistiques officielles sur le marché du déménagement en France : 3M de déménagements/an, prix moyens, taux d'arnaques, entreprises en difficulté. Sources : INSEE, Creditsafe, DGCCRF."
+  "Statistiques officielles sur le marché du déménagement en France : 3M de déménagements/an, prix moyens, taux d'arnaques, entreprises en difficulté. Sources : INSEE, Pappers, BODACC, DGCCRF."
 );
 
 export default function ChiffresClesPage() {
@@ -248,8 +248,8 @@ export default function ChiffresClesPage() {
               <div className="mt-8 rounded-2xl border border-v4-accent/20 bg-white p-6">
                 <p className="text-sm font-semibold text-v4-text mb-2">Comment se protéger</p>
                 <p className="text-sm text-[#1E293B]/75">
-                  Vérifiez toujours la solvabilité (score Creditsafe), les procédures en cours (BODACC), et exigez un dossier précis 
-                  pour éviter les suppléments. <a href="/blog/comprendre-score-creditsafe-demenageur/" className="font-semibold text-v4-accent hover:underline">Guide complet</a>
+                  Vérifiez toujours la santé financière (bilans Pappers), les procédures en cours (BODACC), et exigez un dossier précis
+                  pour éviter les suppléments. <a href="/blog/label-moverz-certification-demenageurs/" className="font-semibold text-v4-accent hover:underline">Guide complet</a>
                 </p>
               </div>
             </div>
@@ -308,7 +308,7 @@ export default function ChiffresClesPage() {
               <div className="mt-8 rounded-2xl border border-v4-accent/20 bg-white p-6">
                 <p className="text-sm font-semibold text-v4-text mb-2">Comment éviter les arnaques</p>
                 <p className="text-sm text-[#1E293B]/75">
-                  Vérifiez la capacité de transport, l'assurance RC Pro, la solvabilité (Creditsafe), les avis Google, 
+                  Vérifiez la capacité de transport, l'assurance RC Pro, la santé financière (Pappers), les avis Google analysés par IA,
                   et exigez un devis détaillé avec volume précis. <a href="/blog/eviter-arnaques-demenagement/" className="font-semibold text-v4-accent hover:underline">Guide complet</a>
                 </p>
               </div>
@@ -336,9 +336,9 @@ export default function ChiffresClesPage() {
 
                 <div>
                   <p className="text-5xl font-bold text-v4-accent">3</p>
-                  <p className="mt-2 font-semibold text-v4-text">Analyses de risque /100</p>
+                  <p className="mt-2 font-semibold text-v4-text">Score Moverz /100</p>
                   <p className="mt-2 text-sm text-[#1E293B]/75">
-                    Chaque déménageur est évalué selon 3 critères : expérience client (Google), risque financier (Creditsafe + Pappers), risque juridique (Pappers Décisions)
+                    Chaque déménageur reçoit un score de 0 à 100 calculé à partir de 5 sous-scores indépendants regroupés en 3 dimensions : fiabilité légale (25%), satisfaction clients (40%), alertes (35%)
                   </p>
                   <a 
                     href="/verifications-partenaires/" 
