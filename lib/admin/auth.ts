@@ -43,18 +43,32 @@ export function createSession(username: string = 'admin'): string {
 export function verifySession(sessionCookie: string): boolean {
   try {
     const sessionData = JSON.parse(Buffer.from(sessionCookie, 'base64').toString('utf-8'));
+    console.log('[VERIFY SESSION] Parsed session data:', { 
+      username: sessionData.username, 
+      expiresAt: sessionData.expiresAt,
+      hasSignature: !!sessionData.signature 
+    });
     
     if (sessionData.expiresAt < Date.now()) {
+      console.log('[VERIFY SESSION] ❌ Session expired');
       return false;
     }
     
+    const sessionSecret = process.env.SESSION_SECRET || 'fallback-secret-key';
+    console.log('[VERIFY SESSION] Using SESSION_SECRET:', sessionSecret ? 'SET' : 'NOT SET');
+    
     const { signature, ...dataToVerify } = sessionData;
     const expectedSignature = createHash('sha256')
-      .update(JSON.stringify(dataToVerify) + SESSION_SECRET)
+      .update(JSON.stringify(dataToVerify) + sessionSecret)
       .digest('hex');
+    
+    console.log('[VERIFY SESSION] Signature received:', signature?.substring(0, 20) + '...');
+    console.log('[VERIFY SESSION] Signature expected:', expectedSignature.substring(0, 20) + '...');
+    console.log('[VERIFY SESSION] Signatures match:', signature === expectedSignature);
     
     return signature === expectedSignature;
   } catch (error) {
+    console.error('[VERIFY SESSION] ❌ Exception:', error);
     return false;
   }
 }
