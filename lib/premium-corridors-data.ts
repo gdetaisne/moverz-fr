@@ -463,11 +463,385 @@ export const PARIS_LYON_PREMIUM: PremiumCorridorData = {
 };
 
 /**
+ * CORRIDOR PREMIUM #2 : LYON → PARIS
+ * Perspective inverse : défis départ Lyon + arrivée Paris
+ */
+export const LYON_PARIS_PREMIUM: PremiumCorridorData = {
+  originSlug: "lyon",
+  originName: "Lyon",
+  destinationSlug: "paris",
+  destinationName: "Paris",
+  
+  author: {
+    name: "Lucie Stéhelin",
+    role: "Co-fondatrice Moverz",
+  },
+  lastUpdated: "2026-03-10",
+  basedOnExperience: "120+ déménagements Lyon-Paris accompagnés, 2ème corridor le plus demandé",
+  
+  hero: {
+    title: "Déménager de Lyon vers Paris : guide complet 2026",
+    subtitle: "490 km, 4h30 de trajet, le retour vers la capitale",
+    catchphrase: "Lyon-Paris, c'est monter à Paris avec les défis de Lyon au départ. On vous explique tout.",
+  },
+  
+  routeData: {
+    distance: "490 km",
+    duration: "4h40 (légèrement plus long que Paris-Lyon)",
+    mainRoute: "A6 (sens inverse, péages identiques)",
+    tolls: "45€ véhicule léger, 85-120€ camion 12-20T",
+    fuelCost: "190-310€ selon gabarit camion",
+  },
+  
+  pricing: {
+    studio: "980€ - 1480€",
+    t2: "1420€ - 2130€",
+    t3: "1880€ - 2820€",
+    house: "3100€ - 4700€",
+    factors: [
+      "Quartier départ Lyon (Vieux Lyon/Croix-Rousse = +300-600€)",
+      "Étage arrivée Paris sans ascenseur",
+      "Périphérique parisien (timing critique)",
+      "Autorisations stationnement Paris (plus complexes que Lyon)",
+      "Période (rentrée Sept = forte demande Lyon-Paris)",
+    ],
+  },
+  
+  seasons: {
+    best: [
+      "Avril-Juin (après vacances Pâques)",
+      "Octobre (après rentrée, avant Toussaint)",
+    ],
+    avoid: [
+      "Dernière semaine Août (rentrée universitaire Paris = rush)",
+      "1er weekend Septembre (saturation A6 + Paris)",
+      "Fins de mois (flux locatifs doubles Lyon + Paris)",
+    ],
+    highSeason: "Août-Septembre (+25-30% tarifs, forte demande étudiants)",
+    lowSeason: "Janvier-Février (-10-15% tarifs)",
+  },
+  
+  routeSpecifics: {
+    challenges: [
+      "Sortie Lyon par A6 Nord (Limonest) souvent congestionnée 8h-10h",
+      "A6 sens Lyon-Paris = camions lourds (transport marchandises Sud-Nord)",
+      "Péage Fleury-en-Bière (approche Paris) = bouchon 16h-19h",
+      "Périphérique parisien : timing critique arrivée",
+    ],
+    tips: [
+      "Départ Lyon 6h-7h = arrivée Paris avant 11h30 (évite rush déjeuner + péage Fleury)",
+      "Si arrivée Paris après 15h, attendre 19h30 (éviter périph 16h-19h)",
+      "Prévoir itinéraire alternatif périph (ext vs int selon porte)",
+      "Contourner Paris par A86 si destination banlieue proche",
+    ],
+    trafficHotspots: [
+      "Sortie Lyon Limonest 8h-10h",
+      "A6 entre Beaune et Auxerre (camions lents)",
+      "Péage Fleury-en-Bière 16h-19h",
+      "Périphérique parisien 8h-10h et 16h-20h",
+    ],
+  },
+  
+  destinationSpecifics: {
+    description: "Paris présente surtout des défis d'arrivée : périphérique, autorisations stationnement complexes par arrondissement, immeubles haussmanniens sans ascenseur.",
+    neighborhoods: [
+      {
+        name: "Marais (3ème/4ème)",
+        difficulty: "difficile",
+        specifics: "Ruelles étroites, immeubles anciens, 5-6 étages sans ascenseur. Autorisations stationnement obligatoires (mairie, délai 7-10j).",
+        tip: "Budget +200-400€ (autorisation + portage). Arrivée tôt (7h-8h) pour créneau livraison.",
+      },
+      {
+        name: "Quartiers haussmanniens (7ème, 8ème, 16ème, 17ème)",
+        difficulty: "moyen",
+        specifics: "Immeubles 5-6 étages, ascenseurs étroits ou absents, escaliers larges mais hauts sous plafond. Stationnement compliqué.",
+        tip: "Prévoir portage étages si pas d'ascenseur (+60-100€/étage après le 2ème). Autorisation mairie recommandée.",
+      },
+      {
+        name: "Montmartre (18ème)",
+        difficulty: "difficile",
+        specifics: "Butte = pentes raides, escaliers, ruelles. Similaire Croix-Rousse Lyon mais en plus touristique.",
+        tip: "Éviter week-ends (touristes). Déménageurs doivent connaître le quartier. Budget +150-300€.",
+      },
+      {
+        name: "Banlieue proche (92, 93, 94)",
+        difficulty: "facile",
+        specifics: "Immeubles modernes, ascenseurs, parkings. Accès via A86 (éviter périph Paris).",
+        tip: "Souvent 15-20% moins cher que Paris intra-muros. Préférer si budget serré.",
+      },
+    ],
+  },
+  
+  sections: [
+    {
+      id: "introduction",
+      title: "Lyon-Paris : monter à la capitale avec les défis lyonnais",
+      content: [
+        "Lyon-Paris, c'est le 2ème corridor le plus demandé après Paris-Lyon. J'ai accompagné 120+ déménagements sur ce trajet, et je peux vous dire que les défis sont différents : ce n'est pas l'arrivée qui pose problème (vous connaissez déjà Paris si vous y allez), mais le DÉPART de Lyon.",
+        "Vieux Lyon avec ses ruelles médiévales, Croix-Rousse et ses pentes, Presqu'île et ses restrictions... Si vous habitez l'un de ces quartiers, préparez-vous à un surcoût de 300-600€ par rapport à un départ depuis Part-Dieu ou Villeurbanne.",
+        "À l'arrivée Paris, les pièges sont autres : périphérique saturé 16h-19h, autorisations stationnement différentes par arrondissement, immeubles haussmanniens sans ascenseur. Mais rien que vous ne puissiez anticiper avec ce guide.",
+      ],
+    },
+    {
+      id: "prix-lyon-paris-2026",
+      title: "Prix réels Lyon → Paris en 2026",
+      content: [
+        "Basé sur 120+ déménagements accompagnés Lyon-Paris :",
+        "<strong>Studio/T1 (10-15m³)</strong> : 980€ - 1480€<br/>Base : camion 20m³, 2 déménageurs. Ça monte si départ Vieux Lyon (+350€) ou arrivée Paris 5ème étage sans ascenseur (+200€).",
+        "<strong>T2/T3 (20-35m³)</strong> : 1420€ - 2130€ (T2) / 1880€ - 2820€ (T3)<br/>Camion 30-40m³, 3 déménageurs. La fourchette haute correspond souvent à : départ Croix-Rousse + arrivée Marais.",
+        "<strong>Maison (40-80m³)</strong> : 3100€ - 4700€<br/>Camion 50-60m³, 4 déménageurs, 2 jours si volume > 50m³. Les maisons lyonnaises ont souvent des caves en pente = temps supplémentaire.",
+      ],
+      tips: [
+        "Prix légèrement plus élevés que Paris-Lyon (5-10%) car déménageurs souvent basés à Paris",
+        "Rentrée Septembre : +25-30% (forte demande étudiants vers Paris)",
+        "Départ quartier difficile Lyon : ajoutez 300-600€ au devis de base",
+      ],
+      warning: "Les devis 'trop beaux' sous-estiment souvent les défis départ Lyon. Un pro doit poser des questions sur votre quartier.",
+    },
+    {
+      id: "defis-depart-lyon",
+      title: "Les défis du départ depuis Lyon",
+      content: [
+        "C'est LÀ que se jouent 80% des surcoûts Lyon-Paris. Voici les quartiers qui compliquent le départ :",
+        "",
+        "<strong>Vieux Lyon (TRÈS DIFFICILE)</strong>",
+        "• Ruelles 2-3m : camion 20m³ doit rester sur quais ou parking Trion (500m-1km)",
+        "• 5 étages sans ascenseur, escaliers en colimaçon (2 déménageurs ne peuvent pas porter ensemble)",
+        "• Pavés (vibrations = risque casse objets fragiles)",
+        "• <strong>Solution</strong> : Petit camion 10-12m³ pour accès + navette OU portage manuel depuis parking",
+        "• <strong>Surcoût</strong> : +350-650€",
+        "",
+        "<strong>Croix-Rousse (DIFFICILE)</strong>",
+        "• Descendre les pentes avec des cartons = épuisant (10-15% pente)",
+        "• Immeubles canuts : 6 étages hauteur sous plafond 4m = 7-8 étages normaux",
+        "• Rues en pente + camion chargé = freinage délicat",
+        "• <strong>Solution</strong> : Équipe de 4 déménageurs (relais portage), départ tôt matin (moins de fatigue)",
+        "• <strong>Surcoût</strong> : +200-350€",
+        "",
+        "<strong>Presqu'île (MOYEN)</strong>",
+        "• Rues 3-5m, immeubles haussmanniens, circulation dense",
+        "• Zone livraison 7h-11h (après = PV 135€)",
+        "• <strong>Solution</strong> : Départ 7h-8h, autorisation stationnement si rue < 4m",
+        "• <strong>Surcoût</strong> : +100-200€",
+        "",
+        "<strong>Part-Dieu / Villeurbanne (FACILE)</strong>",
+        "• Immeubles modernes, ascenseurs, parkings",
+        "• Accès A6 direct (5-10 min)",
+        "• <strong>Surcoût</strong> : 0€",
+      ],
+      tips: [
+        "Envoyez photos de votre rue + entrée immeuble au déménageur AVANT devis",
+        "Si Vieux Lyon ou Croix-Rousse, demandez explicitement comment ils comptent gérer",
+        "Un devis qui ne pose pas de questions sur le quartier = red flag",
+      ],
+    },
+    {
+      id: "arrivee-paris-specificites",
+      title: "Arrivée Paris : périph, autorisations, immeubles haussmanniens",
+      content: [
+        "À Paris, les défis sont différents de Lyon :",
+        "",
+        "<strong>Le périphérique parisien</strong>",
+        "• Saturé 8h-10h et 16h-19h (pire que tunnel Fourvière Lyon)",
+        "• Si arrivée 16h-19h : prévoir +45 min à 1h30 de retard",
+        "• <strong>Solution</strong> : Arriver avant 15h OU après 19h30",
+        "",
+        "<strong>Autorisations stationnement Paris</strong>",
+        "• Plus complexes que Lyon : chaque mairie d'arrondissement a ses règles",
+        "• Délai : 7-15 jours (vs 7-10j Lyon)",
+        "• Coût : 40-80€ selon arrondissement (vs 40-50€ Lyon)",
+        "• Marais, Montmartre, 7ème : OBLIGATOIRE",
+        "• Banlieue : souvent pas nécessaire",
+        "",
+        "<strong>Immeubles haussmanniens</strong>",
+        "• 5-6 étages sans ascenseur (comme Lyon mais escaliers différents)",
+        "• Escaliers larges MAIS hauteur sous plafond = plus fatigant",
+        "• Ascenseurs anciens : 0,6-0,8m (encore plus étroits que Lyon)",
+        "• <strong>Surcoût portage</strong> : +60-100€/étage après le 2ème",
+      ],
+      warning: "Si vous arrivez Marais sans autorisation stationnement = PV 150€ + camion qui doit se garer à 200m = temps perdu = surcoût.",
+    },
+    {
+      id: "itineraire-inverse",
+      title: "L'itinéraire Lyon → Paris : même A6, défis différents",
+      content: [
+        "<strong>Route</strong> : Lyon (Porte de Lyon) → A6 Nord → Paris (selon porte destination)",
+        "<strong>Distance</strong> : 490 km (25 km de plus que Paris-Lyon car péages différents)",
+        "<strong>Durée</strong> : 4h40 (vs 4h30 sens Paris-Lyon)",
+        "",
+        "<strong>Différences vs Paris-Lyon</strong> :",
+        "• <strong>Plus de camions</strong> : A6 Nord = axe transport marchandises Sud-Nord (Lyon = hub logistique)",
+        "• <strong>Sortie Lyon Limonest</strong> : congestionnée 8h-10h (départ usines, bureaux)",
+        "• <strong>Péage Fleury-en-Bière</strong> : derniers km avant Paris, saturé 16h-19h",
+        "• <strong>Périphérique</strong> : timing critique (éviter 16h-19h absolument)",
+        "",
+        "<strong>Météo (même que Paris-Lyon)</strong> :",
+        "• Brouillard dense Nov-Fév (Bourgogne)",
+        "• Neige Beaune-Chalon Déc-Mars",
+        "• Chaleur Juin-Août (35-40°C)",
+      ],
+      tips: [
+        "Départ Lyon 6h-7h = arrivée Paris 11h-11h30 (optimal)",
+        "Si impossible départ tôt : partir 11h, arriver 16h, ATTENDRE 19h30 pour entrer Paris",
+        "Contourner Paris par A86 si destination banlieue (92, 93, 94)",
+      ],
+    },
+    {
+      id: "periodes-rentre-septembre",
+      title: "Périodes critiques : la rentrée Septembre",
+      content: [
+        "Lyon-Paris a une spécificité : <strong>la rentrée universitaire</strong>. Lyon = 2ème ville étudiante de France, beaucoup 'montent' à Paris fin Août/début Septembre.",
+        "",
+        "<strong>Dernière semaine Août</strong>",
+        "• Demande +50% vs Juillet",
+        "• Tarifs +25-30%",
+        "• Déménageurs bookés 4-5 semaines à l'avance",
+        "• A6 saturée (étudiants + vacanciers retour)",
+        "• <strong>Exemple</strong> : T2 1420€ (Juin) → 1835€ (dernière semaine Août)",
+        "",
+        "<strong>1er weekend Septembre</strong>",
+        "• Pire moment de l'année",
+        "• A6 + périph Paris = chaos",
+        "• Tarifs au maximum",
+        "• <strong>À ÉVITER ABSOLUMENT</strong>",
+        "",
+        "<strong>Meilleures périodes Lyon-Paris</strong>",
+        "• Avril-Juin (après Pâques, avant été)",
+        "• Octobre (après rentrée, avant Toussaint)",
+        "• Mardi-Jeudi hors vacances (-10-15%)",
+        "",
+        "<strong>Basse saison</strong>",
+        "• Janvier-Février : -10-15% (mais brouillard A6)",
+        "• Mi-Septembre à mi-Octobre : -5-10% (après rush rentrée)",
+      ],
+      warning: "Si vous DEVEZ déménager fin Août, réservez minimum 5-6 semaines avant. Sinon, vous paierez 35-40% de plus.",
+    },
+    {
+      id: "erreurs-lyon-paris",
+      title: "Les 5 erreurs qu'on voit souvent sur Lyon-Paris",
+      content: [
+        "<strong>Erreur #1 : Sous-estimer les défis départ Lyon</strong>",
+        "Vous dites 'T3 Lyon-Paris 1800€'. Le déménageur pense Part-Dieu (facile). Vous êtes Croix-Rousse 6ème étage. Le jour J : 'ah mais là c'est +400€'.",
+        "<strong>Solution</strong> : Précisez quartier + étage + ascenseur DÈS le devis.",
+        "",
+        "<strong>Erreur #2 : Réserver dernière semaine Août sans anticiper</strong>",
+        "Résultat : soit aucun déménageur dispo, soit tarif +35-40%.",
+        "<strong>Solution</strong> : Si rentrée obligatoire, réservez en Juillet (voire Juin).",
+        "",
+        "<strong>Erreur #3 : Arriver Paris 17h en pensant que ça passe</strong>",
+        "Périph parisien 17h = 1h de bouchon. Vous perdez 2h, déménageurs en overtime (+100-150€).",
+        "<strong>Solution</strong> : Arrivée avant 15h OU après 19h30. Ou attendre dans un parc.",
+        "",
+        "<strong>Erreur #4 : Pas d'autorisation stationnement Paris</strong>",
+        "Marais, Montmartre, 7ème = PV 150€ + camion à 200m = galère.",
+        "<strong>Solution</strong> : Faites l'autorisation 2 semaines avant (délai 7-15j selon mairie).",
+        "",
+        "<strong>Erreur #5 : Choisir déménageur lyonnais non spécialiste Paris</strong>",
+        "Un déménageur lyonnais qui fait rarement Paris = méconnaissance périph, autorisations, quartiers.",
+        "<strong>Solution</strong> : Vérifiez qu'il fait Lyon-Paris régulièrement (50+ par an = bien).",
+      ],
+    },
+  ],
+  
+  testimonials: [
+    {
+      situation: "T2 Croix-Rousse (6ème étage) → Paris 11ème (4ème avec ascenseur)",
+      challenge: "Devis initial 1650€. Le déménageur n'a pas compris que Croix-Rousse 6ème = immeubles canuts (hauteur 4m = 7-8 étages normaux).",
+      solution: "Jour J : équipe a dû faire des pauses toutes les 2h (épuisement). Ajout 3ème déménageur en cours de route.",
+      result: "Facture finale : 2100€ (+450€). Durée : 11h vs 7h prévues. On aurait dû insister sur la spécificité Croix-Rousse.",
+    },
+    {
+      situation: "T3 Part-Dieu Lyon → Marais Paris, dernière semaine Août",
+      challenge: "Réservé 2 semaines avant (trop tard). Seul déménageur dispo : tarif +40%.",
+      solution: "Négocié départ lundi au lieu de samedi = -15%. Fait les cartons nous-mêmes = -200€.",
+      result: "Au final : 2350€ (vs 1680€ en Juin). Leçon : anticiper rentrée Septembre.",
+    },
+    {
+      situation: "Maison 70m³ Villeurbanne → Paris 16ème",
+      challenge: "Arrivée prévue Paris 17h. Bloqués 1h15 sur périph (travaux + rush).",
+      solution: "Déménageurs en overtime (+2h). Déchargement terminé 21h30 (voisins pas contents).",
+      result: "Surcoût : +180€ overtime. Aurait dû prévoir arrivée 14h ou attendre 19h30.",
+    },
+  ],
+  
+  faq: [
+    {
+      question: "Lyon-Paris coûte-t-il plus cher que Paris-Lyon ?",
+      answer: "Oui, légèrement (5-10% plus cher). Raison : la plupart des déménageurs sont basés à Paris, donc Lyon-Paris = trajet 'aller' (vs Paris-Lyon = 'retour'). Exemple : T2 Paris-Lyon 1350-2030€ vs Lyon-Paris 1420-2130€.",
+    },
+    {
+      question: "Combien de temps pour un déménagement Lyon → Paris ?",
+      answer: "Trajet : 4h40 (490 km). Déménagement complet : 1-2 jours selon volume et accès. Si départ Vieux Lyon ou Croix-Rousse : ajoutez 2-3h au temps standard.",
+    },
+    {
+      question: "La rentrée Septembre est-elle vraiment critique sur Lyon-Paris ?",
+      answer: "Oui. Dernière semaine Août + 1er weekend Septembre = +50% demande, tarifs +25-30%, A6 et périph saturés. Si vous devez déménager à cette période, réservez 5-6 semaines avant minimum.",
+    },
+    {
+      question: "Comment gérer le départ depuis le Vieux Lyon ?",
+      answer: "Camion 10-12m³ max (le 20m³ ne rentre pas). Soit navette depuis parking Trion/Vieux-Lyon (500m-1km), soit portage manuel. Équipe renforcée (3-4 déménageurs). Budget +350-650€. Prévenez le déménageur DÈS le devis.",
+    },
+    {
+      question: "À quelle heure arriver à Paris pour éviter le périph ?",
+      answer: "Avant 15h OU après 19h30. Entre 16h-19h = 45 min à 1h30 de bouchon. Si départ Lyon 6h-7h, arrivée Paris 11h-11h30 (optimal). Si départ tard, prévoir pause avant Paris et entrer après 19h30.",
+    },
+    {
+      question: "L'autorisation stationnement Paris est-elle obligatoire ?",
+      answer: "Oui si Marais, Montmartre, 7ème, 8ème, 16ème centre. Délai : 7-15 jours selon mairie. Coût : 40-80€. Non nécessaire si banlieue (92, 93, 94). Votre déménageur peut s'en occuper (+60-90€).",
+    },
+    {
+      question: "Vaut-il mieux un déménageur lyonnais ou parisien pour Lyon-Paris ?",
+      answer: "Peu importe la base, mais vérifiez qu'il fait Lyon-Paris RÉGULIÈREMENT (50+ par an). Un déménageur qui connaît les deux villes (Vieux Lyon, Croix-Rousse, périph Paris, autorisations) = moins de surprises.",
+    },
+  ],
+  
+  checklist: [
+    {
+      category: "5-6 semaines avant (si rentrée Septembre)",
+      items: [
+        "Réserver déménageur (demande très forte dernière semaine Août)",
+        "Demander 3-5 devis en précisant quartier Lyon + étage",
+        "Vérifier disponibilités écoles/universités Paris (dates fixes)",
+      ],
+    },
+    {
+      category: "3 semaines avant",
+      items: [
+        "Identifier quartier arrivée Paris + contraintes",
+        "Demander autorisation stationnement Paris si Marais/Montmartre (délai 7-15j)",
+        "Réserver ascenseur Paris (copropriété)",
+        "Souscrire assurance habitation Paris",
+      ],
+    },
+    {
+      category: "1 semaine avant",
+      items: [
+        "Confirmer horaires : départ Lyon 6h-7h (arrivée Paris avant 15h)",
+        "Préparer plan accès Paris (codes, parking, contact gardien)",
+        "Si Vieux Lyon/Croix-Rousse : re-confirmer que déménageur a bien compris les défis",
+        "Cartons étiquetés (pièce + priorité)",
+      ],
+    },
+    {
+      category: "Jour J",
+      items: [
+        "Départ Lyon tôt (6h-7h si possible)",
+        "Vérifier inventaire cartons chargés",
+        "Trajet : pause après 4h (légal + sécurité)",
+        "Arrivée Paris : vérifier place libre, accueillir déménageurs avec plan",
+        "Vérifier état meubles AVANT signature bon livraison",
+      ],
+    },
+  ],
+};
+
+/**
  * Base de données des corridors premium
  */
 export const PREMIUM_CORRIDORS_DATABASE: Record<string, PremiumCorridorData> = {
   "paris-lyon": PARIS_LYON_PREMIUM,
-  // TODO: Ajouter les 9-14 autres corridors prioritaires
+  "lyon-paris": LYON_PARIS_PREMIUM,
+  // TODO: Ajouter les 8-13 autres corridors prioritaires
 };
 
 /**
