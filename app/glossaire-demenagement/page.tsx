@@ -87,8 +87,8 @@ const glossaryTerms = [
         definition: "Devis détaillé avec volume précis, accès documentés, prestations listées. Le déménageur ne peut pas augmenter le prix jour J si les conditions sont conformes. Moverz standardise les dossiers pour garantir des devis opposables."
       },
       {
-        term: "Dossier standardisé",
-        definition: "Dossier de déménagement avec informations homogènes (volume, accès, contraintes) transmis à tous les déménageurs. Permet de comparer des devis sur une base identique. Exclusivité Moverz."
+        term: "Dossier qualifié",
+        definition: "Dossier de déménagement avec informations complètes (description logement, accès, contraintes, prestations) transmis à tous les déménageurs. Permet de comparer des devis sur une base identique. Exclusivité Moverz."
       },
     ]
   },
@@ -240,11 +240,11 @@ const glossaryTerms = [
     terms: [
       {
         term: "Visite technique",
-        definition: "Visite sur place par le déménageur pour estimer le volume et les contraintes. Gratuite généralement. Permet d'obtenir un devis précis. Alternative : dossier standardisé Moverz (gain de temps)."
+        definition: "Visite sur place par le déménageur pour estimer le volume et les contraintes. Gratuite généralement. Permet d'obtenir un devis précis. Alternative : description détaillée guidée Moverz (gain de temps)."
       },
       {
-        term: "Volumétrie standardisée",
-        definition: "Calcul automatique du volume à partir d'un inventaire détaillé guidé. Précision 90-95%. Permet d'obtenir des devis comparables sans visite technique. Méthode utilisée par Moverz."
+        term: "Description détaillée guidée",
+        definition: "Processus guidé pour décrire précisément son logement (pièces, meubles, contraintes d'accès). Permet aux déménageurs d'établir des devis sur la même base sans visite technique. Méthode utilisée par Moverz."
       },
     ]
   },

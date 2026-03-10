@@ -16,7 +16,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata: Metadata = getFullMetadata(
   "partenaires",
   "Devenir partenaire Moverz : dossiers qualifiés de déménagement",
-  "Rejoignez le réseau Moverz : recevez des dossiers complets et standardisés de particuliers vérifiés. Paiement au succès uniquement (10% HT), pas d'abonnement, pas de lead non qualifié."
+  "Rejoignez le réseau Moverz : recevez des dossiers complets et qualifiés de particuliers vérifiés. Paiement au succès uniquement (10% HT), pas d'abonnement, pas de lead non qualifié."
 );
 
 const FAQ_DATA = [
@@ -54,7 +54,7 @@ const FAQ_DATA = [
   },
   {
     question: "Combien de concurrents sur chaque dossier ?",
-    answer: "Jusqu'à 5 déménageurs maximum par dossier. Vous êtes en concurrence, mais sur une base équitable : tous reçoivent le même dossier standardisé."
+    answer: "Jusqu'à 5 déménageurs maximum par dossier. Vous êtes en concurrence, mais sur une base équitable : tous reçoivent le même dossier complet."
   },
   {
     question: "Y a-t-il un engagement ?",
@@ -75,7 +75,7 @@ export default function PartenairesPage() {
     <main className="min-h-screen bg-white">
       <WebPageSchema
         name="Devenir partenaire Moverz : dossiers qualifiés de déménagement"
-        description="Rejoignez le réseau Moverz : recevez des dossiers complets et standardisés de particuliers vérifiés. Paiement au succès uniquement (10% HT), pas d'abonnement."
+        description="Rejoignez le réseau Moverz : recevez des dossiers complets et qualifiés de particuliers vérifiés. Paiement au succès uniquement (10% HT), pas d'abonnement."
         url="https://moverz.fr/partenaires/"
         about="Programme partenaires déménageurs Moverz"
       />

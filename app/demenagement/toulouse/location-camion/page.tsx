@@ -59,7 +59,7 @@ export default function Page() {
           title: "Alternative sans stress : comparer des devis pros (si vous hésitez)",
           paragraphs: [
             "Si vous hésitez entre “tout faire soi-même” et déléguer, demandez au moins des devis pour comparer.",
-            "Avec Moverz, un seul dossier et des devis standardisés : vous décidez ensuite si le gain de temps vaut l’écart de prix.",
+            "Avec Moverz, un seul dossier et des devis comparables : vous décidez ensuite si le gain de temps vaut l’écart de prix.",
           ],
           bullets: [
             "Idéal si vous avez des meubles lourds, un étage sans ascenseur, ou une longue distance.",

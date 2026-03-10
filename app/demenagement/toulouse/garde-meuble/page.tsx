@@ -97,7 +97,7 @@ export default function Page() {
         {
           question: "Puis-je demander des devis sans être harcelé ?",
           answer:
-            "Oui. Avec Moverz, vous recevez des devis standardisés sur un dossier anonyme, ce qui limite la pression commerciale et facilite la comparaison.",
+            "Oui. Avec Moverz, vous recevez des devis comparables sur un dossier anonyme, ce qui limite la pression commerciale et facilite la comparaison.",
         },
       ]}
     />

@@ -97,7 +97,7 @@ export default function Page() {
         {
           question: "Puis-je comparer des devis sans être harcelé ?",
           answer:
-            "Oui. Moverz fonctionne avec un dossier anonyme et des devis standardisés : moins de pression commerciale et une comparaison plus simple.",
+            "Oui. Moverz fonctionne avec un dossier anonyme et des devis comparables : moins de pression commerciale et une comparaison plus simple.",
         },
       ]}
     />

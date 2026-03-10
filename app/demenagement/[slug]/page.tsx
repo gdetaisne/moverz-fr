@@ -250,8 +250,8 @@ export default function CityMovingPage({ params }: PageProps) {
             url: `https://moverz.fr/demenagement/${city.slug}/`,
           },
           {
-            name: "Complétez le dossier standardisé",
-            text: "Ajoutez les détails d'accès (étage, ascenseur, distance parking), les options souhaitées (emballage, monte-meuble) et éventuellement des photos. Le volume est calculé automatiquement pour que tous les devis soient basés sur la même estimation.",
+            name: "Complétez le dossier",
+            text: "Ajoutez les détails d'accès (étage, ascenseur, distance parking), une description précise de votre logement (pièces, meubles volumineux), et les prestations souhaitées (emballage, monte-meuble). Tous les déménageurs reçoivent les mêmes informations complètes.",
           },
           {
             name: "Recevez et comparez vos devis",

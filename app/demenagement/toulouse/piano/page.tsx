@@ -46,7 +46,7 @@ export default function Page() {
           title: "Devis : les infos indispensables",
           paragraphs: [
             "Pour obtenir un devis fiable, décrivez le type de piano, les accès, et les contraintes (étage, ascenseur, stationnement).",
-            "Avec Moverz, vous standardisez les infos et comparez des devis sur une base identique.",
+            "Avec Moverz, tous les déménageurs reçoivent les mêmes informations complètes pour établir des devis comparables.",
           ],
           bullets: [
             "Piano droit / à queue / numérique lourd (précisez).",
@@ -95,7 +95,7 @@ export default function Page() {
         {
           question: "Puis-je comparer plusieurs devis gratuitement ?",
           answer:
-            "Oui. Avec Moverz, vous pouvez recevoir des devis comparables standardisés et décider ensuite, sans engagement.",
+            "Oui. Avec Moverz, vous pouvez recevoir des devis comparables et décider ensuite, sans engagement.",
         },
       ]}
     />

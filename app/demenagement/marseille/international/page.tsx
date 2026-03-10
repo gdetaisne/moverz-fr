@@ -96,7 +96,7 @@ export default function Page() {
         {
           question: "Puis-je comparer plusieurs devis gratuitement ?",
           answer:
-            "Oui. Avec Moverz, vous pouvez demander plusieurs devis sur une base standardisée, sans engagement.",
+            "Oui. Avec Moverz, vous pouvez demander plusieurs devis comparables, sans engagement.",
         },
       ]}
     />

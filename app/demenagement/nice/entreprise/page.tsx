@@ -58,7 +58,7 @@ export default function Page() {
           title: "Comparer des devis comparables sur une base identique",
           paragraphs: [
             "La comparaison n’a de valeur que si les offres sont sur le même cahier des charges.",
-            "Moverz standardise la demande et vous permet de recevoir des devis comparables, sans spam.",
+            "Moverz structure la demande et vous permet de recevoir des devis comparables, sans spam.",
           ],
           bullets: [
             "Un seul dossier, des devis structurés.",

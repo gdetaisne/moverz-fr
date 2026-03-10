@@ -58,7 +58,7 @@ export default function Page() {
           title: "Comparer des devis (sans perdre du temps)",
           paragraphs: [
             "En international, la comparaison n’est utile que si les offres sont comparables : même volume, même destination, même niveau de service (emballage, formalités, livraison).",
-            "Moverz vous aide à standardiser votre dossier pour obtenir des devis plus lisibles et décider sereinement.",
+            "Moverz vous aide à structurer votre dossier pour obtenir des devis plus lisibles et décider sereinement.",
           ],
           bullets: [
             "Un seul dossier, plusieurs offres structurées.",
@@ -96,7 +96,7 @@ export default function Page() {
         {
           question: "Puis-je comparer plusieurs devis gratuitement ?",
           answer:
-            "Oui. Avec Moverz, vous pouvez demander plusieurs devis sur une base standardisée, sans engagement.",
+            "Oui. Avec Moverz, vous pouvez demander plusieurs devis comparables, sans engagement.",
         },
       ]}
     />

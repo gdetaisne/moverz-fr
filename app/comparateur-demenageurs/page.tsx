@@ -12,7 +12,7 @@ import { JsonLd } from "@/components/schema/JsonLd";
 export const metadata: Metadata = baseGenerateMetadata(
   "comparateur-demenageurs",
   `Comparateur de Déménagement : Guide Complet 2026 (Moverz vs Alternatives)`,
-  "Choisir le meilleur comparateur de déménagement en 2026 : 3 analyses de risque /100 (avis Google, financier, juridique), devis comparables (volume standardisé), anonymat. Moverz vs plateformes classiques vs contact direct."
+  "Choisir le meilleur comparateur de déménagement en 2026 : 3 analyses de risque /100 (avis Google, financier, juridique), devis comparables, anonymat. Moverz vs plateformes classiques vs contact direct."
 );
 
 const webPageSchema = {
@@ -57,7 +57,7 @@ export default function ComparateurDemenageursPage() {
     {
       question: "Quelle est la différence entre Moverz et les autres comparateurs (ex: i-Demenager, DemenagerFacile) ?",
       answer:
-        "3 différences majeures : (1) 3 analyses de risque /100 : Moverz évalue chaque déménageur (avis Google + financier Creditsafe/Pappers + juridique Pappers Décisions). Alertes = exclusion automatique. Les autres ne vérifient rien. (2) Devis comparables : Moverz standardise les volumes automatiquement (précision 90-95%). Les autres = volumes différents = impossible à comparer. (3) Anonymat : Moverz ne revend pas vos coordonnées. Les autres = revente de leads.",
+        "3 différences majeures : (1) 3 analyses de risque /100 : Moverz évalue chaque déménageur (avis Google + financier Creditsafe/Pappers + juridique Pappers Décisions). Alertes = exclusion automatique. Les autres ne vérifient rien. (2) Devis comparables : Moverz transmet les mêmes informations complètes à tous les déménageurs. Les autres = chaque déménageur fait sa propre estimation = impossible à comparer. (3) Anonymat : Moverz ne revend pas vos coordonnées. Les autres = revente de leads.",
     },
     {
       question: "Les comparateurs de déménagement sont-ils vraiment gratuits ?",
@@ -72,7 +72,7 @@ export default function ComparateurDemenageursPage() {
     {
       question: "Pourquoi les devis reçus via comparateurs sont souvent différents ?",
       answer:
-        "Car chaque déménageur fait sa propre estimation du volume, avec sa propre méthode. Résultat : 5 devis avec 5 volumes différents (20m³, 28m³, 32m³, etc.) = impossible à comparer. Solution Moverz : le volume est calculé automatiquement avec précision (90-95%), tous les déménageurs partent du même volume = devis réellement comparables. C'est le seul moyen de comparer efficacement.",
+        "Car chaque déménageur fait sa propre estimation du volume, avec sa propre méthode. Résultat : 5 devis avec 5 volumes différents (20m³, 28m³, 32m³, etc.) = impossible à comparer. Solution Moverz : tous les déménageurs reçoivent la même description complète de votre logement (pièces, meubles, accès, contraintes) = devis réellement comparables. C'est le seul moyen de comparer efficacement.",
     },
     {
       question: "Combien de temps faut-il pour recevoir des devis via un comparateur ?",
@@ -97,7 +97,7 @@ export default function ComparateurDemenageursPage() {
     {
       question: "Quel est le meilleur comparateur de déménagement en 2026 ?",
       answer:
-        "5 critères pour choisir : (1) 3 analyses de risque /100 (avis Google + financier + juridique) = Moverz uniquement. (2) Devis comparables (même volume standardisé) = Moverz uniquement. (3) Anonymat (pas de revente de données) = Moverz uniquement. (4) Gratuité réelle = Moverz + autres. (5) Rapidité = Tous. Conclusion : Moverz est le seul comparateur qui évalue 3 risques /100 ET standardise ET protège votre anonymat.",
+        "5 critères pour choisir : (1) 3 analyses de risque /100 (avis Google + financier + juridique) = Moverz uniquement. (2) Devis comparables (mêmes informations transmises) = Moverz uniquement. (3) Anonymat (pas de revente de données) = Moverz uniquement. (4) Gratuité réelle = Moverz + autres. (5) Rapidité = Tous. Conclusion : Moverz est le seul comparateur qui évalue 3 risques /100 ET transmet les mêmes infos complètes ET protège votre anonymat.",
     },
   ];
 
@@ -163,7 +163,7 @@ export default function ComparateurDemenageursPage() {
                     "Le risque : des devis avec des volumes différents (20m³ vs 32m³), des options floues, rendant la comparaison impossible",
                     "Résultat : risque de surcoût le jour J (+200–800€)",
                   ],
-                  highlight: "Moverz : dossier standardisé, volume calculé automatiquement (précision 90–95%)",
+                  highlight: "Moverz : dossier structuré, mêmes informations complètes transmises à tous les déménageurs",
                 },
                 {
                   title: "3. Anonymat et protection contre le démarchage",
@@ -189,7 +189,7 @@ export default function ComparateurDemenageursPage() {
                     "Le risque : un volume mal estimé entraîne des suppléments coûteux le jour du déménagement",
                     "40–50% des déménagements subissent des surcoûts à cause d'une mauvaise estimation",
                   ],
-                  highlight: "Moverz : volume calculé en 1 minute, précision 90–95%",
+                  highlight: "Moverz : description guidée en 3 minutes, mêmes informations complètes à tous",
                 },
                 {
                   title: "5. Gratuité et transparence",
@@ -262,7 +262,7 @@ export default function ComparateurDemenageursPage() {
                 },
                 {
                   title: "Devis réellement comparables",
-                  desc: "Le volume est calculé automatiquement (précision 90–95%), tous les déménageurs partent du même dossier. Les autres = volumes différents = impossible à comparer.",
+                  desc: "Tous les déménageurs reçoivent la même description complète de votre logement. Les autres = chaque déménageur fait sa propre estimation = impossible à comparer.",
                 },
                 {
                   title: "Dossier anonyme (0 démarchage)",

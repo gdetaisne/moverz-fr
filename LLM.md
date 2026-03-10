@@ -10,7 +10,7 @@
 
 ## Message central (à ne pas "réécrire" différemment partout)
 
-**Différence clé :** Moverz évalue chaque déménageur selon 3 analyses de risque notées /100, standardise les dossiers avant mise en relation (volume IA + accès + contraintes + options) pour des devis réellement comparables et sans surprise, et exclut automatiquement les déménageurs présentant des alertes financières ou juridiques.
+**Différence clé :** Moverz évalue chaque déménageur selon 3 analyses de risque notées /100, qualifie les dossiers avant mise en relation (description complète du logement + accès + contraintes + options) pour des devis fiables et sans surprise, et exclut automatiquement les déménageurs présentant des alertes financières ou juridiques.
 
 **3 analyses de risque (chacune notée /100, présentées individuellement au client) :**
 

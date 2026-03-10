@@ -50,8 +50,8 @@ export default function CommentCaMarchePage() {
             url: "https://moverz.fr/comment-ca-marche/",
           },
           {
-            name: "Complétez le dossier standardisé",
-            text: "Ajoutez les détails d'accès (étage, ascenseur, distance parking-entrée), les options (emballage, monte-meuble) et éventuellement des photos. Le volume est calculé automatiquement pour que chaque devis soit basé sur les mêmes données.",
+            name: "Complétez le dossier",
+            text: "Ajoutez les détails d'accès (étage, ascenseur, distance parking-entrée), une description précise de votre logement (pièces, meubles volumineux), et les prestations souhaitées (emballage, monte-meuble). Chaque déménageur reçoit les mêmes informations complètes pour établir un devis fiable.",
           },
           {
             name: "Recevez et comparez vos devis",

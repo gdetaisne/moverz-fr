@@ -26,7 +26,7 @@ export default function ChoisirVillePage() {
         ]}
         eyebrow="Accès direct au comparateur"
         title="Choisissez votre ville"
-        subtitle="Sélectionnez votre ville pour démarrer le comparateur et recevoir des devis comparables de déménageurs contrôlés, sur une base standardisée."
+        subtitle="Sélectionnez votre ville pour démarrer le comparateur et recevoir des devis comparables de déménageurs contrôlés."
         primaryCta={{
           label: "Démarrer le comparateur",
           href: buildTunnelUrl({ from: "/choisir-ville/" }),

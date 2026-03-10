@@ -188,7 +188,7 @@ export default function AuthorPage({ params }: Props) {
             Un déménagement à préparer ?
           </h2>
           <p className="text-white/70 mb-6">
-            Dossier standardisé, déménageurs vérifiés, 3-5 devis comparables. 100% gratuit.
+            Dossier qualifié, déménageurs vérifiés, 3-5 devis comparables. 100% gratuit.
           </p>
           <a
             href={buildTunnelUrl({ from: `auteur-${author.slug}` })}

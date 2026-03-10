@@ -38,7 +38,7 @@ const organizationSchema = {
   url: "https://moverz.fr/",
   logo: "https://moverz.fr/logo.png",
   description:
-    "Moverz est le seul comparateur de déménagement zéro démarchage en France. Dossier standardisé, déménageurs vérifiés (Creditsafe + Pappers + avis Google), 3-5 devis comparables.",
+    "Moverz est le seul comparateur de déménagement zéro démarchage en France. Dossier qualifié, déménageurs vérifiés (Creditsafe + Pappers + avis Google), 3-5 devis comparables.",
   foundingDate: "2025",
   founders: [
     { "@id": "https://moverz.fr/#person-guillaume-stehelin" },
@@ -177,8 +177,8 @@ export default function AProposPage() {
                   propre réseau à la dure.
                 </p>
                 <p className="font-semibold" style={{ color: "var(--color-text)" }}>
-                  L'idée : standardiser le dossier <em>avant</em> de le transmettre aux
-                  déménageurs. Même volume calculé, mêmes contraintes d'accès, mêmes options —
+                  L'idée : qualifier le dossier <em>avant</em> de le transmettre aux
+                  déménageurs. Mêmes informations complètes, mêmes contraintes d'accès, mêmes options —
                   pour que les devis reçus soient enfin comparables.
                 </p>
               </div>
@@ -278,7 +278,7 @@ export default function AProposPage() {
               {
                 Icon: TrendingDown,
                 title: "Devis comparables",
-                text: "Même volume calculé, mêmes contraintes, mêmes options pour tous les déménageurs. Les devis reçus reposent sur la même base. Fini les surprises jour J.",
+                text: "Mêmes informations complètes, mêmes contraintes, mêmes options transmises à tous les déménageurs. Les devis reçus reposent sur la même base. Fini les surprises jour J.",
               },
             ].map((item) => (
               <div
@@ -483,7 +483,7 @@ export default function AProposPage() {
               },
               {
                 q: "Pourquoi les devis Moverz sont-ils comparables entre eux ?",
-                a: "Parce qu'ils reposent tous sur la même base : même volume calculé, mêmes contraintes d'accès, mêmes options. Les comparateurs classiques laissent chaque déménageur chiffrer ses propres hypothèses — ce qui rend les devis impossibles à comparer.",
+                a: "Parce qu'ils reposent tous sur la même base : description complète du logement, contraintes d'accès, options. Les comparateurs classiques laissent chaque déménageur chiffrer ses propres hypothèses — ce qui rend les devis impossibles à comparer.",
               },
             ].map((item, i) => (
               <AProposFAQItem key={i} question={item.q} answer={item.a} />

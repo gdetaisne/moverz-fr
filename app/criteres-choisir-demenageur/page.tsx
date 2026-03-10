@@ -33,7 +33,7 @@ export default function CriteresChoisirDemenageurPage() {
     {
       question: "Un déménageur peut-il facturer plus le jour J ?",
       answer:
-        "Oui, si le volume réel est supérieur au volume estimé. C'est pourquoi l'estimation précise (visite, visio ou calcul standardisé) est cruciale. Un déménageur fiable base son devis sur un volume précis et l'inscrit au contrat. Si le volume est respecté, aucun supplément ne peut être facturé. Sur Moverz, le volume est calculé automatiquement (précision 90–95%) pour éviter cette situation.",
+        "Oui, si le volume réel est supérieur au volume estimé. C'est pourquoi l'estimation précise (visite technique ou description détaillée) est cruciale. Un déménageur fiable base son devis sur un volume précis et l'inscrit au contrat. Si le volume est respecté, aucun supplément ne peut être facturé. Sur Moverz, vous décrivez précisément votre logement pour que tous les déménageurs établissent leur devis sur la même base.",
     },
     {
       question: "Quelle assurance couvre la casse ?",
@@ -51,9 +51,9 @@ export default function CriteresChoisirDemenageurPage() {
         "Vérifiez 4 éléments : (1) SIREN actif sur annuaire-entreprises.data.gouv.fr, (2) Cohérence raison sociale sur devis/RIB/assurance, (3) Attestation d'assurance RC Pro valide, (4) Avis Google analysés (pas de patterns récurrents négatifs). Méfiez-vous des prix anormalement bas (&lt;30% du marché), des demandes de paiement cash, ou de l'absence de devis écrit. Moverz filtre automatiquement via 3 analyses de risque /100 (expérience client, financier, juridique) — alertes = exclusion.",
     },
     {
-      question: "Visite technique, visio, ou calcul standardisé : que choisir ?",
+      question: "Visite technique, visio, ou description détaillée : que choisir ?",
       answer:
-        "Visite technique = précision maximale mais nécessite RDV (1–2 semaines). Visio = bon compromis (rapide, assez précis). Calcul standardisé Moverz = 1 minute, précision 90–95%, tous les déménageurs partent du même volume. Évitez l'estimation téléphonique (risque élevé d'écart). L'important : que tous vos devis soient basés sur le même volume pour être comparables.",
+        "Visite technique = précision maximale mais nécessite RDV (1–2 semaines). Visio = bon compromis (rapide, assez précis). Description détaillée guidée (Moverz) = 3 minutes, tous les déménageurs reçoivent les mêmes informations. Évitez l'estimation téléphonique (risque élevé d'écart). L'important : que tous vos devis soient basés sur les mêmes informations pour être comparables.",
     },
     {
       question: "Quel acompte est normal ?",
@@ -127,14 +127,14 @@ export default function CriteresChoisirDemenageurPage() {
       note: "Les avis 1-2★ sont les plus révélateurs : si plusieurs clients signalent les mêmes problèmes (retards, casse), c'est un pattern structurel.",
     },
     {
-      title: "5) Méthode d'estimation du volume (visite / visio / calcul standardisé)",
+      title: "5) Méthode d'estimation du volume (visite / visio / description détaillée)",
       Icon: Package,
       iconColor: "text-orange-600",
       iconBg: "bg-orange-50 border-orange-100",
       bullets: [
         "Visite technique gratuite = précision maximale (idéal pour logements > 100m²)",
         "Visio = bon compromis (rapide, assez précis)",
-        "Calcul standardisé Moverz = 1 minute, précision 90–95%, tous les devis partent du même volume",
+        "Description détaillée guidée (Moverz) = 3 minutes, tous les déménageurs reçoivent les mêmes infos",
         "ÉVITEZ l'estimation téléphonique (risque élevé de supplément jour J)",
       ],
       note: "40–50% des déménagements subissent un supplément jour J à cause d'une mauvaise estimation du volume (+200–800€).",
@@ -238,7 +238,7 @@ export default function CriteresChoisirDemenageurPage() {
     { text: "Licence de transport valide (inscription registre des transporteurs)", priority: "high" },
     { text: "Attestation assurance RC Pro < 6 mois (plafond ≥ 1,5M€)", priority: "high" },
     { text: "Risque expérience client /100 acceptable (avis Google analysés, pas de patterns négatifs)", priority: "medium" },
-    { text: "Méthode d'estimation précise : visite/visio/calcul standardisé (pas téléphonique)", priority: "high" },
+    { text: "Méthode d'estimation précise : visite/visio/description détaillée (pas téléphonique)", priority: "high" },
     { text: "Devis écrit détaillé (volume, accès, prestations, options, surcoûts)", priority: "high" },
     { text: "Accès explicités (étage, ascenseur, parking, portage)", priority: "medium" },
     { text: "Prestations incluses clairement listées (emballage, démontage, protection)", priority: "medium" },
@@ -255,7 +255,7 @@ export default function CriteresChoisirDemenageurPage() {
     { step: "Demandez l'attestation d'assurance RC Pro (validité < 6 mois, plafond ≥ 1,5M€, franchise).", tool: "Obligatoire légalement" },
     { step: "Consultez les avis Google Maps (note 4.0+/5, volume 20+ avis, pas de litiges répétitifs).", tool: "Gratuit" },
     { step: "Vérifiez la cohérence raison sociale ↔ RIB ↔ devis ↔ assurance (même nom exact).", tool: "Lecture croisée" },
-    { step: "Exigez une estimation précise du volume (visite/visio ou calcul standardisé) — pas de devis téléphonique.", tool: "Visite gratuite ou calcul en 1 min" },
+    { step: "Exigez une estimation précise du volume (visite/visio ou description détaillée guidée) — pas de devis téléphonique.", tool: "Visite gratuite ou description guidée" },
     { step: "Demandez un devis écrit détaillé (prestations, accès, options, surcoûts, conditions annulation).", tool: "Obligatoire légalement" },
   ];
 
@@ -584,7 +584,7 @@ export default function CriteresChoisirDemenageurPage() {
               <div>
                 <p className="text-sm font-semibold text-v4-text">Estimation de volume précise</p>
                 <p className="text-xs text-v4-text-secondary mt-1">
-                  Volume calculé en 1 minute, précision 90–95%, évite les surcoûts jour J.
+                  Description guidée en 3 minutes, mêmes infos à tous, évite les surcoûts jour J.
                 </p>
               </div>
               <a

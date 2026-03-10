@@ -58,7 +58,7 @@ export default function Page() {
           title: "Comparer des devis sans spam",
           paragraphs: [
             "Même pour une aide partielle, comparer plusieurs devis aide à trouver le bon compromis prix/fiabilité.",
-            "Moverz standardise la demande et vous permet de recevoir des propositions sur une base identique.",
+            "Moverz structure la demande et transmet les mêmes informations à tous pour recevoir des propositions comparables.",
           ],
           bullets: [
             "Un seul dossier, plusieurs offres.",
@@ -96,7 +96,7 @@ export default function Page() {
         {
           question: "Puis-je comparer plusieurs devis gratuitement ?",
           answer:
-            "Oui. Avec Moverz, vous pouvez recevoir des devis comparables standardisés et décider ensuite, sans engagement.",
+            "Oui. Avec Moverz, vous pouvez recevoir des devis comparables et décider ensuite, sans engagement.",
         },
       ]}
     />

@@ -59,7 +59,7 @@ export default function Page() {
           title: "Devis : quelles infos donner",
           paragraphs: [
             "Pour obtenir un prix juste, il faut un volume réaliste et une description des accès.",
-            "Moverz standardise votre dossier et calcule le volume automatiquement pour des devis comparables.",
+            "Moverz structure votre dossier et transmet les mêmes informations complètes à tous les déménageurs pour des devis comparables.",
           ],
           bullets: [
             "Nombre de pièces + liste des meubles principaux (salon/chambre).",
@@ -92,7 +92,7 @@ export default function Page() {
         {
           question: "Puis-je comparer plusieurs devis gratuitement ?",
           answer:
-            "Oui. Avec Moverz, vous remplissez un seul dossier et Comparez des devis comparables standardisés, sans engagement.",
+            "Oui. Avec Moverz, vous remplissez un seul dossier et comparez des devis comparables, sans engagement.",
         },
         {
           question: "Et si j’ai surtout besoin de portage ?",

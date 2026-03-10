@@ -59,7 +59,7 @@ export default function Page() {
           title: "Obtenir un devis fiable (sans surprises)",
           paragraphs: [
             "Un devis utile précise : volume, durée, accès, assurance, modalités d’accès et responsabilités (vous vs prestataire).",
-            "Moverz standardise votre dossier et calcule le volume automatiquement pour comparer sur une base identique.",
+            "Moverz structure votre dossier et transmet les mêmes informations complètes à tous les prestataires pour des devis comparables.",
           ],
           bullets: [
             "Décrivez les pièces principales pour estimer le volume.",
@@ -97,7 +97,7 @@ export default function Page() {
         {
           question: "Puis-je comparer des devis sans spam ?",
           answer:
-            "Oui. Moverz fonctionne avec un dossier anonyme et des devis standardisés : moins de pression commerciale et une comparaison plus simple.",
+            "Oui. Moverz fonctionne avec un dossier anonyme et des devis comparables : moins de pression commerciale et une comparaison plus simple.",
         },
       ]}
     />

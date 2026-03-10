@@ -22,7 +22,7 @@ const faqCategories = [
     items: [
       {
         q: "Qu'est-ce que Moverz ?",
-        a: "Moverz est un comparateur de devis de déménageurs. Vous remplissez un dossier standardisé en ligne (3 minutes), transmis anonymement à 3 à 5 déménageurs vérifiés. Résultat : des devis comparables sur la même base, 100% gratuits et sans harcèlement téléphonique.",
+        a: "Moverz est un comparateur de devis de déménageurs. Vous remplissez un dossier guidé en ligne (3 minutes), transmis anonymement à 3 à 5 déménageurs vérifiés. Résultat : des devis comparables sur la même base, 100% gratuits et sans harcèlement téléphonique.",
       },
       {
         q: "Quelle est la différence entre Moverz et les autres comparateurs ?",
@@ -50,7 +50,7 @@ const faqCategories = [
       },
       {
         q: "Comment Moverz garantit-il des devis comparables ?",
-        a: "Vous décrivez votre déménagement et notre outil cadre un dossier standardisé (même volumétrie, mêmes informations) envoyé à tous les déménageurs partenaires. Ils chiffrent ainsi la même base, ce qui rend les devis directement comparables et limite les mauvaises surprises le jour J.",
+        a: "Vous décrivez précisément votre déménagement (logement, pièces, meubles, accès, contraintes) et ces mêmes informations complètes sont envoyées à tous les déménageurs partenaires. Ils chiffrent ainsi sur la même base, ce qui rend les devis directement comparables et limite les mauvaises surprises le jour J.",
       }
     ]
   },

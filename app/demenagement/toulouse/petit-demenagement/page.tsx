@@ -92,7 +92,7 @@ export default function Page() {
         {
           question: "Puis-je comparer plusieurs devis gratuitement ?",
           answer:
-            "Oui. Avec Moverz, vous remplissez un seul dossier et Comparez des devis comparables standardisés, sans engagement.",
+            "Oui. Avec Moverz, vous remplissez un seul dossier et comparez des devis comparables, sans engagement.",
         },
         {
           question: "Et si j’ai surtout besoin d’un coup de main (portage) ?",

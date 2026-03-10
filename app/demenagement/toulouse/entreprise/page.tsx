@@ -58,10 +58,10 @@ export default function Page() {
           title: "Comparer des devis comparables sur une base identique",
           paragraphs: [
             "Le vrai risque est de comparer des devis incomplets. Pour décider, il faut des offres sur un même cahier des charges.",
-            "Moverz vous aide à standardiser la demande et à recevoir des devis comparables, sans spam.",
+            "Moverz vous aide à structurer la demande et à recevoir des devis comparables, sans spam.",
           ],
           bullets: [
-            "Un seul dossier, des devis standardisés.",
+            "Un seul dossier, des devis comparables.",
             "Moins de pression commerciale grâce au dossier anonyme.",
             "Plus simple pour arbitrer prix vs méthode vs assurance.",
           ],

@@ -58,7 +58,7 @@ export default function Page() {
           title: "Comparer des devis (sans perdre du temps)",
           paragraphs: [
             "La comparaison n’a de valeur que si les offres sont comparables : même volume, même destination, même niveau de service.",
-            "Moverz vous aide à standardiser votre dossier pour obtenir des devis plus lisibles, sans spam.",
+            "Moverz vous aide à structurer votre dossier pour obtenir des devis plus lisibles, sans spam.",
           ],
           bullets: [
             "Un seul dossier, plusieurs offres structurées.",

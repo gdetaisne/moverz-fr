@@ -425,7 +425,7 @@ export default function ChiffresClesPage() {
               Prêt à comparer des déménageurs vérifiés ?
             </h2>
             <p className="mt-4 text-[#1E293B]/75 max-w-2xl mx-auto">
-              3 analyses de risque · Dossier standardisé · Devis comparables · Exclusion automatique des alertes · 100% gratuit
+              3 analyses de risque · Dossier qualifié · Devis comparables · Exclusion automatique des alertes · 100% gratuit
             </p>
             <div className="mt-7 flex flex-col sm:flex-row items-center justify-center gap-3">
               <a

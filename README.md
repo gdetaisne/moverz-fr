@@ -57,9 +57,9 @@ Note: the site self-hosts Inter via `next/font/local` (see `app/layout.tsx`) to 
 ## Key Features
 
 -   **Central Hub**: Links to 11 local moving comparison sites.
--   **AI-powered comparison**: Unique inventory for truly comparable quotes.
--   **Vetted Movers**: Minimum 5 controlled movers (solvency + 0 disputes).
--   **User-centric**: 100% free, no phone harassment.
+-   **Verified comparison**: 3 risk analyses /100 (customer experience, financial, legal) for reliable movers.
+-   **Vetted Movers**: Only verified movers (solvency, no legal alerts, experience).
+-   **User-centric**: 100% free, anonymous quotes, no phone harassment.
 -   **SEO Optimized**: Specific metadata and canonicals for national targeting.
 
 ## 🛡️ Documentation Garde-Fous
