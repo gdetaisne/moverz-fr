@@ -211,7 +211,7 @@ export function CreditsafeChapter() {
                 Obtenir mes devis
               </a>
               <a
-                href="/blog/label-moverz-certification-demenageurs/"
+                href="/label-moverz/"
                 className="group inline-flex items-center gap-1.5 text-sm font-medium transition-colors"
                 style={{ color: "#0EA5A6" }}
               >
