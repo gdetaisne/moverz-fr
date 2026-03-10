@@ -9,14 +9,14 @@ import { LabelCTA } from "@/components/label-moverz/LabelCTA";
 import { ScoringChecker } from "@/components/label-moverz/ScoringChecker";
 
 export const metadata: Metadata = {
-  title: "Label Moverz : 3 analyses /100 · 0 faillite",
-  description: "Label Moverz vérifie automatiquement 3 risques /100 (financier Creditsafe, juridique Pappers, avis Google). Monitoring continu, 0 faillite depuis janvier 2026.",
+  title: "Label Moverz : Score /100 (3 dimensions) · 0 faillite",
+  description: "Label Moverz : score automatique /100 (3 dimensions : fiabilité légale, satisfaction clients, alertes) calculé à partir de 5 sous-scores via Pappers + Google + IA. Monitoring continu, 0 faillite depuis janvier 2026.",
   alternates: {
     canonical: "https://moverz.fr/label-moverz/",
   },
   openGraph: {
-    title: "Label Moverz : 3 analyses de risque /100",
-    description: "Le seul label qui vérifie la santé financière ET juridique des déménageurs. 0 faillite depuis janvier 2026.",
+    title: "Label Moverz : Score /100 (3 dimensions)",
+    description: "Le seul label qui vérifie la santé financière ET juridique des déménageurs en continu. Score < 50/100 = exclusion. 0 faillite depuis janvier 2026.",
     type: "website",
     url: "https://moverz.fr/label-moverz/",
   },
@@ -33,8 +33,8 @@ export default function LabelMoverzPage() {
   return (
     <>
       <WebPageSchema
-        name="Label Moverz : 3 analyses de risque /100 · 0 faillite"
-        description="Label Moverz vérifie automatiquement 3 risques /100 (financier Creditsafe, juridique Pappers, avis Google). Monitoring continu, 0 faillite depuis janvier 2026."
+        name="Label Moverz : Score /100 (3 dimensions) · 0 faillite"
+        description="Label Moverz : score automatique /100 (3 dimensions : fiabilité légale, satisfaction clients, alertes) calculé à partir de 5 sous-scores via Pappers + Google + IA. Monitoring continu, 0 faillite depuis janvier 2026."
         url="https://moverz.fr/label-moverz/"
         about="Certification déménageurs"
       />

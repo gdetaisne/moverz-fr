@@ -9,8 +9,8 @@ import { Check, Star, ShieldCheck, Scale, Sparkles, ArrowRight } from "lucide-re
 
 export const metadata: Metadata = getFullMetadata(
   "verifications-partenaires",
-  "Comment Moverz vérifie les déménageurs | 3 analyses de risque notées /100",
-  "Moverz évalue chaque déménageur selon 3 axes de risque notés /100 : expérience client (avis Google), risque financier (Creditsafe + Pappers + analyse interne), risque juridique (décisions de justice). Alertes = exclusion automatique."
+  "Comment Moverz vérifie les déménageurs | Score /100 (3 dimensions)",
+  "Moverz attribue à chaque déménageur un Score /100 calculé à partir de 5 sous-scores indépendants regroupés en 3 dimensions : fiabilité légale 25% (Pappers financier + juridique), satisfaction clients 40% (Google + réputation IA), alertes 35% (vigilance IA). Score < 50/100 = exclusion automatique."
 );
 
 export default function VerificationsPartenairesPage() {
@@ -240,7 +240,7 @@ export default function VerificationsPartenairesPage() {
             </h3>
             <p className="text-sm md:text-base text-v4-text-secondary mb-5 max-w-2xl mx-auto">
               Obtenez jusqu'à 5 devis comparables de déménageurs notés /100 (3 dimensions : fiabilité légale, satisfaction clients, alertes) sous 5-7 jours. 
-              Score < 50/100 = exclusion automatique. Dossier anonyme, zéro harcèlement, 100% gratuit.
+              Score &lt; 50/100 = exclusion automatique. Dossier anonyme, zéro harcèlement, 100% gratuit.
             </p>
             <a
               href={buildTunnelUrl({ from: "verifications-partenaires" })}

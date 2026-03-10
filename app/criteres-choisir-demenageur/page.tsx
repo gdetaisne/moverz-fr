@@ -402,7 +402,7 @@ export default function CriteresChoisirDemenageurPage() {
 
             <div className="rounded-xl bg-white/60 border border-brand-turquoise-200 p-4 text-center">
               <p className="text-sm md:text-base text-v4-text">
-                <strong>Résultat :</strong> Vous ne recevez des devis que de déménageurs avec un Score Moverz > 50/100 (3 dimensions : fiabilité légale, satisfaction clients, alertes). Monitoring continu automatique.
+                <strong>Résultat :</strong> Vous ne recevez des devis que de déménageurs avec un Score Moverz &gt; 50/100 (3 dimensions : fiabilité légale, satisfaction clients, alertes). Monitoring continu automatique.
               </p>
               <a
                 href="/verifications-partenaires/"
@@ -555,7 +555,7 @@ export default function CriteresChoisirDemenageurPage() {
             </div>
               <p className="text-sm md:text-base text-v4-text-secondary mb-5 max-w-2xl mx-auto">
                 Moverz attribue automatiquement à chaque déménageur un Score /100 (3 dimensions : fiabilité légale, satisfaction clients, alertes)
-                + standardise les volumes pour des devis réellement comparables. Score < 50/100 = exclusion automatique.
+                + standardise les volumes pour des devis réellement comparables. Score &lt; 50/100 = exclusion automatique.
               </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
               <a
