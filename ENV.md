@@ -7,6 +7,22 @@ SITE_URL=https://moverz.fr
 NEXT_PUBLIC_BACKOFFICE_URL=https://moverz-backoffice.gslv.cloud
 ```
 
+## Scoring Checker (label-moverz)
+
+Variables requises pour le système de consultation de scores depuis moverz.fr :
+
+```
+# Clé API publique du backoffice (identique à SCORING_API_KEY_PUBLIC côté Back_Office)
+SCORING_API_KEY_PUBLIC=<clé_32_chars>
+
+# Secret JWT pour signer le cookie de quota (min 32 chars)
+# Générer avec : openssl rand -hex 32
+SCORING_QUOTA_SECRET=<secret_32_chars>
+```
+
+- `SCORING_API_KEY_PUBLIC` : jamais exposée au browser (utilisée uniquement dans les API Routes Next.js)
+- `SCORING_QUOTA_SECRET` : signe le cookie `moverz_quota` (HttpOnly, Secure) — limite à 3 déménageurs / 30j par user
+
 Notes:
 - `NEXT_PUBLIC_BACKOFFICE_URL` is normalized (trim + optional trailing `/api` or `/public` removed).
 - Required for `/confirm-email`.

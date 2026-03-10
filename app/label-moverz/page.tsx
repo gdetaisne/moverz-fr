@@ -6,6 +6,7 @@ import { LabelScoresShowcase } from "@/components/label-moverz/LabelScoresShowca
 import { LabelComparison } from "@/components/label-moverz/LabelComparison";
 import { LabelStats } from "@/components/label-moverz/LabelStats";
 import { LabelCTA } from "@/components/label-moverz/LabelCTA";
+import { ScoringChecker } from "@/components/label-moverz/ScoringChecker";
 
 export const metadata: Metadata = {
   title: "Label Moverz : 3 analyses /100 · 0 faillite",
@@ -40,6 +41,7 @@ export default function LabelMoverzPage() {
       <FAQSchema faqs={faqItems} />
       <LabelMoverzHero />
       <LabelScoresShowcase />
+      <ScoringChecker />
       <LabelStats />
       <LabelComparison />
       <LabelCTA />
