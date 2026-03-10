@@ -1,6 +1,6 @@
 ---
 title: "Devis fiable sans visite technique : la méthodologie en 3 étapes"
-description: "Comment chiffrer plus vite sans dégrader la qualité : infos projet, détails guidées, inventaire IA, et garde-fous anti-surprise."
+description: "Comment chiffrer plus vite sans dégrader la qualité : infos projet, détails guidées, inventaire automatisé, et garde-fous anti-surprise."
 date: "2026-01-15"
 slug: "devis-fiable-sans-visite-technique-methodologie"
 category: "pro"
