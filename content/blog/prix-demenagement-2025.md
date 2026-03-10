@@ -86,11 +86,11 @@ Dans ce guide ultra-complet, vous allez découvrir :
 - **→ Supplément de 280€ + client mécontent** ❌
 
 **La solution Moverz** :
-- L'**IA calcule votre volume en ~1 minute** à partir d'un inventaire détail guidé
+- Le **système calcule votre volume en ~5-10 minutes** à partir d'un inventaire guidé
 - Tous les déménageurs reçoivent **la même base de volume**
 - **→ Devis comparables + 0 surprise jour J** ✅
 
-> **Calculer votre volume précis avec l'IA**  
+> **Calculer votre volume précis**  
 > Inventaire guidé pièce par pièce, calcul automatique en m³, dossier partagé avec 3-5 déménageurs sur [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits).
 
 ---
@@ -199,14 +199,14 @@ Dans ce guide ultra-complet, vous allez découvrir :
 **→ Devis non comparables** (bases de volume différentes)
 
 **La solution Moverz** :
-- L'**IA calcule votre volume précis** à partir de vos détails (précision 90-95%)
+- Le **système calcule votre volume** à partir d'un inventaire détaillé
 - **Tous les déménageurs reçoivent le même volume** (ex: 30 m³)
 - **→ Devis vraiment comparables** ✅
 
 **Process** :
-1. Vous prenez 10-15 détails de votre logement (guidé pièce par pièce)
-2. L'IA analyse et calcule : "Votre volume : 30,5 m³"
-3. Votre dossier (volume + détails + accès) est partagé avec 3-5 déménageurs
+1. Vous remplissez un inventaire guidé pièce par pièce (5-10 min)
+2. Le système calcule : "Votre volume : 30,5 m³"
+3. Votre dossier (volume + inventaire + accès) est partagé avec 3-5 déménageurs
 4. Vous recevez des devis **sur la même base de 30,5 m³**
 
 **→ Vous comparez des pommes avec des pommes** ✅
@@ -415,9 +415,9 @@ Avec Moverz, vous recevez **des devis comparables** :
 
 ### La différence Moverz
 
-**1. IA calcule le volume précis** (1 minute)
+**1. Calcul de volume précis** (5-10 min)
 - Inventaire guidé pièce par pièce
-- Volume en m³ avec précision 90-95%
+- Volume en m³ calculé à partir de votre inventaire
 - **→ Base commune pour tous les devis** ✅
 
 **2. Dossier anonyme**
