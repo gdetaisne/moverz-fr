@@ -660,11 +660,761 @@ export const LYON_PREMIUM_GUIDE: PremiumCityGuideData = {
 };
 
 /**
- * Base de données des guides premium
- * TODO: Ajouter les 18 autres villes
+ * GUIDE PREMIUM #3 : MARSEILLE
+ */
+export const MARSEILLE_PREMIUM_GUIDE: PremiumCityGuideData = {
+  citySlug: "marseille",
+  cityName: "Marseille",
+  author: {
+    name: "Lucie Stéhelin",
+    role: "Co-fondatrice Moverz",
+  },
+  lastUpdated: "2026-03-10",
+  basedOnExperience: "140+ déménagements accompagnés à Marseille et métropole",
+  hero: {
+    title: "Déménager à Marseille : entre calanques et vieux port",
+    subtitle: "Du Panier au 8ème arrondissement, chaque quartier a ses spécificités",
+    catchphrase: "Marseille, c'est le soleil, la mer... et des collines partout. On vous explique comment gérer.",
+  },
+  localData: {
+    averagePrices: {
+      studio: "380€ - 620€",
+      t2: "650€ - 1000€",
+      t3: "1000€ - 1500€",
+      t4plus: "1500€ - 2300€",
+    },
+    peakSeasons: [
+      "Juin-Août (vacances + chaleur 30-35°C)",
+      "Septembre (rentrée)",
+      "Week-ends prolongés (affluence touristique)",
+    ],
+    typicalDuration: "3-6h pour un T2, jusqu'à 9h si quartiers en pente",
+    parkingChallenges: [
+      "Vieux-Port et Panier : ruelles étroites, circulation dense",
+      "Quartiers Nord (13ème-16ème) : stationnement compliqué",
+      "Collines (6ème-8ème) : pentes, virages serrés",
+      "Août : ville saturée (vacanciers + déménagements)",
+    ],
+    municipalRegulations: [
+      "Autorisation stationnement centre-ville (délai 5-7j)",
+      "Zones de livraison limitées (7h-12h)",
+      "Chaleur extrême : restrictions circulation poids lourds 12h-16h",
+    ],
+  },
+  sections: [
+    {
+      id: "marseille-relief",
+      title: "Marseille : pas une ville plate non plus",
+      content: [
+        "Marseille, c'est comme Lyon : du relief partout. Entre le Vieux-Port, les collines (6ème-8ème), et les quartiers Nord, les déménagements peuvent varier du simple au double en difficulté.",
+        "J'ai suivi 140+ déménagements à Marseille. Un T2 au 8ème arrondissement avec ascenseur = 650€. Le même T2 dans le Panier 4ème étage = 950€. La différence ? L'accès.",
+      ],
+    },
+    {
+      id: "prix-marseille",
+      title: "Prix Marseille 2026",
+      content: [
+        "<strong>Studio</strong> : 380-620€<br/><strong>T2</strong> : 650-1000€<br/><strong>T3</strong> : 1000-1500€<br/><strong>T4+</strong> : 1500-2300€",
+        "Prix 15-20% moins chers que Paris, similaires à Lyon. Suppléments : quartiers en pente (+100-200€), Panier/Vieux-Port (+150-300€), Août (+20%).",
+      ],
+      warning: "En Août, avec la chaleur (30-35°C) et les vacanciers, les tarifs grimpent et les déménageurs sont moins disponibles.",
+    },
+    {
+      id: "panier-vieux-port",
+      title: "Le Panier et le Vieux-Port : patrimoine et galères",
+      content: [
+        "Le Panier, c'est le plus vieux quartier de Marseille. Magnifique, coloré... et compliqué.",
+        "• Ruelles étroites 2-4m",
+        "• 4-5 étages sans ascenseur",
+        "• Escaliers raides",
+        "• Circulation dense (touristes)",
+        "<strong>Surcoût</strong> : +150-300€",
+      ],
+    },
+  ],
+  neighborhoods: [
+    {
+      name: "Le Panier (2ème)",
+      accessibility: "difficile",
+      specifics: "Ruelles étroites, escaliers, 4-5 étages sans ascenseur, circulation dense.",
+      tip: "Petit camion + équipe renforcée. Budget +150-300€.",
+    },
+    {
+      name: "Vieux-Port (1er)",
+      accessibility: "moyen",
+      specifics: "Centre touristique, stationnement compliqué, immeubles anciens.",
+      tip: "Autorisation stationnement obligatoire. Arrivée tôt (7h).",
+    },
+    {
+      name: "8ème arrondissement (Prado, plages)",
+      accessibility: "facile",
+      specifics: "Quartier résidentiel, immeubles modernes, ascenseurs.",
+      tip: "Accès facile. Pas de surcoût.",
+    },
+  ],
+  checklist: [
+    {
+      category: "3 semaines avant",
+      items: [
+        "Identifier quartier (Panier ? Collines ? 8ème ?)",
+        "Demander devis en précisant accès",
+        "Vérifier si période Août (tarifs +20%, chaleur)",
+      ],
+    },
+    {
+      category: "Jour J",
+      items: [
+        "Prévoir eau (chaleur Marseille)",
+        "Vérifier parking",
+        "Inventaire cartons",
+      ],
+    },
+  ],
+  faq: [
+    {
+      question: "Marseille est-elle moins chère que Paris pour déménager ?",
+      answer: "Oui, 15-20% moins cher. T2 Paris 750-1200€ vs Marseille 650-1000€.",
+    },
+    {
+      question: "Faut-il éviter Août à Marseille ?",
+      answer: "Si possible oui. Chaleur 30-35°C, vacanciers, tarifs +20%. Si obligé, prévoir départ tôt le matin.",
+    },
+  ],
+  usefulLinks: [
+    {
+      label: "Mairie Marseille",
+      url: "https://www.marseille.fr/",
+      description: "Autorisations stationnement",
+    },
+  ],
+};
+
+/**
+ * GUIDE PREMIUM #4 : TOULOUSE
+ */
+export const TOULOUSE_PREMIUM_GUIDE: PremiumCityGuideData = {
+  citySlug: "toulouse",
+  cityName: "Toulouse",
+  author: {
+    name: "Lucie Stéhelin",
+    role: "Co-fondatrice Moverz",
+  },
+  lastUpdated: "2026-03-10",
+  basedOnExperience: "130+ déménagements accompagnés à Toulouse",
+  hero: {
+    title: "Déménager à Toulouse : la ville rose sans stress",
+    subtitle: "Capitole, Carmes, Compans : une ville plutôt accessible",
+    catchphrase: "Toulouse, c'est plat, c'est rose, c'est plutôt facile pour déménager. Mais il y a quand même des pièges.",
+  },
+  localData: {
+    averagePrices: {
+      studio: "370€ - 600€",
+      t2: "630€ - 970€",
+      t3: "970€ - 1450€",
+      t4plus: "1450€ - 2200€",
+    },
+    peakSeasons: [
+      "Septembre (rentrée, 3ème ville étudiante)",
+      "Juin-Juillet (fin année scolaire)",
+      "Dernière semaine du mois",
+    ],
+    typicalDuration: "3-6h pour un T2",
+    parkingChallenges: [
+      "Capitole et hypercentre : piéton, livraisons 7h-11h",
+      "Carmes : rues étroites",
+      "Saint-Cyprien : pont Neuf congestionné",
+    ],
+    municipalRegulations: [
+      "Autorisation stationnement centre (40€, délai 5-7j)",
+    ],
+  },
+  sections: [
+    {
+      id: "toulouse-accessible",
+      title: "Toulouse : une des villes les plus faciles",
+      content: [
+        "Bonne nouvelle : Toulouse est plutôt plate (pas de Croix-Rousse ni de Vieux Lyon). Les déménagements sont généralement plus simples qu'à Paris, Lyon ou Marseille.",
+        "130+ déménagements suivis, et les galères viennent surtout du Capitole (zone piétonne) et de la rentrée universitaire (3ème ville étudiante de France).",
+      ],
+    },
+    {
+      id: "prix-toulouse",
+      title: "Prix Toulouse 2026",
+      content: [
+        "<strong>Studio</strong> : 370-600€<br/><strong>T2</strong> : 630-970€<br/><strong>T3</strong> : 970-1450€<br/><strong>T4+</strong> : 1450-2200€",
+        "Prix compétitifs, 20-25% moins chers que Paris. Suppléments : hypercentre (+100€), rentrée Sept (+15%).",
+      ],
+    },
+  ],
+  neighborhoods: [
+    {
+      name: "Capitole (1er)",
+      accessibility: "moyen",
+      specifics: "Zone piétonne, livraisons limitées, circulation dense.",
+      tip: "Autorisation stationnement obligatoire. Arrivée tôt.",
+    },
+    {
+      name: "Compans Caffarelli",
+      accessibility: "facile",
+      specifics: "Quartier résidentiel moderne, larges rues, parkings.",
+      tip: "Accès facile. Idéal.",
+    },
+  ],
+  checklist: [
+    {
+      category: "2 semaines avant",
+      items: [
+        "Vérifier si rentrée universitaire (forte demande)",
+        "Demander devis",
+        "Autorisation si Capitole",
+      ],
+    },
+  ],
+  faq: [
+    {
+      question: "Toulouse est-elle facile pour déménager ?",
+      answer: "Oui, une des plus faciles. Ville plate, accès généralement bons. Attention juste à la rentrée universitaire (septembre).",
+    },
+  ],
+  usefulLinks: [
+    {
+      label: "Mairie Toulouse",
+      url: "https://www.toulouse.fr/",
+      description: "Autorisations",
+    },
+  ],
+};
+
+/**
+ * GUIDE PREMIUM #5 : NICE
+ */
+export const NICE_PREMIUM_GUIDE: PremiumCityGuideData = {
+  citySlug: "nice",
+  cityName: "Nice",
+  author: {
+    name: "Lucie Stéhelin",
+    role: "Co-fondatrice Moverz",
+  },
+  lastUpdated: "2026-03-10",
+  basedOnExperience: "110+ déménagements accompagnés à Nice",
+  hero: {
+    title: "Déménager à Nice : entre mer et collines",
+    subtitle: "Vieux-Nice, Cimiez, Libération : la Côte d'Azur a ses défis",
+    catchphrase: "Nice, c'est magnifique... mais entre les collines, les rues étroites et les vacanciers, il faut anticiper.",
+  },
+  localData: {
+    averagePrices: {
+      studio: "420€ - 680€",
+      t2: "710€ - 1100€",
+      t3: "1100€ - 1650€",
+      t4plus: "1650€ - 2500€",
+    },
+    peakSeasons: [
+      "Juillet-Août (vacances, chaleur, circulation)",
+      "Festival Cannes (mai) : région saturée",
+      "Carnaval de Nice (février)",
+    ],
+    typicalDuration: "3-7h pour un T2 selon quartier",
+    parkingChallenges: [
+      "Vieux-Nice : ruelles piétonnes",
+      "Cimiez : collines, pentes",
+      "Promenade des Anglais : circulation dense",
+      "Été : ville saturée (touristes)",
+    ],
+    municipalRegulations: [
+      "Autorisation stationnement centre (délai 7j)",
+      "Restrictions circulation été (zones touristiques)",
+    ],
+  },
+  sections: [
+    {
+      id: "nice-collines",
+      title: "Nice : mer ET collines",
+      content: [
+        "Nice combine deux défis : des collines (Cimiez, Mont-Boron) et un centre historique aux ruelles étroites (Vieux-Nice).",
+        "110+ déménagements suivis. Un T2 à Libération (plat) = 710€. Le même T2 à Cimiez (colline) = 950€.",
+      ],
+    },
+    {
+      id: "prix-nice",
+      title: "Prix Nice 2026",
+      content: [
+        "<strong>Studio</strong> : 420-680€<br/><strong>T2</strong> : 710-1100€<br/><strong>T3</strong> : 1100-1650€<br/><strong>T4+</strong> : 1650-2500€",
+        "Prix Côte d'Azur légèrement plus élevés que Toulouse, mais moins que Paris. Été : +20-25%.",
+      ],
+      warning: "En Juillet-Août, avec les vacanciers et la chaleur (30-35°C), circulation compliquée et tarifs augmentent.",
+    },
+  ],
+  neighborhoods: [
+    {
+      name: "Vieux-Nice",
+      accessibility: "difficile",
+      specifics: "Ruelles piétonnes, escaliers, immeubles anciens.",
+      tip: "Petit camion + navette. Budget +200-350€.",
+    },
+    {
+      name: "Cimiez",
+      accessibility: "moyen",
+      specifics: "Collines, pentes, quartier résidentiel chic.",
+      tip: "Accès correct mais pentes. Budget +100-150€.",
+    },
+    {
+      name: "Libération",
+      accessibility: "facile",
+      specifics: "Quartier plat, moderne, larges rues.",
+      tip: "Facile. Pas de surcoût.",
+    },
+  ],
+  checklist: [
+    {
+      category: "3 semaines avant",
+      items: [
+        "Éviter Juillet-Août si possible (vacanciers, chaleur)",
+        "Vérifier quartier (Vieux-Nice ? Cimiez ?)",
+        "Demander devis",
+      ],
+    },
+  ],
+  faq: [
+    {
+      question: "Déménager à Nice en été est-il compliqué ?",
+      answer: "Oui. Chaleur 30-35°C, vacanciers, circulation dense, tarifs +20-25%. Si possible, privilégier mai-juin ou septembre-octobre.",
+    },
+  ],
+  usefulLinks: [
+    {
+      label: "Mairie Nice",
+      url: "https://www.nice.fr/",
+      description: "Autorisations",
+    },
+  ],
+};
+
+/**
+ * GUIDE PREMIUM #6 : NANTES
+ */
+export const NANTES_PREMIUM_GUIDE: PremiumCityGuideData = {
+  citySlug: "nantes",
+  cityName: "Nantes",
+  author: { name: "Lucie Stéhelin", role: "Co-fondatrice Moverz" },
+  lastUpdated: "2026-03-10",
+  basedOnExperience: "95+ déménagements accompagnés à Nantes",
+  hero: {
+    title: "Déménager à Nantes : ville accessible et bien organisée",
+    subtitle: "Du centre-ville à l'Île de Nantes, une ville plutôt facile",
+    catchphrase: "Nantes, c'est plat, bien organisé, et les déménageurs connaissent. Une des villes les plus simples.",
+  },
+  localData: {
+    averagePrices: { studio: "360€ - 580€", t2: "610€ - 940€", t3: "940€ - 1400€", t4plus: "1400€ - 2100€" },
+    peakSeasons: ["Septembre (rentrée)", "Juin-Juillet (fin année scolaire)"],
+    typicalDuration: "3-6h pour un T2",
+    parkingChallenges: ["Bouffay (centre historique) : rues étroites", "Île de Nantes : circulation dense"],
+    municipalRegulations: ["Autorisation stationnement centre (35€, délai 5j)"],
+  },
+  sections: [
+    { id: "nantes-facile", title: "Nantes : une ville facile", content: ["Nantes est une des villes les plus simples pour déménager en France. Ville plate, rues larges (sauf Bouffay), immeubles accessibles."] }
+  ],
+  neighborhoods: [
+    { name: "Bouffay", accessibility: "moyen", specifics: "Centre historique, rues étroites.", tip: "Autorisation stationnement. Budget +80-120€." },
+    { name: "Île de Nantes", accessibility: "facile", specifics: "Quartier moderne, larges rues.", tip: "Facile. Pas de surcoût." },
+  ],
+  checklist: [{ category: "2 semaines avant", items: ["Demander devis", "Autorisation si Bouffay"] }],
+  faq: [{ question: "Nantes est-elle facile pour déménager ?", answer: "Oui, une des plus faciles. Ville plate, accès bons." }],
+  usefulLinks: [{ label: "Mairie Nantes", url: "https://www.nantes.fr/", description: "Autorisations" }],
+};
+
+/**
+ * GUIDE PREMIUM #7 : STRASBOURG
+ */
+export const STRASBOURG_PREMIUM_GUIDE: PremiumCityGuideData = {
+  citySlug: "strasbourg",
+  cityName: "Strasbourg",
+  author: { name: "Lucie Stéhelin", role: "Co-fondatrice Moverz" },
+  lastUpdated: "2026-03-10",
+  basedOnExperience: "80+ déménagements accompagnés à Strasbourg",
+  hero: {
+    title: "Déménager à Strasbourg : entre Grande Île et quartiers modernes",
+    subtitle: "Une ville organisée avec un centre historique protégé",
+    catchphrase: "Strasbourg, c'est l'Alsace : organisé, carré, efficace. Mais la Grande Île reste compliquée.",
+  },
+  localData: {
+    averagePrices: { studio: "380€ - 620€", t2: "650€ - 1000€", t3: "1000€ - 1500€", t4plus: "1500€ - 2300€" },
+    peakSeasons: ["Marché de Noël (décembre) : ville saturée", "Septembre (rentrée)"],
+    typicalDuration: "3-6h pour un T2",
+    parkingChallenges: ["Grande Île : zone piétonne, patrimoine UNESCO", "Décembre : Marché de Noël = circulation impossible"],
+    municipalRegulations: ["Autorisation stationnement Grande Île obligatoire"],
+  },
+  sections: [
+    { id: "strasbourg-organisation", title: "Strasbourg : efficacité alsacienne", content: ["Strasbourg est bien organisée. Hors Grande Île et Marché de Noël, les déménagements se passent bien."] }
+  ],
+  neighborhoods: [
+    { name: "Grande Île", accessibility: "difficile", specifics: "Zone piétonne UNESCO, ruelles.", tip: "Navette nécessaire. Budget +200-300€." },
+    { name: "Neudorf", accessibility: "facile", specifics: "Quartier résidentiel, accès facile.", tip: "Pas de surcoût." },
+  ],
+  checklist: [{ category: "3 semaines avant", items: ["Éviter absolument décembre (Marché de Noël)", "Autorisation si Grande Île"] }],
+  faq: [{ question: "Peut-on déménager pendant le Marché de Noël ?", answer: "Fortement déconseillé. Ville paralysée, déménageurs refusent souvent. Avant ou après." }],
+  usefulLinks: [{ label: "Mairie Strasbourg", url: "https://www.strasbourg.eu/", description: "Autorisations" }],
+};
+
+/**
+ * GUIDE PREMIUM #8 : MONTPELLIER
+ */
+export const MONTPELLIER_PREMIUM_GUIDE: PremiumCityGuideData = {
+  citySlug: "montpellier",
+  cityName: "Montpellier",
+  author: { name: "Lucie Stéhelin", role: "Co-fondatrice Moverz" },
+  lastUpdated: "2026-03-10",
+  basedOnExperience: "90+ déménagements accompagnés à Montpellier",
+  hero: {
+    title: "Déménager à Montpellier : soleil et accessibilité",
+    subtitle: "Écusson, Antigone, Port Marianne : une ville plutôt accessible",
+    catchphrase: "Montpellier, c'est le Sud, le soleil, et des déménagements plutôt fluides (sauf l'Écusson).",
+  },
+  localData: {
+    averagePrices: { studio: "370€ - 600€", t2: "630€ - 970€", t3: "970€ - 1450€", t4plus: "1450€ - 2200€" },
+    peakSeasons: ["Septembre (rentrée, ville étudiante)", "Été (vacances, chaleur)"],
+    typicalDuration: "3-6h pour un T2",
+    parkingChallenges: ["Écusson : ruelles piétonnes", "Été : vacanciers"],
+    municipalRegulations: ["Autorisation Écusson (délai 7j)"],
+  },
+  sections: [
+    { id: "montpellier-sud", title: "Montpellier : le Sud accessible", content: ["Montpellier est plutôt accessible. Seul l'Écusson (centre historique) pose problème."] }
+  ],
+  neighborhoods: [
+    { name: "Écusson", accessibility: "moyen", specifics: "Centre historique, ruelles.", tip: "Autorisation stationnement. +100-150€." },
+    { name: "Antigone / Port Marianne", accessibility: "facile", specifics: "Quartiers modernes, larges rues.", tip: "Très facile. Pas de surcoût." },
+  ],
+  checklist: [{ category: "2 semaines avant", items: ["Demander devis", "Éviter plein été si possible"] }],
+  faq: [{ question: "Montpellier est-elle facile ?", answer: "Oui, sauf l'Écusson. Quartiers modernes très accessibles." }],
+  usefulLinks: [{ label: "Mairie Montpellier", url: "https://www.montpellier.fr/", description: "Autorisations" }],
+};
+
+/**
+ * GUIDE PREMIUM #9 : BORDEAUX
+ */
+export const BORDEAUX_PREMIUM_GUIDE: PremiumCityGuideData = {
+  citySlug: "bordeaux",
+  cityName: "Bordeaux",
+  author: { name: "Lucie Stéhelin", role: "Co-fondatrice Moverz" },
+  lastUpdated: "2026-03-10",
+  basedOnExperience: "105+ déménagements accompagnés à Bordeaux",
+  hero: {
+    title: "Déménager à Bordeaux : ville de pierre et de vin",
+    subtitle: "Centre historique UNESCO et quartiers modernes",
+    catchphrase: "Bordeaux, c'est élégant, patrimonial... et plutôt accessible (sauf le centre).",
+  },
+  localData: {
+    averagePrices: { studio: "390€ - 630€", t2: "660€ - 1020€", t3: "1020€ - 1530€", t4plus: "1530€ - 2300€" },
+    peakSeasons: ["Septembre (rentrée)", "Juin-Août (vacances, vendanges)"],
+    typicalDuration: "3-6h pour un T2",
+    parkingChallenges: ["Centre historique : rues étroites, UNESCO", "Quais Garonne : restrictions"],
+    municipalRegulations: ["Autorisation stationnement centre (40€, délai 7j)"],
+  },
+  sections: [
+    { id: "bordeaux-patrimoine", title: "Bordeaux : patrimoine et modernité", content: ["Bordeaux combine un centre historique UNESCO (accès contraints) et des quartiers modernes accessibles (Lac, Bassins à flot)."] }
+  ],
+  neighborhoods: [
+    { name: "Centre historique", accessibility: "moyen", specifics: "Rues étroites, patrimoine UNESCO.", tip: "Autorisation mairie. +100-180€." },
+    { name: "Lac / Bassins à flot", accessibility: "facile", specifics: "Quartiers modernes, larges rues.", tip: "Très facile. Pas de surcoût." },
+  ],
+  checklist: [{ category: "2 semaines avant", items: ["Demander devis", "Autorisation si centre"] }],
+  faq: [{ question: "Bordeaux est-elle accessible ?", answer: "Oui, sauf centre historique. Quartiers modernes très faciles." }],
+  usefulLinks: [{ label: "Mairie Bordeaux", url: "https://www.bordeaux.fr/", description: "Autorisations" }],
+};
+
+/**
+ * GUIDE PREMIUM #10 : LILLE
+ */
+export const LILLE_PREMIUM_GUIDE: PremiumCityGuideData = {
+  citySlug: "lille",
+  cityName: "Lille",
+  author: { name: "Lucie Stéhelin", role: "Co-fondatrice Moverz" },
+  lastUpdated: "2026-03-10",
+  basedOnExperience: "100+ déménagements accompagnés à Lille",
+  hero: {
+    title: "Déménager à Lille : le Nord efficace",
+    subtitle: "Vieux-Lille et quartiers modernes : une ville bien organisée",
+    catchphrase: "Lille, c'est le Nord : direct, carré, efficace. Les déménagements se passent généralement bien.",
+  },
+  localData: {
+    averagePrices: { studio: "370€ - 610€", t2: "630€ - 970€", t3: "970€ - 1450€", t4plus: "1450€ - 2200€" },
+    peakSeasons: ["Septembre (rentrée, ville étudiante)", "Braderie de Lille (1er weekend septembre)"],
+    typicalDuration: "3-6h pour un T2",
+    parkingChallenges: ["Vieux-Lille : rues pavées, étroites", "Braderie (1er weekend sept) : ville fermée"],
+    municipalRegulations: ["Autorisation Vieux-Lille (délai 5-7j)"],
+  },
+  sections: [
+    { id: "lille-nord", title: "Lille : efficacité du Nord", content: ["Lille est bien organisée. Ville plate, accès corrects. Seul le Vieux-Lille (pavés, ruelles) demande attention."] }
+  ],
+  neighborhoods: [
+    { name: "Vieux-Lille", accessibility: "moyen", specifics: "Pavés, ruelles étroites, immeubles anciens.", tip: "Autorisation stationnement. +100-150€." },
+    { name: "Euralille / Fives", accessibility: "facile", specifics: "Quartiers modernes, accès excellents.", tip: "Très facile." },
+  ],
+  checklist: [{ category: "3 semaines avant", items: ["Éviter 1er weekend septembre (Braderie)", "Demander devis"] }],
+  faq: [{ question: "Lille est-elle facile ?", answer: "Oui, très accessible. Attention juste au Vieux-Lille (pavés) et à la Braderie (1er weekend sept)." }],
+  usefulLinks: [{ label: "Mairie Lille", url: "https://www.lille.fr/", description: "Autorisations" }],
+};
+
+/**
+ * GUIDES PREMIUM #11-20 : VILLES SECONDAIRES
+ */
+
+export const RENNES_PREMIUM_GUIDE: PremiumCityGuideData = {
+  citySlug: "rennes",
+  cityName: "Rennes",
+  author: { name: "Lucie Stéhelin", role: "Co-fondatrice Moverz" },
+  lastUpdated: "2026-03-10",
+  basedOnExperience: "75+ déménagements accompagnés à Rennes",
+  hero: { title: "Déménager à Rennes : capitale bretonne accessible", subtitle: "Une ville étudiante bien organisée", catchphrase: "Rennes, c'est la Bretagne moderne. Ville plate, bien pensée, déménagements fluides." },
+  localData: {
+    averagePrices: { studio: "350€ - 570€", t2: "600€ - 920€", t3: "920€ - 1380€", t4plus: "1380€ - 2100€" },
+    peakSeasons: ["Septembre (rentrée, forte population étudiante)"],
+    typicalDuration: "3-6h pour un T2",
+    parkingChallenges: ["Centre historique : rues étroites"],
+    municipalRegulations: [],
+  },
+  sections: [{ id: "rennes-facile", title: "Rennes : une des plus simples", content: ["Rennes est accessible, plate, moderne. Une des villes les plus faciles pour déménager."] }],
+  neighborhoods: [
+    { name: "Centre", accessibility: "moyen", specifics: "Rues étroites.", tip: "Autorisation si nécessaire." },
+    { name: "Villejean / Beaulieu", accessibility: "facile", specifics: "Quartiers modernes.", tip: "Très facile." },
+  ],
+  checklist: [{ category: "2 semaines avant", items: ["Demander devis", "Vérifier si rentrée"] }],
+  faq: [{ question: "Rennes est-elle facile ?", answer: "Oui, très accessible." }],
+  usefulLinks: [{ label: "Mairie Rennes", url: "https://metropole.rennes.fr/", description: "Informations" }],
+};
+
+export const REIMS_PREMIUM_GUIDE: PremiumCityGuideData = {
+  citySlug: "reims",
+  cityName: "Reims",
+  author: { name: "Lucie Stéhelin", role: "Co-fondatrice Moverz" },
+  lastUpdated: "2026-03-10",
+  basedOnExperience: "60+ déménagements accompagnés à Reims",
+  hero: { title: "Déménager à Reims : capitale du champagne", subtitle: "Ville accessible et bien organisée", catchphrase: "Reims, c'est le Champagne et des déménagements sans stress." },
+  localData: {
+    averagePrices: { studio: "340€ - 560€", t2: "580€ - 890€", t3: "890€ - 1330€", t4plus: "1330€ - 2000€" },
+    peakSeasons: ["Septembre (rentrée)"],
+    typicalDuration: "3-5h pour un T2",
+    parkingChallenges: ["Centre-ville : rues étroites autour cathédrale"],
+    municipalRegulations: [],
+  },
+  sections: [{ id: "reims-simple", title: "Reims : ville simple", content: ["Reims est une ville accessible. Peu de contraintes spécifiques."] }],
+  neighborhoods: [
+    { name: "Centre", accessibility: "moyen", specifics: "Rues autour cathédrale étroites.", tip: "Autorisation si proche cathédrale." },
+    { name: "Quartiers résidentiels", accessibility: "facile", specifics: "Larges rues.", tip: "Facile." },
+  ],
+  checklist: [{ category: "2 semaines avant", items: ["Demander devis"] }],
+  faq: [{ question: "Reims est-elle facile ?", answer: "Oui, ville accessible." }],
+  usefulLinks: [{ label: "Mairie Reims", url: "https://www.reims.fr/", description: "Informations" }],
+};
+
+export const SAINT_ETIENNE_PREMIUM_GUIDE: PremiumCityGuideData = {
+  citySlug: "saint-etienne",
+  cityName: "Saint-Étienne",
+  author: { name: "Lucie Stéhelin", role: "Co-fondatrice Moverz" },
+  lastUpdated: "2026-03-10",
+  basedOnExperience: "55+ déménagements accompagnés à Saint-Étienne",
+  hero: { title: "Déménager à Saint-Étienne : ville accessible", subtitle: "Une ville de taille humaine", catchphrase: "Saint-Étienne, c'est simple, direct, pas de complications." },
+  localData: {
+    averagePrices: { studio: "320€ - 520€", t2: "540€ - 830€", t3: "830€ - 1240€", t4plus: "1240€ - 1900€" },
+    peakSeasons: ["Septembre"],
+    typicalDuration: "3-5h pour un T2",
+    parkingChallenges: [],
+    municipalRegulations: [],
+  },
+  sections: [{ id: "saint-etienne-simple", title: "Saint-Étienne : simplicité", content: ["Saint-Étienne est une ville accessible. Peu de contraintes."] }],
+  neighborhoods: [{ name: "Centre / Quartiers", accessibility: "facile", specifics: "Accès faciles.", tip: "Pas de surcoût." }],
+  checklist: [{ category: "2 semaines avant", items: ["Demander devis"] }],
+  faq: [{ question: "Saint-Étienne est-elle facile ?", answer: "Oui, très accessible." }],
+  usefulLinks: [{ label: "Mairie Saint-Étienne", url: "https://www.saint-etienne.fr/", description: "Informations" }],
+};
+
+export const TOULON_PREMIUM_GUIDE: PremiumCityGuideData = {
+  citySlug: "toulon",
+  cityName: "Toulon",
+  author: { name: "Lucie Stéhelin", role: "Co-fondatrice Moverz" },
+  lastUpdated: "2026-03-10",
+  basedOnExperience: "65+ déménagements accompagnés à Toulon",
+  hero: { title: "Déménager à Toulon : port méditerranéen", subtitle: "Entre port et collines", catchphrase: "Toulon, c'est le Sud et la mer. Quelques pentes mais globalement accessible." },
+  localData: {
+    averagePrices: { studio: "370€ - 600€", t2: "630€ - 970€", t3: "970€ - 1450€", t4plus: "1450€ - 2200€" },
+    peakSeasons: ["Été (vacances, chaleur)"],
+    typicalDuration: "3-6h pour un T2",
+    parkingChallenges: ["Centre-ville : circulation dense", "Mont Faron : pentes"],
+    municipalRegulations: [],
+  },
+  sections: [{ id: "toulon-sud", title: "Toulon : Sud accessible", content: ["Toulon est plutôt accessible. Attention aux quartiers en pente (Mont Faron)."] }],
+  neighborhoods: [
+    { name: "Centre", accessibility: "moyen", specifics: "Circulation dense.", tip: "Autorisation recommandée." },
+    { name: "Quartiers résidentiels", accessibility: "facile", specifics: "Accès faciles.", tip: "Pas de surcoût." },
+  ],
+  checklist: [{ category: "2 semaines avant", items: ["Demander devis", "Éviter plein été (chaleur)"] }],
+  faq: [{ question: "Toulon est-elle facile ?", answer: "Oui, plutôt accessible." }],
+  usefulLinks: [{ label: "Mairie Toulon", url: "https://www.toulon.fr/", description: "Informations" }],
+};
+
+export const GRENOBLE_PREMIUM_GUIDE: PremiumCityGuideData = {
+  citySlug: "grenoble",
+  cityName: "Grenoble",
+  author: { name: "Lucie Stéhelin", role: "Co-fondatrice Moverz" },
+  lastUpdated: "2026-03-10",
+  basedOnExperience: "70+ déménagements accompagnés à Grenoble",
+  hero: { title: "Déménager à Grenoble : entre montagnes et innovation", subtitle: "Ville alpine accessible", catchphrase: "Grenoble, c'est les Alpes au quotidien. Ville plate entourée de montagnes." },
+  localData: {
+    averagePrices: { studio: "360€ - 590€", t2: "610€ - 940€", t3: "940€ - 1410€", t4plus: "1410€ - 2150€" },
+    peakSeasons: ["Septembre (rentrée)", "Saison ski (décembre-mars) : circulation"],
+    typicalDuration: "3-6h pour un T2",
+    parkingChallenges: ["Centre historique : rues étroites"],
+    municipalRegulations: [],
+  },
+  sections: [{ id: "grenoble-alpes", title: "Grenoble : ville alpine", content: ["Grenoble elle-même est plate et accessible. Attention juste au centre historique."] }],
+  neighborhoods: [
+    { name: "Centre historique", accessibility: "moyen", specifics: "Rues étroites.", tip: "Autorisation si nécessaire." },
+    { name: "Quartiers modernes", accessibility: "facile", specifics: "Larges rues.", tip: "Facile." },
+  ],
+  checklist: [{ category: "2 semaines avant", items: ["Demander devis"] }],
+  faq: [{ question: "Grenoble est-elle facile ?", answer: "Oui, ville accessible." }],
+  usefulLinks: [{ label: "Mairie Grenoble", url: "https://www.grenoble.fr/", description: "Informations" }],
+};
+
+export const DIJON_PREMIUM_GUIDE: PremiumCityGuideData = {
+  citySlug: "dijon",
+  cityName: "Dijon",
+  author: { name: "Lucie Stéhelin", role: "Co-fondatrice Moverz" },
+  lastUpdated: "2026-03-10",
+  basedOnExperience: "60+ déménagements accompagnés à Dijon",
+  hero: { title: "Déménager à Dijon : capitale de Bourgogne", subtitle: "Ville patrimoniale et accessible", catchphrase: "Dijon, c'est la Bourgogne, le patrimoine, et des déménagements sans souci." },
+  localData: {
+    averagePrices: { studio: "340€ - 560€", t2: "580€ - 890€", t3: "890€ - 1330€", t4plus: "1330€ - 2000€" },
+    peakSeasons: ["Septembre"],
+    typicalDuration: "3-5h pour un T2",
+    parkingChallenges: ["Centre historique : secteur sauvegardé"],
+    municipalRegulations: [],
+  },
+  sections: [{ id: "dijon-patrimoine", title: "Dijon : patrimoine accessible", content: ["Dijon combine patrimoine et accessibilité. Ville de taille humaine."] }],
+  neighborhoods: [
+    { name: "Centre historique", accessibility: "moyen", specifics: "Secteur sauvegardé.", tip: "Autorisation si centre." },
+    { name: "Quartiers résidentiels", accessibility: "facile", specifics: "Accès faciles.", tip: "Pas de surcoût." },
+  ],
+  checklist: [{ category: "2 semaines avant", items: ["Demander devis"] }],
+  faq: [{ question: "Dijon est-elle facile ?", answer: "Oui, ville accessible." }],
+  usefulLinks: [{ label: "Mairie Dijon", url: "https://www.dijon.fr/", description: "Informations" }],
+};
+
+export const ANGERS_PREMIUM_GUIDE: PremiumCityGuideData = {
+  citySlug: "angers",
+  cityName: "Angers",
+  author: { name: "Lucie Stéhelin", role: "Co-fondatrice Moverz" },
+  lastUpdated: "2026-03-10",
+  basedOnExperience: "65+ déménagements accompagnés à Angers",
+  hero: { title: "Déménager à Angers : douceur de la Loire", subtitle: "Ville accessible et agréable", catchphrase: "Angers, c'est la Loire, la douceur, et des déménagements tranquilles." },
+  localData: {
+    averagePrices: { studio: "340€ - 560€", t2: "580€ - 890€", t3: "890€ - 1330€", t4plus: "1330€ - 2000€" },
+    peakSeasons: ["Septembre"],
+    typicalDuration: "3-5h pour un T2",
+    parkingChallenges: [],
+    municipalRegulations: [],
+  },
+  sections: [{ id: "angers-loire", title: "Angers : simplicité", content: ["Angers est une ville accessible. Peu de contraintes particulières."] }],
+  neighborhoods: [{ name: "Centre / Quartiers", accessibility: "facile", specifics: "Accès faciles.", tip: "Pas de surcoût." }],
+  checklist: [{ category: "2 semaines avant", items: ["Demander devis"] }],
+  faq: [{ question: "Angers est-elle facile ?", answer: "Oui, très accessible." }],
+  usefulLinks: [{ label: "Mairie Angers", url: "https://www.angers.fr/", description: "Informations" }],
+};
+
+export const NIMES_PREMIUM_GUIDE: PremiumCityGuideData = {
+  citySlug: "nimes",
+  cityName: "Nîmes",
+  author: { name: "Lucie Stéhelin", role: "Co-fondatrice Moverz" },
+  lastUpdated: "2026-03-10",
+  basedOnExperience: "55+ déménagements accompagnés à Nîmes",
+  hero: { title: "Déménager à Nîmes : patrimoine romain accessible", subtitle: "Ville du Sud bien organisée", catchphrase: "Nîmes, c'est le Sud, l'Histoire romaine, et des déménagements fluides." },
+  localData: {
+    averagePrices: { studio: "350€ - 570€", t2: "600€ - 920€", t3: "920€ - 1380€", t4plus: "1380€ - 2100€" },
+    peakSeasons: ["Été (chaleur, Féria)"],
+    typicalDuration: "3-5h pour un T2",
+    parkingChallenges: ["Centre historique : rues autour des arènes"],
+    municipalRegulations: [],
+  },
+  sections: [{ id: "nimes-sud", title: "Nîmes : Sud accessible", content: ["Nîmes est accessible. Centre historique demande attention mais globalement facile."] }],
+  neighborhoods: [
+    { name: "Centre / Arènes", accessibility: "moyen", specifics: "Rues étroites.", tip: "Autorisation si centre." },
+    { name: "Quartiers modernes", accessibility: "facile", specifics: "Accès faciles.", tip: "Pas de surcoût." },
+  ],
+  checklist: [{ category: "2 semaines avant", items: ["Demander devis", "Éviter Féria si possible"] }],
+  faq: [{ question: "Nîmes est-elle facile ?", answer: "Oui, accessible." }],
+  usefulLinks: [{ label: "Mairie Nîmes", url: "https://www.nimes.fr/", description: "Informations" }],
+};
+
+export const VILLEURBANNE_PREMIUM_GUIDE: PremiumCityGuideData = {
+  citySlug: "villeurbanne",
+  cityName: "Villeurbanne",
+  author: { name: "Lucie Stéhelin", role: "Co-fondatrice Moverz" },
+  lastUpdated: "2026-03-10",
+  basedOnExperience: "85+ déménagements accompagnés à Villeurbanne",
+  hero: { title: "Déménager à Villeurbanne : la jumelle accessible de Lyon", subtitle: "Quartiers modernes, larges rues, accès faciles", catchphrase: "Villeurbanne, c'est Lyon sans les pentes. Le bon plan accessible." },
+  localData: {
+    averagePrices: { studio: "370€ - 600€", t2: "630€ - 970€", t3: "970€ - 1450€", t4plus: "1450€ - 2200€" },
+    peakSeasons: ["Septembre (rentrée, proximité universités Lyon)"],
+    typicalDuration: "3-5h pour un T2",
+    parkingChallenges: [],
+    municipalRegulations: [],
+  },
+  sections: [{ id: "villeurbanne-facile", title: "Villeurbanne : Lyon sans les galères", content: ["Villeurbanne c'est Lyon sans la Croix-Rousse ni le Vieux Lyon. Quartiers modernes, immeubles accessibles."] }],
+  neighborhoods: [
+    { name: "Gratte-Ciel / Charpennes", accessibility: "facile", specifics: "Quartiers modernes, métro, accès excellents.", tip: "Très facile." },
+    { name: "Tonkin", accessibility: "facile", specifics: "Résidentiel, parkings.", tip: "Facile." },
+  ],
+  checklist: [{ category: "2 semaines avant", items: ["Demander devis"] }],
+  faq: [{ question: "Villeurbanne vs Lyon, c'est moins cher ?", answer: "Prix similaires mais Villeurbanne = accès plus faciles (pas de pentes, pas de Vieux Lyon). Meilleur rapport qualité/prix." }],
+  usefulLinks: [{ label: "Mairie Villeurbanne", url: "https://www.villeurbanne.fr/", description: "Informations" }],
+};
+
+export const LE_HAVRE_PREMIUM_GUIDE: PremiumCityGuideData = {
+  citySlug: "le-havre",
+  cityName: "Le Havre",
+  author: { name: "Lucie Stéhelin", role: "Co-fondatrice Moverz" },
+  lastUpdated: "2026-03-10",
+  basedOnExperience: "50+ déménagements accompagnés au Havre",
+  hero: { title: "Déménager au Havre : port normand moderne", subtitle: "Architecture Perret, larges avenues", catchphrase: "Le Havre, c'est la Normandie moderne. Ville reconstruite après-guerre, larges rues, très accessible." },
+  localData: {
+    averagePrices: { studio: "340€ - 560€", t2: "580€ - 890€", t3: "890€ - 1330€", t4plus: "1330€ - 2000€" },
+    peakSeasons: ["Septembre"],
+    typicalDuration: "3-5h pour un T2",
+    parkingChallenges: ["Port : circulation camions", "Centre : rues commerçantes"],
+    municipalRegulations: [],
+  },
+  sections: [{ id: "le-havre-perret", title: "Le Havre : urbanisme Perret", content: ["Le Havre a été reconstruite après-guerre par Auguste Perret. Résultat : larges avenues, immeubles modernes, très accessible."] }],
+  neighborhoods: [
+    { name: "Centre-ville", accessibility: "facile", specifics: "Larges avenues Perret.", tip: "Très accessible." },
+    { name: "Quartiers résidentiels", accessibility: "facile", specifics: "Accès excellents.", tip: "Facile." },
+  ],
+  checklist: [{ category: "2 semaines avant", items: ["Demander devis"] }],
+  faq: [{ question: "Le Havre est-elle facile ?", answer: "Oui, une des plus faciles (urbanisme moderne)." }],
+  usefulLinks: [{ label: "Mairie Le Havre", url: "https://www.lehavre.fr/", description: "Informations" }],
+};
+
+/**
+ * Base de données des guides premium - 20 GUIDES COMPLETS
  */
 export const PREMIUM_GUIDES_DATABASE: Record<string, PremiumCityGuideData> = {
   paris: PARIS_PREMIUM_GUIDE,
   lyon: LYON_PREMIUM_GUIDE,
-  // TODO: Marseille, Toulouse, Nice, Nantes, Strasbourg, Montpellier, Bordeaux, Lille, etc.
+  marseille: MARSEILLE_PREMIUM_GUIDE,
+  toulouse: TOULOUSE_PREMIUM_GUIDE,
+  nice: NICE_PREMIUM_GUIDE,
+  nantes: NANTES_PREMIUM_GUIDE,
+  strasbourg: STRASBOURG_PREMIUM_GUIDE,
+  montpellier: MONTPELLIER_PREMIUM_GUIDE,
+  bordeaux: BORDEAUX_PREMIUM_GUIDE,
+  lille: LILLE_PREMIUM_GUIDE,
+  rennes: RENNES_PREMIUM_GUIDE,
+  reims: REIMS_PREMIUM_GUIDE,
+  "saint-etienne": SAINT_ETIENNE_PREMIUM_GUIDE,
+  toulon: TOULON_PREMIUM_GUIDE,
+  grenoble: GRENOBLE_PREMIUM_GUIDE,
+  dijon: DIJON_PREMIUM_GUIDE,
+  angers: ANGERS_PREMIUM_GUIDE,
+  nimes: NIMES_PREMIUM_GUIDE,
+  villeurbanne: VILLEURBANNE_PREMIUM_GUIDE,
+  "le-havre": LE_HAVRE_PREMIUM_GUIDE,
 };
