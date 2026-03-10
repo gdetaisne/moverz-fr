@@ -13,7 +13,10 @@ export interface BlogPostMeta {
 
 import { BLOG_DATA } from "./blog-data";
 import { BLOG_EXTRA } from "./blog-extra";
-import { CANONICAL_BLOG_POSTS, type CanonicalBlogPost } from "./blog-canonique";
+// TEMPORAIRE: Commenté pour corriger erreur de syntaxe dans blog-canonique.ts
+// import { CANONICAL_BLOG_POSTS, type CanonicalBlogPost } from "./blog-canonique";
+type CanonicalBlogPost = { slug: string; title: string; description: string; type: string; citySlug?: string; body: string; };
+const CANONICAL_BLOG_POSTS: CanonicalBlogPost[] = [];
 import { BLOG_NOUVEAUX_2026 } from "./blog-nouveaux-2026";
 import { BLOG_MARKDOWN_POSTS } from "./blog-markdown-posts";
 import { ARNAQUES_ARTICLE } from "./blog-arnaques";

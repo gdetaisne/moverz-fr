@@ -10,3 +10,10 @@ public/data/city-guides/*.json
 reports/
 .env
 tsconfig.tsbuildinfo
+
+# Admin Dashboard Data (contient données scrapées)
+data/
+!data/.gitkeep
+gsc-credentials.json
+*.db
+*.db-journal

@@ -3,6 +3,7 @@ import type { NextFetchEvent } from "next/server";
 import { NextResponse } from "next/server";
 import { CITIES } from "@/lib/cities";
 import { QUARTIER_HUB_SLUGS } from "@/lib/quartiers";
+import { verifySession } from "@/lib/admin/auth";
 
 // NOTE: exclude "ile-de-france" from corridors because it's a region, not a city-to-city route.
 const CITY_SLUGS = new Set(CITIES.filter((c) => c && c.slug).map((c) => c.slug).filter((s) => s !== "ile-de-france"));
@@ -94,6 +95,23 @@ function makeGa4ClientId(): string {
 
 export async function middleware(req: NextRequest, event: NextFetchEvent) {
   const { pathname } = req.nextUrl;
+  
+  // 🔐 ADMIN PROTECTION: Protect /admin/* routes (except /admin/login)
+  if (pathname.startsWith('/admin/') && pathname !== '/admin/login') {
+    const sessionCookie = req.cookies.get('admin_session')?.value;
+    if (!sessionCookie || !verifySession(sessionCookie)) {
+      const loginUrl = new URL('/admin/login', req.url);
+      return NextResponse.redirect(loginUrl);
+    }
+  }
+
+  // 🚫 ADMIN NOINDEX: Add noindex headers to ALL /admin/* pages (including login)
+  if (pathname.startsWith('/admin/')) {
+    const res = NextResponse.next();
+    res.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive');
+    return res;
+  }
+  
   const mwDebug = req.nextUrl.searchParams.get("mwdebug");
   const bot = detectLlmBot(req.headers.get("user-agent"));
   const aiRefHost = detectAiReferrerHost(req.headers.get("referer"));

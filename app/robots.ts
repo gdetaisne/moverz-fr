@@ -93,6 +93,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
+        disallow: ['/admin/', '/api/admin/'],
       },
     ],
     sitemap: 'https://moverz.fr/sitemap.xml',
