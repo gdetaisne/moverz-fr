@@ -258,6 +258,22 @@ export function ScoringChecker() {
     }
   }, []);
 
+  const handleSelectCandidate = useCallback(async (candidate: PlaceCandidate) => {
+    if (!selectedMover) return;
+    // Lier le placeId en base (fire-and-forget — on ne bloque pas le scoring)
+    fetch('/api/scoring-check/link-place', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        moverId: selectedMover.id,
+        googlePlaceId: candidate.googlePlaceId,
+        isMovingBusiness: candidate.isMovingBusiness ?? false,
+        relevanceScore: candidate.relevanceScore ?? 0,
+      }),
+    }).catch(() => {/* non-bloquant */});
+    await launchScoring(selectedMover.id);
+  }, [selectedMover, launchScoring]);
+
   const handleReset = () => {
     setStep("search");
     setQuery("");
@@ -386,7 +402,7 @@ export function ScoringChecker() {
                           const isGoodMatch = candidate.isMovingBusiness && rel >= 50;
                           const isSuspect = !candidate.isMovingBusiness || rel < 20;
                           return (
-                            <button key={candidate.googlePlaceId} onClick={() => launchScoring(selectedMover!.id)}
+                            <button key={candidate.googlePlaceId} onClick={() => handleSelectCandidate(candidate)}
                               className="w-full flex items-start gap-4 p-4 rounded-xl text-left transition-colors hover:bg-gray-50"
                               style={{
                                 border: `1px solid ${isGoodMatch ? "#10b98133" : isSuspect ? "#f59e0b44" : "var(--color-border)"}`,
