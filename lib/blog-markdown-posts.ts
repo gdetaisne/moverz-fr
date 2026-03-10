@@ -1042,7 +1042,7 @@ Aucune réponse > 5 jours : Mauvais ❌
 - **→ Devis NON comparables**
 
 **Solution Moverz** :
-- L'IA calcule votre volume précis (inventaire guidé)
+- Le système calcule votre volume via un inventaire guidé
 - **Tous les déménageurs reçoivent le même volume** (ex: 30 m³)
 - **→ Devis VRAIMENT comparables** ✅
 
@@ -2361,7 +2361,7 @@ C'est le modèle classique des plateformes de "comparaison" de déménagement : 
 #### Étape 1 : Vous créez un dossier complet (3 minutes)
 
 - Ville de départ/arrivée, date, type de logement
-- **L'IA calcule le volume** (précision 90-95%)
+- **Le système calcule le volume** à partir d'un inventaire guidé
 - Vous renseignez les accès (étage, ascenseur, parking)
 - **Aucun numéro de téléphone** n'est transmis aux déménageurs
 

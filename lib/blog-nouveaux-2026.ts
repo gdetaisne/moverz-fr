@@ -658,7 +658,7 @@ Vous contactez 5 déménageurs. Vous recevez 5 devis. Mais :
 
 **Solution #1 : Utilisez un comparateur qui standardise le volume**
 
-[Moverz](/comment-ca-marche/) calcule automatiquement votre volume avec l'IA (précision 90-95%), puis transmet le **même dossier** à 5 déménageurs vérifiés. Résultat : tous les devis partent du même volume, donc ils sont directement comparables.
+[Moverz](/comment-ca-marche/) calcule automatiquement votre volume via un inventaire guidé, puis transmet le **même dossier** à 5 déménageurs vérifiés. Résultat : tous les devis partent du même volume, donc ils sont directement comparables.
 
 > **Comparez intelligemment**  
 > Moverz standardise automatiquement votre dossier (volume IA, accès, contraintes, options) et le transmet à 5 déménageurs vérifiés (Creditsafe + licences + assurances). <a href="https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-comparer-devis&utm_source=moverz_website&utm_medium=referral&utm_content=blog-comparer-devis" class="text-[#6BCFCF] hover:underline font-semibold">Obtenir des devis comparables</a>.
@@ -2271,8 +2271,8 @@ Cherchez spécifiquement les avis des 3-6 derniers mois. Les arnaques récentes 
 
 ### Comment ça fonctionne
 
-1. **Vous remplissez un dossier** (3 minutes) : adresses, dates, type de logement, contraintes
-2. **Le volume est calculé automatiquement** (précision 90-95 %)
+1. **Vous remplissez un dossier** (5-10 minutes) : adresses, dates, type de logement, contraintes, inventaire
+2. **Le volume est calculé automatiquement** à partir de votre inventaire
 3. **Le dossier est transmis** à 3-5 déménageurs vérifiés de votre secteur
 4. **Vous recevez un comparatif** sous 3 à 5 jours : prix TTC, note Google, score financier, ancienneté
 5. **Vous choisissez** qui peut vous contacter (dossier anonyme jusqu'à ce moment)
