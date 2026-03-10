@@ -11,10 +11,6 @@ const ScrollDepthTracker = dynamic(
   () => import("@/components/ScrollDepthTracker").then((m) => m.ScrollDepthTracker),
   { ssr: false }
 );
-const ExitIntentPopup = dynamic(
-  () => import("@/components/ExitIntentPopup"),
-  { ssr: false }
-);
 
 export default function DeferredClientFeatures() {
   const [enabled, setEnabled] = useState(false);
@@ -44,7 +40,6 @@ export default function DeferredClientFeatures() {
     <>
       <ConversionIntentTracker />
       <ScrollDepthTracker />
-      <ExitIntentPopup />
     </>
   );
 }

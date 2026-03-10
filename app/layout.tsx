@@ -7,9 +7,6 @@ import ContentSquare from "@/components/ContentSquare";
 import dynamic from "next/dynamic";
 
 // Lazy load des composants non-critiques pour le rendu initial
-const ExitIntentPopup = dynamic(() => import("@/components/ExitIntentPopup"), {
-  ssr: false,
-});
 const ConversionIntentTracker = dynamic(() => import("@/components/ConversionIntentTracker").then(mod => ({ default: mod.ConversionIntentTracker })), {
   ssr: false,
 });
@@ -234,7 +231,6 @@ export default function RootLayout({
       <body className={`${inter.variable} ${sora.variable} ${inter.className}`}>
         <GoogleAnalytics />
         <ConversionIntentTracker />
-        <ExitIntentPopup />
         <Header />
 
         <main>{children}</main>
