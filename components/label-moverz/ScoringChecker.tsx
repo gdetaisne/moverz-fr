@@ -84,6 +84,22 @@ interface ScoringResult {
     website: string | null;
     companyFoundedYear: number | null;
     pappersDecisions: number;
+    pappersDecisionsList?: Array<{
+      date: string | null;
+      year: number | null;
+      juridiction: string | null;
+      position: string | null;
+      dispositif: string | null;
+      isAttacking: boolean;
+    }>;
+    juriExplanations?: string[];
+    finResultat?: number | null;
+    finFondsPropres?: number | null;
+    finTresorerie?: number | null;
+    finDettes?: number | null;
+    finEBE?: number | null;
+    finCroissanceCA?: number | null;
+    finExplanations?: string[];
   };
   _quota: { used: number; max: number; remaining: number };
 }
@@ -603,26 +619,110 @@ export function ScoringChecker() {
                       {(scoringResult.subscores || scoringResult._meta?.pappersDecisions !== undefined) && (
                         <div className="px-6 py-5">
                           <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: "var(--color-text-muted)" }}>⚖️ Fiabilité légale</p>
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                            {scoringResult.subscores?.financier && (
-                              <div className="flex justify-between items-center p-3 rounded-xl" style={{ background: "var(--color-bg)", border: "1px solid var(--color-border)" }}>
-                                <span className="text-sm" style={{ color: "var(--color-text-secondary)" }}>Santé financière</span>
+
+                          {/* Santé financière */}
+                          <div className="mb-5">
+                            <div className="flex items-center justify-between mb-2">
+                              <span className="text-sm font-semibold" style={{ color: "var(--color-text)" }}>Santé financière</span>
+                              {scoringResult.subscores?.financier && (
                                 <span className="text-sm font-bold" style={{ color: scoreColor(scoringResult.subscores.financier.score) }}>
                                   {scoringResult.subscores.financier.label}
                                   {scoringResult.subscores.financier.score != null && ` (${scoringResult.subscores.financier.score}/100)`}
                                 </span>
+                              )}
+                            </div>
+                            {/* Chiffres bruts */}
+                            {[
+                              { lbl: "Résultat net", val: scoringResult._meta?.finResultat, pos: (v: number) => v >= 0 },
+                              { lbl: "Fonds propres", val: scoringResult._meta?.finFondsPropres, pos: (v: number) => v >= 0 },
+                              { lbl: "Trésorerie", val: scoringResult._meta?.finTresorerie, pos: (v: number) => v >= 0 },
+                              { lbl: "Dettes financières", val: scoringResult._meta?.finDettes, pos: (v: number) => v <= 100000 },
+                            ].filter(r => r.val != null).length > 0 && (
+                              <div className="grid grid-cols-2 gap-2 mb-2">
+                                {[
+                                  { lbl: "Résultat net", val: scoringResult._meta?.finResultat, pos: (v: number) => v >= 0 },
+                                  { lbl: "Fonds propres", val: scoringResult._meta?.finFondsPropres, pos: (v: number) => v >= 0 },
+                                  { lbl: "Trésorerie", val: scoringResult._meta?.finTresorerie, pos: (v: number) => v >= 0 },
+                                  { lbl: "Dettes financières", val: scoringResult._meta?.finDettes, pos: (v: number) => v <= 100000 },
+                                ].filter(r => r.val != null).map(({ lbl, val, pos }) => {
+                                  const n = val as number;
+                                  const color = pos(n) ? "#16A34A" : "#DC2626";
+                                  const abs = Math.abs(n);
+                                  const fmt = abs >= 1_000_000 ? `${n < 0 ? "−" : ""}${(abs / 1_000_000).toFixed(1)} M€`
+                                    : abs >= 1000 ? `${n < 0 ? "−" : ""}${Math.round(abs / 1000)} k€`
+                                    : `${n} €`;
+                                  return (
+                                    <div key={lbl} className="flex justify-between items-center px-3 py-2 rounded-lg" style={{ background: "var(--color-bg)", border: "1px solid var(--color-border)" }}>
+                                      <span className="text-xs" style={{ color: "var(--color-text-secondary)" }}>{lbl}</span>
+                                      <span className="text-xs font-bold tabular-nums" style={{ color }}>{fmt}</span>
+                                    </div>
+                                  );
+                                })}
                               </div>
                             )}
-                            {scoringResult._meta?.pappersDecisions !== undefined && (
-                              <div className="flex justify-between items-center p-3 rounded-xl" style={{ background: "var(--color-bg)", border: "1px solid var(--color-border)" }}>
-                                <span className="text-sm" style={{ color: "var(--color-text-secondary)" }}>Décisions de justice</span>
-                                <span className="text-sm font-bold flex items-center gap-1" style={{ color: scoringResult._meta.pappersDecisions === 0 ? "#16A34A" : "#DC2626" }}>
-                                  {scoringResult._meta.pappersDecisions === 0
-                                    ? <><CheckCircle2 className="w-3.5 h-3.5" />Aucune</>
-                                    : `${scoringResult._meta.pappersDecisions} décision${scoringResult._meta.pappersDecisions > 1 ? "s" : ""}`}
+                            {/* Explications financières */}
+                            {scoringResult._meta?.finExplanations && scoringResult._meta.finExplanations.length > 0 && (
+                              <ul className="text-xs space-y-1" style={{ color: "var(--color-text-muted)" }}>
+                                {scoringResult._meta.finExplanations.map((e, i) => (
+                                  <li key={i} className="flex items-start gap-1"><span>·</span><span>{e}</span></li>
+                                ))}
+                              </ul>
+                            )}
+                            {scoringResult._meta?.finResultat == null && !scoringResult._meta?.finExplanations?.length && (
+                              <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>Données financières non disponibles (entreprise confidentielle ou données Pappers absentes).</p>
+                            )}
+                          </div>
+
+                          {/* Décisions de justice */}
+                          <div className="pt-4" style={{ borderTop: "1px solid var(--color-border)" }}>
+                            <div className="flex items-center justify-between mb-2">
+                              <span className="text-sm font-semibold" style={{ color: "var(--color-text)" }}>
+                                Décisions de justice{(scoringResult._meta?.pappersDecisions ?? 0) > 0 ? ` (${scoringResult._meta!.pappersDecisions})` : ""}
+                              </span>
+                              {scoringResult._meta?.pappersDecisions === 0 ? (
+                                <span className="text-xs font-semibold flex items-center gap-1" style={{ color: "#16A34A" }}>
+                                  <CheckCircle2 className="w-3.5 h-3.5" />Aucune procédure
                                 </span>
+                              ) : (
+                                <span className="text-xs font-bold" style={{ color: "#DC2626" }}>
+                                  {scoringResult._meta?.pappersDecisions} décision{(scoringResult._meta?.pappersDecisions ?? 0) > 1 ? "s" : ""}
+                                </span>
+                              )}
+                            </div>
+
+                            {/* Liste des décisions */}
+                            {scoringResult._meta?.pappersDecisionsList && scoringResult._meta.pappersDecisionsList.length > 0 && (
+                              <div className="space-y-2 mb-2">
+                                {scoringResult._meta.pappersDecisionsList.map((d, i) => (
+                                  <div key={i} className="px-3 py-2 rounded-lg text-xs" style={{ background: d.isAttacking ? "rgba(22,163,74,0.05)" : "rgba(220,38,38,0.05)", border: `1px solid ${d.isAttacking ? "#16a34a33" : "#dc262633"}` }}>
+                                    <div className="flex items-center justify-between gap-2 flex-wrap">
+                                      <span className="font-semibold" style={{ color: "var(--color-text)" }}>
+                                        {d.juridiction ?? "Juridiction inconnue"}{d.year ? ` — ${d.year}` : ""}
+                                      </span>
+                                      <span className="font-bold" style={{ color: d.isAttacking ? "#16A34A" : "#DC2626" }}>
+                                        {d.isAttacking ? "Demandeur (aucune pénalité)" : "Défendeur"}
+                                      </span>
+                                    </div>
+                                    {d.dispositif && (
+                                      <p className="mt-1" style={{ color: "var(--color-text-secondary)" }}>{d.dispositif}</p>
+                                    )}
+                                  </div>
+                                ))}
                               </div>
                             )}
+
+                            {/* Explications de la note juridique */}
+                            {scoringResult._meta?.juriExplanations && scoringResult._meta.juriExplanations.length > 0 && (
+                              <ul className="text-xs space-y-1" style={{ color: "var(--color-text-muted)" }}>
+                                {scoringResult._meta.juriExplanations.map((e, i) => (
+                                  <li key={i} className="flex items-start gap-1"><span>·</span><span>{e}</span></li>
+                                ))}
+                              </ul>
+                            )}
+                          </div>
+
+                          {/* Ancienneté + SIRET */}
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-4">
                             {scoringResult._meta?.companyFoundedYear && (
                               <div className="flex justify-between items-center p-3 rounded-xl" style={{ background: "var(--color-bg)", border: "1px solid var(--color-border)" }}>
                                 <span className="text-sm" style={{ color: "var(--color-text-secondary)" }}>Ancienneté</span>
