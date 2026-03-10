@@ -31,6 +31,7 @@ export async function POST(req: NextRequest) {
     console.log('[AUTH DEBUG] Hashs match:', hashedInput === hashedAdmin);
 
     if (!verifyPassword(password)) {
+      console.log('[AUTH DEBUG] ❌ VERIFICATION FAILED');
       return NextResponse.json(
         { error: 'Mot de passe incorrect', debug: { 
           hasEnvPassword: !!adminPasswordEnv,
@@ -42,7 +43,10 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    console.log('[AUTH DEBUG] ✅ VERIFICATION PASSED - Creating session...');
     const sessionToken = createSession();
+    console.log('[AUTH DEBUG] Session token created:', sessionToken.substring(0, 20) + '...');
+    
     const response = NextResponse.json(
       { success: true, message: 'Connexion réussie' },
       { status: 200 }
@@ -56,6 +60,7 @@ export async function POST(req: NextRequest) {
       path: '/',
     });
 
+    console.log('[AUTH DEBUG] ✅ Cookie set, returning 200 OK');
     return response;
   } catch (error) {
     return NextResponse.json(
