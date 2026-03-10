@@ -498,172 +498,173 @@ export function ScoringChecker() {
                 {/* Score complet */}
                 {!isLoadingScore && scoringResult && !quotaExceeded && (
                   <>
-                    {/* Bandeau recalcul en cours */}
-                    {scoringResult._meta?.stale && (
-                      <div className="flex items-center gap-2 px-6 py-3 text-xs" style={{ background: "#FEF3C7", color: "#92400E" }}>
-                        <RefreshCw className="w-3.5 h-3.5 animate-spin" />
-                        Score mis à jour en arrière-plan — revenez dans quelques minutes pour les données fraîches.
-                      </div>
-                    )}
-
-                    {/* En-tête entreprise */}
-                    <div className="flex items-center gap-3 p-6 pb-5" style={{ borderBottom: "1px solid var(--color-border)" }}>
-                      <div className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0" style={{ background: "rgba(14,165,166,0.1)" }}>
-                        <Building2 className="w-6 h-6" style={{ color: "var(--color-accent)" }} />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="font-bold text-lg truncate" style={{ color: "var(--color-text)" }}>
-                          {scoringResult._meta?.companyName ?? selectedMover?.companyName}
+                    {/* ① Hero : score global */}
+                    <div className="flex items-center gap-5 p-6 pb-5" style={{ borderBottom: "1px solid var(--color-border)" }}>
+                      <ScoreRing score={scoringResult.globalScore} size={80} />
+                      <div>
+                        <div className="text-xl font-extrabold" style={{ color: scoringResult.globalColor }}>
+                          {scoringResult.globalLabel ?? "—"}
                         </div>
-                        <div className="flex items-center gap-3 text-sm flex-wrap" style={{ color: "var(--color-text-secondary)" }}>
-                          <span className="flex items-center gap-1"><MapPin className="w-3 h-3" />{scoringResult._meta?.city ?? selectedMover?.city}</span>
-                          {scoringResult._meta?.siret && <span className="font-mono text-xs">SIRET {scoringResult._meta.siret}</span>}
-                          {scoringResult._meta?.companyFoundedYear && <span>Depuis {scoringResult._meta.companyFoundedYear}</span>}
-                          {scoringResult._meta?.website && (
-                            <a href={scoringResult._meta.website} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:underline" style={{ color: "var(--color-accent)" }}>
-                              <ExternalLink className="w-3 h-3" />Site
-                            </a>
-                          )}
+                        <div className="text-sm" style={{ color: "var(--color-text-secondary)" }}>
+                          Score Moverz global{scoringResult.globalScore != null ? ` — ${scoringResult.globalScore}/100` : ""}
                         </div>
-                      </div>
-                    </div>
-
-                    <div className="p-6 space-y-6">
-                      {/* Score global + 3 dimensions */}
-                      <div className="flex flex-col sm:flex-row items-center gap-8">
-                        <div className="flex flex-col items-center gap-2 shrink-0">
-                          <ScoreRing score={scoringResult.globalScore} size={110} />
-                          <span className="text-sm font-bold px-3 py-1 rounded-full" style={{ background: `${scoringResult.globalColor}15`, color: scoringResult.globalColor }}>
-                            {scoringResult.globalLabel ?? "—"}
-                          </span>
-                          {scoringResult.computedAt && (
-                            <span className="text-xs" style={{ color: "var(--color-text-muted)" }}>
-                              Analysé le {new Date(scoringResult.computedAt).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })}
-                            </span>
-                          )}
-                        </div>
-                        {scoringResult.dimensions.length > 0 && (
-                          <div className="flex-1 w-full space-y-4">
-                            {scoringResult.dimensions.map((dim) => <DimensionBar key={dim.id} dimension={dim} />)}
+                        {scoringResult.computedAt && (
+                          <div className="text-xs mt-0.5" style={{ color: "var(--color-text-muted)" }}>
+                            Analysé le {new Date(scoringResult.computedAt).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })}
                           </div>
                         )}
                       </div>
+                    </div>
 
-                      {/* 5 sous-scores */}
-                      {scoringResult.subscores && (
-                        <div>
-                          <p className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: "var(--color-text-muted)" }}>Détail des 5 analyses</p>
-                          <div className="grid grid-cols-5 gap-2">
-                            <SubScorePill label="Financier" score={scoringResult.subscores.financier.score} icon="💰" />
-                            <SubScorePill label="Juridique" score={scoringResult.subscores.juridique.score} icon="⚖️" />
-                            <SubScorePill label="Google" score={scoringResult.subscores.google.score} icon="⭐" />
-                            <SubScorePill label="Réputation" score={scoringResult.subscores.reputation.score} icon="🗣️" />
-                            <SubScorePill label="Vigilance" score={scoringResult.subscores.vigilance.score} icon="🔍" />
+                    <div className="divide-y" style={{ borderColor: "var(--color-border)" }}>
+
+                      {/* ② Analyse par dimension */}
+                      {scoringResult.dimensions.length > 0 && (
+                        <div className="px-6 py-5">
+                          <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: "var(--color-text-muted)" }}>📊 Analyse par dimension</p>
+                          <div className="space-y-4">
+                            {scoringResult.dimensions.map((dim) => <DimensionBar key={dim.id} dimension={dim} />)}
                           </div>
                         </div>
                       )}
 
-                      {/* Avis Google */}
-                      {(scoringResult._meta?.googleRating != null || scoringResult._meta?.googleReviewsCount != null) && (
-                        <div className="p-4 rounded-xl" style={{ background: "var(--color-bg)", border: "1px solid var(--color-border)" }}>
-                          <div className="flex items-center gap-3 mb-2">
-                            <Star className="w-4 h-4" style={{ color: "#F59E0B" }} />
-                            <span className="text-sm font-semibold" style={{ color: "var(--color-text)" }}>Avis Google</span>
+                      {/* ③ Signaux d'alerte (vigilance par catégorie) */}
+                      {scoringResult.vigilanceCategories && scoringResult.vigilanceCategories.length > 0 && (() => {
+                        const totalReviews = scoringResult.reputation?.totalCollected
+                          ?? scoringResult.reputation?.authenticCount
+                          ?? scoringResult._meta?.googleReviewsCount
+                          ?? "—";
+                        return (
+                          <div className="px-6 py-5">
+                            <p className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: "var(--color-text-muted)" }}>🔍 Analyse des signaux d&apos;alerte</p>
+                            <p className="text-xs mb-4" style={{ color: "var(--color-text-muted)" }}>
+                              Basée sur l&apos;analyse IA de {totalReviews} avis clients des 12 derniers mois
+                            </p>
+                            <div className="space-y-2">
+                              {scoringResult.vigilanceCategories.map((cat) => {
+                                const catColor = vigilanceColor(cat.status);
+                                const catIcon = vigilanceIcon(cat.status);
+                                return (
+                                  <div key={cat.id} className="rounded-lg overflow-hidden" style={{ border: `1px solid ${catColor}22` }}>
+                                    <div className="flex items-center gap-3 px-4 py-3">
+                                      <span className="text-base shrink-0">{catIcon}</span>
+                                      <span className="flex-1 text-sm font-semibold" style={{ color: "var(--color-text)" }}>{cat.label}</span>
+                                      <span className="text-xs" style={{ color: catColor }}>
+                                        {cat.reviewCount === 0
+                                          ? `Aucune mention sur ${totalReviews} avis analysés`
+                                          : `${cat.reviewCount} mention${cat.reviewCount > 1 ? "s" : ""} sur ${totalReviews} avis`}
+                                      </span>
+                                      <span className="text-xs font-bold w-14 text-right tabular-nums shrink-0" style={{ color: catColor }}>
+                                        {cat.score ?? "—"}/100
+                                      </span>
+                                    </div>
+                                  </div>
+                                );
+                              })}
+                            </div>
                           </div>
-                          <div className="flex items-baseline gap-2">
-                            {scoringResult._meta.googleRating != null && (
-                              <span className="text-2xl font-extrabold" style={{ color: "#F59E0B" }}>{scoringResult._meta.googleRating.toFixed(1)}</span>
-                            )}
-                            <span className="text-sm" style={{ color: "var(--color-text-secondary)" }}>
-                              /5 {scoringResult._meta.googleReviewsCount != null ? `· ${scoringResult._meta.googleReviewsCount} avis` : ""}
-                            </span>
-                            {scoringResult.reputation && (
-                              <span className="text-xs ml-2" style={{ color: "var(--color-text-muted)" }}>
-                                ({scoringResult.reputation.authenticCount} authentiques · {scoringResult.reputation.suspiciousCount} suspects exclus)
-                              </span>
-                            )}
-                          </div>
-                          {scoringResult._meta.googleReviewsAISummary && (
-                            <p className="text-sm mt-2 leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
+                        );
+                      })()}
+
+                      {/* ④ Réputation & avis clients */}
+                      {(scoringResult._meta?.googleRating != null || scoringResult.reputation || scoringResult._meta?.googleReviewsAISummary) && (
+                        <div className="px-6 py-5">
+                          <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: "var(--color-text-muted)" }}>⭐ Réputation &amp; avis clients</p>
+                          {(scoringResult.reputation?.totalCollected != null || scoringResult.reputation?.authenticCount != null) && (() => {
+                            const rep = scoringResult.reputation!;
+                            const authentic = rep.authenticCount;
+                            const suspicious = rep.suspiciousCount;
+                            const collected = rep.totalCollected ?? (authentic + suspicious);
+                            return (
+                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+                                {[
+                                  { val: collected, lbl: "avis collectés (12 mois)", color: undefined },
+                                  { val: authentic, lbl: "authentiques", color: "#16A34A" },
+                                  ...(suspicious > 0 ? [{ val: suspicious, lbl: "suspects (filtrés)", color: "#D97706" }] : []),
+                                  ...(scoringResult._meta?.googleRating != null ? [{ val: `${scoringResult._meta.googleRating.toFixed(1)}/5`, lbl: "note moyenne", color: "#F59E0B" }] : []),
+                                ].map(({ val, lbl, color }) => (
+                                  <div key={lbl} className="flex flex-col items-center py-3 px-2 rounded-xl text-center" style={{ background: "var(--color-bg)", border: "1px solid var(--color-border)" }}>
+                                    <span className="text-xl font-extrabold tabular-nums" style={{ color: color ?? "var(--color-text)" }}>{val}</span>
+                                    <span className="text-xs mt-0.5" style={{ color: "var(--color-text-muted)" }}>{lbl}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            );
+                          })()}
+                          {scoringResult._meta?.googleReviewsAISummary && (
+                            <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
                               {scoringResult._meta.googleReviewsAISummary}
                             </p>
                           )}
                         </div>
                       )}
 
-                      {/* Vigilance catégories */}
-                      {scoringResult.vigilanceCategories && scoringResult.vigilanceCategories.length > 0 && (
-                        <div>
-                          <div className="flex items-center gap-2 mb-3">
-                            <Eye className="w-4 h-4" style={{ color: "var(--color-text-secondary)" }} />
-                            <p className="text-xs font-semibold uppercase tracking-wide" style={{ color: "var(--color-text-muted)" }}>Signaux d&apos;alerte détectés</p>
-                          </div>
-                          <div className="space-y-2">
-                            {scoringResult.vigilanceCategories.map((cat) => (
-                              <div key={cat.id} className="flex items-center gap-3 p-3 rounded-lg" style={{ background: "var(--color-bg)", border: `1px solid ${vigilanceColor(cat.status)}20` }}>
-                                <span className="text-base shrink-0">{vigilanceIcon(cat.status)}</span>
-                                <span className="flex-1 text-sm" style={{ color: "var(--color-text)" }}>{cat.label}</span>
-                                <span className="text-xs shrink-0" style={{ color: "var(--color-text-muted)" }}>
-                                  {cat.reviewCount > 0 ? `${cat.reviewCount} mention${cat.reviewCount > 1 ? "s" : ""}` : "Aucune mention"}
-                                </span>
-                                <span className="text-xs font-bold shrink-0 w-8 text-right" style={{ color: vigilanceColor(cat.status) }}>
-                                  {cat.score ?? "—"}
+                      {/* ⑤ Fiabilité légale */}
+                      {(scoringResult.subscores || scoringResult._meta?.pappersDecisions !== undefined) && (
+                        <div className="px-6 py-5">
+                          <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: "var(--color-text-muted)" }}>⚖️ Fiabilité légale</p>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            {scoringResult.subscores?.financier && (
+                              <div className="flex justify-between items-center p-3 rounded-xl" style={{ background: "var(--color-bg)", border: "1px solid var(--color-border)" }}>
+                                <span className="text-sm" style={{ color: "var(--color-text-secondary)" }}>Santé financière</span>
+                                <span className="text-sm font-bold" style={{ color: scoreColor(scoringResult.subscores.financier.score) }}>
+                                  {scoringResult.subscores.financier.label}
+                                  {scoringResult.subscores.financier.score != null && ` (${scoringResult.subscores.financier.score}/100)`}
                                 </span>
                               </div>
-                            ))}
+                            )}
+                            {scoringResult._meta?.pappersDecisions !== undefined && (
+                              <div className="flex justify-between items-center p-3 rounded-xl" style={{ background: "var(--color-bg)", border: "1px solid var(--color-border)" }}>
+                                <span className="text-sm" style={{ color: "var(--color-text-secondary)" }}>Décisions de justice</span>
+                                <span className="text-sm font-bold flex items-center gap-1" style={{ color: scoringResult._meta.pappersDecisions === 0 ? "#16A34A" : "#DC2626" }}>
+                                  {scoringResult._meta.pappersDecisions === 0
+                                    ? <><CheckCircle2 className="w-3.5 h-3.5" />Aucune</>
+                                    : `${scoringResult._meta.pappersDecisions} décision${scoringResult._meta.pappersDecisions > 1 ? "s" : ""}`}
+                                </span>
+                              </div>
+                            )}
+                            {scoringResult._meta?.companyFoundedYear && (
+                              <div className="flex justify-between items-center p-3 rounded-xl" style={{ background: "var(--color-bg)", border: "1px solid var(--color-border)" }}>
+                                <span className="text-sm" style={{ color: "var(--color-text-secondary)" }}>Ancienneté</span>
+                                <span className="text-sm font-bold" style={{ color: "var(--color-text)" }}>depuis {scoringResult._meta.companyFoundedYear}</span>
+                              </div>
+                            )}
+                            {scoringResult._meta?.siret && (
+                              <div className="flex justify-between items-center p-3 rounded-xl" style={{ background: "var(--color-bg)", border: "1px solid var(--color-border)" }}>
+                                <span className="text-sm" style={{ color: "var(--color-text-secondary)" }}>SIRET</span>
+                                <span className="text-xs font-mono font-bold" style={{ color: "var(--color-text)" }}>{scoringResult._meta.siret}</span>
+                              </div>
+                            )}
                           </div>
                         </div>
                       )}
 
-                      {/* Juridique */}
-                      {scoringResult._meta?.pappersDecisions !== undefined && (
-                        <div className="flex items-center gap-3 p-4 rounded-xl" style={{ background: "var(--color-bg)", border: "1px solid var(--color-border)" }}>
-                          <Scale className="w-4 h-4 shrink-0" style={{ color: "var(--color-text-secondary)" }} />
-                          <span className="text-sm flex-1" style={{ color: "var(--color-text)" }}>Décisions de justice</span>
-                          {scoringResult._meta.pappersDecisions === 0 ? (
-                            <span className="text-xs font-semibold flex items-center gap-1" style={{ color: "#16A34A" }}>
-                              <CheckCircle2 className="w-3.5 h-3.5" />Aucune procédure
+                      {/* ⑥ Quota + CTA */}
+                      <div className="px-6 py-5">
+                        {quota && (
+                          <div className="flex items-center justify-between text-xs mb-4 px-1" style={{ color: "var(--color-text-muted)" }}>
+                            <span className="flex items-center gap-1">
+                              <BarChart3 className="w-3 h-3" />
+                              {quota.remaining} vérification{quota.remaining > 1 ? "s" : ""} restante{quota.remaining > 1 ? "s" : ""}
                             </span>
-                          ) : (
-                            <span className="text-xs font-semibold" style={{ color: "#DC2626" }}>
-                              {scoringResult._meta.pappersDecisions} décision{scoringResult._meta.pappersDecisions > 1 ? "s" : ""}
-                            </span>
+                            <span>gratuit · sans inscription</span>
+                          </div>
+                        )}
+                        <div className="flex flex-col sm:flex-row gap-3">
+                          <a href="/" className="flex-1 flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm"
+                            style={{ background: "var(--color-accent)", color: "white" }}>
+                            Obtenir mes devis <ChevronRight className="w-4 h-4" />
+                          </a>
+                          {quota && quota.remaining > 0 && (
+                            <button onClick={handleReset}
+                              className="flex-1 flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm"
+                              style={{ border: "1px solid var(--color-border)", color: "var(--color-text)" }}>
+                              Vérifier un autre déménageur
+                            </button>
                           )}
                         </div>
-                      )}
-
-                      {/* Interprétation globale */}
-                      <div className="p-4 rounded-xl" style={{ background: `${scoringResult.globalColor}08`, border: `1px solid ${scoringResult.globalColor}20` }}>
-                        <div className="flex items-start gap-3">
-                          <TrendingUp className="w-5 h-5 shrink-0 mt-0.5" style={{ color: scoringResult.globalColor }} />
-                          <p className="text-sm" style={{ color: "var(--color-text)" }}>{interpretScore(scoringResult.globalScore)}</p>
-                        </div>
                       </div>
 
-                      {/* Quota + CTA */}
-                      {quota && (
-                        <div className="flex items-center justify-between text-xs px-1" style={{ color: "var(--color-text-muted)" }}>
-                          <span className="flex items-center gap-1">
-                            <BarChart3 className="w-3 h-3" />
-                            {quota.remaining} vérification{quota.remaining > 1 ? "s" : ""} restante{quota.remaining > 1 ? "s" : ""}
-                          </span>
-                          <span>gratuit · sans inscription</span>
-                        </div>
-                      )}
-
-                      <div className="flex flex-col sm:flex-row gap-3">
-                        <a href="/" className="flex-1 flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm"
-                          style={{ background: "var(--color-accent)", color: "white" }}>
-                          Obtenir mes devis <ChevronRight className="w-4 h-4" />
-                        </a>
-                        {quota && quota.remaining > 0 && (
-                          <button onClick={handleReset}
-                            className="flex-1 flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm"
-                            style={{ border: "1px solid var(--color-border)", color: "var(--color-text)" }}>
-                            Vérifier un autre déménageur
-                          </button>
-                        )}
-                      </div>
                     </div>
                   </>
                 )}
