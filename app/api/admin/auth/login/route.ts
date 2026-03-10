@@ -14,12 +14,20 @@ export async function POST(req: NextRequest) {
 
     // DEBUG: Log pour comprendre le problème
     const adminPasswordEnv = process.env.ADMIN_PASSWORD;
+    const sessionSecret = process.env.SESSION_SECRET;
     console.log('[AUTH DEBUG] ADMIN_PASSWORD from env:', adminPasswordEnv ? 'SET' : 'NOT SET');
-    console.log('[AUTH DEBUG] Password length received:', password.length);
+    console.log('[AUTH DEBUG] ADMIN_PASSWORD value:', adminPasswordEnv);
+    console.log('[AUTH DEBUG] SESSION_SECRET:', sessionSecret ? 'SET' : 'NOT SET');
+    console.log('[AUTH DEBUG] Password received:', password);
+    console.log('[AUTH DEBUG] Password length:', password.length);
 
     if (!verifyPassword(password)) {
       return NextResponse.json(
-        { error: 'Mot de passe incorrect', debug: { hasEnvPassword: !!adminPasswordEnv } },
+        { error: 'Mot de passe incorrect', debug: { 
+          hasEnvPassword: !!adminPasswordEnv,
+          envPasswordValue: adminPasswordEnv,
+          receivedPassword: password
+        }},
         { status: 401 }
       );
     }
