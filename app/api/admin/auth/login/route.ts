@@ -21,12 +21,22 @@ export async function POST(req: NextRequest) {
     console.log('[AUTH DEBUG] Password received:', password);
     console.log('[AUTH DEBUG] Password length:', password.length);
 
+    // DEBUG HASH: Voir les hashs générés
+    const { hashPassword } = await import('@/lib/admin/auth');
+    const secret = process.env.SESSION_SECRET || 'fallback-secret-key';
+    const hashedInput = hashPassword(password, secret);
+    const hashedAdmin = hashPassword(adminPasswordEnv || '', secret);
+    console.log('[AUTH DEBUG] Hash input:', hashedInput);
+    console.log('[AUTH DEBUG] Hash admin:', hashedAdmin);
+    console.log('[AUTH DEBUG] Hashs match:', hashedInput === hashedAdmin);
+
     if (!verifyPassword(password)) {
       return NextResponse.json(
         { error: 'Mot de passe incorrect', debug: { 
           hasEnvPassword: !!adminPasswordEnv,
           envPasswordValue: adminPasswordEnv,
-          receivedPassword: password
+          receivedPassword: password,
+          hashMatch: hashedInput === hashedAdmin
         }},
         { status: 401 }
       );
