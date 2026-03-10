@@ -895,7 +895,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 
 ## Obtenez des Devis de Déménageurs Vérifiés
 
-**3 analyses de risque /100** · **Volume IA précis** · **Devis comparables** · **0 harcèlement** · **100% gratuit**
+**Score /100** · **Volume estimé précis** · **Devis comparables** · **0 harcèlement** · **100% gratuit**
 
 [Comparer les déménageurs maintenant →](https://devis.moverz.fr/devis-gratuits)
 

@@ -56,7 +56,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 **Solution 2 : Inventaire manuel détaillé**
 - Listez TOUT : salon, cuisine, chambres, SDB, WC, couloirs, cave, garage, grenier, balcon
 - Utilisez un calculateur de volume en ligne
-- **→ Temps : 45-60 minutes** vs 1 minute avec IA
+- **→ Temps : 45-60 minutes** vs 1 minute avec système automatique
 
 ---
 
@@ -653,7 +653,7 @@ Avec Moverz :
 
 ### 6-8 semaines avant
 
-- [ ] Calculer le volume avec l'IA Moverz
+- [ ] Calculer le volume avec le système Moverz
 - [ ] Comparer des devis
 - [ ] Réserver le déménageur choisi
 - [ ] Demander autorisation stationnement (si centre-ville)
@@ -731,8 +731,8 @@ Avec Moverz :
 
 **Utilisez Moverz** ✅
 
-L'IA + les 3 analyses de risque /100 + la checklist complète éliminent automatiquement :
-- Erreur 1 : Volume sous-estimé (IA volumétrie 90-95%)
+Le système Moverz + le Score /100 + la checklist complète éliminent automatiquement :
+- Erreur 1 : Volume sous-estimé (estimation automatique 90-95%)
 - Erreur 2 : Devis non comparables (même base volume)
 - Erreur 3 : Réservation trop tard (disponibilité visible)
 - Erreur 16 : Déménageur non fiable (scores financier + juridique + avis /100, alertes = exclusion)
@@ -761,7 +761,7 @@ L'IA + les 3 analyses de risque /100 + la checklist complète éliminent automat
 **Coût total évitable : 1 500-3 000€** + 20-40h de temps perdu + stress
 
 **Comment éviter tout ça** :
-✅ IA Moverz pour volume précis  
+[OK] Système Moverz pour volume précis  
 ✅ 3 analyses de risque /100 (financier, juridique, avis Google)  
 ✅ Alertes cash ou juridiques = exclusion automatique  
 ✅ Checklist complète fournie  

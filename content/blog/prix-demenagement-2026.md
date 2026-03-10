@@ -467,7 +467,7 @@ Avec Moverz, vous recevez **des devis comparables** :
 - Salaires : +2%
 - Assurances : +3%
 
-**Mais** : La concurrence reste forte, et les outils comme Moverz (IA pour volume précis) réduisent les coûts cachés (visites techniques, litiges).
+**Mais** : La concurrence reste forte, et les outils comme Moverz (estimation automatique du volume) réduisent les coûts cachés (visites techniques, litiges).
 
 **→ Prix 2025 ≈ Prix 2024 (+3-5%)** dans l'ensemble.
 

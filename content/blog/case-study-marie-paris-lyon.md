@@ -104,7 +104,7 @@ Marie découvre Moverz via un article de blog sur les arnaques au déménagement
    - Date souhaitée : 1er avril 2025
    - Objets fragiles : TV 55", miroir ancien, vaisselle
 
-**Résultat de l'IA :**
+**Résultat de l'estimation :**
 - Volume estimé : **34m³**
 - Dossier complet et anonymisé envoyé à 5 déménageurs contrôlés
 
@@ -157,12 +157,12 @@ Marie choisit **Lyon Déménagement** :
 - Installation des meubles selon plan
 
 **Bilan :**
-- Volume réel : 34m³ (exactement l'estimation IA ✅)
+- Volume réel : 34m³ (exactement l'estimation Moverz [OK])
 - Aucun supplément
 - Aucune casse
 - Fin à 17h comme prévu
 
-> "L'équipe était pro, rapide, et surtout : pas de surprise sur le prix. Le volume était exactement celui estimé par l'IA."  
+> "L'équipe était pro, rapide, et surtout : pas de surprise sur le prix. Le volume était exactement celui estimé par Moverz."  
 > — Marie
 
 ---
@@ -200,9 +200,9 @@ Marie choisit **Lyon Déménagement** :
 ### 1. Le volume est la clé
 
 **Avant :** 3 déménageurs = 3 volumes différents (25m³, 32m³, 40m³)  
-**Après :** 1 volume IA (34m³) = 5 devis vraiment comparables
+**Après :** 1 volume estimé (34m³) = 5 devis vraiment comparables
 
-**Impact :** Impossible de comparer des devis avec des volumes différents. L'IA élimine ce biais.
+**Impact :** Impossible de comparer des devis avec des volumes différents. Le système Moverz élimine ce biais.
 
 ### 2. Le moins cher n'est pas toujours le meilleur
 
@@ -238,7 +238,7 @@ Certains déménageurs avaient de bons avis mais :
 Créez votre dossier en 3 minutes sur [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits).
 
 **Ce que vous obtenez :**
-- ✅ Volume estimé par IA (détails)
+- [OK] Volume estimé automatiquement (détails)
 - ✅ des devis comparables
 - ✅ 3 analyses de risque /100 : financier (Creditsafe + Pappers), juridique (Pappers Décisions), avis Google
 - ✅ Alertes cash ou juridiques = exclusion automatique
