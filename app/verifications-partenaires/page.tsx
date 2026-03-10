@@ -16,29 +16,29 @@ export const metadata: Metadata = getFullMetadata(
 export default function VerificationsPartenairesPage() {
   const faqs: FAQItem[] = [
     {
-      question: "Quelles vérifications Moverz effectue-t-elle concrètement ?",
+      question: "Comment est calculé le Score Moverz ?",
       answer:
-        "Chaque déménageur est évalué automatiquement selon 3 analyses de risque notées /100 : (1) Risque expérience client — analyse des 20 derniers avis Google + détection de patterns récurrents dans les mauvais avis 1-2★ (retards, casse, comportement), (2) Risque financier — scores Creditsafe et Pappers consolidés + analyse interne du ratio cash/dettes court terme, (3) Risque juridique — décisions de justice et litiges passés/en cours via Pappers. En complément : licence de transport, assurance RC Pro (≥ 1,5 M€), identité légale. Les déménageurs avec alertes financières ou juridiques sont exclus automatiquement.",
+        "Le Score Moverz est un score de 0 à 100 calculé automatiquement à partir de 5 sous-scores indépendants : (1) Score Financier 12,5% (Pappers : résultat net, fonds propres, trésorerie, endettement, tendance), (2) Score Juridique 12,5% (BODACC + Pappers Décisions : procédures, litiges, malus selon gravité/récence), (3) Score Google 20% (note pondérée par volume d'avis), (4) Score Réputation 20% (ratio positifs/négatifs sur tous les avis authentiques 12 mois), (5) Score Vigilance 35% (analyse IA de 6 catégories d'alertes). Ces 5 sous-scores sont regroupés en 3 dimensions client : Fiabilité légale, Satisfaction clients, Alertes.",
     },
     {
-      question: "Comment fonctionnent les 3 analyses de risque ?",
+      question: "Que signifient les 3 dimensions du scoring ?",
       answer:
-        "Chaque pilier produit une note /100 présentée individuellement au client. (1) Expérience client : nous analysons les 20 derniers avis Google pour calculer une note globale, puis nous analysons spécifiquement les avis 1-2★ pour détecter des patterns récurrents (retards, casse, comportement des équipes) — cela donne une seconde note /100. (2) Risque financier : nous consolidons les scores Creditsafe et Pappers (scoring financier) en une moyenne, enrichie par notre analyse interne du ratio cash/dettes court terme. (3) Risque juridique : nous exploitons les décisions de justice via Pappers (tribunaux de commerce, sanctions, interdictions de gérer) et le scoring non-financier Pappers (gouvernance, conformité).",
+        "Les 3 dimensions regroupent les 5 sous-scores pour une présentation claire : (1) Fiabilité légale 25% = Score Financier + Score Juridique (santé financière + casier juridique), (2) Satisfaction clients 40% = Score Google + Score Réputation (note pondérée + analyse de tous les avis 12 mois), (3) Alertes 35% = Score Vigilance (détection IA de 6 catégories de problèmes récurrents : casses 30%, vols 30%, retards 10%, prix modifiés 10%, personnel 10%, autres 10%). Le score d'une dimension est la moyenne pondérée de ses sous-scores.",
     },
     {
-      question: "Pourquoi utiliser Creditsafe ET Pappers pour le risque financier ?",
+      question: "Comment fonctionne la détection des faux avis ?",
       answer:
-        "Creditsafe et Pappers sont deux bases de données complémentaires qui évaluent la solvabilité des entreprises via des méthodologies différentes. En consolidant leurs scores, nous obtenons une évaluation plus fiable. Nous ajoutons notre propre analyse du ratio cash/dettes court terme pour détecter les entreprises en tension de trésorerie. 257 faillites de déménageurs ont été enregistrées en 2024 (source Altares) — un déménageur en difficulté financière = risque élevé d'acompte perdu.",
+        "Notre système détecte automatiquement les avis suspects via 4 heuristiques : (1) Texte <10 mots ou vide, (2) Auteur en doublon dans la liste, (3) Rafale : ≥3 avis 5★ la même semaine, (4) Avis 5★ sans texte. Un avis est considéré suspect si ≥2 critères sont remplis. Ces avis sont exclus du calcul des scores Réputation et Vigilance. Seuls les avis authentiques sont utilisés pour les ratios et l'analyse IA.",
     },
     {
-      question: "Comment l'analyse des avis Google fonctionne-t-elle ?",
+      question: "Que se passe-t-il si un déménageur a un score < 50/100 ?",
       answer:
-        "Nous analysons les 20 derniers avis Google de chaque déménageur. Première étape : nous calculons une note /100 basée sur la note moyenne et le volume d'avis. Deuxième étape : nous analysons spécifiquement tous les avis 1-2★ pour identifier des patterns récurrents (retards à répétition, casse non indemnisée, comportement problématique des équipes). Cette analyse produit une seconde note /100. Les deux notes sont présentées séparément au client.",
+        "Un déménageur avec un score global < 50/100 OU une dimension < 30/100 est considéré comme à risque. Si le score passe sous ces seuils, une investigation manuelle est déclenchée. En cas d'alerte critique confirmée (ratio vigilance >3% sur une catégorie grave comme casses ou vols, OU score financier <30/100), le déménageur est exclu automatiquement de la présentation des devis. Il peut récupérer son label si la situation s'améliore (scores >50/100 pendant 3 mois consécutifs).",
     },
     {
-      question: "Que vérifie l'analyse juridique ?",
+      question: "À quelle fréquence le scoring est-il recalculé ?",
       answer:
-        "Nous accédons aux bases de données juridiques françaises via Pappers : décisions des tribunaux de commerce (liquidations, redressements, sanctions), interdictions de gérer, et litiges commerciaux passés ou en cours. Le scoring non-financier Pappers évalue aussi la gouvernance et la conformité de l'entreprise. Résultat : une note /100 estimant le risque de litiges. Les déménageurs avec alerte juridique sont exclus automatiquement de la présentation des devis.",
+        "Le Score Moverz est recalculé automatiquement tous les 7 jours (nouveaux avis Google via SearchAPI.io) et tous les 30 jours (nouvelles données financières Pappers). Il peut aussi être forcé manuellement depuis le backoffice. Les caches : 7 jours pour Google/SearchAPI, 30 jours pour Pappers financier. En cas de changement significatif détecté (nouveau score <50/100 ou nouvelle alerte critique), le recalcul est immédiat et l'exclusion automatique.",
     },
     {
       question: "Les déménageurs ont-ils accès à leur scoring ?",
@@ -114,42 +114,45 @@ export default function VerificationsPartenairesPage() {
 
           {/* Les vérifications actives */}
           <div className="space-y-4">
-            <h2 className="text-lg md:text-xl font-semibold text-v4-text">3 analyses de risque — chacune notée /100</h2>
+            <h2 className="text-lg md:text-xl font-semibold text-v4-text">Score Moverz : 3 dimensions / 5 sous-scores</h2>
+            <p className="text-sm md:text-base text-v4-text-secondary leading-relaxed">
+              Chaque déménageur reçoit un <strong className="text-v4-text">score global de 0 à 100</strong> calculé automatiquement à partir de <strong className="text-v4-text">5 sous-scores indépendants</strong>, regroupés en 3 dimensions pour la présentation client.
+            </p>
 
             <div className="grid gap-4">
               {[
                 {
-                  title: "1) Risque expérience client (données Google)",
-                  desc: "Nous analysons les 20 derniers avis Google de chaque déménageur pour estimer le risque d'expérience client négative.",
+                  title: "1) Fiabilité légale (25% du score global)",
+                  desc: "Cette dimension regroupe 2 sous-scores indépendants qui évaluent la solidité financière et le casier juridique.",
                   bullets: [
-                    "Note /100 basée sur la note moyenne Google et le volume d'avis",
-                    "Analyse spécifique des avis 1-2★ : détection de patterns récurrents (retards, casse, comportement des équipes)",
-                    "Seconde note /100 sur l'analyse des mauvais avis",
-                    "Les deux notes sont présentées séparément au client",
+                    "Score Financier 12,5% : analyse Pappers (résultat net, fonds propres, trésorerie, endettement, tendance) — 5 critères pondérés",
+                    "Score Juridique 12,5% : BODACC + Pappers Décisions (procédures collectives, décisions de justice, sanctions) — malus selon gravité et récence",
+                    "Cache 30 jours pour données financières",
+                    "Fallback 50/100 si données indisponibles, 100/100 si aucune procédure détectée",
                   ],
-                  highlight: "Moverz : seul comparateur à analyser les patterns des mauvais avis",
+                  highlight: "Sources : Pappers Financier + BODACC + Pappers Juridique",
                 },
                 {
-                  title: "2) Risque financier (Creditsafe + Pappers + analyse interne)",
-                  desc: "Nous consolidons les données de deux bases professionnelles et les enrichissons par notre propre analyse.",
+                  title: "2) Satisfaction clients (40% du score global)",
+                  desc: "Cette dimension regroupe 2 sous-scores indépendants qui évaluent la qualité perçue par les clients réels.",
                   bullets: [
-                    "Scores de solvabilité Creditsafe et Pappers (scoring financier), consolidés en moyenne",
-                    "Analyse interne complémentaire : ratio cash / dettes court terme",
-                    "Note /100 — alerte cash = déménageur exclu automatiquement",
-                    "257 faillites de déménageurs en 2024 (source Altares) : ce filtre est essentiel",
+                    "Score Google 20% : note Google pondérée par le volume d'avis (bonus jusqu'à +10pts si >30 avis), plafonné à 80/100 si <30 avis",
+                    "Score Réputation 20% : ratio avis positifs/négatifs sur TOUS les avis des 12 derniers mois (jusqu'à 500 avis), avec plafonds selon volume et détection automatique des faux avis",
+                    "Cache 7 jours pour données Google",
+                    "Seuls les avis authentiques sont comptabilisés (exclusion des suspects : texte <10 mots, doublons, rafales 5★)",
                   ],
-                  highlight: "Double source Creditsafe + Pappers + analyse interne",
+                  highlight: "Sources : Google Places API + SearchAPI.io + Analyse IA (GPT-4o-mini)",
                 },
                 {
-                  title: "3) Risque juridique (Pappers Décisions + scoring non-financier)",
-                  desc: "Nous accédons aux bases de données juridiques françaises pour analyser les litiges passés et en cours.",
+                  title: "3) Alertes (35% du score global)",
+                  desc: "Cette dimension analyse automatiquement les avis négatifs (≤4★) des 12 derniers mois pour détecter 6 catégories de problèmes récurrents.",
                   bullets: [
-                    "Décisions de justice via Pappers (tribunaux de commerce, sanctions, interdictions de gérer)",
-                    "Scoring non-financier Pappers (gouvernance, conformité)",
-                    "Analyse des litiges passés et en cours",
-                    "Note /100 — alerte juridique = déménageur exclu automatiquement",
+                    "Score Vigilance 35% : analyse IA de 6 catégories (Casse 30%, Vol 30%, Calendrier 10%, Prix 10%, Personnel 10%, Autres 10%)",
+                    "Chaque catégorie notée selon ratio signalements/avis authentiques : <1% → 100pts, 1-3% → 50pts, >3% → 0pts (alerte rouge)",
+                    "0 avis négatifs authentiques sur 12 mois = vigilance automatique 100/100 (sans appel IA)",
+                    "Le déménageur peut prendre des engagements validés par IA → catégorie passe à 100pts si approuvé",
                   ],
-                  highlight: "Analyse juridique automatisée via Pappers Décisions",
+                  highlight: "Analyse IA structurée de 6 catégories de risques comportementaux",
                 },
                 {
                   title: "Vérifications complémentaires",
@@ -192,19 +195,19 @@ export default function VerificationsPartenairesPage() {
             <ul className="grid gap-3 text-sm md:text-base text-v4-text/90">
               {[
                 {
-                  icon: <Star className="w-4 h-4" style={{ color: "#0EA5A6" }} />,
-                  title: "Expérience client vérifiée",
-                  desc: "Avis Google analysés (20 derniers avis + patterns des mauvais avis) — deux notes /100 distinctes. Vous savez exactement ce que les clients précédents ont vécu.",
+                  icon: <ShieldCheck className="w-4 h-4" style={{ color: "#0EA5A6" }} />,
+                  title: "Fiabilité légale (25%)",
+                  desc: "Score Financier + Score Juridique. Analyse Pappers : bilans, trésorerie, dettes, procédures collectives, décisions de justice. Score < 50/100 = exclusion automatique.",
                 },
                 {
-                  icon: <ShieldCheck className="w-4 h-4" style={{ color: "#0EA5A6" }} />,
-                  title: "Financièrement solides",
-                  desc: "Scores Creditsafe + Pappers consolidés, enrichis par notre analyse du ratio cash/dettes. Alerte cash = exclusion automatique. Vous évitez les entreprises en difficulté.",
+                  icon: <Star className="w-4 h-4" style={{ color: "#0EA5A6" }} />,
+                  title: "Satisfaction clients (40%)",
+                  desc: "Score Google + Score Réputation. Note Google pondérée par volume + analyse IA de TOUS les avis des 12 derniers mois (jusqu'à 500 avis). Détection automatique des faux avis.",
                 },
                 {
                   icon: <Scale className="w-4 h-4" style={{ color: "#0EA5A6" }} />,
-                  title: "Juridiquement sains",
-                  desc: "Décisions de justice, sanctions et litiges analysés via Pappers. Alerte juridique = exclusion automatique. Vous ne traitez qu'avec des entreprises sans contentieux grave.",
+                  title: "Alertes (35%)",
+                  desc: "Score Vigilance. Analyse IA de 6 catégories d'alertes dans les avis négatifs : casses (30%), vols (30%), retards (10%), prix modifiés (10%), personnel (10%), autres (10%). Ratio >3% = alerte rouge.",
                 },
                 {
                   icon: <Check className="w-4 h-4" style={{ color: "#0EA5A6" }} />,
@@ -236,8 +239,8 @@ export default function VerificationsPartenairesPage() {
               Prêt à comparer des devis de déménageurs vérifiés ?
             </h3>
             <p className="text-sm md:text-base text-v4-text-secondary mb-5 max-w-2xl mx-auto">
-              Obtenez jusqu'à 5 devis comparables de déménageurs évalués selon 3 analyses de risque /100 sous 5-7 jours. 
-              Alertes financières ou juridiques = exclusion automatique. Dossier anonyme, zéro harcèlement, 100% gratuit.
+              Obtenez jusqu'à 5 devis comparables de déménageurs notés /100 (3 dimensions : fiabilité légale, satisfaction clients, alertes) sous 5-7 jours. 
+              Score < 50/100 = exclusion automatique. Dossier anonyme, zéro harcèlement, 100% gratuit.
             </p>
             <a
               href={buildTunnelUrl({ from: "verifications-partenaires" })}

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { MoverzLogo } from "@/components/admin/MoverzLogo";
+import { LockIcon } from "@/components/admin/Icons";
 
 export default function AdminLoginPage() {
   const [password, setPassword] = useState("");
@@ -107,9 +108,7 @@ export default function AdminLoginPage() {
 
           <div className="mt-8 text-center">
             <p className="font-sans text-xs text-v4-text-muted flex items-center justify-center gap-2">
-              <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
-              </svg>
+              <LockIcon className="w-3.5 h-3.5" />
               Accès sécurisé · NoIndex activé
             </p>
           </div>

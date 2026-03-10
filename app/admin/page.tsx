@@ -1,45 +1,51 @@
 import Link from "next/link";
+import { BlogIcon, SearchIcon, CalendarIcon, LinkIcon, SparklesIcon, ChartIcon, CheckCircleIcon, LightningIcon } from "@/components/admin/Icons";
 
 const dashboardCards = [
   {
     href: "/admin/blog",
-    icon: "📝",
+    Icon: BlogIcon,
     title: "Blog Dashboard",
     description: "Monitoring des articles, analytics GSC, métriques SEO",
     gradient: "from-accent/10 to-accent-light/10",
     borderColor: "border-accent",
+    iconColor: "text-accent",
   },
   {
     href: "/admin/veille",
-    icon: "🔍",
+    Icon: SearchIcon,
     title: "Veille Concurrentielle",
     description: "Scraping, gap analysis, heatmap de couverture",
     gradient: "from-purple-50 to-purple-100/50",
     borderColor: "border-purple-400",
+    iconColor: "text-purple-600",
   },
   {
     href: "/admin/editorial",
-    icon: "📅",
+    Icon: CalendarIcon,
     title: "Calendrier Éditorial",
     description: "Kanban, workflow, planning de production",
     gradient: "from-green-50 to-green-100/50",
     borderColor: "border-green-400",
+    iconColor: "text-green-600",
   },
   {
     href: "/admin/linking",
-    icon: "🔗",
+    Icon: LinkIcon,
     title: "Internal Linking",
     description: "Suggestions auto, clusters, graph de maillage",
     gradient: "from-orange-50 to-orange-100/50",
     borderColor: "border-orange-400",
+    iconColor: "text-orange-600",
   },
   {
     href: "/admin/studio",
-    icon: "✨",
+    Icon: SparklesIcon,
     title: "AI Content Studio",
     description: "Génération articles SEO/E-E-A-T depuis query",
     gradient: "from-pink-50 to-pink-100/50",
     borderColor: "border-pink-400",
+    iconColor: "text-pink-600",
   },
 ];
 
@@ -73,33 +79,36 @@ export default function AdminHomePage() {
 
       {/* Dashboard Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {dashboardCards.map((card) => (
-          <Link
-            key={card.href}
-            href={card.href}
-            className="group bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm border border-v4-border 
-                     p-8 hover:shadow-glow-turquoise hover:-translate-y-1
-                     transition-all duration-300"
-          >
-            <div className={`inline-flex p-3 bg-gradient-to-br ${card.gradient} rounded-xl mb-5 
-                           border ${card.borderColor} border-opacity-30
-                           group-hover:scale-110 transition-transform duration-300`}>
-              <span className="text-3xl">{card.icon}</span>
-            </div>
-            <h2 className="font-heading text-xl font-700 text-v4-text mb-2">
-              {card.title}
-            </h2>
-            <p className="font-sans text-sm text-v4-text-secondary leading-relaxed">
-              {card.description}
-            </p>
-          </Link>
-        ))}
+        {dashboardCards.map((card) => {
+          const Icon = card.Icon;
+          return (
+            <Link
+              key={card.href}
+              href={card.href}
+              className="group bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm border border-v4-border 
+                       p-8 hover:shadow-glow-turquoise hover:-translate-y-1
+                       transition-all duration-300"
+            >
+              <div className={`inline-flex p-3 bg-gradient-to-br ${card.gradient} rounded-xl mb-5 
+                             border ${card.borderColor} border-opacity-30
+                             group-hover:scale-110 transition-transform duration-300`}>
+                <Icon className={`w-7 h-7 ${card.iconColor}`} />
+              </div>
+              <h2 className="font-heading text-xl font-700 text-v4-text mb-2">
+                {card.title}
+              </h2>
+              <p className="font-sans text-sm text-v4-text-secondary leading-relaxed">
+                {card.description}
+              </p>
+            </Link>
+          );
+        })}
 
         {/* System Status Card */}
         <div className="bg-gradient-to-br from-accent/5 to-accent-light/10 backdrop-blur-sm 
                       rounded-2xl shadow-sm border border-accent/20 p-8">
           <div className="inline-flex p-3 bg-white rounded-xl mb-5 shadow-sm">
-            <span className="text-3xl">📊</span>
+            <ChartIcon className="w-7 h-7 text-accent" />
           </div>
           <h2 className="font-heading text-xl font-700 text-v4-text mb-4">
             Système Status
@@ -113,9 +122,7 @@ export default function AdminHomePage() {
               <div key={item.label} className="flex justify-between items-center">
                 <span className="font-sans text-sm text-v4-text-secondary">{item.label}</span>
                 <span className="flex items-center gap-1.5 font-sans text-xs font-600 text-green-600">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
+                  <CheckCircleIcon className="w-4 h-4" />
                   {item.status}
                 </span>
               </div>
@@ -126,8 +133,8 @@ export default function AdminHomePage() {
 
       {/* Quick Actions */}
       <div className="bg-white/60 backdrop-blur-sm rounded-2xl shadow-sm border border-v4-border-light p-8">
-        <h3 className="font-heading text-xl font-700 text-v4-text mb-6 flex items-center gap-2">
-          <span className="text-2xl">⚡</span>
+        <h3 className="font-heading text-xl font-700 text-v4-text mb-6 flex items-center gap-3">
+          <LightningIcon className="w-6 h-6 text-accent" />
           Quick Actions
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

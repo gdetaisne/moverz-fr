@@ -6,39 +6,42 @@ import { Building2, MessageSquare, Gavel, Check, Shield } from "lucide-react";
 
 const scores = [
   {
-    icon: Building2,
-    title: "Risque Financier",
-    score: 91,
-    color: "var(--color-accent)",
-    sources: ["Creditsafe", "Pappers", "Analyse interne"],
-    checks: [
-      "Trésorerie saine",
-      "Pas de dettes critiques",
-      "Bilans positifs",
-    ],
-  },
-  {
-    icon: Gavel,
-    title: "Risque Juridique",
+    icon: Shield,
+    title: "Fiabilité légale",
     score: 88,
     color: "#16A34A",
-    sources: ["BODACC", "Pappers Décisions", "Infogreffe"],
+    weight: "25%",
+    sources: ["Pappers Financier", "BODACC", "Pappers Juridique"],
     checks: [
-      "Aucune procédure",
-      "Pas de litiges graves",
-      "Dirigeants propres",
+      "Santé financière vérifiée (bilans, trésorerie)",
+      "Aucune procédure judiciaire active",
+      "Dirigeants sans interdiction de gérer",
     ],
   },
   {
     icon: MessageSquare,
-    title: "Expérience Client",
-    score: 82,
-    color: "#F59E0B",
-    sources: ["Avis Google", "Analyse patterns", "Récence"],
+    title: "Satisfaction clients",
+    score: 76,
+    color: "#16A34A",
+    weight: "40%",
+    sources: ["Google Places API", "SearchAPI.io", "Analyse IA"],
     checks: [
-      "Avis majoritairement positifs",
-      "Pas de patterns récurrents",
-      "Service fiable",
+      "Note Google pondérée par le volume",
+      "Tous les avis analysés sur 12 mois",
+      "Détection automatique des faux avis",
+    ],
+  },
+  {
+    icon: Gavel,
+    title: "Alertes",
+    score: 72,
+    color: "#16A34A",
+    weight: "35%",
+    sources: ["Avis négatifs 12 mois", "Analyse IA GPT-4o", "6 catégories"],
+    checks: [
+      "Détection casses et dégradations",
+      "Détection vols et disparitions",
+      "Détection retards et prix modifiés",
     ],
   },
 ];
@@ -206,6 +209,7 @@ function DetailCard({
   title,
   score,
   color,
+  weight,
   sources,
   checks,
 }: {
@@ -213,6 +217,7 @@ function DetailCard({
   title: string;
   score: number;
   color: string;
+  weight: string;
   sources: string[];
   checks: string[];
 }) {
@@ -235,9 +240,14 @@ function DetailCard({
         >
           <Icon className="w-5 h-5" style={{ color }} />
         </div>
-        <div>
-          <div className="font-semibold" style={{ color: "var(--color-text)" }}>
-            {title}
+        <div className="flex-1">
+          <div className="flex items-center justify-between">
+            <div className="font-semibold" style={{ color: "var(--color-text)" }}>
+              {title}
+            </div>
+            <div className="text-xs font-semibold px-2 py-1 rounded" style={{ background: "var(--color-bg)", color: "var(--color-text-secondary)" }}>
+              {weight}
+            </div>
           </div>
           <div className="text-2xl font-bold tabular-nums" style={{ color }}>
             {score}/100

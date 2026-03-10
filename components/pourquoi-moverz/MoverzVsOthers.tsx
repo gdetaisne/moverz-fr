@@ -113,7 +113,7 @@ export default function MoverzVsOthers() {
                 <div className="px-4 pb-4">
                   <div className="p-3 rounded-xl text-center border" style={{ background: "rgba(14,165,166,0.08)", borderColor: "rgba(14,165,166,0.2)" }}>
                     <p className="text-xs font-bold" style={{ color: "#0EA5A6" }}>
-                      Moverz = 3 analyses de risque /100 + devis comparables
+                      Moverz = Score /100 (3 dimensions · 5 sous-scores) + devis comparables
                     </p>
                   </div>
                 </div>
@@ -140,12 +140,12 @@ export default function MoverzVsOthers() {
                 </div>
                 <div>
                   <h3 className="font-bold text-white mb-2">
-                    Analyse des avis Google
+                    Satisfaction clients (40%)
                   </h3>
                   <p className="text-white/70 text-sm">
-                    20 derniers avis analysés + détection de patterns dans les
-                    mauvais avis (retards, casse, comportement). Deux notes /100
-                    distinctes.
+                    <strong className="text-white">Tous les avis Google 12 mois</strong> analysés par IA (jusqu'à 500 avis).
+                    Score Google (note pondérée) + Score Réputation (ratio positifs/négatifs authentiques).
+                    Détection automatique des faux avis.
                   </p>
                 </div>
               </motion.div>
@@ -160,12 +160,12 @@ export default function MoverzVsOthers() {
                 </div>
                 <div>
                   <h3 className="font-bold text-white mb-2">
-                    Risque financier consolidé
+                    Fiabilité légale (25%)
                   </h3>
                   <p className="text-white/70 text-sm">
-                    <strong className="text-white">Creditsafe + Pappers</strong>{" "}
-                    + analyse interne (ratio cash/dettes). Alerte cash =
-                    exclusion automatique.
+                    <strong className="text-white">Score Financier + Score Juridique</strong>.
+                    Pappers : bilans, trésorerie, dettes, tendances + BODACC + décisions de justice.
+                    Malus selon gravité et récence des procédures.
                   </p>
                 </div>
               </motion.div>
@@ -180,14 +180,14 @@ export default function MoverzVsOthers() {
                 </div>
                 <div>
                   <h3 className="font-bold text-white mb-2">
-                    Risque juridique analysé
+                    Alertes (35%)
                   </h3>
                   <p className="text-white/70 text-sm">
                     <strong className="text-white">
-                      Pappers Décisions + scoring non-financier
+                      Analyse IA de 6 catégories
                     </strong>
-                    . Décisions de justice, sanctions, litiges passés/en cours.
-                    Alerte juridique = exclusion automatique.
+                    : casses (30%), vols (30%), retards (10%), prix modifiés (10%), personnel (10%), autres (10%).
+                    Ratio &gt;3% = alerte rouge sur la catégorie.
                   </p>
                 </div>
               </motion.div>

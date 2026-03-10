@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { MoverzLogo } from "@/components/admin/MoverzLogo";
+import { BlogIcon, SearchIcon, CalendarIcon, LinkIcon, SparklesIcon } from "@/components/admin/Icons";
 
 export const metadata: Metadata = {
   title: "Admin Dashboard - Moverz Content Intelligence",
@@ -14,11 +15,11 @@ export const metadata: Metadata = {
 };
 
 const navItems = [
-  { href: "/admin/blog", label: "Blog", icon: "📝" },
-  { href: "/admin/veille", label: "Veille", icon: "🔍" },
-  { href: "/admin/editorial", label: "Éditorial", icon: "📅" },
-  { href: "/admin/linking", label: "Linking", icon: "🔗" },
-  { href: "/admin/studio", label: "AI Studio", icon: "✨" },
+  { href: "/admin/blog", label: "Blog", Icon: BlogIcon },
+  { href: "/admin/veille", label: "Veille", Icon: SearchIcon },
+  { href: "/admin/editorial", label: "Éditorial", Icon: CalendarIcon },
+  { href: "/admin/linking", label: "Linking", Icon: LinkIcon },
+  { href: "/admin/studio", label: "AI Studio", Icon: SparklesIcon },
 ];
 
 export default function AdminLayout({

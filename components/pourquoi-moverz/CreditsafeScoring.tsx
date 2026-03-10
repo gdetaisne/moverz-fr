@@ -38,14 +38,14 @@ export default function CreditsafeScoring() {
             <motion.h2 variants={staggerItem}
               className="font-heading text-3xl md:text-5xl font-bold text-white mb-6 leading-tight tracking-[-0.02em]"
             >
-              3 analyses de risque.{" "}
-              <span className="text-white/40">Notées /100.</span>
+              Score global.{" "}
+              <span className="text-white/40">3 dimensions /100.</span>
             </motion.h2>
 
             <motion.p variants={staggerItem} className="text-lg text-white/50 leading-relaxed mb-8">
-              Le prix ne fait pas tout. Nous évaluons chaque déménageur selon{" "}
-              <strong className="text-white">3 axes de risque</strong>{" "}
-              (expérience client, financier, juridique) via Creditsafe, Pappers et l'analyse des avis Google.
+              Chaque déménageur reçoit un score de 0 à 100 basé sur{" "}
+              <strong className="text-white">3 dimensions</strong>{" "}
+              (fiabilité légale 25%, satisfaction clients 40%, alertes 35%) calculées à partir de 5 sous-scores indépendants via Pappers, Google Places et analyse IA.
             </motion.p>
 
             <div className="space-y-4">
@@ -55,8 +55,8 @@ export default function CreditsafeScoring() {
               >
                 <CheckCircle className="w-5 h-5 text-[#0EA5A6] flex-shrink-0 mt-0.5" strokeWidth={2} />
                 <div>
-                  <h3 className="font-semibold text-white mb-1">✓ Déménageur A</h3>
-                  <p className="text-white/50 text-sm">Google 82/100 · Financier 85/100 · Juridique 91/100 · Aucune alerte → Le plus fiable</p>
+                  <h3 className="font-semibold text-white mb-1">✓ Déménageur A — Score 85/100</h3>
+                  <p className="text-white/50 text-sm">Fiabilité légale 88/100 · Satisfaction clients 84/100 · Alertes 83/100 → Excellent profil</p>
                 </div>
               </motion.div>
 
@@ -66,8 +66,8 @@ export default function CreditsafeScoring() {
               >
                 <AlertCircle className="w-5 h-5 text-white/40 flex-shrink-0 mt-0.5" strokeWidth={2} />
                 <div>
-                  <h3 className="font-semibold text-white mb-1">⚠ Déménageur B</h3>
-                  <p className="text-white/50 text-sm">Google 61/100 (patterns retards) · Financier 52/100 (↓ ratio cash/dettes) → Fragile, négociez les conditions</p>
+                  <h3 className="font-semibold text-white mb-1">⚠ Déménageur B — Score 58/100</h3>
+                  <p className="text-white/50 text-sm">Fiabilité légale 52/100 (trésorerie faible) · Satisfaction 61/100 · Alertes 60/100 → Profil correct, à surveiller</p>
                 </div>
               </motion.div>
 
@@ -77,14 +77,14 @@ export default function CreditsafeScoring() {
               >
                 <XCircle className="w-5 h-5 text-white/30 flex-shrink-0 mt-0.5" strokeWidth={2} />
                 <div>
-                  <h3 className="font-semibold text-white/50 mb-1">✕ Déménageur C — Exclu automatiquement</h3>
-                  <p className="text-white/40 text-sm">Alerte cash + alerte juridique → Non présenté dans vos devis</p>
+                  <h3 className="font-semibold text-white/50 mb-1">✕ Déménageur C — Score 24/100 — Exclu</h3>
+                  <p className="text-white/40 text-sm">Alertes critiques détectées (>3% avis signalent casses) → Non présenté dans vos devis</p>
                 </div>
               </motion.div>
             </div>
 
             <motion.p variants={staggerItem} className="text-xs text-white/25 mt-6 text-center lg:text-left">
-              Sources : Google, Creditsafe, Pappers • Analyses automatiques • Exemple illustratif
+              Sources : Pappers, Google Places API, SearchAPI.io • Analyses automatiques • Exemples illustratifs
             </motion.p>
           </motion.div>
 
@@ -100,7 +100,7 @@ export default function CreditsafeScoring() {
               <div className="rounded-3xl overflow-hidden border border-white/10" style={{ background: "#111820" }}>
                 {/* Header */}
                 <div className="px-6 py-5 border-b border-white/10">
-                  <p className="text-xs font-semibold text-white/40 mb-1">3 analyses de risque /100</p>
+                  <p className="text-xs font-semibold text-white/40 mb-1">Score Moverz /100</p>
                   <p className="text-lg font-bold text-white">3 déménageurs évalués</p>
                 </div>
 
@@ -117,11 +117,11 @@ export default function CreditsafeScoring() {
                         <div className="w-full h-2 rounded-full overflow-hidden bg-white/10">
                           <div className="h-full rounded-full" style={{ width: "85%", background: "#0EA5A6" }} />
                         </div>
-                        <p className="text-xs text-white/40 mt-1">Financier 85 · Google 82 · Juridique 91</p>
+                        <p className="text-xs text-white/40 mt-1">Fiabilité 88 · Satisfaction 84 · Alertes 83</p>
                       </div>
                     </div>
                     <div className="mt-3 flex gap-2">
-                      <span className="text-xs font-medium text-white/60 bg-white/10 px-2 py-1 rounded">0 alerte</span>
+                      <span className="text-xs font-medium text-white/60 bg-white/10 px-2 py-1 rounded">Excellent</span>
                       <span className="text-xs font-medium px-2 py-1 rounded" style={{ background: "rgba(14,165,166,0.15)", color: "#0EA5A6" }}>Présenté</span>
                     </div>
                   </div>
@@ -133,16 +133,16 @@ export default function CreditsafeScoring() {
                       <TrendingDown className="w-5 h-5 text-white/30" />
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="text-3xl font-bold text-white/60">52</div>
+                      <div className="text-3xl font-bold text-white/60">58</div>
                       <div className="flex-1">
                         <div className="w-full h-2 rounded-full overflow-hidden bg-white/10">
-                          <div className="h-full rounded-full bg-white/30" style={{ width: "52%" }} />
+                          <div className="h-full rounded-full bg-white/30" style={{ width: "58%" }} />
                         </div>
-                        <p className="text-xs text-white/40 mt-1">Financier 52 (↓) · Google 61 · Juridique 74</p>
+                        <p className="text-xs text-white/40 mt-1">Fiabilité 52 · Satisfaction 61 · Alertes 60</p>
                       </div>
                     </div>
                     <div className="mt-3">
-                      <span className="text-xs font-medium text-white/40 bg-white/10 px-2 py-1 rounded">Ratio cash/dettes faible</span>
+                      <span className="text-xs font-medium text-white/40 bg-white/10 px-2 py-1 rounded">Correct · Trésorerie faible</span>
                     </div>
                   </div>
 
@@ -152,8 +152,8 @@ export default function CreditsafeScoring() {
                       <p className="font-bold text-white/50">Déménageur C</p>
                       <XCircle className="w-5 h-5 text-white/20" />
                     </div>
-                    <p className="text-sm font-bold text-white/30">Exclu</p>
-                    <p className="text-xs text-white/30 mt-1">Alerte cash + alerte juridique</p>
+                    <p className="text-sm font-bold text-white/30">Score 24/100 — Exclu</p>
+                    <p className="text-xs text-white/30 mt-1">Alertes critiques détectées (>3% avis signalent casses)</p>
                     <div className="mt-3">
                       <span className="text-xs font-medium text-white/30 bg-white/5 px-2 py-1 rounded">Non présenté</span>
                     </div>
@@ -175,10 +175,10 @@ export default function CreditsafeScoring() {
           <div className="rounded-2xl p-8 border border-white/10 bg-white/5">
             <p className="text-sm font-semibold text-white mb-2">Pourquoi personne d'autre ne le fait ?</p>
             <p className="text-white/40 text-sm">
-              Coût élevé (Creditsafe + Pappers + accès juridique), complexité d'analyse, et conflit d'intérêt : difficile de noter financièrement un client qui vous paie.
+              Coût élevé (Pappers Pro + SearchAPI + analyse IA + Google Places API), complexité technique (agrégation de 5 sous-scores), et conflit d'intérêt : difficile de noter financièrement un client qui vous paie.
             </p>
             <a href="/verifications-partenaires/" className="inline-block mt-4 text-sm font-medium hover:text-white transition-colors" style={{ color: "#0EA5A6" }}>
-              → Voir le détail de nos 3 analyses de risque
+              → Voir le détail de nos 3 dimensions de scoring
             </a>
           </div>
         </motion.div>
