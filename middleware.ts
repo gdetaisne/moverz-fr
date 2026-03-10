@@ -96,11 +96,11 @@ function makeGa4ClientId(): string {
 export async function middleware(req: NextRequest, event: NextFetchEvent) {
   const { pathname } = req.nextUrl;
   
-  // 🔐 ADMIN PROTECTION: Protect /admin/* routes (except /admin/login)
-  if (pathname.startsWith('/admin/') && pathname !== '/admin/login') {
+  // 🔐 ADMIN PROTECTION: Protect /admin/* routes (except /admin/login and /admin/login/)
+  if (pathname.startsWith('/admin/') && !pathname.startsWith('/admin/login')) {
     const sessionCookie = req.cookies.get('admin_session')?.value;
     if (!sessionCookie || !verifySession(sessionCookie)) {
-      const loginUrl = new URL('/admin/login', req.url);
+      const loginUrl = new URL('/admin/login/', req.url);
       return NextResponse.redirect(loginUrl);
     }
   }
