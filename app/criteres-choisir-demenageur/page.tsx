@@ -23,12 +23,12 @@ export default function CriteresChoisirDemenageurPage() {
     {
       question: "Comment Moverz évalue-t-elle la fiabilité d'un déménageur ?",
       answer:
-        "Moverz évalue chaque déménageur selon 3 analyses de risque notées /100 : (1) Risque expérience client — analyse des 20 derniers avis Google + détection de patterns récurrents dans les mauvais avis 1-2★ (retards, casse, comportement), (2) Risque financier — scores Creditsafe et Pappers consolidés + analyse interne du ratio cash/dettes, (3) Risque juridique — décisions de justice et litiges via Pappers. Les déménageurs avec alertes financières ou juridiques sont exclus automatiquement. 257 faillites en 2024 (Altares) : ce filtre est essentiel.",
+        "Moverz attribue à chaque déménageur un Score /100 calculé automatiquement à partir de 5 sous-scores indépendants regroupés en 3 dimensions : (1) Fiabilité légale 25% — Score Financier (Pappers : bilans, trésorerie, dettes) + Score Juridique (BODACC, décisions de justice), (2) Satisfaction clients 40% — Score Google (note pondérée volume) + Score Réputation (tous les avis 12 mois analysés par IA), (3) Alertes 35% — Score Vigilance (6 catégories : casses, vols, retards, prix modifiés, personnel, autres). Score < 50/100 = exclusion automatique. Monitoring continu 7 jours. 257 faillites en 2024 (Altares) : ce filtre est essentiel.",
     },
     {
       question: "Comment vérifier la santé financière d'un déménageur moi-même ?",
       answer:
-        "Vous pouvez vérifier le SIREN sur annuaire-entreprises.data.gouv.fr (entreprise active, pas en liquidation). Pour aller plus loin : societe.com ou infogreffe.fr (historique, procédures). Creditsafe et Pappers (payants) sont les outils professionnels utilisés par Moverz — nous consolidons leurs scores financiers et ajoutons une analyse interne du ratio cash/dettes. Moverz fait tout ça automatiquement (gratuit pour vous).",
+        "Vous pouvez vérifier le SIREN sur annuaire-entreprises.data.gouv.fr (entreprise active, pas en liquidation). Pour aller plus loin : societe.com ou infogreffe.fr (historique, procédures). Pappers Pro (payant) est l'outil professionnel utilisé par Moverz — nous analysons automatiquement les bilans comptables (résultat net, fonds propres, trésorerie, dettes, tendance) et calculons un Score Financier /100. Moverz fait tout ça automatiquement (gratuit pour vous).",
     },
     {
       question: "Un déménageur peut-il facturer plus le jour J ?",
@@ -48,7 +48,7 @@ export default function CriteresChoisirDemenageurPage() {
     {
       question: "Comment éviter les faux déménageurs ?",
       answer:
-        "Vérifiez 4 éléments : (1) SIREN actif sur annuaire-entreprises.data.gouv.fr, (2) Cohérence raison sociale sur devis/RIB/assurance, (3) Attestation d'assurance RC Pro valide, (4) Avis Google analysés (pas de patterns récurrents négatifs). Méfiez-vous des prix anormalement bas (&lt;30% du marché), des demandes de paiement cash, ou de l'absence de devis écrit. Moverz filtre automatiquement via 3 analyses de risque /100 (expérience client, financier, juridique) — alertes = exclusion.",
+        "Vérifiez 4 éléments : (1) SIREN actif sur annuaire-entreprises.data.gouv.fr, (2) Cohérence raison sociale sur devis/RIB/assurance, (3) Attestation d'assurance RC Pro valide, (4) Avis Google analysés (pas de signaux récurrents : casses >3%, vols >3%). Méfiez-vous des prix anormalement bas (&lt;30% du marché), des demandes de paiement cash, ou de l'absence de devis écrit. Moverz filtre automatiquement via Score /100 (3 dimensions, 5 sous-scores indépendants) — score < 50/100 = exclusion.",
     },
     {
       question: "Visite technique, visio, ou description détaillée : que choisir ?",
