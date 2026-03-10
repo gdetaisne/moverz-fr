@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { MoverzLogo } from "@/components/admin/MoverzLogo";
 
 export const metadata: Metadata = {
   title: "Admin Dashboard - Moverz Content Intelligence",
@@ -12,6 +13,14 @@ export const metadata: Metadata = {
   },
 };
 
+const navItems = [
+  { href: "/admin/blog", label: "Blog", icon: "📝" },
+  { href: "/admin/veille", label: "Veille", icon: "🔍" },
+  { href: "/admin/editorial", label: "Éditorial", icon: "📅" },
+  { href: "/admin/linking", label: "Linking", icon: "🔗" },
+  { href: "/admin/studio", label: "AI Studio", icon: "✨" },
+];
+
 export default function AdminLayout({
   children,
 }: {
@@ -19,42 +28,57 @@ export default function AdminLayout({
 }) {
   return (
     <>
-      <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="bg-white/80 backdrop-blur-xl border-b border-v4-border sticky top-0 z-50 shadow-sm">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
             <div className="flex items-center space-x-8">
-              <Link href="/admin" className="text-xl font-bold text-blue-600">
-                📊 Moverz Admin
+              <Link href="/admin" className="flex items-center gap-2 group">
+                <MoverzLogo className="h-7 w-auto transition-transform duration-300 group-hover:scale-105" />
+                <span className="hidden lg:inline font-heading font-600 text-v4-text-secondary text-sm">
+                  Admin
+                </span>
               </Link>
-              <div className="hidden md:flex space-x-4">
-                <Link href="/admin/blog" className="text-sm font-medium text-gray-700 hover:text-blue-600">
-                  Blog
-                </Link>
-                <Link href="/admin/veille" className="text-sm font-medium text-gray-700 hover:text-blue-600">
-                  Veille
-                </Link>
-                <Link href="/admin/editorial" className="text-sm font-medium text-gray-700 hover:text-blue-600">
-                  Éditorial
-                </Link>
-                <Link href="/admin/linking" className="text-sm font-medium text-gray-700 hover:text-blue-600">
-                  Linking
-                </Link>
-                <Link href="/admin/studio" className="text-sm font-medium text-gray-700 hover:text-blue-600">
-                  AI Studio
-                </Link>
+              <div className="hidden md:flex items-center space-x-1">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="px-4 py-2 font-sans text-sm font-500 text-v4-text-secondary 
+                             hover:text-accent hover:bg-accent/5 rounded-xl
+                             transition-all duration-300"
+                  >
+                    <span className="mr-1.5">{item.icon}</span>
+                    {item.label}
+                  </Link>
+                ))}
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <span className="text-sm text-gray-500">👤 Admin</span>
-              <a href="/api/admin/auth/logout" className="text-sm text-red-600 hover:text-red-800">
+              <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-accent/10 rounded-full">
+                <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+                <span className="font-sans text-xs font-600 text-accent">Admin</span>
+              </div>
+              <a 
+                href="/api/admin/auth/logout" 
+                className="font-sans text-sm font-500 text-v4-text-muted hover:text-red-600 
+                         transition-colors duration-300"
+              >
                 Déconnexion
               </a>
             </div>
           </div>
         </div>
       </nav>
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-gray-50 min-h-screen">
-        {children}
+      <main 
+        className="min-h-screen"
+        style={{
+          background: `radial-gradient(1200px 600px at 50% 0%, rgba(107, 207, 207, 0.08), transparent 70%),
+                       #FAFAFA`
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+          {children}
+        </div>
       </main>
     </>
   );
