@@ -38,7 +38,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 | **T4 (80-100 m²)** | 40-55 m³ | **1 500 – 2 700 €** | **2 700 – 4 800 €** |
 | **Maison 120 m²+** | 60-80 m³ | **2 200 – 3 800 €+** | **3 800 – 6 500 €+** |
 
-\*Volumes indicatifs basés sur des inventaires réels. L'IA Moverz peut affiner ce cubage à partir de votre configuration exacte. [Estimer mon volume →](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-tableau)
+\*Volumes indicatifs basés sur des inventaires réels. Le système Moverz peut affiner ce cubage à partir de votre configuration exacte. [Estimer mon volume →](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-tableau)
 
 ---
 

@@ -1,13 +1,7 @@
-import { CorridorPage, generateCorridorMetadata } from "@/components/templates/CorridorPage";
+import { PremiumCorridorPage, generatePremiumCorridorMetadata } from "@/components/templates/PremiumCorridorPage";
 
-export const metadata = generateCorridorMetadata('nice', 'Nice', 'Paris');
+export const metadata = generatePremiumCorridorMetadata('nice', 'paris');
 
 export default function Page() {
-  return (
-    <CorridorPage
-      originCitySlug="nice"
-      originCityName="Nice"
-      destination="Paris"
-    />
-  );
+  return <PremiumCorridorPage originSlug="nice" destinationSlug="paris" />;
 }

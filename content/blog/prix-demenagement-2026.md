@@ -40,7 +40,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 | **T4 (80-100 m²)** | 40-55 m³ | **1 500 – 2 700 €** | **2 700 – 4 800 €** |
 | **Maison 120 m²+** | 60-80 m³ | **2 200 – 3 800 €+** | **3 800 – 6 500 €+** |
 
-\*Volumes indicatifs basés sur des inventaires réels. L'IA Moverz peut affiner ce cubage à partir de votre configuration exacte. [Estimer mon volume →](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-tableau)
+\*Volumes indicatifs basés sur des inventaires réels. Le système Moverz peut affiner ce cubage à partir de votre configuration exacte. [Estimer mon volume →](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-tableau)
 
 ---
 
@@ -48,7 +48,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 
 **Cas 1 – Studio Paris 18e → Paris 15e**
 - 28 m², 4e étage sans ascenseur, rue semi-piétonne
-- Volume IA : 12 m³
+- Volume estimé : 12 m³
 - Distance : 8 km
 - Formule éco (client emballe)
 - **Prix constaté 2026 : 600 – 800 €**
@@ -57,7 +57,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 
 **Cas 2 – T3 Lyon Part-Dieu → Marseille Vieux-Port**
 - 65 m², ascenseur, parking correct
-- Volume IA : 32 m³
+- Volume estimé : 32 m³
 - Distance : 320 km
 - Formule standard
 - **Prix constaté 2026 : 1 900 – 2 800 €**
@@ -66,7 +66,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 
 **Cas 3 – Maison Bordeaux → Toulouse**
 - 110 m², plain-pied, accès camion facile
-- Volume IA : 55 m³
+- Volume estimé : 55 m³
 - Distance : 250 km
 - Formule confort (tout pris en charge)
 - **Prix constaté 2026 : 3 000 – 4 100 €**
@@ -191,7 +191,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 
 ## Comment obtenir un prix précis pour VOTRE déménagement ?
 
-### Étape 1 : Calculer votre volume exact avec l'IA Moverz
+### Étape 1 : Calculer votre volume exact avec le système Moverz
 
 **Le problème des estimations "à l'œil"** :
 - Déménageur 1 estime : 25 m³ → Devis 1 000€
@@ -329,7 +329,7 @@ Avec Moverz, vous recevez **des devis comparables** :
 **→ Aucune base de calcul = litige quasi-garanti** ❌
 
 **La solution Moverz** :
-- Volume IA documenté avec détails
+- Volume estimé documenté avec détails
 - Tous les déménageurs chiffrent **la même base**
 - **→ Devis ferme, 0 surprise jour J** ✅
 
@@ -337,13 +337,13 @@ Avec Moverz, vous recevez **des devis comparables** :
 
 ## Comment optimiser votre budget déménagement
 
-### 1. Avoir un volume fiable (IA Moverz)
+### 1. Avoir un volume fiable (système Moverz)
 
 **Sans volume précis** :
 - Vous comparez des devis sur des bases différentes
 - Risque de choisir le moins cher... qui va vous surprendre jour J
 
-**Avec IA Moverz** :
+**Avec Moverz** :
 - Volume précis en 1 minute (détails guidées)
 - Base commune pour tous les devis
 - **→ Vous comparez vraiment les prix** ✅
@@ -442,7 +442,7 @@ Avec Moverz, vous recevez **des devis comparables** :
 - **→ Nous sommes disponibles** ✅
 
 > **Lancer votre comparaison**  
-> Créez votre dossier en 3 minutes, l'IA estime votre volume, recevez des devis comparables sur [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits).
+> Créez votre dossier en 3 minutes, le système estime votre volume, recevez des devis comparables sur [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits).
 
 ---
 
@@ -483,7 +483,7 @@ Avec Moverz, vous recevez **des devis comparables** :
 - Le volume et les accès sont conformes à l'estimation
 
 **Avec Moverz** :
-- Volume IA documenté avec détails
+- Volume estimé documenté avec détails
 - Accès documentés avec détails
 - **→ Le déménageur ne peut pas augmenter le prix sans preuve** ✅
 
@@ -560,7 +560,7 @@ Avec Moverz, vous recevez **des devis comparables** :
 5. **Période** (été, week-end = +20-30%)
 
 **Comment obtenir le meilleur prix** :
-1. ✅ **Volume précis** (IA Moverz en 1 minute)
+1. ✅ **Volume précis** (système Moverz en 1 minute)
 2. ✅ **Accès bien décrits** (+ détails)
 3. ✅ **Période flexible** (semaine + hors été)
 4. ✅ **des devis comparables** (même base de volume)
@@ -570,7 +570,7 @@ Avec Moverz, vous recevez **des devis comparables** :
 
 ## Calculez votre prix exact maintenant
 
-**Estimation IA en 1 minute** · **des devis comparables** · **3 analyses de risque /100** · **100% gratuit**
+**Estimation automatique en 1 minute** · **des devis comparables** · **Score /100** · **100% gratuit**
 
 [Comparer les devis maintenant →](https://devis.moverz.fr/devis-gratuits)
 
