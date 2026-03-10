@@ -14,6 +14,8 @@ export default function AdminLoginPage() {
     setError("");
     setLoading(true);
 
+    console.log('[LOGIN CLIENT] Submitting password...');
+
     try {
       const response = await fetch("/api/admin/auth/login", {
         method: "POST",
@@ -21,18 +23,25 @@ export default function AdminLoginPage() {
         body: JSON.stringify({ password }),
       });
 
+      console.log('[LOGIN CLIENT] Response status:', response.status);
+
       const data = await response.json();
+      console.log('[LOGIN CLIENT] Response data:', data);
 
       if (response.ok) {
+        console.log('[LOGIN CLIENT] ✅ Login successful, redirecting...');
         router.push("/admin");
         router.refresh();
       } else {
+        console.log('[LOGIN CLIENT] ❌ Login failed:', data.error);
         setError(data.error || "Erreur de connexion");
       }
     } catch (err) {
+      console.error('[LOGIN CLIENT] ❌ Exception:', err);
       setError("Erreur de connexion au serveur");
     } finally {
       setLoading(false);
+      console.log('[LOGIN CLIENT] Loading finished');
     }
   };
 

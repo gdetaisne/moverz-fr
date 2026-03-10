@@ -987,48 +987,97 @@ export const MARSEILLE_PREMIUM_GUIDE: PremiumCityGuideData = {
     {
       name: "Le Panier (2ème)",
       accessibility: "difficile",
-      specifics: "Ruelles étroites, escaliers, 4-5 étages sans ascenseur, circulation dense.",
-      tip: "Petit camion + équipe renforcée. Budget +150-300€.",
+      specifics: "Ruelles 2-4m, 4-5 étages sans ascenseur, escaliers raides, circulation dense touristes.",
+      tip: "Camion 10-12m³ + équipe 4 déménageurs. Budget +150-300€. Prévenez DÈS le devis.",
     },
     {
       name: "Vieux-Port (1er)",
       accessibility: "moyen",
-      specifics: "Centre touristique, stationnement compliqué, immeubles anciens.",
-      tip: "Autorisation stationnement obligatoire. Arrivée tôt (7h).",
+      specifics: "Centre touristique, stationnement compliqué, immeubles anciens, circulation dense.",
+      tip: "Autorisation stationnement obligatoire (40€, 5-7j). Arrivée 7h. Budget +80-150€.",
     },
     {
       name: "8ème arrondissement (Prado, plages)",
       accessibility: "facile",
-      specifics: "Quartier résidentiel, immeubles modernes, ascenseurs.",
-      tip: "Accès facile. Pas de surcoût.",
+      specifics: "Quartier résidentiel moderne, immeubles avec ascenseurs, larges avenues, parkings.",
+      tip: "Accès facile, proche plages. Idéal. Pas de surcoût.",
+    },
+    {
+      name: "Quartiers Nord (13-16ème)",
+      accessibility: "variable",
+      specifics: "Certains secteurs accessibles, d'autres compliqués. Déménageurs peuvent refuser ou majorer.",
+      tip: "Transparence totale dès le devis. Utilisez Moverz pour filtrer déménageurs acceptant votre zone. +30-50% possible.",
+    },
+    {
+      name: "6ème-7ème (Notre-Dame, Saint-Victor)",
+      accessibility: "moyen",
+      specifics: "Collines, pentes, quartiers résidentiels chics, rues étroites.",
+      tip: "Accès moyennement compliqué. Budget +100-200€.",
     },
   ],
   checklist: [
     {
       category: "3 semaines avant",
       items: [
-        "Identifier quartier (Panier ? Collines ? 8ème ?)",
-        "Demander devis en précisant accès",
-        "Vérifier si période Août (tarifs +20%, chaleur)",
+        "Identifier arrondissement exact + quartier (Panier ? 8ème ? Quartiers Nord ?)",
+        "Vérifier si période Août (chaleur 30-35°C, tarifs +20-25%, vacanciers)",
+        "Demander 3-5 devis en précisant arrondissement, quartier, étage, ascenseur",
+        "Réserver ascenseur copropriété",
+      ],
+    },
+    {
+      category: "2 semaines avant",
+      items: [
+        "Autorisation stationnement si centre-ville (40€, délai 5-7j)",
+        "Commander cartons (35-40 pour un T2)",
+        "Si Panier ou Quartiers Nord : re-confirmer que déménageur maintient intervention",
+      ],
+    },
+    {
+      category: "1 semaine avant",
+      items: [
+        "Étiqueter cartons (pièce + priorité)",
+        "Démonter meubles",
+        "Photos meubles de valeur",
+        "Acheter eau (6-10L si Août)",
       ],
     },
     {
       category: "Jour J",
       items: [
-        "Prévoir eau (chaleur Marseille)",
-        "Vérifier parking",
-        "Inventaire cartons",
+        "Si Août : départ 6h-7h (finir avant midi)",
+        "Prévoir eau fraîche (chaleur)",
+        "Vérifier parking libre",
+        "Accueillir équipe avec clés/badges",
+        "Inventaire cartons chargés",
+        "Vérifier état meubles AVANT signature",
       ],
     },
   ],
   faq: [
     {
       question: "Marseille est-elle moins chère que Paris pour déménager ?",
-      answer: "Oui, 15-20% moins cher. T2 Paris 750-1200€ vs Marseille 650-1000€.",
+      answer: "Oui, 15-20% moins cher en moyenne. T2 Paris 750-1200€ vs Marseille 650-1000€. Mais attention aux quartiers difficiles (Panier, Quartiers Nord) qui rattrapent l'écart.",
     },
     {
       question: "Faut-il éviter Août à Marseille ?",
-      answer: "Si possible oui. Chaleur 30-35°C, vacanciers, tarifs +20%. Si obligé, prévoir départ tôt le matin.",
+      answer: "Si possible oui. Chaleur 30-35°C (parfois 38-40°C), vacanciers, circulation dense, tarifs +20-25%. Si vraiment obligé, départ 6h-7h du matin pour finir avant midi.",
+    },
+    {
+      question: "Le Panier est-il vraiment si compliqué ?",
+      answer: "Oui. Ruelles 2-4m (camion standard ne passe pas), 4-5 étages sans ascenseur, escaliers raides. Budget +150-300€ minimum, jusqu'à +500-700€ si monte-meuble nécessaire.",
+    },
+    {
+      question: "Les déménageurs acceptent-ils les Quartiers Nord ?",
+      answer: "Certains oui, d'autres non. Ceux qui acceptent majorent parfois +30-50%. Transparence totale dès le devis. Moverz filtre les déménageurs acceptant votre zone.",
+    },
+    {
+      question: "Quelle est la meilleure période pour déménager à Marseille ?",
+      answer: "Avril-Mai ou Septembre-Octobre. Températures 18-25°C (confort), pas de vacanciers, tarifs normaux. Évitez Août.",
+    },
+    {
+      question: "Le 8ème arrondissement est-il un bon choix pour habiter ?",
+      answer: "Oui, excellent. Plages à proximité, quartier résidentiel agréable, déménagement facile (pas de surcoût). Si vous cherchez à Marseille, le 8ème est un très bon plan.",
     },
   ],
   usefulLinks: [
