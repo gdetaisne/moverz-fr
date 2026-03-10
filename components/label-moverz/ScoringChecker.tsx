@@ -28,6 +28,10 @@ interface PlaceCandidate {
   address: string;
   rating: number | null;
   reviewCount: number;
+  primaryType?: string | null;
+  isMovingBusiness?: boolean;
+  isClosed?: boolean;
+  relevanceScore?: number;
 }
 
 interface ScoringDimension {
@@ -377,27 +381,52 @@ export function ScoringChecker() {
                       </div>
                     ) : (
                       <div className="space-y-3">
-                        {placeCandidates.map((candidate) => (
-                          <button key={candidate.googlePlaceId} onClick={() => launchScoring(selectedMover!.id)}
-                            className="w-full flex items-start gap-4 p-4 rounded-xl text-left transition-colors hover:bg-gray-50"
-                            style={{ border: "1px solid var(--color-border)" }}>
-                            <div className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0 mt-0.5" style={{ background: "rgba(14,165,166,0.08)" }}>
-                              <ExternalLink className="w-5 h-5" style={{ color: "var(--color-accent)" }} />
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <div className="font-semibold truncate" style={{ color: "var(--color-text)" }}>{candidate.name}</div>
-                              <div className="text-sm truncate" style={{ color: "var(--color-text-secondary)" }}>{candidate.address}</div>
-                              {candidate.rating != null && (
-                                <div className="flex items-center gap-1 mt-1">
-                                  <Star className="w-3 h-3" style={{ color: "#F59E0B" }} />
-                                  <span className="text-xs font-medium" style={{ color: "var(--color-text)" }}>{candidate.rating.toFixed(1)}</span>
-                                  <span className="text-xs" style={{ color: "var(--color-text-muted)" }}>({candidate.reviewCount} avis)</span>
+                        {placeCandidates.map((candidate) => {
+                          const rel = candidate.relevanceScore ?? 0;
+                          const isGoodMatch = candidate.isMovingBusiness && rel >= 50;
+                          const isSuspect = !candidate.isMovingBusiness || rel < 20;
+                          return (
+                            <button key={candidate.googlePlaceId} onClick={() => launchScoring(selectedMover!.id)}
+                              className="w-full flex items-start gap-4 p-4 rounded-xl text-left transition-colors hover:bg-gray-50"
+                              style={{
+                                border: `1px solid ${isGoodMatch ? "#10b98133" : isSuspect ? "#f59e0b44" : "var(--color-border)"}`,
+                                background: isGoodMatch ? "rgba(16,185,129,0.03)" : "white",
+                              }}>
+                              <div className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0 mt-0.5" style={{ background: "rgba(14,165,166,0.08)" }}>
+                                <ExternalLink className="w-5 h-5" style={{ color: "var(--color-accent)" }} />
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <div className="flex items-center gap-2 flex-wrap">
+                                  <span className="font-semibold truncate" style={{ color: "var(--color-text)" }}>{candidate.name}</span>
+                                  {isGoodMatch && (
+                                    <span className="text-xs px-2 py-0.5 rounded-full font-medium shrink-0" style={{ background: "rgba(16,185,129,0.1)", color: "#059669" }}>
+                                      ✓ Déménagement
+                                    </span>
+                                  )}
+                                  {!candidate.isMovingBusiness && candidate.primaryType && (
+                                    <span className="text-xs px-2 py-0.5 rounded-full font-medium shrink-0" style={{ background: "rgba(245,158,11,0.12)", color: "#b45309" }}>
+                                      ⚠ Secteur différent
+                                    </span>
+                                  )}
+                                  {candidate.isClosed && (
+                                    <span className="text-xs px-2 py-0.5 rounded-full font-medium shrink-0" style={{ background: "rgba(239,68,68,0.1)", color: "#dc2626" }}>
+                                      Fermé
+                                    </span>
+                                  )}
                                 </div>
-                              )}
-                            </div>
-                            <ChevronRight className="w-4 h-4 shrink-0 mt-1" style={{ color: "var(--color-text-muted)" }} />
-                          </button>
-                        ))}
+                                <div className="text-sm truncate mt-0.5" style={{ color: "var(--color-text-secondary)" }}>{candidate.address}</div>
+                                {candidate.rating != null && (
+                                  <div className="flex items-center gap-1 mt-1">
+                                    <Star className="w-3 h-3" style={{ color: "#F59E0B" }} />
+                                    <span className="text-xs font-medium" style={{ color: "var(--color-text)" }}>{candidate.rating.toFixed(1)}</span>
+                                    <span className="text-xs" style={{ color: "var(--color-text-muted)" }}>({candidate.reviewCount} avis)</span>
+                                  </div>
+                                )}
+                              </div>
+                              <ChevronRight className="w-4 h-4 shrink-0 mt-1" style={{ color: "var(--color-text-muted)" }} />
+                            </button>
+                          );
+                        })}
                       </div>
                     )}
 
