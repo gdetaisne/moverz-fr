@@ -12,9 +12,14 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // DEBUG: Log pour comprendre le problème
+    const adminPasswordEnv = process.env.ADMIN_PASSWORD;
+    console.log('[AUTH DEBUG] ADMIN_PASSWORD from env:', adminPasswordEnv ? 'SET' : 'NOT SET');
+    console.log('[AUTH DEBUG] Password length received:', password.length);
+
     if (!verifyPassword(password)) {
       return NextResponse.json(
-        { error: 'Mot de passe incorrect' },
+        { error: 'Mot de passe incorrect', debug: { hasEnvPassword: !!adminPasswordEnv } },
         { status: 401 }
       );
     }
