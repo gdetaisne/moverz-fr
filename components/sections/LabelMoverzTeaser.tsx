@@ -11,9 +11,9 @@ import Image from "next/image";
 import { staggerContainer, staggerItem } from "@/components/motion";
 
 const CHECKS = [
-  "Solidité financière vérifiée (Creditsafe + Pappers)",
-  "Avis clients analysés et vérifiés",
-  "Zéro signal d'alerte détecté",
+  "Fiabilité légale 25% (santé financière + casier juridique Pappers)",
+  "Satisfaction clients 40% (tous les avis 12 mois analysés par IA)",
+  "Alertes 35% (6 catégories de risques détectées automatiquement)",
 ];
 
 export function LabelMoverzTeaser() {
@@ -59,12 +59,12 @@ export function LabelMoverzTeaser() {
             </div>
 
             <h2 className="font-heading text-[clamp(24px,4vw,40px)] font-bold tracking-[-0.02em] leading-[1.1] text-white">
-              Seuls les déménageurs qui passent nos 3 analyses reçoivent{" "}
-              <span style={{ color: "#0EA5A6" }}>le Label Moverz.</span>
+              Seuls les déménageurs avec un score{" "}
+              <span style={{ color: "#0EA5A6" }}>&gt; 50/100 peuvent vous faire une offre.</span>
             </h2>
 
             <p className="text-base text-white/50 leading-relaxed max-w-lg">
-              57% des candidats sont écartés. Ceux qui passent nos critères sont les seuls à pouvoir vous faire une offre.
+              Score calculé automatiquement à partir de 3 dimensions (fiabilité légale, satisfaction clients, alertes). 18% des déménageurs sont exclus automatiquement.
             </p>
 
             <a

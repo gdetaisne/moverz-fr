@@ -27,7 +27,7 @@ export default function HowItWorksFAQ() {
     {
       question: "Comment savoir si un déménageur est fiable ?",
       answer:
-        "Nous vérifions systématiquement la santé financière de chaque déménageur via Creditsafe avant de les présenter. Découvrez <a href='/blog/comprendre-score-creditsafe-demenageur/' class='text-v4-accent hover:underline'>comment lire un score Creditsafe</a> et nos <a href='/verifications-partenaires/' class='text-v4-accent hover:underline'>critères de vérification</a>.",
+        "Chaque déménageur reçoit un Score Moverz /100 calculé automatiquement à partir de 3 dimensions : fiabilité légale (santé financière + casier juridique), satisfaction clients (avis Google analysés par IA), alertes (détection de problèmes récurrents). Score < 50/100 = exclusion automatique. Découvrez nos <a href='/verifications-partenaires/' class='text-v4-accent hover:underline'>critères de scoring</a> et le <a href='/blog/label-moverz-certification-demenageurs/' class='text-v4-accent hover:underline'>fonctionnement détaillé</a>.",
     },
     {
       question: "Comment comparer efficacement plusieurs devis ?",

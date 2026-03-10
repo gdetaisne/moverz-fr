@@ -195,7 +195,7 @@ Ce que nous ne sommes pas :
 
 - **Zéro démarchage** : Dossier 100% anonyme, vous choisissez qui peut vous contacter. Nous centralisons tous les échanges. Votre téléphone n'est jamais transmis. Zéro appel non sollicité garanti. Les comparateurs classiques revendent vos coordonnées à 10-15 déménageurs → 10-20 appels/SMS par jour pendant 1 semaine.
 - **On filtre pour vous** : Nous sélectionnons uniquement des déménageurs disponibles à vos dates exactes, vérifiés financièrement et juridiquement, avec expérience sur votre trajet. Pas de spam de devis non pertinents.
-- **Vérification stricte** : 3 analyses de risque notées /100 (expérience client, financier, juridique) — alertes = exclusion automatique
+- **Score Moverz /100** : 3 dimensions (fiabilité légale, satisfaction clients, alertes) calculées à partir de 5 sous-scores indépendants — score < 50/100 = exclusion automatique
 - **Qualification dossier** : Description complète et structurée du logement et des contraintes → devis plus précis
 - **Objectif** : limiter le risque de suppléments jour J et le risque de tomber sur un déménageur défaillant
 
@@ -206,7 +206,7 @@ Ce que nous ne sommes pas :
 3. **Ils chiffrent votre dossier** : Aucun déménageur ne vous contacte. Ils reçoivent le dossier standardisé et vous envoient leur devis
 4. **Vous comparez et choisissez** : Vous recevez 3-5 devis comparables sous 3 à 5 jours. Dossier 100% anonyme, zéro démarchage. Vous choisissez qui contacter.
 
-Les déménageurs partenaires sont évalués selon 3 analyses de risque notées /100 (expérience client, financier, juridique). Les déménageurs avec alertes financières ou juridiques sont exclus automatiquement. Vérifications complémentaires : licence de transport, assurance RC Pro (≥ 1,5 M€), identité légale.
+Les déménageurs partenaires reçoivent un Score Moverz /100 calculé à partir de 5 sous-scores indépendants (financier 12,5%, juridique 12,5%, Google 20%, réputation 20%, vigilance 35%) regroupés en 3 dimensions (fiabilité légale, satisfaction clients, alertes). Score < 50/100 = exclusion automatique. Vérifications complémentaires : licence de transport, assurance RC Pro (≥ 1,5 M€), identité légale.
 
 ## Couverture géographique
 

@@ -10,10 +10,10 @@ import { Shield, FileCheck, Building2, Scale } from "lucide-react";
 import { StaggerContainer, StaggerItem, FadeUpSection } from "@/components/motion";
 
 const checks = [
-  { icon: Building2, label: "Score financier /100 (Creditsafe + Pappers)" },
-  { icon: Scale, label: "Score juridique /100 (Pappers Décisions)" },
-  { icon: Shield, label: "Score avis clients /100 (Google Reviews)" },
-  { icon: FileCheck, label: "Conformité : licences + assurances" },
+  { icon: Building2, label: "Fiabilité légale 25% (financier + juridique Pappers)" },
+  { icon: Shield, label: "Satisfaction clients 40% (Google + réputation IA)" },
+  { icon: Scale, label: "Alertes 35% (6 catégories analysées par IA)" },
+  { icon: FileCheck, label: "Conformité : licences + assurances RC Pro" },
 ];
 
 export function VerificationV4() {
@@ -37,7 +37,7 @@ export function VerificationV4() {
 
             <StaggerItem>
               <p className="text-lg text-white/60 max-w-md leading-relaxed">
-                Chaque déménageur est évalué sur 3 risques /100 : financier (Creditsafe + Pappers), juridique (Pappers Décisions) et expérience client (Google). Alertes = exclusion.
+                Chaque déménageur reçoit un score /100 calculé à partir de 3 dimensions (fiabilité légale, satisfaction clients, alertes) basées sur 5 sous-scores indépendants. Score &lt; 50/100 = exclusion.
               </p>
             </StaggerItem>
           </StaggerContainer>
