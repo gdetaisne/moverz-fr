@@ -29,7 +29,7 @@ const faqs: FAQItem[] = [
   {
     question: "Comment vérifiez-vous les déménageurs ?",
     answer:
-      "Chaque partenaire reçoit un Score Moverz /100 calculé automatiquement à partir de 5 sous-scores indépendants regroupés en 3 dimensions : fiabilité légale 25% (santé financière + casier juridique Pappers), satisfaction clients 40% (note Google + tous les avis 12 mois analysés par IA), alertes 35% (6 catégories : casses, vols, retards, prix, personnel, autres). Nous vérifions aussi assurance RC Pro, licence de transport et conformité légale. Score < 50/100 = exclusion automatique. Monitoring continu tous les 7 jours.",
+      "Chaque partenaire reçoit un Score Moverz /100 calculé automatiquement à partir de 5 sous-scores indépendants regroupés en 3 dimensions : fiabilité légale 25% (santé financière + casier juridique Pappers), satisfaction clients 40% (note Google + tous les avis 12 mois analysés automatiquement), alertes 35% (6 catégories : casses, vols, retards, prix, personnel, autres). Nous vérifions aussi assurance RC Pro, licence de transport et conformité légale. Score < 50/100 = exclusion automatique. Monitoring continu tous les 7 jours.",
   },
   {
     question: "Le service est-il vraiment gratuit ?",

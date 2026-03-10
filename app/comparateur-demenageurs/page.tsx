@@ -52,12 +52,12 @@ export default function ComparateurDemenageursPage() {
     {
       question: "Pourquoi utiliser un comparateur de déménagement plutôt que contacter directement ?",
       answer:
-        "Un comparateur vous fait gagner 5-10h de recherche en centralisant les devis. Avantages : (1) Gain de temps (1 formulaire vs 5-10 appels), (2) Devis comparables si le comparateur standardise le volume, (3) Anonymat et pas de démarchage (sur Moverz), (4) Score /100 automatique — 3 dimensions (fiabilité légale 25%, satisfaction clients 40%, alertes 35%) calculées à partir de 5 sous-scores indépendants via Pappers + Google + IA — score < 50/100 = exclusion. Contact direct = plus long, pas de vérification, démarchage.",
+        "Un comparateur vous fait gagner 5-10h de recherche en centralisant les devis. Avantages : (1) Gain de temps (1 formulaire vs 5-10 appels), (2) Devis comparables si le comparateur standardise le volume, (3) Anonymat et pas de démarchage (sur Moverz), (4) Score /100 automatique — 3 dimensions (fiabilité légale 25%, satisfaction clients 40%, alertes 35%) calculées à partir de 5 sous-scores indépendants via Pappers + Google + analyse automatisée — score < 50/100 = exclusion. Contact direct = plus long, pas de vérification, démarchage.",
     },
     {
       question: "Quelle est la différence entre Moverz et les autres comparateurs (ex: i-Demenager, DemenagerFacile) ?",
       answer:
-        "3 différences majeures : (1) Score /100 automatique : Moverz attribue à chaque déménageur un score calculé à partir de 5 sous-scores indépendants (financier/juridique Pappers + Google + réputation IA + vigilance IA). Score < 50/100 = exclusion. Les autres ne vérifient rien. (2) Devis comparables : Moverz transmet les mêmes informations complètes à tous. Les autres = chaque déménageur fait sa propre estimation = impossible à comparer. (3) Anonymat : Moverz ne revend pas vos coordonnées. Les autres = revente de leads.",
+        "3 différences majeures : (1) Score /100 automatique : Moverz attribue à chaque déménageur un score calculé à partir de 5 sous-scores indépendants (financier/juridique Pappers + Google + réputation + vigilance). Score < 50/100 = exclusion. Les autres ne vérifient rien. (2) Devis comparables : Moverz transmet les mêmes informations complètes à tous. Les autres = chaque déménageur fait sa propre estimation = impossible à comparer. (3) Anonymat : Moverz ne revend pas vos coordonnées. Les autres = revente de leads.",
     },
     {
       question: "Les comparateurs de déménagement sont-ils vraiment gratuits ?",
@@ -67,7 +67,7 @@ export default function ComparateurDemenageursPage() {
     {
       question: "Comment Moverz vérifie-t-il les déménageurs ?",
       answer:
-        "Chaque déménageur reçoit un Score Moverz /100 calculé automatiquement à partir de 5 sous-scores indépendants regroupés en 3 dimensions : (1) Fiabilité légale 25% — Score Financier (Pappers bilans/trésorerie) + Score Juridique (BODACC/décisions), (2) Satisfaction clients 40% — Score Google (note pondérée) + Score Réputation (tous les avis 12 mois analysés par IA, détection faux avis), (3) Alertes 35% — Score Vigilance (6 catégories : casses, vols, retards, prix, personnel, autres). Score < 50/100 = exclusion. Monitoring continu 7 jours. En complément : licence, assurance RC Pro (≥ 1,5 M€). Les comparateurs classiques ne font AUCUNE vérification.",
+        "Chaque déménageur reçoit un Score Moverz /100 calculé automatiquement à partir de 5 sous-scores indépendants regroupés en 3 dimensions : (1) Fiabilité légale 25% — Score Financier (Pappers bilans/trésorerie) + Score Juridique (BODACC/décisions), (2) Satisfaction clients 40% — Score Google (note pondérée) + Score Réputation (tous les avis 12 mois analysés automatiquement, détection faux avis), (3) Alertes 35% — Score Vigilance (6 catégories : casses, vols, retards, prix, personnel, autres). Score < 50/100 = exclusion. Monitoring continu 7 jours. En complément : licence, assurance RC Pro (≥ 1,5 M€). Les comparateurs classiques ne font AUCUNE vérification.",
     },
     {
       question: "Pourquoi les devis reçus via comparateurs sont souvent différents ?",

@@ -308,7 +308,7 @@ export default function ChiffresClesPage() {
               <div className="mt-8 rounded-2xl border border-v4-accent/20 bg-white p-6">
                 <p className="text-sm font-semibold text-v4-text mb-2">Comment éviter les arnaques</p>
                 <p className="text-sm text-[#1E293B]/75">
-                  Vérifiez la capacité de transport, l'assurance RC Pro, la santé financière (Pappers), les avis Google analysés par IA,
+                  Vérifiez la capacité de transport, l'assurance RC Pro, la santé financière (Pappers), les avis Google analysés automatiquement,
                   et exigez un devis détaillé avec volume précis. <a href="/blog/eviter-arnaques-demenagement/" className="font-semibold text-v4-accent hover:underline">Guide complet</a>
                 </p>
               </div>

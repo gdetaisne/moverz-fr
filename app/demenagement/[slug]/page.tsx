@@ -281,7 +281,7 @@ export default function CityMovingPage({ params }: PageProps) {
       {/* Stats locales */}
       <CityStats cityName={city.nameCapitalized} />
 
-      {/* Comment ça marche - Process avec IA */}
+      {/* Comment ça marche - Process avec analyse automatisée */}
       <FlowAndIA />
 
       {/* Prix indicatifs */}

@@ -12,7 +12,7 @@ import { staggerContainer, staggerItem } from "@/components/motion";
 
 const CHECKS = [
   "Fiabilité légale 25% (santé financière + casier juridique Pappers)",
-  "Satisfaction clients 40% (tous les avis 12 mois analysés par IA)",
+  "Satisfaction clients 40% (tous les avis 12 mois analysés automatiquement)",
   "Alertes 35% (6 catégories de risques détectées automatiquement)",
 ];
 

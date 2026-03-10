@@ -30,7 +30,7 @@ export const HOME_FAQS: HomeFaqItem[] = [
   {
     question: "Comment les déménageurs sont-ils vérifiés ?",
     answer:
-      "Chaque déménageur reçoit un Score Moverz /100 calculé automatiquement à partir de 3 dimensions : fiabilité légale 25% (santé financière + casier juridique Pappers), satisfaction clients 40% (tous les avis 12 mois analysés par IA), alertes 35% (6 catégories de problèmes détectées). Score < 50/100 = exclusion automatique. Monitoring continu tous les 7 jours.",
+      "Chaque déménageur reçoit un Score Moverz /100 calculé automatiquement à partir de 3 dimensions : fiabilité légale 25% (santé financière + casier juridique Pappers), satisfaction clients 40% (tous les avis 12 mois analysés automatiquement), alertes 35% (6 catégories de problèmes détectées). Score < 50/100 = exclusion automatique. Monitoring continu tous les 7 jours.",
   },
   {
     question: "Et si je n'aime aucun devis ?",

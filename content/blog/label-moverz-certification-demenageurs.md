@@ -229,7 +229,7 @@ Ratio négatifs: 8/47 = 17%
 Score Réputation: (1 - 0.17) × 100 = 83/100 ✓
 ```
 
-**Fallback :** 50/100 si analyse IA non effectuée
+**Fallback :** 50/100 si analyse non effectuée
 
 ---
 
@@ -570,10 +570,10 @@ Le **Score Vigilance (35% du score global)** analyse les avis négatifs des 12 d
 
 1. **Maintenir une bonne santé financière** (bilans positifs, trésorerie saine)
 2. **Répondre aux avis négatifs** de façon constructive et transparente
-3. **Prendre des engagements concrets** sur les problèmes identifiés (validés par IA)
+3. **Prendre des engagements concrets** sur les problèmes identifiés (validés automatiquement)
 4. **Éviter les nouveaux signalements** sur les catégories à problème
 
-Notre IA valide la qualité des engagements (ils doivent être concrets, actionnables, et vérifiables).
+Notre système valide automatiquement la qualité des engagements (ils doivent être concrets, actionnables, et vérifiables).
 
 ---
 
@@ -581,7 +581,7 @@ Notre IA valide la qualité des engagements (ils doivent être concrets, actionn
 
 **Non, le score est 100% objectif et automatique.**
 
-Il est calculé à partir de données publiques (Pappers, Google) et d'algorithmes rule-based + analyse IA.
+Il est calculé à partir de données publiques (Pappers, Google) et d'algorithmes automatisés.
 
 Un déménageur ne peut ni acheter un bon score, ni payer pour améliorer son score, ni manipuler le système.
 
@@ -642,7 +642,7 @@ Que chaque Français qui déménage puisse répondre en 10 secondes :
 - **BODACC** : https://www.bodacc.fr (Procédures collectives officielles)
 - **Google Places API** : Note et volume d'avis
 - **SearchAPI.io** : Collecte de tous les avis Google (12 mois)
-- **OpenAI GPT-4o-mini** : Analyse IA des avis (réputation + vigilance)
+- **Analyse automatisée** : Analyse des avis (réputation + vigilance)
 - **DGCCRF** : https://www.economie.gouv.fr/dgccrf (Rapport anomalies 2023)
 
 **Mise à jour :** 10 mars 2026

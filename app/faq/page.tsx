@@ -26,7 +26,7 @@ const faqCategories = [
       },
       {
         q: "Quelle est la différence entre Moverz et les autres comparateurs ?",
-        a: "La plupart des comparateurs (45-50% du marché) se contentent de revendre vos coordonnées aux déménageurs. Moverz va beaucoup plus loin : nous standardisons votre dossier et nous attribuons à chaque déménageur un Score /100 calculé à partir de 3 dimensions — fiabilité légale 25% (santé financière + casier juridique Pappers), satisfaction clients 40% (tous les avis 12 mois analysés par IA), alertes 35% (6 catégories de risques détectées automatiquement). Score < 50/100 = exclusion automatique. En savoir plus sur <a href='/pourquoi-moverz/' class='underline' style='color: var(--color-accent)'>notre approche unique</a>.",
+        a: "La plupart des comparateurs (45-50% du marché) se contentent de revendre vos coordonnées aux déménageurs. Moverz va beaucoup plus loin : nous standardisons votre dossier et nous attribuons à chaque déménageur un Score /100 calculé à partir de 3 dimensions — fiabilité légale 25% (santé financière + casier juridique Pappers), satisfaction clients 40% (tous les avis 12 mois analysés automatiquement), alertes 35% (6 catégories de risques détectées automatiquement). Score < 50/100 = exclusion automatique. En savoir plus sur <a href='/pourquoi-moverz/' class='underline' style='color: var(--color-accent)'>notre approche unique</a>.",
       },
       {
         q: "Combien de devis vais-je recevoir ?",
@@ -70,11 +70,11 @@ const faqCategories = [
       },
       {
         q: "Comment Moverz vérifie-t-il les déménageurs ?",
-        a: "Chaque déménageur reçoit un Score Moverz /100 calculé automatiquement à partir de 5 sous-scores indépendants regroupés en 3 dimensions : (1) Fiabilité légale 25% — Score Financier (Pappers : bilans, trésorerie, dettes) + Score Juridique (BODACC, décisions de justice), (2) Satisfaction clients 40% — Score Google (note pondérée volume) + Score Réputation (tous les avis 12 mois analysés par IA, détection faux avis), (3) Alertes 35% — Score Vigilance (6 catégories : casses, vols, retards, prix modifiés, personnel, autres). Score < 50/100 = exclusion automatique. En savoir plus sur <a href='/blog/label-moverz-certification-demenageurs/' class='underline' style='color: var(--color-accent)'>le Score Moverz et notre système de notation</a>.",
+        a: "Chaque déménageur reçoit un Score Moverz /100 calculé automatiquement à partir de 5 sous-scores indépendants regroupés en 3 dimensions : (1) Fiabilité légale 25% — Score Financier (Pappers : bilans, trésorerie, dettes) + Score Juridique (BODACC, décisions de justice), (2) Satisfaction clients 40% — Score Google (note pondérée volume) + Score Réputation (tous les avis 12 mois analysés automatiquement, détection faux avis), (3) Alertes 35% — Score Vigilance (6 catégories : casses, vols, retards, prix modifiés, personnel, autres). Score < 50/100 = exclusion automatique. En savoir plus sur <a href='/blog/label-moverz-certification-demenageurs/' class='underline' style='color: var(--color-accent)'>le Score Moverz et notre système de notation</a>.",
       },
       {
         q: "Les déménageurs sont-ils fiables ?",
-        a: "Les déménageurs partenaires Moverz ont tous un Score /100 (3 dimensions : fiabilité légale, satisfaction clients, alertes). Score < 50/100 = exclusion automatique. Nous analysons automatiquement tous les avis Google des 12 derniers mois par IA pour détecter les problèmes récurrents (casses, vols, retards…). En complément : licence de transport, assurance RC Pro (≥ 1,5 M€), identité légale vérifiée. Vous recevez le score détaillé avec chaque devis.",
+        a: "Les déménageurs partenaires Moverz ont tous un Score /100 (3 dimensions : fiabilité légale, satisfaction clients, alertes). Score < 50/100 = exclusion automatique. Nous analysons automatiquement tous les avis Google des 12 derniers mois pour détecter les problèmes récurrents (casses, vols, retards…). En complément : licence de transport, assurance RC Pro (≥ 1,5 M€), identité légale vérifiée. Vous recevez le score détaillé avec chaque devis.",
       }
     ]
   },

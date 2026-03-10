@@ -11,8 +11,8 @@ import { StaggerContainer, StaggerItem, FadeUpSection } from "@/components/motio
 
 const checks = [
   { icon: Building2, label: "Fiabilité légale 25% (financier + juridique Pappers)" },
-  { icon: Shield, label: "Satisfaction clients 40% (Google + réputation IA)" },
-  { icon: Scale, label: "Alertes 35% (6 catégories analysées par IA)" },
+  { icon: Shield, label: "Satisfaction clients 40% (Google + réputation)" },
+  { icon: Scale, label: "Alertes 35% (6 catégories analysées automatiquement)" },
   { icon: FileCheck, label: "Conformité : licences + assurances RC Pro" },
 ];
 

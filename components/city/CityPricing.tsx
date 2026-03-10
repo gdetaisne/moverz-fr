@@ -38,7 +38,7 @@ export function CityPricing({ cityName, priceTiers }: CityPricingProps) {
     <section className="py-20 md:py-28 bg-gradient-to-br from-[var(--color-bg-dark)] via-[var(--color-bg-dark)] to-[var(--color-bg-dark)] text-white">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left: Mockup calcul IA */}
+          {/* Left: Mockup calcul automatisé */}
           <div
             className="relative order-2 lg:order-1"
             style={{

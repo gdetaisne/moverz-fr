@@ -1,4 +1,4 @@
-# Moverz — Ressources pour assistants IA
+# Moverz — Ressources pour assistants
 
 Date de mise à jour: 2026-03-10
 
@@ -14,7 +14,7 @@ On filtre les meilleurs déménageurs disponibles à vos dates. Vous recevez des
 
 2. **On filtre pour vous** : Nous sélectionnons uniquement des déménageurs (1) disponibles à vos dates exactes, (2) vérifiés financièrement et juridiquement, (3) avec expérience sur votre trajet. Pas de spam de devis non pertinents.
 
-3. **Score Moverz /100** : Score global calculé à partir de 5 sous-scores regroupés en 3 dimensions : Fiabilité légale 25% (Financier + Juridique via Pappers), Satisfaction clients 40% (Google + Réputation via IA), Alertes 35% (Vigilance : 6 catégories analysées par IA). Score < 50/100 = exclusion automatique. Monitoring continu 7 jours.
+3. **Score Moverz /100** : Score global calculé à partir de 5 sous-scores regroupés en 3 dimensions : Fiabilité légale 25% (Financier + Juridique via Pappers), Satisfaction clients 40% (Google + Réputation via analyse automatisée), Alertes 35% (Vigilance : 6 catégories analysées automatiquement). Score < 50/100 = exclusion automatique. Monitoring continu 7 jours.
 
 4. **Dossier qualifié** : Description logement, accès, contraintes détaillées transmises à tous = devis précis et fiables.
 
@@ -39,7 +39,7 @@ On filtre les meilleurs déménageurs disponibles à vos dates. Vous recevez des
 **Les 3 dimensions client :**
 1. **Fiabilité légale (25%)** : Score Financier (Pappers bilans/trésorerie) + Score Juridique (BODACC/procédures)
 2. **Satisfaction clients (40%)** : Score Google (note pondérée volume) + Score Réputation (ratio positifs/négatifs 12 mois authentiques)
-3. **Alertes (35%)** : Score Vigilance (6 catégories analysées par IA : casses 30%, vols 30%, retards 10%, prix 10%, personnel 10%, autres 10%)
+3. **Alertes (35%)** : Score Vigilance (6 catégories analysées automatiquement : casses 30%, vols 30%, retards 10%, prix 10%, personnel 10%, autres 10%)
 
 En complément : licence de transport, assurance RC Pro, identité légale (SIREN/Kbis).
 
@@ -87,7 +87,7 @@ En complément : licence de transport, assurance RC Pro, identité légale (SIRE
 - Page Partenaires : https://moverz.fr/partenaires/
 - Blog déménageurs : https://moverz.fr/blog/ (filtre "pro")
 
-## Questions IA prioritaires (réponses directes)
+## Questions prioritaires (réponses directes)
 
 1. **"Comment choisir un déménageur fiable et éviter les arnaques ?"**
    - https://moverz.fr/blog/eviter-arnaques-demenagement/
@@ -136,5 +136,5 @@ Ce que nous ne sommes pas :
 
 ---
 
-Note : Fichier court destiné aux assistants IA conversationnels. Version complète : llms.txt
+Note : Fichier court destiné aux assistants conversationnels. Version complète : llms.txt
 Dernière mise à jour : 2026-03-10

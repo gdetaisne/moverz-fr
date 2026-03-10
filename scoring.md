@@ -41,7 +41,7 @@ Le score est recalculé à chaque enrichissement de données (nouvelles données
 
 *Source :* Pappers (registre du commerce)
 *Fichier :* `backend/src/services/moverzFinancialScore.service.ts`
-*Méthode :* Rule-based (pas d'IA)
+*Méthode :* Rule-based
 
 | Critère | Points max |
 |---|---|
@@ -98,7 +98,7 @@ Si moins de 30 avis → plafonné à 80/100
 
 ### 2.4 Score Réputation (20%)
 
-*Source :* SearchAPI.io (tous les avis Google sur 12 mois) + IA (GPT-4o-mini)
+*Source :* SearchAPI.io (tous les avis Google sur 12 mois) + analyse automatisée
 *Fichier :* `backend/src/services/moverGoogleReviews.service.ts` → `computeReputationFromRatio()`
 *Méthode :* Rule-based sur avis authentiques + détection faux avis
 
@@ -127,15 +127,15 @@ Appliqué uniquement sur les avis *authentiques* (les suspects sont exclus).
 - Avis 5★ sans texte
 
 *Cache :* 7 jours (SearchAPI)
-*Fallback :* 50/100 si analyse IA non effectuée
+*Fallback :* 50/100 si analyse non effectuée
 
 ---
 
 ### 2.5 Score Vigilance (35%)
 
-*Source :* SearchAPI.io (avis ≤ 4★, 12 mois) + IA (GPT-4o-mini)
+*Source :* SearchAPI.io (avis ≤ 4★, 12 mois) + analyse automatisée
 *Fichier :* `backend/src/services/vigilanceCategories.ts` + `moverGoogleReviews.service.ts`
-*Méthode :* Catégories fixes analysées par IA
+*Méthode :* Catégories fixes analysées automatiquement
 
 *6 catégories avec leurs poids :*
 
@@ -159,9 +159,9 @@ Appliqué uniquement sur les avis *authentiques* (les suspects sont exclus).
 
 *Score vigilance global* = somme pondérée des scores par catégorie
 
-*Cas spécial :* 0 avis négatifs authentiques sur 12 mois → vigilance automatiquement 100/100 (sans appel IA)
+*Cas spécial :* 0 avis négatifs authentiques sur 12 mois → vigilance automatiquement 100/100
 
-*Engagement déménageur :* Le déménageur peut répondre à chaque catégorie via sa fiche. Une IA valide si l'engagement est concret. Si approuvé, la catégorie passe à 100 (dismissed).
+*Engagement déménageur :* Le déménageur peut répondre à chaque catégorie via sa fiche. Le système valide automatiquement si l'engagement est concret. Si approuvé, la catégorie passe à 100 (dismissed).
 
 ---
 
@@ -236,8 +236,8 @@ Configuration des poids et seuils (ID `'default'`). Modifiable sans redéploieme
 |---|---|
 | `GOOGLE_PLACES_API_KEY` | Récupération note + avis Google (Places API New) |
 | `SERPAPI_KEY` | Récupération tous les avis 12 mois (SearchAPI.io) |
-| `OPENAI_API_KEY` | Analyse IA (résumé avis, vigilance) — fallback Anthropic |
-| `ANTHROPIC_API_KEY` / `CLAUDE_API_KEY` | Fallback IA si OpenAI indisponible |
+| `OPENAI_API_KEY` | Analyse automatisée (résumé avis, vigilance) — fallback Anthropic |
+| `ANTHROPIC_API_KEY` / `CLAUDE_API_KEY` | Fallback si OpenAI indisponible |
 | `PAPPERS_API_KEY` | Données financières + juridiques |
 | `SCORING_API_KEY_PUBLIC` | Clé API pour moverz.fr (level=public) |
 | `SCORING_API_KEY_DETAIL` | Clé API pour widgets détaillés |
@@ -254,7 +254,7 @@ backend/src/
 │   │                                       (barème, couleurs, labels, dimensions)
 │   ├── moverzGlobalScore.service.ts     ← Orchestration + calcul score global
 │   ├── moverzFinancialScore.service.ts  ← Calcul score financier (Pappers)
-│   ├── moverGoogleReviews.service.ts    ← Avis Google (Places + SearchAPI) + IA
+│   ├── moverGoogleReviews.service.ts    ← Avis Google (Places + SearchAPI) + analyse
 │   ├── vigilanceCategories.ts           ← Définition des 6 catégories
 │   ├── vigilanceTypes.ts                ← Types TypeScript vigilance
 │   ├── vigilanceCommitment.service.ts   ← Engagements déménageur sur catégories
@@ -280,7 +280,7 @@ backend/src/
    │   ├── fetchReviews100() — SearchAPI tous avis 12 mois (max 500)
    │   ├── detectFakeReviews() — heuristiques faux avis
    │   ├── computeReputationFromRatio() — score réputation + plafond volume
-   │   └── generateStructuredVigilanceAnalysis() — IA → 6 catégories
+   │   └── generateStructuredVigilanceAnalysis() — analyse → 6 catégories
    └── resolveFinancialScore() — Pappers (si non calculé)
          ↓
 4. computeGlobalScore() — agrégation pondérée
@@ -475,7 +475,7 @@ Le Score Moverz est une note de 0 à 100 calculée automatiquement à partir de 
 | Dimension | Poids | Ce qu'on mesure |
 |---|---|---|
 | 🔒 Fiabilité légale | 25% | Santé financière (bilans, trésorerie) + absence de procédures judiciaires |
-| ⭐ Satisfaction clients | 40% | Note Google pondérée par le volume + analyse IA de tous les avis des 12 derniers mois |
+| ⭐ Satisfaction clients | 40% | Note Google pondérée par le volume + analyse automatisée de tous les avis des 12 derniers mois |
 | 🚨 Alertes | 35% | Détection de signaux d'alerte dans les avis négatifs : casses, vols, retards, prix modifiés… |
 
 *Barème à afficher :*
@@ -492,7 +492,7 @@ Le Score Moverz est une note de 0 à 100 calculée automatiquement à partir de 
 
 *Q : Comment est calculé le score ?*
 
-Le score Moverz agrège automatiquement des données issues de 4 sources indépendantes : les bilans comptables publiés au registre du commerce (via Pappers), les décisions de justice (BODACC), les avis Google (analysés par intelligence artificielle sur les 12 derniers mois), et une détection de signaux d'alerte récurrents dans les avis clients.
+Le score Moverz agrège automatiquement des données issues de 4 sources indépendantes : les bilans comptables publiés au registre du commerce (via Pappers), les décisions de justice (BODACC), les avis Google (analysés automatiquement sur les 12 derniers mois), et une détection de signaux d'alerte récurrents dans les avis clients.
 
 *Q : À quelle fréquence est-il mis à jour ?*
 
@@ -508,7 +508,7 @@ Non. Notre système détecte automatiquement les avis suspects (texte trop court
 
 *Q : Un déménageur peut-il améliorer son score ?*
 
-Oui, de plusieurs façons : en maintenant une bonne santé financière, en répondant aux avis négatifs de façon constructive, et en prenant des engagements concrets sur les problèmes identifiés. Notre IA valide la qualité de ces engagements.
+Oui, de plusieurs façons : en maintenant une bonne santé financière, en répondant aux avis négatifs de façon constructive, et en prenant des engagements concrets sur les problèmes identifiés. Notre système valide automatiquement la qualité de ces engagements.
 
 ### 9.3 Chiffres clés à jour (mars 2026)
 

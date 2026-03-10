@@ -190,7 +190,7 @@ Réponse 2...
               Moverz Voice
             </h3>
             <p className="font-sans text-sm text-gray-700 leading-relaxed mb-4">
-              Notre IA utilise un prompt spécialement conçu pour générer du contenu avec le ton Moverz : authentique, personnel et SEO-optimisé.
+              Notre système utilise un prompt spécialement conçu pour générer du contenu avec le ton Moverz : authentique, personnel et SEO-optimisé.
             </p>
             <button
               onClick={() => setShowPrompt(!showPrompt)}

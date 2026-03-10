@@ -114,7 +114,7 @@ export default function CriteresChoisirDemenageurPage() {
       note: "Demandez TOUJOURS l'attestation d'assurance avant de signer. Si le déménageur refuse, c'est un red flag majeur.",
     },
     {
-      title: "4) Satisfaction clients + Alertes (Google + IA) — 75%",
+      title: "4) Satisfaction clients + Alertes (Google + Analyse automatisée) — 75%",
       Icon: Star,
       iconColor: "text-amber-600",
       iconBg: "bg-amber-50 border-amber-100",

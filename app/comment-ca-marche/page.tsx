@@ -68,7 +68,7 @@ export default function CommentCaMarchePage() {
       {/* Steps with mockups */}
       <HowItWorksSteps />
 
-      {/* IA Analysis section */}
+      {/* Analyse automatisée section */}
       <HowItWorksIA />
 
       {/* Devis comparison section */}
