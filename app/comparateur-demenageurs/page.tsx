@@ -147,10 +147,10 @@ export default function ComparateurDemenageursPage() {
                   desc: "Un comparateur doit s'assurer de la fiabilité des professionnels qu'il vous propose.",
                   points: [
                     "Vérification du SIREN, des licences de transport, des assurances (RC Pro, marchandises)",
-                    "3 analyses de risque /100 : avis Google, financier (Creditsafe + Pappers), juridique (Pappers Décisions)",
+                    "Score Moverz /100 : 3 dimensions (fiabilité légale 25%, satisfaction clients 40%, alertes 35%) calculées à partir de 5 sous-scores indépendants",
                     "Le risque : être mis en relation avec des entreprises peu scrupuleuses ou en difficulté (257 faillites en 2024)",
                   ],
-                  highlight: "Moverz : 3 analyses de risque /100 + exclusion automatique des alertes",
+                  highlight: "Moverz : Score /100 automatique + exclusion si < 50/100",
                 },
                 {
                   title: "2. Comparabilité des devis",
@@ -257,8 +257,8 @@ export default function ComparateurDemenageursPage() {
             <div className="grid gap-4 md:grid-cols-2">
               {[
                 {
-                  title: "3 analyses de risque /100",
-                  desc: "Moverz évalue chaque déménageur selon 3 axes (avis Google, financier, juridique). Alertes = exclusion automatique. Les autres comparateurs ne vérifient RIEN.",
+                  title: "Score Moverz /100",
+                  desc: "Moverz attribue à chaque déménageur un score calculé à partir de 5 sous-scores indépendants (3 dimensions : fiabilité légale, satisfaction clients, alertes). Score < 50/100 = exclusion. Les autres comparateurs ne vérifient RIEN.",
                 },
                 {
                   title: "Devis réellement comparables",
@@ -317,7 +317,7 @@ export default function ComparateurDemenageursPage() {
                   iconColor: "text-amber-600",
                   iconBg: "bg-amber-50",
                   title: "Meilleur comparateur 2026",
-                  desc: "Comparatif détaillé : 5 critères pour choisir (3 analyses de risque, devis comparables, anonymat).",
+                  desc: "Comparatif détaillé : 5 critères pour choisir (Score /100 automatique, devis comparables, anonymat).",
                 },
                 {
                   href: "/criteres-choisir-demenageur/",
@@ -325,7 +325,7 @@ export default function ComparateurDemenageursPage() {
                   iconColor: "text-teal-600",
                   iconBg: "bg-teal-50",
                   title: "8 critères déménageur fiable",
-                  desc: "3 analyses de risque /100 (financier, juridique, avis), licences, assurances, volume, devis, paiement.",
+                  desc: "Score /100 (3 dimensions : fiabilité légale, satisfaction clients, alertes), licences, assurances, volume, devis, paiement.",
                 },
                 {
                   href: "/blog/eviter-arnaques-demenagement/",

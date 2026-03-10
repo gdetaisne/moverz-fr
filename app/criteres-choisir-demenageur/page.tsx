@@ -182,25 +182,25 @@ export default function CriteresChoisirDemenageurPage() {
 
   const moverz3Checks = [
     {
+      Icon: ShieldCheck,
+      iconColor: "text-green-600",
+      iconBg: "bg-green-50 border-green-100",
+      title: "Fiabilité légale /100 (25%)",
+      desc: "Score Financier (Pappers : bilans, trésorerie, dettes) + Score Juridique (BODACC, décisions de justice). Dimension = moyenne pondérée des 2 sous-scores.",
+    },
+    {
       Icon: Star,
       iconColor: "text-amber-600",
       iconBg: "bg-amber-50 border-amber-100",
-      title: "Risque expérience client /100",
-      desc: "20 derniers avis Google analysés + détection de patterns récurrents dans les avis 1-2★ (retards, casse, comportement). Deux notes /100 distinctes.",
-    },
-    {
-      Icon: TrendingDown,
-      iconColor: "text-blue-600",
-      iconBg: "bg-blue-50 border-blue-100",
-      title: "Risque financier /100",
-      desc: "Scores Creditsafe + Pappers consolidés + ratio cash/dettes interne. Alerte cash = exclusion automatique.",
+      title: "Satisfaction clients /100 (40%)",
+      desc: "Score Google (note pondérée volume) + Score Réputation (tous les avis 12 mois analysés par IA, détection faux avis). Dimension = moyenne pondérée des 2 sous-scores.",
     },
     {
       Icon: ShieldAlert,
       iconColor: "text-red-600",
       iconBg: "bg-red-50 border-red-100",
-      title: "Risque juridique /100",
-      desc: "Décisions de justice + scoring non-financier Pappers. Alerte juridique = exclusion automatique.",
+      title: "Alertes /100 (35%)",
+      desc: "Score Vigilance : 6 catégories analysées par IA (casses 30%, vols 30%, retards 10%, prix 10%, personnel 10%, autres 10%). Ratio >3% = alerte rouge.",
     },
     {
       Icon: ShieldCheck,
@@ -234,7 +234,7 @@ export default function CriteresChoisirDemenageurPage() {
   ];
 
   const checklist = [
-    { text: "Risque financier /100 acceptable (Creditsafe + Pappers, pas d'alerte cash)", priority: "high" },
+    { text: "Score Moverz > 50/100 (fiabilité légale, satisfaction clients, alertes)", priority: "high" },
     { text: "Licence de transport valide (inscription registre des transporteurs)", priority: "high" },
     { text: "Attestation assurance RC Pro < 6 mois (plafond ≥ 1,5M€)", priority: "high" },
     { text: "Risque expérience client /100 acceptable (avis Google analysés, pas de patterns négatifs)", priority: "medium" },
@@ -288,8 +288,8 @@ export default function CriteresChoisirDemenageurPage() {
           { label: "Choisir un déménageur fiable", href: "/criteres-choisir-demenageur/" },
         ]}
         eyebrow="Guide anti-arnaques 2026"
-        title="Critères pour choisir un déménageur fiable — 3 analyses de risque /100"
-        subtitle="64% des déménageurs présentent des anomalies (DGCCRF 2023), 257 faillites en 2024. Ce guide vous explique les 3 analyses de risque Moverz (avis Google, financier, juridique) + les critères complémentaires pour choisir en toute sécurité."
+        title="Critères pour choisir un déménageur fiable — Score Moverz /100"
+        subtitle="64% des déménageurs présentent des anomalies (DGCCRF 2023), 257 faillites en 2024. Ce guide vous explique le Score Moverz /100 (3 dimensions, 5 sous-scores indépendants via Pappers + Google + IA) + les critères complémentaires pour choisir en toute sécurité."
         primaryCta={{ label: "Voir les 8 critères", href: "#criteres" }}
         secondaryCta={{ label: "FAQ", href: "#faq" }}
       />
@@ -402,7 +402,7 @@ export default function CriteresChoisirDemenageurPage() {
 
             <div className="rounded-xl bg-white/60 border border-brand-turquoise-200 p-4 text-center">
               <p className="text-sm md:text-base text-v4-text">
-                <strong>Résultat :</strong> Vous ne recevez des devis que de déménageurs évalués selon 3 analyses de risque /100. Alertes financières ou juridiques = exclusion automatique.
+                <strong>Résultat :</strong> Vous ne recevez des devis que de déménageurs avec un Score Moverz > 50/100 (3 dimensions : fiabilité légale, satisfaction clients, alertes). Monitoring continu automatique.
               </p>
               <a
                 href="/verifications-partenaires/"
@@ -439,7 +439,7 @@ export default function CriteresChoisirDemenageurPage() {
 
               <div className="mt-6 rounded-xl bg-v4-accent/10 border border-brand-turquoise-200 p-4 text-center">
                 <p className="text-sm md:text-base text-v4-text">
-                  <strong>Trop long ?</strong> Moverz fait tout automatiquement : 3 analyses de risque /100 (expérience client, financier, juridique) + vérifications réglementaires.
+                  <strong>Trop long ?</strong> Moverz fait tout automatiquement : Score /100 (3 dimensions, 5 sous-scores indépendants) + vérifications réglementaires. Monitoring continu.
                 </p>
                 <a
                   href={buildTunnelUrl({ from: "criteres-checklist" })}
@@ -553,10 +553,10 @@ export default function CriteresChoisirDemenageurPage() {
                 Recevez des devis de déménageurs déjà vérifiés
               </h3>
             </div>
-            <p className="text-sm md:text-base text-v4-text-secondary mb-5 max-w-2xl mx-auto">
-              Moverz évalue automatiquement chaque déménageur selon 3 analyses de risque /100 (expérience client, financier, juridique)
-              + standardise les volumes pour des devis réellement comparables. Alertes = exclusion automatique.
-            </p>
+              <p className="text-sm md:text-base text-v4-text-secondary mb-5 max-w-2xl mx-auto">
+                Moverz attribue automatiquement à chaque déménageur un Score /100 (3 dimensions : fiabilité légale, satisfaction clients, alertes)
+                + standardise les volumes pour des devis réellement comparables. Score < 50/100 = exclusion automatique.
+              </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
               <a
                 href={buildTunnelUrl({ from: "criteres-choisir-demenageur-cta" })}
