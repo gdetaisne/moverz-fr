@@ -168,7 +168,8 @@ export function ScoringChecker() {
       setIsSearching(true);
       try {
         const res = await fetch(`/api/scoring-check/search?q=${encodeURIComponent(value)}`);
-        const data = await res.json();
+        const text = await res.text();
+        const data = text ? JSON.parse(text) : {};
         if (!res.ok) throw new Error(data.error || "Erreur recherche");
         setSearchResults(data.results ?? []);
       } catch (e: any) {
@@ -195,7 +196,8 @@ export function ScoringChecker() {
       setStep("place-select");
       try {
         const res = await fetch(`/api/scoring-check/place-candidates?moverId=${mover.id}`);
-        const data = await res.json();
+        const text = await res.text();
+        const data = text ? JSON.parse(text) : {};
         if (!res.ok) throw new Error(data.error || "Erreur candidats");
         if (data.isPrioritaire) {
           await launchScoring(mover.id);
@@ -221,7 +223,8 @@ export function ScoringChecker() {
 
     try {
       const res = await fetch(`/api/scoring-check/score?moverId=${moverId}`);
-      const data = await res.json();
+      const text = await res.text();
+      const data = text ? JSON.parse(text) : {};
 
       if (res.status === 429 && data.error === "quota_exceeded") {
         setQuotaExceeded(true);

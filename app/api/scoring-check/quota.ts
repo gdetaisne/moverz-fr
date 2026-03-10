@@ -13,11 +13,9 @@ const COOKIE_NAME = 'moverz_quota';
 const MAX_USES = 3;
 const EXPIRY_DAYS = 30;
 
-function getSecret(): Uint8Array {
+function getSecret(): Uint8Array | null {
   const secret = process.env.SCORING_QUOTA_SECRET;
-  if (!secret || secret.length < 32) {
-    throw new Error('SCORING_QUOTA_SECRET manquant ou trop court (min 32 chars)');
-  }
+  if (!secret || secret.length < 32) return null;
   return new TextEncoder().encode(secret);
 }
 
@@ -27,11 +25,14 @@ export interface QuotaPayload {
 
 export async function readQuota(): Promise<QuotaPayload> {
   try {
+    const secret = getSecret();
+    if (!secret) return { used: [] }; // SCORING_QUOTA_SECRET absent → quota désactivé
+
     const cookieStore = await cookies();
     const raw = cookieStore.get(COOKIE_NAME)?.value;
     if (!raw) return { used: [] };
 
-    const { payload } = await jwtVerify(raw, getSecret());
+    const { payload } = await jwtVerify(raw, secret);
     const used = Array.isArray((payload as any).used) ? (payload as any).used : [];
     return { used };
   } catch {
@@ -39,12 +40,15 @@ export async function readQuota(): Promise<QuotaPayload> {
   }
 }
 
-export async function buildQuotaCookie(payload: QuotaPayload): Promise<string> {
+export async function buildQuotaCookie(payload: QuotaPayload): Promise<string | null> {
+  const secret = getSecret();
+  if (!secret) return null; // SCORING_QUOTA_SECRET absent → pas de cookie
+
   const token = await new SignJWT({ used: payload.used })
     .setProtectedHeader({ alg: 'HS256' })
     .setIssuedAt()
     .setExpirationTime(`${EXPIRY_DAYS}d`)
-    .sign(getSecret());
+    .sign(secret);
   return token;
 }
 

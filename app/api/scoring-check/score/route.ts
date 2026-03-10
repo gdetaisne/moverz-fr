@@ -88,6 +88,6 @@ export async function GET(req: NextRequest) {
     _quota: { used: newUsed.length, max: QUOTA_MAX, remaining: QUOTA_MAX - newUsed.length },
   });
 
-  setQuotaCookieOnResponse(res, token);
+  if (token) setQuotaCookieOnResponse(res, token);
   return res;
 }
