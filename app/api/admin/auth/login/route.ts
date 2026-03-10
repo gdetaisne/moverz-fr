@@ -24,13 +24,13 @@ export async function POST(req: NextRequest) {
     // DEBUG HASH: Voir les hashs générés
     const { hashPassword } = await import('@/lib/admin/auth');
     const secret = process.env.SESSION_SECRET || 'fallback-secret-key';
-    const hashedInput = hashPassword(password, secret);
-    const hashedAdmin = hashPassword(adminPasswordEnv || '', secret);
+    const hashedInput = await hashPassword(password, secret);
+    const hashedAdmin = await hashPassword(adminPasswordEnv || '', secret);
     console.log('[AUTH DEBUG] Hash input:', hashedInput);
     console.log('[AUTH DEBUG] Hash admin:', hashedAdmin);
     console.log('[AUTH DEBUG] Hashs match:', hashedInput === hashedAdmin);
 
-    if (!verifyPassword(password)) {
+    if (!(await verifyPassword(password))) {
       console.log('[AUTH DEBUG] ❌ VERIFICATION FAILED');
       return NextResponse.json(
         { error: 'Mot de passe incorrect', debug: { 
@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
     }
 
     console.log('[AUTH DEBUG] ✅ VERIFICATION PASSED - Creating session...');
-    const sessionToken = createSession();
+    const sessionToken = await createSession();
     console.log('[AUTH DEBUG] Session token created:', sessionToken.substring(0, 20) + '...');
     
     const response = NextResponse.json(

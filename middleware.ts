@@ -109,7 +109,7 @@ export async function middleware(req: NextRequest, event: NextFetchEvent) {
       return NextResponse.redirect(loginUrl);
     }
     
-    const isValid = verifySession(sessionCookie);
+    const isValid = await verifySession(sessionCookie);
     console.log('[MIDDLEWARE] Session valid:', isValid);
     
     if (!isValid) {
