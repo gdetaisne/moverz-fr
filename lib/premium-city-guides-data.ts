@@ -3558,32 +3558,6 @@ export const REIMS_PREMIUM_GUIDE: PremiumCityGuideData = {
       id: "recapitulatif-reims",
       title: "Récapitulatif Reims",
       content: [
-        "• <strong>Prix moyen T2</strong> : 580-890€ (parmi les moins chers)",
-        "• <strong>Quartiers ultra-faciles</strong> : Europe, Croix-Rouge, Wilson (pas de surcoût)",
-        "• <strong>Centre cathédrale UNESCO</strong> : +70-100€",
-        "• <strong>Période à anticiper</strong> : Septembre (vendanges Champagne + rentrée)",
-        "• <strong>Proximité Paris</strong> : 45min TGV",
-        "• <strong>Anticipation</strong> : 2 semaines normale, 3 semaines en septembre",
-        "",
-        "",
-        "Le reste de Reims est très accessible (larges avenues, immeubles modernes).",
-      ],
-    },
-    {
-      id: "erreurs-reims",
-      title: "Les 3 erreurs à éviter à Reims",
-      content: [
-        "<strong>1. Réserver trop tard en septembre</strong><br/>Vendanges + rentrée = double rush. Anticipez 3 semaines.",
-        "",
-        "<strong>2. Sous-estimer la tradition champenoise</strong><br/>Les déménageurs rémois ont une tradition de qualité (région Champagne = excellence). Profitez-en.",
-        "",
-        "<strong>3. Oublier que Reims est proche de Paris</strong><br/>1h30 TGV Paris-Reims. Si vous déménagez Paris→Reims, certains déménageurs font l'aller-retour dans la journée (économie hébergement).",
-      ],
-    },
-    {
-      id: "recapitulatif-reims",
-      title: "Récapitulatif Reims",
-      content: [
         "• <strong>Prix moyen T2</strong> : 580-890€",
         "• <strong>Quartiers faciles</strong> : Tous sauf centre cathédrale",
         "• <strong>Centre cathédrale</strong> : +70-100€",

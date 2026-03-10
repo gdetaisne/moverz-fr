@@ -11,6 +11,8 @@
     "lint": "next lint",
     "test": "vitest run",
     "blog:pro:gen": "tsx scripts/generate-blog-pro.ts",
+    "scrape:competitors": "tsx scripts/scrape-competitors.ts",
+    "analyze:gaps": "tsx scripts/analyze-gaps.ts",
     "seo:inventory": "tsx scripts/seo-inventory.ts > seo-inventory.csv",
     "seo:healthcheck": "tsx scripts/seo-healthcheck.ts",
     "seo:city-guides-wordcount": "tsx scripts/seo-city-guides-wordcount.ts > seo-city-guides-wordcount.csv",

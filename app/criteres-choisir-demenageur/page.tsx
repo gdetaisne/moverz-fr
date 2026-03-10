@@ -74,18 +74,18 @@ export default function CriteresChoisirDemenageurPage() {
 
   const criteria = [
     {
-      title: "1) Risque financier (Creditsafe + Pappers + analyse interne)",
+      title: "1) Fiabilité légale (financier + juridique Pappers) — 25%",
       Icon: TrendingDown,
       iconColor: "text-blue-600",
       iconBg: "bg-blue-50 border-blue-100",
       bullets: [
-        "Scores Creditsafe et Pappers (scoring financier) consolidés en moyenne — note /100",
-        "Analyse interne complémentaire : ratio cash / dettes court terme",
-        "Alerte cash = déménageur exclu automatiquement des devis présentés",
+        "Score Financier 12,5% : Pappers (résultat net, fonds propres, trésorerie, endettement, tendance) — 5 critères pondérés",
+        "Score Juridique 12,5% : BODACC + Pappers Décisions (procédures, litiges, malus selon gravité/récence)",
+        "Score < 50/100 = déménageur exclu automatiquement",
         "257 faillites de déménageurs en 2024 (Altares) : ce filtre est essentiel",
       ],
-      note: "Double source Creditsafe + Pappers + analyse interne du ratio cash/dettes. Les déménageurs en difficulté sont exclus avant de recevoir votre dossier.",
-      highlight: "Exclusivité Moverz : double scoring financier + analyse interne",
+      note: "Dimension Fiabilité légale = moyenne pondérée des scores Financier et Juridique. Les déménageurs avec score < 50/100 sont exclus avant de recevoir votre dossier.",
+      highlight: "Exclusivité Moverz : vérification santé financière + casier juridique automatique",
     },
     {
       title: "2) Licence de transport et conformité légale",
@@ -114,17 +114,17 @@ export default function CriteresChoisirDemenageurPage() {
       note: "Demandez TOUJOURS l'attestation d'assurance avant de signer. Si le déménageur refuse, c'est un red flag majeur.",
     },
     {
-      title: "4) Risque expérience client (analyse des avis Google)",
+      title: "4) Satisfaction clients + Alertes (Google + IA) — 75%",
       Icon: Star,
       iconColor: "text-amber-600",
       iconBg: "bg-amber-50 border-amber-100",
       bullets: [
-        "Analyse des 20 derniers avis Google → note /100 (note moyenne + volume d'avis)",
-        "Analyse spécifique des avis 1-2★ : détection de patterns récurrents (retards, casse, comportement)",
-        "Seconde note /100 sur l'analyse des mauvais avis",
-        "Les deux notes sont présentées séparément au client",
+        "Score Google 20% : note pondérée par volume d'avis (bonus jusqu'à +10pts si >30 avis)",
+        "Score Réputation 20% : ratio positifs/négatifs sur TOUS les avis 12 mois (jusqu'à 500), détection automatique faux avis",
+        "Score Vigilance 35% : analyse IA de 6 catégories (casses 30%, vols 30%, retards 10%, prix 10%, personnel 10%, autres 10%)",
+        "Ratio >3% sur une catégorie critique (casses/vols) = alerte rouge",
       ],
-      note: "Les avis 1-2★ sont les plus révélateurs : si plusieurs clients signalent les mêmes problèmes (retards, casse), c'est un pattern structurel.",
+      note: "Les 2 dimensions (Satisfaction clients 40% + Alertes 35%) représentent 75% du score global. Les avis négatifs sont les plus révélateurs : si >3% signalent le même problème (casses, vols), c'est un pattern structurel.",
     },
     {
       title: "5) Méthode d'estimation du volume (visite / visio / description détaillée)",
