@@ -14,8 +14,8 @@ import {
 
 export const metadata: Metadata = getFullMetadata(
   "criteres-choisir-demenageur",
-  "Critères pour choisir un déménageur fiable en 2026 | 3 analyses de risque /100 | Moverz",
-  "Choisir un déménageur fiable : 3 analyses de risque notées /100 (avis Google, financier Creditsafe + Pappers, juridique Pappers Décisions) + licence, assurance RC Pro, estimation volume, devis détaillé. Checklist + FAQ."
+  "Critères pour choisir un déménageur fiable en 2026 | Score Moverz /100 | Moverz",
+  "Choisir un déménageur fiable : Score /100 (3 dimensions : fiabilité légale 25%, satisfaction clients 40%, alertes 35%) calculé à partir de 5 sous-scores indépendants via Pappers + Google + IA + licence, assurance RC Pro, estimation volume, devis détaillé. Checklist + FAQ."
 );
 
 export default function CriteresChoisirDemenageurPage() {

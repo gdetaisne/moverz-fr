@@ -1,5 +1,6 @@
 import { getBlogPostsMeta } from '@/lib/blog';
 import { generateInternalLinkSuggestions, identifyLinkingClusters, analyzeLinkingStats } from '@/lib/admin/internal-linking';
+import { LinkIcon, LightbulbIcon, TrophyIcon } from '@/components/admin/Icons';
 
 export default function AdminLinkingPage() {
   const articles = getBlogPostsMeta();
@@ -11,63 +12,69 @@ export default function AdminLinkingPage() {
   const topClusters = clusters.slice(0, 5);
   
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900">🔗 Internal Linking</h1>
-        <p className="text-gray-600 mt-1">Intelligence de maillage interne et suggestions automatiques</p>
+        <h1 className="font-heading text-3xl font-800 text-v4-text flex items-center gap-3">
+          <LinkIcon className="w-8 h-8 text-accent" />
+          Internal Linking
+        </h1>
+        <p className="font-sans text-v4-text-secondary mt-2">Intelligence de maillage interne et suggestions automatiques</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <div className="bg-white rounded-lg shadow p-6">
-          <div className="text-sm font-medium text-gray-600">Articles Total</div>
-          <div className="text-3xl font-bold text-blue-600 mt-2">{stats.totalArticles}</div>
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm border border-v4-border p-6">
+          <div className="font-sans text-sm font-600 text-v4-text-secondary mb-2">Articles Total</div>
+          <div className="font-heading text-4xl font-800 text-accent mt-2">{stats.totalArticles}</div>
         </div>
 
-        <div className="bg-white rounded-lg shadow p-6">
-          <div className="text-sm font-medium text-gray-600">Suggestions</div>
-          <div className="text-3xl font-bold text-purple-600 mt-2">{suggestions.length}</div>
+        <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm border border-v4-border p-6">
+          <div className="font-sans text-sm font-600 text-v4-text-secondary mb-2">Suggestions</div>
+          <div className="font-heading text-4xl font-800 text-purple-600 mt-2">{suggestions.length}</div>
         </div>
 
-        <div className="bg-white rounded-lg shadow p-6">
-          <div className="text-sm font-medium text-gray-600">Moy. Liens/Article</div>
-          <div className="text-3xl font-bold text-green-600 mt-2">{stats.avgLinksPerArticle}</div>
+        <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm border border-v4-border p-6">
+          <div className="font-sans text-sm font-600 text-v4-text-secondary mb-2">Moy. Liens/Article</div>
+          <div className="font-heading text-4xl font-800 text-green-600 mt-2">{stats.avgLinksPerArticle}</div>
         </div>
 
-        <div className="bg-white rounded-lg shadow p-6">
-          <div className="text-sm font-medium text-gray-600">Articles Orphelins</div>
-          <div className="text-3xl font-bold text-orange-600 mt-2">{stats.orphanArticles.length}</div>
+        <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm border border-v4-border p-6">
+          <div className="font-sans text-sm font-600 text-v4-text-secondary mb-2">Articles Orphelins</div>
+          <div className="font-heading text-4xl font-800 text-orange-600 mt-2">{stats.orphanArticles.length}</div>
         </div>
       </div>
 
-      <div className="bg-white rounded-lg shadow">
-        <div className="px-6 py-4 border-b border-gray-200">
-          <h2 className="text-xl font-bold text-gray-900">💡 Top Suggestions de Liens</h2>
+      <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm border border-v4-border overflow-hidden">
+        <div className="px-8 py-6 border-b border-v4-border-light">
+          <h2 className="font-heading text-xl font-700 text-v4-text flex items-center gap-2">
+            <LightbulbIcon className="w-5 h-5 text-accent" />
+            Top Suggestions de Liens
+          </h2>
         </div>
         <div className="overflow-x-auto">
-          <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-gray-50">
+          <table className="min-w-full divide-y divide-v4-border-light">
+            <thead className="bg-v4-bg">
               <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Source</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">→ Cible</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Ancre</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Type</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Score</th>
+                <th className="px-8 py-4 text-left font-sans text-xs font-600 text-v4-text-secondary uppercase tracking-wider">Source</th>
+                <th className="px-8 py-4 text-left font-sans text-xs font-600 text-v4-text-secondary uppercase tracking-wider">Cible</th>
+                <th className="px-8 py-4 text-left font-sans text-xs font-600 text-v4-text-secondary uppercase tracking-wider">Ancre</th>
+                <th className="px-8 py-4 text-left font-sans text-xs font-600 text-v4-text-secondary uppercase tracking-wider">Type</th>
+                <th className="px-8 py-4 text-left font-sans text-xs font-600 text-v4-text-secondary uppercase tracking-wider">Score</th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
+            <tbody className="bg-white divide-y divide-v4-border-light">
               {topSuggestions.map((suggestion) => (
-                <tr key={suggestion.id} className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-sm text-gray-900 max-w-xs truncate">
+                <tr key={suggestion.id} className="hover:bg-accent/5 transition-colors duration-200">
+                  <td className="px-8 py-4 font-sans text-sm text-v4-text max-w-xs truncate">
                     {suggestion.sourceArticle.title}
                   </td>
-                  <td className="px-6 py-4 text-sm text-gray-900 max-w-xs truncate">
+                  <td className="px-8 py-4 font-sans text-sm text-v4-text max-w-xs truncate">
                     {suggestion.targetArticle.title}
                   </td>
-                  <td className="px-6 py-4 text-sm text-blue-600 font-medium">
+                  <td className="px-8 py-4 font-sans text-sm text-accent font-600">
                     {suggestion.anchorText}
                   </td>
-                  <td className="px-6 py-4">
-                    <span className={`px-2 py-1 text-xs font-semibold rounded-full ${
+                  <td className="px-8 py-4">
+                    <span className={`px-3 py-1 font-sans text-xs font-600 rounded-full ${
                       suggestion.linkType === 'pillar' ? 'bg-purple-100 text-purple-800' :
                       suggestion.linkType === 'geographic' ? 'bg-blue-100 text-blue-800' :
                       'bg-gray-100 text-gray-800'
@@ -75,12 +82,12 @@ export default function AdminLinkingPage() {
                       {suggestion.linkType}
                     </span>
                   </td>
-                  <td className="px-6 py-4">
-                    <div className="flex items-center">
-                      <div className="text-sm font-bold text-gray-900">{suggestion.relevanceScore}</div>
-                      <div className="ml-2 w-16 bg-gray-200 rounded-full h-2">
+                  <td className="px-8 py-4">
+                    <div className="flex items-center gap-2">
+                      <div className="font-sans text-sm font-700 text-v4-text">{suggestion.relevanceScore}</div>
+                      <div className="w-16 bg-gray-200 rounded-full h-2">
                         <div
-                          className="bg-green-500 h-2 rounded-full"
+                          className="bg-gradient-to-r from-accent to-accent-light h-2 rounded-full transition-all duration-300"
                           style={{ width: `${suggestion.relevanceScore}%` }}
                         />
                       </div>
@@ -93,28 +100,31 @@ export default function AdminLinkingPage() {
         </div>
       </div>
 
-      <div className="bg-white rounded-lg shadow p-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">🌳 Clusters de Contenu</h2>
+      <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm border border-v4-border p-8">
+        <h2 className="font-heading text-xl font-700 text-v4-text mb-6 flex items-center gap-2">
+          <TrophyIcon className="w-6 h-6 text-accent" />
+          Clusters de Contenu
+        </h2>
         <div className="space-y-4">
           {topClusters.map((cluster) => (
-            <div key={cluster.id} className="border border-gray-200 rounded-lg p-4">
-              <div className="flex justify-between items-start mb-2">
-                <h3 className="font-bold text-gray-900">{cluster.name}</h3>
-                <span className="text-sm font-medium text-gray-600">
+            <div key={cluster.id} className="border border-v4-border rounded-xl p-6 bg-gradient-to-br from-white to-accent/5 hover:shadow-md transition-all duration-300">
+              <div className="flex justify-between items-start mb-3">
+                <h3 className="font-heading font-700 text-v4-text">{cluster.name}</h3>
+                <span className="font-sans text-sm font-600 text-v4-text-secondary px-3 py-1 bg-white rounded-full border border-v4-border">
                   {cluster.totalArticles} articles
                 </span>
               </div>
-              <div className="text-sm text-gray-600 mb-2">
-                <strong>Pilier:</strong> /blog/{cluster.pillarArticle.slug}/
+              <div className="font-sans text-sm text-v4-text-secondary mb-3">
+                <strong className="font-600">Pilier:</strong> /blog/{cluster.pillarArticle.slug}/
               </div>
               <div className="flex flex-wrap gap-2">
                 {cluster.supportingArticles.slice(0, 5).map((article) => (
-                  <span key={article.slug} className="px-2 py-1 bg-blue-50 text-blue-700 text-xs rounded">
+                  <span key={article.slug} className="px-3 py-1.5 bg-accent/10 text-accent font-sans text-xs font-600 rounded-lg">
                     {article.title.slice(0, 30)}...
                   </span>
                 ))}
                 {cluster.supportingArticles.length > 5 && (
-                  <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">
+                  <span className="px-3 py-1.5 bg-gray-100 text-v4-text-muted font-sans text-xs font-600 rounded-lg">
                     +{cluster.supportingArticles.length - 5} autres
                   </span>
                 )}

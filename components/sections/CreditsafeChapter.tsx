@@ -37,9 +37,9 @@ const USP_PILLARS = [
 ];
 
 const LABEL_CRITERIA = [
-  { label: "Solidité financière", score: 98, color: "#0EA5A6" },
-  { label: "Expérience client", score: 80, color: "#0EA5A6" },
-  { label: "Vigilance & signaux", score: 72, color: "#F59E0B" },
+  { label: "Fiabilité légale", score: 88, weight: 0.25, color: "#16A34A" },
+  { label: "Satisfaction clients", score: 76, weight: 0.40, color: "#16A34A" },
+  { label: "Alertes", score: 72, weight: 0.35, color: "#D97706" },
 ];
 
 function AnimatedBar({ score, color, delay = 0 }: { score: number; color: string; delay?: number }) {
@@ -194,12 +194,12 @@ export function CreditsafeChapter() {
             </div>
 
             <h3 className="font-heading text-[clamp(22px,3.5vw,36px)] font-bold tracking-[-0.02em] leading-[1.1]" style={{ color: "var(--color-text)" }}>
-              Chaque déménageur est noté sur{" "}
-              <span style={{ color: "#0EA5A6" }}>3 critères indépendants.</span>
+              Chaque déménageur reçoit un score{" "}
+              <span style={{ color: "#0EA5A6" }}>/100 automatique.</span>
             </h3>
 
             <p className="text-base leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
-              57% des candidats sont écartés. Seuls ceux qui passent nos 3 analyses peuvent vous faire une offre.
+              3 dimensions (fiabilité légale, satisfaction clients, alertes) calculées à partir de 5 sous-scores indépendants. Score &lt; 50/100 = exclusion automatique.
             </p>
 
             <div className="flex items-center gap-4">
@@ -257,12 +257,12 @@ export function CreditsafeChapter() {
               >
                 <span className="text-sm font-semibold" style={{ color: "var(--color-text)" }}>Score global Moverz</span>
                 <span className="text-xl font-bold tabular-nums" style={{ color: "#0EA5A6" }}>
-                  {Math.round((98 + 80 + 72) / 3)}/100
+                  {Math.round(88 * 0.25 + 76 * 0.40 + 72 * 0.35)}/100
                 </span>
               </div>
 
               <p className="text-xs text-center" style={{ color: "var(--color-text-muted)" }}>
-                Score calculé automatiquement · 57% des dossiers refusés
+                Score calculé automatiquement · Monitoring continu 7 jours
               </p>
             </div>
           </motion.div>

@@ -12,7 +12,7 @@ import { JsonLd } from "@/components/schema/JsonLd";
 export const metadata: Metadata = baseGenerateMetadata(
   "comparateur-demenageurs",
   `Comparateur de Déménagement : Guide Complet 2026 (Moverz vs Alternatives)`,
-  "Choisir le meilleur comparateur de déménagement en 2026 : 3 analyses de risque /100 (avis Google, financier, juridique), devis comparables, anonymat. Moverz vs plateformes classiques vs contact direct."
+  "Choisir le meilleur comparateur de déménagement en 2026 : Score /100 (3 dimensions : fiabilité légale, satisfaction clients, alertes), devis comparables, anonymat. Moverz vs plateformes classiques vs contact direct."
 );
 
 const webPageSchema = {
@@ -52,12 +52,12 @@ export default function ComparateurDemenageursPage() {
     {
       question: "Pourquoi utiliser un comparateur de déménagement plutôt que contacter directement ?",
       answer:
-        "Un comparateur vous fait gagner 5-10h de recherche en centralisant les devis. Avantages : (1) Gain de temps (1 formulaire vs 5-10 appels), (2) Devis comparables si le comparateur standardise le volume, (3) Anonymat et pas de démarchage (sur Moverz), (4) 3 analyses de risque /100 automatiques — avis Google, financier (Creditsafe + Pappers), juridique (Pappers Décisions) — alertes = exclusion. Contact direct = plus long, pas de vérification, démarchage.",
+        "Un comparateur vous fait gagner 5-10h de recherche en centralisant les devis. Avantages : (1) Gain de temps (1 formulaire vs 5-10 appels), (2) Devis comparables si le comparateur standardise le volume, (3) Anonymat et pas de démarchage (sur Moverz), (4) Score /100 automatique — 3 dimensions (fiabilité légale 25%, satisfaction clients 40%, alertes 35%) calculées à partir de 5 sous-scores indépendants via Pappers + Google + IA — score < 50/100 = exclusion. Contact direct = plus long, pas de vérification, démarchage.",
     },
     {
       question: "Quelle est la différence entre Moverz et les autres comparateurs (ex: i-Demenager, DemenagerFacile) ?",
       answer:
-        "3 différences majeures : (1) 3 analyses de risque /100 : Moverz évalue chaque déménageur (avis Google + financier Creditsafe/Pappers + juridique Pappers Décisions). Alertes = exclusion automatique. Les autres ne vérifient rien. (2) Devis comparables : Moverz transmet les mêmes informations complètes à tous les déménageurs. Les autres = chaque déménageur fait sa propre estimation = impossible à comparer. (3) Anonymat : Moverz ne revend pas vos coordonnées. Les autres = revente de leads.",
+        "3 différences majeures : (1) Score /100 automatique : Moverz attribue à chaque déménageur un score calculé à partir de 5 sous-scores indépendants (financier/juridique Pappers + Google + réputation IA + vigilance IA). Score < 50/100 = exclusion. Les autres ne vérifient rien. (2) Devis comparables : Moverz transmet les mêmes informations complètes à tous. Les autres = chaque déménageur fait sa propre estimation = impossible à comparer. (3) Anonymat : Moverz ne revend pas vos coordonnées. Les autres = revente de leads.",
     },
     {
       question: "Les comparateurs de déménagement sont-ils vraiment gratuits ?",
@@ -67,7 +67,7 @@ export default function ComparateurDemenageursPage() {
     {
       question: "Comment Moverz vérifie-t-il les déménageurs ?",
       answer:
-        "3 analyses de risque automatiques, chacune notée /100 : (1) Risque expérience client — 20 derniers avis Google analysés + patterns récurrents dans les mauvais avis 1-2★ (retards, casse, comportement). (2) Risque financier — scores Creditsafe et Pappers consolidés + ratio cash/dettes interne. Alerte cash = exclusion. (3) Risque juridique — décisions de justice et litiges via Pappers. Alerte juridique = exclusion. En complément : licence de transport, assurance RC Pro (≥ 1,5 M€). Les comparateurs classiques ne font AUCUNE vérification.",
+        "Chaque déménageur reçoit un Score Moverz /100 calculé automatiquement à partir de 5 sous-scores indépendants regroupés en 3 dimensions : (1) Fiabilité légale 25% — Score Financier (Pappers bilans/trésorerie) + Score Juridique (BODACC/décisions), (2) Satisfaction clients 40% — Score Google (note pondérée) + Score Réputation (tous les avis 12 mois analysés par IA, détection faux avis), (3) Alertes 35% — Score Vigilance (6 catégories : casses, vols, retards, prix, personnel, autres). Score < 50/100 = exclusion. Monitoring continu 7 jours. En complément : licence, assurance RC Pro (≥ 1,5 M€). Les comparateurs classiques ne font AUCUNE vérification.",
     },
     {
       question: "Pourquoi les devis reçus via comparateurs sont souvent différents ?",
@@ -97,7 +97,7 @@ export default function ComparateurDemenageursPage() {
     {
       question: "Quel est le meilleur comparateur de déménagement en 2026 ?",
       answer:
-        "5 critères pour choisir : (1) 3 analyses de risque /100 (avis Google + financier + juridique) = Moverz uniquement. (2) Devis comparables (mêmes informations transmises) = Moverz uniquement. (3) Anonymat (pas de revente de données) = Moverz uniquement. (4) Gratuité réelle = Moverz + autres. (5) Rapidité = Tous. Conclusion : Moverz est le seul comparateur qui évalue 3 risques /100 ET transmet les mêmes infos complètes ET protège votre anonymat.",
+        "5 critères pour choisir : (1) Score /100 automatique (3 dimensions : fiabilité légale, satisfaction clients, alertes) = Moverz uniquement. (2) Devis comparables (mêmes informations transmises) = Moverz uniquement. (3) Anonymat (pas de revente de données) = Moverz uniquement. (4) Gratuité réelle = Moverz + autres. (5) Rapidité = Tous. Conclusion : Moverz est le seul comparateur qui attribue un Score /100 (5 sous-scores indépendants) ET transmet les mêmes infos complètes ET protège votre anonymat.",
     },
   ];
 
