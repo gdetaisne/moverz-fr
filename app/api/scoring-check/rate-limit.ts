@@ -2,7 +2,7 @@
  * Rate limiter in-process partagé entre les API Routes du scoring checker.
  *
  * Limites par IP :
- *   - search        : 4 req / 30s  (autocomplete — debounce 350ms ok, scraping en boucle bloqué)
+ *   - search        : 15 req / 30s  (autocomplete avec debounce 350ms — ~8 frappes/session ok)
  *   - place-candidates : 5 req / 60s
  *   - score         : 2 req / 60s   (appel le plus sensible)
  *   - movers-map    : 3 req / 60s   (données carte)
@@ -24,7 +24,7 @@ const stores: Record<string, RateLimitStore> = {
 };
 
 const LIMITS: Record<string, { max: number; windowMs: number }> = {
-  search:         { max: 4,  windowMs: 30_000 },
+  search:         { max: 15, windowMs: 30_000 },
   place:          { max: 5,  windowMs: 60_000 },
   score:          { max: 2,  windowMs: 60_000 },
   map:            { max: 3,  windowMs: 60_000 },
