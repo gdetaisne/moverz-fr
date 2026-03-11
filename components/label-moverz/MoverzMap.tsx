@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useRef, useEffect } from "react";
+import { useState, useCallback, useRef, useEffect, useMemo } from "react";
 import { APIProvider, Map, InfoWindow, useMap, useMapsLibrary } from "@vis.gl/react-google-maps";
 import { MarkerClusterer, SuperClusterAlgorithm } from "@googlemaps/markerclusterer";
 import { MapPin, Search, X, Loader2, Users, Shield } from "lucide-react";
@@ -18,6 +18,31 @@ interface MoverPoint {
   lng: number;
 }
 
+// ─── Helpers marqueur ─────────────────────────────────────────
+
+function makeMarkerEl(mover: MoverPoint, isSelected: boolean): HTMLDivElement {
+  const color = mover.isPrioritaire ? "#0EA5A6" : "#6B7280";
+  const size = isSelected ? 36 : mover.isPrioritaire ? 26 : 20;
+  const el = document.createElement("div");
+  el.style.cssText = [
+    `width:${size}px`,
+    `height:${size}px`,
+    "border-radius:50%",
+    `background:${color}`,
+    `border:${isSelected ? 3 : 2}px solid white`,
+    `box-shadow:${isSelected ? `0 0 0 3px ${color}40,0 4px 12px rgba(0,0,0,0.25)` : "0 2px 6px rgba(0,0,0,0.2)"}`,
+    "cursor:pointer",
+    "display:flex",
+    "align-items:center",
+    "justify-content:center",
+  ].join(";");
+  if (mover.isPrioritaire) {
+    const svgSize = size * 0.45;
+    el.innerHTML = `<svg width="${svgSize}" height="${svgSize}" viewBox="0 0 24 24" fill="white"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z"/></svg>`;
+  }
+  return el;
+}
+
 // ─── Carte interne avec clustering ────────────────────────────
 
 function MapContent({
@@ -32,12 +57,16 @@ function MapContent({
   onSelectMover: (mover: MoverPoint) => void;
 }) {
   const map = useMap();
-  // Charge la librairie marker de façon asynchrone — évite le ReferenceError
   const markerLib = useMapsLibrary("marker");
   const clustererRef = useRef<MarkerClusterer | null>(null);
-  const selectedMover = movers.find((m) => m.id === selectedId) ?? null;
+  // Cache des marqueurs : ID → AdvancedMarkerElement
+  const markerCacheRef = useRef<Map<string, google.maps.marker.AdvancedMarkerElement>>(new Map());
+  // Ensemble des IDs actuellement dans le clusterer
+  const activeIdsRef = useRef<Set<string>>(new Set());
+  const prevSelectedIdRef = useRef<string | null>(null);
+  const selectedMover = useMemo(() => movers.find((m) => m.id === selectedId) ?? null, [movers, selectedId]);
 
-  // Recentrer la carte sur le déménageur sélectionné
+  // Recentrer sur le marqueur sélectionné
   useEffect(() => {
     if (map && selectedMover) {
       map.panTo({ lat: selectedMover.lat, lng: selectedMover.lng });
@@ -45,70 +74,103 @@ function MapContent({
     }
   }, [map, selectedMover]);
 
-  // Initialiser le clusterer uniquement quand map ET markerLib sont prêts
+  // Initialiser le clusterer une seule fois
   useEffect(() => {
-    if (!map || !markerLib) return;
-    if (!clustererRef.current) {
-      clustererRef.current = new MarkerClusterer({
-        map,
-        algorithm: new SuperClusterAlgorithm({ radius: 60, maxZoom: 11 }),
-        renderer: {
-          render: ({ count, position }) => {
-            const el = document.createElement("div");
-            el.style.cssText = `
-              width:${count > 100 ? 52 : count > 20 ? 44 : 36}px;
-              height:${count > 100 ? 52 : count > 20 ? 44 : 36}px;
-              border-radius:50%;
-              background:#374151;
-              border:2px solid white;
-              box-shadow:0 2px 8px rgba(0,0,0,0.25);
-              display:flex;align-items:center;justify-content:center;
-              color:white;font-weight:700;
-              font-size:${count > 100 ? 13 : 12}px;
-              font-family:system-ui,sans-serif;
-              cursor:pointer;
-            `;
-            el.textContent = count > 999 ? "999+" : String(count);
-            return new markerLib.AdvancedMarkerElement({ position, content: el });
-          },
+    if (!map || !markerLib || clustererRef.current) return;
+    clustererRef.current = new MarkerClusterer({
+      map,
+      algorithm: new SuperClusterAlgorithm({ radius: 60, maxZoom: 11 }),
+      renderer: {
+        render: ({ count, position }) => {
+          const size = count > 100 ? 52 : count > 20 ? 44 : 36;
+          const el = document.createElement("div");
+          el.style.cssText = [
+            `width:${size}px`, `height:${size}px`,
+            "border-radius:50%", "background:#374151",
+            "border:2px solid white", "box-shadow:0 2px 8px rgba(0,0,0,0.25)",
+            "display:flex", "align-items:center", "justify-content:center",
+            "color:white", "font-weight:700",
+            `font-size:${count > 100 ? 13 : 12}px`,
+            "font-family:system-ui,sans-serif", "cursor:pointer",
+          ].join(";");
+          el.textContent = count > 999 ? "999+" : String(count);
+          return new markerLib.AdvancedMarkerElement({ position, content: el });
         },
-      });
-    }
-    return () => {
-      clustererRef.current?.clearMarkers();
-    };
+      },
+    });
   }, [map, markerLib]);
 
-  // Synchroniser les marqueurs avec le clusterer
+  // Synchroniser les marqueurs : ajoute/supprime uniquement le delta
   useEffect(() => {
     if (!clustererRef.current || !map || !markerLib) return;
-    clustererRef.current.clearMarkers();
-    const newMarkers: google.maps.marker.AdvancedMarkerElement[] = [];
-    movers.forEach((mover) => {
-      const color = mover.isPrioritaire ? "#0EA5A6" : "#6B7280";
-      const isSelected = mover.id === selectedId;
-      const size = isSelected ? 36 : mover.isPrioritaire ? 26 : 20;
-      const el = document.createElement("div");
-      el.style.cssText = `
-        width:${size}px;height:${size}px;border-radius:50%;
-        background:${color};border:${isSelected ? 3 : 2}px solid white;
-        box-shadow:${isSelected ? `0 0 0 3px ${color}40,0 4px 12px rgba(0,0,0,0.25)` : "0 2px 6px rgba(0,0,0,0.2)"};
-        cursor:pointer;display:flex;align-items:center;justify-content:center;
-        transition:all 0.15s;
-      `;
-      if (mover.isPrioritaire) {
-        el.innerHTML = `<svg width="${size * 0.45}" height="${size * 0.45}" viewBox="0 0 24 24" fill="white"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z"/></svg>`;
+
+    const cache = markerCacheRef.current;
+    const activeIds = activeIdsRef.current;
+    const newIds = new Set(movers.map((m) => m.id));
+
+    // Marqueurs à supprimer (plus dans la liste filtrée)
+    const toRemove: google.maps.marker.AdvancedMarkerElement[] = [];
+    for (const id of activeIds) {
+      if (!newIds.has(id)) {
+        const m = cache.get(id);
+        if (m) toRemove.push(m);
+        activeIds.delete(id);
       }
-      const marker = new markerLib.AdvancedMarkerElement({
-        position: { lat: mover.lat, lng: mover.lng },
-        content: el,
-        zIndex: isSelected ? 100 : mover.isPrioritaire ? 2 : 1,
-      });
-      marker.addListener("click", () => setSelectedId(mover.id === selectedId ? null : mover.id));
-      newMarkers.push(marker);
-    });
-    clustererRef.current.addMarkers(newMarkers);
-  }, [map, markerLib, movers, selectedId]); // eslint-disable-line react-hooks/exhaustive-deps
+    }
+    if (toRemove.length) clustererRef.current.removeMarkers(toRemove);
+
+    // Marqueurs à ajouter (nouveaux dans la liste filtrée)
+    const toAdd: google.maps.marker.AdvancedMarkerElement[] = [];
+    for (const mover of movers) {
+      if (!activeIds.has(mover.id)) {
+        let marker = cache.get(mover.id);
+        if (!marker) {
+          marker = new markerLib.AdvancedMarkerElement({
+            position: { lat: mover.lat, lng: mover.lng },
+            content: makeMarkerEl(mover, false),
+            zIndex: mover.isPrioritaire ? 2 : 1,
+          });
+          marker.addListener("click", () => {
+            setSelectedId(marker!.title === selectedId ? null : mover.id);
+          });
+          // Stocker l'id dans title pour le retrouver au click
+          (marker as any).title = mover.id;
+          cache.set(mover.id, marker);
+        }
+        toAdd.push(marker);
+        activeIds.add(mover.id);
+      }
+    }
+    if (toAdd.length) clustererRef.current.addMarkers(toAdd);
+
+  }, [map, markerLib, movers]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Mettre à jour visuellement uniquement les 2 marqueurs qui changent (prev/next selected)
+  useEffect(() => {
+    if (!markerLib) return;
+    const cache = markerCacheRef.current;
+    const prev = prevSelectedIdRef.current;
+
+    // Désélectionner l'ancien
+    if (prev && prev !== selectedId) {
+      const mover = movers.find((m) => m.id === prev);
+      const marker = cache.get(prev);
+      if (mover && marker) {
+        marker.content = makeMarkerEl(mover, false);
+        (marker as any).zIndex = mover.isPrioritaire ? 2 : 1;
+      }
+    }
+    // Sélectionner le nouveau
+    if (selectedId) {
+      const mover = movers.find((m) => m.id === selectedId);
+      const marker = cache.get(selectedId);
+      if (mover && marker) {
+        marker.content = makeMarkerEl(mover, true);
+        (marker as any).zIndex = 100;
+      }
+    }
+    prevSelectedIdRef.current = selectedId;
+  }, [selectedId, markerLib, movers]);
 
   return (
     <>
