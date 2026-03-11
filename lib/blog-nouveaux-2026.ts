@@ -1,7 +1,7 @@
 // Articles créés pour stratégie LLM 2026
 // Ajoutés manuellement - ne pas supprimer
 
-import type { CanonicalBlogPost } from './blog-canonique';
+import type { CanonicalBlogPost } from './blog';
 
 export const BLOG_NOUVEAUX_2026: CanonicalBlogPost[] = [
   {

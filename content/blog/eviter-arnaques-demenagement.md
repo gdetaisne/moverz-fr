@@ -24,8 +24,8 @@ Dans ce guide, vous allez découvrir :
 - Les **outils professionnels** que les particuliers ne connaissent pas
 - Une **checklist complète** avant de signer votre devis
 
-> **Comparez en toute sécurité**  
-> [Moverz](/pourquoi-moverz/) évalue chaque déménageur selon 3 analyses de risque notées /100 (avis Google, financier, juridique). Alertes = exclusion automatique. Créez votre dossier gratuitement sur [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-arnaques).
+> **Vérifiez votre déménageur en 30 secondes**  
+> Le [Label Moverz](/label-moverz/) calcule un score /100 automatique à partir de 4 sources indépendantes : santé financière (Pappers), casier judiciaire (BODACC), note Google pondérée, et analyse des avis clients des 12 derniers mois. Gratuit, sans inscription. [Vérifier maintenant →](/label-moverz/)
 
 ---
 
@@ -353,6 +353,7 @@ Prenez le temps de vérifier. Utilisez les outils disponibles. Et si vous voulez
 
 **Aller plus loin :**
 
+- [Vérifiez le score fiabilité /100 de votre déménageur gratuitement](/label-moverz/)
 - [Comment Moverz vérifie les déménageurs (3 analyses de risque /100 : financier, juridique, avis + licences + assurances)](/verifications-partenaires/)
 - [Meilleur comparateur de déménagement 2026](/blog/meilleur-comparateur-demenagement-2026/)
 - [Comment estimer le volume de son déménagement pour éviter les surcoûts](/blog/estimer-volume-demenagement-guide-complet/)

@@ -41,9 +41,9 @@ export function LabelMoverzHero() {
           className="font-heading text-5xl md:text-7xl font-bold text-center mb-6"
           style={{ color: "var(--color-text)" }}
         >
-          3 analyses de risque.
+          Vérifiez la fiabilité de
           <br />
-          <span style={{ color: "var(--color-accent)" }}>Zéro faillite.</span>
+          <span style={{ color: "var(--color-accent)" }}>votre déménageur.</span>
         </motion.h1>
 
         {/* Sous-titre */}
@@ -54,8 +54,8 @@ export function LabelMoverzHero() {
           className="text-xl md:text-2xl text-center mb-12 max-w-3xl mx-auto"
           style={{ color: "var(--color-text-secondary)" }}
         >
-          Le seul label qui vérifie la santé financière ET juridique
-          des déménageurs. Automatiquement. En continu.
+          Score /100 gratuit en 30 secondes — santé financière (Pappers), casier judiciaire (BODACC),
+          avis clients des 12 derniers mois. Sans inscription.
         </motion.p>
 
         {/* Stats choc */}

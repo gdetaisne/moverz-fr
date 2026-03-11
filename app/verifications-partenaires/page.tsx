@@ -345,9 +345,26 @@ export default function VerificationsPartenairesPage() {
       {/* CTA discret */}
       <section className="section section-light pt-0">
         <div className="container max-w-4xl space-y-6">
+
+          {/* CTA Label Moverz */}
           <div className="rounded-2xl border border-v4-border bg-white p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div className="space-y-1">
-              <p className="text-sm font-semibold text-v4-text">Envie d'une base d'estimation plus claire ?</p>
+              <p className="text-sm font-semibold text-v4-text">Vérifiez votre déménageur en 30 secondes</p>
+              <p className="text-sm text-v4-text-secondary">
+                Score /100 gratuit : santé financière (Pappers), casier judiciaire (BODACC), avis clients des 12 derniers mois.
+              </p>
+            </div>
+            <a
+              href="/label-moverz/"
+              className="inline-flex items-center justify-center rounded-full bg-v4-text px-6 py-3 text-sm font-semibold text-white shadow-sm hover:opacity-90 transition-colors whitespace-nowrap"
+            >
+              Voir le score →
+            </a>
+          </div>
+
+          <div className="rounded-2xl border border-v4-border bg-white p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div className="space-y-1">
+              <p className="text-sm font-semibold text-v4-text">Envie d&apos;une base d&apos;estimation plus claire ?</p>
               <p className="text-sm text-v4-text-secondary">
                 Une visite ou une visio réduisent les ambiguïtés sur le volume et les accès.
               </p>
