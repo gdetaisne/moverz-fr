@@ -3,7 +3,7 @@
 import { useState, useCallback, useRef, useEffect } from "react";
 import { APIProvider, Map, InfoWindow, useMap } from "@vis.gl/react-google-maps";
 import { MarkerClusterer, SuperClusterAlgorithm } from "@googlemaps/markerclusterer";
-import { MapPin, Search, X, Loader2, Users } from "lucide-react";
+import { MapPin, Search, X, Loader2, Users, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 
 // ─── Types ───────────────────────────────────────────────────────
