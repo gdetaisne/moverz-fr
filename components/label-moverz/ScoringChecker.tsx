@@ -101,6 +101,8 @@ interface ScoringResult {
     finEBE?: number | null;
     finCroissanceCA?: number | null;
     finExplanations?: string[];
+    isReliable?: boolean;
+    reliabilityError?: string | null;
   };
   _quota: { used: number; max: number; remaining: number };
 }
@@ -530,6 +532,18 @@ export function ScoringChecker() {
                 {/* Score complet */}
                 {!isLoadingScore && scoringResult && !quotaExceeded && (
                   <>
+                    {/* Bandeau "analyse en cours" si score non fiable */}
+                    {scoringResult._meta?.isReliable === false && (
+                      <div className="flex items-center gap-3 px-6 py-4" style={{ background: "rgba(14,165,166,0.07)", borderBottom: "1px solid var(--color-border)" }}>
+                        <Loader2 className="w-5 h-5 animate-spin shrink-0" style={{ color: "var(--color-accent)" }} />
+                        <div>
+                          <p className="text-sm font-semibold" style={{ color: "var(--color-text)" }}>Analyse en cours de calcul</p>
+                          <p className="text-xs mt-0.5" style={{ color: "var(--color-text-secondary)" }}>
+                            {scoringResult._meta?.reliabilityError ?? "Le score sera disponible dans quelques minutes. Revenez consulter."}
+                          </p>
+                        </div>
+                      </div>
+                    )}
                     {/* ① Hero : score global */}
                     <div className="flex items-center gap-5 p-6 pb-5" style={{ borderBottom: "1px solid var(--color-border)" }}>
                       <ScoreRing score={scoringResult.globalScore} size={80} />
