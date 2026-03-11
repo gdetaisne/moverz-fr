@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { FAQSchema } from "@/components/schema/FAQSchema";
 import { WebPageSchema } from "@/components/schema/WebPageSchema";
 import { LabelMoverzHero } from "@/components/label-moverz/LabelMoverzHero";
-import { LabelScoresShowcase } from "@/components/label-moverz/LabelScoresShowcase";
+import { LabelScoringExplainer } from "@/components/label-moverz/LabelScoringExplainer";
 import { LabelComparison } from "@/components/label-moverz/LabelComparison";
 import { LabelStats } from "@/components/label-moverz/LabelStats";
 import { LabelCTA } from "@/components/label-moverz/LabelCTA";
 import { ScoringChecker } from "@/components/label-moverz/ScoringChecker";
+import { RecentScores } from "@/components/label-moverz/RecentScores";
+
+// La carte utilise Google Maps JS — chargée uniquement côté client
+const MoverzMap = dynamic(
+  () => import("@/components/label-moverz/MoverzMap").then((m) => ({ default: m.MoverzMapInner })),
+  { ssr: false },
+);
 
 export const metadata: Metadata = {
   title: "Label Moverz : Score /100 (3 dimensions) · 0 faillite",
@@ -40,8 +48,12 @@ export default function LabelMoverzPage() {
       />
       <FAQSchema faqs={faqItems} />
       <LabelMoverzHero />
-      <LabelScoresShowcase />
-      <ScoringChecker />
+      <LabelScoringExplainer />
+      <MoverzMap />
+      <div id="scoring-checker-section">
+        <ScoringChecker />
+      </div>
+      <RecentScores />
       <LabelStats />
       <LabelComparison />
       <LabelCTA />

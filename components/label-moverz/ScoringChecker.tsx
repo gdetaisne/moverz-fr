@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Search, Building2, MapPin, ChevronRight, AlertCircle,
@@ -196,6 +196,16 @@ export function ScoringChecker() {
 
   const searchTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  // Écoute l'event émis par la carte pour pré-remplir la recherche
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const query = (e as CustomEvent<{ query: string }>).detail.query;
+      if (query) handleSearch(query);
+    };
+    window.addEventListener("moverz:prefill-search", handler);
+    return () => window.removeEventListener("moverz:prefill-search", handler);
+  }, [handleSearch]);
+
   const handleSearch = useCallback(async (value: string) => {
     setQuery(value);
     setSearchError(null);
@@ -333,7 +343,7 @@ export function ScoringChecker() {
                   {isSearching ? <Loader2 className="w-5 h-5 shrink-0 animate-spin" style={{ color: "var(--color-accent)" }} />
                     : <Search className="w-5 h-5 shrink-0" style={{ color: "var(--color-text-muted)" }} />}
                   <input type="text" value={query} onChange={(e) => handleSearch(e.target.value)}
-                    placeholder="Nom du déménageur ou SIRET (14 chiffres)…"
+                    placeholder="Nom, ville, code postal, SIRET…"
                     className="flex-1 text-base outline-none bg-transparent" style={{ color: "var(--color-text)" }} autoFocus />
                 </div>
 
