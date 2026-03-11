@@ -288,7 +288,22 @@ export function MoverzMapInner() {
             </div>
           )}
 
-          {!error && (
+          {!error && !apiKey && (
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 z-10"
+              style={{ background: "var(--color-bg)" }}>
+              <MapPin className="w-10 h-10" style={{ color: "var(--color-accent)" }} />
+              <p className="text-sm font-semibold" style={{ color: "var(--color-text)" }}>
+                Carte des déménageurs
+              </p>
+              <p className="text-xs text-center max-w-xs" style={{ color: "var(--color-text-secondary)" }}>
+                {movers.length > 0
+                  ? `${movers.length} déménageurs référencés en France — carte en cours d'activation.`
+                  : "Chargement des déménageurs…"}
+              </p>
+            </div>
+          )}
+
+          {!error && !!apiKey && (
             <APIProvider apiKey={apiKey}>
               <Map
                 defaultCenter={{ lat: 46.5, lng: 2.5 }}
