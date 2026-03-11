@@ -793,7 +793,7 @@ export function ScoringChecker() {
         {turnstileSiteKey && (
           <Turnstile
             siteKey={turnstileSiteKey}
-            options={{ appearance: 'never', execution: 'render', refreshExpired: 'auto' }}
+            options={{ appearance: 'interaction-only', execution: 'render', refreshExpired: 'auto' }}
             onSuccess={(token) => { turnstileToken.current = token; }}
             style={{ display: 'none' }}
           />
