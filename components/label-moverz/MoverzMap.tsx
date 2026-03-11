@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useCallback, useRef, useEffect, useMemo } from "react";
-import { APIProvider, Map, InfoWindow, useMap, useMapsLibrary } from "@vis.gl/react-google-maps";
+import { APIProvider, Map as GoogleMap, InfoWindow, useMap, useMapsLibrary } from "@vis.gl/react-google-maps";
 import { MarkerClusterer, SuperClusterAlgorithm } from "@googlemaps/markerclusterer";
 import { MapPin, Search, X, Loader2, Users, Shield } from "lucide-react";
 import { motion } from "framer-motion";
@@ -444,7 +444,7 @@ export function MoverzMapInner() {
 
           {!error && !!apiKey && (
             <APIProvider apiKey={apiKey}>
-              <Map
+              <GoogleMap
                 defaultCenter={{ lat: 46.5, lng: 2.5 }}
                 defaultZoom={6}
                 mapId="moverz-partners-map"
@@ -461,7 +461,7 @@ export function MoverzMapInner() {
                   setSelectedId={setSelectedId}
                   onSelectMover={handleSelectMover}
                 />
-              </Map>
+              </GoogleMap>
             </APIProvider>
           )}
         </div>
