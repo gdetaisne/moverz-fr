@@ -196,16 +196,6 @@ export function ScoringChecker() {
 
   const searchTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Écoute l'event émis par la carte pour pré-remplir la recherche
-  useEffect(() => {
-    const handler = (e: Event) => {
-      const query = (e as CustomEvent<{ query: string }>).detail.query;
-      if (query) handleSearch(query);
-    };
-    window.addEventListener("moverz:prefill-search", handler);
-    return () => window.removeEventListener("moverz:prefill-search", handler);
-  }, [handleSearch]);
-
   const handleSearch = useCallback(async (value: string) => {
     setQuery(value);
     setSearchError(null);
@@ -228,6 +218,16 @@ export function ScoringChecker() {
       }
     }, 350);
   }, []);
+
+  // Écoute l'event émis par la carte pour pré-remplir la recherche
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const prefill = (e as CustomEvent<{ query: string }>).detail.query;
+      if (prefill) handleSearch(prefill);
+    };
+    window.addEventListener("moverz:prefill-search", handler);
+    return () => window.removeEventListener("moverz:prefill-search", handler);
+  }, [handleSearch]);
 
   const handleSelectMover = useCallback(async (mover: MoverResult) => {
     setSelectedMover(mover);
