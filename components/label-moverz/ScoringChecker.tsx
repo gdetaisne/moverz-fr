@@ -210,7 +210,7 @@ export function ScoringChecker() {
     searchTimeout.current = setTimeout(async () => {
       setIsSearching(true);
       try {
-        const res = await fetch(`/api/scoring-check/search?q=${encodeURIComponent(value)}`);
+        const res = await fetch(`/api/scoring-check/search/?q=${encodeURIComponent(value)}`);
         const text = await res.text();
         const data = text ? JSON.parse(text) : {};
         if (!res.ok) throw new Error(data.error || "Erreur recherche");
@@ -244,7 +244,7 @@ export function ScoringChecker() {
       setIsLoadingPlace(true);
       setStep("place-select");
       try {
-        const res = await fetch(`/api/scoring-check/place-candidates?moverId=${mover.id}`);
+        const res = await fetch(`/api/scoring-check/place-candidates/?moverId=${mover.id}`);
         const text = await res.text();
         const data = text ? JSON.parse(text) : {};
         if (!res.ok) throw new Error(data.error || "Erreur candidats");
@@ -272,7 +272,7 @@ export function ScoringChecker() {
       const params = new URLSearchParams({ moverId });
       if (turnstileToken.current) params.set('turnstile', turnstileToken.current);
 
-      const res = await fetch(`/api/scoring-check/score?${params.toString()}`);
+      const res = await fetch(`/api/scoring-check/score/?${params.toString()}`);
       const text = await res.text();
       const data = text ? JSON.parse(text) : {};
 

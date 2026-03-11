@@ -230,7 +230,7 @@ export function MoverzMapInner() {
   const scoringCheckerRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
-    fetch("/api/scoring-check/movers-map")
+    fetch("/api/scoring-check/movers-map/")
       .then((r) => r.json())
       .then((data: { results?: MoverPoint[]; error?: string }) => {
         if (data.error) throw new Error(data.error);
