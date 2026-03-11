@@ -8,6 +8,7 @@ import { getCityReviewsBySlug } from "@/lib/city-reviews";
 import { buildCityFaqs } from "@/lib/seo-faq";
 import { getCityPageMetadata } from "@/lib/seo/metadata";
 import { CityHero } from "@/components/city/CityHero";
+import { CityPhoto } from "@/components/city/CityPhoto";
 import { CityLocalInsights } from "@/components/city/CityLocalInsights";
 // import { CityLongFormGuide } from "@/components/city/CityLongFormGuide"; // Temporarily disabled - causes build timeout
 import { CityStats } from "@/components/city/CityStats";
@@ -274,6 +275,9 @@ export default function CityMovingPage({ params }: PageProps) {
       </div>
       {/* Hero */}
       <CityHero city={city} quoteUrl={quoteUrl} />
+
+      {/* Photo de la ville — signal qualité SEO + expérience utilisateur */}
+      <CityPhoto citySlug={city.slug} cityName={city.nameCapitalized} />
 
       {/* Tableau prix optimisé featured snippet */}
       <CityPricingTable cityName={city.nameCapitalized} citySlug={city.slug} />

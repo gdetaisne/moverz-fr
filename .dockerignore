@@ -31,6 +31,10 @@ Thumbs.db
 *.md
 !README.md
 
+# SEO docs & data exports (inutiles en prod, certains contiennent des infos sensibles)
+docs/
+*.csv
+
 # Terminals (Cursor)
 terminals
 

@@ -17,7 +17,7 @@ import { BLOG_EXTRA } from "./blog-extra";
 // Désactivé temporairement pour permettre le déploiement du dashboard admin
 // Le dashboard admin fonctionne sans ce fichier
 // import { CANONICAL_BLOG_POSTS, type CanonicalBlogPost } from "./blog-canonique";
-type CanonicalBlogPost = { slug: string; title: string; description: string; type: string; citySlug?: string; body: string; };
+export type CanonicalBlogPost = { slug: string; title: string; description: string; type: string; citySlug?: string; body: string; };
 const CANONICAL_BLOG_POSTS: CanonicalBlogPost[] = [];
 import { BLOG_NOUVEAUX_2026 } from "./blog-nouveaux-2026";
 import { BLOG_MARKDOWN_POSTS } from "./blog-markdown-posts";

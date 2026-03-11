@@ -9,6 +9,8 @@
     "build": "next build",
     "start": "next start -p 3040",
     "lint": "next lint",
+    "prewarm": "node scripts/prewarm-cache.mjs",
+    "prewarm:purge": "node scripts/prewarm-cache.mjs --purge",
     "test": "vitest run",
     "blog:pro:gen": "tsx scripts/generate-blog-pro.ts",
     "scrape:competitors": "tsx scripts/scrape-competitors.ts",

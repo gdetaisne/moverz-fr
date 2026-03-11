@@ -1,6 +1,7 @@
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
+// runtime "edge" supprimé : causait "Failed to load dynamic font Status: 400" en build Docker
+// (edge runtime tente un fetch réseau de fonts même avec system-ui — non disponible sur VPS)
 export const alt = "Label Moverz : Score /100 — Vérifiez la fiabilité de votre déménageur";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
