@@ -161,7 +161,10 @@ export function MoverzMapInner() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  // searchQuery = texte en cours de saisie (dropdown)
   const [searchQuery, setSearchQuery] = useState("");
+  // activeFilter = filtre validé (Entrée ou clic sur item) qui persiste sur la carte
+  const [activeFilter, setActiveFilter] = useState("");
   const scoringCheckerRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
@@ -175,20 +178,43 @@ export function MoverzMapInner() {
       .finally(() => setLoading(false));
   }, []);
 
-  // Filtrer les déménageurs selon la recherche dans la barre
-  const filteredMovers = searchQuery.length >= 2
+  const applyFilter = (q: string) => {
+    setActiveFilter(q.trim());
+    setSearchQuery("");
+  };
+
+  const clearFilter = () => {
+    setActiveFilter("");
+    setSearchQuery("");
+    setSelectedId(null);
+  };
+
+  // Filtre actif pour les marqueurs sur la carte
+  const filterTerm = activeFilter || (searchQuery.length >= 2 ? searchQuery : "");
+  const filteredMovers = filterTerm
+    ? movers.filter(
+        (m) =>
+          m.companyName.toLowerCase().includes(filterTerm.toLowerCase()) ||
+          m.city.toLowerCase().includes(filterTerm.toLowerCase()) ||
+          m.postalCode.startsWith(filterTerm),
+      )
+    : movers;
+
+  // Dropdown : uniquement pendant la saisie, avant validation
+  const dropdownMovers = searchQuery.length >= 2
     ? movers.filter(
         (m) =>
           m.companyName.toLowerCase().includes(searchQuery.toLowerCase()) ||
           m.city.toLowerCase().includes(searchQuery.toLowerCase()) ||
           m.postalCode.startsWith(searchQuery),
       )
-    : movers;
+    : [];
 
-  // Sélectionner depuis la liste de résultats
+  // Sélectionner un item du dropdown → applique le filtre + centre sur ce déménageur
   const handleSearchSelect = useCallback((mover: MoverPoint) => {
-    setSelectedId(mover.id);
+    setActiveFilter(mover.companyName);
     setSearchQuery("");
+    setSelectedId(mover.id);
   }, []);
 
   // Clic "Afficher scoring" → scroll vers ScoringChecker et pré-remplit le champ
@@ -248,31 +274,60 @@ export function MoverzMapInner() {
         <div className="relative mb-4 max-w-md mx-auto">
           <div
             className="flex items-center gap-2 px-4 py-3 rounded-xl"
-            style={{ background: "white", border: "1px solid var(--color-border)", boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}
+            style={{ background: "white", border: `1px solid ${activeFilter ? "var(--color-accent)" : "var(--color-border)"}`, boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}
           >
-            <Search className="w-4 h-4 shrink-0" style={{ color: "var(--color-text-muted)" }} />
+            <Search className="w-4 h-4 shrink-0" style={{ color: activeFilter ? "var(--color-accent)" : "var(--color-text-muted)" }} />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Rechercher sur la carte (nom, ville, CP)…"
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && searchQuery.trim().length >= 2) applyFilter(searchQuery);
+                if (e.key === "Escape") clearFilter();
+              }}
+              placeholder={activeFilter ? `Filtre actif : "${activeFilter}"` : "Rechercher sur la carte (nom, ville, CP)…"}
               className="flex-1 text-sm outline-none bg-transparent"
-              style={{ color: "var(--color-text)" }}
+              style={{ color: activeFilter && !searchQuery ? "var(--color-accent)" : "var(--color-text)" }}
             />
-            {searchQuery && (
-              <button onClick={() => setSearchQuery("")}>
+            {(searchQuery || activeFilter) && (
+              <button onClick={clearFilter} title="Effacer le filtre">
                 <X className="w-4 h-4" style={{ color: "var(--color-text-muted)" }} />
               </button>
             )}
           </div>
 
-          {/* Dropdown résultats */}
-          {searchQuery.length >= 2 && filteredMovers.length > 0 && filteredMovers.length < movers.length && (
+          {/* Badge filtre actif */}
+          {activeFilter && !searchQuery && (
+            <div className="flex items-center gap-2 mt-2 px-1">
+              <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full"
+                style={{ background: "rgba(14,165,166,0.12)", color: "var(--color-accent)" }}>
+                <Search className="w-3 h-3" />
+                {filteredMovers.length} résultat{filteredMovers.length > 1 ? "s" : ""} pour &quot;{activeFilter}&quot;
+                <button onClick={clearFilter} className="ml-1 hover:opacity-70">
+                  <X className="w-3 h-3" />
+                </button>
+              </span>
+            </div>
+          )}
+
+          {/* Dropdown résultats (pendant la saisie uniquement) */}
+          {dropdownMovers.length > 0 && searchQuery.length >= 2 && (
             <div
               className="absolute top-full left-0 right-0 mt-1 rounded-xl overflow-hidden z-10"
               style={{ background: "white", border: "1px solid var(--color-border)", boxShadow: "0 8px 24px rgba(0,0,0,0.1)", maxHeight: 240, overflowY: "auto" }}
             >
-              {filteredMovers.slice(0, 8).map((m) => (
+              {/* Valider tout le filtre */}
+              <button
+                onClick={() => applyFilter(searchQuery)}
+                className="w-full flex items-center gap-3 px-4 py-2.5 text-left border-b"
+                style={{ borderColor: "var(--color-border)", background: "rgba(14,165,166,0.04)" }}
+              >
+                <Search className="w-3.5 h-3.5 shrink-0" style={{ color: "var(--color-accent)" }} />
+                <span className="text-sm font-semibold" style={{ color: "var(--color-accent)" }}>
+                  Voir les {dropdownMovers.length} résultats pour &quot;{searchQuery}&quot; sur la carte
+                </span>
+              </button>
+              {dropdownMovers.slice(0, 7).map((m) => (
                 <button
                   key={m.id}
                   onClick={() => handleSearchSelect(m)}
