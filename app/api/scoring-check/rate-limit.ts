@@ -2,9 +2,11 @@
  * Rate limiter in-process partagé entre les API Routes du scoring checker.
  *
  * Limites par IP :
- *   - search        : 10 req / 60s  (autocomplete)
+ *   - search        : 4 req / 30s  (autocomplete — debounce 350ms ok, scraping en boucle bloqué)
  *   - place-candidates : 5 req / 60s
  *   - score         : 2 req / 60s   (appel le plus sensible)
+ *   - movers-map    : 3 req / 60s   (données carte)
+ *   - recent-scores : 3 req / 60s   (données scores récents)
  *
  * Note : le store est en mémoire (Map). En cas de multi-instance Next.js,
  * chaque instance a son propre compteur — acceptable pour ce niveau de protection.
@@ -17,15 +19,19 @@ const stores: Record<string, RateLimitStore> = {
   search: new Map(),
   place: new Map(),
   score: new Map(),
+  map: new Map(),
+  "recent-scores": new Map(),
 };
 
 const LIMITS: Record<string, { max: number; windowMs: number }> = {
-  search: { max: 10, windowMs: 60_000 },
-  place:  { max: 5,  windowMs: 60_000 },
-  score:  { max: 2,  windowMs: 60_000 },
+  search:         { max: 4,  windowMs: 30_000 },
+  place:          { max: 5,  windowMs: 60_000 },
+  score:          { max: 2,  windowMs: 60_000 },
+  map:            { max: 3,  windowMs: 60_000 },
+  "recent-scores": { max: 3, windowMs: 60_000 },
 };
 
-export function checkRateLimit(route: 'search' | 'place' | 'score', ip: string): {
+export function checkRateLimit(route: 'search' | 'place' | 'score' | 'map' | 'recent-scores', ip: string): {
   allowed: boolean;
   remaining: number;
   resetIn: number; // ms

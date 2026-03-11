@@ -74,7 +74,12 @@ export function LabelScoringExplainer() {
           >
             Comment fonctionne le score Moverz&nbsp;?
           </h2>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8" style={{ color: "var(--color-text-secondary)" }}>
+          <p className="text-lg md:text-xl max-w-2xl mx-auto mb-4" style={{ color: "var(--color-text-secondary)" }}>
+            Vérifiez en 30 secondes si votre déménageur est fiable&nbsp;: consultez son score Moverz,
+            le seul label qui analyse la santé financière, le casier judiciaire et les avis clients
+            des 12 derniers mois. Gratuit, sans inscription, résultat immédiat.
+          </p>
+          <p className="text-base max-w-xl mx-auto mb-8" style={{ color: "var(--color-text-secondary)" }}>
             Un score de 0 à 100 calculé automatiquement à partir de 3 dimensions indépendantes,
             recalculé en continu toutes les 48–72h.
           </p>

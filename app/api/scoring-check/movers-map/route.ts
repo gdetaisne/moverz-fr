@@ -9,6 +9,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
+import { checkRateLimit, getClientIp } from '../rate-limit';
 
 const BACKOFFICE_URL = process.env.NEXT_PUBLIC_BACKOFFICE_URL?.replace(/\/$/, '') ?? '';
 
@@ -79,7 +80,17 @@ function jitter(val: number, seed: string, scale: number): number {
   return val + ((h % 200) - 100) / 100 * scale;
 }
 
-export async function GET(_req: NextRequest) {
+export async function GET(req: NextRequest) {
+  // Rate limit : 3 req/min par IP
+  const ip = getClientIp(req);
+  const rl = checkRateLimit('map', ip);
+  if (!rl.allowed) {
+    return NextResponse.json(
+      { error: 'Trop de requêtes.' },
+      { status: 429, headers: { 'Retry-After': String(Math.ceil(rl.resetIn / 1000)) } },
+    );
+  }
+
   if (!BACKOFFICE_URL) {
     return NextResponse.json({ error: 'Configuration manquante.' }, { status: 503 });
   }
@@ -109,6 +120,6 @@ export async function GET(_req: NextRequest) {
 
   return NextResponse.json(
     { results: withCoords },
-    { headers: { 'Cache-Control': 'public, max-age=3600, stale-while-revalidate=7200' } },
+    { headers: { 'Cache-Control': 'no-store' } },
   );
 }

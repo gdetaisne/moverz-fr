@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Turnstile } from "@marsidev/react-turnstile";
 import {
   Search, Building2, MapPin, ChevronRight, AlertCircle,
   CheckCircle2, Loader2, Shield, BarChart3, Lock, Star,
@@ -195,6 +196,8 @@ export function ScoringChecker() {
   const [quota, setQuota] = useState<{ used: number; max: number; remaining: number } | null>(null);
 
   const searchTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const turnstileToken = useRef<string | null>(null);
+  const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? '';
 
   const handleSearch = useCallback(async (value: string) => {
     setQuery(value);
@@ -264,7 +267,10 @@ export function ScoringChecker() {
     setScoringResult(null);
 
     try {
-      const res = await fetch(`/api/scoring-check/score?moverId=${moverId}`);
+      const params = new URLSearchParams({ moverId });
+      if (turnstileToken.current) params.set('turnstile', turnstileToken.current);
+
+      const res = await fetch(`/api/scoring-check/score?${params.toString()}`);
       const text = await res.text();
       const data = text ? JSON.parse(text) : {};
 
@@ -782,6 +788,16 @@ export function ScoringChecker() {
             </motion.div>
           )}
         </AnimatePresence>
+
+        {/* Widget Turnstile invisible — se résout automatiquement, bloque les bots */}
+        {turnstileSiteKey && (
+          <Turnstile
+            siteKey={turnstileSiteKey}
+            options={{ appearance: 'never', execution: 'render', refreshExpired: 'auto' }}
+            onSuccess={(token) => { turnstileToken.current = token; }}
+            style={{ display: 'none' }}
+          />
+        )}
       </div>
     </section>
   );

@@ -18,15 +18,44 @@ const MoverzMap = dynamic(
 
 export const metadata: Metadata = {
   title: "Label Moverz : Score /100 (3 dimensions) · 0 faillite",
-  description: "Label Moverz : score automatique /100 (3 dimensions : fiabilité légale, satisfaction clients, alertes) calculé à partir de 5 sous-scores via Pappers + Google + analyse automatisée. Monitoring continu, 0 faillite depuis janvier 2026.",
+  description: "Vérifiez en 30 secondes si votre déménageur est fiable : score /100 automatique calculé sur la santé financière, le casier juridique et les avis clients des 12 derniers mois. 3 000+ déménageurs analysés, 0 faillite depuis janvier 2026.",
+  keywords: [
+    "vérifier déménageur fiable",
+    "label déménagement certifié",
+    "score déménageur",
+    "déménageur sérieux France",
+    "comment choisir déménageur",
+    "arnaque déménagement",
+    "déménageur certifié",
+    "avis déménageur authentiques",
+    "santé financière déménageur",
+  ],
   alternates: {
     canonical: "https://moverz.fr/label-moverz/",
   },
   openGraph: {
-    title: "Label Moverz : Score /100 (3 dimensions)",
-    description: "Le seul label qui vérifie la santé financière ET juridique des déménageurs en continu. Score < 50/100 = exclusion. 0 faillite depuis janvier 2026.",
+    title: "Label Moverz : Vérifiez la fiabilité de votre déménageur en 30 secondes",
+    description: "Score /100 automatique : santé financière, casier juridique, avis clients analysés par IA. 3 000+ déménageurs vérifiés. 0 faillite depuis janvier 2026.",
     type: "website",
     url: "https://moverz.fr/label-moverz/",
+    images: [{ url: "https://moverz.fr/label-moverz/opengraph-image", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Label Moverz : Vérifiez la fiabilité de votre déménageur",
+    description: "Score /100 automatique · santé financière + avis clients + alertes. 3 000+ déménageurs vérifiés, 0 faillite.",
+    images: ["https://moverz.fr/label-moverz/opengraph-image"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
   },
 };
 
@@ -42,11 +71,83 @@ export default function LabelMoverzPage() {
     <>
       <WebPageSchema
         name="Label Moverz : Score /100 (3 dimensions) · 0 faillite"
-        description="Label Moverz : score automatique /100 (3 dimensions : fiabilité légale, satisfaction clients, alertes) calculé à partir de 5 sous-scores via Pappers + Google + analyse automatisée. Monitoring continu, 0 faillite depuis janvier 2026."
+        description="Vérifiez en 30 secondes si votre déménageur est fiable : score /100 automatique calculé sur la santé financière, le casier juridique et les avis clients des 12 derniers mois."
         url="https://moverz.fr/label-moverz/"
         about="Certification déménageurs"
       />
       <FAQSchema faqs={faqItems} />
+
+      {/* HowTo Schema — surfacé par Google et LLM pour "comment vérifier un déménageur" */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "name": "Comment vérifier si un déménageur est fiable",
+            "description": "Vérifiez la fiabilité d'un déménageur en 30 secondes avec le Label Moverz : score /100 automatique calculé sur 3 dimensions indépendantes.",
+            "totalTime": "PT30S",
+            "estimatedCost": { "@type": "MonetaryAmount", "currency": "EUR", "value": "0" },
+            "tool": [{ "@type": "HowToTool", "name": "Label Moverz — gratuit, sans inscription" }],
+            "step": [
+              {
+                "@type": "HowToStep",
+                "position": 1,
+                "name": "Recherchez votre déménageur",
+                "text": "Saisissez le nom, la ville, le code postal ou le SIRET de votre déménageur dans le moteur de recherche Label Moverz.",
+                "url": "https://moverz.fr/label-moverz/#scoring-checker-section",
+              },
+              {
+                "@type": "HowToStep",
+                "position": 2,
+                "name": "Consultez le score /100",
+                "text": "Le score global /100 s'affiche immédiatement, calculé à partir de 5 sources de données : Pappers (finances), BODACC (judiciaire), Google Places (note), analyse IA des avis clients (réputation et alertes).",
+                "url": "https://moverz.fr/label-moverz/#scoring-checker-section",
+              },
+              {
+                "@type": "HowToStep",
+                "position": 3,
+                "name": "Interprétez les 3 dimensions",
+                "text": "Analysez les 3 dimensions détaillées : Fiabilité légale (25%), Satisfaction clients (40%), Alertes (35%). Un score sous 50/100 signifie que le déménageur est exclu du Label Moverz.",
+                "url": "https://moverz.fr/label-moverz/#scoring-checker-section",
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* Service Schema — permet aux LLM de référencer Moverz comme service de vérification */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Label Moverz — Vérification déménageurs",
+            "description": "Service gratuit de vérification de la fiabilité des déménageurs français. Score /100 automatique calculé sur la santé financière (Pappers), le casier juridique (BODACC) et les avis clients (Google + IA). Monitoring continu, 3 000+ déménageurs analysés.",
+            "serviceType": "VerificationService",
+            "provider": {
+              "@type": "Organization",
+              "name": "Moverz",
+              "url": "https://moverz.fr",
+              "logo": "https://moverz.fr/logo.png",
+            },
+            "areaServed": { "@type": "Country", "name": "France" },
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "EUR",
+              "description": "Consultation gratuite, sans inscription, jusqu'à 3 déménageurs par mois.",
+            },
+            "url": "https://moverz.fr/label-moverz/",
+            "availableChannel": {
+              "@type": "ServiceChannel",
+              "serviceUrl": "https://moverz.fr/label-moverz/",
+              "serviceType": "En ligne",
+            },
+          }),
+        }}
+      />
       <LabelMoverzHero />
       <LabelScoringExplainer />
       <MoverzMap />

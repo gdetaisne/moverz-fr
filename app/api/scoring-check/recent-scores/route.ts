@@ -3,7 +3,7 @@
  * GET /api/scoring-check/recent-scores
  *
  * Proxifie vers le backend (clé API protégée).
- * Cache 60s côté Next.js.
+ * Cache-Control: no-store — force le passage par le BFF (rate limit actif).
  */
 
 import { NextRequest, NextResponse } from 'next/server';
@@ -14,7 +14,7 @@ const SCORING_KEY = process.env.SCORING_API_KEY_PUBLIC ?? '';
 
 export async function GET(req: NextRequest) {
   const ip = getClientIp(req);
-  const rl = checkRateLimit('search', ip);
+  const rl = checkRateLimit('recent-scores', ip);
   if (!rl.allowed) {
     return NextResponse.json(
       { error: 'Trop de requêtes.' },
@@ -30,7 +30,7 @@ export async function GET(req: NextRequest) {
     `${BACKOFFICE_URL}/api/v1/scoring-search/recent-scores`,
     {
       headers: { 'X-Moverz-Key': SCORING_KEY },
-      next: { revalidate: 60 },
+      next: { revalidate: 0 },
     },
   );
 
@@ -40,6 +40,6 @@ export async function GET(req: NextRequest) {
 
   const data = await upstream.json();
   return NextResponse.json(data, {
-    headers: { 'Cache-Control': 'public, max-age=60, stale-while-revalidate=120' },
+    headers: { 'Cache-Control': 'no-store' },
   });
 }

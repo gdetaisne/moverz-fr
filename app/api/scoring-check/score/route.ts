@@ -18,6 +18,22 @@ import { checkRateLimit, getClientIp } from '../rate-limit';
 
 const BACKOFFICE_URL = process.env.NEXT_PUBLIC_BACKOFFICE_URL?.replace(/\/$/, '') ?? '';
 const SCORING_KEY = process.env.SCORING_API_KEY_PUBLIC ?? '';
+const TURNSTILE_SECRET = process.env.TURNSTILE_SECRET_KEY ?? '';
+
+async function verifyTurnstile(token: string): Promise<boolean> {
+  if (!TURNSTILE_SECRET) return true; // clé non configurée en dev → bypass
+  try {
+    const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({ secret: TURNSTILE_SECRET, response: token }).toString(),
+    });
+    const data = await res.json() as { success: boolean };
+    return data.success === true;
+  } catch {
+    return false;
+  }
+}
 
 export async function GET(req: NextRequest) {
   // ── Rate limit : 2 req/min par IP ───────────────────────────
@@ -36,6 +52,18 @@ export async function GET(req: NextRequest) {
   const moverId = req.nextUrl.searchParams.get('moverId');
   if (!moverId) {
     return NextResponse.json({ error: 'moverId requis.' }, { status: 400 });
+  }
+
+  // ── Validation Turnstile (bloque les bots curl) ──────────────
+  if (TURNSTILE_SECRET) {
+    const token = req.nextUrl.searchParams.get('turnstile') ?? '';
+    if (!token) {
+      return NextResponse.json({ error: 'Vérification de sécurité requise.' }, { status: 403 });
+    }
+    const valid = await verifyTurnstile(token);
+    if (!valid) {
+      return NextResponse.json({ error: 'Vérification de sécurité échouée. Rechargez la page.' }, { status: 403 });
+    }
   }
 
   if (!BACKOFFICE_URL || !SCORING_KEY) {

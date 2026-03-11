@@ -93,7 +93,17 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/admin/', '/api/admin/'],
+        disallow: [
+          '/admin/',
+          '/api/admin/',
+          // API scoring : protégées contre le scraping automatisé
+          '/api/scoring-check/search',
+          '/api/scoring-check/score',
+          '/api/scoring-check/recent-scores',
+          '/api/scoring-check/movers-map',
+          '/api/scoring-check/place-candidates',
+          '/api/scoring-check/link-place',
+        ],
       },
     ],
     sitemap: 'https://moverz.fr/sitemap.xml',
