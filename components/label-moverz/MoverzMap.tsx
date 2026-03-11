@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useCallback, useRef, useEffect } from "react";
-import { APIProvider, Map, AdvancedMarker, InfoWindow, useMap } from "@vis.gl/react-google-maps";
-import { MapPin, Shield, Search, X, Loader2, Users } from "lucide-react";
+import { APIProvider, Map, InfoWindow, useMap } from "@vis.gl/react-google-maps";
+import { MarkerClusterer, SuperClusterAlgorithm } from "@googlemaps/markerclusterer";
+import { MapPin, Search, X, Loader2, Users } from "lucide-react";
 import { motion } from "framer-motion";
 
 // ─── Types ───────────────────────────────────────────────────────
@@ -17,45 +18,7 @@ interface MoverPoint {
   lng: number;
 }
 
-// ─── Marqueur personnalisé ────────────────────────────────────────
-
-function MoverMarker({
-  mover,
-  isSelected,
-  onClick,
-}: {
-  mover: MoverPoint;
-  isSelected: boolean;
-  onClick: () => void;
-}) {
-  const color = mover.isPrioritaire ? "#0EA5A6" : "#6B7280";
-  const size = isSelected ? 36 : mover.isPrioritaire ? 28 : 22;
-  return (
-    <AdvancedMarker position={{ lat: mover.lat, lng: mover.lng }} onClick={onClick} zIndex={isSelected ? 100 : mover.isPrioritaire ? 2 : 1}>
-      <div
-        style={{
-          width: size,
-          height: size,
-          borderRadius: "50%",
-          background: color,
-          border: `${isSelected ? 3 : 2}px solid white`,
-          boxShadow: isSelected ? `0 0 0 4px ${color}40, 0 4px 12px rgba(0,0,0,0.25)` : "0 2px 8px rgba(0,0,0,0.2)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          cursor: "pointer",
-          transition: "all 0.15s ease",
-        }}
-      >
-        {mover.isPrioritaire && (
-          <Shield style={{ width: size * 0.45, height: size * 0.45, color: "white" }} />
-        )}
-      </div>
-    </AdvancedMarker>
-  );
-}
-
-// ─── Carte interne (accès au contexte Map) ─────────────────────
+// ─── Carte interne avec clustering ────────────────────────────
 
 function MapContent({
   movers,
@@ -69,27 +32,87 @@ function MapContent({
   onSelectMover: (mover: MoverPoint) => void;
 }) {
   const map = useMap();
+  const clustererRef = useRef<MarkerClusterer | null>(null);
+  const markersRef = useRef<Map<string, google.maps.marker.AdvancedMarkerElement>>({} as Map<string, google.maps.marker.AdvancedMarkerElement>);
   const selectedMover = movers.find((m) => m.id === selectedId) ?? null;
 
   // Recentrer la carte sur le déménageur sélectionné
   useEffect(() => {
     if (map && selectedMover) {
       map.panTo({ lat: selectedMover.lat, lng: selectedMover.lng });
-      if (map.getZoom()! < 10) map.setZoom(11);
+      if ((map.getZoom() ?? 0) < 10) map.setZoom(11);
     }
   }, [map, selectedMover]);
 
+  // Initialiser le clusterer
+  useEffect(() => {
+    if (!map) return;
+    if (!clustererRef.current) {
+      clustererRef.current = new MarkerClusterer({
+        map,
+        algorithm: new SuperClusterAlgorithm({ radius: 60, maxZoom: 11 }),
+        renderer: {
+          render: ({ count, position }) => {
+            const hasPriority = false;
+            const el = document.createElement("div");
+            el.style.cssText = `
+              width:${count > 100 ? 52 : count > 20 ? 44 : 36}px;
+              height:${count > 100 ? 52 : count > 20 ? 44 : 36}px;
+              border-radius:50%;
+              background:${hasPriority ? "#0EA5A6" : "#374151"};
+              border:2px solid white;
+              box-shadow:0 2px 8px rgba(0,0,0,0.25);
+              display:flex;align-items:center;justify-content:center;
+              color:white;font-weight:700;
+              font-size:${count > 100 ? 13 : 12}px;
+              font-family:system-ui,sans-serif;
+              cursor:pointer;
+            `;
+            el.textContent = count > 999 ? "999+" : String(count);
+            const marker = new google.maps.marker.AdvancedMarkerElement({ position, content: el });
+            return marker;
+          },
+        },
+      });
+    }
+    return () => {
+      clustererRef.current?.clearMarkers();
+    };
+  }, [map]);
+
+  // Synchroniser les marqueurs avec le clusterer
+  useEffect(() => {
+    if (!clustererRef.current || !map) return;
+    clustererRef.current.clearMarkers();
+    const newMarkers: google.maps.marker.AdvancedMarkerElement[] = [];
+    movers.forEach((mover) => {
+      const color = mover.isPrioritaire ? "#0EA5A6" : "#6B7280";
+      const isSelected = mover.id === selectedId;
+      const size = isSelected ? 36 : mover.isPrioritaire ? 26 : 20;
+      const el = document.createElement("div");
+      el.style.cssText = `
+        width:${size}px;height:${size}px;border-radius:50%;
+        background:${color};border:${isSelected ? 3 : 2}px solid white;
+        box-shadow:${isSelected ? `0 0 0 3px ${color}40,0 4px 12px rgba(0,0,0,0.25)` : "0 2px 6px rgba(0,0,0,0.2)"};
+        cursor:pointer;display:flex;align-items:center;justify-content:center;
+        transition:all 0.15s;
+      `;
+      if (mover.isPrioritaire) {
+        el.innerHTML = `<svg width="${size * 0.45}" height="${size * 0.45}" viewBox="0 0 24 24" fill="white"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z"/></svg>`;
+      }
+      const marker = new google.maps.marker.AdvancedMarkerElement({
+        position: { lat: mover.lat, lng: mover.lng },
+        content: el,
+        zIndex: isSelected ? 100 : mover.isPrioritaire ? 2 : 1,
+      });
+      marker.addListener("click", () => setSelectedId(mover.id === selectedId ? null : mover.id));
+      newMarkers.push(marker);
+    });
+    clustererRef.current.addMarkers(newMarkers);
+  }, [map, movers, selectedId]); // eslint-disable-line react-hooks/exhaustive-deps
+
   return (
     <>
-      {movers.map((mover) => (
-        <MoverMarker
-          key={mover.id}
-          mover={mover}
-          isSelected={mover.id === selectedId}
-          onClick={() => setSelectedId(mover.id === selectedId ? null : mover.id)}
-        />
-      ))}
-
       {selectedMover && (
         <InfoWindow
           position={{ lat: selectedMover.lat, lng: selectedMover.lng }}
