@@ -134,7 +134,7 @@ function convertPremiumGuideToLongForm(guide: PremiumCityGuideData): CityLongFor
     <div style="margin: 1rem 0;">
       <h5 style="background: #2563eb; color: white; padding: 0.5rem 1rem; border-radius: 4px; margin-bottom: 0.5rem;">${cat.category}</h5>
       <ul>
-        ${cat.items.map(item => `<li>${item}</li>`).join('')}
+        ${(cat.items || []).map(item => `<li>${item}</li>`).join('')}
       </ul>
     </div>
   `).join('');

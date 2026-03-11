@@ -11,6 +11,9 @@ export default function AdminStudioPage() {
   const [generating, setGenerating] = useState(false);
   const [generatedArticle, setGeneratedArticle] = useState("");
   const [showPrompt, setShowPrompt] = useState(false);
+  const [publishing, setPublishing] = useState(false);
+  const [savingDraft, setSavingDraft] = useState(false);
+  const [publishResult, setPublishResult] = useState<{ success: boolean; message: string; url?: string } | null>(null);
 
   const handleGenerate = async () => {
     if (!query.trim()) {
@@ -20,6 +23,7 @@ export default function AdminStudioPage() {
 
     setGenerating(true);
     setGeneratedArticle("");
+    setPublishResult(null);
 
     const fullPrompt = generateArticlePrompt(query, {
       targetWordCount: wordCount,
@@ -58,6 +62,89 @@ Réponse 2...
       setGeneratedArticle(mockArticle);
       setGenerating(false);
     }, 2000);
+  };
+
+  const handlePublish = async () => {
+    if (!generatedArticle) {
+      alert("Aucun article à publier");
+      return;
+    }
+
+    setPublishing(true);
+    setPublishResult(null);
+
+    try {
+      const response = await fetch('/api/admin/articles/publish', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ content: generatedArticle }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setPublishResult({
+          success: true,
+          message: `Article publié avec succès ! (${data.slug})`,
+          url: data.url,
+        });
+      } else {
+        setPublishResult({
+          success: false,
+          message: data.error || 'Erreur lors de la publication',
+        });
+      }
+    } catch (error) {
+      setPublishResult({
+        success: false,
+        message: 'Erreur réseau lors de la publication',
+      });
+    } finally {
+      setPublishing(false);
+    }
+  };
+
+  const handleSaveDraft = async () => {
+    if (!generatedArticle) {
+      alert("Aucun article à sauvegarder");
+      return;
+    }
+
+    setSavingDraft(true);
+    setPublishResult(null);
+
+    try {
+      const response = await fetch('/api/admin/articles/publish', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ content: generatedArticle }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setPublishResult({
+          success: true,
+          message: `Brouillon sauvegardé avec succès ! (${data.slug})`,
+        });
+      } else {
+        setPublishResult({
+          success: false,
+          message: data.error || 'Erreur lors de la sauvegarde',
+        });
+      }
+    } catch (error) {
+      setPublishResult({
+        success: false,
+        message: 'Erreur réseau lors de la sauvegarde',
+      });
+    } finally {
+      setSavingDraft(false);
+    }
   };
 
   return (
@@ -149,15 +236,47 @@ Réponse 2...
                   Article Généré
                 </h2>
                 <div className="flex gap-3">
-                  <button className="flex items-center gap-2 px-5 py-2.5 bg-green-600 text-white rounded-xl font-sans font-600 hover:bg-green-700 transition-all duration-300">
+                  <button 
+                    onClick={handlePublish}
+                    disabled={publishing || savingDraft}
+                    className="flex items-center gap-2 px-5 py-2.5 bg-green-600 text-white rounded-xl font-sans font-600 hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+                  >
                     <CheckCircleIcon className="w-4 h-4" />
-                    Publier
+                    {publishing ? "Publication..." : "Publier"}
                   </button>
-                  <button className="px-5 py-2.5 bg-gray-100 text-v4-text rounded-xl font-sans font-600 hover:bg-gray-200 transition-all duration-300">
-                    Brouillon
+                  <button 
+                    onClick={handleSaveDraft}
+                    disabled={publishing || savingDraft}
+                    className="px-5 py-2.5 bg-gray-100 text-v4-text rounded-xl font-sans font-600 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+                  >
+                    {savingDraft ? "Sauvegarde..." : "Brouillon"}
                   </button>
                 </div>
               </div>
+
+              {publishResult && (
+                <div className={`p-4 rounded-xl ${
+                  publishResult.success 
+                    ? 'bg-green-50 border border-green-200' 
+                    : 'bg-red-50 border border-red-200'
+                }`}>
+                  <p className={`font-sans text-sm ${
+                    publishResult.success ? 'text-green-800' : 'text-red-800'
+                  }`}>
+                    {publishResult.message}
+                  </p>
+                  {publishResult.url && (
+                    <a 
+                      href={publishResult.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-sans text-sm text-accent hover:text-accent-light mt-2 inline-block"
+                    >
+                      Voir l'article →
+                    </a>
+                  )}
+                </div>
+              )}
 
               <div className="bg-v4-bg rounded-xl p-6 max-h-96 overflow-y-auto border border-v4-border-light">
                 <pre className="font-mono text-sm text-v4-text whitespace-pre-wrap">

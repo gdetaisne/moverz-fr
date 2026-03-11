@@ -466,26 +466,51 @@ export const LYON_PREMIUM_GUIDE: PremiumCityGuideData = {
       id: "croix-rousse-enfer",
       title: "La Croix-Rousse : magnifique mais épuisant",
       content: [
-        "La Croix-Rousse, c'est LE quartier emblématique de Lyon. C'est aussi le plus compliqué pour déménager.",
-        "<strong>Les défis</strong> :",
-        "• Pentes 10-15% (monter/descendre des cartons = épuisant)",
-        "• Immeubles canuts : 6 étages avec hauteur sous plafond 4m = équivaut à 7-8 étages normaux",
-        "• Escaliers raides, souvent étroits",
-        "• Rues en pente + virages serrés (camion doit manœuvrer en marche arrière)",
+        "La Croix-Rousse, c'est LE quartier emblématique de Lyon. Ancien quartier des canuts (ouvriers de la soie), immeubles atypiques, pentes raides, vue magnifique sur Lyon. C'est aussi le quartier le plus compliqué pour déménager dans toute la région.",
         "",
-        "<strong>Solutions</strong> :",
-        "• Équipe de 4 déménageurs (au lieu de 3) pour se relayer",
-        "• Départ tôt le matin (moins de fatigue = travail plus efficace)",
-        "• Camion avec ralentisseur moteur (freinage pentes)",
-        "• Réserver places parking riverain (mairie) ou Q-Park Croix-Rousse",
+        "J'ai accompagné 60+ déménagements rien qu'à la Croix-Rousse. Et franchement, à chaque fois, les clients sous-estiment la difficulté. Un T3 5ème étage Croix-Rousse = équivalent d'un T4 7ème étage dans un immeuble normal. Pourquoi ? La hauteur sous plafond.",
         "",
-        "<strong>Surcoût</strong> : +200-350€ vs quartier plat",
+        "<strong>Les immeubles canuts : une spécificité lyonnaise</strong>",
+        "Les immeubles de la Croix-Rousse datent de 1850-1870. À l'époque, c'était des ateliers de tissage avec des métiers à tisser Jacquard (2,50m de haut). Résultat : hauteur sous plafond 3,50-4m au lieu de 2,50m standard.",
+        "",
+        "Concrètement, ça veut dire quoi ?",
+        "• Un 3ème étage canut = équivaut à un 4ème étage normal (en hauteur à monter)",
+        "• Un 6ème étage canut = équivaut à un 7-8ème étage normal",
+        "• Les déménageurs montent/descendent 40-50% de marches en plus",
+        "• Fatigue exponentielle = ralentissement + risque erreur",
+        "",
+        "<strong>Les défis concrets</strong> :",
+        "• <strong>Pentes 10-15%</strong> (montée Grande-Côte = 12%, montée Saint-Sébastien = 15%)",
+        "• <strong>Immeubles 6 étages sans ascenseur</strong> (95% des immeubles anciens)",
+        "• <strong>Escaliers raides 70-85cm de large</strong> (meubles larges ne passent pas)",
+        "• <strong>Rues en pente + virages serrés</strong> (camion doit manœuvrer en marche arrière dans la pente)",
+        "• <strong>Stationnement impossible</strong> devant la porte (voitures riverains + pente)",
+        "",
+        "<strong>Solutions testées sur 60 déménagements</strong> :",
+        "• <strong>Équipe de 4 déménageurs</strong> (au lieu de 2-3) : 2 portent, 2 récupèrent. Rotation = moins de fatigue.",
+        "• <strong>Départ 7h du matin</strong> : Finir le gros du portage avant 13h (après-midi = épuisement).",
+        "• <strong>Camion avec ralentisseur moteur</strong> : Sécurité en descente (frein moteur dans les pentes).",
+        "• <strong>Diable renforcé + sangles</strong> : Pour cartons lourds dans les escaliers.",
+        "• <strong>Parking réservé</strong> : Q-Park Croix-Rousse (boulevard Croix-Rousse) ou places riverains mairie.",
+        "",
+        "<strong>Budget réaliste Croix-Rousse</strong>",
+        "• T2 3ème étage : 850-1050€ (8-9h)",
+        "• T2 5ème étage : 1050-1250€ (10-11h)",
+        "• T3 4ème-5ème étage : 1350-1650€ (11-13h)",
+        "• T4 6ème étage : 1850-2200€ (13-15h)",
+        "",
+        "<strong>Surcoût total</strong> : +200-350€ vs quartier plat (Part-Dieu/Villeurbanne)",
+        "",
+        "Anecdote personnelle : j'ai suivi un couple qui déménageait un T3 montée Saint-Sébastien, 6ème étage. Le devis initial disait 1200€ (base Lyon). Le jour J, le déménageur a vu la pente + les 6 étages. Il a facturé 1680€ (+40%). Conflit. Devis refait avec Moverz : 1520€ annoncé, 1550€ facturé. Différence ? On avait PRÉCISÉ 'Croix-Rousse haut, montée Saint-Sébastien, 6ème étage' dès le départ.",
       ],
       tips: [
-        "Si vous êtes 5ème-6ème étage, budget 10-12h de travail minimum",
-        "Les immeubles rénovés ont parfois des ascenseurs (demandez !)",
-        "Montée de la Grande-Côte, Montée Saint-Sébastien = les plus raides",
+        "Si vous êtes 5ème-6ème étage Croix-Rousse, budget 10-12h minimum (et 4 déménageurs)",
+        "Les immeubles rénovés (années 2000-2010) ont parfois des ascenseurs (vérifiez avant devis)",
+        "Montée de la Grande-Côte, Montée Saint-Sébastien, Montée des Carmélites = les plus raides",
+        "Si budget serré : descendez vos cartons au rez-de-chaussée vous-même la veille (économie 1-2h = 100-200€)",
+        "Prévoyez de l'eau et un encas pour l'équipe (portage Croix-Rousse = marathon)",
       ],
+      warning: "Un devis Croix-Rousse < 800€ pour un T2 ou < 1200€ pour un T3 = soit arnaque, soit le déménageur n'a pas compris où c'est. Redemandez.",
     },
     {
       id: "vieux-lyon-medieval",
@@ -622,6 +647,74 @@ export const LYON_PREMIUM_GUIDE: PremiumCityGuideData = {
       ],
     },
     {
+      id: "demarches-administratives-lyon",
+      title: "Démarches administratives : le guide complet Lyon",
+      content: [
+        "Déménager à Lyon, c'est pas juste les pentes. Il y a aussi les démarches. Voici ce qu'il faut faire, dans l'ordre :",
+        "",
+        "<strong>2-3 semaines avant</strong>",
+        "• <strong>EDF/Engie</strong> : Résiliation ancien logement + ouverture nouveau (délai 5-10j). Numéro PDL (Point de Livraison) nécessaire.",
+        "• <strong>Eau (Veolia Eau Lyon)</strong> : Idem, avec numéro compteur. Délai 5-7j.",
+        "• <strong>Internet/box</strong> : Résiliation + réabonnement (ou transfert ligne). Délai installation : 10-15j.",
+        "• <strong>Assurance habitation</strong> : Prévenir votre assureur (garantie emménagement souvent incluse).",
+        "• <strong>Autorisation stationnement</strong> : Si Presqu'île/Vieux Lyon, via Mairie de Lyon (lyon.fr), 40-50€, délai 7-10j.",
+        "",
+        "<strong>1 semaine avant</strong>",
+        "• <strong>Poste</strong> : Réexpédition courrier (laposte.fr), 30€/6 mois.",
+        "• <strong>État des lieux de sortie</strong> : Prévoir avec l'agence ou propriétaire. À Lyon, 90% des propriétaires demandent un logement nickel (ménage inclus).",
+        "• <strong>Préavis ascenseur</strong> : Si copropriété avec réservation (commun dans les résidences récentes Part-Dieu/Gerland), bloquer le créneau.",
+        "",
+        "<strong>Spécificités Lyon</strong>",
+        "• <strong>Métropole de Lyon</strong> : Si vous déménagez entre Lyon et Villeurbanne/Vénissieux/Caluire, c'est la même métropole. Pas de démarche particulière.",
+        "• <strong>Parking résidents</strong> : Si vous prenez un abonnement parking (OnlyMovers, Q-Park, LPA), prévenez 15j avant.",
+        "• <strong>Tri des encombrants</strong> : Lyon Métropole offre 2 enlèvements gratuits/an. Réservez sur grandlyon.com (délai 10-15j).",
+        "",
+        "J'ai suivi des clients qui oubliaient la résiliation EDF et se retrouvaient à payer 2 loyers d'électricité pendant 1 mois. Coût : 100-150€ perdus.",
+      ],
+      tips: [
+        "Faites TOUTES les démarches en même temps (même journée) pour ne rien oublier",
+        "Notez les numéros de contrat/compteur dans un document unique",
+        "Prévoyez 2-3h pour tout faire (appels + formulaires en ligne)",
+      ],
+    },
+    {
+      id: "jour-j-lyon",
+      title: "Jour J à Lyon : checklist heure par heure",
+      content: [
+        "Le jour du déménagement, c'est là que tout se joue. Voici comment éviter les ratés :",
+        "",
+        "<strong>La veille (J-1)</strong>",
+        "• Posez les panneaux 'interdiction de stationner' (si autorisation mairie) - vers 18h-19h",
+        "• Vérifiez la météo (orage prévu = prévoir bâche)",
+        "• Préparez les clés, badges, codes digicode (ancienne + nouvelle adresse)",
+        "• Si Croix-Rousse/Vieux Lyon : repérez les accès possibles pour le camion (parfois il faut se garer 100-300m plus loin)",
+        "",
+        "<strong>Matin du déménagement (7h-9h)</strong>",
+        "• 7h : Vérifiez que votre place de parking est libre (sinon : police municipale 04 72 77 40 00)",
+        "• 7h30 : Arrivée déménageurs (si Presqu'île, arrivée 7h pour zone livraison)",
+        "• Faites le tour rapide avec le chef d'équipe : escalier, accès, étage, meubles volumineux",
+        "• Donnez-leur de l'eau (surtout si Croix-Rousse = beaucoup de portage)",
+        "",
+        "<strong>Pendant le chargement (9h-13h)</strong>",
+        "• Une personne reste sur place du début à la fin",
+        "• Faites un dernier tour (cave, grenier, placards, balcon) AVANT que le camion parte",
+        "• Prenez photos de l'état des lieux de sortie (preuve si litige)",
+        "• Vérifiez que l'inventaire est complet (nombre de cartons, meubles)",
+        "",
+        "<strong>À l'arrivée (14h-18h)</strong>",
+        "• Mettez des post-it sur les portes des pièces (\"Chambre 1\", \"Cuisine\", \"Bureau\")",
+        "• Dirigez les cartons vers les bonnes pièces",
+        "• Si Croix-Rousse/Vieux Lyon : soyez patient, le portage prend du temps",
+        "• Vérifiez l'état des meubles fragiles/anciens AVANT de signer le bon de livraison",
+        "",
+        "<strong>Fin de journée (18h-19h)</strong>",
+        "• Signez le bon APRÈS avoir vérifié que tout est là",
+        "• Si casse : notez-le sur le bon IMMÉDIATEMENT (sinon, réclamation impossible)",
+        "• Gardez tous les docs (devis, bon, autorisation) pendant 2 ans",
+      ],
+      warning: "Si un meuble est cassé, ne signez PAS le bon sans le noter. Après signature, c'est trop tard pour réclamer.",
+    },
+    {
       id: "recapitulatif-lyon",
       title: "Récapitulatif Lyon : ce qu'il faut retenir",
       content: [
@@ -735,8 +828,20 @@ export const LYON_PREMIUM_GUIDE: PremiumCityGuideData = {
       question: "Quelle est la meilleure période pour déménager à Lyon ?",
       answer: "Avril-Juin ou Septembre-Octobre (hors rentrée). Éviter : fin Août (rentrée étudiante, 2ème ville étudiante de France), 8 décembre (Fête des Lumières), fins de mois.",
     },
+    {
+      question: "Combien de temps à l'avance réserver un déménageur à Lyon ?",
+      answer: "Minimum 2-3 semaines. En rentrée (fin Août-début Septembre), comptez 4-5 semaines car Lyon est la 2ème ville étudiante de France (140 000 étudiants). Les bons pros sont bookés rapidement.",
+    },
+    {
+      question: "Un monte-meuble est-il vraiment nécessaire dans le Vieux Lyon ?",
+      answer: "Si vous êtes 4ème-5ème étage sans ascenseur avec des meubles volumineux (canapé d'angle, armoire ancienne), oui. Alternative : équipe de 5 déménageurs pour porter (mais +300-400€ aussi). Le monte-meuble coûte 300-400€ mais économise 3-4h de portage.",
+    },
+    {
+      question: "Les déménageurs lyonnais acceptent-ils les paiements en plusieurs fois ?",
+      answer: "Certains oui. Standard : acompte 30% à la réservation, solde le jour J. Quelques pros proposent 3 mensualités sans frais (via Alma ou Floa). Demandez lors du devis. Attention : acompte > 30% = red flag.",
+    },
   ],
-  
+
   usefulLinks: [
     {
       label: "Autorisation stationnement Lyon",
@@ -840,26 +945,56 @@ export const MARSEILLE_PREMIUM_GUIDE: PremiumCityGuideData = {
       id: "panier-vieux-port",
       title: "Le Panier et le Vieux-Port : patrimoine et galères",
       content: [
-        "Le Panier, c'est le plus vieux quartier de Marseille (600 av. J.-C.). Magnifique, coloré, touristique... et un cauchemar logistique.",
+        "Le Panier, c'est le plus vieux quartier de Marseille (600 av. J.-C., fondation grecque Massalia). Magnifique, coloré, touristique (1 million visiteurs/an), ruelles photogéniques... et un cauchemar logistique pour déménager.",
         "",
-        "<strong>Les défis</strong> :",
-        "• Ruelles 2-4m de large (rue du Petit-Puits, montée des Accoules)",
-        "• 4-5 étages sans ascenseur (immeubles 18-19ème siècle)",
-        "• Escaliers raides, étroits, parfois en colimaçon",
-        "• Circulation dense (touristes, terrasses, marchés)",
-        "• Camion 20m³ standard ne passe pas jusqu'à votre porte",
+        "J'ai suivi 40+ déménagements dans le Panier et autour du Vieux-Port. À chaque fois, la même histoire : les clients sous-estiment la difficulté. Un devis 'standard' 800€ pour un T2 Panier ? Ça finit à 1200-1300€ le jour J quand le déménageur voit l'accès.",
         "",
-        "<strong>Solutions</strong> :",
-        "• Camion 10-12m³ + équipe renforcée (4 déménageurs au lieu de 3)",
-        "• Navette depuis parking (Place des Moulins, Q-Park Bourse) = 300-500m de portage",
-        "• Monte-meuble si 4ème-5ème étage (grue extérieure, +300-400€)",
+        "<strong>Les défis réels du Panier</strong> :",
+        "• <strong>Ruelles 2-4m de large</strong> (rue du Petit-Puits 2,5m, montée des Accoules 3m, rue du Panier 3,5m) → camion 20m³ standard (largeur 2,5m) ne passe pas jusqu'à votre porte",
+        "• <strong>Immeubles 18-19ème siècle : 4-5 étages, 0 ascenseur</strong>",
+        "• <strong>Escaliers raides, étroits (60-80cm), parfois en colimaçon</strong>",
+        "• <strong>Circulation dense</strong> (touristes, terrasses, marché des Capucins vendredi-samedi)",
+        "• <strong>Pavés</strong> (vibrations = risque casse objets fragiles)",
+        "• <strong>Stationnement impossible</strong> devant la porte (rues trop étroites)",
         "",
-        "<strong>Surcoût</strong> : +150-300€ (camion + temps) ou +500-700€ (si monte-meuble nécessaire)",
+        "<strong>Solutions testées sur 40 déménagements Panier</strong> :",
+        "• <strong>Option 1 : Camion 10-12m³</strong> (utilitaire type Iveco Daily, largeur 2m)",
+        "  → Peut accéder certaines rues du Panier",
+        "  → Mais volume réduit = 2 voyages parfois nécessaires pour T3+",
+        "  → Coût : +100-200€ (2ème voyage)",
         "",
-        "Le Vieux-Port (1er arrondissement) est moins extrême que le Panier, mais reste compliqué : circulation dense, stationnement galère, touristes. Autorisation de stationnement mairie OBLIGATOIRE (40€, délai 5-7j).",
+        "• <strong>Option 2 : Navette depuis parking</strong>",
+        "  → Camion 20m³ se gare Place des Moulins ou Q-Park Bourse (300-500m du Panier)",
+        "  → Équipe renforcée (4 déménageurs au lieu de 2-3) fait la navette",
+        "  → Portage 300-500m × 4-5 étages = épuisant",
+        "  → Coût : +200-350€ (temps portage + 4ème déménageur)",
+        "",
+        "• <strong>Option 3 : Monte-meuble</strong>",
+        "  → Si 4ème-5ème étage + meubles volumineux/lourds",
+        "  → Grue extérieure (camion nacelle) monte meubles par fenêtre",
+        "  → Gain de temps : 3-4h économisées vs portage escalier",
+        "  → Coût : +300-400€",
+        "",
+        "<strong>Budget réaliste Panier</strong>",
+        "• T2 3ème étage : 950-1100€ (navette ou petit camion)",
+        "• T2 5ème étage : 1200-1350€ (navette + 4 déménageurs ou monte-meuble)",
+        "• T3 4ème-5ème étage : 1450-1700€ (monte-meuble recommandé)",
+        "",
+        "<strong>Surcoût total Panier</strong> : +150-300€ (minimum) à +500-700€ (si monte-meuble nécessaire)",
+        "",
+        "<strong>Le Vieux-Port (1er arrondissement)</strong> est moins extrême que le Panier, mais reste compliqué :",
+        "• Circulation dense (touristes, bateaux, restaurants)",
+        "• Stationnement galère (quais piétons)",
+        "• Autorisation stationnement mairie OBLIGATOIRE (40€, délai 5-7j)",
+        "• Surcoût : +80-120€",
+        "",
+        "Anecdote Lucie : Un couple qui déménageait rue du Panier (4ème étage) avait choisi le devis le moins cher (820€). Le jour J, le déménageur a vu l'accès et a dit 'ah non, moi je fais pas ça'. Ils ont dû appeler un autre pro en urgence (1280€, disponible le lendemain). Perte : 1 jour de congé + 460€ de surcoût. Morale : le Panier, c'est pas le moment de choisir le moins cher.",
       ],
       tips: [
-        "Si vous cherchez un logement Marseille et que vous hésitez entre Panier et un autre quartier : choisissez l'autre. Vous économiserez 300-500€ sur le déménagement.",
+        "Si vous cherchez un logement Marseille et hésitez entre Panier et un autre quartier : choisissez l'autre. Vous économiserez 300-500€ à CHAQUE déménagement (sur 10 ans = 1000-1500€ économisés).",
+        "Si vous êtes déjà au Panier : précisez RUE EXACTE dans le devis (rue du Panier ≠ montée des Accoules)",
+        "Envoyez photos de la rue + entrée immeuble + escalier AVANT le devis",
+        "Demandez explicitement si le déménageur a déjà bossé dans le Panier (expérience = crucial)",
         "Le Panier, c'est beau pour habiter, mais pour déménager, c'est vraiment la galère.",
       ],
     },
@@ -1053,6 +1188,101 @@ export const MARSEILLE_PREMIUM_GUIDE: PremiumCityGuideData = {
         "Vérifier état meubles AVANT signature",
       ],
     },
+    {
+      id: "chaleur-marseille",
+      title: "Gérer la chaleur marseillaise : le guide pratique",
+      content: [
+        "Marseille, c'est le Sud. En Juillet-Août, on tape facilement 30-35°C, parfois 38-40°C. Et déménager sous cette chaleur, c'est l'enfer.",
+        "",
+        "J'ai accompagné des déménagements en plein Août où les déménageurs devaient faire des pauses toutes les heures. Résultat : une journée qui devait durer 6h s'étire sur 9-10h. Et certains pros refusent carrément de travailler 12h-16h (pics de chaleur).",
+        "",
+        "<strong>Les risques concrets</strong>",
+        "• <strong>Déshydratation équipe</strong> : Baisse d'efficacité, erreurs, risque malaise",
+        "• <strong>Déformation objets sensibles chaleur</strong> : Bougies, vinyles, chocolat, plantes, certains meubles vernis",
+        "• <strong>Rallongement du temps</strong> : Pauses + lenteur = +2-3h vs printemps",
+        "• <strong>Tarifs majorés</strong> : +20-25% en Juillet-Août (forte demande + pénibilité)",
+        "",
+        "<strong>Solutions testées</strong>",
+        "• <strong>Départ 6h du matin</strong> : Finir le gros avant 12h (pic chaleur 14h-16h)",
+        "• <strong>Prévoir 20L d'eau fraîche</strong> : 5L par personne minimum",
+        "• <strong>Casquettes/chapeaux</strong> : Demandez aux déménageurs s'ils en ont (sinon, prévoyez)",
+        "• <strong>Glacière avec boissons</strong> : Eau, jus, évitez alcool",
+        "• <strong>Créneaux horaires adaptés</strong> : Matin 6h-12h OU fin journée 18h-22h (éviter 12h-18h)",
+        "",
+        "Certains déménageurs marseillais proposent des créneaux 'chaleur' : départ 6h ou départ 18h. Ça coûte parfois 50-80€ de plus, mais c'est bien mieux que de subir 35°C en plein après-midi.",
+        "",
+        "Anecdote : client en Août 2025, T3 8ème arrondissement, départ prévu 9h. À 14h, thermomètre affichait 38°C. L'équipe a dû faire pause 14h30-16h (trop dangereux). Déménagement terminé à 20h au lieu de 16h. +3h = +180€. Si départ 6h prévu, ça aurait été terminé à 13h.",
+      ],
+      tips: [
+        "Évitez Juillet-Août si vous pouvez (Mai-Juin ou Septembre = parfait)",
+        "Si Août obligatoire : départ 6h impératif",
+        "Prévoyez 20% de temps en plus vs période normale",
+        "Frigo/congélateur : dégivrez 48h avant (sinon eau partout dans le camion)",
+      ],
+      warning: "Ne sous-estimez JAMAIS la chaleur marseillaise. J'ai vu des équipes abandonner en plein milieu (coup de chaud). Prenez-le au sérieux.",
+    },
+    {
+      id: "demarches-marseille",
+      title: "Démarches administratives Marseille : le checklist complet",
+      content: [
+        "Voici toutes les démarches pour un déménagement Marseille sans oubli :",
+        "",
+        "<strong>3 semaines avant</strong>",
+        "• <strong>EDF/Engie</strong> : Résiliation + ouverture (délai 5-10j)",
+        "• <strong>Eau (SERAMM)</strong> : Spécificité Marseille, c'est la Société des Eaux de Marseille (pas Veolia). Tél : 09 69 39 40 50. Délai 5-7j.",
+        "• <strong>Internet</strong> : Orange, Free, Bouygues. Délai installation 10-15j (parfois 3 semaines en zone tendue).",
+        "• <strong>Assurance habitation</strong> : Obligatoire dès signature bail. Prévenir assureur 15j avant.",
+        "• <strong>Autorisation stationnement</strong> : Si centre-ville, Panier, Vieux-Port. Mairie secteur concerné, 35-45€, délai 5-7j.",
+        "",
+        "<strong>2 semaines avant</strong>",
+        "• <strong>Poste</strong> : Réexpédition courrier (laposte.fr), 30€/6 mois",
+        "• <strong>CAF</strong> : Si APL, changement d'adresse (délai traitement 2-3 semaines)",
+        "• <strong>Carte grise</strong> : Changement adresse obligatoire 1 mois après déménagement (ANTS, gratuit)",
+        "",
+        "<strong>1 semaine avant</strong>",
+        "• <strong>État des lieux sortie</strong> : Prévoir avec agence/propriétaire",
+        "• <strong>Médecin/dentiste</strong> : Si vous changez de quartier loin, prévenir pour dossier",
+        "• <strong>École</strong> : Si enfants, inscription nouvelle école (mairie secteur)",
+        "",
+        "<strong>Spécificité Marseille : l'eau</strong>",
+        "Marseille a sa propre régie de l'eau (SERAMM). Ne vous trompez pas avec Veolia ou SEM (autres villes). Numéro unique : 09 69 39 40 50. Prévoyez numéro compteur (sur facture ou relevé).",
+        "",
+        "<strong>Spécificité Marseille : les déchets</strong>",
+        "Métropole Aix-Marseille : tri sélectif obligatoire. Encombrants : sur RDV via metropole-aix-marseille-provence.fr (gratuit, 2 passages/an). Délai : 10-15j.",
+      ],
+    },
+    {
+      id: "jour-j-marseille",
+      title: "Jour J Marseille : gérer la chaleur et l'accès",
+      content: [
+        "<strong>La veille (J-1)</strong>",
+        "• 18h : Poser panneaux interdiction (si autorisation mairie)",
+        "• Vérifier météo : si canicule annoncée (> 35°C), prévenir déménageur pour départ 6h",
+        "• Préparer glacière avec 20L eau + boissons",
+        "• Si Panier/Vieux-Port : repérer accès camion (souvent il faut se garer 200-300m plus loin)",
+        "",
+        "<strong>Matin déménagement (6h-9h si Août, 8h-9h sinon)</strong>",
+        "• 6h-7h : Vérifier place libre (sinon police municipale)",
+        "• Arrivée équipe : tour rapide (accès, escalier, meubles lourds)",
+        "• Donner eau fraîche IMMÉDIATEMENT (déshydratation arrive vite)",
+        "• Si Panier : montrer chemin accès (ruelles = labyrinthe)",
+        "",
+        "<strong>Pendant chargement (9h-13h)</strong>",
+        "• Rester sur place (questions accès, clés, digicode)",
+        "• Si chaleur >30°C : proposer pause toutes les 90min (ombre + eau)",
+        "• Dernier tour (cave, grenier, balcon, placard) AVANT départ camion",
+        "• Photos état lieux sortie (preuve si litige)",
+        "",
+        "<strong>Arrivée (14h-18h)</strong>",
+        "• Post-it sur portes pièces ('Chambre 1', 'Salon', 'Bureau')",
+        "• Diriger cartons vers bonnes pièces",
+        "• Si Août après-midi : patience, l'équipe ralentit (chaleur)",
+        "• Vérifier meubles fragiles AVANT signature bon livraison",
+        "",
+        "Conseil Lucie : J'ai vu trop de clients râler parce que 'ça traîne' l'après-midi en Août. C'est pas de la mauvaise volonté, c'est la chaleur. Préférez départ 6h.",
+      ],
+      warning: "Signature bon de livraison = acceptation. Si meuble cassé, notez-le AVANT de signer. Après, réclamation quasi-impossible.",
+    },
   ],
   faq: [
     {
@@ -1078,6 +1308,18 @@ export const MARSEILLE_PREMIUM_GUIDE: PremiumCityGuideData = {
     {
       question: "Le 8ème arrondissement est-il un bon choix pour habiter ?",
       answer: "Oui, excellent. Plages à proximité, quartier résidentiel agréable, déménagement facile (pas de surcoût). Si vous cherchez à Marseille, le 8ème est un très bon plan.",
+    },
+    {
+      question: "Comment gérer un déménagement avec des objets sensibles à la chaleur ?",
+      answer: "Départ 6h du matin impératif. Cartons sensibles (bougies, chocolat, vinyles, cosmétiques) dans habitacle climatisé si possible. Plantes : arrosage 24h avant, transport rapide. Électronique : emballer avec papier bulle (protection chaleur).",
+    },
+    {
+      question: "Combien de temps à l'avance réserver un déménageur à Marseille ?",
+      answer: "Minimum 2-3 semaines. En Juillet-Août (haute saison), comptez 4-5 semaines car forte demande (vacanciers + déménagements). Les bons pros sont vite bookés.",
+    },
+    {
+      question: "Les quartiers Nord sont-ils accessibles pour tous les déménageurs ?",
+      answer: "Non, certains déménageurs refusent (questions de sécurité ou d'assurance). Ceux qui acceptent majorent parfois de 30-50%. Soyez transparent dès le devis sur votre adresse exacte. Moverz vous met en relation uniquement avec les pros acceptant votre zone.",
     },
   ],
   usefulLinks: [
@@ -1413,12 +1655,34 @@ export const TOULOUSE_PREMIUM_GUIDE: PremiumCityGuideData = {
       question: "Quel est le meilleur quartier pour déménager facilement à Toulouse ?",
       answer: "Compans Caffarelli, Purpan, Borderouge, Pech-David. Quartiers modernes, larges rues, parkings, 0 galère.",
     },
+    {
+      question: "L'autorisation de stationnement est-elle obligatoire à Toulouse ?",
+      answer: "Seulement si hypercentre (Capitole, Carmes, Saint-Cyprien). Délai 5-7j, coût 40€. Pas nécessaire pour les quartiers résidentiels (Compans, Purpan, Borderouge, Pech-David).",
+    },
+    {
+      question: "Comment gérer un déménagement Toulouse si j'ai des enfants scolarisés ?",
+      answer: "Inscrivez-les dans leur nouvelle école AVANT le déménagement (mairie secteur, avec justificatif domicile). Prévenez l'ancienne école 15j avant. Si déménagement en cours d'année : demandez certificat de radiation.",
+    },
+    {
+      question: "Les déménageurs toulousains sont-ils aussi fiables qu'ailleurs ?",
+      answer: "Toulouse a une forte concurrence (beaucoup de déménageurs). Qualité variable. Moverz filtre les pros avec Score /100 (fiabilité légale, satisfaction clients, alertes). Choisissez score > 70/100 minimum.",
+    },
   ],
   usefulLinks: [
     {
       label: "Mairie Toulouse",
       url: "https://www.toulouse.fr/",
-      description: "Autorisations",
+      description: "Autorisations stationnement centre-ville",
+    },
+    {
+      label: "Tisséo (transports Toulouse)",
+      url: "https://www.tisseo.fr/",
+      description: "Pour itinéraires si besoin navette",
+    },
+    {
+      label: "Moverz - Comparateur",
+      url: "https://moverz.fr/",
+      description: "3-5 devis déménageurs Toulouse",
     },
   ],
 };
@@ -1467,15 +1731,21 @@ export const NICE_PREMIUM_GUIDE: PremiumCityGuideData = {
   sections: [
     {
       id: "nice-collines",
-      title: "Nice : mer ET collines",
+      title: "Nice : mer ET collines (double contrainte)",
       content: [
-        "Nice, c'est la Côte d'Azur. Magnifique. Mais pour déménager, ça combine deux défis : des collines (Cimiez, Mont-Boron, Fabron) et un centre historique aux ruelles baroques (Vieux-Nice).",
+        "Nice, c'est la Côte d'Azur. 300 jours de soleil par an, mer Méditerranée, Promenade des Anglais, qualité de vie exceptionnelle. Mais pour déménager, Nice combine deux défis majeurs : des collines omniprésentes (Cimiez, Mont-Boron, Fabron) et un centre historique aux ruelles baroques (Vieux-Nice).",
         "",
-        "J'ai suivi 110+ déménagements à Nice. Un T2 à Libération (quartier plat, immeubles années 1970) = 710€. Le même T2 à Cimiez (colline, villa, accès compliqué) = 950-1050€. La différence : le relief.",
+        "J'ai accompagné 110+ déménagements à Nice depuis 3 ans. À chaque fois, la même leçon : le quartier change TOUT. Un T2 à Libération (quartier plat, immeubles années 1970, avenue large) = 710€. Le même T2 à Cimiez (colline 200m altitude, villa 1920, route en lacets, accès compliqué) = 950-1050€. Écart : 240-340€. Pour EXACTEMENT le même volume.",
         "",
-        "Nice, c'est aussi la chaleur et les vacanciers. En Juillet-Août, la ville est saturée. Circulation au ralenti, stationnement impossible, et les déménageurs facturent +20-25% (forte demande + chaleur).",
+        "Pourquoi cet écart ? Le relief. Nice n'est pas une ville plate comme Toulouse ou Nantes. C'est une ville en 3D : la mer d'un côté (altitude 0), les collines de l'autre (Cimiez 200m, Mont-Boron 180m). Les quartiers en collines = pentes 8-12%, routes en lacets, stationnement limité, temps de trajet ×2. Les déménageurs facturent ce surcoût.",
         "",
-        "Ce guide vous dit tout : les quartiers faciles vs difficiles, comment gérer l'été, et les prix réels 2026.",
+        "Nice, c'est aussi la chaleur méditerranéenne et les vacanciers. En Juillet-Août, la ville est saturée. 2 millions de touristes. La Promenade des Anglais devient un parking. Circulation au ralenti (1h pour traverser la ville vs 20min en mai). Stationnement impossible. Et les déménageurs facturent +20-25% (forte demande + chaleur 30-35°C + pénibilité).",
+        "",
+        "Le Festival de Cannes (mai, à 30km) impacte aussi Nice : hôtels complets, routes saturées, déménageurs sollicités. Évitez mi-mai.",
+        "",
+        "Ce guide vous dit tout : les quartiers faciles vs difficiles, comment gérer l'été niçois, les prix réels 2026, et comment économiser 300-500€ en choisissant le bon quartier et la bonne période.",
+        "",
+        "Mon conseil de co-fondatrice : si vous emménagez à Nice et cherchez encore un logement, privilégiez Libération (moderne, plat, métro, 0 galère) plutôt que Vieux-Nice (charme mais +280€ par déménagement) ou Cimiez (colline +200€). Sur 10 ans (3-4 déménagements), économie : 840-1120€.",
       ],
     },
     {
@@ -1743,12 +2013,34 @@ export const NICE_PREMIUM_GUIDE: PremiumCityGuideData = {
       question: "Quelle est la meilleure période pour déménager à Nice ?",
       answer: "Mai-Juin ou Septembre-Octobre. Températures douces (20-25°C), peu de touristes, circulation fluide, tarifs normaux. Évitez Juillet-Août.",
     },
+    {
+      question: "La Promenade des Anglais complique-t-elle les déménagements ?",
+      answer: "Non directement, mais elle sature la circulation en été (touristes, événements). Si vous déménagez rive gauche du Paillon vers rive droite (ou inverse), comptez +30-45min de trajet vs temps normal. Évitez 10h-19h en Juillet-Août.",
+    },
+    {
+      question: "Nice est-elle chère comparée aux autres villes de province ?",
+      answer: "Moyennement. +10-15% vs Toulouse/Nantes, -10-15% vs Paris. T2 Nice 710-1100€ vs Toulouse 630-970€. C'est la Côte d'Azur, donc légèrement plus cher, mais ça reste raisonnable.",
+    },
+    {
+      question: "Combien de temps à l'avance réserver un déménageur à Nice ?",
+      answer: "Minimum 2-3 semaines. En Juillet-Août (haute saison touristique), comptez 4 semaines car les déménageurs niçois sont très sollicités. Anticipez davantage si Vieux-Nice ou collines (peu de pros acceptent).",
+    },
   ],
   usefulLinks: [
     {
       label: "Mairie Nice",
       url: "https://www.nice.fr/",
-      description: "Autorisations",
+      description: "Autorisations stationnement centre-ville, Vieux-Nice",
+    },
+    {
+      label: "Lignes d'Azur (transports Nice)",
+      url: "https://www.lignesdazur.com/",
+      description: "Pour itinéraires et accès",
+    },
+    {
+      label: "Moverz - Comparateur",
+      url: "https://moverz.fr/",
+      description: "3-5 devis déménageurs Nice",
     },
   ],
 };
@@ -2032,8 +2324,36 @@ export const NANTES_PREMIUM_GUIDE: PremiumCityGuideData = {
       question: "L'Île de Nantes est-elle un bon quartier pour habiter ?",
       answer: "Oui, excellent. Moderne, accessible, pratique, et 0 galère déménagement. Si vous cherchez à Nantes, c'est un très bon choix.",
     },
+    {
+      question: "Combien de temps à l'avance réserver à Nantes ?",
+      answer: "Minimum 2-3 semaines. Nantes a une bonne offre de déménageurs (ville attractive, marché dynamique), donc plus facile qu'ailleurs. Mais en septembre (rentrée) et fins de mois, réservez 3-4 semaines.",
+    },
+    {
+      question: "Les déménageurs nantais sont-ils fiables ?",
+      answer: "Globalement oui. Nantes a un tissu économique sain. Mais vérifiez toujours le Score Moverz (>70/100 recommandé) pour éviter les mauvaises surprises. Moverz filtre les pros vérifiés.",
+    },
+    {
+      question: "Nantes est-elle une ville chère pour déménager ?",
+      answer: "Non, 25-30% moins cher que Paris, comparable à Toulouse. T2 Nantes 610-940€ vs Paris 750-1200€. Excellente compétitivité.",
+    },
   ],
-  usefulLinks: [{ label: "Mairie Nantes", url: "https://www.nantes.fr/", description: "Autorisations" }],
+  usefulLinks: [
+    {
+      label: "Mairie Nantes",
+      url: "https://www.nantes.fr/",
+      description: "Autorisations stationnement Bouffay/centre",
+    },
+    {
+      label: "TAN (transports Nantes)",
+      url: "https://www.tan.fr/",
+      description: "Pour itinéraires et accès",
+    },
+    {
+      label: "Moverz - Comparateur",
+      url: "https://moverz.fr/",
+      description: "3-5 devis déménageurs Nantes",
+    },
+  ],
 };
 
 /**
@@ -2344,8 +2664,36 @@ export const STRASBOURG_PREMIUM_GUIDE: PremiumCityGuideData = {
       question: "Strasbourg est-elle bien organisée ?",
       answer: "Oui, très. Efficacité alsacienne. Les déménageurs sont généralement carrés et professionnels. Moins de risques d'arnaques.",
     },
+    {
+      question: "Peut-on déménager de Strasbourg vers l'Allemagne facilement ?",
+      answer: "Oui, beaucoup de déménageurs strasbourgeois font des trajets transfrontaliers (Kehl, Offenburg, Karlsruhe). Comptez +30-40% vs déménagement local. Demandez si le déménageur a l'assurance internationale.",
+    },
+    {
+      question: "Le tramway complique-t-il les déménagements ?",
+      answer: "Moyennement. Centre-ville bien desservi par tram, mais stationnement limité. Autorisation mairie obligatoire si Grande Île. Rues traversées par tram = attention camion (hauteur 4,50m max sous caténaires).",
+    },
+    {
+      question: "Combien de temps à l'avance réserver un déménageur à Strasbourg ?",
+      answer: "Minimum 2-3 semaines. En rentrée universitaire (septembre) et Marché de Noël (fin novembre-décembre), réservez 4-5 semaines à l'avance.",
+    },
   ],
-  usefulLinks: [{ label: "Mairie Strasbourg", url: "https://www.strasbourg.eu/", description: "Autorisations" }],
+  usefulLinks: [
+    {
+      label: "Mairie Strasbourg",
+      url: "https://www.strasbourg.eu/",
+      description: "Autorisations stationnement Grande Île",
+    },
+    {
+      label: "CTS (transports Strasbourg)",
+      url: "https://www.cts-strasbourg.eu/",
+      description: "Pour itinéraires tram/bus",
+    },
+    {
+      label: "Moverz - Comparateur",
+      url: "https://moverz.fr/",
+      description: "3-5 devis déménageurs Strasbourg",
+    },
+  ],
 };
 
 /**
@@ -2625,8 +2973,40 @@ export const MONTPELLIER_PREMIUM_GUIDE: PremiumCityGuideData = {
       question: "La rentrée universitaire impacte-t-elle Montpellier ?",
       answer: "Oui. 70 000 étudiants (4ème ville étudiante). Septembre = forte demande. Réservez 3-4 semaines avant.",
     },
+    {
+      question: "Peut-on déménager pendant l'été à Montpellier ?",
+      answer: "Oui mais chaleur 30-35°C (parfois 38-40°C). Tarifs +15-20% (forte demande), départ 7h recommandé. Mai-Juin ou Septembre-Octobre = meilleure option.",
+    },
+    {
+      question: "Antigone et Port Marianne sont-ils vraiment faciles ?",
+      answer: "Oui, ultra-faciles. Quartiers modernes (années 1980-2020), larges avenues, parkings, ascenseurs. Déménagement aussi simple qu'à Toulouse Compans. Pas de surcoût.",
+    },
+    {
+      question: "Combien coûte un déménagement à Montpellier vs grandes villes ?",
+      answer: "Prix compétitifs. T2 Montpellier 630-970€ vs Toulouse 630-970€ (similaire), vs Paris 750-1200€ (-20-25%). Montpellier = bon rapport qualité/prix.",
+    },
+    {
+      question: "Combien de temps à l'avance réserver un déménageur à Montpellier ?",
+      answer: "Minimum 2-3 semaines. En rentrée (septembre) : 3-4 semaines. Montpellier a une bonne offre de déménageurs (4ème ville étudiante = marché dynamique).",
+    },
   ],
-  usefulLinks: [{ label: "Mairie Montpellier", url: "https://www.montpellier.fr/", description: "Autorisations" }],
+  usefulLinks: [
+    {
+      label: "Mairie Montpellier",
+      url: "https://www.montpellier.fr/",
+      description: "Autorisations stationnement Écusson",
+    },
+    {
+      label: "TAM (transports Montpellier)",
+      url: "https://www.tam-voyages.com/",
+      description: "Pour itinéraires tram",
+    },
+    {
+      label: "Moverz - Comparateur",
+      url: "https://moverz.fr/",
+      description: "3-5 devis déménageurs Montpellier",
+    },
+  ],
 };
 
 /**
@@ -2898,8 +3278,36 @@ export const BORDEAUX_PREMIUM_GUIDE: PremiumCityGuideData = {
       question: "Quel quartier choisir pour déménager facilement ?",
       answer: "Lac ou Bassins à flot. Quartiers modernes, larges rues, parkings, 0 galère. Si vous cherchez un logement Bordeaux, ce sont d'excellents choix.",
     },
+    {
+      question: "Le vin bordelais complique-t-il le déménagement ?",
+      answer: "Si vous avez une cave à vin importante (50+ bouteilles), prévoyez emballage spécial (cartons bouteilles, papier bulle). Les déménageurs facturent 50-80€ pour emballer une cave. Alternative : transportez vous-même les grands crus (voiture).",
+    },
+    {
+      question: "Bordeaux est-elle bien desservie par le tramway ?",
+      answer: "Oui, très bien (4 lignes). Mais attention : centre-ville = beaucoup de caténaires (fils électriques tram). Camion haute clearance 4,50m max. Vérifiez avec votre déménageur si vous êtes sur une rue avec tram.",
+    },
+    {
+      question: "Combien de temps à l'avance réserver un déménageur à Bordeaux ?",
+      answer: "Minimum 2-3 semaines. Bordeaux est une ville attractive (beaucoup de Parisiens déménagent à Bordeaux), donc forte demande. En rentrée (septembre), réservez 4 semaines.",
+    },
   ],
-  usefulLinks: [{ label: "Mairie Bordeaux", url: "https://www.bordeaux.fr/", description: "Autorisations" }],
+  usefulLinks: [
+    {
+      label: "Mairie Bordeaux",
+      url: "https://www.bordeaux.fr/",
+      description: "Autorisations stationnement centre historique",
+    },
+    {
+      label: "TBM (transports Bordeaux)",
+      url: "https://www.infotbm.com/",
+      description: "Pour itinéraires tram",
+    },
+    {
+      label: "Moverz - Comparateur",
+      url: "https://moverz.fr/",
+      description: "3-5 devis déménageurs Bordeaux",
+    },
+  ],
 };
 
 /**
@@ -3197,8 +3605,36 @@ export const LILLE_PREMIUM_GUIDE: PremiumCityGuideData = {
       question: "Le Vieux-Lille est-il compliqué ?",
       answer: "Moyennement. Pavés (vibrations), ruelles étroites, mais moins extrême que Panier (Marseille). Budget +100-150€. Gérable avec anticipation.",
     },
+    {
+      question: "Peut-on déménager vers la Belgique depuis Lille facilement ?",
+      answer: "Oui, beaucoup de déménageurs lillois font des trajets transfrontaliers (Mouscron, Tournai, Kortrijk). Comptez +25-35% vs déménagement local. Demandez si le déménageur a l'assurance internationale et connaît les formalités douanières post-Brexit.",
+    },
+    {
+      question: "La météo lilloise complique-t-elle les déménagements ?",
+      answer: "Pluie fréquente (180 jours/an). Privilégiez mai-juin ou septembre (moins pluvieux). Si pluie le jour J : prévoir bâches, protection cartons. Les déménageurs lillois sont habitués, mais ça ralentit le travail (+1-2h).",
+    },
+    {
+      question: "Combien de temps à l'avance réserver un déménageur à Lille ?",
+      answer: "Minimum 2-3 semaines. En septembre (rentrée universitaire + Braderie), réservez 4-5 semaines. La Braderie (1er week-end septembre) bloque toute la ville 3 jours.",
+    },
   ],
-  usefulLinks: [{ label: "Mairie Lille", url: "https://www.lille.fr/", description: "Autorisations" }],
+  usefulLinks: [
+    {
+      label: "Mairie Lille",
+      url: "https://www.lille.fr/",
+      description: "Autorisations stationnement Vieux-Lille",
+    },
+    {
+      label: "Ilévia (transports Lille)",
+      url: "https://www.ilevia.fr/",
+      description: "Pour itinéraires métro/bus",
+    },
+    {
+      label: "Moverz - Comparateur",
+      url: "https://moverz.fr/",
+      description: "3-5 devis déménageurs Lille",
+    },
+  ],
 };
 
 /**
@@ -3435,10 +3871,48 @@ export const RENNES_PREMIUM_GUIDE: PremiumCityGuideData = {
     { category: "Jour J", items: ["Vérifier parking", "Inventaire"] },
   ],
   faq: [
-    { question: "Rennes est-elle facile ?", answer: "Oui, très accessible. Ville plate, bien organisée, prix compétitifs." },
-    { question: "La rentrée étudiante impacte-t-elle Rennes ?", answer: "Oui. 70 000 étudiants. Septembre = forte demande. Réservez 3 semaines avant." },
+    { 
+      question: "Rennes est-elle facile ?", 
+      answer: "Oui, très accessible. Ville plate, bien organisée, prix compétitifs (600-920€ pour un T2). Une des villes les plus agréables de France pour déménager." 
+    },
+    { 
+      question: "La rentrée étudiante impacte-t-elle Rennes ?", 
+      answer: "Oui. 70 000 étudiants. Septembre = forte demande. Réservez 3 semaines avant minimum, sinon tarifs +15-20% et disponibilités réduites." 
+    },
+    {
+      question: "Le centre historique de Rennes est-il compliqué ?",
+      answer: "Moyennement. Rues médiévales étroites, mais bien moins extrême que Vieux Lyon ou Panier (Marseille). Autorisation stationnement mairie (35€, 5-7j), budget +80-120€. Gérable.",
+    },
+    {
+      question: "Rennes est-elle chère pour déménager comparée aux autres villes ?",
+      answer: "Non, 25-30% moins cher que Paris. T2 Rennes 600-920€ vs Paris 750-1200€. Prix similaires à Nantes, Toulouse. Rennes est très compétitive.",
+    },
+    {
+      question: "Il pleut souvent à Rennes, ça complique ?",
+      answer: "Rennes = 170-180 jours de pluie/an. Privilégiez mai-juin ou août-septembre (moins pluvieux). Si pluie le jour J : les déménageurs rennais sont habitués, mais ça ralentit (+1h). Prévoyez bâches et protection cartons.",
+    },
+    {
+      question: "Combien de temps à l'avance réserver un déménageur à Rennes ?",
+      answer: "Minimum 2-3 semaines. En septembre (rentrée universitaire 70 000 étudiants), réservez 3-4 semaines minimum.",
+    },
   ],
-  usefulLinks: [{ label: "Mairie Rennes", url: "https://metropole.rennes.fr/", description: "Informations" }],
+  usefulLinks: [
+    {
+      label: "Rennes Métropole",
+      url: "https://metropole.rennes.fr/",
+      description: "Autorisations stationnement centre historique",
+    },
+    {
+      label: "STAR (transports Rennes)",
+      url: "https://www.star.fr/",
+      description: "Pour itinéraires métro/bus",
+    },
+    {
+      label: "Moverz - Comparateur",
+      url: "https://moverz.fr/",
+      description: "3-5 devis déménageurs Rennes",
+    },
+  ],
 };
 
 export const REIMS_PREMIUM_GUIDE: PremiumCityGuideData = {
@@ -3626,10 +4100,48 @@ export const REIMS_PREMIUM_GUIDE: PremiumCityGuideData = {
     { category: "Jour J", items: ["Vérifier parking", "Inventaire"] },
   ],
   faq: [
-    { question: "Reims est-elle facile ?", answer: "Oui, très accessible. Ville plate, peu de contraintes." },
-    { question: "Reims est-elle chère ?", answer: "Non, parmi les moins chères. T2 Reims 580-890€ vs Paris 750-1200€. -25-30% vs Paris." },
+    { 
+      question: "Reims est-elle facile pour déménager ?", 
+      answer: "Oui, très accessible. Ville plate, larges rues (sauf autour cathédrale), immeubles modernes majoritaires. Une des plus faciles de France. Seul le centre médiéval demande un peu d'attention." 
+    },
+    { 
+      question: "Reims est-elle chère pour déménager ?", 
+      answer: "Non, parmi les moins chères de France. T2 Reims 580-890€ vs Paris 750-1200€ (-25-30%), vs Lyon 680-1050€ (-10-15%). Excellent rapport qualité/prix." 
+    },
+    {
+      question: "La rentrée et les vendanges impactent-elles vraiment Reims ?",
+      answer: "Oui, doublement. Mi-septembre = rentrée 25 000 étudiants + vendanges Champagne (saisonniers, circulation vignobles). Déménageurs saturés. Réservez 4 semaines avant minimum.",
+    },
+    {
+      question: "Peut-on visiter les caves de Champagne pendant un déménagement ?",
+      answer: "Non recommandé le jour J (vous serez occupés). Mais si vous emménagez à Reims : visitez Veuve Clicquot, Taittinger, Ruinart les week-ends suivants. Les crayères (120km galeries souterraines) sont impressionnantes.",
+    },
+    {
+      question: "Reims est-elle bien connectée à Paris ?",
+      answer: "Oui, TGV direct 45min (15-20 TGV/jour). Alternative intelligente région parisienne : loyers -40-50% vs Paris, qualité de vie, patrimoine UNESCO, accessibilité. Économie 500-700€/mois = 60 000-84 000€ sur 10 ans.",
+    },
+    {
+      question: "Combien de temps à l'avance réserver un déménageur à Reims ?",
+      answer: "Minimum 2-3 semaines. En septembre (rentrée + vendanges), réservez 4 semaines. Marché rémois plus tendu en septembre.",
+    },
   ],
-  usefulLinks: [{ label: "Mairie Reims", url: "https://www.reims.fr/", description: "Informations" }],
+  usefulLinks: [
+    {
+      label: "Mairie Reims",
+      url: "https://www.reims.fr/",
+      description: "Autorisations stationnement centre cathédrale",
+    },
+    {
+      label: "Citura (transports Reims)",
+      url: "https://www.citura.fr/",
+      description: "Pour itinéraires tram/bus",
+    },
+    {
+      label: "Moverz - Comparateur",
+      url: "https://moverz.fr/",
+      description: "3-5 devis déménageurs Reims",
+    },
+  ],
 };
 
 export const SAINT_ETIENNE_PREMIUM_GUIDE: PremiumCityGuideData = {
@@ -3813,10 +4325,48 @@ export const SAINT_ETIENNE_PREMIUM_GUIDE: PremiumCityGuideData = {
     { category: "Jour J", items: ["Vérifier parking", "Inventaire"] },
   ],
   faq: [
-    { question: "Saint-Étienne est-elle facile ?", answer: "Oui, très accessible. Ville plate, peu de contraintes." },
-    { question: "Saint-Étienne est-elle la moins chère ?", answer: "Oui, parmi les moins chères des grandes villes. T2 Saint-Étienne 540-830€ vs Paris 750-1200€. -30-35% vs Paris." },
+    { 
+      question: "Saint-Étienne est-elle facile pour déménager ?", 
+      answer: "Oui, très accessible. Ville plate (pas de pentes comme Lyon voisine), larges rues, immeubles modernes majoritaires. Une des plus faciles de France. Même le centre-ville est accessible." 
+    },
+    { 
+      question: "Saint-Étienne est-elle la moins chère de France ?", 
+      answer: "Oui, parmi les moins chères des grandes villes. T2 Saint-Étienne 540-830€ vs Paris 750-1200€ (-30-35%), vs Lyon 680-1050€ (-20%). Excellent rapport qualité/prix." 
+    },
+    {
+      question: "Saint-Étienne est-elle une bonne alternative à Lyon ?",
+      answer: "Oui, excellente alternative. TGV 30min Lyon Part-Dieu (même bassin emploi), loyers -30-40% vs Lyon (économie 300-500€/mois = 36 000-60 000€ sur 10 ans), déménagements -20-30%, ville plate accessible (pas de Croix-Rousse). Reconversion design réussie (Cité Design UNESCO).",
+    },
+    {
+      question: "La rentrée universitaire impacte-t-elle Saint-Étienne ?",
+      answer: "Peu. Université Jean Monnet (17 000 étudiants seulement vs 70 000 à Montpellier). Septembre = légère hausse demande, mais rien de comparable aux grandes villes étudiantes. Réservez 2-3 semaines avant suffit.",
+    },
+    {
+      question: "Combien de temps à l'avance réserver un déménageur à Saint-Étienne ?",
+      answer: "Minimum 2 semaines. Saint-Étienne a une offre correcte de déménageurs (ville de 170 000 habitants). En septembre, prévoyez 3 semaines.",
+    },
+    {
+      question: "Le patrimoine UNESCO de Saint-Étienne est-il connu ?",
+      answer: "Peu connu mais réel. Cité du Design (UNESCO 2010, unique en France), histoire industrielle (mines, Manufrance), Biennale Internationale Design. Ville verte (European Green Capital 2010). Reconversion industrielle réussie.",
+    },
   ],
-  usefulLinks: [{ label: "Mairie Saint-Étienne", url: "https://www.saint-etienne.fr/", description: "Informations" }],
+  usefulLinks: [
+    {
+      label: "Mairie Saint-Étienne",
+      url: "https://www.saint-etienne.fr/",
+      description: "Informations générales et autorisations",
+    },
+    {
+      label: "STAS (transports Saint-Étienne)",
+      url: "https://www.reseau-stas.fr/",
+      description: "Pour itinéraires tram/bus",
+    },
+    {
+      label: "Moverz - Comparateur",
+      url: "https://moverz.fr/",
+      description: "3-5 devis déménageurs Saint-Étienne",
+    },
+  ],
 };
 
 export const TOULON_PREMIUM_GUIDE: PremiumCityGuideData = {
@@ -4011,10 +4561,48 @@ export const TOULON_PREMIUM_GUIDE: PremiumCityGuideData = {
     { category: "Jour J", items: ["Prévoir eau (chaleur Sud)", "Vérifier parking", "Inventaire"] },
   ],
   faq: [
-    { question: "Toulon est-elle facile ?", answer: "Oui, plutôt accessible. Attention aux pentes Mont Faron (+100-180€) et à l'été (chaleur, vacanciers, +15-20%)." },
-    { question: "Toulon est-elle chère ?", answer: "Prix Côte d'Azur, similaires à Nice. T2 Toulon 630-970€ vs Paris 750-1200€. -15-20% vs Paris." },
+    { 
+      question: "Toulon est-elle facile pour déménager ?", 
+      answer: "Oui, plutôt accessible si vous évitez le Mont Faron (pentes raides +100-180€) et l'été (chaleur 30-35°C, vacanciers, +15-20%). Quartiers plats (Le Mourillon, La Valette) = 0 galère." 
+    },
+    { 
+      question: "Toulon est-elle chère pour déménager ?", 
+      answer: "Prix Côte d'Azur, similaires à Nice. T2 Toulon 630-970€ vs Paris 750-1200€ (-15-20%), vs Toulouse 630-970€ (équivalent). Cher vs villes de province, mais raisonnable pour la Côte d'Azur." 
+    },
+    {
+      question: "La chaleur estivale complique-t-elle les déménagements à Toulon ?",
+      answer: "Oui. Juillet-Août = 30-35°C (parfois 38-40°C). Départ 6h-7h recommandé pour finir avant 13h. Prévoyez 20L eau fraîche. Tarifs +15-20% en été (forte demande vacanciers + pénibilité chaleur).",
+    },
+    {
+      question: "Le Mont Faron est-il vraiment compliqué ?",
+      answer: "Oui. Colline 584m altitude, pentes 10-15%, routes en lacets, villas sans ascenseur. Accès camion difficile. Budget +100-180€. Si vous cherchez un logement Toulon, privilégiez Le Mourillon ou La Valette (plats).",
+    },
+    {
+      question: "La base navale complique-t-elle la circulation ?",
+      answer: "Oui, moyennement. Arsenal (port militaire) = 20 000 personnes. Heures de pointe 7h30-8h30 et 17h-18h30 = circulation dense centre-ville. Privilégiez départ 6h ou après 9h.",
+    },
+    {
+      question: "Combien de temps à l'avance réserver un déménageur à Toulon ?",
+      answer: "Minimum 2-3 semaines. En Juillet-Août (haute saison Côte d'Azur), réservez 4 semaines. Offre de déménageurs limitée vs grandes villes (Toulon = 170 000 habitants).",
+    },
   ],
-  usefulLinks: [{ label: "Mairie Toulon", url: "https://www.toulon.fr/", description: "Informations" }],
+  usefulLinks: [
+    {
+      label: "Mairie Toulon",
+      url: "https://www.toulon.fr/",
+      description: "Autorisations stationnement centre-ville",
+    },
+    {
+      label: "Réseau Mistral (transports Toulon)",
+      url: "https://www.reseaumistral.com/",
+      description: "Pour itinéraires bus",
+    },
+    {
+      label: "Moverz - Comparateur",
+      url: "https://moverz.fr/",
+      description: "3-5 devis déménageurs Toulon",
+    },
+  ],
 };
 
 export const GRENOBLE_PREMIUM_GUIDE: PremiumCityGuideData = {
@@ -4238,10 +4826,48 @@ export const GRENOBLE_PREMIUM_GUIDE: PremiumCityGuideData = {
     { category: "Jour J", items: ["Vérifier parking", "Inventaire"] },
   ],
   faq: [
-    { question: "Grenoble est-elle facile ?", answer: "Oui, ville accessible. Plate malgré les montagnes autour." },
-    { question: "La saison de ski impacte-t-elle les déménagements ?", answer: "Peu. Juste circulation dense week-ends hiver (skieurs). Privilégiez semaine." },
+    { 
+      question: "Grenoble est-elle facile pour déménager ?", 
+      answer: "Oui, très accessible. Ville plate (malgré les Alpes autour), larges rues, immeubles modernes majoritaires. Seul le centre historique médiéval demande un peu d'attention (+80-120€)." 
+    },
+    { 
+      question: "La saison de ski impacte-t-elle les déménagements ?", 
+      answer: "Peu, sauf week-ends hiver (décembre-mars). Circulation skieurs vers 30+ stations (Chamrousse 30km, Deux Alpes 70km, Alpe d'Huez 65km). Privilégiez déménagement en semaine." 
+    },
+    {
+      question: "Grenoble est-elle chère pour déménager ?",
+      answer: "Non, prix compétitifs. T2 Grenoble 610-940€ vs Paris 750-1200€ (-20-25%), vs Lyon 680-1050€ (-10%). Ville plate = pas de surcoût relief (contrairement Lyon Croix-Rousse).",
+    },
+    {
+      question: "La rentrée scientifique impacte-t-elle Grenoble ?",
+      answer: "Oui. 60 000 étudiants + grandes écoles (Grenoble INP, GEM, École de Management). Septembre = forte demande. Réservez 3 semaines avant minimum.",
+    },
+    {
+      question: "Grenoble est-elle bien pour les scientifiques/chercheurs ?",
+      answer: "Oui, capitale européenne de la recherche scientifique. CEA/Minatec (8000 chercheurs), CNRS, synchrotron. Si vous déménagez pour un poste scientifique, quartier Presqu'île scientifique = idéal (moderne, proche labos).",
+    },
+    {
+      question: "Combien de temps à l'avance réserver un déménageur à Grenoble ?",
+      answer: "Minimum 2-3 semaines. En septembre (rentrée scientifique + étudiante), réservez 3 semaines. Marché grenoblois dynamique mais pas saturé.",
+    },
   ],
-  usefulLinks: [{ label: "Mairie Grenoble", url: "https://www.grenoble.fr/", description: "Informations" }],
+  usefulLinks: [
+    {
+      label: "Grenoble-Alpes Métropole",
+      url: "https://www.grenoblealpesmetropole.fr/",
+      description: "Informations et autorisations",
+    },
+    {
+      label: "TAG (transports Grenoble)",
+      url: "https://www.tag.fr/",
+      description: "Pour itinéraires tram/bus",
+    },
+    {
+      label: "Moverz - Comparateur",
+      url: "https://moverz.fr/",
+      description: "3-5 devis déménageurs Grenoble",
+    },
+  ],
 };
 
 export const DIJON_PREMIUM_GUIDE: PremiumCityGuideData = {
@@ -4440,10 +5066,48 @@ export const DIJON_PREMIUM_GUIDE: PremiumCityGuideData = {
     { category: "Jour J", items: ["Vérifier parking", "Inventaire"] },
   ],
   faq: [
-    { question: "Dijon est-elle facile ?", answer: "Oui, ville accessible de taille humaine. Centre historique moyennement compliqué (+70-100€)." },
-    { question: "Dijon est-elle chère ?", answer: "Non, prix compétitifs. T2 Dijon 580-890€ vs Paris 750-1200€. -25-30% vs Paris." },
+    { 
+      question: "Dijon est-elle facile pour déménager ?", 
+      answer: "Oui, ville accessible de taille humaine (160 000 habitants). Plate, larges rues majoritaires. Centre historique UNESCO moyennement compliqué (+70-100€), mais bien moins que grandes métropoles." 
+    },
+    { 
+      question: "Dijon est-elle chère pour déménager ?", 
+      answer: "Non, prix très compétitifs. T2 Dijon 580-890€ vs Paris 750-1200€ (-25-30%), vs Lyon 680-1050€ (-15%). Parmi les meilleures grandes villes France rapport qualité/prix." 
+    },
+    {
+      question: "Les vendanges impactent-elles vraiment les déménagements ?",
+      answer: "Oui, mi-septembre = vendanges vignobles Côte de Nuits (Gevrey-Chambertin, Vosne-Romanée 15-25km) et Côte de Beaune (Beaune, Pommard, Meursault 30-40km). Tracteurs, remorques, circulation dense. Déménageurs saturés. Réservez 3-4 semaines avant.",
+    },
+    {
+      question: "Dijon est-elle bien connectée à Paris ?",
+      answer: "Oui, TGV direct 1h40 (10-15 TGV/jour). Alternative intelligente région parisienne : loyers -40-50% vs Paris, qualité de vie, gastronomie légendaire. Économie 500-700€/mois = 60 000-84 000€ sur 10 ans.",
+    },
+    {
+      question: "La gastronomie dijonnaise complique-t-elle le déménagement ?",
+      answer: "Si vous avez une cave à vin Bourgogne importante (Romanée-Conti, Chambertin, Meursault), prévoyez emballage spécial (cartons bouteilles, température contrôlée). Les grands crus = fragiles et chers. Transportez vous-même si possible.",
+    },
+    {
+      question: "Combien de temps à l'avance réserver un déménageur à Dijon ?",
+      answer: "Minimum 2 semaines. En septembre (vendanges + rentrée 35 000 étudiants), réservez 3-4 semaines. Marché dijonnais correct mais tendu en vendanges.",
+    },
   ],
-  usefulLinks: [{ label: "Mairie Dijon", url: "https://www.dijon.fr/", description: "Informations" }],
+  usefulLinks: [
+    {
+      label: "Dijon Métropole",
+      url: "https://www.dijon.fr/",
+      description: "Autorisations stationnement centre historique",
+    },
+    {
+      label: "Divia (transports Dijon)",
+      url: "https://www.divia.fr/",
+      description: "Pour itinéraires tram/bus",
+    },
+    {
+      label: "Moverz - Comparateur",
+      url: "https://moverz.fr/",
+      description: "3-5 devis déménageurs Dijon",
+    },
+  ],
 };
 
 export const ANGERS_PREMIUM_GUIDE: PremiumCityGuideData = {
@@ -4638,10 +5302,48 @@ export const ANGERS_PREMIUM_GUIDE: PremiumCityGuideData = {
     { category: "Jour J", items: ["Vérifier parking", "Inventaire"] },
   ],
   faq: [
-    { question: "Angers est-elle facile ?", answer: "Oui, très accessible. Ville de taille humaine, peu de contraintes." },
-    { question: "Angers est-elle chère ?", answer: "Non, prix compétitifs. T2 Angers 580-890€ vs Paris 750-1200€. -25-30% vs Paris." },
+    { 
+      question: "Angers est-elle facile pour déménager ?", 
+      answer: "Oui, très accessible. Ville de taille humaine (155 000 habitants), plate, larges rues. Centre historique autour château d'Angers (forteresse 13ème siècle 17 tours) moyennement compliqué (+50-80€), mais gérable." 
+    },
+    { 
+      question: "Angers est-elle chère pour déménager ?", 
+      answer: "Non, prix compétitifs. T2 Angers 580-890€ vs Paris 750-1200€ (-25-30%), vs Nantes 610-940€ (-5-10%). Similaire à Rennes. Excellent rapport qualité/prix Ouest France." 
+    },
+    {
+      question: "La rentrée universitaire impacte-t-elle Angers ?",
+      answer: "Oui, moyennement. 40 000 étudiants (UCO, université). Septembre = hausse demande. Réservez 3 semaines avant. Moins saturé que Lyon ou Toulouse, mais anticipez quand même.",
+    },
+    {
+      question: "Angers est-elle une alternative intéressante à Nantes ?",
+      answer: "Oui. 1h30 TGV Paris, 45min Nantes. Loyers -20-30% vs Nantes (économie 200-300€/mois), déménagements -5-10%, qualité de vie (douceur angevine, Val de Loire UNESCO). Alternative intelligente.",
+    },
+    {
+      question: "Le patrimoine UNESCO Val de Loire est-il proche ?",
+      answer: "Oui, Angers = porte Ouest Val de Loire UNESCO. Châteaux à proximité : Saumur 50km, Chinon 80km, Villandry 100km. Château d'Angers = Tapisserie de l'Apocalypse 14ème siècle (100m, chef-d'œuvre médiéval).",
+    },
+    {
+      question: "Combien de temps à l'avance réserver un déménageur à Angers ?",
+      answer: "Minimum 2 semaines. En septembre (rentrée 40 000 étudiants), réservez 3 semaines. Marché angevin dynamique (proximité Nantes = offre correcte).",
+    },
   ],
-  usefulLinks: [{ label: "Mairie Angers", url: "https://www.angers.fr/", description: "Informations" }],
+  usefulLinks: [
+    {
+      label: "Angers Loire Métropole",
+      url: "https://www.angers.fr/",
+      description: "Informations et autorisations",
+    },
+    {
+      label: "Irigo (transports Angers)",
+      url: "https://www.irigo.fr/",
+      description: "Pour itinéraires tram/bus",
+    },
+    {
+      label: "Moverz - Comparateur",
+      url: "https://moverz.fr/",
+      description: "3-5 devis déménageurs Angers",
+    },
+  ],
 };
 
 export const NIMES_PREMIUM_GUIDE: PremiumCityGuideData = {
@@ -4876,10 +5578,48 @@ export const NIMES_PREMIUM_GUIDE: PremiumCityGuideData = {
     { category: "Jour J", items: ["Prévoir eau (chaleur Sud)", "Vérifier parking", "Inventaire"] },
   ],
   faq: [
-    { question: "Nîmes est-elle facile ?", answer: "Oui, accessible. Centre historique moyennement compliqué (+80-120€). Quartiers modernes très faciles." },
-    { question: "Les Férias bloquent-elles les déménagements ?", answer: "Oui. Féria Pentecôte (mai) et Féria Vendanges (septembre) : ville en fête, circulation bloquée. Déménageurs refusent souvent. Évitez ces week-ends." },
+    { 
+      question: "Nîmes est-elle facile pour déménager ?", 
+      answer: "Oui, accessible. Ville de taille moyenne (150 000 habitants), plutôt plate. Centre historique autour arènes romaines (UNESCO) moyennement compliqué (+80-120€), mais quartiers modernes (Mas de Mingue, Costières) très faciles." 
+    },
+    { 
+      question: "Les Férias bloquent-elles vraiment les déménagements ?", 
+      answer: "Oui, totalement. Féria Pentecôte (mai, 1 million visiteurs) et Féria Vendanges (septembre, 1 million visiteurs) : centre-ville fermé, corridas, concerts, fête 24h/24 pendant 5-6 jours. Déménageurs refusent. Évitez impérativement ces week-ends." 
+    },
+    {
+      question: "Nîmes est-elle chère pour déménager ?",
+      answer: "Non, prix compétitifs. T2 Nîmes 600-920€ vs Paris 750-1200€ (-20-25%), vs Montpellier 630-970€ (-5%). Similaire à Rennes. Bon rapport qualité/prix Sud France.",
+    },
+    {
+      question: "La chaleur estivale complique-t-elle à Nîmes ?",
+      answer: "Oui. Juillet-Août = 30-35°C (parfois 38-42°C, record France). Départ 6h-7h recommandé. Tarifs +15-20% (forte demande + pénibilité). Prévoyez 20L eau fraîche.",
+    },
+    {
+      question: "Le patrimoine romain est-il contraignant pour les déménagements ?",
+      answer: "Peu. Arènes romaines, Maison Carrée, Temple de Diane = zone piétonne touristique, mais rues accessibles autour. Autorisation stationnement mairie (35€, 5-7j), budget +80-120€. Moins contraignant que Vieux Lyon ou Panier Marseille.",
+    },
+    {
+      question: "Combien de temps à l'avance réserver un déménageur à Nîmes ?",
+      answer: "Minimum 2-3 semaines. En septembre (Féria Vendanges + rentrée), réservez 3-4 semaines. Attention aux dates Férias (ville bloquée).",
+    },
   ],
-  usefulLinks: [{ label: "Mairie Nîmes", url: "https://www.nimes.fr/", description: "Informations" }],
+  usefulLinks: [
+    {
+      label: "Mairie Nîmes",
+      url: "https://www.nimes.fr/",
+      description: "Autorisations stationnement centre historique",
+    },
+    {
+      label: "Tango (transports Nîmes)",
+      url: "https://www.tangobus.fr/",
+      description: "Pour itinéraires bus",
+    },
+    {
+      label: "Moverz - Comparateur",
+      url: "https://moverz.fr/",
+      description: "3-5 devis déménageurs Nîmes",
+    },
+  ],
 };
 
 export const VILLEURBANNE_PREMIUM_GUIDE: PremiumCityGuideData = {
@@ -5099,11 +5839,48 @@ export const VILLEURBANNE_PREMIUM_GUIDE: PremiumCityGuideData = {
     { category: "Jour J", items: ["Vérifier parking", "Inventaire"] },
   ],
   faq: [
-    { question: "Villeurbanne vs Lyon, c'est moins cher ?", answer: "Prix similaires (630-970€ pour un T2) mais Villeurbanne = accès faciles. Vous économisez 200-500€ vs Croix-Rousse ou Vieux Lyon. Meilleur rapport qualité/prix." },
-    { question: "Villeurbanne est-elle bien desservie ?", answer: "Oui, excellente. Métro A et B, tramway T1 T3 T4, bus. 10min métro pour Lyon centre." },
-    { question: "Villeurbanne est-elle facile ?", answer: "Oui, très facile. Ville plate, quartiers modernes, immeubles avec ascenseurs. Une des plus accessibles de la région." },
+    { 
+      question: "Villeurbanne vs Lyon, c'est moins cher ?", 
+      answer: "Prix similaires (630-970€ pour un T2) mais Villeurbanne = accès faciles (ville plate, pas de Croix-Rousse). Vous économisez 200-500€ vs quartiers difficiles Lyon. Meilleur rapport qualité/prix métropole lyonnaise." 
+    },
+    { 
+      question: "Villeurbanne est-elle bien desservie ?", 
+      answer: "Oui, excellente desserte. Métro A et B (Charpennes hub central), tramway T1 T3 T4, bus. 10min métro pour Lyon Bellecour, 15min Part-Dieu. Mobilité ultra-fluide." 
+    },
+    { 
+      question: "Villeurbanne est-elle facile pour déménager ?", 
+      answer: "Oui, très facile. Ville plate (contrairement Lyon pentes Croix-Rousse), quartiers modernes (Gratte-Ciel Art Déco 1930, Tonkin 1970-1990), immeubles avec ascenseurs. Une des plus accessibles de la région Auvergne-Rhône-Alpes." 
+    },
+    {
+      question: "Les Gratte-Ciel de Villeurbanne sont-ils un bon quartier ?",
+      answer: "Oui, excellent. Quartier emblématique Art Déco années 1930 (classé patrimoine), modernisé 2010-2020. Métro A et B (hub Charpennes), immeubles rénovés, parkings. Cœur de Villeurbanne. Très accessible pour déménager.",
+    },
+    {
+      question: "Villeurbanne est-elle impactée par la Fête des Lumières Lyon (8 décembre) ?",
+      answer: "Non directement. La Fête est à Lyon centre. Villeurbanne reste accessible. Mais circulation générale métropole ralentie. Si vous déménagez 8 décembre, Villeurbanne = meilleure option que Lyon.",
+    },
+    {
+      question: "Combien de temps à l'avance réserver un déménageur à Villeurbanne ?",
+      answer: "Minimum 2-3 semaines. En rentrée (septembre, 2ème ville étudiante France avec Lyon = 140 000 étudiants), réservez 3-4 semaines. Marché villeurbannais dynamique (proximité Lyon).",
+    },
   ],
-  usefulLinks: [{ label: "Mairie Villeurbanne", url: "https://www.villeurbanne.fr/", description: "Informations" }],
+  usefulLinks: [
+    {
+      label: "Mairie Villeurbanne",
+      url: "https://www.villeurbanne.fr/",
+      description: "Informations générales",
+    },
+    {
+      label: "TCL (transports Lyon/Villeurbanne)",
+      url: "https://www.tcl.fr/",
+      description: "Pour itinéraires métro/tram/bus",
+    },
+    {
+      label: "Moverz - Comparateur",
+      url: "https://moverz.fr/",
+      description: "3-5 devis déménageurs Villeurbanne",
+    },
+  ],
 };
 
 export const LE_HAVRE_PREMIUM_GUIDE: PremiumCityGuideData = {
@@ -5319,11 +6096,48 @@ export const LE_HAVRE_PREMIUM_GUIDE: PremiumCityGuideData = {
     { category: "Jour J", items: ["Vérifier parking", "Inventaire"] },
   ],
   faq: [
-    { question: "Le Havre est-elle facile ?", answer: "Oui, une des plus faciles de France. Urbanisme Perret après-guerre = larges avenues, immeubles modernes, accès excellents." },
-    { question: "Le Havre est-elle chère ?", answer: "Non, parmi les moins chères. T2 Le Havre 580-890€ vs Paris 750-1200€. -25-30% vs Paris." },
-    { question: "L'architecture Perret impacte-t-elle les déménagements ?", answer: "Oui, positivement. Urbanisme pensé pour circulation fluide, larges avenues, immeubles standardisés avec ascenseurs. C'est un avantage énorme." },
+    { 
+      question: "Le Havre est-elle facile pour déménager ?", 
+      answer: "Oui, une des plus faciles de France. Urbanisme Perret après-guerre (1945-1960) = larges avenues perpendiculaires (30-40m large), immeubles modernes standardisés avec ascenseurs, accès excellents. Architecture fonctionnelle UNESCO 2005." 
+    },
+    { 
+      question: "Le Havre est-elle chère pour déménager ?", 
+      answer: "Non, parmi les moins chères de France. T2 Le Havre 580-890€ vs Paris 750-1200€ (-25-30%), vs Rouen 610-940€ (-5%). Similaire à Saint-Étienne, Reims. Excellent rapport qualité/prix Normandie." 
+    },
+    { 
+      question: "L'architecture Perret impacte-t-elle les déménagements ?", 
+      answer: "Oui, très positivement. Auguste Perret (architecte reconstruction 1945-1960) a conçu la ville POUR la circulation et l'efficacité. Larges avenues, immeubles béton avec ascenseurs, parkings prévus. C'est un avantage énorme vs villes anciennes (Vieux Lyon, Panier Marseille)." 
+    },
+    {
+      question: "Le port du Havre complique-t-il les déménagements ?",
+      answer: "Peu. 1er port français conteneurs (2,9 millions EVP), mais circulation camions majoritairement zone portuaire Est. Si vous êtes zone portuaire, prévoyez +50-80€ (circulation dense camions poids lourds 7h-19h). Centre-ville Perret = fluide.",
+    },
+    {
+      question: "Le Havre est-elle bien connectée à Paris ?",
+      answer: "Oui. TGV 2h15 Paris Saint-Lazare (via Rouen), autoroute A13 2h. Alternative région parisienne : loyers -40-50% vs Paris, bord de mer, architecture UNESCO unique. Économie 500-700€/mois = 60 000-84 000€ sur 10 ans.",
+    },
+    {
+      question: "Combien de temps à l'avance réserver un déménageur au Havre ?",
+      answer: "Minimum 2 semaines. Le Havre = offre correcte de déménageurs (ville de 170 000 habitants, bassin emploi maritime dynamique). En septembre (rentrée), réservez 3 semaines.",
+    },
   ],
-  usefulLinks: [{ label: "Mairie Le Havre", url: "https://www.lehavre.fr/", description: "Informations" }],
+  usefulLinks: [
+    {
+      label: "Le Havre Seine Métropole",
+      url: "https://www.lehavre.fr/",
+      description: "Informations et autorisations",
+    },
+    {
+      label: "Lia (transports Le Havre)",
+      url: "https://www.transports-lia.fr/",
+      description: "Pour itinéraires bus/tram",
+    },
+    {
+      label: "Moverz - Comparateur",
+      url: "https://moverz.fr/",
+      description: "3-5 devis déménageurs Le Havre",
+    },
+  ],
 };
 
 /**
