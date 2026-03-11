@@ -1,9 +1,15 @@
 "use client";
 
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Shield, TrendingDown, AlertCircle } from "lucide-react";
 
 export function LabelMoverzHero() {
+  // Force le scroll en haut à chaque arrivée sur la page
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
+
   return (
     <section className="relative w-full pt-24 pb-16 md:pt-32 md:pb-24 bg-hero overflow-hidden">
       <div className="max-w-5xl mx-auto px-6">
