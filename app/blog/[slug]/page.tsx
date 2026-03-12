@@ -605,7 +605,7 @@ export default function BlogPostPage({ params }: PageProps) {
                   background: "rgba(14,165,166,0.05)"
                 }}
               >
-                <Image src="/logo-label-moverz.png" alt="Label Moverz" width={42} height={28} className="h-6 w-auto" />
+                <Image src="/logo-label-moverz.png" alt="Label Moverz" width={140} height={93} className="h-20 md:h-24 w-auto" />
                 <span>Label Moverz</span>
               </Link>
             )}

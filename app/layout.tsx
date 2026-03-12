@@ -131,11 +131,12 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
-        {/* Favicons transparents - ?v=4 force le rechargement (cache navigateur) */}
-        <link rel="icon" type="image/x-icon" href="/favicon.ico?v=4" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=4" />
-        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?v=4" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=4" />
+        {/* Favicons optimisés (trim+contain) - ?v=5 pour max visibilité / CTR */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico?v=5" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=5" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=5" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?v=5" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=5" />
         <link rel="manifest" href="/site.webmanifest" />
         
         {/* DNS Prefetch pour ressources externes essentielles */}

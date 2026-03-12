@@ -67,11 +67,10 @@ export function Footer() {
         <div className="mb-8 md:hidden">
           <div className="flex flex-wrap items-center gap-3 mb-4">
             <a href="/" className="inline-flex items-center" title="Moverz">
-              <LogoWithText size="lg" variant="light" />
+              <LogoWithText size="footer" variant="light" />
             </a>
-            <Link href="/label-moverz/" className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-white/20 bg-white/5 hover:bg-white/10 transition-colors" title="Label Moverz">
-              <Image src="/logo-label-moverz.png" alt="Label Moverz" width={120} height={80} className="h-14 w-auto" />
-              <span className="text-sm font-semibold text-white/90">Label Moverz</span>
+            <Link href="/label-moverz/" className="inline-flex items-center px-3 py-2 rounded-lg border border-white/20 bg-white/5 hover:bg-white/10 transition-colors" title="Label Moverz">
+              <Image src="/logo-label-moverz.png" alt="Label Moverz" width={180} height={120} className="h-28 md:h-36 w-auto" />
             </Link>
           </div>
           
@@ -90,11 +89,10 @@ export function Footer() {
           <div className="hidden md:block md:col-span-1 space-y-4">
             <div className="flex flex-wrap items-center gap-3">
               <a href="/" className="inline-flex items-center" title="Moverz">
-                <LogoWithText size="lg" variant="light" />
+                <LogoWithText size="footer" variant="light" />
               </a>
-              <Link href="/label-moverz/" className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-white/20 bg-white/5 hover:bg-white/10 transition-colors" title="Label Moverz">
-                <Image src="/logo-label-moverz.png" alt="Label Moverz" width={120} height={80} className="h-14 w-auto" />
-                <span className="text-sm font-semibold text-white/90">Label Moverz</span>
+              <Link href="/label-moverz/" className="inline-flex items-center px-3 py-2 rounded-lg border border-white/20 bg-white/5 hover:bg-white/10 transition-colors" title="Label Moverz">
+                <Image src="/logo-label-moverz.png" alt="Label Moverz" width={180} height={120} className="h-28 md:h-36 w-auto" />
               </Link>
             </div>
             

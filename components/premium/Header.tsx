@@ -42,10 +42,10 @@ export function Header() {
           : "border-black/5 bg-white/50"
       }`}
     >
-      <div className="mx-auto flex h-14 md:h-16 max-w-[1200px] items-center justify-between px-4 md:px-6">
+      <div className="mx-auto flex h-20 md:h-28 max-w-[1200px] items-center justify-between px-4 md:px-6">
         {/* Logo + Moverz (icône transparente + texte teal souligné orange) */}
         <Link href="/" className="flex items-center transition-opacity hover:opacity-80" aria-label="Moverz - Accueil">
-          <LogoWithText size="lg" />
+          <LogoWithText size="header" />
         </Link>
 
         {/* Desktop Nav + CTA + Phone + Mobile Menu */}

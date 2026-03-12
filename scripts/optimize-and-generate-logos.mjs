@@ -14,7 +14,9 @@ const publicDir = join(process.cwd(), "public");
 const LOGOS = ["logo.png"];
 
 const FAVICON_SIZES = [
+  { name: "favicon-16x16.png", size: 16 },
   { name: "favicon-32x32.png", size: 32 },
+  { name: "favicon-48x48.png", size: 48 },
   { name: "favicon-96x96.png", size: 96 },
   { name: "apple-touch-icon.png", size: 180 },
   { name: "web-app-manifest-192x192.png", size: 192 },
@@ -44,17 +46,21 @@ async function optimizeLogo(filepath, name) {
 }
 
 async function generateFavicons(logoPath) {
-  const name = logoPath.includes("logo-transparent") ? "logo-transparent.png" : logoPath.includes("logo-ui") ? "logo-ui.png" : "logo.png";
-  console.log(`\n📌 Génération des favicons depuis ${name}...\n`);
+  const srcName = logoPath.includes("logo-transparent") ? "logo-transparent.png" : "logo.png";
+  console.log(`\n📌 Génération des favicons depuis ${srcName} (trim + fill pour max visibilité)...\n`);
 
-  for (const { name, size } of FAVICON_SIZES) {
-    const outPath = join(publicDir, name);
+  for (const entry of FAVICON_SIZES) {
+    const outPath = join(publicDir, entry.name);
     const buf = await sharp(logoPath)
-      .resize(size, size)
+      .trim({ threshold: 5 })
+      .resize(entry.size, entry.size, {
+        fit: "contain",
+        background: { r: 0, g: 0, b: 0, alpha: 0 },
+      })
       .png({ compressionLevel: 9 })
       .toBuffer();
     await writeFile(outPath, buf);
-    console.log(`   ${name} (${size}x${size})`);
+    console.log(`   ${entry.name} (${entry.size}x${entry.size})`);
   }
 
   const favicon32 = await readFile(join(publicDir, "favicon-32x32.png"));

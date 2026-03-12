@@ -216,7 +216,7 @@ export function CityHero({ city, quoteUrl }: CityHeroProps) {
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-1.5">
                             <div className="relative shrink-0">
-                              <Image src="/logo-label-moverz.png" alt="Label Moverz" width={48} height={32} className="h-8 w-auto" />
+                              <Image src="/logo-label-moverz.png" alt="Label Moverz" width={112} height={75} className="h-20 w-auto" />
                               <div
                                 className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full flex items-center justify-center"
                                 style={{ background: "#10B981" }}

@@ -19,13 +19,13 @@ interface LogoWithTextProps {
 }
 
 const sizes: Record<string, { icon: string; text: string }> = {
-  sm: { icon: "h-8", text: "text-lg" },
-  md: { icon: "h-10", text: "text-xl" },
-  lg: { icon: "h-12", text: "text-2xl" },
-  /** Header : mobile compact, desktop visible */
-  header: { icon: "h-8 md:h-12", text: "text-lg md:text-2xl" },
-  /** Footer : mobile OK, desktop plus grand */
-  footer: { icon: "h-10 md:h-14", text: "text-xl md:text-3xl" },
+  sm: { icon: "h-12", text: "text-2xl" },
+  md: { icon: "h-14", text: "text-2xl" },
+  lg: { icon: "h-16 md:h-20", text: "text-3xl md:text-4xl" },
+  /** Header : bien visible mobile + desktop */
+  header: { icon: "h-16 md:h-24", text: "text-2xl md:text-4xl" },
+  /** Footer : plus grand, bien lisible */
+  footer: { icon: "h-20 md:h-28", text: "text-3xl md:text-5xl" },
 };
 
 export function LogoWithText({
