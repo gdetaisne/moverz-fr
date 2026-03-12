@@ -11,6 +11,7 @@
     "lint": "next lint",
     "prewarm": "node scripts/prewarm-cache.mjs",
     "prewarm:purge": "node scripts/prewarm-cache.mjs --purge",
+    "deploy": "git push && echo 'Build CapRover en cours (4 min)...' && sleep 240 && node scripts/prewarm-cache.mjs",
     "test": "vitest run",
     "blog:pro:gen": "tsx scripts/generate-blog-pro.ts",
     "scrape:competitors": "tsx scripts/scrape-competitors.ts",
