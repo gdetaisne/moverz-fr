@@ -234,7 +234,7 @@ const LABEL_MOVERZ_BLOG_SLUGS = new Set([
 /**
  * SEO (2026-03-07): Un article est indexable si :
  *  1. Il a du trafic GA prouvé (liste GA_TRAFFIC_SLUGS), OU
- *  2. Il passe le filtre qualité automatique : pilier + ≥ 1000 mots + body présent (isQualityPost)
+ *  2. Il passe le filtre qualité (isQualityPost) : pilier ≥1000 mots OU satellite/guide ≥500 mots
  */
 function isIndexableBlogPost(slug: string): boolean {
   return GA_TRAFFIC_SLUGS.has(slug) || isQualityPost(slug);

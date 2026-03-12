@@ -229,10 +229,12 @@ export function getCanonicalBodyBySlug(slug: string): string | undefined {
 
 /**
  * SEO (2026-03-07): Filtre de qualité automatique pour l'indexation Google.
- * Un article est "de qualité" s'il satisfait les 3 critères :
+ * Un article est "de qualité" s'il satisfait :
  *   1. body présent (pas un placeholder)
- *   2. ≥ 1000 mots (contenu substantiel)
- *   3. type = "pilier" (article principal de sa thématique)
+ *   2. Seuils de mots selon le type :
+ *      - pilier : ≥ 1000 mots
+ *      - satellite / guide : ≥ 500 mots (long-tail E-A-A-T)
+ *      - autre/indéfini : non indexable via ce filtre (GA_TRAFFIC_SLUGS uniquement)
  *
  * Utilisé dans generateMetadata (noindex si false) et sitemap-blog.xml.
  */
@@ -240,9 +242,9 @@ export function isQualityPost(slug: string): boolean {
   const canonical = ALL_CANONICAL_POSTS.find((post) => post.slug === slug);
   if (!canonical?.body) return false;
   const wordCount = canonical.body.split(/\s+/).length;
-  if (wordCount < 1000) return false;
-  if (canonical.type !== "pilier") return false;
-  return true;
+  if (canonical.type === "pilier") return wordCount >= 1000;
+  if (canonical.type === "satellite" || canonical.type === "guide") return wordCount >= 500;
+  return false;
 }
 
 // Trouver l'article Prix associé à une ville donnée
