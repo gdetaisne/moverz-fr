@@ -44,7 +44,8 @@ async function optimizeLogo(filepath, name) {
 }
 
 async function generateFavicons(logoPath) {
-  console.log("\n📌 Génération des favicons depuis logo.png...\n");
+  const name = logoPath.includes("logo-ui") ? "logo-ui.png" : "logo.png";
+  console.log(`\n📌 Génération des favicons depuis ${name}...\n`);
 
   for (const { name, size } of FAVICON_SIZES) {
     const outPath = join(publicDir, name);
@@ -76,12 +77,15 @@ async function main() {
     }
   }
 
-  const logoPath = join(publicDir, "logo.png");
-  try {
-    await stat(logoPath);
+  // Favicons : logo-ui.png (icône simple, transparent) > logo.png
+  const faviconSource = join(publicDir, "logo-ui.png");
+  const fallbackSource = join(publicDir, "logo.png");
+  const logoPath = (await stat(faviconSource).then(() => faviconSource).catch(() => null))
+    ?? (await stat(fallbackSource).then(() => fallbackSource).catch(() => null));
+  if (logoPath) {
     await generateFavicons(logoPath);
-  } catch {
-    console.log("⚠️  logo.png absent, favicons non générés.");
+  } else {
+    console.log("⚠️  logo-ui.png et logo.png absents, favicons non générés.");
   }
 
   console.log("\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");

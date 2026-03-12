@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
+import { LogoWithText } from "@/components/LogoWithText";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -43,9 +43,9 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex h-14 md:h-16 max-w-[1200px] items-center justify-between px-4 md:px-6">
-        {/* Logo */}
+        {/* Logo + Moverz (icône transparente + texte teal souligné orange) */}
         <Link href="/" className="flex items-center transition-opacity hover:opacity-80" aria-label="Moverz - Accueil">
-          <Image src="/logo.png" alt="Moverz" width={1536} height={1024} className="h-12 md:h-14 w-auto" priority />
+          <LogoWithText size="lg" />
         </Link>
 
         {/* Desktop Nav + CTA + Phone + Mobile Menu */}

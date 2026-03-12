@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
+import { LogoWithText } from "@/components/LogoWithText";
 
 const footerSections = [
   {
@@ -66,11 +67,11 @@ export function Footer() {
         <div className="mb-8 md:hidden">
           <div className="flex flex-wrap items-center gap-3 mb-4">
             <a href="/" className="inline-flex items-center" title="Moverz">
-              <Image src="/logo.png" alt="Logo Moverz" width={1536} height={1024} className="h-12 w-auto" />
+              <LogoWithText size="lg" variant="light" />
             </a>
-            <Link href="/label-moverz/" className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-white/20 bg-white/5 hover:bg-white/10 transition-colors" title="Label Moverz">
-              <Image src="/logo-label-moverz.png" alt="Label Moverz" width={24} height={16} className="h-4 w-auto" />
-              <span className="text-xs font-semibold text-white/90">Label Moverz</span>
+            <Link href="/label-moverz/" className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-white/20 bg-white/5 hover:bg-white/10 transition-colors" title="Label Moverz">
+              <Image src="/logo-label-moverz.png" alt="Label Moverz" width={32} height={22} className="h-6 w-auto" />
+              <span className="text-sm font-semibold text-white/90">Label Moverz</span>
             </Link>
           </div>
           
@@ -87,13 +88,13 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-8 md:grid-cols-6 md:gap-8 mb-10">
           {/* Col 1: Brand + Texte + CTA - Desktop uniquement */}
           <div className="hidden md:block md:col-span-1 space-y-4">
-            <div className="flex flex-wrap items-center gap-2">
+            <div className="flex flex-wrap items-center gap-3">
               <a href="/" className="inline-flex items-center" title="Moverz">
-                <Image src="/logo.png" alt="Logo Moverz" width={1536} height={1024} className="h-12 w-auto" />
+                <LogoWithText size="lg" variant="light" />
               </a>
               <Link href="/label-moverz/" className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-white/20 bg-white/5 hover:bg-white/10 transition-colors" title="Label Moverz">
-                <Image src="/logo-label-moverz.png" alt="Label Moverz" width={30} height={20} className="h-5 w-auto" />
-                <span className="text-xs font-semibold text-white/90">Label Moverz</span>
+                <Image src="/logo-label-moverz.png" alt="Label Moverz" width={36} height={24} className="h-6 w-auto" />
+                <span className="text-sm font-semibold text-white/90">Label Moverz</span>
               </Link>
             </div>
             
