@@ -12,12 +12,14 @@
  * Output:
  *   - Console summary
  *   - reports/gsc-monitor-YYYY-MM-DD.json  (full data)
+ *   - Neon DB (schema seo) via Prisma
  */
 
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { google } from "googleapis";
+import { PrismaClient } from "@prisma/client";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -66,7 +68,7 @@ function loadServiceAccountKey() {
     const idx = line.indexOf("=");
     if (idx === -1) continue;
     const key = line.slice(0, idx).trim();
-    if (key === "GOOGLE_SERVICE_ACCOUNT_JSON") {
+    if (key === "GSC_CREDENTIALS_JSON" || key === "GOOGLE_SERVICE_ACCOUNT_JSON") {
       raw = line.slice(idx + 1).trim();
       // Remove surrounding quotes if present
       if ((raw.startsWith("'") && raw.endsWith("'")) || (raw.startsWith('"') && raw.endsWith('"'))) {
@@ -289,6 +291,162 @@ function findMovers(currentRows, previousRows, topN = 10) {
   };
 }
 
+// ─── Prisma persistence ───────────────────────────────────────────────────────
+
+async function persistToDB(report, granularData) {
+  let dbUrl = process.env.DATABASE_URL;
+  if (!dbUrl) {
+    // Lire depuis .env si pas en env
+    try {
+      const envContent = fs.readFileSync(path.join(ROOT, ".env"), "utf-8");
+      for (const line of envContent.split(/\r?\n/)) {
+        const idx = line.indexOf("=");
+        if (idx === -1) continue;
+        if (line.slice(0, idx).trim() === "DATABASE_URL") {
+          dbUrl = line.slice(idx + 1).trim();
+          break;
+        }
+      }
+    } catch { /* ignore */ }
+  }
+
+  if (!dbUrl) {
+    console.warn("[DB] DATABASE_URL manquant — persistance ignorée");
+    return;
+  }
+
+  const { PrismaPg } = await import("@prisma/adapter-pg");
+  const { Pool } = await import("pg");
+  const pool = new Pool({ connectionString: dbUrl });
+  const adapter = new PrismaPg(pool);
+  const prisma = new PrismaClient({ adapter });
+
+  try {
+    const periodStart = new Date(report.period.current.start);
+    const periodEnd = new Date(report.period.current.end);
+    const prevStart = new Date(report.period.previous.start);
+    const prevEnd = new Date(report.period.previous.end);
+
+    // Upsert snapshot (idempotent sur la période)
+    const snapshot = await prisma.gscSnapshot.upsert({
+      where: { periodStart_periodEnd: { periodStart, periodEnd } },
+      create: { days: report.days, periodStart, periodEnd, prevStart, prevEnd },
+      update: { fetchedAt: new Date(), days: report.days },
+    });
+
+    // Upsert totals
+    await prisma.gscTotals.upsert({
+      where: { snapshotId: snapshot.id },
+      create: {
+        snapshotId: snapshot.id,
+        clicks: report.totals.current.clicks,
+        impressions: report.totals.current.impressions,
+        ctr: report.totals.current.ctr,
+        clicksPrev: report.totals.previous.clicks,
+        impressionsPrev: report.totals.previous.impressions,
+        ctrPrev: report.totals.previous.ctr,
+        clicksDelta: report.totals.clicksDelta,
+        clicksPct: report.totals.clicksPct,
+        impressionsDelta: report.totals.impressionsDelta,
+        impressionsPct: report.totals.impressionsPct,
+      },
+      update: {
+        clicks: report.totals.current.clicks,
+        impressions: report.totals.current.impressions,
+        ctr: report.totals.current.ctr,
+        clicksPrev: report.totals.previous.clicks,
+        impressionsPrev: report.totals.previous.impressions,
+        ctrPrev: report.totals.previous.ctr,
+        clicksDelta: report.totals.clicksDelta,
+        clicksPct: report.totals.clicksPct,
+        impressionsDelta: report.totals.impressionsDelta,
+        impressionsPct: report.totals.impressionsPct,
+      },
+    });
+
+    // Supprimer les anciennes métriques de ce snapshot (re-run idempotent)
+    await prisma.gscPageMetric.deleteMany({ where: { snapshotId: snapshot.id } });
+    await prisma.gscQueryMetric.deleteMany({ where: { snapshotId: snapshot.id } });
+    await prisma.gscPageQueryMetric.deleteMany({ where: { snapshotId: snapshot.id } });
+    await prisma.gscAlert.deleteMany({ where: { snapshotId: snapshot.id } });
+
+    // Insérer GscPageMetric (date × page)
+    if (granularData.pagesByDate?.length) {
+      const BATCH = 500;
+      for (let i = 0; i < granularData.pagesByDate.length; i += BATCH) {
+        await prisma.gscPageMetric.createMany({
+          data: granularData.pagesByDate.slice(i, i + BATCH).map((r) => ({
+            snapshotId: snapshot.id,
+            date: new Date(r.keys[1]),
+            url: r.keys[0],
+            cluster: classifyUrl(r.keys[0]),
+            clicks: r.clicks,
+            impressions: r.impressions,
+            ctr: r.ctr,
+            position: r.position,
+          })),
+        });
+      }
+      console.log(`[DB] ${granularData.pagesByDate.length} GscPageMetric insérés`);
+    }
+
+    // Insérer GscQueryMetric (date × query)
+    if (granularData.queriesByDate?.length) {
+      const BATCH = 500;
+      for (let i = 0; i < granularData.queriesByDate.length; i += BATCH) {
+        await prisma.gscQueryMetric.createMany({
+          data: granularData.queriesByDate.slice(i, i + BATCH).map((r) => ({
+            snapshotId: snapshot.id,
+            date: new Date(r.keys[1]),
+            query: r.keys[0],
+            clicks: r.clicks,
+            impressions: r.impressions,
+            ctr: r.ctr,
+            position: r.position,
+          })),
+        });
+      }
+      console.log(`[DB] ${granularData.queriesByDate.length} GscQueryMetric insérés`);
+    }
+
+    // Insérer GscPageQueryMetric (page × query) — granularité max
+    if (granularData.pageQuery?.length) {
+      const BATCH = 500;
+      for (let i = 0; i < granularData.pageQuery.length; i += BATCH) {
+        await prisma.gscPageQueryMetric.createMany({
+          data: granularData.pageQuery.slice(i, i + BATCH).map((r) => ({
+            snapshotId: snapshot.id,
+            date: periodStart, // date de début de période (pas de dimension date ici)
+            url: r.keys[0],
+            query: r.keys[1],
+            clicks: r.clicks,
+            impressions: r.impressions,
+            ctr: r.ctr,
+            position: r.position,
+          })),
+        });
+      }
+      console.log(`[DB] ${granularData.pageQuery.length} GscPageQueryMetric insérés`);
+    }
+
+    // Insérer alertes
+    if (report.alerts?.length) {
+      await prisma.gscAlert.createMany({
+        data: report.alerts.map((a) => ({
+          snapshotId: snapshot.id,
+          level: a.level.replace(/[🔴🟠🟡]\s*/g, "").trim(),
+          cluster: null,
+          message: a.message,
+        })),
+      });
+    }
+
+    console.log(`[DB] Snapshot ${snapshot.id} persisté (${periodStart.toISOString().slice(0,10)} → ${periodEnd.toISOString().slice(0,10)})`);
+  } finally {
+    await prisma.$disconnect();
+  }
+}
+
 // ─── Display ─────────────────────────────────────────────────────────────────
 function pct(n) {
   if (n === null || n === undefined) return "N/A";
@@ -427,17 +585,29 @@ async function main() {
     currentQueries,
     previousQueries,
     dailyTrend,
+    pagesByDate,
+    queriesByDate,
+    pageQuery,
   ] = await Promise.all([
     queryPerformance(searchconsole, period.current.start, period.current.end, ["page"]),
     queryPerformance(searchconsole, period.previous.start, period.previous.end, ["page"]),
     queryTopQueries(searchconsole, period.current.start, period.current.end, 50),
     queryTopQueries(searchconsole, period.previous.start, period.previous.end, 50),
     queryDailyTotals(searchconsole, period.current.start, period.current.end),
+    // Granularité : page × date
+    queryPerformance(searchconsole, period.current.start, period.current.end, ["page", "date"]),
+    // Granularité : query × date
+    queryPerformance(searchconsole, period.current.start, period.current.end, ["query", "date"]),
+    // Granularité max : page × query
+    queryPerformance(searchconsole, period.current.start, period.current.end, ["page", "query"]),
   ]);
 
   console.log(`  ✅ Pages: ${currentPages.length} (actuel), ${previousPages.length} (précédent)`);
   console.log(`  ✅ Requêtes: ${currentQueries.length} (actuel)`);
   console.log(`  ✅ Jours: ${dailyTrend.length}`);
+  console.log(`  ✅ Page×Date: ${pagesByDate.length} lignes`);
+  console.log(`  ✅ Query×Date: ${queriesByDate.length} lignes`);
+  console.log(`  ✅ Page×Query: ${pageQuery.length} lignes`);
 
   // Analyze
   const currentClusters = aggregateByCluster(currentPages);
@@ -478,6 +648,10 @@ async function main() {
   const outputFile = path.join(reportsDir, `gsc-monitor-${fmtDate(today)}.json`);
   report.outputFile = path.relative(ROOT, outputFile);
   fs.writeFileSync(outputFile, JSON.stringify(report, null, 2), "utf-8");
+
+  // Persist to Neon DB
+  console.log("\n💾 Persistance en base...");
+  await persistToDB(report, { pagesByDate, queriesByDate, pageQuery });
 
   // Display
   printReport(report);

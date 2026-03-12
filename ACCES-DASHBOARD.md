@@ -18,18 +18,42 @@ Le serveur est maintenant **opérationnel** ! 🚀
 
 ---
 
-## 📊 Dashboards Disponibles
+## Dashboards Disponibles
 
-Une fois connecté, accédez à :
+### Admin (session cookie)
 
 | Dashboard | URL | Description |
 |-----------|-----|-------------|
-| 🏠 Accueil | http://localhost:3040/admin/ | Vue d'ensemble |
-| 📝 Blog | http://localhost:3040/admin/blog/ | Monitoring articles |
-| 🔍 Veille | http://localhost:3040/admin/veille/ | Analyse concurrents |
-| 📅 Éditorial | http://localhost:3040/admin/editorial/ | Kanban production |
-| 🔗 Linking | http://localhost:3040/admin/linking/ | Suggestions liens |
-| ✨ AI Studio | http://localhost:3040/admin/studio/ | Génération articles |
+| Accueil | http://localhost:3040/admin/ | Vue d'ensemble |
+| Blog | http://localhost:3040/admin/blog/ | Monitoring articles |
+| Veille | http://localhost:3040/admin/veille/ | Analyse concurrents |
+| Éditorial | http://localhost:3040/admin/editorial/ | Kanban production |
+| Linking | http://localhost:3040/admin/linking/ | Suggestions liens |
+| AI Studio | http://localhost:3040/admin/studio/ | Génération articles |
+
+### SEO Dashboard (Basic Auth — multi-utilisateurs)
+
+URL : **http://localhost:3040/seo/**  
+En production : **https://moverz.fr/seo/**
+
+**Identifiants** : définis dans `.env.local` (voir ci-dessous).
+
+Variables à ajouter dans `.env.local` :
+
+```env
+# SEO Dashboard — Basic Auth (moverz.fr/seo/)
+SEO_DASHBOARD_USER=seo
+SEO_DASHBOARD_PASSWORD=mot_de_passe_fort_ici
+```
+
+Contenu du dashboard :
+- KPIs globaux GSC (clics, impressions, CTR, position) vs baseline 11/03
+- Top 10 pages + requêtes (depuis `data/gsc-report.json`)
+- Pages stratégiques à surveiller (label-moverz, comparateur, villes)
+- Quick wins blog — articles pos 5–30 à 0 clic
+- Cannibalisation — clusters à consolider
+- Liens directs GSC / PageSpeed / Ahrefs / Semrush / Bing WMT
+- Checklist lundi matin
 
 ---
 

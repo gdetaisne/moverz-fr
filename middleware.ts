@@ -93,9 +93,36 @@ function makeGa4ClientId(): string {
   return `${a}.${b}`;
 }
 
+function checkBasicAuth(req: NextRequest): NextResponse | null {
+  const seoUser = process.env.SEO_DASHBOARD_USER;
+  const seoPass = process.env.SEO_DASHBOARD_PASSWORD;
+
+  if (!seoUser || !seoPass) return null; // not configured → open (dev only)
+
+  const auth = req.headers.get("authorization");
+  if (auth?.startsWith("Basic ")) {
+    const [user, pass] = atob(auth.slice(6)).split(":");
+    if (user === seoUser && pass === seoPass) return null; // authorized
+  }
+
+  const res = new NextResponse("Unauthorized", { status: 401 });
+  res.headers.set("WWW-Authenticate", 'Basic realm="SEO Dashboard", charset="UTF-8"');
+  res.headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
+  return res;
+}
+
 export async function middleware(req: NextRequest, event: NextFetchEvent) {
   const { pathname } = req.nextUrl;
-  
+
+  // 🔐 SEO DASHBOARD: Basic Auth on /seo/*
+  if (pathname === "/seo" || pathname.startsWith("/seo/")) {
+    const denied = checkBasicAuth(req);
+    if (denied) return denied;
+    const res = NextResponse.next();
+    res.headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
+    return res;
+  }
+
   // 🔐 ADMIN PROTECTION: Protect /admin/* routes (except /admin/login and /admin/login/)
   if (pathname.startsWith('/admin/') && !pathname.startsWith('/admin/login')) {
     const sessionCookie = req.cookies.get('admin_session')?.value;
