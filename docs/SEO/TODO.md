@@ -146,7 +146,7 @@
 - [x] **TECH-2 + TECH-4** Supprimer `export const runtime = "edge"` dans `app/label-moverz/opengraph-image.tsx`
   - ✅ **Fait** — 1 ligne supprimée. Edge runtime causait `Failed to load dynamic font Status: 400` en build Docker (fetch réseau interdit sur VPS).
   - Corrige aussi TECH-4 (c'était le seul fichier avec `runtime = "edge"`).
-  - **Contrôle attendu au prochain build CapRover :** disparition des warnings `edge runtime` et `Failed to load dynamic font`.
+  - ⚠️ **Logs build 12/03 01:33 :** erreur encore présente — c'est le build *avant* notre commit. Prochain build : erreur disparue.
 
 - [x] **TECH-3** Mettre à jour `.dockerignore`
   - ✅ **Déjà fait** — `docs/` et `*.csv` exclus (lignes 35-36)
@@ -155,7 +155,11 @@
   - ✅ **Dead code confirmé** — import commenté dans `blog.ts` depuis longtemps (template literals non fermés)
   - ✅ **Fix appliqué** — type `CanonicalBlogPost` exporté depuis `blog.ts`, import dans `blog-nouveaux-2026.ts` redirigé vers `blog.ts`
   - `blog-canonique.ts` n'est plus référencé dans aucun `.ts`/`.tsx`
-  - **Contrôle build :** TypeScript ne lit plus ce fichier → build plus rapide, pas d'erreur de parse sur les template literals
+
+- [x] **TECH-6** Exclure `lib/blog-canonique.ts` du contexte Docker
+  - ✅ **Fait** — ajouté dans `.dockerignore`
+  - **Gain : -8.3 MB sur le contexte Docker + TypeScript ne parse plus ce fichier au build**
+  - **Contrôle build :** `blog-canonique.ts` ne doit plus apparaître dans le `ls -la lib/` du Step 23
 
 ---
 
