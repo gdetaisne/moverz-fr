@@ -38,10 +38,10 @@ export function LogoWithText({
       style={{ fontFamily: "var(--font-sora), Sora, system-ui, sans-serif" }}
     >
       <Image
-        src="/logo-ui.png"
+        src="/logo.png"
         alt=""
-        width={48}
-        height={16}
+        width={1536}
+        height={1024}
         className={`${s.icon} w-auto`}
         priority
       />
