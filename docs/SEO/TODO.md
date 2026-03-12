@@ -31,9 +31,9 @@
 
 - [ ] **#3** Créer 4 articles "comparatif déménageurs [ville] 2026"
   - [x] `/blog/comparatif-demenageurs-rennes-2026/` (81 impr, pos 7.6, 0 clic) — ✅ **Réalisé** (tableau 5 acteurs, section Label Moverz, FAQ)
-  - `/blog/comparatif-demenageurs-marseille-2026/` (40 impr, pos 8.8, 0 clic)
-  - `/blog/comparatif-demenageurs-bordeaux-2026/` (40 impr, pos 8.7, 0 clic)
-  - `/blog/comparatif-demenageurs-lyon-2026/` (64 impr, pos 10.6, 0 clic)
+  - [x] `/blog/comparatif-demenageurs-marseille-2026/` (40 impr, pos 8.8, 0 clic) — ✅ **Réalisé** (tableau 5 acteurs, Label Moverz, FAQ)
+  - [x] `/blog/comparatif-demenageurs-bordeaux-2026/` (40 impr, pos 8.7, 0 clic) — ✅ **Réalisé**
+  - [x] `/blog/comparatif-demenageurs-lyon-2026/` (64 impr, pos 10.6, 0 clic) — ✅ **Réalisé**
   - Format : tableau comparatif 5 déménageurs, 800–1200 mots, FAQ schema, attribution Lucie
   - **Ton Moverz** : fun, personnel (« on », « nous »), E-E-A-T (chiffres, sources, Lucie), SEO (mots-clés naturels, structure claire)
 

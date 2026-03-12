@@ -40,6 +40,45 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     authorSlug: "lucie",
   },
   {
+    slug: "comparatif-demenageurs-marseille-2026",
+    title: "Comparatif Déménageurs Marseille 2026 : Top 5 et Prix Réels",
+    description:
+      "Comparatif déménageurs Marseille 2026 : Amice, Pro Du Dem, ADEM, acteurs locaux. T2 550–950€. Vérifier avec Label Moverz (Score /100 gratuit) avant de signer.",
+    publishedAt: "2026-03-12T00:00:00.000Z",
+    updatedAt: "2026-03-12T00:00:00.000Z",
+    category: "demenagement-par-ville",
+    citySlug: "marseille",
+    readingTimeMinutes: 6,
+    tags: ["déménageurs Marseille", "comparatif Marseille", "Label Moverz", "vérifier déménageur"],
+    authorSlug: "lucie",
+  },
+  {
+    slug: "comparatif-demenageurs-bordeaux-2026",
+    title: "Comparatif Déménageurs Bordeaux 2026 : Top 5 et Prix Réels",
+    description:
+      "Comparatif déménageurs Bordeaux 2026 : Air Déménagement, Alex, Sam'déménage, acteurs locaux. T2 550–950€. Vérifier avec Label Moverz (Score /100 gratuit) avant de signer.",
+    publishedAt: "2026-03-12T00:00:00.000Z",
+    updatedAt: "2026-03-12T00:00:00.000Z",
+    category: "demenagement-par-ville",
+    citySlug: "bordeaux",
+    readingTimeMinutes: 6,
+    tags: ["déménageurs Bordeaux", "comparatif Bordeaux", "Label Moverz", "vérifier déménageur"],
+    authorSlug: "lucie",
+  },
+  {
+    slug: "comparatif-demenageurs-lyon-2026",
+    title: "Comparatif Déménageurs Lyon 2026 : Top 5 et Prix Réels",
+    description:
+      "Comparatif déménageurs Lyon 2026 : S.I.E.T, Lugnier, acteurs locaux. T2 500–900€. Vérifier avec Label Moverz (Score /100 gratuit) avant de signer.",
+    publishedAt: "2026-03-12T00:00:00.000Z",
+    updatedAt: "2026-03-12T00:00:00.000Z",
+    category: "demenagement-par-ville",
+    citySlug: "lyon",
+    readingTimeMinutes: 6,
+    tags: ["déménageurs Lyon", "comparatif Lyon", "Label Moverz", "vérifier déménageur"],
+    authorSlug: "lucie",
+  },
+  {
     slug: "eviter-arnaques-demenagement",
     title: "Comment éviter les arnaques au déménagement en 2026 : Guide complet",
     description:

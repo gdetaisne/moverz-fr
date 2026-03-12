@@ -171,7 +171,286 @@ Un devis précis nécessite : étage, ascenseur oui/non, passage le plus étroit
 4. **Acompte ≤ 30 %** — méfiance au-delà
 
 > **Prêt à comparer à Rennes ?**  
-> [Créer mon dossier gratuit →](https://devis.moverz.fr/devis-gratuits?source=blog-comparatif-rennes) — 1 formulaire, jusqu'à 5 devis, pros vérifiés Score /100, 0 harcèlement. On s'occupe du reste. On s'occupe du reste.
+> [Créer mon dossier gratuit →](https://devis.moverz.fr/devis-gratuits?source=blog-comparatif-rennes) — 1 formulaire, jusqu'à 5 devis, pros vérifiés Score /100, 0 harcèlement. On s'occupe du reste.
+`,
+  },
+  {
+    slug: "comparatif-demenageurs-marseille-2026",
+    title: "Comparatif Déménageurs Marseille 2026 : Top 5 et Prix Réels",
+    description: "Comparatif déménageurs Marseille 2026 : Amice, Pro Du Dem, ADEM, acteurs locaux. Prix T2 550–950€. Vérifier avec Label Moverz (Score /100 gratuit) avant de signer.",
+    type: "guide",
+    citySlug: "marseille",
+    body: `Vous déménagez à Marseille et vous voulez **choisir sereinement** ? On a listé **5 acteurs à connaître**, les **vrais prix 2026** et — surtout — **comment vérifier** avant de signer. Parce que la DGCCRF a trouvé 64 % d'anomalies dans le secteur en 2023, on a mis au point un outil pour ça.
+
+**En bref** : Amice Déménagement, Pro Du Dem, ADEM et 2 autres acteurs locaux. T2 intra-ville 550–950€. Avant de valider : collez le SIREN du déménageur sur [Label Moverz](/label-moverz/) → Score /100 en 30 secondes, gratuit.
+
+---
+
+## Tableau comparatif : 5 déménageurs Marseille 2026
+
+| Déménageur | Type | Fourchette T2 intra-ville | Spécialité | Avis Google |
+|------------|------|---------------------------|------------|-------------|
+| **Amice Déménagement** | PME locale | 580–920€ | Centre, Vieux-Port | 4.6+/5 |
+| **Pro Du Dem** | PME | 550–900€ | PACA, national | 4.5+/5 |
+| **ADEM Déménagement** | Familiale (depuis 1998) | 600–950€ | Particuliers, pros | 4.5+/5 |
+| **Les Compagnons du Déménagement** | PME | 530–880€ | Intra-ville, agglo | 4.4+/5 |
+| **Cardi Déménagement** | Locale | 520–850€ | Petits volumes, express | 4.3+/5 |
+
+*Prix indicatifs T2 25–35 m³, même ville, accès standard. Montants variables selon étage, volume exact et période. Noailles, Panier, 7e = surcoûts accès.*
+
+---
+
+## Vérifier votre déménageur avant de signer : Label Moverz
+
+**Avant de valider un devis**, vérifiez que le déménageur tient la route. En 2024, 257 entreprises de déménagement ont fait faillite en France — un devis « pas cher » peut cacher des difficultés ou des litiges récurrents.
+
+On a construit notre **petit outil gratuit** pour ça : vous entrez le SIREN ou le nom, vous avez un **Score /100 en 30 secondes**. Sans inscription, utilisable pour n'importe quel déménageur — même celui que vous avez trouvé ailleurs.
+
+**[Vérifier un déménageur →](/label-moverz/)**
+
+**Sous le capot ?** Trois dimensions :
+
+1. **Santé financière** (Pappers) : bilans, trésorerie, endettement
+2. **Risque juridique** (BODACC, Pappers Décisions) : procédures, décisions de justice
+3. **Avis clients** : analyse des avis Google des 12 derniers mois
+
+**Score < 50/100** = exclusion automatique sur Moverz. Vous pouvez utiliser l'outil pour vérifier un déménageur **même si vous ne passez pas par Moverz** pour votre devis — c'est gratuit et indépendant. Fonctionne pour les déménageurs de Marseille et partout en France.
+
+> **En pratique** : Avant de signer, récupérez le SIREN sur le devis ou sur [Pappers](https://www.pappers.fr/). Collez-le sur [label-moverz.fr](/label-moverz/) et consultez le score. Si < 50/100 ou alertes critiques → méfiance.
+
+---
+
+## Prix déménagement Marseille 2026 : fourchettes réalistes
+
+| Type de logement | Volume | Intra-ville | Agglomération | Longue distance |
+|------------------|--------|-------------|---------------|-----------------|
+| Studio | 10–15 m³ | 380–600€ | 450–700€ | 850–1600€ |
+| T2 | 20–30 m³ | 550–950€ | 600–1050€ | 1300–2400€ |
+| T3 | 35–45 m³ | 750–1300€ | 850–1500€ | 1900–3500€ |
+| Maison | 50–70 m³ | 1100–2000€ | 1200–2200€ | 2700–5000€ |
+
+*Facteurs de variation : étage sans ascenseur (+60–180€/étage), monte-meuble (+220–500€), période juillet–août (+15–25 %), quartiers accès difficile (+10–20 %).*
+
+---
+
+## 5 critères pour choisir à Marseille
+
+1. **Score /100 vérifié** — Utilisez [Label Moverz](/label-moverz/) avant de signer
+2. **Devis comparables** — Même volume, même accès transmis à tous ([Moverz](/comment-ca-marche/) standardise)
+3. **Avis récents** — 15+ avis sur les 12 derniers mois, lire les 1–2★
+4. **Assurance RC Pro** — ≥ 1,5 M€, attestation à jour
+5. **Licence de transport** — Obligatoire pour activité déménagement
+
+---
+
+## Quartiers Marseille : contraintes à préciser
+
+On vous donne les zones qu'on connaît bien pour Marseille. À préciser dans votre devis :
+
+- **Vieux-Port, Panier, Noailles** : ruelles étroites, stationnement compliqué — à détailler
+- **7e, 8e (Prado)** : souvent accès plus simple, avenues larges
+- **Joliette, La Belle de Mai** : immeubles anciens, monte-meuble fréquent
+- **Cassis, Aubagne (agglo)** : distance, accès variable
+
+Un devis précis nécessite : étage, ascenseur oui/non, passage le plus étroit, distance camion→porte. On vous recommande de tout indiquer dès le départ — ça évite les mauvaises surprises.
+
+---
+
+## En pratique
+
+1. **Comparez 3 à 5 devis** sur la même base (volume, accès, prestations)
+2. **Vérifiez chaque déménageur** avec l'outil [Label Moverz](/label-moverz/) (SIREN sur le devis)
+3. **Privilégiez les devis écrits** — évitez les estimations verbales
+4. **Acompte ≤ 30 %** — méfiance au-delà
+
+> **Prêt à comparer à Marseille ?**  
+> [Créer mon dossier gratuit →](https://devis.moverz.fr/devis-gratuits?source=blog-comparatif-marseille) — 1 formulaire, jusqu'à 5 devis, pros vérifiés Score /100, 0 harcèlement. On s'occupe du reste.
+`,
+  },
+  {
+    slug: "comparatif-demenageurs-bordeaux-2026",
+    title: "Comparatif Déménageurs Bordeaux 2026 : Top 5 et Prix Réels",
+    description: "Comparatif déménageurs Bordeaux 2026 : Air Déménagement, Alex, Sam'déménage, acteurs locaux. Prix T2 550–950€. Vérifier avec Label Moverz (Score /100 gratuit) avant de signer.",
+    type: "guide",
+    citySlug: "bordeaux",
+    body: `Vous déménagez à Bordeaux et vous voulez **choisir sereinement** ? On a listé **5 acteurs à connaître**, les **vrais prix 2026** et — surtout — **comment vérifier** avant de signer. Parce que la DGCCRF a trouvé 64 % d'anomalies dans le secteur en 2023, on a mis au point un outil pour ça.
+
+**En bref** : Air Déménagement, Alex Déménagement, Sam'déménage et 2 autres acteurs locaux. T2 intra-ville 550–950€. Avant de valider : collez le SIREN du déménageur sur [Label Moverz](/label-moverz/) → Score /100 en 30 secondes, gratuit.
+
+---
+
+## Tableau comparatif : 5 déménageurs Bordeaux 2026
+
+| Déménageur | Type | Fourchette T2 intra-ville | Spécialité | Avis Google |
+|------------|------|---------------------------|------------|-------------|
+| **Air Déménagement** | PME locale | 580–920€ | Centre, Miroir d'eau | 4.6+/5 |
+| **Alex Déménagement** | Familiale (16 ans) | 560–900€ | Emballage, stockage | 4.5+/5 |
+| **Sam'déménage** | PME | 570–930€ | Œuvres d'art, national | 4.5+/5 |
+| **Déménagements Aquitains** | Locale | 530–870€ | Gironde, agglo | 4.4+/5 |
+| **PLS Déménagement** | PME | 520–850€ | Petits volumes, express | 4.3+/5 |
+
+*Prix indicatifs T2 25–35 m³, même ville, accès standard. Montants variables selon étage, volume exact et période.*
+
+---
+
+## Vérifier votre déménageur avant de signer : Label Moverz
+
+**Avant de valider un devis**, vérifiez que le déménageur tient la route. En 2024, 257 entreprises de déménagement ont fait faillite en France — un devis « pas cher » peut cacher des difficultés ou des litiges récurrents.
+
+On a construit notre **petit outil gratuit** pour ça : vous entrez le SIREN ou le nom, vous avez un **Score /100 en 30 secondes**. Sans inscription, utilisable pour n'importe quel déménageur — même celui que vous avez trouvé ailleurs.
+
+**[Vérifier un déménageur →](/label-moverz/)**
+
+**Sous le capot ?** Trois dimensions :
+
+1. **Santé financière** (Pappers) : bilans, trésorerie, endettement
+2. **Risque juridique** (BODACC, Pappers Décisions) : procédures, décisions de justice
+3. **Avis clients** : analyse des avis Google des 12 derniers mois
+
+**Score < 50/100** = exclusion automatique sur Moverz. Vous pouvez utiliser l'outil pour vérifier un déménageur **même si vous ne passez pas par Moverz** pour votre devis — c'est gratuit et indépendant. Fonctionne pour les déménageurs de Bordeaux et partout en France.
+
+> **En pratique** : Avant de signer, récupérez le SIREN sur le devis ou sur [Pappers](https://www.pappers.fr/). Collez-le sur [label-moverz.fr](/label-moverz/) et consultez le score. Si < 50/100 ou alertes critiques → méfiance.
+
+---
+
+## Prix déménagement Bordeaux 2026 : fourchettes réalistes
+
+| Type de logement | Volume | Intra-ville | Agglomération | Longue distance |
+|------------------|--------|-------------|---------------|-----------------|
+| Studio | 10–15 m³ | 370–580€ | 430–680€ | 850–1600€ |
+| T2 | 20–30 m³ | 550–950€ | 600–1050€ | 1300–2400€ |
+| T3 | 35–45 m³ | 740–1280€ | 840–1480€ | 1900–3500€ |
+| Maison | 50–70 m³ | 1080–1950€ | 1180–2150€ | 2700–5000€ |
+
+*Facteurs de variation : étage sans ascenseur (+55–170€/étage), monte-meuble (+210–480€), période juillet–août (+15–25 %).*
+
+---
+
+## 5 critères pour choisir à Bordeaux
+
+1. **Score /100 vérifié** — Utilisez [Label Moverz](/label-moverz/) avant de signer
+2. **Devis comparables** — Même volume, même accès transmis à tous ([Moverz](/comment-ca-marche/) standardise)
+3. **Avis récents** — 15+ avis sur les 12 derniers mois, lire les 1–2★
+4. **Assurance RC Pro** — ≥ 1,5 M€, attestation à jour
+5. **Licence de transport** — Obligatoire pour activité déménagement
+
+---
+
+## Quartiers Bordeaux : contraintes à préciser
+
+On vous donne les zones qu'on connaît bien pour Bordeaux. À préciser dans votre devis :
+
+- **Centre, Saint-Pierre, Triangle** : ruelles pavées, stationnement limité — à détailler
+- **Chartrons, Bassins à flot** : souvent accès plus simple
+- **Saint-Michel, Capucins** : quartiers anciens, passage étroit fréquent
+- **Talence, Pessac, Mérignac (agglo)** : distance, accès variable
+
+Un devis précis nécessite : étage, ascenseur oui/non, passage le plus étroit, distance camion→porte. On vous recommande de tout indiquer dès le départ — ça évite les mauvaises surprises.
+
+---
+
+## En pratique
+
+1. **Comparez 3 à 5 devis** sur la même base (volume, accès, prestations)
+2. **Vérifiez chaque déménageur** avec l'outil [Label Moverz](/label-moverz/) (SIREN sur le devis)
+3. **Privilégiez les devis écrits** — évitez les estimations verbales
+4. **Acompte ≤ 30 %** — méfiance au-delà
+
+> **Prêt à comparer à Bordeaux ?**  
+> [Créer mon dossier gratuit →](https://devis.moverz.fr/devis-gratuits?source=blog-comparatif-bordeaux) — 1 formulaire, jusqu'à 5 devis, pros vérifiés Score /100, 0 harcèlement. On s'occupe du reste.
+`,
+  },
+  {
+    slug: "comparatif-demenageurs-lyon-2026",
+    title: "Comparatif Déménageurs Lyon 2026 : Top 5 et Prix Réels",
+    description: "Comparatif déménageurs Lyon 2026 : S.I.E.T, Lugnier, acteurs locaux. Prix T2 500–900€. Vérifier avec Label Moverz (Score /100 gratuit) avant de signer.",
+    type: "guide",
+    citySlug: "lyon",
+    body: `Vous déménagez à Lyon et vous voulez **choisir sereinement** ? On a listé **5 acteurs à connaître**, les **vrais prix 2026** et — surtout — **comment vérifier** avant de signer. Parce que la DGCCRF a trouvé 64 % d'anomalies dans le secteur en 2023, on a mis au point un outil pour ça.
+
+**En bref** : S.I.E.T, Déménagements Lugnier et 3 autres acteurs locaux. T2 intra-ville 500–900€. Avant de valider : collez le SIREN du déménageur sur [Label Moverz](/label-moverz/) → Score /100 en 30 secondes, gratuit.
+
+---
+
+## Tableau comparatif : 5 déménageurs Lyon 2026
+
+| Déménageur | Type | Fourchette T2 intra-ville | Spécialité | Avis Google |
+|------------|------|---------------------------|------------|-------------|
+| **S.I.E.T Déménagement** | Historique (depuis 1900) | 550–850€ | Particuliers, international | 4.5+/5 |
+| **Déménagements Lugnier** | Familiale (depuis 1950) | 520–820€ | Lyon, agglo | 4.5+/5 |
+| **Eurodem Lyon** | PME | 500–800€ | Croix-Rousse, Presqu'île | 4.4+/5 |
+| **Manutention Services Lyon** | Locale | 480–760€ | Formule éco, petits volumes | 4.3+/5 |
+| **Trans Lyon Déménagement** | PME | 490–780€ | Intra-ville, express | 4.3+/5 |
+
+*Prix indicatifs T2 25–35 m³, même ville, accès standard. Montants variables selon étage, volume exact et période. Vieux-Lyon, Croix-Rousse = surcoûts accès.*
+
+---
+
+## Vérifier votre déménageur avant de signer : Label Moverz
+
+**Avant de valider un devis**, vérifiez que le déménageur tient la route. En 2024, 257 entreprises de déménagement ont fait faillite en France — un devis « pas cher » peut cacher des difficultés ou des litiges récurrents.
+
+On a construit notre **petit outil gratuit** pour ça : vous entrez le SIREN ou le nom, vous avez un **Score /100 en 30 secondes**. Sans inscription, utilisable pour n'importe quel déménageur — même celui que vous avez trouvé ailleurs.
+
+**[Vérifier un déménageur →](/label-moverz/)**
+
+**Sous le capot ?** Trois dimensions :
+
+1. **Santé financière** (Pappers) : bilans, trésorerie, endettement
+2. **Risque juridique** (BODACC, Pappers Décisions) : procédures, décisions de justice
+3. **Avis clients** : analyse des avis Google des 12 derniers mois
+
+**Score < 50/100** = exclusion automatique sur Moverz. Vous pouvez utiliser l'outil pour vérifier un déménageur **même si vous ne passez pas par Moverz** pour votre devis — c'est gratuit et indépendant. Fonctionne pour les déménageurs de Lyon et partout en France.
+
+> **En pratique** : Avant de signer, récupérez le SIREN sur le devis ou sur [Pappers](https://www.pappers.fr/). Collez-le sur [label-moverz.fr](/label-moverz/) et consultez le score. Si < 50/100 ou alertes critiques → méfiance.
+
+---
+
+## Prix déménagement Lyon 2026 : fourchettes réalistes
+
+| Type de logement | Volume | Intra-ville | Agglomération | Longue distance |
+|------------------|--------|-------------|---------------|-----------------|
+| Studio | 10–15 m³ | 350–550€ | 400–650€ | 800–1500€ |
+| T2 | 20–30 m³ | 500–900€ | 550–1000€ | 1200–2200€ |
+| T3 | 35–45 m³ | 700–1200€ | 800–1400€ | 1800–3200€ |
+| Maison | 50–70 m³ | 1000–1800€ | 1100–2000€ | 2500–4500€ |
+
+*Facteurs de variation : étage sans ascenseur (+50–150€/étage), monte-meuble (+200–450€), période juillet–août (+15–25 %), traboules Croix-Rousse (+10–20 %).*
+
+---
+
+## 5 critères pour choisir à Lyon
+
+1. **Score /100 vérifié** — Utilisez [Label Moverz](/label-moverz/) avant de signer
+2. **Devis comparables** — Même volume, même accès transmis à tous ([Moverz](/comment-ca-marche/) standardise)
+3. **Avis récents** — 15+ avis sur les 12 derniers mois, lire les 1–2★
+4. **Assurance RC Pro** — ≥ 1,5 M€, attestation à jour
+5. **Licence de transport** — Obligatoire pour activité déménagement
+
+---
+
+## Quartiers Lyon : contraintes à préciser
+
+On vous donne les zones qu'on connaît bien pour Lyon. À préciser dans votre devis :
+
+- **Vieux-Lyon, Croix-Rousse** : traboules, escaliers, passage étroit — à détailler
+- **Presqu'île, Part-Dieu** : souvent accès plus simple, immeubles récents
+- **Gerland, Confluence** : quartiers neufs, ascenseurs fréquents
+- **Villeurbanne, Caluire (agglo)** : distance, accès variable
+
+Un devis précis nécessite : étage, ascenseur oui/non, passage le plus étroit, traboule ou escalier, distance camion→porte. On vous recommande de tout indiquer dès le départ — ça évite les mauvaises surprises.
+
+---
+
+## En pratique
+
+1. **Comparez 3 à 5 devis** sur la même base (volume, accès, prestations)
+2. **Vérifiez chaque déménageur** avec l'outil [Label Moverz](/label-moverz/) (SIREN sur le devis)
+3. **Privilégiez les devis écrits** — évitez les estimations verbales
+4. **Acompte ≤ 30 %** — méfiance au-delà
+
+> **Prêt à comparer à Lyon ?**  
+> [Créer mon dossier gratuit →](https://devis.moverz.fr/devis-gratuits?source=blog-comparatif-lyon) — 1 formulaire, jusqu'à 5 devis, pros vérifiés Score /100, 0 harcèlement. On s'occupe du reste.
 `,
   },
   {

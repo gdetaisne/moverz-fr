@@ -18,6 +18,33 @@ if (!fs.existsSync(reportPath)) {
 
 const report = JSON.parse(fs.readFileSync(reportPath, "utf8"));
 
+// Charger les slugs avec contenu canonique (ne pas rediriger ces pages)
+function loadCanonicalSlugs() {
+  const canonicalFiles = [
+    "lib/blog-nouveaux-2026.ts",
+    "lib/blog-canonique.ts",
+    "lib/blog-markdown-posts.ts",
+    "lib/blog-longtail.ts",
+    "lib/blog-longtail-pack2.ts",
+    "lib/blog-longtail-links.ts",
+    "lib/blog-arnaques.ts",
+    "lib/blog-extra.ts",
+  ];
+  const slugs = new Set();
+  const slugRe = /slug:\s*["']([^"']+)["']/g;
+  for (const rel of canonicalFiles) {
+    const fp = path.join(root, rel);
+    if (fs.existsSync(fp)) {
+      const content = fs.readFileSync(fp, "utf8");
+      let m;
+      while ((m = slugRe.exec(content)) !== null) slugs.add(m[1]);
+    }
+  }
+  return slugs;
+}
+
+const CANONICAL_SLUGS = loadCanonicalSlugs();
+
 function pathFromUrl(url) {
   return url.replace(/^https?:\/\/moverz\.fr/, "").replace(/\/$/, "") || "/";
 }
@@ -40,7 +67,9 @@ for (const url of report.categories.blog.urls) {
   if (!p.startsWith("/blog/")) continue;
   const blogPath = p.replace(/^\//, "").replace(/\/$/, "");
   const slug = blogPath.replace("blog/", "");
-  // Nested: blog/parent/child → on garde le path complet pour la source
+  // Slug effectif : blog/parent/child → child ; blog/slug → slug
+  const effectiveSlug = slug.includes("/") ? slug.split("/").pop() : slug;
+  if (CANONICAL_SLUGS.has(effectiveSlug)) continue; // ne pas rediriger une page qui a du contenu
   const dest = slug.includes("prix") || slug.includes("tarif") || slug.includes("cout")
     ? prixHub
     : demenagementHub;
