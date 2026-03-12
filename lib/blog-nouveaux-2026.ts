@@ -12574,14 +12574,179 @@ Presqu'île, Croix-Rousse : +15-20%. **Moverz** : devis Lyon.
   {
     slug: "prix-demenageur-nice-2026",
     title: "Prix Déménageur Nice 2026 : Tarifs Réels & Comparatif Complet",
-    description: "Prix déménageur Nice 2026 : 545€ studio, 990€ T2, 1680€ T3.",
-    type: "satellite",
+    description: "Combien coûte un déménagement à Nice en 2026 ? Fourchettes studio à maison (545€-2670€), Vieux-Nice et collines, exemples concrets, conseils pour des devis comparables.",
+    type: "guide",
     citySlug: "nice",
-    body: `**Prix déménageur Nice 2026** : studio **545€**, T2 **990€**, T3 **1680€**, maison **2670€**.
+    body: `**Nice est la 5e ville de France et le cœur de la Côte d'Azur.** Chaque année, des milliers de déménagements s'y déroulent : étudiants, retraités, familles attirées par le climat et la qualité de vie. Le marché niçois est dense mais les prix varient fortement selon le quartier (Vieux-Nice, collines, zones accessibles) et la période.
+
+Voici les fourchettes réalistes pour 2026, basées sur les dossiers traités via Moverz.fr.
+
+> **Comparez des devis à Nice en toute transparence**  
+> [Moverz](/) transmet votre dossier à des déménageurs vérifiés (Pappers, avis Google). 3-5 devis comparables, dossier anonyme. [Démarrer gratuitement](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-nice).
+
+---
+
+## Prix moyens d'un déménagement à Nice en 2026
 
 ![Nice - Promenade des Anglais](/images/cities/nice-promenade-anglais.jpg)
 
-Vieux-Nice, collines : +15-20%. **Moverz** : devis Nice.
+*Photo : La Promenade des Anglais, symbole de Nice. Vieux-Nice et collines = surcoûts accès à prévoir.*
+
+### Tableau récapitulatif par surface
+
+| Logement | Volume estimé | Nice → Nice (local) | Nice → Paris / province |
+|---|---|---|---|
+| Studio / T1 (20-35 m²) | 10-20 m³ | 450–800 € | 950–1 600 € |
+| T2 (40-55 m²) | 20-35 m³ | 750–1 350 € | 1 400–2 500 € |
+| T3 (60-80 m²) | 35-55 m³ | 1 200–2 100 € | 2 000–3 800 € |
+| T4 / grande maison (90-120 m²) | 55-80 m³ | 1 900–3 500 € | 3 000–5 500 € |
+
+*Prix TTC, prestation standard. Vieux-Nice et collines non inclus (voir surcoûts ci-dessous).*
+
+### Fourchettes de référence Moverz 2026
+
+- **Studio** : **545 €** (base) → 680 € (Vieux-Nice, collines)
+- **T2** : **990 €** (base) → 1 200 € (centre ancien)
+- **T3** : **1 680 €** (base) → 2 000 € (accès difficile)
+- **Maison 4-5 pièces** : **2 670 €** (base)
+
+---
+
+## Spécificités niçoises qui font varier le prix
+
+### Vieux-Nice et quartiers anciens
+
+Ruelle étroites, immeubles anciens sans ascenseur, stationnement limité :
+- Accès camion très difficile (zones piétonnes, voies étroites)
+- Portage long depuis le parking autorisé
+- Ascenseurs rares dans le centre historique
+
+**Impact estimé : +15 à +25 % vs un appartement avec bon accès.**
+
+### Cimiez, Mont-Boron, collines
+
+Quartiers résidentiels en hauteur, maisons et villas :
+- Portage important si allée étroite ou pas d'accès camion
+- Monte-meuble souvent nécessaire pour les étages élevés
+
+**Impact estimé : +10 à +20 % selon le type d'accès.**
+
+### Nice Nord, Lingostière, Ariane
+
+Quartiers plus récents, voiries mieux adaptées. Les déménagements y sont souvent au tarif de base.
+
+---
+
+## Les 6 facteurs qui font varier le prix à Nice
+
+### 1. L'accès rue et le stationnement
+
+Vieux-Nice, collines : le camion ne peut souvent pas stationner devant. Prévoir un arrêté de circulation si besoin (mairie, 2-3 semaines avant).
+
+### 2. L'étage et l'ascenseur
+
+Nombreux immeubles niçois sans ascenseur adapté aux meubles :
+- Rez-de-chaussée ou ascenseur adapté : tarif de base
+- 3e étage sans ascenseur : +15-25 %
+- 5e étage sans ascenseur : +30-45 %
+
+### 3. La période
+
+| Période | Impact |
+|---|---|
+| Juillet-août (tourisme) | +30 à +50 % |
+| Fin de mois | +15 à +25 % |
+| Rentrée (septembre) | +15 à +30 % |
+| Octobre-mars, milieu de semaine | Tarif de base |
+
+### 4. La formule
+
+- **Économique** : vous emballez. Tarif de base.
+- **Standard** : déménageur emballe les fragiles. +20-35 %
+- **Premium** : clé en main. +40-70 %
+
+### 5. Les objets particuliers
+
+| Objet | Surcoût estimé |
+|---|---|
+| Piano droit | 180-500 € |
+| Piano à queue | 450-1 200 € |
+| Monte-meuble | 150-400 € |
+
+### 6. Monaco et alentours
+
+Nice–Monaco (~20 km) : prix similaires à un déménagement local, mais formalités Monaco à anticiper (TVA, stationnement).
+
+---
+
+## Exemples concrets à Nice
+
+### Exemple 1 : Studio Vieux-Nice → T2 Nice Nord
+- Studio 28 m², 12 m³, 2e étage sans ascenseur (départ)
+- T2 50 m², rez-de-chaussée (arrivée)
+- Formule économique, novembre
+- **Prix constaté : 700–1 000 €**
+
+### Exemple 2 : T3 Cimiez → T3 Lingostière
+- 70 m², 40 m³, accès correct départ et arrivée
+- Formule standard, mars
+- **Prix constaté : 1 550–2 100 €**
+
+### Exemple 3 : T2 Nice → Paris (~930 km)
+- 45 m³, 2e étage avec ascenseur
+- Formule standard, avril
+- **Prix constaté : 2 200–3 500 €**
+
+### Exemple 4 : Maison Nice → Marseille (~220 km)
+- 90 m², 55 m³, accès maison
+- Formule économique, octobre
+- **Prix constaté : 2 400–3 800 €**
+
+---
+
+## Déménagement depuis ou vers Nice : corridors principaux
+
+### Nice → Paris (~930 km)
+
+Corridor très fréquenté.
+
+| Volume | Prix estimé |
+|---|---|
+| 20 m³ (T2) | 1 800 – 2 800 € |
+| 40 m³ (T3) | 2 800 – 4 500 € |
+
+### Nice → Marseille (~220 km)
+
+Trajet courant, bonne offre.
+
+| Volume | Prix estimé |
+|---|---|
+| 20 m³ (T2) | 1 000 – 1 600 € |
+| 40 m³ (T3) | 1 600 – 2 500 € |
+
+### Nice → Monaco (~20 km)
+
+Courte distance, surcoût possible secteur prince.
+
+---
+
+## Comment obtenir des devis comparables à Nice
+
+Environ 40 % des devis obtenus classiquement ne sont pas comparables (volumes différents, accès flous). Moverz standardise le dossier : volume estimé, accès complets (étages, stationnement, portage), même transmission à tous les pros. Les déménageurs du réseau Nice sont vérifiés (Pappers, avis Google, licence transport).
+
+---
+
+## Résumé
+
+1. **Budget de base à Nice** : 45-70 €/m³ pour un déménagement local
+2. **Vieux-Nice et collines** : surcoût 15-25 %, accès à préciser
+3. **Haute saison** : juillet-août = +30-50 %, réservez tôt
+4. **Comparez sur une base identique** : volume précis, accès complets
+
+> **Déménagez à Nice sans mauvaises surprises**  
+> [Moverz](/) vérifie chaque déménageur niçois. 3-5 devis comparables. [Obtenir mes devis](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-nice-fin).
+
+*Sources : données Moverz.fr 2025-2026 | Ville de Nice*
 `,
   },
   {
@@ -12829,27 +12994,285 @@ Vérifiez : numéro de licence de transport (obligatoire), attestation d'assuran
   {
     slug: "prix-demenageur-lille-2026",
     title: "Prix Déménageur Lille 2026 : Tarifs Réels & Comparatif Complet",
-    description: "Prix déménageur Lille 2026 : 520€ studio, 955€ T2, 1620€ T3.",
-    type: "satellite",
+    description: "Combien coûte un déménagement à Lille en 2026 ? Fourchettes studio à maison (520€-2570€), spécificités Vieux-Lille et Wazemmes, exemples concrets, conseils pour des devis comparables.",
+    type: "guide",
     citySlug: "lille",
-    body: `**Prix déménageur Lille 2026** : studio **520€**, T2 **955€**, T3 **1620€**, maison **2570€**.
+    body: `**Lille, capitale des Flandres, est une métropole dynamique pour le déménagement.**
+
+5e agglomération française, Lille attire étudiants, familles et entreprises. Le marché des déménageurs lillois est actif mais les écarts de prix restent importants selon le quartier (Vieux-Lille pavé vs périphérie), l'accès et la période. Voici les fourchettes réalistes pour 2026.
+
+> **Comparez des devis à Lille en toute transparence**  
+> [Moverz](/) transmet votre dossier à des déménageurs vérifiés (Pappers, avis Google). 3-5 devis comparables, anonyme. [Démarrer gratuitement](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-lille).
+
+---
+
+## Prix moyens d'un déménagement à Lille en 2026
 
 ![Lille - Grand Place](/images/cities/lille-grand-place.jpg)
 
-Vieux-Lille : +15-20%. **Moverz** : devis Lille.
+*Photo : Grand Place de Lille. Le Vieux-Lille et ses ruelles pavées imposent des surcoûts de portage (+15 à +20 %).*
+
+### Tableau récapitulatif par surface
+
+| Logement | Volume estimé | Lille → Lille (local) | Lille → Paris / province |
+|---|---|---|---|
+| Studio / T1 (20-35 m²) | 10-20 m³ | 400–720 € | 650–1 350 € |
+| T2 (40-55 m²) | 20-35 m³ | 700–1 350 € | 1 100–2 200 € |
+| T3 (60-80 m²) | 35-55 m³ | 1 100–2 150 € | 1 650–3 300 € |
+| T4 / grande maison (90-120 m²) | 55-80 m³ | 1 650–3 100 € | 2 500–5 000 € |
+
+*Prix TTC, prestation standard. Vieux-Lille non inclus (voir surcoûts).*
+
+### Fourchettes de référence Moverz 2026
+
+- **Studio** : **520 €** (base) → 620 € (Vieux-Lille)
+- **T2** : **955 €** (base) → 1 140 € (centre historique)
+- **T3** : **1 620 €** (base) → 1 950 € (accès difficile)
+- **Maison 4-5 pièces** : **2 570 €** (base)
+
+---
+
+## Spécificités lilloises qui font varier le prix
+
+### Vieux-Lille et centre historique
+
+Rues pavées, immeubles anciens, accès camion limité :
+- Portage long fréquent depuis les places ou parkings
+- Ascenseurs rares dans les bâtiments d'époque
+- **Surcoût estimé : +15 à +25 %** vs quartiers périphériques
+
+### Wazemmes, Vauban, Euralille
+
+Quartiers mixtes, voiries plus larges. Accès généralement correct. Tarif base à +10 % selon la rue.
+
+### Faches, Mons-en-Barœul, Villeneuve-d'Ascq
+
+Périphérie métropolitaine : parkings faciles, immeubles récents. Souvent au tarif de base ou en dessous.
+
+---
+
+## Les 6 facteurs qui font varier le prix à Lille
+
+### 1. L'accès et le stationnement
+
+Vieux-Lille : le camion ne stationne souvent pas devant la porte. Portage 50-120 m = **+50 à +120 €**.
+
+### 2. L'étage et l'ascenseur
+
+- Rez-de-chaussée ou ascenseur adapté : tarif base
+- 3e étage sans ascenseur : +15-25 %
+- 5e étage sans ascenseur : +30-45 %
+
+### 3. La période
+
+| Période | Impact |
+|---|---|
+| Juillet-août | +25 à +45 % |
+| Rentrée universitaire (septembre) | +15 à +30 % |
+| Vendredi-samedi | +10 à +20 % |
+| Octobre-mars, milieu de semaine | Tarif base |
+
+### 4. La formule
+
+Économique (vous emballez) / Standard (+20-35 %) / Premium (+40-70 %).
+
+### 5. Les objets particuliers
+
+Piano droit 180-450 €, piano à queue 450-1 000 €, monte-meuble 150-400 €.
+
+### 6. Lille-Paris (corridor A1)
+
+220 km, corridor très fréquenté. T2 : 1 500–1 800 €, T3 : 2 100–2 500 €.
+
+---
+
+## Exemples concrets à Lille
+
+**Exemple 1** : Studio Vieux-Lille → T2 Wazemmes. 12 m³, 2e sans ascenseur départ. Novembre. **680-920 €**.
+
+**Exemple 2** : T3 Faches → T3 Mons-en-Barœul. 45 m³, bon accès. Septembre. **1 350-1 850 €**.
+
+**Exemple 3** : T3 Lille → Paris. 40 m³, mars. **2 100-3 200 €**.
+
+**Exemple 4** : Maison Villeneuve-d'Ascq → Arras (50 km). 70 m³, octobre. **2 200-3 100 €**.
+
+---
+
+## Comment obtenir des devis comparables à Lille
+
+Moverz standardise votre dossier : volume m³, accès détaillé (étages, distance portage, passage étroit), mêmes options transmises à tous les pros. Les déménageurs lillois du réseau sont vérifiés (Pappers, avis, licence transport).
+
+---
+
+## Déménagement depuis Lille : corridors principaux
+
+| Corridor | Distance | T2 estimé | T3 estimé |
+|---|---|---|---|
+| Lille → Paris | ~220 km | 1 500–1 800 € | 2 100–2 500 € |
+| Lille → Bruxelles | ~120 km | 1 100–1 600 € | 1 600–2 400 € |
+| Lille → Lyon | ~730 km | 2 200–3 200 € | 3 000–4 500 € |
+
+---
+
+## Questions fréquentes
+
+**Le Vieux-Lille coûte-t-il vraiment plus cher ?**  
+Oui. Ruelles pavées, accès camion limité, portage long. Surcoût +15 à +25 % vs quartiers avec parking facile.
+
+**Comment vérifier un déménageur à Lille ?**  
+Vérifiez : licence transport, RC Pro, score Pappers > 60/100. Moverz fait ces contrôles pour chaque pro du réseau.
+
+**Combien pour Lille-Paris en 2026 ?**  
+T2 : 1 500–1 800 €. T3 : 2 100–2 500 €. Comparez 3-5 devis sur Moverz avec le même volume.
+
+---
+
+> **Déménagez à Lille sans mauvaises surprises**  
+> [Moverz](/) vérifie chaque déménageur (Pappers, avis) et standardise votre dossier. 3-5 devis comparables. [Obtenir mes devis](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-lille-fin).
+
+*Sources : données Moverz.fr 2025-2026 | Métropole Lilloise*
 `,
   },
   {
     slug: "prix-demenageur-nantes-2026",
     title: "Prix Déménageur Nantes 2026 : Tarifs Réels & Comparatif Complet",
-    description: "Prix déménageur Nantes 2026 : 530€ studio, 970€ T2, 1650€ T3.",
-    type: "satellite",
+    description: "Combien coûte un déménagement à Nantes en 2026 ? Fourchettes studio à maison (530€-2610€), spécificités Île de Nantes et centre, exemples concrets, conseils pour des devis comparables.",
+    type: "guide",
     citySlug: "nantes",
-    body: `**Prix déménageur Nantes 2026** : studio **530€**, T2 **970€**, T3 **1650€**, maison **2610€**.
+    body: `**Nantes, 6e métropole française, est un hub déménagement dynamique.**
 
-![Nantes - Château des Ducs](/images/cities/nantes-chateau-ducs-bretagne.jpg)
+Capitale des Pays de la Loire, Nantes attire étudiants (École Centrale, Audencia), familles et entreprises. Le marché des déménageurs nantais est actif ; les écarts de prix dépendent du quartier (Île de Nantes, Bouffay vs périphérie), de l'accès et de la période. Voici les fourchettes réalistes pour 2026.
 
-Centre, Île de Nantes : +10-15%. **Moverz** : devis Nantes.
+> **Comparez des devis à Nantes en toute transparence**  
+> [Moverz](/) transmet votre dossier à des déménageurs vérifiés (Pappers, avis Google). 3-5 devis comparables, anonyme. [Démarrer gratuitement](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-nantes).
+
+---
+
+## Prix moyens d'un déménagement à Nantes en 2026
+
+![Nantes - Château des Ducs de Bretagne](/images/cities/nantes-chateau-ducs-bretagne.jpg)
+
+*Photo : Château des Ducs de Bretagne. L'Île de Nantes et le centre historique peuvent imposer des surcoûts de portage (+10 à +15 %).*
+
+### Tableau récapitulatif par surface
+
+| Logement | Volume estimé | Nantes → Nantes (local) | Nantes → Paris / province |
+|---|---|---|---|
+| Studio / T1 (20-35 m²) | 10-20 m³ | 420–740 € | 680–1 380 € |
+| T2 (40-55 m²) | 20-35 m³ | 720–1 380 € | 1 150–2 250 € |
+| T3 (60-80 m²) | 35-55 m³ | 1 150–2 200 € | 1 750–3 350 € |
+| T4 / grande maison (90-120 m²) | 55-80 m³ | 1 750–3 200 € | 2 600–5 100 € |
+
+*Prix TTC, prestation standard. Centre et Île de Nantes non inclus (voir surcoûts).*
+
+### Fourchettes de référence Moverz 2026
+
+- **Studio** : **530 €** (base) → 610 € (Île de Nantes)
+- **T2** : **970 €** (base) → 1 120 € (centre historique)
+- **T3** : **1 650 €** (base) → 1 900 € (accès difficile)
+- **Maison 4-5 pièces** : **2 610 €** (base)
+
+---
+
+## Spécificités nantaises qui font varier le prix
+
+### Île de Nantes et centre (Bouffay)
+
+Quartiers en mutation, immeubles récents et anciens mélangés :
+- Stationnement variable selon la rue et les travaux en cours
+- Portage parfois long vers les logements neufs (Chantiers navals réhabilités)
+- **Surcoût estimé : +10 à +15 %** vs quartiers résidentiels
+
+### Chantenay, Doulon, Rezé
+
+Quartiers résidentiels, voiries correctes. Accès généralement bon. Tarif base à +5-10 % selon la rue.
+
+### Saint-Herblain, Orvault, Vertou
+
+Périphérie : parkings faciles, maisons et immeubles récents. Souvent au tarif de base.
+
+---
+
+## Les 6 facteurs qui font varier le prix à Nantes
+
+### 1. L'accès et le stationnement
+
+Centre et Île de Nantes : le camion ne stationne pas toujours devant la porte. Portage 40-100 m = **+40 à +100 €**.
+
+### 2. L'étage et l'ascenseur
+
+- Rez-de-chaussée ou ascenseur adapté : tarif base
+- 3e étage sans ascenseur : +15-25 %
+- 5e étage sans ascenseur : +30-45 %
+
+### 3. La période
+
+| Période | Impact |
+|---|---|
+| Juillet-août | +25 à +45 % |
+| Rentrée universitaire (septembre) | +15 à +30 % |
+| Vendredi-samedi | +10 à +20 % |
+| Octobre-mars, milieu de semaine | Tarif base |
+
+### 4. La formule
+
+Économique (vous emballez) / Standard (+20-35 %) / Premium (+40-70 %).
+
+### 5. Les objets particuliers
+
+Piano droit 180-450 €, piano à queue 450-1 000 €, monte-meuble 150-400 €.
+
+### 6. Nantes-Paris (corridor A11)
+
+385 km, corridor fréquenté. T2 : 1 600–2 000 €, T3 : 2 200–2 800 €.
+
+---
+
+## Exemples concrets à Nantes
+
+**Exemple 1** : Studio Bouffay → T2 Chantenay. 12 m³, 2e sans ascenseur départ. Novembre. **650-880 €**.
+
+**Exemple 2** : T3 Saint-Herblain → T3 Rezé. 45 m³, bon accès. Septembre. **1 400-1 900 €**.
+
+**Exemple 3** : T3 Nantes → Paris. 40 m³, mars. **2 200-3 300 €**.
+
+**Exemple 4** : Maison Vertou → Rennes (110 km). 70 m³, octobre. **2 300-3 200 €**.
+
+---
+
+## Comment obtenir des devis comparables à Nantes
+
+Moverz standardise votre dossier : volume m³, accès détaillé (étages, distance portage, passage étroit), mêmes options transmises à tous les pros. Les déménageurs nantais du réseau sont vérifiés (Pappers, avis, licence transport).
+
+---
+
+## Déménagement depuis Nantes : corridors principaux
+
+| Corridor | Distance | T2 estimé | T3 estimé |
+|---|---|---|---|
+| Nantes → Paris | ~385 km | 1 600–2 000 € | 2 200–2 800 € |
+| Nantes → Rennes | ~110 km | 900–1 400 € | 1 350–1 950 € |
+| Nantes → Bordeaux | ~340 km | 1 500–2 200 € | 2 100–3 000 € |
+
+---
+
+## Questions fréquentes
+
+**L'Île de Nantes coûte-t-elle plus cher ?**  
+Oui. Stationnement variable, portage parfois long vers les immeubles neufs. Surcoût +10 à +15 % vs quartiers avec accès direct.
+
+**Comment vérifier un déménageur à Nantes ?**  
+Vérifiez : licence transport, RC Pro, score Pappers > 60/100. Moverz fait ces contrôles pour chaque pro du réseau.
+
+**Combien pour Nantes-Paris en 2026 ?**  
+T2 : 1 600–2 000 €. T3 : 2 200–2 800 €. Comparez 3-5 devis sur Moverz avec le même volume.
+
+---
+
+> **Déménagez à Nantes sans mauvaises surprises**  
+> [Moverz](/) vérifie chaque déménageur (Pappers, avis) et standardise votre dossier. 3-5 devis comparables. [Obtenir mes devis](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-nantes-fin).
+
+*Sources : données Moverz.fr 2025-2026 | Nantes Métropole*
 `,
   },
 ];

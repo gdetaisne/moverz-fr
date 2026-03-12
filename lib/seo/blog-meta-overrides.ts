@@ -34,6 +34,21 @@ export const BLOG_META_OVERRIDES: Record<string, BlogMetaOverride> = {
     description: "ABC Lemarié, Eurodem 35 + 3 acteurs. T2 500–900€. Vérifiez avec Label Moverz (Score /100 gratuit en 30s) avant de signer. 3–5 devis Moverz.",
   },
 
+  "comparatif-demenageurs-marseille-2026": {
+    title: "Comparatif Déménageurs Marseille 2026 : Top 5, Prix, Vérifier",
+    description: "Amice, Pro Du Dem, ADEM + 2 acteurs. T2 550–950€. Vérifiez avec Label Moverz (Score /100 gratuit en 30s) avant de signer. 3–5 devis Moverz.",
+  },
+
+  "comparatif-demenageurs-bordeaux-2026": {
+    title: "Comparatif Déménageurs Bordeaux 2026 : Top 5, Prix, Vérifier",
+    description: "Air Déménagement, Alex, Sam'déménage + 2 acteurs. T2 550–950€. Vérifiez avec Label Moverz (Score /100 gratuit en 30s) avant de signer. 3–5 devis Moverz.",
+  },
+
+  "comparatif-demenageurs-lyon-2026": {
+    title: "Comparatif Déménageurs Lyon 2026 : Top 5, Prix, Vérifier",
+    description: "S.I.E.T, Lugnier + 3 acteurs. T2 500–900€. Vérifiez avec Label Moverz (Score /100 gratuit en 30s) avant de signer. 3–5 devis Moverz.",
+  },
+
   // ── GROUPE A — articles déjà solides, titre/desc à affiner ──────────────
 
   "shurgard-lyon-sites-tarifs": {
@@ -114,6 +129,21 @@ export const BLOG_META_OVERRIDES: Record<string, BlogMetaOverride> = {
   "prix-demenageur-strasbourg-2026": {
     title: "Prix Déménageur Strasbourg 2026 : 525€ Studio, T2 960€, Guide Complet",
     description: "Tarifs déménagement Strasbourg 2026 : studio 525€, T2 960€, T3 1630€. Grande Île +15-20%. 3-5 devis comparables sur Moverz, pros vérifiés Pappers.",
+  },
+
+  "prix-demenageur-nice-2026": {
+    title: "Prix Déménageur Nice 2026 : 545€ Studio, T2 990€, Guide Complet",
+    description: "Tarifs déménagement Nice 2026 : studio 545€, T2 990€, T3 1680€. Vieux-Nice et collines +15-25%. 3-5 devis comparables sur Moverz, pros vérifiés.",
+  },
+
+  "prix-demenageur-lille-2026": {
+    title: "Prix Déménageur Lille 2026 : 520€ Studio, T2 955€, Guide Complet",
+    description: "Tarifs déménagement Lille 2026 : studio 520€, T2 955€, T3 1620€. Vieux-Lille +15-25%. 3-5 devis comparables sur Moverz, pros vérifiés Pappers.",
+  },
+
+  "prix-demenageur-nantes-2026": {
+    title: "Prix Déménageur Nantes 2026 : 530€ Studio, T2 970€, Guide Complet",
+    description: "Tarifs déménagement Nantes 2026 : studio 530€, T2 970€, T3 1650€. Île de Nantes +10-15%. 3-5 devis comparables sur Moverz, pros vérifiés.",
   },
 
   "prix-demenagement-international-lyon": {

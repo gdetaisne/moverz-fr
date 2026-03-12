@@ -72,6 +72,57 @@ export const LONGTAIL_FAQS: Record<string, BlogFAQItem[]> = {
         "Oui. La création de dossier et la réception des devis sont gratuites. Moverz est rémunéré par les partenaires quand un déménagement est réalisé, pas à la vente du lead.",
     },
   ],
+  "comparatif-demenageurs-marseille-2026": [
+    {
+      question: "Comment vérifier un déménageur à Marseille avant de signer ?",
+      answer:
+        "Utilisez l'outil gratuit Label Moverz (label-moverz.fr) : entrez le SIREN ou le nom du déménageur, obtenez un Score /100 en 30 secondes (santé financière Pappers, BODACC, avis clients). Score < 50/100 = méfiance. Fonctionne pour tous les déménageurs, même hors Moverz.",
+    },
+    {
+      question: "Quels sont les meilleurs déménageurs à Marseille en 2026 ?",
+      answer:
+        "Amice Déménagement, Pro Du Dem et ADEM sont des acteurs établis. Les Compagnons du Déménagement et Cardi complètent l'offre locale. Critères : vérifier le Score /100 (Label Moverz), comparer 3–5 devis sur la même base, privilégier les avis Google récents.",
+    },
+    {
+      question: "Combien coûte un déménagement à Marseille en 2026 ?",
+      answer:
+        "T2 intra-ville : 550–950€. T3 : 750–1300€. Studio : 380–600€. Facteurs : étage sans ascenseur (+60–180€/étage), monte-meuble (+220–500€), juillet–août (+15–25 %). Noailles, Panier, 7e = surcoûts accès.",
+    },
+  ],
+  "comparatif-demenageurs-bordeaux-2026": [
+    {
+      question: "Comment vérifier un déménageur à Bordeaux avant de signer ?",
+      answer:
+        "Utilisez l'outil gratuit Label Moverz (label-moverz.fr) : entrez le SIREN ou le nom du déménageur, obtenez un Score /100 en 30 secondes (santé financière Pappers, BODACC, avis clients). Score < 50/100 = méfiance. Fonctionne pour tous les déménageurs, même hors Moverz.",
+    },
+    {
+      question: "Quels sont les meilleurs déménageurs à Bordeaux en 2026 ?",
+      answer:
+        "Air Déménagement, Alex Déménagement et Sam'déménage sont des acteurs établis. Déménagements Aquitains et PLS complètent l'offre locale. Critères : vérifier le Score /100 (Label Moverz), comparer 3–5 devis sur la même base, privilégier les avis Google récents.",
+    },
+    {
+      question: "Combien coûte un déménagement à Bordeaux en 2026 ?",
+      answer:
+        "T2 intra-ville : 550–950€. T3 : 740–1280€. Studio : 370–580€. Facteurs : étage sans ascenseur (+55–170€/étage), monte-meuble (+210–480€), juillet–août (+15–25 %). Centre, Saint-Pierre, Triangle = contraintes accès.",
+    },
+  ],
+  "comparatif-demenageurs-lyon-2026": [
+    {
+      question: "Comment vérifier un déménageur à Lyon avant de signer ?",
+      answer:
+        "Utilisez l'outil gratuit Label Moverz (label-moverz.fr) : entrez le SIREN ou le nom du déménageur, obtenez un Score /100 en 30 secondes (santé financière Pappers, BODACC, avis clients). Score < 50/100 = méfiance. Fonctionne pour tous les déménageurs, même hors Moverz.",
+    },
+    {
+      question: "Quels sont les meilleurs déménageurs à Lyon en 2026 ?",
+      answer:
+        "S.I.E.T Déménagement (depuis 1900) et Déménagements Lugnier (depuis 1950) sont des acteurs historiques. Eurodem Lyon, Manutention Services, Trans Lyon complètent l'offre. Critères : vérifier le Score /100 (Label Moverz), comparer 3–5 devis sur la même base.",
+    },
+    {
+      question: "Combien coûte un déménagement à Lyon en 2026 ?",
+      answer:
+        "T2 intra-ville : 500–900€. T3 : 700–1200€. Studio : 360–560€. Surcoûts Vieux-Lyon, Croix-Rousse (traboules, escaliers). Étage sans ascenseur : +50–160€/étage. Obtenez des devis comparables sur Moverz.",
+    },
+  ],
   "comparatif-demenageurs-rennes-2026": [
     {
       question: "Comment vérifier un déménageur à Rennes avant de signer ?",
@@ -87,6 +138,72 @@ export const LONGTAIL_FAQS: Record<string, BlogFAQItem[]> = {
       question: "Combien coûte un déménagement à Rennes en 2026 ?",
       answer:
         "T2 intra-ville : 500–900€. T3 : 700–1200€. Studio : 350–550€. Facteurs : étage sans ascenseur (+50–150€/étage), monte-meuble (+200–450€), juillet–août (+15–25 %). Obtenez des devis comparables sur Moverz.",
+    },
+  ],
+  "prix-demenageur-nice-2026": [
+    {
+      question: "Pourquoi le Vieux-Nice est-il plus cher pour un déménagement ?",
+      answer:
+        "Le Vieux-Nice a des ruelles étroites, peu d'accès camion direct et beaucoup d'immeubles sans ascenseur. Le portage depuis les parkings ou zones autorisées est plus long — surcoût de +15 à +25 % vs quartiers avec accès facile (Promenade, Libération).",
+    },
+    {
+      question: "Les déménagements vers Monaco depuis Nice coûtent-ils plus cher ?",
+      answer:
+        "Nice–Monaco (~20 km) est une courte distance. Le surcoût vient surtout du secteur prince à Monaco (stationnement, formalités). Comptez 800–1 500 € pour un T2 selon accès. Comparez 3–5 devis sur Moverz.",
+    },
+    {
+      question: "Comment trouver un déménageur fiable à Nice ?",
+      answer:
+        "Vérifiez : licence de transport, attestation RC Pro valide, score Pappers > 60/100. Moverz effectue ces vérifications pour chaque déménageur du réseau niçois.",
+    },
+    {
+      question: "Combien coûte un déménagement Nice–Paris en 2026 ?",
+      answer:
+        "T2 (25 m³) : 1 800–2 800 €. T3 (40 m³) : 2 800–4 500 €. Nice–Paris (~930 km) est un corridor fréquenté. Comparez 3–5 devis sur Moverz avec le même volume.",
+    },
+  ],
+  "prix-demenageur-lille-2026": [
+    {
+      question: "Le Vieux-Lille coûte-t-il vraiment plus cher pour un déménagement ?",
+      answer:
+        "Oui. Ruelles pavées, accès camion limité, portage long. Surcoût +15 à +25 % vs quartiers avec parking facile (Wazemmes, Villeneuve-d'Ascq). Prévoyez ce supplément dans votre budget.",
+    },
+    {
+      question: "Comment vérifier un déménageur à Lille ?",
+      answer:
+        "Vérifiez : licence transport (obligatoire), attestation RC Pro valide, score Pappers > 60/100. Moverz fait ces contrôles pour chaque pro du réseau lillois.",
+    },
+    {
+      question: "Combien coûte un déménagement Lille–Paris en 2026 ?",
+      answer:
+        "T2 (25 m³) : 1 500–1 800 €. T3 (40 m³) : 2 100–2 500 €. Lille–Paris (~220 km) via A1 est un corridor très couvert. Comparez 3–5 devis sur Moverz.",
+    },
+    {
+      question: "Quels quartiers lillois ont le meilleur accès déménageur ?",
+      answer:
+        "Faches, Mons-en-Barœul, Villeneuve-d'Ascq : parkings faciles, immeubles récents, souvent tarif de base. Wazemmes et Vauban : accès correct, tarif base à +10 %.",
+    },
+  ],
+  "prix-demenageur-nantes-2026": [
+    {
+      question: "L'Île de Nantes et le centre coûtent-ils plus cher pour déménager ?",
+      answer:
+        "Oui. Île de Nantes et quartier Bouffay : voiries parfois étroites, parkings limités. Surcoût +10 à +15 % vs Chantenay, Doulon ou périphérie (Saint-Herblain, Rezé).",
+    },
+    {
+      question: "Comment trouver un déménageur fiable à Nantes ?",
+      answer:
+        "Vérifiez : licence de transport, attestation RC Pro valide, score Pappers > 60/100. Moverz effectue ces contrôles pour chaque déménageur du réseau nantais.",
+    },
+    {
+      question: "Combien coûte un déménagement Nantes–Paris en 2026 ?",
+      answer:
+        "T2 (25 m³) : 1 600–2 500 €. T3 (40 m³) : 2 400–3 800 €. Nantes–Paris (~380 km) est un corridor fréquenté. Comparez 3–5 devis sur Moverz.",
+    },
+    {
+      question: "Nantes–Rennes : combien pour un déménagement ?",
+      answer:
+        "Nantes–Rennes (~110 km) : T2 850–1 300 €, T3 1 300–2 000 €. Courte distance, bonne disponibilité. Obtenez des devis comparables sur Moverz.",
     },
   ],
   "prix-demenageur-strasbourg-2026": [
@@ -109,6 +226,113 @@ export const LONGTAIL_FAQS: Record<string, BlogFAQItem[]> = {
       question: "Combien coûte un déménagement Strasbourg–Paris en 2026 ?",
       answer:
         "T2 (25 m³) : 1 400–2 200€. T3 (40 m³) : 2 300–3 500€. Strasbourg–Paris (~490 km) est un corridor très couvert. Comparez 3–5 devis sur Moverz avec le même volume et les mêmes options.",
+    },
+  ],
+  "prix-demenageur-nice-2026": [
+    {
+      question: "Pourquoi le Vieux-Nice coûte-t-il plus cher à déménager ?",
+      answer:
+        "Le Vieux-Nice a des ruelles étroites, peu d'accès camion direct et des immeubles anciens sans ascenseur. Le portage est plus long depuis les places ou parkings. Surcoût estimé : +15 à +25 % vs les quartiers avec accès facile (Promenade, Libération).",
+    },
+    {
+      question: "Faut-il une autorisation de stationnement pour déménager à Nice ?",
+      answer:
+        "Oui, dans le Vieux-Nice et les zones piétonnes, un arrêté de circulation est souvent requis. Demande auprès de la mairie, délai 5–7 jours, coût 50–100€. Un déménageur sérieux vous accompagne dans cette démarche.",
+    },
+    {
+      question: "Combien coûte un déménagement Nice–Paris en 2026 ?",
+      answer:
+        "T2 (25 m³) : 1 800–2 800€. T3 (40 m³) : 2 800–4 500€. Nice–Paris (~930 km) est un long corridor. Comparez 3–5 devis sur Moverz avec le même volume et les mêmes options.",
+    },
+    {
+      question: "Comment trouver un déménageur fiable à Nice ?",
+      answer:
+        "Vérifiez : licence de transport, attestation RC Pro valide, score Pappers > 60/100. Moverz effectue ces contrôles automatiquement pour chaque déménageur du réseau niçois.",
+    },
+  ],
+  "prix-demenageur-lille-2026": [
+    {
+      question: "Le Vieux-Lille coûte-t-il vraiment plus cher à déménager ?",
+      answer:
+        "Oui. Ruelles pavées, accès camion limité, portage long fréquent. Surcoût +15 à +25 % vs quartiers périphériques (Wazemmes, Faches, Villeneuve-d'Ascq) où le stationnement est plus facile.",
+    },
+    {
+      question: "Combien pour Lille–Paris en déménagement en 2026 ?",
+      answer:
+        "T2 : 1 500–1 800€. T3 : 2 100–2 500€. Lille–Paris (~220 km) est un corridor très fréquenté (A1). Comparez 3–5 devis sur Moverz avec le même volume et les mêmes options.",
+    },
+    {
+      question: "Comment vérifier un déménageur à Lille ?",
+      answer:
+        "Vérifiez : licence de transport (obligatoire), attestation RC Pro valide, score Pappers > 60/100. Moverz effectue ces contrôles pour chaque déménageur du réseau lillois.",
+    },
+  ],
+  "prix-demenageur-nantes-2026": [
+    {
+      question: "L'Île de Nantes coûte-t-elle plus cher à déménager ?",
+      answer:
+        "Oui. Quartier en mutation, immeubles récents mais accès parfois contraints (chantiers, parkings partagés). Surcoût +10 à +15 % vs quartiers résidentiels (Doulon, Chantenay) où le stationnement est plus facile.",
+    },
+    {
+      question: "Combien coûte un déménagement Nantes–Paris en 2026 ?",
+      answer:
+        "T2 (25 m³) : 1 600–2 400€. T3 (40 m³) : 2 400–3 800€. Nantes–Paris (~385 km) est un corridor très couvert. Comparez 3–5 devis sur Moverz.",
+    },
+    {
+      question: "Comment trouver un déménageur fiable à Nantes ?",
+      answer:
+        "Vérifiez : licence de transport, attestation RC Pro valide, score Pappers > 60/100. Moverz effectue ces contrôles automatiquement pour chaque déménageur du réseau nantais.",
+    },
+  ],
+  "prix-demenageur-nice-2026": [
+    {
+      question: "Le Vieux-Nice coûte-t-il plus cher pour un déménagement ?",
+      answer:
+        "Oui. Les ruelles étroites du Vieux-Nice et les quartiers en colline (Cimiez, Mont-Boron) imposent un portage long et des accès difficiles. Surcoût estimé : +15 à +25 % par rapport aux zones avec parking facile (Promenade, Libération).",
+    },
+    {
+      question: "Comment trouver un déménageur fiable à Nice ?",
+      answer:
+        "Vérifiez : licence de transport obligatoire, attestation RC Pro valide, score Pappers > 60/100. Moverz effectue ces contrôles automatiquement pour chaque déménageur du réseau niçois.",
+    },
+    {
+      question: "Combien coûte un déménagement Nice–Paris en 2026 ?",
+      answer:
+        "T2 (25 m³) : 1 800–2 800€. T3 (40 m³) : 2 800–4 500€. Nice–Paris (~930 km) est un corridor fréquenté. Comparez 3–5 devis sur Moverz avec le même volume.",
+    },
+  ],
+  "prix-demenageur-lille-2026": [
+    {
+      question: "Le Vieux-Lille coûte-t-il vraiment plus cher ?",
+      answer:
+        "Oui. Ruelles pavées, accès camion limité, portage long. Surcoût +15 à +25 % vs quartiers avec parking facile (Wazemmes, Faches, Villeneuve-d'Ascq).",
+    },
+    {
+      question: "Comment vérifier un déménageur à Lille ?",
+      answer:
+        "Vérifiez : licence transport, RC Pro, score Pappers > 60/100. Moverz fait ces contrôles pour chaque pro du réseau lillois.",
+    },
+    {
+      question: "Combien pour Lille–Paris en 2026 ?",
+      answer:
+        "T2 : 1 500–1 800€. T3 : 2 100–2 500€. Lille–Paris (~220 km) est un corridor très couvert (A1). Comparez 3-5 devis sur Moverz avec le même volume.",
+    },
+  ],
+  "prix-demenageur-nantes-2026": [
+    {
+      question: "L'Île de Nantes coûte-t-elle plus cher pour déménager ?",
+      answer:
+        "Oui. Les immeubles neufs et réhabilitations de l'Île de Nantes peuvent imposer des contraintes d'accès (parkings souterrains, ascenseurs étroits). Surcoût estimé : +10 à +15 % vs quartiers avec accès direct.",
+    },
+    {
+      question: "Comment vérifier un déménageur à Nantes ?",
+      answer:
+        "Vérifiez : licence de transport, RC Pro, score Pappers > 60/100. Moverz effectue ces vérifications automatiquement pour chaque déménageur du réseau nantais.",
+    },
+    {
+      question: "Combien coûte un déménagement Nantes–Paris en 2026 ?",
+      answer:
+        "T2 (25 m³) : 1 500–2 300€. T3 (40 m³) : 2 400–3 800€. Nantes–Paris (~385 km) est un corridor très fréquenté. Comparez 3–5 devis sur Moverz.",
     },
   ],
   "demenagement-sans-ascenseur-5e-etage": [
