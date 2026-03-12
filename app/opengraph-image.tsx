@@ -8,8 +8,9 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function OgImage() {
-  // Charger le VRAI logo
-  const logoData = await readFile(join(process.cwd(), "public/logo.png"));
+  // Charger le logo (fond transparent pour intégration propre)
+  const logoPath = join(process.cwd(), "public/logo-transparent.png");
+  const logoData = await readFile(logoPath).catch(() => readFile(join(process.cwd(), "public/logo.png")));
   const logoBase64 = `data:image/png;base64,${logoData.toString("base64")}`;
 
   // Charger Inter Bold (format TTF supporté par ImageResponse)

@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     description: "✓ On centralise tout (1 seul contact) ✓ 0 harcèlement ✓ Pros certifiés finances/assurance contrôlées · 3-5 devis comparables · Note 4.9/5 · 3 min · Gratuit",
     images: [
       {
-        url: "/logo.png",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: "Moverz - Comparateur de déménagement anti-arnaque · Note 4.9/5",
@@ -90,7 +90,7 @@ export const metadata: Metadata = {
     creator: "@moverz",
     title: "Vous déménagez, on compare : 3-5 Devis Sans Stress",
     description: "✓ On centralise tout (1 contact) ✓ 0 harcèlement ✓ Pros certifiés · 3-5 devis comparables · Note 4.9/5 · 3 min · Gratuit",
-    images: ["/logo.png"],
+    images: ["/opengraph-image"],
   },
   robots: {
     index: true,
@@ -131,11 +131,11 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
-        {/* Favicons - ?v=2 force le rechargement (cache navigateur) */}
-        <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2" />
-        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?v=2" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
+        {/* Favicons transparents - ?v=4 force le rechargement (cache navigateur) */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico?v=4" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=4" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?v=4" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=4" />
         <link rel="manifest" href="/site.webmanifest" />
         
         {/* DNS Prefetch pour ressources externes essentielles */}
