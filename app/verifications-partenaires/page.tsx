@@ -9,8 +9,8 @@ import { Check, Star, ShieldCheck, Scale, Sparkles, ArrowRight } from "lucide-re
 
 export const metadata: Metadata = getFullMetadata(
   "verifications-partenaires",
-  "Comment Moverz vérifie les déménageurs | Score /100 (3 dimensions)",
-  "Moverz attribue à chaque déménageur un Score /100 calculé à partir de 5 sous-scores indépendants regroupés en 3 dimensions : fiabilité légale 25% (Pappers financier + juridique), satisfaction clients 40% (Google + analyse réputation), alertes 35% (analyse vigilance). Score < 50/100 = exclusion automatique."
+  "Vérifications déménageurs | Score Moverz /100",
+  "Chaque déménageur reçoit un Score /100 (3 dimensions : fiabilité légale, satisfaction clients, alertes). Score < 50/100 = exclusion automatique."
 );
 
 export default function VerificationsPartenairesPage() {

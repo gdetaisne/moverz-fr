@@ -327,10 +327,10 @@ export default function ChiffresClesPage() {
             <div className="rounded-3xl border border-v4-border bg-gradient-to-b from-white to-[#FAFBFC] p-8 md:p-10">
               <div className="grid gap-8 md:grid-cols-3">
                 <div>
-                  <p className="text-5xl font-bold text-v4-accent">2024</p>
+                  <p className="text-5xl font-bold text-v4-accent">2025</p>
                   <p className="mt-2 font-semibold text-v4-text">Année de lancement</p>
                   <p className="mt-2 text-sm text-[#1E293B]/75">
-                    Projet lancé en 2024 avec pour mission de standardiser les dossiers et vérifier les déménageurs
+                    Projet lancé en 2025 avec pour mission de standardiser les dossiers et vérifier les déménageurs
                   </p>
                 </div>
 
