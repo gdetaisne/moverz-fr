@@ -84,15 +84,15 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-6 md:gap-8 mb-10">
-          {/* Col 1: Brand + Texte + CTA - Desktop uniquement */}
-          <div className="hidden md:block md:col-span-1 space-y-4">
-            <div className="flex flex-wrap items-center gap-3">
-              <a href="/" className="inline-flex items-center" title="Moverz">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-12 md:gap-6 mb-10">
+          {/* Col 1: Brand + Texte + CTA - col-span-3 pour éviter chevauchement avec Liens utiles */}
+          <div className="hidden md:flex md:col-span-3 md:flex-col md:min-w-0 md:overflow-hidden space-y-4">
+            <div className="flex flex-col items-start gap-4">
+              <a href="/" className="inline-flex" title="Moverz">
                 <LogoWithText size="footer" variant="light" />
               </a>
-              <Link href="/label-moverz/" className="inline-flex items-center px-3 py-2 rounded-lg border border-white/20 bg-white/5 hover:bg-white/10 transition-colors" title="Label Moverz">
-                <Image src="/logo-label-moverz.png" alt="Label Moverz" width={180} height={120} className="h-28 md:h-36 w-auto object-contain" />
+              <Link href="/label-moverz/" className="inline-flex items-center px-3 py-2 rounded-lg border border-white/20 bg-white/5 hover:bg-white/10 transition-colors shrink-0" title="Label Moverz">
+                <Image src="/logo-label-moverz.png" alt="Label Moverz" width={180} height={120} className="h-24 w-auto object-contain max-w-[180px]" />
               </Link>
             </div>
             
@@ -121,7 +121,7 @@ export function Footer() {
 
           {/* Colonnes 2-6 : Links */}
           {footerSections.map((section) => (
-            <div key={section.title} className="md:col-span-1">
+            <div key={section.title} className="md:col-span-1 md:min-w-0">
               <h3 className="font-semibold mb-3 md:mb-4 text-sm md:text-base text-white">{section.title}</h3>
               <ul className="space-y-2 text-sm">
                 {section.links.map((link: any) => (
