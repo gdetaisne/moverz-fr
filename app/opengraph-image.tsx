@@ -231,14 +231,11 @@ export default async function OgImage() {
     ),
     {
       ...size,
-      // Charger Inter pour un rendu propre
+      // Tous les poids utilisés (600, 700, 800) pour éviter le fetch dynamique Google Fonts en build
       fonts: [
-        {
-          name: 'Inter',
-          data: fontData,
-          style: 'normal',
-          weight: 700,
-        },
+        { name: "Inter", data: fontData, style: "normal", weight: 600 },
+        { name: "Inter", data: fontData, style: "normal", weight: 700 },
+        { name: "Inter", data: fontData, style: "normal", weight: 800 },
       ],
     }
   );
