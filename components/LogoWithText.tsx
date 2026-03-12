@@ -6,10 +6,11 @@ import Link from "next/link";
 /**
  * Logo Moverz : icône + mot "Moverz" (font Sora, teal, souligné orange)
  * Transparent, lisible sur fond clair ou sombre
+ * Responsive : plus petit sur mobile, plus grand sur desktop
  */
 interface LogoWithTextProps {
-  /** Taille : sm = header mobile, md = header desktop, lg = footer */
-  size?: "sm" | "md" | "lg";
+  /** header = responsive header, footer = responsive footer, sm/md/lg = fixes */
+  size?: "sm" | "md" | "lg" | "header" | "footer";
   /** Sur fond sombre (footer) : texte clair */
   variant?: "light" | "dark";
   /** En tant que lien vers / */
@@ -17,10 +18,14 @@ interface LogoWithTextProps {
   className?: string;
 }
 
-const sizes = {
-  sm: { icon: "h-10", text: "text-2xl" },
-  md: { icon: "h-14", text: "text-3xl" },
-  lg: { icon: "h-16", text: "text-4xl" },
+const sizes: Record<string, { icon: string; text: string }> = {
+  sm: { icon: "h-8", text: "text-lg" },
+  md: { icon: "h-10", text: "text-xl" },
+  lg: { icon: "h-12", text: "text-2xl" },
+  /** Header : mobile compact, desktop visible */
+  header: { icon: "h-8 md:h-12", text: "text-lg md:text-2xl" },
+  /** Footer : mobile OK, desktop plus grand */
+  footer: { icon: "h-10 md:h-14", text: "text-xl md:text-3xl" },
 };
 
 export function LogoWithText({
