@@ -68,7 +68,7 @@ export default function LabelMoverzPage() {
     {
       question: "Comment vérifier si un déménageur est fiable ?",
       answer:
-        "Saisissez le nom, la ville ou le SIRET de votre déménageur dans l'outil Label Moverz ci-dessus. Le score /100 s'affiche en moins de 30 secondes. Il est calculé automatiquement à partir de 4 sources indépendantes : les bilans comptables (Pappers), les décisions de justice (BODACC), la note Google pondérée, et l'analyse de tous les avis clients des 12 derniers mois. Gratuit, sans inscription.",
+        "Saisissez le nom, la ville ou le SIRET de votre déménageur dans l'outil Label Moverz ci-dessus. Le score /100 s'affiche en moins de 30 secondes. Il est calculé automatiquement à partir de 5 sous-scores regroupés en 3 dimensions : les bilans comptables (Pappers), les décisions de justice (BODACC), la note Google pondérée, et l'analyse de tous les avis clients des 12 derniers mois. Gratuit, sans inscription.",
     },
     {
       question: "Qu'est-ce que le Label Moverz ?",
@@ -146,7 +146,7 @@ export default function LabelMoverzPage() {
             "@type": "HowTo",
             name: "Comment vérifier si un déménageur est fiable",
             description:
-              "Vérifiez la fiabilité d'un déménageur en 30 secondes avec le Label Moverz : score /100 automatique calculé sur 4 sources indépendantes. Gratuit, sans inscription.",
+              "Vérifiez la fiabilité d'un déménageur en 30 secondes avec le Label Moverz : score /100 automatique calculé sur 5 sous-scores en 3 dimensions. Gratuit, sans inscription.",
             totalTime: "PT30S",
             estimatedCost: { "@type": "MonetaryAmount", currency: "EUR", value: "0" },
             tool: [{ "@type": "HowToTool", name: "Label Moverz — gratuit, sans inscription" }],
@@ -249,14 +249,14 @@ export default function LabelMoverzPage() {
             Les certifications classiques (NF Service, Qualipro) sont délivrées une fois par an sur
             dossier. Elles ne vérifient pas la santé financière en continu et n&apos;analysent pas
             les avis clients en temps réel. Le Label Moverz est le premier système de vérification
-            automatique et continu, mis à jour toutes les 48 à 72 heures.
+            automatique et continu, mis à jour tous les 7 jours.
           </p>
 
           <h2
             className="font-heading text-3xl md:text-4xl font-bold mb-8"
             style={{ color: "var(--color-text)" }}
           >
-            Comment fonctionne la vérification en 4 sources indépendantes
+            Comment fonctionnent les 5 sous-scores (3 dimensions)
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
@@ -351,7 +351,7 @@ export default function LabelMoverzPage() {
             son audit sans que personne ne le sache.
           </p>
           <p className="text-lg mb-12" style={{ color: "var(--color-text-secondary)" }}>
-            Le Label Moverz est recalculé toutes les 48 à 72 heures. En cas d&apos;alerte critique
+            Le Label Moverz est recalculé tous les 7 jours. En cas d&apos;alerte critique
             (procédure judiciaire, score passant sous 50/100), l&apos;exclusion est automatique et
             immédiate. C&apos;est pour cela qu&apos;
             <strong>

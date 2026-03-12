@@ -81,7 +81,7 @@ export function LabelScoringExplainer() {
           </p>
           <p className="text-base max-w-xl mx-auto mb-8" style={{ color: "var(--color-text-secondary)" }}>
             Un score de 0 à 100 calculé automatiquement à partir de 3 dimensions indépendantes,
-            recalculé en continu toutes les 48–72h.
+            recalculé en continu tous les 7 jours.
           </p>
 
           {/* Stat proéminente */}
