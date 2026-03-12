@@ -29,7 +29,7 @@ export function LabelMoverzHero() {
               border: "1px solid rgba(14, 165, 166, 0.2)",
             }}
           >
-            <Image src="/logo-label-moverz.png" alt="Label Moverz" width={28} height={19} className="h-5 w-auto" />
+            <Image src="/logo-label-moverz.png" alt="Label Moverz" width={70} height={47} className="h-12 w-auto" />
             Label Moverz
           </div>
         </motion.div>

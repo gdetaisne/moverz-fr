@@ -58,7 +58,7 @@ export function MoverScoreCircle({ score, label, size = 72 }: MoverScoreCirclePr
         </p>
         <div className="flex items-center gap-1.5">
           <p className="text-xs text-slate-600">Score</p>
-          <Image src="/logo-label-moverz.png" alt="Label Moverz" width={21} height={14} className="h-3.5" />
+          <Image src="/logo-label-moverz.png" alt="Label Moverz" width={30} height={20} className="h-5 w-auto" />
         </div>
       </div>
     </div>
