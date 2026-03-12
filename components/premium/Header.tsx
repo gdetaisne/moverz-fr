@@ -44,8 +44,8 @@ export function Header() {
     >
       <div className="mx-auto flex h-14 md:h-16 max-w-[1200px] items-center justify-between px-4 md:px-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 md:gap-3 transition-opacity hover:opacity-80">
-          <Image src="/logo-header.png" alt="Moverz" width={60} height={40} className="h-8 md:h-10" priority />
+        <Link href="/" className="flex items-center transition-opacity hover:opacity-80" aria-label="Moverz - Accueil">
+          <Image src="/logo.png" alt="Moverz" width={1536} height={1024} className="h-12 md:h-14 w-auto" priority />
         </Link>
 
         {/* Desktop Nav + CTA + Phone + Mobile Menu */}

@@ -62,13 +62,13 @@ export function Footer() {
       style={{ background: "var(--color-bg-dark)" }}
     >
       <div className="mx-auto max-w-[1200px] px-5 md:px-6 lg:px-8 py-10 md:py-14">
-        {/* Brand + CTA en haut - Mobile */}
+        {/* Brand + Texte (sans CTA) - Mobile : évite la redondance avec le Sticky CTA en bas */}
         <div className="mb-8 md:hidden">
-          <a href="/" className="inline-flex items-center gap-2.5 mb-4" title="Moverz">
-            <Image src="/logo-header.png" alt="Logo Moverz" width={48} height={32} className="h-8" />
+          <a href="/" className="inline-flex items-center mb-4" title="Moverz">
+            <Image src="/logo.png" alt="Logo Moverz" width={1536} height={1024} className="h-12 w-auto" />
           </a>
           
-          <div className="space-y-2 mb-5">
+          <div className="space-y-2">
             <p className="text-sm font-semibold text-white leading-snug">
               Le comparateur anti-arnaque du déménagement :
             </p>
@@ -76,24 +76,13 @@ export function Footer() {
               Zéro harcèlement · 3+ devis fiables sous 5 jours · 100% gratuit
             </p>
           </div>
-          
-          <a
-            href="https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=footer"
-            className="flex items-center justify-center gap-2 w-full rounded-xl px-4 py-3 text-sm font-semibold text-white transition-all hover:opacity-90 active:scale-95"
-            style={{ 
-              background: "#F59E0B",
-              boxShadow: "0 2px 8px rgba(245,158,11,0.25)"
-            }}
-          >
-            Obtenir mes devis
-          </a>
         </div>
 
         <div className="grid grid-cols-2 gap-8 md:grid-cols-6 md:gap-8 mb-10">
           {/* Col 1: Brand + Texte + CTA - Desktop uniquement */}
           <div className="hidden md:block md:col-span-1 space-y-4">
-            <a href="/" className="inline-flex items-center gap-2.5" title="Moverz">
-              <Image src="/logo-header.png" alt="Logo Moverz" width={48} height={32} className="h-8" />
+            <a href="/" className="inline-flex items-center" title="Moverz">
+              <Image src="/logo.png" alt="Logo Moverz" width={1536} height={1024} className="h-12 w-auto" />
             </a>
             
             {/* Texte sous le logo */}

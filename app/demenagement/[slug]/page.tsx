@@ -25,7 +25,9 @@ import { ServiceSchema } from "@/components/schema/ServiceSchema";
 import { FAQSchema } from "@/components/schema/FAQSchema";
 import { HowToSchema } from "@/components/schema/HowToSchema";
 import { JsonLd } from "@/components/schema/JsonLd";
+import { ImageObjectSchema } from "@/components/schema/ImageObjectSchema";
 import { getLocalPricesForMeta, getCityPriceTiers } from "@/lib/pricing-corridors";
+import { getCityImageSchemaData } from "@/lib/seo/city-photos";
 
 type PageProps = {
   params: {
@@ -260,6 +262,9 @@ export default function CityMovingPage({ params }: PageProps) {
           },
         ]}
       />
+      {/* ImageObject schema — SEO Google Images */}
+      <ImageObjectSchema images={getCityImageSchemaData(city.slug, city.nameCapitalized)} />
+      
       {/* BreadcrumbList JSON-LD is injected by the <Breadcrumbs> component below */}
 
       <div className="bg-[var(--color-bg-dark)]">
