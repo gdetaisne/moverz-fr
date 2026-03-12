@@ -25,6 +25,8 @@ import BlogFloatingCTA from "@/components/blog/BlogFloatingCTA";
 import { BlogFAQItem } from "@/components/blog/BlogFAQItem";
 import { AuthorCard } from "@/components/blog/AuthorCard";
 import { buildTunnelUrl } from "@/lib/tunnel-url";
+import Image from "next/image";
+import Link from "next/link";
 
 type PageProps = {
   params: {
@@ -220,6 +222,13 @@ const GA_TRAFFIC_SLUGS = new Set([
   "demenagement-par-ville",
   "cas-frequents",
   "prix-demenagement-2025",
+]);
+
+// Articles du blog qui parlent du Label Moverz — affichent le logo dans le hero
+const LABEL_MOVERZ_BLOG_SLUGS = new Set([
+  "label-moverz-certification-demenageurs",
+  "eviter-arnaques-demenagement",
+  "comment-verifier-demenageur-fiable",
 ]);
 
 /**
@@ -577,12 +586,28 @@ export default function BlogPostPage({ params }: PageProps) {
             </ol>
           </nav>
 
-          <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold border" style={{
-            color: "#0EA5A6",
-            borderColor: "rgba(14,165,166,0.2)",
-            background: "rgba(14,165,166,0.05)"
-          }}>
-            <span>Blog déménagement</span>
+          <div className="flex flex-wrap items-center gap-2">
+            <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold border" style={{
+              color: "#0EA5A6",
+              borderColor: "rgba(14,165,166,0.2)",
+              background: "rgba(14,165,166,0.05)"
+            }}>
+              <span>Blog déménagement</span>
+            </div>
+            {LABEL_MOVERZ_BLOG_SLUGS.has(post.slug) && (
+              <Link
+                href="/label-moverz/"
+                className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold border transition-colors hover:bg-white/5"
+                style={{
+                  color: "#0EA5A6",
+                  borderColor: "rgba(14,165,166,0.2)",
+                  background: "rgba(14,165,166,0.05)"
+                }}
+              >
+                <Image src="/logo-label-moverz.png" alt="Label Moverz" width={28} height={19} className="h-4 w-auto" />
+                <span>Label Moverz</span>
+              </Link>
+            )}
           </div>
           
           <h1 className="font-heading text-[clamp(28px,5vw,44px)] font-bold tracking-[-0.02em] leading-[1.1]" style={{ color: "#111827" }}>
