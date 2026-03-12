@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Shield, TrendingDown, AlertCircle } from "lucide-react";
 
 export function LabelMoverzHero() {
@@ -28,7 +29,7 @@ export function LabelMoverzHero() {
               border: "1px solid rgba(14, 165, 166, 0.2)",
             }}
           >
-            <Shield className="w-4 h-4" />
+            <Image src="/logo-label-moverz.png" alt="Label Moverz" width={28} height={19} className="h-5 w-auto" />
             Label Moverz
           </div>
         </motion.div>

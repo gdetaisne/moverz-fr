@@ -1,5 +1,5 @@
 # TODO SEO — moverz.fr
-**Dernière mise à jour : 11 mars 2026**  
+**Dernière mise à jour : 12 mars 2026**  
 **Analyse source : `SEO_11032026_ANALYSE.md`**  
 **Baseline : ~85 clics/sem | CTR 0.7% | Pos moy 29.4**  
 **Objectif 60j : ~170 clics/sem (×2)**
@@ -37,16 +37,20 @@
   - Tableau comparatif visible above the fold
   - FAQ schema "comparateur déménagement"
 
-- [ ] **#5** `/label-moverz/` — indexation GSC + réécrire H1/title
-  - GSC → Inspection d'URL → "Demander l'indexation"
-  - Title : "Vérifier un Déménageur : Score Fiabilité /100 Gratuit | Moverz"
-  - H1 : "Vérifiez la fiabilité de votre déménageur en 30 secondes"
-  - Meta : "Score /100 gratuit : santé financière (Pappers), alertes BODACC, avis 12 mois. 3 000+ déménageurs. 0 faillite."
-  - Fichier : `app/label-moverz/page.tsx`
+- [x] **#5** `/label-moverz/` — indexation GSC + réécrire H1/title
+  - ✅ GSC → Inspection d'URL → "Demander l'indexation" (fait manuellement)
+  - ✅ H1 : "Vérifiez la fiabilité de votre déménageur en 30 secondes" (`LabelMoverzHero.tsx`)
+  - ✅ Title déjà optimal : "Vérifier un Déménageur : Score Fiabilité /100 Gratuit | Moverz"
+  - **Réalisé le 12 mars 2026**
 
-- [x] **#6** Ajouter photos sur toutes les pages ville (landmark + alt optimisé)
-  - ✅ Composant `CityPhoto.tsx` créé et intégré dans `app/demenagement/[slug]/page.tsx`
-  - 13 villes mappées avec photos Unsplash + fallback
+- [x] **#6** Ajouter photos sur toutes les pages ville (landmark + déménageur + SEO avancé)
+  - ✅ **20 photos landmarks** (20 villes premium complètes) + 3 déménageurs dans `public/images/cities/`
+  - ✅ 2 photos par ville : landmark + déménageur en action
+  - ✅ Nommage SEO : `bordeaux-miroir-eau-quais.jpg`, `demenageur-professionnel-cartons-transport.jpg`
+  - ✅ Alt text + title attributes optimisés (keywords "Déménagement [Ville]")
+  - ✅ ImageObject schema pour Google Images (`ImageObjectSchema.tsx`)
+  - ✅ Helper `lib/seo/city-photos.ts` pour métadonnées
+  - **Réalisé le 12 mars 2026** — Voir `PHOTOS-SEO-IMPLEMENTATION.md` pour détails
 
 ---
 
