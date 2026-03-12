@@ -43,6 +43,7 @@ export const dynamicParams = true;
 // SEO (2026-03-08 v2): +45 articles cités par Bing AI (AIPageStatsReport) — signal fiabilité contenu.
 const GA_TRAFFIC_SLUGS = new Set([
   "pourquoi-moverz-meilleur-comparateur-demenagement",
+  "moverz-vs-concurrents-comparateur-demenagement",
   "demenagement-centre-ville-rennes-autorisations",
   "cartons-gratuits-rennes",
   "prix-garde-meuble-montpellier-2025",

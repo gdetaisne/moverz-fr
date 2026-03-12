@@ -49,6 +49,8 @@ const PRIORITY_URLS = [
   '/blog/comparer-plateformes-devis-demenagement-2026/',
   '/blog/comment-verifier-demenageur-fiable/',
   '/blog/label-moverz-certification-demenageurs/',
+  '/blog/pourquoi-moverz-meilleur-comparateur-demenagement/',
+  '/blog/moverz-vs-concurrents-comparateur-demenagement/',
   '/blog/comparatif-prix-demenageurs-economiques-montpellier/',
   '/blog/estimation-prix-demenagement-bordeaux-methode-simple/',
   '/blog/tarif-horaire-demenageur-rennes/',

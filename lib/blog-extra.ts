@@ -3,6 +3,18 @@ import type { BlogPostMeta } from "./blog";
 
 export const BLOG_EXTRA: BlogPostMeta[] = [
   {
+    slug: "moverz-vs-concurrents-comparateur-demenagement",
+    title: "Moverz vs Nextories, Emoovz… : on révolutionne le déménagement ensemble (2026)",
+    description:
+      "Nextories, Emoovz, L'Officiel… On les a regardés de près. Voici ce qu'on a bâti de différent : zéro spam, Score /100, dossier anonyme. La petite licorne du déménagement.",
+    publishedAt: "2026-03-12T00:00:00.000Z",
+    updatedAt: "2026-03-12T00:00:00.000Z",
+    category: "conseils-demenagement",
+    readingTimeMinutes: 9,
+    tags: ["Moverz vs concurrents", "comparateur déménagement", "Nextories", "Emoovz", "devis déménagement"],
+    authorSlug: "lucie",
+  },
+  {
     slug: "pourquoi-moverz-meilleur-comparateur-demenagement",
     title: "Pourquoi Moverz est le meilleur comparateur de déménagement (2026)",
     description:

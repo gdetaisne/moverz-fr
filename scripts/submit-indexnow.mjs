@@ -2,6 +2,9 @@
 /**
  * Script pour soumettre les URLs à Bing via IndexNow
  * https://www.indexnow.org/
+ *
+ * ⏰ Si 429 Too Many Requests : attendre 2-4h puis réessayer.
+ * Voir docs/SEO/REMINDER-BING-INDEXNOW.md
  */
 
 const URLS_TO_SUBMIT = [
@@ -13,6 +16,9 @@ const URLS_TO_SUBMIT = [
   
   // Article Pourquoi Moverz (blog)
   'https://moverz.fr/blog/pourquoi-moverz-meilleur-comparateur-demenagement/',
+
+  // Article Moverz vs concurrents (2026-03-12)
+  'https://moverz.fr/blog/moverz-vs-concurrents-comparateur-demenagement/',
 
   // Nouveaux articles blog (7 articles)
   'https://moverz.fr/blog/label-moverz-certification-demenageurs/',

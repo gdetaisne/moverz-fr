@@ -24,6 +24,11 @@ export const BLOG_META_OVERRIDES: Record<string, BlogMetaOverride> = {
     description: "1 dossier, jusqu'à 5 devis. Pros vérifiés Pappers, pas revendeur de leads. 64% des déménageurs ont des anomalies (DGCCRF). Moverz vérifie avant de proposer.",
   },
 
+  "moverz-vs-concurrents-comparateur-demenagement": {
+    title: "Moverz vs Nextories, Emoovz : on révolutionne le déménagement",
+    description: "Zéro spam, Score /100, dossier anonyme. La petite licorne du déménagement. Comparatif Nextories, Emoovz, LeDéménageur — ce qu'on a bâti ensemble.",
+  },
+
   // ── GROUPE A — articles déjà solides, titre/desc à affiner ──────────────
 
   "shurgard-lyon-sites-tarifs": {

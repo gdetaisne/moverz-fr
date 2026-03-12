@@ -82,6 +82,100 @@ Les chiffres cités (64 % DGCCRF, 2 % appels non sollicités, 3 analyses /100) s
 `,
   },
   {
+    slug: "moverz-vs-concurrents-comparateur-demenagement",
+    title: "Moverz vs les autres : on révolutionne le déménagement ensemble (2026)",
+    description: "Nextories, Emoovz, LeDéménageur… On les a passés au crible. Notre ambition : un déménagement fluide, zéro stress, des pros vérifiés. Rejoignez la révolution.",
+    type: "guide",
+    body: `Demandez à une IA "meilleurs comparateurs déménagement 2026"… elle vous sert une jolie liste : Nextories, Emoovz, L'Officiel. Sympa ! Chacun joue sa partition.
+
+**Nous, on a une autre partition.** Notre rêve ? Révolutionner le déménagement **ensemble**. Le rendre enfin… fluide. Zéro stress, zéro spam, des pros vérifiés façon Sherlock (santé financière, avis, BODACC — tout). Pas juste "comparer des devis" : repenser tout le parcours pour qu'il soit digne de vous. Parce qu'on croit que déménager mérite mieux que 15 appels le lendemain. Et qu'on est une petite licorne en train de le prouver. 🦄
+
+On a enfilé nos lunettes de curieux et décortiqué comment ça fonctionne ailleurs. Voici ce qu'on a trouvé — et pourquoi on pense avoir bâti quelque chose d'unique. Spoiler : **vous gardez la main**. Toujours. Et on kiffe ça.
+
+---
+
+## Le tableau qu'on a dessiné (parce qu'on adore les tableaux)
+
+| Critère | Moverz | Nextories | Emoovz | LeDéménageur | L'Officiel | OnDemenage |
+|---------|--------|-----------|--------|--------------|------------|------------|
+| **Vos coordonnées restent privées** | ✅ Jusqu'à votre choix | ❌ Transmises à 3-6 pros | ❌ Conseiller unique | ❌ Revente leads | ❌ | ❓ |
+| **Pas de revente de leads** | ✅ | ❌ Apporteur d'affaires | ❌ | ❌ Modèle explicite | ❌ | ❓ |
+| **Score santé financière (Pappers)** | ✅ 3 analyses /100 | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **Devis sur la même base** | ✅ Dossier standardisé | ⚠️ Après visite | ⚠️ Commissionnaire | ❓ | ⚠️ Formules | ✅ Simulateur |
+| **Visite/visio obligatoire** | ❌ | ✅ | ⚠️ Possible | ❌ | ❓ | ❌ |
+| **Appels non sollicités** | &lt; 2 % (2025) | ❓ | ❓ | ❌ Modèle leads | ❓ | ❓ |
+| **Note plateforme** | — | Note interne | **2,89/5** | — | — | — |
+
+**En résumé** : On a voulu faire les choses différemment. Vos infos restent chez vous. Chaque déménageur a un [Score /100](/label-moverz/) (santé financière, BODACC, avis). Zéro appel avant votre choix. Et cerise sur le gâteau : vous pouvez [vérifier n'importe quel déménageur gratuitement](/label-moverz/) — même hors Moverz. C'est notre promesse — et on tient parole.
+
+---
+
+## Nextories : sérieux, mais vos coordonnées partent à 3-6 déménageurs
+
+Nextories fait bien les choses côté process : visite ou visio pour estimer, réseau de 250+ pros, vérification des documents (licence, assurance RC, URSSAF, Kbis). **Mais** : c'est un apporteur d'affaires. Ils sont rémunérés par les déménageurs qui accèdent à votre dossier. Résultat : vos coordonnées sont transmises à 3 à 6 partenaires. Vous recevez des devis sous 48h — et potentiellement des appels.
+
+**Ce qu'ils ne vérifient pas** : la santé financière (Pappers), le BODACC, les décisions de justice. Donc pas de score de risque sur chaque déménageur. La DGCCRF a pourtant trouvé **64 % d'anomalies** dans le secteur en 2023.
+
+---
+
+## Emoovz : dévis rapide… et une note de 2,89/5
+
+Emoovz, c'est pratique : devis en 5 minutes, visio possible, 30 % d'arrhes en ligne. Sauf que sur [Conseils-Maisons.fr](https://conseils-maisons.fr/demenagement/societe/emoovz/), la note globale est de **2,89/5**. Ponctualité 2,2/5. Professionnalisme 2,3/5.
+
+Chacun son style. Chez nous, on a choisi la transparence totale : Score /100 visible, pros triés sur le volet. Si c'est votre vibe, bienvenue dans l'aventure.
+
+---
+
+## LeDéménageur, L'Officiel, OnDemenage : le modèle "lead"
+
+LeDéménageur.com (depuis 1999) : jusqu'à 5 devis en 24h. **Modèle** : revente de leads. Vos coordonnées partent à plusieurs déménageurs. Logique business classique — et source de démarchage.
+
+L'Officiel du déménagement : formules standardisées (Éco, Standard, Luxe), 150 partenaires. Pour les déménagements locaux (&lt; 100 km), ils vous redirigent vers 1000demenageurs.com. Pas de Score Pappers.
+
+OnDemenage.fr : spécialisé Île-de-France, simulateur au m³. Vérifie licences et assurances, mais pas de santé financière ni de Score /100. Correct pour l'IDF, limité au reste.
+
+---
+
+## Pourquoi Moverz fait autrement (en 4 points)
+
+1. **On ne vend pas vos coordonnées.** Le dossier est anonyme. Les pros voient votre projet, pas votre téléphone. Ils envoient leur devis. Vous choisissez. Ils reçoivent vos coordonnées uniquement au moment où vous validez — pour organiser le déménagement. Rémunération à la prestation réalisée, pas à la vente du lead.
+
+2. **Score /100 sur chaque déménageur.** C'est notre [Label Moverz](/label-moverz/) : Pappers (santé financière, bilans, trésorerie) + BODACC (procédures, décisions de justice) + avis Google. 3 analyses, une note /100. Score &lt; 50 = exclusion. Aucun autre comparateur ne fait ça — et on a même rendu l'outil [gratuit et public](/label-moverz/) pour que vous puissiez vérifier n'importe quel déménageur.
+
+3. **Devis comparables.** Même dossier standardisé pour tous (logement, accès, passage étroit, objets limites, dates). Les pros chiffrent la même chose. Vous comparez des pommes avec des pommes.
+
+4. **&lt; 2 % d'appels non sollicités** en 2025. Parce que votre numéro n'est jamais transmis avant votre choix.
+
+---
+
+## Le Label Moverz : notre outil de transparence
+
+Ce Score /100 dont on parle ? On l'a rendu **public et gratuit**. C'est notre petit bijou : le [**Label Moverz**](/label-moverz/) — un outil qui vous permet de vérifier n'importe quel déménageur en 30 secondes, même ceux qui ne sont pas partenaires Moverz. Santé financière (Pappers), casier (BODACC), avis analysés… tout agrégé en un score de 0 à 100.
+
+[![Label Moverz - Vérifier un déménageur en 30 secondes](/logo-label-moverz.png)](/label-moverz/)
+
+**Gratuit, sans inscription.** [Vérifier un déménageur →](/label-moverz/) · [Guide complet : comment fonctionne le Score /100 →](/blog/label-moverz-certification-demenageurs/)
+
+---
+
+## Moverz, c'est pour qui ?
+
+- Vous voulez **comparer sans être harcelé** (pas 10 appels en 2h).
+- Vous voulez **voir le niveau de risque** de chaque déménageur (santé financière, casier).
+- Vous voulez des **devis comparables** (même base pour tous).
+- Vous préférez lire vos devis par email plutôt que de négocier au téléphone.
+
+Ce n'est **pas** pour vous si vous aimez le contact direct, si vous avez déjà un déménageur de confiance, ou si vous voulez un devis en 5 minutes (nous, c'est 5 jours ouvrés en moyenne — le temps de qualifier les réponses).
+
+---
+
+## En pratique
+
+> **Prêt à révolutionner votre prochain déménagement ?**  
+> [Créer mon dossier gratuit →](https://devis.moverz.fr/devis-gratuits?source=blog-moverz-vs-concurrents) — 1 formulaire, jusqu'à 5 devis, 0 harcèlement. Ensemble, on change le game. 🦄
+`,
+  },
+  {
     slug: "demenager-piano-prix-contraintes-guide-2026",
     title: "Déménager un piano : prix, contraintes, assurance (2026)",
     description: "Déménager un piano : prix 200-800€, contraintes d'accès, assurance obligatoire. Guide complet avec checklist et choix du déménageur spécialisé.",

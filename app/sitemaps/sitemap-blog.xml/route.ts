@@ -12,6 +12,7 @@ export const runtime = "nodejs";
 // Articles avec trafic GSC prouvé + citations Bing AI — inclus même s'ils ne sont pas "pilier"
 // Sync avec app/blog/[slug]/page.tsx GA_TRAFFIC_SLUGS
 const GA_TRAFFIC_SLUGS = new Set([
+  "moverz-vs-concurrents-comparateur-demenagement",
   "pourquoi-moverz-meilleur-comparateur-demenagement",
   "demenagement-centre-ville-rennes-autorisations",
   "cartons-gratuits-rennes",
