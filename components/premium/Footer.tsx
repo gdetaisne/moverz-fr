@@ -2,9 +2,10 @@ import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 import { LogoWithText } from "@/components/LogoWithText";
 
-const footerSections = [
+const footerSections: { title: string; colSpan?: number; links: { href: string; label: string; icon?: string }[] }[] = [
   {
     title: "Liens utiles",
+    colSpan: 2,
     links: [
       { href: "/pourquoi-moverz/", label: "Pourquoi Moverz" },
       { href: "/label-moverz/", label: "Label Moverz" },
@@ -21,6 +22,7 @@ const footerSections = [
   },
   {
     title: "Professionnels",
+    colSpan: 2,
     links: [
       { href: "/partenaires/", label: "Devenir partenaire" },
       { href: "/verifications-partenaires/", label: "Critères de sélection" },
@@ -29,6 +31,7 @@ const footerSections = [
   },
   {
     title: "Nos villes",
+    colSpan: 2,
     links: [
       { href: "/demenagement/nice/", label: "Nice" },
       { href: "/demenagement/lyon/", label: "Lyon" },
@@ -39,6 +42,7 @@ const footerSections = [
   },
   {
     title: "Contact",
+    colSpan: 1,
     links: [
       { href: "mailto:guillaume@moverz.fr", label: "guillaume@moverz.fr", icon: "mail" },
       { href: "tel:+33664779434", label: "06 64 77 94 34", icon: "phone" },
@@ -46,6 +50,7 @@ const footerSections = [
   },
   {
     title: "Informations légales",
+    colSpan: 1,
     links: [
       { href: "/mentions-legales/", label: "Mentions légales" },
       { href: "/politique-confidentialite/", label: "Confidentialité" },
@@ -112,7 +117,7 @@ export function Footer() {
 
           {/* Colonnes 2-6 : Links */}
           {footerSections.map((section) => (
-            <div key={section.title} className="md:col-span-1 md:min-w-0">
+            <div key={section.title} className={`${section.colSpan === 2 ? "md:col-span-2" : "md:col-span-1"} md:min-w-0 overflow-hidden`}>
               <h3 className="font-semibold mb-3 md:mb-4 text-sm md:text-base text-white">{section.title}</h3>
               <ul className="space-y-2 text-sm">
                 {section.links.map((link: any) => (
