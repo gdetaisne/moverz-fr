@@ -179,8 +179,18 @@ export const BLOG_META_OVERRIDES: Record<string, BlogMetaOverride> = {
   },
 
   "meilleur-demenageur-rennes-2025": {
-    title: "Meilleur déménageur Rennes 2026 : comparatif & avis",
-    description: "Top déménageurs Rennes : ABC Lemarié (Vern-sur-Seiche), Eurodem 35 (Cesson), acteurs locaux 4.5+/5. Critères : ponctualité, sans-casse, prix. Comparez sur Moverz.",
+    title: "Meilleur Déménageur Rennes 2026 : Top 5 Vérifiés",
+    description: "Top 5 déménageurs Rennes vérifiés Pappers : ABC Lemarié, Eurodem 35, acteurs locaux 4.5+/5. Critères : ponctualité, sans-casse, prix. Comparez sur Moverz.",
+  },
+
+  "prix-demenageur-rouen-2025": {
+    title: "Prix Déménageur Rouen 2026 : Tarifs & Devis Gratuit",
+    description: "Tarifs déménagement Rouen 2026 : fourchettes T1/T2/T3, prix réels, conseils pour comparer. Obtenez des devis gratuits de pros vérifiés Pappers sur Moverz.",
+  },
+
+  "prix-garde-meuble-montpellier-2025": {
+    title: "Prix Garde-Meuble Montpellier 2026 : Comparatif Tarifs",
+    description: "Comparatif garde-meuble Montpellier 2026 : 7 acteurs, tarifs 40–200€/mois selon taille. Shurgard, Klimanett, acteurs locaux. Devis gratuit Moverz.",
   },
 
   "demenagement-strasbourg-paris": {

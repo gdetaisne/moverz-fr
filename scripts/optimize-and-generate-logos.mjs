@@ -77,15 +77,13 @@ async function main() {
     }
   }
 
-  // Favicons : logo-ui.png (icône simple, transparent) > logo.png
-  const faviconSource = join(publicDir, "logo-ui.png");
-  const fallbackSource = join(publicDir, "logo.png");
-  const logoPath = (await stat(faviconSource).then(() => faviconSource).catch(() => null))
-    ?? (await stat(fallbackSource).then(() => fallbackSource).catch(() => null));
-  if (logoPath) {
+  // Favicons : logo.png (nouveau logo principal)
+  const logoPath = join(publicDir, "logo.png");
+  try {
+    await stat(logoPath);
     await generateFavicons(logoPath);
-  } else {
-    console.log("⚠️  logo-ui.png et logo.png absents, favicons non générés.");
+  } catch {
+    console.log("⚠️  logo.png absent, favicons non générés.");
   }
 
   console.log("\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
