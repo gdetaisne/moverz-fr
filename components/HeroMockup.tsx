@@ -38,9 +38,9 @@ export default function HeroMockup() {
           <div className="bg-[#075E54] px-4 py-3 flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center overflow-hidden">
               <Image
-                src="/logo.png"
+                src="/logo-header.png"
                 alt="Moverz"
-                width={32}
+                width={48}
                 height={32}
                 className="object-contain"
               />

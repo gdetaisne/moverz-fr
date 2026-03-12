@@ -65,10 +65,7 @@ export function Footer() {
         {/* Brand + CTA en haut - Mobile */}
         <div className="mb-8 md:hidden">
           <a href="/" className="inline-flex items-center gap-2.5 mb-4" title="Moverz">
-            <Image src="/logo.png" alt="Logo Moverz" width={32} height={32} className="h-8 w-8" />
-            <span className="font-heading text-xl font-bold text-white">
-              Moverz
-            </span>
+            <Image src="/logo-header.png" alt="Logo Moverz" width={48} height={32} className="h-8" />
           </a>
           
           <div className="space-y-2 mb-5">
@@ -96,10 +93,7 @@ export function Footer() {
           {/* Col 1: Brand + Texte + CTA - Desktop uniquement */}
           <div className="hidden md:block md:col-span-1 space-y-4">
             <a href="/" className="inline-flex items-center gap-2.5" title="Moverz">
-              <Image src="/logo.png" alt="Logo Moverz" width={32} height={32} className="h-8 w-8" />
-              <span className="font-heading text-xl font-bold text-white">
-                Moverz
-              </span>
+              <Image src="/logo-header.png" alt="Logo Moverz" width={48} height={32} className="h-8" />
             </a>
             
             {/* Texte sous le logo */}

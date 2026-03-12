@@ -37,9 +37,9 @@ export default function WidgetActionSection({
                 <div className="flex items-center gap-3">
                   <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10">
                     <Image
-                      src="/logo.png"
+                      src="/logo-header.png"
                       alt="Moverz"
-                      width={26}
+                      width={39}
                       height={26}
                     />
                   </div>

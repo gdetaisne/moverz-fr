@@ -5,104 +5,148 @@ type CityPhotoProps = {
   cityName: string;
 };
 
-// Photos libres de droits (Unsplash) — une par ville
-// Format : { src, credit, creditUrl, width, height }
-const CITY_PHOTOS: Record<string, { src: string; alt: string; credit: string }> = {
+// Photos locales hébergées — nommage SEO optimisé
+// Format : { src, alt, title }
+const CITY_PHOTOS: Record<string, { src: string; alt: string; title: string }> = {
   bordeaux: {
-    src: "https://images.unsplash.com/photo-1589561253898-768105ca91a8?w=1200&q=80&auto=format&fit=crop",
-    alt: "Miroir d'eau et quais de Bordeaux",
-    credit: "Unsplash",
+    src: "/images/cities/bordeaux-miroir-eau-quais.jpg",
+    alt: "Déménagement Bordeaux - Miroir d'eau et quais accessibles pour déménageurs",
+    title: "Déménager à Bordeaux avec Moverz - Pros vérifiés",
   },
   lyon: {
-    src: "https://images.unsplash.com/photo-1627308595127-2acbef0b5e45?w=1200&q=80&auto=format&fit=crop",
-    alt: "Basilique de Fourvière et toits de Lyon",
-    credit: "Unsplash",
+    src: "/images/cities/lyon-basilique-fourviere-toits.jpg",
+    alt: "Déménagement Lyon - Basilique Fourvière et toits, vue panoramique",
+    title: "Déménager à Lyon avec Moverz - Pros vérifiés",
   },
   marseille: {
-    src: "https://images.unsplash.com/photo-1589561253898-768105ca91a8?w=1200&q=80&auto=format&fit=crop",
-    alt: "Vieux-Port de Marseille",
-    credit: "Unsplash",
+    src: "/images/cities/marseille-vieux-port.jpg",
+    alt: "Déménagement Marseille - Vieux-Port et quartiers accessibles",
+    title: "Déménager à Marseille avec Moverz - Pros vérifiés",
   },
   paris: {
-    src: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&q=80&auto=format&fit=crop",
-    alt: "Tour Eiffel et toits de Paris",
-    credit: "Unsplash",
+    src: "/images/cities/paris-tour-eiffel-toits.jpg",
+    alt: "Déménagement Paris - Tour Eiffel et toits parisiens",
+    title: "Déménager à Paris avec Moverz - Pros vérifiés",
   },
   toulouse: {
-    src: "https://images.unsplash.com/photo-1590073842125-e6a0fd6cf568?w=1200&q=80&auto=format&fit=crop",
-    alt: "Place du Capitole à Toulouse",
-    credit: "Unsplash",
+    src: "/images/cities/toulouse-place-capitole.jpg",
+    alt: "Déménagement Toulouse - Place du Capitole centre-ville",
+    title: "Déménager à Toulouse avec Moverz - Pros vérifiés",
   },
   lille: {
-    src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80&auto=format&fit=crop",
-    alt: "Grand-Place de Lille",
-    credit: "Unsplash",
+    src: "/images/cities/lille-grand-place.jpg",
+    alt: "Déménagement Lille - Grand-Place et centre historique",
+    title: "Déménager à Lille avec Moverz - Pros vérifiés",
   },
   nice: {
-    src: "https://images.unsplash.com/photo-1490650034902-8665b02f33e0?w=1200&q=80&auto=format&fit=crop",
-    alt: "Promenade des Anglais à Nice",
-    credit: "Unsplash",
+    src: "/images/cities/nice-promenade-anglais.jpg",
+    alt: "Déménagement Nice - Promenade des Anglais et bord de mer",
+    title: "Déménager à Nice avec Moverz - Pros vérifiés",
   },
   nantes: {
-    src: "https://images.unsplash.com/photo-1597348989645-14c44e616ca8?w=1200&q=80&auto=format&fit=crop",
-    alt: "Château des Ducs de Bretagne à Nantes",
-    credit: "Unsplash",
+    src: "/images/cities/nantes-chateau-ducs-bretagne.jpg",
+    alt: "Déménagement Nantes - Château des Ducs de Bretagne",
+    title: "Déménager à Nantes avec Moverz - Pros vérifiés",
   },
   strasbourg: {
-    src: "https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?w=1200&q=80&auto=format&fit=crop",
-    alt: "La Petite France à Strasbourg",
-    credit: "Unsplash",
+    src: "/images/cities/strasbourg-petite-france.jpg",
+    alt: "Déménagement Strasbourg - La Petite France quartier historique",
+    title: "Déménager à Strasbourg avec Moverz - Pros vérifiés",
   },
   rennes: {
-    src: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=80&auto=format&fit=crop",
-    alt: "Place du Parlement de Bretagne à Rennes",
-    credit: "Unsplash",
+    src: "/images/cities/rennes-parlement-bretagne.jpg",
+    alt: "Déménagement Rennes - Place du Parlement de Bretagne",
+    title: "Déménager à Rennes avec Moverz - Pros vérifiés",
   },
   montpellier: {
-    src: "https://images.unsplash.com/photo-1562159017-d67f2e4f8d46?w=1200&q=80&auto=format&fit=crop",
-    alt: "Place de la Comédie à Montpellier",
-    credit: "Unsplash",
+    src: "/images/cities/montpellier-place-comedie.jpg",
+    alt: "Déménagement Montpellier - Place de la Comédie centre-ville",
+    title: "Déménager à Montpellier avec Moverz - Pros vérifiés",
   },
   grenoble: {
-    src: "https://images.unsplash.com/photo-1603088549155-4e9e5e2b4c72?w=1200&q=80&auto=format&fit=crop",
-    alt: "Bastille et vue panoramique de Grenoble",
-    credit: "Unsplash",
+    src: "/images/cities/grenoble-bastille-panorama.jpg",
+    alt: "Déménagement Grenoble - Bastille et vue panoramique Alpes",
+    title: "Déménager à Grenoble avec Moverz - Pros vérifiés",
   },
   rouen: {
-    src: "https://images.unsplash.com/photo-1600639547028-0d8b6e31b26a?w=1200&q=80&auto=format&fit=crop",
-    alt: "Cathédrale Notre-Dame de Rouen",
-    credit: "Unsplash",
+    src: "/images/cities/rouen-cathedrale-notre-dame.jpg",
+    alt: "Déménagement Rouen - Cathédrale Notre-Dame centre historique",
+    title: "Déménager à Rouen avec Moverz - Pros vérifiés",
   },
 };
 
 const FALLBACK_PHOTO = {
-  src: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1200&q=80&auto=format&fit=crop",
-  alt: "Ville de France",
-  credit: "Unsplash",
+  src: "/images/cities/paris-tour-eiffel-toits.jpg",
+  alt: "Déménagement en France - Vue ville",
+  title: "Déménager en France avec Moverz",
 };
 
+// Photos de déménageurs professionnels en action — images locales SEO-optimized
+const MOVER_PHOTOS = [
+  {
+    src: "/images/cities/demenageur-professionnel-cartons-transport.jpg",
+    alt: "Déménageurs professionnels transportant des cartons",
+    title: "Déménageurs vérifiés Moverz en action",
+  },
+  {
+    src: "/images/cities/demenageur-camion-equipe-action.jpg",
+    alt: "Camion de déménagement et équipe de déménageurs professionnels",
+    title: "Équipe de déménageurs Moverz - Camion et professionnels",
+  },
+  {
+    src: "/images/cities/demenageur-transport-carton-professionnel.jpg",
+    alt: "Déménageur professionnel transportant un carton",
+    title: "Déménageur professionnel Moverz - Transport sécurisé",
+  },
+];
+
 export function CityPhoto({ citySlug, cityName }: CityPhotoProps) {
-  const photo = CITY_PHOTOS[citySlug] ?? FALLBACK_PHOTO;
+  const landmarkPhoto = CITY_PHOTOS[citySlug] ?? FALLBACK_PHOTO;
+  // Sélection d'une photo de déménageur basée sur le slug (pour cohérence entre visites)
+  const moverPhoto = MOVER_PHOTOS[citySlug.length % MOVER_PHOTOS.length];
 
   return (
     <section className="section section-light py-0">
       <div className="container max-w-4xl">
-        <div className="relative w-full overflow-hidden rounded-2xl border border-v4-border">
-          <Image
-            src={photo.src}
-            alt={`Déménagement ${cityName} — ${photo.alt}`}
-            width={1200}
-            height={480}
-            className="w-full object-cover"
-            style={{ maxHeight: "320px" }}
-            priority={false}
-            unoptimized
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-          <div className="absolute bottom-4 left-4">
-            <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-v4-text backdrop-blur-sm">
-              Déménager à {cityName}
-            </span>
+        <div className="grid md:grid-cols-2 gap-4">
+          {/* Photo 1 : Landmark de la ville — SEO optimized */}
+          <div className="relative w-full overflow-hidden rounded-2xl border border-v4-border">
+            <Image
+              src={landmarkPhoto.src}
+              alt={landmarkPhoto.alt}
+              title={landmarkPhoto.title}
+              width={600}
+              height={400}
+              className="w-full object-cover"
+              style={{ height: "280px" }}
+              priority={false}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+            <div className="absolute bottom-3 left-3">
+              <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-v4-text backdrop-blur-sm">
+                {cityName}
+              </span>
+            </div>
+          </div>
+
+          {/* Photo 2 : Déménageur en action — SEO optimized */}
+          <div className="relative w-full overflow-hidden rounded-2xl border border-v4-border">
+            <Image
+              src={moverPhoto.src}
+              alt={`${moverPhoto.alt} ${cityName}`}
+              title={`${moverPhoto.title} - ${cityName}`}
+              width={600}
+              height={400}
+              className="w-full object-cover"
+              style={{ height: "280px" }}
+              priority={false}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+            <div className="absolute bottom-3 left-3">
+              <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-v4-text backdrop-blur-sm">
+                Déménageurs vérifiés
+              </span>
+            </div>
           </div>
         </div>
       </div>

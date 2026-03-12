@@ -31,14 +31,13 @@ export default function ConfirmEmailPage() {
                   <div className="relative space-y-6">
                     <div className="mx-auto w-fit inline-flex items-center gap-3">
                       <Image
-                        src="/logo.png"
+                        src="/logo-header.png"
                         alt="Moverz"
-                        width={40}
+                        width={60}
                         height={40}
-                        className="h-10 w-10"
+                        className="h-10"
                         priority
                       />
-                      <span className="text-xl font-bold text-[var(--color-text)]">Moverz</span>
                     </div>
 
                     <div className="space-y-4">

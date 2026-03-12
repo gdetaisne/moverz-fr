@@ -41,9 +41,9 @@ export function LabelMoverzHero() {
           className="font-heading text-5xl md:text-7xl font-bold text-center mb-6"
           style={{ color: "var(--color-text)" }}
         >
-          Vérifiez la fiabilité de
+          Vérifiez la fiabilité de votre déménageur
           <br />
-          <span style={{ color: "var(--color-accent)" }}>votre déménageur.</span>
+          <span style={{ color: "var(--color-accent)" }}>en 30 secondes</span>
         </motion.h1>
 
         {/* Sous-titre */}

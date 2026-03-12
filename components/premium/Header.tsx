@@ -45,8 +45,7 @@ export function Header() {
       <div className="mx-auto flex h-14 md:h-16 max-w-[1200px] items-center justify-between px-4 md:px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 md:gap-3 transition-opacity hover:opacity-80">
-          <Image src="/logo.png" alt="Moverz" width={40} height={40} className="h-8 w-8 md:h-10 md:w-10" priority />
-          <span className="font-heading text-xl md:text-2xl font-bold text-[rgb(var(--text))]">Moverz</span>
+          <Image src="/logo-header.png" alt="Moverz" width={60} height={40} className="h-8 md:h-10" priority />
         </Link>
 
         {/* Desktop Nav + CTA + Phone + Mobile Menu */}

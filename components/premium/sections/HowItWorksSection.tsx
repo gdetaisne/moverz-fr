@@ -79,7 +79,7 @@ export function HowItWorksSection() {
           <VideoExplainer
             title="Voir la démo Moverz"
             description="Voir la démo (45s)"
-            posterUrl="/logo.png"
+            posterUrl="/logo-header.png"
             videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ"
             mode="modal"
             duration="45s"

@@ -23,9 +23,9 @@ export default function ProHeroMockup() {
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-lg bg-white/10 border border-white/10 flex items-center justify-center overflow-hidden">
               <img
-                src="/logo.png"
+                src="/logo-header.png"
                 alt="Moverz"
-                className="h-6 w-6 object-contain"
+                className="h-6 object-contain"
                 loading="eager"
               />
             </div>

@@ -188,8 +188,7 @@ export function CreditsafeChapter() {
                 color: "#0EA5A6",
               }}
             >
-              <Image src="/logo.png" alt="Moverz" width={14} height={14} className="h-3.5 w-3.5" />
-              <Shield className="h-3 w-3" />
+              <Image src="/logo-label-moverz.png" alt="Label Moverz" width={21} height={14} className="h-3.5" />
               <span>Label Moverz</span>
             </div>
 
