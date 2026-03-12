@@ -72,6 +72,45 @@ export const LONGTAIL_FAQS: Record<string, BlogFAQItem[]> = {
         "Oui. La création de dossier et la réception des devis sont gratuites. Moverz est rémunéré par les partenaires quand un déménagement est réalisé, pas à la vente du lead.",
     },
   ],
+  "comparatif-demenageurs-rennes-2026": [
+    {
+      question: "Comment vérifier un déménageur à Rennes avant de signer ?",
+      answer:
+        "Utilisez l'outil gratuit Label Moverz (label-moverz.fr) : entrez le SIREN ou le nom du déménageur, obtenez un Score /100 en 30 secondes (santé financière Pappers, BODACC, avis clients). Score < 50/100 = méfiance. Fonctionne pour tous les déménageurs, même hors Moverz.",
+    },
+    {
+      question: "Quels sont les meilleurs déménageurs à Rennes en 2026 ?",
+      answer:
+        "ABC Lemarié et Eurodem 35 sont des acteurs établis. Les Déménageurs Bretons, Manutention Services, Trans Rennes complètent l'offre locale. Critères : vérifier le Score /100 (Label Moverz), comparer 3–5 devis sur la même base, privilégier les avis Google récents.",
+    },
+    {
+      question: "Combien coûte un déménagement à Rennes en 2026 ?",
+      answer:
+        "T2 intra-ville : 500–900€. T3 : 700–1200€. Studio : 350–550€. Facteurs : étage sans ascenseur (+50–150€/étage), monte-meuble (+200–450€), juillet–août (+15–25 %). Obtenez des devis comparables sur Moverz.",
+    },
+  ],
+  "prix-demenageur-strasbourg-2026": [
+    {
+      question: "Faut-il une autorisation de stationnement pour un déménagement à Strasbourg ?",
+      answer:
+        "Oui, en Grande Île et dans certaines zones piétonnes, un arrêté de circulation temporaire est souvent nécessaire. La demande s'effectue auprès de la mairie de Strasbourg, 2 à 3 semaines avant la date. Coût : 50–120€ selon la durée. Un déménageur sérieux vous guidera dans cette démarche.",
+    },
+    {
+      question: "Les déménageurs strasbourgeois sont-ils plus chers en Grande Île ?",
+      answer:
+        "Oui, les ruelles étroites et le stationnement compliqué de la Grande Île (et la Petite France) entraînent un surcoût de +15 à +20 % par rapport aux quartiers avec accès camion facile (Neudorf, Cronenbourg, Hautepierre). Prévoyez ce supplément dans votre budget.",
+    },
+    {
+      question: "Comment trouver un déménageur fiable à Strasbourg ?",
+      answer:
+        "Vérifiez : numéro de licence de transport (obligatoire), attestation RC Pro valide, score Pappers > 60/100. Moverz effectue ces vérifications automatiquement pour chaque déménageur du réseau strasbourgeois.",
+    },
+    {
+      question: "Combien coûte un déménagement Strasbourg–Paris en 2026 ?",
+      answer:
+        "T2 (25 m³) : 1 400–2 200€. T3 (40 m³) : 2 300–3 500€. Strasbourg–Paris (~490 km) est un corridor très couvert. Comparez 3–5 devis sur Moverz avec le même volume et les mêmes options.",
+    },
+  ],
   "demenagement-sans-ascenseur-5e-etage": [
     {
       question: "Un déménagement au 5e sans ascenseur coûte-t-il forcément beaucoup plus cher ?",

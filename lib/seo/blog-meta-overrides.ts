@@ -29,6 +29,11 @@ export const BLOG_META_OVERRIDES: Record<string, BlogMetaOverride> = {
     description: "Zéro spam, Score /100, dossier anonyme. La petite licorne du déménagement. Comparatif Nextories, Emoovz, LeDéménageur — ce qu'on a bâti ensemble.",
   },
 
+  "comparatif-demenageurs-rennes-2026": {
+    title: "Comparatif Déménageurs Rennes 2026 : Top 5, Prix, Vérifier",
+    description: "ABC Lemarié, Eurodem 35 + 3 acteurs. T2 500–900€. Vérifiez avec Label Moverz (Score /100 gratuit en 30s) avant de signer. 3–5 devis Moverz.",
+  },
+
   // ── GROUPE A — articles déjà solides, titre/desc à affiner ──────────────
 
   "shurgard-lyon-sites-tarifs": {
@@ -104,6 +109,11 @@ export const BLOG_META_OVERRIDES: Record<string, BlogMetaOverride> = {
   "faq-garde-meuble-strasbourg": {
     title: "Garde-meuble Strasbourg 2026 : 20 FAQ, 40–400€/mois",
     description: "FAQ garde-meuble Strasbourg : prix 40–400€/mois selon taille, durée 1–12 mois, accès 24h/7j, assurance incluse. Grande Île, Neudorf, Hautepierre.",
+  },
+
+  "prix-demenageur-strasbourg-2026": {
+    title: "Prix Déménageur Strasbourg 2026 : 525€ Studio, T2 960€, Guide Complet",
+    description: "Tarifs déménagement Strasbourg 2026 : studio 525€, T2 960€, T3 1630€. Grande Île +15-20%. 3-5 devis comparables sur Moverz, pros vérifiés Pappers.",
   },
 
   "prix-demenagement-international-lyon": {

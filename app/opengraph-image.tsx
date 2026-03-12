@@ -2,6 +2,8 @@ import { ImageResponse } from "next/og";
 import { readFile } from "fs/promises";
 import { join } from "path";
 
+// runtime "nodejs" + system-ui uniquement : évite "Failed to download dynamic font. Status: 400" en build Docker
+// (lecture TTF ou fetch Google Fonts échouent/indisponibles sur CapRover)
 export const runtime = "nodejs";
 export const alt = "Moverz – Comparateur de déménagement gratuit";
 export const size = { width: 1200, height: 630 };
@@ -12,9 +14,6 @@ export default async function OgImage() {
   const logoPath = join(process.cwd(), "public/logo-transparent.png");
   const logoData = await readFile(logoPath).catch(() => readFile(join(process.cwd(), "public/logo.png")));
   const logoBase64 = `data:image/png;base64,${logoData.toString("base64")}`;
-
-  // Charger Inter Bold (format TTF supporté par ImageResponse)
-  const fontData = await readFile(join(process.cwd(), "public/fonts/inter.ttf"));
 
   return new ImageResponse(
     (
@@ -27,7 +26,7 @@ export default async function OgImage() {
           alignItems: "flex-start",
           justifyContent: "center",
           background: "#FFFFFF",
-          fontFamily: "Inter",
+          fontFamily: "system-ui, sans-serif",
           position: "relative",
           overflow: "hidden",
           padding: "80px",
@@ -120,7 +119,7 @@ export default async function OgImage() {
                 fontWeight: 800,
                 color: "#0B0F19",
                 letterSpacing: -1.2,
-                fontFamily: "Inter",
+                fontFamily: "system-ui, sans-serif",
               }}
             >
               Moverz
@@ -145,7 +144,7 @@ export default async function OgImage() {
                 color: "#4B5563",
                 fontSize: 17,
                 fontWeight: 600,
-                fontFamily: "Inter, sans-serif",
+                fontFamily: "system-ui, sans-serif",
               }}
             >
               Comparateur de déménagement · Gratuit · Sans démarchage
@@ -161,7 +160,7 @@ export default async function OgImage() {
             fontWeight: 700,
             lineHeight: 0.95,
             marginBottom: 56,
-            fontFamily: "Inter, sans-serif",
+            fontFamily: "system-ui, sans-serif",
             letterSpacing: -3,
             }}
           >
@@ -197,29 +196,21 @@ export default async function OgImage() {
                   boxShadow: "0 1px 3px rgba(0,0,0,0.05), 0 2px 6px rgba(0,0,0,0.03)",
                 }}
               >
-                {/* Checkmark circle */}
+                {/* Bullet (✓ provoque fetch Google Font 400 en build Docker) */}
                 <div
                   style={{
                     width: 22,
                     height: 22,
                     borderRadius: "50%",
                     background: item.color,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: "white",
-                    fontSize: 14,
-                    fontWeight: 700,
                   }}
-                >
-                  ✓
-                </div>
+                />
                 <span
                   style={{
                     color: "#1F2937",
                     fontSize: 17,
                     fontWeight: 600,
-                    fontFamily: "Inter, sans-serif",
+                    fontFamily: "system-ui, sans-serif",
                   }}
                 >
                   {item.label}
@@ -230,14 +221,6 @@ export default async function OgImage() {
         </div>
       </div>
     ),
-    {
-      ...size,
-      // Tous les poids utilisés (600, 700, 800) pour éviter le fetch dynamique Google Fonts en build
-      fonts: [
-        { name: "Inter", data: fontData, style: "normal", weight: 600 },
-        { name: "Inter", data: fontData, style: "normal", weight: 700 },
-        { name: "Inter", data: fontData, style: "normal", weight: 800 },
-      ],
-    }
+    { ...size }
   );
 }

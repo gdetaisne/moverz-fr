@@ -35,17 +35,18 @@ export const BLOG_MISSING_301_REDIRECTS = [
     "destination": "/blog/prix-demenageur-nice-2026/",
     "permanent": true
   },
-  // Redirections 2025 vers pages pertinentes (pas encore de version 2026)
+  // Redirections 2025 → 2026 (version 2026 existante)
   {
     "source": "/blog/prix-demenageur-marseille-tarifs-2025",
-    "destination": "/blog/prix-demenagement-marseille/",
+    "destination": "/blog/prix-demenageur-marseille-2026/",
     "permanent": true
   },
   {
     "source": "/blog/prix-demenageur-marseille-tarifs-2025/",
-    "destination": "/blog/prix-demenagement-marseille/",
+    "destination": "/blog/prix-demenageur-marseille-2026/",
     "permanent": true
   },
+  // Redirections 2025 vers pages pertinentes (pas encore de version 2026)
   {
     "source": "/blog/meilleurs-demenageurs-rouen-avis-2025",
     "destination": "/blog/demenagement-par-ville/",
@@ -423,16 +424,6 @@ export const BLOG_MISSING_301_REDIRECTS = [
   },
   {
     "source": "/blog/pilier-09-prix-demenagement-10-satellites/",
-    "destination": "/blog/demenagement-par-ville/",
-    "permanent": true
-  },
-  {
-    "source": "/blog/prix-garde-meuble-lille-2025",
-    "destination": "/blog/demenagement-par-ville/",
-    "permanent": true
-  },
-  {
-    "source": "/blog/prix-garde-meuble-lille-2025/",
     "destination": "/blog/demenagement-par-ville/",
     "permanent": true
   },

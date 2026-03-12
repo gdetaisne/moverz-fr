@@ -19,6 +19,7 @@
     "seo:inventory": "tsx scripts/seo-inventory.ts > seo-inventory.csv",
     "seo:healthcheck": "tsx scripts/seo-healthcheck.ts",
     "seo:city-guides-wordcount": "tsx scripts/seo-city-guides-wordcount.ts > seo-city-guides-wordcount.csv",
+    "seo:audit-blog": "tsx scripts/audit-blog-content.ts",
     "seo:monitor": "node scripts/gsc-monitor.mjs",
     "seo:monitor:weekly": "node scripts/gsc-monitor.mjs --days 7",
     "seo:monitor:monthly": "node scripts/gsc-monitor.mjs --days 28"

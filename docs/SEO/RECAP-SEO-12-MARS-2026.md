@@ -140,4 +140,39 @@ Cette session a complété **2 actions P0** du plan SEO Guillaume + **3 optimisa
 
 ---
 
+## 📋 Audit contenu blog (12 mars 2026)
+
+**Script :** `pnpm run seo:audit-blog` → génère `docs/SEO/AUDIT-CONTENU-BLOG.md` + `.json`
+
+### Synthèse
+
+| Métrique | Valeur |
+|----------|--------|
+| Total articles publiés | 1 197 |
+| Dans sitemap (qualité) | 608 |
+| **TRÈS FIN** (<200 mots) | **414** |
+| **FIN** (200-400 mots) | **129** |
+| MOYEN (400-700) | 88 |
+| BON (700+) | 566 |
+| Avec red flags (structure squelettique) | 369 |
+
+### Problème
+
+- **~45 % du blog** a un contenu trop fin ou squelettique (543 articles)
+- Exemples : `meilleurs-demenageurs-lyon` (dans sitemap, ~80 mots), pattern "Vérifications / Prix / FAQ" avec 1 ligne par section
+- Placeholders `article-satellite-XX-placeholder` (6 mots chacun)
+
+### Priorisation audit
+
+| P | Action | Impact |
+|---|--------|--------|
+| **P0** | Retirer du sitemap ou réécrire les TRÈS FIN en sitemap | Risque pénalisation Google |
+| **P1** | Réécrire contenu squelettique réel (ex. meilleurs-demenageurs-lyon) | Pages avec trafic potentiel |
+| **P2** | Noindex ou réécrire les placeholders | Nettoyage technique |
+| **P3** | Enrichir progressivement les MOYEN | Qualité globale |
+
+**Fichiers :** `docs/SEO/AUDIT-CONTENU-BLOG.md`, `docs/SEO/AUDIT-CONTENU-BLOG.json`, `scripts/audit-blog-content.ts`
+
+---
+
 *Rédigé le 12 mars 2026 — Lucie Stéhelin + Claude Agent*

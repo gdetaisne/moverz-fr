@@ -13,8 +13,9 @@ import {
 } from "@/lib/blog";
 import { LONGTAIL_FAQS } from "@/lib/blog-longtail";
 import { LONGTAIL_PACK2_FAQS } from "@/lib/blog-longtail-pack2";
-import { getFullMetadata } from "@/lib/canonical-helper";
+import { getCanonicalUrl, getFullMetadata } from "@/lib/canonical-helper";
 import { getCityBySlug } from "@/lib/cities";
+import { BLOG_CANONICAL_OVERRIDES } from "@/lib/seo/blog-canonical-overrides";
 import { BLOG_META_OVERRIDES } from "@/lib/seo/blog-meta-overrides";
 import { ArticleSchema } from "@/components/schema/ArticleSchema";
 import { FAQSchema } from "@/components/schema/FAQSchema";
@@ -44,6 +45,7 @@ export const dynamicParams = true;
 const GA_TRAFFIC_SLUGS = new Set([
   "pourquoi-moverz-meilleur-comparateur-demenagement",
   "moverz-vs-concurrents-comparateur-demenagement",
+  "comparatif-demenageurs-rennes-2026",
   "demenagement-centre-ville-rennes-autorisations",
   "cartons-gratuits-rennes",
   "prix-garde-meuble-montpellier-2025",
@@ -258,7 +260,16 @@ export function generateMetadata({ params }: PageProps): Metadata {
       : `${post.title} | Blog déménagement`;
   const description = override?.description ?? post.description;
 
-  const base = getFullMetadata(path, title, description);
+  let base = getFullMetadata(path, title, description);
+
+  // SEO #7 #8 : override canonical pour consolidation cannibalisation
+  const canonicalPath = BLOG_CANONICAL_OVERRIDES[post.slug];
+  if (canonicalPath) {
+    base = {
+      ...base,
+      alternates: { canonical: getCanonicalUrl(canonicalPath) },
+    };
+  }
 
   if (!isIndexableBlogPost(post.slug)) {
     return { ...base, robots: { index: false, follow: true } };

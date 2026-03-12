@@ -20,6 +20,12 @@ const URLS_TO_SUBMIT = [
   // Article Moverz vs concurrents (2026-03-12)
   'https://moverz.fr/blog/moverz-vs-concurrents-comparateur-demenagement/',
 
+  // Article Comparatif déménageurs Rennes 2026
+  'https://moverz.fr/blog/comparatif-demenageurs-rennes-2026/',
+
+  // Article Comparatif déménageurs Rennes 2026 (2026-03-12)
+  'https://moverz.fr/blog/comparatif-demenageurs-rennes-2026/',
+
   // Nouveaux articles blog (7 articles)
   'https://moverz.fr/blog/label-moverz-certification-demenageurs/',
   'https://moverz.fr/blog/demenager-piano-prix-contraintes-guide-2026/',

@@ -14,6 +14,7 @@ export const runtime = "nodejs";
 const GA_TRAFFIC_SLUGS = new Set([
   "moverz-vs-concurrents-comparateur-demenagement",
   "pourquoi-moverz-meilleur-comparateur-demenagement",
+  "comparatif-demenageurs-rennes-2026",
   "demenagement-centre-ville-rennes-autorisations",
   "cartons-gratuits-rennes",
   "prix-garde-meuble-montpellier-2025",

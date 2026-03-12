@@ -1,5 +1,18 @@
 # 🔧 Debug Erreur Caprover Build
 
+## ✅ Fix OG Image Font (mars 2026)
+
+**Erreur :** `Failed to load dynamic font for ✓ . Error: Failed to download dynamic font. Status: 400`
+
+**Cause :** `@vercel/og` tente de télécharger une Google Font quand le caractère ✓ (checkmark) est rendu dans l’image OG — en build Docker/CapRover, le réseau est limité ou la requête retourne 400.
+
+**Solution appliquée :** `app/opengraph-image.tsx`
+- Police : `system-ui, sans-serif` (pas de fetch externe)
+- Checkmark ✓ → bullet • (caractère supporté par system-ui)
+- Runtime Node.js explicite, pas de fonts fournies en options
+
+---
+
 ## ❌ Problème Actuel
 
 Le build échoue sur Caprover avec l'erreur :

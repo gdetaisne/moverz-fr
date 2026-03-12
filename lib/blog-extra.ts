@@ -27,6 +27,19 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     authorSlug: "lucie",
   },
   {
+    slug: "comparatif-demenageurs-rennes-2026",
+    title: "Comparatif Déménageurs Rennes 2026 : Top 5 et Prix Réels",
+    description:
+      "Comparatif déménageurs Rennes 2026 : ABC Lemarié, Eurodem 35, acteurs locaux. Prix T2 500–900€. Vérifier avec Label Moverz (Score /100 gratuit) avant de signer.",
+    publishedAt: "2026-03-12T00:00:00.000Z",
+    updatedAt: "2026-03-12T00:00:00.000Z",
+    category: "demenagement-par-ville",
+    citySlug: "rennes",
+    readingTimeMinutes: 6,
+    tags: ["déménageurs Rennes", "comparatif Rennes", "Label Moverz", "vérifier déménageur"],
+    authorSlug: "lucie",
+  },
+  {
     slug: "eviter-arnaques-demenagement",
     title: "Comment éviter les arnaques au déménagement en 2026 : Guide complet",
     description:

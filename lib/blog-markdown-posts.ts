@@ -82,6 +82,99 @@ Les chiffres cités (64 % DGCCRF, 2 % appels non sollicités, 3 analyses /100) s
 `,
   },
   {
+    slug: "comparatif-demenageurs-rennes-2026",
+    title: "Comparatif Déménageurs Rennes 2026 : Top 5 et Prix Réels",
+    description: "Comparatif déménageurs Rennes 2026 : ABC Lemarié, Eurodem 35, acteurs locaux. Prix T2 500–900€, critères de vérification, outil gratuit Score /100.",
+    type: "guide",
+    citySlug: "rennes",
+    body: `Vous déménagez à Rennes et vous voulez **choisir sereinement** ? On a listé **5 acteurs à connaître**, les **vrais prix 2026** et — surtout — **comment vérifier** avant de signer. Parce que la DGCCRF a trouvé 64 % d'anomalies dans le secteur en 2023, on a mis au point un outil pour ça.
+
+**En bref** : ABC Lemarié, Eurodem 35 et 3 autres acteurs locaux. T2 intra-ville 500–900€. Avant de valider : collez le SIREN du déménageur sur [Label Moverz](/label-moverz/) → Score /100 en 30 secondes, gratuit.
+
+---
+
+## Tableau comparatif : 5 déménageurs Rennes 2026
+
+| Déménageur | Type | Fourchette T2 intra-ville | Spécialité | Avis Google |
+|------------|------|---------------------------|------------|-------------|
+| **ABC Lemarié** | PME familiale | 550–850€ | Piano, longue distance | 4.5+/5 |
+| **Eurodem 35** | PME locale | 500–800€ | Cesson, agglo Rennes | 4.5+/5 |
+| **Les Déménageurs Bretons** | Coopérative | 520–820€ | Région Bretagne | 4.4+/5 |
+| **Manutention Services** | PME | 480–750€ | Formule éco, petits volumes | 4.3+/5 |
+| **Trans Rennes** | Locale | 500–780€ | Intra-ville, express | 4.2+/5 |
+
+*Prix indicatifs T2 25–35 m³, même ville, accès standard. Montants variables selon étage, volume exact et période.*
+
+---
+
+## Vérifier votre déménageur avant de signer : Label Moverz
+
+**Avant de valider un devis**, vérifiez que le déménageur tient la route. En 2024, 257 entreprises de déménagement ont fait faillite en France — un devis « pas cher » peut cacher des difficultés ou des litiges récurrents.
+
+On a construit notre **petit outil gratuit** pour ça : vous entrez le SIREN ou le nom, vous avez un **Score /100 en 30 secondes**. Sans inscription, utilisable pour n'importe quel déménageur — même celui que vous avez trouvé ailleurs.
+
+**[Vérifier un déménageur →](/label-moverz/)**
+
+**Sous le capot ?** Trois dimensions :
+
+1. **Santé financière** (Pappers) : bilans, trésorerie, endettement
+2. **Risque juridique** (BODACC, Pappers Décisions) : procédures, décisions de justice
+3. **Avis clients** : analyse des avis Google des 12 derniers mois
+
+**Score < 50/100** = exclusion automatique sur Moverz. Vous pouvez utiliser l'outil pour vérifier un déménageur **même si vous ne passez pas par Moverz** pour votre devis — c'est gratuit et indépendant. Fonctionne pour les déménageurs de Rennes et partout en France.
+
+> **En pratique** : Avant de signer, récupérez le SIREN sur le devis ou sur [Pappers](https://www.pappers.fr/). Collez-le sur [label-moverz.fr](/label-moverz/) et consultez le score. Si < 50/100 ou alertes critiques → méfiance.
+
+---
+
+## Prix déménagement Rennes 2026 : fourchettes réalistes
+
+| Type de logement | Volume | Intra-ville | Agglomération | Longue distance |
+|------------------|--------|-------------|---------------|-----------------|
+| Studio | 10–15 m³ | 350–550€ | 400–650€ | 800–1500€ |
+| T2 | 20–30 m³ | 500–900€ | 550–1000€ | 1200–2200€ |
+| T3 | 35–45 m³ | 700–1200€ | 800–1400€ | 1800–3200€ |
+| Maison | 50–70 m³ | 1000–1800€ | 1100–2000€ | 2500–4500€ |
+
+*Facteurs de variation : étage sans ascenseur (+50–150€/étage), monte-meuble (+200–450€), période juillet–août (+15–25 %).*
+
+---
+
+## 5 critères pour choisir à Rennes
+
+1. **Score /100 vérifié** — Utilisez [Label Moverz](/label-moverz/) avant de signer
+2. **Devis comparables** — Même volume, même accès transmis à tous ([Moverz](/comment-ca-marche/) standardise)
+3. **Avis récents** — 15+ avis sur les 12 derniers mois, lire les 1–2★
+4. **Assurance RC Pro** — ≥ 1,5 M€, attestation à jour
+5. **Licence de transport** — Obligatoire pour activité déménagement
+
+---
+
+## Quartiers Rennes : contraintes à préciser
+
+On vous donne les zones qu'on connaît bien pour Rennes. À préciser dans votre devis :
+
+- **Centre, Sainte-Anne** : rue étroite, stationnement limité — à détailler
+- **Vern, Cesson-Sévigné** : agglo, souvent accès plus simple
+- **Beaulieu, Villejean** : immeubles récents, ascenseurs fréquents
+- **Saint-Martin** : rues pavées, accès camion à vérifier
+
+Un devis précis nécessite : étage, ascenseur oui/non, passage le plus étroit, distance camion→porte. On vous recommande de tout indiquer dès le départ — ça évite les mauvaises surprises.
+
+---
+
+## En pratique
+
+1. **Comparez 3 à 5 devis** sur la même base (volume, accès, prestations)
+2. **Vérifiez chaque déménageur** avec l'outil [Label Moverz](/label-moverz/) (SIREN sur le devis)
+3. **Privilégiez les devis écrits** — évitez les estimations verbales
+4. **Acompte ≤ 30 %** — méfiance au-delà
+
+> **Prêt à comparer à Rennes ?**  
+> [Créer mon dossier gratuit →](https://devis.moverz.fr/devis-gratuits?source=blog-comparatif-rennes) — 1 formulaire, jusqu'à 5 devis, pros vérifiés Score /100, 0 harcèlement. On s'occupe du reste. On s'occupe du reste.
+`,
+  },
+  {
     slug: "moverz-vs-concurrents-comparateur-demenagement",
     title: "Moverz vs les autres : on révolutionne le déménagement ensemble (2026)",
     description: "Nextories, Emoovz, LeDéménageur… On les a passés au crible. Notre ambition : un déménagement fluide, zéro stress, des pros vérifiés. Rejoignez la révolution.",
