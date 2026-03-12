@@ -34,6 +34,9 @@ RUN ls -la && \
     ls -la scripts/ && \
     ls -la lib/ || true
 
+# Générer le Prisma Client avant le build Next.js
+RUN npx prisma generate
+
 # Build avec logs détaillés
 RUN npm run build
 
