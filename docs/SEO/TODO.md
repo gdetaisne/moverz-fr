@@ -12,10 +12,9 @@
 ## P0 — Cette semaine (impact J+7 à J+14)
 
 - [ ] **#1** Mettre à jour dates "2025"→"2026" dans les titles de 3 articles + remplacer "CreditSafe"→"Pappers"
-  - `/blog/prix-demenageur-rouen-2025/` → "Prix Déménageur Rouen 2026 : Tarifs & Devis Gratuit"
-  - `/blog/prix-garde-meuble-montpellier-2025/` → "Prix Garde-Meuble Montpellier 2026 : Comparatif Tarifs"
-  - `/blog/meilleur-demenageur-rennes-2025/` → "Meilleur Déménageur Rennes 2026 : Top 5 Vérifiés"
-  - Fichier : `lib/blog-extra.ts`
+  - ✅ **Titles 2026** : overrides en place (`blog-meta-overrides.ts`) — Rouen, Montpellier, Rennes
+  - ⏳ **CreditSafe→Pappers** dans le contenu : à faire (blog-nouveaux-2026, blog-arnaques, etc.)
+  - URLs inchangées : pas de 404
 
 - [ ] **#2** Réécrire titles/meta des 8 pages à 0% CTR (100+ impressions)
   - `/blog/shurgard-lyon-sites-tarifs/` → "Shurgard Lyon : Prix, Adresses et Alternatives Moins Chères"
@@ -44,13 +43,13 @@
   - **Réalisé le 12 mars 2026**
 
 - [x] **#6** Ajouter photos sur toutes les pages ville (landmark + déménageur + SEO avancé)
-  - ✅ **20 photos landmarks** (20 villes premium complètes) + 3 déménageurs dans `public/images/cities/`
+  - ✅ **80 photos landmarks** (Phase 1 + 2 + 3 complètes) + 3 déménageurs dans `public/images/cities/`
   - ✅ 2 photos par ville : landmark + déménageur en action
   - ✅ Nommage SEO : `bordeaux-miroir-eau-quais.jpg`, `demenageur-professionnel-cartons-transport.jpg`
   - ✅ Alt text + title attributes optimisés (keywords "Déménagement [Ville]")
   - ✅ ImageObject schema pour Google Images (`ImageObjectSchema.tsx`)
   - ✅ Helper `lib/seo/city-photos.ts` pour métadonnées
-  - **Réalisé le 12 mars 2026** — Voir `PHOTOS-SEO-IMPLEMENTATION.md` pour détails
+  - **Réalisé le 12 mars 2026** — Phases 1 (20), 2 (35), 3 (25 villes). Voir `PHOTOS-SEO-IMPLEMENTATION.md`
 
 ---
 

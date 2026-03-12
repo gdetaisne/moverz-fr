@@ -99,7 +99,7 @@ Cette session a complété **2 actions P0** du plan SEO Guillaume + **3 optimisa
 
 | # | Action | Statut |
 |---|--------|--------|
-| 1 | Mettre à jour "2025"→"2026" (3 articles) + CreditSafe→Pappers | ⬜ |
+| 1 | Mettre à jour "2025"→"2026" (3 articles) + CreditSafe→Pappers | ⬜ Titres 2026 ✅, contenu CreditSafe→Pappers reporté 13/03 |
 | 2 | Réécrire titles/meta 8 pages à 0% CTR | ⬜ |
 | 3 | Créer 4 articles "comparatif déménageurs [ville] 2026" | ⬜ |
 | 4 | Enrichir `/comparateur-demenageurs/` | ⬜ |
@@ -114,6 +114,29 @@ Cette session a complété **2 actions P0** du plan SEO Guillaume + **3 optimisa
 1. Indexation `/label-moverz/` (devrait être OK)
 2. Impressions Google Images (baseline vs post-photos)
 3. CTR pages ville (objectif : 0.7% → 1.5-2%)
+
+---
+
+## 🚀 Next steps (ordre recommandé)
+
+| Priorité | Action | Fichier | Impact estimé |
+|----------|--------|---------|---------------|
+| **P0 #1** | Mettre à jour "2025"→"2026" (3 articles) + CreditSafe→Pappers | `lib/blog-extra.ts` | CTR +0.5-1% |
+| **P0 #2** | Réécrire titles/meta des 8 pages à 0% CTR (Shurgard Lyon, meilleurs déménageurs Lyon, etc.) | `lib/blog-extra.ts` | +10-25 clics/sem |
+| **P0 #3** | Créer 4 articles "comparatif déménageurs [ville] 2026" (Rennes, Marseille, Bordeaux, Lyon) | Nouveaux articles | +15-30 clics/sem |
+| **P0 #4** | Enrichir `/comparateur-demenageurs/` (H1, tableau above fold, FAQ schema) | Page comparateur | CTR +2-3% |
+| **P1 #7** | Consolider cannibalisation Strasbourg (9 pages → 1 canonique) | Canonicals + enrichissement | Position +5-10 |
+| **P1 #8** | Consolider "devis déménagement bordeaux" (canonical blog → ville) | Meta canonical | Position +5 |
+| **P1 #9** | Créer 4 articles "devis déménagement [ville] 2026" | Nouveaux articles | +20-40 clics/sem |
+| **23 mars** | Re-mesurer GSC pages ville post-refonte + post-photos | `node scripts/gsc-monitor.mjs` | Baseline pour P2 |
+
+**Référence complète :** `docs/SEO/TODO.md`
+
+---
+
+## ⏳ Reporté au 13 mars
+
+- **#1 (suite)** — CreditSafe→Pappers dans le contenu des articles (`blog-nouveaux-2026.ts`, `blog-arnaques.ts`, etc.)
 
 ---
 
