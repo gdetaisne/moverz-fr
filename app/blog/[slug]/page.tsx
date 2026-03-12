@@ -514,35 +514,79 @@ export default function BlogPostPage({ params }: PageProps) {
         </h3>
       );
     },
-    // Tableau comparatif Moverz vs concurrents — couleurs Moverz, sans emojis
+    // Tableau comparatif Moverz vs concurrents
+    // RÈGLE : PAS d'emojis (🔒🛡️📊🏆 etc.). Emoticones/symboles OK : ✓ ✗ ○ ◐ ← →
     ...(post.slug === "moverz-vs-concurrents-comparateur-demenagement"
-      ? {
-          table: ({ children, ...props }) => (
-            <div className="my-6 overflow-x-auto rounded-xl border" style={{ borderColor: "rgba(14,165,166,0.25)" }}>
-              <table
-                className="w-full min-w-[600px] text-sm [&_th:nth-child(2)]:bg-[#0EA5A6]/10 [&_td:nth-child(2)]:bg-[#0EA5A6]/5 [&_th:nth-child(2)]:font-bold"
-                {...props}
-              >
+      ? (() => {
+          const getCellText = (node: React.ReactNode): string => {
+            if (typeof node === "string") return node;
+            if (Array.isArray(node)) return node.map(getCellText).join("");
+            if (node && typeof node === "object" && "props" in node) return getCellText((node as React.ReactElement).props?.children);
+            return String(node ?? "");
+          };
+          const getIconAndSuffix = (trimmed: string) => {
+            if (/^[—–\-]\s*$/.test(trimmed)) return { icon: "○", suffix: "N/A", className: "text-gray-400" };
+            if (trimmed.startsWith("Oui — ")) return { icon: "✓", suffix: trimmed.slice(6), className: "text-[#0EA5A6]" };
+            if (trimmed.startsWith("Oui")) return { icon: "✓", suffix: "", className: "text-[#0EA5A6]" };
+            if (trimmed.startsWith("Non — ")) return { icon: "✗", suffix: trimmed.slice(6), className: "text-red-500/90" };
+            if (trimmed.startsWith("Non")) return { icon: "✗", suffix: "", className: "text-red-500/90" };
+            if (trimmed.startsWith("Partiel — ")) return { icon: "◐", suffix: trimmed.slice(10), className: "text-amber-600" };
+            if (trimmed.startsWith("Partiel")) return { icon: "◐", suffix: "", className: "text-amber-600" };
+            return null;
+          };
+          return {
+            table: ({ children, ...props }) => (
+              <div className="my-8">
+                <p className="mb-2 flex md:hidden items-center justify-center gap-2 text-xs text-gray-500">
+                  <span className="inline-block animate-pulse" aria-hidden>←</span>
+                  Faites glisser horizontalement pour voir tout le tableau
+                  <span className="inline-block animate-pulse" aria-hidden>→</span>
+                </p>
+                <div className="overflow-x-auto rounded-xl border shadow-sm" style={{ borderColor: "rgba(14,165,166,0.25)" }}>
+                  <table
+                    className="w-full min-w-[640px] text-base [&_th:nth-child(2)]:bg-[#0EA5A6]/12 [&_td:nth-child(2)]:bg-[#0EA5A6]/6 [&_th:nth-child(2)]:font-bold
+                      [&_th:first-child]:sticky [&_th:first-child]:left-0 [&_th:first-child]:z-20 [&_th:first-child]:bg-[#0EA5A6]/15 [&_th:first-child]:shadow-[4px_0_8px_-2px_rgba(0,0,0,0.06)]
+                      [&_td:first-child]:sticky [&_td:first-child]:left-0 [&_td:first-child]:z-10 [&_td:first-child]:bg-white [&_td:first-child]:shadow-[4px_0_8px_-2px_rgba(0,0,0,0.04)]
+                      [&_tr:nth-child(even)_td:first-child]:bg-gray-50/80"
+                    {...props}
+                  >
+                    {children}
+                  </table>
+                </div>
+              </div>
+            ),
+            thead: ({ children, ...props }) => (
+              <thead style={{ background: "rgba(14,165,166,0.1)" }} {...props}>
                 {children}
-              </table>
-            </div>
-          ),
-          thead: ({ children, ...props }) => (
-            <thead style={{ background: "rgba(14,165,166,0.08)" }} {...props}>
-              {children}
-            </thead>
-          ),
-          th: ({ children, ...props }) => (
-            <th className="px-4 py-3 font-semibold text-left" style={{ color: "#0EA5A6" }} {...props}>
-              {children}
-            </th>
-          ),
-          td: ({ children, ...props }) => (
-            <td className="border-t px-4 py-3" style={{ borderColor: "rgba(14,165,166,0.15)" }} {...props}>
-              {children}
-            </td>
-          ),
-        }
+              </thead>
+            ),
+            th: ({ children, ...props }) => (
+              <th className="px-5 py-4 font-semibold text-left whitespace-nowrap" style={{ color: "#0EA5A6" }} {...props}>
+                {children}
+              </th>
+            ),
+            td: ({ children, ...props }) => {
+              const text = getCellText(children);
+              const trimmed = text.trim();
+              const parsed = getIconAndSuffix(trimmed);
+              if (parsed) {
+                const showSuffix = parsed.suffix && parsed.suffix.length > 0;
+                const content = parsed.icon === "○" ? (showSuffix ? parsed.suffix : "N/A") : (showSuffix ? parsed.suffix : null);
+                return (
+                  <td className="border-t px-5 py-4 align-top" style={{ borderColor: "rgba(14,165,166,0.12)" }} {...props}>
+                    <span className={`font-bold mr-1.5 ${parsed.className}`}>{parsed.icon}</span>
+                    {content}
+                  </td>
+                );
+              }
+              return (
+                <td className="border-t px-5 py-4 align-top" style={{ borderColor: "rgba(14,165,166,0.12)" }} {...props}>
+                  {children}
+                </td>
+              );
+            },
+          };
+        })()
       : {}),
     // Logo Label Moverz — centré, espace réduit (article moverz-vs-concurrents)
     ...(post.slug === "moverz-vs-concurrents-comparateur-demenagement"
@@ -552,14 +596,14 @@ export default function BlogPostPage({ params }: PageProps) {
             const imgSrc = (firstChild as React.ReactElement)?.props?.src ?? "";
             if (href === "/label-moverz/" && imgSrc?.includes("logo-label-moverz")) {
               return (
-                <div className="w-full flex justify-center my-2 py-2">
+                <div className="w-full flex justify-center my-1 py-1">
                   <Link href="/label-moverz/" className="inline-block">
                     <Image
                       src="/logo-label-moverz.png"
                       alt="Label Moverz - Vérifier un déménageur en 30 secondes"
-                      width={160}
-                      height={107}
-                      className="h-20 md:h-24 w-auto"
+                      width={224}
+                      height={150}
+                      className="h-32 md:h-40 w-auto"
                     />
                   </Link>
                 </div>
