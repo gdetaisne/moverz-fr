@@ -17,6 +17,7 @@ import { CANONICAL_BLOG_POSTS, type CanonicalBlogPost } from "./blog-canonique";
 import { BLOG_NOUVEAUX_2026 } from "./blog-nouveaux-2026";
 import { BLOG_MARKDOWN_POSTS } from "./blog-markdown-posts";
 import { ARNAQUES_ARTICLE } from "./blog-arnaques";
+import { BLOG_CONTENT_GAPS_404 } from "./blog-content-gaps-404";
 import { LONGTAIL_BLOG_POSTS } from "./blog-longtail";
 import { LONGTAIL_PACK2_POSTS } from "./blog-longtail-pack2";
 import { BLOG_PRO_META } from "./blog-pro";
@@ -190,6 +191,7 @@ const RAW_BLOG_POSTS: BlogPostMeta[] = mergeBlogData(
     ...BLOG_NOUVEAUX_2026,
     ...BLOG_MARKDOWN_POSTS,
     ...CANONICAL_BLOG_POSTS,
+    ...BLOG_CONTENT_GAPS_404,
     ...LONGTAIL_BLOG_POSTS,
     ...LONGTAIL_PACK2_POSTS,
     ...CANONICAL_PRO_BLOG_POSTS,
@@ -217,6 +219,7 @@ const ALL_CANONICAL_POSTS = [
   ...BLOG_NOUVEAUX_2026,
   ...BLOG_MARKDOWN_POSTS,
   ...CANONICAL_BLOG_POSTS,
+  ...BLOG_CONTENT_GAPS_404,
   ...LONGTAIL_BLOG_POSTS,
   ...LONGTAIL_PACK2_POSTS,
   ...CANONICAL_PRO_BLOG_POSTS,

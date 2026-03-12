@@ -29,6 +29,7 @@ function loadCanonicalSlugs() {
     "lib/blog-longtail-links.ts",
     "lib/blog-arnaques.ts",
     "lib/blog-extra.ts",
+    "lib/blog-content-gaps-404.ts",
   ];
   const slugs = new Set();
   const slugRe = /slug:\s*["']([^"']+)["']/g;
@@ -70,6 +71,13 @@ for (const url of report.categories.blog.urls) {
   // Slug effectif : blog/parent/child → child ; blog/slug → slug
   const effectiveSlug = slug.includes("/") ? slug.split("/").pop() : slug;
   if (CANONICAL_SLUGS.has(effectiveSlug)) continue; // ne pas rediriger une page qui a du contenu
+  // URL accentuée → rediriger vers la version ASCII canonique
+  if (effectiveSlug === "deménageur-specialise-piano-rennes") {
+    const canonDest = "/blog/demenageur-specialise-piano-rennes/";
+    redirects.push(toRedirect(p, canonDest));
+    if (!p.endsWith("/")) redirects.push(toRedirect(p + "/", canonDest));
+    continue;
+  }
   const dest = slug.includes("prix") || slug.includes("tarif") || slug.includes("cout")
     ? prixHub
     : demenagementHub;

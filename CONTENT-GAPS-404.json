@@ -1,0 +1,20 @@
+{
+  "count": 3,
+  "slugs": [
+    {
+      "slug": "deménageur-specialise-piano-rennes",
+      "flatUrl": "/blog/deménageur-specialise-piano-rennes",
+      "urls": 1
+    },
+    {
+      "slug": "guide",
+      "flatUrl": "/blog/guide",
+      "urls": 9
+    },
+    {
+      "slug": "guide-complet",
+      "flatUrl": "/blog/guide-complet",
+      "urls": 1
+    }
+  ]
+}
