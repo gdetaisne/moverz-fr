@@ -70,7 +70,7 @@ export function Footer() {
               <LogoWithText size="footer" variant="light" />
             </a>
             <Link href="/label-moverz/" className="inline-flex items-center px-3 py-2 rounded-lg border border-white/20 bg-white/5 hover:bg-white/10 transition-colors" title="Label Moverz">
-              <Image src="/logo-label-moverz.png" alt="Label Moverz" width={180} height={120} className="h-28 md:h-36 w-auto" />
+              <Image src="/logo-label-moverz.png" alt="Label Moverz" width={180} height={120} className="h-28 md:h-36 w-auto object-contain" />
             </Link>
           </div>
           
@@ -92,7 +92,7 @@ export function Footer() {
                 <LogoWithText size="footer" variant="light" />
               </a>
               <Link href="/label-moverz/" className="inline-flex items-center px-3 py-2 rounded-lg border border-white/20 bg-white/5 hover:bg-white/10 transition-colors" title="Label Moverz">
-                <Image src="/logo-label-moverz.png" alt="Label Moverz" width={180} height={120} className="h-28 md:h-36 w-auto" />
+                <Image src="/logo-label-moverz.png" alt="Label Moverz" width={180} height={120} className="h-28 md:h-36 w-auto object-contain" />
               </Link>
             </div>
             

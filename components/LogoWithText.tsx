@@ -37,9 +37,11 @@ export function LogoWithText({
   const s = sizes[size];
   const isDarkBg = variant === "light"; // "light" = fond sombre, texte blanc
 
+  const isVertical = size === "footer";
+
   const content = (
     <span
-      className={`inline-flex items-center gap-2 ${className}`}
+      className={`inline-flex gap-2 ${isVertical ? "flex-col items-start" : "items-center"} ${className}`}
       style={{ fontFamily: "var(--font-sora), Sora, system-ui, sans-serif" }}
     >
       <Image
@@ -47,7 +49,7 @@ export function LogoWithText({
         alt=""
         width={1024}
         height={1024}
-        className={`${s.icon} w-auto`}
+        className={`${s.icon} w-auto object-contain`}
         priority
         unoptimized={false}
         sizes="(max-width: 768px) 80px, 96px"
@@ -62,7 +64,7 @@ export function LogoWithText({
           textDecorationThickness: "2px",
         }}
       >
-        Moverz
+        {isVertical ? "MOVERZ" : "Moverz"}
       </span>
     </span>
   );
