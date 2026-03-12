@@ -213,7 +213,7 @@ export default function ChiffresClesPage() {
                     rel="noopener noreferrer"
                     className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-v4-accent hover:underline"
                   >
-                    Source : Creditsafe <ExternalLink className="h-3 w-3" />
+                    Source : Pappers <ExternalLink className="h-3 w-3" />
                   </a>
                 </div>
 
@@ -396,7 +396,7 @@ export default function ChiffresClesPage() {
               <div>
                 <p className="font-semibold text-v4-text">Difficultés financières</p>
                 <ul className="mt-2 ml-4 space-y-1 list-disc">
-                  <li>Taux de fragilité : Creditsafe (scores de solvabilité secteur déménagement)</li>
+                  <li>Taux de fragilité : Pappers (scores de solvabilité secteur déménagement)</li>
                   <li>Procédures collectives : BODACC (Bulletin Officiel des Annonces Civiles et Commerciales)</li>
                   <li>Suppléments jour J : UFC-Que Choisir, retours terrain, études consommateurs</li>
                 </ul>

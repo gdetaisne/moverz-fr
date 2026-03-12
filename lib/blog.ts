@@ -34,6 +34,22 @@ const EXCLUDED_BLOG_SLUGS = new Set<string>([
   "rgpd-détails-retention-sous-traitance-demenageur",
   "reduire-litiges-jour-j-checklist-détails-declaration-valeur",
   "checklist-dossier-opposable-détails-inventaire",
+
+  // Slugs internes (listes, batch, rapports) — 301 vers hub
+  "liste-complete-50-satellites-generes",
+  "articles-pilier-06-batch",
+  "pilier-03-demenagement-pas-cher-10-satellites",
+  "pilier-09-prix-demenagement-10-satellites",
+  "rapport-final-production-montpellier",
+
+  // Slugs URL-encodés (doublons %c3%a9 = é) — 301 vers hub
+  "dem%c3%a9nageur-specialise-piano-rennes",
+  "demenagement-%c3%a9clair-24h-toulouse",
+  "demenagement-%c3%a9clair-toulouse",
+  "demenagement-imm%c3%a9diat-24h-toulouse",
+  "demenagement-imm%c3%a9diat-toulouse",
+  "demenagement-instantan%c3%a9-24h-toulouse",
+  "demenagement-instantan%c3%a9-toulouse",
 ]);
 
 function isExcludedFromPublication(slug: string): boolean {

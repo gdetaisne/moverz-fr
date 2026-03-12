@@ -23,7 +23,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 - Les **pièges à éviter** absolument
 
 > **Comparez en toute sécurité**  
-> [Moverz](/pourquoi-moverz/) évalue chaque déménageur selon 3 analyses de risque notées /100 (avis Google, financier Creditsafe + Pappers, juridique Pappers Décisions). Alertes = exclusion automatique. Dossier anonyme, devis sous 5 jours. [Créer mon dossier →](https://devis.moverz.fr/devis-gratuits?source=blog-comparateur)
+> [Moverz](/pourquoi-moverz/) évalue chaque déménageur selon 3 analyses de risque notées /100 (avis Google, financier Pappers, juridique Pappers Décisions). Alertes = exclusion automatique. Dossier anonyme, devis sous 5 jours. [Créer mon dossier →](https://devis.moverz.fr/devis-gratuits?source=blog-comparateur)
 
 ---
 
@@ -113,7 +113,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 - ✅ Licence de transport valide
 - ✅ Assurance RC Pro (≥ 1,5 M€)
 - ✅ Identité légale (SIREN, Kbis)
-- ✅ Score de solvabilité (Creditsafe, Pappers)
+- ✅ Score de solvabilité (Pappers, Pappers)
 - ✅ Historique juridique (litiges, faillites)
 - ✅ Avis clients (Google, Trustpilot)
 
@@ -121,7 +121,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 
 **Moverz** : 3 analyses de risque notées /100 par déménageur :
 1. **Risque expérience client** (20 derniers avis Google + patterns mauvais avis)
-2. **Risque financier** (Creditsafe + Pappers + ratio cash/dettes)
+2. **Risque financier** (Pappers + ratio cash/dettes)
 3. **Risque juridique** (Pappers Décisions — litiges, sanctions)
 
 **Alertes cash ou juridiques = exclusion automatique** ❌
@@ -208,7 +208,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 - Note /100 sur qualité de service
 
 #### Risque 2 : Financier (/100)
-- Scores Creditsafe + Pappers consolidés
+- Scores Pappers consolidés
 - Analyse interne : ratio cash / dettes court terme
 - **Alerte cash = exclusion automatique** ❌
 
@@ -297,7 +297,7 @@ Certains comparateurs affichent des avis... qu'ils ont eux-mêmes récoltés.
 
 **Problème** : Biais de sélection (ils ne publient que les bons avis).
 
-**Moverz** : Nos scores viennent de sources externes (Google, Pappers, Creditsafe). **Impossible de tricher** ✅
+**Moverz** : Nos scores viennent de sources externes (Google, Pappers, Pappers). **Impossible de tricher** ✅
 
 ---
 

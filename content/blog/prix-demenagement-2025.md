@@ -22,7 +22,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 - Comment **optimiser votre budget** sans prendre de risques
 
 > **Calculer votre volume et comparer des devis**  
-> En 5-10 minutes, Moverz estime votre volume en m³ via un inventaire guidé et partage votre dossier avec jusqu'à 5 déménageurs évalués sur 3 risques /100 (financier Creditsafe + Pappers, juridique Pappers Décisions, avis Google) via [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix).
+> En 5-10 minutes, Moverz estime votre volume en m³ via un inventaire guidé et partage votre dossier avec jusqu'à 5 déménageurs évalués sur 3 risques /100 (financier Pappers, juridique Pappers Décisions, avis Google) via [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix).
 
 ---
 
@@ -425,7 +425,7 @@ Avec Moverz, vous recevez **des devis comparables** :
 - **→ 0 appel commercial non sollicité** ✅
 
 **3. Déménageurs évalués sur 3 risques /100**
-- Score financier (Creditsafe + Pappers + ratio cash/dettes interne)
+- Score financier (Pappers + ratio cash/dettes interne)
 - Score juridique (Pappers Décisions — litiges passés et en cours)
 - Score avis clients (20 derniers avis Google + patterns mauvais avis)
 - Alertes cash ou juridiques = exclusion automatique

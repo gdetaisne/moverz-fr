@@ -67,7 +67,7 @@ export default function VerificationsPartenairesPage() {
           "@type": "WebPage",
           "@id": "https://moverz.fr/verifications-partenaires/",
           name: "Comment Moverz vérifie les déménageurs | 3 analyses de risque notées /100",
-          description: "Moverz évalue chaque déménageur selon 3 axes de risque notés /100 : expérience client (avis Google), risque financier (Creditsafe + Pappers), risque juridique (décisions de justice). Alertes = exclusion automatique.",
+          description: "Moverz évalue chaque déménageur selon 3 axes de risque notés /100 : expérience client (avis Google), risque financier (Pappers), risque juridique (décisions de justice). Alertes = exclusion automatique.",
           url: "https://moverz.fr/verifications-partenaires/",
           inLanguage: "fr-FR",
           isPartOf: { "@id": "https://moverz.fr/#website" },
@@ -87,7 +87,7 @@ export default function VerificationsPartenairesPage() {
         ]}
         eyebrow="Zéro arnaque"
         title="Comment Moverz vérifie les déménageurs"
-        subtitle="Chaque déménageur est évalué selon 3 analyses de risque notées /100 : expérience client (avis Google), risque financier (Creditsafe + Pappers + analyse interne), risque juridique (décisions de justice). Alertes financières ou juridiques = exclusion automatique."
+        subtitle="Chaque déménageur est évalué selon 3 analyses de risque notées /100 : expérience client (avis Google), risque financier (Pappers + analyse interne), risque juridique (décisions de justice). Alertes financières ou juridiques = exclusion automatique."
         primaryCta={{ label: "Voir les vérifications", href: "#verifications" }}
         secondaryCta={{ label: "Voir la FAQ", href: "#faq" }}
       />
@@ -267,7 +267,7 @@ export default function VerificationsPartenairesPage() {
                 <span className="text-2xl">🔍</span>
                 <div>
                   <p className="font-semibold text-v4-text group-hover:text-v4-accent transition-colors">
-                    Comment lire un score Creditsafe
+                    Comment lire le score financier (Pappers)
                   </p>
                   <p className="text-xs text-v4-text-secondary mt-1">
                     Décryptez la santé financière d'un déménageur

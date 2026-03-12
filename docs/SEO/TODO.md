@@ -11,18 +11,15 @@
 
 ## P0 — Cette semaine (impact J+7 à J+14)
 
-- [ ] **#1** Mettre à jour dates "2025"→"2026" dans les titles de 3 articles + remplacer "CreditSafe"→"Pappers"
+- [x] **#1** Mettre à jour dates "2025"→"2026" dans les titles de 3 articles + remplacer "CreditSafe"→"Pappers"
   - ✅ **Titles 2026** : overrides en place (`blog-meta-overrides.ts`) — Rouen, Montpellier, Rennes
-  - ⏳ **CreditSafe→Pappers** dans le contenu : à faire (blog-nouveaux-2026, blog-arnaques, etc.)
-  - URLs inchangées : pas de 404
+  - ✅ **CreditSafe→Pappers** : fait (lib, blog-nouveaux-2026, blog-arnaques, blog-markdown, corridors, app, content/blog)
+  - **Réalisé le 13 mars 2026**
 
-- [ ] **#2** Réécrire titles/meta des 8 pages à 0% CTR (100+ impressions)
-  - `/blog/shurgard-lyon-sites-tarifs/` → "Shurgard Lyon : Prix, Adresses et Alternatives Moins Chères"
-  - `/blog/meilleurs-demenageurs-lyon/` → "Top 7 Déménageurs Lyon Vérifiés Pappers (2026)"
-  - `/blog/comparatif-formules-economiques-demenagement-nantes/` → "Déménagement Nantes Pas Cher : Comparatif Prix 2026"
-  - `/blog/comparer-plateformes-devis-demenagement-2026/` → "Comparateur Déménagement : Quel Site Choisir en 2026 ?"
-  - Améliorer aussi les meta descriptions (template : bénéfice → différenciateur → CTA)
-  - Fichier : `lib/blog-extra.ts`
+- [x] **#2** Réécrire titles/meta des 8 pages à 0% CTR (100+ impressions)
+  - ✅ Shurgard Lyon, meilleurs déménageurs Lyon, Nantes formules éco, comparateur plateformes, piano Nantes — overrides SEO style Moverz
+  - ✅ Meta descriptions : chiffres, USP (vérifiés Pappers, 3–5 devis, 0 harcèlement), CTA implicite
+  - **Réalisé le 13 mars 2026** — Fichier : `lib/seo/blog-meta-overrides.ts`
 
 - [ ] **#3** Créer 4 articles "comparatif déménageurs [ville] 2026"
   - `/blog/comparatif-demenageurs-rennes-2026/` (81 impr, pos 7.6, 0 clic)
@@ -50,6 +47,10 @@
   - ✅ ImageObject schema pour Google Images (`ImageObjectSchema.tsx`)
   - ✅ Helper `lib/seo/city-photos.ts` pour métadonnées
   - **Réalisé le 12 mars 2026** — Phases 1 (20), 2 (35), 3 (25 villes). Voir `PHOTOS-SEO-IMPLEMENTATION.md`
+
+- [ ] **#6b** Indexer l'article "Pourquoi Moverz" sur GSC
+  - URL : `https://moverz.fr/blog/pourquoi-moverz-meilleur-comparateur-demenagement/`
+  - GSC → Inspection d'URL → coller l'URL → "Demander l'indexation"
 
 ---
 

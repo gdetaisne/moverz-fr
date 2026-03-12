@@ -17,11 +17,18 @@ export interface BlogMetaOverride {
 
 export const BLOG_META_OVERRIDES: Record<string, BlogMetaOverride> = {
 
+  // ── Article Moverz (E-E-A-T, comparateur) ────────────────────────────────
+
+  "pourquoi-moverz-meilleur-comparateur-demenagement": {
+    title: "Pourquoi Moverz ? Comparateur 0 Harcèlement, 1 Dossier",
+    description: "1 dossier, jusqu'à 5 devis. Pros vérifiés Pappers, pas revendeur de leads. 64% des déménageurs ont des anomalies (DGCCRF). Moverz vérifie avant de proposer.",
+  },
+
   // ── GROUPE A — articles déjà solides, titre/desc à affiner ──────────────
 
   "shurgard-lyon-sites-tarifs": {
-    title: "Shurgard Lyon : 4 sites, tarifs 130–480€/mois (2026)",
-    description: "Shurgard Lyon Jean Macé, Vaise, Gerland, États-Unis : tailles 1–50m², tarifs détaillés. Comparez avec les alternatives locales moins chères.",
+    title: "Shurgard Lyon : Prix, Adresses et Alternatives Moins Chères",
+    description: "Shurgard Lyon : 4 sites (Jean Macé, Vaise, Gerland, États-Unis), 130–480€/mois. + alternatives locales -20% en moyenne. 3 devis comparables sur Moverz, 0 harcèlement.",
   },
 
   "comparaison-prix-demenageurs-lyon": {
@@ -60,13 +67,23 @@ export const BLOG_META_OVERRIDES: Record<string, BlogMetaOverride> = {
   },
 
   "meilleurs-demenageurs-lyon": {
-    title: "Meilleurs déménageurs Lyon 2026 : comparatif & avis",
-    description: "Top déménageurs Lyon : S.I.E.T (historique 1900), Lugnier (familial), acteurs locaux 4.5+/5. Moverz compare leurs devis sur critères identiques.",
+    title: "Top 7 Déménageurs Lyon Vérifiés Pappers (2026)",
+    description: "S.I.E.T, Lugnier, acteurs locaux 4.5+/5 : 7 déménageurs Lyon vérifiés (santé financière, avis, licences). 3–5 devis comparables sur Moverz, dossier anonyme.",
   },
 
   "comparatif-formules-economiques-demenagement-nantes": {
-    title: "Formules éco déménagement Nantes 2026 : 450–650€ T2",
-    description: "Déménageurs formule économique Nantes : Médard, Gentlemen, Bretons 450–650€ T2. Ce que la formule éco inclut (et exclut) — comparatif honnête.",
+    title: "Déménagement Nantes Pas Cher : Comparatif Prix 2026",
+    description: "Formule éco Nantes : T2 dès 450€ (vous emballez). Médard, Gentlemen, Bretons — ce qui est inclus, ce qui coûte en plus. 3 devis Moverz, zéro démarchage.",
+  },
+
+  "comparer-plateformes-devis-demenagement-2026": {
+    title: "Comparer des Devis Déménagement 2026 : 1 Dossier, 3–5 Réponses",
+    description: "Un seul dossier, jusqu'à 5 devis comparables. Pros vérifiés Pappers, 0 harcèlement. Moverz standardise votre demande — vous comparez à prestation égale. Gratuit.",
+  },
+
+  "demenagement-piano-nantes-prix": {
+    title: "Prix Déménagement Piano Nantes 2026 : 200–800€",
+    description: "Piano droit Nantes 200–400€, queue 400–800€. Étages, monte-meuble : fourchettes réelles. Pros spécialisés vérifiés sur Moverz — devis comparables sous 5j.",
   },
 
   "transport-maritime-container-lyon": {

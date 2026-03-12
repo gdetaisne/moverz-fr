@@ -135,7 +135,7 @@ export default function MarketRisks() {
               <div className="flex flex-wrap gap-2">
                 {[
                   { icon: Star, label: "Avis Google analysés" },
-                  { icon: Shield, label: "Creditsafe + Pappers" },
+                  { icon: Shield, label: "Pappers" },
                   { icon: Gavel, label: "Décisions de justice" },
                 ].map(({ icon: I, label }) => (
                   <span key={label} className="inline-flex items-center gap-1 text-xs font-medium text-white/70 bg-white/10 px-3 py-1 rounded-full">

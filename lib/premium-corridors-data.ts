@@ -356,7 +356,7 @@ export const PARIS_LYON_PREMIUM: PremiumCorridorData = {
         "",
         "<strong>Erreur #3 : Choisir le devis le moins cher sans vérifier</strong>",
         "Un devis 30% moins cher cache souvent : pas d'assurance RC Pro, camion trop petit (2ème voyage facturé), équipe insuffisante.",
-        "<strong>Solution</strong> : Vérifiez l'attestation RC Pro, le score Creditsafe (> 60/100), les avis Google (> 4.2/5).",
+        "<strong>Solution</strong> : Vérifiez l'attestation RC Pro, le score Pappers (> 60/100), les avis Google (> 4.2/5).",
         "",
         "<strong>Erreur #4 : Sous-estimer le volume</strong>",
         "'J'ai pas tant de trucs'. Puis le jour J : 50 cartons, cave pleine, garage. Le camion est trop petit, 2ème voyage facturé (+600-800€).",

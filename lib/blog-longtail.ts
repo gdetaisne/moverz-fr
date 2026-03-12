@@ -45,6 +45,33 @@ Vous pouvez envoyer ceci tel quel (en complétant les champs) :
 `;
 
 export const LONGTAIL_FAQS: Record<string, BlogFAQItem[]> = {
+  "pourquoi-moverz-meilleur-comparateur-demenagement": [
+    {
+      question: "Est-ce que Moverz vend mes coordonnées aux déménageurs ?",
+      answer:
+        "Non. Moverz ne revend pas vos coordonnées. Les partenaires accèdent à votre dossier dans notre outil, envoient leur devis, et ne reçoivent vos coordonnées qu'au moment où vous validez — pour organiser le déménagement.",
+    },
+    {
+      question: "Pourquoi je ne reçois pas d'appels après mon dossier ?",
+      answer:
+        "Votre numéro n'est pas communiqué tant que vous n'avez pas choisi un déménageur. Les devis arrivent par email. En 2025, moins de 2 % des utilisateurs ont signalé un appel non sollicité avant leur choix final.",
+    },
+    {
+      question: "Comment Moverz vérifie-t-il les déménageurs ?",
+      answer:
+        "Moverz utilise Pappers pour contrôler la santé financière, les statuts juridiques et les dirigeants. Les avis Google sont recoupés. Chaque devis affiche un score de risque (3 analyses /100 : avis, financier, juridique).",
+    },
+    {
+      question: "Pourquoi les devis Moverz sont-ils comparables ?",
+      answer:
+        "Votre dossier impose une structure commune (logement, accès camion, distance portage, passage étroit, objets limites, dates). Les pros chiffrent tous la même chose — vous comparez des prix pour la même prestation.",
+    },
+    {
+      question: "Moverz est-il gratuit ?",
+      answer:
+        "Oui. La création de dossier et la réception des devis sont gratuites. Moverz est rémunéré par les partenaires quand un déménagement est réalisé, pas à la vente du lead.",
+    },
+  ],
   "demenagement-sans-ascenseur-5e-etage": [
     {
       question: "Un déménagement au 5e sans ascenseur coûte-t-il forcément beaucoup plus cher ?",

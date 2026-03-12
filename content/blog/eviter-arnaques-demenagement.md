@@ -172,11 +172,11 @@ Cette fragmentation rend l'évaluation de la fiabilité très difficile pour un 
 
 Les professionnels (banques, assureurs, grands comptes) utilisent des outils spécialisés pour évaluer la fiabilité des entreprises. Ces outils sont normalement inaccessibles aux particuliers.
 
-### Creditsafe + Pappers : le scoring financier consolidé
+### Pappers : le scoring financier consolidé
 
-**Creditsafe** : note de solvabilité /100 évaluant la probabilité de défaut à 12 mois.
+**Pappers** : note de solvabilité /100 évaluant la probabilité de défaut à 12 mois.
 
-**Pappers** : scoring financier similaire, consolidé avec Creditsafe pour plus de fiabilité.
+**Pappers** : scoring financier similaire, pour une analyse complète de la santé financière.
 
 **Moverz ajoute** : analyse interne du ratio cash / dettes court terme pour détecter les tensions de trésorerie.
 
@@ -217,7 +217,7 @@ Vous pensez peut-être : "Je vais utiliser un comparateur, il fait le tri pour m
 
 **Ce qu'ils ne vérifient pas** :
 - ❌ Risque expérience client (avis Google analysés)
-- ❌ Risque financier (Creditsafe + Pappers + ratio cash/dettes)
+- ❌ Risque financier (Pappers + ratio cash/dettes)
 - ❌ Risque juridique (décisions de justice, litiges)
 - ❌ Validité des assurances
 
@@ -240,7 +240,7 @@ Moverz n'est pas un comparateur comme les autres. Voici ce qui change.
 Avant de vous présenter un déménageur, nous évaluons :
 
 - ⭐ **Risque expérience client** : 20 derniers avis Google analysés + patterns mauvais avis (retards, casse, comportement) → note /100
-- 🏦 **Risque financier** : scores Creditsafe + Pappers consolidés + ratio cash/dettes interne → note /100. Alerte cash = exclusion.
+- 🏦 **Risque financier** : scores Pappers consolidés + ratio cash/dettes interne → note /100. Alerte cash = exclusion.
 - ⚖️ **Risque juridique** : décisions de justice + scoring non-financier Pappers → note /100. Alerte juridique = exclusion.
 - ✅ **Compléments** : licence de transport, assurance RC Pro (≥ 1,5 M€), identité légale (SIREN/Kbis)
 
@@ -285,7 +285,7 @@ Avant de signer un devis de déménagement, vérifiez ces points :
 - [ ] Pas de publication Bodacc récente (liquidation, redressement)
 - [ ] Avis Google analysés (20 derniers avis, patterns des mauvais avis)
 - [ ] Pas de signalement sur SignalConso ou forums
-- [ ] Risque financier acceptable (Creditsafe + Pappers — Moverz le fait automatiquement)
+- [ ] Risque financier acceptable (Pappers — Moverz le fait automatiquement)
 - [ ] Risque juridique acceptable (décisions de justice — Moverz le fait automatiquement)
 
 ### ✅ Sur le devis
@@ -316,7 +316,7 @@ Avant de signer un devis de déménagement, vérifiez ces points :
 
 ### Comment savoir si un déménageur est fiable ?
 
-Vérifiez son existence légale (SIREN sur societe.com), lisez les avis Google (analysez les 20 derniers, cherchez des patterns dans les mauvais avis 1-2 étoiles), demandez l'attestation d'assurance RC Pro. Pour la santé financière et juridique, Moverz utilise Creditsafe + Pappers (scoring financier consolidé + ratio cash/dettes) et Pappers Décisions (litiges) automatiquement — 3 analyses de risque /100 par déménageur.
+Vérifiez son existence légale (SIREN sur societe.com), lisez les avis Google (analysez les 20 derniers, cherchez des patterns dans les mauvais avis 1-2 étoiles), demandez l'attestation d'assurance RC Pro. Pour la santé financière et juridique, Moverz utilise Pappers (scoring financier consolidé + ratio cash/dettes) et Pappers Décisions (litiges) automatiquement — 3 analyses de risque /100 par déménageur.
 
 ### Que faire en cas de litige avec un déménageur ?
 
@@ -347,7 +347,7 @@ Ces chiffres ne sont pas là pour vous faire peur. Ils sont là pour vous rappel
 Prenez le temps de vérifier. Utilisez les outils disponibles. Et si vous voulez gagner du temps, laissez [Moverz](/pourquoi-moverz/) faire cette vérification pour vous.
 
 > **Comparez en toute sécurité**  
-> [Moverz](/verifications-partenaires/) vérifie systématiquement chaque déménageur : 3 analyses de risque /100 (financier via Creditsafe + Pappers, juridique via Pappers Décisions, avis clients via Google Reviews), licences de transport, assurances RC Pro. Déménageurs avec alertes cash ou juridiques exclus. Obtenez jusqu'à 5 devis de déménageurs vérifiés sous 5-7 jours. [Créer mon dossier gratuitement →](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-arnaques-cta)
+> [Moverz](/verifications-partenaires/) vérifie systématiquement chaque déménageur : 3 analyses de risque /100 (financier via Pappers, juridique via Pappers Décisions, avis clients via Google Reviews), licences de transport, assurances RC Pro. Déménageurs avec alertes cash ou juridiques exclus. Obtenez jusqu'à 5 devis de déménageurs vérifiés sous 5-7 jours. [Créer mon dossier gratuitement →](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-arnaques-cta)
 
 ---
 
@@ -362,5 +362,5 @@ Prenez le temps de vérifier. Utilisez les outils disponibles. Et si vous voulez
 
 ---
 
-*Article mis à jour en février 2026. Sources : DGCCRF (2023), Chambre Syndicale du Déménagement (2024), Altares, Creditsafe, Infogreffe.*
+*Article mis à jour en février 2026. Sources : DGCCRF (2023), Chambre Syndicale du Déménagement (2024), Altares, Pappers, Infogreffe.*
 

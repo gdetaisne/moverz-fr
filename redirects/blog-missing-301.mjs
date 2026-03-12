@@ -147,6 +147,16 @@ export const BLOG_MISSING_301_REDIRECTS = [
     "permanent": true
   },
   {
+    "source": "/blog/prix-garde-meuble-lille-2025",
+    "destination": "/blog/prix-garde-meuble-lille-2026/",
+    "permanent": true
+  },
+  {
+    "source": "/blog/prix-garde-meuble-lille-2025/",
+    "destination": "/blog/prix-garde-meuble-lille-2026/",
+    "permanent": true
+  },
+  {
     "source": "/blog/aide-demenagement-amis-famille-nantes",
     "destination": "/blog/demenagement-par-ville/",
     "permanent": true

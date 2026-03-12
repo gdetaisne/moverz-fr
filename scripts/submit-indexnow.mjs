@@ -8,6 +8,12 @@ const URLS_TO_SUBMIT = [
   // Landing page Label Moverz (nouvelle)
   'https://moverz.fr/label-moverz/',
   
+  // Article Pourquoi Moverz (2026-03-12)
+  'https://moverz.fr/blog/pourquoi-moverz-meilleur-comparateur-demenagement/',
+  
+  // Article Pourquoi Moverz (blog)
+  'https://moverz.fr/blog/pourquoi-moverz-meilleur-comparateur-demenagement/',
+
   // Nouveaux articles blog (7 articles)
   'https://moverz.fr/blog/label-moverz-certification-demenageurs/',
   'https://moverz.fr/blog/demenager-piano-prix-contraintes-guide-2026/',

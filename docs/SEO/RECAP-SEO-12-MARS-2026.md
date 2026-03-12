@@ -99,7 +99,7 @@ Cette session a complété **2 actions P0** du plan SEO Guillaume + **3 optimisa
 
 | # | Action | Statut |
 |---|--------|--------|
-| 1 | Mettre à jour "2025"→"2026" (3 articles) + CreditSafe→Pappers | ⬜ Titres 2026 ✅, contenu CreditSafe→Pappers reporté 13/03 |
+| 1 | Mettre à jour "2025"→"2026" (3 articles) + CreditSafe→Pappers | ✅ **13/03** — Titres + contenu migrés |
 | 2 | Réécrire titles/meta 8 pages à 0% CTR | ⬜ |
 | 3 | Créer 4 articles "comparatif déménageurs [ville] 2026" | ⬜ |
 | 4 | Enrichir `/comparateur-demenageurs/` | ⬜ |
@@ -136,7 +136,7 @@ Cette session a complété **2 actions P0** du plan SEO Guillaume + **3 optimisa
 
 ## ⏳ Reporté au 13 mars
 
-- **#1 (suite)** — CreditSafe→Pappers dans le contenu des articles (`blog-nouveaux-2026.ts`, `blog-arnaques.ts`, etc.)
+- **#1 (suite)** — CreditSafe→Pappers : ✅ fait (lib, blog, corridors, app, content/blog)
 
 ---
 
