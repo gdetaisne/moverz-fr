@@ -79,6 +79,32 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
     authorSlug: "lucie",
   },
   {
+    slug: "comparatif-demenageurs-bordeaux-2026",
+    title: "Comparatif Déménageurs Bordeaux 2026 : Top 5 et Prix Réels",
+    description:
+      "Comparatif déménageurs Bordeaux 2026 : Air Déménagement, Alex, Sam'déménage, acteurs locaux. T2 550–950€. Vérifier avec Label Moverz (Score /100 gratuit) avant de signer.",
+    publishedAt: "2026-03-12T00:00:00.000Z",
+    updatedAt: "2026-03-12T00:00:00.000Z",
+    category: "demenagement-par-ville",
+    citySlug: "bordeaux",
+    readingTimeMinutes: 6,
+    tags: ["déménageurs Bordeaux", "comparatif Bordeaux", "Label Moverz", "vérifier déménageur"],
+    authorSlug: "lucie",
+  },
+  {
+    slug: "comparatif-demenageurs-lyon-2026",
+    title: "Comparatif Déménageurs Lyon 2026 : Top 5 et Prix Réels",
+    description:
+      "Comparatif déménageurs Lyon 2026 : S.I.E.T, Lugnier, acteurs locaux. T2 500–900€. Vérifier avec Label Moverz (Score /100 gratuit) avant de signer.",
+    publishedAt: "2026-03-12T00:00:00.000Z",
+    updatedAt: "2026-03-12T00:00:00.000Z",
+    category: "demenagement-par-ville",
+    citySlug: "lyon",
+    readingTimeMinutes: 6,
+    tags: ["déménageurs Lyon", "comparatif Lyon", "Label Moverz", "vérifier déménageur"],
+    authorSlug: "lucie",
+  },
+  {
     slug: "eviter-arnaques-demenagement",
     title: "Comment éviter les arnaques au déménagement en 2026 : Guide complet",
     description:
@@ -104,32 +130,6 @@ export const BLOG_EXTRA: BlogPostMeta[] = [
   {
     slug: "demenagement-international-juste-prix-experience",
     title: "Déménagement international : dans quels cas Moverz peut vous aider (et comment trouver le juste prix)",
-    description:
-      "Vous partez ou revenez de l’étranger ? Découvrez dans quels cas Moverz peut vous accompagner pour un déménagement international, comment éviter les mauvaises surprises et trouver le juste prix pour votre projet.",
-    publishedAt: "2025-01-02T00:00:00.000Z",
-    updatedAt: "2026-03-08T00:00:00.000Z",
-    category: "conseils-demenagement",
-    readingTimeMinutes: 9,
-    authorSlug: "guillaume",
-  },
-  {
-    slug: "prix-demenagement-lyon-guide-complet",
-    title: "Prix déménagement Lyon 2026 : fourchettes, exemples & conseils",
-    description:
-      "Combien coûte un déménagement à Lyon en 2026 ? Fourchettes par surface, exemples par quartier, facteurs de variation et conseils pour obtenir des devis comparables sans mauvaises surprises.",
-    publishedAt: "2026-03-07T00:00:00.000Z",
-    updatedAt: "2026-03-07T00:00:00.000Z",
-    category: "prix-et-devis",
-    citySlug: "lyon",
-    readingTimeMinutes: 12,
-    tags: ["prix déménagement Lyon", "déménagement Lyon", "devis déménagement Lyon"],
-    authorSlug: "guillaume",
-  },
-  {
-    slug: "demenagement-sans-ascenseur-5e-etage",
-    title: "Déménagement sans ascenseur au 5e étage : méthode, devis fiable & checklist",
-    description:
-      "Surcoût escalier, monte-meuble ou portage, checklist anti-surprise : tout ce qu'il faut savoir pour déménager sans ascenseur au 5e étage sans mauvaise surprise.",
     publishedAt: "2026-03-07T00:00:00.000Z",
     updatedAt: "2026-03-07T00:00:00.000Z",
     category: "checklists-et-guides",

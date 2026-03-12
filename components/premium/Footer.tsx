@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 import { LogoWithText } from "@/components/LogoWithText";
@@ -63,15 +62,12 @@ export function Footer() {
       style={{ background: "var(--color-bg-dark)" }}
     >
       <div className="mx-auto max-w-[1200px] px-5 md:px-6 lg:px-8 py-10 md:py-14">
-        {/* Brand + Texte (sans CTA) - Mobile : évite la redondance avec le Sticky CTA en bas */}
+        {/* Brand (icône seule) + Texte - Mobile */}
         <div className="mb-8 md:hidden">
-          <div className="flex flex-wrap items-center gap-3 mb-4">
-            <a href="/" className="inline-flex items-center" title="Moverz">
-              <LogoWithText size="footer" variant="light" />
+          <div className="mb-4">
+            <a href="/" className="inline-flex" title="Moverz">
+              <LogoWithText size="footer" variant="light" showText={false} />
             </a>
-            <Link href="/label-moverz/" className="inline-flex items-center px-3 py-2 rounded-lg border border-white/20 bg-white/5 hover:bg-white/10 transition-colors" title="Label Moverz">
-              <Image src="/logo-label-moverz.png" alt="Label Moverz" width={180} height={120} className="h-28 md:h-36 w-auto object-contain" />
-            </Link>
           </div>
           
           <div className="space-y-2">
@@ -87,14 +83,9 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-8 md:grid-cols-12 md:gap-6 mb-10">
           {/* Col 1: Brand + Texte + CTA - col-span-3 pour éviter chevauchement avec Liens utiles */}
           <div className="hidden md:flex md:col-span-3 md:flex-col md:min-w-0 md:overflow-hidden space-y-4">
-            <div className="flex flex-col items-start gap-4">
-              <a href="/" className="inline-flex" title="Moverz">
-                <LogoWithText size="footer" variant="light" />
-              </a>
-              <Link href="/label-moverz/" className="inline-flex items-center px-3 py-2 rounded-lg border border-white/20 bg-white/5 hover:bg-white/10 transition-colors shrink-0" title="Label Moverz">
-                <Image src="/logo-label-moverz.png" alt="Label Moverz" width={180} height={120} className="h-24 w-auto object-contain max-w-[180px]" />
-              </Link>
-            </div>
+            <a href="/" className="inline-flex" title="Moverz">
+              <LogoWithText size="footer" variant="light" showText={false} />
+            </a>
             
             {/* Texte sous le logo */}
             <div className="space-y-1.5">

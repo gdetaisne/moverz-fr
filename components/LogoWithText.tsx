@@ -15,6 +15,8 @@ interface LogoWithTextProps {
   variant?: "light" | "dark";
   /** En tant que lien vers / */
   asLink?: boolean;
+  /** Masquer le texte (icône seule) — ex: footer sobre */
+  showText?: boolean;
   className?: string;
 }
 
@@ -32,12 +34,13 @@ export function LogoWithText({
   size = "md",
   variant = "dark",
   asLink = true,
+  showText = true,
   className = "",
 }: LogoWithTextProps) {
   const s = sizes[size];
   const isDarkBg = variant === "light"; // "light" = fond sombre, texte blanc
 
-  const isVertical = size === "footer";
+  const isVertical = size === "footer" && showText;
 
   const content = (
     <span
@@ -46,7 +49,7 @@ export function LogoWithText({
     >
       <Image
         src="/logo-transparent.png"
-        alt=""
+        alt="Moverz"
         width={1024}
         height={1024}
         className={`${s.icon} w-auto object-contain`}
@@ -54,18 +57,20 @@ export function LogoWithText({
         unoptimized={false}
         sizes="(max-width: 768px) 80px, 96px"
       />
-      <span
-        className={`font-extrabold tracking-tight ${s.text}`}
-        style={{
-          color: isDarkBg ? "#ffffff" : "#0EA5A6",
-          textDecoration: "underline",
-          textDecorationColor: "#F59E0B",
-          textUnderlineOffset: "4px",
-          textDecorationThickness: "2px",
-        }}
-      >
-        {isVertical ? "MOVERZ" : "Moverz"}
-      </span>
+      {showText && (
+        <span
+          className={`font-extrabold tracking-tight ${s.text}`}
+          style={{
+            color: isDarkBg ? "#ffffff" : "#0EA5A6",
+            textDecoration: "underline",
+            textDecorationColor: "#F59E0B",
+            textUnderlineOffset: "4px",
+            textDecorationThickness: "2px",
+          }}
+        >
+          {size === "footer" ? "MOVERZ" : "Moverz"}
+        </span>
+      )}
     </span>
   );
 
