@@ -34,7 +34,7 @@ export default function FaqArnaqueDemenagementPage() {
     {
       question: "Comment vérifier qu'un déménageur est fiable ?",
       answer:
-        "Vérifiez le SIREN/SIRET (annuaire officiel ou Kbis). Pour aller plus loin, Moverz évalue chaque déménageur selon 3 analyses de risque notées /100 : expérience client (avis Google analysés), risque financier (Creditsafe + Pappers + ratio cash/dettes), risque juridique (décisions de justice via Pappers). Les déménageurs avec alertes financières ou juridiques sont exclus automatiquement.",
+        "Vérifiez le SIREN/SIRET (annuaire officiel ou Kbis). Pour aller plus loin, Moverz évalue chaque déménageur selon un score /100 automatique (santé financière Pappers, casier judiciaire BODACC, avis clients analysés). Gratuit et instantané : consultez le <a href='/label-moverz/' class='underline' style='color: var(--color-accent)'>Label Moverz — vérifier un déménageur</a>. Les déménageurs avec alertes financières ou juridiques sont exclus automatiquement.",
     },
     {
       question: "Que doit contenir un devis de déménagement fiable ?",
@@ -91,8 +91,15 @@ export default function FaqArnaqueDemenagementPage() {
                 Une estimation basée sur visite/visio réduit les écarts de volume et les ambiguïtés du devis.
               </p>
             </div>
-            <a
-              href="/comment-ca-marche/"
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="/label-moverz/"
+                className="inline-flex items-center justify-center rounded-full bg-[var(--color-accent)] px-6 py-3 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
+              >
+                Vérifier un déménageur →
+              </a>
+              <a
+                href="/comment-ca-marche/"
               className="inline-flex items-center justify-center rounded-full bg-[var(--color-bg-dark)] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[var(--color-bg-dark)] transition-colors"
             >
               Voir une méthode d’estimation plus solide →

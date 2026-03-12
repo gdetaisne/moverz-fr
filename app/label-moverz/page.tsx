@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { FAQSchema } from "@/components/schema/FAQSchema";
 import { WebPageSchema } from "@/components/schema/WebPageSchema";
+import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { LabelMoverzHero } from "@/components/label-moverz/LabelMoverzHero";
 import { LabelScoringExplainer } from "@/components/label-moverz/LabelScoringExplainer";
 import { LabelComparison } from "@/components/label-moverz/LabelComparison";
@@ -14,7 +15,18 @@ import { RecentScores } from "@/components/label-moverz/RecentScores";
 // La carte utilise Google Maps JS — chargée uniquement côté client
 const MoverzMap = dynamic(
   () => import("@/components/label-moverz/MoverzMap").then((m) => ({ default: m.MoverzMapInner })),
-  { ssr: false },
+  {
+    ssr: false,
+    loading: () => (
+      <section className="section section-light">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="rounded-2xl overflow-hidden flex items-center justify-center" style={{ height: 360, background: "var(--color-bg)", border: "1px solid var(--color-border)" }}>
+            <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>Chargement de la carte…</p>
+          </div>
+        </div>
+      </section>
+    ),
+  },
 );
 
 export const metadata: Metadata = {
@@ -213,9 +225,37 @@ export default function LabelMoverzPage() {
 
       <LabelMoverzHero />
       <LabelScoringExplainer />
-      <MoverzMap />
+      <ErrorBoundary
+        fallback={
+          <section className="section section-light">
+            <div className="max-w-7xl mx-auto px-6">
+              <div className="rounded-2xl p-8 text-center" style={{ background: "var(--color-bg)", border: "1px solid var(--color-border)" }}>
+                <p className="text-sm" style={{ color: "var(--color-text-secondary)" }}>
+                  Carte des déménageurs temporairement indisponible.
+                </p>
+              </div>
+            </div>
+          </section>
+        }
+      >
+        <MoverzMap />
+      </ErrorBoundary>
       <div id="scoring-checker-section">
-        <ScoringChecker />
+        <ErrorBoundary
+          fallback={
+            <section className="section section-light">
+              <div className="max-w-2xl mx-auto px-6">
+                <div className="rounded-2xl p-8 text-center" style={{ background: "var(--color-bg)", border: "1px solid var(--color-border)" }}>
+                  <p className="text-sm" style={{ color: "var(--color-text-secondary)" }}>
+                    Vérification de score temporairement indisponible.
+                  </p>
+                </div>
+              </div>
+            </section>
+          }
+        >
+          <ScoringChecker />
+        </ErrorBoundary>
       </div>
       <RecentScores />
       <LabelStats />
@@ -417,44 +457,119 @@ export default function LabelMoverzPage() {
             ))}
           </ul>
 
-          <div
-            className="p-6 rounded-2xl text-center"
-            style={{ background: "var(--color-bg)", border: "1px solid var(--color-border)" }}
+          {/* Cluster : arnaques, vérification, fiabilité — maillage interne vers pillar */}
+          <h2
+            className="font-heading text-3xl md:text-4xl font-bold mb-6 mt-16"
+            style={{ color: "var(--color-text)" }}
           >
-            <p className="text-base mb-4" style={{ color: "var(--color-text-secondary)" }}>
-              Pour aller plus loin : consultez notre guide complet sur les arnaques au déménagement
-              et nos critères de sélection des partenaires.
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <Link
-                href="/blog/eviter-arnaques-demenagement/"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium"
-                style={{ background: "var(--color-accent)", color: "white" }}
-              >
-                Guide anti-arnaques déménagement
-              </Link>
-              <Link
-                href="/verifications-partenaires/"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium"
-                style={{
-                  background: "white",
-                  color: "var(--color-text)",
-                  border: "1px solid var(--color-border)",
-                }}
-              >
-                Nos critères de sélection
-              </Link>
-              <Link
-                href="/criteres-choisir-demenageur/"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium"
-                style={{
-                  background: "white",
-                  color: "var(--color-text)",
-                  border: "1px solid var(--color-border)",
-                }}
-              >
-                Comment choisir un déménageur
-              </Link>
+            Arnaques, vérification, fiabilité : tout notre contenu
+          </h2>
+          <p className="text-lg mb-8" style={{ color: "var(--color-text-secondary)" }}>
+            Guides, FAQ et outils pour choisir un déménageur en toute sécurité. Tout le contenu
+            Moverz sur les arnaques au déménagement et la vérification de fiabilité.
+          </p>
+
+          <div className="space-y-8">
+            {/* Guides arnaques & vérification */}
+            <div>
+              <h3 className="font-heading text-xl font-bold mb-4" style={{ color: "var(--color-text)" }}>
+                Guides
+              </h3>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                <Link
+                  href="/blog/eviter-arnaques-demenagement/"
+                  className="block p-4 rounded-xl text-sm font-medium hover:opacity-90 transition-opacity"
+                  style={{ background: "white", border: "1px solid var(--color-border)", color: "var(--color-text)" }}
+                >
+                  Comment éviter les arnaques au déménagement
+                </Link>
+                <Link
+                  href="/blog/comment-verifier-demenageur-fiable/"
+                  className="block p-4 rounded-xl text-sm font-medium hover:opacity-90 transition-opacity"
+                  style={{ background: "white", border: "1px solid var(--color-border)", color: "var(--color-text)" }}
+                >
+                  Comment vérifier qu&apos;un déménageur est fiable
+                </Link>
+                <Link
+                  href="/blog/label-moverz-certification-demenageurs/"
+                  className="block p-4 rounded-xl text-sm font-medium hover:opacity-90 transition-opacity"
+                  style={{ background: "white", border: "1px solid var(--color-border)", color: "var(--color-text)" }}
+                >
+                  Label Moverz : méthodologie complète
+                </Link>
+                <Link
+                  href="/blog/verifier-demenageur-creditsafe-siren/"
+                  className="block p-4 rounded-xl text-sm font-medium hover:opacity-90 transition-opacity"
+                  style={{ background: "white", border: "1px solid var(--color-border)", color: "var(--color-text)" }}
+                >
+                  Vérifier un déménageur : SIREN, Pappers, assurance
+                </Link>
+                <Link
+                  href="/blog/supplement-prix-jour-j-comment-eviter/"
+                  className="block p-4 rounded-xl text-sm font-medium hover:opacity-90 transition-opacity"
+                  style={{ background: "white", border: "1px solid var(--color-border)", color: "var(--color-text)" }}
+                >
+                  Éviter les suppléments de prix le jour J
+                </Link>
+                <Link
+                  href="/blog/demenagement-sans-harcelement-protection-vie-privee/"
+                  className="block p-4 rounded-xl text-sm font-medium hover:opacity-90 transition-opacity"
+                  style={{ background: "white", border: "1px solid var(--color-border)", color: "var(--color-text)" }}
+                >
+                  Déménagement sans harcèlement : protection vie privée
+                </Link>
+              </div>
+            </div>
+
+            {/* Pages standalone */}
+            <div>
+              <h3 className="font-heading text-xl font-bold mb-4" style={{ color: "var(--color-text)" }}>
+                Pages utiles
+              </h3>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                <Link
+                  href="/faq-arnaque-demenagement/"
+                  className="block p-4 rounded-xl text-sm font-medium hover:opacity-90 transition-opacity"
+                  style={{ background: "white", border: "1px solid var(--color-border)", color: "var(--color-text)" }}
+                >
+                  FAQ arnaques déménagement
+                </Link>
+                <Link
+                  href="/verifications-partenaires/"
+                  className="block p-4 rounded-xl text-sm font-medium hover:opacity-90 transition-opacity"
+                  style={{ background: "white", border: "1px solid var(--color-border)", color: "var(--color-text)" }}
+                >
+                  Nos critères de vérification des partenaires
+                </Link>
+                <Link
+                  href="/criteres-choisir-demenageur/"
+                  className="block p-4 rounded-xl text-sm font-medium hover:opacity-90 transition-opacity"
+                  style={{ background: "white", border: "1px solid var(--color-border)", color: "var(--color-text)" }}
+                >
+                  Comment choisir un déménageur
+                </Link>
+                <Link
+                  href="/comparateur-demenageurs/"
+                  className="block p-4 rounded-xl text-sm font-medium hover:opacity-90 transition-opacity"
+                  style={{ background: "white", border: "1px solid var(--color-border)", color: "var(--color-text)" }}
+                >
+                  Comparateur de déménageurs
+                </Link>
+                <Link
+                  href="/chiffres-cles/"
+                  className="block p-4 rounded-xl text-sm font-medium hover:opacity-90 transition-opacity"
+                  style={{ background: "white", border: "1px solid var(--color-border)", color: "var(--color-text)" }}
+                >
+                  Chiffres clés du marché
+                </Link>
+                <Link
+                  href="/faq/"
+                  className="block p-4 rounded-xl text-sm font-medium hover:opacity-90 transition-opacity"
+                  style={{ background: "white", border: "1px solid var(--color-border)", color: "var(--color-text)" }}
+                >
+                  FAQ déménagement
+                </Link>
+              </div>
             </div>
           </div>
         </div>
