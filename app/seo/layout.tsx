@@ -9,6 +9,7 @@ export default function SeoLayout({ children }: { children: React.ReactNode }) {
   const nav = [
     { href: "/seo/", label: "Vue d'ensemble" },
     { href: "/seo/gsc/", label: "GSC" },
+    { href: "/seo/conversion/", label: "Conversion" },
     { href: "/seo/pagespeed/", label: "PageSpeed / CWV" },
     { href: "/seo/backlinks/", label: "Backlinks" },
     { href: "/seo/bing/", label: "Bing / LLM" },

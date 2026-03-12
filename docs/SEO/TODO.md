@@ -133,6 +133,20 @@
 
 ## Corrections techniques build (hors SEO contenu)
 
+- [ ] **TECH-7** Migrer le build vers GitHub Actions (priorité quand disponible)
+  - Objectif : sortir le build du VPS → build 2 min au lieu de 5 min, cache Next.js persistant
+  - Débloque : SSG sélectif sur les 173 articles `GA_TRAFFIC_SLUGS`
+  - Prérequis : créer 7 secrets GitHub (voir checklist ci-dessous)
+  - Fichier workflow prêt à créer : `.github/workflows/deploy.yml`
+  - **Secrets à configurer dans GitHub → Settings → Secrets → Actions :**
+    - `NEXT_PUBLIC_API_URL` = `https://moverz-backoffice.gslv.cloud`
+    - `NEXT_PUBLIC_BACKOFFICE_URL` = `https://moverz-backoffice.gslv.cloud`
+    - `NEXT_PUBLIC_GOOGLE_MAPS_KEY` = (voir .env)
+    - `NEXT_PUBLIC_TURNSTILE_SITE_KEY` = (voir .env)
+    - `CAPROVER_URL` = `https://captain.moverz.fr`
+    - `CAPROVER_APP_NAME` = `moverz-fr`
+    - `CAPROVER_APP_TOKEN` = (CapRover → app → Deploy → App Token)
+
 - [x] **TECH-1** ISR → SSG blog
   - ✅ **Non applicable** — ISR intentionnel pour éviter timeout build VPS
   - **Solution retenue : Cloudflare CDN Free** + script prewarm

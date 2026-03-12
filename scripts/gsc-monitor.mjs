@@ -29,17 +29,44 @@ const ROOT = path.resolve(__dirname, "..");
 const SITE_URL = "sc-domain:moverz.fr";
 const SCOPES = ["https://www.googleapis.com/auth/webmasters.readonly"];
 
-// Content clusters for grouping
+// Content clusters for grouping (Attribution 1)
+// Ordre d'affichage : Homepage > Standalone > Villes > Corridors > Blog Transactionnel > Blog Informationnel > Quartiers > Autres
 const CLUSTERS = [
-  { name: "Villes (core)", pattern: /^\/demenagement\/[a-z-]+\/$/ },
-  { name: "Guides villes", pattern: /^\/demenagement\/[a-z-]+\/guide\/$/ },
-  { name: "Services villes", pattern: /^\/demenagement\/[a-z-]+\/[a-z-]+\/$/ },
-  { name: "Blog", pattern: /^\/blog\// },
-  { name: "Corridors", pattern: /^\/demenagement-[a-z]+-[a-z]+\// },
-  { name: "Quartiers", pattern: /^\/quartiers-/ },
-  { name: "Pages statiques", pattern: /^\/(villes|comment-ca-marche|a-propos|mentions-legales|prix-demenagement|pro)\/?$/ },
-  { name: "Homepage", pattern: /^\/$/ },
+  { name: "Homepage",               pattern: /^\/$/ },
+  { name: "Standalone",             pattern: /^\/(faq|comment-ca-marche|pourquoi-moverz|comparateur-demenageurs|criteres-choisir-demenageur|glossaire-demenagement|faq-arnaque-demenagement|label-moverz|chiffres-cles|verifications-partenaires|choisir-ville|villes|search|auteurs|contact|cgu|cgv|cgv-partenaires|mentions-legales|politique-confidentialite|partenaires|pro)\/?/ },
+  { name: "Villes",                 pattern: /^\/demenagement\/[a-z-]+/ },
+  { name: "Corridors",              pattern: /^\/(corridor\/|[a-z]+-vers-[a-z])/ },
+  { name: "Blog - Transactionnel",  pattern: /^\/blog\/(prix-et-devis|demenagement-par-ville|cas-frequents)\// },
+  { name: "Blog - Informationnel",  pattern: /^\/blog\/(checklists-et-guides|conseils-demenagement|pro)\// },
+  { name: "Blog",                   pattern: /^\/blog\// },
+  { name: "Quartiers",              pattern: /^\/(quartiers-|quartiers\/)/ },
 ];
+
+// Slugs de villes avec pages statiques dédiées (demenagement/[slug]/ et services)
+const STATIC_VILLE_SLUGS = new Set([
+  "bordeaux", "lille", "lyon", "marseille", "montpellier",
+  "nantes", "nice", "rennes", "rouen", "strasbourg", "toulouse",
+]);
+
+// Slugs de trajets statiques (pages corridors dédiées hors /corridor/[from]/[to]/)
+const STATIC_CORRIDOR_SLUGS = new Set([
+  "paris-vers-lyon", "paris-vers-bordeaux", "paris-vers-marseille", "paris-vers-toulouse",
+  "lyon-vers-paris", "lyon-vers-marseille", "lyon-vers-bordeaux",
+  "marseille-vers-lyon", "marseille-vers-paris",
+  "nantes-vers-la-baule", "nantes-vers-rennes", "nantes-vers-paris", "nantes-vers-bordeaux", "nantes-vers-lyon",
+  "rennes-vers-angers", "rennes-vers-saint-malo", "rennes-vers-brest", "rennes-vers-nantes", "rennes-vers-paris",
+  "rouen-vers-paris", "rouen-vers-lille", "rouen-vers-amiens", "rouen-vers-le-havre", "rouen-vers-caen",
+  "toulouse-vers-lyon", "toulouse-vers-nantes", "toulouse-vers-espagne",
+  "strasbourg-vers-lyon", "strasbourg-vers-paris", "strasbourg-vers-suisse", "strasbourg-vers-allemagne",
+  "montpellier-vers-lyon", "montpellier-vers-toulouse", "montpellier-vers-marseille",
+  "nice-vers-italie", "nice-vers-monaco",
+  "cambrai-vers-nice",
+]);
+
+// Slugs de villes avec pages quartiers statiques
+const STATIC_QUARTIER_CITIES = new Set([
+  "toulouse", "montpellier", "nice", "nantes", "rennes", "rouen", "strasbourg",
+]);
 
 function classifyUrl(pageUrl) {
   try {
@@ -52,6 +79,82 @@ function classifyUrl(pageUrl) {
     // ignore
   }
   return "Autres";
+}
+
+/**
+ * Attribution 2 : sous-catégorie selon le cluster principal.
+ * - Villes → Hub | Service | Dynamique
+ * - Corridors → Statique | Dynamique
+ * - Quartiers → Statique | Dynamique
+ * - Blog Transactionnel / Informationnel → sous-catégorie blog
+ * - Autres → ""
+ */
+function classifyUrl2(pageUrl, attribution1) {
+  try {
+    const u = new URL(pageUrl);
+    const p = u.pathname;
+
+    if (attribution1 === "Villes") {
+      const m = p.match(/^\/demenagement\/([a-z-]+)(\/([a-z-]+))?\/$/);
+      if (!m) return "";
+      const citySlug = m[1];
+      const serviceSlug = m[3]; // undefined si pas de 2e segment
+      const isStaticCity = STATIC_VILLE_SLUGS.has(citySlug);
+      if (!serviceSlug) {
+        // /demenagement/<city>/ → Hub ville
+        return isStaticCity ? "Hub (statique)" : "Hub (dynamique)";
+      }
+      // /demenagement/<city>/<service>/
+      return isStaticCity ? "Service (statique)" : "Service (dynamique)";
+    }
+
+    if (attribution1 === "Corridors") {
+      if (p.startsWith("/corridor/")) return "Dynamique";
+      const slug = p.replace(/^\/|\/$/g, "");
+      return STATIC_CORRIDOR_SLUGS.has(slug) ? "Statique" : "Dynamique";
+    }
+
+    if (attribution1 === "Quartiers") {
+      if (p.startsWith("/quartiers/")) return "Dynamique";
+      const cityMatch = p.match(/^\/([a-z-]+)\//);
+      if (cityMatch && STATIC_QUARTIER_CITIES.has(cityMatch[1])) return "Statique";
+      const hubMatch = p.match(/^\/quartiers-([a-z-]+)/);
+      if (hubMatch && STATIC_QUARTIER_CITIES.has(hubMatch[1])) return "Hub statique";
+      return "Dynamique";
+    }
+
+    if (attribution1 === "Blog - Transactionnel") {
+      if (p.startsWith("/blog/prix-et-devis")) return "Prix & devis";
+      if (p.startsWith("/blog/demenagement-par-ville")) return "Déménagement par ville";
+      if (p.startsWith("/blog/cas-frequents")) return "Cas fréquents";
+      // Articles individuels transactionnels
+      const slug = p.replace(/^\/blog\//, "").replace(/\/$/, "");
+      if (/^prix-|prix$|-tarif|-devis/.test(slug)) return "Prix & devis";
+      if (/paris|lyon|marseille|bordeaux|toulouse|nice|nantes|rennes|strasbourg|montpellier|lille|rouen/.test(slug)) return "Déménagement par ville";
+      if (/acces|escalier|portage|lift|monte-meuble|parking|rue-etroite|colocation|petit-demenagement|objet-lourd/.test(slug)) return "Cas fréquents";
+      return "Transactionnel";
+    }
+
+    if (attribution1 === "Blog - Informationnel") {
+      if (p.startsWith("/blog/checklists-et-guides")) return "Checklists & guides";
+      if (p.startsWith("/blog/conseils-demenagement")) return "Conseils";
+      if (p.startsWith("/blog/pro") || p.startsWith("/blog/blog-pro")) return "Pro (B2B)";
+      // Articles individuels informationnels
+      const slug = p.replace(/^\/blog\//, "").replace(/\/$/, "");
+      if (/checklist|guide|etapes|j-[0-9]/.test(slug)) return "Checklists & guides";
+      if (/conseil|erreur|eviter|preparer|organis/.test(slug)) return "Conseils";
+      return "Informationnel";
+    }
+
+    if (attribution1 === "Blog") {
+      // Blog index ou articles non classifiés
+      if (p.match(/^\/blog\/?$/)) return "Index";
+      return "Article";
+    }
+  } catch {
+    // ignore
+  }
+  return "";
 }
 
 // ─── Auth ────────────────────────────────────────────────────────────────────
@@ -375,16 +478,20 @@ async function persistToDB(report, granularData) {
       const BATCH = 500;
       for (let i = 0; i < granularData.pagesByDate.length; i += BATCH) {
         await prisma.gscPageMetric.createMany({
-          data: granularData.pagesByDate.slice(i, i + BATCH).map((r) => ({
-            snapshotId: snapshot.id,
-            date: new Date(r.keys[1]),
-            url: r.keys[0],
-            cluster: classifyUrl(r.keys[0]),
-            clicks: r.clicks,
-            impressions: r.impressions,
-            ctr: r.ctr,
-            position: r.position,
-          })),
+          data: granularData.pagesByDate.slice(i, i + BATCH).map((r) => {
+            const cluster = classifyUrl(r.keys[0]);
+            return {
+              snapshotId: snapshot.id,
+              date: new Date(r.keys[1]),
+              url: r.keys[0],
+              cluster,
+              attribution2: classifyUrl2(r.keys[0], cluster),
+              clicks: r.clicks,
+              impressions: r.impressions,
+              ctr: r.ctr,
+              position: r.position,
+            };
+          }),
         });
       }
       console.log(`[DB] ${granularData.pagesByDate.length} GscPageMetric insérés`);
