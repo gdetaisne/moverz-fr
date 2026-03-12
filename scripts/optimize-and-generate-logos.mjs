@@ -47,25 +47,41 @@ async function optimizeLogo(filepath, name) {
 
 async function generateFavicons(logoPath) {
   const srcName = logoPath.includes("logo-transparent") ? "logo-transparent.png" : "logo.png";
-  console.log(`\n📌 Génération des favicons depuis ${srcName} (trim + fill pour max visibilité)...\n`);
+  console.log(`\n📌 Génération des favicons depuis ${srcName} (logo plus grand + variantes light/dark)...\n`);
+
+  const bgTransparent = { r: 0, g: 0, b: 0, alpha: 0 };
+  const bgLight = { r: 248, g: 250, b: 252, alpha: 1 }; // #f8fafc contraste fond clair
 
   for (const entry of FAVICON_SIZES) {
-    const outPath = join(publicDir, entry.name);
-    const buf = await sharp(logoPath)
-      .trim({ threshold: 5 })
-      .resize(entry.size, entry.size, {
-        fit: "contain",
-        background: { r: 0, g: 0, b: 0, alpha: 0 },
-      })
+    // Version dark (transparent) — onglets mode sombre
+    const trimmed = await sharp(logoPath).trim({ threshold: 3 }).toBuffer();
+    const bufDark = await sharp(trimmed)
+      .resize(entry.size, entry.size, { fit: "cover", position: "center", background: bgTransparent })
       .png({ compressionLevel: 9 })
       .toBuffer();
-    await writeFile(outPath, buf);
-    console.log(`   ${entry.name} (${entry.size}x${entry.size})`);
+    const darkPath = join(publicDir, entry.name.replace(".png", "-dark.png"));
+    await writeFile(darkPath, bufDark);
+    console.log(`   ${entry.name.replace(".png", "-dark.png")} (transparent)`);
+
+    // Version light (fond clair) — onglets mode clair, meilleur contraste
+    const bufLight = await sharp(trimmed)
+      .resize(entry.size, entry.size, { fit: "cover", position: "center", background: bgLight })
+      .png({ compressionLevel: 9 })
+      .toBuffer();
+    const lightPath = join(publicDir, entry.name.replace(".png", "-light.png"));
+    await writeFile(lightPath, bufLight);
+    console.log(`   ${entry.name.replace(".png", "-light.png")} (fond clair)`);
+
+    // Copie par défaut = dark (pour compat)
+    await writeFile(join(publicDir, entry.name), bufDark);
   }
 
-  const favicon32 = await readFile(join(publicDir, "favicon-32x32.png"));
-  await writeFile(join(publicDir, "favicon.ico"), favicon32);
-  console.log(`   favicon.ico (32x32)`);
+  const favicon32Dark = await readFile(join(publicDir, "favicon-32x32.png"));
+  const favicon32Light = await readFile(join(publicDir, "favicon-32x32-light.png"));
+  await writeFile(join(publicDir, "favicon.ico"), favicon32Light);
+  await writeFile(join(publicDir, "favicon-dark.ico"), favicon32Dark);
+  console.log(`   favicon.ico (32x32, default = light pour majorité utilisateurs)`);
+  console.log(`   favicon-dark.ico (32x32, fond transparent)`);
 }
 
 async function main() {
