@@ -13,12 +13,7 @@ export interface BlogPostMeta {
 
 import { BLOG_DATA } from "./blog-data";
 import { BLOG_EXTRA } from "./blog-extra";
-// TEMPORAIRE: blog-canonique.ts a plusieurs template literals non fermés
-// Désactivé temporairement pour permettre le déploiement du dashboard admin
-// Le dashboard admin fonctionne sans ce fichier
-// import { CANONICAL_BLOG_POSTS, type CanonicalBlogPost } from "./blog-canonique";
-export type CanonicalBlogPost = { slug: string; title: string; description: string; type: string; citySlug?: string; body: string; };
-const CANONICAL_BLOG_POSTS: CanonicalBlogPost[] = [];
+import { CANONICAL_BLOG_POSTS, type CanonicalBlogPost } from "./blog-canonique";
 import { BLOG_NOUVEAUX_2026 } from "./blog-nouveaux-2026";
 import { BLOG_MARKDOWN_POSTS } from "./blog-markdown-posts";
 import { ARNAQUES_ARTICLE } from "./blog-arnaques";

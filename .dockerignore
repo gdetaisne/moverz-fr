@@ -35,8 +35,7 @@ Thumbs.db
 docs/
 *.csv
 
-# Dead code — 8.3 MB, plus aucun import actif (remplacé par blog.ts)
-lib/blog-canonique.ts
+# lib/blog-canonique.ts — réactivé (import dans blog.ts)
 
 # Terminals (Cursor)
 terminals
