@@ -135,6 +135,26 @@ const nextConfig = {
           },
         ],
       },
+      // Pages ISR publiques — écrase le "private" par défaut de Next.js sur les routes dynamiques
+      // Permet à Cloudflare de cacher ces pages (s-maxage = Edge TTL, stale-while-revalidate = ISR)
+      {
+        source: '/blog/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, s-maxage=14400, stale-while-revalidate=86400',
+          },
+        ],
+      },
+      {
+        source: '/demenagement/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, s-maxage=14400, stale-while-revalidate=86400',
+          },
+        ],
+      },
       // Cache agressif pour assets statiques (images)
       {
         source: '/:path*.png',
