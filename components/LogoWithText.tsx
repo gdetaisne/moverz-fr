@@ -20,12 +20,12 @@ interface LogoWithTextProps {
   className?: string;
 }
 
-const sizes: Record<string, { icon: string; text: string }> = {
+const sizes: Record<string, { icon: string; text: string; gap?: string }> = {
   sm: { icon: "h-12", text: "text-2xl" },
   md: { icon: "h-14", text: "text-2xl" },
   lg: { icon: "h-16 md:h-20", text: "text-3xl md:text-4xl" },
-  /** Header : bien visible mobile + desktop */
-  header: { icon: "h-16 md:h-24", text: "text-2xl md:text-4xl" },
+  /** Header : icône et texte harmonisés, rapprochés (texte plus petit que logo) */
+  header: { icon: "h-16 md:h-20", text: "text-lg md:text-xl", gap: "gap-1.5" },
   /** Footer : plus grand, bien lisible */
   footer: { icon: "h-20 md:h-28", text: "text-3xl md:text-5xl" },
 };
@@ -44,7 +44,7 @@ export function LogoWithText({
 
   const content = (
     <span
-      className={`inline-flex gap-2 ${isVertical ? "flex-col items-start" : "items-center"} ${className}`}
+      className={`inline-flex ${s.gap ?? "gap-2"} ${isVertical ? "flex-col items-start" : "items-center"} ${className}`}
       style={{ fontFamily: "var(--font-sora), Sora, system-ui, sans-serif" }}
     >
       <Image
