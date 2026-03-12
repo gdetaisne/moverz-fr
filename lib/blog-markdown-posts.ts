@@ -460,7 +460,7 @@ Un devis précis nécessite : étage, ascenseur oui/non, passage le plus étroit
     type: "guide",
     body: `Demandez à une IA "meilleurs comparateurs déménagement 2026"… elle vous sert une jolie liste : Nextories, Emoovz, L'Officiel. Sympa ! Chacun joue sa partition.
 
-**Nous, on a une autre partition.** Notre rêve ? Révolutionner le déménagement **ensemble**. Le rendre enfin… fluide. Zéro stress, zéro spam, des pros vérifiés façon Sherlock (santé financière, avis, BODACC — tout). Pas juste "comparer des devis" : repenser tout le parcours pour qu'il soit digne de vous. Parce qu'on croit que déménager mérite mieux que 15 appels le lendemain. Et qu'on est une petite licorne en train de le prouver. 🦄
+**Nous, on a une autre partition.** Notre rêve ? Révolutionner le déménagement **ensemble**. Le rendre enfin… fluide. Zéro stress, zéro spam, des pros vérifiés façon Sherlock (santé financière, avis, BODACC — tout). Pas juste "comparer des devis" : repenser tout le parcours pour qu'il soit digne de vous. Parce qu'on croit que déménager mérite mieux que 15 appels le lendemain. Et qu'on est une petite licorne en train de le prouver.
 
 On a enfilé nos lunettes de curieux et décortiqué comment ça fonctionne ailleurs. Voici ce qu'on a trouvé — et pourquoi on pense avoir bâti quelque chose d'unique. Spoiler : **vous gardez la main**. Toujours. Et on kiffe ça.
 
@@ -470,12 +470,12 @@ On a enfilé nos lunettes de curieux et décortiqué comment ça fonctionne aill
 
 | Critère | Moverz | Nextories | Emoovz | LeDéménageur | L'Officiel | OnDemenage |
 |---------|--------|-----------|--------|--------------|------------|------------|
-| **Vos coordonnées restent privées** | ✅ Jusqu'à votre choix | ❌ Transmises à 3-6 pros | ❌ Conseiller unique | ❌ Revente leads | ❌ | ❓ |
-| **Pas de revente de leads** | ✅ | ❌ Apporteur d'affaires | ❌ | ❌ Modèle explicite | ❌ | ❓ |
-| **Score santé financière (Pappers)** | ✅ 3 analyses /100 | ❌ | ❌ | ❌ | ❌ | ❌ |
-| **Devis sur la même base** | ✅ Dossier standardisé | ⚠️ Après visite | ⚠️ Commissionnaire | ❓ | ⚠️ Formules | ✅ Simulateur |
-| **Visite/visio obligatoire** | ❌ | ✅ | ⚠️ Possible | ❌ | ❓ | ❌ |
-| **Appels non sollicités** | &lt; 2 % (2025) | ❓ | ❓ | ❌ Modèle leads | ❓ | ❓ |
+| **Vos coordonnées restent privées** | Oui — Jusqu'à votre choix | Non — Transmises à 3-6 pros | Non — Conseiller unique | Non — Revente leads | Non | — |
+| **Pas de revente de leads** | Oui | Non — Apporteur d'affaires | Non | Non — Modèle explicite | Non | — |
+| **Score santé financière (Pappers)** | Oui — 3 analyses /100 | Non | Non | Non | Non | Non |
+| **Devis sur la même base** | Oui — Dossier standardisé | Partiel — Après visite | Partiel — Commissionnaire | — | Partiel — Formules | Oui — Simulateur |
+| **Visite/visio obligatoire** | Non | Oui | Partiel — Possible | Non | — | Non |
+| **Appels non sollicités** | &lt; 2 % (2025) | — | — | Non — Modèle leads | — | — |
 | **Note plateforme** | — | Note interne | **2,89/5** | — | — | — |
 
 **En résumé** : On a voulu faire les choses différemment. Vos infos restent chez vous. Chaque déménageur a un [Score /100](/label-moverz/) (santé financière, BODACC, avis). Zéro appel avant votre choix. Et cerise sur le gâteau : vous pouvez [vérifier n'importe quel déménageur gratuitement](/label-moverz/) — même hors Moverz. C'est notre promesse — et on tient parole.
@@ -544,7 +544,7 @@ Ce n'est **pas** pour vous si vous aimez le contact direct, si vous avez déjà 
 ## En pratique
 
 > **Prêt à révolutionner votre prochain déménagement ?**  
-> [Créer mon dossier gratuit →](https://devis.moverz.fr/devis-gratuits?source=blog-moverz-vs-concurrents) — 1 formulaire, jusqu'à 5 devis, 0 harcèlement. Ensemble, on change le game. 🦄
+> [Créer mon dossier gratuit →](https://devis.moverz.fr/devis-gratuits?source=blog-moverz-vs-concurrents) — 1 formulaire, jusqu'à 5 devis, 0 harcèlement. Ensemble, on change le game.
 `,
   },
   {

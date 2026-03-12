@@ -95,8 +95,7 @@
 
 ## ✅ À faire demain
 
-- [ ] **Indexer sur GSC** : https://moverz.fr/blog/moverz-vs-concurrents-comparateur-demenagement/
-  - GSC → Inspection d'URL → coller l'URL → "Demander l'indexation"
+- [x] **Indexer sur GSC** : https://moverz.fr/blog/moverz-vs-concurrents-comparateur-demenagement/ (demande faite)
 
 ---
 
