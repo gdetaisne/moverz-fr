@@ -18,9 +18,9 @@ interface LogoWithTextProps {
 }
 
 const sizes = {
-  sm: { icon: "h-8", text: "text-xl" },
-  md: { icon: "h-10", text: "text-2xl" },
-  lg: { icon: "h-12", text: "text-3xl" },
+  sm: { icon: "h-10", text: "text-2xl" },
+  md: { icon: "h-14", text: "text-3xl" },
+  lg: { icon: "h-16", text: "text-4xl" },
 };
 
 export function LogoWithText({
@@ -38,12 +38,14 @@ export function LogoWithText({
       style={{ fontFamily: "var(--font-sora), Sora, system-ui, sans-serif" }}
     >
       <Image
-        src="/logo.png"
+        src="/logo-transparent.png"
         alt=""
-        width={1536}
+        width={1024}
         height={1024}
         className={`${s.icon} w-auto`}
         priority
+        unoptimized={false}
+        sizes="(max-width: 768px) 80px, 96px"
       />
       <span
         className={`font-extrabold tracking-tight ${s.text}`}
