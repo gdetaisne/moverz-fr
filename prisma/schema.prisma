@@ -54,19 +54,21 @@ model GscTotals {
 
 // Performance par page × jour (granularité : 1 ligne = 1 page × 1 jour)
 model GscPageMetric {
-  id          String      @id @default(cuid())
-  snapshot    GscSnapshot @relation(fields: [snapshotId], references: [id], onDelete: Cascade)
-  snapshotId  String
-  date        DateTime    @db.Date
-  url         String
-  cluster     String      // Blog | Villes (core) | Corridors | Guides villes | etc.
-  clicks      Int
-  impressions Int
-  ctr         Float
-  position    Float
+  id           String      @id @default(cuid())
+  snapshot     GscSnapshot @relation(fields: [snapshotId], references: [id], onDelete: Cascade)
+  snapshotId   String
+  date         DateTime    @db.Date
+  url          String
+  cluster      String      // Blog | Villes (core) | Corridors | Guides villes | etc.
+  attribution2 String      @default("") // Sous-catégorie : Statique/Dynamique, catégorie blog, etc.
+  clicks       Int
+  impressions  Int
+  ctr          Float
+  position     Float
 
   @@index([url, date])
   @@index([cluster, date])
+  @@index([attribution2])
   @@index([snapshotId])
   @@schema("seo")
 }
@@ -119,5 +121,27 @@ model GscAlert {
 
   @@index([snapshotId])
   @@index([level])
+  @@schema("seo")
+}
+
+// ─── PageSpeed / Health Check ─────────────────────────────────────────────────
+
+// Une ligne par URL vérifiée lors d'une exécution de pagespeed-monitor.mjs
+model PagespeedResult {
+  id           String   @id @default(cuid())
+  checkedAt    DateTime @default(now())
+  url          String
+  impressions  Int      // total impressions depuis GSC (pour prioriser)
+  httpStatus   Int?     // 200, 301, 404, 500…
+  inSitemap    Boolean  @default(false)
+  scoreMobile  Int?     // score PSI mobile 0–100
+  scoreDesktop Int?     // score PSI desktop 0–100
+  lcpMobile    Float?   // LCP mobile en secondes
+  clsMobile    Float?   // CLS mobile (score)
+  inpMobile    Float?   // INP mobile en ms
+  psiError     String?  // message d'erreur PSI si l'appel a échoué
+
+  @@index([checkedAt])
+  @@index([url])
   @@schema("seo")
 }
