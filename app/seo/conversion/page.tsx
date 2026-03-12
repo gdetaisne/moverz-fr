@@ -1,8 +1,6 @@
+export const dynamic = "force-dynamic";
+
 import {
-  getConversionByCountry,
-  getConversionBySource,
-  getConversionByLandingPage,
-  type ConversionRow,
 } from "@/lib/seo/ga4";
 
 const PERIODS = [

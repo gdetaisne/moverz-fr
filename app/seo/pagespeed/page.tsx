@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { getLatestPagespeedResults, getPagespeedSummary } from "@/lib/seo/db";
 import { PagespeedTable } from "./PagespeedTable";
 
