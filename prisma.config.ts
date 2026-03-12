@@ -20,8 +20,9 @@ function loadEnv(): string {
     // ignore si pas de .env
   }
   const url = process.env.DATABASE_URL;
-  if (!url) throw new Error("DATABASE_URL manquant dans .env ou variables d'environnement");
-  return url;
+  // En build Docker (prisma generate), DATABASE_URL peut être absent.
+  // La vraie URL est injectée à runtime via les variables d'environnement CapRover.
+  return url ?? "postgresql://placeholder:placeholder@localhost:5432/placeholder";
 }
 
 export default defineConfig({
