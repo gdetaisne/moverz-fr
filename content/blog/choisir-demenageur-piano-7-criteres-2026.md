@@ -534,7 +534,7 @@ Total TTC : 650€
 ✅ **Expérience piano vérifiée** : 30+ pianos/an minimum  
 ✅ **Matériel spécialisé** : Chariot piano, sangles renforcées, housses  
 ✅ **3 analyses de risque /100** :
-- Financier (Creditsafe + Pappers) → Pas de risque faillite
+- Financier (Pappers) → Pas de risque faillite
 - Juridique (Pappers Décisions) → Pas de litiges graves
 - Avis Google → Note 4,0+ / 5  
 ✅ **Assurance ad valorem** : Jusqu'à 50 000€  

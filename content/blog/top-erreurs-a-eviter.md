@@ -603,7 +603,7 @@ Avec Moverz :
 
 Avec Moverz :
 - **Prix** : Vous voyez les fourchettes
-- **3 scores /100** : financier (Creditsafe + Pappers), juridique (Pappers Décisions), avis Google
+- **3 scores /100** : financier (Pappers), juridique (Pappers Décisions), avis Google
 - **Alertes** : déménageurs avec alerte cash ou juridique exclus automatiquement
 
 **→ Choisissez le meilleur rapport qualité/prix** (pas forcément le moins cher) ✅

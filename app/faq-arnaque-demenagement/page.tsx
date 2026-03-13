@@ -12,54 +12,54 @@ export const metadata: Metadata = getFullMetadata(
 export default function FaqArnaqueDemenagementPage() {
   const faqs: FAQItem[] = [
     {
-      question: "Quels sont les signaux d’alerte les plus fréquents ?",
+      question: "Quels sont les signaux d'alerte les plus frequents ?",
       answer:
-        "Identité légale floue (pas de SIREN/SIRET), devis trop vague, pression pour payer vite, acompte très élevé, refus de fournir assurance/Kbis, incohérences entre devis et RIB, estimation au téléphone sans base, et conditions d’annulation absentes.",
+        "Identite legale floue (pas de SIREN/SIRET), devis trop vague, pression pour payer vite, acompte tres eleve, refus de fournir assurance/Kbis, incoherences entre devis et RIB, estimation au telephone sans base, et conditions d'annulation absentes.",
     },
     {
-      question: "Un déménageur peut-il exiger un supplément le jour J ?",
+      question: "Un demenageur peut-il exiger un supplement le jour J ?",
       answer:
-        "Un ajustement est possible si le devis le prévoit et si le périmètre réel diffère (volume, accès, attentes, prestations ajoutées). Le risque baisse fortement si l’estimation est faite via visite/visio et si le devis décrit clairement les conditions de révision.",
+        "Un ajustement est possible si le devis le prevoit et si le perimetre reel differe (volume, acces, attentes, prestations ajoutees). Le risque baisse fortement si l'estimation est faite via visite/visio et si le devis decrit clairement les conditions de revision.",
     },
     {
       question: "Quel acompte est raisonnable ?",
       answer:
-        "Un acompte existe souvent, mais il doit rester proportionné et être écrit dans le devis (montant, date, conditions). Méfiez-vous d’une demande de 100% avant prestation ou d’un paiement non traçable.",
+        "Un acompte existe souvent, mais il doit rester proportionne et etre ecrit dans le devis (montant, date, conditions). Mefiez-vous d'une demande de 100% avant prestation ou d'un paiement non tracable.",
     },
     {
       question: "Quels documents demander avant de signer ?",
       answer:
-        "Un devis écrit détaillé, un extrait Kbis récent (ou équivalent), une attestation d’assurance à jour (périmètre + franchise), et les coordonnées complètes de la société (raison sociale, SIREN/SIRET, adresse).",
+        "Un devis ecrit detaille, un extrait Kbis recent (ou equivalent), une attestation d'assurance a jour (perimetre + franchise), et les coordonnees completes de la societe (raison sociale, SIREN/SIRET, adresse).",
     },
     {
-      question: "Comment vérifier qu'un déménageur est fiable ?",
+      question: "Comment verifier qu'un demenageur est fiable ?",
       answer:
-        "Vérifiez le SIREN/SIRET (annuaire officiel ou Kbis). Pour aller plus loin, Moverz évalue chaque déménageur selon 3 analyses de risque notées /100 : expérience client (avis Google analysés), risque financier (Creditsafe + Pappers + ratio cash/dettes), risque juridique (décisions de justice via Pappers). Les déménageurs avec alertes financières ou juridiques sont exclus automatiquement.",
+        "Verifiez le SIREN/SIRET (annuaire officiel ou Kbis). Pour aller plus loin, Moverz evalue chaque demenageur selon un score /100 automatique (sante financiere Pappers, casier judiciaire BODACC, avis clients analyses). Gratuit et instantane : consultez le <a href='/label-moverz/' class='underline' style='color: var(--color-accent)'>Label Moverz - verifier un demenageur</a>. Les demenageurs avec alertes financieres ou juridiques sont exclus automatiquement.",
     },
     {
-      question: "Que doit contenir un devis de déménagement fiable ?",
+      question: "Que doit contenir un devis de demenagement fiable ?",
       answer:
-        "Les prestations incluses vs options, les dates, les accès (étage/ascenseur/portage/stationnement), la méthode d’estimation du volume, les assurances (franchise, plafonds), les conditions de paiement, et les conditions d’annulation.",
+        "Les prestations incluses vs options, les dates, les acces (etage/ascenseur/portage/stationnement), la methode d'estimation du volume, les assurances (franchise, plafonds), les conditions de paiement, et les conditions d'annulation.",
     },
     {
-      question: "Sous-traitance : est-ce un problème ?",
+      question: "Sous-traitance : est-ce un probleme ?",
       answer:
-        "Pas forcément, mais cela doit être transparent. Demandez qui exécute la prestation (nom, documents, assurance) et qui porte la responsabilité contractuelle. Une sous-traitance cachée augmente le risque de litige.",
+        "Pas necessairement, mais cela doit etre transparent. Demandez qui execute la prestation (nom, documents, assurance) et qui porte la responsabilite contractuelle. Une sous-traitance cachee augmente le risque de litige.",
     },
     {
-      question: "Quelle assurance couvre réellement mes biens ?",
+      question: "Quelle assurance couvre reellement mes biens ?",
       answer:
-        "Le déménageur a une responsabilité, mais l’indemnisation dépend souvent de la déclaration de valeur, des plafonds et de la franchise. Lisez les conditions, demandez l’attestation d’assurance, et faites une déclaration de valeur réaliste.",
+        "Le demenageur a une responsabilite, mais l'indemnisation depend souvent de la declaration de valeur, des plafonds et de la franchise. Lisez les conditions, demandez l'attestation d'assurance, et faites une declaration de valeur realiste.",
     },
     {
-      question: "Puis-je accepter un devis “au téléphone” ?",
+      question: "Puis-je accepter un devis au telephone ?",
       answer:
-        "C’est déconseillé : sans visite/visio, le volume et les accès sont souvent mal estimés. Exigez un devis écrit et une base d’estimation documentée avant de vous engager.",
+        "C'est deconseille : sans visite/visio, le volume et les acces sont souvent mal estimes. Exigez un devis ecrit et une base d'estimation documentee avant de vous engager.",
     },
     {
-      question: "Que faire en cas de problème (retard, casse, litige) ?",
+      question: "Que faire en cas de probleme (retard, casse, litige) ?",
       answer:
-        "Conservez tous les échanges et le devis, notez les réserves par écrit (sur documents de livraison si applicable), documentez l'état, et contactez l’entreprise rapidement. En cas de désaccord, privilégiez une trace écrite et informez-vous sur les voies de recours (médiation, assurance, protection juridique).",
+        "Conservez tous les echanges et le devis, notez les reserves par ecrit (sur documents de livraison si applicable), documentez l'etat, et contactez l'entreprise rapidement. En cas de desaccord, privilegiez une trace ecrite et informez-vous sur les voies de recours (mediation, assurance, protection juridique).",
     },
   ];
 
@@ -72,7 +72,7 @@ export default function FaqArnaqueDemenagementPage() {
         ]}
         eyebrow="FAQ factuelle"
         title="FAQ arnaques déménagement"
-        subtitle="10 questions-réponses factuelles pour reconnaître les signaux d’alerte, demander les bons documents, et réduire le risque de mauvaises surprises."
+        subtitle="10 questions-réponses factuelles pour reconnaître les signaux d'alerte, demander les bons documents, et réduire le risque de mauvaises surprises."
         primaryCta={{ label: "Aller aux questions", href: "#faq" }}
         secondaryCta={{ label: "Lire le guide long", href: "/blog/eviter-arnaques-demenagement/" }}
       />
@@ -91,16 +91,23 @@ export default function FaqArnaqueDemenagementPage() {
                 Une estimation basée sur visite/visio réduit les écarts de volume et les ambiguïtés du devis.
               </p>
             </div>
-            <a
-              href="/comment-ca-marche/"
-              className="inline-flex items-center justify-center rounded-full bg-[var(--color-bg-dark)] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[var(--color-bg-dark)] transition-colors"
-            >
-              Voir une méthode d’estimation plus solide →
-            </a>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="/label-moverz/"
+                className="inline-flex items-center justify-center rounded-full bg-[var(--color-accent)] px-6 py-3 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
+              >
+                Vérifier un déménageur →
+              </a>
+              <a
+                href="/comment-ca-marche/"
+                className="inline-flex items-center justify-center rounded-full bg-[var(--color-bg-dark)] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[var(--color-bg-dark)] transition-colors"
+              >
+                Voir une méthode d'estimation plus solide →
+              </a>
+            </div>
           </div>
         </div>
       </section>
     </main>
   );
 }
-

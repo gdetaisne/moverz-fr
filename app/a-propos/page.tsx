@@ -38,7 +38,7 @@ const organizationSchema = {
   url: "https://moverz.fr/",
   logo: "https://moverz.fr/logo.png",
   description:
-    "Moverz est le seul comparateur de déménagement zéro démarchage en France. Dossier qualifié, déménageurs vérifiés (Creditsafe + Pappers + avis Google), 3-5 devis comparables.",
+    "Moverz est le seul comparateur de déménagement zéro démarchage en France. Dossier qualifié, déménageurs vérifiés (Pappers + avis Google), 3-5 devis comparables.",
   foundingDate: "2025",
   founders: [
     { "@id": "https://moverz.fr/#person-guillaume-stehelin" },
@@ -273,7 +273,7 @@ export default function AProposPage() {
               {
                 Icon: ShieldCheck,
                 title: "Déménageurs vérifiés",
-                text: "3 analyses de risque /100 : solidité financière (Creditsafe + Pappers), avis clients (Google), risque juridique (Pappers Décisions). Alertes = exclusion automatique.",
+                text: "3 analyses de risque /100 : solidité financière (Pappers), avis clients (Google), risque juridique (Pappers Décisions). Alertes = exclusion automatique.",
               },
               {
                 Icon: TrendingDown,

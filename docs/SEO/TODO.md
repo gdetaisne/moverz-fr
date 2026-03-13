@@ -1,5 +1,5 @@
 # TODO SEO — moverz.fr
-**Dernière mise à jour : 11 mars 2026**  
+**Dernière mise à jour : 12 mars 2026**  
 **Analyse source : `SEO_11032026_ANALYSE.md`**  
 **Baseline : ~85 clics/sem | CTR 0.7% | Pos moy 29.4**  
 **Objectif 60j : ~170 clics/sem (×2)**
@@ -11,55 +11,77 @@
 
 ## P0 — Cette semaine (impact J+7 à J+14)
 
-- [ ] **#1** Mettre à jour dates "2025"→"2026" dans les titles de 3 articles + remplacer "CreditSafe"→"Pappers"
-  - `/blog/prix-demenageur-rouen-2025/` → "Prix Déménageur Rouen 2026 : Tarifs & Devis Gratuit"
-  - `/blog/prix-garde-meuble-montpellier-2025/` → "Prix Garde-Meuble Montpellier 2026 : Comparatif Tarifs"
-  - `/blog/meilleur-demenageur-rennes-2025/` → "Meilleur Déménageur Rennes 2026 : Top 5 Vérifiés"
-  - Fichier : `lib/blog-extra.ts`
+- [x] **#1** Mettre à jour dates "2025"→"2026" dans les titles de 3 articles + remplacer "CreditSafe"→"Pappers"
+  - ✅ **Titles 2026** : overrides en place (`blog-meta-overrides.ts`) — Rouen, Montpellier, Rennes
+  - ✅ **CreditSafe→Pappers** : fait (lib, blog-nouveaux-2026, blog-arnaques, blog-markdown, corridors, app, content/blog)
+  - **Réalisé le 13 mars 2026**
 
-- [ ] **#2** Réécrire titles/meta des 8 pages à 0% CTR (100+ impressions)
-  - `/blog/shurgard-lyon-sites-tarifs/` → "Shurgard Lyon : Prix, Adresses et Alternatives Moins Chères"
-  - `/blog/meilleurs-demenageurs-lyon/` → "Top 7 Déménageurs Lyon Vérifiés Pappers (2026)"
-  - `/blog/comparatif-formules-economiques-demenagement-nantes/` → "Déménagement Nantes Pas Cher : Comparatif Prix 2026"
-  - `/blog/comparer-plateformes-devis-demenagement-2026/` → "Comparateur Déménagement : Quel Site Choisir en 2026 ?"
-  - Améliorer aussi les meta descriptions (template : bénéfice → différenciateur → CTA)
-  - Fichier : `lib/blog-extra.ts`
+- [x] **#2** Réécrire titles/meta des 8 pages à 0% CTR (100+ impressions)
+  - ✅ Shurgard Lyon, meilleurs déménageurs Lyon, Nantes formules éco, comparateur plateformes, piano Nantes — overrides SEO style Moverz
+  - ✅ Meta descriptions : chiffres, USP (vérifiés Pappers, 3–5 devis, 0 harcèlement), CTA implicite
+  - **Réalisé le 13 mars 2026** — Fichier : `lib/seo/blog-meta-overrides.ts`
+
+- [ ] **#3a** Audit contenu blog — prioriser réécriture contenu squelettique
+  - Rapport : `docs/SEO/AUDIT-CONTENU-BLOG.md` (régénérer via `pnpm run seo:audit-blog`)
+  - **543 articles** trop fins (TRÈS FIN + FIN) dont 414 < 200 mots
+  - P0 : retirer du sitemap ou réécrire les TRÈS FIN en sitemap
+  - P1 : réécrire contenu squelettique réel (ex. `meilleurs-demenageurs-lyon`, ~80 mots, dans sitemap)
+  - P2 : noindex placeholders `article-satellite-XX-placeholder`
+  - Détail : section "Audit contenu blog" dans `docs/SEO/RECAP-SEO-12-MARS-2026.md`
 
 - [ ] **#3** Créer 4 articles "comparatif déménageurs [ville] 2026"
-  - `/blog/comparatif-demenageurs-rennes-2026/` (81 impr, pos 7.6, 0 clic)
-  - `/blog/comparatif-demenageurs-marseille-2026/` (40 impr, pos 8.8, 0 clic)
-  - `/blog/comparatif-demenageurs-bordeaux-2026/` (40 impr, pos 8.7, 0 clic)
-  - `/blog/comparatif-demenageurs-lyon-2026/` (64 impr, pos 10.6, 0 clic)
+  - [x] `/blog/comparatif-demenageurs-rennes-2026/` (81 impr, pos 7.6, 0 clic) — ✅ **Réalisé** (tableau 5 acteurs, section Label Moverz, FAQ)
+  - [x] `/blog/comparatif-demenageurs-marseille-2026/` (40 impr, pos 8.8, 0 clic) — ✅ **Réalisé** (tableau 5 acteurs, Label Moverz, FAQ)
+  - [x] `/blog/comparatif-demenageurs-bordeaux-2026/` (40 impr, pos 8.7, 0 clic) — ✅ **Réalisé**
+  - [x] `/blog/comparatif-demenageurs-lyon-2026/` (64 impr, pos 10.6, 0 clic) — ✅ **Réalisé**
   - Format : tableau comparatif 5 déménageurs, 800–1200 mots, FAQ schema, attribution Lucie
+  - **Ton Moverz** : fun, personnel (« on », « nous »), E-E-A-T (chiffres, sources, Lucie), SEO (mots-clés naturels, structure claire)
 
-- [ ] **#4** Enrichir `/comparateur-demenageurs/` (pos 23–29, 64–117 impr, 0 clic)
-  - H1 exact : "Comparateur de Déménageurs"
-  - Tableau comparatif visible above the fold
-  - FAQ schema "comparateur déménagement"
+- [x] **#4** Enrichir `/comparateur-demenageurs/` (pos 23–29, 64–117 impr, 0 clic)
+  - ✅ H1 exact : "Comparateur de Déménageurs"
+  - ✅ Tableau comparatif visible above the fold (juste après Hero)
+  - ✅ FAQ schema "comparateur déménagement"
+  - ✅ Creditsafe → Pappers dans le tableau
+  - **Réalisé**
 
-- [ ] **#5** `/label-moverz/` — indexation GSC + réécrire H1/title
-  - GSC → Inspection d'URL → "Demander l'indexation"
-  - Title : "Vérifier un Déménageur : Score Fiabilité /100 Gratuit | Moverz"
-  - H1 : "Vérifiez la fiabilité de votre déménageur en 30 secondes"
-  - Meta : "Score /100 gratuit : santé financière (Pappers), alertes BODACC, avis 12 mois. 3 000+ déménageurs. 0 faillite."
-  - Fichier : `app/label-moverz/page.tsx`
+- [x] **#5** `/label-moverz/` — indexation GSC + réécrire H1/title
+  - ✅ GSC → Inspection d'URL → "Demander l'indexation" (fait manuellement)
+  - ✅ H1 : "Vérifiez la fiabilité de votre déménageur en 30 secondes" (`LabelMoverzHero.tsx`)
+  - ✅ Title déjà optimal : "Vérifier un Déménageur : Score Fiabilité /100 Gratuit | Moverz"
+  - **Réalisé le 12 mars 2026**
 
-- [x] **#6** Ajouter photos sur toutes les pages ville (landmark + alt optimisé)
-  - ✅ Composant `CityPhoto.tsx` créé et intégré dans `app/demenagement/[slug]/page.tsx`
-  - 13 villes mappées avec photos Unsplash + fallback
+- [x] **#6** Ajouter photos sur toutes les pages ville (landmark + déménageur + SEO avancé)
+  - ✅ **80 photos landmarks** (Phase 1 + 2 + 3 complètes) + 3 déménageurs dans `public/images/cities/`
+  - ✅ 2 photos par ville : landmark + déménageur en action
+  - ✅ Nommage SEO : `bordeaux-miroir-eau-quais.jpg`, `demenageur-professionnel-cartons-transport.jpg`
+  - ✅ Alt text + title attributes optimisés (keywords "Déménagement [Ville]")
+  - ✅ ImageObject schema pour Google Images (`ImageObjectSchema.tsx`)
+  - ✅ Helper `lib/seo/city-photos.ts` pour métadonnées
+  - **Réalisé le 12 mars 2026** — Phases 1 (20), 2 (35), 3 (25 villes). Voir `PHOTOS-SEO-IMPLEMENTATION.md`
+
+- [x] **#6b** Indexer l'article "Pourquoi Moverz" sur GSC
+  - URL : `https://moverz.fr/blog/pourquoi-moverz-meilleur-comparateur-demenagement/`
+  - GSC → Inspection d'URL → coller l'URL → "Demander l'indexation"
+  - **Réalisé**
+
+- [ ] **#6c** Indexer l'article "Moverz vs concurrents" sur GSC (demain)
+  - URL : `https://moverz.fr/blog/moverz-vs-concurrents-comparateur-demenagement/`
+  - GSC → Inspection d'URL → coller l'URL → "Demander l'indexation"
 
 ---
 
 ## P1 — Semaines 2–3 (impact J+14 à J+30)
 
-- [ ] **#7** Consolider cannibalisation "demenageur strasbourg tarif" (9 pages, 159 impr, 0 clic)
-  - Page canonique : `/blog/prix-demenageur-strasbourg-2026/`
-  - Ajouter `canonical` sur les 8 autres pages Strasbourg prix
-  - Enrichir la page canonique à 1 500+ mots
+- [x] **#7** Consolider cannibalisation "demenageur strasbourg tarif" (9 pages, 159 impr, 0 clic)
+  - ✅ Page canonique : `/blog/prix-demenageur-strasbourg-2026/`
+  - ✅ Canonical ajouté sur 11 pages Strasbourg prix → `lib/seo/blog-canonical-overrides.ts`
+  - **À faire** : Enrichir la page canonique à 1 500+ mots
+  - **Réalisé le 13 mars 2026**
 
-- [ ] **#8** Consolider cannibalisation "devis déménagement bordeaux" (3 pages, 310 impr, 0 clic)
-  - La page ville pos 22 est la canonique
-  - Canonical blog → ville sur les 2 articles blog
+- [x] **#8** Consolider cannibalisation "devis déménagement bordeaux" (3 pages, 310 impr, 0 clic)
+  - ✅ La page ville `/demenagement/bordeaux/` est la canonique
+  - ✅ Canonical blog → ville sur 5 articles devis Bordeaux
+  - **Réalisé le 13 mars 2026** — Fichier : `lib/seo/blog-canonical-overrides.ts`
 
 - [ ] **#9** Créer 4 articles "devis déménagement [ville] 2026" (~727 impr combinées, 0 clic)
   - `/blog/devis-demenagement-bordeaux-2026/` (296 impr, pos 24.7)

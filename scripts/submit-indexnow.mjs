@@ -2,12 +2,37 @@
 /**
  * Script pour soumettre les URLs à Bing via IndexNow
  * https://www.indexnow.org/
+ *
+ * ⏰ Si 429 Too Many Requests : attendre 2-4h puis réessayer.
+ * Voir docs/SEO/REMINDER-BING-INDEXNOW.md
  */
 
 const URLS_TO_SUBMIT = [
   // Landing page Label Moverz (nouvelle)
   'https://moverz.fr/label-moverz/',
   
+  // Article Pourquoi Moverz (2026-03-12)
+  'https://moverz.fr/blog/pourquoi-moverz-meilleur-comparateur-demenagement/',
+  
+  // Article Pourquoi Moverz (blog)
+  'https://moverz.fr/blog/pourquoi-moverz-meilleur-comparateur-demenagement/',
+
+  // Article Moverz vs concurrents (2026-03-12)
+  'https://moverz.fr/blog/moverz-vs-concurrents-comparateur-demenagement/',
+
+  // Article Comparatif déménageurs Rennes 2026
+  'https://moverz.fr/blog/comparatif-demenageurs-rennes-2026/',
+
+  // Article Comparatif déménageurs Rennes 2026 (2026-03-12)
+  'https://moverz.fr/blog/comparatif-demenageurs-rennes-2026/',
+
+  // Article Comparatif déménageurs Marseille 2026
+  'https://moverz.fr/blog/comparatif-demenageurs-marseille-2026/',
+
+  // Articles comparatif villes 2026
+  'https://moverz.fr/blog/comparatif-demenageurs-bordeaux-2026/',
+  'https://moverz.fr/blog/comparatif-demenageurs-lyon-2026/',
+
   // Nouveaux articles blog (7 articles)
   'https://moverz.fr/blog/label-moverz-certification-demenageurs/',
   'https://moverz.fr/blog/demenager-piano-prix-contraintes-guide-2026/',

@@ -581,7 +581,7 @@ export function PremiumCorridorPage({
           </h2>
 
           <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
-            Créez votre dossier en 3 minutes et recevez des devis de déménageurs contrôlés Creditsafe.
+            Créez votre dossier en 3 minutes et recevez des devis de déménageurs contrôlés Pappers.
           </p>
 
           <div className="pt-4">

@@ -17,7 +17,7 @@ export function VerificationSection() {
                   des entreprises. Point.
                 </>
               }
-              description="Chaque déménageur est évalué sur 3 risques /100 : financier (Creditsafe + Pappers), juridique (Pappers Décisions) et expérience client (Google Reviews). Alertes cash ou juridiques = exclusion automatique."
+              description="Chaque déménageur est évalué sur 3 risques /100 : financier (Pappers), juridique (Pappers Décisions) et expérience client (Google Reviews). Alertes cash ou juridiques = exclusion automatique."
               className="text-[rgb(var(--primary-contrast))]"
             />
             <p className="text-sm text-[rgb(var(--primary-contrast))]/70">

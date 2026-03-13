@@ -33,8 +33,9 @@ Un particulier ne peut pas :
 
 **C'est pour ça qu'existe le Score Moverz.**
 
-> **Comparez des déménageurs notés /100**  
-> [Moverz](/) attribue à chaque déménageur un score de 0 à 100 basé sur 3 dimensions (fiabilité légale, satisfaction clients, alertes). Monitoring continu, exclusion automatique. Créez votre dossier gratuitement sur [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-label).
+> **Vérifiez un déménageur en 30 secondes**  
+> Consultez le score /100 de n'importe quel déménageur, gratuit et sans inscription : [Label Moverz — outil de vérification](/label-moverz/).  
+> Ou créez votre dossier pour recevoir des devis de déménageurs notés : [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-label).
 
 ---
 
@@ -411,6 +412,16 @@ Au-delà du score /100, chaque déménageur doit avoir :
 
 ## Comment voir le Score Moverz ?
 
+### Outil de vérification gratuit (Label Moverz)
+
+**Consultez le score de n'importe quel déménageur en 30 secondes** — nom, ville ou SIRET. Gratuit, sans inscription, résultat immédiat.
+
+→ [Vérifier un déménageur sur moverz.fr/label-moverz/](/label-moverz/)
+
+Cet outil affiche le score global /100, les 3 dimensions (fiabilité légale, satisfaction clients, alertes), et les 6 catégories de vigilance. Jusqu'à 3 vérifications gratuites par session.
+
+---
+
 ### Sur les devis que vous recevez
 
 Chaque devis envoyé via Moverz affiche le score global + les 3 dimensions en transparence totale :
@@ -649,9 +660,21 @@ Que chaque Français qui déménage puisse répondre en 10 secondes :
 
 ---
 
-### Articles connexes
+### Articles connexes et cluster vérification
 
+**Pilier (outil de vérification) :**
+- [Label Moverz — Vérifier un déménageur en 30 secondes](/label-moverz/) *(outil gratuit, score /100)*
+
+**Guides arnaques et fiabilité :**
 - [Comment éviter les arnaques au déménagement (Guide 2026)](/blog/eviter-arnaques-demenagement/)
-- [257 déménageurs en faillite en 2024 : Chiffres clés](/chiffres-cles/)
-- [Nos vérifications partenaires (Page officielle)](/verifications-partenaires/)
-- [8 critères pour choisir un déménageur fiable](/criteres-choisir-demenageur/)
+- [Comment vérifier qu'un déménageur est fiable](/blog/comment-verifier-demenageur-fiable/)
+- [Vérifier un déménageur : SIREN, Pappers, assurance](/blog/verifier-demenageur-creditsafe-siren/)
+- [Éviter les suppléments de prix le jour J](/blog/supplement-prix-jour-j-comment-eviter/)
+
+**Pages utiles :**
+- [Chiffres clés du marché](/chiffres-cles/)
+- [Nos vérifications partenaires](/verifications-partenaires/)
+- [Critères pour choisir un déménageur](/criteres-choisir-demenageur/)
+- [Comparateur de déménageurs](/comparateur-demenageurs/)
+- [FAQ arnaques déménagement](/faq-arnaque-demenagement/)
+- [FAQ déménagement](/faq/)

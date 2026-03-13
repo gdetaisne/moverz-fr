@@ -93,6 +93,12 @@
 
 ---
 
+## ✅ À faire demain
+
+- [x] **Indexer sur GSC** : https://moverz.fr/blog/moverz-vs-concurrents-comparateur-demenagement/ (demande faite)
+
+---
+
 ## 💡 Notes de Lucie
 
 - Ce fichier sert de **vue courte** sur ce qui compte pour moi sur `moverz.fr`.  

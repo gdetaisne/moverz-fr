@@ -11,7 +11,7 @@ import { JsonLd } from "@/components/schema/JsonLd";
 
 export const metadata: Metadata = baseGenerateMetadata(
   "comparateur-demenageurs",
-  `Comparateur de Déménagement : Guide Complet 2026 (Moverz vs Alternatives)`,
+  `Comparateur de Déménageurs : Guide 2026 (Moverz vs Alternatives)`,
   "Choisir le meilleur comparateur de déménagement en 2026 : Score /100 (3 dimensions : fiabilité légale, satisfaction clients, alertes), devis comparables, anonymat. Moverz vs plateformes classiques vs contact direct."
 );
 
@@ -19,7 +19,7 @@ const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "@id": "https://moverz.fr/comparateur-demenageurs/",
-  name: "Comparateur de Déménagement : Guide Complet 2026",
+  name: "Comparateur de Déménageurs : Guide 2026",
   description: "Choisir le meilleur comparateur de déménagement en 2026 : Score /100 (3 dimensions), devis comparables, anonymat. Moverz vs alternatives.",
   url: "https://moverz.fr/comparateur-demenageurs/",
   inLanguage: "fr-FR",
@@ -29,7 +29,7 @@ const webPageSchema = {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Accueil", item: "https://moverz.fr/" },
-      { "@type": "ListItem", position: 2, name: "Comparateur de déménagement", item: "https://moverz.fr/comparateur-demenageurs/" },
+      { "@type": "ListItem", position: 2, name: "Comparateur de déménageurs", item: "https://moverz.fr/comparateur-demenageurs/" },
     ],
   },
 };
@@ -108,6 +108,9 @@ export default function ComparateurDemenageursPage() {
       <FAQSchema faqs={faqs} />
       {/* Hero */}
       <ComparisonHero />
+
+      {/* Tableau comparatif — above the fold pour SEO */}
+      <ComparisonTable />
 
       {/* Section intro : Pourquoi utiliser un comparateur */}
       <section className="section section-light">
@@ -237,9 +240,6 @@ export default function ComparateurDemenageursPage() {
           </div>
         </div>
       </section>
-
-      {/* Comparison Table */}
-      <ComparisonTable />
 
       {/* Section différence Moverz */}
       <section className="section section-light">

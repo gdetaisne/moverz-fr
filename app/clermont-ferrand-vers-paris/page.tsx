@@ -1,0 +1,7 @@
+import { PremiumCorridorPage, generatePremiumCorridorMetadata } from "@/components/templates/PremiumCorridorPage";
+
+export const metadata = generatePremiumCorridorMetadata('clermont-ferrand', 'paris');
+
+export default function Page() {
+  return <PremiumCorridorPage originSlug="clermont-ferrand" destinationSlug="paris" />;
+}

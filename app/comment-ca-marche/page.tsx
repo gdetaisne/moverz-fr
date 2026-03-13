@@ -22,7 +22,7 @@ export const metadata: Metadata = getFullMetadata(
 export default function CommentCaMarchePage() {
   const faqItems = [
     { question: "Combien ça coûte ?", answer: "Le service Moverz est 100% gratuit pour les particuliers. Vous ne payez que le déménageur que vous choisissez." },
-    { question: "Comment choisissez-vous les déménageurs ?", answer: "Nous sélectionnons uniquement des déménageurs disponibles à vos dates exactes, vérifiés financièrement et juridiquement (Creditsafe + Pappers), avec expérience sur votre trajet." },
+    { question: "Comment choisissez-vous les déménageurs ?", answer: "Nous sélectionnons uniquement des déménageurs disponibles à vos dates exactes, vérifiés financièrement et juridiquement (Pappers), avec expérience sur votre trajet." },
     { question: "Vais-je recevoir des appels de spam ?", answer: "Non. Votre dossier est 100% anonyme. Vous recevez des devis écrits et comparables, puis vous décidez si et qui vous souhaitez contacter." },
     { question: "Combien de devis vais-je recevoir ?", answer: "Nous nous engageons à vous présenter 3 à 5 devis comparables sous 5 jours ouvrés." },
     { question: "Mes données sont-elles protégées ?", answer: "Oui. Nous appliquons le RGPD et ne transmettons votre dossier qu'aux déménageurs sollicités pour établir un devis, dans le cadre de votre demande." },

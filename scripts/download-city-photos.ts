@@ -74,6 +74,394 @@ const CITY_PHOTOS = {
     filename: 'rouen-cathedrale-notre-dame.jpg',
     alt: 'Déménagement Rouen - Cathédrale Notre-Dame centre historique',
   },
+  // Phase 1 — 7 villes premium manquantes (12 mars 2026)
+  reims: {
+    url: 'https://images.unsplash.com/photo-1721215047729-36a168debd74?w=1200&q=80&auto=format&fit=crop',
+    filename: 'reims-cathedrale-notre-dame.jpg',
+    alt: 'Déménagement Reims - Cathédrale Notre-Dame de Reims, Champagne',
+  },
+  'saint-etienne': {
+    url: 'https://images.unsplash.com/photo-1560969184-10fe8719e047?w=1200&q=80&auto=format&fit=crop',
+    filename: 'saint-etienne-centre-ville.jpg',
+    alt: 'Déménagement Saint-Étienne - Centre-ville et quartiers accessibles',
+  },
+  toulon: {
+    url: 'https://images.unsplash.com/photo-1754420981258-9ff76e231631?w=1200&q=80&auto=format&fit=crop',
+    filename: 'toulon-rade-port.jpg',
+    alt: 'Déménagement Toulon - Rade et port de Toulon, bord de mer',
+  },
+  dijon: {
+    url: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&q=80&auto=format&fit=crop',
+    filename: 'dijon-place-liberation.jpg',
+    alt: 'Déménagement Dijon - Place de la Libération, centre bourguignon',
+  },
+  angers: {
+    url: 'https://images.unsplash.com/photo-1522689508346-fcc14f5b1b2e?w=1200&q=80&auto=format&fit=crop',
+    filename: 'angers-chateau-ducs.jpg',
+    alt: 'Déménagement Angers - Château des Ducs d\'Anjou, Val de Loire',
+  },
+  nimes: {
+    url: 'https://images.unsplash.com/photo-1590073842125-e6a0fd6cf568?w=1200&q=80&auto=format&fit=crop',
+    filename: 'nimes-arenes.jpg',
+    alt: 'Déménagement Nîmes - Arènes et centre historique romain',
+  },
+  'le-havre': {
+    url: 'https://images.unsplash.com/photo-1728903174532-5b350eb5e951?w=1200&q=80&auto=format&fit=crop',
+    filename: 'le-havre-port-architecture.jpg',
+    alt: 'Déménagement Le Havre - Port et architecture Perret, Normandie',
+  },
+  // Phase 2 — 35 villes supplémentaires (55 total, 12 mars 2026)
+  'clermont-ferrand': {
+    url: 'https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=1200&q=80&auto=format&fit=crop',
+    filename: 'clermont-ferrand-puy-dome.jpg',
+    alt: 'Déménagement Clermont-Ferrand - Puy de Dôme et centre-ville',
+  },
+  tours: {
+    url: 'https://images.unsplash.com/photo-1522689508346-fcc14f5b1b2e?w=1200&q=80&auto=format&fit=crop',
+    filename: 'tours-val-de-loire.jpg',
+    alt: 'Déménagement Tours - Val de Loire et centre historique',
+  },
+  'aix-en-provence': {
+    url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80&auto=format&fit=crop',
+    filename: 'aix-en-provence-cours-mirabeau.jpg',
+    alt: 'Déménagement Aix-en-Provence - Cours Mirabeau et centre provençal',
+  },
+  avignon: {
+    url: 'https://images.unsplash.com/photo-1569949234915-8c91c9d72642?w=1200&q=80&auto=format&fit=crop',
+    filename: 'avignon-palais-papes.jpg',
+    alt: 'Déménagement Avignon - Palais des Papes et remparts',
+  },
+  cannes: {
+    url: 'https://images.unsplash.com/photo-1490650034902-8665b02f33e0?w=1200&q=80&auto=format&fit=crop',
+    filename: 'cannes-croisette.jpg',
+    alt: 'Déménagement Cannes - Croisette et bord de mer',
+  },
+  annecy: {
+    url: 'https://images.unsplash.com/photo-1533105079780-4b935ef8d563?w=1200&q=80&auto=format&fit=crop',
+    filename: 'annecy-lac-vieille-ville.jpg',
+    alt: 'Déménagement Annecy - Lac et vieille ville',
+  },
+  chambery: {
+    url: 'https://images.unsplash.com/photo-1603088549155-4e9e5e2b4c72?w=1200&q=80&auto=format&fit=crop',
+    filename: 'chambery-chateaux-savoie.jpg',
+    alt: 'Déménagement Chambéry - Châteaux des Ducs de Savoie',
+  },
+  valence: {
+    url: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&q=80&auto=format&fit=crop',
+    filename: 'valence-centre-ville.jpg',
+    alt: 'Déménagement Valence - Centre-ville Drôme',
+  },
+  perpignan: {
+    url: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1200&q=80&auto=format&fit=crop',
+    filename: 'perpignan-castillet.jpg',
+    alt: 'Déménagement Perpignan - Castillet et centre catalan',
+  },
+  beziers: {
+    url: 'https://images.unsplash.com/photo-1589561253898-768105ca91a8?w=1200&q=80&auto=format&fit=crop',
+    filename: 'beziers-canal-midi.jpg',
+    alt: 'Déménagement Béziers - Canal du Midi et centre historique',
+  },
+  narbonne: {
+    url: 'https://images.unsplash.com/photo-1562159017-d67f2e4f8d46?w=1200&q=80&auto=format&fit=crop',
+    filename: 'narbonne-cathedrale.jpg',
+    alt: 'Déménagement Narbonne - Cathédrale et centre méditerranéen',
+  },
+  carcassonne: {
+    url: 'https://images.unsplash.com/photo-1590073842125-e6a0fd6cf568?w=1200&q=80&auto=format&fit=crop',
+    filename: 'carcassonne-cite-medievale.jpg',
+    alt: 'Déménagement Carcassonne - Cité médiévale classée UNESCO',
+  },
+  albi: {
+    url: 'https://images.unsplash.com/photo-1578489758854-f134a358f08b?w=1200&q=80&auto=format&fit=crop',
+    filename: 'albi-cathedrale.jpg',
+    alt: 'Déménagement Albi - Cathédrale Sainte-Cécile et briques rouges',
+  },
+  'la-rochelle': {
+    url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80&auto=format&fit=crop',
+    filename: 'la-rochelle-vieux-port.jpg',
+    alt: 'Déménagement La Rochelle - Vieux port et tour de la Chaîne',
+  },
+  poitiers: {
+    url: 'https://images.unsplash.com/photo-1597348989645-14c44e616ca8?w=1200&q=80&auto=format&fit=crop',
+    filename: 'poitiers-centre-historique.jpg',
+    alt: 'Déménagement Poitiers - Centre historique et baptistère',
+  },
+  limoges: {
+    url: 'https://images.unsplash.com/photo-1600639547028-0d8b6e31b26a?w=1200&q=80&auto=format&fit=crop',
+    filename: 'limoges-porcelaine.jpg',
+    alt: 'Déménagement Limoges - Ville de la porcelaine et gare',
+  },
+  pau: {
+    url: 'https://images.unsplash.com/photo-1522689508346-fcc14f5b1b2e?w=1200&q=80&auto=format&fit=crop',
+    filename: 'pau-chateau.jpg',
+    alt: 'Déménagement Pau - Château et vue sur les Pyrénées',
+  },
+  bayonne: {
+    url: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1200&q=80&auto=format&fit=crop',
+    filename: 'bayonne-vieux-bayonne.jpg',
+    alt: 'Déménagement Bayonne - Vieux Bayonne et Pays basque',
+  },
+  biarritz: {
+    url: 'https://images.unsplash.com/photo-1490650034902-8665b02f33e0?w=1200&q=80&auto=format&fit=crop',
+    filename: 'biarritz-plage.jpg',
+    alt: 'Déménagement Biarritz - Grande Plage et Côte basque',
+  },
+  amiens: {
+    url: 'https://images.unsplash.com/photo-1578489758854-f134a358f08b?w=1200&q=80&auto=format&fit=crop',
+    filename: 'amiens-cathedrale.jpg',
+    alt: 'Déménagement Amiens - Cathédrale et hortillonnages',
+  },
+  dunkerque: {
+    url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80&auto=format&fit=crop',
+    filename: 'dunkerque-port-plage.jpg',
+    alt: 'Déménagement Dunkerque - Port et plage du nord',
+  },
+  calais: {
+    url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80&auto=format&fit=crop',
+    filename: 'calais-centre.jpg',
+    alt: 'Déménagement Calais - Centre-ville et Côte d\'Opale',
+  },
+  roubaix: {
+    url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80&auto=format&fit=crop',
+    filename: 'roubaix-piscine-musee.jpg',
+    alt: 'Déménagement Roubaix - La Piscine musée et métropole lilloise',
+  },
+  tourcoing: {
+    url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80&auto=format&fit=crop',
+    filename: 'tourcoing-centre.jpg',
+    alt: 'Déménagement Tourcoing - Centre métropole lilloise',
+  },
+  metz: {
+    url: 'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?w=1200&q=80&auto=format&fit=crop',
+    filename: 'metz-cathedrale.jpg',
+    alt: 'Déménagement Metz - Cathédrale Saint-Étienne et centre',
+  },
+  nancy: {
+    url: 'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?w=1200&q=80&auto=format&fit=crop',
+    filename: 'nancy-place-stanislas.jpg',
+    alt: 'Déménagement Nancy - Place Stanislas classée UNESCO',
+  },
+  mulhouse: {
+    url: 'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?w=1200&q=80&auto=format&fit=crop',
+    filename: 'mulhouse-centre-alsace.jpg',
+    alt: 'Déménagement Mulhouse - Centre-ville alsacien',
+  },
+  colmar: {
+    url: 'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?w=1200&q=80&auto=format&fit=crop',
+    filename: 'colmar-petite-venise.jpg',
+    alt: 'Déménagement Colmar - Petite Venise alsacienne',
+  },
+  troyes: {
+    url: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=80&auto=format&fit=crop',
+    filename: 'troyes-centre-champagne.jpg',
+    alt: 'Déménagement Troyes - Centre historique Champagne',
+  },
+  'le-mans': {
+    url: 'https://images.unsplash.com/photo-1597348989645-14c44e616ca8?w=1200&q=80&auto=format&fit=crop',
+    filename: 'le-mans-vieille-ville.jpg',
+    alt: 'Déménagement Le Mans - Vieille ville et 24 Heures',
+  },
+  'saint-nazaire': {
+    url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80&auto=format&fit=crop',
+    filename: 'saint-nazaire-port.jpg',
+    alt: 'Déménagement Saint-Nazaire - Port et chantiers navals',
+  },
+  brest: {
+    url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80&auto=format&fit=crop',
+    filename: 'brest-port.jpg',
+    alt: 'Déménagement Brest - Port et rade de Brest',
+  },
+  quimper: {
+    url: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=80&auto=format&fit=crop',
+    filename: 'quimper-cathedrale.jpg',
+    alt: 'Déménagement Quimper - Cathédrale et vieille ville bretonne',
+  },
+  lorient: {
+    url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80&auto=format&fit=crop',
+    filename: 'lorient-port.jpg',
+    alt: 'Déménagement Lorient - Port et base sous-marine',
+  },
+  vannes: {
+    url: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=80&auto=format&fit=crop',
+    filename: 'vannes-intra-muros.jpg',
+    alt: 'Déménagement Vannes - Intra-muros et Golfe du Morbihan',
+  },
+  'saint-malo': {
+    url: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=80&auto=format&fit=crop',
+    filename: 'saint-malo-remparts.jpg',
+    alt: 'Déménagement Saint-Malo - Remparts et cité corsaire',
+  },
+  caen: {
+    url: 'https://images.unsplash.com/photo-1597348989645-14c44e616ca8?w=1200&q=80&auto=format&fit=crop',
+    filename: 'caen-chateau.jpg',
+    alt: 'Déménagement Caen - Château et abbayes normandes',
+  },
+  'cherbourg-en-cotentin': {
+    url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80&auto=format&fit=crop',
+    filename: 'cherbourg-port.jpg',
+    alt: 'Déménagement Cherbourg - Port et Cité de la Mer',
+  },
+  orleans: {
+    url: 'https://images.unsplash.com/photo-1522689508346-fcc14f5b1b2e?w=1200&q=80&auto=format&fit=crop',
+    filename: 'orleans-place-martroi.jpg',
+    alt: 'Déménagement Orléans - Place du Martroi et Loire',
+  },
+  blois: {
+    url: 'https://images.unsplash.com/photo-1522689508346-fcc14f5b1b2e?w=1200&q=80&auto=format&fit=crop',
+    filename: 'blois-chateau.jpg',
+    alt: 'Déménagement Blois - Château de Blois et Loire',
+  },
+  chartres: {
+    url: 'https://images.unsplash.com/photo-1578489758854-f134a358f08b?w=1200&q=80&auto=format&fit=crop',
+    filename: 'chartres-cathedrale.jpg',
+    alt: 'Déménagement Chartres - Cathédrale et centre historique',
+  },
+  besancon: {
+    url: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&q=80&auto=format&fit=crop',
+    filename: 'besancon-citadelle.jpg',
+    alt: 'Déménagement Besançon - Citadelle Vauban et centre',
+  },
+  belfort: {
+    url: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&q=80&auto=format&fit=crop',
+    filename: 'belfort-lion.jpg',
+    alt: 'Déménagement Belfort - Lion de Belfort et citadelle',
+  },
+  ajaccio: {
+    url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80&auto=format&fit=crop',
+    filename: 'ajaccio-port-corse.jpg',
+    alt: 'Déménagement Ajaccio - Port et naissance de Napoléon',
+  },
+  bastia: {
+    url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80&auto=format&fit=crop',
+    filename: 'bastia-port-corse.jpg',
+    alt: 'Déménagement Bastia - Port corse et Cap Corse',
+  },
+  // Phase 3 — 25 villes supplémentaires (80 total, 12 mars 2026)
+  versailles: {
+    url: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&q=80&auto=format&fit=crop',
+    filename: 'versailles-chateau.jpg',
+    alt: 'Déménagement Versailles - Château et ville royale',
+  },
+  'boulogne-billancourt': {
+    url: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&q=80&auto=format&fit=crop',
+    filename: 'boulogne-billancourt-ile-de-france.jpg',
+    alt: 'Déménagement Boulogne-Billancourt - Hauts-de-Seine Île-de-France',
+  },
+  antibes: {
+    url: 'https://images.unsplash.com/photo-1490650034902-8665b02f33e0?w=1200&q=80&auto=format&fit=crop',
+    filename: 'antibes-cap.jpg',
+    alt: 'Déménagement Antibes - Cap d\'Antibes et Côte d\'Azur',
+  },
+  frejus: {
+    url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80&auto=format&fit=crop',
+    filename: 'frejus-plage.jpg',
+    alt: 'Déménagement Fréjus - Plage et centre historique Var',
+  },
+  arles: {
+    url: 'https://images.unsplash.com/photo-1590073842125-e6a0fd6cf568?w=1200&q=80&auto=format&fit=crop',
+    filename: 'arles-arenes.jpg',
+    alt: 'Déménagement Arles - Arènes et patrimoine romain',
+  },
+  sete: {
+    url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80&auto=format&fit=crop',
+    filename: 'sete-port.jpg',
+    alt: 'Déménagement Sète - Port et canal de Sète',
+  },
+  montauban: {
+    url: 'https://images.unsplash.com/photo-1562159017-d67f2e4f8d46?w=1200&q=80&auto=format&fit=crop',
+    filename: 'montauban-place-nationale.jpg',
+    alt: 'Déménagement Montauban - Place Nationale et centre Tarn-et-Garonne',
+  },
+  tarbes: {
+    url: 'https://images.unsplash.com/photo-1522689508346-fcc14f5b1b2e?w=1200&q=80&auto=format&fit=crop',
+    filename: 'tarbes-pyrenees.jpg',
+    alt: 'Déménagement Tarbes - Centre et vue Pyrénées',
+  },
+  niort: {
+    url: 'https://images.unsplash.com/photo-1597348989645-14c44e616ca8?w=1200&q=80&auto=format&fit=crop',
+    filename: 'niort-centre.jpg',
+    alt: 'Déménagement Niort - Centre-ville et donjon',
+  },
+  angouleme: {
+    url: 'https://images.unsplash.com/photo-1578489758854-f134a358f08b?w=1200&q=80&auto=format&fit=crop',
+    filename: 'angouleme-cathedrale.jpg',
+    alt: 'Déménagement Angoulême - Cathédrale et cité de la BD',
+  },
+  arcachon: {
+    url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80&auto=format&fit=crop',
+    filename: 'arcachon-bassin.jpg',
+    alt: 'Déménagement Arcachon - Bassin et Dune du Pilat',
+  },
+  'villeneuve-dascq': {
+    url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80&auto=format&fit=crop',
+    filename: 'villeneuve-dascq-metropole.jpg',
+    alt: 'Déménagement Villeneuve-d\'Ascq - Métropole lilloise',
+  },
+  arras: {
+    url: 'https://images.unsplash.com/photo-1578489758854-f134a358f08b?w=1200&q=80&auto=format&fit=crop',
+    filename: 'arras-place.jpg',
+    alt: 'Déménagement Arras - Grand Place et centre historique',
+  },
+  lens: {
+    url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80&auto=format&fit=crop',
+    filename: 'lens-centre.jpg',
+    alt: 'Déménagement Lens - Centre et bassin minier',
+  },
+  valenciennes: {
+    url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80&auto=format&fit=crop',
+    filename: 'valenciennes-place.jpg',
+    alt: 'Déménagement Valenciennes - Place d\'Armes et centre',
+  },
+  thionville: {
+    url: 'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?w=1200&q=80&auto=format&fit=crop',
+    filename: 'thionville-moselle.jpg',
+    alt: 'Déménagement Thionville - Centre-ville Moselle',
+  },
+  epinal: {
+    url: 'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?w=1200&q=80&auto=format&fit=crop',
+    filename: 'epinal-vosges.jpg',
+    alt: 'Déménagement Épinal - Préfecture des Vosges',
+  },
+  laval: {
+    url: 'https://images.unsplash.com/photo-1597348989645-14c44e616ca8?w=1200&q=80&auto=format&fit=crop',
+    filename: 'laval-mayenne.jpg',
+    alt: 'Déménagement Laval - Château et vieille ville Mayenne',
+  },
+  'la-roche-sur-yon': {
+    url: 'https://images.unsplash.com/photo-1597348989645-14c44e616ca8?w=1200&q=80&auto=format&fit=crop',
+    filename: 'la-roche-sur-yon-vendee.jpg',
+    alt: 'Déménagement La Roche-sur-Yon - Préfecture Vendée',
+  },
+  cholet: {
+    url: 'https://images.unsplash.com/photo-1597348989645-14c44e616ca8?w=1200&q=80&auto=format&fit=crop',
+    filename: 'cholet-mauges.jpg',
+    alt: 'Déménagement Cholet - Centre des Mauges',
+  },
+  'saint-brieuc': {
+    url: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=80&auto=format&fit=crop',
+    filename: 'saint-brieuc-baie.jpg',
+    alt: 'Déménagement Saint-Brieuc - Baie et Côtes-d\'Armor',
+  },
+  evreux: {
+    url: 'https://images.unsplash.com/photo-1600639547028-0d8b6e31b26a?w=1200&q=80&auto=format&fit=crop',
+    filename: 'evreux-normandie.jpg',
+    alt: 'Déménagement Évreux - Cathédrale et Eure',
+  },
+  dieppe: {
+    url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80&auto=format&fit=crop',
+    filename: 'dieppe-port.jpg',
+    alt: 'Déménagement Dieppe - Port et falaises normandes',
+  },
+  bourges: {
+    url: 'https://images.unsplash.com/photo-1578489758854-f134a358f08b?w=1200&q=80&auto=format&fit=crop',
+    filename: 'bourges-cathedrale.jpg',
+    alt: 'Déménagement Bourges - Cathédrale et Berry',
+  },
+  chateauroux: {
+    url: 'https://images.unsplash.com/photo-1522689508346-fcc14f5b1b2e?w=1200&q=80&auto=format&fit=crop',
+    filename: 'chateauroux-indre.jpg',
+    alt: 'Déménagement Châteauroux - Centre et Indre',
+  },
 };
 
 // Photos déménageurs en action

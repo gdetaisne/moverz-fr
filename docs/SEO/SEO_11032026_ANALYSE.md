@@ -369,29 +369,29 @@ Score /100 visible dans la page de comparaison de devis + badges pages ville + e
 
 ## 6. Tableau récapitulatif — Plan 60 jours
 
-| # | Action | Priorité | Complexité | Impact estimé | Délai effet |
-|---|--------|----------|------------|---------------|-------------|
-| 1 | Mettre à jour dates "2025"→"2026" dans titles (3 articles) + remplacer "CreditSafe"→"Pappers" | **P0** | ⚡ 2h | +10 clics/sem | J+7 |
-| 2 | Réécrire titles/meta des 8 pages à 0% CTR (100+ impr) | **P0** | ⚡ 3h | +15 clics/sem | J+7–14 |
-| 3 | Créer 4 articles "comparatif déménageurs [ville] 2026" (Rennes, Marseille, Bordeaux, Lyon) | **P0** | 🔨 8h | +20 clics/sem | J+14–21 |
-| 4 | Enrichir `/comparateur-demenageurs/` (H1 exact, tableau, FAQ schema) | **P0** | 🔨 3h | +8 clics/sem | J+14 |
-| 5 | `/label-moverz/` : indexation GSC + réécrire H1/title | **P0** | ⚡ 1h | page indexée | J+3 |
-| 6 | Ajouter photos sur toutes les pages ville (landmark + déménageur, alt optimisé) | **P0** | ⚡ 3h | signal qualité | J+7 |
-| 7 | Consolider cannibalisation Strasbourg tarif | **P1** | 🔨 4h | +8 clics/sem | J+14–21 |
-| 8 | Consolider cannibalisation Bordeaux devis | **P1** | ⚡ 1h | +5 clics/sem | J+14 |
-| 9 | Créer 4 articles "devis déménagement [ville] 2026" (Bdx, Mrs, Tlse, Lyon) | **P1** | 🔨 8h | +20 clics/sem | J+21–30 |
-| 10 | `/label-moverz/` : section longform SSR + maillage interne 20+ liens | **P1** | 🔨 5h | +50 impr/sem | J+14 |
-| 11 | Créer `/blog/comment-verifier-demenageur-fiable/` (feeder label-moverz) | **P1** | 🔨 4h | +20 clics/mois | J+21 |
-| 12 | Maillage interne : 20 articles top blog → 3 liens chacun | **P1** | ⚡ 4h | +5 clics/sem | J+7–14 |
-| 13 | Re-mesurer GSC pages ville post-refonte Lucie | **P2** | ⚡ | baseline | J+12 (23 mars) |
-| 14 | Enrichir `/demenagement/bordeaux/` (section devis, prix, FAQ) | **P2** | 🔨 3h | +10 clics/sem | J+21–30 |
-| 15 | Enrichir `/demenagement/marseille/` et `/toulouse/` | **P2** | 🔨 4h | +8 clics/sem | J+21–30 |
-| 16 | Section EN sur `/comparateur-demenageurs/` ("moving company") | **P2** | ⚡ 2h | +8 clics/sem | J+14–21 |
-| 17 | Consolider cannibalisation Lille, Rouen, Nice | **P2** | 🔨 6h | +8 clics/sem | J+21–30 |
-| 18 | Enrichir `/blog/` hub + créer catégories blog | **P2** | 🔨 4h | +5 clics/sem | J+21–30 |
-| 19 | Enrichir guides ville premium → 2 500–3 000 mots (objectif Lucie) | **P2** | 🏗️ 16h | +15 clics/sem | J+30–45 |
-| 20 | Netlinking 500€/mois (villes core + comparateur + label-moverz) | **P3** | 🏗️ ongoing | +20 clics/sem | J+45–60 |
-| 21 | Refaire le logo/favicon affiché dans les SERP Google — actuel trop générique, pas engageant (voir screenshot SERP homepage) | **P1** | 🔨 3h | +CTR global | J+7–14 |
+| # | Action | Priorité | Complexité | Impact estimé | Délai effet | Statut |
+|---|--------|----------|------------|---------------|-------------|--------|
+| 1 | Mettre à jour dates "2025"→"2026" dans titles (3 articles) + remplacer "CreditSafe"→"Pappers" | **P0** | ⚡ 2h | +10 clics/sem | J+7 | ⬜ |
+| 2 | Réécrire titles/meta des 8 pages à 0% CTR (100+ impr) | **P0** | ⚡ 3h | +15 clics/sem | J+7–14 | ⬜ |
+| 3 | Créer 4 articles "comparatif déménageurs [ville] 2026" (Rennes, Marseille, Bordeaux, Lyon) | **P0** | 🔨 8h | +20 clics/sem | J+14–21 | ⬜ |
+| 4 | Enrichir `/comparateur-demenageurs/` (H1 exact, tableau, FAQ schema) | **P0** | 🔨 3h | +8 clics/sem | J+14 | ⬜ |
+| 5 | `/label-moverz/` : indexation GSC + réécrire H1/title | **P0** | ⚡ 1h | page indexée | J+3 | ✅ **12/03** |
+| 6 | Ajouter photos sur toutes les pages ville (landmark + déménageur, alt optimisé) | **P0** | ⚡ 3h | signal qualité | J+7 | ✅ **12/03** (+ ImageObject) |
+| 7 | Consolider cannibalisation Strasbourg tarif | **P1** | 🔨 4h | +8 clics/sem | J+14–21 | ⬜ |
+| 8 | Consolider cannibalisation Bordeaux devis | **P1** | ⚡ 1h | +5 clics/sem | J+14 | ⬜ |
+| 9 | Créer 4 articles "devis déménagement [ville] 2026" (Bdx, Mrs, Tlse, Lyon) | **P1** | 🔨 8h | +20 clics/sem | J+21–30 | ⬜ |
+| 10 | `/label-moverz/` : section longform SSR + maillage interne 20+ liens | **P1** | 🔨 5h | +50 impr/sem | J+14 | ⬜ |
+| 11 | Créer `/blog/comment-verifier-demenageur-fiable/` (feeder label-moverz) | **P1** | 🔨 4h | +20 clics/mois | J+21 | ⬜ |
+| 12 | Maillage interne : 20 articles top blog → 3 liens chacun | **P1** | ⚡ 4h | +5 clics/sem | J+7–14 | ⬜ |
+| 13 | Re-mesurer GSC pages ville post-refonte Lucie | **P2** | ⚡ | baseline | J+12 (23 mars) | ⬜ |
+| 14 | Enrichir `/demenagement/bordeaux/` (section devis, prix, FAQ) | **P2** | 🔨 3h | +10 clics/sem | J+21–30 | ⬜ |
+| 15 | Enrichir `/demenagement/marseille/` et `/toulouse/` | **P2** | 🔨 4h | +8 clics/sem | J+21–30 | ⬜ |
+| 16 | Section EN sur `/comparateur-demenageurs/` ("moving company") | **P2** | ⚡ 2h | +8 clics/sem | J+14–21 | ⬜ |
+| 17 | Consolider cannibalisation Lille, Rouen, Nice | **P2** | 🔨 6h | +8 clics/sem | J+21–30 | ⬜ |
+| 18 | Enrichir `/blog/` hub + créer catégories blog | **P2** | 🔨 4h | +5 clics/sem | J+21–30 | ⬜ |
+| 19 | Enrichir guides ville premium → 2 500–3 000 mots (objectif Lucie) | **P2** | 🏗️ 16h | +15 clics/sem | J+30–45 | ⬜ |
+| 20 | Netlinking 500€/mois (villes core + comparateur + label-moverz) | **P3** | 🏗️ ongoing | +20 clics/sem | J+45–60 | ⬜ |
+| 21 | Refaire le logo/favicon affiché dans les SERP Google — actuel trop générique, pas engageant (voir screenshot SERP homepage) | **P1** | 🔨 3h | +CTR global | J+7–14 | ⬜ |
 
 ---
 
@@ -452,7 +452,10 @@ node scripts/gsc-monitor.mjs  # ou npm run seo:monitor:weekly
 
 ---
 
-*Mise à jour : 11 mars 2026 — intègre RECAP-SEO-SEMAINE-10-MARS-2026.md (commit 9374d65, Lucie Stéhelin) + feedbacks Guillaume*
+*Mise à jour : 11 mars 2026 — intègre RECAP-SEO-SEMAINE-10-MARS-2026.md (commit 9374d65, Lucie Stéhelin) + feedbacks Guillaume*  
+*12 mars 2026 : actions #5 et #6 complétées (label-moverz H1 + indexation GSC, photos pages ville + ImageObject schema). Voir RECAP-SEO-12-MARS-2026.md*
+
+*Mise à jour : 12 mars 2026 — Actions #5 et #6 réalisées. Voir `RECAP-SEO-12-MARS-2026.md`.*
 
 ---
 

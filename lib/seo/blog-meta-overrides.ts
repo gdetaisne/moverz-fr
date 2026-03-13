@@ -17,11 +17,43 @@ export interface BlogMetaOverride {
 
 export const BLOG_META_OVERRIDES: Record<string, BlogMetaOverride> = {
 
+  // ── Article Moverz (E-E-A-T, comparateur) ────────────────────────────────
+
+  "pourquoi-moverz-meilleur-comparateur-demenagement": {
+    title: "Pourquoi Moverz ? Comparateur 0 Harcèlement, 1 Dossier",
+    description: "1 dossier, jusqu'à 5 devis. Pros vérifiés Pappers, pas revendeur de leads. 64% des déménageurs ont des anomalies (DGCCRF). Moverz vérifie avant de proposer.",
+  },
+
+  "moverz-vs-concurrents-comparateur-demenagement": {
+    title: "Moverz vs Nextories, Emoovz : on révolutionne le déménagement",
+    description: "Zéro spam, Score /100, dossier anonyme. La petite licorne du déménagement. Comparatif Nextories, Emoovz, LeDéménageur — ce qu'on a bâti ensemble.",
+  },
+
+  "comparatif-demenageurs-rennes-2026": {
+    title: "Comparatif Déménageurs Rennes 2026 : Top 5, Prix, Vérifier",
+    description: "ABC Lemarié, Eurodem 35 + 3 acteurs. T2 500–900€. Vérifiez avec Label Moverz (Score /100 gratuit en 30s) avant de signer. 3–5 devis Moverz.",
+  },
+
+  "comparatif-demenageurs-marseille-2026": {
+    title: "Comparatif Déménageurs Marseille 2026 : Top 5, Prix, Vérifier",
+    description: "Amice, Pro Du Dem, ADEM + 2 acteurs. T2 550–950€. Vérifiez avec Label Moverz (Score /100 gratuit en 30s) avant de signer. 3–5 devis Moverz.",
+  },
+
+  "comparatif-demenageurs-bordeaux-2026": {
+    title: "Comparatif Déménageurs Bordeaux 2026 : Top 5, Prix, Vérifier",
+    description: "Air Déménagement, Alex, Sam'déménage + 2 acteurs. T2 550–950€. Vérifiez avec Label Moverz (Score /100 gratuit en 30s) avant de signer. 3–5 devis Moverz.",
+  },
+
+  "comparatif-demenageurs-lyon-2026": {
+    title: "Comparatif Déménageurs Lyon 2026 : Top 5, Prix, Vérifier",
+    description: "S.I.E.T, Lugnier + 3 acteurs. T2 500–900€. Vérifiez avec Label Moverz (Score /100 gratuit en 30s) avant de signer. 3–5 devis Moverz.",
+  },
+
   // ── GROUPE A — articles déjà solides, titre/desc à affiner ──────────────
 
   "shurgard-lyon-sites-tarifs": {
-    title: "Shurgard Lyon : 4 sites, tarifs 130–480€/mois (2026)",
-    description: "Shurgard Lyon Jean Macé, Vaise, Gerland, États-Unis : tailles 1–50m², tarifs détaillés. Comparez avec les alternatives locales moins chères.",
+    title: "Shurgard Lyon : Prix, Adresses et Alternatives Moins Chères",
+    description: "Shurgard Lyon : 4 sites (Jean Macé, Vaise, Gerland, États-Unis), 130–480€/mois. + alternatives locales -20% en moyenne. 3 devis comparables sur Moverz, 0 harcèlement.",
   },
 
   "comparaison-prix-demenageurs-lyon": {
@@ -60,13 +92,23 @@ export const BLOG_META_OVERRIDES: Record<string, BlogMetaOverride> = {
   },
 
   "meilleurs-demenageurs-lyon": {
-    title: "Meilleurs déménageurs Lyon 2026 : comparatif & avis",
-    description: "Top déménageurs Lyon : S.I.E.T (historique 1900), Lugnier (familial), acteurs locaux 4.5+/5. Moverz compare leurs devis sur critères identiques.",
+    title: "Top 7 Déménageurs Lyon Vérifiés Pappers (2026)",
+    description: "S.I.E.T, Lugnier, acteurs locaux 4.5+/5 : 7 déménageurs Lyon vérifiés (santé financière, avis, licences). 3–5 devis comparables sur Moverz, dossier anonyme.",
   },
 
   "comparatif-formules-economiques-demenagement-nantes": {
-    title: "Formules éco déménagement Nantes 2026 : 450–650€ T2",
-    description: "Déménageurs formule économique Nantes : Médard, Gentlemen, Bretons 450–650€ T2. Ce que la formule éco inclut (et exclut) — comparatif honnête.",
+    title: "Déménagement Nantes Pas Cher : Comparatif Prix 2026",
+    description: "Formule éco Nantes : T2 dès 450€ (vous emballez). Médard, Gentlemen, Bretons — ce qui est inclus, ce qui coûte en plus. 3 devis Moverz, zéro démarchage.",
+  },
+
+  "comparer-plateformes-devis-demenagement-2026": {
+    title: "Comparer des Devis Déménagement 2026 : 1 Dossier, 3–5 Réponses",
+    description: "Un seul dossier, jusqu'à 5 devis comparables. Pros vérifiés Pappers, 0 harcèlement. Moverz standardise votre demande — vous comparez à prestation égale. Gratuit.",
+  },
+
+  "demenagement-piano-nantes-prix": {
+    title: "Prix Déménagement Piano Nantes 2026 : 200–800€",
+    description: "Piano droit Nantes 200–400€, queue 400–800€. Étages, monte-meuble : fourchettes réelles. Pros spécialisés vérifiés sur Moverz — devis comparables sous 5j.",
   },
 
   "transport-maritime-container-lyon": {
@@ -82,6 +124,26 @@ export const BLOG_META_OVERRIDES: Record<string, BlogMetaOverride> = {
   "faq-garde-meuble-strasbourg": {
     title: "Garde-meuble Strasbourg 2026 : 20 FAQ, 40–400€/mois",
     description: "FAQ garde-meuble Strasbourg : prix 40–400€/mois selon taille, durée 1–12 mois, accès 24h/7j, assurance incluse. Grande Île, Neudorf, Hautepierre.",
+  },
+
+  "prix-demenageur-strasbourg-2026": {
+    title: "Prix Déménageur Strasbourg 2026 : 525€ Studio, T2 960€, Guide Complet",
+    description: "Tarifs déménagement Strasbourg 2026 : studio 525€, T2 960€, T3 1630€. Grande Île +15-20%. 3-5 devis comparables sur Moverz, pros vérifiés Pappers.",
+  },
+
+  "prix-demenageur-nice-2026": {
+    title: "Prix Déménageur Nice 2026 : 545€ Studio, T2 990€, Guide Complet",
+    description: "Tarifs déménagement Nice 2026 : studio 545€, T2 990€, T3 1680€. Vieux-Nice et collines +15-25%. 3-5 devis comparables sur Moverz, pros vérifiés.",
+  },
+
+  "prix-demenageur-lille-2026": {
+    title: "Prix Déménageur Lille 2026 : 520€ Studio, T2 955€, Guide Complet",
+    description: "Tarifs déménagement Lille 2026 : studio 520€, T2 955€, T3 1620€. Vieux-Lille +15-25%. 3-5 devis comparables sur Moverz, pros vérifiés Pappers.",
+  },
+
+  "prix-demenageur-nantes-2026": {
+    title: "Prix Déménageur Nantes 2026 : 530€ Studio, T2 970€, Guide Complet",
+    description: "Tarifs déménagement Nantes 2026 : studio 530€, T2 970€, T3 1650€. Île de Nantes +10-15%. 3-5 devis comparables sur Moverz, pros vérifiés.",
   },
 
   "prix-demenagement-international-lyon": {
@@ -179,8 +241,18 @@ export const BLOG_META_OVERRIDES: Record<string, BlogMetaOverride> = {
   },
 
   "meilleur-demenageur-rennes-2025": {
-    title: "Meilleur déménageur Rennes 2026 : comparatif & avis",
-    description: "Top déménageurs Rennes : ABC Lemarié (Vern-sur-Seiche), Eurodem 35 (Cesson), acteurs locaux 4.5+/5. Critères : ponctualité, sans-casse, prix. Comparez sur Moverz.",
+    title: "Meilleur Déménageur Rennes 2026 : Top 5 Vérifiés",
+    description: "Top 5 déménageurs Rennes vérifiés Pappers : ABC Lemarié, Eurodem 35, acteurs locaux 4.5+/5. Critères : ponctualité, sans-casse, prix. Comparez sur Moverz.",
+  },
+
+  "prix-demenageur-rouen-2025": {
+    title: "Prix Déménageur Rouen 2026 : Tarifs & Devis Gratuit",
+    description: "Tarifs déménagement Rouen 2026 : fourchettes T1/T2/T3, prix réels, conseils pour comparer. Obtenez des devis gratuits de pros vérifiés Pappers sur Moverz.",
+  },
+
+  "prix-garde-meuble-montpellier-2025": {
+    title: "Prix Garde-Meuble Montpellier 2026 : Comparatif Tarifs",
+    description: "Comparatif garde-meuble Montpellier 2026 : 7 acteurs, tarifs 40–200€/mois selon taille. Shurgard, Klimanett, acteurs locaux. Devis gratuit Moverz.",
   },
 
   "demenagement-strasbourg-paris": {

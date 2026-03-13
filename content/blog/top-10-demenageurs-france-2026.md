@@ -17,7 +17,7 @@ Dans ce guide ultra-détaillé, vous allez découvrir :
 
 - Les **10 critères objectifs** pour évaluer un déménageur (santé financière, juridique, avis clients)
 - Pourquoi **90% des comparateurs ne vérifient RIEN** (et vous exposent aux arnaques)
-- Comment **Moverz analyse 3 risques /100** (financier, juridique, réputation) via Creditsafe, Pappers et Google
+- Comment **Moverz analyse 3 risques /100** (financier, juridique, réputation) via Pappers, Pappers et Google
 - Les **signaux d'alerte** à repérer absolument (dettes, litiges, faux avis)
 - Comment **comparer objectivement** plusieurs déménageurs (au-delà du prix)
 
@@ -50,7 +50,7 @@ Dans ce guide ultra-détaillé, vous allez découvrir :
 
 #### 1. Risque Financier /100
 **Sources** :
-- **Creditsafe** (scoring officiel 0-100)
+- **Pappers** (scoring officiel 0-100)
 - **Pappers** (bilans comptables, dettes, retards de paiement)
 - **Ratio cash/dettes** (calculé en interne)
 
@@ -119,7 +119,7 @@ Dans ce guide ultra-détaillé, vous allez découvrir :
 
 **Comment vérifier** :
 
-#### A. Score Creditsafe (gratuit via Pappers)
+#### A. Score Pappers (gratuit via Pappers)
 ```
 Score 80-100 : Excellent (risque minimal)
 Score 60-79 : Bon (risque faible)
@@ -475,7 +475,7 @@ Aucune réponse > 5 jours : Mauvais ❌
 ### 1. Analyse automatique 3 risques /100
 
 **Pour CHAQUE déménageur** :
-- ✅ Score financier (Creditsafe + Pappers + ratio interne)
+- ✅ Score financier (Pappers + Pappers + ratio interne)
 - ✅ Score juridique (Pappers Décisions + DGCCRF)
 - ✅ Score réputation (Google + patterns faux avis)
 
@@ -599,7 +599,7 @@ Aucune réponse > 5 jours : Mauvais ❌
 **Utilisez Moverz** : Les scores sont calculés automatiquement
 
 **Ou manuellement** :
-1. Pappers.fr → Score Creditsafe (financier)
+1. Pappers.fr → Score Pappers (financier)
 2. Pappers.fr → Décisions de justice (juridique)
 3. Google Reviews → Note + analyse des 20 derniers avis (réputation)
 
@@ -680,7 +680,7 @@ Cordialement"
 
 **Process** :
 1. Entrez le nom du déménageur
-2. Onglet "Santé financière" → Score Creditsafe
+2. Onglet "Santé financière" → Score Pappers
 3. Onglet "Finances" → Télécharger le dernier bilan
 
 **Interprétation** :
@@ -698,7 +698,7 @@ Cordialement"
 - Vous perdez l'acompte + devez trouver un autre déménageur en urgence
 
 **Comment se protéger** :
-- ✅ Vérifier le score Creditsafe (> 60/100)
+- ✅ Vérifier le score Pappers (> 60/100)
 - ✅ Vérifier les fonds propres (positifs)
 - ✅ Payer par CB (protection consommateur)
 - ✅ Utiliser Moverz (exclusion automatique des déménageurs fragiles)
@@ -774,7 +774,7 @@ Cordialement"
 ## Conclusion : Les 3 règles d'or pour choisir un déménageur
 
 ### Règle 1 : Vérifier les 3 risques /100
-- ✅ Score financier > 60/100 (Creditsafe)
+- ✅ Score financier > 60/100 (Pappers)
 - ✅ Aucun litige récurrent (Pappers Décisions)
 - ✅ Note Google > 4,0/5 avec 50+ avis
 

@@ -53,7 +53,7 @@ export function LabelMoverzTeaser() {
                 color: "#0EA5A6",
               }}
             >
-              <Image src="/logo-label-moverz.png" alt="Label Moverz" width={21} height={14} className="h-3.5" />
+              <Image src="/logo-label-moverz.png" alt="Label Moverz" width={112} height={75} className="h-20 w-auto" />
               <span>Label Moverz</span>
             </div>
 

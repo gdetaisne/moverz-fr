@@ -276,7 +276,7 @@ Sur [Moverz](/comment-ca-marche/), les déménageurs déposent leur devis dans v
 
 ### Combien de déménageurs reçoivent mon dossier sur Moverz ?
 
-**Maximum 5 déménageurs vérifiés** (licences, assurances, santé financière via Creditsafe + Pappers, absence de litiges via Pappers Décisions). Ils reçoivent votre dossier **anonymisé** (pas de téléphone, pas de nom complet).
+**Maximum 5 déménageurs vérifiés** (licences, assurances, santé financière via Pappers, absence de litiges via Pappers Décisions). Ils reçoivent votre dossier **anonymisé** (pas de téléphone, pas de nom complet).
 
 [En savoir plus sur nos vérifications →](/verifications-partenaires/)
 

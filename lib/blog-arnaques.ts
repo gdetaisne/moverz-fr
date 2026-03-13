@@ -167,11 +167,11 @@ Cette fragmentation rend l'évaluation de la fiabilité très difficile pour un 
 
 Les professionnels (banques, assureurs, grands comptes) utilisent des outils spécialisés pour évaluer la fiabilité des entreprises. Ces outils sont normalement inaccessibles aux particuliers.
 
-### Creditsafe + Pappers : le scoring financier consolidé
+### Pappers : le scoring financier consolidé
 
-**Creditsafe** : note de solvabilité /100 évaluant la probabilité de défaut à 12 mois.
+**Pappers** : note de solvabilité /100 évaluant la probabilité de défaut à 12 mois.
 
-**Pappers** : scoring financier similaire, consolidé avec Creditsafe pour fiabilité accrue.
+**Pappers** : scoring financier similaire, consolidé avec Pappers pour fiabilité accrue.
 
 **Moverz ajoute** : analyse interne du ratio cash / dettes court terme pour détecter les tensions de trésorerie.
 
@@ -210,7 +210,7 @@ Les professionnels (banques, assureurs, grands comptes) utilisent des outils sp�
 
 **Ce qu'ils ne vérifient pas** :
 - ❌ Risque expérience client (avis Google analysés)
-- ❌ Risque financier (Creditsafe + Pappers + ratio cash/dettes)
+- ❌ Risque financier (Pappers + ratio cash/dettes)
 - ❌ Risque juridique (décisions de justice, litiges)
 - ❌ Validité des assurances
 
@@ -229,7 +229,7 @@ Comment voulez-vous qu'ils notent négativement un client qui les paie ?
 Avant de vous présenter un déménageur, nous évaluons :
 
 - ⭐ **Risque expérience client** : 20 derniers avis Google analysés + patterns mauvais avis (retards, casse, comportement) → note /100
-- 🏦 **Risque financier** : scores Creditsafe + Pappers consolidés + ratio cash/dettes interne → note /100. Alerte cash = exclusion.
+- 🏦 **Risque financier** : scores Pappers consolidés + ratio cash/dettes interne → note /100. Alerte cash = exclusion.
 - ⚖️ **Risque juridique** : décisions de justice + scoring non-financier Pappers → note /100. Alerte juridique = exclusion.
 - ✅ **Compléments** : licence de transport, assurance RC Pro (≥ 1,5 M€), identité légale (SIREN/Kbis)
 
@@ -286,7 +286,7 @@ Pour plus de questions sur le déménagement, consultez notre [FAQ complète](/f
 
 ### Comment savoir si un déménageur est fiable ?
 
-Vérifiez son existence légale (SIREN sur societe.com), lisez les avis Google (analysez les 20 derniers, cherchez des patterns dans les mauvais avis), demandez l'attestation d'assurance RC Pro. Pour la santé financière et juridique, Moverz utilise Creditsafe + Pappers + analyse interne automatiquement.
+Vérifiez son existence légale (SIREN sur societe.com), lisez les avis Google (analysez les 20 derniers, cherchez des patterns dans les mauvais avis), demandez l'attestation d'assurance RC Pro. Pour la santé financière et juridique, Moverz utilise Pappers + analyse interne automatiquement.
 
 ### Que faire en cas de litige avec un déménageur ?
 
@@ -313,6 +313,6 @@ Ces chiffres ne sont pas là pour vous faire peur. Ils sont là pour vous rappel
 
 ---
 
-*Article mis à jour en mars 2026. Sources : DGCCRF (2023), Chambre Syndicale du Déménagement (2024), Creditsafe, Pappers, Infogreffe.*`,
+*Article mis à jour en mars 2026. Sources : DGCCRF (2023), Chambre Syndicale du Déménagement (2024), Pappers, Pappers, Infogreffe.*`,
 };
 

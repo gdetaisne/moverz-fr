@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 import { BLOG_MISSING_301_REDIRECTS } from './redirects/blog-missing-301.mjs';
+import { GSC_404_REDIRECTS } from './redirects/gsc-404-redirects.mjs';
 
 const nextConfig = {
   poweredByHeader: false,
@@ -852,6 +853,8 @@ const nextConfig = {
 
       // Blog : slugs sans contenu canonique → redirections 301 vers hubs / guides pertinents
       ...BLOG_MISSING_301_REDIRECTS,
+      // GSC 404 : 358 URLs 404 détectées par Google (2026-03-12)
+      ...GSC_404_REDIRECTS,
     ]
   },
 };

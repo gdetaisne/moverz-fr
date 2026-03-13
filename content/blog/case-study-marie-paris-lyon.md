@@ -74,7 +74,7 @@ Marie contacte aussi directement 2 déménageurs recommandés par des collègues
 **Devis 2 : TransportExpress**
 - Volume estimé : 35m³
 - Prix : 2 890€ TTC
-- Mais : entreprise en difficulté financière (score financier : 28/100 — Creditsafe + Pappers)
+- Mais : entreprise en difficulté financière (score financier : 28/100 — Pappers)
 
 **Bilan après 1 semaine :**
 - 15 appels reçus
@@ -122,7 +122,7 @@ Marie reçoit 5 devis sous 5 jours. **Tous basés sur le même dossier standardi
 
 **Différence avec avant :**
 - ✅ Même volume = vraiment comparable
-- ✅ 3 scores /100 visibles : financier (Creditsafe + Pappers), juridique (Pappers Décisions), avis Google
+- ✅ 3 scores /100 visibles : financier (Pappers), juridique (Pappers Décisions), avis Google
 - ✅ Alertes cash ou juridiques = exclusion automatique
 - ✅ Aucun appel intempestif
 
@@ -130,7 +130,7 @@ Marie reçoit 5 devis sous 5 jours. **Tous basés sur le même dossier standardi
 
 Marie choisit **Lyon Déménagement** :
 - Prix : 2 040€ TTC
-- Score financier : 82/100 (Creditsafe + Pappers — excellent)
+- Score financier : 82/100 (Pappers — excellent)
 - Score juridique : 95/100 (0 litige — Pappers Décisions)
 - Score avis clients : 89/100 (4.7/5 sur 120 avis — 0 pattern négatif récurrent)
 - Assurance RC Pro valide
@@ -212,7 +212,7 @@ Le devis à 1 800€ (25m³) aurait coûté ~2 600€ avec les suppléments jour
 
 ### 3. La santé financière compte
 
-TransportExpress (score financier 28/100 — Creditsafe + Pappers) a fait faillite 2 mois après. Les clients avec acompte ont tout perdu.
+TransportExpress (score financier 28/100 — Pappers) a fait faillite 2 mois après. Les clients avec acompte ont tout perdu.
 
 **Marie a évité ce piège grâce aux 3 analyses de risque Moverz.**
 
@@ -240,12 +240,12 @@ Créez votre dossier en 3 minutes sur [devis.moverz.fr](https://devis.moverz.fr/
 **Ce que vous obtenez :**
 - [OK] Volume estimé automatiquement (détails)
 - ✅ des devis comparables
-- ✅ 3 analyses de risque /100 : financier (Creditsafe + Pappers), juridique (Pappers Décisions), avis Google
+- ✅ 3 analyses de risque /100 : financier (Pappers), juridique (Pappers Décisions), avis Google
 - ✅ Alertes cash ou juridiques = exclusion automatique
 - ✅ Sans démarchage, 0 appel intempestif
 - ✅ 100% gratuit
 
 ---
 
-*Cas client réel anonymisé. Données financières et dates modifiées pour confidentialité. Scores financier (Creditsafe + Pappers), juridique (Pappers Décisions) et avis Google vérifiés au moment du déménagement.*
+*Cas client réel anonymisé. Données financières et dates modifiées pour confidentialité. Scores financier (Pappers), juridique (Pappers Décisions) et avis Google vérifiés au moment du déménagement.*
 

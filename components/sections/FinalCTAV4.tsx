@@ -6,7 +6,6 @@ import { buildTunnelUrl } from "@/lib/tunnel-url";
  * Minimal. Titre court + bouton noir.
  */
 
-import { ArrowRight } from "lucide-react";
 import { FadeUpSection } from "@/components/motion";
 
 export function FinalCTAV4() {
@@ -24,15 +23,16 @@ export function FinalCTAV4() {
           <span style={{ color: "#0EA5A6" }}>1</span> seule décision.
         </h2>
 
+        {/* Bouton caché sur mobile : le Sticky CTA en bas suffit, évite la redondance */}
         <a
           href={buildTunnelUrl({ from: "final-cta-v4", devisRange: "3" })}
-          className="group inline-flex items-center justify-center gap-2 rounded-xl px-8 py-3.5 text-base font-semibold text-white transition-all duration-200 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]"
+          className="hidden md:inline-flex group items-center justify-center gap-2 rounded-xl px-8 py-3.5 text-base font-semibold text-white transition-all duration-200 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]"
           style={{ background: "#F59E0B", boxShadow: "0 4px 20px rgba(245,158,11,0.3)" }}
         >
           Obtenir mes devis
         </a>
 
-        <p className="text-xs text-white/30">
+        <p className="hidden md:block text-xs text-white/30">
           Gratuit · Sans engagement · Sans appels
         </p>
       </div>

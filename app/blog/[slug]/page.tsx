@@ -13,8 +13,9 @@ import {
 } from "@/lib/blog";
 import { LONGTAIL_FAQS } from "@/lib/blog-longtail";
 import { LONGTAIL_PACK2_FAQS } from "@/lib/blog-longtail-pack2";
-import { getFullMetadata } from "@/lib/canonical-helper";
+import { getCanonicalUrl, getFullMetadata } from "@/lib/canonical-helper";
 import { getCityBySlug } from "@/lib/cities";
+import { BLOG_CANONICAL_OVERRIDES } from "@/lib/seo/blog-canonical-overrides";
 import { BLOG_META_OVERRIDES } from "@/lib/seo/blog-meta-overrides";
 import { ArticleSchema } from "@/components/schema/ArticleSchema";
 import { FAQSchema } from "@/components/schema/FAQSchema";
@@ -25,6 +26,8 @@ import BlogFloatingCTA from "@/components/blog/BlogFloatingCTA";
 import { BlogFAQItem } from "@/components/blog/BlogFAQItem";
 import { AuthorCard } from "@/components/blog/AuthorCard";
 import { buildTunnelUrl } from "@/lib/tunnel-url";
+import Image from "next/image";
+import Link from "next/link";
 
 type PageProps = {
   params: {
@@ -40,6 +43,12 @@ export const dynamicParams = true;
 // SEO (2026-03-08): articles avec trafic GSC prouvé — toujours indexés indépendamment du filtre qualité.
 // SEO (2026-03-08 v2): +45 articles cités par Bing AI (AIPageStatsReport) — signal fiabilité contenu.
 const GA_TRAFFIC_SLUGS = new Set([
+  "pourquoi-moverz-meilleur-comparateur-demenagement",
+  "moverz-vs-concurrents-comparateur-demenagement",
+  "comparatif-demenageurs-rennes-2026",
+  "comparatif-demenageurs-marseille-2026",
+  "comparatif-demenageurs-bordeaux-2026",
+  "comparatif-demenageurs-lyon-2026",
   "demenagement-centre-ville-rennes-autorisations",
   "cartons-gratuits-rennes",
   "prix-garde-meuble-montpellier-2025",
@@ -222,10 +231,17 @@ const GA_TRAFFIC_SLUGS = new Set([
   "prix-demenagement-2025",
 ]);
 
+// Articles du blog qui parlent du Label Moverz — affichent le logo dans le hero
+const LABEL_MOVERZ_BLOG_SLUGS = new Set([
+  "label-moverz-certification-demenageurs",
+  "eviter-arnaques-demenagement",
+  "comment-verifier-demenageur-fiable",
+]);
+
 /**
  * SEO (2026-03-07): Un article est indexable si :
  *  1. Il a du trafic GA prouvé (liste GA_TRAFFIC_SLUGS), OU
- *  2. Il passe le filtre qualité automatique : pilier + ≥ 1000 mots + body présent (isQualityPost)
+ *  2. Il passe le filtre qualité (isQualityPost) : pilier ≥1000 mots OU satellite/guide ≥500 mots
  */
 function isIndexableBlogPost(slug: string): boolean {
   return GA_TRAFFIC_SLUGS.has(slug) || isQualityPost(slug);
@@ -247,7 +263,16 @@ export function generateMetadata({ params }: PageProps): Metadata {
       : `${post.title} | Blog déménagement`;
   const description = override?.description ?? post.description;
 
-  const base = getFullMetadata(path, title, description);
+  let base = getFullMetadata(path, title, description);
+
+  // SEO #7 #8 : override canonical pour consolidation cannibalisation
+  const canonicalPath = BLOG_CANONICAL_OVERRIDES[post.slug];
+  if (canonicalPath) {
+    base = {
+      ...base,
+      alternates: { canonical: getCanonicalUrl(canonicalPath) },
+    };
+  }
 
   if (!isIndexableBlogPost(post.slug)) {
     return { ...base, robots: { index: false, follow: true } };
@@ -349,15 +374,15 @@ export default function BlogPostPage({ params }: PageProps) {
       description: "Guide complet pour identifier les signaux d'alerte et choisir un déménageur fiable (64% d'anomalies DGCCRF 2023).",
       totalTime: "PT30M", // 30 min de vérification
       supply: ["SIREN du déménageur", "Devis à comparer"],
-      tool: ["Creditsafe + Pappers (via Moverz)", "Annuaire Entreprises (INSEE)", "Google Maps avis", "Pappers Décisions (litiges)"],
+      tool: ["Pappers (via Moverz)", "Annuaire Entreprises (INSEE)", "Google Maps avis", "Pappers Décisions (litiges)"],
       steps: [
         { name: "Vérifier le SIREN et l'inscription", text: "Utilisez annuaire-entreprises.data.gouv.fr. Le SIREN doit être actif et l'entreprise inscrite au registre des transporteurs." },
-        { name: "Consulter la santé financière", text: "Moverz croise Creditsafe et Pappers (scoring financier consolidé) + analyse interne du ratio cash/dettes court terme. 257 faillites en 2024 — les déménageurs avec alerte cash sont exclus automatiquement." },
+        { name: "Consulter la santé financière", text: "Moverz utilise Pappers (scoring financier consolidé) + analyse interne du ratio cash/dettes court terme. 257 faillites en 2024 — les déménageurs avec alerte cash sont exclus automatiquement." },
         { name: "Lire les avis Google Maps", text: "Vérifiez les avis récents (6 derniers mois). Attention aux patterns : surcôts, objets cassés, litiges." },
         { name: "Vérifier l'assurance RC Pro", text: "Demandez une attestation d'assurance valide. Requis légalement mais souvent absent (DGCCRF)." },
         { name: "Comparer le devis aux standards", text: "Un devis conforme détaille : volume, accès, options, tarif au m³/horaire, conditions annulation, assurance." },
         { name: "Repérer les signaux d'alerte", text: "Prix 50% sous marché, paiement cash uniquement, pas de contrat écrit, urgence artificielle → FUYEZ." },
-        { name: "Utiliser Moverz pour automatiser", text: "Moverz vérifie automatiquement SIREN, santé financière (Creditsafe + Pappers), litiges (Pappers Décisions), et avis Google (patterns des mauvais avis) avant de partager votre dossier. Vous ne recevez que des pros contrôlés (3 analyses de risque /100)." },
+        { name: "Utiliser Moverz pour automatiser", text: "Moverz vérifie automatiquement SIREN, santé financière (Pappers), litiges (Pappers Décisions), et avis Google (patterns des mauvais avis) avant de partager votre dossier. Vous ne recevez que des pros contrôlés (3 analyses de risque /100)." },
       ],
     },
     "prix-demenagement-2026": {
@@ -489,6 +514,109 @@ export default function BlogPostPage({ params }: PageProps) {
         </h3>
       );
     },
+    // Tableau comparatif Moverz vs concurrents
+    // RÈGLE : PAS d'emojis (🔒🛡️📊🏆 etc.). Emoticones/symboles OK : ✓ ✗ ○ ◐ ← →
+    ...(post.slug === "moverz-vs-concurrents-comparateur-demenagement"
+      ? (() => {
+          const getCellText = (node: React.ReactNode): string => {
+            if (typeof node === "string") return node;
+            if (Array.isArray(node)) return node.map(getCellText).join("");
+            if (node && typeof node === "object" && "props" in node) return getCellText((node as React.ReactElement).props?.children);
+            return String(node ?? "");
+          };
+          const getIconAndSuffix = (trimmed: string) => {
+            if (/^[—–\-]\s*$/.test(trimmed)) return { icon: "○", suffix: "N/A", className: "text-gray-400" };
+            if (trimmed.startsWith("Oui — ")) return { icon: "✓", suffix: trimmed.slice(6), className: "text-[#0EA5A6]" };
+            if (trimmed.startsWith("Oui")) return { icon: "✓", suffix: "", className: "text-[#0EA5A6]" };
+            if (trimmed.startsWith("Non — ")) return { icon: "✗", suffix: trimmed.slice(6), className: "text-red-500/90" };
+            if (trimmed.startsWith("Non")) return { icon: "✗", suffix: "", className: "text-red-500/90" };
+            if (trimmed.startsWith("Partiel — ")) return { icon: "◐", suffix: trimmed.slice(10), className: "text-amber-600" };
+            if (trimmed.startsWith("Partiel")) return { icon: "◐", suffix: "", className: "text-amber-600" };
+            return null;
+          };
+          return {
+            table: ({ children, ...props }) => (
+              <div className="my-8">
+                <p className="mb-2 flex md:hidden items-center justify-center gap-2 text-xs text-gray-500">
+                  <span className="inline-block animate-pulse" aria-hidden>←</span>
+                  Faites glisser horizontalement pour voir tout le tableau
+                  <span className="inline-block animate-pulse" aria-hidden>→</span>
+                </p>
+                <div className="overflow-x-auto rounded-xl border shadow-sm" style={{ borderColor: "rgba(14,165,166,0.25)" }}>
+                  <table
+                    className="w-full min-w-[640px] text-base [&_th:nth-child(2)]:bg-[#0EA5A6]/12 [&_td:nth-child(2)]:bg-[#0EA5A6]/6 [&_th:nth-child(2)]:font-bold
+                      [&_th:first-child]:sticky [&_th:first-child]:left-0 [&_th:first-child]:z-20 [&_th:first-child]:bg-[#0EA5A6]/15 [&_th:first-child]:shadow-[4px_0_8px_-2px_rgba(0,0,0,0.06)]
+                      [&_td:first-child]:sticky [&_td:first-child]:left-0 [&_td:first-child]:z-10 [&_td:first-child]:bg-white [&_td:first-child]:shadow-[4px_0_8px_-2px_rgba(0,0,0,0.04)]
+                      [&_tr:nth-child(even)_td:first-child]:bg-gray-50/80"
+                    {...props}
+                  >
+                    {children}
+                  </table>
+                </div>
+              </div>
+            ),
+            thead: ({ children, ...props }) => (
+              <thead style={{ background: "rgba(14,165,166,0.1)" }} {...props}>
+                {children}
+              </thead>
+            ),
+            th: ({ children, ...props }) => (
+              <th className="px-5 py-4 font-semibold text-left whitespace-nowrap" style={{ color: "#0EA5A6" }} {...props}>
+                {children}
+              </th>
+            ),
+            td: ({ children, ...props }) => {
+              const text = getCellText(children);
+              const trimmed = text.trim();
+              const parsed = getIconAndSuffix(trimmed);
+              if (parsed) {
+                const showSuffix = parsed.suffix && parsed.suffix.length > 0;
+                const content = parsed.icon === "○" ? (showSuffix ? parsed.suffix : "N/A") : (showSuffix ? parsed.suffix : null);
+                return (
+                  <td className="border-t px-5 py-4 align-top" style={{ borderColor: "rgba(14,165,166,0.12)" }} {...props}>
+                    <span className={`font-bold mr-1.5 ${parsed.className}`}>{parsed.icon}</span>
+                    {content}
+                  </td>
+                );
+              }
+              return (
+                <td className="border-t px-5 py-4 align-top" style={{ borderColor: "rgba(14,165,166,0.12)" }} {...props}>
+                  {children}
+                </td>
+              );
+            },
+          };
+        })()
+      : {}),
+    // Logo Label Moverz — centré, espace réduit (article moverz-vs-concurrents)
+    ...(post.slug === "moverz-vs-concurrents-comparateur-demenagement"
+      ? {
+          a: ({ href, children, ...props }) => {
+            const firstChild = Array.isArray(children) ? children[0] : children;
+            const imgSrc = (firstChild as React.ReactElement)?.props?.src ?? "";
+            if (href === "/label-moverz/" && imgSrc?.includes("logo-label-moverz")) {
+              return (
+                <div className="w-full flex justify-center my-1 py-1">
+                  <Link href="/label-moverz/" className="inline-block">
+                    <Image
+                      src="/logo-label-moverz.png"
+                      alt="Label Moverz - Vérifier un déménageur en 30 secondes"
+                      width={224}
+                      height={150}
+                      className="h-32 md:h-40 w-auto"
+                    />
+                  </Link>
+                </div>
+              );
+            }
+            return (
+              <a href={href} {...props}>
+                {children}
+              </a>
+            );
+          },
+        }
+      : {}),
   };
 
   return (
@@ -577,12 +705,28 @@ export default function BlogPostPage({ params }: PageProps) {
             </ol>
           </nav>
 
-          <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold border" style={{
-            color: "#0EA5A6",
-            borderColor: "rgba(14,165,166,0.2)",
-            background: "rgba(14,165,166,0.05)"
-          }}>
-            <span>Blog déménagement</span>
+          <div className="flex flex-wrap items-center gap-2">
+            <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold border" style={{
+              color: "#0EA5A6",
+              borderColor: "rgba(14,165,166,0.2)",
+              background: "rgba(14,165,166,0.05)"
+            }}>
+              <span>Blog déménagement</span>
+            </div>
+            {LABEL_MOVERZ_BLOG_SLUGS.has(post.slug) && (
+              <Link
+                href="/label-moverz/"
+                className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold border transition-colors hover:bg-white/5"
+                style={{
+                  color: "#0EA5A6",
+                  borderColor: "rgba(14,165,166,0.2)",
+                  background: "rgba(14,165,166,0.05)"
+                }}
+              >
+                <Image src="/logo-label-moverz.png" alt="Label Moverz" width={140} height={93} className="h-20 md:h-24 w-auto" />
+                <span>Label Moverz</span>
+              </Link>
+            )}
           </div>
           
           <h1 className="font-heading text-[clamp(28px,5vw,44px)] font-bold tracking-[-0.02em] leading-[1.1]" style={{ color: "#111827" }}>

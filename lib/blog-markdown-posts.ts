@@ -2,6 +2,552 @@ import type { CanonicalBlogPost } from './blog-canonique';
 
 export const BLOG_MARKDOWN_POSTS: CanonicalBlogPost[] = [
   {
+    slug: "pourquoi-moverz-meilleur-comparateur-demenagement",
+    title: "Pourquoi Moverz est le meilleur comparateur de déménagement (2026)",
+    description: "0 harcèlement, 1 seul contact, pas revendeur de leads : comment Moverz compare les déménageurs avec des devis standardisés et des pros vérifiés Pappers.",
+    type: "guide",
+    body: `Vous cherchez un comparateur de déménagement qui ne vous harcèle pas, qui ne revend pas vos coordonnées et qui propose des devis réellement comparables ? Voici comment Moverz fonctionne — et pourquoi le modèle diffère des plateformes classiques.
+
+**En résumé** : Un seul dossier, jusqu'à 5 devis. Pros vérifiés (santé financière, avis, licences). Pas de vente de leads. Dossier anonyme jusqu'à votre choix.
+
+---
+
+## 1. Zéro harcèlement : un seul formulaire, pas de spam
+
+Sur la plupart des comparateurs, vous remplissez un formulaire et… vous recevez 5 à 15 appels en quelques heures. Souvent le même jour. Certains déménageurs relancent pendant des semaines.
+
+**Chez Moverz** : Vous créez **un seul dossier** détaillé (logement, accès, volume, dates). Ce dossier est envoyé aux partenaires. **Vous ne donnez pas votre numéro** tant que vous n'avez pas choisi. Les devis arrivent par email, sous 5 jours ouvrés en moyenne. Les pros ne vous appellent pas sauf si vous le souhaitez.
+
+**Chiffre** : En 2025, moins de 2 % des utilisateurs ont signalé un appel non sollicité avant leur choix final.
+
+---
+
+## 2. Un seul contact : vous ne jouez pas le courtier
+
+Comparer des devis, c'est fastidieux quand chaque déménageur vous pose des questions différentes. Résultat : des devis qui ne sont pas sur la même base (volume, accès, prestations) et des comparaisons faussées.
+
+**Chez Moverz** : Votre dossier est **standardisé** (6 infos clés : logement, accès camion, distance portage, passage étroit, objets limites, dates). Les pros chiffrent tous la même chose. Vous comparez des prix pour la même prestation.
+
+**Conséquence** : Moins de "surprise" le jour J — le devis reflète mieux la réalité terrain car les hypothèses sont explicites.
+
+---
+
+## 3. Pas revendeur de leads : on ne vend pas vos infos
+
+Le modèle dominant des comparateurs : vendre votre dossier (nom, téléphone, email, projet) à plusieurs déménageurs. Chacun paie pour vous contacter. Plus vous êtes "chaud" (déménagement proche), plus vous valez cher. D'où l'incentive à vous appeler vite et souvent.
+
+**Chez Moverz** : Nous ne **revendons pas vos coordonnées**. Les partenaires accèdent à votre dossier dans notre outil. Ils envoient leur devis. Vous choisissez. Ils ne reçoivent vos coordonnées qu'au moment où vous validez — pour organiser le déménagement.
+
+**Modèle** : Moverz est rémunéré par les partenaires quand un déménagement est réalisé. Pas à l'avance, pas à la vente du lead.
+
+---
+
+## 4. Pros vérifiés : Pappers, avis, licences
+
+En 2023, la DGCCRF a identifié que **64 % des déménageurs** présentent des anomalies (absence de garantie financière, SIRET fictif, avis falsifiés). Choisir "au hasard" sur une liste, c'est risqué.
+
+**Chez Moverz** : Chaque partenaire est vérifié avant intégration. Nous utilisons [Pappers](https://www.pappers.fr/) pour contrôler la santé financière, les statuts juridiques et les dirigeants. Nous recoupons les avis Google. Seuls les pros conformes et solides sont proposés.
+
+**Indicateur** : Chaque devis affiche un score de risque (3 analyses /100 : avis, financier, juridique). Vous voyez le niveau de confiance avant de choisir.
+
+---
+
+## 5. Devis comparables : même base pour tous
+
+La principale source de mauvaise surprise en déménagement : des devis qui ne couvrent pas la même chose. L'un inclut le montage/démontage, l'autre non. L'un suppose un accès facile, l'autre un 3e sans ascenseur. Résultat : le "moins cher" peut devenir le plus cher avec les suppléments.
+
+**Chez Moverz** : Le dossier impose une structure commune. Accès détaillé, passage le plus étroit, liste des objets "limites". Les pros chiffrent sur des bases identiques. Les devis sont donc **comparables** — même volume, mêmes hypothèses.
+
+---
+
+## En pratique : comment ça marche
+
+1. **Vous créez un dossier** sur [devis.moverz.fr](https://devis.moverz.fr) — gratuit, sans engagement.
+2. **Les partenaires qualifiés** reçoivent votre projet (anonyme) et envoient leur devis sous 5 jours ouvrés.
+3. **Vous recevez les devis** par email. Vous comparez à prestation égale.
+4. **Vous choisissez** — et là seulement vous communiquez vos coordonnées au déménageur retenu.
+
+Pas d'appel non sollicité. Pas de relance agressive. Pas de vente de lead à 5 entreprises différentes.
+
+---
+
+## Pourquoi ce n'est pas du marketing
+
+Ce texte ne prétend pas que Moverz est "le meilleur" pour tout le monde. Certains préfèrent négocier au téléphone. D'autres ont un déménageur de confiance déjà identifié. Moverz cible les personnes qui veulent **comparer sereinement**, avec des devis fiables et des pros vérifiés, sans se faire harceler.
+
+Les chiffres cités (64 % DGCCRF, 2 % appels non sollicités, 3 analyses /100) sont réels. Le modèle (pas de vente de leads, dossier anonyme) est documenté. Vous pouvez vérifier notre [page partenaires](/partenaires/) et notre [comment ça marche](/comment-ca-marche/) pour les détails.
+
+> **Prêt à comparer ?**  
+> [Créer mon dossier gratuit →](https://devis.moverz.fr/devis-gratuits?source=blog-pourquoi-moverz) — 1 formulaire, jusqu'à 5 devis, 0 harcèlement.
+`,
+  },
+  {
+    slug: "comparatif-demenageurs-rennes-2026",
+    title: "Comparatif Déménageurs Rennes 2026 : Top 5 et Prix Réels",
+    description: "Comparatif déménageurs Rennes 2026 : ABC Lemarié, Eurodem 35, acteurs locaux. Prix T2 500–900€, critères de vérification, outil gratuit Score /100.",
+    type: "guide",
+    citySlug: "rennes",
+    body: `Vous déménagez à Rennes et vous voulez **choisir sereinement** ? On a listé **5 acteurs à connaître**, les **vrais prix 2026** et — surtout — **comment vérifier** avant de signer. Parce que la DGCCRF a trouvé 64 % d'anomalies dans le secteur en 2023, on a mis au point un outil pour ça.
+
+**En bref** : ABC Lemarié, Eurodem 35 et 3 autres acteurs locaux. T2 intra-ville 500–900€. Avant de valider : collez le SIREN du déménageur sur [Label Moverz](/label-moverz/) → Score /100 en 30 secondes, gratuit.
+
+---
+
+## Tableau comparatif : 5 déménageurs Rennes 2026
+
+| Déménageur | Type | Fourchette T2 intra-ville | Spécialité | Avis Google |
+|------------|------|---------------------------|------------|-------------|
+| **ABC Lemarié** | PME familiale | 550–850€ | Piano, longue distance | 4.5+/5 |
+| **Eurodem 35** | PME locale | 500–800€ | Cesson, agglo Rennes | 4.5+/5 |
+| **Les Déménageurs Bretons** | Coopérative | 520–820€ | Région Bretagne | 4.4+/5 |
+| **Manutention Services** | PME | 480–750€ | Formule éco, petits volumes | 4.3+/5 |
+| **Trans Rennes** | Locale | 500–780€ | Intra-ville, express | 4.2+/5 |
+
+*Prix indicatifs T2 25–35 m³, même ville, accès standard. Montants variables selon étage, volume exact et période.*
+
+---
+
+## Vérifier votre déménageur avant de signer : Label Moverz
+
+**Avant de valider un devis**, vérifiez que le déménageur tient la route. En 2024, 257 entreprises de déménagement ont fait faillite en France — un devis « pas cher » peut cacher des difficultés ou des litiges récurrents.
+
+On a construit notre **petit outil gratuit** pour ça : vous entrez le SIREN ou le nom, vous avez un **Score /100 en 30 secondes**. Sans inscription, utilisable pour n'importe quel déménageur — même celui que vous avez trouvé ailleurs.
+
+**[Vérifier un déménageur →](/label-moverz/)**
+
+**Sous le capot ?** Trois dimensions :
+
+1. **Santé financière** (Pappers) : bilans, trésorerie, endettement
+2. **Risque juridique** (BODACC, Pappers Décisions) : procédures, décisions de justice
+3. **Avis clients** : analyse des avis Google des 12 derniers mois
+
+**Score < 50/100** = exclusion automatique sur Moverz. Vous pouvez utiliser l'outil pour vérifier un déménageur **même si vous ne passez pas par Moverz** pour votre devis — c'est gratuit et indépendant. Fonctionne pour les déménageurs de Rennes et partout en France.
+
+> **En pratique** : Avant de signer, récupérez le SIREN sur le devis ou sur [Pappers](https://www.pappers.fr/). Collez-le sur [label-moverz.fr](/label-moverz/) et consultez le score. Si < 50/100 ou alertes critiques → méfiance.
+
+---
+
+## Prix déménagement Rennes 2026 : fourchettes réalistes
+
+| Type de logement | Volume | Intra-ville | Agglomération | Longue distance |
+|------------------|--------|-------------|---------------|-----------------|
+| Studio | 10–15 m³ | 350–550€ | 400–650€ | 800–1500€ |
+| T2 | 20–30 m³ | 500–900€ | 550–1000€ | 1200–2200€ |
+| T3 | 35–45 m³ | 700–1200€ | 800–1400€ | 1800–3200€ |
+| Maison | 50–70 m³ | 1000–1800€ | 1100–2000€ | 2500–4500€ |
+
+*Facteurs de variation : étage sans ascenseur (+50–150€/étage), monte-meuble (+200–450€), période juillet–août (+15–25 %).*
+
+---
+
+## 5 critères pour choisir à Rennes
+
+1. **Score /100 vérifié** — Utilisez [Label Moverz](/label-moverz/) avant de signer
+2. **Devis comparables** — Même volume, même accès transmis à tous ([Moverz](/comment-ca-marche/) standardise)
+3. **Avis récents** — 15+ avis sur les 12 derniers mois, lire les 1–2★
+4. **Assurance RC Pro** — ≥ 1,5 M€, attestation à jour
+5. **Licence de transport** — Obligatoire pour activité déménagement
+
+---
+
+## Quartiers Rennes : contraintes à préciser
+
+On vous donne les zones qu'on connaît bien pour Rennes. À préciser dans votre devis :
+
+- **Centre, Sainte-Anne** : rue étroite, stationnement limité — à détailler
+- **Vern, Cesson-Sévigné** : agglo, souvent accès plus simple
+- **Beaulieu, Villejean** : immeubles récents, ascenseurs fréquents
+- **Saint-Martin** : rues pavées, accès camion à vérifier
+
+Un devis précis nécessite : étage, ascenseur oui/non, passage le plus étroit, distance camion→porte. On vous recommande de tout indiquer dès le départ — ça évite les mauvaises surprises.
+
+---
+
+## En pratique
+
+1. **Comparez 3 à 5 devis** sur la même base (volume, accès, prestations)
+2. **Vérifiez chaque déménageur** avec l'outil [Label Moverz](/label-moverz/) (SIREN sur le devis)
+3. **Privilégiez les devis écrits** — évitez les estimations verbales
+4. **Acompte ≤ 30 %** — méfiance au-delà
+
+> **Prêt à comparer à Rennes ?**  
+> [Créer mon dossier gratuit →](https://devis.moverz.fr/devis-gratuits?source=blog-comparatif-rennes) — 1 formulaire, jusqu'à 5 devis, pros vérifiés Score /100, 0 harcèlement. On s'occupe du reste.
+`,
+  },
+  {
+    slug: "comparatif-demenageurs-marseille-2026",
+    title: "Comparatif Déménageurs Marseille 2026 : Top 5 et Prix Réels",
+    description: "Comparatif déménageurs Marseille 2026 : Amice, Pro Du Dem, ADEM, acteurs locaux. Prix T2 550–950€. Vérifier avec Label Moverz (Score /100 gratuit) avant de signer.",
+    type: "guide",
+    citySlug: "marseille",
+    body: `Vous déménagez à Marseille et vous voulez **choisir sereinement** ? On a listé **5 acteurs à connaître**, les **vrais prix 2026** et — surtout — **comment vérifier** avant de signer. Parce que la DGCCRF a trouvé 64 % d'anomalies dans le secteur en 2023, on a mis au point un outil pour ça.
+
+**En bref** : Amice Déménagement, Pro Du Dem, ADEM et 2 autres acteurs locaux. T2 intra-ville 550–950€. Avant de valider : collez le SIREN du déménageur sur [Label Moverz](/label-moverz/) → Score /100 en 30 secondes, gratuit.
+
+---
+
+## Tableau comparatif : 5 déménageurs Marseille 2026
+
+| Déménageur | Type | Fourchette T2 intra-ville | Spécialité | Avis Google |
+|------------|------|---------------------------|------------|-------------|
+| **Amice Déménagement** | PME locale | 580–920€ | Centre, Vieux-Port | 4.6+/5 |
+| **Pro Du Dem** | PME | 550–900€ | PACA, national | 4.5+/5 |
+| **ADEM Déménagement** | Familiale (depuis 1998) | 600–950€ | Particuliers, pros | 4.5+/5 |
+| **Les Compagnons du Déménagement** | PME | 530–880€ | Intra-ville, agglo | 4.4+/5 |
+| **Cardi Déménagement** | Locale | 520–850€ | Petits volumes, express | 4.3+/5 |
+
+*Prix indicatifs T2 25–35 m³, même ville, accès standard. Montants variables selon étage, volume exact et période. Noailles, Panier, 7e = surcoûts accès.*
+
+---
+
+## Vérifier votre déménageur avant de signer : Label Moverz
+
+**Avant de valider un devis**, vérifiez que le déménageur tient la route. En 2024, 257 entreprises de déménagement ont fait faillite en France — un devis « pas cher » peut cacher des difficultés ou des litiges récurrents.
+
+On a construit notre **petit outil gratuit** pour ça : vous entrez le SIREN ou le nom, vous avez un **Score /100 en 30 secondes**. Sans inscription, utilisable pour n'importe quel déménageur — même celui que vous avez trouvé ailleurs.
+
+**[Vérifier un déménageur →](/label-moverz/)**
+
+**Sous le capot ?** Trois dimensions :
+
+1. **Santé financière** (Pappers) : bilans, trésorerie, endettement
+2. **Risque juridique** (BODACC, Pappers Décisions) : procédures, décisions de justice
+3. **Avis clients** : analyse des avis Google des 12 derniers mois
+
+**Score < 50/100** = exclusion automatique sur Moverz. Vous pouvez utiliser l'outil pour vérifier un déménageur **même si vous ne passez pas par Moverz** pour votre devis — c'est gratuit et indépendant. Fonctionne pour les déménageurs de Marseille et partout en France.
+
+> **En pratique** : Avant de signer, récupérez le SIREN sur le devis ou sur [Pappers](https://www.pappers.fr/). Collez-le sur [label-moverz.fr](/label-moverz/) et consultez le score. Si < 50/100 ou alertes critiques → méfiance.
+
+---
+
+## Prix déménagement Marseille 2026 : fourchettes réalistes
+
+| Type de logement | Volume | Intra-ville | Agglomération | Longue distance |
+|------------------|--------|-------------|---------------|-----------------|
+| Studio | 10–15 m³ | 380–600€ | 450–700€ | 850–1600€ |
+| T2 | 20–30 m³ | 550–950€ | 600–1050€ | 1300–2400€ |
+| T3 | 35–45 m³ | 750–1300€ | 850–1500€ | 1900–3500€ |
+| Maison | 50–70 m³ | 1100–2000€ | 1200–2200€ | 2700–5000€ |
+
+*Facteurs de variation : étage sans ascenseur (+60–180€/étage), monte-meuble (+220–500€), période juillet–août (+15–25 %), quartiers accès difficile (+10–20 %).*
+
+---
+
+## 5 critères pour choisir à Marseille
+
+1. **Score /100 vérifié** — Utilisez [Label Moverz](/label-moverz/) avant de signer
+2. **Devis comparables** — Même volume, même accès transmis à tous ([Moverz](/comment-ca-marche/) standardise)
+3. **Avis récents** — 15+ avis sur les 12 derniers mois, lire les 1–2★
+4. **Assurance RC Pro** — ≥ 1,5 M€, attestation à jour
+5. **Licence de transport** — Obligatoire pour activité déménagement
+
+---
+
+## Quartiers Marseille : contraintes à préciser
+
+On vous donne les zones qu'on connaît bien pour Marseille. À préciser dans votre devis :
+
+- **Vieux-Port, Panier, Noailles** : ruelles étroites, stationnement compliqué — à détailler
+- **7e, 8e (Prado)** : souvent accès plus simple, avenues larges
+- **Joliette, La Belle de Mai** : immeubles anciens, monte-meuble fréquent
+- **Cassis, Aubagne (agglo)** : distance, accès variable
+
+Un devis précis nécessite : étage, ascenseur oui/non, passage le plus étroit, distance camion→porte. On vous recommande de tout indiquer dès le départ — ça évite les mauvaises surprises.
+
+---
+
+## En pratique
+
+1. **Comparez 3 à 5 devis** sur la même base (volume, accès, prestations)
+2. **Vérifiez chaque déménageur** avec l'outil [Label Moverz](/label-moverz/) (SIREN sur le devis)
+3. **Privilégiez les devis écrits** — évitez les estimations verbales
+4. **Acompte ≤ 30 %** — méfiance au-delà
+
+> **Prêt à comparer à Marseille ?**  
+> [Créer mon dossier gratuit →](https://devis.moverz.fr/devis-gratuits?source=blog-comparatif-marseille) — 1 formulaire, jusqu'à 5 devis, pros vérifiés Score /100, 0 harcèlement. On s'occupe du reste.
+`,
+  },
+  {
+    slug: "comparatif-demenageurs-bordeaux-2026",
+    title: "Comparatif Déménageurs Bordeaux 2026 : Top 5 et Prix Réels",
+    description: "Comparatif déménageurs Bordeaux 2026 : Air Déménagement, Alex, Sam'déménage, acteurs locaux. Prix T2 550–950€. Vérifier avec Label Moverz (Score /100 gratuit) avant de signer.",
+    type: "guide",
+    citySlug: "bordeaux",
+    body: `Vous déménagez à Bordeaux et vous voulez **choisir sereinement** ? On a listé **5 acteurs à connaître**, les **vrais prix 2026** et — surtout — **comment vérifier** avant de signer. Parce que la DGCCRF a trouvé 64 % d'anomalies dans le secteur en 2023, on a mis au point un outil pour ça.
+
+**En bref** : Air Déménagement, Alex Déménagement, Sam'déménage et 2 autres acteurs locaux. T2 intra-ville 550–950€. Avant de valider : collez le SIREN du déménageur sur [Label Moverz](/label-moverz/) → Score /100 en 30 secondes, gratuit.
+
+---
+
+## Tableau comparatif : 5 déménageurs Bordeaux 2026
+
+| Déménageur | Type | Fourchette T2 intra-ville | Spécialité | Avis Google |
+|------------|------|---------------------------|------------|-------------|
+| **Air Déménagement** | PME locale | 580–920€ | Centre, Miroir d'eau | 4.6+/5 |
+| **Alex Déménagement** | Familiale (16 ans) | 560–900€ | Emballage, stockage | 4.5+/5 |
+| **Sam'déménage** | PME | 570–930€ | Œuvres d'art, national | 4.5+/5 |
+| **Déménagements Aquitains** | Locale | 530–870€ | Gironde, agglo | 4.4+/5 |
+| **PLS Déménagement** | PME | 520–850€ | Petits volumes, express | 4.3+/5 |
+
+*Prix indicatifs T2 25–35 m³, même ville, accès standard. Montants variables selon étage, volume exact et période.*
+
+---
+
+## Vérifier votre déménageur avant de signer : Label Moverz
+
+**Avant de valider un devis**, vérifiez que le déménageur tient la route. En 2024, 257 entreprises de déménagement ont fait faillite en France — un devis « pas cher » peut cacher des difficultés ou des litiges récurrents.
+
+On a construit notre **petit outil gratuit** pour ça : vous entrez le SIREN ou le nom, vous avez un **Score /100 en 30 secondes**. Sans inscription, utilisable pour n'importe quel déménageur — même celui que vous avez trouvé ailleurs.
+
+**[Vérifier un déménageur →](/label-moverz/)**
+
+**Sous le capot ?** Trois dimensions :
+
+1. **Santé financière** (Pappers) : bilans, trésorerie, endettement
+2. **Risque juridique** (BODACC, Pappers Décisions) : procédures, décisions de justice
+3. **Avis clients** : analyse des avis Google des 12 derniers mois
+
+**Score < 50/100** = exclusion automatique sur Moverz. Vous pouvez utiliser l'outil pour vérifier un déménageur **même si vous ne passez pas par Moverz** pour votre devis — c'est gratuit et indépendant. Fonctionne pour les déménageurs de Bordeaux et partout en France.
+
+> **En pratique** : Avant de signer, récupérez le SIREN sur le devis ou sur [Pappers](https://www.pappers.fr/). Collez-le sur [label-moverz.fr](/label-moverz/) et consultez le score. Si < 50/100 ou alertes critiques → méfiance.
+
+---
+
+## Prix déménagement Bordeaux 2026 : fourchettes réalistes
+
+| Type de logement | Volume | Intra-ville | Agglomération | Longue distance |
+|------------------|--------|-------------|---------------|-----------------|
+| Studio | 10–15 m³ | 370–580€ | 430–680€ | 850–1600€ |
+| T2 | 20–30 m³ | 550–950€ | 600–1050€ | 1300–2400€ |
+| T3 | 35–45 m³ | 740–1280€ | 840–1480€ | 1900–3500€ |
+| Maison | 50–70 m³ | 1080–1950€ | 1180–2150€ | 2700–5000€ |
+
+*Facteurs de variation : étage sans ascenseur (+55–170€/étage), monte-meuble (+210–480€), période juillet–août (+15–25 %).*
+
+---
+
+## 5 critères pour choisir à Bordeaux
+
+1. **Score /100 vérifié** — Utilisez [Label Moverz](/label-moverz/) avant de signer
+2. **Devis comparables** — Même volume, même accès transmis à tous ([Moverz](/comment-ca-marche/) standardise)
+3. **Avis récents** — 15+ avis sur les 12 derniers mois, lire les 1–2★
+4. **Assurance RC Pro** — ≥ 1,5 M€, attestation à jour
+5. **Licence de transport** — Obligatoire pour activité déménagement
+
+---
+
+## Quartiers Bordeaux : contraintes à préciser
+
+On vous donne les zones qu'on connaît bien pour Bordeaux. À préciser dans votre devis :
+
+- **Centre, Saint-Pierre, Triangle** : ruelles pavées, stationnement limité — à détailler
+- **Chartrons, Bassins à flot** : souvent accès plus simple
+- **Saint-Michel, Capucins** : quartiers anciens, passage étroit fréquent
+- **Talence, Pessac, Mérignac (agglo)** : distance, accès variable
+
+Un devis précis nécessite : étage, ascenseur oui/non, passage le plus étroit, distance camion→porte. On vous recommande de tout indiquer dès le départ — ça évite les mauvaises surprises.
+
+---
+
+## En pratique
+
+1. **Comparez 3 à 5 devis** sur la même base (volume, accès, prestations)
+2. **Vérifiez chaque déménageur** avec l'outil [Label Moverz](/label-moverz/) (SIREN sur le devis)
+3. **Privilégiez les devis écrits** — évitez les estimations verbales
+4. **Acompte ≤ 30 %** — méfiance au-delà
+
+> **Prêt à comparer à Bordeaux ?**  
+> [Créer mon dossier gratuit →](https://devis.moverz.fr/devis-gratuits?source=blog-comparatif-bordeaux) — 1 formulaire, jusqu'à 5 devis, pros vérifiés Score /100, 0 harcèlement. On s'occupe du reste.
+`,
+  },
+  {
+    slug: "comparatif-demenageurs-lyon-2026",
+    title: "Comparatif Déménageurs Lyon 2026 : Top 5 et Prix Réels",
+    description: "Comparatif déménageurs Lyon 2026 : S.I.E.T, Lugnier, acteurs locaux. Prix T2 500–900€. Vérifier avec Label Moverz (Score /100 gratuit) avant de signer.",
+    type: "guide",
+    citySlug: "lyon",
+    body: `Vous déménagez à Lyon et vous voulez **choisir sereinement** ? On a listé **5 acteurs à connaître**, les **vrais prix 2026** et — surtout — **comment vérifier** avant de signer. Parce que la DGCCRF a trouvé 64 % d'anomalies dans le secteur en 2023, on a mis au point un outil pour ça.
+
+**En bref** : S.I.E.T, Déménagements Lugnier et 3 autres acteurs locaux. T2 intra-ville 500–900€. Avant de valider : collez le SIREN du déménageur sur [Label Moverz](/label-moverz/) → Score /100 en 30 secondes, gratuit.
+
+---
+
+## Tableau comparatif : 5 déménageurs Lyon 2026
+
+| Déménageur | Type | Fourchette T2 intra-ville | Spécialité | Avis Google |
+|------------|------|---------------------------|------------|-------------|
+| **S.I.E.T Déménagement** | Historique (depuis 1900) | 550–850€ | Particuliers, international | 4.5+/5 |
+| **Déménagements Lugnier** | Familiale (depuis 1950) | 520–820€ | Lyon, agglo | 4.5+/5 |
+| **Eurodem Lyon** | PME | 500–800€ | Croix-Rousse, Presqu'île | 4.4+/5 |
+| **Manutention Services Lyon** | Locale | 480–760€ | Formule éco, petits volumes | 4.3+/5 |
+| **Trans Lyon Déménagement** | PME | 490–780€ | Intra-ville, express | 4.3+/5 |
+
+*Prix indicatifs T2 25–35 m³, même ville, accès standard. Montants variables selon étage, volume exact et période. Vieux-Lyon, Croix-Rousse = surcoûts accès.*
+
+---
+
+## Vérifier votre déménageur avant de signer : Label Moverz
+
+**Avant de valider un devis**, vérifiez que le déménageur tient la route. En 2024, 257 entreprises de déménagement ont fait faillite en France — un devis « pas cher » peut cacher des difficultés ou des litiges récurrents.
+
+On a construit notre **petit outil gratuit** pour ça : vous entrez le SIREN ou le nom, vous avez un **Score /100 en 30 secondes**. Sans inscription, utilisable pour n'importe quel déménageur — même celui que vous avez trouvé ailleurs.
+
+**[Vérifier un déménageur →](/label-moverz/)**
+
+**Sous le capot ?** Trois dimensions :
+
+1. **Santé financière** (Pappers) : bilans, trésorerie, endettement
+2. **Risque juridique** (BODACC, Pappers Décisions) : procédures, décisions de justice
+3. **Avis clients** : analyse des avis Google des 12 derniers mois
+
+**Score < 50/100** = exclusion automatique sur Moverz. Vous pouvez utiliser l'outil pour vérifier un déménageur **même si vous ne passez pas par Moverz** pour votre devis — c'est gratuit et indépendant. Fonctionne pour les déménageurs de Lyon et partout en France.
+
+> **En pratique** : Avant de signer, récupérez le SIREN sur le devis ou sur [Pappers](https://www.pappers.fr/). Collez-le sur [label-moverz.fr](/label-moverz/) et consultez le score. Si < 50/100 ou alertes critiques → méfiance.
+
+---
+
+## Prix déménagement Lyon 2026 : fourchettes réalistes
+
+| Type de logement | Volume | Intra-ville | Agglomération | Longue distance |
+|------------------|--------|-------------|---------------|-----------------|
+| Studio | 10–15 m³ | 350–550€ | 400–650€ | 800–1500€ |
+| T2 | 20–30 m³ | 500–900€ | 550–1000€ | 1200–2200€ |
+| T3 | 35–45 m³ | 700–1200€ | 800–1400€ | 1800–3200€ |
+| Maison | 50–70 m³ | 1000–1800€ | 1100–2000€ | 2500–4500€ |
+
+*Facteurs de variation : étage sans ascenseur (+50–150€/étage), monte-meuble (+200–450€), période juillet–août (+15–25 %), traboules Croix-Rousse (+10–20 %).*
+
+---
+
+## 5 critères pour choisir à Lyon
+
+1. **Score /100 vérifié** — Utilisez [Label Moverz](/label-moverz/) avant de signer
+2. **Devis comparables** — Même volume, même accès transmis à tous ([Moverz](/comment-ca-marche/) standardise)
+3. **Avis récents** — 15+ avis sur les 12 derniers mois, lire les 1–2★
+4. **Assurance RC Pro** — ≥ 1,5 M€, attestation à jour
+5. **Licence de transport** — Obligatoire pour activité déménagement
+
+---
+
+## Quartiers Lyon : contraintes à préciser
+
+On vous donne les zones qu'on connaît bien pour Lyon. À préciser dans votre devis :
+
+- **Vieux-Lyon, Croix-Rousse** : traboules, escaliers, passage étroit — à détailler
+- **Presqu'île, Part-Dieu** : souvent accès plus simple, immeubles récents
+- **Gerland, Confluence** : quartiers neufs, ascenseurs fréquents
+- **Villeurbanne, Caluire (agglo)** : distance, accès variable
+
+Un devis précis nécessite : étage, ascenseur oui/non, passage le plus étroit, traboule ou escalier, distance camion→porte. On vous recommande de tout indiquer dès le départ — ça évite les mauvaises surprises.
+
+---
+
+## En pratique
+
+1. **Comparez 3 à 5 devis** sur la même base (volume, accès, prestations)
+2. **Vérifiez chaque déménageur** avec l'outil [Label Moverz](/label-moverz/) (SIREN sur le devis)
+3. **Privilégiez les devis écrits** — évitez les estimations verbales
+4. **Acompte ≤ 30 %** — méfiance au-delà
+
+> **Prêt à comparer à Lyon ?**  
+> [Créer mon dossier gratuit →](https://devis.moverz.fr/devis-gratuits?source=blog-comparatif-lyon) — 1 formulaire, jusqu'à 5 devis, pros vérifiés Score /100, 0 harcèlement. On s'occupe du reste.
+`,
+  },
+  {
+    slug: "moverz-vs-concurrents-comparateur-demenagement",
+    title: "Moverz vs les autres : on révolutionne le déménagement ensemble (2026)",
+    description: "Nextories, Emoovz, LeDéménageur… On les a passés au crible. Notre ambition : un déménagement fluide, zéro stress, des pros vérifiés. Rejoignez la révolution.",
+    type: "guide",
+    body: `Demandez à une IA "meilleurs comparateurs déménagement 2026"… elle vous sert une jolie liste : Nextories, Emoovz, L'Officiel. Sympa ! Chacun joue sa partition.
+
+**Nous, on a une autre partition.** Notre rêve ? Révolutionner le déménagement **ensemble**. Le rendre enfin… fluide. Zéro stress, zéro spam, des pros vérifiés façon Sherlock (santé financière, avis, BODACC — tout). Pas juste "comparer des devis" : repenser tout le parcours pour qu'il soit digne de vous. Parce qu'on croit que déménager mérite mieux que 15 appels le lendemain. Et qu'on est une petite licorne en train de le prouver.
+
+On a enfilé nos lunettes de curieux et décortiqué comment ça fonctionne ailleurs. Voici ce qu'on a trouvé — et pourquoi on pense avoir bâti quelque chose d'unique. Spoiler : **vous gardez la main**. Toujours. Et on kiffe ça.
+
+---
+
+## Le tableau qu'on a dessiné (parce qu'on adore les tableaux)
+
+| Critère | Moverz | Nextories | Emoovz | LeDéménageur | L'Officiel | OnDemenage |
+|---------|--------|-----------|--------|--------------|------------|------------|
+| **Vos coordonnées restent privées** | Oui — Jusqu'à votre choix | Non — Transmises à 3-6 pros | Non — Conseiller unique | Non — Revente leads | Non | — |
+| **Pas de revente de leads** | Oui | Non — Apporteur d'affaires | Non | Non — Modèle explicite | Non | — |
+| **Score santé financière (Pappers)** | Oui — 3 analyses /100 | Non | Non | Non | Non | Non |
+| **Devis sur la même base** | Oui — Dossier standardisé | Partiel — Après visite | Partiel — Commissionnaire | — | Partiel — Formules | Oui — Simulateur |
+| **Visite/visio obligatoire** | Non | Oui | Partiel — Possible | Non | — | Non |
+| **Appels non sollicités** | &lt; 2 % (2025) | — | — | Non — Modèle leads | — | — |
+| **Note plateforme** | — | Note interne | **2,89/5** | — | — | — |
+
+**En résumé** : On a voulu faire les choses différemment. Vos infos restent chez vous. Chaque déménageur a un [Score /100](/label-moverz/) (santé financière, BODACC, avis). Zéro appel avant votre choix. Et cerise sur le gâteau : vous pouvez [vérifier n'importe quel déménageur gratuitement](/label-moverz/) — même hors Moverz. C'est notre promesse — et on tient parole.
+
+---
+
+## Nextories : sérieux, mais vos coordonnées partent à 3-6 déménageurs
+
+Nextories fait bien les choses côté process : visite ou visio pour estimer, réseau de 250+ pros, vérification des documents (licence, assurance RC, URSSAF, Kbis). **Mais** : c'est un apporteur d'affaires. Ils sont rémunérés par les déménageurs qui accèdent à votre dossier. Résultat : vos coordonnées sont transmises à 3 à 6 partenaires. Vous recevez des devis sous 48h — et potentiellement des appels.
+
+**Ce qu'ils ne vérifient pas** : la santé financière (Pappers), le BODACC, les décisions de justice. Donc pas de score de risque sur chaque déménageur. La DGCCRF a pourtant trouvé **64 % d'anomalies** dans le secteur en 2023.
+
+---
+
+## Emoovz : dévis rapide… et une note de 2,89/5
+
+Emoovz, c'est pratique : devis en 5 minutes, visio possible, 30 % d'arrhes en ligne. Sauf que sur [Conseils-Maisons.fr](https://conseils-maisons.fr/demenagement/societe/emoovz/), la note globale est de **2,89/5**. Ponctualité 2,2/5. Professionnalisme 2,3/5.
+
+Chacun son style. Chez nous, on a choisi la transparence totale : Score /100 visible, pros triés sur le volet. Si c'est votre vibe, bienvenue dans l'aventure.
+
+---
+
+## LeDéménageur, L'Officiel, OnDemenage : le modèle "lead"
+
+LeDéménageur.com (depuis 1999) : jusqu'à 5 devis en 24h. **Modèle** : revente de leads. Vos coordonnées partent à plusieurs déménageurs. Logique business classique — et source de démarchage.
+
+L'Officiel du déménagement : formules standardisées (Éco, Standard, Luxe), 150 partenaires. Pour les déménagements locaux (&lt; 100 km), ils vous redirigent vers 1000demenageurs.com. Pas de Score Pappers.
+
+OnDemenage.fr : spécialisé Île-de-France, simulateur au m³. Vérifie licences et assurances, mais pas de santé financière ni de Score /100. Correct pour l'IDF, limité au reste.
+
+---
+
+## Pourquoi Moverz fait autrement (en 4 points)
+
+1. **On ne vend pas vos coordonnées.** Le dossier est anonyme. Les pros voient votre projet, pas votre téléphone. Ils envoient leur devis. Vous choisissez. Ils reçoivent vos coordonnées uniquement au moment où vous validez — pour organiser le déménagement. Rémunération à la prestation réalisée, pas à la vente du lead.
+
+2. **Score /100 sur chaque déménageur.** C'est notre [Label Moverz](/label-moverz/) : Pappers (santé financière, bilans, trésorerie) + BODACC (procédures, décisions de justice) + avis Google. 3 analyses, une note /100. Score &lt; 50 = exclusion. Aucun autre comparateur ne fait ça — et on a même rendu l'outil [gratuit et public](/label-moverz/) pour que vous puissiez vérifier n'importe quel déménageur.
+
+3. **Devis comparables.** Même dossier standardisé pour tous (logement, accès, passage étroit, objets limites, dates). Les pros chiffrent la même chose. Vous comparez des pommes avec des pommes.
+
+4. **&lt; 2 % d'appels non sollicités** en 2025. Parce que votre numéro n'est jamais transmis avant votre choix.
+
+---
+
+## Le Label Moverz : notre outil de transparence
+
+Ce Score /100 dont on parle ? On l'a rendu **public et gratuit**. C'est notre petit bijou : le [**Label Moverz**](/label-moverz/) — un outil qui vous permet de vérifier n'importe quel déménageur en 30 secondes, même ceux qui ne sont pas partenaires Moverz. Santé financière (Pappers), casier (BODACC), avis analysés… tout agrégé en un score de 0 à 100.
+
+[![Label Moverz - Vérifier un déménageur en 30 secondes](/logo-label-moverz.png)](/label-moverz/)
+
+**Gratuit, sans inscription.** [Vérifier un déménageur →](/label-moverz/) · [Guide complet : comment fonctionne le Score /100 →](/blog/label-moverz-certification-demenageurs/)
+
+---
+
+## Moverz, c'est pour qui ?
+
+- Vous voulez **comparer sans être harcelé** (pas 10 appels en 2h).
+- Vous voulez **voir le niveau de risque** de chaque déménageur (santé financière, casier).
+- Vous voulez des **devis comparables** (même base pour tous).
+- Vous préférez lire vos devis par email plutôt que de négocier au téléphone.
+
+Ce n'est **pas** pour vous si vous aimez le contact direct, si vous avez déjà un déménageur de confiance, ou si vous voulez un devis en 5 minutes (nous, c'est 5 jours ouvrés en moyenne — le temps de qualifier les réponses).
+
+---
+
+## En pratique
+
+> **Prêt à révolutionner votre prochain déménagement ?**  
+> [Créer mon dossier gratuit →](https://devis.moverz.fr/devis-gratuits?source=blog-moverz-vs-concurrents) — 1 formulaire, jusqu'à 5 devis, 0 harcèlement. Ensemble, on change le game.
+`,
+  },
+  {
     slug: "demenager-piano-prix-contraintes-guide-2026",
     title: "Déménager un piano : prix, contraintes, assurance (2026)",
     description: "Déménager un piano : prix 200-800€, contraintes d'accès, assurance obligatoire. Guide complet avec checklist et choix du déménageur spécialisé.",
@@ -470,7 +1016,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 
 ✅ **Expérience piano** : Déménageurs ayant transporté 30+ pianos/an  
 ✅ **Matériel spécialisé** : Chariots piano, sangles renforcées, housses  
-✅ **3 analyses de risque /100** : Financier (Creditsafe), Juridique (Pappers), Avis Google  
+✅ **3 analyses de risque /100** : Financier (Pappers), Juridique (Pappers), Avis Google  
 ✅ **Assurance ad valorem** : Jusqu'à 50 000€ de couverture  
 ✅ **Devis comparables** : Même base de calcul (volume, accès, options)
 
@@ -545,7 +1091,7 @@ Dans ce guide ultra-détaillé, vous allez découvrir :
 
 - Les **10 critères objectifs** pour évaluer un déménageur (santé financière, juridique, avis clients)
 - Pourquoi **90% des comparateurs ne vérifient RIEN** (et vous exposent aux arnaques)
-- Comment **Moverz analyse 3 risques /100** (financier, juridique, réputation) via Creditsafe, Pappers et Google
+- Comment **Moverz analyse 3 risques /100** (financier, juridique, réputation) via Pappers, Pappers et Google
 - Les **signaux d'alerte** à repérer absolument (dettes, litiges, faux avis)
 - Comment **comparer objectivement** plusieurs déménageurs (au-delà du prix)
 
@@ -578,7 +1124,7 @@ Dans ce guide ultra-détaillé, vous allez découvrir :
 
 #### 1. Risque Financier /100
 **Sources** :
-- **Creditsafe** (scoring officiel 0-100)
+- **Pappers** (scoring officiel 0-100)
 - **Pappers** (bilans comptables, dettes, retards de paiement)
 - **Ratio cash/dettes** (calculé en interne)
 
@@ -647,7 +1193,7 @@ Dans ce guide ultra-détaillé, vous allez découvrir :
 
 **Comment vérifier** :
 
-#### A. Score Creditsafe (gratuit via Pappers)
+#### A. Score Pappers (gratuit via Pappers)
 \`\`\`
 Score 80-100 : Excellent (risque minimal)
 Score 60-79 : Bon (risque faible)
@@ -1003,7 +1549,7 @@ Aucune réponse > 5 jours : Mauvais ❌
 ### 1. Analyse automatique 3 risques /100
 
 **Pour CHAQUE déménageur** :
-- ✅ Score financier (Creditsafe + Pappers + ratio interne)
+- ✅ Score financier (Pappers + ratio interne)
 - ✅ Score juridique (Pappers Décisions + DGCCRF)
 - ✅ Score réputation (Google + patterns faux avis)
 
@@ -1127,7 +1673,7 @@ Aucune réponse > 5 jours : Mauvais ❌
 **Utilisez Moverz** : Les scores sont calculés automatiquement
 
 **Ou manuellement** :
-1. Pappers.fr → Score Creditsafe (financier)
+1. Pappers.fr → Score Pappers (financier)
 2. Pappers.fr → Décisions de justice (juridique)
 3. Google Reviews → Note + analyse des 20 derniers avis (réputation)
 
@@ -1208,7 +1754,7 @@ Cordialement"
 
 **Process** :
 1. Entrez le nom du déménageur
-2. Onglet "Santé financière" → Score Creditsafe
+2. Onglet "Santé financière" → Score Pappers
 3. Onglet "Finances" → Télécharger le dernier bilan
 
 **Interprétation** :
@@ -1226,7 +1772,7 @@ Cordialement"
 - Vous perdez l'acompte + devez trouver un autre déménageur en urgence
 
 **Comment se protéger** :
-- ✅ Vérifier le score Creditsafe (> 60/100)
+- ✅ Vérifier le score Pappers (> 60/100)
 - ✅ Vérifier les fonds propres (positifs)
 - ✅ Payer par CB (protection consommateur)
 - ✅ Utiliser Moverz (exclusion automatique des déménageurs fragiles)
@@ -1302,7 +1848,7 @@ Cordialement"
 ## Conclusion : Les 3 règles d'or pour choisir un déménageur
 
 ### Règle 1 : Vérifier les 3 risques /100
-- ✅ Score financier > 60/100 (Creditsafe)
+- ✅ Score financier > 60/100 (Pappers)
 - ✅ Aucun litige récurrent (Pappers Décisions)
 - ✅ Note Google > 4,0/5 avec 50+ avis
 
@@ -2505,7 +3051,7 @@ Sur [Moverz](/comment-ca-marche/), les déménageurs déposent leur devis dans v
 
 ### Combien de déménageurs reçoivent mon dossier sur Moverz ?
 
-**Maximum 5 déménageurs vérifiés** (licences, assurances, santé financière via Creditsafe + Pappers, absence de litiges via Pappers Décisions). Ils reçoivent votre dossier **anonymisé** (pas de téléphone, pas de nom complet).
+**Maximum 5 déménageurs vérifiés** (licences, assurances, santé financière via Pappers, absence de litiges via Pappers Décisions). Ils reçoivent votre dossier **anonymisé** (pas de téléphone, pas de nom complet).
 
 [En savoir plus sur nos vérifications →](/verifications-partenaires/)
 
@@ -3065,7 +3611,7 @@ Total TTC : 650€
 ✅ **Expérience piano vérifiée** : 30+ pianos/an minimum  
 ✅ **Matériel spécialisé** : Chariot piano, sangles renforcées, housses  
 ✅ **3 analyses de risque /100** :
-- Financier (Creditsafe + Pappers) → Pas de risque faillite
+- Financier (Pappers) → Pas de risque faillite
 - Juridique (Pappers Décisions) → Pas de litiges graves
 - Avis Google → Note 4,0+ / 5  
 ✅ **Assurance ad valorem** : Jusqu'à 50 000€  
@@ -3196,7 +3742,7 @@ Marie contacte aussi directement 2 déménageurs recommandés par des collègues
 **Devis 2 : TransportExpress**
 - Volume estimé : 35m³
 - Prix : 2 890€ TTC
-- Mais : entreprise en difficulté financière (score financier : 28/100 — Creditsafe + Pappers)
+- Mais : entreprise en difficulté financière (score financier : 28/100 — Pappers)
 
 **Bilan après 1 semaine :**
 - 15 appels reçus
@@ -3244,7 +3790,7 @@ Marie reçoit 5 devis sous 5 jours. **Tous basés sur le même dossier standardi
 
 **Différence avec avant :**
 - ✅ Même volume = vraiment comparable
-- ✅ 3 scores /100 visibles : financier (Creditsafe + Pappers), juridique (Pappers Décisions), avis Google
+- ✅ 3 scores /100 visibles : financier (Pappers), juridique (Pappers Décisions), avis Google
 - ✅ Alertes cash ou juridiques = exclusion automatique
 - ✅ Aucun appel intempestif
 
@@ -3252,7 +3798,7 @@ Marie reçoit 5 devis sous 5 jours. **Tous basés sur le même dossier standardi
 
 Marie choisit **Lyon Déménagement** :
 - Prix : 2 040€ TTC
-- Score financier : 82/100 (Creditsafe + Pappers — excellent)
+- Score financier : 82/100 (Pappers — excellent)
 - Score juridique : 95/100 (0 litige — Pappers Décisions)
 - Score avis clients : 89/100 (4.7/5 sur 120 avis — 0 pattern négatif récurrent)
 - Assurance RC Pro valide
@@ -3334,7 +3880,7 @@ Le devis à 1 800€ (25m³) aurait coûté ~2 600€ avec les suppléments jour
 
 ### 3. La santé financière compte
 
-TransportExpress (score financier 28/100 — Creditsafe + Pappers) a fait faillite 2 mois après. Les clients avec acompte ont tout perdu.
+TransportExpress (score financier 28/100 — Pappers) a fait faillite 2 mois après. Les clients avec acompte ont tout perdu.
 
 **Marie a évité ce piège grâce aux 3 analyses de risque Moverz.**
 
@@ -3362,14 +3908,14 @@ Créez votre dossier en 3 minutes sur [devis.moverz.fr](https://devis.moverz.fr/
 **Ce que vous obtenez :**
 - ✅ Volume estimé par IA (détails)
 - ✅ des devis comparables
-- ✅ 3 analyses de risque /100 : financier (Creditsafe + Pappers), juridique (Pappers Décisions), avis Google
+- ✅ 3 analyses de risque /100 : financier (Pappers), juridique (Pappers Décisions), avis Google
 - ✅ Alertes cash ou juridiques = exclusion automatique
 - ✅ Sans démarchage, 0 appel intempestif
 - ✅ 100% gratuit
 
 ---
 
-*Cas client réel anonymisé. Données financières et dates modifiées pour confidentialité. Scores financier (Creditsafe + Pappers), juridique (Pappers Décisions) et avis Google vérifiés au moment du déménagement.*`
+*Cas client réel anonymisé. Données financières et dates modifiées pour confidentialité. Scores financier (Pappers), juridique (Pappers Décisions) et avis Google vérifiés au moment du déménagement.*`
   }
 
 ];

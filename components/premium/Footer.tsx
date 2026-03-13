@@ -1,10 +1,11 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
+import { LogoWithText } from "@/components/LogoWithText";
 
-const footerSections = [
+const footerSections: { title: string; colSpan?: number; links: { href: string; label: string; icon?: string }[] }[] = [
   {
     title: "Liens utiles",
+    colSpan: 2,
     links: [
       { href: "/pourquoi-moverz/", label: "Pourquoi Moverz" },
       { href: "/label-moverz/", label: "Label Moverz" },
@@ -21,6 +22,7 @@ const footerSections = [
   },
   {
     title: "Professionnels",
+    colSpan: 2,
     links: [
       { href: "/partenaires/", label: "Devenir partenaire" },
       { href: "/verifications-partenaires/", label: "Critères de sélection" },
@@ -29,6 +31,7 @@ const footerSections = [
   },
   {
     title: "Nos villes",
+    colSpan: 2,
     links: [
       { href: "/demenagement/nice/", label: "Nice" },
       { href: "/demenagement/lyon/", label: "Lyon" },
@@ -39,6 +42,7 @@ const footerSections = [
   },
   {
     title: "Contact",
+    colSpan: 1,
     links: [
       { href: "mailto:guillaume@moverz.fr", label: "guillaume@moverz.fr", icon: "mail" },
       { href: "tel:+33664779434", label: "06 64 77 94 34", icon: "phone" },
@@ -46,6 +50,7 @@ const footerSections = [
   },
   {
     title: "Informations légales",
+    colSpan: 1,
     links: [
       { href: "/mentions-legales/", label: "Mentions légales" },
       { href: "/politique-confidentialite/", label: "Confidentialité" },
@@ -62,13 +67,15 @@ export function Footer() {
       style={{ background: "var(--color-bg-dark)" }}
     >
       <div className="mx-auto max-w-[1200px] px-5 md:px-6 lg:px-8 py-10 md:py-14">
-        {/* Brand + CTA en haut - Mobile */}
+        {/* Brand (icône seule) + Texte - Mobile */}
         <div className="mb-8 md:hidden">
-          <a href="/" className="inline-flex items-center gap-2.5 mb-4" title="Moverz">
-            <Image src="/logo-header.png" alt="Logo Moverz" width={48} height={32} className="h-8" />
-          </a>
+          <div className="mb-4">
+            <a href="/" className="inline-flex" title="Moverz">
+              <LogoWithText size="footer" variant="light" showText={false} />
+            </a>
+          </div>
           
-          <div className="space-y-2 mb-5">
+          <div className="space-y-2">
             <p className="text-sm font-semibold text-white leading-snug">
               Le comparateur anti-arnaque du déménagement :
             </p>
@@ -76,24 +83,13 @@ export function Footer() {
               Zéro harcèlement · 3+ devis fiables sous 5 jours · 100% gratuit
             </p>
           </div>
-          
-          <a
-            href="https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=footer"
-            className="flex items-center justify-center gap-2 w-full rounded-xl px-4 py-3 text-sm font-semibold text-white transition-all hover:opacity-90 active:scale-95"
-            style={{ 
-              background: "#F59E0B",
-              boxShadow: "0 2px 8px rgba(245,158,11,0.25)"
-            }}
-          >
-            Obtenir mes devis
-          </a>
         </div>
 
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-6 md:gap-8 mb-10">
-          {/* Col 1: Brand + Texte + CTA - Desktop uniquement */}
-          <div className="hidden md:block md:col-span-1 space-y-4">
-            <a href="/" className="inline-flex items-center gap-2.5" title="Moverz">
-              <Image src="/logo-header.png" alt="Logo Moverz" width={48} height={32} className="h-8" />
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-12 md:gap-6 mb-10">
+          {/* Col 1: Brand + Texte + CTA - col-span-3 pour éviter chevauchement avec Liens utiles */}
+          <div className="hidden md:flex md:col-span-3 md:flex-col md:min-w-0 md:overflow-hidden space-y-4">
+            <a href="/" className="inline-flex" title="Moverz">
+              <LogoWithText size="footer" variant="light" showText={false} />
             </a>
             
             {/* Texte sous le logo */}
@@ -121,7 +117,7 @@ export function Footer() {
 
           {/* Colonnes 2-6 : Links */}
           {footerSections.map((section) => (
-            <div key={section.title} className="md:col-span-1">
+            <div key={section.title} className={`${section.colSpan === 2 ? "md:col-span-2" : "md:col-span-1"} md:min-w-0 overflow-hidden`}>
               <h3 className="font-semibold mb-3 md:mb-4 text-sm md:text-base text-white">{section.title}</h3>
               <ul className="space-y-2 text-sm">
                 {section.links.map((link: any) => (

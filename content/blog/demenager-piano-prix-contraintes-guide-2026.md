@@ -474,7 +474,7 @@ Dans ce guide ultra-complet, vous allez découvrir :
 
 ✅ **Expérience piano** : Déménageurs ayant transporté 30+ pianos/an  
 ✅ **Matériel spécialisé** : Chariots piano, sangles renforcées, housses  
-✅ **3 analyses de risque /100** : Financier (Creditsafe), Juridique (Pappers), Avis Google  
+✅ **3 analyses de risque /100** : Financier (Pappers), Juridique (Pappers Décisions), Avis Google  
 ✅ **Assurance ad valorem** : Jusqu'à 50 000€ de couverture  
 ✅ **Devis comparables** : Même base de calcul (volume, accès, options)
 

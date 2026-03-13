@@ -30,7 +30,7 @@ const FAQ_DATA = [
   },
   {
     question: "Comment Moverz vérifie-t-elle ses partenaires ?",
-    answer: "Chaque déménageur est évalué selon 3 analyses de risque notées /100 : expérience client (avis Google), risque financier (Creditsafe + Pappers + analyse interne), risque juridique (décisions de justice). Consultez nos <a href='/verifications-partenaires/' class='text-v4-accent hover:underline'>critères de vérification détaillés</a>."
+    answer: "Chaque déménageur est évalué selon 3 analyses de risque notées /100 : expérience client (avis Google), risque financier (Pappers + analyse interne), risque juridique (décisions de justice). Consultez nos <a href='/verifications-partenaires/' class='text-v4-accent hover:underline'>critères de vérification détaillés</a>."
   },
   {
     question: "Quels sont les critères pour rejoindre le réseau ?",

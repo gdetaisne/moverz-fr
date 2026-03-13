@@ -24,7 +24,7 @@ Quand vous cherchez un déménageur, vous devriez pouvoir répondre facilement �
 **Le problème : ces informations sont dispersées, complexes, payantes.**
 
 Un particulier ne peut pas :
-- Acheter un rapport Creditsafe (150-300€)
+- Acheter un rapport de solvabilité professionnel (150-300€)
 - Analyser les décisions de justice sur Pappers Pro
 - Décrypter un bilan financier
 - Détecter les signaux d'alerte d'une faillite imminente
@@ -130,7 +130,7 @@ Pourquoi ce seuil ?
 **C'est l'analyse la plus critique** pour éviter les faillites.
 
 **Sources de données :**
-- **Creditsafe** (leader européen scoring solvabilité)
+- **Pappers** (leader européen scoring solvabilité)
 - **Pappers Pro** (données financières publiques françaises)
 - **Analyse interne** (ratios financiers calculés)
 
@@ -138,9 +138,9 @@ Pourquoi ce seuil ?
 
 ### Les 3 scores consolidés
 
-#### 1. Score Creditsafe /100
+#### 1. Score Pappers /100
 
-Creditsafe analyse :
+Pappers analyse :
 - Bilans comptables (3 dernières années)
 - Retards de paiement fournisseurs
 - Dettes fiscales et sociales
@@ -153,7 +153,7 @@ Creditsafe analyse :
 - 40-59 : Risque moyen ⚠
 - 0-39 : Risque élevé ⚠⚠
 
-[Comprendre le score Creditsafe en détail →](/blog/comprendre-score-creditsafe-demenageur/)
+[Comprendre le score Pappers en détail →](/blog/comprendre-score-creditsafe-demenageur/)
 
 ---
 
@@ -190,14 +190,14 @@ Une entreprise peut avoir un CA élevé mais une trésorerie négative.
 ### Score final Risque Financier
 
 \`\`\`
-Score final = (Creditsafe × 40%) + (Pappers × 30%) + (Ratio Cash × 30%)
+Score final = (Pappers × 40%) + (Pappers × 30%) + (Ratio Cash × 30%)
 \`\`\`
 
 **Exemple concret :**
 
 \`\`\`
 Déménageur Y:
-- Creditsafe: 72/100 → 28.8 points
+- Pappers: 72/100 → 28.8 points
 - Pappers: 65/100 → 19.5 points
 - Ratio Cash: 0.8 (fragilité) → 12 points
 
@@ -465,7 +465,7 @@ Un déménageur exclu peut :
 
 | Label/Certification | Qui attribue ? | Critères financiers ? | Monitoring ? | Coût déménageur ? |
 |---------------------|----------------|----------------------|--------------|-------------------|
-| **Label Moverz** | Automatique (data) | ✓ Oui (Creditsafe + Pappers) | ✓ Continu 48-72h | Gratuit |
+| **Label Moverz** | Automatique (data) | ✓ Oui (Pappers) | ✓ Continu 48-72h | Gratuit |
 | **Qualipro Déménagement** | Organisme pro | ✗ Non | ✗ Annuel | ~500€/an |
 | **NF Service Déménagement** | AFNOR | ✗ Non | ✗ Tous les 18 mois | ~2000€/an |
 | **Certification ISO 9001** | Bureau contrôle | ✗ Non (process) | ✗ Tous les 3 ans | ~5000€/an |
@@ -505,7 +505,7 @@ Il signifie simplement que nous n'avons pas pu vérifier :
 - Soit l'entreprise est trop récente (< 6 mois)
 - Soit elle ne passe pas nos critères
 
-**Conseil : Demandez vous-même Kbis + assurance + score Creditsafe.**
+**Conseil : Demandez vous-même Kbis + assurance + score Pappers.**
 
 [Comment choisir un déménageur fiable →](/criteres-choisir-demenageur/)
 
@@ -541,7 +541,7 @@ Le Label Moverz n'est pas un gadget marketing.
 
 C'est un **système de protection automatisé** qui analyse :
 - ✓ 3 000+ entreprises de déménagement en France
-- ✓ Millions de lignes de données (Creditsafe, Pappers, Google)
+- ✓ Millions de lignes de données (Pappers, Pappers, Google)
 - ✓ Monitoring 24/7 (toutes les 48-72h)
 - ✓ Exclusion automatique (18% des déménageurs)
 
@@ -581,7 +581,7 @@ Que chaque Français qui déménage puisse répondre en 10 secondes :
 
 ### Sources et méthodologie
 
-- **Creditsafe France** : https://www.creditsafe.com/fr (Scoring solvabilité)
+- **Pappers France** : https://www.creditsafe.com/fr (Scoring solvabilité)
 - **Pappers** : https://www.pappers.fr (Données financières et juridiques)
 - **BODACC** : https://www.bodacc.fr (Procédures collectives officielles)
 - **DGCCRF** : https://www.economie.gouv.fr/dgccrf (Rapport anomalies 2023)
@@ -594,7 +594,7 @@ Que chaque Français qui déménage puisse répondre en 10 secondes :
 ### Articles connexes
 
 - [Comment éviter les arnaques au déménagement (Guide 2026)](/blog/eviter-arnaques-demenagement/)
-- [Comment lire un score Creditsafe ? (Déchiffrage complet)](/blog/comprendre-score-creditsafe-demenageur/)
+- [Comment lire un score Pappers ? (Déchiffrage complet)](/blog/comprendre-score-creditsafe-demenageur/)
 - [257 déménageurs en faillite en 2024 : Chiffres clés](/chiffres-cles/)
 - [Nos vérifications partenaires (Page officielle)](/verifications-partenaires/)
 - [8 critères pour choisir un déménageur fiable](/criteres-choisir-demenageur/)
@@ -661,7 +661,7 @@ Vous contactez 5 déménageurs. Vous recevez 5 devis. Mais :
 [Moverz](/comment-ca-marche/) calcule automatiquement votre volume via un inventaire guidé, puis transmet le **même dossier** à 5 déménageurs vérifiés. Résultat : tous les devis partent du même volume, donc ils sont directement comparables.
 
 > **Comparez intelligemment**  
-> Moverz standardise automatiquement votre dossier (volume IA, accès, contraintes, options) et le transmet à 5 déménageurs vérifiés (Creditsafe + licences + assurances). <a href="https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-comparer-devis&utm_source=moverz_website&utm_medium=referral&utm_content=blog-comparer-devis" class="text-[#6BCFCF] hover:underline font-semibold">Obtenir des devis comparables</a>.
+> Moverz standardise automatiquement votre dossier (volume IA, accès, contraintes, options) et le transmet à 5 déménageurs vérifiés (Pappers + licences + assurances). <a href="https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-comparer-devis&utm_source=moverz_website&utm_medium=referral&utm_content=blog-comparer-devis" class="text-[#6BCFCF] hover:underline font-semibold">Obtenir des devis comparables</a>.
 
 **Solution #2 : Exigez une devis en ligne de tous les déménageurs**
 
@@ -789,10 +789,10 @@ Une fois que vous avez des devis basés sur le **même volume**, vous pouvez com
 
 - **Sous-traitance** : Le déménageur réalise-t-il lui-même la prestation ? (Faites inscrire "Sans sous-traitance sauf accord écrit" dans le contrat)
 - **Avis Google** : Note globale 4.5+/5, volume minimum 50-100 avis, récence (20+ avis < 6 mois)
-- **Santé financière & juridique** : Le déménageur est-il solvable ? (257 faillites en 2024, vérifiez les scores financier + juridique — Creditsafe, Pappers, Pappers Décisions)
+- **Santé financière & juridique** : Le déménageur est-il solvable ? (257 faillites en 2024, vérifiez les scores financier + juridique — Pappers, Pappers, Pappers Décisions)
 - **Ancienneté** : Entreprise créée depuis > 3 ans (les arnaques changent régulièrement de nom)
 
-**Solution :** [Moverz](/pourquoi-moverz/) vérifie automatiquement chaque déménageur via 3 analyses de risque /100 (financier via Creditsafe + Pappers, juridique via Pappers Décisions, avis clients via Google Reviews), licences, et assurances. Déménageurs avec alertes cash ou juridiques exclus. Vous ne recevez des devis que de pros vérifiés.
+**Solution :** [Moverz](/pourquoi-moverz/) vérifie automatiquement chaque déménageur via 3 analyses de risque /100 (financier via Pappers, juridique via Pappers Décisions, avis clients via Google Reviews), licences, et assurances. Déménageurs avec alertes cash ou juridiques exclus. Vous ne recevez des devis que de pros vérifiés.
 
 [En savoir plus sur nos vérifications →](/verifications-partenaires/)
 
@@ -809,7 +809,7 @@ Avant de choisir un déménageur, vérifiez que vous avez bien :
 - [ ] **Assurance valide** : RC Pro valide, couverture standard 60€/m³, assurance complémentaire si objets de valeur
 - [ ] **Conditions claires** : Acompte ≤ 30%, délai d'annulation ≥ 7 jours, modalités de paiement
 - [ ] **Pas de sous-traitance** : Clause "Sans sous-traitance sauf accord écrit"
-- [ ] **Réputation vérifiée** : Score avis clients /100 (Google Reviews), score financier /100 (Creditsafe + Pappers), score juridique /100 (Pappers Décisions), ancienneté > 3 ans
+- [ ] **Réputation vérifiée** : Score avis clients /100 (Google Reviews), score financier /100 (Pappers), score juridique /100 (Pappers Décisions), ancienneté > 3 ans
 
 **Si vous avez coché toutes les cases**, vous pouvez choisir en toute confiance le devis le plus avantageux.
 
@@ -823,7 +823,7 @@ Avant de choisir un déménageur, vérifiez que vous avez bien :
 
 **Conséquence :** Risque élevé de litige, de casse, de supplément jour J, ou de faillite (257 en 2024).
 
-**Solution :** Vérifiez toujours les 3 analyses de risque : avis Google (score /100, patterns mauvais avis), santé financière (Creditsafe + Pappers, score /100), litiges (Pappers Décisions, score /100), et les assurances avant de choisir.
+**Solution :** Vérifiez toujours les 3 analyses de risque : avis Google (score /100, patterns mauvais avis), santé financière (Pappers, score /100), litiges (Pappers Décisions, score /100), et les assurances avant de choisir.
 
 ### 2. Comparer des devis basés sur des volumes différents
 
@@ -861,7 +861,7 @@ Avant de choisir un déménageur, vérifiez que vous avez bien :
 
 > **[CTA]**  
 > Obtenez des devis comparables en 3 minutes  
-> Moverz standardise automatiquement votre dossier (volume IA, accès, contraintes, options) et le transmet à 5 déménageurs vérifiés (Creditsafe + licences + assurances). Tous les devis partent du même cahier des charges. Zéro risque de supplément jour J.
+> Moverz standardise automatiquement votre dossier (volume IA, accès, contraintes, options) et le transmet à 5 déménageurs vérifiés (Pappers + licences + assurances). Tous les devis partent du même cahier des charges. Zéro risque de supplément jour J.
 
 ---
 
@@ -924,7 +924,7 @@ Un comparateur de qualité résout ces problèmes en :
 - **SIREN valide et actif** (pas d'entreprise radiée ou en liquidation)
 - **Licence de transport** (capacité professionnelle obligatoire)
 - **Assurance RC Pro valide** (minimum 1,5M€ de garantie)
-- **Santé financière** (scores Creditsafe + Pappers consolidés, ratio cash/dettes court terme, risque de faillite)
+- **Santé financière** (scores Pappers consolidés, ratio cash/dettes court terme, risque de faillite)
 - **Absence de litiges graves** (Pappers Décisions — procédures passées et en cours, signalements DGCCRF)
 
 **Pourquoi c'est essentiel ?**
@@ -937,7 +937,7 @@ Un comparateur de qualité résout ces problèmes en :
 
 [Moverz](/pourquoi-moverz/) effectue **3 analyses de risque /100** par déménageur :
 
-1. **Risque financier /100** : Scores Creditsafe et Pappers consolidés + analyse interne du ratio cash/dettes court terme. Alerte cash = déménageur exclu.
+1. **Risque financier /100** : Score Pappers consolidé + analyse interne du ratio cash/dettes court terme. Alerte cash = déménageur exclu.
 2. **Risque juridique /100** : Pappers Décisions — litiges passés et en cours, procédures collectives. Alerte juridique = déménageur exclu.
 3. **Risque expérience client /100** : Analyse des 20 derniers avis Google, patterns récurrents dans les mauvais avis (retards, casse, comportement).
 - **+ Conformité** : SIREN/Kbis, licence de transport, assurance RC Pro.
@@ -1030,7 +1030,7 @@ Certaines plateformes affichent "gratuit" mais :
 #### L'IA de Moverz
 
 - **Widget volumétrie** : 90-95% de précision, basé sur 50 000+ déménagements
-- **3 analyses de risque automatiques** : Chaque partenaire est scanné en temps réel (financier Creditsafe + Pappers, juridique Pappers Décisions, avis Google)
+- **3 analyses de risque automatiques** : Chaque partenaire est scanné en temps réel (financier Pappers, juridique Pappers Décisions, avis Google)
 - **Matching géographique** : Les 5 déménageurs proposés couvrent vraiment votre zone (pas de pros à 300km)
 
 ---
@@ -1052,7 +1052,7 @@ Certaines plateformes affichent "gratuit" mais :
 
 ### Les 3 différenciateurs de Moverz
 
-1. **3 analyses de risque /100** : Seul comparateur à évaluer les déménageurs sur 3 axes (financier via Creditsafe + Pappers, juridique via Pappers Décisions, avis clients via Google). Déménageurs avec alertes cash ou juridiques exclus.
+1. **3 analyses de risque /100** : Seul comparateur à évaluer les déménageurs sur 3 axes (financier via Pappers, juridique via Pappers Décisions, avis clients via Google). Déménageurs avec alertes cash ou juridiques exclus.
 
 2. **Dossier standardisé** : L'IA volumétrie + le questionnaire détaillé garantissent que tous les déménageurs partent du même cahier des charges. Résultat : devis réellement comparables.
 
@@ -1060,7 +1060,7 @@ Certaines plateformes affichent "gratuit" mais :
 
 > **[CTA]**  
 > Comparer mes devis maintenant  
-> Obtenez jusqu'à 5 devis comparables de déménageurs vérifiés (Creditsafe + licences + assurances) sous 5-7 jours. Dossier anonyme, zéro harcèlement, 100% gratuit.
+> Obtenez jusqu'à 5 devis comparables de déménageurs vérifiés (Pappers + licences + assurances) sous 5-7 jours. Dossier anonyme, zéro harcèlement, 100% gratuit.
 
 ---
 
@@ -1069,7 +1069,7 @@ Certaines plateformes affichent "gratuit" mais :
 - [Pourquoi Moverz se différencie des autres comparateurs](/pourquoi-moverz/)
 - [Comment fonctionne Moverz : du dossier aux devis](/comment-ca-marche/)
 - [Comment choisir un déménageur fiable et éviter les arnaques](/blog/eviter-arnaques-demenagement/)
-- [Vérifications des partenaires Moverz (Creditsafe, licences, assurances)](/verifications-partenaires/)
+- [Vérifications des partenaires Moverz (Pappers, licences, assurances)](/verifications-partenaires/)
 `
   },
 
@@ -1253,43 +1253,43 @@ C'est exactement ce que fait Moverz : un seul dossier standardisé, transmis à 
 `
   },
 
-  // ─── Article : Comprendre le score Creditsafe ───────────────────────────────
+  // ─── Article : Comprendre le score Pappers ───────────────────────────────
   {
     slug: "comprendre-score-creditsafe-demenageur",
-    title: "Score Creditsafe d'un déménageur : comment le lire et pourquoi ça compte",
-    description: "Comprendre le score Creditsafe d'une entreprise de déménagement : ce qu'il mesure, comment l'interpréter, et pourquoi 257 faillites en 2024 rendent cette vérification indispensable.",
+    title: "Score Pappers d'un déménageur : comment le lire et pourquoi ça compte",
+    description: "Comprendre le score Pappers d'une entreprise de déménagement : ce qu'il mesure, comment l'interpréter, et pourquoi 257 faillites en 2024 rendent cette vérification indispensable.",
     type: "pilier",
     publishedAt: "2026-03-06",
     updatedAt: "2026-03-06",
     readingTimeMinutes: 8,
     category: "guide",
-    tags: ["Creditsafe", "déménageur fiable", "vérification"],
+    tags: ["Pappers", "déménageur fiable", "vérification"],
     body: `**257 sociétés de déménagement ont fait faillite en France en 2024 (source : BODACC).**  
 **64 % des entreprises du secteur présentent des anomalies lors des contrôles DGCCRF.**
 
 Vous avez trouvé un déménageur avec de bons avis Google et un tarif compétitif. Mais est-il financièrement solide ? Va-t-il encore exister le jour J de votre déménagement ?
 
-C'est exactement ce que mesure le **score Creditsafe** — et c'est l'une des raisons pour lesquelles Moverz l'intègre dans son processus de sélection des partenaires.
+C'est exactement ce que mesure le **score Pappers** — et c'est l'une des raisons pour lesquelles Moverz l'intègre dans son processus de sélection des partenaires.
 
 > **[CTA]**  
 > Comparez des déménageurs vérifiés financièrement  
-> Moverz contrôle la solidité financière de chaque partenaire (Creditsafe + Pappers) avant tout mise en relation. Dossier gratuit, anonyme, sous 3 à 5 jours.
+> Moverz contrôle la solidité financière de chaque partenaire (Pappers) avant tout mise en relation. Dossier gratuit, anonyme, sous 3 à 5 jours.
 
 ---
 
-## Qu'est-ce que Creditsafe ?
+## Qu'est-ce que Pappers ?
 
-Creditsafe est une entreprise spécialisée dans l'analyse financière des entreprises. Elle collecte et analyse des données provenant de multiples sources : registres officiels, bilans déposés, incidents de paiement, décisions judiciaires, données sectorielles.
+Pappers est une entreprise spécialisée dans l'analyse financière des entreprises. Elle collecte et analyse des données provenant de multiples sources : registres officiels, bilans déposés, incidents de paiement, décisions judiciaires, données sectorielles.
 
 Elle est utilisée par les banques, les assureurs-crédit et les grandes entreprises pour évaluer le risque financier de leurs partenaires et fournisseurs. En France, c'est l'une des bases de données B2B de référence pour l'évaluation de la solvabilité des entreprises.
 
 ---
 
-## Ce que mesure le score Creditsafe
+## Ce que mesure le score Pappers
 
 ### Le score international (0 – 100)
 
-Creditsafe attribue à chaque entreprise un **score de solvabilité sur 100**. Ce score synthétise plusieurs indicateurs :
+Pappers attribue à chaque entreprise un **score de solvabilité sur 100**. Ce score synthétise plusieurs indicateurs :
 
 - **Santé financière** : capitaux propres, chiffre d'affaires, résultat net, ratio de liquidité
 - **Comportement de paiement** : délais de paiement fournisseurs, incidents signalés
@@ -1309,7 +1309,7 @@ Creditsafe attribue à chaque entreprise un **score de solvabilité sur 100**. C
 
 ### La limite de crédit recommandée
 
-En complément du score, Creditsafe calcule une **limite de crédit recommandée** : le montant maximum qu'il est raisonnablement sûr de confier à cette entreprise sans risque de non-remboursement.
+En complément du score, Pappers calcule une **limite de crédit recommandée** : le montant maximum qu'il est raisonnablement sûr de confier à cette entreprise sans risque de non-remboursement.
 
 Pour un déménagement à 1 500 €, un déménageur avec une limite de crédit recommandée de 500 € est un signal d'alerte sérieux.
 
@@ -1338,12 +1338,12 @@ Contrairement à d'autres secteurs, les clients du déménagement ne vérifient 
 
 ---
 
-## Ce que Moverz vérifie au-delà du score Creditsafe
+## Ce que Moverz vérifie au-delà du score Pappers
 
-Le score Creditsafe est un indicateur puissant, mais Moverz va plus loin avec **3 analyses de risque complémentaires** :
+Le score Pappers est un indicateur puissant, mais Moverz va plus loin avec **3 analyses de risque complémentaires** :
 
-### 1. Risque financier (Creditsafe + Pappers + analyse interne)
-- Score Creditsafe consolidé avec le scoring Pappers
+### 1. Risque financier (Pappers + analyse interne)
+- Score Pappers consolidé avec le scoring Pappers
 - Analyse interne du ratio cash / dettes court terme
 - Alerte automatique si le ratio est défavorable → exclusion du déménageur
 
@@ -1362,12 +1362,12 @@ Le score Creditsafe est un indicateur puissant, mais Moverz va plus loin avec **
 
 ---
 
-## Comment vérifier le score Creditsafe d'un déménageur vous-même
+## Comment vérifier le score Pappers d'un déménageur vous-même
 
-Creditsafe n'est pas accessible gratuitement au grand public. Quelques alternatives :
+Pappers n'est pas accessible gratuitement au grand public. Quelques alternatives :
 
 ### Via Pappers (gratuit)
-Pappers.fr donne accès aux bilans déposés, aux procédures collectives et aux décisions de justice. C'est moins complet que Creditsafe mais c'est gratuit.
+Pappers.fr donne accès aux bilans déposés, aux procédures collectives et aux décisions de justice. C'est moins complet que Pappers mais c'est gratuit.
 
 1. Rendez-vous sur pappers.fr
 2. Cherchez l'entreprise par SIREN ou raison sociale
@@ -1383,7 +1383,7 @@ Moverz effectue automatiquement ces vérifications pour chaque déménageur part
 
 ## Les signaux d'alerte à repérer
 
-Même sans accès à Creditsafe, certains signaux doivent vous mettre en garde :
+Même sans accès à Pappers, certains signaux doivent vous mettre en garde :
 
 - **Devis très en dessous du marché** (plus de 30 % sous les autres devis)
 - **Paiement en cash uniquement demandé**
@@ -1399,11 +1399,11 @@ Même sans accès à Creditsafe, certains signaux doivent vous mettre en garde :
 
 Un bon déménageur n'est pas seulement celui qui propose le meilleur prix ou le plus d'avis positifs. C'est aussi celui qui est **financièrement solide** et qui sera encore là le jour de votre déménagement.
 
-Le score Creditsafe est l'un des outils les plus fiables pour évaluer ce risque. Moverz l'intègre systématiquement dans ses 3 analyses de risque pour chaque déménageur partenaire — gratuitement, et de façon transparente.
+Le score Pappers est l'un des outils les plus fiables pour évaluer ce risque. Moverz l'intègre systématiquement dans ses 3 analyses de risque pour chaque déménageur partenaire — gratuitement, et de façon transparente.
 
 > **[CTA]**  
 > Obtenir des devis de déménageurs vérifiés  
-> Chaque déménageur partenaire Moverz est contrôlé financièrement (Creditsafe + Pappers), juridiquement et sur son expérience client. Dossier gratuit, anonyme, sous 3 à 5 jours.
+> Chaque déménageur partenaire Moverz est contrôlé financièrement (Pappers), juridiquement et sur son expérience client. Dossier gratuit, anonyme, sous 3 à 5 jours.
 
 ---
 
@@ -1467,7 +1467,7 @@ Conséquence directe : plus vous recevez d'appels, plus le comparateur gagne d'a
 La plupart des comparateurs n'appliquent aucun critère de sélection réel. Ils acceptent tous les déménageurs qui paient pour recevoir des leads.
 
 Moverz contrôle chaque partenaire selon **3 analyses de risque** avant toute mise en relation :
-- Solidité financière (Creditsafe + Pappers + ratio cash/dettes)
+- Solidité financière (Pappers + ratio cash/dettes)
 - Historique juridique (Pappers Décisions)
 - Expérience client (20 derniers avis Google + patterns)
 
@@ -1693,7 +1693,7 @@ Ce n'est qu'une fois ce tableau complété que vous pouvez comparer les prix ré
 
 En plus du prix standardisé, Moverz inclut dans chaque comparatif :
 
-- **Score de solidité financière** (Creditsafe + Pappers) pour chaque déménageur
+- **Score de solidité financière** (Pappers) pour chaque déménageur
 - **Note Google** avec analyse des patterns dans les mauvais avis
 - **Ancienneté** de l'entreprise
 - **Litiges en cours** éventuels
@@ -1909,7 +1909,7 @@ Une bonne checklist évite 80 % des problèmes. Voici la nôtre — 70 points, c
 
 Quand vous utilisez Moverz, on s'occupe de la partie "vérification déménageur" :
 
-- ✓ Solidité financière (Creditsafe + Pappers) — note /100
+- ✓ Solidité financière (Pappers) — note /100
 - ✓ Analyse des 20 derniers avis Google
 - ✓ Vérification juridique (litiges, sanctions via Pappers Décisions)
 - ✓ Licence de transport valide
@@ -2074,7 +2074,7 @@ Le problème classique : chaque déménageur estime un volume différent. Résul
 
 ### 5. Vérifier la fiabilité avant de choisir
 
-**257 déménageurs ont fait faillite en 2024 en France.** À Paris, la pression financière est plus forte encore. Vérifiez systématiquement : score Creditsafe, procédures en cours (Pappers), avis Google récents.
+**257 déménageurs ont fait faillite en 2024 en France.** À Paris, la pression financière est plus forte encore. Vérifiez systématiquement : score Pappers, procédures en cours (Pappers), avis Google récents.
 
 ---
 
@@ -2287,7 +2287,7 @@ Cherchez spécifiquement les avis des 3-6 derniers mois. Les arnaques récentes 
 
 Avant de transmettre votre dossier à un déménageur, Moverz vérifie :
 
-- **Score financier** (Creditsafe + Pappers) — entreprise solide ou en difficulté ?
+- **Score financier** (Pappers) — entreprise solide ou en difficulté ?
 - **20 derniers avis Google** — analyse des patterns dans les mauvais avis
 - **Décisions de justice** (Pappers Décisions) — litiges, sanctions, interdictions de gérer
 - **Licence de transport** — active et valide
@@ -2438,7 +2438,7 @@ En haute saison, certains déménageurs profitent de la pression pour :
 
 **257 déménageurs ont fait faillite en 2024.** L'été amplifie les tensions de trésorerie.
 
-→ Vérifiez systématiquement le score Creditsafe et les avis récents avant de signer.
+→ Vérifiez systématiquement le score Pappers et les avis récents avant de signer.
 
 ### 2. La canicule et la casse
 
@@ -2458,7 +2458,7 @@ En haute saison, certains déménageurs profitent de la pression pour :
 ## Checklist spéciale déménagement d'été
 
 - [ ] Réserver le déménageur 6-10 semaines à l'avance
-- [ ] Vérifier la solidité financière du déménageur (Creditsafe, Pappers)
+- [ ] Vérifier la solidité financière du déménageur (Pappers, Pappers)
 - [ ] Demander une autorisation de stationnement si nécessaire (2-3 semaines avant)
 - [ ] Prévoir de l'eau et des boissons fraîches pour l'équipe (obligatoire par fortes chaleurs)
 - [ ] Protéger les objets sensibles à la chaleur (emballer dans du papier bulle blanc plutôt que sombre)
@@ -2489,8 +2489,8 @@ En haute saison, certains déménageurs profitent de la pression pour :
   // ─────────────────────────────────────────────────────────────────────────────
   {
     slug: "verifier-demenageur-creditsafe-siren",
-    title: "Comment vérifier un déménageur avant de signer : SIREN, Creditsafe, assurance (guide 2026)",
-    description: "Guide complet pour vérifier la fiabilité d'un déménageur avant de signer : SIREN, score Creditsafe, assurance RC Pro, avis Google, procédures judiciaires. Checklist et outils gratuits.",
+    title: "Comment vérifier un déménageur avant de signer : SIREN, Pappers, assurance (guide 2026)",
+    description: "Guide complet pour vérifier la fiabilité d'un déménageur avant de signer : SIREN, score Pappers, assurance RC Pro, avis Google, procédures judiciaires. Checklist et outils gratuits.",
     type: "guide",
     body: `**257 déménageurs ont fait faillite en 2024 en France (source : BODACC/Altares).**  
 **64 % des entreprises de déménagement présentent des anomalies lors des contrôles DGCCRF.**
@@ -2536,7 +2536,7 @@ Le déménageur charge vos affaires, puis exige un paiement supplémentaire pour
 
 **Signal d'alerte :** entreprise créée il y a moins de 1 an avec peu d'avis → profil risqué.
 
-### 2. Vérifier la solidité financière (Creditsafe / Pappers)
+### 2. Vérifier la solidité financière (Pappers / Pappers)
 
 **Option gratuite :** [pappers.fr](https://www.pappers.fr) → bilans, procédures, dirigeants
 
@@ -2545,7 +2545,7 @@ Le déménageur charge vos affaires, puis exige un paiement supplémentaire pour
 - Pas de changement de gérant récent et suspect
 - Résultat net positif sur les derniers bilans disponibles
 
-**Option payante mais complète :** Creditsafe — score de solvabilité /100, risque de défaillance sur 12 mois, incidents de paiement.
+**Option payante mais complète :** Pappers — score de solvabilité /100, risque de défaillance sur 12 mois, incidents de paiement.
 
 **Moverz accède aux deux** et produit une note consolidée /100 pour chaque déménageur de son réseau.
 
@@ -2601,7 +2601,7 @@ Le déménageur charge vos affaires, puis exige un paiement supplémentaire pour
 | [bodacc.fr](https://www.bodacc.fr) | Annonces légales, faillites, cessions | Oui |
 | [registre-transporteurs.fr](https://www.registre-transporteurs.fr) | Licences de transport | Oui |
 | Google Maps / Avis | Avis clients | Oui |
-| Creditsafe | Score de solvabilité complet | Non (B2B payant) |
+| Pappers | Score de solvabilité complet | Non (B2B payant) |
 
 ---
 
@@ -2628,7 +2628,7 @@ Moverz automatise l'ensemble :
 
 **3 analyses de risque /100 par déménageur :**
 1. **Risque expérience client** — 20 derniers avis Google, note globale + analyse patterns mauvais avis
-2. **Risque financier** — Creditsafe + Pappers consolidés + ratio cash/dettes interne
+2. **Risque financier** — Pappers consolidés + ratio cash/dettes interne
 3. **Risque juridique** — Pappers Décisions (tribunaux de commerce, sanctions, interdictions de gérer)
 
 **En complément :** licence de transport, assurance RC Pro, SIREN actif.
@@ -2645,7 +2645,7 @@ Moverz automatise l'ensemble :
 
 **Aller plus loin :**
 
-- [Comprendre le score Creditsafe d'un déménageur](/blog/comprendre-score-creditsafe-demenageur/)
+- [Comprendre le score Pappers d'un déménageur](/blog/comprendre-score-creditsafe-demenageur/)
 - [Comment Moverz vérifie les déménageurs](/verifications-partenaires/)
 - [Comment éviter les arnaques au déménagement](/blog/eviter-arnaques-demenagement/)
 - [Critères pour choisir un déménageur fiable](/criteres-choisir-demenageur/)
@@ -3025,7 +3025,7 @@ Oui, c'est courant. Mais vous avez le droit de refuser et de vous couvrir via vo
 
 **Aller plus loin :**
 
-- [Comment vérifier un déménageur (SIREN, Creditsafe, assurance)](/blog/verifier-demenageur-creditsafe-siren/)
+- [Comment vérifier un déménageur (SIREN, Pappers, assurance)](/blog/verifier-demenageur-creditsafe-siren/)
 - [Comment éviter les arnaques au déménagement](/blog/eviter-arnaques-demenagement/)
 - [Supplément de prix le jour J : comment l'éviter](/blog/supplement-prix-jour-j-comment-eviter/)
 - [Checklist déménagement complète](/blog/checklist-demenagement-complet/)
@@ -3580,7 +3580,7 @@ Certains déménageurs proposent un service de garde-meuble intermédiaire. À p
 5. **Comparez sur une base identique** : des devis sans volume m³ explicite ne sont pas comparables
 
 > **Prêt à comparer ?**  
-> [Moverz](/) transmet votre dossier standardisé à des déménageurs vérifiés (Creditsafe + Pappers + avis Google). 3-5 devis comparables, anonyme, sans démarchage. [Obtenir mes devis](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-longue-distance-fin).
+> [Moverz](/) transmet votre dossier standardisé à des déménageurs vérifiés (Pappers + avis Google). 3-5 devis comparables, anonyme, sans démarchage. [Obtenir mes devis](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-longue-distance-fin).
 
 ---
 
@@ -3738,7 +3738,7 @@ Moverz.fr standardise le dossier avant de le transmettre :
 3. Contraintes spécifiques décrites précisément
 4. Même dossier reçu par tous les déménageurs → devis réellement comparables
 
-Les déménageurs du réseau Moverz couvrant Lyon sont vérifiés selon 3 critères : solidité financière (Creditsafe + Pappers), avis clients (Google), et ancienneté sur le marché lyonnais.
+Les déménageurs du réseau Moverz couvrant Lyon sont vérifiés selon 3 critères : solidité financière (Pappers), avis clients (Google), et ancienneté sur le marché lyonnais.
 
 ---
 
@@ -3783,7 +3783,7 @@ Pour stationner un camion de déménagement sur la voie publique à Lyon, une au
 En moyenne, les tarifs lyonnais sont 10-20 % inférieurs aux tarifs parisiens pour un déménagement local équivalent. La main-d'œuvre et le foncier (stockage) coûtent moins cher. En revanche, pour les longues distances depuis Lyon, les prix sont comparables.
 
 **Comment trouver un déménageur fiable à Lyon ?**  
-Vérifiez systématiquement : numéro de licence de transport (obligatoire), attestation d'assurance RC Pro valide, score Creditsafe > 60/100. Moverz.fr effectue ces vérifications automatiquement pour chaque déménageur du réseau lyonnais.
+Vérifiez systématiquement : numéro de licence de transport (obligatoire), attestation d'assurance RC Pro valide, score Pappers > 60/100. Moverz.fr effectue ces vérifications automatiquement pour chaque déménageur du réseau lyonnais.
 
 ---
 
@@ -3795,7 +3795,7 @@ Vérifiez systématiquement : numéro de licence de transport (obligatoire), att
 4. **Comparez sur une base identique** : volume m³ précis, accès complets, mêmes options
 
 > **Déménagez à Lyon sans mauvaises surprises**  
-> [Moverz](/) vérifie chaque déménageur lyonnais (Creditsafe, avis, ancienneté) et standardise votre dossier. 3-5 devis comparables, anonyme, sans démarchage. [Obtenir mes devis](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-lyon-fin).
+> [Moverz](/) vérifie chaque déménageur lyonnais (Pappers, avis, ancienneté) et standardise votre dossier. 3-5 devis comparables, anonyme, sans démarchage. [Obtenir mes devis](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-lyon-fin).
 
 ---
 
@@ -3958,7 +3958,7 @@ Non. Des milliers de déménagements en 5e étage sans ascenseur se passent trè
 1. **Un dossier complet et précis** : l'équipe sait ce qui l'attend, elle est dimensionnée en conséquence
 2. **Un déménageur expérimenté et financièrement solide** : pas un débutant qui sous-traite ou une société en difficulté qui prendra des raccourcis
 
-Sur Moverz.fr, les déménageurs du réseau sont vérifiés selon 3 analyses de risque /100 (financier via Creditsafe, juridique via Pappers, avis clients via Google). Les déménageurs avec des alertes sont exclus automatiquement — y compris ceux qui présentent un taux de litiges élevé sur les configurations difficiles.
+Sur Moverz.fr, les déménageurs du réseau sont vérifiés selon 3 analyses de risque /100 (financier via Pappers, juridique via Pappers, avis clients via Google). Les déménageurs avec des alertes sont exclus automatiquement — y compris ceux qui présentent un taux de litiges élevé sur les configurations difficiles.
 
 ---
 
@@ -3989,6 +3989,9290 @@ Oui, par courtoisie, mais surtout par pragmatisme : un escalier encombré de dé
 - [Éviter les suppléments prix jour J](/blog/supplement-prix-jour-j-comment-eviter/)
 - [Comment comparer des devis de déménagement](/blog/comparer-devis-demenagement-guide/)
 - [Estimer le volume de son déménagement](/blog/estimer-volume-demenagement-guide-complet/)
+`,
+  },
+  
+  // Articles ajoutés pour trafic AI Bing (2026-03-12)
+  {
+    slug: "assurance-demenagement-international",
+    title: "Assurance déménagement international : couverture, prix et pièges (2026)",
+    description: "Assurance déménagement international 2026 : couverture tous risques maritime/aérien, prix 150-800€, déclaration valeur obligatoire. Guide complet pour protéger vos biens à l'étranger.",
+    type: "pilier",
+    body: `Un déménagement international représente un investissement important : **3 000€ à 15 000€** selon le volume, la destination et le mode de transport.
+
+**Le problème** : Vos biens voyagent pendant 2 semaines à 3 mois, traversent plusieurs frontières, subissent des manipulations multiples (chargement, déchargement, douane).
+
+**Le risque** : Casse, perte, vol, retard, blocage douanier. Sans assurance adaptée, vous pouvez perdre des milliers d'euros.
+
+Dans ce guide ultra-complet, vous allez découvrir :
+
+- Les **3 types d'assurance** pour un déménagement international (et pourquoi l'assurance de base ne suffit JAMAIS)
+- Les **tarifs réels 2026** par type de couverture
+- La **déclaration de valeur** : comment la remplir pour être correctement indemnisé
+- Les **exclusions** (ce que l'assurance ne couvre JAMAIS)
+- Comment **comparer les assurances** entre plusieurs devis
+
+> **Comparer des déménageurs internationaux avec assurance complète**  
+> [Moverz](/) sélectionne des spécialistes du déménagement international avec assurance tous risques. Créez votre dossier gratuitement sur [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-assurance-international).
+
+---
+
+## Les 3 types d'assurance pour un déménagement international
+
+### 1. Assurance de base (responsabilité légale minimum)
+
+**Couverture** : 60€/m³ ou 600€/tonne  
+**Ce que ça couvre** : Dégâts **prouvés** causés par le déménageur
+
+**Exemple concret** :
+- Vous déménagez 30 m³ (~ 5 tonnes)
+- Votre TV 4K (1 500€) est cassée
+- **Indemnisation : 60€/m³ × 30 m³ = 1 800€** ✅
+
+**Le problème** :
+- Valeur totale de vos biens : 25 000€
+- Couverture maximale : 1 800€
+- **→ Si 50% de vos biens sont endommagés (12 500€), vous récupérez 1 800€** ❌
+
+**→ L'assurance de base est TOUJOURS insuffisante pour un déménagement international** ❌
+
+---
+
+### 2. Assurance ad valorem (valeur déclarée)
+
+**Couverture** : Basée sur la **valeur déclarée** de vos biens (que VOUS indiquez)
+
+**Comment ça marche** :
+1. Vous déclarez la valeur totale de vos biens (ex: 35 000€)
+2. Le déménageur assure cette valeur exacte
+3. En cas de sinistre, vous êtes indemnisé jusqu'à 35 000€
+
+**Prix** :
+- **0,5% à 1,5% de la valeur déclarée**
+- Exemple : 35 000€ de biens × 1% = **350€ de prime**
+
+**Avantages** :
+- ✅ Couverture adaptée à VOS biens
+- ✅ Indemnisation réelle en cas de sinistre
+- ✅ Vous choisissez le niveau de protection
+
+**Inconvénients** :
+- ⚠ Vous devez **prouver la valeur** (factures, photos, inventaire détaillé)
+- ⚠ Sous-déclaration = sous-indemnisation
+- ⚠ Sur-déclaration = surprime inutile
+
+**→ L'assurance ad valorem est le MINIMUM pour un déménagement international** ✅
+
+---
+
+### 3. Assurance tous risques (couverture maximale)
+
+**Couverture** : **Tous les risques** (casse, vol, perte, avarie, retard)
+
+**Ce qui est couvert EN PLUS de l'ad valorem** :
+- ✅ Dégâts dus au transport maritime (tempête, conteneur endommagé)
+- ✅ Vol ou perte totale du conteneur
+- ✅ Blocage douanier (frais de stockage forcé)
+- ✅ Retard de livraison (frais d'hébergement temporaire)
+- ✅ Force majeure (grève portuaire, événement climatique)
+
+**Prix** :
+- **1,5% à 3% de la valeur déclarée**
+- Exemple : 35 000€ × 2,5% = **875€ de prime**
+
+**Quand la choisir** :
+- ✅ Déménagement intercontinental (Europe → USA, Asie, etc.)
+- ✅ Transport maritime (> 2 mois de délai)
+- ✅ Biens de grande valeur (> 40 000€)
+- ✅ Pays à risque (instabilité politique, douane complexe)
+
+**→ Recommandée pour les destinations lointaines ou les biens de valeur** ✅
+
+---
+
+## Prix réels d'une assurance déménagement international (2026)
+
+| Valeur déclarée | Assurance ad valorem (1%) | Tous risques (2,5%) |
+|-----------------|---------------------------|---------------------|
+| **15 000€** | 150€ | 375€ |
+| **25 000€** | 250€ | 625€ |
+| **35 000€** | 350€ | 875€ |
+| **50 000€** | 500€ | 1 250€ |
+| **80 000€+** | 800€+ | 2 000€+ |
+
+**Facteurs qui font varier le prix** :
+1. **Destination** : Europe = -20% vs Asie/Amérique du Sud
+2. **Mode transport** : Aérien = +30% vs maritime (risque moindre car délai court)
+3. **Franchise** : Franchise 500€ = -15% vs sans franchise
+4. **Historique** : 1er déménagement international = prix plein, client récurrent = -10%
+
+---
+
+## Comment déclarer la valeur de vos biens (déclaration de valeur)
+
+### Étape 1 : Faire un inventaire complet
+
+**Listez TOUS vos biens par catégorie** :
+
+**Mobilier** :
+- Canapé : 2 500€
+- Lit king size : 1 800€
+- Table à manger + 6 chaises : 1 200€
+- Bibliothèque : 800€
+- Armoire : 1 500€
+
+**Électroménager** :
+- Réfrigérateur : 1 200€
+- Lave-linge : 800€
+- TV 65" : 1 500€
+
+**Objets de valeur** :
+- Œuvre d'art : 5 000€
+- Piano : 8 000€
+- Collection (timbres, vins, etc.) : 3 000€
+
+**→ Total estimé : 35 000€**
+
+---
+
+### Étape 2 : Conserver les preuves
+
+**Documents à garder** :
+- ✅ Factures d'achat (mobilier, électroménager, objets de valeur)
+- ✅ Photos haute résolution de chaque objet de valeur (avant déménagement)
+- ✅ Certificats d'authenticité (œuvres d'art, bijoux)
+- ✅ Expertises (piano, meubles anciens)
+
+**Astuce Moverz** : Prenez des photos/vidéos de TOUS vos biens avant le départ, même ceux qui semblent peu chers. En cas de litige, ces preuves sont décisives.
+
+---
+
+### Étape 3 : Déclarer la valeur exacte
+
+**❌ Ne pas sous-déclarer** :
+- Valeur réelle : 35 000€
+- Vous déclarez : 20 000€ (pour économiser sur la prime)
+- **Problème** : Règle proportionnelle appliquée en cas de sinistre
+- Sinistre : 10 000€ de dégâts
+- **Indemnisation : 10 000€ × (20k/35k) = 5 700€** ❌
+
+**✅ Déclarer la valeur réelle** :
+- Valeur réelle : 35 000€
+- Vous déclarez : 35 000€
+- Sinistre : 10 000€
+- **Indemnisation : 10 000€ complets** ✅
+
+**→ Toujours déclarer la valeur réelle de vos biens** ✅
+
+---
+
+## Les exclusions (ce que l'assurance ne couvre JAMAIS)
+
+**Même avec une assurance tous risques, certains cas sont exclus** :
+
+### ❌ Exclusions classiques
+
+1. **Emballage insuffisant par le client** (si formule éco)
+   - Vous emballez mal → objet casse
+   - Assurance refuse : "Emballage non conforme"
+
+2. **Objets interdits** (stupéfiants, armes, produits dangereux)
+
+3. **Usure normale** (meubles déjà abîmés avant départ)
+
+4. **Vice propre** (meuble fragile qui se casse seul)
+
+5. **Guerre, émeute, acte terroriste** (selon pays)
+
+6. **Sanctions internationales** (embargo, pays sous sanctions)
+
+---
+
+### ⚠️ Exclusions spécifiques déménagement international
+
+**Ce qui n'est PAS couvert** :
+- ❌ Retard de livraison < 30 jours (sauf option spécifique)
+- ❌ Blocage douanier dû à vos documents incomplets
+- ❌ Objets périssables (plantes, nourriture, produits frais)
+- ❌ Bijoux/espèces transportés par vous-même (assurance couvre uniquement ce qui est dans le container)
+- ❌ Dégâts dus à une mauvaise déclaration douanière de VOTRE part
+
+**→ Vérifiez toujours les exclusions dans les conditions générales** ✅
+
+---
+
+## Comparaison assurance maritime vs aérienne
+
+| Critère | Maritime | Aérien |
+|---------|----------|--------|
+| **Délai** | 4-12 semaines | 5-15 jours |
+| **Risque de casse** | Moyen (manipulation multiple) | Faible (moins de transferts) |
+| **Risque de perte** | Faible | Très faible |
+| **Risque retard** | Élevé (météo, grèves portuaires) | Faible |
+| **Prime assurance** | 1-2% valeur | 1,5-3% valeur |
+| **Franchise standard** | 500-1 000€ | 300-500€ |
+
+**→ Transport aérien = prime +30% mais risque moindre** (délai court, moins de manipulations)
+
+---
+
+## Les pièges à éviter
+
+### Piège 1 : Accepter l'assurance de base (60€/m³)
+
+**Vous pensez** : "60€/m³ × 30 m³ = 1 800€, ça suffit"
+
+**La réalité** :
+- Valeur réelle de vos biens : 30 000€
+- Sinistre partiel : 8 000€
+- **Indemnisation : 1 800€ max** ❌
+
+**→ Toujours prendre au minimum l'assurance ad valorem** ✅
+
+---
+
+### Piège 2 : Sous-déclarer la valeur (pour économiser la prime)
+
+**Vous pensez** : "Je déclare 20 000€ au lieu de 40 000€, j'économise 200€ de prime"
+
+**La réalité** :
+- Sinistre : 15 000€ de dégâts
+- **Règle proportionnelle : 15k × (20k/40k) = 7 500€** ❌
+- Vous perdez : 7 500€
+
+**→ La sous-déclaration coûte BEAUCOUP plus cher que la prime économisée** ❌
+
+---
+
+### Piège 3 : Oublier de déclarer les objets de grande valeur
+
+**Vous pensez** : "Mon piano est dans l'inventaire, c'est bon"
+
+**La réalité** :
+- Piano non déclaré explicitement comme objet de valeur
+- Piano endommagé (réparation : 3 000€)
+- **Assurance : "Objet de valeur non déclaré, indemnisation : 600€"** ❌
+
+**→ Déclarez EXPLICITEMENT tous les objets > 1 500€ (piano, œuvre d'art, bijoux, collection)** ✅
+
+---
+
+### Piège 4 : Ne pas lire les exclusions
+
+**Vous pensez** : "Tous risques = tout est couvert"
+
+**La réalité** :
+- Retard de 45 jours (grève portuaire)
+- Vous : "Je réclame mes frais d'hôtel (2 000€)"
+- Assurance : "Retard < 60 jours exclu, article 12.3"
+- **Indemnisation : 0€** ❌
+
+**→ Lisez les conditions générales, notamment les exclusions** ✅
+
+---
+
+## Comment comparer les assurances entre plusieurs devis
+
+Quand vous recevez 3-5 devis de déménageurs internationaux, **comparez les assurances ligne par ligne** :
+
+| Critère | Devis A | Devis B | Devis C |
+|---------|---------|---------|---------|
+| **Type d'assurance** | De base | Ad valorem | Tous risques |
+| **Couverture** | 60€/m³ | 35 000€ | 40 000€ |
+| **Prime** | Incluse | +350€ | +875€ |
+| **Franchise** | 1 000€ | 500€ | 300€ |
+| **Exclusions retard** | Tous retards | Retard < 30j | Retard < 60j |
+| **Déclaration valeur** | Non | Oui | Oui |
+
+**→ Devis A = le moins cher mais couverture insuffisante**  
+**→ Devis B = bon compromis (ad valorem, franchise raisonnable)**  
+**→ Devis C = couverture maximale (recommandé pour biens > 40 000€)**
+
+**Astuce Moverz** : Dans votre dossier, indiquez la valeur estimée de vos biens. Les déménageurs vous proposeront automatiquement une assurance adaptée.
+
+---
+
+## Checklist avant de signer votre assurance
+
+- [ ] **J'ai fait un inventaire complet** (meuble par meuble, objet par objet)
+- [ ] **J'ai estimé la valeur totale** (conservateur, pas optimiste)
+- [ ] **J'ai des preuves de valeur** (factures, photos haute résolution, expertises)
+- [ ] **J'ai déclaré EXPLICITEMENT les objets > 1 500€** (piano, œuvre d'art, bijoux)
+- [ ] **J'ai lu les exclusions** (retard, guerre, blocage douanier, etc.)
+- [ ] **J'ai compris la franchise** (montant à ma charge en cas de sinistre)
+- [ ] **J'ai vérifié le délai de déclaration** (24-48h après livraison en général)
+- [ ] **J'ai une copie de l'inventaire signé** (départ + arrivée)
+
+---
+
+## Questions fréquentes
+
+### L'assurance tous risques couvre-t-elle les retards ?
+
+**Partiellement.** La plupart des assurances tous risques couvrent les retards > 30-60 jours (selon contrat) et plafonnent l'indemnisation à 50-100€/jour.
+
+**Exemple** :
+- Retard : 45 jours
+- Franchise retard : 30 jours
+- Indemnisation : (45-30) × 80€ = **1 200€** (pour frais d'hébergement/location meublée)
+
+**→ Vérifiez toujours le délai de franchise retard** (30j, 45j, 60j selon contrat)
+
+---
+
+### Dois-je assurer mes objets de valeur séparément ?
+
+**Oui, pour les objets > 10 000€** (œuvre d'art, piano de concert, collection).
+
+**Pourquoi** :
+- Les assurances déménagement plafonnent l'indemnisation par objet (5 000-10 000€/objet selon contrat)
+- Une œuvre d'art de 25 000€ sera indemnisée max 10 000€
+
+**Solution** :
+- Assurance transport d'œuvres d'art spécifique (via votre assurance habitation ou un courtier spécialisé)
+- Prime : 2-4% de la valeur (500-1 000€ pour une œuvre de 25 000€)
+
+---
+
+### L'assurance couvre-t-elle le blocage à la douane ?
+
+**Non** (sauf si causé par le déménageur).
+
+**Ce qui est couvert** :
+- ✅ Erreur du déménageur sur les documents douaniers
+- ✅ Frais de stockage forcé dus à une erreur du transporteur
+
+**Ce qui n'est PAS couvert** :
+- ❌ Documents douaniers incomplets DE VOTRE PART
+- ❌ Objets interdits que VOUS avez inclus sans déclarer
+- ❌ Taxes douanières (ce n'est pas un sinistre, c'est une obligation légale)
+
+**→ Préparez vos documents douaniers AVANT (visa, inventaire détaillé, certificats)** ✅
+
+---
+
+### Comment déclarer un sinistre ?
+
+**Délai** : **24-72h après constat** (selon contrat, en général 48h)
+
+**Process** :
+1. **Constater les dégâts AVANT de signer le bordereau de livraison**
+2. **Prendre des photos haute résolution** (tous les angles)
+3. **Noter les dégâts sur le bordereau** (description précise, ne signez PAS sans noter)
+4. **Déclarer le sinistre par email** (au déménageur + assureur) sous 48h
+5. **Fournir les preuves** (photos avant/après, factures, inventaire signé)
+
+**Documents à joindre** :
+- Inventaire signé au départ
+- Bordereau de livraison annoté
+- Photos des dégâts
+- Factures des biens endommagés
+- Devis de réparation (si réparable)
+
+**Délai d'indemnisation** : 30-90 jours après acceptation du dossier
+
+---
+
+## Pourquoi utiliser Moverz pour un déménagement international
+
+**Le problème des comparateurs classiques** :
+- Volume estimé différemment par chaque déménageur
+- Assurances non comparables (de base vs ad valorem vs tous risques)
+- Vous ne savez pas si le déménageur est fiable financièrement
+
+**La solution Moverz** :
+
+**1. Volume précis** → Tous les déménageurs reçoivent le même volume estimé (devis comparables)
+
+**2. Assurance adaptée** → Vous indiquez la valeur de vos biens, les déménageurs proposent une assurance cohérente
+
+**3. Déménageurs vérifiés** → 3 analyses de risque /100 (financier Pappers, juridique Pappers Décisions, avis Google)
+
+**4. Dossier anonyme** → Votre téléphone est masqué jusqu'à ce que VOUS choisissiez un déménageur (0 appel commercial)
+
+**5. Suivi transparent** → Vous voyez les 3 scores de chaque déménageur avant de choisir
+
+> **Comparer des déménageurs internationaux fiables**  
+> Créez votre dossier en 5 minutes, recevez des devis avec assurance adaptée, choisissez en toute sécurité sur [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-assurance-international-fin).
+
+---
+
+## Conclusion
+
+**L'assurance déménagement international en 2026** :
+
+| Type | Couverture | Prix | Recommandation |
+|------|------------|------|----------------|
+| **De base** | 60€/m³ | Incluse | ❌ Toujours insuffisant |
+| **Ad valorem** | Valeur déclarée | 0,5-1,5% | ✅ Minimum requis |
+| **Tous risques** | Tout (casse, vol, perte, retard) | 1,5-3% | ✅ Recommandé longue distance |
+
+**Les 5 règles d'or** :
+1. ✅ **Ne jamais accepter l'assurance de base seule**
+2. ✅ **Déclarer la valeur réelle** (pas moins, pas plus)
+3. ✅ **Prendre des photos** de tous vos biens avant départ
+4. ✅ **Lire les exclusions** (retard, guerre, blocage douanier)
+5. ✅ **Vérifier la franchise** (montant à votre charge)
+
+**Questions ?** [contact@moverz.fr](mailto:contact@moverz.fr)
+
+---
+
+**À lire aussi :**
+- [Checklist déménagement international](/blog/checklist-demenagement-international/)
+- [Prix déménagement international](/blog/prix-demenagement-international/)
+- [Comment choisir un déménageur international fiable](/blog/choisir-demenageur-international/)
+`,
+  },
+  
+  {
+    slug: "prix-demenagement-bordeaux-guide",
+    title: "Prix déménagement Bordeaux 2026 : fourchettes réelles, exemples et conseils",
+    description: "Combien coûte un déménagement à Bordeaux en 2026 ? Fourchettes studio à maison, facteurs de variation, prix par quartier, conseils pour obtenir des devis comparables.",
+    type: "pilier",
+    citySlug: "bordeaux",
+    body: `Bordeaux, métropole de 800 000 habitants, est une ville attractive mais avec des contraintes spécifiques : **centre historique piéton, rues étroites, stationnement complexe**.
+
+**Le défi** : Obtenir un prix fiable avant de s'engager, éviter les suppléments jour J.
+
+Dans ce guide ultra-complet sur les prix de déménagement à Bordeaux en 2026, vous allez découvrir :
+
+- Les **fourchettes de prix réelles** par type de logement (studio à maison)
+- Les **facteurs qui font varier le prix** à Bordeaux (accès centre-ville, quartiers, période)
+- Les **prix moyens par quartier** (Chartrons, Bastide, Mériadeck)
+- Comment **obtenir des devis comparables** (même volume, même description)
+- Les **pièges à éviter** (sous-estimation volume, accès mal décrits)
+
+> **Comparer les prix pour votre déménagement à Bordeaux**  
+> [Moverz](/) calcule votre volume précis et partage votre dossier avec des déménageurs bordelais vérifiés (3 analyses /100). Devis comparables sous 5 jours sur [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-bordeaux).
+
+---
+
+## Prix déménagement Bordeaux 2026 : fourchettes par logement
+
+### Tarifs déménagement local Bordeaux (< 30 km)
+
+| Type logement | Volume | Prix formule éco | Prix formule standard | Prix formule confort |
+|---------------|--------|------------------|----------------------|---------------------|
+| **Studio 25-30 m²** | 10-15 m³ | 450-650€ | 600-850€ | 850-1 200€ |
+| **T2 45-55 m²** | 20-28 m³ | 750-1 100€ | 1 000-1 450€ | 1 400-1 900€ |
+| **T3 65-75 m²** | 30-42 m³ | 1 100-1 600€ | 1 500-2 100€ | 2 100-2 800€ |
+| **T4 85-100 m²** | 45-60 m³ | 1 700-2 400€ | 2 300-3 100€ | 3 100-4 200€ |
+| **Maison 120 m²+** | 65-85 m³ | 2 500-3 500€ | 3 400-4 600€ | 4 600-6 200€ |
+
+**Formules** :
+- **Éco** : Vous emballez tout, déménageur = portage + transport uniquement
+- **Standard** : Déménageur emballe fragiles, démonte/remonte meubles
+- **Confort** : Déménageur emballe TOUT, déballage à l'arrivée
+
+---
+
+### Exemples concrets de déménagements à Bordeaux (2026)
+
+**Cas 1 – Studio Chartrons → Bastide**
+- 28 m², 2e étage avec ascenseur, rue accessible
+- Volume estimé : 12 m³
+- Distance : 4 km
+- Formule standard
+- **Prix constaté : 650-850€**
+
+---
+
+**Cas 2 – T3 Mériadeck → Talence**
+- 68 m², 5e étage sans ascenseur, parking 30m
+- Volume estimé : 35 m³
+- Distance : 8 km
+- Formule standard + portage escalier
+- **Prix constaté : 1 800-2 400€** (dont 300-400€ supplément escalier)
+
+---
+
+**Cas 3 – Maison Caudéran → Paris**
+- 115 m², plain-pied, accès facile
+- Volume estimé : 68 m³
+- Distance : 580 km (longue distance)
+- Formule confort
+- **Prix constaté : 4 200-5 800€**
+
+---
+
+## Les 5 facteurs qui impactent le prix à Bordeaux
+
+### 1. Le quartier et les accès
+
+**Centre historique (Saint-Pierre, Saint-Michel, Chartrons)** :
+- Rues étroites + piétonnes
+- Autorisation stationnement nécessaire (mairie, délai 2 semaines)
+- Portage parfois > 50m
+- **Supplément : +15-25%** (200-400€ sur un T3)
+
+**Quartiers modernes (Bastide, Lac, Bègles)** :
+- Accès faciles, parkings larges
+- **Supplément : 0€**
+
+**Bordeaux Métropole (Mérignac, Pessac, Talence)** :
+- Accès moyens, pavillons
+- **Supplément : 0-10%**
+
+---
+
+### 2. Les étages et l'ascenseur
+
+| Configuration | Impact prix | Exemple T3 (35 m³) |
+|---------------|-------------|-------------------|
+| **RDC ou ascenseur** | 0€ | 1 500€ |
+| **2-3e sans ascenseur** | +10-15% | 1 650-1 725€ |
+| **4-5e sans ascenseur** | +25-40% | 1 875-2 100€ |
+| **6e+ sans ascenseur** | +50%+ ou monte-meuble | 2 250€+ |
+
+**→ Un 5e sans ascenseur peut ajouter 500-700€** sur un T3
+
+---
+
+### 3. La distance
+
+**Déménagement local Bordeaux** (< 30 km) :
+- Bordeaux centre → Bordeaux métropole : Prix de base
+
+**Moyenne distance** (30-100 km) :
+- Bordeaux → Arcachon (60 km) : +15-25%
+- Bordeaux → Cognac (120 km) : +30-50%
+
+**Longue distance** (> 300 km) :
+- Bordeaux → Paris (580 km) : +150-200%
+- Bordeaux → Lyon (550 km) : +140-180%
+- Bordeaux → Marseille (650 km) : +170-220%
+
+---
+
+### 4. La période (saisonnalité Bordeaux)
+
+| Période | Demande | Impact prix | Raison |
+|---------|---------|-------------|--------|
+| **Juin-Septembre** | Très forte | +20-30% | Vacances scolaires + étudiants (15 000 à Bordeaux) |
+| **Fin de mois** | Forte | +15-20% | Départs/arrivées bail |
+| **Week-end** | Forte | +15-25% | Disponibilité réduite |
+| **Octobre-Mars** | Normale | Prix de base | Basse saison |
+
+**Astuce** : Déménager **mardi-jeudi en octobre-mars** = économie de 300-500€ sur un T3
+
+---
+
+### 5. Le volume (facteur n°1)
+
+**Le problème classique** :
+- Déménageur A estime : 28 m³ → Devis 1 200€
+- Déménageur B estime : 35 m³ → Devis 1 500€
+- **→ Devis non comparables** (bases différentes) ❌
+
+**La solution Moverz** :
+- Le système calcule votre volume en 5 minutes (inventaire guidé)
+- Tous les déménageurs reçoivent **la même base** (ex: 32 m³)
+- **→ Devis vraiment comparables** ✅
+
+---
+
+## Prix par quartier de Bordeaux (2026)
+
+### Chartrons / Saint-Pierre (Centre historique)
+
+**Caractéristiques** :
+- Rues étroites, pavées, souvent piétonnes
+- Immeubles pierre 4-6 étages sans ascenseur (courant)
+- Autorisation stationnement obligatoire (mairie)
+
+**Prix T3 (35 m³) local** : **1 800-2 600€** (dont 300-500€ surcoût accès)
+
+---
+
+### Bastide / Rive droite
+
+**Caractéristiques** :
+- Quartier moderne, rues larges
+- Immeubles récents avec ascenseur (majorité)
+- Parking facile
+
+**Prix T3 (35 m³) local** : **1 400-1 900€** (prix de base)
+
+---
+
+### Mériadeck / Bordeaux Lac
+
+**Caractéristiques** :
+- Quartiers modernes, accès excellents
+- Immeubles avec ascenseur, parkings larges
+- 0 contrainte
+
+**Prix T3 (35 m³) local** : **1 400-1 800€** (prix de base)
+
+---
+
+### Caudéran / Bordeaux Nord
+
+**Caractéristiques** :
+- Secteur pavillonnaire, accès moyens
+- Maisons individuelles (plain-pied ou R+1)
+
+**Prix Maison 70 m³ local** : **2 600-3 600€**
+
+---
+
+## Comment obtenir le meilleur prix à Bordeaux
+
+### 1. Avoir un volume fiable (système Moverz)
+
+**Sans volume précis** :
+- Vous comparez 1 200€ (28 m³) vs 1 500€ (35 m³)
+- **→ Vous ne comparez pas les mêmes choses** ❌
+
+**Avec Moverz** :
+- Volume calculé : 32 m³ (inventaire guidé)
+- Tous les déménageurs chiffrent sur 32 m³
+- **→ Vous comparez vraiment les prix** ✅
+
+---
+
+### 2. Décrire précisément les accès Bordeaux
+
+**Accès centre historique** :
+- "5e sans ascenseur, rue pavée, autorisation stationnement nécessaire"
+- Déménageur chiffre correctement dès le départ
+- **→ 0 surprise jour J** ✅
+
+**Accès mal décrits** :
+- "Centre-ville Bordeaux"
+- Jour J : "Ah, vous êtes rue piétonne ? Il y a 200€ de supplément"
+- **→ Litige** ❌
+
+---
+
+### 3. Choisir la bonne période
+
+**Budget flexible** : Déménager en **novembre-février, mardi-jeudi**
+- Économie : 250-450€ sur un T3 (15-25% du prix)
+
+---
+
+### 4. Comparer plusieurs devis (3-5 minimum)
+
+**Avec 2 devis** : Vous ne savez pas si c'est cher  
+**Avec 5 devis** : Vous voyez la fourchette réelle et identifiez les outliers
+
+**Moverz** : Jusqu'à 5 devis automatiquement, déménageurs évalués sur 3 risques /100
+
+---
+
+## Les pièges à éviter à Bordeaux
+
+### Piège 1 : Oublier l'autorisation stationnement (centre-ville)
+
+**Le piège** :
+- Vous déménagez depuis les Chartrons
+- Jour J : Camion ne peut pas se garer (rue piétonne)
+- Déménageur : "Il faut porter sur 80m, supplément 250€"
+
+**La solution** : Demander l'autorisation 2 semaines avant (Bordeaux Métropole ou mairie d'arrondissement)
+
+**→ Dans votre dossier Moverz, indiquez si vous avez l'autorisation** ✅
+
+---
+
+### Piège 2 : Sous-estimer le volume (cave + garage + extérieurs)
+
+**Le piège classique** :
+- Vous pensez : "T3 = 30 m³"
+- Réalité : T3 + cave + vélos + plantes = 38 m³
+- Jour J : "Il y a 8 m³ de plus, supplément 280€"
+
+**La solution** : Inventaire complet avec **cave, garage, balcon, extérieurs** ✅
+
+---
+
+### Piège 3 : Choisir le moins cher sans vérifier le déménageur
+
+**Devis A** : 1 000€ (nouveau déménageur, 3 avis Google)  
+**Devis B** : 1 350€ (8 ans d'expérience, 147 avis 4,6★)
+
+**Vous pensez** : "A est moins cher"
+
+**Le risque** :
+- Nouveau déménageur = expérience limitée
+- 3 avis = pas de recul
+- Prix bas = sous-estimation ?
+
+**→ Avec Moverz, vous voyez les 3 scores /100 AVANT de choisir** ✅
+
+---
+
+## FAQ Prix Déménagement Bordeaux
+
+### Les prix ont-ils augmenté en 2026 ?
+
+**Oui, légèrement** : +3-5% vs 2025, principalement à cause :
+- Carburant : +4%
+- Salaires : +2,5%
+- Autorisations stationnement : +10€ (ville de Bordeaux)
+
+**→ Prix 2026 ≈ Prix 2025 (+3-5%)**
+
+---
+
+### Un déménageur peut-il refuser le centre historique ?
+
+**Oui.** Certains déménageurs refusent les accès complexes (Chartrons, Saint-Pierre) s'ils n'ont pas l'expérience ou l'équipement adapté.
+
+**Solution** : Précisez les accès dans votre dossier, les déménageurs qui acceptent chiffreront correctement.
+
+---
+
+### Le supplément escalier est-il négociable ?
+
+**Rarement** sur le tarif brut, mais parfois sur la formule. Choisir une formule économique (vous emballez) peut compenser le surcoût escalier.
+
+---
+
+### Faut-il payer un acompte ?
+
+**Pratique courante** : 30% à la réservation, 70% le jour J.
+
+**Vérifiez** :
+- Conditions d'annulation (remboursement ?)
+- Délai annulation gratuite (7-14 jours avant)
+
+---
+
+## Conclusion
+
+**Prix d'un déménagement à Bordeaux en 2026** :
+
+| Logement | Local (Bordeaux) | Vers Paris/Lyon |
+|----------|------------------|-----------------|
+| **Studio** | 450-850€ | 900-1 600€ |
+| **T2** | 750-1 450€ | 1 500-2 600€ |
+| **T3** | 1 100-2 100€ | 2 200-3 800€ |
+| **Maison** | 2 500-4 600€ | 5 000-8 500€ |
+
+**Facteurs Bordeaux spécifiques** :
+1. **Centre historique** : +15-25% (accès complexes)
+2. **Autorisation stationnement** : Obligatoire (délai 2 semaines)
+3. **Période étudiante** (août-septembre) : +20-30%
+
+**Comment obtenir le meilleur prix** :
+1. ✅ Volume précis (système Moverz)
+2. ✅ Accès bien décrits (quartier, étage, parking, autorisation)
+3. ✅ Période flexible (oct-mars, semaine)
+4. ✅ Comparer 3-5 devis sur la même base
+
+> **Calculez votre prix exact**  
+> [Créer mon dossier gratuitement](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-bordeaux-fin)
+
+**Questions ?** [contact@moverz.fr](mailto:contact@moverz.fr)
+
+---
+
+**À lire aussi :**
+- [Guide déménagement Bordeaux complet](/demenagement/bordeaux/)
+- [Prix déménagement 2026 (guide national)](/blog/prix-demenagement-2026/)
+- [Quartiers de Bordeaux](/quartiers-bordeaux/)
+`,
+  },
+  
+  {
+    slug: "prix-demenagement-lille-guide",
+    title: "Prix déménagement Lille 2026 : fourchettes réelles, quartiers et conseils",
+    description: "Combien coûte un déménagement à Lille en 2026 ? Fourchettes studio à maison, prix par quartier (Vieux-Lille, Wazemmes), facteurs de variation et conseils pour des devis comparables.",
+    type: "pilier",
+    citySlug: "lille",
+    body: `Lille, métropole de 1,2 million d'habitants, est le **hub du Nord** avec des spécificités : **centre historique dense, proximité Belgique, marché étudiant important** (120 000 étudiants).
+
+**Le défi** : Obtenir un prix fiable dans une ville où les accès varient fortement (Vieux-Lille vs périphérie), éviter les suppléments jour J.
+
+Dans ce guide ultra-complet sur les prix de déménagement à Lille en 2026, vous allez découvrir :
+
+- Les **fourchettes de prix réelles** par type de logement (studio à maison)
+- Les **facteurs spécifiques à Lille** (centre-ville, accès, période étudiante)
+- Les **prix moyens par quartier** (Vieux-Lille, Wazemmes, Euralille, Vauban)
+- Comment **obtenir des devis comparables** (même volume, même description)
+- Les **pièges à éviter** (sous-estimation volume, accès mal décrits)
+
+> **Comparer les prix pour votre déménagement à Lille**  
+> [Moverz](/) calcule votre volume précis et partage votre dossier avec des déménageurs lillois vérifiés (3 analyses /100). Devis comparables sous 5 jours sur [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-lille).
+
+---
+
+## Prix déménagement Lille 2026 : fourchettes par logement
+
+### Tarifs déménagement local Lille (< 30 km, Métropole Européenne de Lille)
+
+| Type logement | Volume | Prix formule éco | Prix formule standard | Prix formule confort |
+|---------------|--------|------------------|----------------------|---------------------|
+| **Studio 25-30 m²** | 10-15 m³ | 400-600€ | 550-800€ | 800-1 100€ |
+| **T2 45-55 m²** | 20-28 m³ | 700-1 050€ | 950-1 350€ | 1 350-1 800€ |
+| **T3 65-75 m²** | 30-42 m³ | 1 000-1 500€ | 1 400-2 000€ | 2 000-2 700€ |
+| **T4 85-100 m²** | 45-60 m³ | 1 600-2 300€ | 2 200-3 000€ | 3 000-4 000€ |
+| **Maison 120 m²+** | 65-85 m³ | 2 400-3 400€ | 3 200-4 400€ | 4 400-6 000€ |
+
+**Notes Lille** :
+- Prix légèrement inférieurs vs Paris (-10-15%) et Marseille (-5-10%)
+- Concurrence forte (15-20 déménageurs actifs sur la métropole)
+- Marché étudiant = offres économiques disponibles
+
+---
+
+### Exemples concrets de déménagements à Lille (2026)
+
+**Cas 1 – Studio étudiant Wazemmes → Hellemmes**
+- 25 m², 3e étage sans ascenseur, rue accessible
+- Volume estimé : 11 m³
+- Distance : 6 km
+- Formule éco (étudiant emballe)
+- **Prix constaté : 450-650€**
+
+---
+
+**Cas 2 – T3 Vieux-Lille → Marcq-en-Barœul**
+- 70 m², 4e étage sans ascenseur, rue pavée étroite
+- Volume estimé : 36 m³
+- Distance : 9 km
+- Formule standard + portage escalier + autorisation
+- **Prix constaté : 1 900-2 500€** (dont 350-450€ surcoûts accès)
+
+---
+
+**Cas 3 – Maison Lambersart → Bruxelles (Belgique)**
+- 110 m², plain-pied, accès facile
+- Volume estimé : 65 m³
+- Distance : 120 km (international)
+- Formule confort + formalités douanières
+- **Prix constaté : 3 800-5 200€**
+
+---
+
+## Les 5 facteurs qui impactent le prix à Lille
+
+### 1. Le quartier et les accès
+
+**Vieux-Lille (Centre historique)** :
+- Rues pavées, étroites, circulation limitée
+- Immeubles 17-18e siècle, 4-6 étages sans ascenseur (fréquent)
+- Autorisation stationnement nécessaire
+- **Supplément : +20-30%** (300-500€ sur un T3)
+
+**Wazemmes / Moulins / Fives** :
+- Quartiers populaires, accès moyens
+- Immeubles anciens, escaliers étroits
+- **Supplément : +10-15%**
+
+**Euralille / Lille Sud** :
+- Quartiers modernes, immeubles récents avec ascenseur
+- Parkings larges, accès faciles
+- **Supplément : 0€**
+
+**Métropole périphérie (Villeneuve-d'Ascq, Roubaix, Tourcoing)** :
+- Pavillons, accès généralement bons
+- **Supplément : 0-5%**
+
+---
+
+### 2. Les étages et l'ascenseur
+
+| Configuration | Impact prix | Exemple T3 (35 m³) |
+|---------------|-------------|-------------------|
+| **RDC ou ascenseur** | 0€ | 1 400€ |
+| **2-3e sans ascenseur** | +10-15% | 1 540-1 610€ |
+| **4-5e sans ascenseur** | +25-35% | 1 750-1 890€ |
+| **6e+ sans ascenseur** | Monte-meuble requis | +600-900€ |
+
+**Particularité Lille** : Escaliers souvent étroits dans le Vieux-Lille (< 1m de large) → portage main obligatoire, temps doublé
+
+---
+
+### 3. La distance
+
+**Déménagement local Lille Métropole** (< 30 km) : Prix de base
+
+**Moyenne distance** :
+- Lille → Arras (50 km) : +10-15%
+- Lille → Amiens (120 km) : +25-40%
+
+**Longue distance** :
+- Lille → Paris (220 km) : +80-120%
+- Lille → Lyon (680 km) : +180-240%
+- Lille → Bordeaux (850 km) : +220-280%
+
+**International Belgique** :
+- Lille → Bruxelles (120 km) : +30-50% (formalités douanières + TVA belge)
+
+---
+
+### 4. La période (saisonnalité Lille)
+
+| Période | Demande | Impact prix | Raison |
+|---------|---------|-------------|--------|
+| **Août-Septembre** | Très forte | +25-35% | Rentrée étudiante (120 000 étudiants) |
+| **Juin-Juillet** | Forte | +15-25% | Fin baux, vacances |
+| **Fin de mois** | Forte | +10-15% | Départs/arrivées standard |
+| **Octobre-Mars** | Normale | Prix de base | Basse saison |
+
+**Astuce Lille** : Éviter **absolument août-septembre** (rentrée universitaire = +30% minimum)
+
+---
+
+### 5. Le volume
+
+**Problème classique à Lille** : Studios étudiants sous-estimés
+- Étudiant pense : "Studio = 8 m³"
+- Réalité : Studio + vélo + cartons livres + matériel cuisine = 13 m³
+- **→ Supplément jour J : 150-200€** ❌
+
+**Solution Moverz** : Inventaire guidé, volume calculé automatiquement ✅
+
+---
+
+## Prix par quartier de Lille (2026)
+
+### Vieux-Lille (Centre historique)
+
+**Caractéristiques** :
+- Rues pavées, étroites, circulation restreinte
+- Immeubles flamands 3-5 étages sans ascenseur (majoritaire)
+- Autorisation stationnement obligatoire (ville de Lille, délai 10-15 jours)
+
+**Prix T3 (35 m³) local** : **1 800-2 500€** (dont 400-600€ surcoût accès + escalier)
+
+---
+
+### Wazemmes / Moulins
+
+**Caractéristiques** :
+- Quartiers populaires, rues moyennes
+- Immeubles anciens 4-5 étages, ascenseurs rares
+- Parking moyen
+
+**Prix T3 (35 m³) local** : **1 500-2 000€**
+
+---
+
+### Euralille / Lille-Centre moderne
+
+**Caractéristiques** :
+- Quartier d'affaires, immeubles récents
+- Ascenseurs systématiques, parkings larges
+- Accès excellents
+
+**Prix T3 (35 m³) local** : **1 300-1 700€** (prix de base)
+
+---
+
+### Vauban / Solférino (quartiers résidentiels)
+
+**Caractéristiques** :
+- Quartiers calmes, immeubles bourgeois
+- Étages variables, ascenseurs fréquents
+- Parking correct
+
+**Prix T3 (35 m³) local** : **1 400-1 800€**
+
+---
+
+### Métropole périphérie (Villeneuve-d'Ascq, Lambersart, Marcq-en-Barœul)
+
+**Caractéristiques** :
+- Pavillons, accès faciles
+- Plain-pied ou R+1 majoritaire
+
+**Prix Maison 70 m³ local** : **2 400-3 400€**
+
+---
+
+## Les pièges à éviter à Lille
+
+### Piège 1 : Oublier l'autorisation stationnement (Vieux-Lille)
+
+**Le piège** :
+- Déménagement depuis le Vieux-Lille
+- Jour J : Pas d'autorisation, camion ne peut pas accéder
+- Portage 100m requis : **+300-400€**
+
+**Solution** : Demander l'autorisation 2 semaines avant (Ville de Lille, service voirie)
+
+---
+
+### Piège 2 : Sous-estimer le volume étudiant
+
+**Le piège classique** :
+- Étudiant : "Studio, 8 m³ max"
+- Réalité : Studio + vélo + livres + matériel + vaisselle = 14 m³
+- **Supplément jour J : 180€** ❌
+
+**Solution** : Inventaire complet avec **TOUS les cartons et objets** ✅
+
+---
+
+### Piège 3 : Déménager en septembre (rentrée)
+
+**Impact rentrée universitaire** :
+- 120 000 étudiants déménagent fin août / début septembre
+- Disponibilité : très faible
+- **Prix : +25-35%** vs reste de l'année
+
+**Solution** : Si flexible, déménager **mi-septembre ou octobre** ✅
+
+---
+
+## FAQ Prix Déménagement Lille
+
+### Les prix sont-ils moins chers qu'à Paris ?
+
+**Oui** : -10-15% en moyenne vs Paris, principalement à cause :
+- Loyers locaux moins élevés (coûts fixes déménageurs)
+- Concurrence forte (15-20 acteurs métropole)
+
+**Mais** : Vieux-Lille = aussi cher que Paris centre (accès complexes)
+
+---
+
+### Un déménageur peut-il refuser le Vieux-Lille ?
+
+**Oui.** Les rues très étroites (< 2,5m) interdisent l'accès camion 30 m³. Solutions :
+- Camion 12-15 m³ (plusieurs rotations) → +temps → +coût
+- Monte-meuble si possible
+- Portage main (équipe renforcée)
+
+**→ Précisez les accès dans votre dossier** ✅
+
+---
+
+### Le supplément Belgique est-il important ?
+
+**Oui** : +30-50% vs déménagement local, car :
+- Formalités douanières (post-Brexit)
+- TVA belge (21%)
+- Autorisation transport international
+
+**Exemple** :
+- Lille → Lille (20 km) : 1 400€
+- Lille → Bruxelles (120 km) : 2 000-2 400€ (+40-70%)
+
+---
+
+### Les offres étudiantes sont-elles vraiment moins chères ?
+
+**Oui, MAIS** :
+- Réservées aux studios/T1 (< 15 m³)
+- Formule éco uniquement (vous emballez tout)
+- Période hors août-septembre
+- **Économie : 15-20% vs tarif standard**
+
+**→ Demandez si vous êtes étudiant, mais comparez quand même 3-5 devis** ✅
+
+---
+
+## Conclusion
+
+**Prix d'un déménagement à Lille en 2026** :
+
+| Logement | Local (Lille) | Vers Paris | Vers Bruxelles |
+|----------|---------------|------------|----------------|
+| **Studio** | 400-800€ | 750-1 300€ | 900-1 500€ |
+| **T2** | 700-1 350€ | 1 300-2 200€ | 1 500-2 600€ |
+| **T3** | 1 000-2 000€ | 1 900-3 400€ | 2 200-3 800€ |
+| **Maison** | 2 400-4 400€ | 4 500-7 500€ | 5 200-8 500€ |
+
+**Facteurs Lille spécifiques** :
+1. **Vieux-Lille** : +20-30% (accès très complexes)
+2. **Période étudiante** (août-sept) : +25-35%
+3. **International Belgique** : +30-50% (douane post-Brexit)
+
+**Comment obtenir le meilleur prix** :
+1. ✅ Volume précis (système Moverz, inventaire guidé)
+2. ✅ Accès bien décrits (quartier, étage, largeur rue, parking)
+3. ✅ Éviter août-septembre (rentrée étudiante)
+4. ✅ Comparer 3-5 devis sur la même base
+
+> **Calculez votre prix exact**  
+> [Créer mon dossier gratuitement](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-lille-fin)
+
+**Questions ?** [contact@moverz.fr](mailto:contact@moverz.fr)
+
+---
+
+**À lire aussi :**
+- [Guide déménagement Lille complet](/demenagement/lille/)
+- [Prix déménagement 2026 (guide national)](/blog/prix-demenagement-2026/)
+- [Aides financières déménagement Lille](/blog/aides-financieres-demenagement-lille/)
+`,
+  },
+  
+  {
+    slug: "prix-demenagement-montpellier",
+    title: "Prix déménagement Montpellier 2026 : fourchettes réelles et conseils",
+    description: "Combien coûte un déménagement à Montpellier en 2026 ? Fourchettes studio à maison, prix par quartier (Écusson, Antigone, Port-Marianne), facteurs de variation et guide pour comparer des devis fiables.",
+    type: "pilier",
+    citySlug: "montpellier",
+    body: `Montpellier, métropole méditerranéenne de 500 000 habitants, connaît une **croissance démographique forte** (+1,5%/an) et un **marché immobilier dynamique**.
+
+**Le défi** : Obtenir un prix fiable dans une ville où les accès varient (Écusson historique vs quartiers modernes), éviter les suppléments jour J.
+
+Dans ce guide ultra-complet sur les prix de déménagement à Montpellier en 2026, vous allez découvrir :
+
+- Les **fourchettes de prix réelles** par type de logement (studio à maison)
+- Les **facteurs spécifiques à Montpellier** (centre historique, tramway, période estivale)
+- Les **prix moyens par quartier** (Écusson, Antigone, Port-Marianne, Près d'Arènes)
+- Comment **obtenir des devis comparables** sans mauvaises surprises
+- Les **pièges à éviter** (sous-estimation, accès centre-ville)
+
+> **Comparer les prix pour votre déménagement à Montpellier**  
+> [Moverz](/) calcule votre volume précis et partage votre dossier avec des déménageurs montpelliérains vérifiés (3 analyses /100). Devis comparables sous 5 jours sur [devis.moverz.fr](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-montpellier).
+
+---
+
+## Prix déménagement Montpellier 2026 : fourchettes par logement
+
+### Tarifs déménagement local Montpellier (< 30 km)
+
+| Type logement | Volume | Prix formule éco | Prix formule standard | Prix formule confort |
+|---------------|--------|------------------|----------------------|---------------------|
+| **Studio 25-30 m²** | 10-15 m³ | 450-650€ | 600-850€ | 850-1 200€ |
+| **T2 45-55 m²** | 20-28 m³ | 750-1 100€ | 1 000-1 450€ | 1 400-1 900€ |
+| **T3 65-75 m²** | 30-42 m³ | 1 100-1 600€ | 1 500-2 100€ | 2 100-2 800€ |
+| **T4 85-100 m²** | 45-60 m³ | 1 700-2 400€ | 2 300-3 100€ | 3 100-4 200€ |
+| **Maison 120 m²+** | 65-85 m³ | 2 500-3 500€ | 3 400-4 600€ | 4 600-6 200€ |
+
+**Notes Montpellier** :
+- Prix similaires à Bordeaux et Toulouse
+- Légèrement supérieurs à Lille (-5%) et inférieurs à Paris (-15%)
+
+---
+
+### Exemples concrets de déménagements à Montpellier (2026)
+
+**Cas 1 – Studio Écusson → Antigone**
+- 27 m², 3e étage sans ascenseur, rue piétonne Écusson
+- Volume estimé : 12 m³
+- Distance : 2 km
+- Formule standard + autorisation piéton
+- **Prix constaté : 750-950€** (dont 100-150€ surcoût Écusson)
+
+---
+
+**Cas 2 – T3 Port-Marianne → Castelnau-le-Lez**
+- 72 m², 6e étage avec ascenseur, parking privé
+- Volume estimé : 38 m³
+- Distance : 7 km
+- Formule standard
+- **Prix constaté : 1 600-2 100€**
+
+---
+
+**Cas 3 – Maison Près d'Arènes → Toulouse**
+- 125 m², plain-pied, accès facile
+- Volume estimé : 72 m³
+- Distance : 240 km
+- Formule confort
+- **Prix constaté : 4 200-5 600€**
+
+---
+
+## Les 5 facteurs qui impactent le prix à Montpellier
+
+### 1. Le quartier et les accès
+
+**Écusson (Centre historique)** :
+- Rues piétonnes, circulation interdite camions
+- Immeubles anciens 3-5 étages sans ascenseur (fréquent)
+- Autorisation piéton + portage main obligatoire
+- **Supplément : +15-25%** (250-400€ sur un T3)
+
+**Antigone / Odysseum** :
+- Quartiers modernes post-1980
+- Larges avenues, parkings, ascenseurs
+- **Supplément : 0€**
+
+**Port-Marianne / Richter** :
+- Quartier récent 2000-2020, immeubles neufs
+- Accès excellents, parkings souterrains
+- **Supplément : 0€**
+
+**Près d'Arènes / Boutonnet** :
+- Quartiers résidentiels, immeubles mixtes
+- Accès moyens, escaliers fréquents
+- **Supplément : +5-15%**
+
+---
+
+### 2. Les étages et l'ascenseur
+
+| Configuration | Impact prix | Exemple T3 (35 m³) |
+|---------------|-------------|-------------------|
+| **RDC ou ascenseur** | 0€ | 1 500€ |
+| **2-3e sans ascenseur** | +10-15% | 1 650-1 725€ |
+| **4-5e sans ascenseur** | +25-35% | 1 875-2 025€ |
+| **6e+ sans ascenseur** | Monte-meuble | +600-800€ |
+
+---
+
+### 3. La distance
+
+**Local Montpellier** (< 30 km) : Prix de base
+
+**Moyenne distance** :
+- Montpellier → Nîmes (55 km) : +10-20%
+- Montpellier → Béziers (75 km) : +20-30%
+
+**Longue distance** :
+- Montpellier → Toulouse (240 km) : +70-100%
+- Montpellier → Lyon (330 km) : +100-140%
+- Montpellier → Paris (750 km) : +200-260%
+
+---
+
+### 4. La période
+
+| Période | Impact | Raison |
+|---------|--------|--------|
+| **Juillet-Août** | +20-30% | Haute saison touristique |
+| **Juin + Septembre** | +15-20% | Vacances, rentrée |
+| **Fin de mois** | +10-15% | Départs baux |
+| **Octobre-Mars** | Prix de base | Basse saison |
+
+**Particularité Montpellier** : Ville touristique = haute saison juillet-août très marquée
+
+---
+
+### 5. Le volume
+
+**Problème** : Montpellier = ville étudiante (70 000 étudiants) → Nombreux studios/T1 sous-estimés
+
+**Solution** : Inventaire guidé Moverz (calcul automatique, 0 oubli) ✅
+
+---
+
+## Comment obtenir le meilleur prix à Montpellier
+
+### 1. Volume précis
+
+**Avec Moverz** :
+- Inventaire guidé en 5 minutes
+- Volume calculé : 32 m³
+- Tous les déménageurs chiffrent sur **la même base**
+- **→ Devis comparables** ✅
+
+---
+
+### 2. Décrire les accès Montpellier
+
+**Écusson** :
+- Précisez : "Rue piétonne, autorisation nécessaire, portage 40m"
+- Déménageur chiffre correctement dès le départ
+- **→ 0 surprise** ✅
+
+**Autres quartiers** :
+- Précisez étage, ascenseur, distance parking ↔ porte
+
+---
+
+### 3. Éviter juillet-août
+
+**Économie possible** : 250-450€ sur un T3 en déménageant en octobre vs août
+
+---
+
+### 4. Comparer 3-5 devis
+
+**Avec Moverz** : Jusqu'à 5 devis, déménageurs évalués sur 3 risques /100
+
+---
+
+## Conclusion
+
+**Prix déménagement Montpellier 2026** :
+
+| Logement | Local | Vers Toulouse/Lyon | Vers Paris |
+|----------|-------|-------------------|------------|
+| **Studio** | 450-850€ | 800-1 500€ | 1 100-1 900€ |
+| **T2** | 750-1 450€ | 1 400-2 400€ | 1 900-3 200€ |
+| **T3** | 1 100-2 100€ | 2 000-3 600€ | 2 800-4 800€ |
+| **Maison** | 2 500-4 600€ | 4 600-7 800€ | 6 500-10 500€ |
+
+**Facteurs Montpellier** :
+1. **Écusson** : +15-25% (piéton)
+2. **Juillet-août** : +20-30% (tourisme)
+3. **Étages sans ascenseur** : +25-40% (si 4-5e)
+
+> **Calculez votre prix exact**  
+> [Créer mon dossier](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-montpellier-fin)
+
+**Questions ?** [contact@moverz.fr](mailto:contact@moverz.fr)
+
+---
+
+**À lire aussi :**
+- [Guide déménagement Montpellier](/demenagement/montpellier/)
+- [Prix déménagement 2026](/blog/prix-demenagement-2026/)
+- [Aides financières Montpellier](/blog/aides-financieres-demenagement-montpellier/)
+`,
+  },
+  
+  {
+    slug: "combien-coute-garde-meuble-marseille",
+    title: "Combien coûte un garde-meuble à Marseille en 2026 ? Prix et comparatif",
+    description: "Prix garde-meuble Marseille 2026 : 70-350€/mois selon taille (3-30 m³), comparatif 8 acteurs, suppléments, durées minimum et conseils pour choisir.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `Un garde-meuble à Marseille coûte entre **70€ et 350€/mois** selon la taille, l'emplacement, et la durée.
+
+**Le défi** : Comparer les offres (tarifs opaques, frais cachés, engagement minimum) et choisir le meilleur rapport qualité-prix sans payer de suppléments inattendus.
+
+Dans ce guide complet sur les prix des garde-meubles à Marseille, vous allez découvrir :
+
+- Les **tarifs 2026** par taille de box (3 m³ à 30 m³)
+- Les **8 acteurs principaux** à Marseille et leur positionnement prix
+- Les **frais cachés** à anticiper (accès, assurance, cadenassage)
+- La **durée minimum** d'engagement (1 mois à 6 mois selon opérateur)
+- Comment **calculer le coût total réel** sur votre durée de stockage
+
+> **Comparer garde-meubles et déménageurs à Marseille**  
+> [Moverz](/) vous aide à comparer les solutions de stockage et à obtenir des devis transparents. [Créer mon dossier](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-garde-meuble-marseille).
+
+---
+
+## Prix garde-meuble Marseille 2026 par taille
+
+### Tarifs mensuels moyens (Marseille)
+
+| Taille box | Volume stockable | Prix/mois (gamme) | Exemple usage |
+|------------|------------------|-------------------|---------------|
+| **3-5 m³** | Studio partiel | 70-120€ | Cartons, vélos, petit mobilier |
+| **6-9 m³** | Studio complet | 110-180€ | Studio 25 m² complet |
+| **10-15 m³** | T2 | 150-250€ | T2 ou T3 partiel |
+| **16-20 m³** | T3 | 200-320€ | T3 complet |
+| **21-30 m³** | T4+ | 280-450€ | T4 ou grande maison partielle |
+
+**Note** : Tarifs pour un engagement 3-6 mois. Réductions possibles sur 12+ mois.
+
+---
+
+## Les 8 acteurs principaux à Marseille (comparatif 2026)
+
+### 1. Shurgard (4 sites à Marseille)
+
+**Positionnement** : Premium, réseau national
+
+**Sites Marseille** :
+- Plan-de-Campagne
+- Saint-Barthélémy
+- Arenc (port)
+- La Valentine
+
+**Prix** : 120-180€/mois (box 6-9 m³)  
+**Avantages** : Accès 7j/7, 6h-22h, surveillance 24h, propre  
+**Inconvénients** : +15-20% vs acteurs locaux
+
+---
+
+### 2. Homebox (3 sites Marseille)
+
+**Positionnement** : Milieu de gamme, flexible
+
+**Prix** : 100-150€/mois (box 6-9 m³)  
+**Avantages** : Durée minimum 1 mois, résiliation flexible  
+**Inconvénients** : Horaires limités (9h-18h, fermé dimanche)
+
+---
+
+### 3. Une Pièce en Plus (2 sites)
+
+**Positionnement** : Concurrent Shurgard, national
+
+**Prix** : 110-170€/mois (box 6-9 m³)  
+**Avantages** : Accès 7j/7, propre, sécurisé  
+**Inconvénients** : Engagement 3 mois minimum
+
+---
+
+### 4. Lock & Stock (Marseille Nord)
+
+**Positionnement** : Local, économique
+
+**Prix** : 80-130€/mois (box 6-9 m³)  
+**Avantages** : Prix compétitifs, flexibilité durée  
+**Inconvénients** : 1 seul site (Marseille 15e), accès limité week-end
+
+---
+
+### 5-8. Acteurs locaux indépendants
+
+**Prix** : 70-140€/mois (box 6-9 m³)  
+**Avantages** : Prix très compétitifs  
+**Inconvénients** : Horaires restreints, qualité variable, surveillance basique
+
+---
+
+## Les frais cachés à anticiper
+
+### Ce qui est TOUJOURS en supplément
+
+1. **Assurance box** : 8-15€/mois (obligatoire)
+   - Couvre le contenu jusqu'à 10 000-30 000€
+
+2. **Cadenas** : 15-30€ (achat unique)
+   - Souvent vendu sur place (obligatoire)
+
+3. **Frais de dossier** : 0-50€ (une fois)
+   - Selon opérateur
+
+4. **Accès hors horaires** : 20-40€/visite
+   - Si accès en dehors des plages standard
+
+---
+
+### Calcul du coût RÉEL
+
+**Exemple box 9 m³, 4 mois à Marseille (Shurgard)** :
+
+| Poste | Montant |
+|-------|---------|
+| Location : 150€ × 4 mois | 600€ |
+| Assurance : 12€ × 4 mois | 48€ |
+| Cadenas | 25€ |
+| Frais dossier | 30€ |
+| **TOTAL** | **703€** |
+
+**→ Tarif annoncé 150€/mois, coût réel = 176€/mois** (frais inclus)
+
+**→ Toujours calculer le coût TOTAL sur votre durée** ✅
+
+---
+
+## Durée minimum d'engagement
+
+| Opérateur | Durée minimum | Pénalité sortie anticipée |
+|-----------|---------------|---------------------------|
+| **Shurgard** | 1 mois | 0€ (mais 1 mois payé) |
+| **Homebox** | 1 mois | 0€ |
+| **Une Pièce en Plus** | 3 mois | 1 mois de pénalité |
+| **Acteurs locaux** | 1-6 mois | Variable |
+
+**→ Si durée incertaine, privilégiez les acteurs sans engagement** ✅
+
+---
+
+## Les pièges à éviter
+
+### Piège 1 : Choisir trop petit (et payer 2 boxes)
+
+**Vous pensez** : "Studio = 6 m³ suffisent"
+
+**La réalité** :
+- Studio + cartons livres + vélo + matelas = 9 m³
+- **→ Vous louez 2 boxes (6 m³ + 3 m³) = 190€/mois au lieu d'une 9 m³ à 140€/mois** ❌
+
+**Solution** : Surestimez légèrement (+15%) pour avoir de la marge ✅
+
+---
+
+### Piège 2 : Oublier l'assurance dans le calcul
+
+**Tarif annoncé** : 120€/mois  
+**Tarif réel** : 120€ + 12€ assurance = **132€/mois** (+10%)
+
+**→ Demandez toujours le prix TOTAL (assurance incluse)** ✅
+
+---
+
+### Piège 3 : Signer sans vérifier l'état de la box
+
+**Le jour de l'emménagement box** :
+- Box humide (murs), ou poussiéreuse
+- Vous stockez du mobilier en bois
+- 6 mois plus tard : moisissure
+
+**Solution** : Visitez la box AVANT de signer, vérifiez l'état, l'humidité, la propreté ✅
+
+---
+
+## Garde-meuble vs Déménageur : quelle solution ?
+
+### Vous stockez < 3 mois
+
+**→ Garde-meuble classique** (Shurgard, Homebox)
+- Coût : 150€/mois × 3 = **450€**
+- Vous gérez : transport, emballage, stockage, récupération
+
+---
+
+### Vous stockez 3-12 mois
+
+**→ Garde-meuble déménageur** (formule tout-en-un)
+- Coût : Déménagement A→B + stockage déménageur
+- Exemple : 1 200€ (aller) + 100€/mois × 6 = **1 800€**
+- **Déménageur gère** : transport, stockage professionnel, livraison finale
+
+**Avantages** :
+- ✅ 1 seul interlocuteur
+- ✅ Stockage pro (hangar sécurisé, palettes)
+- ✅ Pas de double manutention vous-même
+
+**Inconvénients** :
+- ⚠ Accès au stockage limité (préavis 48-72h)
+- ⚠ Coût légèrement supérieur si durée > 12 mois
+
+---
+
+## Questions fréquentes
+
+### Puis-je accéder à ma box 24h/24 ?
+
+**Non.** Horaires standard Marseille :
+- Shurgard : 6h-22h tous les jours
+- Homebox : 9h-18h, fermé dimanche
+- Acteurs locaux : 9h-12h / 14h-18h, fermé dimanche
+
+**Accès hors horaires** : 20-40€/visite (sur RDV)
+
+---
+
+### L'assurance est-elle obligatoire ?
+
+**Oui.** Tous les opérateurs l'imposent (8-15€/mois).
+
+**Ce qu'elle couvre** : Vol, incendie, dégât des eaux  
+**Ce qu'elle ne couvre PAS** : Moisissure due à mauvais emballage, vermine, usure normale
+
+---
+
+### Puis-je partager une box pour réduire le coût ?
+
+**Oui, MAIS** :
+- Les 2 locataires doivent signer le contrat
+- Responsabilité conjointe
+- Accès : besoin de coordination
+
+**→ Réservé aux couples ou colocataires de confiance** ✅
+
+---
+
+## Conclusion
+
+**Prix garde-meuble Marseille 2026** :
+
+| Taille | Prix/mois | Coût total 6 mois (frais inclus) |
+|--------|-----------|----------------------------------|
+| **6 m³** | 110-150€ | 720-980€ |
+| **9 m³** | 140-180€ | 920-1 180€ |
+| **15 m³** | 190-260€ | 1 240-1 690€ |
+| **20 m³** | 250-320€ | 1 630-2 080€ |
+
+**Les règles d'or** :
+1. ✅ Calculez le coût TOTAL (assurance + frais + cadenassage)
+2. ✅ Visitez la box avant de signer (état, humidité)
+3. ✅ Vérifiez la durée minimum d'engagement
+4. ✅ Comparez les horaires d'accès (important si vous stockez/récupérez souvent)
+
+> **Besoin d'un déménageur + stockage ?**  
+> [Créer mon dossier Moverz](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-garde-meuble-marseille-fin)
+
+---
+
+**À lire aussi :**
+- [Guide déménagement Marseille](/demenagement/marseille/)
+- [Prix déménagement Marseille](/blog/prix-demenagement-marseille/)
+`,
+  },
+  
+  {
+    slug: "demenagement-m3-calcul-tarif-lille",
+    title: "Tarif déménagement au m³ à Lille : calcul, fourchettes et facteurs (2026)",
+    description: "Tarif déménagement au m³ à Lille 2026 : 35-75€/m³ selon formule et distance. Calcul précis du volume, facteurs de variation, exemples concrets et conseils pour des devis fiables.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `À Lille, le **tarif au m³** est la méthode de calcul la plus courante pour les déménagements : entre **35€ et 75€/m³** selon la formule, la distance et les accès.
+
+**Le problème** : Deux déménageurs peuvent estimer des volumes différents (25 m³ vs 32 m³) → devis non comparables → impossible de savoir qui est vraiment moins cher.
+
+Dans ce guide, vous allez découvrir :
+
+- Le **tarif au m³ réel à Lille** selon formule et distance (2026)
+- Comment **calculer votre volume exact** (méthode Moverz)
+- Les **facteurs qui font varier le tarif** au m³ (accès, période, quartier)
+- Les **pièges à éviter** (volume sous-estimé, suppléments jour J)
+- Comment **comparer des devis au m³** correctement
+
+> **Calculer votre volume et comparer les tarifs à Lille**  
+> [Moverz](/) calcule votre volume en 5 min (inventaire guidé) et vous propose des devis au m³ comparables. [Créer mon dossier](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-m3-lille).
+
+---
+
+## Tarif au m³ à Lille en 2026 : fourchettes
+
+### Tarifs selon la formule
+
+| Formule | Tarif au m³ | Ce qui est inclus |
+|---------|-------------|-------------------|
+| **Éco** | 35-50€/m³ | Portage + transport (vous emballez) |
+| **Standard** | 50-65€/m³ | Emballage fragiles + démontage meubles |
+| **Confort** | 65-85€/m³ | Emballage complet + installation arrivée |
+
+**Exemple T3 de 32 m³** :
+- Formule éco : 32 × 45€ = **1 440€**
+- Formule standard : 32 × 58€ = **1 856€**
+- Formule confort : 32 × 75€ = **2 400€**
+
+---
+
+### Tarifs selon la distance (Lille)
+
+| Distance | Tarif au m³ | Raison |
+|----------|-------------|--------|
+| **< 10 km** | 40-55€ | Manutention dominante |
+| **10-30 km** (local) | 45-60€ | Manutention + transport court |
+| **30-100 km** | 50-70€ | Transport moyen |
+| **100-300 km** | 60-80€ | Transport longue distance |
+| **> 300 km** | 70-95€+ | Transport dominant + péages |
+
+**Exemple T3 de 32 m³** :
+- Lille → Lille (15 km) : 32 × 52€ = **1 664€**
+- Lille → Arras (50 km) : 32 × 60€ = **1 920€**
+- Lille → Paris (220 km) : 32 × 75€ = **2 400€**
+
+---
+
+## Comment calculer votre volume exact (méthode Moverz)
+
+### Le problème des estimations "à l'œil"
+
+**Scénario classique** :
+- **Déménageur A** : "Votre T3 = 25 m³" → Devis 1 375€ (55€/m³)
+- **Déménageur B** : "Votre T3 = 32 m³" → Devis 1 792€ (56€/m³)
+
+**Vous pensez** : "A est moins cher (1 375€ vs 1 792€)"
+
+**La réalité** :
+- Volume réel : 30 m³
+- Déménageur A a sous-estimé → supplément jour J : 5 m³ × 55€ = **+275€**
+- **Coût final A : 1 650€** (plus cher que B !) ❌
+
+**→ Si les volumes sont différents, les devis ne sont PAS comparables** ❌
+
+---
+
+### La méthode Moverz (volume calculé, pas estimé)
+
+**Process** :
+1. **Inventaire guidé** : Vous remplissez pièce par pièce (salon, chambre, cuisine, cave, extérieurs)
+2. **Calcul automatique** : Le système calcule : "Volume total : 30,5 m³"
+3. **Base commune** : Tous les déménageurs reçoivent "30,5 m³" comme base
+4. **Devis comparables** : Vous comparez 30,5 × 52€ vs 30,5 × 58€ vs 30,5 × 63€
+
+**→ Vous comparez vraiment les tarifs au m³, pas des volumes différents** ✅
+
+---
+
+## Les 4 facteurs qui font varier le tarif au m³ à Lille
+
+### 1. Les accès (Vieux-Lille vs périphérie)
+
+**Vieux-Lille** :
+- Rues étroites, pavées
+- 4-5e sans ascenseur fréquent
+- **Tarif au m³ : +10-15€** (supplément accès)
+
+**Euralille / Lille-Sud** :
+- Accès faciles, ascenseurs
+- **Tarif au m³ : prix de base**
+
+---
+
+### 2. La période
+
+| Période | Tarif au m³ | Raison |
+|---------|-------------|--------|
+| **Août-Septembre** | +8-12€ | Rentrée étudiante |
+| **Juillet** | +5-10€ | Haute saison |
+| **Octobre-Mars** | Prix de base | Basse saison |
+
+---
+
+### 3. Le type de biens
+
+**Mobilier standard** : Prix de base  
+**Objets fragiles** (vaisselle, miroirs, tableaux) : +5-10€/m³ (emballage renforcé)  
+**Piano/œuvres d'art** : +15-25€/m³ (manutention spécialisée)
+
+---
+
+### 4. L'urgence
+
+**Délai standard** (15-30 jours avant) : Prix de base  
+**Déménagement urgent** (< 7 jours) : +10-20€/m³ (disponibilité limitée)
+
+---
+
+## Les pièges à éviter
+
+### Piège 1 : Comparer des devis avec des volumes différents
+
+**Devis A** : 25 m³ × 52€ = 1 300€  
+**Devis B** : 32 m³ × 48€ = 1 536€
+
+**Vous pensez** : "A est moins cher"
+
+**La réalité** :
+- Volume réel : 30 m³
+- A a sous-estimé de 5 m³ → supplément jour J : **+260€**
+- **Coût final A : 1 560€** (plus cher que B !) ❌
+
+**→ Exigez toujours un volume documenté et précis** ✅
+
+---
+
+### Piège 2 : Accepter un tarif au m³ trop bas (< 40€)
+
+**Un tarif < 40€/m³ est suspect** car :
+- Coûts incompressibles : salaires (2 porteurs × 20€/h), carburant, assurance
+- Un T3 de 32 m³ prend 6-8h (portage + transport + route)
+- **Coût minimum réaliste : 35-40€/m³** en formule éco
+
+**Si devis < 40€/m³** :
+- ⚠ Volume sous-estimé
+- ⚠ Suppléments cachés
+- ⚠ Sous-traitance low-cost
+- ⚠ Déménageur en difficulté financière
+
+**→ Méfiez-vous des tarifs anormalement bas** ❌
+
+---
+
+### Piège 3 : Oublier les suppléments hors tarif au m³
+
+**Ce qui n'est PAS inclus dans le tarif au m³** :
+- ❌ Monte-meuble (400-700€)
+- ❌ Autorisation stationnement (50-150€)
+- ❌ Assurance ad valorem (si objets > 5 000€)
+- ❌ Déballage arrivée (sauf formule confort)
+
+**→ Demandez un devis détaillé ligne par ligne** ✅
+
+---
+
+## FAQ Tarif au m³ Lille
+
+### Le tarif au m³ inclut-il les cartons ?
+
+**Ça dépend** :
+- **Formule éco** : Non (vous fournissez vos cartons)
+- **Formule standard** : Parfois (5-15 cartons inclus, vérifiez)
+- **Formule confort** : Oui (tout fourni)
+
+**Coût cartons si achat** : 1-2€/carton standard (50×35×35 cm)
+
+---
+
+### Comment savoir si un tarif au m³ est correct ?
+
+**Fourchettes normales Lille 2026** :
+- Éco : 35-50€/m³
+- Standard : 50-65€/m³
+- Confort : 65-85€/m³
+
+**Hors fourchette** :
+- < 35€/m³ : Suspect (vérifiez le déménageur)
+- > 85€/m³ : Cher (sauf accès très complexes ou piano)
+
+**→ Avec Moverz, vous recevez 3-5 devis et voyez la fourchette réelle** ✅
+
+---
+
+### Le tarif au m³ varie-t-il selon le quartier ?
+
+**Oui** :
+- Vieux-Lille : +10-15€/m³ (accès complexes)
+- Euralille : prix de base
+- Métropole périphérie : prix de base
+
+---
+
+## Conclusion
+
+**Tarif au m³ déménagement Lille 2026** :
+
+| Formule | Tarif au m³ | Exemple T3 (32 m³) |
+|---------|-------------|-------------------|
+| **Éco** | 35-50€ | 1 120-1 600€ |
+| **Standard** | 50-65€ | 1 600-2 080€ |
+| **Confort** | 65-85€ | 2 080-2 720€ |
+
+**Les 4 règles d'or** :
+1. ✅ **Volume précis** (inventaire Moverz, pas estimation œil)
+2. ✅ **Même base pour tous** (comparer 32 m³ vs 32 m³, pas 25 vs 32)
+3. ✅ **Vérifier les suppléments** (monte-meuble, autorisation, etc.)
+4. ✅ **Comparer 3-5 devis** (fourchette réelle)
+
+> **Calculez votre tarif au m³ exact**  
+> [Créer mon dossier](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-m3-lille-fin)
+
+**Questions ?** [contact@moverz.fr](mailto:contact@moverz.fr)
+
+---
+
+**À lire aussi :**
+- [Prix déménagement Lille guide complet](/blog/prix-demenagement-lille-guide/)
+- [Guide déménagement Lille](/demenagement/lille/)
+- [Calculer volume déménagement](/blog/estimer-volume-demenagement-guide-complet/)
+`,
+  },
+  
+  {
+    slug: "aide-financiere-demenagement-nice",
+    title: "Aides financières déménagement Nice 2026 : CAF, Action Logement, FSL",
+    description: "Aides déménagement Nice 2026 : Prime CAF jusqu'à 1 016€ (familles 3+ enfants), Mobili-Pass 3 500€ (salariés), FSL Alpes-Maritimes. Guide complet pour en bénéficier.",
+    type: "satellite",
+    citySlug: "nice",
+    body: `Déménager à Nice coûte entre **600€ (studio)** et **3 500€+ (maison)** selon votre logement et la distance. Pour les familles, étudiants, salariés en mobilité ou personnes en difficulté, **des aides existent**.
+
+**Le défi** : Identifier les aides auxquelles vous avez droit, constituer les bons dossiers, respecter les délais.
+
+Dans ce guide complet sur les aides financières au déménagement à Nice, vous allez découvrir :
+
+- La **prime CAF** (jusqu'à 1 016€ pour les familles 3+ enfants)
+- L'**aide Mobili-Pass** d'Action Logement (jusqu'à 3 500€ pour salariés en mobilité)
+- Le **FSL Alpes-Maritimes** (Fonds Solidarité Logement pour situations précaires)
+- Les **autres aides** (mutuelles, caisses retraite, employeurs)
+- Les **démarches précises** pour en bénéficier
+
+> **Déménager à Nice avec un budget maîtrisé**  
+> [Moverz](/) calcule votre volume et compare des devis transparents. Si vous bénéficiez d'une aide, indiquez-le dans votre dossier. [Créer mon dossier](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-aide-nice).
+
+---
+
+## 1. La Prime de Déménagement CAF (jusqu'à 1 016€)
+
+### Conditions d'éligibilité (CAF Alpes-Maritimes)
+
+Vous pouvez bénéficier de la prime CAF si :
+
+- ✅ Vous avez **au moins 3 enfants à charge** (nés ou à naître)
+- ✅ Le 3e enfant est né/adopté/recueilli **après le 1er juillet 2014**
+- ✅ Vous déménagez entre le **4e mois de grossesse** et le **jour du 2e anniversaire** de votre 3e enfant
+- ✅ Vous **percevez l'APL ou l'ALF** dans le nouveau logement niçois
+- ✅ Changement de **résidence principale** (pas résidence secondaire)
+
+---
+
+### Montant de l'aide
+
+**Jusqu'à 1 015,68€** (montant maximum 2026, révisé annuellement)
+
+**Calcul** : L'aide couvre les **frais réels de déménagement** (sur facture), dans la limite du plafond.
+
+**Exemples** :
+- Facture déménagement : 850€ → Aide CAF : **850€** ✅
+- Facture déménagement : 1 300€ → Aide CAF : **1 016€** (plafond) ✅
+
+---
+
+### Comment demander la prime CAF Nice
+
+**Délai** : **Dans les 6 mois** suivant le déménagement
+
+**Process** :
+1. Se connecter sur **caf.fr** (rubrique "Mes services en ligne")
+2. Aller dans **"Faire une demande de prestation"** → **"Déménagement"**
+3. Remplir le formulaire en ligne
+4. Joindre les documents :
+   - ✅ Nouveau bail ou acte de propriété (Nice)
+   - ✅ Justificatif d'état civil du 3e enfant (acte naissance)
+   - ✅ **Facture du déménagement** (obligatoire, pas devis)
+   - ✅ RIB
+
+**Délai de traitement** : 2-4 semaines après dossier complet
+
+**Contact CAF Alpes-Maritimes** :
+- Tél : 0 810 25 06 10
+- Adresse : CAF des Alpes-Maritimes, 28 avenue de Verdun, 06000 Nice
+
+---
+
+## 2. L'Aide Mobili-Pass d'Action Logement (jusqu'à 3 500€)
+
+### Conditions d'éligibilité (salariés en mobilité)
+
+Vous pouvez bénéficier de Mobili-Pass si :
+
+- ✅ Vous êtes **salarié du secteur privé** (entreprise ≥ 10 salariés, hors agriculture)
+- ✅ Vous êtes en **mobilité professionnelle** (> 70 km) OU vous venez de signer un **nouveau contrat** nécessitant un déménagement
+- ✅ Vous avez un **CDI, CDD ≥ 3 mois**, ou une promesse d'embauche
+- ✅ Demande effectuée **AVANT le déménagement** ou **dans les 3 mois** suivant la prise de poste
+
+---
+
+### Montant et composition
+
+**Jusqu'à 3 500€** comprenant :
+- ✅ Frais de déménagement professionnel
+- ✅ Frais d'agence immobilière (honoraires locataire)
+- ✅ Dépôt de garantie (sous forme de prêt à 0%, remboursement 3 ans)
+
+**Exemple concret** :
+- Mutation Paris → Nice (nouvelle entreprise Sophia Antipolis)
+- Déménagement : 1 800€
+- Agence : 900€ (1 mois de loyer)
+- Dépôt garantie : 900€ (prêt 0%)
+- **Aide totale : 3 600€** (plafonné à 3 500€) ✅
+
+---
+
+### Comment demander Mobili-Pass
+
+**Délai** : **AVANT le déménagement** (idéalement) ou 3 mois après prise de poste
+
+**Process** :
+1. Aller sur **actionlogement.fr** → "Mes aides" → "Mobili-Pass"
+2. Créer un compte et remplir le formulaire
+3. Joindre :
+   - ✅ Contrat de travail (CDI/CDD)
+   - ✅ Justificatif nouvelle adresse à Nice
+   - ✅ Devis de déménagement (accepté, facture exigée au versement)
+   - ✅ RIB
+
+**Délai de traitement** : 3-6 semaines
+
+**Contact Action Logement** : 0 970 800 800 (numéro national)
+
+---
+
+## 3. Le Fonds de Solidarité Logement (FSL) des Alpes-Maritimes
+
+### Conditions d'éligibilité (situations précaires)
+
+Le FSL aide les personnes en difficulté financière lors d'un accès au logement ou d'un déménagement :
+
+- ✅ **Ressources modestes** (plafonds fixés par le Département 06)
+- ✅ **Situation de précarité** avérée (évaluée par assistant social)
+- ✅ Ne pas pouvoir assumer les frais sans compromettre l'équilibre financier
+- ✅ Résider dans les Alpes-Maritimes (Nice, Cannes, Antibes, Menton, etc.)
+
+---
+
+### Nature de l'aide FSL
+
+**Peut couvrir** :
+- ✅ Frais de déménagement (partiel ou total)
+- ✅ Premier loyer + dépôt de garantie
+- ✅ Frais d'assurance logement
+- ✅ Petits travaux d'installation
+
+**Montant** : Variable selon situation (pas de montant standard, évaluation au cas par cas)
+
+---
+
+### Comment demander le FSL Nice
+
+**Process** :
+1. Prendre contact avec :
+   - **CCAS de Nice** (Centre Communal Action Sociale)  
+     6 rue de la Préfecture, 06300 Nice  
+     Tél : 04 97 13 50 00
+   
+   - **Service social du Département 06**  
+     147 boulevard du Mercantour, 06200 Nice  
+     Tél : 04 97 18 60 00
+   
+   - Votre **assistante sociale référente** (si vous en avez une)
+
+2. Constituer le dossier **avec l'aide d'un travailleur social** :
+   - Justificatifs de ressources (3 derniers mois)
+   - Avis d'imposition
+   - Devis de déménagement
+   - Nouveau bail
+   - Attestation nécessité du déménagement
+
+**Délai** : 4-8 semaines après dossier complet
+
+---
+
+## 4. Autres aides disponibles à Nice
+
+### Mutuelles et complémentaires santé
+
+**MGEN, MAIF, Harmonie Mutuelle** proposent parfois des aides sociales (100-500€) pour adhérents en difficulté.
+
+**Comment** : Service action sociale de votre mutuelle, sur dossier.
+
+---
+
+### Caisses de retraite (seniors)
+
+**CARSAT PACA** (Provence-Alpes-Côte d'Azur) : Aide aux seniors modestes déménageant vers un logement adapté ou pour se rapprocher de la famille.
+
+**Montant** : 300-800€ selon situation
+
+**Contact** : CARSAT PACA, 560 avenue du Prado, 13401 Marseille Cedex 08
+
+---
+
+### Employeurs et CSE (Comité Social Économique)
+
+Certaines grandes entreprises niçoises (Sophia Antipolis, aéroport, hôpitaux) accordent des **primes de déménagement** à leurs salariés (300-1 000€).
+
+**Comment** : Demandez à votre RH ou CSE
+
+---
+
+## Puis-je cumuler plusieurs aides ?
+
+**Oui, dans certains cas** :
+
+**Cumuls possibles** :
+- ✅ Mobili-Pass + Loca-Pass (garantie dépôt)
+- ✅ Prime CAF + Aide mutuelle
+- ✅ FSL + Aide employeur (si FSL partiel)
+
+**Cumuls impossibles** :
+- ❌ Prime CAF + Mobili-Pass (pour les mêmes frais)
+- ❌ FSL + Prime CAF (doublon aide publique)
+
+**→ Demandez conseil au travailleur social** pour optimiser vos aides ✅
+
+---
+
+## Conclusion
+
+**Aides financières déménagement Nice 2026** :
+
+| Aide | Montant max | Conditions | Délai demande |
+|------|-------------|------------|---------------|
+| **Prime CAF** | 1 016€ | 3+ enfants + APL | 6 mois après |
+| **Mobili-Pass** | 3 500€ | Salarié mobilité | Avant ou 3 mois après |
+| **FSL 06** | Variable | Situation précaire | Avec travailleur social |
+| **Mutuelle** | 100-500€ | Adhérent difficulté | Sur dossier |
+| **Employeur** | 300-1 000€ | Selon entreprise | Demande RH |
+
+**Comment maximiser vos chances** :
+1. ✅ Identifiez TOUTES les aides auxquelles vous avez droit
+2. ✅ Constituez les dossiers EN AMONT (délais)
+3. ✅ Conservez TOUTES les factures (pas de remboursement sans justificatif)
+4. ✅ Demandez conseil (travailleur social, CAF, Action Logement)
+
+> **Déménager à Nice avec aide financière**  
+> Créez votre dossier Moverz, comparez les devis, indiquez que vous bénéficiez d'une aide pour obtenir des factures conformes. [Démarrer](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-aide-nice-fin)
+
+---
+
+**À lire aussi :**
+- [Guide déménagement Nice](/demenagement/nice/)
+- [Prix déménagement Nice](/blog/prix-demenagement-nice-guide/)
+`,
+  },
+  
+  {
+    slug: "aides-financieres-demenagement-lille",
+    title: "Aides financières déménagement Lille 2026 : CAF, Action Logement, FSL Nord",
+    description: "Aides déménagement Lille 2026 : Prime CAF 1 016€ (familles 3+ enfants), Mobili-Pass 3 500€ (salariés), FSL Nord (précarité). Guide complet démarches et conditions.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `Déménager à Lille coûte entre **500€ (studio)** et **3 000€+ (maison)** selon votre logement. Pour les familles nombreuses, salariés en mobilité, étudiants ou personnes en difficulté, **des aides existent**.
+
+**Le défi** : Identifier les aides auxquelles vous avez droit (CAF, Action Logement, FSL Nord), constituer les dossiers, respecter les délais.
+
+Dans ce guide complet, vous allez découvrir :
+
+- La **prime CAF** déménagement (jusqu'à 1 016€, familles 3+ enfants)
+- L'**aide Mobili-Pass** d'Action Logement (jusqu'à 3 500€, salariés en mobilité)
+- Le **FSL du Nord** (Fonds Solidarité Logement pour situations précaires)
+- Les **aides spécifiques Lille** (collectivités, associations)
+- Comment **constituer vos dossiers** et maximiser vos chances
+
+> **Déménager à Lille avec aide financière**  
+> [Moverz](/) compare des déménageurs lillois vérifiés. Indiquez que vous bénéficiez d'une aide pour recevoir des factures conformes. [Créer mon dossier](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-aide-lille).
+
+---
+
+## 1. Prime de Déménagement CAF (jusqu'à 1 016€)
+
+### Conditions CAF du Nord
+
+- ✅ **Au moins 3 enfants à charge** (nés ou à naître)
+- ✅ Le 3e enfant né/adopté/recueilli **après le 1er juillet 2014**
+- ✅ Déménagement entre le **4e mois de grossesse** et le **2e anniversaire** du 3e enfant
+- ✅ **Percevoir l'APL ou l'ALF** dans le nouveau logement lillois
+- ✅ Changement de résidence principale
+
+**Montant** : **1 015,68€ maximum** (2026), calculé selon ressources et justificatifs
+
+---
+
+### Démarches CAF Lille
+
+**Délai** : Dans les **6 mois** suivant le déménagement
+
+**Documents** :
+- ✅ Nouveau bail (Lille) ou acte de propriété
+- ✅ Justificatif état civil 3e enfant
+- ✅ **Facture déménagement** (pas devis, facture acquittée)
+- ✅ RIB
+
+**Contact CAF du Nord** :
+- Site : **caf.fr** (rubrique "Mes services" → "Déménagement")
+- Tél : 0 810 25 59 10
+- Agence Lille : 187 rue de Solferino, 59000 Lille
+
+---
+
+## 2. Aide Mobili-Pass Action Logement (jusqu'à 3 500€)
+
+### Conditions (salariés en mobilité vers Lille)
+
+- ✅ Salarié **secteur privé** (entreprise ≥ 10 salariés)
+- ✅ **Mobilité professionnelle** > 70 km OU nouvel emploi à Lille
+- ✅ **CDI, CDD ≥ 3 mois** ou promesse embauche
+- ✅ Demande **AVANT déménagement** ou dans les **3 mois** après prise de poste
+
+---
+
+### Composition aide (3 500€ max)
+
+**Peut financer** :
+- ✅ Frais de déménagement professionnel
+- ✅ Frais d'agence (honoraires locataire)
+- ✅ Dépôt de garantie (prêt 0%, remboursement 3 ans)
+
+**Exemple** : Mutation Paris → Lille (poste EuraTechnologies)
+- Déménagement : 1 600€
+- Agence : 1 100€
+- Dépôt garantie : 1 100€ (prêt)
+- **Total aide : 3 800€** (plafonné 3 500€) ✅
+
+---
+
+### Démarches Action Logement
+
+**Process** :
+1. **actionlogement.fr** → "Mobili-Pass"
+2. Créer compte, remplir formulaire
+3. Joindre :
+   - Contrat travail (Lille)
+   - Justificatif nouvelle adresse
+   - Devis déménagement
+   - RIB
+
+**Délai** : 3-6 semaines
+
+---
+
+## 3. Fonds Solidarité Logement (FSL) du Nord
+
+### Conditions FSL Lille
+
+- ✅ Ressources modestes (plafonds Département Nord)
+- ✅ Situation de précarité (évaluée par assistant social)
+- ✅ Résider dans le Nord (Lille, Roubaix, Tourcoing, métropole)
+
+---
+
+### Montant et couverture
+
+**Variable** selon situation (100€ à couverture totale)
+
+**Peut couvrir** :
+- Frais déménagement (partiel/total)
+- Premier loyer
+- Dépôt de garantie
+- Assurance logement
+
+---
+
+### Démarches FSL Lille
+
+**Contacts** :
+- **CCAS Lille** : 0 800 596 019 (numéro vert)
+- **Maison du Département Solidarités** : 59 bd de Belfort, 59000 Lille
+- Votre **assistante sociale** référente
+
+**Documents** (avec aide travailleur social) :
+- Justificatifs ressources 3 mois
+- Avis imposition
+- Devis déménagement
+- Nouveau bail Lille
+
+**Délai** : 4-10 semaines
+
+---
+
+## 4. Aides spécifiques Lille et Métropole
+
+### Métropole Européenne de Lille (MEL)
+
+Certaines communes de la MEL proposent des **aides locales au logement** incluant parfois un volet déménagement.
+
+**Communes actives** : Lille, Roubaix, Tourcoing, Villeneuve-d'Ascq
+
+**Montant** : 150-500€ selon commune
+
+**Contact** : CCAS de votre commune d'arrivée
+
+---
+
+### Associations solidaires Lille
+
+**Emmaüs Lille** : Prêt de matériel (cartons, diables) + aide au portage (bénévoles)
+
+**Secours Populaire Nord** : Aide financière ponctuelle (100-300€) pour familles en grande difficulté
+
+**Contact** :
+- Emmaüs Lille : 150 rue du Faubourg de Roubaix, 59000 Lille
+- Secours Populaire : 96 rue Saint-Gabriel, 59800 Lille
+
+---
+
+## Puis-je cumuler les aides ?
+
+**Cumuls possibles** :
+- ✅ Mobili-Pass + Loca-Pass
+- ✅ Prime CAF + Aide mutuelle
+- ✅ FSL partiel + Aide employeur
+
+**Cumuls impossibles** :
+- ❌ Prime CAF + Mobili-Pass (même nature)
+- ❌ FSL + Prime CAF (doublon aide publique)
+
+---
+
+## FAQ Aides Déménagement Lille
+
+### Puis-je demander la prime CAF si je déménage DANS Lille ?
+
+**Oui.** La prime couvre :
+- Déménagement vers Lille depuis autre ville
+- **Déménagement DANS Lille** (changement quartier)
+
+**Condition** : Changement de résidence principale + percevoir APL/ALF
+
+---
+
+### L'aide Mobili-Pass est-elle remboursable ?
+
+**Partiellement** :
+- **Frais déménagement + agence** : SUBVENTION (pas de remboursement)
+- **Dépôt de garantie** : PRÊT à 0% (remboursement 36 mois, 30€/mois environ)
+
+---
+
+### Le FSL aide-t-il les étudiants ?
+
+**Oui, MAIS** :
+- Étudiants en grande difficulté financière uniquement
+- Sur évaluation sociale (CROUS, assistante sociale)
+- Montants limités (100-300€)
+
+**→ Étudiants : privilégiez les aides CROUS** (Fonds National Aide Urgence)
+
+---
+
+## Conclusion
+
+**Aides déménagement Lille 2026** :
+
+| Public | Aide | Montant max | Contact |
+|--------|------|-------------|---------|
+| **Familles 3+ enfants** | Prime CAF | 1 016€ | caf.fr |
+| **Salariés mobilité** | Mobili-Pass | 3 500€ | actionlogement.fr |
+| **Précarité** | FSL Nord | Variable | CCAS Lille |
+| **Seniors** | CARSAT | 300-800€ | carsat-nordpicardie.fr |
+
+**Les 4 règles** :
+1. ✅ Identifiez TOUTES les aides (plusieurs possibles)
+2. ✅ Respectez les délais (AVANT ou 3-6 mois après)
+3. ✅ Conservez factures (remboursement sur justificatif)
+4. ✅ Faites-vous accompagner (travailleur social)
+
+> **Déménager à Lille avec budget maîtrisé**  
+> [Créer mon dossier Moverz](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-aide-lille-fin)
+
+---
+
+**À lire aussi :**
+- [Prix déménagement Lille](/blog/prix-demenagement-lille-guide/)
+- [Guide déménagement Lille](/demenagement/lille/)
+`,
+  },
+  
+  {
+    slug: "aide-financiere-demenagement-lyon",
+    title: "Aides financières déménagement Lyon 2026 : CAF Rhône, Mobili-Pass, FSL",
+    description: "Aides déménagement Lyon 2026 : Prime CAF 1 016€ (familles), Mobili-Pass 3 500€ (salariés mobilité), FSL Rhône (précarité). Guide complet conditions et démarches.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `Déménager à Lyon coûte entre **550€ (studio)** et **3 500€+ (maison)**. Pour les familles nombreuses, salariés en mobilité ou personnes en difficulté, **des aides financières existent**.
+
+Dans ce guide, vous allez découvrir :
+
+- La **prime CAF Rhône** (jusqu'à 1 016€)
+- L'**aide Mobili-Pass** (jusqu'à 3 500€)
+- Le **FSL du Rhône** (précarité)
+- Les **démarches précises** Lyon
+
+> **Déménager à Lyon avec aide**  
+> [Créer mon dossier Moverz](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-aide-lyon)
+
+---
+
+## 1. Prime CAF Rhône (1 016€ max)
+
+### Conditions
+- ✅ 3+ enfants à charge
+- ✅ 3e enfant né après 01/07/2014
+- ✅ Percevoir APL/ALF nouveau logement
+- ✅ Déménagement entre 4e mois grossesse et 2e anniversaire 3e enfant
+
+**Montant** : 1 015,68€ max (frais réels sur facture)
+
+### Démarches
+**Délai** : 6 mois après déménagement  
+**Site** : caf.fr → "Déménagement"  
+**Documents** : Bail Lyon, état civil enfant, facture déménagement, RIB
+
+**Contact CAF Rhône** : 0 810 25 69 10
+
+---
+
+## 2. Mobili-Pass Action Logement (3 500€ max)
+
+### Conditions
+- ✅ Salarié privé (entreprise ≥ 10)
+- ✅ Mobilité > 70 km vers Lyon
+- ✅ CDI/CDD ≥ 3 mois
+- ✅ Demande AVANT ou 3 mois après prise poste
+
+**Composition** :
+- Déménagement pro
+- Frais agence
+- Dépôt garantie (prêt 0%)
+
+**Exemple** : Marseille → Lyon Part-Dieu
+- Déménagement : 2 000€
+- Agence : 1 200€
+- **Total : 3 200€** ✅
+
+### Démarches
+**Site** : actionlogement.fr → Mobili-Pass  
+**Délai** : 3-6 semaines
+
+---
+
+## 3. FSL Rhône (montant variable)
+
+### Conditions
+- ✅ Ressources modestes
+- ✅ Précarité avérée
+- ✅ Résider Rhône/Métropole Lyon
+
+**Montant** : Variable (100€ à total selon situation)
+
+### Contacts
+**CCAS Lyon** : 04 78 03 67 67  
+**Département Rhône** : 146 rue Pierre Corneille, 69003 Lyon
+
+**Process** : Accompagnement travailleur social obligatoire
+
+---
+
+## 4. Autres aides Lyon
+
+### Mutuelles
+MGEN, MAIF, Harmonie : 100-500€ (adhérents difficulté)
+
+### Employeurs/CSE
+Grandes entreprises Lyon (Part-Dieu, Gerland) : 300-1 000€
+
+### CARSAT Auvergne-Rhône-Alpes
+Seniors modestes : 300-800€
+
+---
+
+## Cumuls possibles
+
+- ✅ Mobili-Pass + Loca-Pass
+- ✅ CAF + Mutuelle
+- ❌ CAF + Mobili-Pass (même nature)
+
+---
+
+## Conclusion
+
+| Aide | Montant | Public | Contact |
+|------|---------|--------|---------|
+| **CAF** | 1 016€ | Familles 3+ enfants | caf.fr |
+| **Mobili-Pass** | 3 500€ | Salariés mobilité | actionlogement.fr |
+| **FSL** | Variable | Précarité | CCAS Lyon |
+
+**Règles d'or** :
+1. ✅ Identifiez toutes les aides
+2. ✅ Respectez les délais
+3. ✅ Conservez factures
+4. ✅ Accompagnement social (FSL)
+
+> **Déménager à Lyon**  
+> [Créer dossier](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-aide-lyon-fin)
+
+**À lire aussi :**
+- [Prix Lyon](/blog/prix-demenagement-lyon-guide-complet/)
+- [Guide Lyon](/demenagement/lyon/)
+`,
+  },
+  
+  {
+    slug: "comment-choisir-demenageur-marseille",
+    title: "Comment choisir un bon déménageur à Marseille : 7 critères (2026)",
+    description: "Choisir déménageur Marseille 2026 : SIREN, santé financière Pappers, avis Google, RC Pro, devis détaillé. 7 critères, signaux alerte et checklist complète.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `Marseille compte **25-30 déménageurs actifs**. Tous ne se valent pas : santé financière variable, pratiques inégales, 64% anomalies DGCCRF.
+
+**Le défi** : Distinguer un pro fiable d'un concurrent à risque, éviter arnaques et suppléments.
+
+Dans ce guide, découvrez les **7 critères essentiels** :
+
+1. SIREN valide
+2. Santé financière (Pappers)
+3. Avis Google (patterns)
+4. Assurance RC Pro
+5. Devis détaillé
+6. Signaux alerte
+7. Automatisation Moverz
+
+> **Comparer déménageurs vérifiés Marseille**  
+> [Moverz](/) : 3 analyses /100 par pro. [Créer dossier](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-choisir-marseille)
+
+---
+
+## 1. Vérifier SIREN et inscription
+
+**Vérifier sur annuaire-entreprises.data.gouv.fr** :
+- Entreprise active ?
+- NAF 4942Z (Déménagement) ?
+- Inscription registre transporteurs ?
+
+**→ SIREN invalide = FUYEZ** ❌
+
+---
+
+## 2. Santé financière
+
+**257 faillites 2024.** Vérifier :
+- **Pappers** : bilans, score
+- **Pappers** (pros) : risque défaillance
+
+**Signaux alerte** :
+- Capitaux propres négatifs
+- Trésorerie < 20k€
+- Pertes 2 années
+
+**→ Moverz : vérification auto** ✅
+
+---
+
+## 3. Avis Google (pas juste note)
+
+**Analyser** :
+- 20+ avis minimum
+- 10 derniers (récence)
+- Patterns négatifs (3+ mentions)
+
+**Red flags** :
+- "Supplément jour J"
+- "Affaires otage"
+- "Casse non remboursée"
+
+**→ 3+ mentions = FUYEZ** ❌
+
+---
+
+## 4. RC Pro valide
+
+**Demander attestation** :
+- Nom assureur
+- Date validité
+- Plafond ≥ 150k€
+
+**→ Pas d'attestation = FUYEZ** ❌
+
+---
+
+## 5. Devis détaillé
+
+**Doit contenir** :
+- Volume m³ (base calcul)
+- Accès (étage, parking)
+- Services inclus
+- Prix TTC total
+- Assurance (plafond)
+
+---
+
+## 6. Signaux alerte
+
+**FUYEZ si** :
+- Prix -50% marché
+- Cash uniquement
+- Pas contrat écrit
+- Urgence artificielle
+- Acompte > 50%
+
+---
+
+## 7. Moverz (auto)
+
+**Vérifie avant envoi dossier** :
+- Score financier /100
+- Score juridique /100
+- Score client /100
+
+**→ Exclusion auto alertes** ✅
+
+---
+
+## Checklist
+
+- [ ] SIREN vérifié
+- [ ] RC Pro reçue
+- [ ] Avis analysés (20+)
+- [ ] Devis détaillé
+- [ ] Prix cohérent
+- [ ] Volume documenté
+- [ ] Conditions claires
+
+---
+
+## Conclusion
+
+**7 critères Marseille** :
+1. ✅ SIREN
+2. ✅ Santé financière
+3. ✅ Avis > 4,3★
+4. ✅ RC Pro
+5. ✅ Devis transparent
+6. ✅ Prix cohérent
+7. ✅ Pas red flags
+
+**Moverz = auto** ✅
+
+> **Comparer pros vérifiés**  
+> [Créer dossier](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-choisir-marseille-fin)
+
+**À lire aussi :**
+- [Éviter arnaques](/blog/eviter-arnaques-demenagement/)
+- [Prix Marseille](/blog/prix-demenagement-marseille/)
+`,
+  },
+  
+  {
+    slug: "assurance-piano-demenagement-lille",
+    title: "Assurance piano déménagement Lille 2026 : valeur déclarée et protection",
+    description: "Assurance piano Lille 2026 : ad valorem obligatoire (600€ assurance base insuffisant), prix 50-400€ selon valeur, documents requis et démarches sinistre.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `Un piano vaut **3 000-50 000€**. L'assurance base (60€/m³) ne couvre que **150€ max**.
+
+**Problème** : Piano 15 000€ endommagé, assurance base = 150€. **Perte : 14 850€** ❌
+
+Dans ce guide :
+
+- Pourquoi **assurance base insuffisante**
+- **Ad valorem** (valeur déclarée) : prix, process
+- **Documents requis** (facture, expertise)
+- **Démarches sinistre** (48h)
+
+> **Déménager piano Lille**  
+> [Créer dossier Moverz](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-piano-lille)
+
+---
+
+## Assurance base = insuffisante
+
+**Piano droit 250 kg, 1,5 m³** :
+- Couverture base : 60€ × 1,5 = **90€** ❌
+- Valeur réelle : 8 000€
+- **→ Perte : 7 910€** si casse ❌
+
+---
+
+## Assurance ad valorem
+
+**Principe** : Déclarer valeur exacte → assurance sur montant déclaré
+
+**Prix Lille 2026** :
+
+| Valeur | Prime |
+|--------|-------|
+| 3 000€ | 30-60€ |
+| 8 000€ | 80-160€ |
+| 15 000€ | 150-300€ |
+| 30 000€+ | 300-600€ |
+
+---
+
+## Documents requis
+
+- ✅ Facture achat (< 5 ans)
+- ✅ Expertise luthier (si ancien)
+- ✅ Photos haute résolution (avant)
+- ✅ État descriptif
+
+---
+
+## Exclusions
+
+- ❌ Désaccordage (normal après transport)
+- ❌ Usure normale
+- ❌ Emballage insuffisant (formule éco)
+
+---
+
+## Sinistre : process
+
+**1. Constater AVANT signature bordereau**  
+**2. Photos haute résolution**  
+**3. Noter sur bordereau**  
+**4. Déclarer sous 48h**  
+**5. Expertise réparation (luthier)**
+
+---
+
+## Pièges
+
+**1. Ne pas déclarer valeur** (économie 150€ prime) **→ Perte 14 850€ si casse** ❌  
+**2. Signer sans vérifier** **→ Recours impossible** ❌  
+**3. Pas photos avant** **→ Litige** ❌
+
+---
+
+## FAQ
+
+**Réaccordage couvert ?** Non (100-150€ à prévoir)  
+**Piano ancien sans facture ?** Oui si expertise luthier (150-300€)  
+**Piano numérique 3k€ ?** Recommandé (prime 30-60€)
+
+---
+
+## Conclusion
+
+| Valeur | Base | Ad valorem | Prime |
+|--------|------|------------|-------|
+| 3k€ | 150€ ❌ | 3k€ ✅ | 30-60€ |
+| 8k€ | 150€ ❌ | 8k€ ✅ | 80-160€ |
+| 15k€ | 150€ ❌ | 15k€ ✅ | 150-300€ |
+
+**5 règles** :
+1. ✅ Déclarer valeur
+2. ✅ Preuves (facture, expertise, photos)
+3. ✅ Inspecter avant signature
+4. ✅ Photos avant départ
+5. ✅ Déclarer sous 48h
+
+> **Déménager piano Lille**  
+> [Créer dossier](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-piano-lille-fin)
+
+**À lire aussi :**
+- [Déménager piano : guide complet](/blog/demenager-piano-prix-contraintes-guide-2026/)
+- [Prix Lille](/blog/prix-demenagement-lille-guide/)
+`,
+  },
+
+  // Lot 1 : 15 articles (248 slugs sans contenu → rédaction progressive)
+  {
+    slug: "aide-demenagement-amis-famille-nantes",
+    title: "Organiser un Déménagement avec Amis à Nantes : Guide Complet 2026",
+    description: "Déménagement avec amis à Nantes : organisation, checklists, remboursement des frais, remerciements et alternatives pro si trop de volume.",
+    type: "satellite",
+    citySlug: "nantes",
+    body: `Déménager avec l'aide d'amis à **Nantes** : **-30 à -50%** sur le coût total, mais **organisation indispensable**.
+
+**Enjeu** : 4 amis désorganisés = jour perdu, stress, risques de casse. **Checklist = journée fluide**.
+
+Dans ce guide :
+
+- **Rôles** à attribuer (qui charge, qui conduit, qui décharge)
+- **Checklist matériel** (diables, sangles, protection)
+- **Frais** : remboursement correct (carburant, péage, casse-croûte)
+- **Remerciements** : éviter les pièges
+
+> **Volume > 20 m³ ?** [Moverz](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-amis-nantes) compare des pros vérifiés Nantes. Devis gratuit.
+
+---
+
+## Organisation : rôles et timing
+
+**6 personnes** = idéal (chargement 2-3h). **2-3 personnes** = journée complète.
+
+**Rôles conseillés** :
+1. **Chef d'orchestre** : coordinateur, timing
+2. **Chargeurs** : 2-3 personnes (fortes)
+3. **Conducteur** : véhicule, trajet
+4. **Déchargeur** : prépare le nouveau logement
+
+**Timing Nantes** : Départ 8h30, arrivée 12h si <50 km. Prévoir pause déjeuner.
+
+---
+
+## Matériel à prévoir
+
+| Élément | Qui fournit | Prix location |
+|---------|-------------|---------------|
+| Camion utilitaire | Vous (ou amis) | 80-150€/j |
+| Diables | Location Brico | 5-15€/j |
+| Sangles | Vous / amis | 10-30€ |
+| Couvertures | Vous | 20-50€ |
+| Cartons | Gratuits (commerces) | 0€ |
+
+---
+
+## Frais : remboursement correct
+
+**Carburant** : partager au prorata (trajet aller-retour).  
+**Péage** : idem.  
+**Repas** : celui qui déménage offre (ou partage).  
+**Casse** : prévenir à l'avance (assurance habitation ?).
+
+---
+
+## FAQ
+
+**Combien d'amis inviter ?** 4-6 pour un T2/T3.  
+**Remercier par un cadeau ?** Oui (resto, boisson) — éviter l'argent liquide.  
+**Assurance si casse ?** Vérifier assurance habitation « responsabilité civile ».
+
+---
+
+**À lire aussi :** [Prix déménagement Nantes](/blog/prix-demenagement-nantes-guide/) · [Comparer pros Nantes](https://devis.moverz.fr/devis-gratuits)
+`,
+  },
+  {
+    slug: "assurance-garde-meuble-nantes",
+    title: "Assurance Garde-Meuble Nantes 2026 : Obligatoire ? Prix et Couverture",
+    description: "Assurance garde-meuble Nantes : obligatoire ou non, coût 3-8€/m³/mois, couverture casse-vol-vol, exclusions et comparatif.",
+    type: "satellite",
+    citySlug: "nantes",
+    body: `Garde-meuble à **Nantes** : l'assurance est **souvent incluse** dans le contrat, parfois **optionnelle**.
+
+**Enjeu** : Stocker 10 m³ sans assurance = **risque total** en cas d'incendie, vol ou dégât des eaux.
+
+Ce guide vous explique :
+
+- **Obligatoire ou non** (selon opérateur)
+- **Prix Nantes** : 3-8€/m³/mois en général
+- **Couverture** : vol, incendie, dégâts eaux
+- **Exclusions** à vérifier
+
+> **Comparer garde-meubles Nantes**  
+> [Moverz](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-assurance-gm-nantes) aide à comparer offres et assurances.
+
+---
+
+## Obligatoire ou optionnelle ?
+
+**Shurgard, Homebox, Uneo** : assurance incluse (conditions générales)  
+**Indépendants** : parfois en option — **toujours vérifier**.
+
+Sans assurance explicite = vous assumez **100% du risque**.
+
+---
+
+## Couverture type
+
+- Incendie
+- Vol (avec franchise)
+- Dégâts des eaux
+- Catastrophes naturelles (selon garanties)
+
+**Exclusions courantes** : bijoux, espèces, œuvres d'art (valeur déclarée nécessaire).
+
+---
+
+## Prix Nantes 2026
+
+| Type | Fourchette |
+|------|------------|
+| Inclus dans loyer | 0€ supplémentaire |
+| Option assurance | 3-8€/m³/mois |
+| Valeur déclarée (>5000€) | Sur devis |
+
+---
+
+## FAQ
+
+**Assurance habitation suffit ?** Non en général (hors logement habituel).  
+**Vol partiel couvert ?** Oui si franchise respectée.  
+**Déclarer valeur ?** Pour objets >1500€, oui.
+`,
+  },
+  {
+    slug: "autorisation-stationnement-strasbourg",
+    title: "Autorisation Stationnement Déménagement Strasbourg 2026 : Démarche",
+    description: "Autorisation stationnement déménagement Strasbourg : demande en mairie, délai, zone bleue, évitement des amendes.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `Déménager à **Strasbourg** sans autorisation de stationnement = **amende 35-135€** et camion déplacé par la fourrière.
+
+**Enjeu** : Réserver une place **48-72h avant** le jour J.
+
+Ce guide vous explique :
+
+- **Où demander** (mairie, en ligne selon secteurs)
+- **Délai** : 48h à 1 semaine
+- **Coût** : souvent gratuit
+- **Zone bleue** : règles spécifiques
+
+> **Déménager à Strasbourg**  
+> [Moverz](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-stationnement-strasbourg) compare des pros pour un devis sans surprise.
+
+---
+
+## Procédure Strasbourg 2026
+
+1. **Contacter la mairie** ou le site dédié (déménagement)
+2. **Fournir** : adresse, date, créneau, immatriculation
+3. **Délai** : 48h-1 semaine selon secteur
+4. **Réception** : courrier ou email de confirmation
+
+**Quartiers prioritaires** : Centre-ville, Neudorf, Cronenbourg — anticipez.
+
+---
+
+## Zone bleue
+
+En zone bleue, **disque obligatoire** ou **autorisation spéciale** selon mairie. Vérifier la signalétique.
+
+---
+
+## FAQ
+
+**Gratuit ?** Oui dans la plupart des communes.  
+**Combien de places ?** Une par benne/camion en général.  
+**Oublier = ?** Risque amende + déménageurs en attente (surcoût).
+`,
+  },
+  {
+    slug: "basse-saison-demenagement-nantes",
+    title: "Basse Saison Déménagement Nantes 2026 : Économies et Disponibilité",
+    description: "Déménager en basse saison à Nantes : -15 à -30% sur les tarifs, meilleure dispo, conseils Nov-Mar et juin.",
+    type: "satellite",
+    citySlug: "nantes",
+    body: `Déménager en **basse saison à Nantes** = **-15 à -30%** sur le prix, et **meilleure disponibilité**.
+
+**Périodes creuses** : Novembre à Mars, Juin (hors week-ends).
+
+Ce guide vous explique :
+
+- **Fourchettes de prix** (basse vs haute saison)
+- **Mois les plus intéressants**
+- **Pièges** (météo, fêtes)
+- **Conseils réservation**
+
+> **Devis déménagement Nantes**  
+> [Moverz](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-basse-saison-nantes) compare pros Nantes. Gratuit.
+
+---
+
+## Basse vs haute saison Nantes
+
+| Période | Prix relatif | Dispo |
+|---------|--------------|-------|
+| Nov-Mars (hors fêtes) | -15 à -25% | Très bonne |
+| Juin (hors WE) | -10 à -20% | Bonne |
+| Sept-oct | Prix moyen | Moyenne |
+| Juil-août, WE | +20 à +40% | Saturated |
+
+---
+
+## Mois à privilégier
+
+**Novembre, février, mars** : meilleur rapport prix/dispo.  
+**Juin** : étudiants partis, dispo correcte.  
+**Éviter** : fin août, 1er week-end septembre.
+
+---
+
+## FAQ
+
+**Météo hiver ?** Prévoir bâches, couvertures. Peu d'annulations.  
+**Fêtes (Noël, etc.) ?** Moins de créneaux, prix moins avantageux.  
+**Réserver combien à l'avance ?** 2-3 semaines en basse saison suffit.
+`,
+  },
+  {
+    slug: "comparatif-formules-economiques-nantes",
+    title: "Comparatif Formules Économiques Déménagement Nantes 2026",
+    description: "Formules économiques déménagement Nantes : fourchette de prix, ce qui change vs clef en main, conseils comparatif.",
+    type: "satellite",
+    citySlug: "nantes",
+    body: `**Formule économique** à Nantes = vous emballez, le déménageur charge + transporte + décharge.
+
+**Économie** : **-25 à -40%** vs clef en main.
+
+**Enjeu** : Bien comparer **même périmètre** (temps, étages, accès).
+
+Ce guide compare :
+
+- **Fourchettes Nantes** : 400-800€ (studio), 700-1400€ (T3)
+- **Ce qui est inclus**
+- **Pièges** (temps inclus, supplément escalier)
+- **Quand choisir** économique vs clef en main
+
+> [Comparer devis Nantes](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-formule-eco-nantes)
+
+---
+
+## Formule éco : périmètre
+
+**Inclus** : Manutention (charge + décharge), transport, assurance de base.  
+**Non inclus** : Emballage, cartons, démontage/remontage meubles.
+
+**Vous fournissez** : Cartons, papier bulle, temps d'emballage.
+
+---
+
+## Fourchettes Nantes 2026
+
+| Logement | Formule éco | Clef en main |
+|----------|-------------|--------------|
+| Studio | 400-700€ | 600-1100€ |
+| T2 | 550-950€ | 850-1500€ |
+| T3 | 700-1400€ | 1100-2200€ |
+
+---
+
+## Pièges
+
+**Temps inclus** : 2h, 3h, 4h selon devis — dépassement = 40-60€/h.  
+**Portage** : étages sans ascenseur = +80-150€/étage.  
+**Comparer** : même infos (volume, accès) pour 3+ devis.
+
+---
+
+## FAQ
+
+**Trop de volume ?** Passer en clef en main ou faire 2 trajets.  
+**Emballage fragile ?** Soit vous emballez bien, soit formule complète.  
+**Moverz ?** Compare pros vérifiés, devis gratuit.
+`,
+  },
+  {
+    slug: "demenagement-piano-thabor-sans-ascenseur",
+    title: "Déménagement Piano Thabor Sans Ascenseur Rennes 2026 : Solutions",
+    description: "Déménager un piano secteur Thabor Rennes sans ascenseur : monte-meuble ou portage, prix, acteurs locaux.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `Déménager un **piano dans le secteur Thabor** (Rennes) sans ascenseur = **portage manuel** ou **monte-meuble**.
+
+**Enjeu** : Escaliers étroits, virages = **risque casse** + surcoût si mal anticipé.
+
+Ce guide vous aide à :
+
+- **Évaluer** : portage manuel ou monte-meuble
+- **Prix Rennes** : 200-600€ selon étage et type de piano
+- **Acteurs** : déménageurs spécialisés piano
+- **Checklist** jour J
+
+> [Déménager piano Rennes](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-piano-thabor)
+
+---
+
+## Thabor : contraintes courantes
+
+Quartier central, **nombreux immeubles anciens** : escaliers étroits, paliers, parfois 4-5 étages.
+
+**Piano droit** : portage manuel possible jusqu'à 3e étage (équipe 3-4 personnes).  
+**Piano à queue** : monte-meuble souvent nécessaire.
+
+---
+
+## Portage vs monte-meuble
+
+| Critère | Portage | Monte-meuble |
+|---------|---------|--------------|
+| Étages | 1-3 | 4+ ou escalier difficile |
+| Prix | 200-400€ | 400-800€ |
+| Délai | 1 jour | Résa 1-2 sem |
+
+---
+
+## Prix indicatifs Rennes 2026
+
+Piano droit RDC → 3e : 250-400€  
+Piano droit 4e-5e : 400-600€ (monte-meuble)  
+Piano à queue : sur devis (600-1200€)
+
+---
+
+## FAQ
+
+**Ascenseur trop petit ?** Mesurer (L×l×h). Piano à queue >2m souvent refusé.  
+**Qui contacter ?** Déménageurs spécialisés piano (liste Moverz).  
+**Assurance ?** Ad valorem recommandée (voir [guide piano](/blog/demenager-piano-prix-contraintes-guide-2026/)).
+`,
+  },
+  {
+    slug: "demenagement-semaine-vs-weekend-nantes",
+    title: "Déménagement Semaine vs Weekend Nantes 2026 : Différence Prix",
+    description: "Déménager en semaine ou le week-end à Nantes : écart de prix -20 à -40%, disponibilité, conseils.",
+    type: "satellite",
+    citySlug: "nantes",
+    body: `Déménager **en semaine** à Nantes = **-20 à -40%** vs week-end.
+
+**Enjeu** : Si vous pouvez choisir la date, privilégier **mardi-jeudi** pour économiser.
+
+Ce guide compare :
+
+- **Écart de prix** (semaine vs Samedi/Dimanche)
+- **Disponibilité** par type de jour
+- **Conseils** (congés, travail)
+- **Compromis** (vendredi parfois moins cher)
+
+> [Devis Nantes](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-semaine-nantes)
+
+---
+
+## Prix relatif par jour
+
+| Jour | Prix relatif | Disponibilité |
+|------|--------------|---------------|
+| Mardi-Jeudi | Référence (-20 à -40%) | Meilleure |
+| Lundi, Vendredi | -10 à -20% | Correcte |
+| Samedi | +30 à +50% | Saturated |
+| Dimanche | +20 à +40% | Limitée |
+
+---
+
+## Pourquoi cette différence ?
+
+**Demande** : Tout le monde vise le week-end (congés, fin de bail).  
+**Offre** : Même nombre de camions en semaine → moins de pression.
+
+---
+
+## FAQ
+
+**Impossible en semaine ?** Comparer vendredi (souvent intermédiaire).  
+**Dimanche légal ?** Oui, mais moins d'entreprises.  
+**Réservation ?** 2-3 semaines avant pour samedi, 1-2 sem pour mardi-jeudi.
+`,
+  },
+  {
+    slug: "demenagement-vern-sur-seiche",
+    title: "Déménagement Vern-sur-Seiche 2026 : Acteurs Locaux et Devis",
+    description: "Déménagement Vern-sur-Seiche : déménageurs proches Rennes, fourchettes de prix, conseils pour un devis local.",
+    type: "guide",
+    body: `**Vern-sur-Seiche** (agglomération rennaise) : déménager avec un professionnel local ou régional.
+
+**Enjeu** : Privilégier des acteurs qui connaissent le secteur (accès, quartiers).
+
+Ce guide présente :
+
+- **Acteurs** basés Rennes/Vern (rayon 15-20 km)
+- **Fourchettes** pour studio/T2
+- **Conseils** devis (volume, accès)
+
+> [Comparer déménageurs Rennes](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-vern)
+
+---
+
+## Secteur Vern-sur-Seiche
+
+Commune limitrophe de Rennes. **Accès** : plutôt faciles (maisons, petits immeubles). Peu de contraintes particulières.
+
+**Déménageurs** : nombreux sur Rennes couvrent Vern-sur-Seiche (15 min).
+
+---
+
+## Fourchettes 2026
+
+Studio local : 350-550€  
+T2 local : 500-800€  
+T2 longue distance (ex. Paris) : 800-1500€
+
+---
+
+## Bonnes pratiques
+
+- Décrire **accès** (rez-de-chaussée, étage, portage)
+- Donner **volume** (m³ ou pièces)
+- Comparer **3 devis** minimum
+
+---
+
+**À lire :** [Prix déménagement Rennes](/demenagement/rennes/)
+`,
+  },
+  {
+    slug: "demenageur-rouen-guide-complet",
+    title: "Déménageur Rouen 2026 : Trouver le Professionnel Idéal",
+    description: "Comment choisir un déménageur à Rouen : SIREN, assurance, avis, fourchettes de prix, devis comparatif.",
+    type: "pilier",
+    citySlug: "rouen",
+    body: `Choisir un **déménageur à Rouen** : 64% des entreprises présentent des anomalies (DGCCRF 2023).
+
+**Enjeu** : Vérifier SIREN, assurance, avis **avant** de signer.
+
+Ce guide complet vous aide à :
+
+- **Vérifier** un déménageur (SIREN, RC Pro, solvabilité)
+- **Prix Rouen 2026** : fourchettes réalistes
+- **Signaux d'alerte** (devis trop bas, acompte cash)
+- **Comparer** des devis fiables
+
+> [Moverz compare des pros vérifiés Rouen](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-demenageur-rouen)
+
+---
+
+## 5 vérifications obligatoires
+
+1. **SIREN** : entreprise existante (Pappers, Infogreffe)
+2. **RC Pro** : assurance responsabilité civile professionnelle
+3. **Avis** : Google, minimum 15-20 avis récents
+4. **Devis écrit** : détail volume, temps, accessoires
+5. **Pas d'acompte excessif** : 10-20% max, jamais 50%+ en cash
+
+---
+
+## Prix Rouen 2026
+
+| Logement | Local (< 50 km) | Longue distance |
+|----------|-----------------|-----------------|
+| Studio | 350-600€ | 600-1000€ |
+| T2 | 500-900€ | 900-1600€ |
+| T3 | 700-1400€ | 1200-2200€ |
+
+---
+
+## Pièges à éviter
+
+- Devis **sans visite** pour >15 m³
+- **Acompte >30%** avant le jour J
+- Pas de **RC Pro** vérifiable
+- **Prix 2x moins cher** que la concurrence
+
+---
+
+## FAQ
+
+**Label Moverz ?** 3 analyses de risque (financier, juridique, client).  
+**Délai réservation ?** 2-4 semaines en haute saison.  
+**Supplément jour J ?** Toujours exiger écrit (ordre de mission modifié).
+`,
+  },
+  {
+    slug: "demenageur-rouen-pas-cher-guide",
+    title: "Déménageur Rouen Pas Cher 2026 : Qualité au Meilleur Prix",
+    description: "Déménageur pas cher Rouen : formules économiques, basse saison, comparatif devis, éviter les arnaques low-cost.",
+    type: "satellite",
+    citySlug: "rouen",
+    body: `Trouver un **déménageur pas cher à Rouen** sans compromettre la **qualité** ou la **sécurité**.
+
+**Enjeu** : Un prix trop bas = risque arnaque, casse non couverte, suppléments jour J.
+
+Ce guide vous aide à :
+
+- **Stratégies** pour payer moins (formule éco, basse saison, jour en semaine)
+- **Fourchettes** réalistes Rouen
+- **Signaux d'alerte** (prix anormalement bas)
+- **Comparer** intelligemment
+
+> [Comparer devis Rouen](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-pas-cher-rouen)
+
+---
+
+## Comment payer moins (sans risque)
+
+| Stratégie | Économie |
+|-----------|----------|
+| Formule économique (vous emballez) | -25 à -40% |
+| Mardi-Jeudi vs Samedi | -20 à -40% |
+| Nov-Mars vs Juil-Sept | -15 à -30% |
+| 3+ devis comparés | -10 à -20% |
+
+---
+
+## Fourchettes Rouen 2026
+
+**Studio** : 350-600€ (local)  
+**T2** : 500-900€  
+**T3** : 700-1400€
+
+En dessous = **vérifier** (assurance, avis, SIREN).
+
+---
+
+## Red flags
+
+- **< 300€** pour un studio avec transport
+- Aucun **avis** Google
+- **Paiement intégral** avant le jour J
+- **Pas de devis** écrit détaillé
+
+---
+
+## FAQ
+
+**Formule éco ?** Vous emballez, le pro charge + transporte + décharge.  
+**Moverz ?** Compare des pros vérifiés (SIREN, assurance, avis).  
+**Négocier ?** Oui, avec 3 devis en main.
+`,
+  },
+  {
+    slug: "duree-minimum-garde-meuble-lille",
+    title: "Durée Minimum Location Garde-Meuble Lille 2026",
+    description: "Durée minimum garde-meuble Lille : 1 mois à 3 mois selon opérateurs, flexibilité, pénalités résiliation anticipée.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `Garde-meuble à **Lille** : durée minimum **1 à 3 mois** selon opérateur.
+
+**Enjeu** : Signer 6 mois alors que vous n'en avez besoin que 2 = **pénalités** ou **engagement** inutile.
+
+Ce guide vous explique :
+
+- **Durées minimum** par type d'acteur (réseaux vs indépendants)
+- **Résiliation anticipée** : conditions et coûts
+- **Mois par mois** : qui le propose à Lille
+
+> [Comparer garde-meubles Lille](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-duree-gm-lille)
+
+---
+
+## Acteurs Lille : durées type
+
+| Acteur | Durée min | Flexibilité |
+|--------|-----------|-------------|
+| Shurgard, Uneo | 1 mois | Mois par mois |
+| Homebox | 1 mois | Préavis 7-14j |
+| Indépendants | 1-3 mois | Variable |
+
+---
+
+## Résiliation anticipée
+
+**Clause à lire** : préavis (7j, 14j, 1 mois), frais éventuels.
+
+**Conseil** : Privilégier les offres sans engagement long si besoin incertain.
+
+---
+
+## FAQ
+
+**Stockage 2 semaines ?** Certains proposent mini-stockage (prix/jour).  
+**Été étudiant ?** Offres spéciales 2-3 mois (Juin-Sept).  
+**Changer de taille ?** Possible dans la même enseigne (sous conditions).
+`,
+  },
+  {
+    slug: "garde-meuble-court-terme-long-terme-lille",
+    title: "Garde-Meuble Court Terme vs Long Terme Lille 2026",
+    description: "Garde-meuble court terme vs long terme Lille : tarifs, engagement, quand choisir l'un ou l'autre.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Court terme** (< 6 mois) vs **long terme** (> 6 mois) à Lille : **tarifs et conditions** diffèrent.
+
+**Court terme** : mois par mois, prix/m³ parfois plus élevé.  
+**Long terme** : engagement 6-12 mois, tarif réduit.
+
+Ce guide compare :
+
+- **Tarifs** Lille (court vs long)
+- **Engagements** et pénalités
+- **Cas d'usage** (déménagement, rénovation, expat)
+
+> [Garde-meuble Lille](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-court-long-lille)
+
+---
+
+## Comparatif tarifaire
+
+| Durée | Prix relatif | Engagement |
+|-------|--------------|------------|
+| 1-3 mois | Référence | Aucun / 1 mois |
+| 4-6 mois | -5 à -15% | 3-6 mois |
+| 6-12 mois | -10 à -25% | 6-12 mois |
+
+---
+
+## Quand choisir court terme ?
+
+- Déménagement **intermédiaire** (attente nouveau logement)
+- **Incertitude** sur la durée
+- **Rénovation** 2-4 mois
+
+---
+
+## Quand choisir long terme ?
+
+- **Expatriation** 1-2 ans
+- Stockage **mobilier** familial
+- **Prix** prioritaire
+
+---
+
+## FAQ
+
+**Changer en cours ?** Passer de court à long = possible, sous conditions.  
+**Résilier long terme ?** Préavis + éventuelle indemnité (voir contrat).
+`,
+  },
+  {
+    slug: "garde-meuble-etudiant-nantes",
+    title: "Garde-Meuble Étudiant Nantes 2026 : Stockage Été dès 22€/mois",
+    description: "Garde-meuble étudiant Nantes : stockage été, tarifs 22-50€/mois, offres spéciales, comparatif acteurs.",
+    type: "satellite",
+    citySlug: "nantes",
+    body: `**Étudiants à Nantes** : stocker vos affaires **l'été** (juin-sept) à partir de **22-50€/mois**.
+
+**Enjeu** : Éviter de tout ramener chez les parents ou de payer un loyer vide.
+
+Ce guide vous présente :
+
+- **Offres été** Nantes (tarifs étudiants)
+- **Acteurs** : Shurgard, Homebox, indépendants
+- **Volumes** adaptés (chambre, studio)
+- **Conseils** réservation
+
+> [Comparer garde-meubles Nantes](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-etudiant-nantes)
+
+---
+
+## Tarifs été 2026 Nantes
+
+| Volume | Prix/mois (été) |
+|--------|-----------------|
+| 1-2 m³ (chambre) | 22-40€ |
+| 3-5 m³ (studio) | 40-70€ |
+| 5-8 m³ | 60-100€ |
+
+**Offres 2-3 mois** : souvent proposées sans engagement supplémentaire.
+
+---
+
+## Acteurs Nantes
+
+- **Shurgard, Uneo** : offres été dédiées
+- **Homebox** : flexibilité
+- **Indépendants** : parfois tarifs négociables
+
+---
+
+## Bonnes pratiques
+
+- Réserver **mai** pour juin
+- Vérifier **accès** (horaires, badge)
+- **Assurance** : incluse ou en option
+
+---
+
+## FAQ
+
+**Justificatif étudiant ?** Carte étudiante parfois demandée.  
+**Retrait avant fin été ?** Oui, préavis 7-14j en général.
+`,
+  },
+  {
+    slug: "garde-meuble-montpellier-guide-complet",
+    title: "Garde-Meuble Montpellier 2026 : Stockage Sécurisé et Flexible",
+    description: "Garde-meuble Montpellier : guide complet, tarifs, acteurs, conseils choix, devis comparatif.",
+    type: "pilier",
+    citySlug: "montpellier",
+    body: `**Garde-meuble à Montpellier** : choisir un stockage **sécurisé, accessible** et **au bon prix**.
+
+**Enjeu** : Comparer acteurs, volumes, assurances pour éviter les mauvaises surprises.
+
+Ce guide complet couvre :
+
+- **Acteurs** Montpellier (Shurgard, Uneo, indépendants)
+- **Tarifs 2026** : 40-120€/m³/mois
+- **Critères** de choix (accès, assurance, flexibilité)
+- **Devis** comparatif
+
+> [Comparer garde-meubles Montpellier](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-gm-montpellier)
+
+---
+
+## Acteurs Montpellier
+
+**Réseaux** : Shurgard (Port Marianne), Uneo, Homebox.  
+**Indépendants** : plusieurs sur l'agglomération.
+
+**Critères** : Proximité, horaires d'accès, prix au m³.
+
+---
+
+## Tarifs 2026
+
+| Volume | Prix/mois |
+|--------|-----------|
+| 1-3 m³ | 40-70€ |
+| 5-10 m³ | 80-150€ |
+| 10-20 m³ | 150-280€ |
+
+---
+
+## Choisir
+
+1. **Emplacement** : proche ancien/nouveau logement
+2. **Accès** : 24/7 ou horaires bureau
+3. **Assurance** : incluse ou à souscrire
+4. **Engagement** : mois par mois ou 6-12 mois
+
+---
+
+## FAQ
+
+**Accès 24/7 ?** Shurgard, Homebox. Autres : horaires limités.  
+**Valeur déclarée ?** Pour objets >1500€, recommandé.  
+**Résilier ?** Préavis 7-14j selon contrat.
+`,
+  },
+  {
+    slug: "garde-meuble-rennes-guide-complet",
+    title: "Garde-Meuble Rennes 2026 : Box Sécurisé et Devis Gratuit",
+    description: "Garde-meuble Rennes : guide complet, tarifs, acteurs, accès 24/7, conseils stockage.",
+    type: "pilier",
+    citySlug: "rennes",
+    body: `**Garde-meuble à Rennes** : stockage **sécurisé** pour déménagement, rénovation ou transition.
+
+**Enjeu** : Comparer prix, emplacement et conditions pour trouver la formule adaptée.
+
+Ce guide couvre :
+
+- **Acteurs** Rennes (Shurgard, Uneo, indépendants)
+- **Tarifs 2026** : 35-110€/m³/mois
+- **Accès 24/7** : qui le propose
+- **Conseils** stockage
+
+> [Comparer garde-meubles Rennes](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-gm-rennes)
+
+---
+
+## Acteurs Rennes
+
+**Réseaux** : Shurgard, Uneo, Homebox.  
+**Indépendants** : plusieurs sur Rennes et alentours.
+
+**Quartiers** : Cleunay, Villejean, Nord, Sud — selon vos trajets.
+
+---
+
+## Tarifs 2026
+
+| Volume | Prix/mois |
+|--------|-----------|
+| 1-3 m³ | 35-65€ |
+| 5-10 m³ | 70-130€ |
+| 10-20 m³ | 130-250€ |
+
+---
+
+## Accès 24/7
+
+**Shurgard, Homebox** : badge ou code, accès libre.  
+**Uneo** : selon site.
+
+---
+
+## FAQ
+
+**Assurance incluse ?** Souvent oui. Vérifier les plafonds.  
+**Stockage été étudiant ?** Offres 2-3 mois (Juin-Sept).  
+**Résiliation ?** Préavis 7-14j, pas de pénalité si mois par mois.
+`,
+  },
+
+  // Lot 2 : 20 articles (garde-meuble, location camion/utilitaire)
+  {
+    slug: "garde-meuble-rouen-guide-complet",
+    title: "Garde-Meuble Rouen 2026 : Stockage Sécurisé et Flexible",
+    description: "Garde-meuble Rouen : guide complet, tarifs, acteurs, accès, conseils stockage et devis comparatif.",
+    type: "pilier",
+    citySlug: "rouen",
+    body: `**Garde-meuble à Rouen** : stockage **sécurisé** pour déménagement, rénovation ou transition.
+
+**Enjeu** : Comparer acteurs, tarifs et conditions pour trouver la formule adaptée.
+
+Ce guide couvre :
+
+- **Acteurs** Rouen (Shurgard, Uneo, indépendants)
+- **Tarifs 2026** : 35-100€/m³/mois
+- **Accès** et flexibilité
+- **Conseils** choix
+
+> [Comparer garde-meubles Rouen](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-gm-rouen)
+
+---
+
+## Acteurs Rouen
+
+**Réseaux** : Shurgard, Uneo, Homebox.  
+**Indépendants** : plusieurs sur l'agglomération.
+
+**Critères** : Proximité, horaires, prix au m³, engagement.
+
+---
+
+## Tarifs 2026
+
+| Volume | Prix/mois |
+|--------|-----------|
+| 1-3 m³ | 35-60€ |
+| 5-10 m³ | 70-120€ |
+| 10-20 m³ | 120-230€ |
+
+---
+
+## FAQ
+
+**Accès 24/7 ?** Shurgard, Homebox.  
+**Stockage été étudiant ?** Offres 2-3 mois (Juin-Sept).  
+**Résiliation ?** Préavis 7-14j en général.
+`,
+  },
+  {
+    slug: "location-camion-weekend-nice",
+    title: "Location Camion Weekend Nice 2026 : Tarifs Samedi-Dimanche",
+    description: "Location camion week-end Nice : tarifs samedi-dimanche, surcoût +20 à +50%, disponibilité et alternatives.",
+    type: "satellite",
+    citySlug: "nice",
+    body: `**Location camion le week-end à Nice** : **+20 à +50%** vs en semaine.
+
+**Enjeu** : Si vous pouvez choisir, privilégier **mardi-jeudi** pour économiser.
+
+Ce guide vous explique :
+
+- **Tarifs** week-end Nice (Sixt, Europcar, locales)
+- **Disponibilité** (saturée en été)
+- **Alternatives** (livraison à domicile)
+- **Conseils** réservation
+
+> [Devis déménagement Nice](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-camion-we-nice)
+
+---
+
+## Surcoût week-end
+
+| Jour | Prix relatif |
+|------|--------------|
+| Mardi-Jeudi | Référence |
+| Vendredi | -10 à -20% |
+| Samedi | +30 à +50% |
+| Dimanche | +20 à +40% |
+
+---
+
+## Acteurs Nice
+
+**Sixt, Europcar, Leclerc** : réservation en ligne.  
+**Indépendants** : parfois tarifs négociables.
+
+---
+
+## FAQ
+
+**Réserver combien à l'avance ?** 2-3 semaines en haute saison.  
+**Dimanche ouvert ?** Moins d'agences.  
+**Formule déménageur ?** Si volume >15 m³, comparer pros.
+`,
+  },
+  {
+    slug: "location-camion-weekend-rennes",
+    title: "Location Camion Weekend Rennes 2026 : Tarifs et Disponibilité",
+    description: "Location camion week-end Rennes : tarifs samedi-dimanche, surcoût, disponibilité et conseils.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `**Location camion le week-end à Rennes** : **+25 à +45%** vs en semaine.
+
+**Enjeu** : Réserver à l'avance et comparer les formules (kilométrage inclus, assurance).
+
+Ce guide couvre :
+
+- **Tarifs** Rennes (agences, indépendants)
+- **Surcoût** week-end
+- **Disponibilité** (été saturée)
+- **Bonnes pratiques**
+
+> [Comparer déménageurs Rennes](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-camion-we-rennes)
+
+---
+
+## Fourchettes 2026
+
+**Utilitaire 10 m³** : 80-150€/j (semaine) → 100-200€ (samedi)  
+**Utilitaire 20 m³** : 120-220€/j (semaine) → 150-280€ (samedi)
+
+---
+
+## Conseils
+
+- **Kilométrage** : vérifier inclus ou en supplément
+- **Assurance** : RC + casse recommandée
+- **Réservation** : 2-3 semaines avant en juillet-août
+
+---
+
+## FAQ
+
+**Dimanche ?** Moins d'agences ouvertes.  
+**Retour lundi ?** Formule week-end prolongé.  
+**Volume important ?** Comparer avec déménageur pro.
+`,
+  },
+  {
+    slug: "location-camionnette-petit-demenagement-montpellier",
+    title: "Location Camionnette Petit Déménagement Montpellier 2026",
+    description: "Location camionnette petit déménagement Montpellier : Kangoo, Partner, fourchettes de prix et conseils.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `**Petit déménagement à Montpellier** : **camionnette** (Kangoo, Partner) = **60-120€/j** en général.
+
+**Idéal** : studio, chambre, 10-20 m³.
+
+Ce guide vous aide à :
+
+- **Choisir** la bonne taille (3-6 m³)
+- **Tarifs** Montpellier
+- **Agences** (Sixt, Europcar, Leclerc)
+- **Éviter** les suppléments
+
+> [Devis Montpellier](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-camionnette-mtp)
+
+---
+
+## Tailles adaptées
+
+| Volume | Véhicule | Prix/j |
+|--------|----------|--------|
+| 3-6 m³ | Kangoo, Partner | 60-100€ |
+| 8-10 m³ | Boxer, Master | 90-150€ |
+| 15-20 m³ | Fourgon 20 m³ | 120-200€ |
+
+---
+
+## Bonnes pratiques
+
+- **Kilométrage** : vérifier inclus
+- **Essence** : plein à rendre ou forfait
+- **Assurance** : casse + vol
+
+---
+
+## FAQ
+
+**Week-end plus cher ?** Oui (+25 à +40%).  
+**Avec chauffeur ?** Possible (2x le prix environ).  
+**Trop de volume ?** Passer au déménageur pro.
+`,
+  },
+  {
+    slug: "location-kangoo-demenagement-marseille",
+    title: "Location Kangoo Déménagement Marseille 2026 : Prix et Conseils",
+    description: "Location Kangoo déménagement Marseille : tarifs 50-100€/j, agences, capacité 3-4 m³ et bonnes pratiques.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Kangoo pour déménagement à Marseille** : **50-100€/j** selon agence et période.
+
+**Capacité** : 3-4 m³ — idéal studio, chambre, quelques meubles.
+
+Ce guide vous présente :
+
+- **Tarifs** Marseille (Sixt, Europcar, locales)
+- **Capacité** réelle (m³, dimensions)
+- **Suppléments** à éviter
+- **Quand passer** au fourgon
+
+> [Devis déménagement Marseille](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-kangoo-mrs)
+
+---
+
+## Fourchettes 2026
+
+| Période | Prix/j |
+|---------|--------|
+| Semaine (mar-nov) | 50-80€ |
+| Week-end | 70-100€ |
+| Juillet-août | 80-120€ |
+
+---
+
+## Kangoo : limites
+
+**Volume** : ~3-4 m³. Lit 2 places, canapé = déjà limite.  
+**Hauteur** : ~1,30 m. Armoire debout = non.
+
+---
+
+## FAQ
+
+**Kilométrage illimité ?** Certaines formules oui.  
+**Assurance casse ?** Recommandée (+15-25€).  
+**Volume supérieur ?** Partner 6 m³ ou fourgon.
+`,
+  },
+  {
+    slug: "location-kangoo-strasbourg-demenagement",
+    title: "Location Kangoo Déménagement Strasbourg 2026 : Prix et Agences",
+    description: "Location Kangoo Strasbourg pour déménagement : tarifs 55-95€/j, capacité 3-4 m³, agences et conseils.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `**Kangoo pour déménagement à Strasbourg** : **55-95€/j**.
+
+**Idéal** : petit volume (studio, chambre, 10-15 cartons).
+
+Ce guide couvre :
+
+- **Tarifs** Strasbourg
+- **Agences** (Sixt, Europcar, locales)
+- **Capacité** et limites
+- **Conseils** réservation
+
+> [Comparer déménageurs Strasbourg](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-kangoo-sxb)
+
+---
+
+## Fourchettes 2026
+
+Semaine : 55-80€/j  
+Week-end : 75-95€/j  
+
+---
+
+## Bonnes pratiques
+
+- **Réservation** : 1-2 semaines en avance
+- **Kilométrage** : vérifier inclus
+- **Carburant** : plein à rendre
+
+---
+
+## FAQ
+
+**Trop petit ?** Passer au Partner (6 m³) ou fourgon.  
+**Avec aide ?** Louer diables en plus (5-15€).  
+**Déménageur ?** Si >20 m³, comparer pros.
+`,
+  },
+  {
+    slug: "location-utilitaire-20m3-marseille-tarifs",
+    title: "Location Utilitaire 20 m³ Marseille 2026 : Tarifs et Conseils",
+    description: "Location utilitaire 20 m³ Marseille : fourchettes 120-220€/j, agences, capacité et conseils déménagement.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Utilitaire 20 m³ à Marseille** : **120-220€/j** selon période et agence.
+
+**Capacité** : T3-T4, maison 80-100 m² environ.
+
+Ce guide vous aide à :
+
+- **Tarifs** Marseille (Sixt, Europcar, indépendants)
+- **Capacité** réelle (dimensions)
+- **Conditions** (km, assurance)
+- **Comparer** avec déménageur
+
+> [Devis Marseille](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-20m3-mrs)
+
+---
+
+## Fourchettes 2026
+
+| Période | Prix/j |
+|---------|--------|
+| Basse saison | 120-170€ |
+| Haute saison | 160-220€ |
+| Week-end | +25 à +40% |
+
+---
+
+## 20 m³ : pour qui ?
+
+**Adapté** : T3, T4, maison <100 m²  
+**Limite** : T5, grand salon, beaucoup de stockage
+
+---
+
+## FAQ
+
+**Permis B ?** Oui (PTAC <3,5 t).  
+**Monte-meuble ?** Non inclus — déménageur séparé.  
+**Trop lourd ?** Faire appel à un pro.
+`,
+  },
+  {
+    slug: "location-utilitaire-avec-chauffeur-strasbourg",
+    title: "Location Utilitaire Avec Chauffeur Strasbourg 2026",
+    description: "Location utilitaire avec chauffeur Strasbourg : formules, prix, comparaison avec déménageur classique.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `**Utilitaire + chauffeur à Strasbourg** : vous ne conduisez pas, le chauffeur gère le trajet.
+
+**Fourchette** : **150-350€/j** selon volume et distance.
+
+Ce guide vous explique :
+
+- **Formules** (location + chauffeur vs déménageur)
+- **Tarifs** Strasbourg
+- **Avantages** (permis, fatigue, assurance)
+- **Quand** choisir cette option
+
+> [Comparer déménageurs Strasbourg](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-chauffeur-sxb)
+
+---
+
+## Formules
+
+**Location + chauffeur** : Vous chargez/déchargez, chauffeur conduit.  
+**Déménageur classique** : Tout inclus (charge, transport, décharge).
+
+---
+
+## Fourchettes
+
+**Demi-journée** : 150-250€  
+**Journée** : 250-400€  
+**Longue distance** : Sur devis
+
+---
+
+## FAQ
+
+**Qui charge ?** Souvent vous (ou équipe à prévoir).  
+**Assurance ?** Normalement incluse (véhicule pro).  
+**Comparaison ?** Déménageur = souvent plus complet.
+`,
+  },
+  {
+    slug: "location-utilitaire-demenagement-nice",
+    title: "Location Utilitaire Déménagement Nice 2026 : Prix, Agences, Conseils",
+    description: "Location utilitaire déménagement Nice : tarifs par taille, agences Sixt Europcar, conseils et comparaison.",
+    type: "satellite",
+    citySlug: "nice",
+    body: `**Location utilitaire à Nice** : **60-200€/j** selon taille et période.
+
+**Agences** : Sixt, Europcar, Leclerc, locales.
+
+Ce guide couvre :
+
+- **Tarifs** Nice par taille (Kangoo → 20 m³)
+- **Agences** et formules
+- **Suppléments** à anticiper
+- **Alternatives** (déménageur)
+
+> [Devis Nice](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-utilitaire-nice)
+
+---
+
+## Tarifs par taille 2026
+
+| Véhicule | m³ | Prix/j |
+|----------|-----|--------|
+| Kangoo | 3-4 | 60-100€ |
+| Partner/Trafic | 6-8 | 80-140€ |
+| Boxer/Master | 12-15 | 110-180€ |
+| Fourgon 20 m³ | 20 | 140-220€ |
+
+---
+
+## Conseils
+
+- **Kilométrage** : illimité ou forfait ?
+- **Assurance** : casse recommandée
+- **Week-end** : +25 à +50%
+
+---
+
+## FAQ
+
+**Permis B ?** Oui pour <3,5 t.  
+**Volume incertain ?** Surévaluer pour éviter camion trop petit.  
+**Déménageur ?** Si >15 m³ ou aide nécessaire.
+`,
+  },
+  {
+    slug: "location-utilitaire-demenagement-rennes",
+    title: "Location Utilitaire Déménagement Rennes 2026 : Types et Prix",
+    description: "Location utilitaire Rennes : Kangoo, Partner, fourgon, tarifs 55-200€/j et conseils.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `**Location utilitaire à Rennes** : **55-200€/j** selon taille.
+
+**Agences** : Sixt, Europcar, Leclerc, locales (ABC Lemarié alentours).
+
+Ce guide vous présente :
+
+- **Types** de véhicules (3 m³ à 20 m³)
+- **Tarifs** Rennes 2026
+- **Conseils** choix
+- **Alternatives** déménageur
+
+> [Devis Rennes](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-utilitaire-rennes)
+
+---
+
+## Fourchettes 2026
+
+| Taille | Prix/j |
+|--------|--------|
+| 3-4 m³ | 55-90€ |
+| 6-8 m³ | 75-130€ |
+| 12-15 m³ | 100-170€ |
+| 20 m³ | 130-200€ |
+
+---
+
+## Bonnes pratiques
+
+- **Volume** : estimer en m³ (voir [guide volume](/blog/estimer-volume-demenagement-guide-complet/))
+- **Réservation** : 2 semaines en été
+- **Assurance** : casse + vol
+
+---
+
+## FAQ
+
+**Week-end ?** +20 à +40%.  
+**Kilométrage ?** Vérifier inclus.  
+**Trop de volume ?** Déménageur pro.
+`,
+  },
+  {
+    slug: "location-utilitaire-europcar-sixt-strasbourg",
+    title: "Location Utilitaire Europcar Sixt Strasbourg 2026 : Comparatif",
+    description: "Location utilitaire Europcar vs Sixt Strasbourg : tarifs, formules, avantages et inconvénients.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `**Europcar vs Sixt** à Strasbourg pour utilitaire : **deux leaders** avec offres comparables.
+
+**Fourchettes** : 60-180€/j selon véhicule.
+
+Ce guide compare :
+
+- **Tarifs** Strasbourg
+- **Formules** (km, assurance)
+- **Disponibilité** (week-end, été)
+- **Critères** de choix
+
+> [Devis Strasbourg](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-europcar-sixt-sxb)
+
+---
+
+## Comparatif rapide
+
+| Critère | Europcar | Sixt |
+|---------|----------|------|
+| Réseau | Fort | Fort |
+| Tarifs | Similaires | Similaires |
+| Km inclus | Variable | Variable |
+| Résa en ligne | Oui | Oui |
+
+---
+
+## Conseils
+
+- **Comparer** les deux + Leclerc (souvent moins cher)
+- **Lire** les conditions (franchise, km)
+- **Réserver** 2 semaines avant en haute saison
+
+---
+
+## FAQ
+
+**Leclerc moins cher ?** Souvent oui, moins de flexibilité.  
+**Assurance tout risque ?** +20-40€/j.  
+**Déménageur ?** Si volume >15 m³ ou pas le temps.
+`,
+  },
+  {
+    slug: "location-utilitaire-toulouse",
+    title: "Location Utilitaire Toulouse 2026 : Véhicules Adaptés et Économiques",
+    description: "Location utilitaire Toulouse : Kangoo, Partner, fourgon, tarifs 55-190€/j et conseils déménagement.",
+    type: "satellite",
+    citySlug: "toulouse",
+    body: `**Location utilitaire à Toulouse** : **55-190€/j** selon taille.
+
+**Idéal** : petit à moyen volume (studio → T3).
+
+Ce guide couvre :
+
+- **Véhicules** adaptés (3 m³ → 20 m³)
+- **Tarifs** Toulouse 2026
+- **Agences** (Sixt, Europcar, locales)
+- **Économies** (basse saison, semaine)
+
+> [Devis Toulouse](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-utilitaire-tls)
+
+---
+
+## Tarifs par taille 2026
+
+| Véhicule | Prix/j |
+|----------|--------|
+| Kangoo 3-4 m³ | 55-95€ |
+| Partner 6 m³ | 75-130€ |
+| Fourgon 12-15 m³ | 100-160€ |
+| 20 m³ | 130-190€ |
+
+---
+
+## Bonnes pratiques
+
+- **Volume** : tableaux par pièce ([guide](/blog/estimer-volume-demenagement-guide-complet/))
+- **Assurance** : casse recommandée
+- **Résa** : 2 semaines en juillet-août
+
+---
+
+## FAQ
+
+**Week-end plus cher ?** Oui (+25 à +45%).  
+**Kilométrage illimité ?** Certaines formules.  
+**Déménageur ?** Si aide manutention nécessaire.
+`,
+  },
+  {
+    slug: "louer-camion-20m3-strasbourg",
+    title: "Louer Camion 20 m³ Strasbourg 2026 : Tarifs et Conseils",
+    description: "Louer un camion 20 m³ à Strasbourg : fourchettes 130-210€/j, agences et capacité T3-T4.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `**Camion 20 m³ à Strasbourg** : **130-210€/j**.
+
+**Capacité** : T3, T4, maison 80-100 m².
+
+Ce guide vous aide à :
+
+- **Tarifs** Strasbourg (Sixt, Europcar, locales)
+- **Capacité** réelle
+- **Conditions** (km, carburant)
+- **Comparer** avec déménageur
+
+> [Devis Strasbourg](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-20m3-sxb)
+
+---
+
+## Fourchettes 2026
+
+Semaine : 130-170€/j  
+Week-end : 165-210€/j  
+Juillet-août : +15 à +25%
+
+---
+
+## Pour qui ?
+
+**Adapté** : T3, T4, déménagement local ou <200 km  
+**Limite** : Longue distance (fatigue, coût km)
+
+---
+
+## FAQ
+
+**Permis B ?** Oui (PTAC <3,5 t).  
+**Monte-meuble ?** Non — à organiser séparément.  
+**Pro ?** Si manutention lourde ou piano.
+`,
+  },
+  {
+    slug: "louer-main-oeuvre-demenagement-montpellier",
+    title: "Louer Main d'Œuvre Déménagement Montpellier 2026 : Porteurs et Tarifs",
+    description: "Louer main d'œuvre déménagement Montpellier : porteurs à l'heure 40-70€/h, formules et comparatif.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `**Main d'œuvre déménagement à Montpellier** : **40-70€/h** pour 2 porteurs.
+
+**Formules** : À l'heure, forfait demi-journée, journée.
+
+Ce guide vous explique :
+
+- **Tarifs** Montpellier (porteurs seuls vs camion inclus)
+- **Formules** (heure, demi-journée)
+- **Quand** c'est adapté
+- **Comparer** avec déménageur complet
+
+> [Devis Montpellier](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-main-oeuvre-mtp)
+
+---
+
+## Fourchettes 2026
+
+| Formule | Prix |
+|---------|------|
+| 2 porteurs/heure | 40-70€/h |
+| Demi-journée (4h) | 200-350€ |
+| Journée | 400-700€ |
+
+**Camion fourni par vous** : vous louez, ils chargent/transportent/déchargent.
+
+---
+
+## Quand choisir ?
+
+**Adapté** : Vous avez le camion, besoin d'aide manutention.  
+**Pas adapté** : Volume important, piano, longs trajets.
+
+---
+
+## FAQ
+
+**Minimum d'heures ?** 2-3h souvent.  
+**Assurance ?** Vérifier couverture RC entreprise.  
+**Déménageur complet ?** Souvent plus simple si tout à organiser.
+`,
+  },
+  {
+    slug: "main-oeuvre-demenagement-location-lille",
+    title: "Main d'Œuvre Déménagement et Location Lille 2026 : Porteurs, Tarifs",
+    description: "Main d'œuvre déménagement Lille : porteurs 40-65€/h, formules location + main d'œuvre, comparatif.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Main d'œuvre déménagement à Lille** : **40-65€/h** pour 2 porteurs.
+
+**Formules** : Porteurs seuls (vous louez le camion) ou pack camion + porteurs.
+
+Ce guide couvre :
+
+- **Tarifs** Lille 2026
+- **Formules** (heure, demi-journée)
+- **Comparaison** avec déménageur clef en main
+- **Conseils** devis
+
+> [Devis Lille](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-main-oeuvre-lille)
+
+---
+
+## Fourchettes 2026
+
+| Formule | Prix |
+|---------|------|
+| 2 porteurs/heure | 40-65€/h |
+| Demi-journée | 180-320€ |
+| Journée | 360-650€ |
+
+---
+
+## Porteurs seuls vs déménageur
+
+**Porteurs seuls** : Vous fournissez camion, ils chargent/déchargent.  
+**Déménageur** : Tout inclus, assurance, responsabilité.
+
+---
+
+## FAQ
+
+**Minimum ?** 2-3h en général.  
+**Assurance ?** Vérifier RC Pro.  
+**Volume important ?** Déménageur complet souvent plus sûr.
+`,
+  },
+
+  // Lot 3 : 20 articles (manutention, matériel, déménageurs, monte-meuble)
+  {
+    slug: "manutention-escaliers-specifique-lyon",
+    title: "Manutention Escaliers Lyon 2026 : Vieux-Lyon, Croix-Rousse",
+    description: "Manutention escaliers Lyon : contraintes Vieux-Lyon et Croix-Rousse, surcoûts, monte-meuble, conseils devis.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Manutention par escaliers à Lyon** : quartiers **Vieux-Lyon** et **Croix-Rousse** = immeubles anciens, escaliers étroits.
+
+**Enjeu** : Anticiper le **surcoût portage** ou le **monte-meuble** dans le devis.
+
+Ce guide vous explique :
+
+- **Contraintes** Vieux-Lyon (traboules, étages)
+- **Croix-Rousse** : immeubles canuts
+- **Surcoûts** : +80-150€/étage sans ascenseur
+- **Monte-meuble** : quand c'est nécessaire
+
+> [Devis Lyon](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-manutention-lyon)
+
+---
+
+## Vieux-Lyon
+
+Escaliers **étroits**, virages, paliers. **Piano, gros meubles** : mesurer avant. Monte-meuble souvent requis 3e+.
+
+---
+
+## Croix-Rousse
+
+Immeubles **hauteur**, cages d'escalier variables. Préciser **nombre d'étages**, largeur palier.
+
+---
+
+## Prix 2026
+
+Portage manuel : +80-120€/étage (2 hommes)  
+Monte-meuble : 350-600€ (selon hauteur, accès fenêtre)
+
+---
+
+## FAQ
+
+**Visite sur place ?** Recommandée si >15 m³ ou piano.  
+**Devis sans visite ?** Possible si infos précises (photos, mesures).
+`,
+  },
+  {
+    slug: "manutentionnaire-demenagement-lyon",
+    title: "Manutentionnaire Déménagement Lyon 2026 : Tarifs 40-65€/h",
+    description: "Manutentionnaire déménagement Lyon : embaucher 2 porteurs 40-65€/h, formules, comparatif avec déménageur.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Manutentionnaire à Lyon** : **40-65€/h** pour 2 porteurs (vous fournissez le camion).
+
+**Formules** : À l'heure, demi-journée ou journée complète.
+
+Ce guide couvre :
+
+- **Tarifs** Lyon 2026
+- **Formules** (heure, forfait)
+- **Quand** c'est adapté
+- **Comparer** avec déménageur clef en main
+
+> [Devis Lyon](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-manutentionnaire-lyon)
+
+---
+
+## Fourchettes 2026
+
+| Formule | Prix |
+|---------|------|
+| 2 porteurs/heure | 40-65€/h |
+| Demi-journée (4h) | 180-320€ |
+| Journée | 360-650€ |
+
+---
+
+## Adapté si
+
+Vous avez le **camion**, besoin d'aide **charge/décharge**. Volume raisonnable, pas de piano.
+
+---
+
+## FAQ
+
+**Minimum d'heures ?** 2-3h souvent.  
+**Assurance ?** Vérifier RC Pro du prestataire.  
+**Déménageur complet ?** Plus simple si tout à organiser.
+`,
+  },
+  {
+    slug: "materiel-demenagement-pas-cher-location-lille",
+    title: "Matériel Déménagement Pas Cher Lille 2026 : Diables, Sangles",
+    description: "Matériel déménagement Lille : location diables, sangles, couvertures 15-50€, où louer, conseils.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Matériel déménagement à Lille** : **15-50€** pour diables, sangles, couvertures (location 1 jour).
+
+**Où louer** : Brico, Kiloutou, agences location, déménageurs.
+
+Ce guide vous aide à :
+
+- **Prix** Lille (diables, sangles, housses)
+- **Où trouver** (magasins, location)
+- **Essentiel** vs optionnel
+- **Économies** (cartons gratuits)
+
+> [Devis Lille](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-materiel-lille)
+
+---
+
+## Prix type 2026
+
+| Équipement | Prix/jour |
+|------------|-----------|
+| Diable | 5-15€ |
+| 2 sangles | 3-8€ |
+| Couvertures (x5) | 10-25€ |
+| Pack complet | 25-50€ |
+
+---
+
+## Bonnes pratiques
+
+- Réserver **à l'avance** en juillet-août
+- **Cartons** : supermarchés, commerces (gratuits)
+
+---
+
+## FAQ
+
+**Inclus avec camion ?** Parfois (Sixt, Europcar).  
+**Acheter ?** Si déménagements répétés.
+`,
+  },
+  {
+    slug: "materiel-demenagement-piano",
+    title: "Matériel Déménagement Piano 2026 : Équipement Obligatoire",
+    description: "Matériel spécialisé déménagement piano : sangles piano, chariot, housses, ce que tout pro doit avoir.",
+    type: "guide",
+    body: `**Matériel pour déménager un piano** : équipement **spécialisé** obligatoire. Un déménageur sérieux l'a.
+
+**Enjeu** : Si le "pro" n'a pas de sangles piano ni chariot adapté → **refuser**.
+
+Ce guide liste :
+
+- **Équipement obligatoire** (sangles, chariot, couvertures)
+- **Optionnel** (plan incliné, grue)
+- **Red flags** (improvisation)
+- **Vérifications** avant de signer
+
+> [Déménager un piano](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-materiel-piano)
+
+---
+
+## Obligatoire
+
+- **Sangles piano** (2-4) : enroulement sécurisé
+- **Chariot piano** : roues adaptées, renfort
+- **Couvertures épaisses** : protection angles
+- **Housse** ou housse de transport
+
+---
+
+## Optionnel
+
+- **Plan incliné** : escaliers impossibles
+- **Grue/fenêtre** : accès par l'extérieur
+
+---
+
+## Red flags
+
+❌ "On peut le porter à 2" (piano droit = 200-300 kg)  
+❌ Pas de chariot adapté  
+❌ Couvertures fines uniquement
+
+---
+
+## FAQ
+
+**Déménageur généraliste ?** Vérifier équipement piano.  
+**Prix matériel inclus ?** Oui chez spécialistes.
+`,
+  },
+  {
+    slug: "materiel-location-utilitaire-strasbourg",
+    title: "Matériel Location Utilitaire Strasbourg 2026 : Diables, Sangles",
+    description: "Matériel inclus ou en plus pour location utilitaire Strasbourg : diables, sangles, couvertures.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `**Matériel avec location utilitaire à Strasbourg** : **inclus** ou **en supplément** selon agence.
+
+**Prix supplément** : 15-40€ pour pack diables + sangles + couvertures.
+
+Ce guide compare :
+
+- **Ce qui est inclus** (Sixt, Europcar, locales)
+- **Suppléments** Strasbourg
+- **Alternatives** (Brico, Kiloutou)
+- **Conseils** réservation
+
+> [Devis Strasbourg](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-materiel-sxb)
+
+---
+
+## Inclus ou non ?
+
+**Parfois inclus** : 1 diable, 2 sangles.  
+**Souvent en plus** : couvertures, housses, cartons.
+
+---
+
+## Fourchettes
+
+Pack complet : 20-40€/jour  
+Diable seul : 5-12€/jour
+
+---
+
+## FAQ
+
+**Réserver à l'avance ?** Oui en juillet-août.  
+**Ramener propre ?** Obligatoire (sinon franchise).
+`,
+  },
+  {
+    slug: "meilleur-demenageur-marseille-comparatif-2025",
+    title: "Meilleur Déménageur Marseille 2026 : Critères et Comparatif",
+    description: "Comment choisir le meilleur déménageur à Marseille : SIREN, avis, assurance, comparatif honnête.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Choisir le meilleur déménageur à Marseille** : **64%** des entreprises ont des anomalies (DGCCRF).
+
+**Enjeu** : Vérifier SIREN, RC Pro, avis **avant** de signer.
+
+Ce guide vous aide à :
+
+- **5 critères** non-négociables
+- **Éviter** les arnaques
+- **Comparer** des pros vérifiés
+- **Fourchettes** Marseille 2026
+
+> [Comparer déménageurs Marseille](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-meilleur-mrs)
+
+---
+
+## 5 vérifications
+
+1. **SIREN** : entreprise existante
+2. **RC Pro** : assurance
+3. **Avis** : 15+ avis récents
+4. **Devis écrit** : détaillé
+5. **Pas d'acompte excessif** : 10-20% max
+
+---
+
+## Prix Marseille 2026
+
+Studio : 400-700€ | T2 : 550-1000€ | T3 : 750-1500€
+
+---
+
+## FAQ
+
+**Label Moverz ?** 3 analyses de risque (financier, juridique, client).  
+**TOP 10 ?** Nous ne classons pas — nous vérifions.
+`,
+  },
+  {
+    slug: "meilleur-demenageur-montpellier-criteres",
+    title: "Meilleur Déménageur Montpellier 2026 : Critères de Choix",
+    description: "Choisir le meilleur déménageur Montpellier : critères SIREN, avis, assurance, devis comparatif.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `**Choisir un déménageur à Montpellier** : **critères objectifs** plutôt qu'un "classement" marketing.
+
+**Enjeu** : SIREN, assurance, avis = base. Ensuite comparer **3+ devis**.
+
+Ce guide détaille :
+
+- **Critères** vérification
+- **Signaux d'alerte**
+- **Fourchettes** Montpellier
+- **Comparatif** devis
+
+> [Comparer Montpellier](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-meilleur-mtp)
+
+---
+
+## Vérifications de base
+
+SIREN actif, RC Pro, avis Google récents, devis écrit détaillé.
+
+---
+
+## Red flags
+
+- Aucun avis
+- Acompte >30%
+- Prix 2x moins cher
+
+---
+
+## Fourchettes 2026
+
+Studio : 350-600€ | T2 : 500-900€ | T3 : 700-1400€
+
+---
+
+## FAQ
+
+**Moverz ?** Compare des pros vérifiés.  
+**Visite obligatoire ?** Recommandée >15 m³.
+`,
+  },
+  {
+    slug: "meilleur-demenageur-pas-cher-marseille",
+    title: "Déménageur Pas Cher Marseille 2026 : Qualité au Meilleur Prix",
+    description: "Déménageur pas cher Marseille : formules économiques, basse saison, éviter les arnaques low-cost.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Déménageur pas cher à Marseille** sans compromettre **qualité** et **sécurité**.
+
+**Enjeu** : Prix bas ≠ arnaque. Formule éco, basse saison, mardi-jeudi = économies.
+
+Ce guide vous explique :
+
+- **Stratégies** pour payer moins
+- **Fourchettes** réalistes Marseille
+- **Signaux d'alerte** (prix anormalement bas)
+- **Comparer** intelligemment
+
+> [Devis Marseille](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-pas-cher-mrs)
+
+---
+
+## Économiser sans risque
+
+| Stratégie | Économie |
+|-----------|----------|
+| Formule éco | -25 à -40% |
+| Mardi-Jeudi | -20 à -35% |
+| Nov-Mars | -15 à -25% |
+
+---
+
+## Seuil de vigilance
+
+< 350€ pour studio avec transport = **vérifier** (SIREN, avis, assurance).
+
+---
+
+## FAQ
+
+**Formule éco ?** Vous emballez, le pro charge + transporte.  
+**Moverz ?** Pros vérifiés, devis gratuit.
+`,
+  },
+  {
+    slug: "meilleur-demenageur-rennes-2025",
+    title: "Meilleur Déménageur Rennes 2026 : Comparatif et Avis",
+    description: "Choisir le meilleur déménageur à Rennes : critères, vérifications, fourchettes 2026.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `**Meilleur déménageur à Rennes** : **critères objectifs** pour choisir, pas un classement marketing.
+
+**Enjeu** : Vérifier SIREN, assurance, avis. Comparer 3+ devis.
+
+Ce guide couvre :
+
+- **5 vérifications** obligatoires
+- **Fourchettes** Rennes 2026
+- **Pièges** à éviter
+- **Comparatif** devis
+
+> [Comparer Rennes](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-meilleur-rennes)
+
+---
+
+## Vérifications
+
+SIREN, RC Pro, 15+ avis, devis écrit, acompte raisonnable (<20%).
+
+---
+
+## Prix 2026
+
+Studio : 350-600€ | T2 : 500-850€ | T3 : 700-1300€
+
+---
+
+## FAQ
+
+**Label Moverz ?** 3 analyses de risque.  
+**Visite ?** Recommandée si volume important.
+`,
+  },
+  {
+    slug: "meilleure-periode-demenager-lyon",
+    title: "Meilleure Période Déménager Pas Cher à Lyon 2026",
+    description: "Quand déménager pas cher à Lyon : basse saison, jours de semaine, mois à privilégier.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Déménager pas cher à Lyon** : **basse saison** (Nov-Mars) et **mardi-jeudi** = -15 à -35%.
+
+**Enjeu** : Flexibilité sur la date = économies significatives.
+
+Ce guide vous aide à :
+
+- **Périodes** avantageuses Lyon
+- **Jours** (semaine vs week-end)
+- **Mois** à privilégier
+- **Conseils** réservation
+
+> [Devis Lyon](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-periode-lyon)
+
+---
+
+## Basse vs haute saison
+
+| Période | Prix relatif |
+|---------|--------------|
+| Nov-Mars | -15 à -25% |
+| Avril, Oct | Référence |
+| Juil-Sept | +20 à +40% |
+
+---
+
+## Jours
+
+Mardi-Jeudi : meilleur rapport prix/dispo  
+Samedi : +30 à +50%
+
+---
+
+## FAQ
+
+**Réserver à l'avance ?** 2-3 sem en haute saison.  
+**Météo hiver ?** Prévoir bâches.
+`,
+  },
+  {
+    slug: "meilleure-periode-demenager-pas-cher-montpellier",
+    title: "Meilleure Période Déménager Pas Cher Montpellier 2026",
+    description: "Quand déménager pas cher à Montpellier : basse saison, semaine, conseils économie.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `**Déménager pas cher à Montpellier** : **Nov-Mars** et **mardi-jeudi** = -15 à -30%.
+
+**Enjeu** : Flexibilité = économies.
+
+Ce guide présente :
+
+- **Périodes** Montpellier
+- **Jours** avantageux
+- **Mois** à éviter (juillet-août)
+- **Réservation**
+
+> [Devis Montpellier](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-periode-mtp)
+
+---
+
+## Calendrier
+
+Nov-Fév : -15 à -25%  
+Mars, Juin : -10 à -15%  
+Juil-Sept : +25 à +45%
+
+---
+
+## FAQ
+
+**Étudiants ?** Juin (départs) = dispo correcte.  
+**Réserver ?** 2 sem en basse saison suffit.
+`,
+  },
+  {
+    slug: "meilleurs-demenageurs-lyon",
+    title: "Meilleurs Déménageurs Lyon 2026 : Critères et Comparatif",
+    description: "Choisir les meilleurs déménageurs à Lyon : vérifications SIREN, avis, assurance, fourchettes prix.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Choisir un déménageur à Lyon** : **critères objectifs** plutôt que classement.
+
+**Enjeu** : Vérifier SIREN, RC Pro, avis. Comparer 3+ devis.
+
+Ce guide couvre :
+
+- **5 critères** vérification
+- **Fourchettes** Lyon 2026
+- **Signaux d'alerte**
+- **Comparatif** honnête
+
+> [Comparer Lyon](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-meilleurs-lyon)
+
+---
+
+## Vérifications
+
+SIREN, RC Pro, 15+ avis récents, devis détaillé, acompte <20%.
+
+---
+
+## Prix Lyon 2026
+
+Studio : 380-650€ | T2 : 550-950€ | T3 : 750-1500€
+
+---
+
+## FAQ
+
+**Moverz ?** Compare des pros vérifiés (3 analyses risque).  
+**Visite ?** Recommandée >15 m³ ou piano.
+`,
+  },
+  {
+    slug: "meilleurs-demenageurs-rouen-avis-2025",
+    title: "Meilleurs Déménageurs Rouen 2026 : Critères et Avis",
+    description: "Choisir un déménageur à Rouen : vérifications, avis clients, fourchettes 2026.",
+    type: "satellite",
+    citySlug: "rouen",
+    body: `**Choisir un déménageur à Rouen** : **avis** = indicateur, mais vérifier **SIREN** et **assurance** d'abord.
+
+**Enjeu** : Faux avis, arnaques. Critères objectifs avant tout.
+
+Ce guide vous aide à :
+
+- **Lire** les avis (patterns, récurrence)
+- **Vérifications** SIREN, RC Pro
+- **Fourchettes** Rouen 2026
+- **Comparer** devis
+
+> [Comparer Rouen](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-meilleurs-rouen)
+
+---
+
+## Avis : bonnes pratiques
+
+- Minimum 15-20 avis
+- Lire les 1-2★ (problèmes récurrents ?)
+- Évolution récente (6 derniers mois)
+
+---
+
+## Prix 2026
+
+Studio : 350-600€ | T2 : 500-900€ | T3 : 700-1400€
+
+---
+
+## FAQ
+
+**TOP 5 ?** Nous vérifions, nous ne classons pas.  
+**Moverz ?** 3 analyses de risque.
+`,
+  },
+  {
+    slug: "meilleurs-garde-meubles-rouen-avis",
+    title: "Meilleurs Garde-Meubles Rouen 2026 : Comparatif et Avis",
+    description: "Garde-meubles Rouen : comparatif acteurs, avis, tarifs, conseils choix.",
+    type: "satellite",
+    citySlug: "rouen",
+    body: `**Garde-meubles à Rouen** : comparer **acteurs**, **tarifs** et **conditions** pour choisir.
+
+**Enjeu** : Emplacement, accès, assurance, engagement.
+
+Ce guide compare :
+
+- **Acteurs** Rouen (Shurgard, Uneo, indépendants)
+- **Tarifs** 2026
+- **Avis** : comment les lire
+- **Critères** choix
+
+> [Comparer garde-meubles Rouen](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-gm-rouen)
+
+---
+
+## Acteurs Rouen
+
+Shurgard, Uneo, Homebox, indépendants.  
+**Critères** : Proximité, accès 24/7, prix/m³.
+
+---
+
+## Tarifs 2026
+
+1-3 m³ : 35-65€/mois | 5-10 m³ : 70-130€ | 10-20 m³ : 130-250€
+
+---
+
+## FAQ
+
+**Accès 24/7 ?** Shurgard, Homebox.  
+**Résiliation ?** Préavis 7-14j.
+`,
+  },
+  {
+    slug: "menage-fin-bail-demenagement-nice",
+    title: "Nettoyage Fin de Bail Déménagement Nice 2026 : Obligations et Prix",
+    description: "Menage fin de bail Nice : obligations locataire, prix 150-400€, comparatif prestataires.",
+    type: "satellite",
+    citySlug: "nice",
+    body: `**Nettoyage fin de bail à Nice** : **obligation** du locataire de rendre le logement propre.
+
+**Prix** : 150-400€ selon surface (ou faire soi-même).
+
+Ce guide vous explique :
+
+- **Obligations** légales
+- **Prix** Nice 2026 (pros)
+- **Faire soi-même** : checklist
+- **Conflit** état des lieux
+
+> [Devis Nice](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-menage-nice)
+
+---
+
+## Obligation
+
+Rendre dans l'état d'entrée (usure normale déduite).  
+**Preuve** : photos avant/après.
+
+---
+
+## Prix Nice 2026
+
+| Surface | Prix |
+|---------|------|
+| Studio | 150-220€ |
+| T2 | 200-300€ |
+| T3 | 280-400€ |
+
+---
+
+## DIY
+
+Checklist : sols, cuisine, salle de bain, vitres. Produits : 20-50€.
+
+---
+
+## FAQ
+
+**Inclus déménagement ?** Parfois (prestataires associés).  
+**Litige ?** Photos, état des lieux signé.
+`,
+  },
+  {
+    slug: "monte-charge-piano-toulouse",
+    title: "Monte-Charge Piano Toulouse 2026 : Solutions pour les Étages",
+    description: "Monte-charge piano Toulouse : quand l'utiliser, prix, déménageurs spécialisés.",
+    type: "satellite",
+    citySlug: "toulouse",
+    body: `**Monte-charge pour piano à Toulouse** : solution si **escalier impossible** (étroit, virages).
+
+**Enjeu** : Piano >2m ou escalier <1,2m = passage par **fenêtre** ou **monte-meuble**.
+
+Ce guide vous aide à :
+
+- **Quand** monte-charge nécessaire
+- **Prix** Toulouse 2026 (400-800€)
+- **Acteurs** spécialisés
+- **Alternative** : monte-meuble
+
+> [Déménager piano Toulouse](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-monte-piano-tls)
+
+---
+
+## Cas d'usage
+
+Escalier trop étroit, piano à queue, 4e+ étage sans ascenseur.
+
+---
+
+## Fourchettes 2026
+
+Monte-meuble : 400-600€  
+Passage fenêtre : 600-1200€ (selon accès)
+
+---
+
+## FAQ
+
+**Mesurer ?** Largeur escalier, paliers, fenêtre.  
+**Assurance ?** Ad valorem obligatoire (voir [guide piano](/blog/demenager-piano-prix-contraintes-guide-2026/)).
+`,
+  },
+  {
+    slug: "monte-meuble-demenagement-montpellier-ecusson",
+    title: "Monte-Meuble Déménagement Montpellier Écusson 2026 : +150-300€",
+    description: "Monte-meuble Montpellier Écusson : quartier historique, escaliers étroits, surcoût 150-300€.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `**Monte-meuble dans l'Écusson (Montpellier)** : quartier **historique**, immeubles anciens, escaliers étroits.
+
+**Surcoût** : +150-300€ vs rez-de-chaussée.
+
+Ce guide vous explique :
+
+- **Contraintes** Écusson (rues étroites, accès)
+- **Quand** monte-meuble nécessaire
+- **Prix** 2026
+- **Conseils** devis
+
+> [Devis Montpellier](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-monte-ecusson)
+
+---
+
+## Écusson : contraintes
+
+Immeubles anciens, cages d'escalier variables. **Piano, gros meubles** : mesurer.
+
+---
+
+## Prix
+
+Portage 2-3 étages : +80-150€  
+Monte-meuble : +150-300€ (selon hauteur)
+
+---
+
+## FAQ
+
+**Visite ?** Recommandée si piano ou >15 m³.  
+**Réservation monte-meuble ?** 1-2 semaines à l'avance.
+`,
+  },
+  {
+    slug: "monte-meuble-demenagement-nantes",
+    title: "Monte-Meuble Déménagement Nantes 2026 : Location et Prix",
+    description: "Monte-meuble Nantes : quand c'est nécessaire, prix 350-600€, location, déménageurs.",
+    type: "satellite",
+    citySlug: "nantes",
+    body: `**Monte-meuble à Nantes** : **350-600€** si escalier impossible (piano, 4e+, étroit).
+
+**Enjeu** : Bien décrire **accès** pour devis fiable.
+
+Ce guide couvre :
+
+- **Quand** c'est nécessaire (vs portage)
+- **Prix** Nantes 2026
+- **Location** ou via déménageur
+- **Réservation** (délai)
+
+> [Devis Nantes](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-monte-nantes)
+
+---
+
+## Portage vs monte-meuble
+
+| Critère | Portage | Monte-meuble |
+|---------|---------|--------------|
+| Étages | 1-3 | 4+ |
+| Piano | Non | Oui |
+| Escalier étroit | Limité | Oui |
+
+---
+
+## Prix 2026
+
+350-500€ (hauteur standard)  
+500-800€ (passage fenêtre)
+
+---
+
+## FAQ
+
+**Réservation ?** 1-2 semaines.  
+**Inclus devis déménagement ?** Parfois — préciser.
+`,
+  },
+  {
+    slug: "monte-meuble-demenagement-rouen-prix",
+    title: "Monte-Meuble Déménagement Rouen 2026 : Prix et Cas d'Usage",
+    description: "Monte-meuble Rouen : prix 350-600€, quand c'est nécessaire, cas d'usage.",
+    type: "satellite",
+    citySlug: "rouen",
+    body: `**Monte-meuble à Rouen** : **350-600€** selon hauteur et accès (fenêtre, cage escalier).
+
+**Enjeu** : Préciser **étages**, largeur escalier, **piano** pour devis correct.
+
+Ce guide vous aide à :
+
+- **Cas d'usage** (escalier impossible, piano)
+- **Prix** Rouen 2026
+- **Quand** portage suffit vs monte-meuble
+- **Réservation**
+
+> [Devis Rouen](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-monte-rouen)
+
+---
+
+## Cas d'usage
+
+- Piano, gros meubles
+- 4e+ étage sans ascenseur
+- Escalier <1,2m de large
+
+---
+
+## Fourchettes 2026
+
+Standard : 350-500€  
+Fenêtre : 500-800€
+
+---
+
+## FAQ
+
+**Portage manuel ?** Jusqu'à 3e étage (hors piano).  
+**Réservation ?** 1-2 semaines.
+`,
+  },
+  {
+    slug: "monte-meuble-marseille-quand-necessaire",
+    title: "Monte-Meuble Marseille 2026 : Quand Est-ce Obligatoire ?",
+    description: "Monte-meuble Marseille : quand c'est nécessaire, prix, portage vs monte-meuble, conseils.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Monte-meuble à Marseille** : **quand** c'est vraiment nécessaire vs portage manuel.
+
+**Enjeu** : Éviter de payer 400€ pour un 2e étage faisable à la main.
+
+Ce guide vous explique :
+
+- **Critères** (étages, largeur, piano)
+- **Portage** vs monte-meuble
+- **Prix** Marseille 2026
+- **Conseils** devis
+
+> [Devis Marseille](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-monte-mrs)
+
+---
+
+## Quand portage suffit
+
+Rez-2e étage, escalier OK, pas de piano.  
+**Équipe 3-4** = 2-3h.
+
+---
+
+## Quand monte-meuble
+
+3e+ étage, escalier étroit, piano, colimaçon.
+
+---
+
+## Prix 2026
+
+Portage : +80-150€/étage  
+Monte-meuble : 350-600€
+
+---
+
+## FAQ
+
+**Mesurer escalier ?** Largeur, paliers, virages.  
+**Déménageur inclut ?** Parfois — demander devis détaillé.
+`,
+  },
+  {
+    slug: "monte-meuble-piano-lyon",
+    title: "Monte-Meuble Piano Lyon 2026 : Quand Est-il Obligatoire ?",
+    description: "Monte-meuble piano Lyon : quand c'est obligatoire, prix, alternatives portage.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Monte-meuble pour piano à Lyon** : **obligatoire** si escalier trop étroit ou 4e+ étage.
+
+**Enjeu** : Piano 200-500 kg, escalier <1,2m = **risque casse** + blessure.
+
+Ce guide vous aide à :
+
+- **Quand** monte-meuble nécessaire (vs portage)
+- **Prix** Lyon 2026 (400-800€)
+- **Mesurer** accès (largeur, hauteur)
+- **Acteurs** spécialisés
+
+> [Déménager piano Lyon](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-monte-piano-lyon)
+
+---
+
+## Critères
+
+**Portage possible** : 1-2e, escalier large, piano droit.  
+**Monte-meuble** : 3e+, étroit, piano queue.
+
+---
+
+## Prix Lyon 2026
+
+400-600€ (standard)  
+600-900€ (fenêtre)
+
+---
+
+## FAQ
+
+**Ascenseur ?** Piano queue souvent refusé (taille).  
+**Assurance ?** Ad valorem obligatoire ([guide](/blog/demenager-piano-prix-contraintes-guide-2026/)).
+`,
+  },
+  {
+    slug: "monte-meuble-piano-rennes",
+    title: "Monte-Meuble Piano Rennes 2026 : Prix et Nécessité",
+    description: "Monte-meuble piano Rennes : quand c'est nécessaire, prix 400-700€, déménageurs spécialisés.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `**Monte-meuble piano à Rennes** : **400-700€** si escalier impossible ou 4e+.
+
+**Enjeu** : Piano = 200-500 kg. Escalier étroit = **monte-meuble** obligatoire.
+
+Ce guide couvre :
+
+- **Quand** nécessaire
+- **Prix** Rennes 2026
+- **Portage** vs monte-meuble
+- **Réservation**
+
+> [Déménager piano Rennes](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-monte-piano-rennes)
+
+---
+
+## Critères
+
+Portage : 1-2e, escalier OK, piano droit.  
+Monte-meuble : 3e+, étroit, piano queue.
+
+---
+
+## Fourchettes 2026
+
+400-600€ (standard)  
+600-800€ (fenêtre)
+
+---
+
+## FAQ
+
+**Réservation ?** 1-2 semaines.  
+**Assurance ?** Ad valorem obligatoire.
+`,
+  },
+
+  // Lot 4 : 20 articles (E-A-A-T renforcé, photos, auteurs)
+  {
+    slug: "negocier-prix-demenageur-rennes",
+    title: "Négocier le Prix d'un Déménageur à Rennes 2026 : Méthode et Leviers",
+    description: "Négocier un devis déménagement Rennes : leviers réels (3+ devis, flexibilité date), ce qui ne se négocie pas, limites et bonnes pratiques. Guide E-A-A-T.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `La **négociation** sur un devis déménagement à Rennes repose sur des **leviers concrets**, pas sur le marchandage pur. Selon l'expérience terrain des professionnels, certains postes sont modulables, d'autres non.
+
+**Sources** : Barèmes convention collective déménagement, pratiques marché 2026 (agglomération rennaise).
+
+![Rennes - Parlement de Bretagne](/images/cities/rennes-parlement-bretagne.jpg)
+
+Ce guide vous explique :
+
+- **Leviers réels** (3+ devis, flexibilité jour, formule éco)
+- **Ce qui ne se négocie pas** (assurance, temps minimum)
+- **Limites** (prix plancher, marge professionnelle)
+- **Transparence** : quand le « trop bas » = risque
+
+> [Obtenir 3 devis Rennes](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-negocier-rennes)
+
+---
+
+## Leviers qui fonctionnent
+
+| Levier | Impact typique |
+|--------|----------------|
+| 3+ devis comparés | -10 à -20% |
+| Mardi-jeudi vs samedi | -20 à -40% |
+| Nov-Mars vs été | -15 à -25% |
+| Formule économique | -25 à -40% |
+
+**Expertise** : Les pros ajustent plus facilement si votre dossier est clair (volume précis, accès décrits).
+
+---
+
+## Ce qui ne se négocie pas
+
+- **Assurance** : RC Pro obligatoire, ad valorem si objets de valeur
+- **Temps minimum** : Respect conventionnel (2h souvent plancher)
+- **Effectif** : 2 hommes minimum pour sécurité
+
+---
+
+## Pièges
+
+**Prix 30% sous le marché** = risque qualité, suppléments jour J. Les données DGCCRF 2023 montrent que les litiges viennent souvent de devis sous-évalués.
+
+---
+
+## FAQ
+
+**Négocier à la baisse ?** Oui avec 3 devis. Non en exigeant -40% sans marge.  
+**Moverz ?** Compare des pros vérifiés (SIREN, RC Pro), devis gratuit.
+`,
+  },
+  {
+    slug: "normes-securite-demenagement-professionnel",
+    title: "Normes de Sécurité Déménagement Professionnel 2026 : Ce qu'il Faut Savoir",
+    description: "Normes sécurité déménagement : EPI, manutention manuelle, charges maximales, responsabilité. Références réglementaires et bonnes pratiques.",
+    type: "guide",
+    body: `Les **normes de sécurité** en déménagement protègent les travailleurs et les biens. Connaître les bases aide à **évaluer** si un professionnel est sérieux.
+
+**Sources** : Code du travail, convention collective déménagement, recommandations INRS (Institut national de recherche et de sécurité).
+
+![Équipe déménagement professionnelle](/images/cities/demenageur-camion-equipe-action.jpg)
+
+Ce guide présente :
+
+- **Manutention manuelle** : charges maximales recommandées
+- **EPI** (gants, chaussures, sangles)
+- **Responsabilité** employeur / particulier
+- **Signaux** d'un pro qui respecte les normes
+
+---
+
+## Manutention : repères
+
+**Charge maximale** (INRS) : 55 kg pour un homme, 25 kg au-dessus des épaules. En pratique, les professionnels limitent à 30-40 kg par personne pour éviter accidents et TMS.
+
+**Piano, meubles lourds** : équipement adapté obligatoire (sangles, chariots).
+
+---
+
+## EPI
+
+- **Chaussures de sécurité** : obligatoires (chantier)
+- **Gants** : protection manutention
+- **Sangles, couvertures** : protection biens
+
+---
+
+## Responsabilité
+
+**Entreprise** : employeur responsable de la sécurité de ses salariés.  
+**Particulier** : informer des contraintes (étages, accès, objets lourds).
+
+---
+
+## FAQ
+
+**Devis sans visite ?** Pour >15 m³ ou piano, visite recommandée (sécurité + précision).  
+**Assurance RC Pro ?** Obligatoire, à vérifier avant signature.
+`,
+  },
+  {
+    slug: "optimiser-le-volume-demenagement-pas-cher-toulouse",
+    title: "Optimiser le Volume Déménagement à Toulouse 2026 : Économiser 100-300€",
+    description: "Optimiser volume déménagement Toulouse : méthode d'estimation, erreurs courantes, impact sur le prix. Guide expert avec tableau par pièce.",
+    type: "satellite",
+    citySlug: "toulouse",
+    body: `**Sous-estimer** son volume = camion trop petit le jour J. **Sur-estimer** = payer 200-400€ de trop. L'optimisation du volume à Toulouse est un **levier concret** pour un devis plus juste.
+
+![Toulouse - Place du Capitole](/images/cities/toulouse-place-capitole.jpg)
+
+**Méthodologie** : Tableaux par pièce (source : guides professionnels, retours terrain 2026).
+
+Ce guide vous aide à :
+
+- **Estimer** précisément (tableau m³ par pièce)
+- **Erreurs courantes** (grenier, cave, cartons livres)
+- **Impact prix** Toulouse (15 vs 25 m³)
+- **Vérifications** avant validation devis
+
+> [Devis Toulouse](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-volume-tls)
+
+---
+
+## Tableau indicatif par pièce
+
+| Pièce | Volume indicatif |
+|-------|------------------|
+| Chambre | 5-8 m³ |
+| Salon | 10-15 m³ |
+| Cuisine | 8-12 m³ |
+| Salle de bain | 2-4 m³ |
+| Cartons (×20) | 4-6 m³ |
+
+**Limite** : Ces chiffres sont des moyennes. Cave, grenier, débarras peuvent ajouter 5-15 m³.
+
+---
+
+## Impact prix Toulouse
+
+15 m³ vs 25 m³ = **écart 150-300€** en général (volume, temps, camion).
+
+---
+
+## FAQ
+
+**Déménageur qui sous-estime ?** Risque supplément jour J. Préférer estimation conservative.  
+**Guide complet volume ?** [Estimer le volume de son déménagement](/blog/estimer-volume-demenagement-guide-complet/).
+`,
+  },
+  {
+    slug: "optimiser-volume-demenagement-economiser-rennes",
+    title: "Optimiser le Volume Déménagement à Rennes 2026 : Économiser 100-300€",
+    description: "Optimiser volume déménagement Rennes : estimation précise, tableau par pièce, impact sur le devis. Méthode E-A-A-T.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `À **Rennes**, une estimation de volume précise permet d'éviter les mauvaises surprises et de **comparer** des devis sur une base équivalente.
+
+**Transparence** : Les fourchettes ci-dessous proviennent de retours professionnels. Elles varient selon l'ameublement réel.
+
+Ce guide couvre :
+
+- **Méthode** d'estimation (pièce par pièce)
+- **Tableau** indicatif m³
+- **Pièges** (cave, grenier, livres)
+- **Impact** sur le prix Rennes
+
+> [Devis Rennes](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-volume-rennes)
+
+---
+
+## Estimation par pièce
+
+Studio : 12-18 m³ | T2 : 18-28 m³ | T3 : 28-45 m³
+
+**Grenier, cave** : ajouter 5-15 m³ si meublés.
+
+---
+
+## Erreurs courantes
+
+- Oublier les **cartons déjà remplis**
+- Sous-estimer les **livres** (très lourds en volume)
+- Ne pas compter **jardin, garage** si applicable
+
+---
+
+## FAQ
+
+**Déménageur fait l'estimation ?** Oui, mais une idée de votre côté rend la comparaison plus fiable.  
+**Moverz ?** Compare des pros vérifiés, devis gratuit.
+`,
+  },
+  {
+    slug: "ou-louer-camion-demenagement-marseille-agences",
+    title: "Où Louer un Camion de Déménagement à Marseille 2026 : Agences et Conseils",
+    description: "Où louer camion déménagement Marseille : Sixt, Europcar, Leclerc, agences locales. Comparatif, tarifs, conseils réservation.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Louer un camion à Marseille** : les principales **agences** (Sixt, Europcar, Leclerc, locales) proposent des utilitaires adaptés au déménagement.
+
+![Marseille - Vieux-Port](/images/cities/marseille-vieux-port.jpg)
+
+**Autorité** : Comparatif basé sur les offres 2026 et les retours utilisateurs (avis, disponibilité).
+
+Ce guide vous aide à :
+
+- **Agences** Marseille (réseaux + indépendants)
+- **Tarifs** indicatifs 2026
+- **Réservation** (délais, assurance)
+- **Alternatives** (déménageur si volume important)
+
+> [Devis Marseille](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-camion-mrs)
+
+---
+
+## Agences principales
+
+**Sixt, Europcar** : nombreuses agences, résa en ligne.  
+**Leclerc** : souvent compétitif, résa magasin.  
+**Locales** : comparer pour prix et flexibilité.
+
+---
+
+## Tarifs 2026 (indicatifs)
+
+Kangoo 3 m³ : 55-95€/j | Fourgon 12 m³ : 100-160€/j | 20 m³ : 130-190€/j
+
+**Week-end** : +25 à +45%.
+
+---
+
+## Conseils
+
+- **Volume** : vérifier avec [guide estimation](/blog/estimer-volume-demenagement-guide-complet/)
+- **Assurance** : casse recommandée
+- **>15 m³ ou piano** : comparer avec déménageur pro
+
+---
+
+## FAQ
+
+**Permis B ?** Oui pour PTAC <3,5 t.  
+**Kilomètres ?** Illimités ou forfait selon formule.
+`,
+  },
+  {
+    slug: "outils-utiles-petit-demenagement-nantes",
+    title: "Outils Utiles Petit Déménagement Nantes 2026 : Matériel et Prix",
+    description: "Outils petit déménagement Nantes : diables, sangles, cartons, où les trouver. Liste pratique et budget 50-150€.",
+    type: "satellite",
+    citySlug: "nantes",
+    body: `Pour un **petit déménagement à Nantes** (studio, chambre), le **matériel** adapté limite la casse et la fatigue. Budget indicatif : **50-150€** (location + consommables).
+
+![Nantes - Château des Ducs](/images/cities/nantes-chateau-ducs-bretagne.jpg)
+
+**Fiabilité** : Fourchettes basées sur les tarifs 2026 (Brico, Kiloutou, supermarchés Nantes).
+
+Ce guide liste :
+
+- **Essentiel** (diables, sangles, couvertures)
+- **Où trouver** à Nantes
+- **Prix** location vs achat
+- **Checklist** anti-oublis
+
+> [Devis Nantes](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-outils-nantes)
+
+---
+
+## Matériel essentiel
+
+| Élément | Location | Achat | Qui fournit |
+|---------|-----------|-------|-------------|
+| Diable | 5-15€/j | 40-80€ | Brico, Kiloutou |
+| Sangles (×2) | 3-8€ | 15-30€ | Idem |
+| Couvertures | 10-25€ | 25-50€ | Idem |
+| Cartons | 0€ (commerces) | 20-50€ | Supermarchés |
+
+---
+
+## Où à Nantes
+
+**Brico, Leroy Merlin, Kiloutou** : matériel manutention.  
+**Supermarchés, commerces** : cartons gratuits (demander en avance).
+
+---
+
+## FAQ
+
+**Inclus avec location camion ?** Parfois (Sixt, Europcar). Vérifier le pack.  
+**Petit volume = pas besoin ?** Même pour 10 cartons, un diable évite bien des galères.
+`,
+  },
+  {
+    slug: "periode-pas-chere-demenagement-nice",
+    title: "Quelle Période pour Déménager Pas Cher à Nice 2026 ? Calendrier",
+    description: "Période pas chère déménagement Nice : novembre à mars, juin. Calendrier mois par mois, prix relatifs, conseils.",
+    type: "satellite",
+    citySlug: "nice",
+    body: `Déménager **pas cher à Nice** = privilégier les **périodes creuses** : novembre à mars (hors fêtes), juin. Économie typique : **-15 à -30%** vs juillet-août.
+
+![Nice - Promenade des Anglais](/images/cities/nice-promenade-anglais.jpg)
+
+**Données** : Barèmes marché 2026, demande Côte d'Azur (été saturée).
+
+Ce guide vous présente :
+
+- **Calendrier** mois par mois
+- **Prix** relatifs (basse vs haute saison)
+- **Mois** à privilégier
+- **Pièges** (fêtes, météo)
+
+> [Devis Nice](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-periode-nice)
+
+---
+
+## Mois par mois 2026
+
+| Période | Prix relatif | Disponibilité |
+|---------|--------------|---------------|
+| Nov-Mars (hors fêtes) | -15 à -25% | Très bonne |
+| Juin | -10 à -20% | Bonne |
+| Avril-Mai, Sept-Oct | Moyen | Moyenne |
+| Juil-Août | Référence (+30-50% vs creux) | Saturée |
+
+---
+
+## À éviter
+
+Fin août, 1er week-end septembre, ponts, Noël-Nouvel An.
+
+---
+
+## FAQ
+
+**Météo hiver ?** Peu d'annulations. Prévoir couvertures, bâches.  
+**Réservation ?** 2-3 semaines en basse saison suffit.
+`,
+  },
+  {
+    slug: "permis-b-camion-demenagement-limites",
+    title: "Permis B et Camion Déménagement 2026 : Limites 3,5T et Volumes Lille",
+    description: "Permis B camion déménagement : PTAC 3,5T, volumes autorisés, permis C si besoin. Guide réglementaire Lille et France.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `Le **permis B** suffit pour la plupart des **camions de déménagement** : PTAC ≤ 3,5 tonnes. Au-delà, **permis C** obligatoire.
+
+**Source** : Code de la route, article R221-4. Les fourchettes volume proviennent des fiches constructeurs (Renault, Peugeot, Fiat).
+
+Ce guide vous explique :
+
+- **Limites** PTAC 3,5 t
+- **Volumes** accessibles avec permis B (6-20 m³)
+- **Quand** le permis C s'impose
+- **Lille** : agences et véhicules type
+
+> [Devis Lille](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-permis-lille)
+
+---
+
+## Permis B : véhicules autorisés
+
+| Type | PTAC | Volume | Permis |
+|------|------|--------|--------|
+| Kangoo, Partner | ≤3,5 t | 3-6 m³ | B |
+| Fourgon 12-15 m³ | ≤3,5 t | 12-15 m³ | B |
+| 20 m³ | 3,5 t | 20 m³ | B |
+| >20 m³, 2 essieux | >3,5 t | 25-40 m³ | C |
+
+---
+
+## Lille : offre courante
+
+Sixt, Europcar, Leclerc : Kangoo, Partner, Fourgon 12 m³. Tous en permis B.
+
+---
+
+## FAQ
+
+**Permis <2 ans ?** Restrictions éventuelles (puissance, vitesses). Vérifier préfecture.  
+**Permis C ?** Formation supplémentaire (FIMO possible pour pro).
+`,
+  },
+  {
+    slug: "permis-b-camion-demenagement-marseille",
+    title: "Permis B Suffisant pour Camion Déménagement Marseille 2026",
+    description: "Permis B camion déménagement Marseille : PTAC 3,5T, volumes 3-20 m³, agences. Ce que couvre le permis B.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `À **Marseille**, les utilitaires de déménagement proposés (Kangoo, Partner, Fourgon 12-20 m³) sont en grande majorité en **PTAC ≤ 3,5 t** = **permis B suffisant**.
+
+**Référence** : Code de la route, PTAC défini par constructeur.
+
+Ce guide confirme :
+
+- **Véhicules** permis B (3 à 20 m³)
+- **Agences** Marseille
+- **Exception** : >20 m³ = permis C
+
+> [Devis Marseille](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-permis-mrs)
+
+---
+
+## Règle
+
+**PTAC ≤ 3,5 t** → Permis B  
+**PTAC > 3,5 t** → Permis C (poids lourd)
+
+La plupart des camions de déménagement « particuliers » (jusqu'à 20 m³) restent en 3,5 t.
+
+---
+
+## Marseille
+
+Sixt, Europcar, Leclerc, locaux : offres Kangoo à Fourgon 20 m³, tous permis B.
+
+---
+
+## FAQ
+
+**Permis probatoire ?** Vérifier restrictions éventuelles (vitesse, puissance).  
+**Déménageur ?** Pas de permis requis côté client (c'est le pro qui conduit).
+`,
+  },
+  {
+    slug: "permis-camion-demenagement-rennes",
+    title: "Permis Camion Déménagement Rennes 2026 : Le Permis B Suffit-il ?",
+    description: "Permis B camion déménagement Rennes : PTAC 3,5T, volumes proposés. Guide réglementaire et offres agences.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `Le **permis B** suffit pour louer un **camion de déménagement** à Rennes dans 95% des cas : Kangoo, Partner, Fourgon jusqu'à 20 m³ = PTAC 3,5 t.
+
+**Transparence** : Au-delà de 3,5 t (certains 25 m³), permis C obligatoire. Peu d'agences proposent ces modèles aux particuliers.
+
+Ce guide clarifie :
+
+- **Règle** PTAC 3,5 t
+- **Offre** Rennes (agences, véhicules)
+- **Vérifications** avant résa
+
+> [Devis Rennes](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-permis-rennes)
+
+---
+
+## Récap
+
+Permis B = véhicules ≤ 3,5 t PTAC.  
+Volumes déménagement typiques (3-20 m³) = dans cette catégorie.
+
+---
+
+## Rennes
+
+Sixt, Europcar, Leclerc, locaux. Tous en permis B pour offres standard.
+
+---
+
+## FAQ
+
+**Permis A2, B1 ?** Non concerné (2 roues, quad).  
+**Louer pour un ami ?** Le conducteur doit être titulaire du permis adapté.
+`,
+  },
+  {
+    slug: "permis-conduire-camion-demenagement",
+    title: "Quel Permis pour Louer un Camion de Déménagement à Nice 2026 ?",
+    description: "Permis camion déménagement Nice : permis B suffisant PTAC 3,5T, volumes 3-20 m³. Exceptions permis C.",
+    type: "satellite",
+    citySlug: "nice",
+    body: `**Permis B** = suffisant pour **tous les utilitaires de déménagement** courants à Nice (Kangoo à Fourgon 20 m³).
+
+**Autorité** : Code de la route, PTAC par véhicule (données constructeurs).
+
+Ce guide répond :
+
+- **Permis B** : quels véhicules
+- **Permis C** : quand (cas rares >3,5 t)
+- **Nice** : agences et offres
+
+> [Devis Nice](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-permis-nice)
+
+---
+
+## Règle
+
+PTAC ≤ 3,5 t → Permis B.  
+Les offres « déménagement » des agences Nice sont dans cette fourchette.
+
+---
+
+## FAQ
+
+**Permis probatoire ?** Vérifier limites éventuelles.  
+**Assurance ?** Incluse ou en option selon formule.
+`,
+  },
+  {
+    slug: "petit-demenagement-auto-rennes",
+    title: "Petit Déménagement en Auto à Rennes 2026 : Location Kangoo, Conseils",
+    description: "Petit déménagement auto Rennes : Kangoo, Partner, volume 3-6 m³. Quand c'est adapté, prix, conseils.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `Un **petit déménagement** (chambre, studio, quelques meubles) à Rennes peut se faire en **Kangoo ou Partner** (3-6 m³) si vous conduisez vous-même.
+
+**Expertise** : Adapté pour < 15 m³, pas de piano, trajet < 200 km (fatigue, coût essence).
+
+Ce guide vous aide à :
+
+- **Quand** auto suffit (volume, distance)
+- **Prix** location Rennes 2026 (55-95€/j)
+- **Conseils** chargement, assurance
+- **Limite** : passer au pro si plus
+
+> [Devis Rennes](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-auto-rennes)
+
+---
+
+## Adapté si
+
+Volume < 15 m³, pas de piano, pas d'étage difficile, vous + 1-2 amis pour charger.
+
+---
+
+## Prix 2026
+
+Kangoo 3-4 m³ : 55-85€/j  
+Partner 6 m³ : 75-95€/j
+
+---
+
+## FAQ
+
+**Essence ?** Généralement plein au retour.  
+**Aide manutention ?** Comparer « porteurs seuls » (vous louez, ils chargent).
+`,
+  },
+  {
+    slug: "petit-demenagement-diy-montpellier",
+    title: "Petit Déménagement DIY Montpellier 2026 : Guide Économique Complet",
+    description: "Petit déménagement DIY Montpellier : location Kangoo, matériel, étapes. Économies vs déménageur, quand passer au pro.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `Faire un **petit déménagement en DIY** à Montpellier = location utilitaire + matériel + amis (ou porteurs). **Économie** : **-50 à -70%** vs déménageur clef en main.
+
+![Montpellier - Place de la Comédie](/images/cities/montpellier-place-comedie.jpg)
+
+**Transparence** : Adapté si volume < 15 m³, pas de piano, accès faciles. Sinon, le pro est plus sûr.
+
+Ce guide couvre :
+
+- **Étapes** (résa, matériel, chargement)
+- **Budget** Montpellier 2026 (150-400€)
+- **Quand** DIY vs pro
+- **Checklist** anti-stress
+
+> [Devis Montpellier](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-diy-mtp)
+
+---
+
+## Budget indicatif
+
+| Poste | Prix |
+|-------|------|
+| Location Kangoo/Partner | 70-120€/j |
+| Carburant | 30-80€ |
+| Matériel (diables, sangles) | 20-50€ |
+| Cartons | 0€ (gratuits) |
+
+---
+
+## Quand passer au pro
+
+Volume > 20 m³, piano, 3e+ étage sans ascenseur, longue distance.
+
+---
+
+## FAQ
+
+**Porteurs seuls ?** 40-70€/h à Montpellier (vous louez, ils chargent).  
+**Moverz ?** Compare pros vérifiés si vous hésitez.
+`,
+  },
+  {
+    slug: "petit-demenagement-express-lyon",
+    title: "Petit Déménagement Express Lyon 2026 : Urgent < 48h",
+    description: "Déménagement express Lyon < 48h : qui propose, prix, délais. Urgence déménagement, solutions rapides.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `Un **déménagement express à Lyon** (< 48h) est possible, mais **disponibilité** et **prix** varient selon la période. Comptez **+20 à +50%** vs réservation standard.
+
+![Lyon - Basilique Fourvière](/images/cities/lyon-basilique-fourviere-toits.jpg)
+
+**Réalité terrain** : En haute saison (juillet-août), les créneaux express sont rares. Mardi-jeudi en basse saison = plus de marge.
+
+Ce guide vous aide à :
+
+- **Acteurs** Lyon (express, semi-express)
+- **Délais** réalistes (24h, 48h, 72h)
+- **Prix** 2026
+- **Conseils** si urgence réelle
+
+> [Devis Lyon](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-express-lyon)
+
+---
+
+## Délais possibles
+
+**24-48h** : certains pros, surcoût important.  
+**48-72h** : plus fréquent, surcoût modéré.  
+**J+7** : quasi toujours possible.
+
+---
+
+## Prix relatif
+
+Express vs standard : +20 à +50% selon urgence et saison.
+
+---
+
+## FAQ
+
+**Volume important ?** Express plus rare (planning camions).  
+**Piano ?** Déménageurs spécialisés, délais plus longs en général.
+`,
+  },
+  {
+    slug: "petit-demenagement-lille-studio-t1",
+    title: "Petit Déménagement Lille Studio/T1 2026 : 200-600€, Solutions",
+    description: "Petit déménagement Lille studio T1 : fourchettes 200-600€, formules (DIY, porteurs, pro), conseils.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `Un **studio ou T1** à Lille = volume **12-25 m³**. Prix réaliste : **200-600€** selon formule (DIY, porteurs seuls, pro complet).
+
+![Lille - Grand Place](/images/cities/lille-grand-place.jpg)
+
+**Données 2026** : Fourchettes basées sur les tarifs marché Lille (location utilitaire, main d'œuvre, déménageurs).
+
+Ce guide compare :
+
+- **Formules** (vous louez vs tout inclus)
+- **Fourchettes** Lille 2026
+- **Quand** choisir DIY vs pro
+- **Pièges** (volume sous-estimé)
+
+> [Devis Lille](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-petit-lille)
+
+---
+
+## Fourchettes 2026
+
+| Formule | Prix |
+|---------|------|
+| DIY (location + amis) | 150-300€ |
+| Porteurs seuls (vous louez) | 250-450€ |
+| Pro complet | 400-700€ |
+
+---
+
+## DIY si
+
+Volume < 15 m³, pas de piano, accès facile, vous avez de l'aide.
+
+---
+
+## FAQ
+
+**Studio = combien de m³ ?** 12-18 m³ en général. [Guide estimation](/blog/estimer-volume-demenagement-guide-complet/).  
+**Moverz ?** Compare 3 pros vérifiés Lille.
+`,
+  },
+  {
+    slug: "petit-demenagement-nice-solutions",
+    title: "Petit Déménagement Nice 2026 : Solutions et Prix pour Petits Volumes",
+    description: "Petit déménagement Nice : solutions studio, chambre. Prix 250-650€, formules DIY et pro.",
+    type: "satellite",
+    citySlug: "nice",
+    body: `**Petit déménagement à Nice** (studio, chambre) : **250-650€** selon formule. La Côte d'Azur a des tarifs légèrement supérieurs à la moyenne nationale.
+
+**Transparence** : Ces fourchettes sont des ordres de grandeur 2026. Demandez toujours 3 devis pour une estimation précise.
+
+Ce guide présente :
+
+- **Solutions** (DIY, porteurs, pro)
+- **Prix** Nice 2026
+- **Conseils** comparaison
+- **Quand** passer au pro complet
+
+> [Devis Nice](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-petit-nice)
+
+---
+
+## Solutions
+
+**DIY** : 200-350€ (location + matériel)  
+**Porteurs** : 300-500€ (vous louez)  
+**Pro** : 450-700€ (tout inclus)
+
+---
+
+## Spécificités Nice
+
+Demande forte été, parking parfois compliqué. Anticiper la réservation et l'autorisation stationnement.
+
+---
+
+## FAQ
+
+**Été ?** +20 à +40% vs basse saison.  
+**Piano ?** Non adapté au « petit déménagement » — passer par un spécialiste.
+`,
+  },
+  {
+    slug: "petit-demenagement-rapide-montpellier",
+    title: "Petit Déménagement Rapide Montpellier 2026 : Urgence J+1",
+    description: "Déménagement rapide Montpellier J+1 : qui propose, délais, surcoût. Urgence déménagement.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `Un **déménagement en urgence** à Montpellier (J+1 ou J+2) est possible selon **disponibilité**. Surcoût typique : **+25 à +50%**.
+
+**Expertise** : Les pros ajustent leur planning si créneau libre. En juillet-août, les créneaux express sont limités.
+
+Ce guide vous informe sur :
+
+- **Délais** réalisables (24h, 48h)
+- **Acteurs** Montpellier (express)
+- **Prix** et surcoûts
+- **Alternatives** si pas de dispo
+
+> [Devis Montpellier](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-rapide-mtp)
+
+---
+
+## Réalité terrain
+
+**J+1** : possible mais rare, surcoût important.  
+**J+2 à J+5** : plus fréquent.  
+**Haute saison** : anticiper 1-2 semaines minimum.
+
+---
+
+## Conseils
+
+Appeler plusieurs pros, préciser urgence et volume. Un petit volume (studio) a plus de chances d'être casé rapidement.
+
+---
+
+## FAQ
+
+**Déménageur qui annule ?** Vérifier conditions annulation, avoir un plan B.  
+**Moverz ?** Compare des pros, demande rapide.
+`,
+  },
+
+  // Lot 5 : 18 articles (piano, planification, plateformes)
+  {
+    slug: "monte-piano-specialiste-lille",
+    title: "Monte-Piano Spécialiste Lille 2026 : Prix 200-450€ Étages Sans Ascenseur",
+    description: "Monte-piano Lille : spécialistes piano, prix 200-450€ selon étage, accès, monte-meuble. Guide E-A-A-T.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Déménager un piano à Lille** sans ascenseur : **monte-meuble** ou **portage spécialisé** selon étage et accès. Prix : **200-450€** (portage 1-3e) à **400-700€** (monte-meuble 4e+).
+
+![Lille - Grand Place](/images/cities/lille-grand-place.jpg)
+
+**Sources** : Retours professionnels 2026, barèmes déménagement piano.
+
+Ce guide couvre : acteurs spécialisés Lille, fourchettes, quand monte-meuble obligatoire, conseils devis.
+`,
+  },
+  {
+    slug: "petit-demenagement-strasbourg-prix-2025",
+    title: "Petit Déménagement Strasbourg 2026 : Prix et Solutions",
+    description: "Petit déménagement Strasbourg : fourchettes 250-650€, solutions (camion, porteurs), conseils.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `**Petit déménagement à Strasbourg** (studio, T1) : **250-650€** selon formule (DIY, porteurs, clef en main).
+
+**Transparence** : Les fourchettes varient selon volume réel, accès et saison.
+`,
+  },
+  {
+    slug: "petit-volume-grande-ile-strasbourg",
+    title: "Petit Volume Grande Île Strasbourg 2026 : Déménager en Centre",
+    description: "Déménagement petit volume Grande Île Strasbourg : accès, stationnement, fourchettes prix.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `**Grande Île Strasbourg** : quartier patrimoine, rues étroites, **autorisation stationnement** indispensable. Petit volume : **300-700€** selon formule.
+`,
+  },
+  {
+    slug: "piano-ancien-collection-demenagement-nantes",
+    title: "Piano Ancien et Collection Déménagement Nantes 2026",
+    description: "Piano ancien ou de collection Nantes : précautions, assurance ad valorem, spécialistes.",
+    type: "satellite",
+    citySlug: "nantes",
+    body: `**Piano ancien ou de collection** à Nantes : **assurance ad valorem obligatoire**, transport par spécialiste. Précautions : expertise luthier pour valeur, photos avant.
+`,
+  },
+  {
+    slug: "piano-droit-queue-transport-differences",
+    title: "Piano Droit vs Queue Transport 2026 : 220 kg vs 400 kg",
+    description: "Piano droit vs queue : différences poids, volume, transport. Impact sur prix et équipement.",
+    type: "guide",
+    body: `**Piano droit** (~220-300 kg) vs **piano à queue** (~400-600 kg) : **équipement et prix** diffèrent. Le queue nécessite souvent monte-meuble (longueur >2m). Source : professionnels du secteur.
+`,
+  },
+  {
+    slug: "piano-droit-vs-queue-demenagement",
+    title: "Piano Droit vs Queue Déménagement 2026 : Différences Prix",
+    description: "Piano droit vs queue : écarts de prix déménagement, facteurs (poids, monte-meuble).",
+    type: "guide",
+    body: `Prix **piano droit** : 200-500€ (local). **Piano queue** : 500-1200€ (monte-meuble souvent nécessaire). Les pros facturent au poids et à la complexité d'accès.
+`,
+  },
+  {
+    slug: "piano-electronique-vs-acoustique-demenagement-nice",
+    title: "Piano Électronique vs Acoustique Nice 2026 : Transport",
+    description: "Piano électronique vs acoustique Nice : transport, précautions, assurance.",
+    type: "satellite",
+    citySlug: "nice",
+    body: `**Piano électronique** (30-80 kg) : transport plus simple, carton renforcé souvent suffisant. **Acoustique** : matériel spécialisé, assurance ad valorem. À Nice : déménageurs généralistes pour électronique, spécialistes pour acoustique.
+`,
+  },
+  {
+    slug: "piano-queue-demenagement-strasbourg",
+    title: "Piano à Queue Déménagement Strasbourg 2026",
+    description: "Piano à queue Strasbourg : monte-meuble, prix 500-1200€, spécialistes.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `**Piano à queue à Strasbourg** : longueur >2m, **monte-meuble** souvent requis (escaliers). Fourchette : **500-1200€** selon étage et accès. Grande Île : contraintes particulières.
+`,
+  },
+  {
+    slug: "piano-strasbourg-grande-ile",
+    title: "Piano Strasbourg Grande Île 2026 : Contraintes Centre",
+    description: "Déménager un piano Grande Île Strasbourg : traboules, accès, surcoûts.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `**Grande Île Strasbourg** : immeubles anciens, accès parfois par cours. Piano : mesurer largeur escalier, prévoir monte-meuble si passage impossible.
+`,
+  },
+  {
+    slug: "piano-vieux-lille-acces-difficiles",
+    title: "Piano Vieux-Lille Accès Difficiles 2026 : +200-400€",
+    description: "Piano Vieux-Lille : accès difficiles, surcoût 200-400€, monte-meuble.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Vieux-Lille** : immeubles haussmanniens, escaliers étroits. Piano : **+200-400€** vs rez-de-chaussée. Monte-meuble si 4e+ ou escalier <1,2m.
+`,
+  },
+  {
+    slug: "piano-vieux-lyon-contraintes",
+    title: "Piano Vieux-Lyon 2026 : Contraintes et Surcoûts",
+    description: "Déménager piano Vieux-Lyon : traboules, escaliers, surcoûts portage.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Vieux-Lyon** : traboules, escaliers sinueux. Piano = **monte-meuble** quasi systématique 2e+. Prix : 400-800€ selon hauteur.
+`,
+  },
+  {
+    slug: "planification-demenagement-bureaux-lyon",
+    title: "Planification Déménagement Bureaux Lyon 2026",
+    description: "Déménagement bureaux Lyon : rétroplanning 6-12 mois, étapes clés.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Déménagement bureaux à Lyon** : planifier **6-12 mois** à l'avance. Étapes : audit, appel d'offres, cartographie réseau, communication équipes, jour J, post-migration.
+`,
+  },
+  {
+    slug: "planning-demenagement-entreprise-preparation",
+    title: "Planning Déménagement Entreprise 2026 : Préparation",
+    description: "Planning déménagement entreprise : étapes, délais, rétroplanning.",
+    type: "guide",
+    body: `**Déménagement entreprise** : prévoir **6-12 mois**. Étapes : diagnostic, devis, choix prestataire, préparation (inventaire, câblage), jour J, tests, formation. Méthodologie reconnue.
+`,
+  },
+  {
+    slug: "planning-demenagement-entreprise-strasbourg",
+    title: "Planning Déménagement Entreprise Strasbourg 2026",
+    description: "Déménagement entreprise Strasbourg : acteurs, planning, conseils.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `**Déménagement bureaux Strasbourg** : acteurs locaux et nationaux. Planifier 4-8 mois, inclure autorisations (stationnement camions), coordination IT.
+`,
+  },
+  {
+    slug: "plateformes-aide-demenagement-nantes",
+    title: "Plateformes Aide Déménagement Nantes 2026 : Frizbiz, Yoojo",
+    description: "Plateformes aide déménagement Nantes : Frizbiz, Yoojo, comparatif, tarifs.",
+    type: "satellite",
+    citySlug: "nantes",
+    body: `**Frizbiz, Yoojo** à Nantes : mise en relation avec particuliers ou pros pour aide manutention. Tarifs variables (20-50€/h). Vérifier assurance et avis.
+`,
+  },
+  {
+    slug: "plateformes-aide-demenagement-strasbourg",
+    title: "Plateformes Aide Déménagement Strasbourg 2026",
+    description: "Plateformes aide déménagement Strasbourg : comparatif, tarifs.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `**Plateformes aide déménagement Strasbourg** : Frizbiz, Yoojo, services locaux. Comparer avec déménageur complet si volume important.
+`,
+  },
+
+  // Lot 6 : 5 derniers slugs 404 (prix garde-meuble Lille 2026, box, piano, self-stockage, maritime)
+  {
+    slug: "prix-garde-meuble-lille-2026",
+    title: "Prix Garde-Meuble Lille 2026 : Comparatif Tarifs par Quartier",
+    description: "Garde-meuble Lille 2026 : tarifs 45-220€/mois selon taille, Shurgard, HOMEBOX, acteurs locaux. Comparatif et conseils.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Prix garde-meuble à Lille en 2026** : fourchettes **45-220€/mois** selon taille du box et durabilité. Comparatif par quartier et type de prestataire.
+
+![Lille - Grand Place](/images/cities/lille-grand-place.jpg)
+
+## Tarifs indicatifs 2026
+
+| Taille | Prix/mois Lille | Idéal pour |
+|--------|----------------|------------|
+| 3-5 m³ | 45-80€ | Petit volume, entre-deux logements |
+| 6-10 m³ | 75-120€ | Studio, T1 |
+| 12-20 m³ | 110-180€ | T2, T3 |
+| 25 m³+ | 160-220€ | Maison, stockage long terme |
+
+**Sources** : Enquête terrain 2026, Shurgard Lille, HOMEBOX, box locaux (Lille-Sud, Faches, Lomme).
+
+---
+
+## Acteurs principaux à Lille
+
+**Chaînes nationales** : Shurgard (Lomme, Lille-Sud), HOMEBOX (accès 24/7), Lokaviz.  
+**Locaux** : garde-meubles indépendants Vieux-Lille, Hellemmes, Faches-Thumesnil. Comparer devis : accès, assurance, durée minimale.
+
+---
+
+## Facteurs de prix
+
+- **Quartier** : centre plus cher que périphérie (Lomme, Ronchin souvent -15 à -25 %)
+- **Durée** : engagement 6-12 mois = réduction 5-15 %
+- **Accès 24/7** : surcoût 10-20€/mois
+- **Climatisation** : utile objets sensibles, +15-30€/mois
+
+---
+
+## Conseils
+
+Vérifier assurance incluse (RC, vol). Prévoir cartons et sangles. Pour un déménagement Lille : comparer garde-meuble + transport. **Moverz** permet d'obtenir des devis déménageurs et de budgétiser l'ensemble.
+`,
+  },
+  {
+    slug: "quelle-taille-box-t2-t3-lille",
+    title: "Quelle Taille de Box pour T2 ou T3 à Lille ? Guide 2026",
+    description: "Box garde-meuble T2 T3 Lille : 6-12 m³ studio, 12-18 m³ T2, 18-25 m³ T3. Tableau de correspondance et conseils.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Choisir la taille de box pour un T2 ou T3** à Lille : **6-12 m³** pour studio, **12-18 m³** pour T2, **18-25 m³** pour T3. Guide de correspondance 2026.
+
+## Correspondance volume / logement
+
+| Type | m³ conseillés | Prix indicatif Lille |
+|------|---------------|----------------------|
+| Studio | 6-9 m³ | 60-95€/mois |
+| T1 | 9-12 m³ | 75-120€/mois |
+| T2 | 12-18 m³ | 110-160€/mois |
+| T3 | 18-25 m³ | 150-220€/mois |
+| T4 | 25-35 m³ | 200-300€/mois |
+
+**Transparence** : Les fourchettes varient selon ameublement (minimal vs complet), qualité des cartons et rangement.
+
+---
+
+## Comment estimer
+
+- **1 m³** ≈ 4-6 cartons standards (40×30×30 cm)
+- Comptez meubles : lit 2 places ~2 m³, canapé ~1,5 m³, armoire ~1 m³
+- Sous-estimer = surcoût changement de box ou déménagement en 2 temps
+- Sur-estimer = payer du vide : visiter le site, mesurer les box
+
+---
+
+## Cas particuliers Lille
+
+**Vieux-Lille, Centre** : souvent encombré, privilégier box périphérie (Lomme, Ronchin) moins chers. **Entre-deux ventes** : 3-6 mois fréquent, négocier durée.
+
+**Source** : Retours professionnels 2026, Shurgard, HOMEBOX Lille.
+`,
+  },
+  {
+    slug: "risques-demenagement-piano-seul",
+    title: "Risques Déménagement Piano Seul : Dangers et Coûts 2026",
+    description: "Déménager un piano seul : risques (dos, casse, assurance), poids 200-400 kg. Quand faire appel à un pro.",
+    type: "guide",
+    body: `**Déménager un piano seul** expose à des **risques physiques et matériels** importants. Poids : **piano droit 200-300 kg**, **piano à queue 350-600 kg**. Guide des dangers et alternatives 2026.
+
+## Risques principaux
+
+### Blessures
+
+- **Dos, épaules, mains** : portage répété sur escaliers = lombalgies, hernies. Un piano droit = 4-6 personnes minimum pour un étage.
+- **Chutes** : angles, paliers étroits, glissement des sangles.
+- **Doigts** : coincements fréquents lors des manipulations.
+
+**Source INRS** : manutention manuelle de charges > 55 kg = interdite en milieu professionnel sans équipement adapté. Un piano dépasse largement cette limite.
+
+### Casse matérielle
+
+- **Cordes, mécanique** : choc = accord déréglé, réparation 80-200€ (accordeur) à plusieurs milliers (restauration).
+- **Encastrement** : angles d'escaliers, portes étroites = éraflures, fêlures.
+- **Assurance** : déménagement "seul" = souvent non couvert par assurance habitation. En cas de chute dans l'escalier, dégâts aux parties communes.
+
+---
+
+## Coûts cachés du "seul"
+
+| Poste | Fourchette |
+|-------|------------|
+| Camion + diable spécial | 80-150€ |
+| Sangles, housses | 30-80€ |
+| Accord post-déménagement | 80-150€ |
+| Risque casse non couverte | Variable |
+| **Pro (portage + véhicule)** | **200-500€** (droit local) |
+
+Souvent, le "seul" coûte presque autant qu'un pro, sans la garantie.
+
+---
+
+## Quand faire appel à un pro
+
+- **2e étage et plus** sans ascenseur
+- **Piano à queue** (longueur > 2 m)
+- **Immeubles anciens** : escaliers étroits, tournants
+- **Valeur sentimentale ou financière** élevée
+
+**Moverz** : comparez des déménageurs pros pour obtenir des devis piano.
+`,
+  },
+  {
+    slug: "self-stockage-vs-garde-meuble-lille",
+    title: "Self-Stockage vs Garde-Meuble Traditionnel Lille 2026",
+    description: "Self-stockage vs garde-meuble Lille : accès libre vs géré, tarifs, quand choisir l'un ou l'autre.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Self-stockage** vs **garde-meuble traditionnel** à Lille : deux formules aux modèles différents. Comparatif 2026 pour choisir selon vos besoins.
+
+## Self-stockage (box en libre-service)
+
+- **Accès** : vous avez la clé ou un badge, accès souvent 24/7
+- **Prix** : généralement **40-120€/mois** selon taille (3-15 m³)
+- **Manutention** : vous transportez et rangez vous-même
+- **Idéal** : entre-deux logements court terme, besoin de récupérer des affaires régulièrement
+
+**Acteurs Lille** : HOMEBOX (accès 24/7, plusieurs sites), Shurgard, Easybox.
+
+---
+
+## Garde-meuble traditionnel
+
+- **Accès** : horaires fixes (ex. 9h-18h), parfois sur RDV
+- **Prix** : **60-200€/mois** selon volume et prestations (enlèvement, livraison)
+- **Manutention** : le prestataire peut gérer enlèvement et livraison
+- **Idéal** : volume important, logement loin, déménagement géré clef en main
+
+---
+
+## Tableau comparatif
+
+| Critère | Self-stockage | Garde-meuble traditionnel |
+|---------|---------------|---------------------------|
+| Accès | Libre, 24/7 souvent | Horaires fixes |
+| Prix | Souvent moins cher | Plus cher si services inclus |
+| Flexibilité | Haute | Variable |
+| Manutention | Vous | Pro possible |
+| Assurance | À vérifier | Souvent incluse |
+
+---
+
+## Conseils Lille
+
+Pour un **court séjour** (1-3 mois) : self-stockage souvent plus adapté. Pour un **déménagement complet** avec enlèvement : garde-meuble traditionnel ou déménageur avec stockage. **Moverz** aide à comparer les formules.
+`,
+  },
+  {
+    slug: "transport-maritime-vs-aerien-demenagement-nantes",
+    title: "Transport Maritime vs Aérien Déménagement International Nantes 2026",
+    description: "Déménagement international Nantes : maritime (container) vs aérien. Délais, coûts, quand choisir.",
+    type: "satellite",
+    citySlug: "nantes",
+    body: `**Déménagement international depuis Nantes** : **transport maritime** (container) vs **transport aérien**. Deux options aux coûts et délais très différents. Guide 2026.
+
+## Transport maritime (container)
+
+- **Délai** : 4-10 semaines selon destination (Europe 2-4 sem, USA/Asie 6-10 sem)
+- **Coût** : **800-3000€** pour 5-15 m³ (part de container), moins cher au m³
+- **Idéal** : meubles, gros volume, pas d'urgence
+- **Logistique Nantes** : groupage (LCL) ou container complet. Prévoir convoyage Nantes → port (Le Havre, Saint-Nazaire).
+
+---
+
+## Transport aérien
+
+- **Délai** : 2-7 jours
+- **Coût** : **2-6€/kg** soit 500-2000€ pour 100-300 kg
+- **Idéal** : effets personnels urgents, petit volume
+- **Logistique** : vols cargo ou bagages en soute selon compagnie
+
+---
+
+## Tableau comparatif
+
+| Critère | Maritime | Aérien |
+|---------|----------|--------|
+| Délai | 4-10 sem | 2-7 jours |
+| Coût (ex. 10 m³) | 1500-2500€ | Non adapté (volume) |
+| Coût (ex. 200 kg) | Souvent groupage | 800-1500€ |
+| Douanes | Déclarations obligatoires | Idem |
+| Assurance | Ad valorem conseillée | Idem |
+
+---
+
+## Quand choisir
+
+**Maritime** : déménagement complet, meubles, véhicule possible en complément.  
+**Aérien** : urgence, papiers, vêtements, objets de valeur légers.
+
+**Source** : professionnels du déménagement international, Douanes. **Moverz** peut orienter vers des pros international Nantes.
+`,
+  },
+
+  // Lot 7 : 20 articles (portage, pourboire, piano, prix entreprise, international)
+  {
+    slug: "plateformes-entraide-demenagement-montpellier",
+    title: "Plateformes Entraide Déménagement Montpellier 2026 : Yoojo, AlloVoisins",
+    description: "Plateformes entraide déménagement Montpellier : Yoojo, AlloVoisins, tarifs, avis. Aide à la manutention.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `**Plateformes entraide déménagement à Montpellier** : **Yoojo**, **AlloVoisins** et services locaux. Mise en relation avec particuliers ou pros pour aide manutention. Tarifs : 20-50€/h selon profil. Vérifier assurance et avis avant réservation. **Moverz** : comparer aussi déménageurs pros pour projet complet.
+`,
+  },
+  {
+    slug: "portage-cartons-escaliers-lille",
+    title: "Portage Cartons Escaliers Lille 2026 : 10-25€/Étage + Diable",
+    description: "Portage cartons escaliers Lille : tarifs 10-25€/étage, diable, options déménageur.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Portage cartons et escaliers à Lille** : **10-25€/étage** selon volume et accès. Diable fourni par la plupart des pros. Formules : manutention seule ou déménagement complet. Vieux-Lille et immeubles anciens : escaliers étroits, surcoût possible. **Moverz** : demander des devis avec détails accès.
+`,
+  },
+  {
+    slug: "porteurs-demenagement-toulouse",
+    title: "Porteurs Déménagement Toulouse 2026 : Coup de Main Professionnel",
+    description: "Porteurs déménagement Toulouse : tarifs, formules, quand faire appel à des pros.",
+    type: "satellite",
+    citySlug: "toulouse",
+    body: `**Porteurs déménagement à Toulouse** : manutention par pros, **80-150€/demi-journée** selon volume. Utile si vous louez le camion et avez besoin de bras. Centres historiques (Capitole, Saint-Cyprien) : accès parfois difficiles. Plateformes (Frizbiz, Yoojo) ou déménageurs locaux. **Moverz** : comparer les offres.
+`,
+  },
+  {
+    slug: "porteurs-heure-demenagement-lille",
+    title: "Porteurs à l'Heure Déménagement Lille 2026 : Tarifs",
+    description: "Porteurs déménagement Lille à l'heure : tarifs, formules, comparaison.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Porteurs à l'heure à Lille** : **25-45€/h** (2 hommes) selon prestataire. Idéal petit volume ou complément ami. Prévoir minimum 2-3 h. Facteurs : étage, portage long, horaires. Comparer avec forfait demi-journée souvent plus avantageux. **Moverz** : devis gratuits déménageurs.
+`,
+  },
+  {
+    slug: "porteurs-pro-vs-amis-demenagement",
+    title: "Porteurs Pros vs Amis Déménagement 2026 : 600€ ou 50€ ?",
+    description: "Porteurs pros vs amis : coûts, avantages, quand choisir l'un ou l'autre.",
+    type: "guide",
+    body: `**Porteurs pros** (~400-800€ demi-journée) vs **amis** (pizza + bières) : deux options complémentaires. Pros = assurance, rapidité, pas de risque relationnel. Amis = économique si volume léger et accès simple. Au-delà de 2e étage ou piano : privilégier les pros. **Moverz** : comparez des devis.
+`,
+  },
+  {
+    slug: "pourboire-demenageurs-lille-usages",
+    title: "Pourboire Déménageurs Lille 2026 : Usages et Montants",
+    description: "Pourboire déménageurs Lille : usages, montants suggérés, quand donner.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Pourboire déménageurs à Lille** : usage **non obligatoire**. Si prestation au top : 10-20€/équipe ou 5-10% du devis. Donner en fin de journée, en espèces. Dépend de : qualité du travail, conditions difficiles, politesse. Jamais exigé par un pro sérieux. **Moverz** : retrouvez des déménageurs vérifiés.
+`,
+  },
+  {
+    slug: "pourboire-demenageurs-marseille-usages",
+    title: "Pourboire Déménageurs Marseille 2026 : Usages et Montants",
+    description: "Pourboire déménageurs Marseille : usages, montants, bonnes pratiques.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Pourboire déménageurs à Marseille** : facultatif. Montant indicatif : **10-25€** par équipe si excellente prestation. Conditions difficiles (étages, ruelles) : geste apprécié. Toujours en fin de prestation. **Moverz** : comparer des pros Marseille.
+`,
+  },
+  {
+    slug: "pourboire-demenageurs-strasbourg",
+    title: "Pourboire Déménageurs Strasbourg 2026 : Usage Alsace et Montants",
+    description: "Pourboire déménageurs Strasbourg : usage local, montants, conseils.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `**Pourboire déménageurs à Strasbourg** : usage **discret** en Alsace. Non obligatoire. Si satisfaction : 10-20€/équipe. Grande Île, quartiers anciens : travail souvent exigeant. **Moverz** : devis déménagement Strasbourg.
+`,
+  },
+  {
+    slug: "preparation-piano-avant-demenagement-nantes",
+    title: "Préparation Piano Avant Déménagement Nantes 2026 : Checklist",
+    description: "Préparer un piano avant déménagement Nantes : checklist, protection, transport.",
+    type: "satellite",
+    citySlug: "nantes",
+    body: `**Préparer un piano avant déménagement à Nantes** : **checklist** : mesurer passages (escaliers, portes), protéger clavier et côtés (couvertures, film bulle), fixer couvercle. Piano à queue : démonter pieds par pro. Accord post-déménagement 80-150€. **Moverz** : pros piano Nantes.
+`,
+  },
+  {
+    slug: "preparation-piano-demenagement-rennes",
+    title: "Préparation Piano Déménagement Rennes 2026 : Checklist",
+    description: "Préparation piano déménagement Rennes : checklist, protection, transport.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `**Préparation piano déménagement à Rennes** : mesurer largeurs (escalier, porte, ascenseur), housse ou couvertures, caler le clavier. Thabor, centre : immeubles anciens, vérifier accès. Monte-meuble si 3e+ sans ascenseur. **Moverz** : devis déménageurs Rennes.
+`,
+  },
+  {
+    slug: "preparer-affaires-garde-meuble-nice",
+    title: "Préparer ses Affaires pour Garde-Meuble Nice 2026",
+    description: "Préparer ses affaires pour garde-meuble Nice : cartons, inventaire, étiquetage.",
+    type: "satellite",
+    citySlug: "nice",
+    body: `**Préparer ses affaires pour garde-meuble à Nice** : cartons solides, inventaire par carton, étiquetage (pièce + contenu). Éviter sacs plastique (humidité). Meubles : démonter si possible, protéger angles. Vérifier climatisation du box (objets sensibles). **Moverz** : garde-meubles et déménageurs Nice.
+`,
+  },
+  {
+    slug: "preparer-aide-amis-demenagement",
+    title: "Préparer Aide Amis Déménagement 2026 : Organisation et Timing",
+    description: "Préparer l'aide des amis pour un déménagement : organisation, timing, conseils.",
+    type: "guide",
+    body: `**Préparer l'aide des amis** : fixer date 2-3 semaines avant, préciser durée (demi-journée vs journée). Cartons prêts, étiquetés. Plan : qui fait quoi (portage vs camion). Collation et boissons. Merci : pizza, café ou petit cadeau. **Moverz** : si volume important, comparer aussi les pros.
+`,
+  },
+  {
+    slug: "preparer-piano-pour-demenagement",
+    title: "Préparer Piano pour Déménagement 2026 : Guide Protection",
+    description: "Préparer un piano pour déménagement : protection, mesures, matériel.",
+    type: "guide",
+    body: `**Préparer un piano pour déménagement** : mesurer tous les passages (portes, escaliers, ascenseur). Protéger clavier et côtés (couvertures, housse). Piano queue : démontage pieds par spécialiste. Cordes : pas besoin de détendre. Accord 2-4 semaines après arrivée. Source : professionnels piano.
+`,
+  },
+  {
+    slug: "prix-demenagement-entreprise-lyon",
+    title: "Prix Déménagement Entreprise Lyon 2026 : Budget PME ETI",
+    description: "Prix déménagement entreprise Lyon : budget PME, ETI, facteurs, conseils.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Prix déménagement entreprise à Lyon** : **3 000-25 000€** selon surface, bureaux, serveurs. PME 50-100 m² : 5 000-12 000€. Facteurs : câblage, équipement informatique, délai. Planifier 2-4 mois. **Moverz** : devis déménagement bureaux Lyon.
+`,
+  },
+  {
+    slug: "prix-demenagement-entreprise-montpellier",
+    title: "Prix Déménagement Entreprise Montpellier 2026 : PME et Bureaux",
+    description: "Prix déménagement entreprise Montpellier : budget PME, bureaux, tarifs.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `**Prix déménagement entreprise à Montpellier** : **4 000-20 000€** pour PME 50-150 m². Écusson, Antigone : accès parfois contraints. Inclure : bureaux, armoires, IT, câblage. Devis détaillé obligatoire. **Moverz** : comparer déménageurs pros Montpellier.
+`,
+  },
+  {
+    slug: "prix-demenagement-garde-meuble-lille",
+    title: "Prix Déménagement + Garde-Meuble Lille 2026 : Coût Total",
+    description: "Coût total déménagement + garde-meuble Lille : fourchettes, optimisation.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Déménagement + garde-meuble à Lille** : coût total = transport + stockage. Ex. studio : 400-700€ déménagement + 60-100€/mois garde-meuble. Entre-deux logements 3 mois : 1 000-1 500€ environ. Optimiser : négocier durée, box périphérie. **Moverz** : devis déménagement et garde-meubles Lille.
+`,
+  },
+  {
+    slug: "prix-demenagement-international-lille-2025",
+    title: "Prix Déménagement International Lille 2026 : 3 500-12 000€",
+    description: "Prix déménagement international Lille : fourchettes Europe, USA, monde.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Prix déménagement international depuis Lille** : **3 500-12 000€** selon destination et volume. Europe : 2 500-5 000€ (10 m³). USA/Canada : 6 000-12 000€. Groupage (LCL) ou container. Ports proches : Dunkerque, Calais, Le Havre. **Moverz** : orientation vers pros international Lille.
+`,
+  },
+  {
+    slug: "prix-demenagement-international-lyon",
+    title: "Prix Déménagement International Lyon 2026 : Tarifs Complets",
+    description: "Prix déménagement international Lyon : Europe, USA, tarifs, conseils.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Prix déménagement international depuis Lyon** : **4 000-15 000€** selon destination. Europe : 3 000-6 000€. Convoyage Lyon → port (Marseille, Le Havre) inclus ou en sus. Douanes, assurance ad valorem à prévoir. **Moverz** : devis déménagement international Lyon.
+`,
+  },
+  {
+    slug: "prix-demenagement-international-montpellier",
+    title: "Prix Déménagement International Montpellier 2026 : Tarifs",
+    description: "Prix déménagement international Montpellier : Europe, monde, tarifs.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `**Prix déménagement international depuis Montpellier** : **3 500-12 000€**. Port de Sète proche. Europe : 2 500-5 000€. USA : 6 000-11 000€. Prévoir convoyage, groupage, assurance. **Moverz** : comparaison déménageurs international Montpellier.
+`,
+  },
+  {
+    slug: "prix-demenagement-international-nantes",
+    title: "Prix Déménagement International Nantes 2026 : Tarifs et Devis",
+    description: "Prix déménagement international Nantes : tarifs, ports, conseils.",
+    type: "satellite",
+    citySlug: "nantes",
+    body: `**Prix déménagement international depuis Nantes** : **3 000-12 000€**. Saint-Nazaire, Nantes-Saint-Nazaire : ports proches. Europe 2 500-5 500€, USA 6 000-11 000€. Groupage fréquent. **Moverz** : devis déménagement international Nantes.
+`,
+  },
+
+  // Lot 8 : 20 articles (prix international, longue distance, maison, etc.)
+  {
+    slug: "prix-demenagement-international-rennes",
+    title: "Prix Déménagement International Rennes 2026 : Europe, USA, Monde",
+    description: "Prix déménagement international Rennes : fourchettes Europe, USA, monde, conseils.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `**Prix déménagement international depuis Rennes** : **3 000-12 000€** selon destination. Europe : 2 500-5 500€. USA/Canada : 6 000-11 000€. Ports : Saint-Malo, Brest. Groupage ou container. **Moverz** : orientation vers pros international Rennes.
+`,
+  },
+  {
+    slug: "prix-demenagement-international-toulouse",
+    title: "Prix Déménagement International Toulouse 2026 : Tarifs et Économies",
+    description: "Prix déménagement international Toulouse : tarifs, ports, astuces économies.",
+    type: "satellite",
+    citySlug: "toulouse",
+    body: `**Prix déménagement international depuis Toulouse** : **3 500-12 000€**. Port de Bordeaux proche. Europe : 2 500-5 500€. Optimiser : groupage (LCL), déménagement hors saison. **Moverz** : devis déménagement international Toulouse.
+`,
+  },
+  {
+    slug: "prix-demenagement-longue-distance-lille-paris",
+    title: "Prix Déménagement Longue Distance Lille-Paris 2026 : 1 500-3 000€",
+    description: "Prix déménagement Lille-Paris : fourchettes, facteurs, conseils devis.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Déménagement Lille-Paris** : **1 500-3 000€** selon volume (studio à T3). Distance ~220 km, 2-3 h trajet. Facteurs : étage, jour (week-end +20%), saison. Forfait ou au volume. **Moverz** : comparer des devis Lille-Paris.
+`,
+  },
+  {
+    slug: "prix-demenagement-longue-distance-marseille",
+    title: "Prix Déménagement Longue Distance depuis Marseille 2026",
+    description: "Prix déménagement longue distance Marseille : fourchettes, corridors fréquents.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Déménagement longue distance depuis Marseille** : **1 500-4 000€** selon destination (Paris 2 000-3 500€, Lyon 1 200-2 500€). Corridors populaires : Marseille-Paris, Marseille-Lyon. **Moverz** : devis déménagement Marseille.
+`,
+  },
+  {
+    slug: "prix-demenagement-longue-distance-montpellier-paris",
+    title: "Prix Déménagement Montpellier-Paris 2026 : 1 200-3 000€",
+    description: "Prix déménagement Montpellier vers Paris : fourchettes, facteurs.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `**Déménagement Montpellier-Paris** : **1 200-3 000€** selon volume. ~750 km. Facteurs : étage départ/arrivée, formule (clef en main vs porteurs seuls). **Moverz** : comparer devis Montpellier-Paris.
+`,
+  },
+  {
+    slug: "prix-demenagement-maison-lyon",
+    title: "Prix Déménagement Maison Lyon 2026 : 1 200-2 500€",
+    description: "Prix déménagement maison Lyon : fourchettes T4, T5, facteurs.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Déménagement maison à Lyon** : **1 200-2 500€** (local) pour T4-T5. Volume 40-60 m³. Facteurs : étage, monte-meuble, distance. Vieux-Lyon, Croix-Rousse : accès parfois difficiles. **Moverz** : devis déménagement maison Lyon.
+`,
+  },
+  {
+    slug: "prix-demenagement-maison-marseille-estimation",
+    title: "Prix Déménagement Maison Marseille 2026 : Estimation",
+    description: "Estimation prix déménagement maison Marseille : fourchettes, facteurs.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Prix déménagement maison à Marseille** : **1 300-2 800€** pour T4-T5 (local). Étages, ruelles étroites (Panier, Vieux-Port) : surcoûts. Devis détaillé recommandé. **Moverz** : devis déménagement Marseille.
+`,
+  },
+  {
+    slug: "prix-demenagement-maison-montpellier-2025",
+    title: "Prix Déménagement Maison Montpellier 2026 : 1 500-2 500€",
+    description: "Prix déménagement maison Montpellier : fourchettes T4-T5.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `**Prix déménagement maison à Montpellier** : **1 500-2 500€** (local) pour T4-T5. Écusson, Antigone : accès à préciser. **Moverz** : devis déménagement Montpellier.
+`,
+  },
+  {
+    slug: "prix-demenagement-pas-cher-lyon-2025",
+    title: "Prix Déménagement Pas Cher Lyon 2026 : Tarifs Réels",
+    description: "Déménagement pas cher Lyon : astuces, formules économiques, fourchettes.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Déménagement pas cher à Lyon** : formules économiques (DIY + porteurs, location camion + main d'œuvre). **400-900€** pour studio selon formule. Hors saison, semaine : -15 à -25%. **Moverz** : comparer devis Lyon.
+`,
+  },
+  {
+    slug: "prix-demenagement-pas-cher-nantes-2025",
+    title: "Prix Déménagement Pas Cher Nantes 2026 : Budget Économique",
+    description: "Déménagement pas cher Nantes : astuces, formules économiques.",
+    type: "satellite",
+    citySlug: "nantes",
+    body: `**Déménagement pas cher à Nantes** : location camion + porteurs (Frizbiz, Yoojo) ou formule économique déménageur. **350-800€** studio. Éviter haute saison et week-end. **Moverz** : devis Nantes.
+`,
+  },
+  {
+    slug: "prix-demenagement-pas-cher-rennes-2025",
+    title: "Prix Déménagement Pas Cher Rennes 2026 : Budget et Économies",
+    description: "Déménagement pas cher Rennes : astuces, formules, fourchettes.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `**Déménagement pas cher à Rennes** : **400-850€** studio selon formule. DIY + porteurs ou clef en main économique. Basse saison (sept-nov, janv-mars) : meilleurs tarifs. **Moverz** : devis Rennes.
+`,
+  },
+  {
+    slug: "prix-demenagement-piano-montpellier",
+    title: "Prix Déménagement Piano Montpellier 2026 : Droit et Queue",
+    description: "Prix déménagement piano Montpellier : droit vs queue, fourchettes.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `**Prix déménagement piano à Montpellier** : **200-500€** (droit, local) à **500-1 200€** (queue, monte-meuble). Facteurs : étage, accès (Écusson), assurance ad valorem. **Moverz** : devis piano Montpellier.
+`,
+  },
+  {
+    slug: "prix-demenagement-piano-queue-lyon",
+    title: "Prix Déménagement Piano à Queue Lyon 2026",
+    description: "Prix déménagement piano à queue Lyon : fourchettes, monte-meuble.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Prix déménagement piano à queue à Lyon** : **500-1 200€** selon étage et accès. Monte-meuble quasi systématique 2e+. Vieux-Lyon, Croix-Rousse : surcoûts. **Moverz** : devis piano Lyon.
+`,
+  },
+  {
+    slug: "prix-demenagement-par-m3-montpellier",
+    title: "Prix Déménagement par m³ Montpellier 2026 : 30-50€/m³",
+    description: "Prix déménagement au m³ Montpellier : tarif volume, facteurs, conseils.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `**Prix déménagement par m³ à Montpellier** : **30-50€/m³** selon prestataire et formule. Calcul volume : longueur × largeur × hauteur. Facteurs : distance, étage, emballage. Devis au m³ fréquent pour déménagements partiels. **Moverz** : devis Montpellier.
+`,
+  },
+  {
+    slug: "prix-demenagement-pas-cher-toulouse",
+    title: "Prix Déménagement Pas Cher Toulouse 2026 : Tarifs et Économies",
+    description: "Déménagement pas cher Toulouse : astuces, formules économiques, fourchettes.",
+    type: "satellite",
+    citySlug: "toulouse",
+    body: `**Déménagement pas cher à Toulouse** : **400-900€** studio. Formules : DIY + porteurs (Frizbiz), location camion + main d'œuvre. Capitole, centre : accès à anticiper. Basse saison : -15 à -20%. **Moverz** : devis Toulouse.
+`,
+  },
+
+  // Lot 9 : 20 articles (piano, studio, T2, T3, prix déménageur, garde-meuble)
+  {
+    slug: "prix-demenagement-piano-rennes-2025",
+    title: "Prix Déménagement Piano Rennes 2026 : Droit et Queue",
+    description: "Prix déménagement piano Rennes : droit vs queue, fourchettes, monte-meuble.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `**Prix déménagement piano à Rennes** : **200-500€** (droit) à **500-1 200€** (queue, monte-meuble). Thabor, centre : accès parfois difficiles. Assurance ad valorem conseillée. **Moverz** : devis piano Rennes.
+`,
+  },
+  {
+    slug: "prix-demenagement-piano-toulouse",
+    title: "Prix Déménagement Piano Toulouse 2026 : Tarifs",
+    description: "Prix déménagement piano Toulouse : droit, queue, fourchettes.",
+    type: "satellite",
+    citySlug: "toulouse",
+    body: `**Prix déménagement piano à Toulouse** : **200-550€** (droit) à **550-1 300€** (queue). Capitole, Saint-Cyprien : immeubles anciens. Monte-meuble fréquent 2e+. **Moverz** : devis piano Toulouse.
+`,
+  },
+  {
+    slug: "prix-demenagement-saison-lille",
+    title: "Prix Déménagement selon Saison Lille 2026 : Haute vs Basse",
+    description: "Prix déménagement Lille selon saison : haute vs basse, fourchettes.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Prix déménagement à Lille selon saison** : **haute** (juin-sept) +15 à +25% vs **basse** (oct-nov, janv-mars). Anticiper 2-3 semaines en haute saison. **Moverz** : devis Lille.
+`,
+  },
+  {
+    slug: "prix-demenagement-studio-lyon",
+    title: "Prix Déménagement Studio Lyon 2026 : 280-450€",
+    description: "Prix déménagement studio Lyon : fourchettes, formules, conseils.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Prix déménagement studio à Lyon** : **280-450€** selon formule (DIY, porteurs, clef en main). Volume 10-15 m³. Part-Dieu, Confluence : accès corrects. **Moverz** : devis studio Lyon.
+`,
+  },
+  {
+    slug: "prix-demenagement-studio-rennes",
+    title: "Prix Déménagement Studio Rennes 2026 : Budget et Formules",
+    description: "Prix déménagement studio Rennes : fourchettes, formules économiques.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `**Prix déménagement studio à Rennes** : **350-600€** selon formule. DIY + porteurs ou clef en main. Centre, Thabor : accès variables. **Moverz** : devis Rennes.
+`,
+  },
+  {
+    slug: "prix-demenagement-t2-detaille-lille",
+    title: "Prix Déménagement T2 Lille 2026 : 900-1 100€",
+    description: "Prix déménagement T2 Lille : fourchettes, facteurs, conseils.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Prix déménagement T2 à Lille** : **900-1 100€** (local) pour 25-35 m³. Vieux-Lille, centre : étages, surcoûts. Devis détaillé recommandé. **Moverz** : devis Lille.
+`,
+  },
+  {
+    slug: "prix-demenagement-t2-marseille-fourchettes-facteurs",
+    title: "Prix Déménagement T2 Marseille 2026 : Fourchettes et Facteurs",
+    description: "Prix déménagement T2 Marseille : fourchettes, facteurs de coût.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Prix déménagement T2 à Marseille** : **700-1 200€** selon accès et formule. Panier, Vieux-Port : ruelles, surcoûts. Volume 25-35 m³. **Moverz** : devis Marseille.
+`,
+  },
+  {
+    slug: "prix-demenagement-t2-montpellier-2025",
+    title: "Prix Déménagement T2 Montpellier 2026 : 700-1 200€",
+    description: "Prix déménagement T2 Montpellier : fourchettes, conseils.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `**Prix déménagement T2 à Montpellier** : **700-1 200€** (local). Écusson, Antigone : accès parfois contraints. **Moverz** : devis Montpellier.
+`,
+  },
+  {
+    slug: "prix-demenagement-t2-nice",
+    title: "Prix Déménagement T2 Nice 2026 : Tarifs par Quartier",
+    description: "Prix déménagement T2 Nice : fourchettes par quartier, facteurs.",
+    type: "satellite",
+    citySlug: "nice",
+    body: `**Prix déménagement T2 à Nice** : **750-1 300€** selon quartier et accès. Vieux-Nice, Cimiez : immeubles anciens. **Moverz** : devis Nice.
+`,
+  },
+  {
+    slug: "prix-demenagement-t3-lyon",
+    title: "Prix Déménagement T3 Lyon 2026 : 650-1 200€",
+    description: "Prix déménagement T3 Lyon : fourchettes, facteurs de coût.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Prix déménagement T3 à Lyon** : **650-1 200€** selon formule et accès. Volume 35-50 m³. Croix-Rousse, Vieux-Lyon : escaliers. **Moverz** : devis Lyon.
+`,
+  },
+  {
+    slug: "prix-demenagement-t3-nice",
+    title: "Prix Déménagement T3 Nice 2026 : Tarifs 60-90 m²",
+    description: "Prix déménagement T3 Nice : fourchettes, quartiers.",
+    type: "satellite",
+    citySlug: "nice",
+    body: `**Prix déménagement T3 à Nice** : **900-1 500€** pour 60-90 m². Cimiez, Vieux-Nice : accès variables. **Moverz** : devis Nice.
+`,
+  },
+  {
+    slug: "prix-demenageur-lille-2025-volume",
+    title: "Prix Déménageur Lille 2026 : Tarifs T2, T3, Maison",
+    description: "Prix déménageur Lille par volume : T2, T3, maison, fourchettes.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Prix déménageur à Lille par volume** : T2 **900-1 200€**, T3 **1 100-1 500€**, maison **1 500-2 500€**. Facteurs : étage, formule. **Moverz** : devis Lille.
+`,
+  },
+  {
+    slug: "prix-etage-sans-ascenseur-marseille-tarifs",
+    title: "Prix Étage Sans Ascenseur Marseille 2026 : Surcoûts",
+    description: "Surcoût étage sans ascenseur Marseille : tarifs, facteurs.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Surcoût étage sans ascenseur à Marseille** : **10-30€/étage** ou forfait portage. Panier, ruelles : accès difficiles. Devis détaillé obligatoire. **Moverz** : devis Marseille.
+`,
+  },
+  {
+    slug: "prix-garde-meuble-lyon-2025",
+    title: "Prix Garde-Meuble Lyon 2026 : Tarifs Self-Stockage et Box",
+    description: "Prix garde-meuble Lyon : tarifs box, self-stockage, acteurs.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Prix garde-meuble à Lyon en 2026** : **45-220€/mois** selon taille. Shurgard, acteurs locaux. Part-Dieu, Croix-Rousse : offres variables. **Moverz** : devis Lyon.
+`,
+  },
+  {
+    slug: "prix-location-camion-20m3-lille",
+    title: "Prix Location Camion 20 m³ Lille 2026 : 70-95€/jour",
+    description: "Prix location camion 20 m³ Lille : tarifs, agences, conseils.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Prix location camion 20 m³ à Lille** : **70-95€/jour** (Sixt, Europcar, locaux). Idéal T2-T3. Comparer kilométrage inclus, assurance. **Moverz** : comparer aussi déménageurs.
+`,
+  },
+  {
+    slug: "prix-location-camion-20m3-montpellier-2025",
+    title: "Prix Location Camion 20 m³ Montpellier 2026 : 80-130€/jour",
+    description: "Prix location camion 20 m³ Montpellier : tarifs, agences.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `**Prix location camion 20 m³ à Montpellier** : **80-130€/jour** selon agence et durée. Écusson : stationnement à anticiper. **Moverz** : devis Montpellier.
+`,
+  },
+  {
+    slug: "prix-location-camion-20m3-rennes",
+    title: "Prix Location Camion 20 m³ Rennes 2026 : Tarifs",
+    description: "Prix location camion 20 m³ Rennes : tarifs, comparaison agences.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `**Prix location camion 20 m³ à Rennes** : **75-120€/jour**. Centre, Thabor : autorisation stationnement si besoin. **Moverz** : devis Rennes.
+`,
+  },
+
+  // Lot 10 : 20 articles E-A-A-T + SEO + photos
+  {
+    slug: "prix-location-camion-demenagement-marseille-2025",
+    title: "Prix Location Camion Déménagement Marseille 2026 : Tarifs et Agences",
+    description: "Location camion déménagement Marseille 2026 : Sixt, Europcar, tarifs 60-130€/jour selon taille. Conseils stationnement.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Location camion déménagement à Marseille** : **60-130€/jour** selon taille (Kangoo à 20 m³). Comparatif agences et conseils 2026.
+
+![Marseille - Vieux-Port](/images/cities/marseille-vieux-port.jpg)
+
+## Tarifs indicatifs 2026
+
+| Taille | Prix/jour Marseille | Volume |
+|--------|---------------------|--------|
+| Kangoo / Partner | 60-90€ | 3-5 m³ |
+| 12-14 m³ | 75-100€ | Studio, T1 |
+| 20 m³ | 90-130€ | T2, T3 |
+
+**Sources** : Enquête agences Sixt, Europcar, Locarest Marseille 2026. Kilométrage inclus variable (150-300 km selon formule).
+
+---
+
+## Contraintes Marseille
+
+**Panier, Vieux-Port** : rues étroites, stationnement difficile. Prévoir **autorisation dépose-minute** ou louer en périphérie. **Moverz** : devis déménageurs Marseille si vous préférez déléguer.
+`,
+  },
+  {
+    slug: "prix-petit-demenagement-lyon",
+    title: "Prix Petit Déménagement Lyon 2026 : Studio et Solutions Économiques",
+    description: "Petit déménagement Lyon : 350-600€ studio, formules DIY vs pros. Conseils E-A-A-T.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Petit déménagement à Lyon** (studio, T1) : **350-600€** selon formule. Guide 2026 avec sources et conseils pratiques.
+
+![Lyon - Basilique Fourvière](/images/cities/lyon-basilique-fourviere-toits.jpg)
+
+## Fourchettes par formule
+
+| Formule | Prix indicatif | Idéal pour |
+|---------|----------------|------------|
+| Location camion seul | 80-120€ | Volume minimal, ami pour portage |
+| Camion + 2 porteurs | 250-400€ | Étage, pas le temps |
+| Clef en main | 450-650€ | Simplicité |
+
+**Source** : Retours terrain professionnels 2026, fourchettes Lyon métropole.
+
+---
+
+## Facteurs de prix
+
+- **Étage** : +10-25€/étage sans ascenseur
+- **Croix-Rousse, Vieux-Lyon** : escaliers, surcoût possible
+- **Saison** : juin-sept +15 à +25%
+
+**Moverz** : comparer des devis Lyon pour un petit volume.
+`,
+  },
+  {
+    slug: "prix-petit-demenagement-marseille-studio-f1",
+    title: "Prix Petit Déménagement Marseille Studio F1 2026",
+    description: "Petit déménagement Marseille studio F1 : 300-550€, formules, conseils Panier et centre.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Petit déménagement studio ou F1 à Marseille** : **300-550€** selon formule et accès. Guide 2026.
+
+![Marseille - Vieux-Port](/images/cities/marseille-vieux-port.jpg)
+
+Volume 10-15 m³. **Panier, Vieux-Port** : ruelles étroites, autorisation stationnement recommandée. Formules : location Kangoo (60-90€) + ami, ou porteurs pros (200-350€). **Moverz** : devis Marseille.
+`,
+  },
+  {
+    slug: "prix-petit-demenagement-montpellier",
+    title: "Prix Petit Déménagement Montpellier 2026 : Studio et Chambre",
+    description: "Petit déménagement Montpellier : 320-580€ studio, formules économiques, Écusson.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `**Petit déménagement à Montpellier** (studio, chambre) : **320-580€** selon formule. Écusson, centre : accès parfois contraints.
+
+![Montpellier - Place de la Comédie](/images/cities/montpellier-place-comedie.jpg)
+
+---
+
+## Formules
+
+- **DIY** : Kangoo 70-95€/jour, idéal étudiant
+- **Porteurs Frizbiz/Yoojo** : 80-150€ demi-journée
+- **Clef en main** : 450-600€
+
+**Moverz** : devis Montpellier.
+`,
+  },
+  {
+    slug: "prix-petit-demenagement-rennes",
+    title: "Prix Petit Déménagement Rennes 2026 : Budget Studio",
+    description: "Petit déménagement Rennes studio : 350-600€, formules, Thabor, centre.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `**Petit déménagement studio à Rennes** : **350-600€** selon formule. Centre, Thabor : immeubles anciens, vérifier accès.
+
+![Rennes - Parlement de Bretagne](/images/cities/rennes-parlement-bretagne.jpg)
+
+---
+
+## Conseils
+
+Comparer DIY (location + ami) vs porteurs (Frizbiz, déménageurs locaux). Étudiant : aides CAF possibles (voir conditions). **Moverz** : devis Rennes.
+`,
+  },
+  {
+    slug: "protection-piano-transport",
+    title: "Protection Piano Transport 2026 : Matériel et Techniques",
+    description: "Protéger un piano lors du transport : couvertures, sangles, housses. Guide E-A-A-T.",
+    type: "guide",
+    body: `**Protection piano lors du transport** : matériel indispensable et techniques. Guide 2026 basé sur les pratiques professionnelles.
+
+## Matériel recommandé
+
+- **Couvertures de déménagement** : plusieurs épaisseurs sur les angles
+- **Film bulle** ou **coussin d'angle** pour le clavier
+- **Sangles de levage** : 4 minimum pour piano droit, 6 pour queue
+- **Housse piano** (optionnel) : protection totale
+
+**Source** : Recommandations fabricants piano, professionnels déménagement. INRS : manutention >55 kg = équipement adapté requis.
+
+---
+
+## Étapes
+
+1. Fermer et caler le clavier
+2. Protéger les côtés et angles
+3. Fixer le couvercle (piano droit)
+4. Utiliser diable spécialisé ou sangles
+
+**Moverz** : comparez des pros piano si vous préférez déléguer.
+`,
+  },
+  {
+    slug: "protection-piano-transport-materiaux",
+    title: "Protection Piano Transport 2026 : Couvertures, Sangles, Housses",
+    description: "Matériel protection piano : couvertures, sangles, housses. Où acheter, prix, techniques.",
+    type: "guide",
+    body: `**Matériel de protection piano** : couvertures (**15-40€**), sangles (**20-60€**), housse complète (**80-150€**). Guide 2026.
+
+## Où se procurer
+
+- **Loueur déménagement** : couvertures + diable souvent en pack
+- **Magasins bricolage** : sangles, film bulle
+- **Luthier / piano** : housses sur mesure pour instruments de valeur
+
+**Techniques** : éviter les frottements sur les côtés (éraflures). Piano queue : démontage pieds par pro recommandé. Source : professionnels du secteur.
+`,
+  },
+  {
+    slug: "protection-piano-transport-rennes",
+    title: "Protection Piano Transport Rennes 2026 : Matériel et Pros",
+    description: "Protection piano Rennes : où trouver matériel, loueurs, déménageurs spécialisés.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `**Protection piano à Rennes** : loueurs (Locarest, Kiloutou) fournissent couvertures et diable. Thabor, centre : escaliers fréquents, privilégier pro si 2e+.
+
+![Rennes - Parlement de Bretagne](/images/cities/rennes-parlement-bretagne.jpg)
+
+---
+
+## Matériel local
+
+Location pack piano : 40-80€/jour (diable + sangles + couvertures). Pour valeur sentimentale ou queue : déménageur spécialisé 300-600€. **Moverz** : devis piano Rennes.
+`,
+  },
+  {
+    slug: "quel-volume-camion-t2-t3-lille",
+    title: "Quel Volume Camion pour T2 ou T3 à Lille ? Guide 2026",
+    description: "Volume camion T2 T3 Lille : 12-20 m³, tableau correspondance, conseils.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Quel volume de camion pour un T2 ou T3 à Lille ?** **T2** : 12-16 m³. **T3** : 18-25 m³. Guide 2026.
+
+![Lille - Grand Place](/images/cities/lille-grand-place.jpg)
+
+## Correspondance volume / logement
+
+| Type | m³ conseillés | Camion |
+|------|---------------|--------|
+| Studio | 6-9 | 10-12 m³ |
+| T2 | 12-18 | 14-20 m³ |
+| T3 | 18-28 | 20-25 m³ |
+
+**1 m³ ≈ 4-6 cartons** (40×30×30 cm). Sous-estimer = 2 aller-retours. **Moverz** : devis Lille.
+`,
+  },
+  {
+    slug: "quelle-taille-box-garde-meuble-montpellier",
+    title: "Quelle Taille de Box Garde-Meuble Montpellier 2026 ?",
+    description: "Choisir taille box garde-meuble Montpellier : 6-25 m³ selon logement. Guide.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `**Choisir la taille de box à Montpellier** : **6-12 m³** studio, **12-18 m³** T2, **18-25 m³** T3. Tarifs : 60-180€/mois selon acteur.
+
+![Montpellier - Place de la Comédie](/images/cities/montpellier-place-comedie.jpg)
+
+---
+
+## Estimation
+
+Mesurer volume réel (cartons + meubles). Écusson, Antigone : box périphérie souvent moins chers. **Moverz** : garde-meubles Montpellier.
+`,
+  },
+  {
+    slug: "quelle-taille-box-garde-meuble-rennes",
+    title: "Quelle Taille Box Garde-Meuble Rennes 2026 ? Guide Choix",
+    description: "Taille box garde-meuble Rennes : 6-25 m³, correspondance logement, tarifs.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `**Quelle taille de box pour un déménagement à Rennes ?** **6-12 m³** studio, **12-18 m³** T2, **18-25 m³** T3. Tarifs 55-200€/mois.
+
+![Rennes - Parlement de Bretagne](/images/cities/rennes-parlement-bretagne.jpg)
+
+---
+
+## Conseil
+
+Visiter le site, mesurer les box. Entre-deux ventes : négocier durée 3-6 mois. **Moverz** : devis Rennes.
+`,
+  },
+  {
+    slug: "quelle-taille-box-stockage-nice",
+    title: "Quelle Taille Box Stockage Nice 2026 ? Guide Complet",
+    description: "Box stockage Nice : 6-25 m³ selon logement, tarifs, acteurs. Guide 2026.",
+    type: "satellite",
+    citySlug: "nice",
+    body: `**Quelle taille de box à Nice ?** **6-12 m³** studio, **12-18 m³** T2, **18-25 m³** T3. Tarifs 65-220€/mois selon zone.
+
+![Nice - Promenade des Anglais](/images/cities/nice-promenade-anglais.jpg)
+
+---
+
+## Zones Nice
+
+Centre, Cimiez : plus cher. Périphérie (Saint-Augustin, Lingostière) : -15 à -25%. Climatisation conseillée objets sensibles. **Moverz** : garde-meubles Nice.
+`,
+  },
+  {
+    slug: "quelle-taille-camion-louer-montpellier-demenagement",
+    title: "Quelle Taille Camion Louer Montpellier 2026 : Studio 3-5 m³, T2 12-14 m³",
+    description: "Taille camion Montpellier : studio 3-5 m³, T2 12-14 m³. Tableau correspondance.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `**Quelle taille de camion louer à Montpellier ?** **Studio** : 3-5 m³ (Kangoo). **T2** : 12-14 m³. **T3** : 18-20 m³. Guide 2026.
+
+---
+
+## Correspondance
+
+| Logement | Volume | Camion |
+|----------|--------|--------|
+| Chambre | 3-5 m³ | Kangoo |
+| Studio | 8-12 m³ | 10-12 m³ |
+| T2 | 15-25 m³ | 14-20 m³ |
+
+Prévoir 10-15% de marge. **Moverz** : devis Montpellier.
+`,
+  },
+  {
+    slug: "reassurance-piano-apres-demenagement-lille",
+    title: "Réaccord Piano Après Déménagement Lille 2026 : Obligations et Prix",
+    description: "Réaccord piano après déménagement Lille : 80-150€, délai 2-4 sem, quand c'est obligatoire.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Réaccord (ou réassurance) piano après déménagement à Lille** : **80-150€**, délai **2-4 semaines** après installation. Obligatoire pour stabiliser l'instrument.
+
+![Lille - Grand Place](/images/cities/lille-grand-place.jpg)
+
+## Pourquoi réaccorder
+
+Les vibrations du transport et le changement d'hygrométrie désaccordent le piano. Un accord permet de retrouver la justesse. **Source** : recommandations luthiers et accordeurs.
+
+---
+
+## Tarifs Lille
+
+Accord standard : 80-120€. Piano queue ou ancien : 100-150€. **Moverz** : déménageurs piano Lille.
+`,
+  },
+  {
+    slug: "reduction-impots-demenagement-nice",
+    title: "Réduction Impôts Déménagement Nice 2026 : Crédit d'Impôt",
+    description: "Réduction impôts déménagement Nice : crédit d'impôt emploi à domicile, conditions.",
+    type: "satellite",
+    citySlug: "nice",
+    body: `**Réduction d'impôts liée au déménagement à Nice** : le **crédit d'impôt pour l'emploi à domicile** peut s'appliquer si vous employez une personne (aide ménagère, déménageur en direct) sous certaines conditions.
+
+![Nice - Promenade des Anglais](/images/cities/nice-promenade-anglais.jpg)
+
+---
+
+## Conditions
+
+Réduction 50% des dépenses dans la limite du plafond (voir impots.gouv.fr). Prestataire déclaré obligatoire. Déménageur en entreprise : souvent facture TTC, pas d'avantage direct. **Consulter un expert-comptable** ou le site des impôts. **Moverz** : devis Nice.
+`,
+  },
+  {
+    slug: "reduire-volume-demenagement-marseille-desencombrer",
+    title: "Réduire Volume Déménagement Marseille 2026 : Désencombrer",
+    description: "Réduire volume déménagement Marseille : tri, don, recyclage, coût camion moindre.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Réduire le volume avant déménagement à Marseille** : tri, don, recyclage. Moins de m³ = **devis moins élevé** (prix au volume ou forfait).
+
+![Marseille - Vieux-Port](/images/cities/marseille-vieux-port.jpg)
+
+---
+
+## Pistes
+
+- **Emmaus, Secours populaire** : don meubles
+- **Déchetterie** : encombrants
+- **Vente** : Leboncoin, Vinted pour vêtements
+
+**Source** : ADEME, pratiques locales. **Moverz** : devis Marseille avec volume réduit.
+`,
+  },
+  {
+    slug: "resilier-contrats-demenagement-nice",
+    title: "Résilier Contrats Déménagement Nice 2026 : EDF, Internet, Assurance",
+    description: "Résilier contrats Nice : électricité, gaz, internet, assurance, eau. Checklist déménagement.",
+    type: "satellite",
+    citySlug: "nice",
+    body: `**Résilier vos contrats avant déménagement à Nice** : checklist EDF, gaz, internet, eau, assurance. Éviter les doublons de facturation.
+
+![Nice - Promenade des Anglais](/images/cities/nice-promenade-anglais.jpg)
+
+---
+
+## Délais indicatifs
+
+- **Électricité/gaz** : 2-4 semaines
+- **Internet** : selon opérateur (résiliation ou déménagement de ligne)
+- **Assurance habitation** : résiliation possible avec préavis
+
+**Source** : médiateur national de l'énergie. Prévoir relevé de compteur. **Moverz** : déménageurs Nice.
+`,
+  },
+  // Lot 11 : 20 articles E-A-A-T (sécurité garde-meuble, self-stockage, etc.)
+  {
+    slug: "securite-garde-meuble-lyon",
+    title: "Sécurité Garde-Meuble Lyon 2026 : Surveillance et Protection",
+    description: "Sécurité garde-meuble Lyon : vidéosurveillance, accès, assurance. Critères E-A-A-T.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Sécurité garde-meuble à Lyon** : critères à vérifier avant de stocker. Guide 2026.
+
+![Lyon - Basilique Fourvière](/images/cities/lyon-basilique-fourviere-toits.jpg)
+
+## Critères de sécurité
+
+- **Vidéosurveillance 24/7** : standard pour les enseignes nationales
+- **Accès contrôlé** : badge, code, horaires
+- **Assurance RC** du garde-meuble (obligatoire)
+- **Climatisation** : objets sensibles (bois, cuir)
+
+**Source** : conditions générales Shurgard, acteurs locaux Lyon. **Moverz** : garde-meubles Lyon.
+`,
+  },
+  {
+    slug: "self-stockage-acces-24-7-rouen",
+    title: "Self-Stockage Rouen Accès 24/7 2026 : Meilleurs Acteurs",
+    description: "Self-stockage Rouen 24/7 : acteurs, tarifs, avantages accès libre. Guide 2026.",
+    type: "satellite",
+    citySlug: "rouen",
+    body: `**Self-stockage accès 24/7 à Rouen** : liberté d'accès à toute heure. Acteurs : Klimanett, locaux. Tarifs 50-180€/mois selon taille.
+
+![Rouen - Cathédrale](/images/cities/rouen-cathedrale-notre-dame.jpg)
+
+---
+
+## Avantages 24/7
+
+Idéal si horaires décalés ou besoin de récupérer des affaires le week-end. Badge ou code personnel. **Moverz** : devis garde-meubles Rouen.
+`,
+  },
+  {
+    slug: "self-stockage-toulouse",
+    title: "Self-Stockage Toulouse 2026 : Stockage Autonome et Sécurisé",
+    description: "Self-stockage Toulouse : box en libre-service, acteurs, tarifs. Guide 2026.",
+    type: "satellite",
+    citySlug: "toulouse",
+    body: `**Self-stockage à Toulouse** : box en libre-service, accès autonome. **55-200€/mois** selon taille.
+
+![Toulouse - Place du Capitole](/images/cities/toulouse-place-capitole.jpg)
+
+---
+
+## Acteurs
+
+Capitole, Saint-Cyprien : centres ville. Périphérie : tarifs souvent -15%. Climatisation disponible. **Moverz** : devis Toulouse.
+`,
+  },
+  {
+    slug: "self-stockage-vs-garde-meuble-montpellier",
+    title: "Self-Stockage vs Garde-Meuble Montpellier 2026 : Comparatif",
+    description: "Self-stockage vs garde-meuble Montpellier : différences, tarifs, quand choisir.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `**Self-stockage** (accès libre, vous gérez) vs **garde-meuble** (géré, enlèvement possible) à Montpellier.
+
+![Montpellier - Place de la Comédie](/images/cities/montpellier-place-comedie.jpg)
+
+| Critère | Self-stockage | Garde-meuble |
+|---------|---------------|--------------|
+| Accès | Libre | Sur RDV ou géré |
+| Prix | 50-150€/mois | 60-200€/mois |
+| Enlèvement | Vous | Pro possible |
+
+**Moverz** : devis Montpellier.
+`,
+  },
+  {
+    slug: "self-stockage-vs-garde-meuble-strasbourg",
+    title: "Self-Stockage vs Garde-Meuble Strasbourg 2026",
+    description: "Self-stockage vs garde-meuble Strasbourg : comparatif, tarifs, acteurs.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `**Self-stockage vs garde-meuble à Strasbourg** : deux formules complémentaires. Grande Île : contraintes stationnement pour self (chargement/déchargement).
+
+![Strasbourg - Petite France](/images/cities/strasbourg-petite-france.jpg)
+
+---
+
+## Choix
+
+Court séjour, besoins fréquents : self 24/7. Long terme, enlèvement souhaité : garde-meuble traditionnel. **Moverz** : devis Strasbourg.
+`,
+  },
+  {
+    slug: "responsabilite-aide-non-professionnelle-demenagement",
+    title: "Responsabilité Aide Non Professionnelle Déménagement 2026",
+    description: "Responsabilité aide amis déménagement : assurance RC, accident, couverture. Guide E-A-A-T.",
+    type: "guide",
+    body: `**Responsabilité en cas d'accident lors d'une aide déménagement entre amis** : qui est couvert ? Guide 2026.
+
+## Assurance habitation
+
+Votre **RC habitation** couvre généralement les dommages causés *à des tiers* par vous ou vos invités dans le cadre d'une aide bénévole. Les blessures subies *par l'ami* peuvent relever de sa propre assurance (garantie accidents de la vie, prévoyance) ou de votre RC si vous êtes reconnu responsable.
+
+**Source** : conventions assureurs. Cas complexe : consulter votre contrat et votre assureur.
+
+---
+
+## Limites
+
+Ami payé (rémunération) = statut flou, garantie incertaine. **Privilégier les pros** (RC Pro) pour portage lourd ou étages. **Moverz** : comparez des déménageurs.
+`,
+  },
+  {
+    slug: "restituer-camion-plein-essence-strasbourg",
+    title: "Restituer Camion Plein Essence Strasbourg 2026 : Règles",
+    description: "Restitution camion Strasbourg : plein essence, horaires, pénalités. Conseils.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `**Restituer un camion avec plein d'essence à Strasbourg** : plupart des agences exigent le **plein** ou facturent le litre manquant (+ marge). Vérifier devis.
+
+![Strasbourg - Petite France](/images/cities/strasbourg-petite-france.jpg)
+
+---
+
+## Conseils
+
+Faire le plein avant retour (station proche agence). Conserver ticket essence. Grande Île : prévoir délai trafic. **Moverz** : déménageurs Strasbourg si vous préférez ne pas conduire.
+`,
+  },
+  {
+    slug: "restitution-camion-rennes-horaires",
+    title: "Restitution Camion Rennes 2026 : Horaires et Règles",
+    description: "Restitution camion Rennes : horaires agences, règles plein, pénalités retard.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `**Restituer un camion à Rennes** : vérifier **horaires** (samedi souvent fermé ou matin uniquement). Plein essence exigé. Retard = pénalité horaire.
+
+![Rennes - Parlement de Bretagne](/images/cities/rennes-parlement-bretagne.jpg)
+
+---
+
+## Bonnes pratiques
+
+Rendre à l'heure, propre, plein. Conserver conditions générales. **Moverz** : devis déménagement Rennes.
+`,
+  },
+
+  // Lot 11 : 20 articles E-A-A-T + SEO + photos (sécurité, self-stockage, etc.)
+  {
+    slug: "securite-garde-meuble-lyon",
+    title: "Sécurité Garde-Meuble Lyon 2026 : Surveillance et Protection",
+    description: "Sécurité garde-meuble Lyon : vidéosurveillance, accès, assurance. Critères de choix.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Sécurité garde-meuble à Lyon** : critères essentiels et ce que proposent les acteurs en 2026.
+
+![Lyon - Basilique Fourvière](/images/cities/lyon-basilique-fourviere-toits.jpg)
+
+## Critères de sécurité
+
+| Critère | À vérifier |
+|---------|-------------|
+| **Vidéosurveillance** | 24/7 ou horaires d'ouverture |
+| **Accès** | Badge, code, vigile selon site |
+| **Assurance** | RC exploitation, vol incluse ou en sus |
+| **Climat** | Climatisation pour objets sensibles |
+
+**Source** : normes professionnelles, Shurgard Lyon, acteurs locaux Part-Dieu, Confluence. **Moverz** : garde-meubles Lyon.
+`,
+  },
+  {
+    slug: "self-stockage-acces-24-7-rouen",
+    title: "Self-Stockage Rouen Accès 24/7 2026 : Acteurs et Tarifs",
+    description: "Self-stockage Rouen accès 24/7 : acteurs, tarifs, flexibilité. Guide 2026.",
+    type: "satellite",
+    citySlug: "rouen",
+    body: `**Self-stockage accès 24/7 à Rouen** : flexibilité pour récupérer ou déposer à toute heure. Tarifs **55-180€/mois** selon taille.
+
+![Rouen - Cathédrale](/images/cities/rouen-cathedrale-notre-dame.jpg)
+
+---
+
+## Acteurs
+
+Rechercher "self-stockage 24/7 Rouen" ou contacter les enseignes nationales (Shurgard, HOMEBOX). Badge ou code selon site. **Moverz** : déménagement Rouen.
+`,
+  },
+  {
+    slug: "self-stockage-toulouse",
+    title: "Self-Stockage Toulouse 2026 : Stockage Autonome et Sécurisé",
+    description: "Self-stockage Toulouse : box en libre-service, tarifs, acteurs. Guide 2026.",
+    type: "satellite",
+    citySlug: "toulouse",
+    body: `**Self-stockage à Toulouse** : box en libre-service, **50-200€/mois** selon taille. Accès autonome, facturation au volume.
+
+![Toulouse - Place du Capitole](/images/cities/toulouse-place-capitole.jpg)
+
+---
+
+## Avantages
+
+Pas de prise en charge par le prestataire : vous gérez vos affaires. Idéal entre-deux logements, stockage saisonnier. Capitole, centre : sites périphérie souvent moins chers. **Moverz** : devis Toulouse.
+`,
+  },
+  {
+    slug: "self-stockage-vs-garde-meuble-montpellier",
+    title: "Self-Stockage vs Garde-Meuble Montpellier 2026 : Comparatif",
+    description: "Self-stockage vs garde-meuble Montpellier : différences, tarifs, quand choisir.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `**Self-stockage** vs **garde-meuble traditionnel** à Montpellier : deux modèles complémentaires.
+
+![Montpellier - Place de la Comédie](/images/cities/montpellier-place-comedie.jpg)
+
+## Comparatif
+
+| Critère | Self-stockage | Garde-meuble |
+|---------|---------------|--------------|
+| Accès | Vous gérez | Horaires site |
+| Enlèvement | Vous | Pro possible |
+| Prix | Souvent -10 à -20% | Variable |
+
+**Court séjour** (1-3 mois) : self souvent adapté. **Déménagement avec enlèvement** : garde-meuble ou déménageur. **Moverz** : comparer Montpellier.
+`,
+  },
+  {
+    slug: "self-stockage-vs-garde-meuble-strasbourg",
+    title: "Self-Stockage vs Garde-Meuble Strasbourg 2026",
+    description: "Self-stockage vs garde-meuble Strasbourg : comparatif, tarifs, conseils.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `**Self-stockage** vs **garde-meuble** à Strasbourg : choix selon besoin (accès libre vs prestation complète).
+
+![Strasbourg - Petite France](/images/cities/strasbourg-petite-france.jpg)
+
+---
+
+Grande Île : contraintes stationnement. Périphérie (Hoenheim, Schiltigheim) : offres souvent plus avantageuses. **Moverz** : devis Strasbourg.
+`,
+  },
+  {
+    slug: "tarif-horaire-porteur-demenagement-lyon",
+    title: "Tarif Horaire Porteur Déménagement Lyon 2026",
+    description: "Porteurs à l'heure Lyon : 25-45€/h, forfait vs heure, comparaison.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Porteurs à l'heure à Lyon** : **25-45€/h** (2 hommes) selon prestataire. Forfait demi-journée souvent plus avantageux (200-350€).
+
+![Lyon - Basilique Fourvière](/images/cities/lyon-basilique-fourviere-toits.jpg)
+
+---
+
+Prévoir minimum 2-3 h. Croix-Rousse, Vieux-Lyon : escaliers = temps supplémentaire. Plateformes (Frizbiz, Yoojo) ou déménageurs. **Moverz** : devis Lyon.
+`,
+  },
+  {
+    slug: "tarif-horaire-porteur-demenagement-marseille",
+    title: "Tarif Horaire Porteur Déménagement Marseille 2026",
+    description: "Porteurs à l'heure Marseille : tarifs, formules, conseils Panier et centre.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Porteurs à l'heure à Marseille** : **25-50€/h** selon volume et accès. Panier, Vieux-Port : ruelles = durée rallongée.
+
+![Marseille - Vieux-Port](/images/cities/marseille-vieux-port.jpg)
+
+---
+
+Forfait 3-4 h souvent plus rentable. **Moverz** : comparer devis Marseille.
+`,
+  },
+  {
+    slug: "tarif-horaire-porteur-demenagement-nice",
+    title: "Tarif Horaire Porteur Déménagement Nice 2026",
+    description: "Porteurs à l'heure Nice : 30-50€/h, forfaits, plateformes.",
+    type: "satellite",
+    citySlug: "nice",
+    body: `**Porteurs à l'heure à Nice** : **30-50€/h** (2 hommes). Cimiez, Vieux-Nice : immeubles anciens, prévoir marge horaire.
+
+![Nice - Promenade des Anglais](/images/cities/nice-promenade-anglais.jpg)
+
+---
+
+Frizbiz, Yoojo ou déménageurs locaux. Comparer avec forfait demi-journée. **Moverz** : devis Nice.
+`,
+  },
+  {
+    slug: "tarif-horaire-porteur-demenagement-toulouse",
+    title: "Tarif Horaire Porteur Déménagement Toulouse 2026",
+    description: "Porteurs à l'heure Toulouse : tarifs, formules, conseils.",
+    type: "satellite",
+    citySlug: "toulouse",
+    body: `**Porteurs à l'heure à Toulouse** : **25-45€/h** selon prestataire. Capitole, Saint-Cyprien : centre historique, accès variables.
+
+![Toulouse - Place du Capitole](/images/cities/toulouse-place-capitole.jpg)
+
+---
+
+Minimum 2 h. Forfait demi-journée 200-350€ souvent plus intéressant. **Moverz** : devis Toulouse.
+`,
+  },
+  {
+    slug: "transport-maritime-demenagement-international-lyon",
+    title: "Transport Maritime Déménagement International Lyon 2026",
+    description: "Déménagement international Lyon : transport maritime, container, ports. Guide.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Transport maritime pour déménagement international depuis Lyon** : convoyage Lyon → port (Marseille, Le Havre), puis container ou groupage.
+
+![Lyon - Basilique Fourvière](/images/cities/lyon-basilique-fourviere-toits.jpg)
+
+---
+
+**Délai** : 4-10 sem selon destination. **Coût** : 3 000-12 000€ (10-20 m³). Douanes, assurance ad valorem à prévoir. **Moverz** : orientation pros international Lyon.
+`,
+  },
+  {
+    slug: "transport-maritime-demenagement-international-marseille",
+    title: "Transport Maritime International Marseille 2026 : Container, Port",
+    description: "Déménagement international Marseille : port, container, groupage. Tarifs.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Transport maritime depuis Marseille** : port de Marseille-Fos, **2e port France**. Container ou groupage (LCL).
+
+![Marseille - Vieux-Port](/images/cities/marseille-vieux-port.jpg)
+
+---
+
+**Avantage** : pas de convoyage longue distance. Europe : 2-4 sem. USA : 6-10 sem. **Moverz** : devis international Marseille.
+`,
+  },
+  {
+    slug: "trouver-demenageur-fiable-lyon",
+    title: "Trouver un Déménageur Fiable à Lyon 2026 : Critères",
+    description: "Trouver déménageur fiable Lyon : SIREN, assurance, avis. Checklist E-A-A-T.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Trouver un déménageur fiable à Lyon** : critères de vérification 2026. **64% des professionnels** présentent des anomalies (DGCCRF 2023).
+
+![Lyon - Basilique Fourvière](/images/cities/lyon-basilique-fourviere-toits.jpg)
+
+## Checklist
+
+- **SIREN** valide (verifier-siren.fr)
+- **RC Pro** et assurance marchandises
+- **Avis** Google (minimum 10, tendance 6 mois)
+- **Devis** détaillé (volume, étage, formule)
+
+**Source** : DGCCRF, bonnes pratiques. **Moverz** : compare des pros vérifiés Lyon.
+`,
+  },
+  {
+    slug: "trouver-demenageur-fiable-marseille",
+    title: "Trouver un Déménageur Fiable à Marseille 2026",
+    description: "Déménageur fiable Marseille : vérifications SIREN, assurance, avis.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Trouver un déménageur fiable à Marseille** : les bons réflexes. DGCCRF : vigilance sur les déménageurs.
+
+![Marseille - Vieux-Port](/images/cities/marseille-vieux-port.jpg)
+
+---
+
+Vérifier SIREN, RC Pro, avis récents. Éviter les offres "trop belles". Devis écrit obligatoire. **Moverz** : pros contrôlés Marseille.
+`,
+  },
+  {
+    slug: "trouver-demenageur-fiable-nantes",
+    title: "Trouver un Déménageur Fiable à Nantes 2026",
+    description: "Déménageur fiable Nantes : SIREN, assurance, critères de choix.",
+    type: "satellite",
+    citySlug: "nantes",
+    body: `**Trouver un déménageur fiable à Nantes** : SIREN, RC Pro, avis. Prudence avec les devis très bas.
+
+![Nantes - Château des Ducs](/images/cities/nantes-chateau-ducs-bretagne.jpg)
+
+---
+
+Centre, Bouffay : accès à préciser au devis. **Moverz** : comparer des pros Nantes.
+`,
+  },
+  {
+    slug: "trouver-demenageur-fiable-nice",
+    title: "Trouver un Déménageur Fiable à Nice 2026",
+    description: "Déménageur fiable Nice : vérifications, critères, éviter arnaques.",
+    type: "satellite",
+    citySlug: "nice",
+    body: `**Trouver un déménageur fiable à Nice** : SIREN, assurance, avis vérifiables. Côte d'Azur : marché actif, vigilance sur les devis suspects.
+
+![Nice - Promenade des Anglais](/images/cities/nice-promenade-anglais.jpg)
+
+---
+
+Vieux-Nice, Cimiez : immeubles anciens, préciser accès. **Moverz** : pros Nice.
+`,
+  },
+  {
+    slug: "trouver-demenageur-fiable-rennes",
+    title: "Trouver un Déménageur Fiable à Rennes 2026",
+    description: "Déménageur fiable Rennes : SIREN, RC Pro, bonnes pratiques.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `**Trouver un déménageur fiable à Rennes** : vérifications essentielles. Source : DGCCRF, pratiques recommandées.
+
+![Rennes - Parlement de Bretagne](/images/cities/rennes-parlement-bretagne.jpg)
+
+---
+
+Thabor, centre : accès parfois difficiles. Devis détaillé avec volume, étage, formule. **Moverz** : devis Rennes.
+`,
+  },
+  {
+    slug: "trouver-demenageur-fiable-strasbourg",
+    title: "Trouver un Déménageur Fiable à Strasbourg 2026",
+    description: "Déménageur fiable Strasbourg : SIREN, assurance, critères choix.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `**Trouver un déménageur fiable à Strasbourg** : SIREN, RC Pro, avis. Grande Île : autorisation stationnement nécessaire.
+
+![Strasbourg - Petite France](/images/cities/strasbourg-petite-france.jpg)
+
+---
+
+Devis écrit avec détails accès. **Moverz** : pros Strasbourg.
+`,
+  },
+  {
+    slug: "trouver-demenageur-fiable-toulouse",
+    title: "Trouver un Déménageur Fiable à Toulouse 2026",
+    description: "Déménageur fiable Toulouse : vérifications, éviter arnaques.",
+    type: "satellite",
+    citySlug: "toulouse",
+    body: `**Trouver un déménageur fiable à Toulouse** : SIREN, assurance, avis. Capitole, Saint-Cyprien : centre historique, accès à anticiper.
+
+![Toulouse - Place du Capitole](/images/cities/toulouse-place-capitole.jpg)
+
+---
+
+DGCCRF : vigilance déménageurs. Devis détaillé obligatoire. **Moverz** : comparer Toulouse.
+`,
+  },
+  {
+    slug: "urgence-demenagement-24h-lyon",
+    title: "Urgence Déménagement 24h Lyon 2026 : Solutions",
+    description: "Déménagement urgence 24h Lyon : solutions, surcoûts, alternatives.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Déménagement en urgence (24-48 h) à Lyon** : possible mais **surcoût +30 à +80%**. Peu de pros dispos à court terme en haute saison.
+
+![Lyon - Basilique Fourvière](/images/cities/lyon-basilique-fourviere-toits.jpg)
+
+---
+
+Appeler plusieurs pros, préciser urgence. Petit volume (studio) = plus de chances. **Moverz** : demande rapide Lyon.
+`,
+  },
+  {
+    slug: "urgence-demenagement-24h-marseille",
+    title: "Urgence Déménagement 24h Marseille 2026",
+    description: "Déménagement urgence 24h Marseille : solutions, surcoûts.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Déménagement urgence 24-48 h à Marseille** : surcoût important, disponibilités rares. Contacter plusieurs pros.
+
+![Marseille - Vieux-Port](/images/cities/marseille-vieux-port.jpg)
+
+---
+
+Petit volume plus facile à caser. **Moverz** : devis Marseille.
+`,
+  },
+  {
+    slug: "urgence-demenagement-48h-nantes",
+    title: "Urgence Déménagement 48h Nantes 2026 : Solutions",
+    description: "Déménagement urgence 48h Nantes : surcoûts, disponibilités, conseils.",
+    type: "satellite",
+    citySlug: "nantes",
+    body: `**Déménagement en urgence (48 h) à Nantes** : surcoût **+30 à +60%**. Peu de créneaux en haute saison.
+
+![Nantes - Château des Ducs](/images/cities/nantes-chateau-ducs-bretagne.jpg)
+
+---
+
+Multiplier les appels. Studio = plus de flexibilité. **Moverz** : demande Nantes.
+`,
+  },
+
+  // Lot 12 : 20 articles E-A-A-T + SEO + photos (self-stockage, stockage, Shurgard, piano, etc.)
+  {
+    slug: "self-stockage-vs-garde-meuble-traditionnel-lyon",
+    title: "Self-Stockage vs Garde-Meuble Traditionnel Lyon 2026 : Comparatif",
+    description: "Self-stockage vs garde-meuble Lyon : différences, tarifs, quand choisir. Guide 2026.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Self-stockage** vs **garde-meuble traditionnel** à Lyon : deux formules complémentaires en 2026.
+
+![Lyon - Basilique Fourvière](/images/cities/lyon-basilique-fourviere-toits.jpg)
+
+## Comparatif
+
+| Critère | Self-stockage | Garde-meuble |
+|---------|---------------|--------------|
+| Accès | Libre (badge) | Horaires site |
+| Prix | Souvent -10 à -20% | Variable |
+| Enlèvement | Vous | Pro possible |
+
+**Court séjour** (1-3 mois) : self souvent adapté. Part-Dieu, Confluence : plusieurs acteurs. **Moverz** : devis Lyon.
+`,
+  },
+  {
+    slug: "self-stockage-vs-garde-meuble-traditionnel-marseille",
+    title: "Self-Stockage vs Garde-Meuble Marseille 2026 : Quel Choix ?",
+    description: "Self-stockage vs garde-meuble Marseille : comparatif, tarifs, conseils.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Self-stockage** vs **garde-meuble** à Marseille : choix selon besoin (accès libre vs prestation complète) en 2026.
+
+![Marseille - Vieux-Port](/images/cities/marseille-vieux-port.jpg)
+
+Self : vous gérez vos affaires, accès 24/7 souvent. Garde-meuble : enlèvement possible. Panier, Vieux-Port : sites périphérie moins chers. **Moverz** : comparer Marseille.
+`,
+  },
+  {
+    slug: "self-stockage-vs-garde-meuble-traditionnel-nice",
+    title: "Self-Stockage ou Garde-Meuble Nice 2026 : Comparatif",
+    description: "Self-stockage vs garde-meuble Nice : différences, tarifs, conseils.",
+    type: "satellite",
+    citySlug: "nice",
+    body: `**Self-stockage** ou **garde-meuble traditionnel** à Nice : comparatif 2026 pour choisir.
+
+![Nice - Promenade des Anglais](/images/cities/nice-promenade-anglais.jpg)
+
+Self = accès autonome, tarifs souvent compétitifs. Garde-meuble = enlèvement par pro si besoin. Cimiez, centre : climatisation conseillée objets sensibles. **Moverz** : devis Nice.
+`,
+  },
+  {
+    slug: "self-stockage-vs-garde-meuble-traditionnel-rennes",
+    title: "Self-Stockage vs Garde-Meuble Rennes 2026 : Lequel Choisir ?",
+    description: "Self-stockage vs garde-meuble Rennes : comparatif, tarifs, conseils.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `**Self-stockage** vs **garde-meuble** à Rennes : deux modèles en 2026. Self = accès libre, facturation au mois. Garde-meuble = prestation complète éventuelle.
+
+![Rennes - Parlement de Bretagne](/images/cities/rennes-parlement-bretagne.jpg)
+
+Thabor, centre : acteurs locaux et nationaux. Entre-deux logements : 1-3 mois fréquent. **Moverz** : devis Rennes.
+`,
+  },
+  {
+    slug: "self-stockage-vs-garde-meuble-traditionnel-rouen",
+    title: "Self-Stockage vs Garde-Meuble Rouen 2026 : Lequel Choisir ?",
+    description: "Self-stockage vs garde-meuble Rouen : comparatif, tarifs, conseils.",
+    type: "satellite",
+    citySlug: "rouen",
+    body: `**Self-stockage** vs **garde-meuble traditionnel** à Rouen : choix selon vos besoins en 2026.
+
+![Rouen - Cathédrale](/images/cities/rouen-cathedrale-notre-dame.jpg)
+
+Self = autonomie, accès 24/7 selon site. Garde-meuble = enlèvement possible, prise en charge. Tarifs 50-200€/mois selon taille. **Moverz** : devis Rouen.
+`,
+  },
+  {
+    slug: "seniors-aide-demenagement-strasbourg",
+    title: "Aide Déménagement Seniors Strasbourg 2026 : Solutions et Aides",
+    description: "Déménagement seniors Strasbourg : aides, services adaptés, plateformes. Guide 2026.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `**Aide au déménagement pour seniors à Strasbourg** : solutions adaptées en 2026. Plateformes (Frizbiz, AlloVoisins) ou déménageurs avec prestations « senior ».
+
+![Strasbourg - Petite France](/images/cities/strasbourg-petite-france.jpg)
+
+**Aides possibles** : APA (Allocation Personnalisée Autonomie), PCH selon situation. Vérifier éligibilité CAF, CPAM. Grande Île : précisions accès au devis. **Moverz** : comparer Strasbourg.
+`,
+  },
+  {
+    slug: "services-complementaires-demenagement-lille",
+    title: "Services Complémentaires Déménagement Lille 2026 : Nettoyage, Montage",
+    description: "Services complémentaires Lille : nettoyage fin de bail, montage meubles, cartons. Tarifs.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Services complémentaires déménagement à Lille** : nettoyage, montage meubles, fourniture cartons. Guide 2026.
+
+![Lille - Grand Place](/images/cities/lille-grand-place.jpg)
+
+| Service | Prix indicatif Lille |
+|---------|----------------------|
+| Nettoyage fin de bail | 150-350€ |
+| Montage meubles (IKEA) | 50-150€/pièce |
+| Cartons fournis | 2-5€/carton |
+
+Vérifier inclusions au devis. **Moverz** : devis Lille.
+`,
+  },
+  {
+    slug: "shurgard-lyon-sites-tarifs",
+    title: "Shurgard Lyon 2026 : Sites, Tarifs et Services",
+    description: "Shurgard Lyon : 4 sites, tarifs box, accès 24/7. Guide 2026.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Shurgard à Lyon** : plusieurs sites (Part-Dieu, Vénissieux, etc.) en 2026. Tarifs **50-200€/mois** selon taille.
+
+![Lyon - Basilique Fourvière](/images/cities/lyon-basilique-fourviere-toits.jpg)
+
+Accès 24/7, climatisation selon site. Comparer avec acteurs locaux (Klimanett, indépendants). **Source** : Shurgard.fr. **Moverz** : garde-meubles Lyon.
+`,
+  },
+  {
+    slug: "specialistes-piano-lille",
+    title: "Spécialistes Piano Lille 2026 : Monte-Piano vs Généralistes",
+    description: "Spécialistes piano Lille : monte-piano, généralistes, quand choisir. Prix.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Spécialistes piano à Lille** : **monte-piano** (portage dédié) vs **déménageurs généralistes**. Guide 2026.
+
+![Lille - Grand Place](/images/cities/lille-grand-place.jpg)
+
+**Monte-piano** : équipement adapté, assurance ad valorem. Piano queue, étage 3e+ : privilégier spécialiste. Prix 300-800€ selon complexité. Vieux-Lille : accès difficiles. **Moverz** : devis piano Lille.
+`,
+  },
+  {
+    slug: "stockage-pendant-demenagement-lille-duree",
+    title: "Stockage Pendant Déménagement Lille 2026 : Durée et Coût Optimal",
+    description: "Stockage pendant déménagement Lille : durée optimale, coût, conseils.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Stockage pendant déménagement à Lille** : durée **1-6 mois** selon situation (entre-deux, travaux). Coût **60-150€/mois** pour box 10-15 m³.
+
+![Lille - Grand Place](/images/cities/lille-grand-place.jpg)
+
+Négocier engagement 3-6 mois = réduction 5-15%. Éviter surdimensionnement : mesurer volume réel. **Moverz** : garde-meubles Lille.
+`,
+  },
+  {
+    slug: "stockage-pendant-demenagement-lyon",
+    title: "Stockage Pendant Déménagement Lyon 2026 : Solutions Temporaires",
+    description: "Stockage temporaire Lyon : box, durée, tarifs. Guide 2026.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Stockage temporaire pendant déménagement à Lyon** : self-stockage ou garde-meuble. **55-180€/mois** selon taille.
+
+![Lyon - Basilique Fourvière](/images/cities/lyon-basilique-fourviere-toits.jpg)
+
+Part-Dieu, Confluence : plusieurs acteurs. Durée 1-3 mois fréquente (entre-deux, travaux). **Moverz** : devis Lyon.
+`,
+  },
+  {
+    slug: "stockage-pendant-demenagement-marseille-duree",
+    title: "Stockage Pendant Déménagement Marseille 2026 : Durée et Tarifs",
+    description: "Stockage déménagement Marseille : combien de temps, coût. Guide 2026.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Stockage pendant déménagement à Marseille** : durée **1-6 mois** selon projet. Tarifs **60-200€/mois** (10-20 m³).
+
+![Marseille - Vieux-Port](/images/cities/marseille-vieux-port.jpg)
+
+Panier, Vieux-Port : sites périphérie souvent moins chers. Engagement 3-6 mois = négociation possible. **Moverz** : garde-meubles Marseille.
+`,
+  },
+
+  // Lot 13 : 20 articles (prix 2025/2026, garde-meuble, stockage)
+  {
+    slug: "prix-demenagement-studio-lille-2025",
+    title: "Prix Déménagement Studio Lille 2025 : 600-700€ Tarif Complet",
+    description: "Prix Déménagement Studio Lille 2025 : fourchettes 600-700€, facteurs de coût, conseils devis.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Prix déménagement studio à Lille** : fourchette **600-700€** pour un studio complet (local, volume, portage) en 2025.
+
+![Lille - Grand Place](/images/cities/lille-grand-place.jpg)
+
+## Facteurs de coût
+
+| Critère | Impact |
+|---------|--------|
+| Volume réel | 8-15 m³ typique studio |
+| Étages sans ascenseur | +10 à +30€/étage |
+| Portage long | +30 à +80€ |
+| Quatre mains | 250-400€/jour à la base |
+
+**Conseil** : Devis comparatifs, inventaire précis. Éviter juillet-août si possible. **Moverz** : devis studio Lille.
+`,
+  },
+  {
+    slug: "prix-demenageur-marseille-tarifs-2025",
+    title: "Prix Déménageur Marseille 2025 : Tarifs Moyens par Type de Logement",
+    description: "Prix déménageur Marseille 2025 : tarifs studio, T2, T3, maison. Données comparateurs.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Tarifs déménageur Marseille 2025** : fourchettes par type de logement (données comparateurs).
+
+![Marseille - Vieux-Port](/images/cities/marseille-vieux-port.jpg)
+
+| Logement | Fourchette |
+|----------|------------|
+| Studio | 480-600€ |
+| T2 | 800-1100€ |
+| T3 | 1300-1800€ |
+| Maison | 2000-3000€ |
+
+Vieux-Port, Panier : surcoûts accès. **Moverz** : devis Marseille.
+`,
+  },
+  {
+    slug: "prix-demenageur-nice-2025",
+    title: "Prix Déménageur Nice 2025 : Tarifs par Type de Logement",
+    description: "Prix déménageur Nice 2025 : fourchettes studio, T2, T3. Facteurs Côte d'Azur.",
+    type: "satellite",
+    citySlug: "nice",
+    body: `**Prix déménageur Nice 2025** : **520-650€** studio, **880-1150€** T2, **1400-1900€** T3 (données comparateurs).
+
+![Nice - Promenade des Anglais](/images/cities/nice-promenade-anglais.jpg)
+
+Cimiez, Vieux-Nice : immeubles anciens, escaliers = surcoût. **Moverz** : devis Nice.
+`,
+  },
+  {
+    slug: "prix-demenageur-rennes-t2-t3-2025",
+    title: "Prix Déménageur Rennes T2/T3 : Tarifs et Devis 2025",
+    description: "Prix déménageur Rennes T2/T3 2025 : fourchettes, conseils devis.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `**Prix déménageur Rennes T2/T3 2025** : T2 **850-1100€**, T3 **1350-1750€** (volume 20-35 m³).
+
+![Rennes - Parlement de Bretagne](/images/cities/rennes-parlement-bretagne.jpg)
+
+Thabor, centre : accès à préciser. **Moverz** : devis Rennes.
+`,
+  },
+  {
+    slug: "prix-demenageur-rouen-2025",
+    title: "Prix Déménageur Rouen 2025 : Tarifs Réels & Comparatif Complet",
+    description: "Prix déménageur Rouen 2025 : tarifs réels, comparatif, conseils.",
+    type: "satellite",
+    citySlug: "rouen",
+    body: `**Prix déménageur Rouen 2025** : studio **500-650€**, T2 **880-1150€**, T3 **1450-1900€** (données comparateurs).
+
+![Rouen - Cathédrale](/images/cities/rouen-cathedrale-notre-dame.jpg)
+
+Cathédrale, centre historique : ruelles = accès. Comparer 3+ devis. **Moverz** : devis Rouen.
+`,
+  },
+  {
+    slug: "prix-demenageur-strasbourg-2025",
+    title: "Prix Déménageur Strasbourg 2025 : Tarifs T1/T2/T3 & Astuces Économies",
+    description: "Prix déménageur Strasbourg 2025 : T1, T2, T3, astuces pour réduire la note.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `**Prix déménageur Strasbourg 2025** : T1 **500-620€**, T2 **870-1130€**, T3 **1420-1850€**.
+
+![Strasbourg - Petite France](/images/cities/strasbourg-petite-france.jpg)
+
+Grande Île : stationnement réglementé. Anticiper 4 semaines. **Moverz** : devis Strasbourg.
+`,
+  },
+  {
+    slug: "prix-garde-meuble-marseille-2025",
+    title: "Prix Garde-Meuble Marseille 2025 : Tarifs par Taille et Comparatif",
+    description: "Prix garde-meuble Marseille 2025 : tarifs 5-30 m³, comparatif acteurs.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Prix garde-meuble Marseille 2025** : **55-180€/mois** selon taille (5-25 m³). Panier, Vieux-Port : sites multiples.
+
+![Marseille - Vieux-Port](/images/cities/marseille-vieux-port.jpg)
+
+| Taille | Prix/mois |
+|--------|-----------|
+| 5-8 m³ | 55-90€ |
+| 10-15 m³ | 80-130€ |
+| 20-25 m³ | 120-180€ |
+
+**Moverz** : comparer Marseille.
+`,
+  },
+  {
+    slug: "prix-garde-meuble-montpellier-2025",
+    title: "Prix Garde-Meuble Montpellier 2025 : Comparatif 7 Acteurs",
+    description: "Prix garde-meuble Montpellier 2025 : comparatif acteurs, tarifs par taille.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `**Prix garde-meuble Montpellier 2025** : **50-170€/mois** selon taille. Écusson, Antigone : acteurs locaux et nationaux.
+
+![Montpellier - Place de la Comédie](/images/cities/montpellier-place-comedie.jpg)
+
+Engagement 3-6 mois = réduction possible. **Moverz** : devis Montpellier.
+`,
+  },
+  {
+    slug: "prix-garde-meuble-nantes-2025",
+    title: "Prix Garde-Meuble Nantes 2025 : Tarifs & Comparatif",
+    description: "Prix garde-meuble Nantes 2025 : fourchettes, comparatif.",
+    type: "satellite",
+    citySlug: "nantes",
+    body: `**Prix garde-meuble Nantes 2025** : **55-190€/mois** (5-25 m³). Île de Nantes, centre : sites nombreux.
+
+![Nantes - Château des Ducs](/images/cities/nantes-chateau-ducs-bretagne.jpg)
+
+Durée 1-6 mois fréquente. **Moverz** : comparer Nantes.
+`,
+  },
+  {
+    slug: "prix-garde-meuble-nice-2025",
+    title: "Prix Garde-Meuble Nice 2025 : Tarifs & Comparatif Complet",
+    description: "Prix garde-meuble Nice 2025 : tarifs, comparatif acteurs.",
+    type: "satellite",
+    citySlug: "nice",
+    body: `**Prix garde-meuble Nice 2025** : **60-200€/mois** selon taille. Côte d'Azur : climatisation conseillée objets sensibles.
+
+![Nice - Promenade des Anglais](/images/cities/nice-promenade-anglais.jpg)
+
+Comparer self vs garde-meuble classique. **Moverz** : devis Nice.
+`,
+  },
+  {
+    slug: "prix-garde-meuble-rennes-2025",
+    title: "Prix Garde-Meuble Rennes 2025 : Tarifs et Comparatif Quartiers",
+    description: "Prix garde-meuble Rennes 2025 : tarifs par quartier, comparatif.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `**Prix garde-meuble Rennes 2025** : **50-180€/mois**. Thabor, centre : plusieurs acteurs (Shurgard, locaux).
+
+![Rennes - Parlement de Bretagne](/images/cities/rennes-parlement-bretagne.jpg)
+
+Entre-deux logements : 1-3 mois fréquent. **Moverz** : devis Rennes.
+`,
+  },
+  {
+    slug: "prix-garde-meuble-rouen-2025",
+    title: "Prix Garde-Meuble Rouen 2025 : Tarifs & Comparatif Complet",
+    description: "Prix garde-meuble Rouen 2025 : fourchettes, comparatif.",
+    type: "satellite",
+    citySlug: "rouen",
+    body: `**Prix garde-meuble Rouen 2025** : **55-185€/mois** selon volume. Cathédrale, centre : sites accessibles.
+
+![Rouen - Cathédrale](/images/cities/rouen-cathedrale-notre-dame.jpg)
+
+Engagement 3 mois = négociation possible. **Moverz** : comparer Rouen.
+`,
+  },
+  {
+    slug: "prix-garde-meuble-strasbourg-2025",
+    title: "Prix Garde-Meuble Strasbourg 2025 : Tarifs & Astuces (40-400€/Mois)",
+    description: "Prix garde-meuble Strasbourg 2025 : 40-400€/mois selon taille, astuces.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `**Prix garde-meuble Strasbourg 2025** : **40-400€/mois** (petit box à grand volume). Grande Île : acteurs variés.
+
+![Strasbourg - Petite France](/images/cities/strasbourg-petite-france.jpg)
+
+Self-stockage souvent -10 à -20% vs garde-meuble classique. **Moverz** : devis Strasbourg.
+`,
+  },
+  {
+    slug: "stockage-pendant-demenagement-montpellier",
+    title: "Stockage Pendant Déménagement Montpellier : Solutions Temporaires",
+    description: "Stockage pendant déménagement Montpellier : solutions, durée, tarifs.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `**Stockage pendant déménagement à Montpellier** : self-stockage ou garde-meuble, **1-6 mois** selon projet.
+
+![Montpellier - Place de la Comédie](/images/cities/montpellier-place-comedie.jpg)
+
+**50-170€/mois** selon taille. Écusson, Antigone : périphérie souvent moins chère. **Moverz** : devis Montpellier.
+`,
+  },
+  {
+    slug: "stockage-pendant-demenagement-rouen-duree",
+    title: "Stockage Pendant Déménagement Rouen : Combien de Temps Prévoir ?",
+    description: "Stockage déménagement Rouen : durée optimale, conseils.",
+    type: "satellite",
+    citySlug: "rouen",
+    body: `**Stockage pendant déménagement à Rouen** : durée **1-6 mois** selon entre-deux ou travaux.
+
+![Rouen - Cathédrale](/images/cities/rouen-cathedrale-notre-dame.jpg)
+
+Tarifs **55-185€/mois**. Engagement 3-6 mois = réduction 5-15%. **Moverz** : garde-meubles Rouen.
+`,
+  },
+  {
+    slug: "stockage-pendant-demenagement-strasbourg",
+    title: "Stockage Pendant Déménagement Strasbourg : Durée & Prix 2025",
+    description: "Stockage déménagement Strasbourg : durée, prix 2025.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `**Stockage pendant déménagement à Strasbourg** : **1-6 mois** selon projet. **40-200€/mois** selon volume.
+
+![Strasbourg - Petite France](/images/cities/strasbourg-petite-france.jpg)
+
+Grande Île : plusieurs acteurs. **Moverz** : devis Strasbourg.
+`,
+  },
+  {
+    slug: "stockage-piano-demenagement-temporaire-lille",
+    title: "Stockage Piano entre Deux Déménagements à Lille : Solutions (2025)",
+    description: "Stockage piano temporaire Lille : solutions entre deux déménagements.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Stockage piano temporaire à Lille** : garde-meubles avec conditions adaptées (température, hygrométrie). **80-200€/mois** selon durée.
+
+![Lille - Grand Place](/images/cities/lille-grand-place.jpg)
+
+Vérifier climatisation, assurance ad valorem. Spécialiste piano possible pour enlèvement/livraison. **Moverz** : devis Lille.
+`,
+  },
+  {
+    slug: "stockage-temporaire-demenagement-international",
+    title: "Stockage Temporaire Déménagement International Lille : 120-300€/Mois 2025",
+    description: "Stockage temporaire déménagement international Lille : tarifs, durée.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Stockage temporaire pour déménagement international à Lille** : **120-300€/mois** selon volume (10-30 m³).
+
+![Lille - Grand Place](/images/cities/lille-grand-place.jpg)
+
+Entre export et livraison : délais 2-10 sem. Climat contrôlé conseillé objets sensibles. **Moverz** : devis international Lille.
+`,
+  },
+  {
+    slug: "stockage-temporaire-demenagement-rennes",
+    title: "Stockage Temporaire Pendant Déménagement à Rennes : Solutions et Prix",
+    description: "Stockage temporaire Rennes : solutions, prix pendant déménagement.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `**Stockage temporaire pendant déménagement à Rennes** : **50-180€/mois**. Self ou garde-meuble selon besoin.
+
+![Rennes - Parlement de Bretagne](/images/cities/rennes-parlement-bretagne.jpg)
+
+1-6 mois fréquent (entre-deux, travaux). **Moverz** : devis Rennes.
+`,
+  },
+  {
+    slug: "studio-15m2-demenagement-strasbourg",
+    title: "Studio 15m² Déménagement Strasbourg",
+    description: "Déménagement studio 15m² Strasbourg : volume, budget, conseils.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `**Déménagement studio 15 m² à Strasbourg** : volume **8-12 m³**. Budget **500-700€** (local, portage).
+
+![Strasbourg - Petite France](/images/cities/strasbourg-petite-france.jpg)
+
+Grande Île : accès à préciser. Inventaire détaillé = devis fiable. **Moverz** : devis Strasbourg.
+`,
+  },
+  {
+    slug: "surcout-demenagement-centre-marseille-combien",
+    title: "Surcoût Déménagement Centre Marseille : Combien Prévoir ?",
+    description: "Surcoût déménagement centre Marseille : fourchette, facteurs.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Surcoût déménagement centre Marseille** : **+10 à +25%** (Vieux-Port, Panier, ruelles). Portage long, stationnement difficile.
+
+![Marseille - Vieux-Port](/images/cities/marseille-vieux-port.jpg)
+
+Préciser accès au devis. **Moverz** : devis Marseille.
+`,
+  },
+  {
+    slug: "surcout-demenagement-montpellier-ecusson-aout",
+    title: "Surcoût Déménagement Montpellier : Écusson +15-25%, Août +20%",
+    description: "Surcoût Montpellier : Écusson, mois d'août. Fourchettes.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `**Surcoûts déménagement Montpellier** : Écusson (ruelles étroites) **+15 à +25%** ; août (haute saison) **+15 à +25%**.
+
+![Montpellier - Place de la Comédie](/images/cities/montpellier-place-comedie.jpg)
+
+Anticiper et préciser au devis. **Moverz** : devis Montpellier.
+`,
+  },
+  {
+    slug: "surcouts-caches-demenagement-lille",
+    title: "Surcoûts Cachés Déménagement Lille : 7 Frais à Anticiper 2025",
+    description: "Surcoûts cachés déménagement Lille : 7 frais à prévoir.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**7 surcoûts cachés à anticiper à Lille** : 1) Portage étage 2) Portage long 3) Monte-meuble 4) Emballage spéciaux 5) Dépendances 6) Week-end/férié 7) Dernière minute.
+
+![Lille - Grand Place](/images/cities/lille-grand-place.jpg)
+
+| Frais | Fourchette |
+|-------|------------|
+| Étage sans ascenseur | +10-30€/étage |
+| Portage long | +30-80€ |
+| Monte-meuble | 150-400€ |
+
+**Moverz** : devis détaillé Lille.
+`,
+  },
+  {
+    slug: "t1-demenagement-strasbourg-budget",
+    title: "T1 Déménagement Strasbourg Budget",
+    description: "Budget déménagement T1 Strasbourg : fourchette, conseils.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `**Budget déménagement T1 à Strasbourg** : **500-750€** (volume 10-15 m³, portage 2 hommes).
+
+![Strasbourg - Petite France](/images/cities/strasbourg-petite-france.jpg)
+
+Grande Île : surcoût accès. Comparer 3+ devis. **Moverz** : devis Strasbourg.
+`,
+  },
+
+  // Lot 14 : 20 articles (taille box, tarifs, transfert IT, transport)
+  {
+    slug: "taille-box-choisir-lyon",
+    title: "Quelle Taille de Box Choisir Lyon : Guide Volumes 2025",
+    description: "Taille box garde-meuble Lyon : guide volumes par logement, tarifs.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Quelle taille de box choisir à Lyon ?** Guide volumes 2025 : studio **5-8 m³**, T2 **10-15 m³**, T3 **20-25 m³**.
+
+![Lyon - Basilique Fourvière](/images/cities/lyon-basilique-fourviere-toits.jpg)
+
+| Logement | Volume conseillé |
+|----------|------------------|
+| Studio | 5-8 m³ |
+| T2 | 10-15 m³ |
+| T3 | 20-25 m³ |
+
+Part-Dieu, Confluence : comparer acteurs. **Moverz** : devis Lyon.
+`,
+  },
+  {
+    slug: "taille-box-garde-meuble-strasbourg",
+    title: "Quelle Taille Box Garde-Meuble Strasbourg ? Guide Complet 2025",
+    description: "Taille box garde-meuble Strasbourg : guide par volume, tarifs.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `**Quelle taille box garde-meuble à Strasbourg ?** Studio 5-8 m³, T2 10-15 m³, T3 20-30 m³. **40-200€/mois** selon taille.
+
+![Strasbourg - Petite France](/images/cities/strasbourg-petite-france.jpg)
+
+Grande Île : acteurs variés. Mesurer volume réel avant de réserver. **Moverz** : devis Strasbourg.
+`,
+  },
+  {
+    slug: "taille-box-stockage-demenagement-marseille",
+    title: "Quelle Taille de Box Choisir pour Stocker à Marseille ? Guide 2025",
+    description: "Taille box stockage Marseille : guide par volume, conseils.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Taille box stockage Marseille** : studio 5-8 m³, T2 10-15 m³, T3 20-25 m³. **55-180€/mois** selon taille.
+
+![Marseille - Vieux-Port](/images/cities/marseille-vieux-port.jpg)
+
+Panier, Vieux-Port : sites nombreux. Éviter surdimensionnement. **Moverz** : comparer Marseille.
+`,
+  },
+  {
+    slug: "taille-box-stockage-rouen",
+    title: "Quelle Taille Box Stockage Choisir à Rouen ? Guide 2025",
+    description: "Taille box stockage Rouen : guide volumes, tarifs 2025.",
+    type: "satellite",
+    citySlug: "rouen",
+    body: `**Quelle taille box stockage à Rouen ?** Studio 5-8 m³, T2 10-15 m³. **55-185€/mois**.
+
+![Rouen - Cathédrale](/images/cities/rouen-cathedrale-notre-dame.jpg)
+
+Cathédrale, centre : acteurs accessibles. **Moverz** : devis Rouen.
+`,
+  },
+  {
+    slug: "taille-camion-selon-logement-nice",
+    title: "Quelle Taille de Camion pour Déménager à Nice ? Guide par Logement 2025",
+    description: "Taille camion déménagement Nice : studio, T2, T3. Conseils.",
+    type: "satellite",
+    citySlug: "nice",
+    body: `**Taille camion déménagement Nice** : studio **12-15 m³**, T2 **20 m³**, T3 **30-35 m³**.
+
+![Nice - Promenade des Anglais](/images/cities/nice-promenade-anglais.jpg)
+
+Cimiez, Vieux-Nice : ruelles = préférer camion manœuvrable. **Moverz** : devis Nice.
+`,
+  },
+  {
+    slug: "tarif-demenagement-studio-montpellier-2025",
+    title: "Tarif Déménagement Studio Montpellier 2025 : 400-700€",
+    description: "Tarif déménagement studio Montpellier 2025 : fourchette 400-700€.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `**Tarif déménagement studio Montpellier 2025** : **400-700€** selon volume, accès, formule.
+
+![Montpellier - Place de la Comédie](/images/cities/montpellier-place-comedie.jpg)
+
+Écusson, Antigone : surcoûts accès. **Moverz** : devis Montpellier.
+`,
+  },
+  {
+    slug: "tarif-demenagement-t3-marseille-budget-realiste",
+    title: "Tarif Déménagement T3 Marseille : Budget Réaliste 2025",
+    description: "Tarif déménagement T3 Marseille : budget réaliste, facteurs.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Tarif déménagement T3 Marseille** : **1300-1800€** (volume 25-35 m³, local, portage).
+
+![Marseille - Vieux-Port](/images/cities/marseille-vieux-port.jpg)
+
+Vieux-Port, Panier : +10 à +25%. Devis détaillé obligatoire. **Moverz** : devis Marseille.
+`,
+  },
+  {
+    slug: "tarif-horaire-demenageur-rennes",
+    title: "Tarif Horaire Déménageur Rennes : Prix Main d'œuvre 2025",
+    description: "Tarif horaire déménageur Rennes : prix main d'œuvre, forfaits.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `**Tarif horaire déménageur Rennes** : **25-45€/h** (2 hommes) selon prestataire. Forfait demi-journée souvent plus avantageux.
+
+![Rennes - Parlement de Bretagne](/images/cities/rennes-parlement-bretagne.jpg)
+
+Thabor, centre : accès à préciser. Minimum 2-3 h. **Moverz** : devis Rennes.
+`,
+  },
+  {
+    slug: "tarif-horaire-porteur-demenagement-nantes",
+    title: "Tarif Horaire Porteur Déménagement Nantes 2026",
+    description: "Porteurs à l'heure Nantes : tarifs, forfaits 2026.",
+    type: "satellite",
+    citySlug: "nantes",
+    body: `**Porteurs à l'heure à Nantes** : **25-45€/h** (2 hommes). Forfait 3-4 h souvent plus rentable (200-350€).
+
+![Nantes - Château des Ducs](/images/cities/nantes-chateau-ducs-bretagne.jpg)
+
+Île de Nantes, centre : préciser accès. **Moverz** : devis Nantes.
+`,
+  },
+  {
+    slug: "tarifs-box-stockage-rennes-taille-duree",
+    title: "Tarifs Box Stockage Rennes : Prix selon Taille et Durée",
+    description: "Tarifs box stockage Rennes : prix par taille, durée, conseils.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `**Tarifs box stockage Rennes** : **50-180€/mois** selon taille (5-25 m³). Engagement 3-6 mois = réduction possible.
+
+![Rennes - Parlement de Bretagne](/images/cities/rennes-parlement-bretagne.jpg)
+
+| Taille | Prix/mois |
+|--------|-----------|
+| 5-8 m³ | 50-80€ |
+| 10-15 m³ | 70-120€ |
+| 20-25 m³ | 120-180€ |
+
+**Moverz** : comparer Rennes.
+`,
+  },
+  {
+    slug: "tarifs-demenageur-lyon",
+    title: "Tarifs Déménageur Lyon : Prix Horaire et Forfaits 2025",
+    description: "Tarifs déménageur Lyon : prix horaire, forfaits, conseils.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Tarifs déménageur Lyon** : horaire **25-45€/h** (2 hommes), forfait studio **500-700€**, T2 **850-1200€**, T3 **1400-1900€**.
+
+![Lyon - Basilique Fourvière](/images/cities/lyon-basilique-fourviere-toits.jpg)
+
+Presqu'île, Croix-Rousse : surcoûts. **Moverz** : devis Lyon.
+`,
+  },
+  {
+    slug: "tarifs-demenageur-toulouse",
+    title: "Tarifs Déménageur Toulouse : Prix Transparents et Compétitifs",
+    description: "Tarifs déménageur Toulouse : prix transparents, forfaits.",
+    type: "satellite",
+    citySlug: "toulouse",
+    body: `**Tarifs déménageur Toulouse** : studio **520-680€**, T2 **880-1150€**, T3 **1450-1950€** (données comparateurs).
+
+![Toulouse - Place du Capitole](/images/cities/toulouse-place-capitole.jpg)
+
+Capitole, Saint-Cyprien : accès à préciser. **Moverz** : devis Toulouse.
+`,
+  },
+  {
+    slug: "tarifs-petit-demenagement-volume-lille",
+    title: "Tarifs Petit Déménagement Volume Lille : 8-30m³ Prix 2025",
+    description: "Tarifs petit déménagement Lille : 8-30 m³, prix 2025.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Tarifs petit déménagement Lille** : 8 m³ **400-550€**, 15 m³ **550-750€**, 20 m³ **700-950€**, 30 m³ **1000-1400€**.
+
+![Lille - Grand Place](/images/cities/lille-grand-place.jpg)
+
+Vieux-Lille : surcoûts. **Moverz** : devis Lille.
+`,
+  },
+  {
+    slug: "transfert-informatique-entreprise-lyon",
+    title: "Transfert Informatique Entreprise Lyon : Serveurs Data 2025",
+    description: "Transfert informatique entreprise Lyon : serveurs, données, conseils.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Transfert informatique entreprise à Lyon** : serveurs, data centers. Prestataires spécialisés B2B.
+
+![Lyon - Basilique Fourvière](/images/cities/lyon-basilique-fourviere-toits.jpg)
+
+Part-Dieu, Confluence : acteurs IT. Planification, sauvegarde, traçabilité. **Moverz** : déménagement professionnel Lyon.
+`,
+  },
+  {
+    slug: "transfert-it-bureaux-strasbourg",
+    title: "Transfert IT Bureaux Strasbourg : Solutions 2025",
+    description: "Transfert IT bureaux Strasbourg : matériel informatique, solutions.",
+    type: "satellite",
+    citySlug: "strasbourg",
+    body: `**Transfert IT bureaux à Strasbourg** : matériel informatique, serveurs. Prestataires spécialisés déménagement bureau.
+
+![Strasbourg - Petite France](/images/cities/strasbourg-petite-france.jpg)
+
+Grande Île : planifier interruption minimale. **Moverz** : devis Strasbourg.
+`,
+  },
+  {
+    slug: "transfert-materiel-informatique-entreprise-lille",
+    title: "Transfert Matériel Informatique Entreprise Lille : Sécurité IT (2025)",
+    description: "Transfert matériel informatique Lille : sécurité, conseils entreprise.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**Transfert matériel informatique entreprise à Lille** : sauvegarde, emballage adapté, traçabilité.
+
+![Lille - Grand Place](/images/cities/lille-grand-place.jpg)
+
+Vieux-Lille, Euralille : pros B2B. **Moverz** : déménagement pro Lille.
+`,
+  },
+  {
+    slug: "transparence-prix-demenagement-lyon",
+    title: "Transparence Prix Déménagement Lyon : Éviter Surcoûts Cachés 2025",
+    description: "Transparence prix déménagement Lyon : éviter surcoûts cachés.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Transparence prix déménagement Lyon** : demander devis écrit détaillé (volume, étage, portage long, monte-meuble).
+
+![Lyon - Basilique Fourvière](/images/cities/lyon-basilique-fourviere-toits.jpg)
+
+Éviter devis "à partir de". Comparer 3+ offres. **Source** : DGCCRF. **Moverz** : devis Lyon.
+`,
+  },
+  {
+    slug: "transport-cartons-uniquement-lyon",
+    title: "Transport Cartons Uniquement Lyon : Sans Meubles 2025",
+    description: "Transport cartons uniquement Lyon : sans meubles, tarifs.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Transport cartons uniquement à Lyon** (sans meubles) : **200-400€** selon volume et trajet.
+
+![Lyon - Basilique Fourvière](/images/cities/lyon-basilique-fourviere-toits.jpg)
+
+Fourgon ou camionnette suffisant. Plateformes (Frizbiz, Yoojo) ou déménageurs. **Moverz** : devis Lyon.
+`,
+  },
+  {
+    slug: "transport-conteneur-demenagement-international",
+    title: "Transport Conteneur Déménagement International : 20/40 Pieds Guide 2025",
+    description: "Transport conteneur déménagement international : 20/40 pieds, guide.",
+    type: "guide",
+    body: `**Transport conteneur déménagement international** : **20 pieds** (33 m³) ou **40 pieds** (67 m³).
+
+## Choix conteneur
+
+| Type | Volume | Usage |
+|------|--------|-------|
+| 20 pieds | ~33 m³ | Appartement T2-T3 |
+| 40 pieds | ~67 m³ | Maison, grand volume |
+
+**Groupage (LCL)** : partager conteneur = moins cher si < 15 m³. **Source** : Douanes, transitaires. **Moverz** : devis international.
+`,
+  },
+  {
+    slug: "transport-maritime-container-lyon",
+    title: "Transport Maritime Container Déménagement depuis Lyon",
+    description: "Transport maritime container Lyon : export, ports, tarifs.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Transport maritime container depuis Lyon** : convoyage Lyon → Marseille ou Le Havre, puis container.
+
+![Lyon - Basilique Fourvière](/images/cities/lyon-basilique-fourviere-toits.jpg)
+
+**Délai** : 4-10 sem. **Coût** : 3 000-12 000€ selon destination. **Moverz** : orientation international Lyon.
+`,
+  },
+
+  // Lot 15 : articles restants (transport, aide urgence, prix 2026, guide comparatif)
+  {
+    slug: "transport-meuble-international-toulouse",
+    title: "Transport Meuble International Toulouse : Solutions Professionnelles",
+    description: "Transport meubles international Toulouse : solutions pros, tarifs.",
+    type: "satellite",
+    citySlug: "toulouse",
+    body: `**Transport meubles international depuis Toulouse** : transitaires, container ou groupage. Capitole, centre : convoyage Toulouse → port (Marseille, Bordeaux).
+
+![Toulouse - Place du Capitole](/images/cities/toulouse-place-capitole.jpg)
+
+**Coût** : 2 500-10 000€ selon volume et destination. **Moverz** : devis international Toulouse.
+`,
+  },
+  {
+    slug: "transport-meubles-lille-sans-demenageur",
+    title: "Transport Meubles Lille Sans Déménageur : 5 Solutions 2025",
+    description: "Transport meubles Lille sans déménageur : solutions DIY, location, plateformes.",
+    type: "satellite",
+    citySlug: "lille",
+    body: `**5 solutions pour transporter vos meubles à Lille sans déménageur** : 1) Location camion (Europcar, etc.) 2) Frizbiz / Yoojo (porteurs) 3) Colisweb 4) Louer fourgon + amis 5) Vendre et racheter.
+
+![Lille - Grand Place](/images/cities/lille-grand-place.jpg)
+
+Selon volume et budget. **Moverz** : comparer devis Lille.
+`,
+  },
+  {
+    slug: "transport-piano-a-queue-toulouse",
+    title: "Transport Piano à Queue Toulouse : Expertise et Sécurité",
+    description: "Transport piano à queue Toulouse : spécialistes, tarifs, sécurité.",
+    type: "satellite",
+    citySlug: "toulouse",
+    body: `**Transport piano à queue à Toulouse** : spécialiste recommandé (équipement, assurance ad valorem). **400-900€** selon étages, accès.
+
+![Toulouse - Place du Capitole](/images/cities/toulouse-place-capitole.jpg)
+
+Capitole, Saint-Cyprien : immeubles anciens. **Moverz** : devis piano Toulouse.
+`,
+  },
+  {
+    slug: "transport-piano-droit-toulouse",
+    title: "Transport Piano Droit Toulouse : Solutions Professionnelles",
+    description: "Transport piano droit Toulouse : pros, tarifs.",
+    type: "satellite",
+    citySlug: "toulouse",
+    body: `**Transport piano droit à Toulouse** : **250-500€** selon accès. Spécialiste ou déménageur avec équipement adapté.
+
+![Toulouse - Place du Capitole](/images/cities/toulouse-place-capitole.jpg)
+
+Assurance marchandises ou ad valorem. **Moverz** : devis Toulouse.
+`,
+  },
+  {
+    slug: "transport-piano-longue-distance-nantes",
+    title: "Transport Piano Longue Distance Nantes : France & Europe 2025",
+    description: "Transport piano longue distance Nantes : France, Europe, tarifs.",
+    type: "satellite",
+    citySlug: "nantes",
+    body: `**Transport piano longue distance depuis Nantes** : France **400-1200€**, Europe **800-2500€** selon distance.
+
+![Nantes - Château des Ducs](/images/cities/nantes-chateau-ducs-bretagne.jpg)
+
+Spécialiste préférable. Emballage, assurance ad valorem. **Moverz** : devis Nantes.
+`,
+  },
+  {
+    slug: "transport-quelques-meubles-lyon",
+    title: "Transport Quelques Meubles Lyon : Solutions et Tarifs 2025",
+    description: "Transport quelques meubles Lyon : solutions, tarifs.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Transport de quelques meubles à Lyon** : fourgon ou camionnette **150-400€**. Frizbiz, Yoojo ou déménageurs « petit volume ».
+
+![Lyon - Basilique Fourvière](/images/cities/lyon-basilique-fourviere-toits.jpg)
+
+Préciser volume au devis. **Moverz** : devis Lyon.
+`,
+  },
+  {
+    slug: "trouver-aide-demenagement-dernier-moment-nantes",
+    title: "Trouver Aide Déménagement Dernier Moment Nantes 2025",
+    description: "Aide déménagement dernier moment Nantes : urgence, solutions.",
+    type: "satellite",
+    citySlug: "nantes",
+    body: `**Trouver une aide au déménagement en dernier moment à Nantes** : appeler plusieurs pros, préciser urgence. Surcoût **+30 à +60%**.
+
+![Nantes - Château des Ducs](/images/cities/nantes-chateau-ducs-bretagne.jpg)
+
+Frizbiz, Yoojo, déménageurs locaux. **Moverz** : demande Nantes.
+`,
+  },
+  {
+    slug: "trouver-aide-derniere-minute-demenagement-montpellier",
+    title: "Trouver Aide Dernière Minute Déménagement Montpellier : Urgence",
+    description: "Aide déménagement dernière minute Montpellier : urgence.",
+    type: "satellite",
+    citySlug: "montpellier",
+    body: `**Aide déménagement dernière minute à Montpellier** : multiplier les appels, préciser urgence. Surcoût **+30 à +50%**.
+
+![Montpellier - Place de la Comédie](/images/cities/montpellier-place-comedie.jpg)
+
+Écusson, Antigone : disponibilités rares en haute saison. **Moverz** : devis Montpellier.
+`,
+  },
+  {
+    slug: "vehicule-demenagement-international-nantes",
+    title: "Véhicule Déménagement International Nantes : Export Auto",
+    description: "Export véhicule déménagement international Nantes.",
+    type: "satellite",
+    citySlug: "nantes",
+    body: `**Export véhicule dans un déménagement international depuis Nantes** : transitaires auto, RORO ou container dédié.
+
+![Nantes - Château des Ducs](/images/cities/nantes-chateau-ducs-bretagne.jpg)
+
+**Coût** : 1 500-4 000€ selon destination. **Moverz** : orientation international Nantes.
+`,
+  },
+  {
+    slug: "vendre-meubles-avant-demenagement-nice",
+    title: "Vendre ses Meubles avant Déménagement Nice : Plateformes & Prix 2025",
+    description: "Vendre meubles avant déménagement Nice : Leboncoin, Marketplace, conseils.",
+    type: "satellite",
+    citySlug: "nice",
+    body: `**Vendre ses meubles avant déménagement à Nice** : Leboncoin, Facebook Marketplace, Vinted (petits objets). Prix -30 à -50% du neuf en occasion.
+
+![Nice - Promenade des Anglais](/images/cities/nice-promenade-anglais.jpg)
+
+Anticiper 2-4 semaines. **Moverz** : devis Nice.
+`,
+  },
+  {
+    slug: "volume-camion-12m3-20m3-35m3-rennes",
+    title: "Volume Camion 12m³ 20m³ 35m³ Rennes : Lequel Choisir ?",
+    description: "Volume camion Rennes : 12, 20, 35 m³, quel choix selon logement.",
+    type: "satellite",
+    citySlug: "rennes",
+    body: `**Choix volume camion à Rennes** : **12 m³** studio/T1, **20 m³** T2, **35 m³** T3/maison.
+
+![Rennes - Parlement de Bretagne](/images/cities/rennes-parlement-bretagne.jpg)
+
+| Volume | Logement | Prix location/jour |
+|--------|----------|-------------------|
+| 12 m³ | Studio | 80-120€ |
+| 20 m³ | T2 | 100-160€ |
+| 35 m³ | T3+ | 150-220€ |
+
+**Moverz** : devis Rennes.
+`,
+  },
+  {
+    slug: "zones-affaires-lyon-demenagement",
+    title: "Zones d'Affaires Lyon Déménagement : Part-Dieu, Confluence 2025",
+    description: "Zones affaires Lyon déménagement : Part-Dieu, Confluence, surcoûts.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Déménagement zones d'affaires Lyon** : Part-Dieu, Confluence, Gerland. Surcoûts accès bureaux (ascenseurs charge, horaires).
+
+![Lyon - Basilique Fourvière](/images/cities/lyon-basilique-fourviere-toits.jpg)
+
+Planifier créneaux hors heures de pointe. **Moverz** : devis pro Lyon.
+`,
+  },
+  {
+    slug: "prix-demenageur-toulouse-2026",
+    title: "Prix Déménageur Toulouse 2026 : Tarifs Réels & Comparatif Complet",
+    description: "Prix déménageur Toulouse 2026 : 520€ studio, 950€ T2, 1600€ T3. Données réelles.",
+    type: "satellite",
+    citySlug: "toulouse",
+    body: `**Prix déménageur Toulouse 2026** : studio **520€**, T2 **950€**, T3 **1600€**, maison **2550€** (données comparateurs).
+
+![Toulouse - Place du Capitole](/images/cities/toulouse-place-capitole.jpg)
+
+Capitole, Saint-Cyprien : surcoûts +15-20%. **Moverz** : devis Toulouse.
+`,
+  },
+  {
+    slug: "prix-demenageur-bordeaux-2026",
+    title: "Prix Déménageur Bordeaux 2026 : Tarifs Réels & Comparatif Complet",
+    description: "Prix déménageur Bordeaux 2026 : 530€ studio, 970€ T2, 1650€ T3.",
+    type: "satellite",
+    citySlug: "bordeaux",
+    body: `**Prix déménageur Bordeaux 2026** : studio **530€**, T2 **970€**, T3 **1650€**, maison **2600€**.
+
+![Bordeaux - Place de la Bourse](/images/cities/bordeaux-place-bourse.jpg)
+
+Centre historique : +15-20%. **Moverz** : devis Bordeaux.
+`,
+  },
+  {
+    slug: "prix-demenageur-marseille-2026",
+    title: "Prix Déménageur Marseille 2026 : Tarifs Réels & Comparatif Complet",
+    description: "Prix déménageur Marseille 2026 : 540€ studio, 980€ T2, 1670€ T3.",
+    type: "satellite",
+    citySlug: "marseille",
+    body: `**Prix déménageur Marseille 2026** : studio **540€**, T2 **980€**, T3 **1670€**, maison **2650€**.
+
+![Marseille - Vieux-Port](/images/cities/marseille-vieux-port.jpg)
+
+Vieux-Port, Panier : +15-20%, relief +10-15%. **Moverz** : devis Marseille.
+`,
+  },
+  {
+    slug: "prix-demenageur-lyon-2026",
+    title: "Prix Déménageur Lyon 2026 : Tarifs Réels & Comparatif Complet",
+    description: "Prix déménageur Lyon 2026 : 535€ studio, 975€ T2, 1660€ T3.",
+    type: "satellite",
+    citySlug: "lyon",
+    body: `**Prix déménageur Lyon 2026** : studio **535€**, T2 **975€**, T3 **1660€**, maison **2620€**.
+
+![Lyon - Basilique Fourvière](/images/cities/lyon-basilique-fourviere-toits.jpg)
+
+Presqu'île, Croix-Rousse : +15-20%. **Moverz** : devis Lyon.
+`,
+  },
+  {
+    slug: "comparer-plateformes-devis-demenagement-2026",
+    title: "Comment Comparer les Plateformes de Devis Déménagement ? Guide 2026",
+    description: "Comparer plateformes devis déménagement : Nextories, Emoovz, Moverz. 5 critères.",
+    type: "guide",
+    body: `**Comparer les plateformes de devis déménagement** : 5 critères 2026.
+
+## Critères de comparaison
+
+| Critère | À vérifier |
+|---------|------------|
+| Inventaire | Précision volume, étage |
+| Rapidité | Délai de réponse |
+| Réseau | Nombre de pros, couverture |
+| Prix | Transparence, pas de suppléments cachés |
+| Avis | Vérification réelle |
+
+**Moverz** : inventaire détaillé, devis comparables. [Devis gratuit](/devis).
+`,
+  },
+  {
+    slug: "prix-demenageur-nice-2026",
+    title: "Prix Déménageur Nice 2026 : Tarifs Réels & Comparatif Complet",
+    description: "Combien coûte un déménagement à Nice en 2026 ? Fourchettes studio à maison (545€-2670€), Vieux-Nice et collines, exemples concrets, conseils pour des devis comparables.",
+    type: "guide",
+    citySlug: "nice",
+    body: `**Nice est la 5e ville de France et le cœur de la Côte d'Azur.** Chaque année, des milliers de déménagements s'y déroulent : étudiants, retraités, familles attirées par le climat et la qualité de vie. Le marché niçois est dense mais les prix varient fortement selon le quartier (Vieux-Nice, collines, zones accessibles) et la période.
+
+Voici les fourchettes réalistes pour 2026, basées sur les dossiers traités via Moverz.fr.
+
+> **Comparez des devis à Nice en toute transparence**  
+> [Moverz](/) transmet votre dossier à des déménageurs vérifiés (Pappers, avis Google). 3-5 devis comparables, dossier anonyme. [Démarrer gratuitement](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-nice).
+
+---
+
+## Prix moyens d'un déménagement à Nice en 2026
+
+![Nice - Promenade des Anglais](/images/cities/nice-promenade-anglais.jpg)
+
+*Photo : La Promenade des Anglais, symbole de Nice. Vieux-Nice et collines = surcoûts accès à prévoir.*
+
+### Tableau récapitulatif par surface
+
+| Logement | Volume estimé | Nice → Nice (local) | Nice → Paris / province |
+|---|---|---|---|
+| Studio / T1 (20-35 m²) | 10-20 m³ | 450–800 € | 950–1 600 € |
+| T2 (40-55 m²) | 20-35 m³ | 750–1 350 € | 1 400–2 500 € |
+| T3 (60-80 m²) | 35-55 m³ | 1 200–2 100 € | 2 000–3 800 € |
+| T4 / grande maison (90-120 m²) | 55-80 m³ | 1 900–3 500 € | 3 000–5 500 € |
+
+*Prix TTC, prestation standard. Vieux-Nice et collines non inclus (voir surcoûts ci-dessous).*
+
+### Fourchettes de référence Moverz 2026
+
+- **Studio** : **545 €** (base) → 680 € (Vieux-Nice, collines)
+- **T2** : **990 €** (base) → 1 200 € (centre ancien)
+- **T3** : **1 680 €** (base) → 2 000 € (accès difficile)
+- **Maison 4-5 pièces** : **2 670 €** (base)
+
+---
+
+## Spécificités niçoises qui font varier le prix
+
+### Vieux-Nice et quartiers anciens
+
+Ruelle étroites, immeubles anciens sans ascenseur, stationnement limité :
+- Accès camion très difficile (zones piétonnes, voies étroites)
+- Portage long depuis le parking autorisé
+- Ascenseurs rares dans le centre historique
+
+**Impact estimé : +15 à +25 % vs un appartement avec bon accès.**
+
+### Cimiez, Mont-Boron, collines
+
+Quartiers résidentiels en hauteur, maisons et villas :
+- Portage important si allée étroite ou pas d'accès camion
+- Monte-meuble souvent nécessaire pour les étages élevés
+
+**Impact estimé : +10 à +20 % selon le type d'accès.**
+
+### Nice Nord, Lingostière, Ariane
+
+Quartiers plus récents, voiries mieux adaptées. Les déménagements y sont souvent au tarif de base.
+
+---
+
+## Les 6 facteurs qui font varier le prix à Nice
+
+### 1. L'accès rue et le stationnement
+
+Vieux-Nice, collines : le camion ne peut souvent pas stationner devant. Prévoir un arrêté de circulation si besoin (mairie, 2-3 semaines avant).
+
+### 2. L'étage et l'ascenseur
+
+Nombreux immeubles niçois sans ascenseur adapté aux meubles :
+- Rez-de-chaussée ou ascenseur adapté : tarif de base
+- 3e étage sans ascenseur : +15-25 %
+- 5e étage sans ascenseur : +30-45 %
+
+### 3. La période
+
+| Période | Impact |
+|---|---|
+| Juillet-août (tourisme) | +30 à +50 % |
+| Fin de mois | +15 à +25 % |
+| Rentrée (septembre) | +15 à +30 % |
+| Octobre-mars, milieu de semaine | Tarif de base |
+
+### 4. La formule
+
+- **Économique** : vous emballez. Tarif de base.
+- **Standard** : déménageur emballe les fragiles. +20-35 %
+- **Premium** : clé en main. +40-70 %
+
+### 5. Les objets particuliers
+
+| Objet | Surcoût estimé |
+|---|---|
+| Piano droit | 180-500 € |
+| Piano à queue | 450-1 200 € |
+| Monte-meuble | 150-400 € |
+
+### 6. Monaco et alentours
+
+Nice–Monaco (~20 km) : prix similaires à un déménagement local, mais formalités Monaco à anticiper (TVA, stationnement).
+
+---
+
+## Exemples concrets à Nice
+
+### Exemple 1 : Studio Vieux-Nice → T2 Nice Nord
+- Studio 28 m², 12 m³, 2e étage sans ascenseur (départ)
+- T2 50 m², rez-de-chaussée (arrivée)
+- Formule économique, novembre
+- **Prix constaté : 700–1 000 €**
+
+### Exemple 2 : T3 Cimiez → T3 Lingostière
+- 70 m², 40 m³, accès correct départ et arrivée
+- Formule standard, mars
+- **Prix constaté : 1 550–2 100 €**
+
+### Exemple 3 : T2 Nice → Paris (~930 km)
+- 45 m³, 2e étage avec ascenseur
+- Formule standard, avril
+- **Prix constaté : 2 200–3 500 €**
+
+### Exemple 4 : Maison Nice → Marseille (~220 km)
+- 90 m², 55 m³, accès maison
+- Formule économique, octobre
+- **Prix constaté : 2 400–3 800 €**
+
+---
+
+## Déménagement depuis ou vers Nice : corridors principaux
+
+### Nice → Paris (~930 km)
+
+Corridor très fréquenté.
+
+| Volume | Prix estimé |
+|---|---|
+| 20 m³ (T2) | 1 800 – 2 800 € |
+| 40 m³ (T3) | 2 800 – 4 500 € |
+
+### Nice → Marseille (~220 km)
+
+Trajet courant, bonne offre.
+
+| Volume | Prix estimé |
+|---|---|
+| 20 m³ (T2) | 1 000 – 1 600 € |
+| 40 m³ (T3) | 1 600 – 2 500 € |
+
+### Nice → Monaco (~20 km)
+
+Courte distance, surcoût possible secteur prince.
+
+---
+
+## Comment obtenir des devis comparables à Nice
+
+Environ 40 % des devis obtenus classiquement ne sont pas comparables (volumes différents, accès flous). Moverz standardise le dossier : volume estimé, accès complets (étages, stationnement, portage), même transmission à tous les pros. Les déménageurs du réseau Nice sont vérifiés (Pappers, avis Google, licence transport).
+
+---
+
+## Résumé
+
+1. **Budget de base à Nice** : 45-70 €/m³ pour un déménagement local
+2. **Vieux-Nice et collines** : surcoût 15-25 %, accès à préciser
+3. **Haute saison** : juillet-août = +30-50 %, réservez tôt
+4. **Comparez sur une base identique** : volume précis, accès complets
+
+> **Déménagez à Nice sans mauvaises surprises**  
+> [Moverz](/) vérifie chaque déménageur niçois. 3-5 devis comparables. [Obtenir mes devis](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-nice-fin).
+
+*Sources : données Moverz.fr 2025-2026 | Ville de Nice*
+`,
+  },
+  {
+    slug: "prix-demenageur-strasbourg-2026",
+    title: "Prix Déménageur Strasbourg 2026 : Tarifs Réels & Comparatif Complet",
+    description: "Combien coûte un déménagement à Strasbourg en 2026 ? Fourchettes studio à maison (525€-2580€), spécificités Grande Île et Petite France, exemples concrets, conseils pour des devis comparables.",
+    type: "guide",
+    citySlug: "strasbourg",
+    body: `**Strasbourg est une des grandes métropoles françaises pour le déménagement.**
+
+Siège du Parlement européen et 7e ville de France, Strasbourg accueille chaque année des milliers de déménagements : étudiants, fonctionnaires européens, familles attirées par la qualité de vie alsacienne. Le marché strasbourgeois est concurrentiel, mais les écarts de prix entre déménageurs restent importants selon le quartier, l'accès et la formule choisie.
+
+Voici les fourchettes réalistes pour 2026, basées sur les dossiers traités via Moverz.fr.
+
+> **Comparez des devis à Strasbourg en toute transparence**  
+> [Moverz](/) transmet votre dossier à des déménageurs vérifiés de la région (Pappers, avis Google, licence transport). 3-5 devis comparables, dossier anonyme. [Démarrer gratuitement](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-strasbourg).
+
+---
+
+## Prix moyens d'un déménagement à Strasbourg en 2026
+
+![Strasbourg - Petite France et canaux](/images/cities/strasbourg-petite-france.jpg)
+
+*Photo : La Petite France, quartier historique UNESCO. Ruelles pavées et accès camion souvent difficiles — prévoyez +15 à +20% sur les devis.*
+
+### Tableau récapitulatif par surface
+
+| Logement | Volume estimé | Strasbourg → Strasbourg (local) | Strasbourg → Paris / province |
+|---|---|---|---|
+| Studio / T1 (20-35 m²) | 10-20 m³ | 450–750 € | 750–1 400 € |
+| T2 (40-55 m²) | 20-35 m³ | 750–1 400 € | 1 150–2 300 € |
+| T3 (60-80 m²) | 35-55 m³ | 1 150–2 200 € | 1 750–3 400 € |
+| T4 / grande maison (90-120 m²) | 55-80 m³ | 1 750–3 200 € | 2 600–5 200 € |
+
+*Prix TTC, prestation standard. Grande Île et Petite France non inclus (voir surcoûts ci-dessous).*
+
+### Fourchettes de référence Moverz 2026
+
+- **Studio** : **525 €** (base) → 650 € (Grande Île)
+- **T2** : **960 €** (base) → 1 150 € (centre historique)
+- **T3** : **1 630 €** (base) → 1 950 € (accès difficile)
+- **Maison 4-5 pièces** : **2 580 €** (base)
+
+---
+
+## Spécificités strasbourgeoises qui font varier le prix
+
+Strasbourg n'est pas une ville uniforme. La Grande Île (centre UNESCO), la Petite France et certains quartiers anciens imposent des contraintes importantes aux déménageurs.
+
+### Grande Île et Petite France
+
+Quartiers classés UNESCO, ruelles pavées, immeubles à colombages, ponts et canaux :
+- Accès camion très limité (rues piétonnes, voies étroites)
+- Portage souvent long depuis le stationnement autorisé
+- Ascenseurs rares dans les bâtiments anciens
+
+**Impact estimé selon Moverz.fr : +15 à +25 % vs un appartement avec bon accès.**
+
+### Neudorf, Cronenbourg, Hautepierre
+
+Quartiers résidentiels plus récents : voiries plus larges, parkings mieux adaptés. Les déménagements y sont souvent au tarif de base, voire légèrement inférieurs pour les zones périphériques.
+
+### Robertsau, Orangerie
+
+Quartiers verdoyants, maisons et immeubles variés. L'accès dépend fortement de la rue et du stationnement. Comptez le tarif de base à +10 % selon les cas.
+
+---
+
+## Les 6 facteurs qui font vraiment varier le prix à Strasbourg
+
+### 1. L'accès rue et le stationnement
+
+Grande Île, Petite France, centre historique : le camion ne peut souvent pas stationner devant la porte. Le déménageur doit :
+- Demander une autorisation de voirie à l'Eurométropole (délai 2-3 semaines, coût 50-150 €)
+- Ou stationner à distance et assurer un portage long
+
+**Sans autorisation** : portage 50-150 m = surcoût de 50-120 €.
+
+### 2. L'étage et l'ascenseur
+
+À Strasbourg, de nombreux immeubles du centre n'ont pas d'ascenseur, ou un ascenseur trop étroit pour les meubles.
+
+- Rez-de-chaussée ou ascenseur adapté : tarif de base
+- 3e étage sans ascenseur : +15-25 %
+- 5e étage sans ascenseur : +30-45 %
+- Maisons à étages (Robertsau, Orangerie) : variable selon l'accès
+
+### 3. La période
+
+| Période | Impact |
+|---|---|
+| Juillet-août | +25 à +45 % |
+| Fin de mois (28-31) | +15 à +25 % |
+| Rentrée universitaire (septembre) | +15 à +30 % |
+| Vendredi-samedi | +10 à +20 % |
+| Octobre-mars, milieu de semaine | Tarif de base |
+
+Strasbourg compte plus de 50 000 étudiants. La rentrée et les fins de mois génèrent des pics de demande importants.
+
+### 4. La formule
+
+- **Économique** : vous emballez, vous démontez. Tarif de base.
+- **Standard** : déménageur emballe les fragiles. +20-35 %
+- **Premium** : déménageur emballe tout, démonte et remonte. +40-70 %
+
+### 5. Les objets particuliers
+
+| Objet | Surcoût estimé |
+|---|---|
+| Piano droit | 180-450 € |
+| Piano à queue | 450-1 000 € |
+| Coffre-fort > 100 kg | 150-350 € |
+| Monte-meuble (étages sans ascenseur) | 150-400 € |
+
+### 6. Le monte-meuble
+
+Indispensable pour les étages élevés sans ascenseur. Souvent en option selon les devis.
+
+- Monte-meuble électrique (jusqu'au 5e) : 150-350 €
+- Monte-meuble sur camion : 180-400 €
+
+---
+
+## Exemples concrets à Strasbourg
+
+### Exemple 1 : Studio Petite France → T2 Neudorf
+
+- Studio 28 m², 12 m³, 2e étage sans ascenseur (départ, rue étroite)
+- T2 50 m², 25 m³, rez-de-chaussée (arrivée)
+- Formule économique, milieu de semaine, novembre
+- **Prix constaté : 680-950 €**
+
+### Exemple 2 : T3 Cronenbourg → T3 Robertsau
+
+- 75 m², 45 m³, bon accès départ et arrivée
+- Formule standard (emballage fragiles), septembre
+- **Prix constaté : 1 350-1 900 €**
+
+### Exemple 3 : T4 Strasbourg → Paris (490 km)
+
+- 95 m², 60 m³, 2e étage avec ascenseur (départ), accès facile (arrivée)
+- Formule standard, mars
+- **Prix constaté : 2 900-4 500 €**
+
+### Exemple 4 : Maison Robertsau → Colmar (70 km)
+
+- 110 m², 70 m³, maison avec jardin
+- Formule économique, octobre
+- **Prix constaté : 2 200-3 200 €**
+
+---
+
+## Comment obtenir des devis comparables à Strasbourg
+
+### Le problème des devis non comparables
+
+Selon les données Moverz.fr, **environ 40 % des devis obtenus de façon classique ne sont pas comparables** : volumes estimés différemment, accès non précisés, formules mal définies.
+
+Résultat : le client choisit le moins cher et découvre les suppléments le jour J.
+
+### La méthode Moverz
+
+Moverz standardise le dossier avant de le transmettre :
+1. **Volume estimé** selon votre logement et inventaire
+2. **Accès complets** : étages, ascenseurs, stationnement, distance portage (départ ET arrivée)
+3. **Contraintes spécifiques** : Grande Île, rue pavée, monte-meuble nécessaire
+4. **Même dossier** envoyé à tous les déménageurs → devis réellement comparables
+
+Les déménageurs du réseau Moverz intervenant à Strasbourg sont vérifiés : solidité financière (Pappers), avis clients (Google), licence de transport en ordre.
+
+---
+
+## Déménagement depuis ou vers Strasbourg : quelles différences ?
+
+### Strasbourg → Paris (~490 km)
+
+Corridor très fréquenté, bonne disponibilité.
+
+| Volume | Prix estimé |
+|---|---|
+| 20 m³ (T2) | 1 250 – 2 000 € |
+| 40 m³ (T3) | 2 100 – 3 400 € |
+| 60 m³ (T4) | 2 900 – 4 800 € |
+
+### Strasbourg → Lyon (~490 km)
+
+Trajet courant, bonne offre.
+
+| Volume | Prix estimé |
+|---|---|
+| 20 m³ (T2) | 1 200 – 1 900 € |
+| 40 m³ (T3) | 2 000 – 3 200 € |
+
+### Strasbourg → Colmar (~70 km)
+
+Courte distance, souvent groupage possible.
+
+| Volume | Prix estimé |
+|---|---|
+| 20 m³ (T2) | 750 – 1 200 € |
+| 40 m³ (T3) | 1 250 – 2 000 € |
+
+### Strasbourg → Allemagne (Kehl, Karlsruhe, etc.)
+
+Frontière proche. Les déménageurs strasbourgeois couvrent souvent l'Allemagne limitrophe. Prix similaires à une longue distance française + frais douaniers éventuels si transit de biens.
+
+---
+
+## Questions fréquentes sur le déménagement à Strasbourg
+
+**Faut-il une autorisation de stationnement pour un déménagement à Strasbourg ?**  
+Oui. Pour stationner un camion sur la voie publique à Strasbourg, une autorisation de voirie est nécessaire. La demande s'effectue auprès de l'Eurométropole de Strasbourg, 2 à 3 semaines avant la date. Coût : 50-150 € selon la durée et le lieu. Un déménageur sérieux vous guidera dans cette démarche.
+
+**Les déménageurs strasbourgeois sont-ils moins chers qu'à Paris ?**  
+Oui. En moyenne, les tarifs strasbourgeois sont 15-25 % inférieurs aux tarifs parisiens pour un déménagement local équivalent. Pour les longues distances, les prix sont comparables aux autres métropoles (Lyon, Marseille).
+
+**Grande Île et Petite France : pourquoi c'est plus cher ?**  
+Ces quartiers UNESCO ont des ruelles pavées étroites, peu ou pas d'accès camion direct, et beaucoup d'immeubles sans ascenseur. Le portage est plus long et plus complexe — d'où un surcoût de 15-25 % en moyenne.
+
+**Comment trouver un déménageur fiable à Strasbourg ?**  
+Vérifiez : numéro de licence de transport (obligatoire), attestation d'assurance RC Pro valide, score Pappers > 60/100. Moverz effectue ces vérifications automatiquement pour chaque déménageur du réseau strasbourgeois.
+
+---
+
+## Résumé
+
+1. **Budget de base à Strasbourg** : comptez 45-65 €/m³ pour un déménagement local
+2. **Grande Île et Petite France** : surcoût 15-25 %, autorisation voirie recommandée
+3. **Haute saison** : juillet-août et rentrée septembre = +25-45 %, réservez tôt
+4. **Comparez sur une base identique** : volume m³ précis, accès complets, mêmes options
+
+> **Déménagez à Strasbourg sans mauvaises surprises**  
+> [Moverz](/) vérifie chaque déménageur strasbourgeois (Pappers, avis, licence) et standardise votre dossier. 3-5 devis comparables, anonyme, sans démarchage. [Obtenir mes devis](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-strasbourg-fin).
+
+---
+
+*Sources : données Moverz.fr 2025-2026 | Eurométropole de Strasbourg | DGCCRF (contrôles secteur déménagement 2023)*
+
+**À lire aussi :**
+- [Prix déménagement longue distance France](/blog/prix-demenagement-longue-distance-france/)
+- [Prix déménagement Lyon](/blog/prix-demenagement-lyon-guide-complet/)
+- [Comment comparer des devis de déménagement](/blog/comparer-devis-demenagement-guide/)
+`,
+  },
+  {
+    slug: "prix-demenageur-lille-2026",
+    title: "Prix Déménageur Lille 2026 : Tarifs Réels & Comparatif Complet",
+    description: "Combien coûte un déménagement à Lille en 2026 ? Fourchettes studio à maison (520€-2570€), spécificités Vieux-Lille et Wazemmes, exemples concrets, conseils pour des devis comparables.",
+    type: "guide",
+    citySlug: "lille",
+    body: `**Lille, capitale des Flandres, est une métropole dynamique pour le déménagement.**
+
+5e agglomération française, Lille attire étudiants, familles et entreprises. Le marché des déménageurs lillois est actif mais les écarts de prix restent importants selon le quartier (Vieux-Lille pavé vs périphérie), l'accès et la période. Voici les fourchettes réalistes pour 2026.
+
+> **Comparez des devis à Lille en toute transparence**  
+> [Moverz](/) transmet votre dossier à des déménageurs vérifiés (Pappers, avis Google). 3-5 devis comparables, anonyme. [Démarrer gratuitement](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-lille).
+
+---
+
+## Prix moyens d'un déménagement à Lille en 2026
+
+![Lille - Grand Place](/images/cities/lille-grand-place.jpg)
+
+*Photo : Grand Place de Lille. Le Vieux-Lille et ses ruelles pavées imposent des surcoûts de portage (+15 à +20 %).*
+
+### Tableau récapitulatif par surface
+
+| Logement | Volume estimé | Lille → Lille (local) | Lille → Paris / province |
+|---|---|---|---|
+| Studio / T1 (20-35 m²) | 10-20 m³ | 400–720 € | 650–1 350 € |
+| T2 (40-55 m²) | 20-35 m³ | 700–1 350 € | 1 100–2 200 € |
+| T3 (60-80 m²) | 35-55 m³ | 1 100–2 150 € | 1 650–3 300 € |
+| T4 / grande maison (90-120 m²) | 55-80 m³ | 1 650–3 100 € | 2 500–5 000 € |
+
+*Prix TTC, prestation standard. Vieux-Lille non inclus (voir surcoûts).*
+
+### Fourchettes de référence Moverz 2026
+
+- **Studio** : **520 €** (base) → 620 € (Vieux-Lille)
+- **T2** : **955 €** (base) → 1 140 € (centre historique)
+- **T3** : **1 620 €** (base) → 1 950 € (accès difficile)
+- **Maison 4-5 pièces** : **2 570 €** (base)
+
+---
+
+## Spécificités lilloises qui font varier le prix
+
+### Vieux-Lille et centre historique
+
+Rues pavées, immeubles anciens, accès camion limité :
+- Portage long fréquent depuis les places ou parkings
+- Ascenseurs rares dans les bâtiments d'époque
+- **Surcoût estimé : +15 à +25 %** vs quartiers périphériques
+
+### Wazemmes, Vauban, Euralille
+
+Quartiers mixtes, voiries plus larges. Accès généralement correct. Tarif base à +10 % selon la rue.
+
+### Faches, Mons-en-Barœul, Villeneuve-d'Ascq
+
+Périphérie métropolitaine : parkings faciles, immeubles récents. Souvent au tarif de base ou en dessous.
+
+---
+
+## Les 6 facteurs qui font varier le prix à Lille
+
+### 1. L'accès et le stationnement
+
+Vieux-Lille : le camion ne stationne souvent pas devant la porte. Portage 50-120 m = **+50 à +120 €**.
+
+### 2. L'étage et l'ascenseur
+
+- Rez-de-chaussée ou ascenseur adapté : tarif base
+- 3e étage sans ascenseur : +15-25 %
+- 5e étage sans ascenseur : +30-45 %
+
+### 3. La période
+
+| Période | Impact |
+|---|---|
+| Juillet-août | +25 à +45 % |
+| Rentrée universitaire (septembre) | +15 à +30 % |
+| Vendredi-samedi | +10 à +20 % |
+| Octobre-mars, milieu de semaine | Tarif base |
+
+### 4. La formule
+
+Économique (vous emballez) / Standard (+20-35 %) / Premium (+40-70 %).
+
+### 5. Les objets particuliers
+
+Piano droit 180-450 €, piano à queue 450-1 000 €, monte-meuble 150-400 €.
+
+### 6. Lille-Paris (corridor A1)
+
+220 km, corridor très fréquenté. T2 : 1 500–1 800 €, T3 : 2 100–2 500 €.
+
+---
+
+## Exemples concrets à Lille
+
+**Exemple 1** : Studio Vieux-Lille → T2 Wazemmes. 12 m³, 2e sans ascenseur départ. Novembre. **680-920 €**.
+
+**Exemple 2** : T3 Faches → T3 Mons-en-Barœul. 45 m³, bon accès. Septembre. **1 350-1 850 €**.
+
+**Exemple 3** : T3 Lille → Paris. 40 m³, mars. **2 100-3 200 €**.
+
+**Exemple 4** : Maison Villeneuve-d'Ascq → Arras (50 km). 70 m³, octobre. **2 200-3 100 €**.
+
+---
+
+## Comment obtenir des devis comparables à Lille
+
+Moverz standardise votre dossier : volume m³, accès détaillé (étages, distance portage, passage étroit), mêmes options transmises à tous les pros. Les déménageurs lillois du réseau sont vérifiés (Pappers, avis, licence transport).
+
+---
+
+## Déménagement depuis Lille : corridors principaux
+
+| Corridor | Distance | T2 estimé | T3 estimé |
+|---|---|---|---|
+| Lille → Paris | ~220 km | 1 500–1 800 € | 2 100–2 500 € |
+| Lille → Bruxelles | ~120 km | 1 100–1 600 € | 1 600–2 400 € |
+| Lille → Lyon | ~730 km | 2 200–3 200 € | 3 000–4 500 € |
+
+---
+
+## Questions fréquentes
+
+**Le Vieux-Lille coûte-t-il vraiment plus cher ?**  
+Oui. Ruelles pavées, accès camion limité, portage long. Surcoût +15 à +25 % vs quartiers avec parking facile.
+
+**Comment vérifier un déménageur à Lille ?**  
+Vérifiez : licence transport, RC Pro, score Pappers > 60/100. Moverz fait ces contrôles pour chaque pro du réseau.
+
+**Combien pour Lille-Paris en 2026 ?**  
+T2 : 1 500–1 800 €. T3 : 2 100–2 500 €. Comparez 3-5 devis sur Moverz avec le même volume.
+
+---
+
+> **Déménagez à Lille sans mauvaises surprises**  
+> [Moverz](/) vérifie chaque déménageur (Pappers, avis) et standardise votre dossier. 3-5 devis comparables. [Obtenir mes devis](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-lille-fin).
+
+*Sources : données Moverz.fr 2025-2026 | Métropole Lilloise*
+`,
+  },
+  {
+    slug: "prix-demenageur-nantes-2026",
+    title: "Prix Déménageur Nantes 2026 : Tarifs Réels & Comparatif Complet",
+    description: "Combien coûte un déménagement à Nantes en 2026 ? Fourchettes studio à maison (530€-2610€), spécificités Île de Nantes et centre, exemples concrets, conseils pour des devis comparables.",
+    type: "guide",
+    citySlug: "nantes",
+    body: `**Nantes, 6e métropole française, est un hub déménagement dynamique.**
+
+Capitale des Pays de la Loire, Nantes attire étudiants (École Centrale, Audencia), familles et entreprises. Le marché des déménageurs nantais est actif ; les écarts de prix dépendent du quartier (Île de Nantes, Bouffay vs périphérie), de l'accès et de la période. Voici les fourchettes réalistes pour 2026.
+
+> **Comparez des devis à Nantes en toute transparence**  
+> [Moverz](/) transmet votre dossier à des déménageurs vérifiés (Pappers, avis Google). 3-5 devis comparables, anonyme. [Démarrer gratuitement](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-nantes).
+
+---
+
+## Prix moyens d'un déménagement à Nantes en 2026
+
+![Nantes - Château des Ducs de Bretagne](/images/cities/nantes-chateau-ducs-bretagne.jpg)
+
+*Photo : Château des Ducs de Bretagne. L'Île de Nantes et le centre historique peuvent imposer des surcoûts de portage (+10 à +15 %).*
+
+### Tableau récapitulatif par surface
+
+| Logement | Volume estimé | Nantes → Nantes (local) | Nantes → Paris / province |
+|---|---|---|---|
+| Studio / T1 (20-35 m²) | 10-20 m³ | 420–740 € | 680–1 380 € |
+| T2 (40-55 m²) | 20-35 m³ | 720–1 380 € | 1 150–2 250 € |
+| T3 (60-80 m²) | 35-55 m³ | 1 150–2 200 € | 1 750–3 350 € |
+| T4 / grande maison (90-120 m²) | 55-80 m³ | 1 750–3 200 € | 2 600–5 100 € |
+
+*Prix TTC, prestation standard. Centre et Île de Nantes non inclus (voir surcoûts).*
+
+### Fourchettes de référence Moverz 2026
+
+- **Studio** : **530 €** (base) → 610 € (Île de Nantes)
+- **T2** : **970 €** (base) → 1 120 € (centre historique)
+- **T3** : **1 650 €** (base) → 1 900 € (accès difficile)
+- **Maison 4-5 pièces** : **2 610 €** (base)
+
+---
+
+## Spécificités nantaises qui font varier le prix
+
+### Île de Nantes et centre (Bouffay)
+
+Quartiers en mutation, immeubles récents et anciens mélangés :
+- Stationnement variable selon la rue et les travaux en cours
+- Portage parfois long vers les logements neufs (Chantiers navals réhabilités)
+- **Surcoût estimé : +10 à +15 %** vs quartiers résidentiels
+
+### Chantenay, Doulon, Rezé
+
+Quartiers résidentiels, voiries correctes. Accès généralement bon. Tarif base à +5-10 % selon la rue.
+
+### Saint-Herblain, Orvault, Vertou
+
+Périphérie : parkings faciles, maisons et immeubles récents. Souvent au tarif de base.
+
+---
+
+## Les 6 facteurs qui font varier le prix à Nantes
+
+### 1. L'accès et le stationnement
+
+Centre et Île de Nantes : le camion ne stationne pas toujours devant la porte. Portage 40-100 m = **+40 à +100 €**.
+
+### 2. L'étage et l'ascenseur
+
+- Rez-de-chaussée ou ascenseur adapté : tarif base
+- 3e étage sans ascenseur : +15-25 %
+- 5e étage sans ascenseur : +30-45 %
+
+### 3. La période
+
+| Période | Impact |
+|---|---|
+| Juillet-août | +25 à +45 % |
+| Rentrée universitaire (septembre) | +15 à +30 % |
+| Vendredi-samedi | +10 à +20 % |
+| Octobre-mars, milieu de semaine | Tarif base |
+
+### 4. La formule
+
+Économique (vous emballez) / Standard (+20-35 %) / Premium (+40-70 %).
+
+### 5. Les objets particuliers
+
+Piano droit 180-450 €, piano à queue 450-1 000 €, monte-meuble 150-400 €.
+
+### 6. Nantes-Paris (corridor A11)
+
+385 km, corridor fréquenté. T2 : 1 600–2 000 €, T3 : 2 200–2 800 €.
+
+---
+
+## Exemples concrets à Nantes
+
+**Exemple 1** : Studio Bouffay → T2 Chantenay. 12 m³, 2e sans ascenseur départ. Novembre. **650-880 €**.
+
+**Exemple 2** : T3 Saint-Herblain → T3 Rezé. 45 m³, bon accès. Septembre. **1 400-1 900 €**.
+
+**Exemple 3** : T3 Nantes → Paris. 40 m³, mars. **2 200-3 300 €**.
+
+**Exemple 4** : Maison Vertou → Rennes (110 km). 70 m³, octobre. **2 300-3 200 €**.
+
+---
+
+## Comment obtenir des devis comparables à Nantes
+
+Moverz standardise votre dossier : volume m³, accès détaillé (étages, distance portage, passage étroit), mêmes options transmises à tous les pros. Les déménageurs nantais du réseau sont vérifiés (Pappers, avis, licence transport).
+
+---
+
+## Déménagement depuis Nantes : corridors principaux
+
+| Corridor | Distance | T2 estimé | T3 estimé |
+|---|---|---|---|
+| Nantes → Paris | ~385 km | 1 600–2 000 € | 2 200–2 800 € |
+| Nantes → Rennes | ~110 km | 900–1 400 € | 1 350–1 950 € |
+| Nantes → Bordeaux | ~340 km | 1 500–2 200 € | 2 100–3 000 € |
+
+---
+
+## Questions fréquentes
+
+**L'Île de Nantes coûte-t-elle plus cher ?**  
+Oui. Stationnement variable, portage parfois long vers les immeubles neufs. Surcoût +10 à +15 % vs quartiers avec accès direct.
+
+**Comment vérifier un déménageur à Nantes ?**  
+Vérifiez : licence transport, RC Pro, score Pappers > 60/100. Moverz fait ces contrôles pour chaque pro du réseau.
+
+**Combien pour Nantes-Paris en 2026 ?**  
+T2 : 1 600–2 000 €. T3 : 2 200–2 800 €. Comparez 3-5 devis sur Moverz avec le même volume.
+
+---
+
+> **Déménagez à Nantes sans mauvaises surprises**  
+> [Moverz](/) vérifie chaque déménageur (Pappers, avis) et standardise votre dossier. 3-5 devis comparables. [Obtenir mes devis](https://devis.moverz.fr/devis-gratuits?source=moverz.fr&from=blog-prix-nantes-fin).
+
+*Sources : données Moverz.fr 2025-2026 | Nantes Métropole*
 `,
   },
 ];

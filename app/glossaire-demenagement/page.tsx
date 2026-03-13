@@ -58,8 +58,8 @@ const glossaryTerms = [
         definition: "Trajet fréquent entre deux villes (ex: Paris-Lyon, Marseille-Nice). Les déménageurs proposent souvent des tarifs optimisés grâce au groupage de plusieurs déménagements sur le même trajet."
       },
       {
-        term: "Creditsafe",
-        definition: "Agence européenne de notation financière qui attribue un score de solvabilité (0-100) aux entreprises. Score < 40/100 = risque élevé de défaillance. Moverz exclut automatiquement les déménageurs avec alertes Creditsafe."
+        term: "Pappers",
+        definition: "Service français d'information sur les entreprises (bilans, procédures collectives, décisions de justice). Moverz utilise Pappers pour le scoring financier (0-100) des déménageurs. Score < 40/100 = risque élevé de défaillance. Déménageurs avec alertes exclus automatiquement."
       },
       {
         term: "Cubage (ou volumétrie)",
@@ -149,7 +149,7 @@ const glossaryTerms = [
       },
       {
         term: "Liquidation judiciaire",
-        definition: "Procédure de cessation d'activité d'une entreprise en faillite. Vos affaires peuvent être bloquées (gage juridique) si le déménageur est en liquidation pendant votre déménagement. Vérifiez le score Creditsafe."
+        definition: "Procédure de cessation d'activité d'une entreprise en faillite. Vos affaires peuvent être bloquées (gage juridique) si le déménageur est en liquidation pendant votre déménagement. Vérifiez le score financier Pappers."
       },
     ]
   },
@@ -210,7 +210,7 @@ const glossaryTerms = [
     terms: [
       {
         term: "Solvabilité",
-        definition: "Capacité d'une entreprise à payer ses dettes et charges. Mesurée par le score Creditsafe (0-100). Score < 40 = risque élevé de défaillance. Moverz vérifie la solvabilité de tous les déménageurs."
+        definition: "Capacité d'une entreprise à payer ses dettes et charges. Mesurée par le score Pappers (0-100). Score < 40 = risque élevé de défaillance. Moverz vérifie la solvabilité de tous les déménageurs."
       },
       {
         term: "Supplément jour J",

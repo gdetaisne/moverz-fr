@@ -6,15 +6,18 @@ export const runtime = "nodejs";
 
 /**
  * SEO (2026-03-07): sitemap cohérent avec la logique d'indexation de app/blog/[slug]/page.tsx.
- * Inclut : articles GA trafic prouvé + piliers qualité (≥ 1000 mots, type="pilier", body présent).
- *
- * Before: ~750 posts (filtre 500 mots)
- * After:  articles piliers qualité + liste GA trafic (~100-150 URLs estimées)
+ * Inclut : GA_TRAFFIC_SLUGS + isQualityPost (pilier ≥1000 mots OU satellite/guide ≥500 mots).
  */
 
 // Articles avec trafic GSC prouvé + citations Bing AI — inclus même s'ils ne sont pas "pilier"
 // Sync avec app/blog/[slug]/page.tsx GA_TRAFFIC_SLUGS
 const GA_TRAFFIC_SLUGS = new Set([
+  "moverz-vs-concurrents-comparateur-demenagement",
+  "pourquoi-moverz-meilleur-comparateur-demenagement",
+  "comparatif-demenageurs-rennes-2026",
+  "comparatif-demenageurs-marseille-2026",
+  "comparatif-demenageurs-bordeaux-2026",
+  "comparatif-demenageurs-lyon-2026",
   "demenagement-centre-ville-rennes-autorisations",
   "cartons-gratuits-rennes",
   "prix-garde-meuble-montpellier-2025",

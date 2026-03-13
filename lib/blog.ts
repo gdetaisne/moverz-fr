@@ -17,6 +17,7 @@ import { CANONICAL_BLOG_POSTS, type CanonicalBlogPost } from "./blog-canonique";
 import { BLOG_NOUVEAUX_2026 } from "./blog-nouveaux-2026";
 import { BLOG_MARKDOWN_POSTS } from "./blog-markdown-posts";
 import { ARNAQUES_ARTICLE } from "./blog-arnaques";
+import { BLOG_CONTENT_GAPS_404 } from "./blog-content-gaps-404";
 import { LONGTAIL_BLOG_POSTS } from "./blog-longtail";
 import { LONGTAIL_PACK2_POSTS } from "./blog-longtail-pack2";
 import { BLOG_PRO_META } from "./blog-pro";
@@ -34,6 +35,22 @@ const EXCLUDED_BLOG_SLUGS = new Set<string>([
   "rgpd-détails-retention-sous-traitance-demenageur",
   "reduire-litiges-jour-j-checklist-détails-declaration-valeur",
   "checklist-dossier-opposable-détails-inventaire",
+
+  // Slugs internes (listes, batch, rapports) — 301 vers hub
+  "liste-complete-50-satellites-generes",
+  "articles-pilier-06-batch",
+  "pilier-03-demenagement-pas-cher-10-satellites",
+  "pilier-09-prix-demenagement-10-satellites",
+  "rapport-final-production-montpellier",
+
+  // Slugs URL-encodés (doublons %c3%a9 = é) — 301 vers hub
+  "dem%c3%a9nageur-specialise-piano-rennes",
+  "demenagement-%c3%a9clair-24h-toulouse",
+  "demenagement-%c3%a9clair-toulouse",
+  "demenagement-imm%c3%a9diat-24h-toulouse",
+  "demenagement-imm%c3%a9diat-toulouse",
+  "demenagement-instantan%c3%a9-24h-toulouse",
+  "demenagement-instantan%c3%a9-toulouse",
 ]);
 
 function isExcludedFromPublication(slug: string): boolean {
@@ -174,6 +191,7 @@ const RAW_BLOG_POSTS: BlogPostMeta[] = mergeBlogData(
     ...BLOG_NOUVEAUX_2026,
     ...BLOG_MARKDOWN_POSTS,
     ...CANONICAL_BLOG_POSTS,
+    ...BLOG_CONTENT_GAPS_404,
     ...LONGTAIL_BLOG_POSTS,
     ...LONGTAIL_PACK2_POSTS,
     ...CANONICAL_PRO_BLOG_POSTS,
@@ -201,6 +219,7 @@ const ALL_CANONICAL_POSTS = [
   ...BLOG_NOUVEAUX_2026,
   ...BLOG_MARKDOWN_POSTS,
   ...CANONICAL_BLOG_POSTS,
+  ...BLOG_CONTENT_GAPS_404,
   ...LONGTAIL_BLOG_POSTS,
   ...LONGTAIL_PACK2_POSTS,
   ...CANONICAL_PRO_BLOG_POSTS,
@@ -229,10 +248,12 @@ export function getCanonicalBodyBySlug(slug: string): string | undefined {
 
 /**
  * SEO (2026-03-07): Filtre de qualité automatique pour l'indexation Google.
- * Un article est "de qualité" s'il satisfait les 3 critères :
+ * Un article est "de qualité" s'il satisfait :
  *   1. body présent (pas un placeholder)
- *   2. ≥ 1000 mots (contenu substantiel)
- *   3. type = "pilier" (article principal de sa thématique)
+ *   2. Seuils de mots selon le type :
+ *      - pilier : ≥ 1000 mots
+ *      - satellite / guide : ≥ 500 mots (long-tail E-A-A-T)
+ *      - autre/indéfini : non indexable via ce filtre (GA_TRAFFIC_SLUGS uniquement)
  *
  * Utilisé dans generateMetadata (noindex si false) et sitemap-blog.xml.
  */
@@ -240,9 +261,9 @@ export function isQualityPost(slug: string): boolean {
   const canonical = ALL_CANONICAL_POSTS.find((post) => post.slug === slug);
   if (!canonical?.body) return false;
   const wordCount = canonical.body.split(/\s+/).length;
-  if (wordCount < 1000) return false;
-  if (canonical.type !== "pilier") return false;
-  return true;
+  if (canonical.type === "pilier") return wordCount >= 1000;
+  if (canonical.type === "satellite" || canonical.type === "guide") return wordCount >= 500;
+  return false;
 }
 
 // Trouver l'article Prix associé à une ville donnée

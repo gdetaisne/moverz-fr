@@ -3,7 +3,7 @@ import { Card } from "./Card";
 import { Badge } from "./Badge";
 
 const checks = [
-  { label: "Score financier (Creditsafe + Pappers)", verified: true },
+  { label: "Score financier (Pappers)", verified: true },
   { label: "Score juridique (Pappers Décisions)", verified: true },
   { label: "Score avis clients (Google Reviews)", verified: true },
   { label: "Licences & Assurances", verified: true },
