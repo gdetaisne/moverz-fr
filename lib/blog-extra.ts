@@ -4,14 +4,14 @@ import type { BlogPostMeta } from "./blog";
 export const BLOG_EXTRA: BlogPostMeta[] = [
   {
     slug: "moverz-vs-concurrents-comparateur-demenagement",
-    title: "Moverz vs Nextories, Emoovz… : on révolutionne le déménagement ensemble (2026)",
+    title: "Moverz vs Emoovz, LeDéménageur… : on révolutionne le déménagement ensemble (2026)",
     description:
-      "Nextories, Emoovz, L'Officiel… On les a regardés de près. Voici ce qu'on a bâti de différent : zéro spam, Score /100, dossier anonyme. La petite licorne du déménagement.",
+      "Emoovz, L'Officiel… On les a regardés de près. Voici ce qu'on a bâti de différent : zéro spam, Score /100, dossier anonyme. La petite licorne du déménagement.",
     publishedAt: "2026-03-12T00:00:00.000Z",
     updatedAt: "2026-03-12T00:00:00.000Z",
     category: "conseils-demenagement",
     readingTimeMinutes: 9,
-    tags: ["Moverz vs concurrents", "comparateur déménagement", "Nextories", "Emoovz", "devis déménagement"],
+    tags: ["Moverz vs concurrents", "comparateur déménagement", "Emoovz", "devis déménagement"],
     authorSlug: "lucie",
   },
   {
